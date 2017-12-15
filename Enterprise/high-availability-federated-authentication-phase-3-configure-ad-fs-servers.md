@@ -23,39 +23,39 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
-# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
+# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a><span data-ttu-id="4ebaa-103">高可用性同盟驗證階段 3：設定 AD FS 伺服器</span><span class="sxs-lookup"><span data-stu-id="4ebaa-103">High availability federated authentication Phase 3: Configure AD FS servers</span></span>
 
- **摘要：**建立及設定您的高可用性同盟驗證 Office 365 的 Active Directory Federation Services (AD FS) 伺服器 in Microsoft Azure。
+ <span data-ttu-id="4ebaa-104">**摘要：**建立及設定您的高可用性同盟驗證 Office 365 的 Active Directory Federation Services (AD FS) 伺服器 in Microsoft Azure。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-104">**Summary:** Create and configure the Active Directory Federation Services (AD FS) servers for your high availability federated authentication for Office 365 in Microsoft Azure.</span></span>
   
-在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。
+<span data-ttu-id="4ebaa-105">在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-105">In this phase of deploying high availability for Office 365 federated authentication in Azure infrastructure services, you create an internal load balancer and two AD FS servers.</span></span>
   
-您必須完成此階段中的將移入之前[高可用性同盟驗證階段 4： 設定 web 應用程式 proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。
+<span data-ttu-id="4ebaa-p101">您必須完成此階段中的將移入之前[高可用性同盟驗證階段 4： 設定 web 應用程式 proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p101">You must complete this phase before moving on to [High availability federated authentication Phase 4: Configure web application proxies](high-availability-federated-authentication-phase-4-configure-web-application-pro.md). See [Deploy high availability federated authentication for Office 365 in Azure](deploy-high-availability-federated-authentication-for-office-365-in-azure.md) for all of the phases.</span></span>
   
-## <a name="create-the-ad-fs-server-virtual-machines-in-azure"></a>在 Azure 中建立 AD FS 伺服器虛擬機器
+## <a name="create-the-ad-fs-server-virtual-machines-in-azure"></a><span data-ttu-id="4ebaa-108">在 Azure 中建立 AD FS 伺服器虛擬機器</span><span class="sxs-lookup"><span data-stu-id="4ebaa-108">Create the AD FS server virtual machines in Azure</span></span>
 
-您可以使用下列 PowerShell 命令的區塊，建立兩個 AD FS 伺服器的虛擬機器。此 PowerShell 命令集會使用下表中的值︰
+<span data-ttu-id="4ebaa-p102">您可以使用下列 PowerShell 命令的區塊，建立兩個 AD FS 伺服器的虛擬機器。此 PowerShell 命令集會使用下表中的值︰</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p102">Use the following block of PowerShell commands to create the virtual machines for the two AD FS servers. This PowerShell command set uses values from the following tables:</span></span>
   
-- 表格 M，適用於虛擬機器
+- <span data-ttu-id="4ebaa-111">表格 M，適用於虛擬機器</span><span class="sxs-lookup"><span data-stu-id="4ebaa-111">Table M, for your virtual machines</span></span>
     
-- 表格 R，適用於資源群組
+- <span data-ttu-id="4ebaa-112">表格 R，適用於資源群組</span><span class="sxs-lookup"><span data-stu-id="4ebaa-112">Table R, for your resource groups</span></span>
     
-- 表格 V，適用於虛擬網路設定
+- <span data-ttu-id="4ebaa-113">表格 V，適用於虛擬網路設定</span><span class="sxs-lookup"><span data-stu-id="4ebaa-113">Table V, for your virtual network settings</span></span>
     
-- 表格 S，適用於子網路
+- <span data-ttu-id="4ebaa-114">表格 S，適用於子網路</span><span class="sxs-lookup"><span data-stu-id="4ebaa-114">Table S, for your subnets</span></span>
     
-- 表格 I，適用於靜態 IP 位址
+- <span data-ttu-id="4ebaa-115">表格 I，適用於靜態 IP 位址</span><span class="sxs-lookup"><span data-stu-id="4ebaa-115">Table I, for your static IP addresses</span></span>
     
-- 表格 A，適用於可用性設定組
+- <span data-ttu-id="4ebaa-116">表格 A，適用於可用性設定組</span><span class="sxs-lookup"><span data-stu-id="4ebaa-116">Table A, for your availability sets</span></span>
     
-重新叫用您定義中的表格 M[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)和表格 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
+<span data-ttu-id="4ebaa-117">重新叫用您定義中的表格 M[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)和表格 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-117">Recall that you defined Table M in [High availability federated authentication Phase 2: Configure domain controllers](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) and Tables R, V, S, I, and A in [High availability federated authentication Phase 1: Configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md).</span></span>
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> <span data-ttu-id="4ebaa-p103">下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p103">The following command sets use the latest version of Azure PowerShell. See [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/).</span></span> 
   
-首先，您建立 Azure 內部負載平衡器的兩個 AD FS 伺服器。指定的變數，移除值\<和 > 字元。當您有提供所有適當的值時，在 Azure PowerShell 命令提示字元處或 PowerShell ISE 中執行的結果區塊。
+<span data-ttu-id="4ebaa-p104">首先，您建立 Azure 內部負載平衡器的兩個 AD FS 伺服器。指定的變數，移除值\<和 > 字元。當您有提供所有適當的值時，在 Azure PowerShell 命令提示字元處或 PowerShell ISE 中執行的結果區塊。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p104">First, you create an Azure internal load balancer for the two AD FS servers. Specify the values for the variables, removing the \< and > characters. When you have supplied all the proper values, run the resulting block at the Azure PowerShell command prompt or in the PowerShell ISE.</span></span>
   
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> <span data-ttu-id="4ebaa-123">對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-123">For a text file that contains all of the PowerShell commands in this article and a Microsoft Excel configuration workbook that generates ready-to-run PowerShell command blocks based on your custom settings, see the [Federated Authentication for Office 365 in Azure Deployment Kit](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664).</span></span> 
   
 ```
 # Set up key variables
@@ -76,9 +76,9 @@ $lbrule=New-AzureRMLoadBalancerRuleConfig -Name "HTTPSTraffic" -FrontendIpConfig
 New-AzureRMLoadBalancer -ResourceGroupName $rgName -Name "ADFSServers" -Location $locName -LoadBalancingRule $lbrule -BackendAddressPool $beAddressPool -Probe $healthProbe -FrontendIpConfiguration $frontendIP
 ```
 
-下一步，建立 AD FS 伺服器虛擬機器。
+<span data-ttu-id="4ebaa-124">下一步，建立 AD FS 伺服器虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-124">Next, create the AD FS server virtual machines.</span></span>
   
-當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
+<span data-ttu-id="4ebaa-125">當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-125">When you have supplied all the proper values, run the resulting block at the Azure PowerShell command prompt or in the PowerShell ISE.</span></span>
   
 ```
 # Set up variables common to both virtual machines
@@ -133,11 +133,11 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用私人 IP 位址] 或 [內部網路 DNS 名稱。
+> <span data-ttu-id="4ebaa-p105">因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用私人 IP 位址] 或 [內部網路 DNS 名稱。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p105">Because these virtual machines are for an intranet application, they are not assigned a public IP address or a DNS domain name label and exposed to the Internet. However, this also means that you cannot connect to them from the Azure portal. The **Connect** option is unavailable when you view the properties of the virtual machine. Use the Remote Desktop Connection accessory or another Remote Desktop tool to connect to the virtual machine using its private IP address or intranet DNS name.</span></span>
   
-針對每一部虛擬機器，使用您所選的遠端桌面用戶端建立遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
+<span data-ttu-id="4ebaa-p106">針對每一部虛擬機器，使用您所選的遠端桌面用戶端建立遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-p106">For each virtual machine, use the remote desktop client of your choice and create a remote desktop connection. Use its intranet DNS or computer name and the credentials of the local administrator account.</span></span>
   
-針對每一部虛擬機器，在 Windows PowerShell 提示上使用以下命令將其加入適當的 Windows Server AD 網域。
+<span data-ttu-id="4ebaa-132">針對每一部虛擬機器，在 Windows PowerShell 提示上使用以下命令將其加入適當的 Windows Server AD 網域。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-132">For each virtual machine, join them to the appropriate Windows Server AD domain with these commands at the Windows PowerShell prompt.</span></span>
   
 ```
 $domName="<Windows Server AD domain name to join, such as corp.contoso.com>"
@@ -146,20 +146,20 @@ Add-Computer -DomainName $domName -Credential $cred
 Restart-Computer
 ```
 
-以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
+<span data-ttu-id="4ebaa-133">以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-133">Here is the configuration resulting from the successful completion of this phase, with placeholder computer names.</span></span>
   
-**階段 3： AD FS 伺服器與高可用性同盟的驗證基礎結構 Azure 中的內部負載平衡器**
+<span data-ttu-id="4ebaa-134">**階段 3： AD FS 伺服器與高可用性同盟的驗證基礎結構 Azure 中的內部負載平衡器**</span><span class="sxs-lookup"><span data-stu-id="4ebaa-134">**Phase 3: The AD FS servers and internal load balancer for your high availability federated authentication infrastructure in Azure**</span></span>
 
 ![具有 AD FS 伺服器的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 3](images/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
   
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a><span data-ttu-id="4ebaa-136">下一步</span><span class="sxs-lookup"><span data-stu-id="4ebaa-136">Next step</span></span>
 
-使用[高可用性同盟驗證階段 4： 設定 web 應用程式 proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)繼續設定此工作量。
+<span data-ttu-id="4ebaa-137">使用[高可用性同盟驗證階段 4： 設定 web 應用程式 proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)繼續設定此工作量。</span><span class="sxs-lookup"><span data-stu-id="4ebaa-137">Use [High availability federated authentication Phase 4: Configure web application proxies](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) to continue configuring this workload.</span></span>
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a><span data-ttu-id="4ebaa-138">See Also</span><span class="sxs-lookup"><span data-stu-id="4ebaa-138">See Also</span></span>
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[<span data-ttu-id="4ebaa-139">部署在 Azure 中的 Office 365 的高可用性同盟的驗證</span><span class="sxs-lookup"><span data-stu-id="4ebaa-139">Deploy high availability federated authentication for Office 365 in Azure</span></span>](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+[<span data-ttu-id="4ebaa-140">Office 365 開發人員/測試環境的同盟身分識別</span><span class="sxs-lookup"><span data-stu-id="4ebaa-140">Federated identity for your Office 365 dev/test environment</span></span>](federated-identity-for-your-office-365-dev-test-environment.md)
 
 

@@ -23,58 +23,58 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
-# <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
+# <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a><span data-ttu-id="ac8d0-103">高可用性同盟驗證階段 2：設定網域控制站</span><span class="sxs-lookup"><span data-stu-id="ac8d0-103">High availability federated authentication Phase 2: Configure domain controllers</span></span>
 
- **摘要：**設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。
+ <span data-ttu-id="ac8d0-104">**摘要：**設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-104">**Summary:** Configure the domain controllers and DirSync server for your high availability federated authentication for Office 365 in Microsoft Azure.</span></span>
   
-在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會在 Azure 虛擬網路中設定兩個網域控制站和 DirSync 伺服器。然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。
+<span data-ttu-id="ac8d0-p101">在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會在 Azure 虛擬網路中設定兩個網域控制站和 DirSync 伺服器。然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p101">In this phase of deploying high availability for Office 365 federated authentication in Azure infrastructure services, you configure two domain controllers and the DirSync server in the Azure virtual network. Client web requests for authentication can then be authenticated in the Azure virtual network, rather than sending that authentication traffic across the site-to-site VPN connection to your on-premises network.</span></span>
   
 > [!NOTE]
-> Active Directory 同盟服務 (AD FS) 無法使用 Azure Active Directory 網域服務替代 Windows Server AD 網域控制站。 
+> <span data-ttu-id="ac8d0-107">Active Directory 同盟服務 (AD FS) 無法使用 Azure Active Directory 網域服務替代 Windows Server AD 網域控制站。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-107">Active Directory Federation Services (AD FS) cannot use Azure Active Directory Domain Services as a substitute for Windows Server AD domain controllers.</span></span> 
   
-您必須完成此階段中的將移入之前[高可用性同盟驗證階段 3： 設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。
+<span data-ttu-id="ac8d0-p102">您必須完成此階段中的將移入之前[高可用性同盟驗證階段 3： 設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p102">You must complete this phase before moving on to [High availability federated authentication Phase 3: Configure AD FS servers](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md). See [Deploy high availability federated authentication for Office 365 in Azure](deploy-high-availability-federated-authentication-for-office-365-in-azure.md) for all of the phases.</span></span>
   
-## <a name="create-the-domain-controller-virtual-machines-in-azure"></a>在 Azure 中建立網域控制站虛擬機器
+## <a name="create-the-domain-controller-virtual-machines-in-azure"></a><span data-ttu-id="ac8d0-110">在 Azure 中建立網域控制站虛擬機器</span><span class="sxs-lookup"><span data-stu-id="ac8d0-110">Create the domain controller virtual machines in Azure</span></span>
 
-首先，您必須填寫**虛擬機器名稱**] 欄中的表格 M 與 [**最小大小**] 欄中所視需要修改虛擬機器大小。
+<span data-ttu-id="ac8d0-111">首先，您必須填寫**虛擬機器名稱**] 欄中的表格 M 與 [**最小大小**] 欄中所視需要修改虛擬機器大小。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-111">First, you need to fill out the **Virtual machine name** column of Table M and modify virtual machine sizes as needed in the **Minimum size** column.</span></span>
   
-|**項目**|**虛擬機器名稱**|**[圖庫圖像**|**儲存體類型**|**大小下限**|
+|<span data-ttu-id="ac8d0-112">**項目**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-112">**Item**</span></span>|<span data-ttu-id="ac8d0-113">**虛擬機器名稱**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-113">**Virtual machine name**</span></span>|<span data-ttu-id="ac8d0-114">**[圖庫圖像**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-114">**Gallery image**</span></span>|<span data-ttu-id="ac8d0-115">**儲存體類型**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-115">**Storage type**</span></span>|<span data-ttu-id="ac8d0-116">**大小下限**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-116">**Minimum size**</span></span>|
 |:-----|:-----|:-----|:-----|:-----|
-|1.  <br/> |______________ (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|2.  <br/> |______________ (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|3.  <br/> |______________ (DirSync 伺服器，範例 DS1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|4.  <br/> |______________ (第一個 AD FS 伺服器，範例 ADFS1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|5.  <br/> |______________ (第二個 AD FS 伺服器，範例 ADFS2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|6.  <br/> |______________ (第一個 Web 應用程式 Proxy 伺服器，範例 WEB1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|7.  <br/> |______________ (第二個 Web 應用程式 Proxy 伺服器，範例 WEB2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|<span data-ttu-id="ac8d0-117">1.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-117">1.</span></span>  <br/> |<span data-ttu-id="ac8d0-118">______________ (第一個網域控制站，範例 DC1)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-118">______________ (first domain controller, example DC1)</span></span>  <br/> |<span data-ttu-id="ac8d0-119">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-119">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-120">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-120">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-121">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-121">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-122">2.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-122">2.</span></span>  <br/> |<span data-ttu-id="ac8d0-123">______________ (第二個網域控制站，範例 DC2)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-123">______________ (second domain controller, example DC2)</span></span>  <br/> |<span data-ttu-id="ac8d0-124">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-124">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-125">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-125">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-126">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-126">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-127">3.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-127">3.</span></span>  <br/> |<span data-ttu-id="ac8d0-128">______________ (DirSync 伺服器，範例 DS1)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-128">______________ (DirSync server, example DS1)</span></span>  <br/> |<span data-ttu-id="ac8d0-129">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-129">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-130">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-130">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-131">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-131">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-132">4.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-132">4.</span></span>  <br/> |<span data-ttu-id="ac8d0-133">______________ (第一個 AD FS 伺服器，範例 ADFS1)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-133">______________ (first AD FS server, example ADFS1)</span></span>  <br/> |<span data-ttu-id="ac8d0-134">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-134">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-135">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-135">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-136">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-136">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-137">5.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-137">5.</span></span>  <br/> |<span data-ttu-id="ac8d0-138">______________ (第二個 AD FS 伺服器，範例 ADFS2)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-138">______________ (second AD FS server, example ADFS2)</span></span>  <br/> |<span data-ttu-id="ac8d0-139">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-139">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-140">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-140">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-141">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-141">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-142">6.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-142">6.</span></span>  <br/> |<span data-ttu-id="ac8d0-143">______________ (第一個 Web 應用程式 Proxy 伺服器，範例 WEB1)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-143">______________ (first web application proxy server, example WEB1)</span></span>  <br/> |<span data-ttu-id="ac8d0-144">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-144">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-145">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-145">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-146">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-146">Standard_D2</span></span>  <br/> |
+|<span data-ttu-id="ac8d0-147">7.</span><span class="sxs-lookup"><span data-stu-id="ac8d0-147">7.</span></span>  <br/> |<span data-ttu-id="ac8d0-148">______________ (第二個 Web 應用程式 Proxy 伺服器，範例 WEB2)</span><span class="sxs-lookup"><span data-stu-id="ac8d0-148">______________ (second web application proxy server, example WEB2)</span></span>  <br/> |<span data-ttu-id="ac8d0-149">Windows Server 2016 Datacenter</span><span class="sxs-lookup"><span data-stu-id="ac8d0-149">Windows Server 2016 Datacenter</span></span>  <br/> |<span data-ttu-id="ac8d0-150">StandardLRS</span><span class="sxs-lookup"><span data-stu-id="ac8d0-150">StandardLRS</span></span>  <br/> |<span data-ttu-id="ac8d0-151">Standard_D2</span><span class="sxs-lookup"><span data-stu-id="ac8d0-151">Standard_D2</span></span>  <br/> |
    
- **表 M-Azure 中的 Office 365 的高可用性同盟驗證的虛擬機器**
+ <span data-ttu-id="ac8d0-152">**表 M-Azure 中的 Office 365 的高可用性同盟驗證的虛擬機器**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-152">**Table M - Virtual machines for the high availability federated authentication for Office 365 in Azure**</span></span>
   
-虛擬機器大小的完整清單，請參閱[虛擬機器時的大小](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)。
+<span data-ttu-id="ac8d0-153">虛擬機器大小的完整清單，請參閱[虛擬機器時的大小](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-153">For the complete list of virtual machine sizes, see [Sizes for virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes).</span></span>
   
-下列的 Azure PowerShell 命令區塊會建立兩個網域控制站虛擬機器。指定的變數，移除值\<和 > 字元。請注意此 Azure PowerShell 命令區塊會使用下表中的值：
+<span data-ttu-id="ac8d0-p103">下列的 Azure PowerShell 命令區塊會建立兩個網域控制站虛擬機器。指定的變數，移除值\<和 > 字元。請注意此 Azure PowerShell 命令區塊會使用下表中的值：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p103">The following Azure PowerShell command block creates the virtual machines for the two domain controllers. Specify the values for the variables, removing the \< and > characters. Note that this Azure PowerShell command block uses values from the following tables:</span></span>
   
-- 表格 M，適用於虛擬機器
+- <span data-ttu-id="ac8d0-157">表格 M，適用於虛擬機器</span><span class="sxs-lookup"><span data-stu-id="ac8d0-157">Table M, for your virtual machines</span></span>
     
-- 表格 R，適用於資源群組
+- <span data-ttu-id="ac8d0-158">表格 R，適用於資源群組</span><span class="sxs-lookup"><span data-stu-id="ac8d0-158">Table R, for your resource groups</span></span>
     
-- 表格 V，適用於虛擬網路設定
+- <span data-ttu-id="ac8d0-159">表格 V，適用於虛擬網路設定</span><span class="sxs-lookup"><span data-stu-id="ac8d0-159">Table V, for your virtual network settings</span></span>
     
-- 表格 S，適用於子網路
+- <span data-ttu-id="ac8d0-160">表格 S，適用於子網路</span><span class="sxs-lookup"><span data-stu-id="ac8d0-160">Table S, for your subnets</span></span>
     
-- 表格 I，適用於靜態 IP 位址
+- <span data-ttu-id="ac8d0-161">表格 I，適用於靜態 IP 位址</span><span class="sxs-lookup"><span data-stu-id="ac8d0-161">Table I, for your static IP addresses</span></span>
     
-- 表格 A，適用於可用性設定組
+- <span data-ttu-id="ac8d0-162">表格 A，適用於可用性設定組</span><span class="sxs-lookup"><span data-stu-id="ac8d0-162">Table A, for your availability sets</span></span>
     
-重新叫用您定義資料表 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
+<span data-ttu-id="ac8d0-163">重新叫用您定義資料表 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-163">Recall that you defined Tables R, V, S, I, and A in [High availability federated authentication Phase 1: Configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md).</span></span>
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> <span data-ttu-id="ac8d0-p104">下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p104">The following command sets use the latest version of Azure PowerShell. See [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/).</span></span> 
   
-當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
+<span data-ttu-id="ac8d0-166">當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-166">When you have supplied all the correct values, run the resulting block at the Azure PowerShell prompt or in the PowerShell Integrated Script Environment (ISE) on your local computer.</span></span>
   
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> <span data-ttu-id="ac8d0-167">對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-167">For a text file that contains all of the PowerShell commands in this article and a Microsoft Excel configuration workbook that generates ready-to-run PowerShell command blocks based on your custom settings, see the [Federated Authentication for Office 365 in Azure Deployment Kit](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664).</span></span> 
   
 ```
 # Set up variables common to both virtual machines
@@ -148,23 +148,23 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用私人 IP 位址] 或 [內部網路 DNS 名稱。
+> <span data-ttu-id="ac8d0-p105">因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用私人 IP 位址] 或 [內部網路 DNS 名稱。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p105">Because these virtual machines are for an intranet application, they are not assigned a public IP address or a DNS domain name label and exposed to the Internet. However, this also means that you cannot connect to them from the Azure portal. The **Connect** option is unavailable when you view the properties of the virtual machine. Use the Remote Desktop Connection accessory or another Remote Desktop tool to connect to the virtual machine using its private IP address or intranet DNS name.</span></span>
   
-## <a name="configure-the-first-domain-controller"></a>設定第一個網域控制站
+## <a name="configure-the-first-domain-controller"></a><span data-ttu-id="ac8d0-172">設定第一個網域控制站</span><span class="sxs-lookup"><span data-stu-id="ac8d0-172">Configure the first domain controller</span></span>
 
-使用您所選的遠端桌面用戶端，建立第一個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
+<span data-ttu-id="ac8d0-p106">使用您所選的遠端桌面用戶端，建立第一個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p106">Use the remote desktop client of your choice and create a remote desktop connection to the first domain controller virtual machine. Use its intranet DNS or computer name and the credentials of the local administrator account.</span></span>
   
-下一步] 新增至與此命令的第一個網域控制站的額外資料磁碟從 Windows PowerShell 命令提示字元中**第一個網域控制站虛擬機器上**：
+<span data-ttu-id="ac8d0-175">下一步] 新增至與此命令的第一個網域控制站的額外資料磁碟從 Windows PowerShell 命令提示字元中**第一個網域控制站虛擬機器上**：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-175">Next, add the extra data disk to the first domain controller with this command from a Windows PowerShell command prompt **on the first domain controller virtual machine**:</span></span>
   
 ```
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
-下一步] 以測試在您組織的網路位置的第一個網域控制站連線使用**ping**命令 ping 名稱及 IP 位址您組織的網路上的資源。
+<span data-ttu-id="ac8d0-176">下一步] 以測試在您組織的網路位置的第一個網域控制站連線使用**ping**命令 ping 名稱及 IP 位址您組織的網路上的資源。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-176">Next, test the first domain controller's connectivity to locations on your organization network by using the **ping** command to ping names and IP addresses of resources on your organization network.</span></span>
   
-此程序可確保 DNS 名稱解析運作正常 (虛擬機器已透過內部部署 DNS 伺服器正確設定)，而且封包可在跨單位虛擬網路間傳送。如果此基本測試失敗，請連絡您的 IT 部門，以針對 DNS 名稱解析和封包傳遞問題進行移難排解。
+<span data-ttu-id="ac8d0-p107">此程序可確保 DNS 名稱解析運作正常 (虛擬機器已透過內部部署 DNS 伺服器正確設定)，而且封包可在跨單位虛擬網路間傳送。如果此基本測試失敗，請連絡您的 IT 部門，以針對 DNS 名稱解析和封包傳遞問題進行移難排解。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p107">This procedure ensures that DNS name resolution is working correctly (that the virtual machine is correctly configured with on-premises DNS servers) and that packets can be sent to and from the cross-premises virtual network. If this basic test fails, contact your IT department to troubleshoot the DNS name resolution and packet delivery issues.</span></span>
   
-下一步，從第一個網域控制站上的 Windows PowerShell 命令提示字元，執行下列命令：
+<span data-ttu-id="ac8d0-179">下一步，從第一個網域控制站上的 Windows PowerShell 命令提示字元，執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-179">Next, from the Windows PowerShell command prompt on the first domain controller, run the following commands:</span></span>
   
 ```
 $domname="<DNS domain name of the domain for which this computer will be a domain controller, such as corp.contoso.com>"
@@ -173,19 +173,19 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:\\NTDS" -SysvolPath "F:\\SYSVOL" -LogPath "F:\\Logs" -Credential $cred
 ```
 
-系統會提示您提供網域管理員帳戶的認證。電腦將會重新啟動。
+<span data-ttu-id="ac8d0-p108">系統會提示您提供網域管理員帳戶的認證。電腦將會重新啟動。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p108">You will be prompted to supply the credentials of a domain administrator account. The computer will restart.</span></span>
   
-## <a name="configure-the-second-domain-controller"></a>設定第二個網域控制站
+## <a name="configure-the-second-domain-controller"></a><span data-ttu-id="ac8d0-182">設定第二個網域控制站</span><span class="sxs-lookup"><span data-stu-id="ac8d0-182">Configure the second domain controller</span></span>
 
-使用您所選的遠端桌面用戶端，建立第二個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
+<span data-ttu-id="ac8d0-p109">使用您所選的遠端桌面用戶端，建立第二個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p109">Use the remote desktop client of your choice and create a remote desktop connection to the second domain controller virtual machine. Use its intranet DNS or computer name and the credentials of the local administrator account.</span></span>
   
-接下來，您需要從 Windows PowerShell 命令提示字元中**第二個網域控制站虛擬機器上**使用此命令的第二個網域控制站新增額外的資料磁碟：
+<span data-ttu-id="ac8d0-185">接下來，您需要從 Windows PowerShell 命令提示字元中**第二個網域控制站虛擬機器上**使用此命令的第二個網域控制站新增額外的資料磁碟：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-185">Next, you need to add the extra data disk to the second domain controller with this command from a Windows PowerShell command prompt **on the second domain controller virtual machine**:</span></span>
   
 ```
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
-接著，執行下列命令：
+<span data-ttu-id="ac8d0-186">接著，執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-186">Next, run the following commands:</span></span>
   
 ```
 $domname="<DNS domain name of the domain for which this computer will be a domain controller, such as corp.contoso.com>"
@@ -195,9 +195,9 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
 
 ```
 
-系統會提示您提供網域管理員帳戶的認證。電腦將會重新啟動。
+<span data-ttu-id="ac8d0-p110">系統會提示您提供網域管理員帳戶的認證。電腦將會重新啟動。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p110">You will be prompted to supply the credentials of a domain administrator account. The computer will restart.</span></span>
   
-接下來，您需要讓該 Azure 指派虛擬機器的兩個新網域控制站作為其 DNS 伺服器的 IP 位址更新為您的虛擬網路的 DNS 伺服器。變數中填滿，然後在本機電腦上的 Windows PowerShell 命令提示字元執行下列命令：
+<span data-ttu-id="ac8d0-p111">接下來，您需要讓該 Azure 指派虛擬機器的兩個新網域控制站作為其 DNS 伺服器的 IP 位址更新為您的虛擬網路的 DNS 伺服器。變數中填滿，然後在本機電腦上的 Windows PowerShell 命令提示字元執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p111">Next, you need to update the DNS servers for your virtual network so that Azure assigns virtual machines the IP addresses of the two new domain controllers to use as their DNS servers. Fill in the variables and then run these commands from a Windows PowerShell command prompt on your local computer:</span></span>
   
 ```
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -221,9 +221,9 @@ Restart-AzureRMVM -ResourceGroupName $adrgName -Name $firstDCName
 Restart-AzureRMVM -ResourceGroupName $adrgName -Name $secondDCName
 ```
 
-請注意，我們會重新啟動兩個網域控制站，所以這兩個控制站不會像 DNS 伺服器一樣，透過內部部署 DNS 伺服器來設定。因為這兩個控制站本身就是 DNS 伺服器，當系統提示其作為網域控制站時，這些控制站會自動透過內部部署 DNS 伺服器設定為 DNS 轉寄站。
+<span data-ttu-id="ac8d0-p112">請注意，我們會重新啟動兩個網域控制站，所以這兩個控制站不會像 DNS 伺服器一樣，透過內部部署 DNS 伺服器來設定。因為這兩個控制站本身就是 DNS 伺服器，當系統提示其作為網域控制站時，這些控制站會自動透過內部部署 DNS 伺服器設定為 DNS 轉寄站。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p112">Note that we restart the two domain controllers so that they are not configured with the on-premises DNS servers as DNS servers. Because they are both DNS servers themselves, they were automatically configured with the on-premises DNS servers as DNS forwarders when they were promoted to domain controllers.</span></span>
   
-下一步，我們需要建立一個 Active Directory 複寫站台，以確保 Azure 的虛擬網路中的伺服器會使用本機網域控制站。請使用網域管理員帳戶與其中一個網域控制站連線，並從管理員層級的 Windows PowerShell 提示執行下列命令：
+<span data-ttu-id="ac8d0-p113">下一步，我們需要建立一個 Active Directory 複寫站台，以確保 Azure 的虛擬網路中的伺服器會使用本機網域控制站。請使用網域管理員帳戶與其中一個網域控制站連線，並從管理員層級的 Windows PowerShell 提示執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p113">Next, we need to create an Active Directory replication site to ensure that servers in the Azure virtual network use the local domain controllers. Connect to either domain controller with a domain administrator account and run the following commands from an administrator-level Windows PowerShell prompt:</span></span>
   
 ```
 $vnet="<Table V - Item 1 - Value column>"
@@ -232,11 +232,11 @@ New-ADReplicationSite -Name $vnet
 New-ADReplicationSubnet -Name $vnetSpace -Site $vnet
 ```
 
-## <a name="configure-the-dirsync-server"></a>設定 DirSync 伺服器
+## <a name="configure-the-dirsync-server"></a><span data-ttu-id="ac8d0-195">設定 DirSync 伺服器</span><span class="sxs-lookup"><span data-stu-id="ac8d0-195">Configure the DirSync server</span></span>
 
-使用您選擇在遠端桌面用戶端及建立 DirSync server 虛擬機器的遠端桌面連線。使用其內部網路 DNS 或電腦名稱以及本機管理員帳戶的認證。
+<span data-ttu-id="ac8d0-p114">使用您選擇在遠端桌面用戶端及建立 DirSync server 虛擬機器的遠端桌面連線。使用其內部網路 DNS 或電腦名稱以及本機管理員帳戶的認證。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-p114">Use the remote desktop client of your choice and create a remote desktop connection to the DirSync server virtual machine. Use its intranet DNS or computer name and the credentials of the local administrator account.</span></span>
   
-下一步，在 Windows PowerShell 提示上使用以下命令將其加入適當的 Windows Server AD 網域。
+<span data-ttu-id="ac8d0-198">下一步，在 Windows PowerShell 提示上使用以下命令將其加入適當的 Windows Server AD 網域。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-198">Next, join it to the appropriate Windows Server AD domain with these commands at the Windows PowerShell prompt.</span></span>
   
 ```
 $domName="<Windows Server AD domain name to join, such as corp.contoso.com>"
@@ -245,24 +245,24 @@ Add-Computer -DomainName $domName -Credential $cred
 Restart-Computer
 ```
 
-以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
+<span data-ttu-id="ac8d0-199">以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-199">Here is the configuration resulting from the successful completion of this phase, with placeholder computer names.</span></span>
   
-**階段 2： 的網域控制站和 DirSync server 高可用性同盟的驗證基礎結構 Azure 中**
+<span data-ttu-id="ac8d0-200">**階段 2： 的網域控制站和 DirSync server 高可用性同盟的驗證基礎結構 Azure 中**</span><span class="sxs-lookup"><span data-stu-id="ac8d0-200">**Phase 2: The domain controllers and DirSync server for your high availability federated authentication infrastructure in Azure**</span></span>
 
 ![具有網域控制站的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 2](images/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a><span data-ttu-id="ac8d0-202">下一步</span><span class="sxs-lookup"><span data-stu-id="ac8d0-202">Next step</span></span>
 
-使用[高可用性同盟驗證階段 3： 設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)繼續設定此工作量。
+<span data-ttu-id="ac8d0-203">使用[高可用性同盟驗證階段 3： 設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)繼續設定此工作量。</span><span class="sxs-lookup"><span data-stu-id="ac8d0-203">Use [High availability federated authentication Phase 3: Configure AD FS servers](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md) to continue configuring this workload.</span></span>
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a><span data-ttu-id="ac8d0-204">See Also</span><span class="sxs-lookup"><span data-stu-id="ac8d0-204">See Also</span></span>
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[<span data-ttu-id="ac8d0-205">部署在 Azure 中的 Office 365 的高可用性同盟的驗證</span><span class="sxs-lookup"><span data-stu-id="ac8d0-205">Deploy high availability federated authentication for Office 365 in Azure</span></span>](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+[<span data-ttu-id="ac8d0-206">Office 365 開發人員/測試環境的同盟身分識別</span><span class="sxs-lookup"><span data-stu-id="ac8d0-206">Federated identity for your Office 365 dev/test environment</span></span>](federated-identity-for-your-office-365-dev-test-environment.md)
   
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[<span data-ttu-id="ac8d0-207">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="ac8d0-207">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
 
-[Office 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
+[<span data-ttu-id="ac8d0-208">Office 365 的同盟身分識別</span><span class="sxs-lookup"><span data-stu-id="ac8d0-208">Federated identity for Office 365</span></span>](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
 
 

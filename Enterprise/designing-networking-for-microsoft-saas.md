@@ -22,181 +22,181 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
-# <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
+# <a name="designing-networking-for-microsoft-saas"></a><span data-ttu-id="97f9c-103">設計 Microsoft SaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="97f9c-103">Designing networking for Microsoft SaaS</span></span>
 
- **摘要：**了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
+ <span data-ttu-id="97f9c-104">**摘要：**了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。</span><span class="sxs-lookup"><span data-stu-id="97f9c-104">**Summary:** Understand how to optimize your network for access to Microsoft's SaaS services, including Office 365, Microsoft Intune, and Dynamics 365.</span></span>
   
-若要針對 Microsoft SaaS 服務最佳化您的網路，需要仔細分析您的網際網路邊緣、用戶端裝置以及一般 IT 作業。
+<span data-ttu-id="97f9c-105">若要針對 Microsoft SaaS 服務最佳化您的網路，需要仔細分析您的網際網路邊緣、用戶端裝置以及一般 IT 作業。</span><span class="sxs-lookup"><span data-stu-id="97f9c-105">Optimizing your network for Microsoft SaaS services requires careful analysis of your Internet edge, your client devices, and typical IT operations.</span></span>
   
-## <a name="steps-to-prepare-your-network-for-microsoft-saas-services"></a>準備您的網路 Microsoft saas 和服務的步驟
+## <a name="steps-to-prepare-your-network-for-microsoft-saas-services"></a><span data-ttu-id="97f9c-106">準備您的網路 Microsoft saas 和服務的步驟</span><span class="sxs-lookup"><span data-stu-id="97f9c-106">Steps to prepare your network for Microsoft SaaS services</span></span>
 
-請遵循這些步驟以最佳化您的網路 Microsoft saas 和服務：
+<span data-ttu-id="97f9c-107">請遵循這些步驟以最佳化您的網路 Microsoft saas 和服務：</span><span class="sxs-lookup"><span data-stu-id="97f9c-107">Follow these steps to optimize your network for Microsoft SaaS services:</span></span>
   
-1. 經歷中[常見的元素 Microsoft cloud 連線的](common-elements-of-microsoft-cloud-connectivity.md)**步驟來準備您的 Microsoft 雲端服務的網路**區段。
+1. <span data-ttu-id="97f9c-108">經歷中[常見的元素 Microsoft cloud 連線的](common-elements-of-microsoft-cloud-connectivity.md)**步驟來準備您的 Microsoft 雲端服務的網路**區段。</span><span class="sxs-lookup"><span data-stu-id="97f9c-108">Go through the **Steps to prepare your network for Microsoft cloud services** section in [Common elements of Microsoft cloud connectivity](common-elements-of-microsoft-cloud-connectivity.md).</span></span>
     
-2. 最佳化 Microsoft saas 和服務使用的 proxy 伺服器建議您網際網路的輸出。
+2. <span data-ttu-id="97f9c-109">最佳化 Microsoft saas 和服務使用的 proxy 伺服器建議您網際網路的輸出。</span><span class="sxs-lookup"><span data-stu-id="97f9c-109">Optimize your Internet egress for Microsoft SaaS services using the proxy server recommendations.</span></span>
     
-3. 最佳化的鄰近和位置建議您網際網路輸送量。
+3. <span data-ttu-id="97f9c-110">最佳化的鄰近和位置建議您網際網路輸送量。</span><span class="sxs-lookup"><span data-stu-id="97f9c-110">Optimize your Internet throughput using the proximity and location recommendations.</span></span>
     
-4. 最佳化效能的用戶端電腦與內部網路位，都使用的用戶端流量考量。
+4. <span data-ttu-id="97f9c-111">最佳化效能的用戶端電腦與內部網路位，都使用的用戶端流量考量。</span><span class="sxs-lookup"><span data-stu-id="97f9c-111">Optimize the performance of your client computers and the intranet on which they are located using the client usage considerations.</span></span>
     
-5. 依需要最佳化資料移轉及同步處理使用 IT 作業考量的效能。
+5. <span data-ttu-id="97f9c-112">依需要最佳化資料移轉及同步處理使用 IT 作業考量的效能。</span><span class="sxs-lookup"><span data-stu-id="97f9c-112">As needed, optimize the performance of data migrations and synchronization using the IT operations considerations.</span></span>
     
-## <a name="internet-edge-considerations"></a>網際網路 edge 考量
+## <a name="internet-edge-considerations"></a><span data-ttu-id="97f9c-113">網際網路 edge 考量</span><span class="sxs-lookup"><span data-stu-id="97f9c-113">Internet edge considerations</span></span>
 
-以下是一些考量事項最佳化您的網際網路 edge 和 Microsoft saas 和服務的輸送量。
+<span data-ttu-id="97f9c-114">以下是一些考量事項最佳化您的網際網路 edge 和 Microsoft saas 和服務的輸送量。</span><span class="sxs-lookup"><span data-stu-id="97f9c-114">Here are some things to consider optimize your Internet edge and throughput to Microsoft SaaS services.</span></span>
   
-**圖 1： Microsoft saas 和服務的連線選項**
+<span data-ttu-id="97f9c-115">**圖 1： Microsoft saas 和服務的連線選項**</span><span class="sxs-lookup"><span data-stu-id="97f9c-115">**Figure 1: Connection options for Microsoft SaaS services**</span></span>
 
 ![圖 1：Microsoft SaaS 服務的連線選項](images/Network_Poster/SaaS1.png)
   
-圖 1 顯示透過網際網路管道或 ExpressRoute 連線至 Microsoft saas 和服務的內部網路。
+<span data-ttu-id="97f9c-117">圖 1 顯示透過網際網路管道或 ExpressRoute 連線至 Microsoft saas 和服務的內部網路。</span><span class="sxs-lookup"><span data-stu-id="97f9c-117">Figure 1 shows an on-premises network connecting to Microsoft SaaS services over an Internet pipe or ExpressRoute.</span></span>
   
-以下是一些最佳化您的 proxy 伺服器的建議：
+<span data-ttu-id="97f9c-118">以下是一些最佳化您的 proxy 伺服器的建議：</span><span class="sxs-lookup"><span data-stu-id="97f9c-118">Here are some recommendations to optimize your proxy server:</span></span>
   
-- 設定 web 用戶端使用 WPAD、 PAC 或 GPO
+- <span data-ttu-id="97f9c-119">設定 web 用戶端使用 WPAD、 PAC 或 GPO</span><span class="sxs-lookup"><span data-stu-id="97f9c-119">Configure web clients using WPAD, PAC, or GPO</span></span>
     
-- 不使用 SSL 攔截
+- <span data-ttu-id="97f9c-120">不使用 SSL 攔截</span><span class="sxs-lookup"><span data-stu-id="97f9c-120">Don't use SSL interception</span></span>
     
-- 使用 PAC 檔案略過 Microsoft saas 和服務 DNS 名稱的 proxy
+- <span data-ttu-id="97f9c-121">使用 PAC 檔案略過 Microsoft saas 和服務 DNS 名稱的 proxy</span><span class="sxs-lookup"><span data-stu-id="97f9c-121">Use a PAC file to bypass the proxy for Microsoft SaaS service DNS names</span></span>
     
-- 允許 CRL/OCSP 驗證的流量
+- <span data-ttu-id="97f9c-122">允許 CRL/OCSP 驗證的流量</span><span class="sxs-lookup"><span data-stu-id="97f9c-122">Allow traffic for CRL/OCSP verification</span></span>
     
-以下是一些要檢查的 proxy 伺服器瓶頸：
+<span data-ttu-id="97f9c-123">以下是一些要檢查的 proxy 伺服器瓶頸：</span><span class="sxs-lookup"><span data-stu-id="97f9c-123">Here are some proxy server bottlenecks to check:</span></span>
   
-- 沒有足夠的持續連線 (Outlook)
+- <span data-ttu-id="97f9c-124">沒有足夠的持續連線 (Outlook)</span><span class="sxs-lookup"><span data-stu-id="97f9c-124">Insufficient persistent connections (Outlook)</span></span>
     
-- 沒有足夠的容量
+- <span data-ttu-id="97f9c-125">沒有足夠的容量</span><span class="sxs-lookup"><span data-stu-id="97f9c-125">Insufficient capacity</span></span>
     
-- 這麼做關閉網路評估
+- <span data-ttu-id="97f9c-126">這麼做關閉網路評估</span><span class="sxs-lookup"><span data-stu-id="97f9c-126">Doing off-network evaluation</span></span>
     
-- 需要驗證
+- <span data-ttu-id="97f9c-127">需要驗證</span><span class="sxs-lookup"><span data-stu-id="97f9c-127">Requiring authentication</span></span>
     
-- 不支援的 UDP 流量 (Skype 企業版)
+- <span data-ttu-id="97f9c-128">不支援的 UDP 流量 (Skype 企業版)</span><span class="sxs-lookup"><span data-stu-id="97f9c-128">No support for UDP traffic (Skype for Business)</span></span>
     
-以下是一些鄰近和位置的建議：
+<span data-ttu-id="97f9c-129">以下是一些鄰近和位置的建議：</span><span class="sxs-lookup"><span data-stu-id="97f9c-129">Here are some proximity and location recommendations:</span></span>
   
-- 不要在網際網路的流量路由傳送透過私人 WAN
+- <span data-ttu-id="97f9c-130">不要在網際網路的流量路由傳送透過私人 WAN</span><span class="sxs-lookup"><span data-stu-id="97f9c-130">Don't route your Internet traffic over the private WAN</span></span>
     
-- 使用的區域 （英文） 使用者的區域中 DNS 和網際網路流量
+- <span data-ttu-id="97f9c-131">使用的區域 （英文） 使用者的區域中 DNS 和網際網路流量</span><span class="sxs-lookup"><span data-stu-id="97f9c-131">Use in-region DNS and Internet traffic flow for out-of-region users</span></span>
     
-- ExpressRoute 用於高頻寬至 Office 365 和 Azure 服務並行連線
+- <span data-ttu-id="97f9c-132">ExpressRoute 用於高頻寬至 Office 365 和 Azure 服務並行連線</span><span class="sxs-lookup"><span data-stu-id="97f9c-132">Use ExpressRoute for high bandwidth to Office 365 and concurrent connectivity with Azure services</span></span>
     
-以下是輸出所需的 Office 365 流量的連接埠：
+<span data-ttu-id="97f9c-133">以下是輸出所需的 Office 365 流量的連接埠：</span><span class="sxs-lookup"><span data-stu-id="97f9c-133">Here are the outbound ports needed for Office 365 traffic:</span></span>
   
-- TCP 80 （適用於 CRL/OCSP 檢查）
+- <span data-ttu-id="97f9c-134">TCP 80 （適用於 CRL/OCSP 檢查）</span><span class="sxs-lookup"><span data-stu-id="97f9c-134">TCP 80 (for CRL/OCSP checks)</span></span>
     
-- TCP 443
+- <span data-ttu-id="97f9c-135">TCP 443</span><span class="sxs-lookup"><span data-stu-id="97f9c-135">TCP 443</span></span>
     
-- UDP 3478
+- <span data-ttu-id="97f9c-136">UDP 3478</span><span class="sxs-lookup"><span data-stu-id="97f9c-136">UDP 3478</span></span>
     
-- TCP 5223
+- <span data-ttu-id="97f9c-137">TCP 5223</span><span class="sxs-lookup"><span data-stu-id="97f9c-137">TCP 5223</span></span>
     
-- TCP 50000-59999
+- <span data-ttu-id="97f9c-138">TCP 50000-59999</span><span class="sxs-lookup"><span data-stu-id="97f9c-138">TCP 50000-59999</span></span>
     
-- UDP 50000-59999
+- <span data-ttu-id="97f9c-139">UDP 50000-59999</span><span class="sxs-lookup"><span data-stu-id="97f9c-139">UDP 50000-59999</span></span>
     
-## <a name="client-usage-considerations"></a>用戶端流量考量
+## <a name="client-usage-considerations"></a><span data-ttu-id="97f9c-140">用戶端流量考量</span><span class="sxs-lookup"><span data-stu-id="97f9c-140">Client usage considerations</span></span>
 
-首先，設定一組服務的用戶端將會使用，例如：
+<span data-ttu-id="97f9c-141">首先，設定一組服務的用戶端將會使用，例如：</span><span class="sxs-lookup"><span data-stu-id="97f9c-141">First, configure the set of services that your clients will be using, such as:</span></span>
   
-- Azure Active Directory
+- <span data-ttu-id="97f9c-142">Azure Active Directory</span><span class="sxs-lookup"><span data-stu-id="97f9c-142">Azure Active Directory</span></span>
     
-- Office 365
+- <span data-ttu-id="97f9c-143">Office 365</span><span class="sxs-lookup"><span data-stu-id="97f9c-143">Office 365</span></span>
     
-  - Office 用戶端應用程式
+  - <span data-ttu-id="97f9c-144">Office 用戶端應用程式</span><span class="sxs-lookup"><span data-stu-id="97f9c-144">Office client apps</span></span>
     
-  - SharePoint Online
+  - <span data-ttu-id="97f9c-145">SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="97f9c-145">SharePoint Online</span></span>
     
-  - Exchange Online
+  - <span data-ttu-id="97f9c-146">Exchange Online</span><span class="sxs-lookup"><span data-stu-id="97f9c-146">Exchange Online</span></span>
     
-  - 商務用 Skype
+  - <span data-ttu-id="97f9c-147">商務用 Skype</span><span class="sxs-lookup"><span data-stu-id="97f9c-147">Skype for Business</span></span>
     
-- Microsoft Intune
+- <span data-ttu-id="97f9c-148">Microsoft Intune</span><span class="sxs-lookup"><span data-stu-id="97f9c-148">Microsoft Intune</span></span>
     
-- Dynamics 365
+- <span data-ttu-id="97f9c-149">Dynamics 365</span><span class="sxs-lookup"><span data-stu-id="97f9c-149">Dynamics 365</span></span>
     
-您的用戶端電腦，決定下列項目：
+<span data-ttu-id="97f9c-150">您的用戶端電腦，決定下列項目：</span><span class="sxs-lookup"><span data-stu-id="97f9c-150">For your client computers, determine the following:</span></span>
   
-- 任何一個時間 （時間日、 虛擬主機、 尖峰流量 troughs） 的數目上限
+- <span data-ttu-id="97f9c-151">任何一個時間 （時間日、 虛擬主機、 尖峰流量 troughs） 的數目上限</span><span class="sxs-lookup"><span data-stu-id="97f9c-151">Maximum number at any one time (time of day, seasonal, peaks and troughs in usage)</span></span>
     
-- 尖峰量所需的總頻寬
+- <span data-ttu-id="97f9c-152">尖峰量所需的總頻寬</span><span class="sxs-lookup"><span data-stu-id="97f9c-152">Total bandwidth needed for peaks</span></span>
     
-- 延遲到網際網路的輸出裝置
+- <span data-ttu-id="97f9c-153">延遲到網際網路的輸出裝置</span><span class="sxs-lookup"><span data-stu-id="97f9c-153">Latency to the Internet egress device</span></span>
     
-- 國家/地區和國家/地區資料中心代管的比較
+- <span data-ttu-id="97f9c-154">國家/地區和國家/地區資料中心代管的比較</span><span class="sxs-lookup"><span data-stu-id="97f9c-154">Country of origin vs. country of datacenter co-location</span></span>
     
-每一種用戶端 （PC、 smartphone 與平板電腦），請確定目前：
+<span data-ttu-id="97f9c-155">每一種用戶端 （PC、 smartphone 與平板電腦），請確定目前：</span><span class="sxs-lookup"><span data-stu-id="97f9c-155">For each type of client (PC, smartphone, tablet), ensure the current:</span></span>
   
-- 作業系統
+- <span data-ttu-id="97f9c-156">作業系統</span><span class="sxs-lookup"><span data-stu-id="97f9c-156">Operating system</span></span>
     
-- 網際網路瀏覽器
+- <span data-ttu-id="97f9c-157">網際網路瀏覽器</span><span class="sxs-lookup"><span data-stu-id="97f9c-157">Internet browser</span></span>
     
-- TCP/IP 堆疊
+- <span data-ttu-id="97f9c-158">TCP/IP 堆疊</span><span class="sxs-lookup"><span data-stu-id="97f9c-158">TCP/IP stack</span></span>
     
-- 網路硬體
+- <span data-ttu-id="97f9c-159">網路硬體</span><span class="sxs-lookup"><span data-stu-id="97f9c-159">Network hardware</span></span>
     
-- 網路硬體的作業系統驅動程式
+- <span data-ttu-id="97f9c-160">網路硬體的作業系統驅動程式</span><span class="sxs-lookup"><span data-stu-id="97f9c-160">OS drivers for network hardware</span></span>
     
-- 更新及修補程式安裝
+- <span data-ttu-id="97f9c-161">更新及修補程式安裝</span><span class="sxs-lookup"><span data-stu-id="97f9c-161">Updates and patches are installed</span></span>
     
-此外，最佳化內部網路連線輸送量 (有線、 無線、 或 VPN)。
+<span data-ttu-id="97f9c-162">此外，最佳化內部網路連線輸送量 (有線、 無線、 或 VPN)。</span><span class="sxs-lookup"><span data-stu-id="97f9c-162">Additionally, optimize intranet connection throughput (wired, wireless, or VPN).</span></span>
   
-如需詳細資訊，請參閱[Office 365 的 NAT 支援](https://support.office.com/article/NAT-support-with-Office-365-170e96ea-d65d-4e51-acac-1de56abe39b9)。
+<span data-ttu-id="97f9c-163">如需詳細資訊，請參閱[Office 365 的 NAT 支援](https://support.office.com/article/NAT-support-with-Office-365-170e96ea-d65d-4e51-acac-1de56abe39b9)。</span><span class="sxs-lookup"><span data-stu-id="97f9c-163">For more information, see [NAT support with Office 365](https://support.office.com/article/NAT-support-with-Office-365-170e96ea-d65d-4e51-acac-1de56abe39b9).</span></span>
   
-搭配 Office 365 使用 ExpressRoute 的最新建議，請參閱[Office 365 ExpressRoute](https://support.office.com/article/Azure-ExpressRoute-for-Office-365-6d2534a2-c19c-4a99-be5e-33a0cee5d3bd)。
+<span data-ttu-id="97f9c-164">搭配 Office 365 使用 ExpressRoute 的最新建議，請參閱[Office 365 ExpressRoute](https://support.office.com/article/Azure-ExpressRoute-for-Office-365-6d2534a2-c19c-4a99-be5e-33a0cee5d3bd)。</span><span class="sxs-lookup"><span data-stu-id="97f9c-164">For the latest recommendations for using ExpressRoute with Office 365, see [ExpressRoute for Office 365](https://support.office.com/article/Azure-ExpressRoute-for-Office-365-6d2534a2-c19c-4a99-be5e-33a0cee5d3bd).</span></span>
   
-最佳化您的內部網路效能，請執行下列動作：
+<span data-ttu-id="97f9c-165">最佳化您的內部網路效能，請執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="97f9c-165">To optimize your intranet performance, do the following:</span></span>
   
-- 使用工具來往返時間 (RTTs) 量測貴網際網路 edge 裝置 （PsPing、 Ping、 Tracert、 TraceTCP、 網路監視器）
+- <span data-ttu-id="97f9c-166">使用工具來往返時間 (RTTs) 量測貴網際網路 edge 裝置 （PsPing、 Ping、 Tracert、 TraceTCP、 網路監視器）</span><span class="sxs-lookup"><span data-stu-id="97f9c-166">Use tools to gauge round trip times (RTTs) to your Internet edge devices (PsPing, Ping, Tracert, TraceTCP, Network Monitor)</span></span>
     
-- 執行使用流程通訊協定的輸出路徑分析
+- <span data-ttu-id="97f9c-167">執行使用流程通訊協定的輸出路徑分析</span><span class="sxs-lookup"><span data-stu-id="97f9c-167">Perform egress path analysis using flow protocols</span></span>
     
-- 執行中繼裝置 （保留時間下限、 健康情況） 分析
+- <span data-ttu-id="97f9c-168">執行中繼裝置 （保留時間下限、 健康情況） 分析</span><span class="sxs-lookup"><span data-stu-id="97f9c-168">Perform analysis of intermediate devices (age, health, etc.)</span></span>
     
-如需詳細資訊，請參閱[PsPing 工具](https://technet.microsoft.com/sysinternals/jj729731.aspx)。
+<span data-ttu-id="97f9c-169">如需詳細資訊，請參閱[PsPing 工具](https://technet.microsoft.com/sysinternals/jj729731.aspx)。</span><span class="sxs-lookup"><span data-stu-id="97f9c-169">For more information, see the [PsPing tool](https://technet.microsoft.com/sysinternals/jj729731.aspx).</span></span>
   
-## <a name="it-operations-considerations"></a>IT 作業考量
+## <a name="it-operations-considerations"></a><span data-ttu-id="97f9c-170">IT 作業考量</span><span class="sxs-lookup"><span data-stu-id="97f9c-170">IT operations considerations</span></span>
 
-以下是一些操作 Microsoft saas 和服務中的 IT 工作負載時要考慮的事項。
+<span data-ttu-id="97f9c-171">以下是一些操作 Microsoft saas 和服務中的 IT 工作負載時要考慮的事項。</span><span class="sxs-lookup"><span data-stu-id="97f9c-171">Here are some things to consider when operating an IT workload in a Microsoft SaaS service.</span></span>
   
-### <a name="one-time-migrations"></a>一次性移轉
+### <a name="one-time-migrations"></a><span data-ttu-id="97f9c-172">一次性移轉</span><span class="sxs-lookup"><span data-stu-id="97f9c-172">One-time migrations</span></span>
 
-一次性移轉的範例是大量資料傳輸的雲端應用程式] 或 [封存存放區。
+<span data-ttu-id="97f9c-173">一次性移轉的範例是大量資料傳輸的雲端應用程式] 或 [封存存放區。</span><span class="sxs-lookup"><span data-stu-id="97f9c-173">Examples of one-time migrations are bulk data transfer for cloud-based applications or archival storage.</span></span>
   
-若要最佳化您的網路上時間移轉：
+<span data-ttu-id="97f9c-174">若要最佳化您的網路上時間移轉：</span><span class="sxs-lookup"><span data-stu-id="97f9c-174">To optimize your network for on-time migrations:</span></span>
   
-- 避免尖峰網路使用率和修補次數的電腦
+- <span data-ttu-id="97f9c-175">避免尖峰網路使用率和修補次數的電腦</span><span class="sxs-lookup"><span data-stu-id="97f9c-175">Avoid peak network usage and computer patching times</span></span>
     
-- 應該已建立基準和來試驗、 評估網路狀況並解決問題才可嘗試實際移轉
+- <span data-ttu-id="97f9c-176">應該已建立基準和來試驗、 評估網路狀況並解決問題才可嘗試實際移轉</span><span class="sxs-lookup"><span data-stu-id="97f9c-176">Should be baselined and piloted, assess network health and resolve issues before attempting actual migration</span></span>
     
-- 執行事後的未來移轉
+- <span data-ttu-id="97f9c-177">執行事後的未來移轉</span><span class="sxs-lookup"><span data-stu-id="97f9c-177">Perform post-mortem for future migrations</span></span>
     
-### <a name="ongoing-synchronizations"></a>進行中的同步處理
+### <a name="ongoing-synchronizations"></a><span data-ttu-id="97f9c-178">進行中的同步處理</span><span class="sxs-lookup"><span data-stu-id="97f9c-178">Ongoing synchronizations</span></span>
 
-進行中的同步處理的範例是目錄資訊、 設定或檔案。
+<span data-ttu-id="97f9c-179">進行中的同步處理的範例是目錄資訊、 設定或檔案。</span><span class="sxs-lookup"><span data-stu-id="97f9c-179">Examples of ongoing synchronizations are directory information, settings, or files.</span></span>
   
-若要最佳化您的進行中的同步處理的網路：
+<span data-ttu-id="97f9c-180">若要最佳化您的進行中的同步處理的網路：</span><span class="sxs-lookup"><span data-stu-id="97f9c-180">To optimize your network for ongoing synchronizations:</span></span>
   
-- 確定已備妥監視系統網路頻寬、 解決或關閉收集的錯誤
+- <span data-ttu-id="97f9c-181">確定已備妥監視系統網路頻寬、 解決或關閉收集的錯誤</span><span class="sxs-lookup"><span data-stu-id="97f9c-181">Ensure that a network bandwidth monitoring system is in place, resolve or dismiss collected errors</span></span>
     
-- 使用以決定需要網路變更 （擴充/向上、 新電路或新增裝置） 的頻寬監控結果
+- <span data-ttu-id="97f9c-182">使用以決定需要網路變更 （擴充/向上、 新電路或新增裝置） 的頻寬監控結果</span><span class="sxs-lookup"><span data-stu-id="97f9c-182">Use bandwidth monitoring results to determine need for network changes (scale-up/out, new circuits, or adding devices)</span></span>
     
-如需詳細資訊，請參閱：
+<span data-ttu-id="97f9c-183">如需詳細資訊，請參閱：</span><span class="sxs-lookup"><span data-stu-id="97f9c-183">For more information, see:</span></span>
   
-- [網路與 Office 365 規劃移轉](https://aka.ms/tune)
+- [<span data-ttu-id="97f9c-184">網路與 Office 365 規劃移轉</span><span class="sxs-lookup"><span data-stu-id="97f9c-184">Network and migration planning for Office 365</span></span>](https://aka.ms/tune)
     
-- [Office 365 效能管理 Microsoft 虛擬學院課程 （英文)](https://aka.ms/o365perf)
+- [<span data-ttu-id="97f9c-185">Office 365 效能管理 Microsoft 虛擬學院課程 （英文)</span><span class="sxs-lookup"><span data-stu-id="97f9c-185">Office 365 Performance Management Microsoft Virtual Academy course</span></span>](https://aka.ms/o365perf)
     
-- [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
+- [<span data-ttu-id="97f9c-186">Office 365 ExpressRoute</span><span class="sxs-lookup"><span data-stu-id="97f9c-186">ExpressRoute for Office 365</span></span>](https://aka.ms/expressrouteoffice365)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a><span data-ttu-id="97f9c-187">See Also</span><span class="sxs-lookup"><span data-stu-id="97f9c-187">See Also</span></span>
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[<span data-ttu-id="97f9c-188">Microsoft Cloud 網路的企業架構師</span><span class="sxs-lookup"><span data-stu-id="97f9c-188">Microsoft Cloud Networking for Enterprise Architects</span></span>](microsoft-cloud-networking-for-enterprise-architects.md)
   
-[Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
+[<span data-ttu-id="97f9c-189">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="97f9c-189">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
+[<span data-ttu-id="97f9c-190">Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源</span><span class="sxs-lookup"><span data-stu-id="97f9c-190">Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers</span></span>](https://sway.com/FJ2xsyWtkJc2taRD)
 
 
 
