@@ -1,7 +1,7 @@
 ---
 title: SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 ms.author: bcarter
-author: bcarter
+author: brendacarter
 manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
@@ -16,11 +16,11 @@ ms.custom:
 - Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: "摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。"
-ms.openlocfilehash: 79469b862dbc18a34b09d638879e199869de880a
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 38fe5adb6cac099f6f8014e7535e92e7b841d0bd
+ms.sourcegitcommit: 4a347cfb16405d5213b28f332d80e244fca0fb8f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 
