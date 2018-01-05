@@ -14,13 +14,13 @@ ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: "摘要：了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。"
 ms.openlocfilehash: 6187207d57723c9c69fa6fdc7885c91de6d5080f
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-office-365"></a>使用 PowerShell 來執行 IMAP 移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 來執行 IMAP 遷移至 Office 365。
+ **摘要：**了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
   
 在部署 Office 365 的過程中，您可以選擇將使用者信箱的內容從網際網路訊息存取通訊協定 (IMAP) 電子郵件服務移轉到 Office 365。本文會引導您使用 Exchange Online PowerShell 來進行電子郵件 IMAP 移轉的工作。 
   
@@ -238,7 +238,7 @@ Get-MigrationBatch IMAPBatch1"
   
 如需 **Get-MigrationBatch** Cmdlet 的詳細資訊，請參閱[Get-MigrationBatch](https://go.microsoft.com/fwlink/p/?LinkId=536441)。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

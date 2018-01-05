@@ -14,13 +14,13 @@ ms.assetid: 893e5275-30b3-433f-8ecd-644f78f513e2
 description: "摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。"
 ms.openlocfilehash: 40c1dedd8fb223ea6fa478b3a5c3e716fe07dd93
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料
 
- **摘要：**使用 remoteWindows 的 Microsoft Exchange Online PowerShell 擷取個別客戶租用戶的報告。
+ **摘要：**使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
   
 新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可透過遠端 Windows PowerShell for Exchange Online PowerShell 直接存取構成客戶租用戶報告的資料。這可讓合作夥伴收集和儲存報告資料，再據此執行其他作業。開啟遠端連線之後，擷取客戶租用相關報告資料的程序與針對客戶租用執行任何 Cmdlet 相同。
   
@@ -42,7 +42,7 @@ Get-StaleMailboxReport -StartDate 03/25/2015 -EndDate 03/31/2015
 
 Exchange Online、Lync Online 及 SharePoint Online 另有其他許多適用的報告 Cmdlet，以及其他可用來追蹤訊息的 Cmdlet。若要尋找其他可用之報告 Cmdlet 和 Office 365 報告 Web 服務的相關資訊，請參閱以下小節中的主題。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

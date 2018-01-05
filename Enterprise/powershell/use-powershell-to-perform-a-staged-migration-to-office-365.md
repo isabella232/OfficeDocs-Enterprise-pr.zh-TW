@@ -14,13 +14,13 @@ ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: "摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。"
 ms.openlocfilehash: 6c3ed6c0e37f7b99d3f26056dfe1b9d989388ff3
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 來執行分段的移轉至 Office 365。
+ **摘要：**了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
   
 您可以使用分段移轉，逐漸將使用者信箱的內容從來源電子郵件系統移轉到 Office 365。
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/15/2017
   
 - 從公司網路之外使用 Outlook 連線至您的內部部署 Exchange 信箱。
     
-- 使用 [Microsoft Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) 來測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
+- 使用 [Microsoft Exchange Remote Connectivity Analyzer]((https://www.testexchangeconnectivity.com/)) 來測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
     
 - 在 Exchange Online PowerShell 中執行下列命令：
     
@@ -76,11 +76,11 @@ ms.lasthandoff: 12/15/2017
   
 - 屬於內部部署組織中 Active Directory 內的 **Domain Admins** 群組成員。
     
-    或
+    或 
     
 - 獲得每個內部部署信箱的 **FullAccess** 權限，以及用來修改內部部署使用者帳戶的 **TargetAddress** 內容的 **WriteProperty** 權限。
     
-    或
+    或 
     
 - 獲得儲存使用者信箱的內部部署信箱資料庫的 **Receive As** 權限，以及用來修改內部部署使用者帳戶的 **TargetAddress** 內容的 **WriteProperty** 權限。
     
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/15/2017
 |**屬性**|**描述**|**Required?**|
 |:-----|:-----|:-----|
 |EmailAddress  <br/> |指定內部部署信箱的主要 SMTP 電子郵件地址，例如 pilarp@contoso.com。  <br/> 使用內部部署信箱的主要 SMTP 位址，而非 Office 365 中的使用者識別碼。例如，如果內部部署網域名為 contoso.com，但 Office 365 電子郵件網域名為 service.contoso.com，您應在 CSV 檔案的電子郵件地址中使用 contoso.com 網域名稱。  <br/> |必要  <br/> |
-|Password  <br/> |要為新的 Office 365 信箱設定的密碼。Office 365 組織所套用的密碼限制也會套用到 CSV 檔案中包含的密碼。  <br/> |選用  <br/> |
+|密碼  <br/> |要為新的 Office 365 信箱設定的密碼。Office 365 組織所套用的密碼限制也會套用到 CSV 檔案中包含的密碼。  <br/> |選用  <br/> |
 |ForceChangePassword  <br/> |指定使用者第一次登入新的 Office 365 信箱時，是否必須變更密碼。使用 **True** 或 **False** 作為此參數的值。<br/> > [!NOTE]> 如果您已在內部部署組織中部署 Active Directory Federation Services (AD FS) 或更新版本來實作單一登入 (SSO) 解決方案，則必須使用 **False** 作為 **ForceChangePassword** 屬性的值。          |選用  <br/> |
    
  **CSV 檔案格式**
@@ -252,7 +252,7 @@ Get-MigrationBatch StagedBatch1
     
 - **解除委任內部部署 Exchange 伺服器。**確認所有電子郵件會直接路由傳送到 Office 365 信箱後，如果不再需要維護內部部署電子郵件組織，或沒打算實作 SSO 解決方案，您可以從伺服器解除安裝 Exchange，並移除內部部署 Exchange 組織。
     
-    如需相關資訊，請參閱下列各主題：
+    如需詳細資訊，請參閱下列各主題：
     
   - [修改及移除 Exchange 2010](https://go.microsoft.com/fwlink/?LinkId=217936)
     

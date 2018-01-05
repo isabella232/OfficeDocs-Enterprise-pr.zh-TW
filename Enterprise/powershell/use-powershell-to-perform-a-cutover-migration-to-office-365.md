@@ -14,13 +14,13 @@ ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: "摘要：了解如何使用 Windows PowerShell 來完全移轉至 Office 365。"
 ms.openlocfilehash: be5a3587538c32589c20fe6d27d69a84e0b8e7db
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-office-365"></a>使用 PowerShell 來執行完全移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 來執行轉換遷移至 Office 365。
+ **摘要：**了解如何使用 Windows PowerShell 來完全移轉至 Office 365。
   
 您可以使用完全移轉，一次將所有使用者信箱的內容從來源電子郵件系統移轉到 Office 365。本文會引導您使用 Exchange Online PowerShell 來進行電子郵件完全移轉的工作。 
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/15/2017
     
   - 從公司網路之外使用 Microsoft Outlook 連線至內部部署 Exchange 信箱。
     
-  - 使用 Microsoft [Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) 測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
+  - 使用 Microsoft [Exchange Remote Connectivity Analyzer]((https://www.testexchangeconnectivity.com/)) 測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
     
   - 在 Exchange Online PowerShell 中執行下列命令。
     
@@ -217,7 +217,7 @@ Remove-MigrationBatch -Identity CutoverBatch
     
 - **解除委任內部部署 Exchange 伺服器。**確認所有電子郵件會直接路由傳送到 Office 365 信箱後，如果不再需要維護內部部署電子郵件組織，或沒打算實作單一登入 (SSO) 解決方案，您可以從伺服器解除安裝 Exchange，並移除內部部署 Exchange 組織。
     
-    如需相關資訊，請參閱下列各主題：
+    如需詳細資訊，請參閱下列各主題：
     
   - [修改及移除 Exchange 2010](https://go.microsoft.com/fwlink/?LinkId=217936)
     
