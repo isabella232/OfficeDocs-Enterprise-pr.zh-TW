@@ -16,13 +16,13 @@ ms.assetid: 1ea4d4ec-af89-496f-9678-701867f5a6fc
 description: "摘要：使用 Office 365 PowerShell 來建立無法在 Office 365 系統管理中心內產生的報告。"
 ms.openlocfilehash: b1cbbbef73a266a62a417d2714fefcd630c604c4
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="use-windows-powershell-to-create-reports-in-office-365"></a>使用 Windows PowerShell 在 Office 365 中建立報告
 
- **摘要：**使用 Office 365 PowerShell 建立您無法在 Office 365 系統管理中心來產生的報告。
+ **摘要：**使用 Office 365 PowerShell 來建立無法在 Office 365 系統管理中心內產生的報告。
   
 Office 365 系統管理中心內有許多不同的報表可供使用。不過，這些報告只提供如此多的資訊，但有時候您需要更多。這是當您需要 Office 365 PowerShell
   
@@ -48,17 +48,17 @@ Office 365 系統管理中心內有許多不同的報表可供使用。不過，
     
 - SharePoint Online 的報告：
     
-  - [使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組](http://technet.microsoft.com/library/9680af2e-a965-4e62-92ee-da72105c7800.aspx)
+  - [使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組]((http://technet.microsoft.com/library/9680af2e-a965-4e62-92ee-da72105c7800.aspx))
     
-  - [Manage SharePoint Online site groups with Office 365 PowerShell](http://technet.microsoft.com/library/122f4099-c78d-4cce-bab0-4343b04596ae.aspx)
+  - [Manage SharePoint Online site groups with Office 365 PowerShell]((http://technet.microsoft.com/library/122f4099-c78d-4cce-bab0-4343b04596ae.aspx))
     
 - Exchange Online 的報告：
     
-  - [Display Exchange Online mailbox information with Office 365 PowerShell](http://technet.microsoft.com/library/13843002-56ca-4b75-81c5-84386522b01b.aspx)
+  - [Display Exchange Online mailbox information with Office 365 PowerShell]((http://technet.microsoft.com/library/13843002-56ca-4b75-81c5-84386522b01b.aspx))
     
-  - [Display Exchange Online reports with Office 365 PowerShell](http://technet.microsoft.com/library/4873a063-9fc4-4ed9-826a-6e935fef61d4.aspx)
+  - [Display Exchange Online reports with Office 365 PowerShell]((http://technet.microsoft.com/library/4873a063-9fc4-4ed9-826a-6e935fef61d4.aspx))
     
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

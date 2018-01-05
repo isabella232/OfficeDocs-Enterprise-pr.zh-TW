@@ -14,13 +14,13 @@ ms.assetid: 0f946b46-200a-4bdd-9b1b-019a554ddcc6
 description: "摘要：使用 Windows PowerShell for Office 365 來擷取有關所有客戶租用的報告，以及將資料彙集到單一位置。"
 ms.openlocfilehash: 89651971424d1b9a494335572d2654d8402ec146
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="aggregate-customer-reporting-data-via-windows-powershell-for-delegated-access-permission-dap-partners"></a>透過適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 彙總客戶報告資料
 
- **摘要：**使用 Windows PowerShell for Office 365 來擷取報告上所有客戶租用並彙總資料到單一的位置。
+ **摘要：**使用 Windows PowerShell for Office 365 來擷取有關所有客戶租用的報告，以及將資料彙集到單一位置。
   
 依預設，Windows PowerShell for Office 365 沒有從多個客戶租用彙總報告資料的內建功能。不過，您可以使用這個範例 Windows PowerShell for Office 365 指令碼，逐一查看所有客戶租用以針對每位客戶擷取單一報告，再將報告資料彙集到單一位置。最後您將擁有一份涵蓋所有客戶租用戶的報告。 
   
@@ -137,7 +137,7 @@ foreach ($c in $contracts) {
 
 此範例指令碼會將彙總報告放置在 ReportOutput.csv 檔案中。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

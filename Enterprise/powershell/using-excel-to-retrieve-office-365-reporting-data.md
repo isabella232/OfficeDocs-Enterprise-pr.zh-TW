@@ -17,17 +17,17 @@ ms.assetid: 510d5528-ac00-4f54-9d38-75fa043d0a06
 description: "概要：使用 Microsoft Excel 中的 oData 功能，來擷取 Office 365 部署的詳細報告資訊。"
 ms.openlocfilehash: 72c0fce0a70f5cc3136ab01b48bb178d32a8f64d
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="using-excel-to-retrieve-office-365-reporting-data"></a>使用 Excel 擷取 Office 365 報表資料
 
- **摘要：**在 Microsoft Excel 中使用 oData 功能來擷取部署 Office 365 報告的詳細的資訊
+ **摘要：**使用 Microsoft Excel 中的 oData 功能，來擷取 Office 365 部署的詳細報告資訊。
   
 報告是系統管理的重要部分。Office 365 系統管理中心包括幾個預先定義的報告，您可以從左方瀏覽區的 **報告**區段存取。有使用報告和安全性及規範符合性報告。
   
-您所使用的 Office 365 版本以及已啟用哪些 Office 365 服務會決定您可以使用哪些報告。如需詳細資訊，請參閱[報告](https://technet.microsoft.com/en-us/library/office-365-reports.aspx)頁面。
+您所使用的 Office 365 版本以及已啟用哪些 Office 365 服務會決定您可以使用哪些報告。如需詳細資訊，請參閱[報告]((https://technet.microsoft.com/zh-TW/library/office-365-reports.aspx))頁面。
   
 預先定義的系統管理中心報告是絕佳資源，可讓您輕鬆檢視信箱使用量，或使用者在線上會議待了多久時間等資訊。不過，若要對 Office 365 網域進行詳細分析，報告就會面臨一些限制。
   
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/15/2017
     
      ![連線至 [資料連線精靈] 中 [資料摘要] 對話方塊的範例。](images/o365_reporting_connect_data_feed.png)
   
-2. 在 [**連接到資料摘要**] 頁面上輸入**https://reports.office365.com/ecp/reportingwebservice/reporting.svc/**如下資料摘要的位置。請注意您可以只輸入的基底 URL 所示;您無法新增任何 Select、 Filter、 或格式陳述式。如果您輸入的基底 URL 以外的所有則不會收到任何資料 ；而您只是將會看到下列錯誤訊息：
+2. 在 [連線到資料摘要]**** 頁面上，輸入 **https://reports.office365.com/ecp/reportingwebservice/reporting.svc/** 作為資料摘要的位置。請注意，您只能輸入上述的基底 URL；無法新增任何選取、篩選或格式化陳述式。如果輸入基底 URL 以外的內容，就不會傳回任何資料，而只會看到下列錯誤訊息：
     
      ![當您新增 Select、Filter 或 Format 陳述式時，錯誤訊息的範例。](images/o365_reporting_incorrect_data_feed.png)
   
 3. 輸入報告服務 URL 後，選取 [登入認證] 底下的 [使用此名稱和密碼]。在 [使用者名稱] 方塊中輸入 Office 365 登入名稱 (例如，admin@litwareinc.onmicrosoft.com)。在 [密碼] 方塊中，輸入 Office 365 登入密碼，然後按 [下一步]。然後 Excel 便會利用提供的認證，嘗試連線到報告服務。
     
-4. 您已經過驗證之後，您會看到 [**選取表格**] 頁面。選取您會想要檢視 (例如**MailTrafficTop** ) 並再按 [**下一步**的報告：
+4. 通過驗證之後，您會看到 [選取資料表]**** 頁面。選取您想要檢視的報告 (例如，**MailTrafficTop**)，然後按 [下一步]****：
     
      ![[資料連線精靈] 中 [選取資料表] 頁面的範例。](images/o365_reporting_select_tables.png)
   
@@ -87,7 +87,7 @@ DataFeed_3_reports-office365-com ClientSoftwareBrowserDetail.odc
     
 請注意，這些 .ODC 檔案是純文字 XML 檔案。在這些純文字 XML 檔案中所包含的，是您的 Office 365 使用者名稱和密碼︰
     
-\<odc:ConnectionString > 資料來源 = https://reports.office365.com/ecp/reportingwebservice/reporting.svc/;若要包含的命名空間 = *;最大接收的郵件大小 = 4398046511104; Integrated Security = 基本;**使用者 ID=admin@litwareinc.onmicrosoft.com;密碼 = MYpassw0rd ！**;持續安全性資訊 = false;服務文件 Url = https://reports.office365.com/ecp/reportingwebservice/reporting.svc/\</odc:ConnectionString >
+\<odc:ConnectionString>Data Source=https://reports.office365.com/ecp/reportingwebservice/reporting.svc/;Namespaces to Include=*;Max Received Message Size=4398046511104;Integrated Security=Basic; **User ID=admin@litwareinc.onmicrosoft.com;Password=MYpassw0rd!**;Persist Security Info=false;Service Document Url=https://reports.office365.com/ecp/reportingwebservice/reporting.svc/\</odc:ConnectionString>
     
 如果您不想要將使用者名稱和密碼儲存在純文字檔案中，請不要勾選標示為 [將密碼儲存在檔案中] 的核取方塊。不過，如果這樣做的話，請記住您將無法重複使用這些資料連線。這是因為如果沒有使用者名稱和密碼，Office 365 將無法對登入服務的嘗試進行驗證。
     
@@ -101,7 +101,7 @@ DataFeed_3_reports-office365-com ClientSoftwareBrowserDetail.odc
   
 之後您要如何處理這些資料就完全取決於您。如果需要建議，請看一下[使用 OData 資料摘要來建立 Excel Services 儀表板](https://technet.microsoft.com/en-us/library/jj873965%28v=office.15%29.aspx)。雖然這篇文章沒有使用 Office 365 報告服務，但提供了一些對於執行作業有用的提示，例如將篩選器和交叉分析篩選器新增到新儀表板等。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

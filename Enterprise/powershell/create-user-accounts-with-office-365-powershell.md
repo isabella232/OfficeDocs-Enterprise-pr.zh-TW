@@ -19,7 +19,7 @@ ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
 description: "了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。"
 ms.openlocfilehash: 9f6eb4cafa82ae511e806b7e32f2ed98a065d52e
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
@@ -31,13 +31,13 @@ ms.lasthandoff: 12/15/2017
   
 ****
 
-|**屬性名稱**|**必要？**|**說明**|
+|**屬性名稱**|**必要？**|**描述**|
 |:-----|:-----|:-----|
 |**DisplayName** <br/> |是  <br/> |這是 Office 365 服務中使用的顯示名稱。例如，Caleb Sills。  <br/> |
 |**UserPrincipalName** <br/> |是  <br/> |這是用來登入 Office 365 服務的帳戶名稱。例如，CalebS@contoso.onmicrosoft.com。  <br/> |
 |**FirstName** <br/> |否  <br/> ||
 |**LastName** <br/> |否  <br/> ||
-|**LicenseAssignment** <br/> |否  <br/> |這是從中將可用的授權指派給使用者帳戶的授權計劃 (也稱為 Office 365 計劃或 SKU)。授權定義帳戶可用的 Office 365 服務。當您建立帳戶時，您不必將授權指派給使用者，但帳戶需要授權才能存取 Office 365 服務。建立使用者帳戶之後，您有 30 天的時間進行使用者帳戶授權。<br/> 若要檢視您組織中的授權方案 ( **AccountSkuId** ) 和可用授權使用**Get-msolaccountsku** cmdlet。如需詳細資訊，請參閱[檢視授權和 Office 365 powershell 的服務](view-licenses-and-services-with-office-365-powershell.md)。<br/> |
+|**LicenseAssignment** <br/> |否  <br/> |這是從中將可用的授權指派給使用者帳戶的授權計劃 (也稱為 Office 365 計劃或 SKU)。授權定義帳戶可用的 Office 365 服務。當您建立帳戶時，您不必將授權指派給使用者，但帳戶需要授權才能存取 Office 365 服務。建立使用者帳戶之後，您有 30 天的時間進行使用者帳戶授權。<br/> 使用 **Get-MsolAccountSku** Cmdlet，以檢視您組織中的授權計劃 ( **AccountSkuId** ) 和可用的授權。如需詳細資訊，請參閱[使用 Office 365 PowerShell 檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)。<br/> |
 |**Password** <br/> |否  <br/> | 如果您未指定密碼，則會指派隨機密碼給使用者帳戶，並可在命令結果中看見此密碼。如果您指定密碼，該密碼必須符合下列複雜性需求： <br/>  8 到 16 個 ASCII 文字字元。 <br/>  下列任何三種類型中的字元：小寫字母、大寫字母、數字和符號。 <br/> |
 |**UsageLocation** <br/> |否  <br/> |這是有效的 ISO 3166-1 alpha-2 國碼。例如，US 代表美國、FR 代表法國。請務必提供此值，因為某些 Office 365 服務不適用於某些國家/地區，所以您無法將授權指派給使用者帳戶 (除非帳戶已設定此值)。如需詳細資訊，請參閱[關於授權限制](https://go.microsoft.com/fwlink/p/?LinkId=691730)。<br/> |
    
@@ -71,7 +71,7 @@ ShawnM@contoso.onmicrosoft.com,Shawn,Melendez,Shawn Melendez,US,contoso:ENTERPRI
   ```
 
  > [!NOTE]
->資料行名稱及 CSV 檔案的第一列其順序是任意，但確定其餘的檔案中的資料會比對的欄名稱順序和 Office 365 PowerShell 命令中同時使用的參數值的欄名稱。
+>CSV 檔第一列中的欄名稱及其順序並無任何限定，但請確定檔案其餘部分中的資料符合欄名稱之順序，並將欄名稱使用於 Office 365 PowerShell 命令中的參數值。
     
 2. 使用下列語法：
     
@@ -89,7 +89,7 @@ ShawnM@contoso.onmicrosoft.com,Shawn,Melendez,Shawn Melendez,US,contoso:ENTERPRI
     
 ## <a name="use-the-azure-active-directory-v2-powershell-module-to-create-individual-user-accounts"></a>使用 Azure Active Directory V2 PowerShell 模組來建立個別使用者帳戶
 
-若要使用 Azure Active Directory V2 PowerShell 模組中的**新增 AzureADUser**指令程式，您必須先連線至您的訂閱。指示，請參閱[使用 Azure Active Directory V2 PowerShell 模組的連線](https://go.microsoft.com/fwlink/?linkid=842218)。
+若要從 Azure Active Directory V2 PowerShell 模組使用 **New-AzureADUser** Cmdlet，您必須先連接至您的訂用帳戶。如需相關指示，請參閱[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
   
 連接之後，使用下列語法來建立個別帳戶：
   
@@ -107,9 +107,9 @@ $PasswordProfile.Password="3Rv0y1q39/chsy"
 New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -UserPrincipalName calebs@contoso.onmicrosoft.com -UsageLocation US -MailNickName calebs -PasswordProfile $PasswordProfile -AccountEnabled $true
 ```
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
-請參閱下列有關管理 Office 365 PowerShell 與使用者的其他主題：
+請參閱這些有關透過 Office 365 PowerShell 管理使用者的其他主題：
   
 - [使用 Office 365 PowerShell 刪除及還原使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)
     
@@ -123,12 +123,12 @@ New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -
   
 - [Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
     
-- [Import-Csv](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-csv)
+- [Import-Csv]((https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-csv))
     
-- [New-msoluser](https://go.microsoft.com/fwlink/p/?LinkId=691547)
+- [New-MsolUser](https://go.microsoft.com/fwlink/p/?LinkId=691547)
     
-- [Foreach-object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
+- [ForEach-Object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
     
-- [新 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/new-azureaduser?view=azureadps-2.0)
+- [New-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/new-azureaduser?view=azureadps-2.0)
     
 

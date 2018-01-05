@@ -20,7 +20,7 @@ ms.assetid: c4a6d625-4938-42cc-87e1-56b7a13c63ef
 description: "摘要： 虛擬但具有代表性的全球組織如何透過 Microsoft 雲端服務項目採用內含雲端的 IT 基礎結構。"
 ms.openlocfilehash: 17ee633c13f50db4c1de630a5c006506d9d79ece
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
@@ -30,15 +30,15 @@ ms.lasthandoff: 12/15/2017
   
 本文會連結至一系列的文章，說明總部位於巴黎的全球製造集團 Contoso Corporation 是如何採用包含雲端的 IT 基礎結構，並作出關於網路能力、身分識別和安全性的重大設計決策，以及如何實作企業雲端案例來解決其業務問題。您也可以檢視本資訊的 11 頁海報並以 tabloid 格式列印 (也稱為總帳 11 x 17 或 A3)。
   
-[![Contoso Microsoft Cloud 海報縮圖圖像。](images/Contoso_Poster/Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54427)
+[![Microsoft 雲端海報中 Contoso 的縮圖影像。](images/Contoso_Poster/Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54427)
   
-![PDF 檔案](images/Common_Images/PDFIcon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842085)  | ![Visio 檔案](images/Common_Images/VisioIcon.png)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842086)  | ![請參閱其他語言版本的頁面](images/Common_Images/GlobeIcon.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54427)
+![PDF 檔案](images/Common_Images/PDFIcon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842085)  | ![Visio 檔案](images/Common_Images/VisioIcon.png)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842086)  | ![參閱其他語言版本的頁面](images/Common_Images/GlobeIcon.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54427)
   
 請參閱下列各節：
   
 - [混合式雲端概觀 （英文)](hybrid-cloud-overview.md)
     
-    Contoso 公司是一家全球性的製造、銷售與支援的組織集團，擁有超過 100,000 種的商品。
+    Contoso 公司是一家全球性的製造、銷售與支援的組織集團，擁有超過 100,000 種的商品。 
     
 - [Contoso 的 IT 基礎結構和需求](contoso-it-infrastructure-and-needs.md)
     
@@ -67,11 +67,11 @@ ms.lasthandoff: 12/15/2017
 > [!NOTE]
 > 這幾篇文章說明在 **2017 年 9 月** Microsoft Cloud 海報中發佈的 Contoso 版本。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
+[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))
 
 
 

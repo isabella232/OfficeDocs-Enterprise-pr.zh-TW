@@ -19,7 +19,7 @@ ms.assetid: 54deae50-9442-4b6a-bd86-e5edb0ec6d74
 description: "摘要： IT 架構設計人員在使用 Microsoft 雲端服務和平台時，有關混合案例需要瞭解的資訊。"
 ms.openlocfilehash: 46e9a6cead44f5392d3ae228dbb5e7f9285bf891
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
@@ -29,13 +29,13 @@ ms.lasthandoff: 12/15/2017
   
 本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，混合結構和設定所需的資訊。您也可以 7 頁海報的形式檢視本文，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。
   
-[![Microsoft 混合雲端模型縮圖影像](images/Hybrid_Poster/Hybrid_Cloud_Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54424
+[![Microsoft 混合式雲端模型的縮圖影像](images/Hybrid_Poster/Hybrid_Cloud_Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54424
 )
   
-![PDF 檔案](images/Common_Images/PDFIcon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | ![Visio 檔案](images/Common_Images/VisioIcon.png)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842083) | ![會看到的頁面中的其他語言的版本與](images/Common_Images/GlobeIcon.png)
-[多個語言](https://www.microsoft.com/download/details.aspx?id=54424)
+![PDF 檔案](images/Common_Images/PDFIcon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | ![Visio 檔案](images/Common_Images/VisioIcon.png)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842083) | ![參閱其他語言版本的頁面](images/Common_Images/GlobeIcon.png)
+[更多語言](https://www.microsoft.com/download/details.aspx?id=54424)
   
-您可以也看到所有的[Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)模型及透過往撥動[Microsoft 企業雲端藍圖： IT 決策者的資源](https://aka.ms/cloudarchitecture)。
+您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源]((https://aka.ms/cloudarchitecture))。
   
 請參閱下列各節：
   
@@ -62,11 +62,11 @@ ms.lasthandoff: 12/15/2017
 > [!NOTE]
 > 這幾篇文章說明在 **2017 年 6 月** 發佈的 Microsoft Hybrid Cloud for Enterprise Architects 海報。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
+[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))
 
 
 

@@ -16,15 +16,15 @@ ms.assetid: 3a1ea1a6-edbd-4922-9ad3-0b075f7f9009
 description: "摘要：尋找 Azure Active Directory、Exchange Online、SharePoint Online 和 商務用 Skype Online 的 Office 365 PowerShell Cmdlet 參考主題。"
 ms.openlocfilehash: 86975e7c0729429d771a9a316dad4b8c73d28010
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="cmdlet-references-for-office-365-services"></a>Office 365 服務的 Cmdlet 參考資料
 
- **摘要：**尋找 Office 365 PowerShell cmdlet 參考主題 Azure Active Directory、 Exchange Online、 SharePoint Online 和 Skype 的商務 Online。
+ **摘要：**尋找 Azure Active Directory、Exchange Online、SharePoint Online 和 商務用 Skype Online 的 Office 365 PowerShell Cmdlet 參考主題。
   
-不同 Office 365 服務的指令程式參考資料主題提供如何使用每個指令程式的詳細的資訊和指示。Addiitonally，每個 Office 365 服務的 PowerShell 支援需要不同的連線的指示。
+各種 Office 365 服務的 Cmdlet 參考主題會提供如何使用每個 cmdlet 的詳細資訊和指示。此外，每個具有 PowerShell 支援的 Office 365 服務都需要不同的連線指示。
   
 > [!NOTE]
 > 若要一次連線至所有服務，請參閱[在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](connect-to-all-office-365-services-in-a-single-windows-powershell-window.md)。 
@@ -37,9 +37,9 @@ Azure Active Directory Cmdlet 參考主題位於 MSDN Library 的 Azure Active D
   
 ## <a name="security-amp-compliance-center-powershell-cmdlets"></a>安全規範中心 PowerShell Cmdlet
 
-Office 365 安全性&amp;規範中心指令程式參考主題位於安全性&amp;規範中心 PowerShell] 區域中的 TechNet 文件庫。那里移，按一下 [ [Office 365 安全性&amp;規範中心 cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=627085)。
+Office 365 安全 &amp; 規範中心 Cmdlet 參考主題位於 TechNet Library 的安全 &amp; 規範中心 PowerShell 區域。若要移至該處，請按一下 [Office 365 安全 &amp;規範中心 Cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=627085)。
   
-如需安全性的連線指示&amp;規範中心 PowerShell 中按一下 [[連線至 Office 365 安全性&amp;規範中心使用遠端 PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=627084)。
+如需安全 &amp; 規範中心 PowerShell 的連線指示，請按一下[使用遠端 PowerShell 連線到 Office 365 安全 &amp;規範中心](https://go.microsoft.com/fwlink/p/?LinkId=627084)。
   
 ## <a name="exchange-online-powershell-cmdlets"></a>Exchange Online PowerShell Cmdlet
 
@@ -62,7 +62,7 @@ SharePoint Online Cmdlet 參考主題位於 TechNet Library 的 SharePoint Onlin
   
 如需 商務用 Skype Online PowerShell 的連線指示，按一下[使用 Windows PowerShell 連線到商務用 Skype Online](https://go.microsoft.com/fwlink/p/?LinkId=691607)。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

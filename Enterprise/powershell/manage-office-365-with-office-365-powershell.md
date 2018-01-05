@@ -18,13 +18,13 @@ ms.assetid: 932d57c0-1520-4f0f-8ec9-9966d646480f
 description: "摘要：了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online 和 Microsoft Exchange Online。"
 ms.openlocfilehash: aaea1d5aa83bd01bc1646a11778397936bdb14c9
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="manage-office-365-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 Office 365
 
- **摘要：**了解如何使用 Office 365 PowerShell 授權 Office 365 使用者與 Skype 商務 Online、 SharePoint Online 和 Microsoft Exchange Online。
+ **摘要：**了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online 和 Microsoft Exchange Online。
   
 Office 365 PowerShell 是個功能強大的管理工具，可補充 Office 365 系統管理中心。例如，您可以使用 Office 365 PowerShell 自動化更快速地管理多個使用者帳戶和授權，以及建立報告。了解如何搭配使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online 和 Microsoft Exchange Online。 
   
@@ -38,7 +38,7 @@ Office 365 PowerShell 是個功能強大的管理工具，可補充 Office 365 �
     
     如果您已安裝 Office 365 PowerShell 模組並且想要深入了解如何使用自動化命令來管理使用者帳戶和授權，請從這裡開始。
     
-- [適用於 SharePoint Online 的 Office 365 PowerShell](https://technet.microsoft.com/en-us/library/fp161362.aspx)
+- [適用於 SharePoint Online 的 Office 365 PowerShell]((https://technet.microsoft.com/zh-TW/library/fp161362.aspx))
     
     如果您已安裝 Office 365 PowerShell 模組並且想要使用自動化命令來執行 SharePoint Online 的管理，請從這裡開始。
     
@@ -58,7 +58,7 @@ Office 365 PowerShell 是個功能強大的管理工具，可補充 Office 365 �
     
     如果您已安裝 Office 365 PowerShell 模組並且想要使用自動化命令來執行 商務用 Skype Online 的管理，請從這裡開始。
     
-- [Skype for Business Online cmdlets](http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx)
+- [Skype for Business Online cmdlets]((http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx))
     
     如果您十分熟悉 Office 365 PowerShell、想要深入了解管理組織之撥入會議、Cloud PBX 和 PSTN 通話設定的特定命令，以及使用報告功能來監視和報告商務用 Skype Online 使用情形的特定命令，請從這裡開始。
     

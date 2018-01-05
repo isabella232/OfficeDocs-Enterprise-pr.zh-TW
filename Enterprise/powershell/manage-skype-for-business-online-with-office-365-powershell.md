@@ -14,21 +14,21 @@ ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: "摘要︰使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。"
 ms.openlocfilehash: 66a3cdd90f1c0c205ddf5cab52597e32a638688d
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="manage-skype-for-business-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理商務用 Skype Office
 
- **摘要：**使用 Office 365 PowerShell 來管理 Skype 商務 Online 原則、 個別使用者原則及會議設定。
+ **摘要︰**使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
   
-其中一個主要商務 Online 管理員任何 Skype 工作管理原則。雖然您可以完成這些工作在 Office 365 系統管理中心，其他工作會更加更快速且更輕鬆地在 Office 365 PowerShell。如需詳細資訊，請參閱下列主題：
+任何商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。雖然您可以在 Office 365 系統管理中心完成其中某些工作，但是在 Office 365 PowerShell 中，可以更快速且更輕鬆地完成其他工作。如需詳細資訊，請參閱下列主題：
   
 - [線上商務原則與 Office 365 PowerShell 管理 Skype](manage-skype-for-business-online-policies-with-office-365-powershell.md)
     
 - [指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
     
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

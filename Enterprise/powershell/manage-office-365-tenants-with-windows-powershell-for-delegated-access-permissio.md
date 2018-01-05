@@ -14,13 +14,13 @@ ms.assetid: f92d5116-5b66-4150-ad20-1452fc3dd712
 description: "摘要：使用 Windows PowerShell for Office 365 來管理客戶租用。"
 ms.openlocfilehash: 6001a6b40d2851d13e8fb74da615a2b8137f17ec
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="manage-office-365-tenants-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 管理 Office 365 租用戶
 
- **摘要：**使用 Windows PowerShell for Office 365 管理客戶租用。
+ **摘要：**使用 Windows PowerShell for Office 365 來管理客戶租用。
   
 Windows PowerShell 可讓新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴輕鬆地管理及報告 Office 365 系統管理中心 未提供的客戶租用設定。請注意，合作夥伴系統管理員帳戶須有管理代表 (AOBO) 權限才能連接其客戶租用。
   
@@ -56,7 +56,7 @@ Get-MsolPartnerContract -DomainName <domainname.onmicrosoft.com> | Select-Object
 
 ### <a name="list-all-domains-for-a-tenant"></a>列出租用戶的所有網域
 
-若要取得任何一位客戶的租用戶的所有網域，請執行此命令。取代_<customer TenantId value>_的實際值。
+若要取得任一客戶租用戶的所有網域，請執行此命令。將 _<customer TenantId value>_ 取代為實際值。
   
 ```
 Get-MsolDomain -TenantId <customer TenantId value>
@@ -74,7 +74,7 @@ $Tenants = Get-MsolPartnerContract -All; $Tenants | foreach {$Domains = $_.Tenan
 
 ### <a name="get-all-users-for-a-tenant"></a>取得租用戶的所有使用者
 
-這會顯示**UserPrincipalName**、 **DisplayName**及**isLicensed**狀態的所有使用者的特定承租人。取代_<customer TenantId value>_的實際值。
+這會顯示特定租用戶之所有使用者的 **UserPrincipalName**、**DisplayName** 和 **isLicensed** 狀態。將 _<customer TenantId value>_ 取代為實際值。
   
 ```
 Get-MsolUser -TenantID <customer TenantId value>
@@ -82,7 +82,7 @@ Get-MsolUser -TenantID <customer TenantId value>
 
 ### <a name="get-all-details-about-a-user"></a>取得有關使用者的所有詳細資料
 
-如果您想要查看特定使用者的所有屬性，執行此命令。取代_<customer TenantId value>_和_<user principal name value>_實際值。
+如果您想要查看特定使用者的所有內容，請執行此命令。將 _<customer TenantId value>_ 和 _<user principal name value>_ 取代為實際值。
   
 ```
 Get-MsolUser -TenantId <customer TenantId value> -UserPrincipalName <user principal name value>
@@ -112,7 +112,7 @@ Get-MsolUser -TenantId <customer TenantId value> -UserPrincipalName <user princi
 Import-Csv .\\FILENAME.CSV | foreach {New-MsolUser -UserPrincipalName $_.UserPrincipalName -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -Password $_.Password -UsageLocation $_.UsageLocation -LicenseAssignment $_.LicenseAssignment -ForceChangePassword:$true -PasswordNeverExpires:$true -TenantId $_.TenantId}
 ```
 
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

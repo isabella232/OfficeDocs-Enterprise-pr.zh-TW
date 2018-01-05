@@ -20,7 +20,7 @@ ms.assetid: d27b5085-7325-4ab9-9d9a-438908a65d2c
 description: "摘要： 為您的 Microsoft 雲端服務與平台設計識別身分解決方案。"
 ms.openlocfilehash: f581711345b043d61de503360d101fbcc09de82e
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
@@ -30,15 +30,15 @@ ms.lasthandoff: 12/15/2017
   
 此文章說明 IT 結構設計師在使用 Microsoft 雲端服務和平台，來設計組織的身分識別時，需要了解的資訊。您也可以 5 頁海報的形式檢視本文，並且列印 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。
   
-[![Microsoft 雲端身分識別模型縮圖影像](images/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png) 
+[![Microsoft 雲端身分識別模型的縮圖影像](images/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png) 
 ](https://www.microsoft.com/download/details.aspx?id=54431)
   
-![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd) | ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54431)
+![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio]((https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd)) | ![參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54431)
   
-您可以也看到所有的[Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)模型及透過往撥動[Microsoft 企業雲端藍圖： IT 決策者的資源](https://aka.ms/cloudarchitecture)。
+您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源]((https://aka.ms/cloudarchitecture))。
   
 > [!NOTE]
-> 本文會反映年 1 月 2016年版本的**Microsoft 雲端身分識別的企業架構師**海報 （英文）。它不包含的年 4 月 2016年變更或更新版本的海報。
+> 此文章反映了 2016 年 1 月版本的**適用於企業結構設計師的 Microsoft 雲端識別**海報。但不包含在 2016 年 4 月版本或更新版本的海報中所進行的變更。
   
 ## <a name="designing-identity-for-the-microsoft-cloud"></a>設計 Microsoft 雲端的識別
 
@@ -66,7 +66,7 @@ Azure AD 有三個版本︰「免費」、「基本」與「進階」。
 ||||
 |:-----|:-----|:-----|
 |**免費** <br/> |**基本** <br/> |**進階** <br/> |
-| 管理使用者帳戶 <br/>  與內部部署的目錄同步 <br/>  在 Azure、Office 365 和數千種熱門的 SaaS 應用程式 (例如 Salesforce、Workday、Concur、DocuSign、Google Apps、Box、ServiceNow、Dropbox 等等) 之間，進行單一登入。 <br/> | 包括免費版中的所有功能，再加上： <br/>  公司品牌推廣 <br/>  以群組為基礎的應用程式存取 <br/>  自助式密碼重設 <br/>  99.9% 的企業 SLA <br/> | 包括免費版和基本版的所有功能，再加上： <br/>  自助式群組管理 <br/>  進階的安全性報告及警示 <br/>  Multi-factor authentication <br/>  藉由寫回至內部部署 AD DS 的方式，重新設定密碼 <br/>  Azure AD Connect 工具雙向同步 <br/>  Azure AD 應用程式 Proxy <br/>  Microsoft Forefront Identity Manager (MIM) <br/> |
+| 	管理使用者帳戶 <br/>  與內部部署的目錄同步 <br/>  在 Azure、Office 365 和數千種熱門的 SaaS 應用程式 (例如 Salesforce、Workday、Concur、DocuSign、Google Apps、Box、ServiceNow、Dropbox 等等) 之間，進行單一登入。 <br/> | 包括免費版中的所有功能，再加上： <br/>  公司品牌推廣 <br/>  以群組為基礎的應用程式存取 <br/>  自助式密碼重設 <br/>  99.9% 的企業 SLA <br/> | 包括免費版和基本版的所有功能，再加上： <br/>  自助式群組管理 <br/>  進階的安全性報告及警示 <br/>  Multi-factor authentication <br/>  藉由寫回至內部部署 AD DS 的方式，重新設定密碼 <br/>  Azure AD Connect 工具雙向同步 <br/>  Azure AD 應用程式 Proxy <br/>  	Microsoft Forefront Identity Manager (MIM) <br/> |
    
 如需有關版本的詳細資訊，請參閱[Azure Active Directory 的版本](https://go.microsoft.com/fwlink/p/?LinkId=524280)。
   
@@ -287,7 +287,7 @@ Azure AD 有三個版本︰「免費」、「基本」與「進階」。
   
 以下是可以置於 Azure 虛擬網路中的目錄元件︰
   
-- Azure AD Connect 工具
+- 	Azure AD Connect 工具
     
 - 同盟驗證元件
     
@@ -363,11 +363,11 @@ Azure AD Connect 工具可裝載於 Azure 虛擬網路中的雲端。將此工�
     
 如需詳細資訊，請參閱[將內部部署識別與 Azure Active Directory 整合](https://go.microsoft.com/fwlink/p/?LinkId=524307)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
+[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))
 
 
 

@@ -21,7 +21,7 @@ ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: "摘要： 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。"
 ms.openlocfilehash: 83e5842a4b3192ee2f65048cefe57790cd1e2341
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/15/2017
     
 - [部署藍圖](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#DeploymentRoadmap)
     
-## <a name="overview"></a>概觀
+## <a name="overview"></a>Overview
 <a name="Overview"> </a>
 
 Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azure 虛擬機器與內部部署網路資源連線，您必須設定跨單位 Azure 虛擬網路。下列圖表顯示當 Azure 中有一部虛擬機器時，部署跨單位 Azure 虛擬網路所需要的元件。
@@ -52,7 +52,7 @@ Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azur
   
 1. **內部部署：** 針對指向您內部部署 VPN 裝置的 Azure 虛擬網路位址空間，定義和建立內部部署網路路由。
     
-2. **Microsoft Azure:**建立 Azure 虛擬網路與網站 VPN 連線的情況。本文不會說明[ExpressRoute](https://azure.microsoft.com/services/expressroute/)使用。
+2. **Microsoft Azure：** [ExpressRoute]((https://azure.microsoft.com/services/expressroute/))。
     
 3. **內部部署：** 設定內部部署硬體或軟體 VPN 裝置來終止使用網際網路通訊協定安全性 (IPsec) 的 VPN 連線。
     
@@ -64,7 +64,7 @@ Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azur
 ### <a name="prerequisites"></a>必要條件
 <a name="Prerequisites"> </a>
 
-- Azure 訂用帳戶。如需有關 Azure 訂用帳戶的資訊，請移至 [Microsoft Azure 訂用帳戶頁面](https://azure.microsoft.com/pricing/purchase-options/)。
+- Azure 訂用帳戶。如需有關 Azure 訂用帳戶的資訊，請移至 [Microsoft Azure 訂用帳戶頁面]((https://azure.microsoft.com/pricing/purchase-options/))。
     
 - 要指派至虛擬網路和其子網路的可用私人 IPv4 位址空間，需具備足夠的擴充空間，以容納現在或未來所需的虛擬機器數量。
     
@@ -145,17 +145,17 @@ Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址
   
  **表格 V：跨單位虛擬網路設定**
   
-|**項目**|**Configuration 元素**|**說明**|**值**|
+|**項目**|**Configuration 元素**|**描述**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |虛擬網路名稱  <br/> |指派給 Azure 虛擬網路的名稱 (例如 DirSyncNet)。  <br/> |__________________  <br/> |
 |2.  <br/> |虛擬網路位置  <br/> |將包含虛擬網路的 Azure 資料中心 (例如美國西部)  <br/> |__________________  <br/> |
 |3.  <br/> |VPN 裝置 IP 位址  <br/> |網際網路上 VPN 裝置介面的公用 IPv4 位址請與您的 IT 部門合作以決定此位址。  <br/> |__________________  <br/> |
 |4.  <br/> |虛擬網路位址空間  <br/> |虛擬網路的位址空間 (定義於單一私人位址前置詞中)。請與您的 IT 部門合作以決定此位址空間。位址空間應是無類別網域間路由選擇 (CIDR) 格式 (也稱為網路前置詞格式)。例如 10.24.64.0/20。  <br/> |__________________  <br/> |
-|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值並將其儲存至安全的位置。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。<br/> |__________________  <br/> |
+|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值並將其儲存至安全的位置。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰]((https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx))。<br/> |__________________  <br/> |
    
 針對此解決方案的子網路填寫表格 S。
   
-- 針對第一個子網路，請決定 Azure 閘道子網路的 28 位元位址空間 (使用 /28 前置長度)。請參閱[針對 Azure 虛擬網路計算閘道子網路位址空間](https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/)，以取得如何決定此位址空間的資訊。
+- 針對第一個子網路，請決定 Azure 閘道子網路的 28 位元位址空間 (使用 /28 前置長度)。請參閱[針對 Azure 虛擬網路計算閘道子網路位址空間]((https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/))，以取得如何決定此位址空間的資訊。
     
 - 針對二個的子網路，請指定好記的名稱、以虛擬網路位址空間為基礎的單一 IP 位址空間，以及具描述性的用途。
     
@@ -212,10 +212,10 @@ Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址
 ### <a name="phase-2-create-the-cross-premises-virtual-network-in-azure"></a>階段 2：在 Azure 中建立跨單位的虛擬網路
 <a name="Phase2"> </a>
 
-首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。
+首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet]((https://docs.microsoft.com/powershell/azureps-cmdlets-docs/))。
   
 > [!NOTE]
-> 這些命令適用於 Azure PowerShell 1.0 或更新版本。如需包含本文中所有 PowerShell 命令的文字檔，請按一下[這裡](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19)。 
+> 這些命令適用於 Azure PowerShell 1.0 或更新版本。如需包含本文中所有 PowerShell 命令的文字檔，請按一下[這裡]((https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19))。 
   
 接著，使用此命令登入您的 Azure 帳戶。
   
@@ -304,7 +304,7 @@ Set-AzureRMVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $SubnetName -A
   
 ![虛擬網路尚未連接至內部部署網路中。](images/54a37782-a6cc-4d48-b38d-73e128b44a82.png)
   
-下一步，使用以下命令來建立站台對站台 VPN 連線的閘道。
+接著，使用以下命令來建立站台對站台 VPN 連線的閘道。
   
 ```
 # Fill in the variables from previous values and from Tables V and L
@@ -334,7 +334,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
   
 ![虛擬網路現在有一個閘道。](images/82dd66b2-a4b7-48f6-a89b-cfdd94630980.png)
   
-下一步，設定內部部署 VPN 裝置與 Azure VPN 閘道連線。如需詳細資訊，請參閱[關於適用於站台對站台虛擬網路連線的 VPN 裝置](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices)。
+下一步，設定內部部署 VPN 裝置與 Azure VPN 閘道連線。如需詳細資訊，請參閱[關於適用於站台對站台虛擬網路連線的 VPN 裝置]((https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices))。
   
 若要設定您的 VPN 裝置，您需要下列項目︰
   
@@ -357,7 +357,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
     
 - 在 [大小] 窗格中選擇適當大小。
     
-- 在 [**設定**] 窗格中 [**儲存**] 區段中選取 [**標準**的儲存類型和設定虛擬網路的存放區帳戶。在 [**網路**] 區段中選取主控虛擬機器 (不 GatewaySubnet) 虛擬網路和子網路的名稱。保留所有其他設定的預設值。
+- 在 [設定]**** 窗格的＜**儲存體**＞區段中，選取 [標準]****儲存體類型和您為虛擬網路設定的儲存體帳戶。在＜**網路**＞區段中，選取您裝載虛擬機器 (不是閘道子網路) 的虛擬網路和子網路名稱。其他所有設定都保留預設值。
     
 請檢查您的內部 DNS 以確認虛擬機器正在正確地使用 DNS，藉此確認適用於新虛擬機器的位址 (A) 記錄已新增。若要存取網際網路，您的 Azure 虛擬機器必須設定為使用內部部署網路的 Proxy 伺服器。請連絡您的網路系統管理員，以取得要在伺服器上執行的其他設定步驟。
   
@@ -365,7 +365,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
   
 ![虛擬網路現在主控可從內部部署網路存取的虛擬機器。](images/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="DeploymentRoadmap"> </a>
 
@@ -375,7 +375,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
 
 [如何建立虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393098)
   
-[關於適用於站台對站台 Azure 虛擬網路連線的 VPN 裝置](https://azure.microsoft.com/documentation/articles/vpn-gateway-about-vpn-devices/)
+[關於適用於站台對站台 Azure 虛擬網路連線的 VPN 裝置]((https://azure.microsoft.com/documentation/articles/vpn-gateway-about-vpn-devices/))
   
 [如何安裝與設定 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/#how-to-install-azure-powershell)
 

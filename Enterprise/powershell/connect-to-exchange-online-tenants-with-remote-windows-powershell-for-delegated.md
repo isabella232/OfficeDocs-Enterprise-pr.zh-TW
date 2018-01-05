@@ -14,13 +14,13 @@ ms.assetid: ae5f1a87-8b77-4f93-a1b8-56f800aeb283
 description: "摘要：使用遠端 Windows PowerShell 搭配 DelegatedOrg 參數連接 Exchange Online。"
 ms.openlocfilehash: 9bb6a5a316f4bc23c6586da825b8755cf755f484
 ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/15/2017
 ---
 # <a name="connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶
 
- **摘要：**使用遠端 Windows PowerShell 連線至 Exchange Online 使用_DelegatedOrg_參數。
+ **摘要：**使用遠端 Windows PowerShell 搭配 _DelegatedOrg_ 參數連線至 Exchange Online。
   
 遠端 Windows PowerShell 可讓您從命令列管理 Exchange Online 設定。您可以在本機電腦上使用 Windows PowerShell 建立連往 Exchange Online 的遠端工作階段。這是個包含三個步驟的程序：輸入您的 Exchange Online 認證、提供必要的連線設定，然後將 Exchange Online Cmdlet 匯入本機 Windows PowerShell 工作階段中，以供使用。
   
@@ -57,7 +57,7 @@ DAP 合作夥伴是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作
   
 ## <a name="connect-to-exchange-online"></a>連線至 Exchange Online
 
-1. 在本機電腦上開啟 Windows PowerShell 並執行下列命令。
+1. 在您的本機電腦上開啟 Windows PowerShell，並執行下列命令。
     
   ```
   $UserCredential = Get-Credential
@@ -65,7 +65,7 @@ DAP 合作夥伴是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作
 
     在 **[Windows PowerShell 認證要求]** 對話方塊中，輸入您的 DAP 系統管理員使用者名稱和密碼，然後按一下 **[確定]**。
     
-2. 執行下列命令，並取代_<customer tenant domain name>_與您想要連線至租用戶網域的名稱。
+2. 執行下列命令，並將 _<customer tenant domain name>_ 取代為要連線的租用戶網域名稱。
     
   ```
   $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell-liveid?DelegatedOrg=<customer tenant domain name>-Credential $UserCredential -Authentication Basic -AllowRedirection
@@ -88,7 +88,7 @@ DAP 合作夥伴是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作
   
 如果出現錯誤，請檢查下列需求：
   
-- 密碼錯誤是常見的問題。再次執行這三個步驟，並密切注意您在步驟 1 中輸入的使用者名稱和密碼。
+- 密碼錯誤是常見的問題。再次執行這三個步驟，並特別留意您在步驟 1 中輸入的使用者名稱和密碼。
     
 - 為防止拒絕服務 (DoS) 攻擊，您最多只能對您的 Exchange Online 組織建立三個遠端 Windows PowerShell 連線。
     
