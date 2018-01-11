@@ -10,17 +10,15 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
-- jan17entnews
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: "摘要： 建立簡化的內部網路為 Microsoft Azure 中的開發人員/測試環境。"
-ms.openlocfilehash: 672486f62a940d812c821fda67d3e92a4164eea8
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: f61490ea9ee9ee23df2b2fd13df1097d183a8de7
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="base-configuration-devtest-environment"></a>基本組態開發/測試環境
 
@@ -360,7 +358,7 @@ CLIENT1 重新啟動後，連線至其使用 CORP\\User1 帳戶名稱和密碼�
 您在 Azure 中的基本設定現在是好或建立其他測試環境的應用程式開發和測試。 
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)一個 Microsoft Cloud 測試實驗室指南堆疊中的文章的所有視覺地圖。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="minimizing-the-costs-of-test-environment-virtual-machines-in-azure"></a>最小化的 Azure 中的測試環境虛擬機器時的成本
 <a name="mincost"> </a>
@@ -397,13 +395,13 @@ Start-AzureRMVM -ResourceGroupName $rgName -Name "APP1"
 Start-AzureRMVM -ResourceGroupName $rgName -Name "CLIENT1"
 ```
 
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="mincost"> </a>
 
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
   
 [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
