@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Visuals
-ms.custom:
-- DecEntMigration
-- Ent_Deployment
+ms.collection: Ent_O365
+ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: "摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。"
-ms.openlocfilehash: 38fe5adb6cac099f6f8014e7535e92e7b841d0bd
-ms.sourcegitcommit: 4a347cfb16405d5213b28f332d80e244fca0fb8f
+ms.openlocfilehash: be1a369bb87a5a63d9c266977c32c64fc55f3630
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 
@@ -185,7 +181,7 @@ SQL Server 記錄傳送與分散式檔案系統複寫 (DFSR) 用於將資料庫�
   
 **圖： 拓撲和實際執行伺服器陣列及暖待命復原伺服器陣列的主要元素**
 
-![顯示 SharePoint 實際執行伺服器陣列和暖待命復原伺服器陣列的拓撲和重要元素。](images/AZarch_TopWarmStndby.gif)
+![顯示 SharePoint 實際執行伺服器陣列和暖待命復原伺服器陣列的拓撲和重要元素。](images/AZarchWarmStndby.gif)
   
 在此圖表中：
   
@@ -688,7 +684,7 @@ Ipconfig /flushdns
   
 [設定 SQL Server 2012 AlwaysOn 可用性群組的 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=393122)
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="Troubleshooting"> </a>
 

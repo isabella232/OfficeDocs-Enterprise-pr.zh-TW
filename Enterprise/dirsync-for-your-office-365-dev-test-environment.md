@@ -8,22 +8,18 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - TLG
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: "摘要： 設定目錄同步處理 Office 365 開發人員/測試環境。"
-ms.openlocfilehash: da9a0070587c50ea9fc2f33612fb4885d6eaf695
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: d8a663367e61ac3f01e67f4d3731a0dccdd5a222
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="dirsync-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的 DirSync
 
@@ -121,13 +117,13 @@ Stop-Process -Name Explorer -Force
 
 當您準備好您的組織部署 DirSync 時，請參閱[部署 Office 365 中目錄同步處理 (DirSync) Microsoft Azure](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)。
 
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
 [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   

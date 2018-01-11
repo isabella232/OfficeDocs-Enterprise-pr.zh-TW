@@ -9,16 +9,14 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 8f6f9894-5394-4110-8b0a-b8765028c10b
 description: "摘要： 了解如何 Contoso 其安全性需求對應至 Microsoft cloud 方案中的功能和取決於雲端安全性整備的路徑。"
-ms.openlocfilehash: f7c6667ce96a01771ce4f18339daf4c62173e4d9
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 4d38f58595f0043e1a02106b6428b92dabad2e17
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-for-the-contoso-corporation"></a>Contoso Corporation 的安全性
 
@@ -134,9 +132,9 @@ Contoso 以備妥 Microsoft cloud 其安全性使用下列步驟：
     
     如需詳細資訊，請參閱 ＜[資料外洩防護原則的概觀](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e)。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

@@ -11,14 +11,13 @@ localization_priority: Normal
 ms.custom:
 - PowerShell
 - Ent_Office_Other
-- DecEntMigration
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
 description: "了解如何將授權指派給使用者帳戶及使用 Office 365 PowerShell 的同時停用特定的服務計劃。"
-ms.openlocfilehash: 907314e13b353e5d5ddbcd8fe467db568473d0b3
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 96ce12f811ee147a92da6b6928c2f6e3391c9b1f
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用時指派使用者授權的服務存取權
 
@@ -150,7 +149,7 @@ $users | Get-MsolUser | Select UserPrincipalName, Islicensed,Usagelocation | Exp
     
 - 建立已處理的所有使用者的 CSV 檔案並顯示其授權狀態。
     
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

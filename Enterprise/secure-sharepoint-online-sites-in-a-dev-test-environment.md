@@ -8,16 +8,14 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.custom:
-- DecEntMigration
-- Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise
 ms.assetid: 06af70f3-e7dc-4ee2-a385-fb4d61a5e93b
 description: "摘要： 建立公用、 私人、 機密、 和高度機密的 SharePoint Online 小組網站的開發人員/測試環境中。"
-ms.openlocfilehash: 17abee7a293996194a097693607b4b4d9c117046
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 4878eb201fa32fbeb34be755a22e329fe45d5885
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="secure-sharepoint-online-sites-in-a-devtest-environment"></a>安全的開發人員/測試環境中的 SharePoint Online 網站
 
@@ -590,7 +588,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
 
 當您準備好實際執行部署的安全的 SharePoint Online 網站時，請參閱[安全 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)的詳細的資訊以及逐步說明的部署文章的連結。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [安全的 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)
   

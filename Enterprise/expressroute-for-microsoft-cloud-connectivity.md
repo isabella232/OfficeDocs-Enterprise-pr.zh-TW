@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
 description: "摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。"
-ms.openlocfilehash: 69120d3237518be5d77716a106d2e75b64a4860e
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 4534f06e5d4eca759aadb9b589e39f0c8cdeffb1
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線 ExpressRoute
 
@@ -263,9 +261,9 @@ ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，
     
 - [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

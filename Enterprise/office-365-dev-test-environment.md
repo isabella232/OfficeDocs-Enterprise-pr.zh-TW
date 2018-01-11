@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: "摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。"
-ms.openlocfilehash: 1864043513fc7502ada332ab3b3043ff20a13736
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 60ac59f8b6af81ff18a4c41c0ce5d2376bc161e7
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -274,7 +271,7 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 
 Office 365 開發人員/測試環境中使用這些額外的文章：
   
-- [Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
     
 - [Office 365 開發人員/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
     
@@ -296,13 +293,13 @@ Office 365 開發人員/測試環境中使用這些額外的文章：
   
 - [Microsoft 365 Enterprise 開發人員/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
     
-- [Office 365 和 Dynamics 365 開發人員/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
+- [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[Office 365 和 Dynamics 365 開發人員/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
+[Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

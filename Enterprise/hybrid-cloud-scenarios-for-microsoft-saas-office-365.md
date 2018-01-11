@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Visuals
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: db117e59-389f-46f5-a5df-4eeac0040aa8
 description: "摘要： 瞭解混合架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。"
-ms.openlocfilehash: 5f50573376b70ad94b3b1cd4b86ce3ef1fdc67dd
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 63126d694817f8323494e584f1f497a1a732c678
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="hybrid-cloud-scenarios-for-microsoft-saas-office-365"></a>Microsoft SaaS (Office 365) 的混合式雲端案例
 
@@ -162,9 +158,9 @@ SharePoint 混合式案例：
   
 如需詳細資訊，請參閱[Exchange Server 混合式部署](https://technet.microsoft.com/library/jj200581%28v=exchg.150%29.aspx)與[Exchange 混合](http://hybrid.office.com/exchange/)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft 混合雲端為企業架構師的](microsoft-hybrid-cloud-for-enterprise-architects.md)
+[Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

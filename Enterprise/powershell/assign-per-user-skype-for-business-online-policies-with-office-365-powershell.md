@@ -9,14 +9,14 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: DecEntMigration
+ms.custom: 
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
 description: "摘要： 使用 Office 365 PowerShell 指派個別使用者線上商務原則與 Skype 通訊設定。"
-ms.openlocfilehash: 91916b41ba420a204ecabb27eea2e451a91f6f25
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 7f819b619c5b3607c98c10791fe30c3944e862a4
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 
@@ -106,7 +106,7 @@ Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
   
 若要停用使用 Windows PowerShell 的使用者帳戶，請使用 Azure Active Directory cmdlet 來移除 Alex 的 Skype 商務 Online 授權。如需詳細資訊，請參閱 ＜[停用 Office 365 powershell 的服務存取權](assign-licenses-to-user-accounts-with-office-365-powershell.md)。
   
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 #### 
 

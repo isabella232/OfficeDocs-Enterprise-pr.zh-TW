@@ -8,16 +8,14 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: None
-ms.custom:
-- DecEntMigration
-- Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise
 ms.assetid: 0e22bcf3-bad3-42a4-b44f-276e0cf4790f
 description: "摘要： 建立 Office 365 和 Enterprise 行動性 + 安全性 （EMS） 試用版訂閱使用者和群組政治 campaign 開發/測試環境。"
-ms.openlocfilehash: 7faf428fc2225d3f31297ba6bf83a10a7682009a
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: e876c8770651c3f23c06c9c499bdaabca52da353
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a>設定群組及使用者政治 campaign 開發/測試環境
 
@@ -195,13 +193,13 @@ foreach ($element in $userNames){ New-AzureADUser -DisplayName $element -Passwor
 
 建置[在政治 campaign 開發/測試環境中的建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)與此開發/測試環境中的 SharePoint Online 小組網站的四種不同類型。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
 [政治 campaign 開發/測試環境中建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Contoso Corporation 的概觀"
+title: "Contoso 公司概觀"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -9,18 +9,16 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 1de16e29-ac2e-40b5-bf13-9301a51e16a8
 description: "摘要： 了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。"
-ms.openlocfilehash: 6243f6d6e5c08342cae7650d0b4e75de27ed3527
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: c00e7fd75f580b82f8f920b9f74551a5e5e1b328
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
-# <a name="overview-of-the-contoso-corporation"></a>Contoso Corporation 的概觀
+# <a name="overview-of-the-contoso-corporation"></a>Contoso 公司概觀
 
  **摘要：**了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。
   
@@ -85,9 +83,9 @@ Contoso 的 IT 架構師規劃採用 Microsoft cloud 方案時識別下列項目
     
     雲端應用程式及 saas 和工作負載管理需要維護設定、 資料、 帳戶、 原則與權限以及監視進行中的狀況與效能的功能。現有的伺服器管理工具將用來管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

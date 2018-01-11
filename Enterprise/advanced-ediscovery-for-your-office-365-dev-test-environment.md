@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - TLG
 - Ent_TLGs
 ms.assetid: d4c49a6f-abfd-4d68-b353-259b4eefb033
 description: "摘要： 設定與示範 Office 365 進階 eDiscovery 與 Office 365 開發人員/測試環境中的範例資料。"
-ms.openlocfilehash: 35ebbe68027d37d2925728005235d3dde62c6248
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 95eabc3eeb718cb1235848544b41207a94c428c7
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="advanced-ediscovery-for-your-office-365-devtest-environment"></a>用於 Office 365 開發/測試環境的進階電子文件探索
 
@@ -183,15 +180,15 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 您現在可以使用此環境來建立新的內容、新的搜尋和案例，並進一步在 Office 365 中試驗進階電子文件探索。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
   
 [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   

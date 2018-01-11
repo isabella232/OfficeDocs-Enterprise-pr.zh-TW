@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_Solutions
+ms.collection: Ent_O365
+ms.custom: Ent_Solutions
 ms.assetid: bef810a4-53f6-4962-878e-e20b5019baeb
 description: "摘要： 了解如何使用 Azure Access Control Service 來驗證您的 SharePoint Server 2013 使用者利用 Azure Active Directory。"
-ms.openlocfilehash: 85db8376aeb06ef6f291b563410c991ea24351d5
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 9025eb53f4d8e37403c48416f41adbe35fa9fa01
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="using-microsoft-azure-active-directory-for-sharepoint-2013-authentication"></a>使用 Microsoft Azure Active Directory 的 SharePoint 2013 驗證
 
@@ -133,7 +129,7 @@ ms.lasthandoff: 12/15/2017
     
      ![擴充應用程式的設定](images/ExtendWebApp.jpg)
   
-2. 在 IIS 管理員中，按兩下 [**伺服器憑證**]。
+2. In IIS Manager, double-click **Server Certificates**.
     
 3. 在 [**動作**] 窗格中，按一下 [**建立自我簽署憑證**。在 [**指定憑證的易記名稱**] 方塊中輸入憑證的易記名稱及 [**確定]**。
     
@@ -143,7 +139,7 @@ ms.lasthandoff: 12/15/2017
   
      ![[編輯繫結] 方塊中的主機名稱](images/SelfSignedCert1.jpg)
   
-5. 從 Azure 管理入口網站中，按一下您要設定的虛擬機器] 和 [**端點**。
+5. From the Azure management portal, click the virtual machine that you want to configure, and then click **Endpoints**.
     
 6. 按一下 [**新增**] 和 [ **-->** （適用於下一步）。
     
@@ -156,7 +152,7 @@ ms.lasthandoff: 12/15/2017
     > [!NOTE]
     > 如需如何將端點加入在 Azure 虛擬機器的其他資訊，請參閱[如何設定 「 端點虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393126)。 
   
-9. 從 [存取控制服務入口網站中，新增信賴憑證者，如下圖所示。
+9. From the Access Control services portal, add a relying party, as illustrated in the following figure.
     
      ![「新增信賴憑證者應用程式」設定](images/AddRelyingParty.jpg)
   
@@ -179,11 +175,11 @@ ms.lasthandoff: 12/15/2017
     
      ![Azure Access Control 中的宣告規則](images/ClaimRules.jpg)
   
-4. 刪除現有的宣告規則名為 [ **upn**]，並保持**UPN 宣告名稱**規則、 圖，如下圖所示。
+4. Delete the existing claim rule named **upn**, and leave the **Name Claim to UPN** rule, as illustrated by the following figure.
     
      ![Azure Access Control 中的規則設定](images/ClaimToUPN.jpg)
   
-## <a name="configure-the-x509-certificate"></a>設定的 X.509 憑證
+## <a name="configure-the-x509-certificate"></a>Configure the X.509 certificate
 
 使用下列步驟來設定要用於 token 簽署的 X.509 憑證。
   
@@ -195,7 +191,7 @@ ms.lasthandoff: 12/15/2017
     
      ![Federation.xml 檔案的 X509 憑證元素](images/X509Cert.jpg)
   
-4. 從 c 磁碟機根目錄\\，建立名為**憑證**的資料夾。
+4. From the root of drive C:\\, create a folder named **Certificates**.
     
 5. X509Certificate 資訊儲存到資料夾 c:\\憑證檔案名稱， **AcsTokenSigning.cer**。
     
@@ -204,15 +200,15 @@ ms.lasthandoff: 12/15/2017
   
      ![將 X509Certificate 元素儲存為檔案](images/X509Cert_Save.jpg)
   
-## <a name="create-a-claim-mapping-by-using-windows-powershell"></a>使用 Windows PowerShell 建立的宣告對應
+## <a name="create-a-claim-mapping-by-using-windows-powershell"></a>Create a claim mapping by using Windows PowerShell
 
 使用下列步驟來使用 Windows PowerShell 建立宣告對應。
   
 確認您具備下列成員資格：
   
-1. SQL Server 執行個體上的**securityadmin**固定伺服器角色。
+1. **securityadmin** fixed server role on the SQL Server instance.
     
-2. 將更新的所有資料庫上的**db_owner**固定的資料庫角色。
+2. **db_owner** fixed database role on all databases that will be updated.
     
 3. 在執行 Windows PowerShell cmdlet 的伺服器上的管理員群組。
     
@@ -223,9 +219,9 @@ ms.lasthandoff: 12/15/2017
   
 1. 從 [**開始**] 功能表按一下 [**所有程式**]。
     
-2. 按一下 [ **Microsoft SharePoint 2013 產品**]。
+2. Click **Microsoft SharePoint 2013 Products**.
     
-3. 按一下 [ **SharePoint 2013 管理命令介面**]。
+3. Click **SharePoint 2013 Management Shell**.
     
 4. 在 Windows PowerShell 命令提示字元處輸入下列命令來建立的宣告對應：
     
@@ -259,70 +255,70 @@ ms.lasthandoff: 12/15/2017
 
 ## <a name="configure-sharepoint-for-the-new-identity-provider"></a>設定 SharePoint 進行新的身分識別提供者
 
-使用下列步驟來設定您的 SharePoint 安裝至新的身分識別提供者的 Azure AD。
+Use the following steps to configure your SharePoint installation to the new identity provider for Azure AD.
   
 1. 確認執行此程序的使用者帳戶為 SharePoint 伺服器陣列管理員群組的成員。
     
-2. 在管理中心首頁上，按一下 [**應用程式管理**。
+2. In Central Administration, on the home page, click **Application Management**.
     
-3. 按一下 [**應用程式管理**] 頁面上的 [ **Web 應用程式**] 區段中的 [**管理 web 應用程式**]。
+3. On the **Application Management** page, in the **Web Applications** section, click **Manage web applications**.
     
 4. 按一下適當的 Web 應用程式。
     
-5. 功能區上，按一下 [**驗證提供者**]。
+5. From the ribbon, click **Authentication Providers**.
     
-6. 在 [**區域**] 按一下 [區域名稱。例如，**預設值**。
+6. Under **Zone**, click the name of the zone. For example, **Default**.
     
-7. 在 [**編輯驗證**] 頁面上的 [**宣告驗證類型**] 區段中選取 [**信任的身分識別提供者**，和 [提供者，即為本文目的**ACS 提供者**的名稱。按一下 [**確定]**。
+7. On the **Edit Authentication** page, in the **Claims Authentication Types** section, select **Trusted Identity provider**, and then click the name of your provider, which for purposes of this article is **ACS Provider**. Click **OK**.
     
-8. 下圖說明 「**信任的提供者**設定。
+8. The following figure illustrates the **Trusted Provider** setting.
     
 ![Web 應用程式中的「信任提供者」設定](images/AddProvider_Azure.jpg)
   
-## <a name="set-the-permissions"></a>設定的權限
+## <a name="set-the-permissions"></a>Set the permissions
 
-使用下列步驟來設定存取 web 應用程式的權限。
+Use the following steps to set the permissions to access the web application.
   
-1. 在管理中心首頁上，按一下 [**應用程式管理**。
+1. In Central Administration, on the home page, click **Application Management**.
     
-2. 按一下 [**應用程式管理**] 頁面上的 [ **Web 應用程式**] 區段中的 [**管理 web 應用程式**]。
+2. On the **Application Management** page, in the **Web Applications** section, click **Manage web applications**.
     
-3. 按一下適當的 web 應用程式] 和 [**使用者原則**。
+3. Click the appropriate web application, and then click **User Policy**.
     
-4. 在 [ **Web 應用程式的原則**中，按一下 [**新增使用者**]。
+4. In **Policy for Web Application**, click **Add Users**.
     
-5. 在 [**新增使用者**] 對話方塊中按一下適當的區域中**的區域**]，並再按 [**下一步**。
+5. In the **Add Users** dialog box, click the appropriate zone in **Zones**, and then click **Next**.
     
-6. 在 [**新增使用者**] 對話方塊中，typeuser2@blueskyabove.onmicrosoft.com （ACS 提供者）。
+6. In the **Add Users** dialog box, typeuser2@blueskyabove.onmicrosoft.com (ACS Provider).
     
-7. 在 [**權限**，按一下 [**完全控制**]。
+7. In **Permissions**, click **Full Control**.
     
 8. 按一下 [完成]，然後按一下 [確定]。
     
-下圖說明 [**新增使用者**] 區段中的現有 web 應用程式。
+The following figure illustrates the **Add Users** section of an existing web application.
   
 ![將使用者新增至現有 Web 應用程式](images/AddUsers_Azure.jpg)
   
-## <a name="verify-the-new-provider"></a>確認新的提供者
+## <a name="verify-the-new-provider"></a>Verify the new provider
 
-使用下列步驟以確認新的身分識別提供者正常運作來確保新的驗證提供者會出現在 [登入提示。
+Use the following steps to verify that the new identity provider is working by ensuring that the new authentication provider appears on the sign-in prompt.
   
-1. 登入使用名為**藍色天空上方**，新的提供者，如下圖所示。
+1. Sign in by using the new provider named **Blue Sky Above**, as illustrated in the following figure.
     
      ![顯示新受信任提供者的登入對話方塊](images/BlueSkyAbove.jpg)
   
 ## <a name="additional-resources"></a>其他資源
 
-[了解 WS-同盟](https://go.microsoft.com/fwlink/p/?linkid=188052)
+[Understanding WS-Federation](https://go.microsoft.com/fwlink/p/?linkid=188052)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
   
 ## <a name="join-the-discussion"></a>參與討論
 
-|**與我們連絡**|**描述**|
+|**Contact us**|**描述**|
 |:-----|:-----|
-|**雲端採用內容您是否需要吗？** <br/> |我們會建立橫跨多個 Microsoft cloud 平台及服務的雲端採用的內容。我們知道什麼構思我們雲端採用內容，或藉由傳送電子郵件給[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)要求特定的內容。<br/> |
-|**加入雲端採用討論** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
-|**取得您在此處看到美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
+|**What cloud adoption content do you need?** <br/> |We are creating content for cloud adoption that spans multiple Microsoft cloud platforms and services. Let us know what you think about our cloud adoption content, or ask for specific content by sending email to [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20).  <br/> |
+|**Join the cloud adoption discussion** <br/> |If you are passionate about cloud-based solutions, consider joining the Cloud Adoption Advisory Board (CAAB) to connect with a larger, vibrant community of Microsoft content developers, industry professionals, and customers from around the globe. To join, add yourself as a member of the [CAAB (Cloud Adoption Advisory Board) space](https://aka.ms/caab) of the Microsoft Tech Community and send us a quick email at [CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!). Anyone can read community-related content on the [CAAB blog](https://blogs.technet.com/b/solutions_advisory_board/). However, CAAB members get invitations to private webinars that describe new cloud adoption resources and solutions.  <br/> |
+|**Get the art you see here** <br/> |If you want an editable copy of the art you see in this article, we'll be glad to send it to you. Email your request, including the URL and title of the art, to [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20).  <br/> |
    
 

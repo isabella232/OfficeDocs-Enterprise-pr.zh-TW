@@ -9,16 +9,14 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 3e9c405a-415b-4584-aa7e-f2489299c457
 description: "摘要： 如何實作 Contoso SQL Server 伸展以減少其內部部署資料儲存需求及每日執行成本的資料庫。"
-ms.openlocfilehash: f1a44a14da49c394974755f7c557013717c4ccef
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: ef21b00f54fcc6efda2e83cb5952a99c7b8c8f28
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="moving-historical-transaction-data-to-the-cloud"></a>將歷程交易資料移至雲端
 
@@ -69,11 +67,11 @@ Contoso 用來將其歷程資料移至雲端的下列步驟：
     
 - 大幅減少其每日執行成本。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Contoso Corporation 的企業案例](enterprise-scenarios-for-the-contoso-corporation.md)
   
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

@@ -14,14 +14,13 @@ ms.custom:
 - Ent_Office_Other
 - LIL_Placement
 - O365ITProTrain
-- DecEntMigration
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: "說明如何使用 Office 365 PowerShell 移除先前已指派給使用者的 Office 365 授權。"
-ms.openlocfilehash: 90cae603a7a7cda0b7318571d3eb045f750fd58d
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: d419aab9b3287364567e03accdfb2e687eacb0de
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -37,7 +36,7 @@ ms.lasthandoff: 12/15/2017
     
   - [使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料](view-account-license-and-service-details-with-office-365-powershell.md)
     
-- 如果您使用**Get-msoluser** cmdlet 而不需使用_-所有_參數，傳回前 500 的帳戶。
+- 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _-All_參數，則只會傳回前 500 個帳戶。
     
 ## <a name="the-short-version-instructions-without-explanations"></a>簡短版本 (不含說明的指示)
 <a name="ShortVersion"> </a>
@@ -158,11 +157,11 @@ BelindaN@litwareinc.com      Newman, Belinda     False
   
 - [Get-content](https://go.microsoft.com/fwlink/p/?LinkId=289917)
     
-- [Get-msoluser](https://go.microsoft.com/fwlink/p/?LinkId=691543)
+- [Get-MsolUser](https://go.microsoft.com/fwlink/p/?LinkId=691543)
     
 - [Set-msoluserlicense](https://go.microsoft.com/fwlink/p/?LinkId=691548)
     
-- [Foreach-object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
+- [ForEach-Object](https://go.microsoft.com/fwlink/p/?LinkId=113300)
     
 - [Where-Object](https://go.microsoft.com/fwlink/p/?LinkId=113423)
     

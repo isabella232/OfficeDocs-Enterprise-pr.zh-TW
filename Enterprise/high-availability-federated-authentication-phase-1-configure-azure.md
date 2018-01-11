@@ -8,20 +8,15 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
-- Ent_O365_Hybrid_Top
-ms.custom:
-- DecEntMigration
-- Ent_Solutions
+ms.collection: Ent_O365
+ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: "摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。"
-ms.openlocfilehash: fed6b24af2ba54bef95be22641fd140f7c1be717
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: f74e91930f5aef8f10986dcf51db6066c953014d
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
@@ -43,7 +38,7 @@ Azure 必須佈建使用這些基本元件：
 
 開始設定 Azure 元件之前，請填入如下表所示。若要協助您在設定 Azure 的程序，此區段列印和寫下所需的資訊或將本節複製到文件並填入其。針對 VNet 的設定，填入表格 V。
   
-|**項目**|**組態設定**|**說明**|**值**|
+|**項目**|**組態設定**|**描述**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |VNet 名稱  <br/> |要指派給 VNet 的名稱 (例如 FedAuthNet)。  <br/> |_______________________________  <br/> |
 |2.  <br/> |VNet 位置  <br/> |將包含虛擬網路的區域性 Azure 資料中心  <br/> |_______________________________  <br/> |
@@ -76,7 +71,7 @@ Azure 必須佈建使用這些基本元件：
   
 下一步，針對指派至虛擬機器和負載平衡器執行個體的靜態 IP 位址填寫表格 I。
   
-|**項目**|**目的**|**子網路上的 IP 位址**|**值**|
+|**項目**|**用途**|**子網路上的 IP 位址**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |第一個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第四個可能 IP 位址。  <br/> |_______________________________  <br/> |
 |2.  <br/> |第二個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第五個可能 IP 位址。  <br/> |_______________________________  <br/> |
@@ -222,7 +217,7 @@ $nsg=Get-AzureRMNetworkSecurityGroup -Name $subnet3Name -ResourceGroupName $rgNa
 Set-AzureRMVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $subnet3Name -AddressPrefix $subnet3Prefix -NetworkSecurityGroup $nsg
 ```
 
-下一步，使用以下命令來建立站台對站台 VPN 連線的閘道。
+接著，使用以下命令來建立站台對站台 VPN 連線的閘道。
   
 ```
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -276,7 +271,7 @@ Get-AzureRMPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgNam
   
 下一步，定義三個可用性設定組的名稱。填寫表格 A。  
   
-|**項目**|**目的**|**可用性設定名稱**|
+|**項目**|**用途**|**可用性設定名稱**|
 |:-----|:-----|:-----|
 |1.  <br/> |網域控制站  <br/> |_______________________________  <br/> |
 |2.  <br/> |AD FS 伺服器  <br/> |_______________________________  <br/> |
@@ -311,7 +306,7 @@ New-AzureRMAvailabilitySet -Name $avName -ResourceGroupName $rgName -Location $l
 
 使用[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)繼續執行此工作負載的組態。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   

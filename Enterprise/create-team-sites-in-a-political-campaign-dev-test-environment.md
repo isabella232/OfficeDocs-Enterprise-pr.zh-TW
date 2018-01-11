@@ -8,16 +8,14 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: None
-ms.custom:
-- DecEntMigration
-- Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise
 ms.assetid: c2112ce8-1c4b-424f-b200-59e161db2d21
 description: "摘要： 政治 campaign 開發/測試環境中建立公用、 私人、 機密、 和高度機密的 SharePoint Online 小組網站。"
-ms.openlocfilehash: 82e671af271508dfdecac6169a7892a8a12b7865
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 4f89fd29103756a33aa15e8e5e2976c521d69baa
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-team-sites-in-a-political-campaign-devtest-environment"></a>政治 campaign 開發/測試環境中建立小組網站
 
@@ -407,13 +405,13 @@ ms.lasthandoff: 12/15/2017
   
 若要保護與 Azure 資訊保護及這個新的標籤文件，您必須在測試電腦上的 [[安裝 Azure 資訊保護用戶端](https://docs.microsoft.com/information-protection/rms-client/install-client-app)、 從 Office 365 入口網站安裝 Office 並再登入從 Microsoft Word 中**帳戶資深和策略性人員**您試用版訂閱的群組。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
 [設定群組及使用者政治 campaign 開發/測試環境](configure-groups-and-users-for-a-political-campaign-dev-test-environment.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

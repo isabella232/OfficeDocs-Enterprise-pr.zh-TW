@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Solutions
 ms.assetid: 71250a04-fd2d-4c3c-a32b-b8a838b19a54
 description: "摘要： 了解隔離的 SharePoint Online 小組網站的用途。"
-ms.openlocfilehash: 3de60bb19498d9f84c18e51181a3fedda9846bdf
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: d4fe03c8e95b78bbd9454bbbd23f6fa27ba39f06
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="isolated-sharepoint-online-team-sites"></a>隔離的 SharePoint Online 小組網站
 
@@ -61,7 +58,7 @@ SharePoint Online 小組網站是簡單的方法來快速建立 Microsoft Office
   
 當您準備好要部署在生產環境中的隔離的 SharePoint Online 小組網站時，請參閱[設計隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)中的逐步說明設計考量。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [設計隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)
   

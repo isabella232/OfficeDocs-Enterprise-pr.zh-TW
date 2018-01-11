@@ -8,21 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
-- jan17entnews
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 098c1a1d-83a1-40eb-bbc9-47de7af8bb23
 description: "摘要： 將 Dynamics 365 新增至 Office 365 開發人員/測試環境用於此測試實驗室指南。"
-ms.openlocfilehash: 49648dd357d23eaee2d08d35252e18edf6a5d2ec
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: a61e831eeabc159da4774cfe730c694c383e6801
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
 
@@ -136,17 +132,17 @@ Office 365 和 Dynamics 365 開發人員/測試環境現在有：
 
 設定及示範 [Office 365 與 Dynamics 365 共同運作方式與[Office 365 和 Dynamics 365 開發人員/測試環境的 Exchange Online 整合](exchange-online-integration-for-your-office-365-and-dynamics-365-dev-test-enviro.md)的 Exchange Online 信箱。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
 
-[訂閱管理 Dynamics 365 （線上）](https://technet.microsoft.com/library/jj679903.aspx)
+[Dynamics 365 訂閱管理 (線上)](https://technet.microsoft.com/library/jj679903.aspx)
   
 [管理 Dynamics 365](https://technet.microsoft.com/library/dn531101.aspx)
 

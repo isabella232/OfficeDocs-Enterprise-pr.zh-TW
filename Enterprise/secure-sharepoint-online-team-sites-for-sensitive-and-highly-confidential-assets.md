@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: 8c088e88-a9ba-4044-bced-722196f4496d
 description: "摘要： 如何 Contoso 變得容易實作機密保護和高度機密的 SharePoint Online 的小組網站，尚未安全、 高階主管的共同作業和其參考資料中心。"
-ms.openlocfilehash: 1574babb54bfcb3fd74fb8ce4f31c364bb96b14a
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 062238bd301200e388ba9d4f6d24503d33046f50
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="secure-sharepoint-online-team-sites-for-sensitive-and-highly-confidential-assets"></a>保護敏感和最高機密資產的 SharePoint Online 小組網站
 
@@ -60,11 +56,11 @@ Contoso 為其行政人員及的研究小組建立安全的 SharePoint Online �
   
  若要將此以為示範、 概念證明或開發人員/測試，請參閱 ＜[保護 SharePoint Online 開發人員/測試環境中的網站](https://docs.microsoft.com/microsoft-365-enterprise/secure-sharepoint-online-sites-dev-test)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Contoso Corporation 的企業案例](enterprise-scenarios-for-the-contoso-corporation.md)
   
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

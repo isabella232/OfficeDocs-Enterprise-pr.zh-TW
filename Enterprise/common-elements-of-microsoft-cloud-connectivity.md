@@ -9,16 +9,14 @@ ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 061d4507-7360-4029-8f4b-3d4bc6b4ade0
 description: "摘要： 了解一般的網路基礎結構元素，以及如何準備您的網路。"
-ms.openlocfilehash: 27a83217e94d6a0f882825c57346b58ea1834443
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 9dffcae28283c9f8b8c219284554225645435e0a
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="common-elements-of-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的常見的元素
 
@@ -78,11 +76,11 @@ ms.lasthandoff: 12/15/2017
     
 - **網際網路 DNS：**A、 AAAA、 CNAME、 MX、 PTR 及其他記錄以找出 Microsoft cloud 或雲端服務。例如，您可能需要 CNAME 記錄為您的應用程式架設在 Azure PaaS。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="steps"> </a>
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

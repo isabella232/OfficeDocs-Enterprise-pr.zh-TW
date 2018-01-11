@@ -9,16 +9,14 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 78a407e4-2d8b-4561-b308-b22c95f60eeb
 description: "摘要： 了解如何利用 IDaaS Contoso，並提供地理位置分散變得多餘的和驗證其使用者。"
-ms.openlocfilehash: a0de29ac7e73216e04fe02c680f2557e9f402883
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: d9aee05d36061433398cd8ce913a03bce65cc103
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="identity-for-the-contoso-corporation"></a>Contoso Corporation 的身分識別
 
@@ -120,15 +118,15 @@ Headquarters DMZ 中主要的驗證伺服器變成無法使用，IT 人員切換
     
 - 當 DMZ 驗證伺服器無法使用，在 Azure IaaS 中使用之伺服器的 IP 位址。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 雲端身分識別的企業架構師](http://aka.ms/cloudarchidentity)
+[Microsoft Cloud Identity for Enterprise Architects](http://aka.ms/cloudarchidentity)
   
-[身分識別與裝置 Protection for Office 365](http://aka.ms/o365protect_device)
+[Office 365 的身分識別與裝置保護](http://aka.ms/o365protect_device)
   
 [Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
 

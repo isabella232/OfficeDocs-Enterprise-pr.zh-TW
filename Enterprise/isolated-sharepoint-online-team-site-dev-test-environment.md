@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - TLG
 - Ent_TLGs
 ms.assetid: d1795031-beef-49ea-a6fc-5da5450d320d
 description: "摘要： 設定隔離與 Office 365 開發人員/測試環境中之組織的其餘的 SharePoint Online 小組網站。"
-ms.openlocfilehash: a5e36060ed54213f555ab75a1d4ace7300b7667c
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: e54edb0111fd3285030a3074b5ec66a0c9224d29
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="isolated-sharepoint-online-team-site-devtest-environment"></a>隔離的 SharePoint Online 小組網站開發/測試環境
 
@@ -285,15 +282,15 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
 
 當您準備好要部署在生產環境中的隔離的 SharePoint Online 小組網站時，請參閱[設計隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)中的逐步說明設計考量。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

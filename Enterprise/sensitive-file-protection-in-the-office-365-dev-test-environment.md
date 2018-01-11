@@ -8,21 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
-- jan17entnews
 - TLG
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: "摘要： 設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。"
-ms.openlocfilehash: a6547cf4327980e3909323d5bda4455dfffd37f4
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: eb456c86b118556abde6a887fe8b9ab68300740b
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發人員/測試環境中的機密檔案保護
 
@@ -331,13 +327,13 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 若要查看 IRM 保護的另一種方式是要查看您的本機資料夾中的檔案。**SensitiveData AfterIRM.docx**應該更加大於**SensitiveData BeforeIRM.docx**檔案。加密**SensitiveData AfterIRM.docx**檔案，而且已新增 IRM 保護資訊。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

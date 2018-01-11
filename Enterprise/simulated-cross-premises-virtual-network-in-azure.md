@@ -8,21 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
-- jan17entnews
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: "摘要： 會建立模擬的跨內部虛擬網路 in Microsoft Azure 為開發人員/測試環境。"
-ms.openlocfilehash: b8ced6da7932ca463c7c722cb1d715198e20e07c
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: bd39e1a9815326ee9b0c479631b834df3609ac4f
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>模擬的跨部署在 Azure 虛擬網路
 
@@ -209,13 +205,13 @@ New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
 
 使用此開發/測試環境來模擬[架設在 Azure 中的 SharePoint Server 2016 內部網路伺服器陣列](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+[Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
   
 [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   

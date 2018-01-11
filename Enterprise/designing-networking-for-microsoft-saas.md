@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: 4194020a-3847-4259-9f2d-5c556a4510f9
 description: "摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。"
-ms.openlocfilehash: 432789d03f5208a379dc2ab4f17f38f95223e10d
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 970d27e50e06f4d872de67589295c490aaa6e0e7
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
 
@@ -190,9 +186,9 @@ ms.lasthandoff: 12/15/2017
     
 - [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

@@ -5,23 +5,20 @@ author: brendacarter
 manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
-ms.topic: concetpual
+ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Architecture
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 description: "摘要： 設定建議保護 SharePoint Online 和 Office 365 中的檔案。"
-ms.openlocfilehash: 336dd4114e7853319fede88f9f3ea5aa613b2081
-ms.sourcegitcommit: 4a347cfb16405d5213b28f332d80e244fca0fb8f
+ms.openlocfilehash: a8ba632d9bc24e272a649f5790824323f889bdc0
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="secure-sharepoint-online-sites-and-files"></a>安全的 SharePoint Online 網站及檔案
 
@@ -39,9 +36,9 @@ ms.lasthandoff: 12/18/2017
     
 如需這些層與建議的每一層的功能的詳細資訊，請參閱下列資源。 
   
-- [身分識別與裝置 Protection for Office 365](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
+- [Office 365 的身分識別與裝置保護](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
     
-- [Office 365 中的檔案防護解決方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
+- [Office 365 的檔案保護方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
     
 ## <a name="capability-overview"></a>功能概觀 （英文)
 
@@ -185,7 +182,7 @@ SharePoint Online 和 OneDrive for Business 的裝置存取設定可讓您判斷
 
 如需設定 Azure 資訊保護此解決方案，請參閱[Azure 資訊保護檔案保護 SharePoint Online](protect-sharepoint-online-files-with-azure-information-protection.md)的步驟。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   

@@ -5,23 +5,20 @@ author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
-ms.topic: concetpual
+ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: "摘要： 在同步處理您的內部部署目錄與 Office 365 訂閱的 Azure AD 租用戶之間的帳戶的 Azure 虛擬機器上部署 Azure AD Connect (DirSync)。"
-ms.openlocfilehash: c6ee337c49092ac5d2b3d30a54fc33b3f3e2bb58
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 4160c8b0f1d38c53fdbc1052cc0bc30793cc8ba2
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Office 365 目錄同步作業 (DirSync)
 
@@ -198,7 +195,7 @@ Azure AD Connect 會從內部部署 Windows Server AD 新增帳戶至您的 Offi
     
 7. 針對其他使用者請回到步驟 3。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="DeploymentRoadmap"> </a>
 

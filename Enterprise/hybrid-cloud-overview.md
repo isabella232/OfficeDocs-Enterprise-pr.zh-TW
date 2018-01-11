@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Visuals
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: 3ea3ee10-411e-4690-b9e5-f1b46f1f4d59
 description: "摘要： 了解的定義和 Microsoft 混合雲端的元素。"
-ms.openlocfilehash: 9ece0f2e09384c0b9e6d9042b899d782be6327b5
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 6f4eb3a814c6dcf50321ae34a05671cfa8cf17c1
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="hybrid-cloud-overview"></a>混合式雲端概觀 （英文)
 
@@ -86,9 +82,9 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
     
     混合式雲端案例的管理包括維護設定、 資料、 帳戶、 原則與權限，以及要監視的案例和與其效能元素的進行中狀況的功能。您也可以使用相同的工具集，例如 Systems Management Server、 管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft 混合雲端為企業架構師的](microsoft-hybrid-cloud-for-enterprise-architects.md)
+[Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

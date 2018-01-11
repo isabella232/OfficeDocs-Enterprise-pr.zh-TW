@@ -8,21 +8,17 @@ ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: "摘要： 使用這些雲端採用測試實驗室指南 (Tlg) 來設定示範、 證明概念或開發人員/測試環境的 Office 365、 企業行動性 + 安全性 （EMS）、 Dynamics 365 與 Office Server 產品。"
-ms.openlocfilehash: 532215a08e28a9d67cd19ef60d60419b06df4957
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 2c533129b88783d8ff39dbc5753bdeb26eeafe81
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="cloud-adoption-test-lab-guides-tlgs"></a>雲端採用測試實驗室指南 (TLG)
 
@@ -45,15 +41,15 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
 
 使用這些文章來建置您的 Office 365 開發/測試環境︰
   
-- [基本組態開發/測試環境](base-configuration-dev-test-environment.md)
+- [基底組態開發/測試環境](base-configuration-dev-test-environment.md)
     
     建立在 Microsoft Azure 基礎結構服務中執行的簡化內部網路。如果您想要建置模擬的企業組態，這是選擇性的步驟。
     
-- [Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境](office-365-dev-test-environment.md)
     
     建立 Office 365 企業版 E5 」 試用訂閱，您可以從您的電腦或 Azure 基礎結構服務中執行簡化內部網路中執行。
     
-- [Office 365 開發人員/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
     
     安裝和設定 Azure AD Connect 以進行目錄同步作業及密碼同步化。如果您想要建置模擬的企業組態，這是選擇性的步驟。
     
@@ -113,7 +109,7 @@ Office 365 開發人員/測試環境中，使用這些文章來示範 Office 365
 
 透過這些文章，新增 Dynamics 365 試用版訂閱，並測試 Office 365 和 Dynamics 365 整合式功能與案例︰
   
-- [Office 365 和 Dynamics 365 開發人員/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
+- [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
     
     將 Dynamics 365 試用版訂閱以及 Dynamics 365 授權和權限新增至您的使用者帳戶。
     
@@ -164,7 +160,7 @@ Office 365 開發人員/測試環境中，使用這些文章來示範 Office 365
 |**加入雲端採用討論** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
 |**取得您在此處看到美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
    
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="ADD_TLGs"> </a>
 
@@ -172,7 +168,7 @@ Office 365 開發人員/測試環境中，使用這些文章來示範 Office 365
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
   
-[SharePoint、 Exchange、 Skype for Business 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
+[適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
   
 [混合式解決方案](hybrid-solutions.md)
 

@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_TLGs
+ms.collection: Ent_O365
+ms.custom: Ent_TLGs
 ms.assetid: 49c7758a-1c01-4153-9b63-5eae3f6305ce
 description: "摘要： 使用此測試實驗室指南註冊 Microsoft 365 開發人員/測試環境中的裝置並從遠端管理它們。"
-ms.openlocfilehash: 8ad22ed62d8e7cac8aca225af42e389dc05cb2b5
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 71d04b0d2a59683ff09ad4256ed8fc82e89e876a
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-devtest-environment"></a>註冊 iOS 和 Microsoft 企業 365 開發人員/測試環境中的 Android 裝置
 
@@ -255,15 +251,15 @@ Android 裝置密碼重設時, Intune 系統管理入口網站，就會產生並
 7. 若要變更密碼後，移到**設定**、 點選**裝置**、 點選 [**鎖定] 畫面上**，輸入新的密碼再次、 點選 [**螢幕鎖定**及您所選擇的密碼。
     
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)一個 Microsoft Cloud 測試實驗室指南堆疊中的文章的所有視覺地圖。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft 365 Enterprise 開發人員/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
   
 [Microsoft 365 Enterprise 開發人員/測試環境的 MAM 原則](mam-policies-for-your-microsoft-365-enterprise-dev-test-environment.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
 
 [Enterprise 行動性 + 安全性 （EMS）](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)
 

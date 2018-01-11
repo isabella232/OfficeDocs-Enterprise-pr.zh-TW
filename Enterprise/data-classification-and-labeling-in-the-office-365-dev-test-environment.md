@@ -8,21 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
-- jan17entnews
 - TLG
 - Ent_TLGs
 ms.assetid: 919b8fc7-b0bc-46db-91f5-37342564e01b
 description: "摘要： 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。"
-ms.openlocfilehash: 2784f4105903855de89c6c45f7a643279bb4dfbf
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: a2db6817bea879caeb52ed9b11b40c6c317ea171
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>資料分類和 Office 365 開發人員/測試環境中顯示標籤
 
@@ -161,9 +157,9 @@ Office 365 開發人員/測試環境現在有：
     
     您應該會看到 [文件] 資料夾中的 AfterAIP.docx 支援網站集合中。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
 
 [Office 365 和 EMS 開發/測試環境](http://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)
   

@@ -9,16 +9,14 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 8f004c92-773e-4eb0-8bb5-24494ca538d3
 description: "摘要： 如何虛構但代表性的全域組織已處理其商務需求與企業雲端案例。"
-ms.openlocfilehash: ff520c317fe4137b5e683935dc238bd7ff3f05ac
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: e63e5cdcece24cbffa7a0d6027c7bc28dbff4c7e
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enterprise-scenarios-for-the-contoso-corporation"></a>Contoso Corporation 的企業案例
 
@@ -34,9 +32,9 @@ ms.lasthandoff: 12/15/2017
     
     Contoso 實作機密保護和高度機密其行政人員及參考資料中心的更容易，尚未安全共同作業的 SharePoint Online 小組網站。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

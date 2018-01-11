@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Solutions
 ms.assetid: 1e8e3cfd-b878-4088-b941-9940363a5fae
 description: "摘要： 建立及設定的不同層級的資訊保護的 SharePoint Online 小組網站。"
-ms.openlocfilehash: 1023eff2542ab1bf41a8261d85d70c06718497cf
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 7aa0107222454383abe0c1284b66ec0c4b808595
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="deploy-sharepoint-online-sites-for-three-tiers-of-protection"></a>部署三層的保護的 SharePoint Online 的網站
 
@@ -265,7 +262,7 @@ ms.lasthandoff: 12/15/2017
 
 [保護 SharePoint Online 與 Office 365 標籤和 DLP 檔案](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [安全的 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)
   

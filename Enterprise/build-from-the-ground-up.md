@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: 84348d0c-d9d1-4a98-9b99-8433f9b70e45
 description: "摘要： 取得雲端一組的詳細資料儲存區可用來建立您自己的存放服務或解決方案的建置組塊。"
-ms.openlocfilehash: 18aa8cb7fa0dda05302a88487dcc69bdbcb174d5
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: eabf38e0ccef3335b2d198a33f5622d0d449589a
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="build-from-the-ground-up"></a>為基礎而建置
 
@@ -194,9 +190,9 @@ ms.lasthandoff: 12/15/2017
     
 - 在垂直 （由表格） 或水平 （跨多個擊碎線段資料表） 資料分割負載分散到多個資料庫。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft 雲端儲存為企業架構師的](microsoft-cloud-storage-for-enterprise-architects.md)
+[Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-storage-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

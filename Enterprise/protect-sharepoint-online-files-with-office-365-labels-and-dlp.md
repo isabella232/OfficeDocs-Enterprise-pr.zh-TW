@@ -8,20 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
+ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Solutions
 ms.assetid: c9f837af-8d71-4df1-a285-dedb1c5618b3
 description: "摘要： 適用於具有不同的層級的資訊保護的 SharePoint Online 小組網站的 Office 365 標籤和資料外洩防護 (DLP) 原則。"
-ms.openlocfilehash: 502a899c586114644bb59a2d55ca388c819f7777
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: dd4f71d8fae458d6d20f7a5b35b46e14a72853f1
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="protect-sharepoint-online-files-with-office-365-labels-and-dlp"></a>保護 SharePoint Online 與 Office 365 標籤和 DLP 檔案
 
@@ -225,7 +222,7 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
 
 [保護與 Azure 資訊保護的 SharePoint Online 檔案](protect-sharepoint-online-files-with-azure-information-protection.md)
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [安全的 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)
   

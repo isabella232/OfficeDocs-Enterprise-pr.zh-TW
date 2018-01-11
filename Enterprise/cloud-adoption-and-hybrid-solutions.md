@@ -1,25 +1,24 @@
 ---
 title: "企業雲端解決方案"
-description: "使用 Microsoft Cloud 解決商務問題。尋找最新的混合式及安全性雲端解決方案、 雲端採用及其他資訊。"
-services: o365-solutions
+description: "使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。"
 author: JoeDavies-MSFT
 manager: laurawi
 layout: LandingPage
 ms.assetid: 
 ms.service: o365-solutions
-ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: landing-page
+localization_priority: Normal
+ms.collection: Ent_O365
 ms.date: 12/13/2017
 ms.author: JoeDavies-MSFT
-ms.openlocfilehash: c9717be6f881968af0cc8ef66dfae54f4a6e7298
-ms.sourcegitcommit: d61cf5f3cd127dc0d446c5e78402aa8913041d06
+ms.openlocfilehash: 396d61debdd3f0cb222e9627b74a7baaa287c4c3
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 <h1>企業雲端解決方案</h1>
-<p>使用 Microsoft Cloud 解決商務問題。尋找最新的混合式及安全性雲端解決方案、 雲端採用及其他資訊。</p>
+<p>使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。</p>
 <p>現今的業務問題所需的技術解決方案，經常涉及多種產品及平台。您可以運用現有的內部部署基礎結構，同時運用 Microsoft 的雲端服務和平台提供的彈性和經濟實惠的特性。我們的目標是，提供可協助您使用 Microsoft 產品和服務來達到業務目標所需的資訊。 </p>
 <ul class="cardsF panelContent">
     <li>

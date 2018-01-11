@@ -5,20 +5,18 @@ author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
-ms.topic: concetpual
+ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 83e2859a-c673-47c4-880a-01cdfdadb93e
 description: "摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。"
-ms.openlocfilehash: 810640ab3b870759424af2f88392bbaf0b0e11c7
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 18b4e5e10094a43f0d2b10cd0f01684f2352a0a8
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="evolving-your-network-for-cloud-connectivity"></a>發展您的雲端連線的網路
 
@@ -83,9 +81,9 @@ ExpressRoute 可以運用您現有的網路提供者的專屬的連線。透過 
 |包括工程師及實作的內部和網際網路對向 IT 工作量負載平衡  <br/> |||適用於  <br/> |
 |虛擬機器連線及輸送量問題的疑難排解  <br/> |||適用於  <br/> |
    
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft 雲端連線 ExpressRoute](expressroute-for-microsoft-cloud-connectivity.md)
   

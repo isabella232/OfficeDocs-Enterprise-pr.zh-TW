@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: ccf1b8b3-0d50-4c66-b314-f480245fad5e
 description: "摘要： 取得可用來建立自訂的儲存解決方案的雲端儲存選項的詳細資料。"
-ms.openlocfilehash: bf6f7586b3a890cd25aba314e4892d5e2ac5bb34
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: bcfc5d851a3f3b0d987214c4ea22e669db3a53ee
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="some-assembly-required"></a>有部分組件
 
@@ -406,9 +402,9 @@ ms.lasthandoff: 12/15/2017
 
 檢閱[設定為基礎而建置](build-from-the-ground-up.md)雲端儲存選項。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[Microsoft 雲端儲存為企業架構師的](microsoft-cloud-storage-for-enterprise-architects.md)
+[Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-storage-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

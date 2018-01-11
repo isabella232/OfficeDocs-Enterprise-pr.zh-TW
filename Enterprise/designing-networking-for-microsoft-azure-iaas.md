@@ -5,20 +5,18 @@ author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
-ms.topic: concetpual
+ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 9cb70c9d-9ed9-47cc-af5a-6403d87d3372
 description: "摘要： 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。"
-ms.openlocfilehash: e4861de51f386af6e142debdafc64f655f010880
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 6f431eb2d87a4420e6e0ba7f48bfc3ef836c0cbe
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="designing-networking-for-microsoft-azure-iaas"></a>設計 Microsoft Azure IaaS 的網路
 
@@ -261,7 +259,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
 
 表 6 列出不同類型的連線。
   
-|**連線類型**|**目的**|
+|**連線類型**|**用途**|
 |:-----|:-----|
 |若要網站 (S2S) VPN  <br/> |以單一 VNet 連線 1-10 網站 （包括其他 VNets）。  <br/> |
 |ExpressRoute  <br/> |透過網際網路 Exchange 提供者 (IXP) 或網路服務提供者 (NSP) Azure 私人的安全連結。  <br/> |
@@ -428,11 +426,11 @@ IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多�
   
 如需其他範例虛擬跨部署 Azure 中的虛擬機器上部署的 IT 工作負載的網路，請參閱[Azure IaaS 的混合式雲端案例](https://technet.microsoft.com/library/mt750502.aspx)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 <a name="cross_prem"> </a>
 
-[Microsoft Cloud 網路的企業架構師](microsoft-cloud-networking-for-enterprise-architects.md)
+[Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

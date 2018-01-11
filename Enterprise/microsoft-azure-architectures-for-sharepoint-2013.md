@@ -8,19 +8,15 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Top
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.collection: Ent_O365
+ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
 description: "摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。了解解決方案的類型有良好的調整及如何設定 Microsoft Azure 至其中的主機。"
-ms.openlocfilehash: ee157ef81101cd51090fff50c972edd37562a179
-ms.sourcegitcommit: 4a347cfb16405d5213b28f332d80e244fca0fb8f
+ms.openlocfilehash: e7290e3e53173ecf3406470ef0a136bb1364e39b
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure Architectures for SharePoint 2013
 
@@ -65,7 +61,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
 
 每個 SharePoint 伺服器陣列依賴 Active Directory 提供給伺服器陣列安裝程式的管理帳戶。在此階段中，有兩個 Azure 中的 SharePoint 解決方案的選項。下表說明這些。
   
-|**選項**|**描述**|
+|**選項**|**說明**|
 |:-----|:-----|
 |專用的網域  <br/> |您可對 Azure 以支援您的 SharePoint 伺服器陣列部署專用和隔離的 Active Directory 網域。這是不錯的選擇的公用對向網際網路網站。  <br/> |
 |擴充跨部署連線到內部部署網域  <br/> |當您擴充跨部署連線到內部網域時、 使用者會存取透過您的內部網路 SharePoint 伺服器陣列主控內部部署一樣。您可以運用您的內部部署 Active Directory 和 DNS 實作。  <br/> 跨部署的連線，則需要建置 Azure 容錯移轉至從內部部署伺服器陣列中的嚴重損壞修復環境。  <br/> |
@@ -226,7 +222,7 @@ SharePoint 伺服器陣列可能會需要可調整的 Azure 平台。若要確�
 |**加入雲端採用討論** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
 |**取得您在此處看到美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
    
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
   

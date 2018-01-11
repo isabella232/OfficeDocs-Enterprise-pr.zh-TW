@@ -8,16 +8,14 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.custom:
-- DecEntMigration
-- Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise
 ms.assetid: 10d1004b-42b6-4e2b-aaa2-18ddd9118f64
 description: "摘要： 規劃和實作指引 fast 移動增加的威脅設定檔的組織。"
-ms.openlocfilehash: 0177e91ac0cbd7ba6ce7ffe95206036036c43da4
-ms.sourcegitcommit: 4a347cfb16405d5213b28f332d80e244fca0fb8f
+ms.openlocfilehash: 7b400a1c097bb1d3906a59dfd21461df0568c76a
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織
 
@@ -49,11 +47,11 @@ ms.lasthandoff: 12/18/2017
     
 示範或概念證明的其他安全性功能，請參閱[Office 365 測試實驗室指南](http://aka.ms/o365tlgs)。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [安全性解決方案](security-solutions.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

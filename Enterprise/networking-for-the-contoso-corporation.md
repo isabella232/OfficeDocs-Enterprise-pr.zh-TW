@@ -9,16 +9,14 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 014b3710-e6e9-485c-8550-975d510eb2fc
 description: "摘要： 了解的定義和 Microsoft 混合雲端的元素。"
-ms.openlocfilehash: 115a4844d96c1d027fd63e7d91f02cbadeb975d9
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 0943864c8a9982eba00a139617ebe17d39cdde4e
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="networking-for-the-contoso-corporation"></a>Contoso Corporation 的網路
 
@@ -128,9 +126,9 @@ Contoso 以備妥 Microsoft cloud 其網路使用下列步驟：
     
     根據預計的簡短和長期伺服器在 Azure IaaS 的數字，保留私人位址空間 Azure VNets 和其子網路。
     
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
