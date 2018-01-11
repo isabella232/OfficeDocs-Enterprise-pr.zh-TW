@@ -37,7 +37,7 @@ ms.lasthandoff: 01/11/2018
     
     <span data-ttu-id="df2b2-112">如果您已安裝 Office 365 PowerShell 模組並且想要深入了解如何使用自動化命令來管理使用者帳戶和授權，請從這裡開始。</span><span class="sxs-lookup"><span data-stu-id="df2b2-112">Start here if you have installed the Office 365 PowerShell modules and want to learn more about using automation commands to manage user accounts and licenses.</span></span>
     
-- <span data-ttu-id="df2b2-113">[適用於 SharePoint Online 的 Office 365 PowerShell]((https://technet.microsoft.com/zh-TW/library/fp161362.aspx))</span><span class="sxs-lookup"><span data-stu-id="df2b2-113">[Office 365 PowerShell for SharePoint Online]((https://technet.microsoft.com/zh-TW/library/fp161362.aspx))</span></span>
+- <span data-ttu-id="df2b2-113">[適用於 SharePoint Online 的 Office 365 PowerShell](https://technet.microsoft.com/zh-TW/library/fp161362.aspx)</span><span class="sxs-lookup"><span data-stu-id="df2b2-113">[Office 365 PowerShell for SharePoint Online](https://technet.microsoft.com/zh-TW/library/fp161362.aspx)</span></span>
     
     <span data-ttu-id="df2b2-114">如果您已安裝 Office 365 PowerShell 模組並且想要使用自動化命令來執行 SharePoint Online 的管理，請從這裡開始。</span><span class="sxs-lookup"><span data-stu-id="df2b2-114">Start here if you have installed the Office 365 PowerShell modules and want to use automation commands to perform management of SharePoint Online.</span></span>
     
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/11/2018
     
     <span data-ttu-id="df2b2-122">如果您已安裝 Office 365 PowerShell 模組並且想要使用自動化命令來執行 商務用 Skype Online 的管理，請從這裡開始。</span><span class="sxs-lookup"><span data-stu-id="df2b2-122">Start here if you have installed the Office 365 PowerShell modules and want to use automation commands to perform management of Skype for Business Online.</span></span>
     
-- <span data-ttu-id="df2b2-123">[Skype for Business Online cmdlets]((http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx))</span><span class="sxs-lookup"><span data-stu-id="df2b2-123">[Skype for Business Online cmdlets]((http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx))</span></span>
+- <span data-ttu-id="df2b2-123">[Skype for Business Online cmdlets](http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx)</span><span class="sxs-lookup"><span data-stu-id="df2b2-123">[Skype for Business Online cmdlets](http://technet.microsoft.com/library/141fbda3-992a-4eeb-9352-c6b0ffd760f6.aspx)</span></span>
     
     <span data-ttu-id="df2b2-124">如果您十分熟悉 Office 365 PowerShell、想要深入了解管理組織之撥入會議、Cloud PBX 和 PSTN 通話設定的特定命令，以及使用報告功能來監視和報告商務用 Skype Online 使用情形的特定命令，請從這裡開始。</span><span class="sxs-lookup"><span data-stu-id="df2b2-124">Start here if you are very comfortable with Office 365 PowerShell and want to learn more about specific commands to manage dial-in conferencing, Cloud PBX, and PSTN calling settings for your organization, and use the reporting features to monitor and report on Skype for Business Online usage.</span></span>
     

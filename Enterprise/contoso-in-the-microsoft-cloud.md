@@ -67,7 +67,7 @@ ms.lasthandoff: 01/11/2018
 
 [<span data-ttu-id="b9882-126">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="b9882-126">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
 
-<span data-ttu-id="b9882-127">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))</span><span class="sxs-lookup"><span data-stu-id="b9882-127">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers]((https://sway.com/FJ2xsyWtkJc2taRD))</span></span>
+<span data-ttu-id="b9882-127">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)</span><span class="sxs-lookup"><span data-stu-id="b9882-127">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers](https://sway.com/FJ2xsyWtkJc2taRD)</span></span>
 
 
 

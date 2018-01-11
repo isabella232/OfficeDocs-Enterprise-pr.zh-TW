@@ -32,7 +32,7 @@ ms.lasthandoff: 01/11/2018
   
 <span data-ttu-id="ffb74-108">![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842074) | ![參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54425)</span><span class="sxs-lookup"><span data-stu-id="ffb74-108">![PDF file](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | ![Visio file](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842074) | ![See a page with versions in additional languages](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[More languages](https://www.microsoft.com/download/details.aspx?id=54425)</span></span>
   
-<span data-ttu-id="ffb74-109">您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源]((https://aka.ms/cloudarchitecture))。</span><span class="sxs-lookup"><span data-stu-id="ffb74-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md) and swipe through [Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers]((https://aka.ms/cloudarchitecture)).</span></span>
+<span data-ttu-id="ffb74-109">您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源](https://aka.ms/cloudarchitecture)。</span><span class="sxs-lookup"><span data-stu-id="ffb74-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md) and swipe through [Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers](https://aka.ms/cloudarchitecture).</span></span>
   
 <span data-ttu-id="ffb74-110">請參閱下列各節：</span><span class="sxs-lookup"><span data-stu-id="ffb74-110">See the following sections:</span></span>
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/11/2018
     
     <span data-ttu-id="ffb74-123">逐步執行設計程序，用於主控伺服器架構 IT 工作負載，包括子網路建立最佳 Azure 虛擬的網路 (VNet)、位址空間、路由、DNS、負載平衡，及與您在上場所的網路、其他 VNets 及網際網路連線能力。</span><span class="sxs-lookup"><span data-stu-id="ffb74-123">Step through the design process to create an optimal Azure virtual network (VNet) for hosting server-based IT workloads, including subnets, address spaces, routing, DNS, load balancing, and connectivity to your on-premises network, other VNets, and the Internet.</span></span>
     
-<span data-ttu-id="ffb74-124">如需這張海報重點的 30 分鐘摘要，請參閱 Microsoft Virtual Academy 課程的[針對 Microsoft Cloud 供應項目最佳化您的網路]((https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743))。</span><span class="sxs-lookup"><span data-stu-id="ffb74-124">For a 30-minute summary of the key points of this poster, see the [Optimize Your Network for Microsoft Cloud Offerings]((https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743)) Microsoft Virtual Academy course.</span></span>
+<span data-ttu-id="ffb74-124">如需這張海報重點的 30 分鐘摘要，請參閱 Microsoft Virtual Academy 課程的[針對 Microsoft Cloud 供應項目最佳化您的網路](https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743)。</span><span class="sxs-lookup"><span data-stu-id="ffb74-124">For a 30-minute summary of the key points of this poster, see the [Optimize Your Network for Microsoft Cloud Offerings](https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743) Microsoft Virtual Academy course.</span></span>
   
 > [!NOTE]
 > <span data-ttu-id="ffb74-125">這幾篇文章說明在 **2017 年 6 月**發佈的 Microsoft Cloud Networking for Enterprise Architects 海報。</span><span class="sxs-lookup"><span data-stu-id="ffb74-125">These articles reflect the **June 2017** release of the Microsoft Cloud Networking for Enterprise Architects poster.</span></span>
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/11/2018
 
 [<span data-ttu-id="ffb74-127">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="ffb74-127">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
 
-<span data-ttu-id="ffb74-128">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))</span><span class="sxs-lookup"><span data-stu-id="ffb74-128">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers]((https://sway.com/FJ2xsyWtkJc2taRD))</span></span>
+<span data-ttu-id="ffb74-128">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)</span><span class="sxs-lookup"><span data-stu-id="ffb74-128">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers](https://sway.com/FJ2xsyWtkJc2taRD)</span></span>
 
 
 

@@ -39,7 +39,7 @@ ms.lasthandoff: 01/11/2018
 
 <span data-ttu-id="4a962-115">若要設定全域系統管理員的信箱將 Dynamics 365 與 Exchange Online 整合，請使用這些步驟：</span><span class="sxs-lookup"><span data-stu-id="4a962-115">Use these steps to configure the global administrator's mailbox for Dynamics 365 and Exchange Online integration:</span></span>
   
-1. <span data-ttu-id="4a962-116">使用瀏覽器的私人工作階段，請移至 [(http://portal.office.com)]((http://portal.office.com))，並使用您的 Office 365 全域系統管理員帳戶登入。</span><span class="sxs-lookup"><span data-stu-id="4a962-116">Using a private session of your browser, go to [(http://portal.office.com)]((http://portal.office.com)) and sign in using your Office 365 global administrator account.</span></span>
+1. <span data-ttu-id="4a962-116">使用瀏覽器的私人工作階段，請移至 [(http://portal.office.com)](http://portal.office.com)，並使用您的 Office 365 全域系統管理員帳戶登入。</span><span class="sxs-lookup"><span data-stu-id="4a962-116">Using a private session of your browser, go to [(http://portal.office.com)](http://portal.office.com) and sign in using your Office 365 global administrator account.</span></span>
     
 2. <span data-ttu-id="4a962-117">在 [Microsoft Office Home]**** 頁面上，按一下 [郵件]**** 磚。</span><span class="sxs-lookup"><span data-stu-id="4a962-117">On the **Microsoft Office Home** page, click the **Mail** tile.</span></span>
     
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/11/2018
 9. <span data-ttu-id="4a962-151">按一下 [捨棄]****。</span><span class="sxs-lookup"><span data-stu-id="4a962-151">Click **Discard**.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="4a962-152">按一下[這裡]((http://aka.ms/catlgstack))，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。</span><span class="sxs-lookup"><span data-stu-id="4a962-152">Click [here]((http://aka.ms/catlgstack)) for a visual map to all of the articles in the One Microsoft Cloud Test Lab Guide stack.</span></span>
+> <span data-ttu-id="4a962-152">按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。</span><span class="sxs-lookup"><span data-stu-id="4a962-152">Click [here](http://aka.ms/catlgstack) for a visual map to all of the articles in the One Microsoft Cloud Test Lab Guide stack.</span></span>
     
 ## <a name="see-also"></a><span data-ttu-id="4a962-153">請參閱</span><span class="sxs-lookup"><span data-stu-id="4a962-153">See Also</span></span>
 
@@ -112,8 +112,8 @@ ms.lasthandoff: 01/11/2018
   
 [<span data-ttu-id="4a962-158">Office 365 開發/測試環境的 DirSync</span><span class="sxs-lookup"><span data-stu-id="4a962-158">DirSync for your Office 365 dev/test environment</span></span>](dirsync-for-your-office-365-dev-test-environment.md)
 
-<span data-ttu-id="4a962-159">[Dynamics 365 訂閱管理 (線上)]((https://technet.microsoft.com/library/jj679903.aspx))</span><span class="sxs-lookup"><span data-stu-id="4a962-159">[Subscription Management for Dynamics 365 (online)]((https://technet.microsoft.com/library/jj679903.aspx))</span></span>
+<span data-ttu-id="4a962-159">[Dynamics 365 訂閱管理 (線上)](https://technet.microsoft.com/library/jj679903.aspx)</span><span class="sxs-lookup"><span data-stu-id="4a962-159">[Subscription Management for Dynamics 365 (online)](https://technet.microsoft.com/library/jj679903.aspx)</span></span>
   
-<span data-ttu-id="4a962-160">[管理 Dynamics 365]((https://technet.microsoft.com/library/dn531101.aspx))</span><span class="sxs-lookup"><span data-stu-id="4a962-160">[Administering Dynamics 365]((https://technet.microsoft.com/library/dn531101.aspx))</span></span>
+<span data-ttu-id="4a962-160">[管理 Dynamics 365](https://technet.microsoft.com/library/dn531101.aspx)</span><span class="sxs-lookup"><span data-stu-id="4a962-160">[Administering Dynamics 365](https://technet.microsoft.com/library/dn531101.aspx)</span></span>
 
 

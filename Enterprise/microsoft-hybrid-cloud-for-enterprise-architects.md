@@ -34,7 +34,7 @@ ms.lasthandoff: 01/11/2018
 [更多語言](https://www.microsoft.com/download/details.aspx?id=54424)</span><span class="sxs-lookup"><span data-stu-id="b4408-108">![PDF file](images/Common_Images/PDFIcon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | ![Visio file](images/Common_Images/VisioIcon.png)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842083) | ![See a page with versions in additional languages](images/Common_Images/GlobeIcon.png)
 [More languages](https://www.microsoft.com/download/details.aspx?id=54424)</span></span>
   
-<span data-ttu-id="b4408-109">您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源]((https://aka.ms/cloudarchitecture))。</span><span class="sxs-lookup"><span data-stu-id="b4408-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md) and swipe through [Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers]((https://aka.ms/cloudarchitecture)).</span></span>
+<span data-ttu-id="b4408-109">您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源](https://aka.ms/cloudarchitecture)。</span><span class="sxs-lookup"><span data-stu-id="b4408-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md) and swipe through [Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers](https://aka.ms/cloudarchitecture).</span></span>
   
 <span data-ttu-id="b4408-110">請參閱下列各節：</span><span class="sxs-lookup"><span data-stu-id="b4408-110">See the following sections:</span></span>
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/11/2018
 
 [<span data-ttu-id="b4408-123">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="b4408-123">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
 
-<span data-ttu-id="b4408-124">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))</span><span class="sxs-lookup"><span data-stu-id="b4408-124">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers]((https://sway.com/FJ2xsyWtkJc2taRD))</span></span>
+<span data-ttu-id="b4408-124">[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)</span><span class="sxs-lookup"><span data-stu-id="b4408-124">[Microsoft's Enterprise Cloud Roadmap: Resources for IT Decision Makers](https://sway.com/FJ2xsyWtkJc2taRD)</span></span>
 
 
 

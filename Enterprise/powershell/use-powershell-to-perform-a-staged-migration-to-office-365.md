@@ -58,7 +58,7 @@ ms.lasthandoff: 01/11/2018
   
 - <span data-ttu-id="a6402-131">從公司網路之外使用 Outlook 連線至您的內部部署 Exchange 信箱。</span><span class="sxs-lookup"><span data-stu-id="a6402-131">Use Outlook from outside your corporate network to connect to your on-premises Exchange mailbox.</span></span>
     
-- <span data-ttu-id="a6402-p108">使用 [Microsoft Exchange Remote Connectivity Analyzer]((https://www.testexchangeconnectivity.com/)) 來測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。</span><span class="sxs-lookup"><span data-stu-id="a6402-p108">Use the [Microsoft Exchange Remote Connectivity Analyzer]((https://www.testexchangeconnectivity.com/)) to test your connection settings. Use the Outlook Anywhere (RPC over HTTP) or Outlook Autodiscover tests.</span></span>
+- <span data-ttu-id="a6402-p108">使用 [Microsoft Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) 來測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。</span><span class="sxs-lookup"><span data-stu-id="a6402-p108">Use the [Microsoft Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) to test your connection settings. Use the Outlook Anywhere (RPC over HTTP) or Outlook Autodiscover tests.</span></span>
     
 - <span data-ttu-id="a6402-134">在 Exchange Online PowerShell 中執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="a6402-134">Run the following commands in Exchange Online PowerShell:</span></span>
     
