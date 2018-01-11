@@ -8,28 +8,26 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection:
-- Ent_O365
-- Ent_O365_Hybrid
+ms.collection: Ent_O365
 ms.assetid: 48a24184-2868-4bb2-866c-1907d1bad505
 description: "了解如何組織共同作業以安全方式不同 Office 365 租用戶。"
-ms.openlocfilehash: a6b82ab79d6eb2312c33fac488cb21a941831518
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: a4de2d6c755b3edd64d835636c59b7cf5d003bf8
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
-# <a name="office-365-cross-tenant-collaboration"></a><span data-ttu-id="1cac2-103">Office 365 租用戶的跨共同作業</span><span class="sxs-lookup"><span data-stu-id="1cac2-103">Office 365 cross-tenant collaboration</span></span>
+# <a name="office-365-cross-tenant-collaboration"></a><span data-ttu-id="fd489-103">Office 365 租用戶的跨共同作業</span><span class="sxs-lookup"><span data-stu-id="fd489-103">Office 365 cross-tenant collaboration</span></span>
 
-<span data-ttu-id="1cac2-104">了解如何組織共同作業以安全方式不同 Office 365 租用戶。</span><span class="sxs-lookup"><span data-stu-id="1cac2-104">Learn how organizations can collaborate in a secure manner across Office 365 tenants.</span></span>
+<span data-ttu-id="fd489-104">了解如何組織共同作業以安全方式不同 Office 365 租用戶。</span><span class="sxs-lookup"><span data-stu-id="fd489-104">Learn how organizations can collaborate in a secure manner across Office 365 tenants.</span></span>
   
-<span data-ttu-id="1cac2-p101">組織可以使用 Office 365 進行共同作業的專案。例如，Skype for Business 可讓其他人符合線上、 共用檔案，並透過立即訊息交談。或人員可以使用 Office 365 群組所有的單一位置有對話、 檔案及行事曆項目。</span><span class="sxs-lookup"><span data-stu-id="1cac2-p101">Organizations can use Office 365 to collaborate on projects. For example, Skype for Business enables people to meet online, share files, and chat via instant messaging. Or, people can use Office 365 groups to have conversations, files, and calendar items all in one place.</span></span>
+<span data-ttu-id="fd489-p101">組織可以使用 Office 365 進行共同作業的專案。例如，Skype for Business 可讓其他人符合線上、 共用檔案，並透過立即訊息交談。或人員可以使用 Office 365 群組所有的單一位置有對話、 檔案及行事曆項目。</span><span class="sxs-lookup"><span data-stu-id="fd489-p101">Organizations can use Office 365 to collaborate on projects. For example, Skype for Business enables people to meet online, share files, and chat via instant messaging. Or, people can use Office 365 groups to have conversations, files, and calendar items all in one place.</span></span>
   
-<span data-ttu-id="1cac2-p102">有時，企業組織有公司需要進行共同作業與其他組織使用不同的 Office 365 租用戶。範例包括： ___</span><span class="sxs-lookup"><span data-stu-id="1cac2-p102">Sometimes, an enterprise organization has a business need to collaborate with another organization using a different Office 365 tenant. Examples include: ___</span></span>
+<span data-ttu-id="fd489-p102">有時，企業組織有公司需要進行共同作業與其他組織使用不同的 Office 365 租用戶。範例包括： ___</span><span class="sxs-lookup"><span data-stu-id="fd489-p102">Sometimes, an enterprise organization has a business need to collaborate with another organization using a different Office 365 tenant. Examples include: ___</span></span>
   
-## <a name="what-is-office-365-cross-tenant-collaboration"></a><span data-ttu-id="1cac2-110">什麼是 Office 365 租用戶的跨共同作業？</span><span class="sxs-lookup"><span data-stu-id="1cac2-110">What is Office 365 cross-tenant collaboration?</span></span>
-<span data-ttu-id="1cac2-111"><a name="whatisctc"> </a></span><span class="sxs-lookup"><span data-stu-id="1cac2-111"></span></span>
+## <a name="what-is-office-365-cross-tenant-collaboration"></a><span data-ttu-id="fd489-110">什麼是 Office 365 租用戶的跨共同作業？</span><span class="sxs-lookup"><span data-stu-id="fd489-110">What is Office 365 cross-tenant collaboration?</span></span>
+<span data-ttu-id="fd489-111"><a name="whatisctc"> </a></span><span class="sxs-lookup"><span data-stu-id="fd489-111"></span></span>
 
-<span data-ttu-id="1cac2-p103">Office 365 租用戶的跨共同作業是指人使用一個能夠以安全方式與其他人共同作業的 Office 365 租用戶使用不同的 Office 365 租用戶。例如，假設</span><span class="sxs-lookup"><span data-stu-id="1cac2-p103">Office 365 cross-tenant collaboration refers to people who are using one Office 365 tenant being able to collaborate in a secure manner with others who are using a different Office 365 tenant. For example, suppose</span></span> 
+<span data-ttu-id="fd489-p103">Office 365 租用戶的跨共同作業是指人使用一個能夠以安全方式與其他人共同作業的 Office 365 租用戶使用不同的 Office 365 租用戶。例如，假設</span><span class="sxs-lookup"><span data-stu-id="fd489-p103">Office 365 cross-tenant collaboration refers to people who are using one Office 365 tenant being able to collaborate in a secure manner with others who are using a different Office 365 tenant. For example, suppose</span></span> 
   
 

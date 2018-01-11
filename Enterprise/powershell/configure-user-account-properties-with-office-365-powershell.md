@@ -10,106 +10,104 @@ ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom:
-- DecEntMigration
 - O365ITProTrain
 - Ent_Office_Other
 - PowerShell
-- apr17entnews
 ms.assetid: 30813f8d-b08d-444b-98c1-53df7c29b4d7
 description: "摘要： 使用 Office 365 PowerShell Office 365 租用戶中設定的個人或多個使用者帳戶屬性。"
-ms.openlocfilehash: d9e817530f3b1554cb757720f01afec5ed3b63ef
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: eac568d20d1b33e06c37e920f9fd31582c8bb648
+ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/11/2018
 ---
-# <a name="configure-user-account-properties-with-office-365-powershell"></a><span data-ttu-id="f4958-103">使用 Office 365 PowerShell 中設定使用者帳戶屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-103">Configure user account properties with Office 365 PowerShell</span></span>
+# <a name="configure-user-account-properties-with-office-365-powershell"></a><span data-ttu-id="76b90-103">使用 Office 365 PowerShell 中設定使用者帳戶屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-103">Configure user account properties with Office 365 PowerShell</span></span>
 
- <span data-ttu-id="f4958-104">**摘要：**使用 Office 365 PowerShell 來設定您的 Office 365 租用戶中的個人或多個使用者帳戶的屬性。</span><span class="sxs-lookup"><span data-stu-id="f4958-104">**Summary:** Use Office 365 PowerShell to configure properties of individual or multiple user accounts in your Office 365 tenant.</span></span>
+ <span data-ttu-id="76b90-104">**摘要：**使用 Office 365 PowerShell 來設定您的 Office 365 租用戶中的個人或多個使用者帳戶的屬性。</span><span class="sxs-lookup"><span data-stu-id="76b90-104">**Summary:** Use Office 365 PowerShell to configure properties of individual or multiple user accounts in your Office 365 tenant.</span></span>
   
-<span data-ttu-id="f4958-105">雖然您可以使用 Office 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行一些無法在 Office 365 系統管理中心。</span><span class="sxs-lookup"><span data-stu-id="f4958-105">Although you can use the Office 365 Admin center to configure properties for the user accounts of your Office 365 tenant, you can also use Office 365 PowerShell and do some things that the Office 365 Admin center cannot.</span></span>
+<span data-ttu-id="76b90-105">雖然您可以使用 Office 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行一些無法在 Office 365 系統管理中心。</span><span class="sxs-lookup"><span data-stu-id="76b90-105">Although you can use the Office 365 Admin center to configure properties for the user accounts of your Office 365 tenant, you can also use Office 365 PowerShell and do some things that the Office 365 Admin center cannot.</span></span>
   
-## <a name="before-you-begin"></a><span data-ttu-id="f4958-106">開始之前</span><span class="sxs-lookup"><span data-stu-id="f4958-106">Before you begin</span></span>
+## <a name="before-you-begin"></a><span data-ttu-id="76b90-106">開始之前</span><span class="sxs-lookup"><span data-stu-id="76b90-106">Before you begin</span></span>
 
-<span data-ttu-id="f4958-p101">本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="f4958-p101">The procedures in this topic require you to connect to Office 365 PowerShell. For instructions, see [Connect to Office 365 PowerShell](connect-to-office-365-powershell.md).</span></span>
+<span data-ttu-id="76b90-p101">本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="76b90-p101">The procedures in this topic require you to connect to Office 365 PowerShell. For instructions, see [Connect to Office 365 PowerShell](connect-to-office-365-powershell.md).</span></span>
   
-## <a name="change-properties-for-a-specific-user-account"></a><span data-ttu-id="f4958-109">變更特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-109">Change properties for a specific user account</span></span>
+## <a name="change-properties-for-a-specific-user-account"></a><span data-ttu-id="76b90-109">變更特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-109">Change properties for a specific user account</span></span>
 
-<span data-ttu-id="f4958-p102">若要設定特定的使用者帳戶的屬性，您可以使用[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx) cmdlet 並指定來設定或變更的屬性。此範例命令會將 Belinda Newman 的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-p102">To configure properties for a specific user account, you use the [Set-MsolUser](https://msdn.microsoft.com/library/azure/dn194136.aspx) cmdlet and specify the properties to set or change. This example command changes Belinda Newman's usage location to France:</span></span>
+<span data-ttu-id="76b90-p102">若要設定特定的使用者帳戶的屬性，您可以使用[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx) cmdlet 並指定來設定或變更的屬性。此範例命令會將 Belinda Newman 的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-p102">To configure properties for a specific user account, you use the [Set-MsolUser](https://msdn.microsoft.com/library/azure/dn194136.aspx) cmdlet and specify the properties to set or change. This example command changes Belinda Newman's usage location to France:</span></span>
   
 ```
 Set-MsolUser -UserPrincipalName "BelindaN@litwareinc.onmicosoft.com" -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-p103">您使用**-UserPrincipalName**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。</span><span class="sxs-lookup"><span data-stu-id="f4958-p103">You identify the account with the **-UserPrincipalName** parameter and set or change specific properties with additional parameters. Here is a list of the most common parameters.</span></span>
+<span data-ttu-id="76b90-p103">您使用**-UserPrincipalName**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。</span><span class="sxs-lookup"><span data-stu-id="76b90-p103">You identify the account with the **-UserPrincipalName** parameter and set or change specific properties with additional parameters. Here is a list of the most common parameters.</span></span>
   
-- <span data-ttu-id="f4958-114">--市/鎮"\<城市名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-114">-City "\<city name>"</span></span>
+- <span data-ttu-id="76b90-114">--市/鎮"\<城市名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-114">-City "\<city name>"</span></span>
     
-- <span data-ttu-id="f4958-115">-國家"\<國家/地區名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-115">-Country "\<country name>"</span></span>
+- <span data-ttu-id="76b90-115">-國家"\<國家/地區名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-115">-Country "\<country name>"</span></span>
     
-- <span data-ttu-id="f4958-116">-部門"\<部門名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-116">-Department "\<department name>"</span></span>
+- <span data-ttu-id="76b90-116">-部門"\<部門名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-116">-Department "\<department name>"</span></span>
     
-- <span data-ttu-id="f4958-117">-DisplayName"\<完整的使用者名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-117">-DisplayName "\<full user name>"</span></span>
+- <span data-ttu-id="76b90-117">-DisplayName"\<完整的使用者名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-117">-DisplayName "\<full user name>"</span></span>
     
-- <span data-ttu-id="f4958-118">-傳真"\<傳真號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-118">-Fax "\<fax number>"</span></span>
+- <span data-ttu-id="76b90-118">-傳真"\<傳真號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-118">-Fax "\<fax number>"</span></span>
     
-- <span data-ttu-id="f4958-119">-FirstName"\<使用者名字 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-119">-FirstName "\<user first name>"</span></span>
+- <span data-ttu-id="76b90-119">-FirstName"\<使用者名字 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-119">-FirstName "\<user first name>"</span></span>
     
-- <span data-ttu-id="f4958-120">-LastName"\<使用者上次名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-120">-LastName "\<user last name>"</span></span>
+- <span data-ttu-id="76b90-120">-LastName"\<使用者上次名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-120">-LastName "\<user last name>"</span></span>
     
-- <span data-ttu-id="f4958-121">-MobilePhone"\<行動電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-121">-MobilePhone "\<mobile phone number>"</span></span>
+- <span data-ttu-id="76b90-121">-MobilePhone"\<行動電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-121">-MobilePhone "\<mobile phone number>"</span></span>
     
-- <span data-ttu-id="f4958-122">Office"\<辦公室位置 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-122">-Office "\<office location>"</span></span>
+- <span data-ttu-id="76b90-122">Office"\<辦公室位置 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-122">-Office "\<office location>"</span></span>
     
-- <span data-ttu-id="f4958-123">-[Phonenumber]"\<辦公室電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-123">-PhoneNumber "\<office phone number>"</span></span>
+- <span data-ttu-id="76b90-123">-[Phonenumber]"\<辦公室電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-123">-PhoneNumber "\<office phone number>"</span></span>
     
-- <span data-ttu-id="f4958-124">-PostalCode"\<郵遞區號 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-124">-PostalCode "\<postal code>"</span></span>
+- <span data-ttu-id="76b90-124">-PostalCode"\<郵遞區號 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-124">-PostalCode "\<postal code>"</span></span>
     
-- <span data-ttu-id="f4958-125">-PreferredLanguage"\<語言 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-125">-PreferredLanguage "\<language>"</span></span>
+- <span data-ttu-id="76b90-125">-PreferredLanguage"\<語言 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-125">-PreferredLanguage "\<language>"</span></span>
     
-- <span data-ttu-id="f4958-126">-State"\<狀態名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-126">-State "\<state name>"</span></span>
+- <span data-ttu-id="76b90-126">-State"\<狀態名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-126">-State "\<state name>"</span></span>
     
-- <span data-ttu-id="f4958-127">-StreetAddress"\<街道地址 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-127">-StreetAddress "\<street address>"</span></span>
+- <span data-ttu-id="76b90-127">-StreetAddress"\<街道地址 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-127">-StreetAddress "\<street address>"</span></span>
     
-- <span data-ttu-id="f4958-128">-Title"\<標題名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-128">-Title "\<title name>"</span></span>
+- <span data-ttu-id="76b90-128">-Title"\<標題名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-128">-Title "\<title name>"</span></span>
     
-- <span data-ttu-id="f4958-129">-UsageLocation"\<2 個字元的國家或地區的程式碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-129">-UsageLocation "\<2-character country or region code>"</span></span>
+- <span data-ttu-id="76b90-129">-UsageLocation"\<2 個字元的國家或地區的程式碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-129">-UsageLocation "\<2-character country or region code>"</span></span>
     
-    <span data-ttu-id="f4958-130">這是 ISO 3166-1 alpha-2 (A2) 雙字母國家或地區碼。</span><span class="sxs-lookup"><span data-stu-id="f4958-130">This is the ISO 3166-1 alpha-2 (A2) two-letter country or region code.</span></span>
+    <span data-ttu-id="76b90-130">這是 ISO 3166-1 alpha-2 (A2) 雙字母國家或地區碼。</span><span class="sxs-lookup"><span data-stu-id="76b90-130">This is the ISO 3166-1 alpha-2 (A2) two-letter country or region code.</span></span>
     
-<span data-ttu-id="f4958-131">請參閱[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx)額外的參數。</span><span class="sxs-lookup"><span data-stu-id="f4958-131">See [Set-MsolUser](https://msdn.microsoft.com/library/azure/dn194136.aspx) for additional parameters.</span></span>
+<span data-ttu-id="76b90-131">請參閱[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx)額外的參數。</span><span class="sxs-lookup"><span data-stu-id="76b90-131">See [Set-MsolUser](https://msdn.microsoft.com/library/azure/dn194136.aspx) for additional parameters.</span></span>
   
-<span data-ttu-id="f4958-132">若要查看使用者主體名稱的所有使用者，請執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="f4958-132">To see the User Principal Names of all your users, run the following command.</span></span>
+<span data-ttu-id="76b90-132">若要查看使用者主體名稱的所有使用者，請執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="76b90-132">To see the User Principal Names of all your users, run the following command.</span></span>
   
 ```
 Get-MSolUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalName | More
 ```
 
-<span data-ttu-id="f4958-133">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-133">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-133">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-133">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-134">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-134">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-134">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-134">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-135">依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-135">Sort the list of User Principal Names alphabetically ( **Sort-Object UserPrincipalName** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-135">依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-135">Sort the list of User Principal Names alphabetically ( **Sort-Object UserPrincipalName** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-136">顯示使用者主體名稱屬性的每個帳戶 ( **Select-object UserPrincipalName** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-136">Display just the User Principal Name property for each account ( **Select-Object UserPrincipalName** ).</span></span>
+- <span data-ttu-id="76b90-136">顯示使用者主體名稱屬性的每個帳戶 ( **Select-object UserPrincipalName** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-136">Display just the User Principal Name property for each account ( **Select-Object UserPrincipalName** ).</span></span>
     
-- <span data-ttu-id="f4958-137">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="f4958-137">Display them one screen at a time ( **More** ).</span></span>
+- <span data-ttu-id="76b90-137">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="76b90-137">Display them one screen at a time ( **More** ).</span></span>
     
-<span data-ttu-id="f4958-p104">此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="f4958-p104">This command will list all of your accounts. If you want to display the User Principal Name for an account based on its display name (first and last name), fill in the **$userName** variable below (removing the \< and > characters), and then run the following commands:</span></span>
+<span data-ttu-id="76b90-p104">此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="76b90-p104">This command will list all of your accounts. If you want to display the User Principal Name for an account based on its display name (first and last name), fill in the **$userName** variable below (removing the \< and > characters), and then run the following commands:</span></span>
   
 ```
 $userName="<Display name>"
 Write-Host (Get-MsolUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-<span data-ttu-id="f4958-140">本範例會顯示名為 caleb Sills Sills 使用者的使用者主體名稱。</span><span class="sxs-lookup"><span data-stu-id="f4958-140">This example displays the User Principal Name for the user named Caleb Sills.</span></span>
+<span data-ttu-id="76b90-140">本範例會顯示名為 caleb Sills Sills 使用者的使用者主體名稱。</span><span class="sxs-lookup"><span data-stu-id="76b90-140">This example displays the User Principal Name for the user named Caleb Sills.</span></span>
   
 ```
 $userName="Caleb Sills"
 Write-Host (Get-MsolUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-<span data-ttu-id="f4958-p105">藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：</span><span class="sxs-lookup"><span data-stu-id="f4958-p105">By using a **$upn** variable, you can make changes to individual accounts based on their display name. Here is an example of setting Belinda Newman's usage location to France, but specifying her display name rather than her User Principal Name:</span></span>
+<span data-ttu-id="76b90-p105">藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：</span><span class="sxs-lookup"><span data-stu-id="76b90-p105">By using a **$upn** variable, you can make changes to individual accounts based on their display name. Here is an example of setting Belinda Newman's usage location to France, but specifying her display name rather than her User Principal Name:</span></span>
   
 ```
 $userName="<Display name>"
@@ -117,116 +115,116 @@ $upn=(Get-MsolUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 Set-MsolUser -UserPrincipalName $upn -UsageLocation "FR"
 ```
 
-## <a name="change-properties-for-all-user-accounts"></a><span data-ttu-id="f4958-143">變更所有使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-143">Change properties for all user accounts</span></span>
+## <a name="change-properties-for-all-user-accounts"></a><span data-ttu-id="76b90-143">變更所有使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-143">Change properties for all user accounts</span></span>
 
-<span data-ttu-id="f4958-p106">若要變更的所有使用者的屬性，您可以使用**Get-msoluser**和**Set-msoluser** cmdlet 的組合。下列範例會將所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-p106">To change properties for all users, you can use the combination of the **Get-MsolUser** and **Set-MsolUser** cmdlets. The following example changes the usage location for all users to France:</span></span>
+<span data-ttu-id="76b90-p106">若要變更的所有使用者的屬性，您可以使用**Get-msoluser**和**Set-msoluser** cmdlet 的組合。下列範例會將所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-p106">To change properties for all users, you can use the combination of the **Get-MsolUser** and **Set-MsolUser** cmdlets. The following example changes the usage location for all users to France:</span></span>
   
 ```
 Get-MsolUser | Set-MsolUser -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-146">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-146">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-146">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-146">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-147">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-147">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-147">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-147">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-148">法國 ( **Set-msoluser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="f4958-148">Set the user location to France ( **Set-MsolUser -UsageLocation "FR"** ).</span></span>
+- <span data-ttu-id="76b90-148">法國 ( **Set-msoluser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="76b90-148">Set the user location to France ( **Set-MsolUser -UsageLocation "FR"** ).</span></span>
     
-## <a name="change-properties-for-a-specific-set-of-user-accounts"></a><span data-ttu-id="f4958-149">變更一組特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-149">Change properties for a specific set of user accounts</span></span>
+## <a name="change-properties-for-a-specific-set-of-user-accounts"></a><span data-ttu-id="76b90-149">變更一組特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-149">Change properties for a specific set of user accounts</span></span>
 
-<span data-ttu-id="f4958-p107">若要變更的一組特定的使用者帳戶屬性，您可以使用**Get-msoluser**、 **Where-object**和**Set-msoluser** cmdlet 的組合。下列範例會將會計部門的所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-p107">To change properties for a specific set of user account, you can use the combination of the **Get-MsolUser**, **Where-Object**, and **Set-MsolUser** cmdlets. The following example changes the usage location for all the users in the Accounting department to France:</span></span>
+<span data-ttu-id="76b90-p107">若要變更的一組特定的使用者帳戶屬性，您可以使用**Get-msoluser**、 **Where-object**和**Set-msoluser** cmdlet 的組合。下列範例會將會計部門的所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-p107">To change properties for a specific set of user account, you can use the combination of the **Get-MsolUser**, **Where-Object**, and **Set-MsolUser** cmdlets. The following example changes the usage location for all the users in the Accounting department to France:</span></span>
   
 ```
 Get-MsolUser | Where-Object {$_.Department -eq "Accounting"} | Set-MsolUser -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-152">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-152">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-152">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-152">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-153">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-153">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-153">會取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-153">Get all of the information on the user accounts ( **Get-MsolUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-154">找到的所有使用者帳戶具有其部門屬性設定為 「 會計 」 ( **Where-object {$_。部門-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-154">Find all of the user accounts that have their Department property set to "Accounting" ( **Where-Object {$_.Department -eq "Accounting"}** ) and send the resulting information to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-154">找到的所有使用者帳戶具有其部門屬性設定為 「 會計 」 ( **Where-object {$_。部門-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-154">Find all of the user accounts that have their Department property set to "Accounting" ( **Where-Object {$_.Department -eq "Accounting"}** ) and send the resulting information to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-155">法國 ( **Set-msoluser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="f4958-155">Set the user location to France ( **Set-MsolUser -UsageLocation "FR"** ).</span></span>
+- <span data-ttu-id="76b90-155">法國 ( **Set-msoluser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="76b90-155">Set the user location to France ( **Set-MsolUser -UsageLocation "FR"** ).</span></span>
     
-- <span data-ttu-id="f4958-156">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="f4958-156">Display them one screen at a time ( **More** ).</span></span>
+- <span data-ttu-id="76b90-156">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="76b90-156">Display them one screen at a time ( **More** ).</span></span>
     
-## <a name="use-the-azure-active-directory-v2-powershell-module-to-configure-user-account-properties"></a><span data-ttu-id="f4958-157">使用 Azure Active Directory V2 PowerShell 模組來設定使用者帳戶屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-157">Use the Azure Active Directory V2 PowerShell module to configure user account properties</span></span>
+## <a name="use-the-azure-active-directory-v2-powershell-module-to-configure-user-account-properties"></a><span data-ttu-id="76b90-157">使用 Azure Active Directory V2 PowerShell 模組來設定使用者帳戶屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-157">Use the Azure Active Directory V2 PowerShell module to configure user account properties</span></span>
 
-<span data-ttu-id="f4958-p108">使用 Azure Active Directory V2 PowerShell 模組設定的使用者帳戶內容，您可以使用[組 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0)指令程式並指定來設定或變更的屬性。但首先，您必須連線到您的訂閱。指示，請參閱[使用 Azure Active Directory V2 PowerShell 模組的連線](https://go.microsoft.com/fwlink/?linkid=842218)。</span><span class="sxs-lookup"><span data-stu-id="f4958-p108">To configure properties for user accounts with the Azure Active Directory V2 PowerShell module, you use the [Set-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) cmdlet and specify the properties to set or change. But first, you must connect to your subscription. For the instructions, see [Connect with the Azure Active Directory V2 PowerShell module](https://go.microsoft.com/fwlink/?linkid=842218).</span></span>
+<span data-ttu-id="76b90-p108">使用 Azure Active Directory V2 PowerShell 模組設定的使用者帳戶內容，您可以使用[組 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0)指令程式並指定來設定或變更的屬性。但首先，您必須連線到您的訂閱。指示，請參閱[使用 Azure Active Directory V2 PowerShell 模組的連線](https://go.microsoft.com/fwlink/?linkid=842218)。</span><span class="sxs-lookup"><span data-stu-id="76b90-p108">To configure properties for user accounts with the Azure Active Directory V2 PowerShell module, you use the [Set-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) cmdlet and specify the properties to set or change. But first, you must connect to your subscription. For the instructions, see [Connect with the Azure Active Directory V2 PowerShell module](https://go.microsoft.com/fwlink/?linkid=842218).</span></span>
   
-### <a name="change-properties-for-a-specific-user-account"></a><span data-ttu-id="f4958-161">變更特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-161">Change properties for a specific user account</span></span>
+### <a name="change-properties-for-a-specific-user-account"></a><span data-ttu-id="76b90-161">變更特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-161">Change properties for a specific user account</span></span>
 
-<span data-ttu-id="f4958-162">此範例命令會將 Belinda Newman 的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-162">This example command changes Belinda Newman's usage location to France:</span></span>
+<span data-ttu-id="76b90-162">此範例命令會將 Belinda Newman 的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-162">This example command changes Belinda Newman's usage location to France:</span></span>
   
 ```
 Set-AzureADUser -ObjectID "BelindaN@litwareinc.onmicosoft.com" -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-p109">您使用**-ObjectID**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。</span><span class="sxs-lookup"><span data-stu-id="f4958-p109">You identify the account with the **-ObjectID** parameter and set or change specific properties with additional parameters. Here is a list of the most common parameters.</span></span>
+<span data-ttu-id="76b90-p109">您使用**-ObjectID**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。</span><span class="sxs-lookup"><span data-stu-id="76b90-p109">You identify the account with the **-ObjectID** parameter and set or change specific properties with additional parameters. Here is a list of the most common parameters.</span></span>
   
-- <span data-ttu-id="f4958-165">-部門"\<部門名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-165">-Department "\<department name>"</span></span>
+- <span data-ttu-id="76b90-165">-部門"\<部門名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-165">-Department "\<department name>"</span></span>
     
-- <span data-ttu-id="f4958-166">-DisplayName"\<完整的使用者名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-166">-DisplayName "\<full user name>"</span></span>
+- <span data-ttu-id="76b90-166">-DisplayName"\<完整的使用者名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-166">-DisplayName "\<full user name>"</span></span>
     
-- <span data-ttu-id="f4958-167">-FacsimilieTelephoneNumber"\<傳真號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-167">-FacsimilieTelephoneNumber "\<fax number>"</span></span>
+- <span data-ttu-id="76b90-167">-FacsimilieTelephoneNumber"\<傳真號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-167">-FacsimilieTelephoneNumber "\<fax number>"</span></span>
     
-- <span data-ttu-id="f4958-168">-GivenName"\<使用者名字 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-168">-GivenName "\<user first name>"</span></span>
+- <span data-ttu-id="76b90-168">-GivenName"\<使用者名字 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-168">-GivenName "\<user first name>"</span></span>
     
-- <span data-ttu-id="f4958-169">-姓氏"\<使用者上次名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-169">-Surname "\<user last name>"</span></span>
+- <span data-ttu-id="76b90-169">-姓氏"\<使用者上次名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-169">-Surname "\<user last name>"</span></span>
     
-- <span data-ttu-id="f4958-170">-行動"\<行動電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-170">-Mobile "\<mobile phone number>"</span></span>
+- <span data-ttu-id="76b90-170">-行動"\<行動電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-170">-Mobile "\<mobile phone number>"</span></span>
     
-- <span data-ttu-id="f4958-171">-JobTitle"\<職稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-171">-JobTitle "\<job title>"</span></span>
+- <span data-ttu-id="76b90-171">-JobTitle"\<職稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-171">-JobTitle "\<job title>"</span></span>
     
-- <span data-ttu-id="f4958-172">-PreferredLanguage"\<語言 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-172">-PreferredLanguage "\<language>"</span></span>
+- <span data-ttu-id="76b90-172">-PreferredLanguage"\<語言 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-172">-PreferredLanguage "\<language>"</span></span>
     
-- <span data-ttu-id="f4958-173">-StreetAddress"\<街道地址 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-173">-StreetAddress "\<street address>"</span></span>
+- <span data-ttu-id="76b90-173">-StreetAddress"\<街道地址 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-173">-StreetAddress "\<street address>"</span></span>
     
-- <span data-ttu-id="f4958-174">--市/鎮"\<城市名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-174">-City "\<city name>"</span></span>
+- <span data-ttu-id="76b90-174">--市/鎮"\<城市名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-174">-City "\<city name>"</span></span>
     
-- <span data-ttu-id="f4958-175">-State"\<狀態名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-175">-State "\<state name>"</span></span>
+- <span data-ttu-id="76b90-175">-State"\<狀態名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-175">-State "\<state name>"</span></span>
     
-- <span data-ttu-id="f4958-176">-PostalCode"\<郵遞區號 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-176">-PostalCode "\<postal code>"</span></span>
+- <span data-ttu-id="76b90-176">-PostalCode"\<郵遞區號 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-176">-PostalCode "\<postal code>"</span></span>
     
-- <span data-ttu-id="f4958-177">-國家"\<國家/地區名稱 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-177">-Country "\<country name>"</span></span>
+- <span data-ttu-id="76b90-177">-國家"\<國家/地區名稱 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-177">-Country "\<country name>"</span></span>
     
-- <span data-ttu-id="f4958-178">-TelephoneNumber"\<辦公室電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-178">-TelephoneNumber "\<office phone number>"</span></span>
+- <span data-ttu-id="76b90-178">-TelephoneNumber"\<辦公室電話號碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-178">-TelephoneNumber "\<office phone number>"</span></span>
     
-- <span data-ttu-id="f4958-179">-UsageLocation"\<2 個字元的國家或地區的程式碼 >"</span><span class="sxs-lookup"><span data-stu-id="f4958-179">-UsageLocation "\<2-character country or region code>"</span></span>
+- <span data-ttu-id="76b90-179">-UsageLocation"\<2 個字元的國家或地區的程式碼 >"</span><span class="sxs-lookup"><span data-stu-id="76b90-179">-UsageLocation "\<2-character country or region code>"</span></span>
     
-    <span data-ttu-id="f4958-180">這是 ISO 3166-1 alpha-2 (A2) 雙字母國家或地區碼。</span><span class="sxs-lookup"><span data-stu-id="f4958-180">This is the ISO 3166-1 alpha-2 (A2) two-letter country or region code.</span></span>
+    <span data-ttu-id="76b90-180">這是 ISO 3166-1 alpha-2 (A2) 雙字母國家或地區碼。</span><span class="sxs-lookup"><span data-stu-id="76b90-180">This is the ISO 3166-1 alpha-2 (A2) two-letter country or region code.</span></span>
     
-<span data-ttu-id="f4958-181">請參閱額外的參數[組 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) 。</span><span class="sxs-lookup"><span data-stu-id="f4958-181">See [Set-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) for additional parameters.</span></span>
+<span data-ttu-id="76b90-181">請參閱額外的參數[組 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) 。</span><span class="sxs-lookup"><span data-stu-id="76b90-181">See [Set-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0) for additional parameters.</span></span>
   
-<span data-ttu-id="f4958-182">若要顯示您的使用者帳戶的使用者主體名稱，請執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="f4958-182">To display the User Principal Name for your user accounts, run the following command.</span></span>
+<span data-ttu-id="76b90-182">若要顯示您的使用者帳戶的使用者主體名稱，請執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="76b90-182">To display the User Principal Name for your user accounts, run the following command.</span></span>
   
 ```
 Get-AzureADUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalName | More
 ```
 
-<span data-ttu-id="f4958-183">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-183">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-183">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-183">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-184">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-184">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-184">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-184">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-185">依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-185">Sort the list of User Principal Names alphabetically ( **Sort-Object UserPrincipalName** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-185">依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-185">Sort the list of User Principal Names alphabetically ( **Sort-Object UserPrincipalName** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-186">顯示使用者主體名稱屬性的每個帳戶 ( **Select-object UserPrincipalName** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-186">Display just the User Principal Name property for each account ( **Select-Object UserPrincipalName** ).</span></span>
-- <span data-ttu-id="f4958-187">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="f4958-187">Display them one screen at a time ( **More** ).</span></span>
+- <span data-ttu-id="76b90-186">顯示使用者主體名稱屬性的每個帳戶 ( **Select-object UserPrincipalName** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-186">Display just the User Principal Name property for each account ( **Select-Object UserPrincipalName** ).</span></span>
+- <span data-ttu-id="76b90-187">顯示一個畫面 （**更多**） 一次。</span><span class="sxs-lookup"><span data-stu-id="76b90-187">Display them one screen at a time ( **More** ).</span></span>
     
-<span data-ttu-id="f4958-p110">此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="f4958-p110">This command will list all of your accounts. If you want to display the User Principal Name for an account based on its display name (first and last name), fill in the **$userName** variable below (removing the \< and > characters), and then run the following commands:</span></span>
+<span data-ttu-id="76b90-p110">此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="76b90-p110">This command will list all of your accounts. If you want to display the User Principal Name for an account based on its display name (first and last name), fill in the **$userName** variable below (removing the \< and > characters), and then run the following commands:</span></span>
   
 ```
 $userName="<Display name>"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-<span data-ttu-id="f4958-190">本範例會顯示名為 caleb Sills Sills 使用者的使用者主體名稱。</span><span class="sxs-lookup"><span data-stu-id="f4958-190">This example displays the User Principal Name for the user named Caleb Sills.</span></span>
+<span data-ttu-id="76b90-190">本範例會顯示名為 caleb Sills Sills 使用者的使用者主體名稱。</span><span class="sxs-lookup"><span data-stu-id="76b90-190">This example displays the User Principal Name for the user named Caleb Sills.</span></span>
   
 ```
 $userName="Caleb Sills"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-<span data-ttu-id="f4958-p111">藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：</span><span class="sxs-lookup"><span data-stu-id="f4958-p111">By using a **$upn** variable, you can make changes to individual accounts based on their display name. Here is an example of setting Belinda Newman's usage location to France, but specifying her display name rather than her User Principal Name:</span></span>
+<span data-ttu-id="76b90-p111">藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：</span><span class="sxs-lookup"><span data-stu-id="76b90-p111">By using a **$upn** variable, you can make changes to individual accounts based on their display name. Here is an example of setting Belinda Newman's usage location to France, but specifying her display name rather than her User Principal Name:</span></span>
   
 ```
 $userName="Belinda Newman"
@@ -234,43 +232,43 @@ $upn=(Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 Set-AzureADUser -ObjectID $upn -UsageLocation "FR"
 ```
 
-### <a name="change-properties-for-all-user-accounts"></a><span data-ttu-id="f4958-193">變更所有使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-193">Change properties for all user accounts</span></span>
+### <a name="change-properties-for-all-user-accounts"></a><span data-ttu-id="76b90-193">變更所有使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-193">Change properties for all user accounts</span></span>
 
-<span data-ttu-id="f4958-p112">若要變更的所有使用者的屬性，您可以使用**Get AzureADUser**和**設定 AzureADUser**指令程式的組合。下列範例會將所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-p112">To change properties for all users, you can use the combination of the **Get-AzureADUser** and **Set-AzureADUser** cmdlets. The following example changes the usage location for all users to France:</span></span>
+<span data-ttu-id="76b90-p112">若要變更的所有使用者的屬性，您可以使用**Get AzureADUser**和**設定 AzureADUser**指令程式的組合。下列範例會將所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-p112">To change properties for all users, you can use the combination of the **Get-AzureADUser** and **Set-AzureADUser** cmdlets. The following example changes the usage location for all users to France:</span></span>
   
 ```
 Get-AzureADUser | Set-AzureADUser -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-196">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-196">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-196">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-196">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-197">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-197">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-197">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-197">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-198">法國 (**組 AzureADUser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="f4958-198">Set the user location to France ( **Set-AzureADUser -UsageLocation "FR"** ).</span></span>
+- <span data-ttu-id="76b90-198">法國 (**組 AzureADUser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="76b90-198">Set the user location to France ( **Set-AzureADUser -UsageLocation "FR"** ).</span></span>
     
-### <a name="change-properties-for-a-specific-set-of-user-accounts"></a><span data-ttu-id="f4958-199">變更一組特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="f4958-199">Change properties for a specific set of user accounts</span></span>
+### <a name="change-properties-for-a-specific-set-of-user-accounts"></a><span data-ttu-id="76b90-199">變更一組特定的使用者帳戶的屬性</span><span class="sxs-lookup"><span data-stu-id="76b90-199">Change properties for a specific set of user accounts</span></span>
 
-<span data-ttu-id="f4958-p113">若要變更的一組特定的使用者帳戶屬性，您可以使用**Get AzureADUser**、**位置**及**組 AzureADUser** cmdlet 的組合。下列範例會將會計部門的所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="f4958-p113">To change properties for a specific set of user account, you can use the combination of the **Get-AzureADUser**, **Where**, and **Set-AzureADUser** cmdlets. The following example changes the usage location for all the users in the Accounting department to France:</span></span>
+<span data-ttu-id="76b90-p113">若要變更的一組特定的使用者帳戶屬性，您可以使用**Get AzureADUser**、**位置**及**組 AzureADUser** cmdlet 的組合。下列範例會將會計部門的所有使用者的使用狀況位置變更為法國：</span><span class="sxs-lookup"><span data-stu-id="76b90-p113">To change properties for a specific set of user account, you can use the combination of the **Get-AzureADUser**, **Where**, and **Set-AzureADUser** cmdlets. The following example changes the usage location for all the users in the Accounting department to France:</span></span>
   
 ```
 Get-AzureADUser | Where-Object {$_.Department -eq "Accounting"} | Set-AzureADUser -UsageLocation "FR"
 ```
 
-<span data-ttu-id="f4958-202">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="f4958-202">This command instructs Office 365 PowerShell to:</span></span>
+<span data-ttu-id="76b90-202">此命令會指示至 Office 365 PowerShell：</span><span class="sxs-lookup"><span data-stu-id="76b90-202">This command instructs Office 365 PowerShell to:</span></span>
   
-- <span data-ttu-id="f4958-203">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-203">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-203">會取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊並將其傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-203">Get all of the information on the user accounts ( **Get-AzureADUser** ) and send it to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-204">尋找所有已設定為"Accounting"其部門屬性的使用者帳戶 (**其中 {$_。部門-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="f4958-204">Find all of the user accounts that have their Department property set to "Accounting" ( **Where {$_.Department -eq "Accounting"}** ) and send the resulting information to the next command ( **|** ).</span></span>
+- <span data-ttu-id="76b90-204">尋找所有已設定為"Accounting"其部門屬性的使用者帳戶 (**其中 {$_。部門-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。</span><span class="sxs-lookup"><span data-stu-id="76b90-204">Find all of the user accounts that have their Department property set to "Accounting" ( **Where {$_.Department -eq "Accounting"}** ) and send the resulting information to the next command ( **|** ).</span></span>
     
-- <span data-ttu-id="f4958-205">法國 (**組 AzureADUser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="f4958-205">Set the user location to France ( **Set-AzureADUser -UsageLocation "FR"** ).</span></span>
+- <span data-ttu-id="76b90-205">法國 (**組 AzureADUser UsageLocation"FR-FR"** ) 來設定使用者位置。</span><span class="sxs-lookup"><span data-stu-id="76b90-205">Set the user location to France ( **Set-AzureADUser -UsageLocation "FR"** ).</span></span>
     
-## <a name="see-also"></a><span data-ttu-id="f4958-206">See also</span><span class="sxs-lookup"><span data-stu-id="f4958-206">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76b90-206">另請參閱</span><span class="sxs-lookup"><span data-stu-id="76b90-206">See also</span></span>
 
 #### 
 
-[<span data-ttu-id="f4958-207">使用 Office 365 PowerShell 管理使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="f4958-207">Manage user accounts and licenses with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[<span data-ttu-id="76b90-207">使用 Office 365 PowerShell 管理使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="76b90-207">Manage user accounts and licenses with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[<span data-ttu-id="f4958-208">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="f4958-208">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="76b90-208">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="76b90-208">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
   
-[<span data-ttu-id="f4958-209">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="f4958-209">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
+[<span data-ttu-id="76b90-209">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="76b90-209">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
 
