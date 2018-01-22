@@ -31,7 +31,7 @@ ms.lasthandoff: 01/11/2018
   
 ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842074) | ![參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54425)
   
-您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源]((https://aka.ms/cloudarchitecture))。
+您也可以查看在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md) 內的所有模型，並在[Microsoft 的 Enterprise Cloud 藍圖中撥動︰IT 決策者的資源](https://aka.ms/cloudarchitecture)。
   
 請參閱下列各節：
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/11/2018
     
     逐步執行設計程序，用於主控伺服器架構 IT 工作負載，包括子網路建立最佳 Azure 虛擬的網路 (VNet)、位址空間、路由、DNS、負載平衡，及與您在上場所的網路、其他 VNets 及網際網路連線能力。
     
-如需這張海報重點的 30 分鐘摘要，請參閱 Microsoft Virtual Academy 課程的[針對 Microsoft Cloud 供應項目最佳化您的網路]((https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743))。
+如需這張海報重點的 30 分鐘摘要，請參閱 Microsoft Virtual Academy 課程的[針對 Microsoft Cloud 供應項目最佳化您的網路](https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743)。
   
 > [!NOTE]
 > 這幾篇文章說明在 **2017 年 6 月**發佈的 Microsoft Cloud Networking for Enterprise Architects 海報。
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/11/2018
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))
+[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
 
 
 
