@@ -16,11 +16,11 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 description: "說明如何使用 Office 365 PowerShell 指派給未授權使用者的 Office 365 授權。"
-ms.openlocfilehash: 88628a78179605c734cd1d3f114a8a1dcb712376
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 8a7ad7b4586ccdef95430f9c4cc9c4d6e9360070
+ms.sourcegitcommit: f10e47df0dca4a241659f33061db5217ebc3401e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 指派授權至使用者帳戶
 
@@ -222,10 +222,8 @@ Get-MsolUser -All | Where-Object {$_.UsageLocation -eq $null}
   
 ## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？
 
-||
-|:-----|
-|![簡短 LinkedIn 學習圖示](images/d547e1cb-7c66-422b-85be-7e7db2a9cf97.png)**新增至 Office 365？**        [Office 365 系統管理員及 IT 專業人員](https://support.office.com/article/Office-365-admin-and-IT-pro-courses-68cc9b95-0bdc-491e-a81f-ee70b3ec63c5)，傳送給您的 LinkedIn 學習探索免費的視訊課程。 |
-   
+[!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
+
 ## <a name="see-also"></a>請參閱
 <a name="SeeAlso"> </a>
 
