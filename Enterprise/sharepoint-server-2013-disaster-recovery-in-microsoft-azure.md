@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: "摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。"
-ms.openlocfilehash: be1a369bb87a5a63d9c266977c32c64fc55f3630
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: e949d2cc88e576993a357007c2a600b55c259009
+ms.sourcegitcommit: b3d44b30b6e60df85ea9b404692db64ba54a16c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/11/2018
   
 **圖： 元素的 Azure 中暖待命解決方案**
 
-![Azure 中 SharePoint 暖待命解決方案的元素](images/AZarch_AZWarmStndby.png)
+![Azure 中 SharePoint 暖待命解決方案的元素](images/AZarch_AZWarmStndby.gif)
   
 SQL Server 記錄傳送與分散式檔案系統複寫 (DFSR) 用於將資料庫備份和交易記錄檔複製到 Azure 中的復原伺服器陣列： 
   
@@ -506,7 +506,7 @@ restore database WSS_Content with recovery
   
 **表格： 虛擬機器的內部部署測試**
 
-|**伺服器名稱**|**角色**|**設定**|
+|**伺服器名稱**|**Role**|**設定**|
 |:-----|:-----|:-----|
 |DC1  <br/> |使用 Active Directory 網域控制站。  <br/> |2 個處理器  <br/> 從 512 MB 透過 4 GB 的 RAM  <br/> 1 x 127 GB 硬碟  <br/> |
 |RRAS  <br/> |設定與路由及遠端存取服務 (RRAS) 角色的伺服器。  <br/> |2 個處理器  <br/> 2-8 GB 的 RAM  <br/> 1 x 127 GB 硬碟  <br/> |
@@ -519,7 +519,7 @@ restore database WSS_Content with recovery
   
 **表格： Front End 網頁的虛擬機器的磁碟機需求與內部部署的應用程式伺服器測試**
 
-|**磁碟機代號**|**大小**|**目錄名稱**|**路徑**|
+|**磁碟機代號**|**大小**|**目錄名稱**|**Path**|
 |:-----|:-----|:-----|:-----|
 |C  <br/> |80  <br/> |系統磁碟機  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\  <br/> |
 |E  <br/> |80  <br/> |記錄檔磁碟 (40 GB)  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\資料  <br/> |
@@ -529,7 +529,7 @@ restore database WSS_Content with recovery
   
 **表格： 內部部署的資料庫伺服器的虛擬機器的磁碟機需求測試**
 
-|**磁碟機代號**|**大小**|**目錄名稱**|**路徑**|
+|**磁碟機代號**|**大小**|**目錄名稱**|**Path**|
 |:-----|:-----|:-----|:-----|
 |C  <br/> |80  <br/> |資料根目錄  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\  <br/> |
 |E  <br/> |500 個  <br/> |使用者資料庫目錄  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\資料  <br/> |
@@ -594,7 +594,7 @@ SharePoint 伺服器陣列是為了簡化環境穩定和疑難排解、 帳戶�
   
 **表格： 復原伺服器陣列基礎結構**
 
-|**伺服器名稱**|**角色**|**設定**|**子網路**|**可用性設定**|
+|**伺服器名稱**|**Role**|**設定**|**子網路**|**可用性設定**|
 |:-----|:-----|:-----|:-----|:-----|
 |spDRAD  <br/> |使用 Active Directory 網域控制站  <br/> |2 個處理器  <br/> 從 512 MB 透過 4 GB 的 RAM  <br/> 1 x 127 GB 硬碟  <br/> |sp ADservers  <br/> ||
 |亞利桑那州-SP-FS  <br/> |檔案伺服器與共用的備份和 DFSR 的端點  <br/> | A5 組態： <br/>  2 個處理器 <br/>  14 GB 的 RAM <br/>  1 x 127 GB 硬碟 <br/>  1 x 135 GB 硬碟 <br/>  1 x 127 GB 硬碟 <br/>  1 x 150 GB 硬碟 <br/> |sp databaseservers  <br/> |DATA_SET  <br/> |

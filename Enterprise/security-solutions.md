@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 75fa293a-b51c-42d0-ad90-5b3d9c9b0cd4
 description: "摘要： 使用這些文章來部署使用 Microsoft 的雲端方案的安全性解決方案。"
-ms.openlocfilehash: 48ff69c7ae90ab429c11bfcc4407d2fcf267fc37
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 6ba8b623d4073b611a5123e01e7cf5819bd34e4a
+ms.sourcegitcommit: b3d44b30b6e60df85ea9b404692db64ba54a16c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="security-solutions"></a>安全性解決方案
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/11/2018
 - [安全的 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)
     
 - [隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)
-<br/>
+<br/><br/>
     
 **加入討論區**
 
