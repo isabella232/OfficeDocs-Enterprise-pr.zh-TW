@@ -8,17 +8,18 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
 ms.custom:
 - Strat_O365_Enterprise
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
 description: "摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。"
-ms.openlocfilehash: 111e52531e45e54b8ce53c3f530e9c9d273f24fc
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 8652b27b51c8a94bd98953d5160faa182523cc93
+ms.sourcegitcommit: b3d44b30b6e60df85ea9b404692db64ba54a16c7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
 
@@ -43,12 +44,12 @@ ms.lasthandoff: 01/11/2018
 所有虛擬機器位於單一跨單位 Azure 虛擬網路中 (VNet)。 
   
 > [!NOTE]
-> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。不過，如果跨單位連線無法使用，VNet 中的網域控制站就不會收到使用者帳戶和群組在內部部署 Windows Server AD 中的更新。若要確保不會發生這個情況，您可以設定跨場所連線的高可用性。如需詳細資訊，請參閱[高度可用的跨單位和 VNet-VNet 連線]((https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable))
+> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。不過，如果跨單位連線無法使用，VNet 中的網域控制站就不會收到使用者帳戶和群組在內部部署 Windows Server AD 中的更新。若要確保不會發生這個情況，您可以設定跨場所連線的高可用性。如需詳細資訊，請參閱＜[高度可用的跨單位和 VNet-VNet 連線](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable)＞。
   
 特定角色的每個虛擬機器配對都是位於它自己的子網路和可用性設定組中。
   
 > [!NOTE]
-> 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱[執行 N 層架構的 Windows VM]((https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm))。 
+> 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱＜[執行 N 層架構的 Windows VM](https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm)＞。 
   
 這項設定的結果是，您所有的 Office 365 使用者都將會有聯盟驗證，他們可以在其中使用其 Windows 伺服器 Active Directory 憑證，而不是其 Office 365 帳戶登入。聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
   
@@ -78,13 +79,12 @@ ms.lasthandoff: 01/11/2018
 |6.  <br/> |第一個 Web 應用程式 Proxy 伺服器  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
 |7.  <br/> |第二個 Web 應用程式 Proxy 伺服器  <br/> |Windows Server 2016 Datacenter  <br/> |D2  <br/> |
    
-若要計算此組態的估計成本，請參閱 [Azure 價格計算機]((https://azure.microsoft.com/pricing/calculator/))
+若要計算此組態的估計成本，請參閱 [Azure 價格計算機](https://azure.microsoft.com/pricing/calculator/)
   
 ## <a name="phases-of-deployment"></a>部署階段
 
 您可以在下列階段部署此工作負載：
   
-<<<<<<< 標頭
 - [高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
     
 - [High availability federated authentication Phase 2: Configure domain controllers](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
@@ -93,17 +93,7 @@ ms.lasthandoff: 01/11/2018
     
 - [高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。建立並設定兩個 Web 應用程式 Proxy 伺服器。
     
-- [高可用性同盟驗證階段 5：設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。設定 Office 365 訂用帳戶的聯盟驗證。=======
-- [高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md) - 建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
-    
-- [高可用性同盟驗證階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md) - 建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
-    
-- [高可用性同盟驗證階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md) - 建立並設定兩個 AD FS 伺服器。
-    
-- [高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md) - 建立並設定兩個 Web 應用程式 Proxy 伺服器。
-    
-- [高可用性同盟驗證階段 5： 設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md) - 設定 Office 365 訂用帳戶的聯盟驗證。
->>>>>>> master
+- [高可用性同盟驗證階段 5：設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。設定 Office 365 訂用帳戶的聯盟驗證。
     
 這些文章是預先定義之架構的引導式、階段式指引，用以在 Azure 基礎結構服務中建立功能性、高可用性的 Office 365 聯盟驗證。請記住下列事項：
   
@@ -118,14 +108,6 @@ ms.lasthandoff: 01/11/2018
 使用＜[高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)＞開始設定此工作負載。 
   
 > [!TIP]
-> 如需更快速地在 Azure 中部署您 Office 365 的高可用性聯盟驗證檔案集合，請參閱＜[Azure 部署套件中的 Office 365 聯盟驗證]((https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664))＞。 
-  
-## <a name="see-also"></a>請參閱
-
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
-  
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
-
-[Office 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
-
+> 如需更快速地在 Azure 中部署您 Office 365 的高可用性聯盟驗證檔案集合，請參閱＜[Azure 部署套件中的 Office 365 聯盟驗證](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)＞。 
+ 
 
