@@ -14,263 +14,263 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 1e8e3cfd-b878-4088-b941-9940363a5fae
 description: "摘要： 建立及設定的不同層級的資訊保護的 SharePoint Online 小組網站。"
-ms.openlocfilehash: 7aa0107222454383abe0c1284b66ec0c4b808595
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 0b0c6541f05499526dc472e4e724472d943607ef
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="deploy-sharepoint-online-sites-for-three-tiers-of-protection"></a><span data-ttu-id="6666d-103">部署三層的保護的 SharePoint Online 的網站</span><span class="sxs-lookup"><span data-stu-id="6666d-103">Deploy SharePoint Online sites for three tiers of protection</span></span>
+# <a name="deploy-sharepoint-online-sites-for-three-tiers-of-protection"></a><span data-ttu-id="0e00d-103">部署三層的保護的 SharePoint Online 的網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-103">Deploy SharePoint Online sites for three tiers of protection</span></span>
 
- <span data-ttu-id="6666d-104">**摘要：**建立及設定的不同層級的資訊保護的 SharePoint Online 小組網站。</span><span class="sxs-lookup"><span data-stu-id="6666d-104">**Summary:** Create and configure SharePoint Online team sites for various levels of information protection.</span></span>
+ <span data-ttu-id="0e00d-104">**摘要：**建立及設定的不同層級的資訊保護的 SharePoint Online 小組網站。</span><span class="sxs-lookup"><span data-stu-id="0e00d-104">**Summary:** Create and configure SharePoint Online team sites for various levels of information protection.</span></span>
   
-<span data-ttu-id="6666d-p101">使用本文中的步驟來設計及部署比較基準 」、 機密、 和高度機密 SharePoint Online 小組網站。如需保護這些三層的詳細資訊，請參閱[Secure SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)。</span><span class="sxs-lookup"><span data-stu-id="6666d-p101">Use the steps in this article to design and deploy baseline, sensitive, and highly confidential SharePoint Online team sites. For more information about these three tiers of protection, see [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md).</span></span>
+<span data-ttu-id="0e00d-p101">使用本文中的步驟來設計及部署比較基準 」、 機密、 和高度機密 SharePoint Online 小組網站。如需保護這些三層的詳細資訊，請參閱[Secure SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p101">Use the steps in this article to design and deploy baseline, sensitive, and highly confidential SharePoint Online team sites. For more information about these three tiers of protection, see [Secure SharePoint Online sites and files](secure-sharepoint-online-sites-and-files.md).</span></span>
   
-## <a name="baseline-sharepoint-online-team-sites"></a><span data-ttu-id="6666d-107">[比較基準 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="6666d-107">Baseline SharePoint Online team sites</span></span>
+## <a name="baseline-sharepoint-online-team-sites"></a><span data-ttu-id="0e00d-107">[比較基準 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-107">Baseline SharePoint Online team sites</span></span>
 
-<span data-ttu-id="6666d-p102">[比較基準保護包含這兩個公用及私人小組網站。可以探索和組織中的任何人存取公用小組網站。私用網站可以只探索和存取小組網站相關聯的 Office 365 群組的成員。這兩個小組網站這類允許成員與其他人] 共用網站。</span><span class="sxs-lookup"><span data-stu-id="6666d-p102">Baseline protection includes both public and private team sites. Public team sites can be discovered and accessed by anybody in the organization. Private sites can only be discovered and accessed by members of the Office 365 group associated with the team site. Both of these types of team sites allow members to share the site with others.</span></span>
+<span data-ttu-id="0e00d-p102">[比較基準保護包含這兩個公用及私人小組網站。可以探索和組織中的任何人存取公用小組網站。私用網站可以只探索和存取小組網站相關聯的 Office 365 群組的成員。這兩個小組網站這類允許成員與其他人] 共用網站。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p102">Baseline protection includes both public and private team sites. Public team sites can be discovered and accessed by anybody in the organization. Private sites can only be discovered and accessed by members of the Office 365 group associated with the team site. Both of these types of team sites allow members to share the site with others.</span></span>
   
-### <a name="public"></a><span data-ttu-id="6666d-112">公用</span><span class="sxs-lookup"><span data-stu-id="6666d-112">Public</span></span>
+### <a name="public"></a><span data-ttu-id="0e00d-112">公用</span><span class="sxs-lookup"><span data-stu-id="0e00d-112">Public</span></span>
 
-<span data-ttu-id="6666d-113">若要建立基準 SharePoint Online 小組網站與公用存取和權限，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="6666d-113">To create a baseline SharePoint Online team site with public access and permissions, do the following:</span></span>
+<span data-ttu-id="0e00d-113">若要建立基準 SharePoint Online 小組網站與公用存取和權限，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="0e00d-113">To create a baseline SharePoint Online team site with public access and permissions, do the following:</span></span>
   
-1. <span data-ttu-id="6666d-p103">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="6666d-p103">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
+1. <span data-ttu-id="0e00d-p103">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p103">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
     
-2. <span data-ttu-id="6666d-116">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-116">In the list of tiles, click **SharePoint**.</span></span>
+2. <span data-ttu-id="0e00d-116">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-116">In the list of tiles, click **SharePoint**.</span></span>
     
-3. <span data-ttu-id="6666d-117">在 [新增**SharePoint** ] 索引標籤在瀏覽器中按一下 [ **+ 建立網站**。</span><span class="sxs-lookup"><span data-stu-id="6666d-117">On the new **SharePoint** tab in your browser, click **+ Create site**.</span></span>
+3. <span data-ttu-id="0e00d-117">在 [新增**SharePoint** ] 索引標籤在瀏覽器中按一下 [ **+ 建立網站**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-117">On the new **SharePoint** tab in your browser, click **+ Create site**.</span></span>
     
-4. <span data-ttu-id="6666d-118">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="6666d-118">On the **Create a site** page, click **Team site**.</span></span>
+4. <span data-ttu-id="0e00d-118">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-118">On the **Create a site** page, click **Team site**.</span></span>
     
-5. <span data-ttu-id="6666d-119">在**站台名稱**] 中，輸入公用小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-119">In **Site name**, type a name for the public team site.</span></span> 
+5. <span data-ttu-id="0e00d-119">在**站台名稱**] 中，輸入公用小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-119">In **Site name**, type a name for the public team site.</span></span> 
     
-6. <span data-ttu-id="6666d-120">在**小組網站描述**] 中，輸入網站的用途說明。</span><span class="sxs-lookup"><span data-stu-id="6666d-120">In **Team site description**, type a description of the purpose of the site.</span></span>
+6. <span data-ttu-id="0e00d-120">在**小組網站描述**] 中，輸入網站的用途說明。</span><span class="sxs-lookup"><span data-stu-id="0e00d-120">In **Team site description**, type a description of the purpose of the site.</span></span>
     
-7. <span data-ttu-id="6666d-121">**隱私權設定**] 中選取**公用位在組織中的任何人都可以存取此站台**，並再按 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="6666d-121">In **Privacy settings**, select **Public - anyone in the organization can access this site**, and then click **Next**.</span></span>
+7. <span data-ttu-id="0e00d-121">**隱私權設定**] 中選取**公用位在組織中的任何人都可以存取此站台**，並再按 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-121">In **Privacy settings**, select **Public - anyone in the organization can access this site**, and then click **Next**.</span></span>
     
-8. <span data-ttu-id="6666d-122">在**您要新增誰？** ] 窗格中，按一下 [**完成]**。</span><span class="sxs-lookup"><span data-stu-id="6666d-122">On the **Who do you want to add?** pane, click **Finish**.</span></span>
+8. <span data-ttu-id="0e00d-122">在**您要新增誰？** ] 窗格中，按一下 [**完成]**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-122">On the **Who do you want to add?** pane, click **Finish**.</span></span>
     
-<span data-ttu-id="6666d-123">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="6666d-123">Here is your resulting configuration.</span></span>
+<span data-ttu-id="0e00d-123">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="0e00d-123">Here is your resulting configuration.</span></span>
   
 ![適用於公用 SharePoint Online 小組網站的基準層級保護。](images/bcd46b8d-3f89-4398-80ce-4da17ee85e03.png)
   
-### <a name="private"></a><span data-ttu-id="6666d-125">私人</span><span class="sxs-lookup"><span data-stu-id="6666d-125">Private</span></span>
+### <a name="private"></a><span data-ttu-id="0e00d-125">私人</span><span class="sxs-lookup"><span data-stu-id="0e00d-125">Private</span></span>
 
-<span data-ttu-id="6666d-126">若要建立基準 SharePoint Online 小組網站與私人 access 和權限，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="6666d-126">To create a baseline SharePoint Online team site with private access and permissions, do the following:</span></span>
+<span data-ttu-id="0e00d-126">若要建立基準 SharePoint Online 小組網站與私人 access 和權限，執行下列動作：</span><span class="sxs-lookup"><span data-stu-id="0e00d-126">To create a baseline SharePoint Online team site with private access and permissions, do the following:</span></span>
   
-1. <span data-ttu-id="6666d-p104">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="6666d-p104">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
+1. <span data-ttu-id="0e00d-p104">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p104">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
     
-2. <span data-ttu-id="6666d-129">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-129">In the list of tiles, click **SharePoint**.</span></span>
+2. <span data-ttu-id="0e00d-129">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-129">In the list of tiles, click **SharePoint**.</span></span>
     
-3. <span data-ttu-id="6666d-130">在 [新增**SharePoint** ] 索引標籤在瀏覽器中按一下 [ **+ 建立網站**。</span><span class="sxs-lookup"><span data-stu-id="6666d-130">On the new **SharePoint** tab in your browser, click **+ Create site**.</span></span>
+3. <span data-ttu-id="0e00d-130">在 [新增**SharePoint** ] 索引標籤在瀏覽器中按一下 [ **+ 建立網站**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-130">On the new **SharePoint** tab in your browser, click **+ Create site**.</span></span>
     
-4. <span data-ttu-id="6666d-131">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="6666d-131">On the **Create a site** page, click **Team site**.</span></span>
+4. <span data-ttu-id="0e00d-131">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-131">On the **Create a site** page, click **Team site**.</span></span>
     
-5. <span data-ttu-id="6666d-132">在**站台名稱**] 中輸入私人小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-132">In **Site name**, type a name for the private team site.</span></span> 
+5. <span data-ttu-id="0e00d-132">在**站台名稱**] 中輸入私人小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-132">In **Site name**, type a name for the private team site.</span></span> 
     
-6. <span data-ttu-id="6666d-133">在**小組網站描述] 中，**輸入網站的用途說明。</span><span class="sxs-lookup"><span data-stu-id="6666d-133">In **Team site description,** type a description of the purpose of the site.</span></span>
+6. <span data-ttu-id="0e00d-133">在**小組網站描述] 中，**輸入網站的用途說明。</span><span class="sxs-lookup"><span data-stu-id="0e00d-133">In **Team site description,** type a description of the purpose of the site.</span></span>
     
-7. <span data-ttu-id="6666d-134">**隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="6666d-134">In **Privacy settings**, select **Private - only members can access this site**, and then click **Next**.</span></span>
+7. <span data-ttu-id="0e00d-134">**隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-134">In **Privacy settings**, select **Private - only members can access this site**, and then click **Next**.</span></span>
     
-8. <span data-ttu-id="6666d-135">在**您要新增誰？** ] 窗格中，在**新增成員**中，輸入能夠存取這私人小組網站的使用者帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-135">On the **Who do you want to add?** pane, in **Add members**, type the names of user accounts that have access to this private team site.</span></span>
+8. <span data-ttu-id="0e00d-135">在**您要新增誰？** ] 窗格中，在**新增成員**中，輸入能夠存取這私人小組網站的使用者帳戶的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-135">On the **Who do you want to add?** pane, in **Add members**, type the names of user accounts that have access to this private team site.</span></span>
     
-9. <span data-ttu-id="6666d-136">當您完成初始組成員新增至網站，按一下 [**完成時間**</span><span class="sxs-lookup"><span data-stu-id="6666d-136">When you are done adding the initial set of members to the site, click **Finish**</span></span>
+9. <span data-ttu-id="0e00d-136">當您完成初始組成員新增至網站，按一下 [**完成時間**</span><span class="sxs-lookup"><span data-stu-id="0e00d-136">When you are done adding the initial set of members to the site, click **Finish**</span></span>
     
-<span data-ttu-id="6666d-137">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="6666d-137">Here is your resulting configuration.</span></span>
+<span data-ttu-id="0e00d-137">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="0e00d-137">Here is your resulting configuration.</span></span>
   
 ![適用於私人 SharePoint Online 小組網站的基準層級保護。](images/91769026-37e3-4383-ac3c-dbf7aca98e41.png)
   
-## <a name="sensitive-sharepoint-online-team-sites"></a><span data-ttu-id="6666d-139">機密的 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="6666d-139">Sensitive SharePoint Online team sites</span></span>
+## <a name="sensitive-sharepoint-online-team-sites"></a><span data-ttu-id="0e00d-139">機密的 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-139">Sensitive SharePoint Online team sites</span></span>
 
-<span data-ttu-id="6666d-140">機密的 SharePoint Online 小組網站是隔離的小組網站] 表示權限所控制透過而不是在小組網站相關聯的 Office 365 群組的成員資格的 SharePoint 群組的成員資格。</span><span class="sxs-lookup"><span data-stu-id="6666d-140">A sensitive SharePoint Online team site is an isolated team site, which means that permissions are controlled through membership in SharePoint groups instead of membership in the Office 365 group associated with the team site.</span></span>
+<span data-ttu-id="0e00d-140">機密的 SharePoint Online 小組網站是隔離的小組網站] 表示權限所控制透過而不是在小組網站相關聯的 Office 365 群組的成員資格的 SharePoint 群組的成員資格。</span><span class="sxs-lookup"><span data-stu-id="0e00d-140">A sensitive SharePoint Online team site is an isolated team site, which means that permissions are controlled through membership in SharePoint groups instead of membership in the Office 365 group associated with the team site.</span></span>
   
-<span data-ttu-id="6666d-141">若要建立的隔離的小組網站，有兩個主要步驟。</span><span class="sxs-lookup"><span data-stu-id="6666d-141">To create an isolated team site, there are two main steps.</span></span>
+<span data-ttu-id="0e00d-141">若要建立的隔離的小組網站，有兩個主要步驟。</span><span class="sxs-lookup"><span data-stu-id="0e00d-141">To create an isolated team site, there are two main steps.</span></span>
   
-### <a name="step-1-design-your-isolated-site"></a><span data-ttu-id="6666d-142">步驟 1： 設計在隔離的網站</span><span class="sxs-lookup"><span data-stu-id="6666d-142">Step 1: Design your isolated site</span></span>
+### <a name="step-1-design-your-isolated-site"></a><span data-ttu-id="0e00d-142">步驟 1： 設計在隔離的網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-142">Step 1: Design your isolated site</span></span>
 
-<span data-ttu-id="6666d-143">若要設計隔離的小組網站，您需要決定：</span><span class="sxs-lookup"><span data-stu-id="6666d-143">To design your isolated team site, you need to determine:</span></span>
+<span data-ttu-id="0e00d-143">若要設計隔離的小組網站，您需要決定：</span><span class="sxs-lookup"><span data-stu-id="0e00d-143">To design your isolated team site, you need to determine:</span></span>
   
-- <span data-ttu-id="6666d-144">您的 SharePoint 群組和權限層級。</span><span class="sxs-lookup"><span data-stu-id="6666d-144">Your SharePoint groups and permission levels.</span></span>
+- <span data-ttu-id="0e00d-144">您的 SharePoint 群組和權限層級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-144">Your SharePoint groups and permission levels.</span></span>
     
-- <span data-ttu-id="6666d-145">將您的 SharePoint 群組的成員存取群組的屬性集。</span><span class="sxs-lookup"><span data-stu-id="6666d-145">The set of access groups that will be members of your SharePoint groups.</span></span>
+- <span data-ttu-id="0e00d-145">將您的 SharePoint 群組的成員存取群組的屬性集。</span><span class="sxs-lookup"><span data-stu-id="0e00d-145">The set of access groups that will be members of your SharePoint groups.</span></span>
     
-     <span data-ttu-id="6666d-146">存取群組的建議的設定是一個網站成員，一個網站檢視者另一個網站管理員。</span><span class="sxs-lookup"><span data-stu-id="6666d-146">The recommended set of access groups is one for site members, one for site viewers, and one for site administrators.</span></span>
+     <span data-ttu-id="0e00d-146">存取群組的建議的設定是一個網站成員，一個網站檢視者另一個網站管理員。</span><span class="sxs-lookup"><span data-stu-id="0e00d-146">The recommended set of access groups is one for site members, one for site viewers, and one for site administrators.</span></span>
     
-- <span data-ttu-id="6666d-147">您是否要使用的巢狀存取群組內的群組。</span><span class="sxs-lookup"><span data-stu-id="6666d-147">Whether you will use nested groups within your access groups.</span></span>
+- <span data-ttu-id="0e00d-147">您是否要使用的巢狀存取群組內的群組。</span><span class="sxs-lookup"><span data-stu-id="0e00d-147">Whether you will use nested groups within your access groups.</span></span>
     
-<span data-ttu-id="6666d-148">例如，建議的群組結構和權限層級看起來如下：</span><span class="sxs-lookup"><span data-stu-id="6666d-148">For example, the recommended group structure and permission levels look like this:</span></span>
+<span data-ttu-id="0e00d-148">例如，建議的群組結構和權限層級看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0e00d-148">For example, the recommended group structure and permission levels look like this:</span></span>
   
-|<span data-ttu-id="6666d-149">**SharePoint 群組**</span><span class="sxs-lookup"><span data-stu-id="6666d-149">**SharePoint group**</span></span>|<span data-ttu-id="6666d-150">**權限層級**</span><span class="sxs-lookup"><span data-stu-id="6666d-150">**Permission level**</span></span>|<span data-ttu-id="6666d-151">**存取群組 （範例）**</span><span class="sxs-lookup"><span data-stu-id="6666d-151">**Access group (examples)**</span></span>|
+|<span data-ttu-id="0e00d-149">**SharePoint 群組**</span><span class="sxs-lookup"><span data-stu-id="0e00d-149">**SharePoint group**</span></span>|<span data-ttu-id="0e00d-150">**權限層級**</span><span class="sxs-lookup"><span data-stu-id="0e00d-150">**Permission level**</span></span>|<span data-ttu-id="0e00d-151">**存取群組 （範例）**</span><span class="sxs-lookup"><span data-stu-id="0e00d-151">**Access group (examples)**</span></span>|
 |:-----|:-----|:-----|
-|<span data-ttu-id="6666d-152">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="6666d-152">[site name] Members</span></span>  <br/> |<span data-ttu-id="6666d-153">編輯</span><span class="sxs-lookup"><span data-stu-id="6666d-153">Edit</span></span>  <br/> |<span data-ttu-id="6666d-154">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="6666d-154">[site name] Members</span></span>  <br/> |
-|<span data-ttu-id="6666d-155">[網站名稱]訪客</span><span class="sxs-lookup"><span data-stu-id="6666d-155">[site name] Visitors</span></span>  <br/> |<span data-ttu-id="6666d-156">讀取</span><span class="sxs-lookup"><span data-stu-id="6666d-156">Read</span></span>  <br/> |<span data-ttu-id="6666d-157">[網站名稱]檢視程式</span><span class="sxs-lookup"><span data-stu-id="6666d-157">[site name] Viewers</span></span>  <br/> |
-|<span data-ttu-id="6666d-158">[網站名稱]擁有者</span><span class="sxs-lookup"><span data-stu-id="6666d-158">[site name] Owners</span></span>  <br/> |<span data-ttu-id="6666d-159">完全控制</span><span class="sxs-lookup"><span data-stu-id="6666d-159">Full control</span></span>  <br/> |<span data-ttu-id="6666d-160">[網站名稱]系統管理員</span><span class="sxs-lookup"><span data-stu-id="6666d-160">[site name] Admins</span></span>  <br/> |
+|<span data-ttu-id="0e00d-152">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-152">[site name] Members</span></span>  <br/> |<span data-ttu-id="0e00d-153">編輯</span><span class="sxs-lookup"><span data-stu-id="0e00d-153">Edit</span></span>  <br/> |<span data-ttu-id="0e00d-154">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-154">[site name] Members</span></span>  <br/> |
+|<span data-ttu-id="0e00d-155">[網站名稱]訪客</span><span class="sxs-lookup"><span data-stu-id="0e00d-155">[site name] Visitors</span></span>  <br/> |<span data-ttu-id="0e00d-156">讀取</span><span class="sxs-lookup"><span data-stu-id="0e00d-156">Read</span></span>  <br/> |<span data-ttu-id="0e00d-157">[網站名稱]檢視程式</span><span class="sxs-lookup"><span data-stu-id="0e00d-157">[site name] Viewers</span></span>  <br/> |
+|<span data-ttu-id="0e00d-158">[網站名稱]擁有者</span><span class="sxs-lookup"><span data-stu-id="0e00d-158">[site name] Owners</span></span>  <br/> |<span data-ttu-id="0e00d-159">完全控制</span><span class="sxs-lookup"><span data-stu-id="0e00d-159">Full control</span></span>  <br/> |<span data-ttu-id="0e00d-160">[網站名稱]系統管理員</span><span class="sxs-lookup"><span data-stu-id="0e00d-160">[site name] Admins</span></span>  <br/> |
    
-<span data-ttu-id="6666d-p105">小組網站的預設會建立 SharePoint 群組與權限層級。您需要確定您的存取群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-p105">The SharePoint groups and permission levels are created by default for a team site. You need to determine the names of your access groups.</span></span>
+<span data-ttu-id="0e00d-p105">小組網站的預設會建立 SharePoint 群組與權限層級。您需要確定您的存取群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p105">The SharePoint groups and permission levels are created by default for a team site. You need to determine the names of your access groups.</span></span>
   
-<span data-ttu-id="6666d-163">如需設計程序的詳細資訊，請參閱 ＜ [Design 隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="6666d-163">For the details of the design process, see [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md).</span></span>
+<span data-ttu-id="0e00d-163">如需設計程序的詳細資訊，請參閱 ＜ [Design 隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-163">For the details of the design process, see [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md).</span></span>
   
-### <a name="step-2-deploy-your-isolated-site"></a><span data-ttu-id="6666d-164">步驟 2： 部署隔離的網站</span><span class="sxs-lookup"><span data-stu-id="6666d-164">Step 2: Deploy your isolated site</span></span>
+### <a name="step-2-deploy-your-isolated-site"></a><span data-ttu-id="0e00d-164">步驟 2： 部署隔離的網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-164">Step 2: Deploy your isolated site</span></span>
 
-<span data-ttu-id="6666d-165">若要部署在隔離的網站，您必須先：</span><span class="sxs-lookup"><span data-stu-id="6666d-165">To deploy your isolated site, you first need to:</span></span>
+<span data-ttu-id="0e00d-165">若要部署在隔離的網站，您必須先：</span><span class="sxs-lookup"><span data-stu-id="0e00d-165">To deploy your isolated site, you first need to:</span></span>
   
-- <span data-ttu-id="6666d-166">決定使用者帳戶和群組新增至每個存取群組。</span><span class="sxs-lookup"><span data-stu-id="6666d-166">Determine the user accounts and groups to add to each of your access groups.</span></span>
+- <span data-ttu-id="0e00d-166">決定使用者帳戶和群組新增至每個存取群組。</span><span class="sxs-lookup"><span data-stu-id="0e00d-166">Determine the user accounts and groups to add to each of your access groups.</span></span>
     
-- <span data-ttu-id="6666d-167">建立存取群組並新增使用者和群組的成員。</span><span class="sxs-lookup"><span data-stu-id="6666d-167">Create the access groups and add the user and group members.</span></span>
+- <span data-ttu-id="0e00d-167">建立存取群組並新增使用者和群組的成員。</span><span class="sxs-lookup"><span data-stu-id="0e00d-167">Create the access groups and add the user and group members.</span></span>
     
-<span data-ttu-id="6666d-168">如需詳細的步驟，請參閱 ＜**階段 1**的[部署隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="6666d-168">For the detailed steps, see **Phase 1** of [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md).</span></span>
+<span data-ttu-id="0e00d-168">如需詳細的步驟，請參閱 ＜**階段 1**的[部署隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-168">For the detailed steps, see **Phase 1** of [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md).</span></span>
   
-<span data-ttu-id="6666d-169">接下來，您可以建立的 SharePoint Online 小組網站進行這些步驟。</span><span class="sxs-lookup"><span data-stu-id="6666d-169">Next, you create the SharePoint Online team site with these steps.</span></span>
+<span data-ttu-id="0e00d-169">接下來，您可以建立的 SharePoint Online 小組網站進行這些步驟。</span><span class="sxs-lookup"><span data-stu-id="0e00d-169">Next, you create the SharePoint Online team site with these steps.</span></span>
   
-1. <span data-ttu-id="6666d-p106">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="6666d-p106">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
+1. <span data-ttu-id="0e00d-p106">Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p106">Sign in to the Office 365 portal with an account that will also be used to administer the SharePoint Online team site (a SharePoint Online administrator). For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
     
-2. <span data-ttu-id="6666d-172">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-172">In the list of tiles, click **SharePoint**.</span></span>
+2. <span data-ttu-id="0e00d-172">在 [並排顯示] 清單中按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-172">In the list of tiles, click **SharePoint**.</span></span>
     
-3. <span data-ttu-id="6666d-173">新**SharePoint**索引標籤中的瀏覽器中，按一下 [ **+ 建立網站**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-173">In the new **SharePoint** tab of your browser, click **+ Create site**.</span></span>
+3. <span data-ttu-id="0e00d-173">新**SharePoint**索引標籤中的瀏覽器中，按一下 [ **+ 建立網站**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-173">In the new **SharePoint** tab of your browser, click **+ Create site**.</span></span>
     
-4. <span data-ttu-id="6666d-174">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="6666d-174">On the **Create a site** page, click **Team site**.</span></span>
+4. <span data-ttu-id="0e00d-174">在 [**建立網站**] 頁面上，按一下 [**小組網站**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-174">On the **Create a site** page, click **Team site**.</span></span>
     
-5. <span data-ttu-id="6666d-175">在**站台名稱**] 中輸入私人小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-175">In **Site name**, type a name for the private team site.</span></span>
+5. <span data-ttu-id="0e00d-175">在**站台名稱**] 中輸入私人小組網站的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-175">In **Site name**, type a name for the private team site.</span></span>
     
-6. <span data-ttu-id="6666d-176">在**小組網站描述**] 中，輸入的選用描述。</span><span class="sxs-lookup"><span data-stu-id="6666d-176">In **Team site description**, type an optional description.</span></span>
+6. <span data-ttu-id="0e00d-176">在**小組網站描述**] 中，輸入的選用描述。</span><span class="sxs-lookup"><span data-stu-id="0e00d-176">In **Team site description**, type an optional description.</span></span>
     
-7. <span data-ttu-id="6666d-177">**隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="6666d-177">In **Privacy settings**, select **Private - only members can access this site**, and then click **Next**.</span></span>
+7. <span data-ttu-id="0e00d-177">**隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-177">In **Privacy settings**, select **Private - only members can access this site**, and then click **Next**.</span></span>
     
-8. <span data-ttu-id="6666d-178">在**您要新增誰？** ] 窗格中，按一下 [**完成]**。</span><span class="sxs-lookup"><span data-stu-id="6666d-178">On the **Who do you want to add?** pane, click **Finish**.</span></span>
+8. <span data-ttu-id="0e00d-178">在**您要新增誰？** ] 窗格中，按一下 [**完成]**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-178">On the **Who do you want to add?** pane, click **Finish**.</span></span>
     
-<span data-ttu-id="6666d-179">下一步] 從新的 SharePoint Online 小組網站，請使用下列步驟設定權限。</span><span class="sxs-lookup"><span data-stu-id="6666d-179">Next, from the new SharePoint Online team site, configure permissions with these steps.</span></span>
+<span data-ttu-id="0e00d-179">下一步] 從新的 SharePoint Online 小組網站，請使用下列步驟設定權限。</span><span class="sxs-lookup"><span data-stu-id="0e00d-179">Next, from the new SharePoint Online team site, configure permissions with these steps.</span></span>
   
-1. <span data-ttu-id="6666d-p107">決定使用者主體名稱 (UPN) 的 IT 管理員或其他負責回應及位址的網站的存取權要求的人員 （belindan@contoso.com 是 UPN 的範例）。寫入該的 UPN： ___。</span><span class="sxs-lookup"><span data-stu-id="6666d-p107">Determine the User Principal Name (UPN) of the IT administrator or other person who will be responsible for responding to and addressing requests for access to the site (belindan@contoso.com is an example of a UPN). Write that UPN here: _________________________________________.</span></span>
+1. <span data-ttu-id="0e00d-p107">決定使用者主體名稱 (UPN) 的 IT 管理員或其他負責回應及位址的網站的存取權要求的人員 （belindan@contoso.com 是 UPN 的範例）。寫入該的 UPN： ___。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p107">Determine the User Principal Name (UPN) of the IT administrator or other person who will be responsible for responding to and addressing requests for access to the site (belindan@contoso.com is an example of a UPN). Write that UPN here: _________________________________________.</span></span>
     
-2. <span data-ttu-id="6666d-182">在 [工具] 列中按一下 [設定] 圖示，和 [**網站權限**。</span><span class="sxs-lookup"><span data-stu-id="6666d-182">In the tool bar, click the settings icon, and then click **Site permissions**.</span></span>
+2. <span data-ttu-id="0e00d-182">在 [工具] 列中按一下 [設定] 圖示，和 [**網站權限**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-182">In the tool bar, click the settings icon, and then click **Site permissions**.</span></span>
     
-3. <span data-ttu-id="6666d-183">在 [**網站權限**] 窗格中，按一下 [**進階權限設定**。</span><span class="sxs-lookup"><span data-stu-id="6666d-183">In the **Site permissions** pane, click **Advanced permissions settings**.</span></span>
+3. <span data-ttu-id="0e00d-183">在 [**網站權限**] 窗格中，按一下 [**進階權限設定**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-183">In the **Site permissions** pane, click **Advanced permissions settings**.</span></span>
     
-4. <span data-ttu-id="6666d-184">新**的權限**] 索引標籤上的瀏覽器中，按一下 [**存取要求設定**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-184">On the new **Permissions** tab of your browser, click **Access Request Settings**.</span></span>
+4. <span data-ttu-id="0e00d-184">新**的權限**] 索引標籤上的瀏覽器中，按一下 [**存取要求設定**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-184">On the new **Permissions** tab of your browser, click **Access Request Settings**.</span></span>
     
-5. <span data-ttu-id="6666d-185">在 [**存取要求設定**] 對話方塊中：</span><span class="sxs-lookup"><span data-stu-id="6666d-185">In the **Access Requests Settings** dialog box:</span></span>
+5. <span data-ttu-id="0e00d-185">在 [**存取要求設定**] 對話方塊中：</span><span class="sxs-lookup"><span data-stu-id="0e00d-185">In the **Access Requests Settings** dialog box:</span></span>
     
-  - <span data-ttu-id="6666d-186">清除 [**允許成員] 共用網站和個別的檔案及資料夾**和**允許邀請其他人網站成員 」 群組的成員**] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="6666d-186">Clear the **Allow members to share the site and individual files and folders** and **Allow members to invite others to the site members group** check boxes.</span></span>
+  - <span data-ttu-id="0e00d-186">清除 [**允許成員] 共用網站和個別的檔案及資料夾**和**允許邀請其他人網站成員 」 群組的成員**] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="0e00d-186">Clear the **Allow members to share the site and individual files and folders** and **Allow members to invite others to the site members group** check boxes.</span></span>
     
-  - <span data-ttu-id="6666d-187">輸入您的 IT 管理員從步驟 1 的 UPN**傳送存取的所有要求**。</span><span class="sxs-lookup"><span data-stu-id="6666d-187">Type the UPN of your IT administrator from step 1 in **Send all requests for access**.</span></span>
+  - <span data-ttu-id="0e00d-187">輸入您的 IT 管理員從步驟 1 的 UPN**傳送存取的所有要求**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-187">Type the UPN of your IT administrator from step 1 in **Send all requests for access**.</span></span>
     
-  - <span data-ttu-id="6666d-188">按一下 [確定]****。</span><span class="sxs-lookup"><span data-stu-id="6666d-188">Click **OK**.</span></span>
+  - <span data-ttu-id="0e00d-188">按一下 [確定]****。</span><span class="sxs-lookup"><span data-stu-id="0e00d-188">Click **OK**.</span></span>
     
-6. <span data-ttu-id="6666d-189">在瀏覽器的 [**權限**] 索引標籤中，按一下 [清單中的**[網站名稱] 成員**。</span><span class="sxs-lookup"><span data-stu-id="6666d-189">On the **Permissions** tab of your browser, click **[site name] Members** in the list.</span></span>
+6. <span data-ttu-id="0e00d-189">在瀏覽器的 [**權限**] 索引標籤中，按一下 [清單中的**[網站名稱] 成員**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-189">On the **Permissions** tab of your browser, click **[site name] Members** in the list.</span></span>
     
-7. <span data-ttu-id="6666d-190">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-190">In **People and Groups**, click **New**.</span></span>
+7. <span data-ttu-id="0e00d-190">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-190">In **People and Groups**, click **New**.</span></span>
     
-8. <span data-ttu-id="6666d-191">在 [**共用**] 對話方塊中，輸入您的網站成員存取群組此網站的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="6666d-191">In the **Share** dialog box, type the name of your site members access group for this site, select it, and then click **Share**.</span></span>
+8. <span data-ttu-id="0e00d-191">在 [**共用**] 對話方塊中，輸入您的網站成員存取群組此網站的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-191">In the **Share** dialog box, type the name of your site members access group for this site, select it, and then click **Share**.</span></span>
     
-9. <span data-ttu-id="6666d-192">按一下瀏覽器上的 [上一頁] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="6666d-192">Click the back button on your browser.</span></span>
+9. <span data-ttu-id="0e00d-192">按一下瀏覽器上的 [上一頁] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="0e00d-192">Click the back button on your browser.</span></span>
     
-10. <span data-ttu-id="6666d-193">按一下**[網站名稱] 擁有者**] 清單中。</span><span class="sxs-lookup"><span data-stu-id="6666d-193">Click **[site name] Owners** in the list.</span></span>
+10. <span data-ttu-id="0e00d-193">按一下**[網站名稱] 擁有者**] 清單中。</span><span class="sxs-lookup"><span data-stu-id="0e00d-193">Click **[site name] Owners** in the list.</span></span>
     
-11. <span data-ttu-id="6666d-194">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-194">In **People and Groups**, click **New**.</span></span>
+11. <span data-ttu-id="0e00d-194">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-194">In **People and Groups**, click **New**.</span></span>
     
-12. <span data-ttu-id="6666d-195">在 [**共用**] 對話方塊中，輸入此網站的網站管理員存取群組的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="6666d-195">In the **Share** dialog box, type the name of the site administrators access group for this site, select it, and then click **Share**.</span></span>
+12. <span data-ttu-id="0e00d-195">在 [**共用**] 對話方塊中，輸入此網站的網站管理員存取群組的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-195">In the **Share** dialog box, type the name of the site administrators access group for this site, select it, and then click **Share**.</span></span>
     
-13. <span data-ttu-id="6666d-196">按一下瀏覽器上的 [上一頁] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="6666d-196">Click the back button on your browser.</span></span>
+13. <span data-ttu-id="0e00d-196">按一下瀏覽器上的 [上一頁] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="0e00d-196">Click the back button on your browser.</span></span>
     
-14. <span data-ttu-id="6666d-197">按一下**[網站名稱] 訪客**] 清單中。</span><span class="sxs-lookup"><span data-stu-id="6666d-197">Click **[site name] Visitors** in the list.</span></span>
+14. <span data-ttu-id="0e00d-197">按一下**[網站名稱] 訪客**] 清單中。</span><span class="sxs-lookup"><span data-stu-id="0e00d-197">Click **[site name] Visitors** in the list.</span></span>
     
-15. <span data-ttu-id="6666d-198">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="6666d-198">In **People and Groups**, click **New**.</span></span>
+15. <span data-ttu-id="0e00d-198">在 [**人員與群組**，按一下 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="0e00d-198">In **People and Groups**, click **New**.</span></span>
     
-16. <span data-ttu-id="6666d-199">在 [**共用**] 對話方塊中，輸入此網站的網站檢視者存取群組的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="6666d-199">In the **Share** dialog box, type the name of the site viewers access group for this site, select it, and then click **Share**.</span></span>
+16. <span data-ttu-id="0e00d-199">在 [**共用**] 對話方塊中，輸入此網站的網站檢視者存取群組的名稱、 選取它，和 [**共用**。</span><span class="sxs-lookup"><span data-stu-id="0e00d-199">In the **Share** dialog box, type the name of the site viewers access group for this site, select it, and then click **Share**.</span></span>
     
-17. <span data-ttu-id="6666d-200">關閉瀏覽器的 [**權限**] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="6666d-200">Close the **Permissions** tab of your browser.</span></span>
+17. <span data-ttu-id="0e00d-200">關閉瀏覽器的 [**權限**] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="0e00d-200">Close the **Permissions** tab of your browser.</span></span>
     
-<span data-ttu-id="6666d-201">這些權限設定的結果是：</span><span class="sxs-lookup"><span data-stu-id="6666d-201">The results of these permission settings are:</span></span>
+<span data-ttu-id="0e00d-201">這些權限設定的結果是：</span><span class="sxs-lookup"><span data-stu-id="0e00d-201">The results of these permission settings are:</span></span>
   
-- <span data-ttu-id="6666d-202">**[網站名稱] 擁有者**SharePoint 群組包含網站管理員存取群組中的所有成員具有 [**完全控制**」 權限層級。</span><span class="sxs-lookup"><span data-stu-id="6666d-202">The **[site name] Owners** SharePoint group contains the site administrators access group, in which all the members have the **Full control** permission level.</span></span>
+- <span data-ttu-id="0e00d-202">**[網站名稱] 擁有者**SharePoint 群組包含網站管理員存取群組中的所有成員具有 [**完全控制**」 權限層級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-202">The **[site name] Owners** SharePoint group contains the site administrators access group, in which all the members have the **Full control** permission level.</span></span>
     
-- <span data-ttu-id="6666d-203">**[網站名稱] 成員**SharePoint 群組包含網站成員存取群組中的所有成員具有**編輯**權限等級。</span><span class="sxs-lookup"><span data-stu-id="6666d-203">The **[site name] Members** SharePoint group contains the site members access group, in which all the members have the **Edit** permission level.</span></span>
+- <span data-ttu-id="0e00d-203">**[網站名稱] 成員**SharePoint 群組包含網站成員存取群組中的所有成員具有**編輯**權限等級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-203">The **[site name] Members** SharePoint group contains the site members access group, in which all the members have the **Edit** permission level.</span></span>
     
-- <span data-ttu-id="6666d-204">**[網站名稱] 訪客**SharePoint 群組包含網站檢視者存取群組中的所有成員具有 「**讀取**」 權限等級。</span><span class="sxs-lookup"><span data-stu-id="6666d-204">The **[site name] Visitors** SharePoint group contains the site viewers access group, in which all the members have the **Read** permission level.</span></span>
+- <span data-ttu-id="0e00d-204">**[網站名稱] 訪客**SharePoint 群組包含網站檢視者存取群組中的所有成員具有 「**讀取**」 權限等級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-204">The **[site name] Visitors** SharePoint group contains the site viewers access group, in which all the members have the **Read** permission level.</span></span>
     
-- <span data-ttu-id="6666d-205">邀請其他成員的成員的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="6666d-205">The ability for members to invite other members is disabled.</span></span>
+- <span data-ttu-id="0e00d-205">邀請其他成員的成員的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="0e00d-205">The ability for members to invite other members is disabled.</span></span>
     
-- <span data-ttu-id="6666d-206">非成員要求存取的功能已啟用。</span><span class="sxs-lookup"><span data-stu-id="6666d-206">The ability for non-members to request access is enabled.</span></span>
+- <span data-ttu-id="0e00d-206">非成員要求存取的功能已啟用。</span><span class="sxs-lookup"><span data-stu-id="0e00d-206">The ability for non-members to request access is enabled.</span></span>
     
-<span data-ttu-id="6666d-207">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="6666d-207">Here is your resulting configuration.</span></span>
+<span data-ttu-id="0e00d-207">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="0e00d-207">Here is your resulting configuration.</span></span>
   
 ![適用於隔離 SharePoint Online 小組網站的敏感性層級保護。](images/7a6ab9c6-560a-4674-ac39-8175644dbe6f.png)
   
-<span data-ttu-id="6666d-209">網站透過群組成員資格之一的存取群組的成員可以現在安全地進行共同作業網站的資源。</span><span class="sxs-lookup"><span data-stu-id="6666d-209">The members of the site, through group membership in one of the access groups, can now securely collaborate on the resources of the site.</span></span>
+<span data-ttu-id="0e00d-209">網站透過群組成員資格之一的存取群組的成員可以現在安全地進行共同作業網站的資源。</span><span class="sxs-lookup"><span data-stu-id="0e00d-209">The members of the site, through group membership in one of the access groups, can now securely collaborate on the resources of the site.</span></span>
   
-## <a name="highly-confidential-sharepoint-online-team-sites"></a><span data-ttu-id="6666d-210">高度機密的 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="6666d-210">Highly confidential SharePoint Online team sites</span></span>
+## <a name="highly-confidential-sharepoint-online-team-sites"></a><span data-ttu-id="0e00d-210">高度機密的 SharePoint Online 小組網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-210">Highly confidential SharePoint Online team sites</span></span>
 
-<span data-ttu-id="6666d-211">高度機密的 SharePoint Online 小組網站是隔離的小組網站] 表示權限所控制透過而不是在小組網站相關聯的 Office 365 群組的成員資格的 SharePoint 群組的成員資格。</span><span class="sxs-lookup"><span data-stu-id="6666d-211">A highly confidential SharePoint Online team site is an isolated team site, which means that permissions are controlled through membership in SharePoint groups instead of membership in the Office 365 group associated with the team site.</span></span>
+<span data-ttu-id="0e00d-211">高度機密的 SharePoint Online 小組網站是隔離的小組網站] 表示權限所控制透過而不是在小組網站相關聯的 Office 365 群組的成員資格的 SharePoint 群組的成員資格。</span><span class="sxs-lookup"><span data-stu-id="0e00d-211">A highly confidential SharePoint Online team site is an isolated team site, which means that permissions are controlled through membership in SharePoint groups instead of membership in the Office 365 group associated with the team site.</span></span>
   
-<span data-ttu-id="6666d-212">若要建立高度機密資訊與共同作業的隔離的小組網站，有兩個主要步驟。</span><span class="sxs-lookup"><span data-stu-id="6666d-212">To create an isolated team site for highly confidential information and collaboration, there are two main steps.</span></span>
+<span data-ttu-id="0e00d-212">若要建立高度機密資訊與共同作業的隔離的小組網站，有兩個主要步驟。</span><span class="sxs-lookup"><span data-stu-id="0e00d-212">To create an isolated team site for highly confidential information and collaboration, there are two main steps.</span></span>
   
-### <a name="step-1-design-your-isolated-site"></a><span data-ttu-id="6666d-213">步驟 1： 設計在隔離的網站</span><span class="sxs-lookup"><span data-stu-id="6666d-213">Step 1: Design your isolated site</span></span>
+### <a name="step-1-design-your-isolated-site"></a><span data-ttu-id="0e00d-213">步驟 1： 設計在隔離的網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-213">Step 1: Design your isolated site</span></span>
 
-<span data-ttu-id="6666d-214">若要設計隔離的小組網站，您需要決定：</span><span class="sxs-lookup"><span data-stu-id="6666d-214">To design your isolated team site, you need to determine:</span></span>
+<span data-ttu-id="0e00d-214">若要設計隔離的小組網站，您需要決定：</span><span class="sxs-lookup"><span data-stu-id="0e00d-214">To design your isolated team site, you need to determine:</span></span>
   
-- <span data-ttu-id="6666d-215">您的 SharePoint 群組和權限層級。</span><span class="sxs-lookup"><span data-stu-id="6666d-215">Your SharePoint groups and permission levels.</span></span>
+- <span data-ttu-id="0e00d-215">您的 SharePoint 群組和權限層級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-215">Your SharePoint groups and permission levels.</span></span>
     
-- <span data-ttu-id="6666d-216">將您的 SharePoint 群組的成員存取群組的屬性集。</span><span class="sxs-lookup"><span data-stu-id="6666d-216">The set of access groups that will be members of your SharePoint groups.</span></span>
+- <span data-ttu-id="0e00d-216">將您的 SharePoint 群組的成員存取群組的屬性集。</span><span class="sxs-lookup"><span data-stu-id="0e00d-216">The set of access groups that will be members of your SharePoint groups.</span></span>
     
-     <span data-ttu-id="6666d-217">存取群組的建議的設定是一個網站成員，一個網站檢視者另一個網站管理員。</span><span class="sxs-lookup"><span data-stu-id="6666d-217">The recommended set of access groups is one for site members, one for site viewers, and one for site administrators.</span></span>
+     <span data-ttu-id="0e00d-217">存取群組的建議的設定是一個網站成員，一個網站檢視者另一個網站管理員。</span><span class="sxs-lookup"><span data-stu-id="0e00d-217">The recommended set of access groups is one for site members, one for site viewers, and one for site administrators.</span></span>
     
-- <span data-ttu-id="6666d-218">您是否要使用的巢狀存取群組內的群組。</span><span class="sxs-lookup"><span data-stu-id="6666d-218">Whether you will use nested groups within your access groups.</span></span>
+- <span data-ttu-id="0e00d-218">您是否要使用的巢狀存取群組內的群組。</span><span class="sxs-lookup"><span data-stu-id="0e00d-218">Whether you will use nested groups within your access groups.</span></span>
     
-<span data-ttu-id="6666d-219">例如，建議的群組結構和權限層級看起來如下：</span><span class="sxs-lookup"><span data-stu-id="6666d-219">For example, the recommended group structure and permission levels look like this:</span></span>
+<span data-ttu-id="0e00d-219">例如，建議的群組結構和權限層級看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0e00d-219">For example, the recommended group structure and permission levels look like this:</span></span>
   
-|<span data-ttu-id="6666d-220">**SharePoint 群組**</span><span class="sxs-lookup"><span data-stu-id="6666d-220">**SharePoint group**</span></span>|<span data-ttu-id="6666d-221">**權限層級**</span><span class="sxs-lookup"><span data-stu-id="6666d-221">**Permission level**</span></span>|<span data-ttu-id="6666d-222">**存取群組 （範例）**</span><span class="sxs-lookup"><span data-stu-id="6666d-222">**Access group (examples)**</span></span>|
+|<span data-ttu-id="0e00d-220">**SharePoint 群組**</span><span class="sxs-lookup"><span data-stu-id="0e00d-220">**SharePoint group**</span></span>|<span data-ttu-id="0e00d-221">**權限層級**</span><span class="sxs-lookup"><span data-stu-id="0e00d-221">**Permission level**</span></span>|<span data-ttu-id="0e00d-222">**存取群組 （範例）**</span><span class="sxs-lookup"><span data-stu-id="0e00d-222">**Access group (examples)**</span></span>|
 |:-----|:-----|:-----|
-|<span data-ttu-id="6666d-223">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="6666d-223">[site name] Members</span></span>  <br/> |<span data-ttu-id="6666d-224">編輯</span><span class="sxs-lookup"><span data-stu-id="6666d-224">Edit</span></span>  <br/> |<span data-ttu-id="6666d-225">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="6666d-225">[site name] Members</span></span>  <br/> |
-|<span data-ttu-id="6666d-226">[網站名稱]訪客</span><span class="sxs-lookup"><span data-stu-id="6666d-226">[site name] Visitors</span></span>  <br/> |<span data-ttu-id="6666d-227">讀取</span><span class="sxs-lookup"><span data-stu-id="6666d-227">Read</span></span>  <br/> |<span data-ttu-id="6666d-228">[網站名稱]檢視程式</span><span class="sxs-lookup"><span data-stu-id="6666d-228">[site name] Viewers</span></span>  <br/> |
-|<span data-ttu-id="6666d-229">[網站名稱]擁有者</span><span class="sxs-lookup"><span data-stu-id="6666d-229">[site name] Owners</span></span>  <br/> |<span data-ttu-id="6666d-230">完全控制</span><span class="sxs-lookup"><span data-stu-id="6666d-230">Full control</span></span>  <br/> |<span data-ttu-id="6666d-231">[網站名稱]系統管理員</span><span class="sxs-lookup"><span data-stu-id="6666d-231">[site name] Admins</span></span>  <br/> |
+|<span data-ttu-id="0e00d-223">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-223">[site name] Members</span></span>  <br/> |<span data-ttu-id="0e00d-224">編輯</span><span class="sxs-lookup"><span data-stu-id="0e00d-224">Edit</span></span>  <br/> |<span data-ttu-id="0e00d-225">[網站名稱]成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-225">[site name] Members</span></span>  <br/> |
+|<span data-ttu-id="0e00d-226">[網站名稱]訪客</span><span class="sxs-lookup"><span data-stu-id="0e00d-226">[site name] Visitors</span></span>  <br/> |<span data-ttu-id="0e00d-227">讀取</span><span class="sxs-lookup"><span data-stu-id="0e00d-227">Read</span></span>  <br/> |<span data-ttu-id="0e00d-228">[網站名稱]檢視程式</span><span class="sxs-lookup"><span data-stu-id="0e00d-228">[site name] Viewers</span></span>  <br/> |
+|<span data-ttu-id="0e00d-229">[網站名稱]擁有者</span><span class="sxs-lookup"><span data-stu-id="0e00d-229">[site name] Owners</span></span>  <br/> |<span data-ttu-id="0e00d-230">完全控制</span><span class="sxs-lookup"><span data-stu-id="0e00d-230">Full control</span></span>  <br/> |<span data-ttu-id="0e00d-231">[網站名稱]系統管理員</span><span class="sxs-lookup"><span data-stu-id="0e00d-231">[site name] Admins</span></span>  <br/> |
    
-<span data-ttu-id="6666d-p108">小組網站的預設會建立 SharePoint 群組與權限層級。您需要確定您的存取群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="6666d-p108">The SharePoint groups and permission levels are created by default for a team site. You need to determine the names of your access groups.</span></span>
+<span data-ttu-id="0e00d-p108">小組網站的預設會建立 SharePoint 群組與權限層級。您需要確定您的存取群組的名稱。</span><span class="sxs-lookup"><span data-stu-id="0e00d-p108">The SharePoint groups and permission levels are created by default for a team site. You need to determine the names of your access groups.</span></span>
   
-<span data-ttu-id="6666d-234">如需設計程序的詳細資訊，請參閱 ＜ [Design 隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="6666d-234">For the details of the design process, see [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md).</span></span>
+<span data-ttu-id="0e00d-234">如需設計程序的詳細資訊，請參閱 ＜ [Design 隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-234">For the details of the design process, see [Design an isolated SharePoint Online team site](design-an-isolated-sharepoint-online-team-site.md).</span></span>
   
-### <a name="step-2-deploy-your-isolated-site"></a><span data-ttu-id="6666d-235">步驟 2： 部署隔離的網站</span><span class="sxs-lookup"><span data-stu-id="6666d-235">Step 2: Deploy your isolated site</span></span>
+### <a name="step-2-deploy-your-isolated-site"></a><span data-ttu-id="0e00d-235">步驟 2： 部署隔離的網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-235">Step 2: Deploy your isolated site</span></span>
 
-<span data-ttu-id="6666d-236">若要部署在隔離的網站，您必須先：</span><span class="sxs-lookup"><span data-stu-id="6666d-236">To deploy your isolated site, you first need to:</span></span>
+<span data-ttu-id="0e00d-236">若要部署在隔離的網站，您必須先：</span><span class="sxs-lookup"><span data-stu-id="0e00d-236">To deploy your isolated site, you first need to:</span></span>
   
-- <span data-ttu-id="6666d-237">決定每個存取群組的使用者與群組成員</span><span class="sxs-lookup"><span data-stu-id="6666d-237">Determine the user and group members of each of your access groups</span></span>
+- <span data-ttu-id="0e00d-237">決定每個存取群組的使用者與群組成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-237">Determine the user and group members of each of your access groups</span></span>
     
-- <span data-ttu-id="6666d-238">建立存取群組並新增使用者和群組的成員</span><span class="sxs-lookup"><span data-stu-id="6666d-238">Create the access groups and add the user and group members</span></span>
+- <span data-ttu-id="0e00d-238">建立存取群組並新增使用者和群組的成員</span><span class="sxs-lookup"><span data-stu-id="0e00d-238">Create the access groups and add the user and group members</span></span>
     
-- <span data-ttu-id="6666d-239">建立使用您的存取群組隔離的小組網站</span><span class="sxs-lookup"><span data-stu-id="6666d-239">Create an isolated team site that uses your access groups</span></span>
+- <span data-ttu-id="0e00d-239">建立使用您的存取群組隔離的小組網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-239">Create an isolated team site that uses your access groups</span></span>
     
-<span data-ttu-id="6666d-240">如需詳細的步驟，請參閱 ＜ [Deploy 隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="6666d-240">For the detailed steps, see [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md).</span></span>
+<span data-ttu-id="0e00d-240">如需詳細的步驟，請參閱 ＜ [Deploy 隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)。</span><span class="sxs-lookup"><span data-stu-id="0e00d-240">For the detailed steps, see [Deploy an isolated SharePoint Online team site](deploy-an-isolated-sharepoint-online-team-site.md).</span></span>
   
-<span data-ttu-id="6666d-241">權限設定的結果是：</span><span class="sxs-lookup"><span data-stu-id="6666d-241">The results of the permission settings are:</span></span>
+<span data-ttu-id="0e00d-241">權限設定的結果是：</span><span class="sxs-lookup"><span data-stu-id="0e00d-241">The results of the permission settings are:</span></span>
   
-- <span data-ttu-id="6666d-242">**[網站名稱] 擁有者**SharePoint 群組包含網站管理員存取群組中的所有成員具有 [**完全控制**」 權限層級。</span><span class="sxs-lookup"><span data-stu-id="6666d-242">The **[site name] Owners** SharePoint group contains the site administrators access group, in which all the members have the **Full control** permission level.</span></span>
+- <span data-ttu-id="0e00d-242">**[網站名稱] 擁有者**SharePoint 群組包含網站管理員存取群組中的所有成員具有 [**完全控制**」 權限層級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-242">The **[site name] Owners** SharePoint group contains the site administrators access group, in which all the members have the **Full control** permission level.</span></span>
     
-- <span data-ttu-id="6666d-243">**[網站名稱] 成員**SharePoint 群組包含網站成員存取群組中的所有成員具有**編輯**權限等級。</span><span class="sxs-lookup"><span data-stu-id="6666d-243">The **[site name] Members** SharePoint group contains the site members access group, in which all the members have the **Edit** permission level.</span></span>
+- <span data-ttu-id="0e00d-243">**[網站名稱] 成員**SharePoint 群組包含網站成員存取群組中的所有成員具有**編輯**權限等級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-243">The **[site name] Members** SharePoint group contains the site members access group, in which all the members have the **Edit** permission level.</span></span>
     
-- <span data-ttu-id="6666d-244">**[網站名稱] 訪客**SharePoint 群組包含網站檢視者存取群組中的所有成員具有 「**讀取**」 權限等級。</span><span class="sxs-lookup"><span data-stu-id="6666d-244">The **[site name] Visitors** SharePoint group contains the site viewers access group, in which all the members have the **Read** permission level.</span></span>
+- <span data-ttu-id="0e00d-244">**[網站名稱] 訪客**SharePoint 群組包含網站檢視者存取群組中的所有成員具有 「**讀取**」 權限等級。</span><span class="sxs-lookup"><span data-stu-id="0e00d-244">The **[site name] Visitors** SharePoint group contains the site viewers access group, in which all the members have the **Read** permission level.</span></span>
     
-- <span data-ttu-id="6666d-245">邀請其他成員的成員的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="6666d-245">The ability for members to invite other members is disabled.</span></span>
+- <span data-ttu-id="0e00d-245">邀請其他成員的成員的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="0e00d-245">The ability for members to invite other members is disabled.</span></span>
     
-- <span data-ttu-id="6666d-246">非成員要求存取的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="6666d-246">The ability for non-members to request access is disabled.</span></span>
+- <span data-ttu-id="0e00d-246">非成員要求存取的功能已停用。</span><span class="sxs-lookup"><span data-stu-id="0e00d-246">The ability for non-members to request access is disabled.</span></span>
     
-<span data-ttu-id="6666d-247">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="6666d-247">Here is your resulting configuration.</span></span>
+<span data-ttu-id="0e00d-247">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="0e00d-247">Here is your resulting configuration.</span></span>
   
 ![適用於隔離 SharePoint Online 小組網站的高度機密層級保護。](images/196359ab-d7ed-4fcf-97b4-61820a74aca4.png)
   
-<span data-ttu-id="6666d-249">網站透過群組成員資格之一的存取群組的成員可以現在安全地進行共同作業網站的資源。</span><span class="sxs-lookup"><span data-stu-id="6666d-249">The members of the site, through group membership in one of the access groups, can now securely collaborate on the resources of the site.</span></span>
+<span data-ttu-id="0e00d-249">網站透過群組成員資格之一的存取群組的成員可以現在安全地進行共同作業網站的資源。</span><span class="sxs-lookup"><span data-stu-id="0e00d-249">The members of the site, through group membership in one of the access groups, can now securely collaborate on the resources of the site.</span></span>
   
-## <a name="next-step"></a><span data-ttu-id="6666d-250">下一步</span><span class="sxs-lookup"><span data-stu-id="6666d-250">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="0e00d-250">下一步</span><span class="sxs-lookup"><span data-stu-id="0e00d-250">Next step</span></span>
 
-[<span data-ttu-id="6666d-251">保護 SharePoint Online 與 Office 365 標籤和 DLP 檔案</span><span class="sxs-lookup"><span data-stu-id="6666d-251">Protect SharePoint Online files with Office 365 labels and DLP</span></span>](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
+[<span data-ttu-id="0e00d-251">保護 SharePoint Online 與 Office 365 標籤和 DLP 檔案</span><span class="sxs-lookup"><span data-stu-id="0e00d-251">Protect SharePoint Online files with Office 365 labels and DLP</span></span>](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)
     
-## <a name="see-also"></a><span data-ttu-id="6666d-252">請參閱</span><span class="sxs-lookup"><span data-stu-id="6666d-252">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e00d-252">請參閱</span><span class="sxs-lookup"><span data-stu-id="0e00d-252">See Also</span></span>
 
-[<span data-ttu-id="6666d-253">安全的 SharePoint Online 網站及檔案</span><span class="sxs-lookup"><span data-stu-id="6666d-253">Secure SharePoint Online sites and files</span></span>](secure-sharepoint-online-sites-and-files.md)
+[<span data-ttu-id="0e00d-253">安全的 SharePoint Online 網站及檔案</span><span class="sxs-lookup"><span data-stu-id="0e00d-253">Secure SharePoint Online sites and files</span></span>](secure-sharepoint-online-sites-and-files.md)
   
-[<span data-ttu-id="6666d-254">安全的開發人員/測試環境中的 SharePoint Online 網站</span><span class="sxs-lookup"><span data-stu-id="6666d-254">Secure SharePoint Online sites in a dev/test environment</span></span>](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
+[<span data-ttu-id="0e00d-254">安全的開發人員/測試環境中的 SharePoint Online 網站</span><span class="sxs-lookup"><span data-stu-id="0e00d-254">Secure SharePoint Online sites in a dev/test environment</span></span>](secure-sharepoint-online-sites-in-a-dev-test-environment.md)
   
-[<span data-ttu-id="6666d-255">Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織</span><span class="sxs-lookup"><span data-stu-id="6666d-255">Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations</span></span>](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
+[<span data-ttu-id="0e00d-255">Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織</span><span class="sxs-lookup"><span data-stu-id="0e00d-255">Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations</span></span>](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
-[<span data-ttu-id="6666d-256">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="6666d-256">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
+[<span data-ttu-id="0e00d-256">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="0e00d-256">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
 
 
 
