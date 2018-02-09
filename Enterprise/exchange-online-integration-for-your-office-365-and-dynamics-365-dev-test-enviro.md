@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 499c5823-427a-4ba2-8fc1-9553bc2ff2d3
 description: "摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。"
-ms.openlocfilehash: b297c3e461b5695b323c619145df64524989d58a
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 4acfc4c676482131160ca82b5e8e405cca938cac
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="exchange-online-integration-for-your-office-365-and-dynamics-365-devtest-environment"></a>適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 
@@ -39,7 +39,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
 
 若要設定全域系統管理員的信箱將 Dynamics 365 與 Exchange Online 整合，請使用這些步驟：
   
-1. 使用瀏覽器的私人工作階段，請移至 [(http://portal.office.com)]((http://portal.office.com))，並使用您的 Office 365 全域系統管理員帳戶登入。
+1. 使用瀏覽器的私人工作階段，請移至 [http://portal.office.com](http://portal.office.com)，並使用您的 Office 365 全域系統管理員帳戶登入。
     
 2. 在 [Microsoft Office Home]**** 頁面上，按一下 [郵件]**** 磚。
     
@@ -98,7 +98,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
 9. 按一下 [捨棄]****。
 
 > [!TIP]
-> 按一下[這裡]((http://aka.ms/catlgstack))，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
     
 ## <a name="see-also"></a>請參閱
 
@@ -112,8 +112,8 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
   
 [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
 
-[Dynamics 365 訂閱管理 (線上)]((https://technet.microsoft.com/library/jj679903.aspx))
+[Dynamics 365 訂閱管理 (線上)](https://technet.microsoft.com/library/jj679903.aspx)
   
-[管理 Dynamics 365]((https://technet.microsoft.com/library/dn531101.aspx))
+[管理 Dynamics 365](https://technet.microsoft.com/library/dn531101.aspx)
 
 

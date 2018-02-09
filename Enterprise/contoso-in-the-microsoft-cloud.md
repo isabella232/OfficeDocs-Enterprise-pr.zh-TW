@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c4a6d625-4938-42cc-87e1-56b7a13c63ef
 description: "摘要： 虛擬但具有代表性的全球組織如何透過 Microsoft 雲端服務項目採用內含雲端的 IT 基礎結構。"
-ms.openlocfilehash: 4c0969e929851c97c62a3099ff90ce311297413d
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: d1d17a307f7f13668897343b69dcaebbedb4a7a4
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="contoso-in-the-microsoft-cloud"></a>Microsoft 雲端中的 Contoso
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/11/2018
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源]((https://sway.com/FJ2xsyWtkJc2taRD))
+[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
 
 
 
