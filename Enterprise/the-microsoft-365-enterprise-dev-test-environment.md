@@ -14,11 +14,11 @@ ms.custom:
 - Strat_O365_Enterprise
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
 description: "摘要： 使用此測試實驗室指南建立開發/測試環境包含 Office 365 E5、 企業行動性 + 安全性 （EMS） E5 及執行 Windows 10 企業的電腦。"
-ms.openlocfilehash: f6baabaee10c25243690918aa6c9b2c68ff3758b
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 3996035bf954b9e6e8ee1f6157c875a041fc3f90
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 Enterprise 開發人員/測試環境
 

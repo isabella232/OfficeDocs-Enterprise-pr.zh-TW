@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c37a4365-b350-4856-a0a8-ff5dfe005af1
 description: "摘要： 您針對和設計儲存 Microsoft 雲端服務平台。"
-ms.openlocfilehash: 71b774192e72c4c7e961df8c9258c104e25aea4a
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 610a33962098f6d3474b1a77f668536ce7bbbbbf
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="microsoft-cloud-storage-for-enterprise-architects"></a>Microsoft Cloud Storage for Enterprise Architects
 

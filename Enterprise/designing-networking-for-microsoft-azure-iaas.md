@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 9cb70c9d-9ed9-47cc-af5a-6403d87d3372
 description: "摘要： 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。"
-ms.openlocfilehash: 6f431eb2d87a4420e6e0ba7f48bfc3ef836c0cbe
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 2430b62e04392ddd4266d37797b18ae7e890c092
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="designing-networking-for-microsoft-azure-iaas"></a>設計 Microsoft Azure IaaS 的網路
 
@@ -196,8 +196,7 @@ Azure 內部的負載平衡隨機分散每個來自其他 Azure Vm 或從內部�
 |1.端點和雲端服務上設定的 Acl  <br/> |傳統  <br/> |
 |2.網路安全性群組  <br/> |資源管理員與傳統  <br/> |
 |3.網際網路對向的負載平衡器以輸入 NAT 規則  <br/> |資源管理員  <br/> |
-|4.網路 Azure 中的安全性設備 
- 服務商場 （不會顯示）  <br/> |資源管理員與傳統  <br/> |
+|4.網路安全性設備中 （不會顯示） Azure Marketplace  <br/> |資源管理員與傳統  <br/> |
    
  **連線至虛擬機器和其對應的 Azure 部署模型的表 5： 方法**
   
@@ -379,10 +378,8 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
 |**步驟**|**結果**|
 |:-----|:-----|
 |1.清單不是 VNet 位址空間根空間的前置詞。  <br/> |172.16.0.0/12 和 192.168.0.0/16  <br/> |
-|2.最多可列出變數八位元的不重疊的前置詞但不是包括最後用 
- 八位元的 VNet 位址空間中。  <br/> |10.0.0.0/16、 10.1.0.0/16...]10.99.0.0/16、 10.101.0.0/16...]10.254.0.0/16、 10.255.0.0/16 （255 的首碼，已略過 10.100.0.0/16）  <br/> |
-|3.清單內不重疊字首 
- 上次使用八位元的 VNet 位址空間。  <br/> | 10.100.0.0/24、 10.100.1.0/24...]10.100.99.0/24、 10.100.101.0/24...]10.100.254.0/24、 10.100.0.255.0/24 （255 的首碼，已略過 10.100.100.0/24）  <br/> |
+|2.清單變數八位元，但不包括 VNet 位址空間的最後一個使用八位元的不重疊前置詞。  <br/> |10.0.0.0/16、 10.1.0.0/16...]10.99.0.0/16、 10.101.0.0/16...]10.254.0.0/16、 10.255.0.0/16 （255 的首碼，已略過 10.100.0.0/16）  <br/> |
+|3.清單內的最後一個使用八位元 VNet 位址空間的不重疊前置詞。  <br/> |10.100.0.0/24、 10.100.1.0/24...]10.100.99.0/24、 10.100.101.0/24...]10.100.254.0/24、 10.100.0.255.0/24 （255 的首碼，已略過 10.100.100.0/24）  <br/> |
    
  **表 7： 範例本機位址網路空間**
   
@@ -413,7 +410,7 @@ Azure 的子網路的預設系統路由會指向網際網路。若要確保從�
 ## <a name="sharepoint-server-2016-farm-in-azure"></a>SharePoint Server 2016 Azure 中的伺服器陣列
 <a name="cross_prem"> </a>
 
-IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多層 SharePoint Server 2016 伺服器陣列中圖 19 所示。
+IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多層的 SharePoint Server 2016 伺服器陣列。
   
 **圖 19： 高度可用的內部網路 SharePoint Server 2016 中的伺服器陣列 Azure IaaS**
 
@@ -426,7 +423,7 @@ IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多�
   
 如需其他範例虛擬跨部署 Azure 中的虛擬機器上部署的 IT 工作負載的網路，請參閱[Azure IaaS 的混合式雲端案例](https://technet.microsoft.com/library/mt750502.aspx)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <a name="cross_prem"> </a>
 

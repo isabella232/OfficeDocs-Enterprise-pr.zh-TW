@@ -6,15 +6,16 @@ manager: laurawi
 ms.date: 12/15/2017
 ms.audience: ITPro
 ms.topic: article
+ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: d78983fa-0951-49b8-b890-d76a44c70035
 description: "本文是圖表的名為功能整合跨 Microsoft Office Server 產品-SharePoint Server、 Exchange Server、 Lync Server 與 Office Online 可存取的文字版本。"
-ms.openlocfilehash: c927bca4d60fe49f941d9f03177e6fdd64e27389
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 809a9272d7088ac069aad6b64daedfe059188247
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessible-diagram---feature-integration-across-microsoft-office-server-products"></a>存取圖表-功能整合跨 Microsoft Office 伺服器產品
 
@@ -154,7 +155,7 @@ Office Web Apps Server 是 Office server 產品提供瀏覽器為基礎的檔案
   
 隨附圖建立成為雙向信任的伺服器對伺服器信任關係。Exchange Server、 SharePoint Server 與 Lync Server 之間是顯示的雙向信任關係。每個伺服器類型都有雙向信任與每個其他兩部伺服器。 
   
-### <a name="configuration"></a>設定
+### <a name="configuration"></a>組態
 
 若要設定的伺服器對伺服器驗證信任，您必須將新的信任的安全性 token 發行者對應新增至傳送代表使用者的資源要求的每部伺服器。每種伺服器類型有包含組態資訊及存取權杖簽署憑證的公開金鑰一部分的 JavaScript Object Notation (JSON) 的中繼資料端點。設定伺服器對伺服器驗證信任的組件指定另一部伺服器的 JSON 中繼資料端點。 
   
@@ -198,7 +199,7 @@ Office Web Apps Server 是 Office server 產品提供瀏覽器為基礎的檔案
     
 - Lync Server 2013 
     
-### <a name="configuration"></a>設定
+### <a name="configuration"></a>組態
 
 設定伺服器對伺服器的驗證： 
   

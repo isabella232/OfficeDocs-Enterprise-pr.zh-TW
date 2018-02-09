@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: "摘要： 了解混合式架構與案例的 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。"
-ms.openlocfilehash: 5ec74058174724b6497a5cb41e67896818ef4d05
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 66024c708cb4fbc904de18f27077871d52f0e70c
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 

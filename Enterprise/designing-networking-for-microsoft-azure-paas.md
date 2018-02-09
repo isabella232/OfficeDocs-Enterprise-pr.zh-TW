@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 19568184-705b-493b-b713-b484367adba9
 description: "摘要： 了解如何最佳化您的網路存取 Microsoft Azure PaaS。"
-ms.openlocfilehash: 8ea344b5c18f9224b1a939a05c6e5a4eda2eeec5
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 151701223c6cf21890fcd961c5dc3acda8de4915
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="designing-networking-for-microsoft-azure-paas"></a>設計 Microsoft Azure PaaS 的網路
 
@@ -26,8 +26,6 @@ ms.lasthandoff: 01/11/2018
   
 ## <a name="planning-steps-for-hosting-organization-paas-applications-in-azure"></a>規劃步驟裝載在 Azure 中的組織 PaaS 應用程式
 
-在此處插入區段主體。
-  
 1. 經歷中[常見的元素 Microsoft cloud 連線的](common-elements-of-microsoft-cloud-connectivity.md)**步驟來準備您的 Microsoft 雲端服務的網路**區段。
     
 2. 最佳化您的網際網路頻寬使用中[設計的 Microsoft saas 和網路](designing-networking-for-microsoft-saas.md)的**步驟來準備您的網路 Microsoft saas 和服務的**一節的步驟 2 到 4。
@@ -97,8 +95,12 @@ Application Gateway 目前支援階層 7 應用程式傳遞下列：
 2. 使用者會具有歐洲地區的 web 應用程式的流量。
     
 如需詳細資訊，請參閱[流量管理員](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)。
-  
-## <a name="see-also"></a>請參閱
+
+## <a name="next-step"></a>下一步
+
+[設計 Microsoft Azure IaaS 的網路](designing-networking-for-microsoft-azure-iaas.md)
+ 
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   

@@ -14,11 +14,11 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: "摘要： 設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。"
-ms.openlocfilehash: eb456c86b118556abde6a887fe8b9ab68300740b
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 388eb2a6288fc72771b6a554d1c9de78febe8a4e
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發人員/測試環境中的機密檔案保護
 

@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: e9b8e065-2750-4534-9d39-aafd51a2a4e2
 description: "摘要： 使用這些文章來部署 Microsoft Azure 中的 Office Server 工作負載。"
-ms.openlocfilehash: 1397143f6b66a4391357bf29b3414a7ef8e86794
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 5a225acb061da961f27f05fa43317b752f6aba56
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hybrid-solutions"></a>混合式解決方案
 

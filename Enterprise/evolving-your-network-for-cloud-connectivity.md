@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 83e2859a-c673-47c4-880a-01cdfdadb93e
 description: "摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。"
-ms.openlocfilehash: 18b4e5e10094a43f0d2b10cd0f01684f2352a0a8
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 1fe3b2cbacb0fff31de1c368fa36650adc7d570c
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="evolving-your-network-for-cloud-connectivity"></a>發展您的雲端連線的網路
 
@@ -81,15 +81,15 @@ ExpressRoute 可以運用您現有的網路提供者的專屬的連線。透過 
 |包括工程師及實作的內部和網際網路對向 IT 工作量負載平衡  <br/> |||適用於  <br/> |
 |虛擬機器連線及輸送量問題的疑難排解  <br/> |||適用於  <br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="next-step"></a>下一步
+
+[Microsoft 雲端連線的常見的元素](common-elements-of-microsoft-cloud-connectivity.md)
+
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
-[Microsoft 雲端連線 ExpressRoute](expressroute-for-microsoft-cloud-connectivity.md)
-  
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
 
 
 

@@ -14,11 +14,11 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: "摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。"
-ms.openlocfilehash: 60ac59f8b6af81ff18a4c41c0ce5d2376bc161e7
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 734bc694c8be45a92cabc82aebe7a83726247e3b
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 

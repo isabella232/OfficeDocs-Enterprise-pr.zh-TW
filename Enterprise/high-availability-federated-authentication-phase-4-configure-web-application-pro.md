@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
 description: "摘要： 設定 Microsoft Azure 中的 Office 365 在高可用性同盟驗證的 web 應用程式 proxy 伺服器。"
-ms.openlocfilehash: 9e7c07a659993437776a7c26e5d02498b1680699
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 3465281c6ba27c52cc7a991e400fb4f4a892b244
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
@@ -63,13 +63,13 @@ Write-Host (Get-AzureRMPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**名稱**|**類型**|**TTL**|**值**|
+|**Name**|**類型**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對向負載平衡器 （由上一節中的命令會**寫入主機**顯示） 的公用 IP 位址 <br/> |
    
 範例如下：
   
-|**名稱**|**類型**|**TTL**|**值**|
+|**Name**|**類型**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    

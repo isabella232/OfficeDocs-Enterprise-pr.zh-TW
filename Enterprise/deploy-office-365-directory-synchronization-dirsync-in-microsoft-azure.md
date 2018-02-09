@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: "摘要： 在同步處理您的內部部署目錄與 Office 365 訂閱的 Azure AD 租用戶之間的帳戶的 Azure 虛擬機器上部署 Azure AD Connect (DirSync)。"
-ms.openlocfilehash: 4160c8b0f1d38c53fdbc1052cc0bc30793cc8ba2
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 496dca01d8478c693cb983adefe9e663d2285279
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Office 365 目錄同步作業 (DirSync)
 

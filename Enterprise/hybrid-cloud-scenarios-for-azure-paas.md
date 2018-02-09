@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 5f4f5d0d-4638-48e8-a517-bd804856b617
 description: "摘要： 了解混合式架構與案例的 Microsoft 平台服務 (PaaS)-以 Azure 中的雲端方案。"
-ms.openlocfilehash: 304322e5ad36f0a7f385a41fc3f2e5232dcecd69
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 96548b74341474ff2bd0720f982cbdba96b06e4b
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-paas"></a>Azure PaaS 的混合式雲端案例
 

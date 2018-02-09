@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 7e511118-1b75-413a-b959-ad0d3ffc9516
 description: "摘要： 了解為何需要雲端儲存空間和檢閱 Microsoft 雲端儲存選項和主要儲存區案例的清單。"
-ms.openlocfilehash: 199e385ea0238e8fb27c04153faf177df07e1025
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: ed816743e2d85a622a3fbfbb129bf90a7db93881
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="designing-storage-for-the-microsoft-cloud"></a>設計 Microsoft 雲端儲存空間
 

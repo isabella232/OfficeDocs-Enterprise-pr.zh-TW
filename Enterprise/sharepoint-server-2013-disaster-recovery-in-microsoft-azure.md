@@ -3,7 +3,7 @@ title: SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 2/5/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: "摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。"
-ms.openlocfilehash: e949d2cc88e576993a357007c2a600b55c259009
-ms.sourcegitcommit: b3d44b30b6e60df85ea9b404692db64ba54a16c7
+ms.openlocfilehash: 4c1a5d92445dfa89dce4c87216922282d29f075c
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/29/2018
   
 **圖： 元素的 Azure 中暖待命解決方案**
 
-![Azure 中 SharePoint 暖待命解決方案的元素](images/AZarch_AZWarmStndby.gif)
+![Azure 中 SharePoint 暖待命解決方案的元素](images/AZarch_AZWarmStndby.png)
   
 SQL Server 記錄傳送與分散式檔案系統複寫 (DFSR) 用於將資料庫備份和交易記錄檔複製到 Azure 中的復原伺服器陣列： 
   
@@ -181,7 +181,7 @@ SQL Server 記錄傳送與分散式檔案系統複寫 (DFSR) 用於將資料庫�
   
 **圖： 拓撲和實際執行伺服器陣列及暖待命復原伺服器陣列的主要元素**
 
-![顯示 SharePoint 實際執行伺服器陣列和暖待命復原伺服器陣列的拓撲和重要元素。](images/AZarchWarmStndby.gif)
+![在 SharePoint 伺服器陣列及暖待命復原伺服器陣列的拓撲](images/AZarch_AZWarmStndby.png)
   
 在此圖表中：
   

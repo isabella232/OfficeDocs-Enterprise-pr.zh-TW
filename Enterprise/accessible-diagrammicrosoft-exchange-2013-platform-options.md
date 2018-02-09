@@ -5,15 +5,16 @@ author: JoeDavies-MSFT
 ms.date: 12/15/2017
 ms.audience: ITPro
 ms.topic: article
+ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 129f4e45-647e-4cf1-92a6-4d86d8396e73
 description: "本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表可存取的文字版本。"
-ms.openlocfilehash: d81fe9947feee64d1dd75278738262d10c802ecc
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: e1c4957c9152c5a23008c657d7e2d0d47b5cce0f
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessible-diagram---microsoft-exchange-2013-platform-options"></a>存取圖表-Microsoft Exchange 2013 平台選項
 
@@ -250,7 +251,7 @@ ms.lasthandoff: 12/15/2017
     
 在組織中的 IT 人員責任包括建立和管理使用者帳戶。
   
-#### <a name="more-information"></a>其他資訊
+#### <a name="more-information"></a>詳細資訊
 
 若要深入了解 Exchange Online (Office 365)，請參閱下列各項：
   

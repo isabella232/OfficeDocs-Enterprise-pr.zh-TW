@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 4194020a-3847-4259-9f2d-5c556a4510f9
 description: "摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。"
-ms.openlocfilehash: 970d27e50e06f4d872de67589295c490aaa6e0e7
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: e4d83f9ab88408b3eb5ca98379bbc709ec8f31a7
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
 
@@ -185,8 +185,12 @@ ms.lasthandoff: 01/11/2018
 - [Office 365 效能管理 Microsoft 虛擬學院課程 （英文)](https://aka.ms/o365perf)
     
 - [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
+
+## <a name="next-step"></a>下一步
+
+[設計 Microsoft Azure PaaS 的網路](designing-networking-for-microsoft-azure-paas.md)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
