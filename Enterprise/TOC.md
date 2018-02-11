@@ -64,7 +64,6 @@
 #### [高可用性同盟驗證階段 5： 設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)
 ### [SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
 ### [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)
-### [使用 Microsoft Azure Active Directory 的 SharePoint 2013 驗證](using-microsoft-azure-active-directory-for-sharepoint-2013-authentication.md)
 ### [自動化檔案集合 ediscovery （英文）](automate-file-collection-for-ediscovery.md)
 ## [安全性解決方案](security-solutions.md)
 ### [GDPR 的 office 365 資訊保護](office-365-information-protection-for-gdpr.md)

@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 description: "摘要： 取得 IT 海報說明架構模型、 部署及 SharePoint、 Exchange、 Skype for Business 和 Lync 的平台選項。"
-ms.openlocfilehash: c751e4375b18067a4834787c3ee8f0a5f28480d7
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: d50a3eae1e5fe308d71afaef398fe97e2d37f9cb
+ms.sourcegitcommit: 38001ca323a60126fcf31667393c31322044cedc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型
 
@@ -166,7 +166,7 @@ ms.lasthandoff: 02/09/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![在 Azure 中使用 SharePoint 的網際網路網站的影像](images/MS_AZ_SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報概述重要的設計活動和建議的網際網路 Azure 中的網站架構選項。此海報可存取的文字版本，請參閱 ＜[存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagraminternet-sites-in-microsoft-azure-for-sharepoint-2013.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> - [使用 Microsoft Azure Active Directory 的 SharePoint 2013 驗證](using-microsoft-azure-active-directory-for-sharepoint-2013-authentication.md) <br/> |
+|[![在 Azure 中使用 SharePoint 的網際網路網站的影像](images/MS_AZ_SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報概述重要的設計活動和建議的網際網路 Azure 中的網站架構選項。此海報可存取的文字版本，請參閱 ＜[存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagraminternet-sites-in-microsoft-azure-for-sharepoint-2013.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 ### <a name="design-sample-internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>設計範例：Microsoft Azure 中的 SharePoint 2013 網際網路網站
 <a name="DesignSampleInternetSites"> </a>
@@ -175,7 +175,7 @@ ms.lasthandoff: 02/09/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![圖像的設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](images/MS_AZ_InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |使用此設計範例為起點網際網路對向網站架構在 Azure 中使用 SharePoint Server 2013。此海報可存取的文字版本，請參閱 ＜[存取圖表-設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagramdesign-sample-internet-sites-in-microsoft-azure-for-sharepoint.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> - [使用 Microsoft Azure Active Directory 的 SharePoint 2013 驗證](using-microsoft-azure-active-directory-for-sharepoint-2013-authentication.md) <br/> |
+|[![圖像的設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](images/MS_AZ_InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |使用此設計範例為起點網際網路對向網站架構在 Azure 中使用 SharePoint Server 2013。此海報可存取的文字版本，請參閱 ＜[存取圖表-設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagramdesign-sample-internet-sites-in-microsoft-azure-for-sharepoint.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 ### <a name="sharepoint-disaster-recovery-to-microsoft-azure"></a>對於 Microsoft Azure 的 SharePoint 嚴重損壞修復
 <a name="sharepoint_recovery_Azure"> </a>
