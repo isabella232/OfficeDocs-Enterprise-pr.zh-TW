@@ -9,16 +9,14 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- TLG
-- Ent_TLGs
+ms.custom: TLG, Ent_TLGs
 ms.assetid: d1795031-beef-49ea-a6fc-5da5450d320d
 description: "摘要： 設定隔離與 Office 365 開發人員/測試環境中之組織的其餘的 SharePoint Online 小組網站。"
-ms.openlocfilehash: 997c5cf236a795f4846718cc8864997799a1d966
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: 75a469b50603d5eb398d1e15d37c6745bc0a48b8
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="isolated-sharepoint-online-team-site-devtest-environment"></a>隔離的 SharePoint Online 小組網站開發/測試環境
 

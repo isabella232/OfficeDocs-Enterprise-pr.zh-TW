@@ -9,18 +9,14 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- PowerShell
-- Ent_Office_Other
-- LIL_Placement
-- O365ITProTrain
+ms.custom: PowerShell, Ent_Office_Other, LIL_Placement, O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: "說明如何使用 Office 365 PowerShell 移除先前已指派給使用者的 Office 365 授權。"
-ms.openlocfilehash: 21aed391cf0395bf51a7e99cf9f8f0e34bfd9d10
-ms.sourcegitcommit: f10e47df0dca4a241659f33061db5217ebc3401e
+ms.openlocfilehash: 115a708d8def679d43d88e9c83b68ca13dd72fdc
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
