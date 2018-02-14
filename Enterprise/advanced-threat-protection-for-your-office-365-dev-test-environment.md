@@ -9,14 +9,16 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: TLG, Ent_TLGs
+ms.custom:
+- TLG
+- Ent_TLGs
 ms.assetid: 51019757-20ac-498c-b51e-cae6d41a8c08
 description: "摘要： 設定及示範 Office 365 開發人員/測試環境中的 Office 365 進階威脅保護。"
-ms.openlocfilehash: 2715e2722ab2826d4a4e05db0f9bd4cd9035fb98
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 6266960287d06ffafdf7ed1f6690396fd4cda9d5
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>用於 Office 365 開發/測試環境的進階威脅防護
 

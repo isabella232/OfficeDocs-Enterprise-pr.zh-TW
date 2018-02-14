@@ -8,15 +8,19 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365, Strat_O365_Enterprise
-ms.custom: Strat_O365_Enterprise, Ent_Architecture
+ms.collection:
+- Ent_O365
+- Strat_O365_Enterprise
+ms.custom:
+- Strat_O365_Enterprise
+- Ent_Architecture
 ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 description: "摘要： 取得 IT 海報說明架構模型、 部署及 SharePoint、 Exchange、 Skype for Business 和 Lync 的平台選項。"
-ms.openlocfilehash: f00106d442977478d0399b492dcf3ed05f3f273b
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 94f33ec4460758276cfada3ef9fcc4a444e9133a
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型
 

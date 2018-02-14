@@ -9,14 +9,16 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: TLG, Ent_TLGs
+ms.custom:
+- TLG
+- Ent_TLGs
 ms.assetid: e2b354b9-7f18-4da0-9107-6245eae0f33f
 description: "摘要： 設定多重要素驗證使用文字訊息傳送給 Office 365 開發人員/測試環境中的智慧型手機。"
-ms.openlocfilehash: 5f0767aedd69cd568c88617eac739ba7abb00b9b
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 23c5aa4e205937899cac813b3b39780c989a1073
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="multi-factor-authentication-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的多重要素驗證
 

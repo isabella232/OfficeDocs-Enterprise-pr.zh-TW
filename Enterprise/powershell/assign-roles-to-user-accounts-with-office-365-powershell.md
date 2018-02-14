@@ -9,14 +9,17 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: O365ITProTrain, PowerShell, Ent_Office_Other
+ms.custom:
+- O365ITProTrain
+- PowerShell
+- Ent_Office_Other
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
 description: "摘要： 使用 Office 365 PowerShell 並新增 MsolRoleMember cmdlet 來為使用者帳戶指派的角色。"
-ms.openlocfilehash: 68e8be24f1581aa3430bca95206ecc1b2512f09a
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 97ecf29e10d14843322f3062ef16da14f16f7a2a
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="assign-roles-to-user-accounts-with-office-365-powershell"></a>將角色指派給 Office 365 powershell 的使用者帳戶
 

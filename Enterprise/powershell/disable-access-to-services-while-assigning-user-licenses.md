@@ -9,14 +9,16 @@ ms.topic: article
 ms.collection: Ent_O365
 ms.service: o365-administration
 localization_priority: Normal
-ms.custom: PowerShell, Ent_Office_Other
+ms.custom:
+- PowerShell
+- Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
 description: "了解如何將授權指派給使用者帳戶及使用 Office 365 PowerShell 的同時停用特定的服務計劃。"
-ms.openlocfilehash: 5b39a7e92217f5f7039ae1d8980f0c271ea29bfb
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 0ab1aea03099f6aae469699b1169af9e12b41d74
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用時指派使用者授權的服務存取權
 

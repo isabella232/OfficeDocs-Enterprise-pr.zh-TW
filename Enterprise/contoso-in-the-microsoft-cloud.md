@@ -8,17 +8,15 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Priority
-ms.collection: Ent_O365
-ms.custom:
-- Strat_O365_Enterprise
-- Ent_Architecture
+ms.collection: Ent_O365, Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise, Ent_Architecture
 ms.assetid: c4a6d625-4938-42cc-87e1-56b7a13c63ef
 description: "摘要： 虛擬但具有代表性的全球組織如何透過 Microsoft 雲端服務項目採用內含雲端的 IT 基礎結構。"
-ms.openlocfilehash: d1d17a307f7f13668897343b69dcaebbedb4a7a4
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: 6357338705a1ae8aa987981b680cbcd02560041f
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="contoso-in-the-microsoft-cloud"></a>Microsoft 雲端中的 Contoso
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 02/09/2018
   
 請參閱下列各節：
   
-- [混合式雲端概觀 （英文)](hybrid-cloud-overview.md)
+- [混合雲端概觀](hybrid-cloud-overview.md)
     
     Contoso 公司是一家全球性的製造、銷售與支援的組織集團，擁有超過 100,000 種的商品。 
     
@@ -61,7 +59,7 @@ ms.lasthandoff: 02/09/2018
     請參閱 Contoso 如何透過 Microsoft 的雲端產品來解決其商業需求
     
 > [!NOTE]
-> 這幾篇文章說明在 **2017 年 9 月** Microsoft Cloud 海報中發佈的 Contoso 版本。
+> 這幾篇文章說明在 **2017 年 9 月** Microsoft 雲端海報中發佈的 Contoso 版本。
   
 ## <a name="see-also"></a>請參閱
 

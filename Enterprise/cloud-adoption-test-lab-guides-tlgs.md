@@ -8,15 +8,19 @@ ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365, Strat_O365_Enterprise
-ms.custom: Strat_O365_Enterprise, Ent_TLGs
+ms.collection:
+- Ent_O365
+- Strat_O365_Enterprise
+ms.custom:
+- Strat_O365_Enterprise
+- Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: "摘要： 使用這些雲端採用測試實驗室指南 (Tlg) 來設定示範、 證明概念或開發人員/測試環境的 Office 365、 企業行動性 + 安全性 （EMS）、 Dynamics 365 與 Office Server 產品。"
-ms.openlocfilehash: f9d2d9a5e092cf310f2d700da0419096a6a15b36
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 3172b6033fbb7dd79b8eb786d92a4f58886a8fd5
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cloud-adoption-test-lab-guides-tlgs"></a>雲端採用測試實驗室指南 (TLG)
 
@@ -154,9 +158,9 @@ Office 365 開發人員/測試環境中，使用這些文章來示範 Office 365
 
 |**與我們連絡**|**描述**|
 |:-----|:-----|
-|**雲端採用內容您是否需要吗？** <br/> |我們會建立橫跨多個 Microsoft cloud 平台及服務的雲端採用的內容。我們知道什麼構思我們雲端採用內容，或藉由傳送電子郵件給[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)要求特定的內容。<br/> |
-|**加入雲端採用討論** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
-|**取得您在此處看到美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
+|**您需要什麼樣的雲端採用內容？** <br/> |我們會建立橫跨多個 Microsoft cloud 平台及服務的雲端採用的內容。我們知道什麼構思我們雲端採用內容，或藉由傳送電子郵件給[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)要求特定的內容。<br/> |
+|**加入雲端採用討論區** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
+|**取得您在這裡看到的美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
    
 ## <a name="see-also"></a>請參閱
 

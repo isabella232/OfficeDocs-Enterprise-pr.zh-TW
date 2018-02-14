@@ -8,17 +8,15 @@ ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
 localization_priority: Priority
-ms.collection: Ent_O365
-ms.custom:
-- Strat_O365_Enterprise
-- Ent_Architecture
+ms.collection: Ent_O365, Strat_O365_Enterprise
+ms.custom: Strat_O365_Enterprise, Ent_Architecture
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 description: "摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。"
-ms.openlocfilehash: 94b0e732e84fe7ec47431b7521be4c21a1d858df
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: 202e7f837275474694a37060803a272c9aa5bdc4
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/09/2018
     - [Microsoft Mobility and Security for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#mobility)
     - [Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#storage)
     - [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#hybrid)
-    - [Microsoft Cloud 中的 Contoso](microsoft-cloud-it-architecture-resources.md#contoso)
+    - [Microsoft 雲端中的 Contoso](microsoft-cloud-it-architecture-resources.md#contoso)
     - [常見攻擊和保護您組織的 Microsoft 功能](#common-attacks-and-microsoft-capabilities-that-protect-your-organization)
     
 - **[Office 365 企業版解決方案系列](microsoft-cloud-it-architecture-resources.md#BKMK_o365solutions)**：
@@ -47,7 +45,7 @@ ms.lasthandoff: 02/09/2018
     - [使用 Microsoft 部署現代和安全的桌面](microsoft-cloud-it-architecture-resources.md#msd)
     
 > [!TIP]
-> 此頁面上的海報大多提供多種語言版本，包括中文、英文、法文、德文、義大利文、日文、韓文、葡萄牙文、俄文和西班牙文。若要下載以上其中一種語言的海報，請按一下該海報的 [更多語言] 連結。讓我們知道您的想法！
+> 此頁面上的海報大多提供多種語言版本，包括中文、英文、法文、德文、義大利文、日文、韓文、葡萄牙文、俄文和西班牙文。若要下載以上其中一種語言的海報，請按一下該海報的 **[更多語言]** 連結。讓我們知道您的想法！
   
 讓我們知道您的心得！請傳送電子郵件給我們：[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com)。 
   
@@ -129,7 +127,7 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關混合雲
 |[![Microsoft 混合式雲端模型的縮圖影像](images/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)          ](https://www.microsoft.com/download/details.aspx?id=54424) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842083)           \| ![文章](images/5cec453d-5fc4-4657-8980-16543b2316ea.png)[文章](https://technet.microsoft.com/library/mt750500.aspx) <br/>![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54424) <br/> | 此模型包含下列頁面︰ <ul><li> **混合雲端概觀** Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素。 </li><li> **Microsoft 混合雲端結構的案例** Microsoft 雲端產品的混合雲端結構圖表，顯示內部部署基礎結構、網路和身分識別的共同層次。 </li><li> **Microsoft SaaS (Office 365) 混合雲端的案例** 商務用 Skype、SharePoint Server 和 Exchange Server 的 SaaS 混合案例結構，以及關鍵混合設定的說明。 </li><li> **Azure PaaS 混合雲端的案例** Azure PaaS 混合案例結構、附有範例的 Azure PaaS 混合應用程式說明，以及 SQL Server 2016 Stretch Database 的說明。 </li><li> **Azure IaaS 混合雲端的案例** Azure IaaS 混合案例結構，以及裝載在 Azure IaaS 中適用於企業營運 (LOB) 應用程式的說明。 </li></ul><br/>|
    
 <a name="contoso"> </a>
-### <a name="contoso-in-the-microsoft-cloud"></a>Microsoft Cloud 中的 Contoso
+### <a name="contoso-in-the-microsoft-cloud"></a>Microsoft 雲端中的 Contoso
 
 一個虛構但具有代表性的全球組織，如何實作 Microsoft 的雲端產品 (包括 Office 365、Azure、Dynamics 365 和 Intune)。
   
