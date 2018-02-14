@@ -8,15 +8,19 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Priority
-ms.collection: Ent_O365, Strat_O365_Enterprise
-ms.custom: Strat_O365_Enterprise, Ent_Architecture
+ms.collection:
+- Ent_O365
+- Strat_O365_Enterprise
+ms.custom:
+- Strat_O365_Enterprise
+- Ent_Architecture
 ms.assetid: c4a6d625-4938-42cc-87e1-56b7a13c63ef
 description: "摘要： 虛擬但具有代表性的全球組織如何透過 Microsoft 雲端服務項目採用內含雲端的 IT 基礎結構。"
-ms.openlocfilehash: 6357338705a1ae8aa987981b680cbcd02560041f
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 314fc872e1c5d555b3e412b3ce709d70595aa23b
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="contoso-in-the-microsoft-cloud"></a>Microsoft 雲端中的 Contoso
 
