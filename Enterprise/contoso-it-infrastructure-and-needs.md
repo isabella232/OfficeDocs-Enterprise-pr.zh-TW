@@ -1,5 +1,5 @@
 ---
-title: "Contoso 的 IT 基礎結構和需求"
+title: "Contoso 的 IT 基礎結構與需求"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -9,18 +9,16 @@ ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- DecEntMigration
-- Ent_Architecture
+ms.custom: Ent_Architecture
 ms.assetid: 5d6a58b8-bec3-4629-9737-8733c7b7ec92
 description: "摘要： 了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。"
-ms.openlocfilehash: 98ead7ffa3164c3cd57ec50def836b690881ba63
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: b8282c4bd04448266bc68e65f95aaaff0a7a5db8
+ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="contosos-it-infrastructure-and-needs"></a>Contoso 的 IT 基礎結構和需求
+# <a name="contosos-it-infrastructure-and-needs"></a>Contoso 的 IT 基礎結構與需求
 
  **摘要：**了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。
   
@@ -82,9 +80,9 @@ Contoso 使用多半集中式內部 IT 基礎結構與 Paris headquarters 中的
 |**Dynamics 365:**使用雲端式客戶與廠商管理。移除網路 DMZ 中的協力廠商。<br/> 業務需求： 2  <br/> |行動應用程式的雲端式而不是 Paris 資料中心架構。  <br/> 業務需求： 3 4  <br/> |移轉使用率低的應用程式和不在內部部署資料中心的資料。  <br/> 業務需求： 5  <br/> |
 |**Intune/EMS:**管理 iOS 及 Android 裝置。 <br/> 業務需求： 3  <br/> ||新增暫時伺服器和結束一季處理需求的儲存空間。  <br/> 商務需要： 6  <br/> |
    
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
-[在 Microsoft Cloud Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

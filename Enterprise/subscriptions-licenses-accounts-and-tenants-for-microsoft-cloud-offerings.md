@@ -10,18 +10,17 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.collection:
 - Ent_O365
-- Ent_O365_Visuals
+- Strat_O365_Enterprise
 ms.custom:
-- DecEntMigration
 - Strat_O365_Enterprise
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: "摘要： 了解 Microsoft cloud 方案跨組織、 訂閱、 授權、 使用者帳戶和租用戶的關係。"
-ms.openlocfilehash: 0c416efe1bfff6a3e6c979af165df8eb951b879c
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: a1bcc040d046e4e5674f16432aeffb0a34b9031b
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>訂閱、 授權、 帳戶、 及承租人 Microsoft cloud 方案
 
@@ -169,13 +168,13 @@ Office 365 系統管理中心會將新的訂閱 saas 和型雲端版方案的組
     
 如果您另外購買 Azure 和 Office 365 訂閱而且想要從您的 Azure 訂閱存取 Office 365 Azure AD 租用戶，請參閱[建立關聯的 Azure 訂閱與 Office 365 租用戶](https://channel9.msdn.com/Series/Microsoft-Azure-Tutorials/Associate-an-Office-365-tenant-with-an-Azure-subscription)中的指示。
   
-## <a name="see-also"></a>See Also
+## <a name="see-also"></a>請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
   
-[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[SharePoint、 Exchange、 Skype for Business 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
+[適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
   
 [混合式解決方案](hybrid-solutions.md)
   

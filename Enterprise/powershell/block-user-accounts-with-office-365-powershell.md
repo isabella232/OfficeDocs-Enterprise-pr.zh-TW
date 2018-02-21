@@ -3,7 +3,7 @@ title: "使用 Office 365 PowerShell 封鎖使用者帳戶"
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 01/10/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -11,15 +11,14 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom:
 - Ent_Office_Other
-- DecEntMigration
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
 description: "說明如何使用 Office 365 PowerShell 封鎖及解除封鎖存取 Office 365 帳戶。"
-ms.openlocfilehash: f22656426e7aa3adf764a3f90adea84cf57a5e89
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: 34d144c982210ddc9d557b6094f71706f8edbb7f
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="block-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 封鎖使用者帳戶
 
@@ -77,12 +76,12 @@ kakers@contoso.com
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
   ```
-  Get-Content "C:\My Documents\Accounts.txt" | Set-MsolUser -UserPrincipalName $_.UserPrincipalName -BlockCredential $true
+  Get-Content Accounts.txt | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $true }
   ```
 若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
   ```
-  Get-Content "C:\My Documents\Accounts.txt" | Set-MsolUser -UserPrincipalName $_.UserPrincipalName -BlockCredential $false
+  Get-Content Accounts.txt | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $false }
   ```
 
 ## <a name="use-the-azure-active-directory-v2-powershell-module-to-block-access-to-user-accounts"></a>使用 Azure Active Directory V2 PowerShell 模組來封鎖使用者存取使用者帳戶
@@ -152,13 +151,13 @@ kakers@contoso.com
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
 ```
-Get-Content "C:\My Documents\Accounts.txt" | Set-AzureADUSer -ObjectID $_.ObjectID -AccountEnabled $true
+Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $false }
 ```
 
 若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
 ```
-Get-Content "C:\My Documents\Accounts.txt" | Set-AzureADUSer -ObjectID $_.ObjectID -AccountEnabled $false
+Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $true }
 ```
 
 ## <a name="see-also"></a>另請參閱
@@ -180,6 +179,6 @@ Get-Content "C:\My Documents\Accounts.txt" | Set-AzureADUSer -ObjectID $_.Object
     
 - [Set-msoluser](https://go.microsoft.com/fwlink/p/?LinkId=691644)
     
-- [新 AzureADUser](https://docs.microsoft.com/powershell/module/azuread/new-azureaduser?view=azureadps-2.0)
+- [New-AzureADUser](https://docs.microsoft.com/powershell/module/azuread/new-azureaduser?view=azureadps-2.0)
     
 

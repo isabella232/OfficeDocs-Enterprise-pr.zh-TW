@@ -12,16 +12,14 @@ ms.collection: Ent_O365
 ms.custom:
 - LIL_Placement
 - PowerShell
-- apr17entnews
 - Ent_Office_Other
-- DecEntMigration
 ms.assetid: bb12f49d-a85d-4f3b-ada2-5c4e33977b10
 description: "摘要： 檢視、 清單或顯示您的使用者帳戶的各種方式與 Office 365 PowerShell。"
-ms.openlocfilehash: b27f9045d26d4dabd3ada70766491f722d822a91
-ms.sourcegitcommit: d31cf57295e8f3d798ab971d405baf3bd3eb7a45
+ms.openlocfilehash: e9ffa439c1840cbbbd8a47c2835d9427330804be
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="view-user-accounts-with-office-365-powershell"></a>檢視與 Office 365 PowerShell 的使用者帳戶
 
@@ -257,11 +255,9 @@ Get-AzureADUser | Where-Object {$_.UsageLocation -eq $Null} | Select-Object Disp
     
 ## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？
 
-||
-|:-----|
-|![簡短 LinkedIn 學習圖示](images/d547e1cb-7c66-422b-85be-7e7db2a9cf97.png)**新增至 Office 365？**        [Office 365 系統管理員及 IT 專業人員](https://support.office.com/article/Office-365-admin-and-IT-pro-courses-68cc9b95-0bdc-491e-a81f-ee70b3ec63c5)，傳送給您的 LinkedIn 學習探索免費的視訊課程。 |
-   
-## <a name="see-also"></a>See also
+[!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
+  
+## <a name="see-also"></a>另請參閱
 
 #### 
 
