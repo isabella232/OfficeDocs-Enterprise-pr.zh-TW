@@ -2,6 +2,7 @@
 title: "企業雲端解決方案"
 description: "使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。"
 author: JoeDavies-MSFT
+ms.author: josephd
 manager: laurawi
 layout: LandingPage
 ms.assetid: 
@@ -9,13 +10,12 @@ ms.service: o365-solutions
 ms.topic: hub-page
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.date: 12/13/2017
-ms.author: JoeDavies-MSFT
-ms.openlocfilehash: 32e15b5d80fd7c7a200987ea55bca927e6e02372
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.date: 2/14/2018
+ms.openlocfilehash: 3d8d7f89395c7cb84953e75de48cde71d2e7327a
+ms.sourcegitcommit: 990ca49b20ae70a3b57ca8293d22deb04defa958
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 <h1>企業雲端解決方案</h1>
 <p>使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。</p>
