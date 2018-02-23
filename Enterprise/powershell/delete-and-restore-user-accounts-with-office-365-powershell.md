@@ -9,14 +9,17 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: PowerShell, Ent_Office_Other, O365ITProTrain
+ms.custom:
+- PowerShell
+- Ent_Office_Other
+- O365ITProTrain
 ms.assetid: 209c9868-448c-49bc-baae-11e28b923a39
 description: "了解如何使用 Office 365 PowerShell 來刪除和還原 Office 365 使用者帳戶。"
-ms.openlocfilehash: 1f1212de342894f6ca9f478a0830c45458d27511
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: 09f3595ed7cd5434efb2897a43ba1bbca5286c25
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="delete-and-restore-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 刪除及還原使用者帳戶
 
@@ -26,7 +29,7 @@ ms.lasthandoff: 02/13/2018
   
 ## <a name="before-you-begin"></a>開始之前
 
-- 本主題中的程序需要您連線到 Office 365 PowerShell。如需指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+- 本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
     
 - 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _-All_參數，則只會傳回前 500 個帳戶。
     
@@ -70,7 +73,7 @@ Restore-MsolUser -UserPrincipalName BelindaN@litwareinc.com
 ## <a name="use-the-azure-active-directory-v2-powershell-module-to-remove-a-user-account"></a>使用 Azure Active Directory V2 PowerShell 模組來移除使用者帳戶
 <a name="ShortVersion"> </a>
 
-若要從 Azure Active Directory V2 PowerShell 模組使用 **Remove-AzureADUser** Cmdlet，您必須先連線至您的訂用帳戶。如需指示，請參閱[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
+若要從 Azure Active Directory V2 PowerShell 模組使用 **Remove-AzureADUser** Cmdlet，您必須先連線至您的訂用帳戶。如需相關指示，請參閱[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
   
 連接之後，使用下列語法來移除個別使用者帳戶：
   

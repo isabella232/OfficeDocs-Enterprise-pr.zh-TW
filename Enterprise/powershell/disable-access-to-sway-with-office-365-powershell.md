@@ -9,14 +9,16 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: PowerShell, Ent_Office_Other
+ms.custom:
+- PowerShell
+- Ent_Office_Other
 ms.assetid: 7221a4c9-ae03-4598-81fe-a655c02f40ab
 description: "學習如何下載 ManageSway.ps1 PowerShell 指令碼，可讓您停用您 Office 365 組織中 Sway 的存取。"
-ms.openlocfilehash: 261a192195950c7ca21cbc33dd39307ee64b552e
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: d5e5c17a5156e9f969ea2908544993e3fa80f695
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="disable-access-to-sway-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用 Sway 的存取權
 
