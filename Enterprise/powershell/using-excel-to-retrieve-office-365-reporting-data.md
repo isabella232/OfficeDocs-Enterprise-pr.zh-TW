@@ -9,24 +9,22 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- Ent_Office_Other
-- PowerShell
+ms.custom: Ent_Office_Other, PowerShell
 ms.assetid: 510d5528-ac00-4f54-9d38-75fa043d0a06
 description: "概要：使用 Microsoft Excel 中的 oData 功能，來擷取 Office 365 部署的詳細報告資訊。"
-ms.openlocfilehash: a4245029c337450f5f5ac3655e0b60a301ea80ec
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 4347aad28e1e197c03eb986663ef7e59849493d1
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="using-excel-to-retrieve-office-365-reporting-data"></a>使用 Excel 擷取 Office 365 報表資料
 
  **摘要：**使用 Microsoft Excel 中的 oData 功能，來擷取 Office 365 部署的詳細報告資訊。
   
-報告是系統管理的重要部分。Office 365 系統管理中心包括幾個預先定義的報告，您可以從左方瀏覽區的 **報告**區段存取。有使用報告和安全性及規範符合性報告。
+報告是系統管理的重要部分。Office 365 系統管理中心包括幾個預先定義的報告，您可以從左方瀏覽區的 [報告]**** 區段存取。有使用報告和安全性及規範符合性報告。
   
-您所使用的 Office 365 版本以及已啟用哪些 Office 365 服務會決定您可以使用哪些報告。如需詳細資訊，請參閱[報告]((https://technet.microsoft.com/zh-TW/library/office-365-reports.aspx))頁面。
+您所使用的 Office 365 版本以及已啟用哪些 Office 365 服務會決定您可以使用哪些報告。如需詳細資訊，請參閱[報告](https://technet.microsoft.com/zh-TW/library/office-365-reports.aspx)頁面。
   
 預先定義的系統管理中心報告是絕佳資源，可讓您輕鬆檢視信箱使用量，或使用者在線上會議待了多久時間等資訊。不過，若要對 Office 365 網域進行詳細分析，報告就會面臨一些限制。
   
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/11/2018
   
 此外，自訂指令碼/應用程式可讓您存取 Office 365 系統管理中心未能提供的報告。例如，系統管理中心可以指出您有多少「過時」信箱，但無法指出在過去 30 天內沒有存取過的信箱。但自訂的 PowerShell 指令碼則可以提供這項資訊。總的來說，這表示雖然您必須撰寫簡短且相對簡單的小型 Windows PowerShell 指令碼，但卻能換得諸多彈性。
   
-> [!VISUAL BASIC NOTE] 如需詳細資訊，請參閱 Office 365 報告服務的[首頁](https://msdn.microsoft.com/en-us/library/office/jj984325%28v=office.15%29.aspx)。
+> [!VISUAL BASIC NOTE] 如需詳細資訊，請參閱 Office 365 報告服務的[首頁](https://msdn.microsoft.com/zh-TW/library/office/jj984325%28v=office.15%29.aspx)。
   
 為了擷取這項資料，您必須撰寫某種程式碼。如果組織較為龐大，需要限制傳回的資訊數量和類型，這麼做很值得。但如果組織規模較小，並不需要限制傳回的資訊數量和類型，則您可以考慮從 Excel 本身開啟 Office 365 報告。
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 01/11/2018
   
 若要直接從 Excel 內開啟 Office 365 報告，請完成下列程序︰
   
-1. 先在 Excel 中開啟新的工作表。在工作表中依序按一下 [資料]、[從其他來源] 和 [從 OData 資料摘要]。之後便會出現 [資料連線精靈] 對話方塊：
+1. 先在 Excel 中開啟新的工作表。在工作表中依序按一下 [資料]****、[從其他來源]**** 和 [從 OData 資料摘要]****。之後便會出現 [資料連線精靈]**** 對話方塊：
     
      ![連線至 [資料連線精靈] 中 [資料摘要] 對話方塊的範例。](images/o365_reporting_connect_data_feed.png)
   
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/11/2018
     
      ![當您新增 Select、Filter 或 Format 陳述式時，錯誤訊息的範例。](images/o365_reporting_incorrect_data_feed.png)
   
-3. 輸入報告服務 URL 後，選取 [登入認證] 底下的 [使用此名稱和密碼]。在 [使用者名稱] 方塊中輸入 Office 365 登入名稱 (例如，admin@litwareinc.onmicrosoft.com)。在 [密碼] 方塊中，輸入 Office 365 登入密碼，然後按 [下一步]。然後 Excel 便會利用提供的認證，嘗試連線到報告服務。
+3. 輸入報告服務 URL 後，選取 [登入認證]**** 底下的 [使用此名稱和密碼]****。在 [使用者名稱]**** 方塊中輸入 Office 365 登入名稱 (例如，admin@litwareinc.onmicrosoft.com)。在 [密碼]**** 方塊中，輸入 Office 365 登入密碼，然後按 [下一步]****。然後 Excel 便會利用提供的認證，嘗試連線到報告服務。
     
 4. 通過驗證之後，您會看到 [選取資料表]**** 頁面。選取您想要檢視的報告 (例如，**MailTrafficTop**)，然後按 [下一步]****：
     
@@ -59,15 +57,15 @@ ms.lasthandoff: 01/11/2018
     > [!NOTE]
     > 您可以選取多個報告；這麼做會在 Excel 試算表中新增多個資料表/圖表。您甚至可以建立單一資料表/圖表，在其中結合多個報告的資料。不過，本簡介文章不會討論到這部分。 
   
-5. 按 [下一步] 後，就會出現 [儲存資料連線檔案和完成] 頁面：
+5. 按 [下一步]**** 後，就會出現 [儲存資料連線檔案和完成]**** 頁面：
     
      ![[資料連線精靈] 中 [儲存資料連線檔案和完成] 頁面的範例。](images/o365_reporting_odata_finish.png)
   
-    您不必在此輸入任何資訊。只需要按一下 [完成] 即可擷取資料。不過，值得注意的是，依預設，Excel 會儲存您所建立的每個資料連線的相關資訊；這些資料儲存在 [我的資料來源] 資料夾：
+    您不必在此輸入任何資訊。只需要按一下 [完成]**** 即可擷取資料。不過，值得注意的是，依預設，Excel 會儲存您所建立的每個資料連線的相關資訊；這些資料儲存在 [我的資料來源]**** 資料夾：
     
      ![[我的資料來源] 資料夾的 [儲存檔案] 對話方塊範例。](images/o365_reporting_save_data_source.png)
   
-    這就是為何對話方塊會包含帶有「好記的名稱」和「搜尋關鍵字」之類標籤的文字方塊；這些選項讓您能夠自訂這些資料連線。如此一來，您就不會到頭來擁有一堆看起來像這樣的資料來源：
+    這就是為何對話方塊會包含帶有「好記的名稱」****和「搜尋關鍵字」****之類標籤的文字方塊；這些選項讓您能夠自訂這些資料連線。如此一來，您就不會到頭來擁有一堆看起來像這樣的資料來源：
     
   ```
   DataFeed_1_reports-office365-com ClientSoftwareBrowserDetail.odc
@@ -78,7 +76,7 @@ DataFeed_2_reports-office365-com MailTrafficTop.odc
 DataFeed_3_reports-office365-com ClientSoftwareBrowserDetail.odc
   ```
 
-如果您選取 [將密碼儲存在檔案中] 核取方塊，您就可以重複使用這些資料摘要。例如，假設您將資料連線儲存為「用戶端瀏覽器報告」。下次您想取得用來存取 Office 365 網域之網頁瀏覽器的相關資訊時，您就不必再次執行資料連線精靈的所有步驟。相反地，您只需要開啟 Excel，按一下 [資料]，然後按一下 [現有來源]。在 [現有連線] 對話方塊中選取想要的資料連線，然後按一下 [確定]：
+如果您選取 [將密碼儲存在檔案中]**** 核取方塊，您就可以重複使用這些資料摘要。例如，假設您將資料連線儲存為「用戶端瀏覽器報告」****。下次您想取得用來存取 Office 365 網域之網頁瀏覽器的相關資訊時，您就不必再次執行資料連線精靈的所有步驟。相反地，您只需要開啟 Excel，按一下 [資料]****，然後按一下 [現有來源]****。在 [現有連線]**** 對話方塊中選取想要的資料連線，然後按一下 [確定]****：
     
 ![在 [現有連線] 對話方塊中，選取想要的資料連線的範例。](images/o365_reporting_select_connection.png)
   
@@ -88,17 +86,17 @@ DataFeed_3_reports-office365-com ClientSoftwareBrowserDetail.odc
     
 \<odc:ConnectionString>Data Source=https://reports.office365.com/ecp/reportingwebservice/reporting.svc/;Namespaces to Include=*;Max Received Message Size=4398046511104;Integrated Security=Basic; **User ID=admin@litwareinc.onmicrosoft.com;Password=MYpassw0rd!**;Persist Security Info=false;Service Document Url=https://reports.office365.com/ecp/reportingwebservice/reporting.svc/\</odc:ConnectionString>
     
-如果您不想要將使用者名稱和密碼儲存在純文字檔案中，請不要勾選標示為 [將密碼儲存在檔案中] 的核取方塊。不過，如果這樣做的話，請記住您將無法重複使用這些資料連線。這是因為如果沒有使用者名稱和密碼，Office 365 將無法對登入服務的嘗試進行驗證。
+如果您不想要將使用者名稱和密碼儲存在純文字檔案中，請不要勾選標示為 [將密碼儲存在檔案中]**** 的核取方塊。不過，如果這樣做的話，請記住您將無法重複使用這些資料連線。這是因為如果沒有使用者名稱和密碼，Office 365 將無法對登入服務的嘗試進行驗證。
     
-6. 按一下 [儲存資料連線檔案和完成] 頁面上的 [完成]，將會出現 [匯入資料] 對話方塊：
+6. 按一下 [儲存資料連線檔案和完成]**** 頁面上的 [完成]****，將會出現 [匯入資料]**** 對話方塊：
     
      ![[匯入資料] 對話方塊的範例。](images/o365_reporting_import_data.png)
   
-7. 選取檢視選項 (例如 [樞紐分析表])，然後按一下 [確定]。如果一切順利，系統將會匯入資料並以您所選的檢視選項加以呈現。
+7. 選取檢視選項 (例如 [樞紐分析表]****)，然後按一下 [確定]****。如果一切順利，系統將會匯入資料並以您所選的檢視選項加以呈現。
     
      ![資料已成功匯入到 Excel 工作表中的範例。](images/o365_reporting_sample_spreadsheet.png)
   
-之後您要如何處理這些資料就完全取決於您。如果需要建議，請看一下[使用 OData 資料摘要來建立 Excel Services 儀表板](https://technet.microsoft.com/en-us/library/jj873965%28v=office.15%29.aspx)。雖然這篇文章沒有使用 Office 365 報告服務，但提供了一些對於執行作業有用的提示，例如將篩選器和交叉分析篩選器新增到新儀表板等。
+之後您要如何處理這些資料就完全取決於您。如果需要建議，請看一下[使用 OData 資料摘要來建立 Excel Services 儀表板](https://technet.microsoft.com/zh-TW/library/jj873965%28v=office.15%29.aspx)。雖然這篇文章沒有使用 Office 365 報告服務，但提供了一些對於執行作業有用的提示，例如將篩選器和交叉分析篩選器新增到新儀表板等。
   
 ## <a name="see-also"></a>另請參閱
 
