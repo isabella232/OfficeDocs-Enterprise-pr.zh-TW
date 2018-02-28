@@ -9,17 +9,14 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- O365ITProTrain
-- Ent_Office_Other
-- PowerShell
+ms.custom: O365ITProTrain, Ent_Office_Other, PowerShell
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
 description: "說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。"
-ms.openlocfilehash: fe4f75d9d8dbc85efbc71856192dbaece3e84fbc
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: e691ba7db96b34166f03ccd90d87fee0d2ee09f8
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="view-licensed-and-unlicensed-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 
@@ -29,7 +26,7 @@ ms.lasthandoff: 01/11/2018
   
 ## <a name="before-you-begin"></a>開始之前
 
-- 本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+- 本主題中的程序需要您連線到 Office 365 PowerShell。如需指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
     
 - 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _-All_參數，則只會傳回前 500 個帳戶。
     
@@ -57,7 +54,7 @@ Get-MsolUser -All | where {$_.isLicensed -eq $true}
 
 ## <a name="the-long-version-instructions-with-detailed-explanations"></a>冗長版本 (包含詳細說明的指示)
 
-Office 365 使用者帳戶與 Office 365 授權不必具備一對一的對應關係：Office 365 使用者不一定具有 Office 365 授權，而 Office 365 授權不一定已指派給使用者。(事實上，單一使用者帳戶甚至可以有多個** Office 365 授權。) 當您建立新的 Office 365 使用者帳戶時 (請參閱[License Office 365 users with Windows PowerShell]((http://technet.microsoft.com/library/0ab9fcac-e5ea-4b5b-b72c-8c92c55565ac.aspx))一文以了解詳細資訊)，您不必為該使用者指派授權：新使用者會擁有一個有效的帳戶，但是無法登入 Office 365。如果他們嘗試登入，就會看見如下的內容：
+Office 365 使用者帳戶與 Office 365 授權不必具備一對一的對應關係：Office 365 使用者不一定具有 Office 365 授權，而 Office 365 授權不一定已指派給使用者。(事實上，單一使用者帳戶甚至可以有多個** Office 365 授權。) 當您建立新的 Office 365 使用者帳戶時 (請參閱[License Office 365 users with Windows PowerShell](http://technet.microsoft.com/library/0ab9fcac-e5ea-4b5b-b72c-8c92c55565ac.aspx)一文以了解詳細資訊)，您不必為該使用者指派授權：新使用者會擁有一個有效的帳戶，但是無法登入 Office 365。如果他們嘗試登入，就會看見如下的內容：
   
 ![沒有有效 Office 365 授權的使用者。](images/o365_powershell_no_license.png)
   

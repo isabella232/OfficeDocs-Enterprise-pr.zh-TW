@@ -9,16 +9,14 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- Strat_O365_Enterprise
-- Ent_Solutions
+ms.custom: Strat_O365_Enterprise, Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
 description: "摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。"
-ms.openlocfilehash: ada4533179aa79f7f619f7b0cf04576594283863
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: 6bbc53eae616fca4c044b7b4c24314191d9be22a
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
 
@@ -43,12 +41,12 @@ ms.lasthandoff: 02/09/2018
 所有虛擬機器位於單一跨單位 Azure 虛擬網路中 (VNet)。 
   
 > [!NOTE]
-> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。不過，如果跨單位連線無法使用，VNet 中的網域控制站就不會收到使用者帳戶和群組在內部部署 Windows Server AD 中的更新。若要確保不會發生這個情況，您可以設定跨場所連線的高可用性。如需詳細資訊，請參閱＜[高度可用的跨單位和 VNet-VNet 連線](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable)＞。
+> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。不過，如果跨單位連線無法使用，VNet 中的網域控制站就不會收到使用者帳戶和群組在內部部署 Windows Server AD 中的更新。若要確保不會發生這個情況，您可以設定跨場所連線的高可用性。如需詳細資訊，請參閱＜[高可用性跨單位和 VNet 對 VNet 連線](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable)＞。
   
 特定角色的每個虛擬機器配對都是位於它自己的子網路和可用性設定組中。
   
 > [!NOTE]
-> 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱＜[執行 N 層架構的 Windows VM](https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm)＞。 
+> 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱＜[執行適用於多層式架構應用程式的 Windows VM](https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm)＞。 
   
 這項設定的結果是，您所有的 Office 365 使用者都將會有聯盟驗證，他們可以在其中使用其 Windows 伺服器 Active Directory 憑證，而不是其 Office 365 帳戶登入。聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 02/09/2018
   
 - [高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
     
-- [High availability federated authentication Phase 2: Configure domain controllers](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
+- [高可用性同盟驗證階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
     
 - [高可用性同盟驗證階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。建立並設定兩個 AD FS 伺服器。
     

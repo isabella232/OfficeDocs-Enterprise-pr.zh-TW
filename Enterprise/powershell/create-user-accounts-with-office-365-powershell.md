@@ -9,17 +9,14 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- PowerShell
-- Ent_Office_Other
-- O365ITProTrain
+ms.custom: PowerShell, Ent_Office_Other, O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
 description: "了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。"
-ms.openlocfilehash: 97830f8158f84e6978cf3f2d168aa83d9fc551e6
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: 58c4f6b1d75bb8b77cbf6616b8036dd753ddc3f3
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="create-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 建立使用者帳戶
 
@@ -41,7 +38,7 @@ ms.lasthandoff: 01/11/2018
    
 ## <a name="before-you-begin"></a>開始之前
 
-本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+本主題中的程序需要您連線到 Office 365 PowerShell。如需指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
   
 ## <a name="use-office-365-powershell-to-create-individual-user-accounts"></a>使用 Office 365 PowerShell 建立個別使用者帳戶
 
@@ -87,7 +84,7 @@ ShawnM@contoso.onmicrosoft.com,Shawn,Melendez,Shawn Melendez,US,contoso:ENTERPRI
     
 ## <a name="use-the-azure-active-directory-v2-powershell-module-to-create-individual-user-accounts"></a>使用 Azure Active Directory V2 PowerShell 模組來建立個別使用者帳戶
 
-若要從 Azure Active Directory V2 PowerShell 模組使用 **New-AzureADUser** Cmdlet，您必須先連接至您的訂用帳戶。如需相關指示，請參閱[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
+若要從 Azure Active Directory V2 PowerShell 模組使用 **New-AzureADUser** Cmdlet，您必須先連線至您的訂用帳戶。如需指示，請參閱[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
   
 連接之後，使用下列語法來建立個別帳戶：
   
@@ -121,7 +118,7 @@ New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -
   
 - [Export-Csv](https://go.microsoft.com/fwlink/p/?LinkId=113299)
     
-- [Import-Csv]((https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-csv))
+- [Import-Csv](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/import-csv)
     
 - [New-MsolUser](https://go.microsoft.com/fwlink/p/?LinkId=691547)
     

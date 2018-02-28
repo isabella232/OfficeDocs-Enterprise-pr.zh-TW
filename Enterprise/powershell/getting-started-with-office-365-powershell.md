@@ -9,16 +9,14 @@ ms.topic: hub-page
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom:
-- PowerShell
-- Ent_Office_Other
+ms.custom: PowerShell, Ent_Office_Other
 ms.assetid: 4712d6fd-d9c7-4ec2-88c1-3ad9201cbb7f
 description: "摘要：了解 Office 365 PowerShell 的重要性，連線到 Office 365 租用戶，並取得說明。"
-ms.openlocfilehash: 4e416914703016a6b33c12779eff0c080ae0552f
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+ms.openlocfilehash: e6e3ed87208c36db359e40ba0aceaeb1cef505fd
+ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="getting-started-with-office-365-powershell"></a>開始使用 Office 365 PowerShell
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/11/2018
     
 - [在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](connect-to-all-office-365-services-in-a-single-windows-powershell-window.md)
     
-    您可以針對 商務用 Skype Online、SharePoint Online、Microsoft Exchange Online 和 Office 365 帳戶和授權，在不同的視窗中管理 Office 365。或者，可以從單一視窗進行管理。本主題說明如何操作。
+    您可以針對商務用 Skype Online、SharePoint Online、Microsoft Exchange Online 和 Office 365 帳戶和授權，在不同的視窗中管理 Office 365。或者，可以從單一視窗進行管理。本主題說明如何操作。
     
 - [使用 Windows PowerShell 在 Office 365 中建立報告](use-windows-powershell-to-create-reports-in-office-365.md)
     

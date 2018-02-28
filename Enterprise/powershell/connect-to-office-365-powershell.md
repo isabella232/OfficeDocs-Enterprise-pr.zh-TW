@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: "摘要：使用 Office 365 PowerShell 連線到您的 Office 365 組織，以從命令列執行 Office 365 系統管理中心工作。"
-ms.openlocfilehash: 9aa3fe8bc0f7debd01e3a3e5f91ca8403e696f56
-ms.sourcegitcommit: 5045bd498a9a531f34ac9db742e5cd9f15126bcc
+ms.openlocfilehash: 2f51c68acf55239c7d47f9b617a8a72965ead79d
+ms.sourcegitcommit: 7ed9108846227ca883cb5113543a165704d9bbc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -110,7 +110,7 @@ Connect-MsolService
     
   - 針對 Windows 7 或 Windows Server 2008 R2，請參閱[您無法開啟 Windows PowerShell 的 Azure Active Directory 模組](https://go.microsoft.com/fwlink/p/?LinkId=532370)
     
-- **您的 Windows PowerShell 的 Microsoft Azure Active Directory 模組 版本可能已過期。** 若要檢查，請在 Office 365 PowerShell 或 Windows PowerShell 的 Microsoft Azure Active Directory 模組 中執行下列命令：
+- **您的 Windows PowerShell 的 Microsoft Azure Active Directory 模組 版本可能已過期。** 若要檢查，請在 Office 365 PowerShell 或 Windows PowerShell 的 Microsoft Azure Active Directory 模組中執行下列命令：
     
   ```
   (Get-Item C:\Windows\System32\WindowsPowerShell\v1.0\Modules\MSOnline\Microsoft.Online.Administration.Automation.PSModule.dll).VersionInfo.FileVersion
@@ -123,7 +123,7 @@ Connect-MsolService
 ## <a name="connect-with-the-azure-active-directory-v2-powershell-module"></a>與 Azure Active Directory V2 PowerShell 模組連接
 <a name="ConnectV2"> </a>
 
-在適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組中，命令的 Cmdlet 名稱會包含 "AzureAD"。
+在 Azure Active Directory V2 PowerShell 模組中，命令的 Cmdlet 名稱會包含 "AzureAD"。
 
 如果執行程序時需要 [Azure Active Directory V2 PowerShell 模組](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)中的新 Cmdlet，請使用下列步驟來安裝模組，並連線至您的 Office 365 訂用帳戶：
 
