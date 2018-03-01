@@ -9,14 +9,17 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: O365ITProTrain, Ent_Office_Other, PowerShell
+ms.custom:
+- O365ITProTrain
+- Ent_Office_Other
+- PowerShell
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
 description: "說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。"
-ms.openlocfilehash: e691ba7db96b34166f03ccd90d87fee0d2ee09f8
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+ms.openlocfilehash: b26c98c1c294e2f1369d4368d0b1415702580a83
+ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="view-licensed-and-unlicensed-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 
@@ -26,7 +29,7 @@ ms.lasthandoff: 02/13/2018
   
 ## <a name="before-you-begin"></a>開始之前
 
-- 本主題中的程序需要您連線到 Office 365 PowerShell。如需指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+- 本主題中的程序需要您連線到 Office 365 PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
     
 - 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _-All_參數，則只會傳回前 500 個帳戶。
     
