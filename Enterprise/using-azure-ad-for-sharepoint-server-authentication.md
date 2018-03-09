@@ -18,11 +18,11 @@ ms.collection:
 ms.custom: Ent_Solutions
 ms.assetid: 
 description: "摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。"
-ms.openlocfilehash: e346a79fae32c19e14ce852257d5643041faf5d4
-ms.sourcegitcommit: b1cb876c8a8fca1c2d67b2bc8282f1361066962c
+ms.openlocfilehash: 1e8ce1aad43e110311c1f5fcceca816871c07e9e
+ms.sourcegitcommit: 2cfb30dd7c7a6bc9fa97a98f56ab8fe008504f41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-azure-ad-for-sharepoint-server-authentication"></a>SharePoint Server 驗證使用 Azure AD
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/05/2018
 > 本文根據吳 Evans、 Microsoft 首席程式經理的工作。 
 
 <blockquote>
-<p>本文是指與 Azure Active Directory 圖表互動的程式碼範例。您可以下載程式碼範例[此處](https://1drv.ms/u/s!AuAlJmH2xI6Kg3ItzF78krMFxJu3)。</p>
+<p>本文是指與 Azure Active Directory 圖表互動的程式碼範例。您可以下載程式碼範例[此處](https://github.com/kaevans/spsaml11/tree/master/scripts)。</p>
 </blockquote>
 
 SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成為容易管理您的使用者進行其驗證您信任但其他人管理不同的身分識別提供者的能力。例如，而不是管理透過 Active Directory 網域服務 (AD DS) 的使用者驗證，您無法讓使用者使用 Azure Active Directory (Azure AD) 進行驗證。這可讓 onmicrosoft.com 尾碼其使用者名稱中使用的僅限雲端使用者驗證、 使用者與內部部署目錄同步處理及受邀來賓使用者從其他目錄。它也可讓您利用 Azure AD 的功能，例如多重要素驗證和進階的報告功能。
@@ -131,13 +131,12 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
 $realm = "<Realm from Table 1>"
 $wsfedurl="<SAML single sign-on service URL from Table 1>"
 $filepath="<Full path to SAML signing certificate file from Table 1>"
-$cert = New-Object 
-System.Security.Cryptography.X509Certificates.X509Certificate2($filepath)
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($filepath)
 New-SPTrustedRootAuthority -Name "AzureAD" -Certificate $cert
 $map = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" -IncomingClaimTypeDisplayName "name" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
 $map2 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" -IncomingClaimTypeDisplayName "GivenName" -SameAsIncoming
 $map3 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" -IncomingClaimTypeDisplayName "SurName" -SameAsIncoming
-$ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint secured by Azure AD" -realm $realm -ImportTrustCertificate $cert -ClaimsMappings $map,$map2,$map3 -SignInUrl $wsfedurl -IdentifierClaim “http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name”
+$ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint secured by Azure AD" -realm $realm -ImportTrustCertificate $cert -ClaimsMappings $map,$map2,$map3 -SignInUrl $wsfedurl -IdentifierClaim "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"
 ```
 
 接下來，請遵循下列步驟以啟用您的應用程式的信任的身分識別提供者：
@@ -173,7 +172,8 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 
 ## <a name="step-6-add-a-saml-11-token-issuance-policy-in-azure-ad"></a>步驟 6： 在 Azure AD 中新增的 SAML 1.1 token 發行原則
 
-入口網站中建立的 Azure AD 應用程式之後，它會預設為使用 SAML 2.0。SharePoint Server 2016 需要的 SAML 1.1 token 格式。下列指令碼會移除預設 SAML 2.0 原則並將新的原則新增到問題 SAML 1.1 權杖。
+入口網站中建立的 Azure AD 應用程式之後，它會預設為使用 SAML 2.0。SharePoint Server 2016 需要的 SAML 1.1 token 格式。下列指令碼會移除預設 SAML 2.0 原則並將新的原則新增到問題 SAML 1.1 權杖。這段程式碼需要下載隨附的[範例示範互動 Azure Active Directory 圖表](https://github.com/kaevans/spsaml11/tree/master/scripts)。
+
 
 ```
 Import-Module <file path of Initialize.ps1> 
@@ -183,6 +183,8 @@ Remove-PolicyFromServicePrincipal -policyId $saml2policyid -servicePrincipalId $
 $policy = Add-TokenIssuancePolicy -DisplayName SPSAML11 -SigningAlgorithm "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" -TokenResponseSigningPolicy TokenOnly -SamlTokenVersion "1.1"
 Set-PolicyToServicePrincipal -policyId $policy.objectId -servicePrincipalId $objectid
 ```
+
+更多個 Azure AD 的 Token 發行原則的詳細資訊，請參閱[圖 API 參考 （英文） 原則上的作業](https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/policy-operations#create-a-policy)。
 
 ## <a name="step-7-verify-the-new-provider"></a>步驟 7： 確認新的提供者
 
@@ -197,6 +199,17 @@ Set-PolicyToServicePrincipal -policyId $policy.objectId -servicePrincipalId $obj
 最後，您可以存取您的 Azure Active Directory 租用戶中的使用者身分登入的網站。
 
 ![使用者登入 SharePoint](images/SAML11/fig15-signedinsharepoint.png)
+
+## <a name="managing-certificates"></a>管理憑證
+請務必了解已設定為在上面的步驟 4 中的信任的身分識別提供者的簽署憑證已到期和必須更新。請參閱資訊的文章[同盟單一登入的 Azure Active Directory 中的管理憑證](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-sso-certs)上的憑證更新。一旦憑證有已更新在 Azure AD，下載至本機檔案並使用下列指令碼來設定信任的身分識別提供者的已更新的簽署憑證。 
+
+```
+$filepath="<Full path to renewed SAML signing certificate file>"
+$cert= New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($filePath)
+New-SPTrustedRootAuthority -Name "AzureAD" -Certificate $cert
+Get-SPTrustedIdentityTokenIssuer "AzureAD" | Set-SPTrustedIdentityTokenIssuer -ImportTrustCertificate $cert
+```
+
 
 
 ## <a name="additional-resources"></a>其他資源
