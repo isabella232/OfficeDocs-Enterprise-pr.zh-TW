@@ -18,11 +18,11 @@ ms.collection:
 ms.custom: Ent_Solutions
 ms.assetid: 
 description: "摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。"
-ms.openlocfilehash: 1e8ce1aad43e110311c1f5fcceca816871c07e9e
-ms.sourcegitcommit: 2cfb30dd7c7a6bc9fa97a98f56ab8fe008504f41
+ms.openlocfilehash: e57414c3ed5af5c02b719d0c3639542e154be5bf
+ms.sourcegitcommit: fbf33e74fd74c4ad6d60b2214329a3bbbdb3cc7c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-azure-ad-for-sharepoint-server-authentication"></a>SharePoint Server 驗證使用 Azure AD
 
@@ -144,7 +144,7 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 2. 在功能區上，按一下 [**驗證提供者**並選擇您想要使用的區域。
 3. 選取 [**信任的身分識別提供者**，並選取 [身分識別提供者所註冊名為*AzureAD*。  
 4. 在登入頁面 URL 設定中，選取 [**自訂登入] 頁面上**，並提供"/_trust/"的值。 
-5. 按一下 [確定]****。
+5. 按一下 [確定]。
 
 ![設定驗證提供者](images/SAML11/fig10-configauthprovider.png)
 
@@ -159,7 +159,7 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
  
 使用者已授與 Azure AD 的權限，但也必須授與 SharePoint 中的權限。使用下列步驟來設定存取 web 應用程式的權限。
 
-1. 在管理中心按一下 [**應用程式管理**]。
+1. 在管理中心中，按一下 [應用程式管理]。
 2. 按一下 [**應用程式管理**] 頁面上的 [ **Web 應用程式**] 區段中的 [**管理 web 應用程式**]。
 3. 按一下適當的 web 應用程式] 和 [**使用者原則**。
 4. 在 [Web 應用程式的原則，按一下 [**新增使用者**]。</br>![搜尋使用者及其名稱宣告](images/SAML11/fig11-searchbynameclaim.png)</br>
@@ -172,7 +172,7 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 
 ## <a name="step-6-add-a-saml-11-token-issuance-policy-in-azure-ad"></a>步驟 6： 在 Azure AD 中新增的 SAML 1.1 token 發行原則
 
-入口網站中建立的 Azure AD 應用程式之後，它會預設為使用 SAML 2.0。SharePoint Server 2016 需要的 SAML 1.1 token 格式。下列指令碼會移除預設 SAML 2.0 原則並將新的原則新增到問題 SAML 1.1 權杖。這段程式碼需要下載隨附的[範例示範互動 Azure Active Directory 圖表](https://github.com/kaevans/spsaml11/tree/master/scripts)。
+入口網站中建立的 Azure AD 應用程式之後，它會預設為使用 SAML 2.0。SharePoint Server 2016 需要的 SAML 1.1 token 格式。下列指令碼會移除預設 SAML 2.0 原則並將新的原則新增到問題 SAML 1.1 權杖。這段程式碼需要下載隨附的[範例示範互動 Azure Active Directory 圖表](https://github.com/kaevans/spsaml11/tree/master/scripts)。 
 
 
 ```
@@ -183,8 +183,9 @@ Remove-PolicyFromServicePrincipal -policyId $saml2policyid -servicePrincipalId $
 $policy = Add-TokenIssuancePolicy -DisplayName SPSAML11 -SigningAlgorithm "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" -TokenResponseSigningPolicy TokenOnly -SamlTokenVersion "1.1"
 Set-PolicyToServicePrincipal -policyId $policy.objectId -servicePrincipalId $objectid
 ```
+> 請注意務必要執行`Import-Module`命令在此範例所示。這會載入包含顯示的命令會在相依模組。您可能需要開啟已提升權限的命令提示字元處成功執行這些命令。
 
-更多個 Azure AD 的 Token 發行原則的詳細資訊，請參閱[圖 API 參考 （英文） 原則上的作業](https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/policy-operations#create-a-policy)。
+這些範例 PowerShell 命令是範例如何對圖表 API 執行查詢。更多個 Azure AD 的 Token 發行原則的詳細資訊，請參閱[圖 API 參考 （英文） 原則上的作業](https://msdn.microsoft.com/en-us/library/azure/ad/graph/api/policy-operations#create-a-policy)。
 
 ## <a name="step-7-verify-the-new-provider"></a>步驟 7： 確認新的提供者
 
@@ -210,7 +211,14 @@ New-SPTrustedRootAuthority -Name "AzureAD" -Certificate $cert
 Get-SPTrustedIdentityTokenIssuer "AzureAD" | Set-SPTrustedIdentityTokenIssuer -ImportTrustCertificate $cert
 ```
 
+## <a name="fixing-people-picker"></a>修正 [人員選擇]
+使用者現在可以登入 SharePoint 2016 使用從 Azure AD 的身分識別，但仍有改進的使用者經驗的機會。在人員選擇]，搜尋使用者呈現，多個搜尋結果。有 3 的宣告類型所建立的宣告對應的每個自訂的搜尋結果。若要選擇使用人員選擇] 的使用者，您必須完全輸入其使用者名稱及選擇**名稱**宣告結果。
 
+![宣告的搜尋結果](images/SAML11/fig16-claimssearchresults.png)
+
+無驗證值搜尋，可能會導致拼字錯誤或意外選擇錯誤的宣告指派例如**姓氏**類型的使用者宣告。這可防止使用者順利存取資源。
+
+若要協助進行此案例中，有開啟來源解決方案呼叫[AzureCP](https://yvand.github.io/AzureCP/) for SharePoint 2016 所提供的自訂宣告提供者。它會使用 Azure AD 圖表以解析使用者輸入以及執行驗證。深入瞭解[AzureCP](https://yvand.github.io/AzureCP/)。 
 
 ## <a name="additional-resources"></a>其他資源
 
