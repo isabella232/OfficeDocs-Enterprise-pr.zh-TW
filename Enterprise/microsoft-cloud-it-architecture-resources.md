@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Cloud IT 架構資源"
+title: Microsoft Cloud IT 架構資源
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
@@ -15,7 +15,7 @@ ms.custom:
 - Strat_O365_Enterprise
 - Ent_Architecture
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
-description: "摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。"
+description: 摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
 ms.openlocfilehash: bf8015d1a3876276a5a7f15be7e289d1984e9193
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT

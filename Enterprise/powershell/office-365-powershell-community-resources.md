@@ -1,5 +1,5 @@
 ---
-title: "Office 365 PowerShell 社群資源"
+title: Office 365 PowerShell 社群資源
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,7 +11,7 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: ebe0f5ff-fd17-487f-bbb6-271b5ea270bb
-description: "摘要： 從這些社群基地取得 Office 365 PowerShell 的說明。"
+description: 摘要： 從這些社群基地取得 Office 365 PowerShell 的說明。
 ms.openlocfilehash: 9348c824e34baba4d4d1a12da7910fc3cfe81a30
 ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
 ms.translationtype: HT
