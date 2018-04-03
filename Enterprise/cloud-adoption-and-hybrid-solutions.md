@@ -1,11 +1,11 @@
 ---
-title: "企業雲端解決方案"
-description: "使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。"
+title: 企業雲端解決方案
+description: 使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。
 author: JoeDavies-MSFT
 ms.author: josephd
 manager: laurawi
 layout: LandingPage
-ms.assetid: 
+ms.assetid: ''
 ms.service: o365-solutions
 ms.topic: hub-page
 localization_priority: Normal

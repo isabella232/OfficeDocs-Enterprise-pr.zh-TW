@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 管理 Office 365"
+title: 使用 Office 365 PowerShell 管理 Office 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,7 +14,7 @@ ms.custom:
 - O365ITProTrain
 - Ent_Office_Other
 ms.assetid: 932d57c0-1520-4f0f-8ec9-9966d646480f
-description: "摘要：了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online 和 Microsoft Exchange Online。"
+description: 摘要：了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online 和 Microsoft Exchange Online。
 ms.openlocfilehash: fd794066703c89ceb7f0c81c78d6e69b9d608dd0
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
