@@ -73,7 +73,6 @@
 #### [刪除地理位置](delete-a-geo-location.md)
 #### [在多個地理位置環境中的使用者經驗](multi-geo-user-experience.md)
 ### [設定 OneDrive for Business 多重地理位置](multi-geo-tenant-configuration.md)
-### [設定搜尋 onedrive for Business 多重地理位置](configure-search-for-multi-geo.md)
 ### [移至不同地理位置的 OneDrive 文件庫](move-onedrive-between-geo-locations.md)
 ## [安全性解決方案](security-solutions.md)
 ### [GDPR 的 office 365 資訊保護](office-365-information-protection-for-gdpr.md)
