@@ -1,9 +1,9 @@
 ---
-title: "Office 365 開發人員/測試環境的 DirSync"
+title: Office 365 開發人員/測試環境的目錄同步處理
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/04/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -16,31 +16,29 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
-description: "摘要： 設定目錄同步處理 Office 365 開發人員/測試環境。"
-ms.openlocfilehash: 8a656ea742af642a8b4dc3e096764f0e8cbde074
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定目錄同步處理 Office 365 開發人員/測試環境。
+ms.openlocfilehash: 1363e7fd6a3afdbec85fd08790268ab186badbc8
+ms.sourcegitcommit: 21cc62118b78b76d16ef12e2c3eff2c0c789e3d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/05/2018
 ---
-# <a name="dirsync-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的 DirSync
+# <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的目錄同步處理
 
  **摘要：**設定 Office 365 開發人員/測試環境的目錄同步處理。
   
-許多組織使用 Azure AD 連線和目錄同步處理 (DirSync) 同步處理至 Office 365 中的帳戶一組其內部部署 Windows Server Active Directory (AD) 樹系中的帳戶的設定。本文說明如何新增 DirSync 搭配密碼同步處理至 Office 365 開發人員/測試環境中，則產生下列設定。
+許多組織使用 Azure AD 連線和同步處理至 Office 365 中的帳戶一組其內部部署 Windows Server Active Directory (AD) 樹系中的帳戶的設定目錄同步處理。本文說明如何新增與密碼雜湊同步處理的目錄同步處理至 Office 365 開發人員/測試環境，則產生下列設定。
   
-![具有 DirSync 的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![Office 365 開發人員/測試環境以目錄同步作業](images/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 此組態組成為： 
   
 - Office 365 E5 試用版訂閱，這會從建立時的 30 天到期。
-    
 - 簡化的組織內部網路連線至網際網路上的 Azure 虛擬網路 （DC1、 APP1 和 CLIENT1） 子網路的三個虛擬機器所組成。同步處理至 Office 365 的 Windows Server AD 網域在 APP1 上，執行 azure AD 連線。
     
 有兩個階段來設定此開發/測試環境：
   
 1. 建立 Office 365 開發人員/測試環境 （DC1、 APP1 和 CLIENT1 虛擬機器的 Office 365 E5 試用版訂閱與 Azure 虛擬網路中）。
-    
 2. 安裝及設定 Azure AD 連接在 APP1 上。
     
 > [!TIP]
@@ -55,7 +53,6 @@ ms.lasthandoff: 02/14/2018
 此組態組成為： 
   
 - Office 365 E5 列印試用訂閱。
-    
 - 簡化的組織內部網路連線至網際網路，DC1、 APP1 和 CLIENT1 虛擬機器上的 Azure 虛擬網路子網路所組成。
     
 ## <a name="phase-2-install-azure-ad-connect-on-app1"></a>在 APP1 上的階段 2： 安裝 Azure AD 連線
@@ -99,7 +96,7 @@ Stop-Process -Name Explorer -Force
     
 14. 在左導覽列中，按一下 [**使用者 > 作用中使用者**。
     
-    記下名為**User1**的帳戶。此帳戶是來自公司 Windows Server AD 網域並且 DirSync 具有正常運作的概念。
+    記下名為**User1**的帳戶。此帳戶是來自公司 Windows Server AD 網域並且目錄同步處理已正常運作的概念。
     
 15. 按一下 [ **User1**帳戶。產品授權的按一下 [**編輯**]。
     
@@ -107,30 +104,24 @@ Stop-Process -Name Explorer -Force
     
 這是所產生的設定。
   
-![具有 DirSync 的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![Office 365 開發人員/測試環境以目錄同步作業](images/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 此組態組成為： 
   
 - Office 365 E5 列印試用訂閱。
-    
 - 簡化的組織內部網路連線至網際網路，DC1、 APP1 和 CLIENT1 虛擬機器上的 Azure 虛擬網路子網路所組成。同步處理至 Office 365 的公司 Windows Server AD 網域每 30 分鐘在 APP1 上，執行 azure AD 連線。
     
 ## <a name="next-step"></a>下一個步驟
 
-當您準備好您的組織部署 DirSync 時，請參閱[部署 Office 365 中目錄同步處理 (DirSync) Microsoft Azure](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)。
+當您準備好要部署目錄同步處理您的組織時，請參閱[Microsoft Azure 中的部署 Office 365 目錄同步處理](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)。
 
 ## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
-  
-[基底組態開發/測試環境](base-configuration-dev-test-environment.md)
-  
-[Office 365 開發/測試環境](office-365-dev-test-environment.md)
-  
+[雲端採用測試實驗室指南 (Tlg)](cloud-adoption-test-lab-guides-tlgs.md)
+[基本設定測試開發/環境](base-configuration-dev-test-environment.md)
+[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)
 [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
-  
-[Office 365 開發人員/測試環境的進階威脅保護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
-  
+ [Office 365 開發人員/測試環境的進階威脅保護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
 

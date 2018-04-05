@@ -1,9 +1,9 @@
 ---
-title: "Office 365 開發/測試環境"
+title: Office 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/04/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,12 +11,12 @@ localization_priority: Normal
 ms.collection: Ent_O365, Strat_O365_Enterprise
 ms.custom: Strat_O365_Enterprise, Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
-description: "摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。"
-ms.openlocfilehash: b3c9e83dfab3aaf02ad598021e11965657e877bb
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+description: 摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。
+ms.openlocfilehash: 70a316f89078305b52e27348dce8a133d7f6de7d
+ms.sourcegitcommit: 21cc62118b78b76d16ef12e2c3eff2c0c789e3d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -56,17 +56,17 @@ ms.lasthandoff: 02/13/2018
 
 若要啟動您的 Office 365 E5 試用版訂閱，您首先需要虛構公司名稱和新的 Microsoft 帳戶。
   
-1. 我們建議您的公司名稱 Contoso variant 用於您公司的名稱，也就是使用中 Microsoft 範例內容虛構公司，但並非必要。記錄您的虛構公司名稱： ___
+1. 我們建議您的公司名稱 Contoso variant 用於您公司的名稱，也就是使用中 Microsoft 範例內容虛構公司，但並非必要。記錄您的虛構公司名稱： ___。
     
-2. 若要註冊新的 Microsoft 帳戶，移至[https://outlook.com](https://outlook.com)並建立新的電子郵件帳戶和地址的帳戶。此帳戶會用於註冊 Office 365。
+2. 若要註冊新的 Microsoft 帳戶，請移至[https://outlook.com](https://outlook.com)及建立新的電子郵件帳戶和地址的帳戶。此帳戶會用於註冊 Office 365。
     
-  - 您新增的帳戶的第一個及最後一個名稱記錄： ___
+  - 您新增的帳戶的第一個及最後一個名稱記錄： ___。
     
   - 記錄的新電子郵件帳戶地址這裡： ___@outlook.com
     
 ### <a name="sign-up-for-an-office-365-e5-trial-subscription"></a>註冊 Office 365 E5 試用訂閱
 
-1. 輕量型 Office 365 開發人員/測試環境中，開啟您電腦上的 [網際網路瀏覽器並移至[https://aka.ms/e5trial](https://aka.ms/e5trial)。 
+1. 輕量型 Office 365 開發人員/測試環境中，開啟您電腦的網際網路瀏覽器，並移至[https://aka.ms/e5trial](https://aka.ms/e5trial)。 
     
     模擬企業版 Office 365 開發人員/測試環境中：
     
@@ -105,7 +105,7 @@ Stop-Process -Name Explorer -Force
     
     記錄您在安全的位置中輸入密碼。
     
-    記錄您虛構公司名稱，以作為**組織名稱**，此處參照： ___
+    記錄您虛構公司名稱，以作為**組織名稱**，此處參照： ___。
     
 5. 按一下 [**建立我的帳號**。
     
@@ -113,7 +113,7 @@ Stop-Process -Name Explorer -Force
     
 7. 輸入從已接收之的文字郵件驗證碼，然後按 [**下一步**。
     
-8. 登入頁面 URL 記錄以下 （選取和複本）： ___
+8. 登入頁面 URL 記錄以下 （選取和複本）： ___。
     
 9. 記錄使用者識別碼此處 （選取和複本）： ___.onmicrosoft.com
     
@@ -259,17 +259,17 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
   Get-SPOSite | Where URL -like "*/sites/*" | Sort URL | Select URL
   ```
 
-  - 實際執行網站 URL： https://___.sharepoint.com/sites/production
+  - 實際執行網站 URL：https://______________________________________________.sharepoint.com/sites/production
     
-  - 銷售網站 URL： https://___.sharepoint.com/sites/sales
+  - 銷售網站 URL：https://______________________________________________.sharepoint.com/sites/sales
     
-  - 支援的網站 URL： https://___.sharepoint.com/sites/support
+  - 支援的網站 URL：https://______________________________________________.sharepoint.com/sites/support
     
 ## <a name="next-steps"></a>後續步驟
 
 Office 365 開發人員/測試環境中使用這些額外的文章：
   
-- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)
     
 - [Office 365 開發人員/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
     
