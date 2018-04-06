@@ -1,9 +1,9 @@
 ---
-title: "基本組態開發/測試環境"
+title: 基本組態開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,12 +15,12 @@ ms.custom:
 - Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
-description: "摘要： 建立簡化的內部網路為 Microsoft Azure 中的開發人員/測試環境。"
-ms.openlocfilehash: 04da1037dbebed9f9a5d2aa2fb37b03b88218839
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 建立簡化的內部網路為 Microsoft Azure 中的開發人員/測試環境。
+ms.openlocfilehash: b2bd1c7bb2b0cd100326867fc3603b6afb6cd8db
+ms.sourcegitcommit: 1db536d09343bdf6b4eb695ab07890164c047bd3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="base-configuration-devtest-environment"></a>基本組態開發/測試環境
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/14/2018
 
 ![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
-圖 1 中的基本設定開發/測試環境所組成的僅限雲端 Azure 虛擬網路中名為會模擬簡體中文、 私人的內部網路連線至網際網路的 TestLab 依舊套用子網路。包含三個 Azure 的虛擬機器執行 Windows Server 2016：
+圖 1 中的基本設定開發/測試環境所組成的僅限雲端 Azure 虛擬網路中名為會模擬簡體中文、 私人的內部網路連線至網際網路的 TestLab 依舊套用子網路。包含三個 Azure 虛擬機器：
   
 - DC1 設定為內部網路網域控制站和網域名稱系統 (DNS) 伺服器
     
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/14/2018
   
 - 適用於應用程式開發及測試。
     
-- 為包含其他虛擬機器、 Azure 服務或 Office 365 和企業安全性 + 行動性等其他 Microsoft cloud 方案自行設計延伸的測試環境的初始設定。
+- 為包含其他虛擬機器、 Azure 服務或其他 Microsoft cloud 優惠方案例如 Office 365 和企業安全性 + 行動性 （EMS） 自行設計延伸的測試環境的初始設定。
     
 有四個階段來設定 Azure 中的基本設定測試環境：
   
@@ -163,7 +163,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 ### <a name="connect-to-dc1-using-local-administrator-account-credentials"></a>連線至 DC1 使用本機系統管理員帳戶認證
 
-1. 在[Azure 的入口網站](https://portal.azure.com)中，按一下 [**資源群組 >** <the name of your new resource group> **> DC1 > Connect**。
+1. 在[Azure 的入口網站](https://portal.azure.com)中，按一下 [**資源群組 >** [新的資源群組名稱] **> DC1 > Connect**。
     
 2. 開啟已下載的 DC1.rdp 檔案並再按一下 [**連線**。
     
@@ -191,7 +191,7 @@ Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR 
   
 ```
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-Install-ADDSForest -DomainName corp.contoso.com -DatabasePath "F:\\NTDS" -SysvolPath "F:\\SYSVOL" -LogPath "F:\\Logs"
+Install-ADDSForest -DomainName corp.contoso.com -DatabasePath "F:\NTDS" -SysvolPath "F:\SYSVOL" -LogPath "F:\Logs"
 ```
 
 您必須指定安全模式的系統管理員密碼。此密碼儲存在安全的位置。
@@ -202,7 +202,7 @@ DC1 重新啟動後，重新連線至 DC1 虛擬機器。
   
 ### <a name="connect-to-dc1-using-domain-credentials"></a>連線至 DC1 使用網域認證
 
-1. 在[Azure 的入口網站](https://portal.azure.com)中，按一下 [**資源群組 >** <your resource group name> **> DC1 > Connect**。
+1. 在[Azure 的入口網站](https://portal.azure.com)中，按一下 [**資源群組 >** [您資源群組名稱] **> DC1 > Connect**。
     
 2. 執行 DC1.rdp 檔案是下載並再按一下 [**連線**。
     
@@ -242,7 +242,7 @@ Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv
 
 在 APP1 提供網頁伺服器和共用服務的檔案。
   
-若要建立 APP1 Azure 虛擬機器，您資源群組、 Azure 位置及儲存的帳戶名稱的名稱中填滿及本機電腦上執行這些命令在 Azure PowerShell 命令提示字元。
+若要建立 APP1 Azure 虛擬機器，資源群組的名稱中填滿及本機電腦上執行這些命令在 Azure PowerShell 命令提示字元。
   
 ```
 $rgName="<resource group name>"
@@ -283,9 +283,9 @@ Install-WindowsFeature Web-WebServer -IncludeManagementTools
 接下來，建立共用的資料夾和資料夾內的文字檔案在 APP1 上和下列 PowerShell 命令。
   
 ```
-New-Item -path c:\\files -type directory
-Write-Output "This is a shared file." | out-file c:\\files\\example.txt
-New-SmbShare -name files -path c:\\files -changeaccess CORP\\User1
+New-Item -path c:\files -type directory
+Write-Output "This is a shared file." | out-file c:\files\example.txt
+New-SmbShare -name files -path c:\files -changeaccess CORP\User1
 ```
 
 這是您目前的設定。
@@ -296,10 +296,7 @@ New-SmbShare -name files -path c:\\files -changeaccess CORP\\User1
 
 CLIENT1 做為一般筆記型電腦、 平板電腦或桌上型電腦 contoso 公司內部網路上。
   
-> [!NOTE]
-> 下列命令一組會建立 CLIENT1 執行 Windows Server 2016 Datacenter，可藉的 Azure 訂閱的所有類型。如果您有 Visual Studio 為基礎的 Azure 訂閱，您可以建立 CLIENT1 執行 Windows 10、 Windows 8 或 Windows 7 與[Azure 入口網站](https://portal.azure.com)。 
-  
-若要建立 CLIENT1 Azure 虛擬機器，填入您的資源群組、 Azure 位置及儲存的帳戶名稱的名稱中與本機電腦上執行這些命令在 Azure PowerShell 命令提示字元。
+若要建立 CLIENT1 Azure 虛擬機器，資源群組的名稱中填滿及本機電腦上執行這些命令在 Azure PowerShell 命令提示字元。
   
 ```
 $rgName="<resource group name>"
@@ -310,7 +307,7 @@ $nic=New-AzureRMNetworkInterface -Name CLIENT1-NIC -ResourceGroupName $rgName -L
 $vm=New-AzureRMVMConfig -VMName CLIENT1 -VMSize Standard_A1
 $cred=Get-Credential -Message "Type the name and password of the local administrator account for CLIENT1."
 $vm=Set-AzureRMVMOperatingSystem -VM $vm -Windows -ComputerName CLIENT1 -Credential $cred -ProvisionVMAgent -EnableAutoUpdate
-$vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version "latest"
+$vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsDesktop -Offer Windows-10 -Skus RS3-Pro -Version "latest"
 $vm=Add-AzureRMVMNetworkInterface -VM $vm -Id $nic.Id
 $vm=Set-AzureRmVMOSDisk -VM $vm -Name "CLIENT1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType "StandardLRS"
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
@@ -343,7 +340,7 @@ CLIENT1 重新啟動後，連線至其使用 CORP\\User1 帳戶名稱和密碼�
     
 4. 從 [開始] 畫面中，按一下 [ **Internet Explorer**，並再按一下 [**確定]**。
     
-5. 在 [位址] 列中輸入**http://app1.corp.contoso.com/**，並按 ENTER。您應該會看到 [預設網際網路資訊服務 web] 頁面上的 APP1。
+5. 在 [位址] 列中輸入**http://app1.corp.contoso.com/**，然後按 ENTER 鍵。您應該會看到 [預設網際網路資訊服務 web] 頁面上的 APP1。
     
 6. 從桌面工作列上，按一下 [檔案總管] 圖示。
     
@@ -362,8 +359,8 @@ CLIENT1 重新啟動後，連線至其使用 CORP\\User1 帳戶名稱和密碼�
 > [!TIP]
 > 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
-## <a name="minimizing-the-costs-of-test-environment-virtual-machines-in-azure"></a>最小化的 Azure 中的測試環境虛擬機器時的成本
 <a name="mincost"> </a>
+## <a name="minimizing-the-costs-of-test-environment-virtual-machines-in-azure"></a>最小化的 Azure 中的測試環境虛擬機器時的成本
 
 若要降低執行測試環境的虛擬機器時的成本，您可以執行下列其中一項動作：
   
@@ -383,9 +380,7 @@ Stop-AzureRMVM -ResourceGroupName $rgName -Name "DC1" -Force
 若要確保虛擬機器且運作正常從已停止 (Deallocated) 狀態時啟動所有這些，您應該依下列順序啟動它們：
   
 1. DC1
-    
 2. 在 APP1
-    
 3. CLIENT1
     
 若要啟動順序與 PowerShell 的 windows Azure 虛擬機器，填入資源群組名稱並執行下列命令。
@@ -399,16 +394,8 @@ Start-AzureRMVM -ResourceGroupName $rgName -Name "CLIENT1"
 
 ## <a name="see-also"></a>請參閱
 
-<a name="mincost"> </a>
-
-[Office 365 開發/測試環境](office-365-dev-test-environment.md)
-  
-[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
-  
-[Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
-  
-[Office 365 開發人員/測試環境的進階威脅保護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
-  
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
-
-
+- [Office 365 開發/測試環境](office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的進階威脅保護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
+- [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
