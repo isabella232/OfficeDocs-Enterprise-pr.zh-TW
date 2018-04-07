@@ -1,5 +1,5 @@
 ---
-title: "將標籤套用至 Office 365 中的個人資料"
+title: 將標籤套用至 Office 365 中的個人資料
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
@@ -14,8 +14,8 @@ localization_priority: Priority
 ms.custom:
 - Strat_O365_Enterprise
 - GDPR
-ms.assetid: 
-description: "了解如何使用 Office 標籤做為 GDPR 保護計劃的一部分。"
+ms.assetid: ''
+description: 了解如何使用 Office 標籤做為 GDPR 保護計劃的一部分。
 ms.openlocfilehash: be09afa8efa19d48d6bed2ad818adbcaf2aafcda
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/14/2018
 ---
 # <a name="apply-labels-to-personal-data-in-office-365"></a>將標籤套用至 Office 365 中的個人資料
 
- 如果您使用 Office 標籤做為 GDPR 保護計劃的一部分，請使用本主題。目前可在 Office 365 安全與規範中心和 Azure 資訊保護中建立標籤。隨著時間的推移，這些技術將匯聚成一個統一的標籤和分類體驗，您將能夠達成更多的目標。
+ 如果您使用 Office 標籤做為 GDPR 保護計劃的一部分，請使用本主題。目前可在 Office 365 安全性與合規性中心和 Azure 資訊保護中建立標籤。隨著時間的推移，這些技術將匯聚成一個統一的標籤和分類體驗，而且您將能夠達成更多的目標。
 
 如果您是使用標籤來保護 Office 365 中的個人資料，Microsoft 建議您先建立 Office 標籤。您可以使用進階資料控管，根據敏感資訊或其他準則自動套用標籤。您可以使用 Office 標籤與資料外洩防護搭配來套用保護。您也可以使用標籤與進階電子文件探索和內容搜尋搭配。您很快就可以同時使用標籤和敏感資訊類型與 Cloud App Security 搭配，來監視位於其他 SaaS 應用程式中的個人資料。
 
@@ -36,17 +36,17 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 
 ![Office 365 標籤和 Azure 資訊保護標籤](Media/Apply-labels-to-personal-data-in-Office-365-image1.png)
 
-在此圖中：
+在此圖例中：
 
 -   將 Office 365 標籤用於個人資料，以及 SharePoint Online 和商務用 OneDrive 中高度管制的商業機密檔案。
 
 -   將 Azure 資訊保護 (AIP) 標籤用於高度管制的商業機密檔案、Exchange Online 電子郵件、其他 SaaS 服務中的檔案、內部部署資料中心中的檔案，以及其他雲端提供者中的檔案。
 
--   即將推出：這兩種類型的標籤將匯聚成整合式分類和標記體驗。
+-   即將推出：這兩種類型的標籤將匯聚成統一的分類和標記體驗。
 
 ## <a name="use-office-labels-and-sensitive-information-types-across-microsoft-365-for-information-protection"></a>在整個 Microsoft 365 中使用 Office 標籤和敏感資訊類型以保護資訊
 
-下圖顯示如何在標籤原則、資料外洩防護原則，以及搭配 Cloud App Security 原則使用 Office 標籤和敏感資訊類型。
+下圖顯示如何在標籤原則、資料外洩防護原則，以及搭配雲端 App 安全性原則使用 Office 標籤和敏感資訊類型。
 
 ![Office 標籤和敏感資訊類型](Media/Apply-labels-to-personal-data-in-Office-365-image2.png)
 
@@ -58,12 +58,12 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 <th align="left"><strong>分類元素</strong></th>
 <th align="left"><strong>標籤原則 — 2 個範例</strong></th>
 <th align="left"><strong>資料外洩防護原則 — 2 個範例</strong></th>
-<th align="left"><strong>所有 SaaS 應用程式的 Cloud App Security 原則 — 1 個範例</strong></th>
+<th align="left"><strong>所有 SaaS 應用程式的雲端 App 安全性原則 — 1 個範例</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Office 標籤範例：個人、公用、客戶資料、HR 資料、機密、高度機密</td>
+<td align="left">Office 標籤。範例：個人、公用、客戶資料、HR 資料、機密、高度機密</td>
 <td align="left"><p>自動套用此標籤 . . .</p>
 <p>客戶資料</p>
 <p>. . . 至符合這些敏感資訊類型的文件 . . .</p>
@@ -72,7 +72,7 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 <p>&lt;定義保護&gt;</p>
 <p>. . . 至具有此標籤的文件 . . .</p>
 <p>客戶資料</p></td>
-<td align="left"><p>在任何獲批准的 SaaS 應用程式中具有這些屬性的檔案 . . .</p>
+<td align="left"><p>在任何獲批准的 SaaS App 中具有這些屬性的檔案 . . .</p>
 <p>&lt;預先定義的 PII 屬性或自訂運算式&gt;</p>
 <p>. . . 在組織外共用時發出警示</p></td>
 </tr>
@@ -85,12 +85,12 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 <td align="left"><p>套用此保護 . . .</p>
 <p>&lt;定義保護&gt;</p>
 <p>. . . 至符合這些敏感資訊類型的文件&gt;</p></td>
-<td align="left">附註：Cloud App Security 即將推出的屬性包含 Office 365 敏感資訊類型，以及 Office 365 與 Azure 資訊保護中的統一標籤。</td>
+<td align="left">注意：雲端 App 安全性即將推出的屬性包含 Office 365 敏感資訊類型，以及 Office 365 與 Azure 資訊保護中的統一標籤。</td>
 </tr>
 </tbody>
 </table>
 
-## <a name="prioritize-auto-apply-label-policies"></a>制定自動套用標籤原則的優先順序
+## <a name="prioritize-auto-apply-label-policies"></a>指定自動套用標籤原則的優先順序
 
 對於受到 GDPR 約束的個人資料，Microsoft 建議利用您為環境策劃的敏感資訊類型來自動套用標籤。請務必妥善地設計並測試自動套用標籤原則，以確保發生預期的行為。
 
@@ -114,7 +114,7 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 
 請確定實作標籤的計劃包括：
 
--   制定建立自動套用原則的優先順序。
+-   指定建立自動套用原則的優先順序。
 
 -   在推出標籤供使用者手動套用之前，允許有足夠的時間自動套用這些標籤。最多可能需要 7 天，標籤才會套用至符合條件的所有內容。
 
@@ -149,7 +149,7 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 <td align="left">5</td>
 </tr>
 <tr class="even">
-<td align="left">公用</td>
+<td align="left">公開</td>
 <td align="left">6</td>
 </tr>
 <tr class="odd">
@@ -161,7 +161,7 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 
 ## <a name="create-labels-and-auto-apply-label-policies"></a>建立標籤和自動套用標籤原則
 
-在安全規範中心建立標籤和原則。
+在安全性與合規性中心建立標籤和原則。
 
 <table>
 <thead>
@@ -173,16 +173,16 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 <tbody>
 <tr class="odd">
 <td align="left"><p>將權限授與規範小組的成員。</p></td>
-<td align="left"><p>要建立標籤的規範小組成員需有有使用安全規範中心的權限。請移至安全規範中心的 [權限]，然後修改規範管理員群組的成員。</p>
-<p>請參閱<a href="https://support.office.com/en-ie/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76">讓使用者能夠存取 Office 365 安全規範中心</a></p></td>
+<td align="left"><p>要建立標籤的合規性小組成員需有有使用安全性與合規性中心的權限。請移至安全性與合規性中心的 [權限]，然後修改合規性系統管理員群組的成員。</p>
+<p>請參閱<a href="https://support.office.com/en-ie/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76">讓使用者能夠存取 Office 365 安全性與合規性中心</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>建立 Office 標籤</p></td>
-<td align="left">移至安全規範中心中的 [分類]、選取 [標籤]，然後建立適用於您環境的標籤。</td>
+<td align="left"><p>建立 Office 標籤。</p></td>
+<td align="left">移至安全性與合規性中心中的 [分類]、選擇 [標籤]，然後建立適用於您環境的標籤。</td>
 </tr>
 <tr class="odd">
 <td align="left"><p>建立標籤的自動套用原則。</p></td>
-<td align="left">移至安全規範中心的 [分類]、選擇標籤原則，然後建立自動套用標籤的原則。請務必依優先順序建立這些原則。</td>
+<td align="left">移至安全性與合規性中心的 [分類]、選擇標籤原則，然後建立自動套用標籤的原則。請務必依優先順序建立這些原則。</td>
 </tr>
 </tbody>
 </table>
@@ -191,10 +191,10 @@ Azure 資訊保護標籤可套用至 Exchange Online 中的郵件，而且這些
 
 ![為客戶資料建立及套用標籤](Media/Apply-labels-to-personal-data-in-Office-365-image3.png)
 
-在此圖中：
+在此圖例中：
 
--   建立「客戶資料」標籤。
+-   已建立「客戶資料」標籤。
 
--   列出所需的敏感資訊類型範例：比利時國民編碼、信用卡號碼、克羅埃西亞身分證號碼、芬蘭國民身分證
+-   已列出所需的敏感資訊類型範例：比利時國民編碼、信用卡號碼、克羅埃西亞身分證號碼、芬蘭國民身分證
 
 -   建立自動套用原則可將標籤「客戶資料」指派給任何檔案，其中包含您新增至原則的其中一個敏感資訊類型。

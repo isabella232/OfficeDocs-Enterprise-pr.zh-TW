@@ -1,5 +1,5 @@
 ---
-title: "GDPR 的 Office 365 資訊保護概觀"
+title: GDPR 的 Office 365 資訊保護概觀
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
@@ -14,8 +14,8 @@ localization_priority: Priority
 ms.custom:
 - Strat_O365_Enterprise
 - GDPR
-ms.assetid: 
-description: "取得 GDPR 的 Office 365 資訊保護概觀。了解如何探索、分類、保護及監視個人資料。"
+ms.assetid: ''
+description: 取得 GDPR 的 Office 365 資訊保護概觀。了解如何探索、分類、保護及監視個人資料。
 ms.openlocfilehash: b3af91608d545b221694b9e4a18db07b85d7541a
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
@@ -46,7 +46,7 @@ GDPR 規定個人資料的收集、儲存、處理及共用。在 GDPR 下，個
 
 ![使用合規性管理員來檢視需求及追蹤進度](Media/Overview-image1.png)
 
-如需詳細資訊，請參閱[在服務信任入口網站中使用合規性管理員](https://support.office.com/zh-TW/article/Use-Compliance-Manager-in-the-Service-Trust-Portal-Preview-5756d342-5af9-4496-82e8-4dd50fa39942)。 
+如需詳細資訊，請參閱[使用服務信任入口網站中的合規性管理員](https://support.office.com/zh-TW/article/Use-Compliance-Manager-in-the-Service-Trust-Portal-Preview-5756d342-5af9-4496-82e8-4dd50fa39942)。 
 
 ### <a name="step-2--use-content-search-and-sensitive-information-types-to-find-personal-data"></a>步驟 2 — 使用內容搜尋和敏感資訊類型來尋找個人資料 
 
@@ -58,7 +58,7 @@ GDPR 規定個人資料的收集、儲存、處理及共用。在 GDPR 下，個
 
 ![使用內容搜尋和敏感資訊類型來尋找個人資料](Media/Overview-image2.png)
 
-敏感資訊類型會定義自動化程序如何辨識特定資訊類型，例如健康服務號碼和信用卡號碼。本文包含一組可以用作起點的資訊類型。即將對歐盟國家中的個人資料推出許多更敏感的資訊類型。
+敏感資訊類型會定義自動化程序如何辨識特定資訊類型，例如健康服務號碼和信用卡號碼。本文包含一組可以用作起點的資訊類型。即將對歐盟國家中的個人資料推出許多更敏感性資訊類型。
 
 如需詳細資訊，請參閱[搜尋並找出個人資料](search-for-and-find-personal-data.md)。 
 
@@ -72,15 +72,15 @@ Office 365 中用於資訊保護的部分功能也可以用來保護其他 SaaS 
 
 ### <a name="step-3--decide-if-you-want-to-use-labels-in-addition-to-sensitive-information-types"></a>步驟 3 — 決定除了敏感資訊類型外，是否還要使用標籤
 
-敏感資訊類型是一種分類形式。請參閱[設計個人資料的分類結構描述](architect-a-classification-schema-for-personal-data.md)，以決定是否也要實作標籤。若要套用標籤，請參閱[將標籤套用至 Office 365 中的個人資料](apply-labels-to-personal-data-in-office-365.md)。
+敏感資訊類型是一種分類形式。請參閱[設計個人資料的分類結構描述架構](architect-a-classification-schema-for-personal-data.md)，以決定是否也要實作標籤。若要套用標籤，請參閱[將標籤套用至 Office 365 中的個人資料](apply-labels-to-personal-data-in-office-365.md)。
 
-在圖例中，敏感資訊類型和標籤適用於整個 Office 365。不久以來，您可以使用這些項目與 Cloud App Security 搭配，來尋找其他 SaaS 應用程式 (例如 Box 和 Salesforce) 中的敏感資料。
+在圖例中，敏感資訊類型和標籤適用於整個 Office 365。不久以來，您可以使用這些項目與雲端 App 安全性搭配，來尋找其他 SaaS 應用程式 (例如 Box 和 Salesforce) 中的敏感資料。
 
 ### <a name="step-4--protect-personal-data-in-office-365"></a>步驟 4 — 保護 Office 365 中的個人資料 
 
 保護個人資料從 Office 365 資料外洩防護開始。有數個針對保護個人資料存取而建議的其他功能，包括電子郵件的 Office 365 郵件加密。
 
-這些保護對準特定資料集：
+這些保護能以特定資料集為目標：
 
 -   網站和文件庫層級權限
 
@@ -100,4 +100,4 @@ Office 365 中用於資訊保護的部分功能也可以用來保護其他 SaaS 
 
 ### <a name="step-5--monitor-for-leaks-of-personal-data"></a>步驟 5 — 監視個人資料的外洩
 
-Office 365 資料外洩防護報告可提供監視敏感資料的最詳細層級。您可以設定自動警示，並使用 Office 365 稽核記錄調查洩露。Cloud App Security 可將尋找並監視敏感資料的功能擴充至其他 SaaS 提供者。如需這些工具的詳細資訊，請參閱[監視個人資料的洩露](monitor-for-leaks-of-personal-data.md)。
+Office 365 資料外洩防護報告可提供監視敏感資料的最詳細層級。您可以設定自動警示，並使用 Office 365 稽核記錄調查洩露。雲端 App 安全性可將尋找並監視敏感性資料的功能擴充至其他 SaaS 提供者。如需這些工具的詳細資訊，請參閱[監視個人資料的洩露](monitor-for-leaks-of-personal-data.md)。
