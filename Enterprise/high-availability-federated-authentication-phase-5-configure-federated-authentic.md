@@ -1,5 +1,5 @@
 ---
-title: "高可用性同盟的驗證 Office 365 的階段 5 設定同盟驗證"
+title: 高可用性同盟的驗證 Office 365 的階段 5 設定同盟驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,22 +11,22 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 0f1dbf52-5bff-44cc-a264-1b48641af98f
-description: "摘要： 設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。"
-ms.openlocfilehash: 2c23ffa2e9f033018c5cc1fd016fb4ed76535605
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。
+ms.openlocfilehash: 93e872098b31326de67fb0557354e9f4fc1de9ed
+ms.sourcegitcommit: a337ac253054f571a8304e18e426f74bcd385857
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-office-365"></a>高可用性同盟驗證階段 5： 設定 Office 365 同盟的驗證
 
  **摘要：**設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。
  
-此部署高可用性同盟的驗證 Office 365 Azure 基礎結構服務中的最後階段中，在您取得並安裝的公用憑證授權單位所發出的憑證、 驗證您的設定，然後安裝並執行 Azure ADDirSync 伺服器上的連線。Azure AD 連線設定您的 Office 365 訂閱和您的 Active Directory Federation Services (AD FS) 和同盟驗證的 web 應用程式 proxy 伺服器。
+此部署高可用性同盟的驗證 Office 365 Azure 基礎結構服務中的最後階段中，在您取得並安裝的公用憑證授權單位所發出的憑證、 驗證您的設定，然後安裝並執行 Azure AD連線的目錄同步處理伺服器上。Azure AD 連線設定您的 Office 365 訂閱和您的 Active Directory Federation Services (AD FS) 和同盟驗證的 web 應用程式 proxy 伺服器。
   
 請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。
   
-## <a name="get-a-public-certificate-and-copy-it-to-the-dirsync-server"></a>取得公用憑證並將它複製到 DirSync 伺服器
+## <a name="get-a-public-certificate-and-copy-it-to-the-directory-synchronization-server"></a>取得公用憑證並將它複製到目錄同步處理伺服器
 
 從具有下列內容的公用憑證授權單位取得數位憑證：
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 如需同盟驗證的憑證需求的詳細資訊，請參閱[federation 安裝與設定的必要條件](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites#prerequisites-for-federation-installation-and-configuration)。
   
-當您收到憑證時，請將它複製到 c： 磁碟機的 DirSync 伺服器上的資料夾。例如 SSL.pfx 的檔案名稱和儲存在 c:\\DirSync 伺服器上的 [憑證] 資料夾。
+當您收到憑證時，請將它複製到 c： 磁碟機的目錄同步處理伺服器上的資料夾。例如 SSL.pfx 的檔案名稱和儲存在 c:\\目錄同步處理伺服器上的 [憑證] 資料夾。
   
 ## <a name="verify-your-configuration"></a>確認您的設定
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/09/2018
     
 - 您同盟服務 FQDN 點的私人 IP 位址的內部 Azure 的負載平衡器的 AD FS 伺服器私人的 DNS A 記錄。
     
-- 公用憑證授權單位 isssued 數位憑證合適與 SAN 設為同盟服務的 SSL 連線 FQDN 是 PFX 檔案儲存在 DirSync 伺服器。
+- 公用憑證授權單位 isssued 數位憑證合適與 SAN 設為同盟服務的 SSL 連線 FQDN 是 PFX 檔案儲存在您的目錄同步處理伺服器上。
     
 - 公用憑證授權單位的根憑證安裝在信任的根憑證授權儲存在您的電腦和裝置。
     
@@ -70,9 +70,9 @@ ms.lasthandoff: 02/09/2018
 
 「 Azure AD 連線工具設定 AD FS 伺服器、 web 應用程式 proxy 伺服器及 Office 365 同盟驗證進行這些步驟：
   
-1. 使用具有本機系統管理員權限的網域帳戶建立 DirSync 伺服器的遠端桌面連線。
+1. 使用具有本機系統管理員權限的網域帳戶建立您的目錄同步處理伺服器的遠端桌面連線。
     
-2. 從 DirSync 伺服器的桌面，開啟 Internet Explorer，並移至[https://aka.ms/aadconnect](https://aka.ms/aadconnect)。
+2. 從目錄同步處理伺服器的桌面，開啟 Internet Explorer，並移至[https://aka.ms/aadconnect](https://aka.ms/aadconnect)。
     
 3. 在 [ **Microsoft Azure Active Directory 連線**] 頁面上，按一下 [**下載**] 及 [**執行**。
     

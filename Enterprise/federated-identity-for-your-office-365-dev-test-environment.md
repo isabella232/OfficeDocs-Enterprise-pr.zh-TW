@@ -1,9 +1,9 @@
 ---
-title: "Office 365 開發人員/測試環境的同盟身分識別"
+title: Office 365 開發人員/測試環境的同盟身分識別
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/06/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -16,12 +16,12 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
-description: "摘要： 設定 Office 365 開發人員/測試環境的同盟的驗證。"
-ms.openlocfilehash: 8458e8e11547c14e479a64d037707d5292afcc02
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定 Office 365 開發人員/測試環境的同盟的驗證。
+ms.openlocfilehash: 8841e203587f4582396db172ff5f4626eacbcdc7
+ms.sourcegitcommit: a337ac253054f571a8304e18e426f74bcd385857
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -63,7 +63,7 @@ Office 365 支援同盟身分識別。這表示而非本身執行的認證驗證
   
 ## <a name="phase-1-create-the-simulated-enterprise-office-365-devtest-environment-with-dirsync"></a>階段 1： 建立使用 DirSync 模擬企業版 Office 365 開發人員/測試環境
 
-遵循[DirSync Office 365 開發人員/測試環境](dirsync-for-your-office-365-dev-test-environment.md)中的指示來建立 APP1 DirSync 伺服器與 Office 365 和 Windows Server AD 之間的同步處理的 identity 為模擬企業版 Office 365 開發人員/測試環境在 DC1 帳戶。
+依照指示[目錄同步處理 Office 365 開發人員/測試環境](dirsync-for-your-office-365-dev-test-environment.md)中的使用 DirSync 伺服器 APP1 建立模擬企業版 Office 365 開發人員/測試環境和同步處理 Office 365 之間的身分識別和在 DC1 上的 Windows Server AD 帳戶。
   
 接下來，建立新公用 DNS 網域名稱根據您目前的網域名稱並將其新增至您的 Office 365 訂閱。我們建議使用名稱**testlab。**\<公用網域 >。例如，如果您的部署公用網域名稱是 contoso.com，新增公用網域名稱 testlab.contoso.com。
   
@@ -71,11 +71,11 @@ Office 365 支援同盟身分識別。這表示而非本身執行的認證驗證
   
 以下是您產生的組態。
   
-**圖 2： Office 365 開發人員/測試環境的 DirSync**
+**圖 2： 目錄同步處理 Office 365 開發人員/測試環境**
 
-![具有 DirSync 的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![Office 365 開發人員/測試環境以目錄同步作業](images/be5b37b0-f832-4878-b153-436c31546e21.png)
   
-圖 2 顯示 Office 365 開發人員/測試環境，其中包含 Office 365 CLIENT1、 APP1 與 DC1 虛擬機器在 Azure 虛擬網路的 DirSync。
+圖 2 顯示 Office 365 開發人員/測試環境中，其中包含 Office 365 CLIENT1、 APP1 與 DC1 虛擬機器在 Azure 虛擬網路目錄 synchronizationc。
   
 ## <a name="phase-2-create-the-ad-fs-server"></a>階段 2： 建立 AD FS 伺服器
 
@@ -103,7 +103,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-f79bc2c2?redir=0)以取得包含在本文中的所有 PowerShell 命令的文字檔案。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-f79bc2c2?redir=0)的文字檔案，包含本文中的所有 PowerShell 命令。
   
 下一步] 使用[Azure 入口網站](http://portal.azure.com)連線至 ADFS1 虛擬機器使用 ADFS1 本機系統管理員帳戶名稱和密碼，然後再開啟 [Windows PowerShell 命令提示字元。
   
@@ -112,7 +112,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 接下來，這些命令在 Windows PowerShell 提示字元上 ADFS1 CORP 網域加入 ADFS1 虛擬機器。
   
 ```
-$cred=Get-Credential -UserName "CORP\\User1" -Message "Type the User1 account password."
+$cred=Get-Credential -UserName "CORP\User1" -Message "Type the User1 account password."
 Add-Computer -DomainName corp.contoso.com -Credential $cred
 Restart-Computer
 ```
@@ -164,7 +164,7 @@ Get-AzureRmNetworkSecurityGroup -Name CorpNet -ResourceGroupName $rgName | Add-A
 接下來，這些命令在 Windows PowerShell 提示字元上 PROXY1 CORP 網域加入 PROXY1 虛擬機器。
   
 ```
-$cred=Get-Credential -UserName "CORP\\User1" -Message "Type the User1 account password."
+$cred=Get-Credential -UserName "CORP\User1" -Message "Type the User1 account password."
 Add-Computer -DomainName corp.contoso.com -Credential $cred
 Restart-Computer
 ```
@@ -214,9 +214,9 @@ New-ADUser -SamAccountName ADFS-Service -AccountPassword (read-host "Set user pa
   
 ```
 $fedServiceFQDN="<federation service FQDN>"
-New-SelfSignedCertificate -DnsName $fedServiceFQDN -CertStoreLocation "cert:\\LocalMachine\\My"
-New-Item -path c:\\Certs -type directory
-New-SmbShare -name Certs -path c:\\Certs -changeaccess CORP\\User1
+New-SelfSignedCertificate -DnsName $fedServiceFQDN -CertStoreLocation "cert:\LocalMachine\My"
+New-Item -path c:\Certs -type directory
+New-SmbShare -name Certs -path c:\Certs -changeaccess CORP\User1
 ```
 
 下一步] 以儲存新的自我簽署的憑證的檔案中使用下列步驟。

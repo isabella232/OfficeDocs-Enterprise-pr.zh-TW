@@ -1,9 +1,9 @@
 ---
-title: "高可用性同盟驗證階段 2 設定網域控制站"
+title: 高可用性同盟驗證階段 2 設定網域控制站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/06/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,12 +11,12 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
-description: "摘要： 設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。"
-ms.openlocfilehash: 5e2cc8b5c750b5b2cf48ff0c594a5bd716d5bcf2
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。
+ms.openlocfilehash: 80846025af82810f63087aafd1a3b3a1213212d1
+ms.sourcegitcommit: a337ac253054f571a8304e18e426f74bcd385857
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
@@ -35,13 +35,13 @@ ms.lasthandoff: 02/09/2018
   
 |**項目**|**虛擬機器名稱**|**[圖庫圖像**|**儲存體類型**|**大小下限**|
 |:-----|:-----|:-----|:-----|:-----|
-|1.  <br/> |______________ (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|2.  <br/> |______________ (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|3.  <br/> |______________ (DirSync 伺服器，範例 DS1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|4.  <br/> |______________ (第一個 AD FS 伺服器，範例 ADFS1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|5.  <br/> |______________ (第二個 AD FS 伺服器，範例 ADFS2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|6.  <br/> |______________ (第一個 Web 應用程式 Proxy 伺服器，範例 WEB1)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|7.  <br/> |______________ (第二個 Web 應用程式 Proxy 伺服器，範例 WEB2)  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|1.  <br/> |![](./images/Common_Images/TableLine.png)（第一個網域控制站，範例 DC1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|2.  <br/> |![](./images/Common_Images/TableLine.png)（第二個網域控制站，範例 DC2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|3.  <br/> |![](./images/Common_Images/TableLine.png)（DirSync 伺服器、 範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|4.  <br/> |![](./images/Common_Images/TableLine.png)（第一部 AD FS 伺服器、 範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|5.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 AD FS 伺服器、 範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|6.  <br/> |![](./images/Common_Images/TableLine.png)（第一個 web 應用程式 proxy 伺服器、 範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|7.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 web 應用程式 proxy 伺服器、 範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
    
  **表 M-Azure 中的 Office 365 的高可用性同盟驗證的虛擬機器**
   
