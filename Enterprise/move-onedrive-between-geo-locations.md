@@ -7,13 +7,14 @@ ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
+ms.custom: Strat_SP_gtc
 localization_priority: Normal
 description: 了解如何將 OneDrive 網站移至不同地理位置。
-ms.openlocfilehash: a31f683170fdb83dac90e9d09884c3020d1a47b1
-ms.sourcegitcommit: 3f3d2de6c0c5225156cfba01bc980994cd9ae848
+ms.openlocfilehash: 7ce9106fa7d8d144f0f8935713b4df926a73fb6b
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同地理位置 
 
@@ -76,9 +77,9 @@ OneDrive 服務使用 Azure Blob 儲存空間來儲存內容。儲存 blob 相�
 
 若要排程稍後地理位置移動，使用下列參數中的程序：
 
--   _PreferredMoveBeginDate_ – 可能移動會開始在此指定的時間。
+-   _PreferredMoveBeginDate_ – 可能移動會開始在此指定的時間。必須指定時間的國際標準時間 (UTC)。
 
--   _PreferredMoveEndDate_ – 可能移動會完成此指定的時間、 最佳投入比為基礎。
+-   _PreferredMoveEndDate_ – 可能移動會完成此指定的時間、 最佳投入比為基礎。必須指定時間的國際標準時間 (UTC)。 
 
 ## <a name="cancel-a-onedrive-geo-move"></a>取消 OneDrive 地理位置移動 
 
@@ -97,7 +98,7 @@ _UserPrincipalName_所在之 OneDrive 移動您想要停止之使用者的 UPN�
 <table>
 <thead>
 <tr class="header">
-<th align="left"><strong>Status</strong></th>
+<th align="left"><strong>狀態</strong></th>
 <th align="left"><strong>描述</strong></th>
 </tr>
 </thead>
@@ -135,7 +136,7 @@ _UserPrincipalName_所在之 OneDrive 移動您想要停止之使用者的 UPN�
 
 如果其 OneDrive 移至不同地理位置，OneDrive 的使用者應注意到最少的中斷。除了之外的簡短唯讀狀態移動期間，現有的連結和權限會繼續移動完成之後如預期般運作。
 
-### <a name="onedrive-for-business"></a>商務用 OneDrive
+### <a name="onedrive-for-business"></a>OneDrive for Business
 
 雖然移動正在進行中使用者的 OneDrive 設為唯讀屬性。移動完成之後，將使用者導向至新的地理位置中其 OneDrive 時瀏覽至 OneDrive Office 365 應用程式啟動器或在網頁瀏覽器。
 

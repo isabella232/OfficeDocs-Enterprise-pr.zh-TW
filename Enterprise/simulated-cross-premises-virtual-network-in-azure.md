@@ -1,5 +1,5 @@
 ---
-title: "模擬的跨部署在 Azure 虛擬網路"
+title: 模擬的跨部署在 Azure 虛擬網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -12,15 +12,14 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
-- Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
-description: "摘要： 會建立模擬的跨內部虛擬網路 in Microsoft Azure 為開發人員/測試環境。"
-ms.openlocfilehash: 0889d0c70b6ffb93fc0ebf9c989b68e8a4766126
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 會建立模擬的跨內部虛擬網路 in Microsoft Azure 為開發人員/測試環境。
+ms.openlocfilehash: 41988e8201e896a7c1900b645e6c38357d0bfcd0
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>模擬的跨部署在 Azure 虛擬網路
 

@@ -1,5 +1,5 @@
 ---
-title: "Office 365 和 Dynamics 365 開發/測試環境"
+title: Office 365 和 Dynamics 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,15 +8,17 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365, Strat_O365_Enterprise
-ms.custom: Strat_O365_Enterprise, Ent_TLGs
+ms.collection:
+- Ent_O365
+- Strat_O365_Enterprise
+ms.custom: Ent_TLGs
 ms.assetid: 098c1a1d-83a1-40eb-bbc9-47de7af8bb23
-description: "摘要： 將 Dynamics 365 新增至 Office 365 開發人員/測試環境用於此測試實驗室指南。"
-ms.openlocfilehash: f13cf81f989867e543439e1ccb6ecd7f8ba55cb6
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+description: 摘要： 將 Dynamics 365 新增至 Office 365 開發人員/測試環境用於此測試實驗室指南。
+ms.openlocfilehash: 24f121c9e5f8a25bae61ce4a59b42d528ffbda17
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
 
@@ -56,9 +58,9 @@ ms.lasthandoff: 02/13/2018
   
 ### <a name="sign-up-for-a-dynamics-365-trial-subscription"></a>註冊 Dynamics 365 試用版訂閱
 
-1. 在 [您的桌上型電腦 （輕量型） 使用瀏覽器或從 CLIENT1 （模擬企業） 登入[https://portal.office.com](https://portal.office.com)全域管理員帳戶的認證與 Office 365 入口網站。
+1. 在 [您的桌上型電腦 （輕量型） 使用瀏覽器或從 CLIENT1 （模擬企業） 登入 Office 365 入口網站[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
     
-2. 按一下 [**系統**] 磚。
+2. 按一下 [管理] 磚。
     
 3. 在**Office 系統管理中心**] 索引標籤的 [在左導覽列中，按一下 [**帳務 > 購買服務**。
     
@@ -66,7 +68,7 @@ ms.lasthandoff: 02/13/2018
     
 5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
     
-6. 在 [**順序回條**] 頁面上按一下 [**繼續**]。
+6. 在 [訂單收據] 頁面上，按一下 [繼續]。
     
 > [!NOTE]
 > Dynamics 365 計劃 1 Enterprise Edition 試用訂閱是 30 天。您可以輕鬆地擴充另一個 30 天的軌跡訂閱。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 

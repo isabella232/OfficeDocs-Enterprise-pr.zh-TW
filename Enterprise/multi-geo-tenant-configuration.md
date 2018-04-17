@@ -7,13 +7,14 @@ ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
+ms.custom: Strat_SP_gtc
 localization_priority: Normal
 description: 了解如何設定 OneDrive for Business 多-地理位置。
-ms.openlocfilehash: 4ef31df802eeaedf2eecbdd295d2e359816e4909
-ms.sourcegitcommit: 3f3d2de6c0c5225156cfba01bc980994cd9ae848
+ms.openlocfilehash: 56268acd319684ecb713e674b8accbe311d08dce
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="onedrive-for-business-multi-geo-tenant-configuration"></a>OneDrive for Business 多重地理租用戶組態
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/03/2018
 
 若要使用 OneDrive for Business 多-地理位置，您需要_多個地理位置功能的 Office 365_計劃。若要將此計劃新增至您的租用戶帳戶小組與搭配使用。帳戶小組會與適當的授權專家連線並取得設定您的租用戶。
 
-請注意_Office 365 的多重地理位置功能_規劃使用者層級的服務計劃。您要主控 setellite 位置中每個使用者需要授權。您可以新增更多授權一段時間當您將使用者新增衛星位置中。
+請注意_Office 365 的多重地理位置功能_規劃使用者層級的服務計劃。您要主控衛星位置中每個使用者需要授權。您可以新增更多授權一段時間當您將使用者新增衛星位置中。
 
 一旦_Office 365 的多重地理位置功能_計劃已佈建租用戶、**地理位置**] 索引標籤會變成可用[OneDrive 系統管理中心](https://admin.onedrive.com)。
 
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/03/2018
 
 6. 按一下 [關閉]。
 
-衛星位置的佈建完成之後，您會收到電子郵件確認。當新的地理位置會出現在地圖上 OneDrive 系統管理中心的 [**地理位置**] 索引標籤上的藍色時，您可以繼續設定使用者的偏好的資料位置為該地理位置。 
+佈建可能需要幾個小時從到 72 個小時，視您的租用戶的大小而定。衛星位置的佈建完成之後，您會收到電子郵件確認。當新的地理位置會出現在地圖上 OneDrive 系統管理中心的 [**地理位置**] 索引標籤上的藍色時，您可以繼續設定使用者的偏好的資料位置為該地理位置。 
 
 > [!IMPORTANT]
 > 新的衛星地理位置會設定為預設值。這可讓您設定最適合您的本機規範需求的地理位置。

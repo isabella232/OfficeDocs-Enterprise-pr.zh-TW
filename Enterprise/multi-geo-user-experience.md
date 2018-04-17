@@ -7,13 +7,14 @@ ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
+ms.custom: Strat_SP_gtc
 localization_priority: Normal
 description: 了解在多個地理位置環境中的 SharePoint 和 OneDrive 使用者經驗。
-ms.openlocfilehash: 91837883ef7c970674a500afa4fda9adfafc6d5b
-ms.sourcegitcommit: 3f3d2de6c0c5225156cfba01bc980994cd9ae848
+ms.openlocfilehash: 42e384d3e93ca3f5a06a8ee07a37b10e21477038
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-experience-in-a-multi-geo-environment"></a>在多個地理位置環境中的使用者經驗
 
@@ -55,7 +56,7 @@ Office 365 使用者衛星執行個體中，探索多重地理位置支援，Del
 
 下列的搜尋用戶端可支援：
 
--   商務用 OneDrive
+-   OneDrive for Business
 
 -   Delve
 

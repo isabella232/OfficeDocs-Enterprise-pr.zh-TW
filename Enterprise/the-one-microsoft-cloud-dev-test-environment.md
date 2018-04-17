@@ -1,5 +1,5 @@
 ---
-title: "一個 Microsoft Cloud 開發/測試環境"
+title: 一個 Microsoft Cloud 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -12,15 +12,14 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
-- Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
-description: "摘要： 使用此測試實驗室指南建立包含所有的 Microsoft cloud 方案的開發人員/測試環境。"
-ms.openlocfilehash: 90f93b1050ec0c2b82f4ed42c76413d68b314b7c
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 使用此測試實驗室指南建立包含所有的 Microsoft cloud 方案的開發人員/測試環境。
+ms.openlocfilehash: c1d0e190e6d7e3871cf4289729b53cc0b4b5d04d
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-one-microsoft-cloud-devtest-environment"></a>一個 Microsoft Cloud 開發/測試環境
 
@@ -59,22 +58,22 @@ ms.lasthandoff: 02/14/2018
   
 1. 其中一個瀏覽器與您的桌上型電腦或從 CLIENT1，登入 Office 365 入口網站在[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
     
-2. 按一下 [**系統**] 磚。
+2. 按一下 [管理] 磚。
     
-3. 在**Office 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**帳務 > 購買服務**。
+3. 在瀏覽器的 [Office 系統管理中心] 索引標籤上，按一下左導覽中的 [計費] > [購買服務]。
     
 4. 在 [**購買服務**] 頁面上尋找**企業行動性 + 安全性 E5**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
     
 5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
     
-6. 在 [**順序回條**] 頁面上按一下 [**繼續**]。
+6. 在 [訂單收據] 頁面上，按一下 [繼續]。
     
 > [!NOTE]
 > Enterprise Mobility + Security E5 試用訂閱為 90 天。針對永久開發/測試環境，建立具有少數授權的新付費訂閱。 
   
 接下來，可讓企業行動性 + 安全性 E5 授權的所有使用者帳戶。
   
-1. 在**Office 365 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**使用者 > 作用中使用者**。
+1. 在瀏覽器的 [Office 365 系統管理中心] 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]。
     
 2. 按一下 [您的全域管理員帳戶] 和 [**編輯****產品**授權。
     
@@ -102,7 +101,7 @@ ms.lasthandoff: 02/14/2018
   
 1. 在 [您的桌上型電腦使用瀏覽器或從 CLIENT1，登入 Office 365 入口網站在[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
     
-2. 按一下 [**系統**] 磚。
+2. 按一下 [管理] 磚。
     
 3. 在**Office 系統管理中心**] 索引標籤的 [在左導覽列中，按一下 [**帳務 > 購買服務**。
     
@@ -110,7 +109,7 @@ ms.lasthandoff: 02/14/2018
     
 5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
     
-6. 在 [**順序回條**] 頁面上按一下 [**繼續**]。
+6. 在 [訂單收據] 頁面上，按一下 [繼續]。
     
 > [!NOTE]
 > Dynamics 365 計劃 1 Enterprise Edition 試用訂閱是 30 天。您可以輕鬆地擴充另一個 30 天的軌跡訂閱。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 

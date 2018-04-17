@@ -12,15 +12,14 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
-- Strat_O365_Enterprise
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要： 建立簡化的內部網路為 Microsoft Azure 中的開發人員/測試環境。
-ms.openlocfilehash: b2bd1c7bb2b0cd100326867fc3603b6afb6cd8db
-ms.sourcegitcommit: 1db536d09343bdf6b4eb695ab07890164c047bd3
+ms.openlocfilehash: a874260510b2825fae0f0fd9154912d35e555d19
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="base-configuration-devtest-environment"></a>基本組態開發/測試環境
 
@@ -32,7 +31,7 @@ ms.lasthandoff: 04/06/2018
 
 ![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
-圖 1 中的基本設定開發/測試環境所組成的僅限雲端 Azure 虛擬網路中名為會模擬簡體中文、 私人的內部網路連線至網際網路的 TestLab 依舊套用子網路。包含三個 Azure 虛擬機器：
+圖 1 中的基本設定開發/測試環境所組成的僅限雲端 Azure 虛擬網路中名為會模擬簡體中文、 私人的內部網路連線至網際網路的 TestLab 依舊套用子網路。包含三個 Azure 的虛擬機器執行 WIndows Server 2016：
   
 - DC1 設定為內部網路網域控制站和網域名稱系統 (DNS) 伺服器
     
@@ -241,7 +240,10 @@ Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv
 ## <a name="phase-3-configure-app1"></a>階段 3： 設定 APP1
 
 在 APP1 提供網頁伺服器和共用服務的檔案。
-  
+
+-> [!NOTE]  
+下列]-> [組命令會建立 CLIENT1 執行 Windows Server 2016 Datacenter，可藉的 Azure 訂閱的所有類型。如果您有 Visual Studio 為基礎的 Azure 訂閱，您可以建立 CLIENT1 [Azure 入口網站](https://portal.azure.com)執行 Windows 10。 
+
 若要建立 APP1 Azure 虛擬機器，資源群組的名稱中填滿及本機電腦上執行這些命令在 Azure PowerShell 命令提示字元。
   
 ```
@@ -307,7 +309,7 @@ $nic=New-AzureRMNetworkInterface -Name CLIENT1-NIC -ResourceGroupName $rgName -L
 $vm=New-AzureRMVMConfig -VMName CLIENT1 -VMSize Standard_A1
 $cred=Get-Credential -Message "Type the name and password of the local administrator account for CLIENT1."
 $vm=Set-AzureRMVMOperatingSystem -VM $vm -Windows -ComputerName CLIENT1 -Credential $cred -ProvisionVMAgent -EnableAutoUpdate
-$vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsDesktop -Offer Windows-10 -Skus RS3-Pro -Version "latest"
+$vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version "latest"
 $vm=Add-AzureRMVMNetworkInterface -VM $vm -Id $nic.Id
 $vm=Set-AzureRmVMOSDisk -VM $vm -Name "CLIENT1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType "StandardLRS"
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm

@@ -8,15 +8,18 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365, Strat_O365_Enterprise
-ms.custom: Strat_O365_Enterprise, Ent_TLGs
+ms.collection:
+- Ent_O365
+- Strat_O365_Enterprise
+ms.custom:
+- Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。
-ms.openlocfilehash: 70a316f89078305b52e27348dce8a133d7f6de7d
-ms.sourcegitcommit: 21cc62118b78b76d16ef12e2c3eff2c0c789e3d0
+ms.openlocfilehash: 12de8b5dbd468d292e824e5ed3245fc2141cc65c
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -26,7 +29,7 @@ ms.lasthandoff: 04/05/2018
   
 - 輕量型 Office 365 開發人員/測試環境包含您從主要的電腦存取 Office 365 試用版訂閱。
     
-    當您想要快速示範功能使用此環境。輕量型 Office 365 開發人員/測試環境中，完成階段 2 和 3 的本文。
+    當您想要快速示範功能使用此環境。輕量型 Office 365 開發人員/測試環境中，完成僅階段 2 和 3 的本文。
     
 - 模擬的企業版 Office 365 開發人員/測試環境包含 Office 365 試用版訂閱] 與 [連線至網際網路，則會在 Microsoft Azure 基礎結構服務裝載簡化的組織內部網路。您可以建立 Microsoft 雲端中完全這個設定。
     
@@ -56,13 +59,13 @@ ms.lasthandoff: 04/05/2018
 
 若要啟動您的 Office 365 E5 試用版訂閱，您首先需要虛構公司名稱和新的 Microsoft 帳戶。
   
-1. 我們建議您的公司名稱 Contoso variant 用於您公司的名稱，也就是使用中 Microsoft 範例內容虛構公司，但並非必要。記錄您的虛構公司名稱： ___。
+1. 我們建議您的公司名稱 Contoso variant 用於您公司的名稱，也就是使用中 Microsoft 範例內容虛構公司，但並非必要。記錄您的虛構公司名稱：![](./images/Common_Images/TableLine.png)
     
 2. 若要註冊新的 Microsoft 帳戶，請移至[https://outlook.com](https://outlook.com)及建立新的電子郵件帳戶和地址的帳戶。此帳戶會用於註冊 Office 365。
     
-  - 您新增的帳戶的第一個及最後一個名稱記錄： ___。
+  - 您新增的帳戶的第一個及最後一個名稱記錄：![](./images/Common_Images/TableLine.png)
     
-  - 記錄的新電子郵件帳戶地址這裡： ___@outlook.com
+  - 記錄的新電子郵件帳戶地址這裡： ![](./images/Common_Images/TableLine.png)@outlook.com
     
 ### <a name="sign-up-for-an-office-365-e5-trial-subscription"></a>註冊 Office 365 E5 試用訂閱
 
@@ -105,7 +108,7 @@ Stop-Process -Name Explorer -Force
     
     記錄您在安全的位置中輸入密碼。
     
-    記錄您虛構公司名稱，以作為**組織名稱**，此處參照： ___。
+    記錄您的虛構公司名稱，以作為**組織名稱**，此處參照：![](./images/Common_Images/TableLine.png)
     
 5. 按一下 [**建立我的帳號**。
     
@@ -113,9 +116,9 @@ Stop-Process -Name Explorer -Force
     
 7. 輸入從已接收之的文字郵件驗證碼，然後按 [**下一步**。
     
-8. 登入頁面 URL 記錄以下 （選取和複本）： ___。
+8. 登入頁面 URL 記錄以下 （選取和複本）：![](./images/Common_Images/TableLine.png)
     
-9. 記錄使用者識別碼此處 （選取和複本）： ___.onmicrosoft.com
+9. 記錄使用者識別碼此處 （選取和複本）： ![](./images/Common_Images/TableLine.png)。 onmicrosoft.com
     
     這個值將被稱為**Office 365 全域管理員名稱**。
     
@@ -229,11 +232,11 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 
 記錄使用或其他測試實驗室指南此測試環境中部署這些值：
   
-- Office 365 全域管理員名稱： ___.onmicrosoft.com （從階段 2 的步驟 9）
+- Office 365 全域管理員名稱： ![](./images/Common_Images/TableLine.png)。 onmicrosoft.com （從階段 2 的步驟 9）
     
     也在安全的位置記錄此帳戶的密碼。
     
-- 您的試用版訂閱的組織名稱： ___ （從步驟 4 的階段 2）
+- 您的試用版訂閱的組織名稱： ![](./images/Common_Images/TableLine.png) （從步驟 4 的階段 2）
     
 - 若要列出之帳戶的使用者 2、 3 使用者、 使用者 4 和使用者 5，請在 Windows Azure Active Directory Module for Windows PowerShell 提示字元處執行下列命令：
     
@@ -243,13 +246,13 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 
     記錄的帳戶名稱：
     
-  - 使用者 2 帳戶名稱： user2@___.onmicrosoft.com
+  - 使用者 2 帳戶名稱： 使用者 2 @![](./images/Common_Images/TableLine.png)。 onmicrosoft.com
     
-  - 3 的使用者帳戶名稱： user3@___.onmicrosoft.com
+  - 3 的使用者帳戶名稱： user3 @![](./images/Common_Images/TableLine.png)。 onmicrosoft.com
     
-  - 4 的使用者帳戶名稱： user4@___.onmicrosoft.com
+  - 4 的使用者帳戶名稱： user4 @![](./images/Common_Images/TableLine.png)。 onmicrosoft.com
     
-  - 5 的使用者帳戶名稱： user5@___.onmicrosoft.com
+  - 5 的使用者帳戶名稱： user5 @![](./images/Common_Images/TableLine.png)。 onmicrosoft.com
     
     也在安全的位置記錄這些帳戶的密碼。
     
@@ -259,11 +262,11 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
   Get-SPOSite | Where URL -like "*/sites/*" | Sort URL | Select URL
   ```
 
-  - 實際執行網站 URL：https://______________________________________________.sharepoint.com/sites/production
+  - 實際執行網站 URL： https://![](./images/Common_Images/TableLine.png).sharepoint.com/sites/production
     
-  - 銷售網站 URL：https://______________________________________________.sharepoint.com/sites/sales
+  - 銷售網站 URL： https://![](./images/Common_Images/TableLine.png).sharepoint.com/sites/sales
     
-  - 支援的網站 URL：https://______________________________________________.sharepoint.com/sites/support
+  - 支援的網站 URL： https://![](./images/Common_Images/TableLine.png).sharepoint.com/sites/support
     
 ## <a name="next-steps"></a>後續步驟
 
@@ -295,10 +298,10 @@ Office 365 開發人員/測試環境中使用這些額外的文章：
     
 ## <a name="see-also"></a>請參閱
 
-[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
+- [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
-[Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
+- [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
   
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+ - [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
 

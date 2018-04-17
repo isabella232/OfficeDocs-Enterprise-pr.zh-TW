@@ -1,5 +1,5 @@
 ---
-title: "用於 Office 365 開發/測試環境的進階電子文件探索"
+title: 用於 Office 365 開發/測試環境的進階電子文件探索
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,15 +10,15 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom:
-- TLG-
+- TLG
 - Ent_TLGs
 ms.assetid: d4c49a6f-abfd-4d68-b353-259b4eefb033
-description: "摘要： 設定與示範 Office 365 進階 eDiscovery 與 Office 365 開發人員/測試環境中的範例資料。"
-ms.openlocfilehash: a118ec2753d04afb60d13890b7d5da8c07701721
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定與示範 Office 365 進階 eDiscovery 與 Office 365 開發人員/測試環境中的範例資料。
+ms.openlocfilehash: e850cf7ebab806d8ff51176a3e88077a692c41ef
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="advanced-ediscovery-for-your-office-365-devtest-environment"></a>用於 Office 365 開發/測試環境的進階電子文件探索
 
@@ -44,7 +44,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
 
 在此程序中，您會建立稍後要在進階電子文件探索案例中分析的電子郵件訊息。
   
-1. 開啟 Internet Explorer，並在[https://outlook.com](https://outlook.com)您在階段 2 的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)中建立的 Outlook 帳戶登入]。
+1. 開啟 Internet Explorer，並在登入[https://outlook.com](https://outlook.com)您在階段 2 的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)中建立的 Outlook 帳戶。
     
   - 如果您使用輕量型開發/測試環境，請開啟 Internet Explorer 的私密工作階段，並從本機電腦登入。
     
@@ -76,7 +76,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 14. 按一下右上角中的 [使用者] 圖示] 和 [**登出**。
     
-15. 開啟新的索引標籤並登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 帳戶名稱與您的試用版訂閱 User6 帳戶的密碼。
+15. 開啟 [新增] 索引標籤和登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 帳戶名稱與您的試用版訂閱 User6 帳戶的密碼。
     
 16. 按一下 [ **Office 365 入口網站**] 索引標籤的 [**郵件**]。
     

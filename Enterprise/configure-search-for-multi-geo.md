@@ -7,13 +7,14 @@ ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
+ms.custom: Strat_SP_gtc
 localization_priority: Normal
 description: 了解如何在多個地理位置環境中設定搜尋。
-ms.openlocfilehash: 5aa1e9eb189e00dbed8f575e88046b661341bf52
-ms.sourcegitcommit: 21cc62118b78b76d16ef12e2c3eff2c0c789e3d0
+ms.openlocfilehash: 5cf155c2c5bd2e27a54d84c4d5411e5b1afce568
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-search-for-onedrive-for-business-multi-geo"></a>設定搜尋 onedrive for Business 多重地理位置
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/05/2018
 
 這些用戶端可以從所有地理位置傳回的結果：
 
--   商務用 OneDrive
+-   OneDrive for Business
 
 -   Delve
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/05/2018
 
 -   使用 SharePoint 搜尋 API 的自訂搜尋應用程式
 
-### <a name="onedrive-for-business"></a>商務用 OneDrive
+### <a name="onedrive-for-business"></a>OneDrive for Business
 
 多個地理位置環境已設定，如搜尋 OneDrive 中的使用者會從所有地理位置取得結果。
 

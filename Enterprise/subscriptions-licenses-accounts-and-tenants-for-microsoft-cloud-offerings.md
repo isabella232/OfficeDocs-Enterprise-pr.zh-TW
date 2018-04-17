@@ -1,5 +1,5 @@
 ---
-title: "訂閱、 授權、 帳戶、 及承租人 Microsoft cloud 方案"
+title: 訂閱、 授權、 帳戶、 及承租人 Microsoft cloud 方案
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -12,15 +12,14 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
-- Strat_O365_Enterprise
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
-description: "摘要： 了解 Microsoft cloud 方案跨組織、 訂閱、 授權、 使用者帳戶和租用戶的關係。"
-ms.openlocfilehash: a1bcc040d046e4e5674f16432aeffb0a34b9031b
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 了解 Microsoft cloud 方案跨組織、 訂閱、 授權、 使用者帳戶和租用戶的關係。
+ms.openlocfilehash: ff4854bc66f9a500715bbcd2da696b9a4519aa82
+ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>訂閱、 授權、 帳戶、 及承租人 Microsoft cloud 方案
 
@@ -160,7 +159,7 @@ Office 365 系統管理中心會將新的訂閱 saas 和型雲端版方案的組
   
 若要為您的 Office 365 訂閱新增 Azure AD 租用戶的相同組織與 Azure 訂閱：
   
-1. Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com)) 與您的 Office 365 全域管理員帳戶登入。
+1. 登入 Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com)) 與您的 Office 365 全域管理員帳戶。
     
 2. 在左導覽列中，[**訂閱**，和 [**新增]**。
     
