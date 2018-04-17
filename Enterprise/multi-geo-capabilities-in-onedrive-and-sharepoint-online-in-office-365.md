@@ -3,7 +3,7 @@ title: OneDrive 和 Office 365 中的 SharePoint Online 中的多個地理位置
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
-ms.date: 4/3/2018
+ms.date: 4/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,15 +11,15 @@ ms.custom: Strat_SP_gtc
 localization_priority: Normal
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
 description: 展開您的 Office 365 平台服務來使用 OneDrive 和 SharePoint Online 中的多個地理位置功能的多個地理區域。
-ms.openlocfilehash: 2c5de533aaaace68e51b747cd62a53b9572bcaec
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 3f72158fe05aadfe8a08a5520bf65cd2d0aaa1c6
+ms.sourcegitcommit: a81d08c7e8771cb2c232435971e3169d4f7428dc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365"></a>OneDrive 和 Office 365 中的 SharePoint Online 中的多個地理位置功能
 
-OneDrive 和 SharePoint Online 中的多個地理位置功能，您的組織可以依序展開 [其 Office 365 平台服務多個地理區域 （英文） 和/或國家/地區內您現有的租用戶。此功能目前處於預覽。到達給 Microsoft 帳戶小組才能註冊多 National 公司 OneDrive 多重地理 preview。
+OneDrive 和 SharePoint Online 中的多個地理位置功能，您的組織可以依序展開 [其 Office 365 平台服務多個地理區域 （英文） 和/或國家/地區內您現有的租用戶。到達給您的 Microsoft 帳戶小組才能註冊多 National 公司 OneDrive for Business 多-地理位置。
   
 使用 OneDrive 多-地理位置，您可以佈建靜態資料儲存在您已選擇要符合資料 residency 需求的地理位置和同時解除鎖定您通用 roll 超出現代產能體驗到您的人力。
   
