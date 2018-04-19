@@ -3,7 +3,7 @@ title: Microsoft 365 Enterprise 開發人員/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,11 +15,11 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
 description: 摘要： 使用此測試實驗室指南建立開發/測試環境包含 Office 365 E5、 企業行動性 + 安全性 （EMS） E5 及執行 Windows 10 企業的電腦。
-ms.openlocfilehash: 47557b7d7bdb09e2ce2731a17d6e4b35ddcd063d
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 9ef1c13d7ae194ff4ba31abaf379529220ffa14f
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 Enterprise 開發人員/測試環境
 
@@ -34,6 +34,9 @@ ms.lasthandoff: 04/16/2018
 **圖 1： Office 365 E5 訂閱具有其 Azure Active Directory (AD) 租用戶和使用者帳戶**
 
 ![Microsoft 365 企業版 開發/測試環境的階段 1](images/65bb027b-fb59-46eb-aec2-38c0af425168.png)
+
+> [!NOTE]
+> Office 365 E5 試用訂閱是 30 天，可輕鬆地延伸到 60 天。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 
   
 ## <a name="phase-2-add-ems"></a>階段 2： 新增 EMS
 
@@ -66,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 開發/測試環境現在有：
   
-- Office 365 E5 Enterprise 和 EMS 試用訂閱會與您的使用者帳戶清單共用相同的組織和相同的 Azure AD 租用戶。
+- Office 365 E5 Enterprise 和 EMS E5 試用版訂閱共用相同的 Azure AD 租用戶時您的使用者帳戶的清單。
 - 使用 Office 365 E5 和 EMS E5 啟用所有適當的使用者帳戶 （只是將全域管理員或所有五個使用者帳戶）。
     
 圖 2 顯示您所產生的設定，會新增 EMS。
@@ -201,8 +204,9 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
     
 - [設定和測試進階威脅保護](https://technet.microsoft.com/library/mt490479.aspx)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>概念
 
 - [Microsoft 365 企業版文件](https://docs.microsoft.com/microsoft-365-enterprise/)
 - [部署 Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise)
 - [一個 Microsoft Cloud 開發/測試環境](the-one-microsoft-cloud-dev-test-environment.md)
+- [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)

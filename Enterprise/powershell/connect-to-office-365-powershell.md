@@ -3,7 +3,7 @@ title: 連線至 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/12/2018
+ms.date: 04/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要：使用 Office 365 PowerShell 連線到您的 Office 365 組織，以從命令列執行 Office 365 系統管理中心工作。
-ms.openlocfilehash: 95d1e5717d3fec7f0d3102beb65eebaef28bd6cf
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 71b8c8d61a914fa7fd036fadb7e17ca3f66cd639
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -27,7 +27,6 @@ ms.lasthandoff: 04/16/2018
   
 Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 365 PowerShell 是包含三個步驟的簡單程序，您可以在其中安裝必要的軟體、執行必要的軟體，然後連線至您的 Office 365 組織。 
 
-請注意，這些連線指示與 [Azure ActiveDirectory (MSOnline)](https://go.microsoft.com/fwlink/p/?LinkId=528113) 主題中的指示相同。
   
 > [!TIP]
 > **第一次使用 PowerShell？**請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/en-us/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
@@ -120,15 +119,15 @@ Connect-MsolService
     
 - **如果您收到連線錯誤，請參閱本主題：** [「Connect-MsolService：擲回類型例外狀況」錯誤](https://go.microsoft.com/fwlink/p/?LinkId=532377)。
     
-## <a name="connect-with-the-azure-active-directory-v2-powershell-module"></a>與 Azure Active Directory V2 PowerShell 模組連接
+## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組的連線
 <a name="ConnectV2"> </a>
 
-在 Azure Active Directory V2 PowerShell 模組中，命令的 Cmdlet 名稱會包含 "AzureAD"。
+Azure Active Directory PowerShell for 圖模組中的命令及其指令程式名稱中有"AzureAD"。
 
-如需要在 Azure Active Directory V2 PowerShell 模組中的新 cmdlet 的程序，使用下列步驟來安裝此模組，並連線至您的 Office 365 訂閱。
+如圖模組的需要在 Azure Active Directory PowerShell 中的新 cmdlet 的程序，使用下列步驟來安裝此模組，並連線至您的 Office 365 訂閱。
 
 >[!Note]
->請參閱[Azure Active Directory V2 PowerShell 模組](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)的不同版本的 Microsoft Windows 支援的相關資訊。
+>請參閱[Azure Active Directory PowerShell 圖模組的](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)不同版本的 Microsoft Windows 支援的相關資訊。
 >
 
 ### <a name="step-1-install-required-software"></a>步驟 1：安裝必要的軟體
@@ -168,7 +167,7 @@ Connect-AzureAD
     
 遵循 [Azure Active Directory PowerShell] 對話方塊中的指示，提供其他驗證資訊 (例如驗證碼)，然後按一下 [登入]。
     
-連線之後，您可以對 [Azure Active Directory V2 PowerShell 模組](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)使用新的 Cmdlet。
+連接之後，您可以使用的新 cmdlet 的[Azure Active Directory PowerShell 圖模組的](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)。
   
 ## <a name="see-also"></a>另請參閱
 

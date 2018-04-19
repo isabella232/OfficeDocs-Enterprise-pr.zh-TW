@@ -3,7 +3,7 @@ title: 適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構�
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/11/2017
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 description: 摘要： 取得 IT 海報說明架構模型、 部署及 SharePoint、 Exchange、 Skype for Business 和 Lync 的平台選項。
-ms.openlocfilehash: be889a6d16dbe9c7ac4efb21174ee720bf200714
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: ac3ba3f8a0786ec28c9aa6099f288811802bd92d
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/16/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Office 365 模型中的多個地理位置 OneDrive](images/c6c1b7cd-7833-46fb-9eec-c12150c260d9.png)          ](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.pdf) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.pdf)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.vsdx) <br/> | 此模型是在 Office 365，仍在私人 preview 中的多個地理位置 OneDrive 的一個頁面概觀。此模型包含：<br/><br/> -優點 <br/> -部署步驟 <br/> -設定範例 <br/><br/>  在 Office 365 的 OneDrive 的多個地理位置 Preview 的相關資訊，請按一下[這裡](https://aka.ms/onedrivemultigeo)。  <br/> |
+|[![Office 365 模型中的多個地理位置 OneDrive](images/c6c1b7cd-7833-46fb-9eec-c12150c260d9.png)          ](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.pdf) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.pdf)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](http://download.microsoft.com/download/0/5/9/0594634F-7893-4201-938A-C2FF2F21B655/Multi-Geo-ODB.vsdx) <br/> | 此海報 （英文） 是 Office 365，目前處於預覽中的多個地理位置 OneDrive 一個頁面簡介。此模型包含：<br/><br/> -優點 <br/> -部署步驟 <br/> -設定範例 <br/><br/>  在 Office 365 的 OneDrive 的多個地理位置 Preview 的相關資訊，請按一下[這裡](https://aka.ms/onedrivemultigeo)。  <br/> |
    
 ### <a name="sharepoint-server-2016-databases"></a>SharePoint Server 2016 資料庫
 <a name="SP2016_Databases"> </a>
@@ -167,7 +167,7 @@ ms.lasthandoff: 04/16/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![在 Azure 中使用 SharePoint 的網際網路網站的影像](images/MS_AZ_SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報概述重要的設計活動和建議的網際網路 Azure 中的網站架構選項。此海報可存取的文字版本，請參閱 ＜[存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagraminternet-sites-in-microsoft-azure-for-sharepoint-2013.md)。<br/><br/> 如需詳細資訊，請參閱下列文件：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![在 Azure 中使用 SharePoint 的網際網路網站的影像](images/MS_AZ_SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報概述重要的設計活動和建議的網際網路 Azure 中的網站架構選項。此海報可存取的文字版本，請參閱 ＜[存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagraminternet-sites-in-microsoft-azure-for-sharepoint-2013.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 ### <a name="design-sample-internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>設計範例：Microsoft Azure 中的 SharePoint 2013 網際網路網站
 <a name="DesignSampleInternetSites"> </a>
@@ -176,7 +176,7 @@ ms.lasthandoff: 04/16/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![圖像的設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](images/MS_AZ_InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |使用此設計範例為起點網際網路對向網站架構在 Azure 中使用 SharePoint Server 2013。此海報可存取的文字版本，請參閱 ＜[存取圖表-設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagramdesign-sample-internet-sites-in-microsoft-azure-for-sharepoint.md)。<br/><br/> 如需詳細資訊，請參閱下列文件：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![圖像的設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](images/MS_AZ_InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |使用此設計範例為起點網際網路對向網站架構在 Azure 中使用 SharePoint Server 2013。此海報可存取的文字版本，請參閱 ＜[存取圖表-設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站](accessible-diagramdesign-sample-internet-sites-in-microsoft-azure-for-sharepoint.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 ### <a name="sharepoint-disaster-recovery-to-microsoft-azure"></a>對於 Microsoft Azure 的 SharePoint 嚴重損壞修復
 <a name="sharepoint_recovery_Azure"> </a>
@@ -185,9 +185,9 @@ ms.lasthandoff: 04/16/2018
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Azure 的 SharePoint 災害復原程序](images/SP_DR_Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報說明 Azure 中的災害復原環境的架構原則。此海報可存取的文字版本，請參閱 ＜[存取圖表-至 Microsoft Azure 的 SharePoint 災害復原](accessible-diagramsharepoint-disaster-recovery-to-microsoft-azure.md)。<br/><br/> 如需詳細資訊，請參閱下列文件：  <br/><br/> - [SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![Azure 的 SharePoint 災害復原程序](images/SP_DR_Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報說明 Azure 中的災害復原環境的架構原則。此海報可存取的文字版本，請參閱 ＜[存取圖表-至 Microsoft Azure 的 SharePoint 災害復原](accessible-diagramsharepoint-disaster-recovery-to-microsoft-azure.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure Architectures for SharePoint 2013](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>概念
 
 <a name="Lync2013_Options"> </a>
 

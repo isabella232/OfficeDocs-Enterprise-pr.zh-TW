@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: 摘要： 部署中要同步處理您的內部部署目錄與 Office 365 訂閱的 Azure AD 租用戶之間的帳戶 Azure 虛擬機器上的 Azure AD 連線。
-ms.openlocfilehash: af0c837ead0ddfce31d7f3635f3283f118d26dca
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 31a72d027acd274c9908a7e63e83843bce9cec71
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="deploy-office-365-directory-synchronization-in-microsoft-azure"></a>部署 Microsoft Azure 中的 Office 365 目錄同步作業
 
@@ -105,7 +105,7 @@ Azure Active Directory (AD) 連線 （前身為目錄同步作業工具、 目�
     
 - 在內部部署網路上會有網域控制站 和 DNS 伺服器。
     
-- Azure AD 連線執行而不是單一登入的密碼雜湊同步處理。您沒有部署 Active Directory Federation Services (AD FS) 基礎結構。若要深入了解密碼雜湊同步處理與單一登入選項，請參閱[決定要使用哪些目錄整合案例](https://go.microsoft.com/fwlink/p/?LinkId=393094)。
+- Azure AD 連線執行而不是單一登入的密碼雜湊同步處理。您沒有部署 Active Directory Federation Services (AD FS) 基礎結構。若要深入了解密碼雜湊同步處理與單一登入選項，請參閱[選擇 Azure Active Directory 混合式身分識別解決方案正確的驗證方法](http://aka.ms/auth-options)。
     
 在您的環境中部署此解決方案時，您可能會考慮的其他設計選擇。其中包含下列各項：
   
@@ -196,7 +196,7 @@ Azure AD Connect 會從內部部署 Windows Server AD 新增帳戶至您的 Offi
     
 7. 針對其他使用者請回到步驟 3。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>概念
 
 <a name="DeploymentRoadmap"> </a>
 

@@ -3,7 +3,7 @@ title: Office 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/04/2018
+ms.date: 04/11/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,11 +15,11 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要： 使用此測試實驗室指南建立評估或開發人員/測試的 Office 365 試用版訂閱。
-ms.openlocfilehash: 12de8b5dbd468d292e824e5ed3245fc2141cc65c
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 61c1fc5a997eaa0a524d49e7806fc8bb102ee281
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
 您將需要 Azure 訂閱。您可以使用[Azure 免費試用版](https://azure.microsoft.com/pricing/free-trial/)這個設定。如果您有 MSDN 或 Visual Studio 訂閱，請參閱[Visual Studio 訂閱者的每月 Azure 信用](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)。
   
-以下是所產生的設定。
+以下是所產生的組態。
   
 ![Azure 基底組態開發/測試環境](images/63108214-f716-46ae-9974-072ff15b44a2.png)
   
@@ -71,22 +71,9 @@ ms.lasthandoff: 04/16/2018
 
 1. 輕量型 Office 365 開發人員/測試環境中，開啟您電腦的網際網路瀏覽器，並移至[https://aka.ms/e5trial](https://aka.ms/e5trial)。 
     
-    模擬企業版 Office 365 開發人員/測試環境中：
-    
-  - 從[Azure 入口網站](https://portal.azure.com)連線到與公司 CLIENT1\\User1 帳戶。
-    
-  - 開啟系統管理員層級 Windows PowerShell 命令提示字元處，並再執行下列命令：
-    
-  ```
-  Set-ItemProperty -Path "HKLM:\\SOFTWARE\\Microsoft\\Active Setup\\Installed Components\\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}" -Name "IsInstalled" -Value 0
-Set-ItemProperty -Path "HKLM:\\SOFTWARE\\Microsoft\\Active Setup\\Installed Components\\{A509B1A8-37EF-4b3f-8CFC-4F3A74704073}" -Name "IsInstalled" -Value 0
-Stop-Process -Name Explorer -Force
-  ```
+    模擬的企業版 Office 365 開發人員/測試環境中，連線至 CLIENT1 使用 CORP\User1 帳戶從 Azure 入口網站。
 
-    > [!TIP]
-    > 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34)以取得包含在本文中的所有 PowerShell 命令的文字檔案。
-  
-  - 從 [開始] 畫面中，按一下 [ **Internet Explorer** ，並移至[https://aka.ms/e5trial](https://aka.ms/e5trial)。
+    從 [開始] 畫面中，執行 [Microsoft Edge 並移至[https://aka.ms/e5trial](https://aka.ms/e5trial)。
     
 2. 在 [**歡迎使用，讓我們知道您取得**] 頁面上指定：
     
@@ -161,6 +148,8 @@ $licAssignment= $orgName + ":ENTERPRISEPREMIUM"
 $userName= "user2@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "User 2" -FirstName User -LastName 2 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
 ```
+> [!TIP]
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34)以取得包含在本文中的所有 PowerShell 命令的文字檔案。
 
 從**New-msoluser**命令顯示，記下所產生的使用者 2 帳戶的密碼並將其記錄在安全的位置。
   
@@ -296,12 +285,12 @@ Office 365 開發人員/測試環境中使用這些額外的文章：
     
 - [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>概念
 
 - [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
 - [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
   
- - [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+- [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
 

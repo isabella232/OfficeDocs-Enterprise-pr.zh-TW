@@ -3,7 +3,7 @@ title: 在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/10/2018
+ms.date: 04/17/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,11 +16,11 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 連線至單一 Windows PowerShell 視窗中的所有 Office 365 服務的 Windows PowerShell。
-ms.openlocfilehash: ffa603ec50c95f5800315eee07b4d01e058852f3
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: b48caf9ab75b775995b9839325832c798da4d331
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
@@ -57,10 +57,9 @@ ms.lasthandoff: 04/16/2018
     
     您需要用於 64 位元版本的 Windows 因為 Skype 的需求而商務線上模組及其中一個 Office 365 模組。
     
-- 您必須安裝所需的 Office 365、 SharePoint Online 和 Skype 的商務 Online 模組：
+- 您需要安裝所需的 Azure AD 模組 SharePoint Online 和 Skype 的商務 Online：
     
-   - [Microsoft Online Services 登入小幫手，適用於 IT 專業人員 RTW](https://go.microsoft.com/fwlink/p/?LinkId=286152)
-   - Windows Azure Active Directory Module for Windows PowerShell （64 位元版本） 具有較高的 PowerShell 命令提示字元處**安裝模組 MSOnline**命令。
+   - [Azure Active Directory V2](connect-to-office-365-powershell.md#ConnectV2)
    - [SharePoint Online 管理命令介面](https://go.microsoft.com/fwlink/p/?LinkId=255251)
    - [Skype Online，企業版 Windows PowerShell 模組](https://go.microsoft.com/fwlink/p/?LinkId=532439)
     
@@ -83,11 +82,10 @@ ms.lasthandoff: 04/16/2018
   $credential = Get-Credential
   ```
 
-3. 執行下列命令以連線至 Office 365。
+3. 執行此命令以連線至 Azure Active Directory (AD)。
     
   ```
-  Import-Module MsOnline
-  Connect-MsolService -Credential $credential
+   Connect-AzureAD -Credential $credential
   ```
 
 4. 執行下列命令以連接至 SharePoint Online。取代_\<domainhost >_網域的實際值。例如，用於`litwareinc.onmicrosoft.com`、 _ \<domainhost >_值是`litwareinc`。
@@ -124,8 +122,7 @@ ms.lasthandoff: 04/16/2018
 ```
 $domainHost="<domain host name, such as litware for litwareinc.onmicrosoft.com>"
 $credential = Get-Credential
-Import-Module MsOnline
-Connect-MsolService -Credential $credential
+Connect-AzureAD -Credential $credential
 Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
 Connect-SPOService -Url https://$domainHost-admin.sharepoint.com -credential $credential
 Import-Module SkypeOnlineConnector
@@ -151,10 +148,7 @@ Remove-PSSession $sfboSession ; Remove-PSSession $exchangeSession ; Remove-PSSes
 $acctName="<UPN of a global administrator account>"
 $domainHost="<domain host name, such as litware for litwareinc.onmicrosoft.com>"
 #Azure Active Directory
-#If you are running Office 365 commands that contain "AzureAd" in their name, use this command:
 Connect-AzureAD
-#If you are running Office 365 commands that contain "Msol" in their name, comment the preceding command and un-comment the following command:
-#Connect-MsolService
 #SharePoint Online
 Connect-SPOService -Url https://$domainHost-admin.sharepoint.com
 #Skype for Business Online
@@ -176,8 +170,7 @@ Exchange Online 和安全性&amp;規範中心，請參閱下列主題使用多�
 
 ## <a name="see-also"></a>另請參閱
 
-- [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
-- [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+- [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
 - [使用 Windows PowerShell 在 Office 365 中建立報告](use-windows-powershell-to-create-reports-in-office-365.md)
