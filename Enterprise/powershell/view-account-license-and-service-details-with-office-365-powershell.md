@@ -1,9 +1,9 @@
 ---
-title: "使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料"
+title: 使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/19/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Other
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
-description: "說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。"
-ms.openlocfilehash: 69784b43e6e2b24f776d07a937877e5ae0c74888
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。
+ms.openlocfilehash: 5286a581a67b39d5d5ca921b998d6ea14b3ff50f
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="view-account-license-and-service-details-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料
 
@@ -44,8 +44,8 @@ ms.lasthandoff: 02/14/2018
     
 - 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _All_ 參數，則只會傳回前 500 個帳戶。
     
-## <a name="the-short-version-instructions-without-explanations"></a>簡短版本 (不含說明的指示)
 <a name="ShortVersion"> </a>
+## <a name="the-short-version-instructions-without-explanations"></a>簡短版本 (不含說明的指示)
 
 若要檢視所有使用者有權存取 Office 365 PowerShell 服務，請使用下列語法：
   
@@ -89,8 +89,8 @@ Get-MsolUser -All | where {$_.isLicensed -eq $true -and $_.Licenses[0].ServiceSt
 Get-MsolUser -All | where {$_.isLicensed -eq $true -and $_.Licenses[0].ServiceStatus[5].ProvisioningStatus -eq "Disabled" -and $_.Licenses[0].ServiceStatus[8].ProvisioningStatus -eq "Disabled"}
 ```
 
-## <a name="the-long-version-instructions-with-detailed-explanations"></a>冗長版本 (包含詳細說明的指示)
 <a name="LongVersion"> </a>
+## <a name="the-long-version-instructions-with-detailed-explanations"></a>冗長版本 (包含詳細說明的指示)
 
 ### <a name="find-the-office-365-powershell-services-that-a-user-has-access-to"></a>尋找 Office 365 PowerShell 服務使用者有權存取
 
@@ -124,7 +124,7 @@ System.Runtime... Microsoft.On...  litwarein... {Microsoft.Online.A...
 
 然後藉由展開**ServiceStatus**屬性可以收到更多資訊：
   
-|服務計劃 * * *|描述 * * *|
+|服務計劃 * * *|****Description****|
 |:-----|:-----|
 | `SWAY` <br/> |Sway  <br/> |
 | `TEAMS1` <br/> |Microsoft Teams  <br/> |
@@ -162,7 +162,7 @@ EXCHANGE_S_ENTERPRISE             Success
 
 與我們也看看一下表格，這些詭異命名服務計畫確實代表什麼：
   
-|服務計劃 * * *|描述 * * *|
+|服務計劃 * * *|****Description****|
 |:-----|:-----|
 | `SWAY` <br/> |Sway  <br/> |
 | `TEAMS1` <br/> |Microsoft Teams  <br/> |
@@ -190,7 +190,7 @@ EXCHANGE_S_ENTERPRISE             Success
   
 我們已希望希望有人會。若要回答這個問題，請檢閱我們先看文章[檢視授權和 services 與 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)中的我們唯一可用的授權方案的服務的表格`litwareinc:ENTERPRISEPACK`：
   
-|服務計劃 * * *|描述 * * *|
+|服務計劃 * * *|****Description****|
 |:-----|:-----|
 | `SWAY` <br/> |Sway  <br/> |
 | `TEAMS1` <br/> |Microsoft Teams  <br/> |
@@ -282,17 +282,21 @@ Get-MsolUser | Where-Object {$_.isLicensed -eq $true -and $_.Licenses.ServiceSta
   
 它會當然，是為什麼我們有 Windows PowerShell： Windows PowerShell 協助讓您免於面對那樣既繁瑣又耗時的工作。
   
-我們活躍於它，以下是用於檢視服務資訊的最終命令：
+以下是命令的由其授權和 ServiceStatus 索引 Office 365 E5 訂閱所依照檢視指定的一組服務的服務資訊的範例：
   
 ```
-Get-MsolUser | Select-Object DisplayName, @{Name="Sway";Expression={$_.Licenses[0].ServiceStatus[0].ProvisioningStatus}}, @{Name="MDM";Expression={$_.Licenses[0].ServiceStatus[1].ProvisioningStatus}}, @{Name="Yammer";Expression={$_.Licenses[0].ServiceStatus[2].ProvisioningStatus}}, @{Name="AD RMS";Expression={$_.Licenses[0].ServiceStatus[3].ProvisioningStatus}}, @{Name="OfficePro";Expression={$_.Licenses[0].ServiceStatus[4].ProvisioningStatus}}, @{Name="Skype";Expression={$_.Licenses[0].ServiceStatus[5].ProvisioningStatus}}, @{Name="OfficeWeb";Expression={$_.Licenses[0].ServiceStatus[6].ProvisioningStatus}}, @{Name="SharePoint";Expression={$_.Licenses[0].ServiceStatus[7].ProvisioningStatus}}, @{Name="Exchange";Expression={$_.Licenses[0].ServiceStatus[8].ProvisioningStatus}} | ConvertTo-Html > "C:\\My Documents\\Service Info.html"
+Get-MsolUser | Select-Object DisplayName, @{Name="Sway";Expression={$_.Licenses[0].ServiceStatus[12].ProvisioningStatus}}, @{Name="Teams";Expression={$_.Licenses[0].ServiceStatus[7].ProvisioningStatus}}, @{Name="Yammer";Expression={$_.Licenses[0].ServiceStatus[20].ProvisioningStatus}}, @{Name="AD RMS";Expression={$_.Licenses[0].ServiceStatus[19].ProvisioningStatus}}, @{Name="OfficePro";Expression={$_.Licenses[0].ServiceStatus[21].ProvisioningStatus}}, @{Name="Skype";Expression={$_.Licenses[0].ServiceStatus[22].ProvisioningStatus}}, @{Name="SharePoint";Expression={$_.Licenses[0].ServiceStatus[24].ProvisioningStatus}}, @{Name="Exchange";Expression={$_.Licenses[0].ServiceStatus[23].ProvisioningStatus}} | ConvertTo-CSV > "C:\Service Info.csv"
 ```
 
-沒錯，是非常瘋狂尋找命令。但是它會建立 CSV 檔案顯示所有使用者及所有其服務狀態。
+此命令會建立 CSV 檔案顯示的所有使用者與指定之設定的服務 （小組、 Yammer、 AD RMS、 OfficePro、 Skype、 SharePoint 及 Exchange） 其服務狀態。
+
+>[!Note]
+>您可以從訂閱中取得的服務清單`(Get-MsolUser -UserPrincipalName <user account UPN>).Licenses[<LicenseIndexNumber>].ServiceStatus`命令。在輸出中開始編號服務索引 0。以上的命令只是一個範例。服務的索引編號可以隨著時間變更。
+>
 
   
-## <a name="see-also"></a>另請參閱
 <a name="SeeAlso"> </a>
+## <a name="see-also"></a>另請參閱
 
 請參閱下列有關透過 Office 365 PowerShell 管理使用者的其他主題：
   

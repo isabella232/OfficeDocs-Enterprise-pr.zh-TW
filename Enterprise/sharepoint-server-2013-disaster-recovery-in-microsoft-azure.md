@@ -12,19 +12,18 @@ ms.collection: Ent_O365
 ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: 摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。
-ms.openlocfilehash: 1e8f067954de19c374688220be439fe1a56089f7
-ms.sourcegitcommit: 63e2844daa2863dddcd84819966a708c434e8580
+ms.openlocfilehash: 499b296040eaf02bd679ee422429f08ed669ba85
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
 
  **摘要：**使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。
 
  **觀賞 SharePoint Server 2013 嚴重損壞修復概觀影片**
-<iframe src="//videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=1b73ec8f-29bd-44eb-aa3a-f7932784bfd9&AutoPlayVideo=false&height=415&width=740" frameborder= "0" marginwidth= "0" marginheight= "0" scrolling= "no" allowfullscreen= "" style="width: 740px; height: 415px;"></iframe>
-
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/1b73ec8f-29bd-44eb-aa3a-f7932784bfd9?autoplay=false]
   
  發生災害事件 SharePoint 內部部署環境，您最高的優先順序時若要取得執行一次迅速系統。與 SharePoint 的嚴重損壞修復時更快速且更容易必須已在執行 Microsoft Azure 中的備份環境。本影片說明 SharePoint 暖容錯移轉環境的主要概念及補充本文中提供的完整詳細資料。
   
@@ -193,9 +192,9 @@ SQL Server 記錄傳送與分散式檔案系統複寫 (DFSR) 用於將資料庫�
     
 - 第四層是資料庫層。記錄傳送用來將記錄從內部部署環境中的次要資料庫伺服器複製至相同的環境中的檔案共用。
     
-- DFSR 會將檔案從內部部署環境中的檔案共用複製到 Azure 環境中的檔案共用。
+- DFSR 會將檔案從內部部署環境中的檔案共用複製至 Azure 環境中的檔案共用。
     
-- 記錄傳送會重新執行至復原環境中的 SQL Server AlwaysOn 可用性群組的主要複本 Azure 環境中的記錄從檔案共用。
+- 記錄傳送會將記錄從 Azure 環境中的檔案共用重新執行至復原環境的 SQL Server AlwaysOn 可用性群組中的主要複本。
     
 ### <a name="cold-standby-environments"></a>冷待命環境
 
@@ -460,7 +459,7 @@ restore database WSS_Content with recovery
 
 |**記錄傳送資料庫還原這些服務**|**這些服務已在資料庫，但建議您在不含還原其資料庫啟動這些服務**|**這些服務不資料儲存在資料庫 ；容錯移轉後啟動這些服務**|
 |:-----|:-----|:-----|
-| Machine Translation Service <br/>  Managed Metadata Service <br/>  Secure Store Service <br/>  使用者設定檔。（僅限設定檔及社交標記資料庫的支援。同步處理資料庫不支援。） <br/>  Microsoft SharePoint Foundation 訂閱設定服務 <br/> | Usage and Health Data Collection <br/>  State Service <br/>  Word automation <br/> | Excel Services <br/>  PerformancePoint Services <br/>  PowerPoint 轉換 <br/>  Visio Graphics Service <br/>  Work Management <br/> |
+| 機器翻譯服務 <br/>  Managed Metadata Service <br/>  Secure Store Service <br/>  使用者設定檔。（僅限設定檔及社交標記資料庫的支援。同步處理資料庫不支援。） <br/>  Microsoft SharePoint Foundation 訂閱設定服務 <br/> | Usage and Health Data Collection <br/>  State Service <br/>  Word automation <br/> | Excel Services <br/>  PerformancePoint Services <br/>  PowerPoint 轉換 <br/>  Visio Graphics Service <br/>  Work Management <br/> |
    
 下列範例會示範如何將資料庫還原的受管理的中繼資料服務。
   
@@ -594,7 +593,7 @@ SharePoint 伺服器陣列是為了簡化環境穩定和疑難排解、 帳戶�
   
 **表格： 復原伺服器陣列基礎結構**
 
-|**伺服器名稱**|**角色**|**設定**|**子網路**|**可用性設定**|
+|**伺服器名稱**|**角色**|**設定**|**子網路**|**可用性設定組**|
 |:-----|:-----|:-----|:-----|:-----|
 |spDRAD  <br/> |使用 Active Directory 網域控制站  <br/> |2 個處理器  <br/> 從 512 MB 透過 4 GB 的 RAM  <br/> 1 x 127 GB 硬碟  <br/> |sp ADservers  <br/> ||
 |亞利桑那州-SP-FS  <br/> |檔案伺服器與共用的備份和 DFSR 的端點  <br/> | A5 組態： <br/>  2 個處理器 <br/>  14 GB 的 RAM <br/>  1 x 127 GB 硬碟 <br/>  1 x 135 GB 硬碟 <br/>  1 x 127 GB 硬碟 <br/>  1 x 150 GB 硬碟 <br/> |sp databaseservers  <br/> |DATA_SET  <br/> |
@@ -684,7 +683,7 @@ Ipconfig /flushdns
   
 [設定 SharePoint 2013 的 SQL Server 2012 AlwaysOn 可用性群組](https://go.microsoft.com/fwlink/p/?LinkId=393122)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 <a name="Troubleshooting"> </a>
 

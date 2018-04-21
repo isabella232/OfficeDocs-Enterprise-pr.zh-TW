@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 指派授權至使用者帳戶"
+title: 使用 Office 365 PowerShell 指派授權至使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -15,12 +15,12 @@ ms.custom:
 - PowerShell
 - O365ITProTrain
 ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
-description: "說明如何使用 Office 365 PowerShell 指派給未授權使用者的 Office 365 授權。"
-ms.openlocfilehash: 688e2775e7a028cd9dbe0c8ea27a7f3a453b5279
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 說明如何使用 Office 365 PowerShell 指派給未授權使用者的 Office 365 授權。
+ms.openlocfilehash: ce8e8c26e929132a8d4beb0f71e18c127064acbe
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 指派授權至使用者帳戶
 
@@ -139,7 +139,7 @@ Set-MsolUserLicense -UserPrincipalName "BelindaN@litwareinc.com" -AddLicenses "l
   
 當**Set-msoluserlicense**執行完成時，您會看到類似此螢幕上：
   
- `PS C:\\windows\\system32>`
+ `PS C:\windows\system32>`
   
 換句話說，它將不會看起來像是發生的任何項目。若要確認使用者具有已指派授權，執行如下所示的命令：
   

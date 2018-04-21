@@ -11,11 +11,11 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 48e16935-3429-456a-8fe6-50afa257924c
 description: 摘要： 了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器與執行 SharePoint Server 2013 伺服器的整合式的測試實驗室。
-ms.openlocfilehash: 636429a9cce04b982c1129dba601c6348deb9cdc
-ms.sourcegitcommit: 63e2844daa2863dddcd84819966a708c434e8580
+ms.openlocfilehash: a15bdefe1749bca98933a8b9a4c4874130732eda
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="test-lab-guide-configure-an-integrated-exchange-lync-and-sharepoint-test-lab"></a>Test Lab Guide: Configure 整合了的 Exchange、 Lync 和 SharePoint 測試實驗室
 
@@ -23,8 +23,7 @@ ms.lasthandoff: 04/18/2018
  
 **觀賞整合式的 Exchange、 Lync 和 SharePoint 測試實驗室指南概觀影片**
 
-<iframe src="//videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=8d1f00cc-b8b1-4394-9367-0cc9765e380a&AutoPlayVideo=false" frameborder= "0" marginwidth= "0" marginheight= "0" scrolling= "no" allowfullscreen= "" ></iframe>
-
+> [!VIDEO https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=8d1f00cc-b8b1-4394-9367-0cc9765e380a&AutoPlayVideo=false]
  
 結果包含三種伺服器之間的伺服器對伺服器驗證，此設定的測試實驗室可用來建立及示範多產品案例與解決方案使用執行 Exchange Server 2013 的伺服器執行 Lync Server 2013 伺服器與執行 SharePoint Server 2013 的伺服器。
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 04/18/2018
 
 [測試實驗室指南： 設定整合式的 Exchange、 Lync 和 SharePoint 測試實驗室](https://go.microsoft.com/fwlink/p/?LinkId=313670)(https://go.microsoft.com/fwlink/p/?LinkId=313670)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [測試實驗室指南](https://go.microsoft.com/fwlink/p/?LinkId=202817)
 

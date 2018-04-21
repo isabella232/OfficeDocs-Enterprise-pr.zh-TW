@@ -1,5 +1,5 @@
 ---
-title: "自動化檔案集合 ediscovery （英文）"
+title: 自動化檔案集合 ediscovery （英文）
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -9,14 +9,14 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: 8d751419-d81b-4eb7-a2e5-8b03ccbf670c
-description: "摘要： 了解如何自動化 ediscovery （英文） 的使用者電腦從檔案集合。"
-ms.openlocfilehash: bb93bed80ec95511c6bbf4307d1f0c9e1d4f82cb
-ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
+description: 摘要： 了解如何自動化 ediscovery （英文） 的使用者電腦從檔案集合。
+ms.openlocfilehash: 0a09eb8ec997f62e0f8c3149d35422b0ee0e4a98
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="automate-file-collection-for-ediscovery"></a>自動化檔案集合 ediscovery （英文）
 
@@ -53,7 +53,7 @@ eDiscovery 是依據公司清查、 搜尋、 識別、 保留、 篩選和提�
 |![洋紅色圖說文字 10](images/cebf7de5-7525-413b-9e52-638a4f8b2f74.png)|執行 eDiscovery 寒冷儲存區與內部部署 Exchange Server 2013 中的內容。  <br/> |
 |![洋紅色圖說文字 11](images/e59ab403-2f19-497a-92a5-549846dded66.png)|在 Office 365 中的內容上執行 eDiscovery。  <br/> |
    
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 此解決方案的設定需要許多元素最其中您可能已經備妥及設定若您的想法有關 eDiscovery。元素可能沒有或類需要特定設定，我們將會提供您下列連結，您需要建立取出您基底的設定。您必須基本組態備妥之前設定本身的解決方案。
   
@@ -163,7 +163,7 @@ catch [System.Exception] {
 Function CopyFileToCaseFolder($SourcePath, $TargetPath, $FileName) {
     
     # Check to see if the file already exists
-    $TargetFileCheck = Test-Path $TargetPath\\$FileName
+    $TargetFileCheck = Test-Path $TargetPath\$FileName
 
 try {
 
@@ -202,18 +202,18 @@ $CaseNo = get-date -Format yyyyMMddHHmm
 $CaseNo = $CaseNo + "_" + [Environment]::UserName
 
 # Target location to copy case files
-$CaseRootLocation = "\\\\staging\\Cases$" 
+$CaseRootLocation = "\\staging\Cases$" 
 
 # File copy location, log file location, PST file location and temporary log file location
-$CaseLocation = $CaseRootLocation + "\\" + $CaseNo
-$CaseLogLocation = $CaseRootLocation + "\\" + $CaseNo + "\\_Log"
-$CasePSTLocation = $CaseRootLocation + "\\" + $CaseNo + "\\_PSTs"
-$TemporaryLogLocation = [Environment]::getfolderpath('ApplicationData') + "\\" + $CaseNo
+$CaseLocation = $CaseRootLocation + "\" + $CaseNo
+$CaseLogLocation = $CaseRootLocation + "\" + $CaseNo + "\_Log"
+$CasePSTLocation = $CaseRootLocation + "\" + $CaseNo + "\_PSTs"
+$TemporaryLogLocation = [Environment]::getfolderpath('ApplicationData') + "\" + $CaseNo
 
 # Inventory of local drives
 $LocalDrives = Get-PSDrive -PSProvider FileSystem -Scope Global
 
-$LoggingFile = "$CaseLogLocation\\FileCopyErrors.log"
+$LoggingFile = "$CaseLogLocation\FileCopyErrors.log"
 
 # Main script
 
@@ -221,12 +221,12 @@ $LoggingFile = "$CaseLogLocation\\FileCopyErrors.log"
 CreateCaseFolder
 
 # Create the list of files to be copied
-# First create the temporary directory in the AppData\\Roaming folder
+# First create the temporary directory in the AppData\Roaming folder
 New-Item "$TemporaryLogLocation" -ItemType Directory -Force -ErrorAction SilentlyContinue
 $LocalDrives | foreach {
 
     # Write-Host -ForeGroundColor Cyan "Collecting Files for Drive: " $_
-    Get-ChildItem -Path $_.Root -Recurse -Include $FileTypes -ErrorAction SilentlyContinue -ErrorVariable +Loggederrors | Export-Clixml $TemporaryLogLocation\\\\$_.xml -Force
+    Get-ChildItem -Path $_.Root -Recurse -Include $FileTypes -ErrorAction SilentlyContinue -ErrorVariable +Loggederrors | Export-Clixml $TemporaryLogLocation\$_.xml -Force
     # Needs try catch and logged collection error file
 }
 
@@ -290,7 +290,7 @@ Write-Host -ForegroundColor Cyan "Finished."
 # This is for on-prem Exchange only
 # Input parameters
 # When you run the script, you call it with two parameters, PST source path and target mailbox alias
-# For example:  .\\PSTImport.ps1 \\\\FileShare\\PSTFiles jdoe
+# For example:  .\PSTImport.ps1 \\FileShare\PSTFiles jdoe
 
 param ([String]$SourcePath,[String]$MailboxAlias)
 
@@ -337,7 +337,7 @@ $AllFiles | ForEach-Object {
     
   - **$MailboxAlias**將會收到匯入的電子郵件項目的目標信箱的別名。
     
-6. 例如，如果您想要匯入所有 PST 檔案的路徑\\\\臨時\\轉換與別名 eDiscoveryMailbox 信箱的情況下 $、 您可執行類似的指令碼`\\\\staging\\AFCscripts\\PSTImportScript.ps1 \\\\Staging\\cases$ eDiscoveryMailbox`。
+6. 例如，如果您想要匯入所有 PST 檔案的路徑\\Staging\Cases$ 轉換與別名 eDiscoveryMailbox 信箱，您可執行類似的指令碼`\\staging\AFCscripts\PSTImportScript.ps1 \\Staging\cases$ eDiscoveryMailbox`。
     
 ### <a name="pst-import-option-b-for-exchange-online"></a>Exchange Online 的 PST 匯入選項 B
 
@@ -361,7 +361,7 @@ $AllFiles | ForEach-Object {
     
 4. 選取 [**匯入 runbooks**和**匯入 Orchestrator 加密資料**。清除**計數器**、**排程**、**變數**、 **Computer Groups**、**匯入通用設定**，以及**要覆寫現有的全域設定**。
     
-5. 按一下 [**完成**]。
+5. 按一下 [完成]。
     
 6. 編輯**MoveFilesToColdStorage** runbook，如下所示：
     

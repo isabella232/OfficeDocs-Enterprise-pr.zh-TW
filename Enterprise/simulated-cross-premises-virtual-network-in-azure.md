@@ -15,11 +15,11 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: 摘要： 會建立模擬的跨內部虛擬網路 in Microsoft Azure 為開發人員/測試環境。
-ms.openlocfilehash: 41988e8201e896a7c1900b645e6c38357d0bfcd0
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 775c5b19de75ac63cbc3da7fb4e6dc21cb10212c
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>模擬的跨部署在 Azure 虛擬網路
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/16/2018
     
 - 建立電腦、 TestLab 虛擬網路內某些和一些 XPrem 虛擬網路內，來模擬混合雲端式 IT 工作負載的測試設定。
     
-有三個主要階段設定此開發/測試環境：
+設定此開發/測試環境有三個主要階段︰
   
 1. 設定測試實驗室虛擬網路。
     
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 3. 設定 DC2。
     
 > [!NOTE]
-> 此設定需要付費 Azure 訂閱。 
+> [!附註] 此組態需要付費的 Azure 訂用帳戶。 
   
 ![Microsoft 雲端中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/16/2018
 首先，您的本機電腦上啟動 Azure PowerShell 提示字元處。
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> [!附註] 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 下列命令以 Azure 帳戶登入。
   
@@ -85,7 +85,7 @@ Login-AzureRMAccount
 ```
 
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0)以取得包含所有的 PowerShell 命令會在本文中的文字檔案。
+> [!提示] 請按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0) 以取得此文件所包含的全部 PowerShell 命令文字檔案。
   
 使用下列命令取得訂用帳戶名稱。
   
@@ -173,7 +173,7 @@ Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR 
   
 ```
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-Install-ADDSDomainController -Credential (Get-Credential CORP\\User1) -DomainName "corp.contoso.com" -InstallDns:$true -DatabasePath "F:\\NTDS" -LogPath "F:\\Logs" -SysvolPath "F:\\SYSVOL"
+Install-ADDSDomainController -Credential (Get-Credential CORP\User1) -DomainName "corp.contoso.com" -InstallDns:$true -DatabasePath "F:\NTDS" -LogPath "F:\Logs" -SysvolPath "F:\SYSVOL"
 ```
 
 請注意系統提示您提供兩個公司\\User1 密碼] 和 [目錄服務還原模式 (DSRM) 的密碼，並重新啟動 DC2。 
