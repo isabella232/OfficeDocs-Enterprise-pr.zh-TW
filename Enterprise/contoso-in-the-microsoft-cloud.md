@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c4a6d625-4938-42cc-87e1-56b7a13c63ef
 description: 摘要： 虛擬但具有代表性的全球組織如何透過 Microsoft 雲端服務項目採用內含雲端的 IT 基礎結構。
-ms.openlocfilehash: 7807a6b07179e695c28a923f744805558d83e690
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 0a332883fef3291e133998ecd1bbfa53e7282ec0
+ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="contoso-in-the-microsoft-cloud"></a>Microsoft 雲端中的 Contoso
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 請參閱下列各節：
   
-- [混合雲端概觀](hybrid-cloud-overview.md)
+- [Contoso 公司概觀](overview-of-the-contoso-corporation.md)
     
     Contoso 公司是一家全球性的製造、銷售與支援的組織集團，擁有超過 100,000 種的商品。 
     
