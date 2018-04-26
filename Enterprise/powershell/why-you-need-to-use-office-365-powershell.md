@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: d4dec6a62aecf2cfafdaf52f018f34fd2c9a14d4
-ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
+ms.openlocfilehash: 375ab283385431ea975782f9b7b8bf97ed0cb6ed
+ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
@@ -348,7 +348,7 @@ Office 365 系統管理中心可讓您檢視資料清單。以下是商務用 Sk
 幸運的是，您可以使用 Office 365 PowerShell，這不只會顯示清單，還會將它儲存至可輕鬆地匯入至 Excel 的檔案。以下範例命令可將 商務用 Skype Online 使用者資料儲存為逗點分隔值 (CSV) 檔案，而這是可輕鬆地匯入為 Excel 工作表中的資料表的檔案：
   
 ```
-Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Export-Csv -Path "C:\\Logs\\SfBUsers.csv" -NoTypeInformation
+Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Export-Csv -Path "C:\Logs\SfBUsers.csv" -NoTypeInformation
 ```
 
 以下是顯示範例：
