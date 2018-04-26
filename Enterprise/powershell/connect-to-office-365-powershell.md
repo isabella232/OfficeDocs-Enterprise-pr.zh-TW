@@ -14,16 +14,16 @@ ms.custom:
 - O365ITProTrain
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
-description: 摘要：使用 Office 365 PowerShell 連線到您的 Office 365 組織，以從命令列執行 Office 365 系統管理中心工作。
-ms.openlocfilehash: 71b8c8d61a914fa7fd036fadb7e17ca3f66cd639
-ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
+description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
+ms.openlocfilehash: 65ddb3c66d2cd69ad1ecb468ec762667a0b07a84
+ms.sourcegitcommit: 3b474e0b9f0c12bb02f8439fb42b80c2f4798ce1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
- **摘要：**使用 Office 365 PowerShell 連線到您的 Office 365 組織，以從命令列執行 Office 365 系統管理工作。
+ **摘要：**連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行管理工作。
   
 Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 365 PowerShell 是包含三個步驟的簡單程序，您可以在其中安裝必要的軟體、執行必要的軟體，然後連線至您的 Office 365 組織。 
 
@@ -64,8 +64,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 
   - 如果系統提示您從 PSGallery 安裝模組，請輸入 **Y**，然後按 ENTER 鍵。
   - 安裝完成後，請關閉 PowerShell 命令視窗。
     
-### <a name="step-2-connect-to-your-office-365-subscription"></a>步驟 2：連線至您的 Office 365 訂用帳戶
-<a name="step3"> </a>
+### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2： 連線至 Office 365 訂閱的 Azure AD
 
 若要僅以*帳戶名稱和密碼*進行連線：
   
@@ -77,7 +76,7 @@ $UserCredential = Get-Credential
 Connect-MsolService -Credential $UserCredential
 ```
 
-3. 在 [Windows PowerShell 認證要求] ****對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
+3. 在 [Windows PowerShell 認證要求] **** 對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
     
 若要以*多重要素驗證 (MFA)* 進行連線：
   
@@ -88,12 +87,11 @@ Connect-MsolService -Credential $UserCredential
 Connect-MsolService
 ```
 
-3. 在 [Azure Active Directory PowerShell] ****對話方塊中，鍵入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [登入]****。
+3. 在 [Azure Active Directory PowerShell] **** 對話方塊中，鍵入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [登入]****。
     
 4. 遵循 [Azure Active Directory PowerShell] 對話方塊中的指示，提供其他驗證資訊 (例如驗證碼)，然後按一下 [登入]。
     
 ### <a name="how-do-you-know-this-worked"></a>如何知道這是否正常運作？
-<a name="step3"> </a>
 
 如果您未收到任何錯誤，便已順利連線。若要做快速測試，您可以執行一個 Office 365 Cmdlet (例如 **Get-MsolUser** )，然後檢視結果。
   
@@ -119,10 +117,10 @@ Connect-MsolService
     
 - **如果您收到連線錯誤，請參閱本主題：** [「Connect-MsolService：擲回類型例外狀況」錯誤](https://go.microsoft.com/fwlink/p/?LinkId=532377)。
     
-## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組的連線
 <a name="ConnectV2"> </a>
+## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組的連線
 
-Azure Active Directory PowerShell for 圖模組中的命令及其指令程式名稱中有"AzureAD"。
+[圖模組的 Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)模組中的命令及其指令程式名稱中有"AzureAD"。
 
 如圖模組的需要在 Azure Active Directory PowerShell 中的新 cmdlet 的程序，使用下列步驟來安裝此模組，並連線至您的 Office 365 訂閱。
 
@@ -146,7 +144,7 @@ Azure Active Directory PowerShell for 圖模組中的命令及其指令程式名
 如果出現提示，指出需安裝來自不受信任存放庫的模組，請輸入 **Y**，然後按 ENTER 鍵。
 
 
-### <a name="step-2-connect-to-office-365"></a>步驟 2：連線至 Office 365
+### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2： 連線至 Office 365 訂閱的 Azure AD
 
 若要以*帳戶名稱和密碼*連線至您的 Office 365 訂用帳戶：
     
@@ -155,7 +153,7 @@ $UserCredential = Get-Credential
 Connect-AzureAD -Credential $UserCredential
 ```
 
-在 [Windows PowerShell 認證要求] ****對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
+在 [Windows PowerShell 認證要求] **** 對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
     
 若要以*多重要素驗證 (MFA)* 連線至您的 Office 365 訂用帳戶：
 
@@ -163,7 +161,7 @@ Connect-AzureAD -Credential $UserCredential
 Connect-AzureAD
 ```
 
-在 [Azure Active Directory PowerShell] ****對話方塊中，鍵入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [登入]****。
+在 [Azure Active Directory PowerShell] **** 對話方塊中，鍵入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [登入]****。
     
 遵循 [Azure Active Directory PowerShell] 對話方塊中的指示，提供其他驗證資訊 (例如驗證碼)，然後按一下 [登入]。
     

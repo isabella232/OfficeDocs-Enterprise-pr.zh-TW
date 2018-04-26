@@ -3,7 +3,7 @@ title: 使內部部署網路與 Microsoft Azure 虛擬網路連線
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/23/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -14,18 +14,20 @@ ms.collection:
 ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
-description: 摘要： 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 559c1330c3f39ea52b1cf5c3127782dddf37f95b
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+description: 摘要： 了解如何設定跨部署 Azure 虛擬網路的網站 VPN 連線使用的 Office server 工作負載。
+ms.openlocfilehash: 818e709c8177c6533bfa02da00170bf7fdb5a0ac
+ms.sourcegitcommit: 3b474e0b9f0c12bb02f8439fb42b80c2f4798ce1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
  **摘要：** 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
   
-跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線允許您內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。例如，在 Azure 虛擬機器上執行的 DirSync 伺服器需要向內部部署的網域控制站查詢帳戶上的變更，並將這些變更同步至您的 Office 365 訂閱。本文將示範如何設定準備裝載 Azure 虛擬機器的跨單位 Azure 虛擬網路。
+跨部署 Azure 虛擬網路連線至您的內部網路、 擴充您的網路子網路與虛擬機器來裝載納入 Azure 基礎結構服務。此連線允許直接存取虛擬機器在 Azure 中反之亦然您的內部網路上的電腦。 
+
+例如，在 Azure 虛擬機器上執行目錄同步處理伺服器需要查詢您的內部部署網域控制站的變更帳戶並將這些變更同步處理與 Office 365 訂閱。本文將告訴您如何設定跨部署 Azure 虛擬網路使用即可主控 Azure 虛擬機器的網站虛擬私人網路 (VPN) 連線。
 
 ## <a name="overview"></a>概觀
 
@@ -33,13 +35,22 @@ Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azur
   
 ![內部部署網路已透過網站對網站 VPN 連線連接到 Microsoft Azure](images/CP_ConnectOnPremisesNetworkToAzureVPN.png)
   
-在圖表中，有兩個網路透過站台對站台的虛擬私人網路 (VPN) 來連線：內部部署網路和 Azure 虛擬網路。站台對站台的 VPN 連線可由內部部署網路上的 VPN 裝置和 Azure 虛擬網路上的 Azure VPN 閘道加以終止。Azure 虛擬網路有虛擬機器。虛擬機器在 Azure 虛擬網路上產生的流量會被轉送至 VPN 閘道，此 VPN 閘道會透過站台對站台 VPN 連線將流量轉送到內部部署網路上的 VPN 裝置。內部部署網路的路由基礎結構接著會將流量轉送到目的地。
+在圖表中，有兩個網路連線至網站 VPN 連線： 內部網路與 Azure 虛擬網路。若要網站 VPN 連線是：
+
+- 之間所定址且位於公用網際網路的兩個端點。
+- 由內部網路的 VPN 裝置與 Azure 虛擬網路上的 Azure VPN 閘道終止。
+
+Azure 虛擬網路主控虛擬機器。源自 Azure 虛擬網路上的虛擬機器時的網路流量取得轉接至 VPN 閘道，然後將流量轉送跨內部網路的 VPN 裝置的網站 VPN 連線。在內部網路的路由基礎結構然後轉寄至目的地的流量。
+
+>[!Note]
+>您也可以使用[ExpressRoute](https://azure.microsoft.com/services/expressroute/)，這是您的組織與 Microsoft 的網路之間的直接連線。透過 ExpressRoute 的流量不會透過公用網際網路旅行社。本文不會說明 ExpressRoute 使用。
+>
   
 若要設定 Azure 虛擬網路和內部部署網路間的 VPN 連線，請執行下列步驟︰ 
   
 1. **內部部署：** 針對指向您內部部署 VPN 裝置的 Azure 虛擬網路位址空間，定義和建立內部部署網路路由。
     
-2. **Microsoft Azure：** [ExpressRoute](https://azure.microsoft.com/services/expressroute/)。
+2. **Microsoft Azure:** 建立 Azure 虛擬網路與網站 VPN 連線的情況。 
     
 3. **內部部署：** 設定內部部署硬體或軟體 VPN 裝置來終止使用網際網路通訊協定安全性 (IPsec) 的 VPN 連線。
     
@@ -51,7 +62,7 @@ Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azur
 ### <a name="prerequisites"></a>必要條件
 <a name="Prerequisites"></a>
 
-- Azure 訂用帳戶。如需有關 Azure 訂用帳戶的資訊，請移至 [Microsoft Azure 訂用帳戶頁面](https://azure.microsoft.com/pricing/purchase-options/)。
+- Azure 訂閱。如需 Azure 訂閱，移至[如何購買 Azure] 頁面](https://azure.microsoft.com/pricing/purchase-options/)。
     
 - 要指派至虛擬網路和其子網路的可用私人 IPv4 位址空間，需具備足夠的擴充空間，以容納現在或未來所需的虛擬機器數量。
     
@@ -328,7 +339,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
   
 ### <a name="phase-3-optional-add-virtual-machines"></a>階段 3 (選用)：新增虛擬機器
 
-在 Azure 中建立您需要的虛擬機器。如需詳細資訊，請參閱＜[在 Azure 入口網站中建立第一個 Windows 虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393098)＞。
+在 Azure 中建立您需要的虛擬機器。如需詳細資訊，請參閱 ＜ [Create Windows Azure 的入口網站與虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393098)。
   
 使用下列設定：
   
@@ -336,7 +347,7 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
     
 - 在 [大小] 窗格中選擇適當大小。
     
-- 在 [設定]**** 窗格的＜**儲存體**＞區段中，選取 [標準]****儲存體類型和您為虛擬網路設定的儲存體帳戶。在＜**網路**＞區段中，選取您裝載虛擬機器 (不是閘道子網路) 的虛擬網路和子網路名稱。其他所有設定都保留預設值。
+- 在 [設定]**** 窗格的＜**儲存體**＞區段中，選取 [標準]**** 儲存體類型和您為虛擬網路設定的儲存體帳戶。在＜**網路**＞區段中，選取您裝載虛擬機器 (不是閘道子網路) 的虛擬網路和子網路名稱。其他所有設定都保留預設值。
     
 請檢查您的內部 DNS 以確認虛擬機器正在正確地使用 DNS，藉此確認適用於新虛擬機器的位址 (A) 記錄已新增。若要存取網際網路，您的 Azure 虛擬機器必須設定為使用內部部署網路的 Proxy 伺服器。請連絡您的網路系統管理員，以取得要在伺服器上執行的其他設定步驟。
   
@@ -347,6 +358,4 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
 ## <a name="next-step"></a>下一步
   
 [在 Microsoft Azure 中部署 Office 365 目錄同步作業 (DirSync)](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
- 
-
 
