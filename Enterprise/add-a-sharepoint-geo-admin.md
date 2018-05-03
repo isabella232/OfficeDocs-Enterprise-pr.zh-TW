@@ -8,11 +8,11 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 description: 了解如何在新增或移除的地理位置管理員 OneDrive for Business 多-地理位置。
-ms.openlocfilehash: 7630597654df9ad78619b94fedc9e18d5b0b721e
-ms.sourcegitcommit: 886b23f590f6187f7a98c1083a3b49359ec2a5c3
+ms.openlocfilehash: b88467cf2f33ec3a3a8bf6c2d6927e69e9f7af65
+ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-remove-a-geo-administrator-in-onedrive-for-busniess-multi-geo"></a>新增或移除的地理位置管理員的 onedrive for Busniess 多-地理位置
 
@@ -49,6 +49,14 @@ ms.lasthandoff: 04/30/2018
 `Add-SPOGeoAdministrator -ObjectID <ObjectID>`
 
 若要移除群組使用 ObjectID、 執行`Remove-SPOGeoAdministrator -ObjectID <ObjectID>`
+
+### <a name="accessing-the-admin-center-for-a-specific-geo-location"></a>存取特定的地理位置的系統管理中心
+
+若要管理其地理位置的 OneDrive 設定，系統管理員必須存取 OneDrive 系統管理中心直接使用 URL 格式如下：
+
+https://admin.onedrive.com/?geo=<*地理位置*>
+
+例如，加拿大 OneDrive 系統中心位於： https://admin.onedrive.com/?geo=CAN。
 
 ## <a name="see-also"></a>另請參閱
 

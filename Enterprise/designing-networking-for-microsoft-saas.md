@@ -1,5 +1,5 @@
 ---
-title: "設計 Microsoft SaaS 的網路"
+title: 設計 Microsoft SaaS 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,12 +11,12 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 4194020a-3847-4259-9f2d-5c556a4510f9
-description: "摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。"
-ms.openlocfilehash: e4d83f9ab88408b3eb5ca98379bbc709ec8f31a7
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
+ms.openlocfilehash: 4cfbeab3d90703e17c86e707988a8a62c937df9a
+ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
 
@@ -181,8 +181,6 @@ ms.lasthandoff: 02/09/2018
 如需詳細資訊，請參閱：
   
 - [網路與 Office 365 規劃移轉](https://aka.ms/tune)
-    
-- [Office 365 效能管理 Microsoft 虛擬學院課程 （英文)](https://aka.ms/o365perf)
     
 - [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
 

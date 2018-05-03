@@ -12,11 +12,11 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
-ms.openlocfilehash: aea4fb5b8645f18381b9b9391b91925ffed00aab
-ms.sourcegitcommit: a337ac253054f571a8304e18e426f74bcd385857
+ms.openlocfilehash: 465c53efe8464ac823ebb3cd0e847a854eed82bb
+ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
@@ -42,9 +42,9 @@ Azure 必須佈建使用這些基本元件：
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |VNet 名稱  <br/> |要指派給 VNet 的名稱 (例如 FedAuthNet)。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |2.  <br/> |VNet 位置  <br/> |將包含虛擬網路的區域性 Azure 資料中心  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|3.  <br/> |VPN 裝置 IP 位址  <br/> |網際網路上 VPN 裝置介面的公用 IPv4 位址。   <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|3.  <br/> |VPN 裝置 IP 位址  <br/> |網際網路上 VPN 裝置介面的公用 IPv4 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |4.  <br/> |VNet 位址空間  <br/> |虛擬網路的位址空間。請與您的 IT 部門合作以決定此位址空間。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元隨機、 英數字元字串將用來驗證網站 VPN 連線的兩側。使用您的 IT 或安全性部門決定此機碼的值。或者，請參閱[建立 IPsec 預先共用金鑰的隨機字串](http://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。<br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](http://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
    
  **表格 V：跨單位虛擬網路設定**
   
@@ -80,9 +80,9 @@ Azure 必須佈建使用這些基本元件：
 |5.  <br/> |第一個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |6.  <br/> |第二個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第六個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |7.  <br/> |第一個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|8。  <br/> |第二個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|8.  <br/> |第二個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
    
- **虛擬網路中的表格 i： 靜態 IP 位址**
+ **表格 I：虛擬網路中的靜態 IP 位址**
   
 針對初次在虛擬網路中設定網域控制站時，您要在內部部署網路中使用的網域名稱系統 (DNS) 伺服器，填寫表格 D。請與您的 IT 部門合作以決定此清單。
   
@@ -108,7 +108,7 @@ Azure 必須佈建使用這些基本元件：
 現在讓我們開始建置 Azure 基礎結構以裝載您的 Office 365 同盟驗證。
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> [!附註] 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 首先，啟動 Azure PowerShell 提示並登入您的帳戶。
   
@@ -153,7 +153,7 @@ Get-AzureRMResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 |3.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |Web 應用程式 Proxy 伺服器  <br/> |
 |4.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |基礎結構元素  <br/> |
    
- **表： 資源群組**
+ **表格 R：資源群組**
   
 使用這些命令建立新的資源群組。
   
@@ -198,7 +198,7 @@ New-AzureRMVirtualNetwork -Name $vnetName -ResourceGroupName $rgName -Location $
 
 ```
 
-接下來，您建立網路的每個包含虛擬機器時的子網路的安全性群組。若要執行的子網路隔離，您可以新增特定類型的流量允許或拒絕的子網路的網路安全性] 群組的規則。
+接著，為每個包含虛擬機器的子網路建立網路安全性群組。若要執行子網路隔離，您可以針對允許或拒絕子網路安全小組流量的特定類型新增規則。
   
 ```
 # Create network security groups
@@ -259,25 +259,25 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
 Get-AzureRMPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgName
 ```
 
-接下來，設定您的內部部署 VPN 裝置連線至 Azure VPN 閘道。如需詳細資訊，請參閱 ＜ [Configure VPN 裝置](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices)。
+接著，設定內部部署 VPN 裝置與 Azure VPN 閘道連線。如需詳細資訊，請參閱[設定您的 VPN 裝置](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices)。
   
 若要設定您的內部部署 VPN 裝置，您需要下列項目︰
   
 - Azure VPN 閘道的公用 IPv4 位址。
     
-- 網站 VPN 連線 （表格 V-項目 5-值欄） 的 IPsec 預先共用的索引鍵。
+- 站台對站台 VPN 連線的 IPsec 預先共用金鑰 (表格 V - 項目 5 - 值欄)。
     
 下一步，確認從內部部署網路可觸及虛擬網路的位址空間。一般來說，完成方式是新增路由以將虛擬網路位址空間對應至 VPN 裝置，然後將此路由傳達給其餘組織網路的路由基礎結構。請與您的 IT 部門合作以決定如何執行此動作。
   
 下一步，定義三個可用性設定組的名稱。填寫表格 A。  
   
-|**項目**|**用途**|**可用性設定名稱**|
+|**項目**|**用途**|**可用性設定組名稱**|
 |:-----|:-----|:-----|
 |1.  <br/> |網域控制站  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |2.  <br/> |AD FS 伺服器  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
 |3.  <br/> |Web 應用程式 Proxy 伺服器  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
    
- **表格： 可用性設定**
+ **表格 A：可用性設定組**
   
 當您在階段 2、3 和 4 中建立虛擬機器時，將會需要這些名稱。
   
@@ -287,13 +287,13 @@ Get-AzureRMPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgNam
 $locName="<the Azure location for your new resource group>"
 $rgName="<Table R - Item 1 - Resource group name column>"
 $avName="<Table A - Item 1 - Availability set name column>"
-New-AzureRMAvailabilitySet -Name $avName -ResourceGroupName $rgName -Location $locName
+New-AzureRMAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locName -Sku Aligned  -PlatformUpdateDomainCount 5 -PlatformFaultDomainCount 2
 $rgName="<Table R - Item 2 - Resource group name column>"
 $avName="<Table A - Item 2 - Availability set name column>"
-New-AzureRMAvailabilitySet -Name $avName -ResourceGroupName $rgName -Location $locName
+New-AzureRMAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locName -Sku Aligned  -PlatformUpdateDomainCount 5 -PlatformFaultDomainCount 2
 $rgName="<Table R - Item 3 - Resource group name column>"
 $avName="<Table A - Item 3 - Availability set name column>"
-New-AzureRMAvailabilitySet -Name $avName -ResourceGroupName $rgName -Location $locName
+New-AzureRMAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locName -Sku Aligned  -PlatformUpdateDomainCount 5 -PlatformFaultDomainCount 2
 ```
 
 以下是成功完成此階段的設定結果。
@@ -306,9 +306,9 @@ New-AzureRMAvailabilitySet -Name $avName -ResourceGroupName $rgName -Location $l
 
 使用[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)繼續執行此工作負載的組態。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
