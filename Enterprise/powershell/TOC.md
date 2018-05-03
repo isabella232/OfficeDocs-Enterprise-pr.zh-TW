@@ -24,6 +24,9 @@
 ### [檢視與 Office 365 PowerShell 的使用者帳戶](view-user-accounts-with-office-365-powershell.md)
 ### [使用 Office 365 PowerShell 中設定使用者帳戶屬性](configure-user-account-properties-with-office-365-powershell.md)
 ## [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
+### [建立 SharePoint Online 網站和新增使用者](create-sharepoint-sites-and-add-users-with-powershell.md)
+### [管理 SharePoint Online 的使用者和群組](manage-sharepoint-users-and-groups-with-powershell.md)
+### [管理 SharePoint Online 網站群組](manage-sharepoint-site-groups-with-powershell.md)
 ## [管理 Exchange Online 與 Office 365 PowerShell](manage-exchange-online-with-office-365-powershell.md)
 ## [使用 PowerShell 將電子郵件移轉至 Office 365](use-powershell-for-email-migration-to-office-365.md)
 ### [使用 PowerShell 來執行完全移轉至 Office 365](use-powershell-to-perform-a-cutover-migration-to-office-365.md)
@@ -35,7 +38,7 @@
 ### [連線至 Exchange Online 透過遠端 Windows PowerShell 委派存取協力廠商](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)
 ### [擷取報告資料透過 Windows PowerShell 委派存取協力廠商的客戶](retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md)
 ### [彙總報告資料透過 Windows PowerShell 委派存取協力廠商的客戶](aggregate-customer-reporting-data-via-windows-powershell-for-delegated-access-pe.md)
-## [使用 Office 365 PowerShell 管理商務用 Skype Office](manage-skype-for-business-online-with-office-365-powershell.md)
+## [使用 Office 365 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
 ### [線上商務原則與 Office 365 PowerShell 管理 Skype](manage-skype-for-business-online-policies-with-office-365-powershell.md)
 ### [指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
 
