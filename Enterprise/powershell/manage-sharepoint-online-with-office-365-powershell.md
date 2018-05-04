@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 管理 SharePoint Online
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/01/2018
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要︰使用 Office 365 PowerShell 來管理 SharePoint Online 使用者、群組及網站群組。
-ms.openlocfilehash: 7fa6249e04b980a3dc9d3407935694d85938bcab
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 752c7d24ee6d0e77ee1cc4a65322957324767531
+ms.sourcegitcommit: 74cdb2534bce376abc9cf4fef85ff039c46ee790
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-sharepoint-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 SharePoint Online
 
@@ -28,11 +28,11 @@ ms.lasthandoff: 04/16/2018
 
 - [連線至 SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
   
-- [使用 Office 365 PowerShell 建立 SharePoint Online 網站並新增使用者](http://technet.microsoft.com/library/c55d4ccf-ab36-481a-a285-c40234e11abd.aspx)
+- [建立 SharePoint Online 網站和新增使用者使用 Office 365 PowerShell](create-sharepoint-sites-and-add-users-with-powershell.md)
     
-- [使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組](http://technet.microsoft.com/library/9680af2e-a965-4e62-92ee-da72105c7800.aspx)
+- [使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組](manage-sharepoint-users-and-groups-with-powershell.md)
     
-- [Manage site groups](http://technet.microsoft.com/library/122f4099-c78d-4cce-bab0-4343b04596ae.aspx)
+- [Manage SharePoint Online site groups with Office 365 PowerShell](manage-sharepoint-site-groups-with-powershell.md)
     
 ## <a name="see-also"></a>另請參閱
 
