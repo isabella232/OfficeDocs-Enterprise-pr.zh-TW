@@ -14,11 +14,11 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 管理 SharePoint Online 網站群組。
-ms.openlocfilehash: 68be9ce3ef26cb46df6d43716c6719ffd9c172e2
-ms.sourcegitcommit: 74cdb2534bce376abc9cf4fef85ff039c46ee790
+ms.openlocfilehash: 881e67b7eb2d8bb5e04f83e28569aa54341d16b9
+ms.sourcegitcommit: 5c5489db5d1000296945c9774198bd911bee4f14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="manage-sharepoint-online-site-groups-with-office-365-powershell"></a>管理 Office 365 powershell 的 SharePoint Online 網站群組
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="view-sharepoint-online-with-office-365-powershell"></a>檢視 SharePoint Online 搭配 Office 365 PowerShell
 
-SharePoint Online 系統管理中心有一些簡單好用方法來管理網站群組。例如，假設您想要查看群組及群組成員https://litwareinc.sharepoint.com/sites/finance網站。以下是您必須執行：
+SharePoint Online 系統管理中心有一些簡單好用方法來管理網站群組。例如，假設您想要查看群組及群組成員，https\://litwareinc.sharepoint.com/sites/finance 網站。以下是您必須執行：
 
 1. 從 Office 365 系統管理中心中，按一下 [**資源** > **網站**]，然後按一下 [網站的 URL。
 2. 在 [網站集合] 對話方塊中，按一下 [**移至這個網站**。
@@ -56,33 +56,47 @@ foreach ($y in $x)
 ```
 
 有兩種方式可以執行在 SharePoint Online 管理命令介面命令提示字元中設定此命令：
-- 複製到 [記事本] （或其它文字編輯器） 的命令、 修改 **$siteURL**變數的值、 選取命令，並再將它們貼到 SharePoint Online 管理命令介面命令提示字元。當您執行 PowerShell 將會停止在 >> 提示。按 Enter 以執行每個命令。</br>
-- 將命令複製到 [記事本] （或其它文字編輯器）、 修改 **$siteURL**變數的值，然後儲存此文字檔案名稱及.ps1 副檔名合適的資料夾中。接著，在 SharePoint Online 管理命令介面命令提示字元執行指令碼來指定它的路徑和檔案名稱。以下是範例：</br>
+
+- 複製到 [記事本] （或其它文字編輯器） 的命令、 修改 **$siteURL**變數的值、 選取命令，並再將它們貼到 SharePoint Online 管理命令介面命令提示字元。當您執行 PowerShell 將會停止在**>>** 提示。按 enter 鍵執行**foreach**命令。</br>
+- 將命令複製到 [記事本] （或其它文字編輯器）、 修改 **$siteURL**變數的值，然後儲存此文字檔案名稱及.ps1 副檔名合適的資料夾中。接著，在 SharePoint Online 管理命令介面命令提示字元執行指令碼來指定它的路徑和檔案名稱。以下是範例命令：
+
 ```
 C:\Scripts\SiteGroupsAndUsers.ps1
-```</br>
+```
 
-In both cases, you should see something similar to this:
+在這兩種情況下，您應該看到類似：
 
-![SharePoint Online site groups](images/SPO-site-groups.png)
+![SharePoint Online 網站群組](images/SPO-site-groups.png)
 
-These are all the groups that have been created for the site https://litwareinc.sharepoint.com/sites/finance, as well as all the users assigned to those groups. The group names are in yellow to help you separate group names from their members.
+這些是已建立的網站 https 的所有群組\:/ / litwareinc.sharepoint.com/sites/finance，為所有使用者指派給這些群組。群組名稱是以黃色可協助您從其成員的不同的群組名稱。
 
-As another example, here is a command set that lists the groups, and all the group memberships, for all of your SharePoint Online sites.
+另一個範例，以下是一組命令列出群組和所有的群組成員資格，所有您的 SharePoint Online 網站。
 
 ```
-$x = Get-sposite foreach ($y 中 $x) {寫入主機 $y.Url-ForegroundColor"黃色"$z = Get Get-spositegroup-網站 $y.Url foreach ($ 以 $z) {$b = Get Get-spositegroup-網站 $y.Url-群組 $a.Title 寫入主機 $b.Title-ForegroundColor"青綠色"$b |Select-object-ExpandProperty 使用者寫入-主機}}
+$x = Get-SPOSite
+foreach ($y in $x)
+    {
+        Write-Host $y.Url -ForegroundColor "Yellow"
+        $z = Get-SPOSiteGroup -Site $y.Url
+        foreach ($a in $z)
+            {
+                 $b = Get-SPOSiteGroup -Site $y.Url -Group $a.Title 
+                 Write-Host $b.Title -ForegroundColor "Cyan"
+                 $b | Select-Object -ExpandProperty Users
+                 Write-Host
+            }
+    }
 ```
     
-## See also
+## <a name="see-also"></a>另請參閱
 
-[Connect to SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[連線至 SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Create SharePoint Online sites and add users with Office 365 PowerShell](create-sharepoint-sites-and-add-users-with-powershell.md)
+[建立 SharePoint Online 網站和新增使用者使用 Office 365 PowerShell](create-sharepoint-sites-and-add-users-with-powershell.md)
 
-[Manage SharePoint Online users and groups with Office 365 PowerShell](manage-sharepoint-users-and-groups-with-powershell.md)
+[使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組](manage-sharepoint-users-and-groups-with-powershell.md)
 
-[Manage Office 365 with Office 365 PowerShell](manage-office-365-with-office-365-powershell.md)
+[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   
-[Getting started with Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
 

@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/01/2018
+ms.date: 05/07/2018
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -14,17 +14,17 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 管理 SharePoint Online 使用者、 群組及網站。
-ms.openlocfilehash: 8ed40d2c736853145e21f0f9852bdb18c7842075
-ms.sourcegitcommit: 74cdb2534bce376abc9cf4fef85ff039c46ee790
+ms.openlocfilehash: a04bf1538d6f56b760932b5be89b1953fcaa33d5
+ms.sourcegitcommit: 5c5489db5d1000296945c9774198bd911bee4f14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組
 
  **摘要：**使用 Office 365 PowerShell 來管理 SharePoint Online 使用者、 群組及網站。
 
-如果您是 SharePoint Online 搭配大型清單的使用者帳戶或群組且想更輕鬆地方法來管理它們，您可以使用 Office 365 PowerShell。 
+如果您是使用大型清單的使用者帳戶或群組的運作方式與想更輕鬆地方法來管理它們 SharePoint Online 管理員，您可以使用 Office 365 PowerShell。 
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -47,30 +47,29 @@ Get-SPOSite
 使用這個命令，來取得在您的租用戶中群組的清單︰
 
 ```
-Get-SPOSite | ForEach-Object {Get-SPOSiteGroup -Site $_.Url} |Format-Table
+Get-SPOSite | ForEach {Get-SPOSiteGroup -Site $_.Url} | Format-Table
 ```
 
 ### <a name="get-a-list-of-users"></a>取得使用者的清單
 
 使用這個命令，來取得在您的租用戶中使用者的清單︰
 
-```Get-SPOSite | ForEach-Object {Get-SPOUser -Site $_.Url}```
+```
+Get-SPOSite | ForEach {Get-SPOUser -Site $_.Url}
+```
 
 ## <a name="add-a-user-to-the-site-collection-administrators-group"></a>將使用者新增至「網站集合系統管理員」群組
 
 您可以使用**組 SPOUser**命令將使用者新增至網站集合上的網站集合管理員清單。這是語法的外觀：
 
 ```
-$tenant = "tenant"
-<!--This is the Tenant Name. Value must be enclosed in double quotation marks. Example: "Contoso01"-->
-$site = "site"
-<!--# This is the Site name. Value must be enclosed in double quotation marks. Example: "contosotest"-->
-$user = "loginname"
-<!--This is the users login name. Value must be enclosed in double quotation marks. Example "opalc"-->
+$tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
+$site = "<site name>"
+$user = "<user account name, such as opalc>"
 Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$tenant.onmicrosoft.com -IsSiteCollectionAdmin $true
  ```
 
-本範例會使用變數來儲存值和指令碼中有附註 (例如"<!--This is the Tenant Name…-->") 可協助您了解這些值應該是。
+若要使用這些命令，取代所有內容取代為括住，包括 < 和 > 字元，以正確的名稱。
 
 例如，這組命令新增 Opal Castillo (使用者名稱 opalc) 清單的網站集合管理員對 contoso1 租用中 ContosoTest 網站集合：
 
@@ -81,21 +80,17 @@ $user = "opalc"
 Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$tenant.onmicrosoft.com -IsSiteCollectionAdmin $true
 ```
 
-您可以將上述命令實際剪貼至 [記事本]，將 $tenant、$site 和 $user 的變數值，變更為環境中的實際值，再將其貼至 SharePoint Online 管理命令介面視窗內。
+您可以複製並貼入 [記事本] 中的這些命令、 從您的環境實際值至變更變數值 $tenant、 $site，及 $user，然後將此貼到您的 SharePoint Online 管理命令介面視窗來執行這些。
 
 ## <a name="add-a-user-to-other-site-collection-administrators-groups"></a>將使用者新增至其他「網站集合系統管理員」群組
 
-在此工作，我們將使用**Add-spouser**命令來將使用者新增至網站集合上的 SharePoint 群組。這是語法的外觀：
+在此工作，我們將使用**Add-spouser**命令來將使用者新增至網站集合上的 SharePoint 群組。
 
 ```
-$tenant = "tenant"
-<!--This is the Tenant Name. Value must be enclosed in double quotation marks. Example: "Contoso01"-->
-$site = "site"
-<!--This is the Site name. Value must be enclosed in double quotation marks. Example: "contosotest"-->
-$user = "loginname"
-<!--This is the users login name. Value must be enclosed in double quotation marks. Example: "opalc"-->
-$group = "group"
-<!--This is the SharePoint security Group name. Value must be enclosed in double quotation marks. Example: "Auditors"-->
+$tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
+$site = "<site name>"
+$user = "<user account name, such as opalc>"
+$group = "<group name name, such as Auditors>"
 Add-SPOUser -Group $group -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sharepoint.com/sites/$site
 
 ```
@@ -112,30 +107,24 @@ Add-SPOUser -Group $group -LoginName $user@$tenant.onmicrosoft.com -Site https:/
 
 ## <a name="create-a-site-collection-group"></a>建立網站集合群組
 
-您可以使用**Set-spositegroup**命令建立新的 SharePoint 群組並將其新增至 ContosoTest 網站集合。這是語法的外觀：
+您可以使用**Set-spositegroup**命令建立新的 SharePoint 群組並將其新增至 ContosoTest 網站集合。
 
 ```
-$tenant = "tenant"
-<!--This is the Tenant Name. Value must be enclosed in double quotation marks, Example: "Contoso01"-->
-$site = "site"
-<!--This is the Site name. Value must be enclosed in double quotation marks, Example: "contosotest"-->
-$group = "group"
-<!--This is the SharePoint security Group name. Value must be enclosed in double quotation marks, Example: "Auditors"-->
-$level = "permission level"
-<!--This is the level of permissions to assign to the group. Value must be enclosed in double quotation marks, Example: "View Only"-->
+$tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
+$site = "<site name>"
+$group = "<group name name, such as Auditors>"
+$level = "<permission level, such as View Only>"
 New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sharepoint.com/sites/$site
 ```
-
-> [!IMPORTANT]
-> 您必須在引號括住空格的任何字串。群組內容，例如權限層級可使用 **-Set-spositegroup** cmdlet 更新版本進行更新。
+群組內容，例如權限層級可使用 **-Set-spositegroup** cmdlet 更新版本進行更新。
 
 例如，我們將稽核者群組新增僅供檢視權限 contoso1 租用中 Contoso 測試網站集合：
 
 ```
 $tenant = "contoso1"
 $site = "Contoso Test"
-$level = "View Only"
 $group = "Auditors"
+$level = "View Only"
 New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sharepoint.com/sites/$site
 ```
 
@@ -148,17 +137,12 @@ New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sh
 我們將使用**Remove-spouser**命令以從網站集合群組中移除單一 Office 365 使用者剛才，因此我們可以看到命令語法。以下是語法的外觀：
 
 ```
-$tenant = "tenant"
-<!--This is the Tenant Name. Value must be enclosed in double quotation marks, Example: "Contoso01"-->
-$site = "site"
-<!--This is the Site name. Value must be enclosed in double quotation marks, Example: "contosotest"-->
-$group = "group"
-<!--This is the SharePoint security Group name. Value must be enclosed in double quotation marks, Example: "Auditors"-->
-$user = "loginname"
-<!--This is the user’s login name. Value must be enclosed in double quotation marks, Example: "opalc"-->
-Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sharepoint.com/sites/$site
+$tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
+$site = "<site name>"
+$user = "<user account name, such as opalc>"
+$group = "<group name name, such as Auditors>"
+Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sharepoint.com/sites/$site -Group $group
 ```
-
 例如，我們 Bobby Overby 從群組中移除網站集合稽核者 contoso1 租用中 Contoso 測試網站集合中：
 
 ```
@@ -174,11 +158,11 @@ Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sh
 ```
 $tenant = "contoso1"
 $user = "bobbyo"
-Get-SPOSite | ForEach-Object {Get-SPOSiteGroup –Site $_.Url} | ForEach-Object {Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site &_.Url}
+Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site &_.Url}
 ```
 
 > [!WARNING]
-> 這只是顯示作法。除非您真地必須從每個群組中移除使用者 (例如，如果使用者離開公司)，否則不應執行此命令。
+> 這只是範例。除非您真的有使用者移除每個群組中，如果使用者離開公司，不應執行此命令。
 
 ## <a name="automate-management-of-large-lists-of-users-and-groups"></a>自動化管理大型使用者和群組清單
 
@@ -199,7 +183,7 @@ Site,Group,PermissionLevels
 ### <a name="item"></a>項目：
 
 ```
-https://tenant.sharepoint.com/sites/site,site collection,group,level
+https://tenant.sharepoint.com/sites/site,group,level
 ```
 
 範例檔案如下：
@@ -244,19 +228,19 @@ Contoso Blog Editors,opalc@contoso1.onmicrosoft.com,https://contoso1.sharepoint.
 Project Alpha Approvers,robinc@contoso1.onmicrosoft.com,https://contoso1.sharepoint.com/sites/Project01
 ```
 
-下一個步，您必須將這兩個 CSV 檔案儲存至磁碟機。以下的命令會使用這兩個 CSV 檔案，來新增權限和群組成員︰
+下一個步驟中，您必須具備儲存至您的磁碟機的兩個 CSV 檔案。以下是使用這兩個 CSV 檔案的範例命令來新增權限與群組成員資格與：
 
 ```
-Import-Csv C:\O365Admin\GroupsAndPermissions.csv | ForEach-Object {New-SPOSiteGroup -Group $_.Group -PermissionLevels $_.PermissionLevels -Site $_.Site}
-Import-Csv C:\O365Admin\Users.csv | ForEach-Object {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
+Import-Csv C:\O365Admin\GroupsAndPermissions.csv | ForEach {New-SPOSiteGroup -Group $_.Group -PermissionLevels $_.PermissionLevels -Site $_.Site}
+Import-Csv C:\O365Admin\Users.csv | ForEach {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
 ```
 
-指令碼會匯入 CSV 檔案內容與使用中的欄 （以粗體） 的值填入**新增 Get-spositegroup**和**Add-spouser**命令的參數。在我們的範例中，我們會將此儲存至磁碟機 C、 但儘想儲存它。
+指令碼會匯入 CSV 檔案內容和使用中欄的值填入**新增 Get-spositegroup**和**Add-spouser**命令的參數。在我們的範例中，我們會將此儲存至 theO365Admin 資料夾，磁碟機 C 上但儘想儲存它。
 
-現在，請使用相同的 CSV 檔案，來移除不同網站中數個群組的一群人。命令如下：
+現在，我們在不同的網站使用相同的 CSV 檔案中移除一堆數個群組的人員。以下是範例命令：
 
 ```
-Import-Csv C:\O365Admin\Users.csv | ForEach-Object {Remove-SPOUser -LoginName $_.LoginName -Site $_.Site -Group $_.Group}
+Import-Csv C:\O365Admin\Users.csv | ForEach {Remove-SPOUser -LoginName $_.LoginName -Site $_.Site -Group $_.Group}
 ```
 
 ## <a name="generate-user-reports"></a>產生使用者報告
@@ -264,10 +248,8 @@ Import-Csv C:\O365Admin\Users.csv | ForEach-Object {Remove-SPOUser -LoginName $_
 您可能會想要取得許多網站的簡單報告，並顯示那些網站的使用者、其權限等級及其他內容。語法如下：
 
 ```
-$tenant = "tenant"
-<!--This is the Tenant Name. Value must be enclosed in double quotes, Example: "Contoso01"-->
-$site = "site"
-<!--This is the Site name. Value must be enclosed in double quotes, Example: "contosotest"-->
+$tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
+$site = "<site name>"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | select * | Format-table -Wrap -AutoSize | Out-File c\UsersReport.txt -Force -Width 360 -Append
 ```
 
@@ -290,14 +272,14 @@ Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | Format-Table -Wra
 不過，如果您想要對每個網站執行這項作業，該怎麼辦？使用此命令，便可執行這項作業，無需鍵入所有這些網站：
 
 ```
-Get-SPOSite | ForEach-Object {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
+Get-SPOSite | ForEach {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
 ```
 
 這份報告是相當簡單，您可以新增更多的程式碼來建立更多特定報告或報告包含更多詳細的資訊。但是這應讓您瞭解如何使用 SharePoint Online 管理命令介面來管理 SharePoint Online 環境中的使用者。
    
 ## <a name="see-also"></a>另請參閱
 
-[連線至 SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[連線至 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [使用 Office 365 PowerShell 管理 SharePoint Online](create-sharepoint-sites-and-add-users-with-powershell.md)
 
