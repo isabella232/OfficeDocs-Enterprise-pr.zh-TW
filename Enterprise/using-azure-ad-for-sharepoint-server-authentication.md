@@ -1,5 +1,5 @@
 ---
-title: "SharePoint Server 驗證使用 Azure AD"
+title: SharePoint Server 驗證使用 Azure AD
 ms.author: tracyp
 author: MSFTTracyP
 ms.reviewer:
@@ -16,13 +16,13 @@ ms.collection:
 - Ent_O365
 - Ent_O365_Hybrid
 ms.custom: Ent_Solutions
-ms.assetid: 
-description: "摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。"
-ms.openlocfilehash: e57414c3ed5af5c02b719d0c3639542e154be5bf
-ms.sourcegitcommit: fbf33e74fd74c4ad6d60b2214329a3bbbdb3cc7c
+ms.assetid: ''
+description: 摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。
+ms.openlocfilehash: 1ab0bb3215531ca8b2d0fda8d70874f966438759
+ms.sourcegitcommit: def3e311db9322e469753bac59ff03624349b140
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-azure-ad-for-sharepoint-server-authentication"></a>SharePoint Server 驗證使用 Azure AD
 
@@ -99,13 +99,13 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
 3. 設定包含下列資料列的表格 （類似以下的表格 1）：</br> 
     - 領域
     - SAML 簽署憑證檔案的完整路徑
-    - SAML 單一登入服務的 URL （將*/saml2*取代*/wsfed*）
+    - SAML 單一登入服務的 URL （將 */saml2*取代 */wsfed*）
     - 應用程式物件識別碼。 </br>
 將 [ *Identifier* ] 值複製到插入資料表 (請參閱表 1 下方) 的*領域*屬性。
 4. 儲存變更。
 5. 按一下以存取設定登入] 頁面上的**設定 （應用程式名稱）**連結。</br>![設定單一登入頁面](images/SAML11/fig7-configssopage.png)</br> 
     -  按一下 [下載為副檔名為.cer 檔的 SAML 簽署憑證的**SAML 簽署憑證-原始**連結。複製並貼到表格的下載檔案的完整路徑。
-    - 複製並貼上的 SAML 單一登入服務 URL 連結到您、 取代*/wsfed* */saml2*部分 URL。</br>
+    - 複製並貼上的 SAML 單一登入服務 URL 連結到您、 取代 */wsfed* */saml2*部分 URL。</br>
 6.  瀏覽至 [應用程式的 [**內容**] 窗格。複製並貼到您在步驟 3 設定表格的物件 ID 值。</br>![應用程式的 [內容] 窗格](images/SAML11/fig8-propertiespane.png)</br>
 7. 使用您所擷取的值，請確定您在步驟 3 設定表格的格式類似於下表 1。
 
@@ -118,7 +118,7 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
 |應用程式物件識別碼 | `a812f48b-d1e4-4c8e-93be-e4808c8ca3ac` |
 
 > [!IMPORTANT]
-> 在 URL 中的*/saml2*值取代為*/wsfed*。*/Saml2*端點會處理 SAML 2.0 權杖。*/Wsfed*端點啟用處理 SAML 1.1 權杖，並需要 SharePoint 2016 SAML 同盟。
+> 在 URL 中的 */saml2*值取代為 */wsfed*。*/Saml2*端點會處理 SAML 2.0 權杖。*/Wsfed*端點啟用處理 SAML 1.1 權杖，並需要 SharePoint 2016 SAML 同盟。
 
 ## <a name="step-4-configure-a-new-trusted-identity-provider-in-sharepoint-server-2016"></a>步驟 4： 在 SharePoint Server 2016 中設定新的受信任的身分識別提供者
 
@@ -144,7 +144,7 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 2. 在功能區上，按一下 [**驗證提供者**並選擇您想要使用的區域。
 3. 選取 [**信任的身分識別提供者**，並選取 [身分識別提供者所註冊名為*AzureAD*。  
 4. 在登入頁面 URL 設定中，選取 [**自訂登入] 頁面上**，並提供"/_trust/"的值。 
-5. 按一下 [確定]。
+5. 按一下 [確定]****。
 
 ![設定驗證提供者](images/SAML11/fig10-configauthprovider.png)
 
@@ -166,7 +166,7 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 5. 在 [**新增使用者**] 對話方塊中按一下適當的區域中**的區域**]，並再按 [**下一步**。
 6. 在 [ **Web 應用程式的原則**] 對話方塊的 [**選擇使用者**] 區段中按一下 [**瀏覽**] 圖示。
 7. 在 [**尋找**] 文字方塊中，在您的目錄中輸入使用者的登入名稱並按一下 [**搜尋**]。 </br>範例： *demouser@blueskyabove.onmicrosoft.com*。
-8. 在清單檢視中 AzureAD 標題、 下的 [選取的 name 屬性並按一下 [**新增**] 然後按一下**[確定]**以關閉 [] 對話方塊。
+8. 在清單檢視中 AzureAD 標題、 下的 [選取的 name 屬性並按一下 [**新增**] 然後按一下 **[確定]** 以關閉 [] 對話方塊。
 9. 在權限，按一下 [**完全控制**]。</br>![宣告使用者授與完全控制](images/SAML11/fig12-grantfullcontrol.png)</br>
 10. 按一下 [完成]，然後按一下 [確定]。
 
@@ -210,6 +210,22 @@ $cert= New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
 New-SPTrustedRootAuthority -Name "AzureAD" -Certificate $cert
 Get-SPTrustedIdentityTokenIssuer "AzureAD" | Set-SPTrustedIdentityTokenIssuer -ImportTrustCertificate $cert
 ```
+## <a name="configuring-one-trusted-identity-provider-for-multiple-web-applications"></a>設定多個 web 應用程式的一個信任的身分識別提供者
+設定適用於單一 web 應用程式，但如果您想要使用相同的信任的身分識別提供者的多個 web 應用程式需要額外的設定。例如，假設我們曾經擴充 web 應用程式使用的 URL`https://portal.contoso.local`現在要驗證使用者與`https://sales.contoso.local`也。若要這樣做，我們需要更新受限於 WReply 參數並更新應用程式登錄中新增的回覆 URL 的 Azure AD 的身分識別提供者。
+
+1. 在 Azure 入口網站中開啟的 Azure AD 目錄。按一下 [**應用程式註冊**，然後按一下 [**檢視所有的應用程式**。按一下您先前建立的應用程式 （SharePoint SAML 整合）。
+2. 按一下 [**設定**]。
+3. 在設定 blade 中，按一下 [**回覆 Url**。 
+4. 新增其他 web 應用程式的 URL (例如`https://sales.contoso.local`) 並按一下 [**儲存**]。 
+5. 在 SharePoint 伺服器上，開啟**SharePoint 2016 管理命令介面**命令並執行下列命令，將使用您先前所使用之信任的身分識別 token 簽署者的名稱。
+
+```
+$t = Get-SPTrustedIdentityTokenIssuer "AzureAD"
+$t.UseWReplyParameter=$true
+$t.Update()
+```
+6. 在管理中心中，移至 web 應用程式並啟用現有信任的身分識別提供者。也設定為自訂的登入頁面的 [登入頁面 URL，請記得`/_trust/`。
+7. 在管理中心按一下 web 應用程式並選擇 [**使用者原則**。如先前所本文中新增具有適當的權限的使用者。
 
 ## <a name="fixing-people-picker"></a>修正 [人員選擇]
 使用者現在可以登入 SharePoint 2016 使用從 Azure AD 的身分識別，但仍有改進的使用者經驗的機會。在人員選擇]，搜尋使用者呈現，多個搜尋結果。有 3 的宣告類型所建立的宣告對應的每個自訂的搜尋結果。若要選擇使用人員選擇] 的使用者，您必須完全輸入其使用者名稱及選擇**名稱**宣告結果。
@@ -228,10 +244,10 @@ Get-SPTrustedIdentityTokenIssuer "AzureAD" | Set-SPTrustedIdentityTokenIssuer -I
   
 ## <a name="join-the-discussion"></a>參與討論
 
-|**與我們連絡**|**描述**|
+|**連絡我們**|**描述**|
 |:-----|:-----|
-|**您需要什麼樣的雲端採用內容？** <br/> |我們會建立橫跨多個 Microsoft cloud 平台及服務的雲端採用的內容。我們知道什麼構思我們雲端採用內容，或藉由傳送電子郵件給[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)要求特定的內容。<br/> |
-|**加入雲端採用討論區** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
-|**取得您在這裡看到的美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
+|**您需要什麼樣的雲端採用內容？** <br/> |我們正在建立涵蓋多個 Microsoft 雲端平台及服務的雲端採用內容。請傳送電子郵件至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)，讓我們知道您對雲端採用內容的看法或對特定內容的要求。<br/> |
+|**加入雲端採用討論** <br/> |如果您熱愛雲端解決方案，請考慮加入雲端採用諮詢委員會 (Cloud Adoption Advisory Board，CAAB)，與更大且活躍的 Microsoft 內容開發人員、產業專業人員及全球的客戶接觸。若要加入，請新增為 Microsoft 技術社群 [CAAB (雲端採用諮詢委員會) 空間](https://aka.ms/caab)的成員，並傳送電子郵件給我們，地址為：[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)。所有人都可以在 [CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)上讀取社群相關內容。不過，CAAB 成員可獲得新雲端採用資源和解決方案說明的私人網路研討會邀請。<br/> |
+|**取得您在這裡看到的美工圖案** <br/> |如果您想要此文章中所看到之美工圖案的可編輯複本，我們很樂於將它傳送給您。請以電子郵件將您的要求 (包括美工圖案的 URL 和標題) 傳送至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)。<br/> |
    
 

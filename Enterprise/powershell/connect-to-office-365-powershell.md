@@ -15,11 +15,11 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
-ms.openlocfilehash: 65ddb3c66d2cd69ad1ecb468ec762667a0b07a84
-ms.sourcegitcommit: 3b474e0b9f0c12bb02f8439fb42b80c2f4798ce1
+ms.openlocfilehash: eac56ae28ab48bb53842725d703bf81fb37d31eb
+ms.sourcegitcommit: def3e311db9322e469753bac59ff03624349b140
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -120,7 +120,7 @@ Connect-MsolService
 <a name="ConnectV2"> </a>
 ## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組的連線
 
-[圖模組的 Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)模組中的命令及其指令程式名稱中有"AzureAD"。
+[圖模組的 Azure Active Directory PowerShell](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)模組中的命令會有**AzureAD**在其指令程式名稱。
 
 如圖模組的需要在 Azure Active Directory PowerShell 中的新 cmdlet 的程序，使用下列步驟來安裝此模組，並連線至您的 Office 365 訂閱。
 

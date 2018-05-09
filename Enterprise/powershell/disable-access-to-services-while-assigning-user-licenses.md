@@ -1,9 +1,9 @@
 ---
-title: "停用時指派使用者授權的服務存取權"
+title: 停用時指派使用者授權的服務存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/07/2018
 ms.audience: Admin
 ms.topic: article
 ms.collection: Ent_O365
@@ -13,21 +13,18 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
-description: "了解如何將授權指派給使用者帳戶及使用 Office 365 PowerShell 的同時停用特定的服務計劃。"
-ms.openlocfilehash: 0ab1aea03099f6aae469699b1169af9e12b41d74
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 了解如何將授權指派給使用者帳戶及使用 Office 365 PowerShell 的同時停用特定的服務計劃。
+ms.openlocfilehash: 7567d84490cdb3db7c149a51c4f2f04d39cad9ce
+ms.sourcegitcommit: def3e311db9322e469753bac59ff03624349b140
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用時指派使用者授權的服務存取權
 
 **摘要：** 了解如何將授權指派給使用者帳戶及使用 Office 365 PowerShell 的同時停用特定的服務計劃。
   
 Office 365 訂閱隨附的個別服務的服務計劃。Office 365 系統管理員通常需要將授權指派給使用者時，停用特定計劃。使用本文中的指示，您可以將 Office 365 授權指派時停用特定的服務計劃使用 PowerShell for 個別的使用者帳戶或多個使用者帳戶。
-  
-> [!NOTE]
-> 本文根據 Siddhartha Parmar，Microsoft 支援呈報工程師的工作。 
   
 ## <a name="before-you-begin"></a>開始之前
 
@@ -151,8 +148,6 @@ $users | Get-MsolUser | Select UserPrincipalName, Islicensed,Usagelocation | Exp
 - 建立已處理的所有使用者的 CSV 檔案並顯示其授權狀態。
     
 ## <a name="see-also"></a>另請參閱
-
-#### 
 
 [使用 Office 365 PowerShell 停用服務存取權](disable-access-to-services-with-office-365-powershell.md)
   

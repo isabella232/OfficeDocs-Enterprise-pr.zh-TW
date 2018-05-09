@@ -4,21 +4,24 @@ ms.author: robmazz
 author: robmazz
 manager: laurawi
 ms.date: 5/4/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
-ms.service: o365-solutions
-localization_priority: Normal
-ms.collection: ''
-ms.custom: ''
-ms.assetid: ''
+ms.service: Office 365 Administration
+localization_priority: None
+ms.collection: Strat_O365_Enterprise
 description: 摘要： 了解 android （英文）、 瀏覽器、 iOS、 Mac OS X、 Windows 及 Windows Mobile 所支援的 Office 365 用戶端原則。
-ms.openlocfilehash: 1da917ec40fb40d7a13dc5fb426f640b178877f4
-ms.sourcegitcommit: 5c5489db5d1000296945c9774198bd911bee4f14
+ms.openlocfilehash: 663d2e2a127b03524f7f402acee3d6249870321a
+ms.sourcegitcommit: def3e311db9322e469753bac59ff03624349b140
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="office-365-client-policies---client-and-app-view"></a>Office 365 用戶端原則-用戶端和應用程式檢視
+**想要變更之檢視的這項資訊嗎？選取不同的檢視下列：**
+> [!div class="op_single_selector"] 
+> - [用戶端與 App 檢視](office-365-client-policies-app-view.md)
+> - [原則檢視](office-365-client-policies-policy-view.md)
+
 若要判斷哪些 Office 365 用戶端原則支援個別 Microsoft 用戶端應用程式使用下列清單。
 
 ## <a name="delve"></a>Delve
