@@ -11,11 +11,11 @@ ms.custom: ''
 localization_priority: Normal
 ms.assetid: ''
 description: Exchange Online 中的多個地理位置功能的多個地理區域展開您的 Office 365 目前狀態。
-ms.openlocfilehash: 6378f8a010b790674f07150aa39cbbc38c60b7fe
-ms.sourcegitcommit: 63e2844daa2863dddcd84819966a708c434e8580
+ms.openlocfilehash: ea00ab52142e92e122273ab4ba718e98bd94b572
+ms.sourcegitcommit: 12d3223cc2d6bf39a8960409a923254e1790fd2f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="multi-geo-capabilities-in-exchange-online"></a>Exchange Online 中的多個地理位置功能
 
@@ -65,7 +65,7 @@ Exchange Online 進行同步處理來自 Azure AD 的**PreferredDataLocation**�
 
 - 如果沒有指定任何地理位置，信箱將會被放置在預設的地理位置。
 
-**請注意**： 多重地理位置功能和 Skype 的商務線上地域主控會議這兩個使用者物件上使用**PreferredDataLocation**屬性來尋找服務。如果您在地域託管會議的使用者物件上設定**PreferredDataLocation**值，信箱和 OneDrive for 這些使用者會自動移至指定的地理位置之後在 Office 365 租用戶上啟用多個地理位置。
+**請注意**： 多重地理位置功能和 Skype 的商務線上地域主控會議這兩個使用者物件上使用**PreferredDataLocation**屬性來尋找服務。如果您在地域託管會議的使用者物件上設定**PreferredDataLocation**值，這些使用者的信箱將會自動移到指定的地理位置之後在 Office 365 租用戶上啟用多個地理位置。
 
 ## <a name="feature-limitations-for-multi-geo-in-exchange-online"></a>功能會受到限制的多個地理位置 in Exchange Online
 1. 使用者信箱、 資源信箱 （會議室及器材信箱） 和共用的信箱支援多個地理位置功能。您可以僅置於公用資料夾信箱與 Office 365 群組客戶的家用地理位置。
