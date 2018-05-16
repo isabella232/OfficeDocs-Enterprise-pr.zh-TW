@@ -3,7 +3,7 @@ title: 在開發/測試環境中保護 SharePoint Online 網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/14/2018
 ms.audience: ITPro
 ms.topic: article
 ms.collection:
@@ -14,15 +14,15 @@ localization_priority: Priority
 ms.custom: ''
 ms.assetid: 06af70f3-e7dc-4ee2-a385-fb4d61a5e93b
 description: 摘要： 建立公用、 私人、 機密、 和高度機密的 SharePoint Online 小組網站的開發人員/測試環境中。
-ms.openlocfilehash: 8c02f1416cb00150e68dcc27dc7afb41bf82ed21
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 004a1614330f220b31be640cd822d9fdcbb49b99
+ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="secure-sharepoint-online-sites-in-a-devtest-environment"></a>在開發/測試環境中保護 SharePoint Online 網站
 
- **摘要：**開發/測試環境中建立公用、 私人、 機密、 和高度機密的 SharePoint Online 小組網站。
+ **摘要：** 開發/測試環境中建立公用、 私人、 機密、 和高度機密的 SharePoint Online 小組網站。
   
 本文提供逐步指示以建立包含四種不同類型的[安全 SharePoint Online 網站及檔案](secure-sharepoint-online-sites-and-files.md)解決方案的 SharePoint Online 小組網站的開發人員/測試環境。
   
@@ -66,18 +66,18 @@ ms.lasthandoff: 04/27/2018
   
 1. 在瀏覽器中，建立不同的索引標籤並前往 Azure 入口網站[https://portal.azure.com](https://portal.azure.com)。必要時，登入的全域管理員帳戶認證的 Office 365 E5 試用版訂閱。
     
-2. 在 Azure 入口網站中，按一下 [Azure Active Directory] > [使用者和群組] > [所有群組]。
+2. 在 Azure 入口網站中，按一下 [ **Azure Active Directory > 群組**。
     
-3. 在 [所有群組] 刀鋒視窗中，按一下 [+ 新增群組]。
+3. 在**群組-所有群組**blade 中，按一下 [ **+ 新群組**。
     
 4. 在 [群組] 刀鋒視窗中：
     
+  - 選取**Office 365**中的**群組類型**。
+    
   - 在 [**名稱**類型**C 套件**。
     
-  - 在 [成員資格] 中選取 [已指派]。
-    
-  - 對 [啟用 Office 功能] 按一下 [是]。
-    
+  - 在 [**成員資格類型**選取**已指派]** 。
+      
 5. 按一下 [建立]，然後關閉 [群組] 刀鋒視窗。
     
 6. 重複步驟 3-5，逐一設定下列群組名稱：
@@ -285,7 +285,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
 5. 在 [網站名稱] 中，鍵入「專案 1」。 
     
-6. 在**小組網站描述] 中，**輸入**SharePoint 網站的專案 1**。
+6. 在**小組網站描述] 中，** 輸入**SharePoint 網站的專案 1**。
     
 7. **隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。
     
@@ -409,7 +409,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
   - 若要與組織外部的使用者共用，請下載檔案，然後將它開啟。 依序按一下 [檔案]、[保護文件] 和 [以密碼加密]，然後指定強式密碼。 以個別電子郵件或其他通訊方式傳送密碼。
     
-16. 按一下 [ **OK** ]。
+16. 按一下 [確定]****。
     
 17. 在**您想要如果我們偵測敏感資訊吗？** ] 窗格中，清除**封鎖來自共用、 人員及限制共用內容的存取權**] 核取方塊，然後再按一下 [**下一步**。
     
@@ -523,7 +523,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
   - 若要與組織外部的使用者共用，請下載檔案，然後將它開啟。 依序按一下 [檔案]、[保護文件] 和 [以密碼加密]，然後指定強式密碼。 以個別電子郵件或其他通訊方式傳送密碼。
     
-17. 按一下 [ **OK** ]。
+17. 按一下 [確定]****。
     
 18. 在**您想要如果我們偵測敏感資訊吗？** ] 窗格中，選取**需要覆寫業務上理由**，然後再按一下 [**下一步**。
     
@@ -541,7 +541,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
 3. 如果這是您要設定 Azure 資訊保護第一次，請參閱這些[指示](https://docs.microsoft.com/information-protection/deploy-use/configure-policy#to-access-the-azure-information-protection-blade-for-the-first-time)。
     
-4. 在 [清單] 窗格中，按一下 [**更多的服務**、 輸入**資訊**，和 [ **Azure 資訊保護**。
+4. 在 [清單] 窗格中，按一下 [**所有服務**、 輸入**資訊**，和都 [ **Azure 資訊保護**。
     
 5. **Azure 資訊保護**blade、 上，按一下 [**範圍設定的原則 > + 新增原則**。
     

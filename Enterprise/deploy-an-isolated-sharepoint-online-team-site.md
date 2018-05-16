@@ -1,9 +1,9 @@
 ---
-title: "部署隔離的 SharePoint Online 小組網站"
+title: 部署隔離的 SharePoint Online 小組網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/14/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,16 +11,16 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 3033614b-e23b-4f68-9701-f62525eafaab
-description: "摘要： 部署新隔離的 SharePoint Online 小組網站與這些逐步指示。"
-ms.openlocfilehash: 297681b688b43eb02ee4f99f983a0f796312e599
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+description: 摘要： 部署新隔離的 SharePoint Online 小組網站與這些逐步指示。
+ms.openlocfilehash: c4bb272cc96ca86fc8bffc99f7c3e50033c06755
+ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="deploy-an-isolated-sharepoint-online-team-site"></a>部署隔離的 SharePoint Online 小組網站
 
- **摘要：**部署新隔離的 SharePoint Online 小組網站與這些逐步指示。
+ **摘要：** 部署新隔離的 SharePoint Online 小組網站與這些逐步指示。
   
 本文是建立及設定 Microsoft Office 365 中隔離的 SharePoint Online 小組網站的逐步說明部署指南 》。這些步驟假設使用三個預設 SharePoint 群組及對應的權限層級、 與每個存取層級單一 Azure Active Directory AD 型的存取群組。
   
@@ -61,21 +61,23 @@ ms.lasthandoff: 02/13/2018
     
 - 網站檢視器 （其中將包含從步驟 3 的清單）
     
-1. 在瀏覽器中移至[https://portal.azure.com](https://portal.azure.com) Azure 入口網站並使用已指派與使用者管理管理員或公司管理員角色的帳戶的認證登入。
+1. 在瀏覽器中移至 Azure 入口網站[https://portal.azure.com](https://portal.azure.com)並簽署的已指派與使用者管理管理員或公司管理員角色的帳戶認證。
     
-2. 在 Azure 入口網站中，按一下 [ **Azure Active Directory > 使用者和群組 > 的所有群組**。
+2. 在 Azure 入口網站中，按一下 [ **Azure Active Directory > 群組**。
     
-3. 在**所有群組**blade 中，按一下 [ **+ 新群組**。
+3. 在**群組-所有群組**blade 中，按一下 [ **+ 新群組**。
     
-4. 在**群組**blade 中：
+4. 在 [群組] 刀鋒視窗中：
+    
+  - 選取**Office 365**中的**群組類型**。
     
   - **名稱**] 中輸入群組名稱。
     
-  - 選取**指派**中的**成員資格**。
+  - 在 [**群組描述**輸入群組的描述。
     
-  - 按一下 [**是]**以**啟用 Office**功能。
+  - 在 [**成員資格類型**選取**已指派]** 。
     
-5. 按一下 [**建立**]，然後關閉 [**群組**blade。
+5. 按一下 [建立]，然後關閉 [群組] 刀鋒視窗。
     
 6. 針對您的其他群組重複步驟 3-5。
     
@@ -160,27 +162,27 @@ Get-AzureADGroupMember -ObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq 
   
 1. Office 365 入口網站也可用於管理 SharePoint Online 小組網站 （SharePoint Online 系統管理員） 帳戶登入。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
     
-2. 在 [並排顯示] 清單中按一下 [ **SharePoint**]。
+2. 在磚清單中，按一下 [SharePoint]。
     
 3. 新**SharePoint**索引標籤中的瀏覽器中，按一下 [ **+ 建立網站**]。
     
-4. 在 [**建立網站**] 頁面上，按一下 [**小組網站**。
+4. 在 [建立網站] 頁面上，按一下 [小組網站]。
     
 5. 在**站台名稱**] 中輸入小組網站的名稱。 
     
-6. 在**小組網站描述] 中，**輸入網站的用途的選用描述。
+6. 在**小組網站描述] 中，** 輸入網站的用途的選用描述。
     
 7. **隱私權設定**] 中選取 [**私人-只有成員可以存取此站台**，然後按一下 [**下一步**。
     
-8. 在**您要新增誰？** ] 窗格中，按一下 [**完成]**。
+8. 在 [您想要新增誰?] 窗格中，按一下 [完成]。
     
 新的 SharePoint Online 小組網站下, 一步] 設定的權限。
   
 1. 在 [工具] 列中按一下 [設定] 圖示，和 [**網站權限**。
     
-2. 在 [**網站權限**] 窗格中，按一下 [**進階權限設定**。
+2. 在 [網站權限] 窗格中，按一下 [進階權限設定]。
     
-3. 新**的權限**] 索引標籤上的瀏覽器中，按一下 [**存取要求設定**]。
+3. 在新的 [權限] 瀏覽器索引標籤中，按一下 [存取要求設定]。
     
 4. **存取要求設定**] 對話方塊中，清除 [**允許成員共用網站和個別的檔案及資料夾**，以及**允許存取權要求**（使已取消選取所有的三個核取方塊），然後按一下 [**確定]**。
     
@@ -206,7 +208,7 @@ Get-AzureADGroupMember -ObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq 
     
 15. 在 [**共用**] 對話方塊中，輸入網站檢視者存取群組的名稱、 選取它，，然後按一下 [**共用**。
     
-16. 關閉瀏覽器的 [**權限**] 索引標籤。
+16. 關閉 [權限] 瀏覽器索引標籤。
     
 這些權限設定的結果是：
   
@@ -228,9 +230,9 @@ Get-AzureADGroupMember -ObjectId (Get-AzureADGroup | Where { $_.DisplayName -eq 
 
 當您需要變更網站的存取群組成員資格或建立自訂的權限的文件資料夾時，請參閱[管理隔離的 SharePoint Online 小組網站](manage-an-isolated-sharepoint-online-team-site.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)
+[獨立的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)。
   
 [設計隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)
   

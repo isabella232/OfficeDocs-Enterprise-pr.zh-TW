@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 Enterprise 開發人員/測試環境的 MAM 原則"
+title: Microsoft 365 Enterprise 開發人員/測試環境的 MAM 原則
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,16 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 1aa9639b-2862-49c4-bc33-1586dda636b8
-description: "摘要： 使用此測試實驗室指南新增至 Microsoft 365 開發人員/測試環境的 EMS 行動應用程式管理 (MAM) 原則。"
-ms.openlocfilehash: 9eb636fe14b2fbd1fe45fb7dac528a0d4e31be36
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 使用此測試實驗室指南新增至 Microsoft 365 開發人員/測試環境的 EMS 行動應用程式管理 (MAM) 原則。
+ms.openlocfilehash: 1d4ede9b5757d4adce8909586790bcad51f7433f
+ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/16/2018
 ---
 # <a name="mam-policies-for-your-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 Enterprise 開發人員/測試環境的 MAM 原則
 
- **摘要：**使用此測試實驗室指南新增至 Microsoft 365 開發人員/測試環境的 EMS 行動應用程式管理 (MAM) 原則。
+ **摘要：** 使用此測試實驗室指南新增至 Microsoft 365 開發人員/測試環境的 EMS 行動應用程式管理 (MAM) 原則。
   
 Microsoft Enterprise 行動性 + 安全性 (EMS) 可協助您的員工提高工作效率使用其最愛的應用程式和裝置的保護組織的資料。如需詳細資訊，請參閱[企業行動性 + 安全性 （EMS）](https://www.microsoft.com/cloud-platform/enterprise-mobility-security)。
   
@@ -38,31 +38,31 @@ Microsoft Enterprise 行動性 + 安全性 (EMS) 可協助您的員工提高工�
     
 2. 在瀏覽器的新] 索引標籤上開啟 Azure 入口網站 ([https://azure.portal.com](https://azure.portal.com)) 並使用您的 Office 365 全域管理員帳戶登入。
     
-3. Azure 入口網站] 索引標籤上的 Internet Explorer 中，在功能窗格] 中按一下 [**更多服務**（或右邊的箭號）、 並輸入**Intune**，然後按一下 [ **Intune**。
+3. Azure 入口網站] 索引標籤上的 Internet Explorer 中，在功能窗格] 中按一下 [**所有服務**、 並輸入**Intune**，然後按一下都 [ **Intune**。
     
 4. 在左側瀏覽窗格中，按一下 [群組]****。
     
-5. 按一下 [**使用者和群組所有群組**blade、 的 [**新增**]。
+5. 在**群組所有群組**blade 中，按一下 [ **+ 新群組**。
     
-6. 在**群組**blade 中，輸入**Managed iOS 裝置的使用者****名稱**] 中選取**已指派]**中的**成員資格類型**，請選取**[是]**的**啟用 Office 功能吗？**，然後按一下 [**建立**。 
+6. 在**群組**blade 中，選取 [ **Office 365** **群組類型？**、 在 [**名稱**] 中輸入 [**受管理的 iOS 裝置使用者****成員資格類型**] 中選取 [**已指派**] 和 [**建立**。 
     
 7. 關閉**群組**blade。
     
-8. 按一下 [**使用者和群組所有群組**blade、 的 [**新增**]。
+8. 在**群組所有群組**blade 中，按一下 [**新增]**。
     
-9. 在**群組**blade 中，輸入**受管理的 Android 裝置的使用者****名稱**] 中選取**已指派]**中的**成員資格類型**，請選取**[是]**的**啟用 Office 功能吗？**，然後按一下 [**建立**。
+9. 在**群組**blade 中，選取 [ **Office 365** **群組類型？**、 在 [**名稱**] 中輸入**受管理的 Android 裝置使用者****成員資格類型**] 中選取 [**已指派**] 和 [**建立**。
     
-10. 關閉**使用者和群組所有群組**blade。
+10. 關閉**群組所有群組**blade。
     
 11. 在**Intune** blade、**快速工作**清單中，按一下 [**建立規範原則**。
     
 12. 在**規範原則設定檔**blade 中，按一下 [**建立原則**。
     
-13. 在**建立原則**blade，在 [**名稱**] 輸入**iOS**。在**平台**，選取**iOS**、 上**iOS 規範原則**blade 中，按一下 [**確定]**和 [**建立**。
+13. 在**建立原則**blade，在 [**名稱**] 輸入**iOS**。在**平台**，選取**iOS**、 上**iOS 規範原則**blade 中，按一下 [**確定]** 和 [**建立**。
     
 14. 在**規範原則設定檔**blade 中，按一下 [**建立原則**。
     
-15. 在**建立原則**blade，在 [**名稱**] 中，輸入**Android**。在**平台**，選取**Android**、 在**Android 規範原則**blade 中，按一下 [**確定]**和 [**建立**。
+15. 在**建立原則**blade，在 [**名稱**] 中，輸入**Android**。在**平台**，選取**Android**、 在**Android 規範原則**blade 中，按一下 [**確定]** 和 [**建立**。
     
 16. 按一下 [**規範原則設定檔**blade、 **Android**原則名稱。
     
@@ -141,9 +141,9 @@ Microsoft Enterprise 行動性 + 安全性 (EMS) 可協助您的員工提高工�
   
 ## <a name="see-also"></a>請參閱
 
-[Microsoft 365 Enterprise 開發人員/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
+[Microsoft 365 企業版開發/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
   
-[註冊 iOS 和 Microsoft 企業 365 開發人員/測試環境中的 Android 裝置](enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md)
+[在您的 Microsoft 365 企業版開發/測試環境中註冊 iOS 和 Android 裝置](enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md)
   
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
 
