@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 Enterprise 開發人員/測試環境
+title: Microsoft 365 企業版開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,99 +7,99 @@ ms.date: 04/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-localization_priority: Normal
+localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
 - Ent_TLGs
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
-description: 摘要： 使用此測試實驗室指南建立開發/測試環境包含 Office 365 E5、 企業行動性 + 安全性 （EMS） E5 及執行 Windows 10 企業的電腦。
-ms.openlocfilehash: 9ef1c13d7ae194ff4ba31abaf379529220ffa14f
-ms.sourcegitcommit: 62c0630cc0d2611710e73e0592bddfe093e00783
-ms.translationtype: MT
+description: 摘要：使用此測試實驗室指南來建立開發/測試環境，其中包含 Office 365 E5、Enterprise Mobility + Security (EMS) E5 與執行 Windows 10 企業版的電腦。
+ms.openlocfilehash: 5a4c23b3bde309a75a61e574e91823ecdd4629fe
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 Enterprise 開發人員/測試環境
+# <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 企業版開發/測試環境
 
- **摘要：**若要建立包含 Office 365 E5、 企業行動性 + 安全性 （EMS） E5 和執行 Windows 10 企業之電腦的開發人員/測試環境中使用此測試實驗室指南。
+ **摘要：** 使用此測試實驗室指南來建立開發/測試環境，其中包含 Office 365 E5、Enterprise Mobility + Security (EMS) E5 與執行 Windows 10 企業版的電腦。
   
-本文提供逐步指示以建立要測試的功能和[Microsoft 365 企業版](https://www.microsoft.com/microsoft-365/enterprise)功能簡化的環境。
+本文提供逐步指示來建立簡化的環境，用以測試 [Microsoft 365 企業版](https://www.microsoft.com/microsoft-365/enterprise)的功能與特性。
   
-## <a name="phase-1-create-your-office-365-e5-subscription"></a>階段 1： 建立您的 Office 365 E5 訂閱
+## <a name="phase-1-create-your-office-365-e5-subscription"></a>階段 1：建立您的 Office 365 E5 訂閱
 
-請依照下列階段 2 和[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)的階段 3： 建立輕量型 Office 365 開發人員/測試環境中，如圖 1 所示的步驟。
+請依照 [Office 365 開發/測試環境](office-365-dev-test-environment.md)中階段 2 和階段 3 的步驟，建立簡易的 Office 365 開發/測試環境，如圖 1 所示。
   
-**圖 1： Office 365 E5 訂閱具有其 Azure Active Directory (AD) 租用戶和使用者帳戶**
+**圖 1：Office 365 E5 訂閱及其 Azure Active Directory (AD) 租用戶和使用者帳戶**
 
 ![Microsoft 365 企業版 開發/測試環境的階段 1](images/65bb027b-fb59-46eb-aec2-38c0af425168.png)
 
 > [!NOTE]
-> Office 365 E5 試用訂閱是 30 天，可輕鬆地延伸到 60 天。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 
+> Office 365 E5 試用訂閱為 30 天，也可以輕鬆擴充到 60 天。如需永久開發/測試環境，請建立具有一些授權的新付費訂閱。 
   
-## <a name="phase-2-add-ems"></a>階段 2： 新增 EMS
+## <a name="phase-2-add-ems"></a>階段 2：新增 EMS
 
-在此階段中，您註冊 EMS E5 試用版訂閱並將其新增至您的 Office 365 E5 試用版訂閱相同的組織。
+在這個階段中，您可以註冊 EMS E5 試用訂閱，並將它新增至與 Office 365 E5 試用訂閱相同的組織。
   
-首先，新增 EMS E5 試用訂閱及 EMS 授權指派給全域管理員帳戶。
+首先，請新增 EMS E5 試用訂閱，並指派 EMS 授權給您的全域管理員帳戶。
   
-1. 網際網路瀏覽器的私人執行個體，登入 Office 365 入口網站與您的全域管理員帳戶認證。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
+1. 請使用網際網路瀏覽器的私用執行個體，並使用全域管理員帳戶認證登入 Office 365 入口網站。如需說明，請參閱[在何處登入 Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
     
-2. 按一下 [管理] 磚。
+2. 按一下 [管理]**** 磚。
     
-3. 在瀏覽器的 [Office 系統管理中心] 索引標籤上，按一下左導覽中的 [計費] > [購買服務]。
+3. 在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [**購買服務**] 頁面上尋找**企業行動性 + 安全性 E5**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
+4. 在 [購買服務]**** 頁面上，尋找 [Enterprise Mobility + Security E5] **** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [訂單收據] 頁面上，按一下 [繼續]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
     
-7. 在瀏覽器的 [Office 365 系統管理中心] 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]。
+7. 在瀏覽器的 [Office 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]****。
     
-8. 按一下 [您的全域管理員帳戶] 和 [**編輯****產品**授權。
+8. 按一下您的全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯]****。
     
-9. 在**產品授權**] 窗格中，開啟**企業行動性 + 安全性 E5** **上**至產品授權、 按一下 [**儲存]**及 [**關閉**兩次。
+9. 在 [產品授權]**** 窗格中，將 [**Enterprise Mobility + Security E5**] 的產品授權設為 [開啟]**，按一下 [儲存]，然後按兩次 [關閉]。
     
 > [!NOTE]
 > Enterprise Mobility + Security E5 試用訂閱為 90 天。針對永久開發/測試環境，建立具有少數授權的新付費訂閱。 
   
- ***如果您已完成的階段 3：***[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)的所有其他帳戶 （使用者 2、 3 使用者、 使用者 4 和使用者 5） 的重複步驟 8 和 9 的前一程序。
+ ***如果您已完成 [Office 365 開發/測試環境](office-365-dev-test-environment.md)的階段 3***，請為所有其他帳戶 (使用者 2、使用者 3、使用者 4 和使用者 5) 重複先前程序的步驟 8 和 9。
   
-開發/測試環境現在有：
+開發/測試環境現在擁有：
   
-- Office 365 E5 Enterprise 和 EMS E5 試用版訂閱共用相同的 Azure AD 租用戶時您的使用者帳戶的清單。
-- 使用 Office 365 E5 和 EMS E5 啟用所有適當的使用者帳戶 （只是將全域管理員或所有五個使用者帳戶）。
+- Office 365 E5 Enterprise 和 EMS E5 試用訂閱會與您的使用者帳戶清單共用相同的 Azure AD 租用戶。
+- 已啟用所有適用的使用者帳戶 (僅全域管理員或全部五個使用者帳戶) 以使用 Office 365 E5 和 EMS E5。
     
-圖 2 顯示您所產生的設定，會新增 EMS。
+圖 2 顯示產生的組態，其中會新增 EMS。
   
-**圖 2： 新增 EMS 試用訂閱**
+**圖 2：新增 EMS 試用訂閱**
 
 ![Microsoft 365 企業版 開發/測試環境的階段 2](images/8a01a483-3de2-41f3-a845-141c7edd0cb0.png)
   
-## <a name="phase-3-create-a-windows-10-enterprise-computer"></a>階段 3： 建立 Windows 10 企業電腦
+## <a name="phase-3-create-a-windows-10-enterprise-computer"></a>階段 3：建立 Windows 10 企業版的電腦
 
-在此階段中，您可以建立獨立的電腦執行 Windows 10 Enterprise。
+在這個階段，您可以建立執行 Windows 10 企業版的獨立電腦。
   
 ### <a name="physical-computer"></a>實體電腦
 
-取得個人電腦並在其上安裝 Windows 10 Enterprise。您可以下載 Windows 10 Enterprise 試用版[此處](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)。
+取得個人電腦並在其上安裝 Windows 10 企業版。您可以在[這裡](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)下載 Windows 10 企業版試用版。
   
 ### <a name="virtual-machine"></a>虛擬機器
 
-建立使用您選擇 hypervisor 虛擬機器，並在其上安裝 Windows 10 Enterprise。您可以下載 Windows 10 Enterprise 試用版[此處](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)。
+使用您所選的 Hypervisor 建立虛擬機器並在其上安裝 Windows 10 企業版。您可以在[這裡](https://www.microsoft.com/evalcenter/evaluate-windows-10-enterprise)下載 Windows 10 企業版試用版。
   
-### <a name="virtual-machine-in-azure"></a>在 Azure 虛擬機器
+### <a name="virtual-machine-in-azure"></a>Azure 中的虛擬機器
 
-若要建立 Windows 10 虛擬機器 in Microsoft Azure，***您必須具備的 Visual Studio 為基礎的訂閱***，以存取 Windows 10 enterprise 映像。其他類型的 Azure 訂閱、 試驗和付費訂閱，例如不需要存取此影像。
+若要在 Microsoft Azure 中建立 Windows 10 虛擬機器，***您必須擁有以 Visual Studio 為基礎的訂閱***，其具有 Windows 10 企業版的影像存取權。其他類型的 Azure 訂閱，例如試用版與付費訂閱，沒有此影像的存取權。
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。這些命令會建立 Windows 10 Enterprise 虛擬機器名為 WIN10 和所有其所需的基礎結構，包括資源群組、 儲存帳戶及虛擬網路。如果您已熟悉 Azure 基礎結構服務，請能否這些指示以符合您目前已部署的基礎結構。 
+> 下列命令集使用最新版本的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。這些命令集會建置名為 WIN10 的 Windows 10 企業版虛擬機器，以及所有必要的基礎結構，包括資源群組、儲存體帳戶及虛擬網路。如果您已熟悉 Azure 基礎結構服務，請調整這些指示以符合您目前所部署的基礎結構。 
   
 首先，啟動 Microsoft PowerShell 提示字元。
   
-下列命令以 Azure 帳戶登入。
+使用下列命令登入您的 Azure 帳戶。
   
 ```
 Login-AzureRMAccount
@@ -111,7 +111,7 @@ Login-AzureRMAccount
 Get-AzureRMSubscription | Sort Name | Select Name
 ```
 
-設定您的 Azure 訂閱。括住，包括所有內容取代為\<和 > 具有正確的名稱的字元。
+設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 \< 和 > 字元)。
   
 ```
 $subscr="<subscription name>"
@@ -124,7 +124,7 @@ Get-AzureRmSubscription -SubscriptionName $subscr | Select-AzureRmSubscription
 Get-AzureRMResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
-使用這些命令建立新的資源群組。括住，包括所有內容取代為\<和 > 字元，以正確的名稱。
+使用這些命令建立新的資源群組。以正確的名稱取代引號內的所有項目 (包括 \< 和 > 字元)。
   
 ```
 $rgName="<resource group name>"
@@ -132,7 +132,7 @@ $locName="<location name, such as West US>"
 New-AzureRMResourceGroup -Name $rgName -Location $locName
 ```
 
-接下來，您可以使用這些命令建立新的虛擬網路和 WIN10 虛擬機器。出現提示時，WIN10 提供的名稱和本機管理員帳戶的密碼並儲存這些安全的位置。
+接下來，您可以使用這些命令建立新的虛擬網路和 WIN10 虛擬機器。出現提示時，請提供 WIN10 本機系統管理員帳戶的名稱和密碼，並將其存放在安全的位置。
   
 ```
 $corpnetSubnet=New-AzureRMVirtualNetworkSubnetConfig -Name Corpnet -AddressPrefix 10.0.0.0/24
@@ -153,60 +153,60 @@ $vm=Set-AzureRmVMOSDisk -VM $vm -Name WIN10-TestLab-OSDisk -DiskSizeInGB 128 -Cr
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
-## <a name="phase-4-join-your-windows-10-computer-to-azure-ad"></a>階段 4： 將 Windows 10 電腦加入 Azure AD
+## <a name="phase-4-join-your-windows-10-computer-to-azure-ad"></a>階段 4：將 Windows 10 電腦加入 Azure AD
 
-實體或虛擬機器與 Windows 10 Enterprise 建立之後，使用本機系統管理員帳戶登入。
+建立實體或虛擬機器的 Windows 10 企業版之後，使用本機系統管理員帳戶登入。
   
 > [!NOTE]
-> 針對在 Azure 虛擬機器，連線至其使用[這些指示](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)。使用本機系統管理員帳戶的認證登入。 
+> 針對 Azure 中的虛擬機器，使用[這些指示](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)進行連線。使用本機系統管理員帳戶認證登入。 
   
-接下來，WIN10 電腦加入 Azure AD 租用的 Office 365 和 EMS 訂閱。
+接下來，將 WIN10 電腦加入 Office 365 和 EMS 訂閱的 Azure AD 租用戶。
   
-1. 在 WIN10 電腦桌面上按一下**啟動 > 設定 > 帳戶 > 存取工作或學校 > Connect**。
+1. 在 WIN10 電腦桌面，按一下 [開始] > [設定] > [帳戶] > [存取公司或學校] > [連線]****。
     
-2. 在 [**工作] 或 [學校帳戶設定**] 對話方塊中，按一下 [**加入至 Azure Active Directory 此裝置**。
+2. 在 [設定公司或學校帳戶]**** 對話方塊中，按一下 [將此裝置加入 Azure Active Directory]****。
     
-3. 在**工作或學校帳戶**、 輸入您的 Office 365 訂閱的全域管理員帳戶名稱] 和 [**下一步**。
+3. 在 [公司或學校帳戶]**** 中，輸入 Office 365 訂閱的全域管理員帳戶名稱，然後按一下 [下一步]****。
     
-4. 在**輸入密碼**，輸入您的全域管理員帳戶的密碼，然後按一下 [**登入**。
+4. 在 [輸入密碼]**** 中，輸入全域管理員帳戶的密碼，然後按一下 [登入]****。
     
-5. 出現提示時若要確保這是您的組織，按一下 [**加入**，和 [**完成**。
+5. 系統提示您確認這是您的組織時，按一下 [加入]****，然後按一下 [完成]****。
     
 6. 關閉 [設定] 視窗。
     
-下一步] 安裝 Office 2016 WIN10 電腦上。
+接下來，在 WIN10 電腦上安裝 Office 2016。
   
-1. 開啟 [Microsoft Edge 瀏覽器並登入 Office 365 入口網站與您的全域管理員帳戶認證。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
+1. 開啟 Microsoft Edge 瀏覽器，並使用全域管理員帳戶認證登入 Office 365 入口網站。如需說明，請參閱[在何處登入 Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
     
-2. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [**安裝 Office 2016**。
+2. 在 [Microsoft Office 首頁]**** 索引標籤上，按一下 [安裝 Office 2016]****。
     
-3. 出現提示時與該怎麼辦，按一下 [**執行**] 和 [**是****使用者帳戶**控制。
+3. 系統提示您要執行的動作時，按一下 [執行]****，然後為 [使用者帳戶控制]**** 按一下 [是]****。
     
-4. 等待以完成其安裝 Office。當您看到**你全都設 ！**，按一下 [**關閉**] 兩次。
+4. 等待 Office 完成安裝。當您看到 **「一切就緒！」** 時，按兩次 [關閉]****。
     
-圖 3 是您所產生的環境，包括已加入 Azure AD 租用的 Office 365 和 EMS 訂閱 WIN10 電腦。
+圖 3 顯示您產生的環境，其中包括已加入 Office 365 和 EMS 訂閱的 Azure AD 租用戶之 WIN10 電腦。
   
-**圖 3： 將 WIN10 電腦帳戶新增至 Azure AD 租用戶**
+**圖 3：將 WIN10 電腦帳戶新增至 Azure AD 租用戶**
 
 ![Microsoft 365 企業版 開發/測試環境的階段 4](images/20680f6a-f77e-4333-aaa9-f7cf5e4b0d03.png)
   
-您現在可以開始實驗[Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise)企業版的其他功能。
+您現在已準備好嘗試 [Microsoft 365 企業版](https://www.microsoft.com/microsoft-365/enterprise)的其他功能。
   
 ## <a name="next-steps"></a>後續步驟
 
-使用這些額外的文章來了解 Microsoft 365 企業版功能：
+使用下列額外文章探索 Microsoft 365 企業版的功能：
   
 - [新增行動應用程式管理 (MAM) 原則](https://technet.microsoft.com/library/mt764059.aspx)
     
-- [註冊 iOS 及 Android 裝置](https://technet.microsoft.com/library/mt743077.aspx)
+- [註冊 iOS 和 Android 裝置](https://technet.microsoft.com/library/mt743077.aspx)
     
-- [設定和測試進階安全性管理](https://technet.microsoft.com/library/mt757250.aspx)
+- [設定及測試進階安全性管理](https://technet.microsoft.com/library/mt757250.aspx)
     
-- [設定和測試進階威脅保護](https://technet.microsoft.com/library/mt490479.aspx)
+- [設定及測試進階威脅防護](https://technet.microsoft.com/library/mt490479.aspx)
     
-## <a name="see-also"></a>概念
+## <a name="see-also"></a>另請參閱
 
 - [Microsoft 365 企業版文件](https://docs.microsoft.com/microsoft-365-enterprise/)
-- [部署 Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise)
-- [一個 Microsoft Cloud 開發/測試環境](the-one-microsoft-cloud-dev-test-environment.md)
+- [部署 Microsoft 365 企業版](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise)
+- [One Microsoft Cloud 開發/測試環境](the-one-microsoft-cloud-dev-test-environment.md)
 - [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)

@@ -7,27 +7,27 @@ ms.date: 12/15/2017
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
-localization_priority: Normal
+localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
 - Ent_Architecture
 ms.assetid: c37a4365-b350-4856-a0a8-ff5dfe005af1
-description: 摘要： 您針對和設計儲存 Microsoft 雲端服務平台。
-ms.openlocfilehash: e6edaae9d575babff3c85e87cac5ea65b5a8407b
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
-ms.translationtype: MT
+description: 摘要：設計您的 Microsoft 雲端服務與平台的網路功能。
+ms.openlocfilehash: f4ab7ad5391fadb78db1c5522022a2e2c9ca1ecc
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="microsoft-cloud-storage-for-enterprise-architects"></a>Microsoft Cloud Storage for Enterprise Architects
 
- **摘要：**設計 Microsoft 雲端服務和平台的儲存空間。
+ **摘要：** 設計您的 Microsoft 雲端服務與平台的網路功能。
   
-本文提供連結的文章說明了解設計組織使用 Microsoft 雲端服務和平台的儲存空間何種 IT 架構師所需的一組。您也可以檢視這項資訊為 6 頁海報和列印 tabloid 格式 (也稱為 ledger 11 x 17 或 A3)。
+本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，設計組織的儲存功能時所需的資訊。您也可以 6 頁海報的形式檢視此資訊，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。
   
-[![Microsoft 雲端儲存模型縮圖影像](images/0d4e2eb9-1109-4b3b-bf9e-2f3eff2e2cc4.png)  
+[![Microsoft 雲端儲存模型的縮圖影像](images/0d4e2eb9-1109-4b3b-bf9e-2f3eff2e2cc4.png)  
 ](https://www.microsoft.com/download/details.aspx?id=49552)
   
 ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?linkid=842079) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://go.microsoft.com/fwlink/p/?linkid=842080) | ![參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=49552)
@@ -36,26 +36,26 @@ ms.lasthandoff: 04/16/2018
   
 請參閱下列各節：
   
-- [設計 Microsoft 雲端儲存空間](designing-storage-for-the-microsoft-cloud.md)
+- [設計 Microsoft 雲端的儲存](designing-storage-for-the-microsoft-cloud.md)
     
-    了解為何您應使用雲端儲存空間及重要的雲端儲存案例，以及然後掃描不同的 Microsoft 雲端儲存選項清單。
+    了解為什麼您應該使用雲端儲存和重要的雲端儲存案例，然後掃描不同的 Microsoft 雲端儲存選項的清單。
     
-- [移入就緒](move-in-ready.md)
+- [支援遷入作業](move-in-ready.md)
     
-    使用情況下比喻組織各種不同的雲端存放區選項，這些是內建至其他 Microsoft cloud 優惠方案，即可立即使用。
+    使用結構類比來整理各種雲端儲存選項，這些選項內建至其他 Microsoft 雲端供應項目，並且已準備就緒可立即使用。
     
-- [有部分組件](some-assembly-required.md)
+- [某些必要組件](some-assembly-required.md)
     
-    這些雲端儲存選項會儲存解決方案，需要進行其他設定或針對配合自訂編碼的起點。
+    這些雲端儲存選項是您的儲存解決方案的起點，需要針對自訂調整進行額外設定或編碼。
     
-- [為基礎而建置](build-from-the-ground-up.md)
+- [從頭開始建置](build-from-the-ground-up.md)
     
-    這些雲端儲存選項為基礎的儲存空間建置組塊，讓您可以用來從頭開始建立您自己的儲存解決方案或應用程式。
+    這些雲端儲存選項是基礎的儲存建置組塊，讓您可以用來從頭開始建立您自己的儲存解決方案或應用程式。
     
 > [!NOTE]
-> 這些文章並反映 Enterprise 架構師海報 「 Microsoft 雲端儲存空間**2017 年 9 月**發行版本。
+> 這幾篇文章說明在 **2017 年 9 月** 發佈的 Microsoft Cloud Storage for Enterprise Architects 海報。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

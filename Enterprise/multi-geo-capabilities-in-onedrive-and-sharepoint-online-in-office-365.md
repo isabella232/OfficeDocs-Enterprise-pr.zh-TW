@@ -1,5 +1,5 @@
 ---
-title: OneDrive 和 Office 365 中的 SharePoint Online 中的多個地理位置功能
+title: OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -7,59 +7,60 @@ ms.date: 4/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-ms.custom: Strat_SP_gtc
-localization_priority: Normal
+ms.custom: ''
+ms.collection: Strat_SP_gtc
+localization_priority: Priority
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
-description: 展開您的 Office 365 平台服務來使用 OneDrive 和 SharePoint Online 中的多個地理位置功能的多個地理區域。
-ms.openlocfilehash: edcd8895c4a6e57ae1124ad15a9c5cc2b6bf94ca
-ms.sourcegitcommit: 63e2844daa2863dddcd84819966a708c434e8580
-ms.translationtype: MT
+description: 使用 OneDrive 和 Sharepoint 中的多地理位置功能，將 Office 365 的目前狀態拓展至多個地理區域。
+ms.openlocfilehash: 939c12790c30172dc87f89fc1a91a92a40b1c219
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365"></a>OneDrive 和 Office 365 中的 SharePoint Online 中的多個地理位置功能
+# <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365"></a>OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
 
-OneDrive 和 SharePoint Online 中的多個地理位置功能，您的組織可以依序展開 [其 Office 365 平台服務多個地理區域 （英文） 和/或國家/地區內您現有的租用戶。到達給您的 Microsoft 帳戶小組才能註冊多 National 公司 OneDrive for Business 多-地理位置。
+使用 OneDrive 和 Sharepoint Online 中的多地理位置功能，貴組織可以將 Office 365 目前狀態拓展至您現有租用戶中的多個地理區域及/或國家。連絡 Microsoft 帳戶小組以註冊商務用 OneDrive 多地理位置的多國家公司。
   
-使用 OneDrive 多-地理位置，您可以佈建靜態資料儲存在您已選擇要符合資料 residency 需求的地理位置和同時解除鎖定您通用 roll 超出現代產能體驗到您的人力。
+您可以使用 OneDrive 多地理位置，來佈建待用資料並將資料儲存在您所選擇之符合資料常駐要求的地理位置，和同時將現代化生產力體驗逐步拓展至您的員工。
   
-以下是多重地理位置功能何助益組織：
+以下是多地理位置功能為您組織帶來好處的方式：
   
-- 操作與一部通用連接組織與單一 Office 365 租用戶跨越多個地理位置。
+- 以全域連接組織的形式運作，內含跨多個地理位置的單一 Office 365 租用戶。
     
-- 建立和主控的資料集在-rest 內指定的地理位置符合資料 residency 需求。
+- 在指定地理位置中建立及主控待用資料以符合資料常駐要求。
     
-- 對您衛星使用者賦能集中管理位置使用者中慣用相同現代產能經驗。
+- 賦與衛星使用者中央位置使用者所享有的相同現代化生產力體驗。
     
-- 可讓您存取其內容會保持不變時為其角色的變更，移動所有地理位置之間的使用者。
+- 可讓您的使用者隨著角色變更移到各個地理位置，同時對其內容的存取權則保持不變。
     
-- 依此修改您每個地理位置的共用原則和每個站台的資料外洩防護原則。
+- 為每個地理位置打造共用原則和為每個網站打造資料外洩防護原則。
     
-- 指定 eDiscovery 管理員每個地理位置，然後允許管理量身訂作地理位置的情況。
+- 為每個地理位置指派電子文件探索管理員，並允許管理為您地理位置量身打造的案例。
     
-- 額外的地理位置的選擇唯一 URL 命名空間 (例如 ContosoEUR.sharepoint.com)。
+- 選擇其他地理位置的唯一 URL 命名空間 (例如 ContosoEUR.sharepoint.com)。
     
-- 將您內部區域的資料合併到您的 Office 365 多重地理位置租用戶。
+- 將區域內部部署資料與 Office 365 多地理位置租用戶合併。
     
-在多個地理位置設定中，您的 Office 365 租用戶包含一個集中的位置 （也稱為預設位置） 和一或多個衛星地理位置。多個地理位置的重要概念是該單一租用會跨越一個多個地理位置。在多個地理位置租用戶中對應的 Azure Active Directory (AAD) 地理位置、 群組及使用者資訊的相關資訊。因為您的租用戶資訊是以集中與同步至每個地理位置、 共用及初始化的任何人從您公司的體驗包含全域傳達方式。
+在多地理位置組態中，Office 365 租用包含中央位置 (也就是預設位置) 以及一或多個衛星地理位置。多地理位置的重要概念是，單一租用戶會跨越多個地理位置。在多地理位置租用戶中，系統會在 Azure Active Directory (AAD) 中主控地理位置、群組和使用者資訊的相關資訊。因為您的租用戶資訊是集中管理且同步處理到每個地理位置，包含公司任何人的共用與體驗都會包含全域意識。
 
-## <a name="video-introducing-office-365-multi-geo"></a>影片： 簡介 Office 365 的多重地理位置
+## <a name="video-introducing-office-365-multi-geo"></a>影片：介紹 Office 365 的多地理位置
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1Yk6B?autoplay=false]
   
-## <a name="get-multi-geo-features-in-three-simple-steps"></a>取得多個地理位置功能中三個簡單的步驟
+## <a name="get-multi-geo-features-in-three-simple-steps"></a>在三個簡單的步驟中獲得多地理位置功能
 
-設定多個地理位置很簡單：
+設定多地理位置很簡單：
   
-1. 若要新增_多個地理位置功能的 Office 365_服務計劃帳戶小組與搭配使用。它們可引導您要新增所需的授權數。
+1. 與您的帳戶小組合作以新增 _Office 365 中的多地理位置功能_服務方案。他們會引導您新增所需的授權數目。
     
 2. 新增衛星位置。
     
-3. 設定您的使用者帳戶的適當位置。
+3. 設定適當位置的使用者帳戶。
     
-## <a name="multi-geo-status-and-availability"></a>多個地理位置狀態與可用性
+## <a name="multi-geo-status-and-availability"></a>多地理位置狀態和可用性
 
-OneDrive 多重地理位置是目前提供這些區域 （英文） 和國家/地區：
+目前在這些地區與國家中提供的 OneDrive 多地理位置：
   
 - 亞太地區
     
@@ -73,7 +74,7 @@ OneDrive 多重地理位置是目前提供這些區域 （英文） 和國家/�
     
 - 英國
     
-- 美國 （北美洲）
+- 美國 (北美洲)
     
 - 韓國
       
@@ -84,4 +85,4 @@ OneDrive 多重地理位置是目前提供這些區域 （英文） 和國家/�
     
 ## <a name="getting-started"></a>快速入門
 
-若要開始使用 OneDrive for Business 多-地理位置，第一個步驟是[規劃您 OneDrive for Business 的多個地理環境](plan-for-multi-geo.md)。下一步]、[了解如何管理多個地理位置環境](administering-a-multi-geo-environment.md)及[如何讓使用者會遇到的多個地理位置環境](multi-geo-user-experience.md)。當您準備好設定 OneDrive for Business 多-地理位置，[設定您的租用戶的多個地理位置](multi-geo-tenant-configuration.md)，然後[移至其新的地理位置的任何現有 OneDrive 網站](move-onedrive-between-geo-locations.md)及[設定搜尋](configure-search-for-multi-geo.md)。
+若要開始使用商務用 OneDrive 的多地理位置，第一個步驟是[規劃您的商務用 OneDrive 多地理位置環境](plan-for-multi-geo.md)。接下來，[了解管理多地理位置環境](administering-a-multi-geo-environment.md)與[使用者經歷多地理位置環境的方式](multi-geo-user-experience.md)。當您準備好設定商務用 OneDrive 多地理位置時，[設定多地理位置的租用戶](multi-geo-tenant-configuration.md)，然後[將任何現有的 OneDrive 網站移至其新地理位置](move-onedrive-between-geo-locations.md)和[設定搜尋](configure-search-for-multi-geo.md)。
