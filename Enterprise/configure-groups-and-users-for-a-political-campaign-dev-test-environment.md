@@ -1,5 +1,5 @@
 ---
-title: "設定群組及使用者政治 campaign 開發/測試環境"
+title: 設定政治活動開發/測試環境的群組和使用者
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,127 +10,127 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.service: o365-solutions
-localization_priority: None
-ms.custom: Strat_O365_Enterprise
+localization_priority: Priority
+ms.custom: ''
 ms.assetid: 0e22bcf3-bad3-42a4-b44f-276e0cf4790f
-description: "摘要： 建立 Office 365 和 Enterprise 行動性 + 安全性 （EMS） 試用版訂閱使用者和群組政治 campaign 開發/測試環境。"
-ms.openlocfilehash: 25d03e0aa521c8fdbf20c2dc3ff2fc46e1aabe2f
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
-ms.translationtype: MT
+description: 摘要：為政治活動開發/測試環境建立具備使用者與群組的 Office 365 和 Enterprise Mobility + Security (EMS) 之試用訂閱。
+ms.openlocfilehash: 8556040a648937d4c1bc338292be121e5d290dd9
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a>設定群組及使用者政治 campaign 開發/測試環境
+# <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a>設定政治活動開發/測試環境的群組和使用者
 
- **摘要：**使用使用者和群組政治 campaign 開發/測試環境中建立 Office 365 和 Enterprise 行動性 + 安全性 （EMS） 試用版訂閱。
+ **摘要：** 為政治活動開發/測試環境建立具備使用者與群組的 Office 365 和 Enterprise Mobility + Security (EMS) 之試用訂閱。
   
-若要建立包含簡化的使用者帳戶和群組[政治活動、 非營利機構，與其他靈活組織的 Microsoft 安全性指引](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)解決方案的開發人員/測試環境中使用本文中的指示。
+使用本文中的指示來建立開發/測試環境，其中包括簡化使用者帳戶和群組，其適用於 [ Microsoft 安全性指導方針的政治活動、非營利組織，以及其他靈活組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)解決方法。
   
 ## <a name="phase-1-create-your-office-365-devtest-environment"></a>階段 1：建立 Office 365 開發/測試環境
 
-在此階段中，您可以取得 Office 365 E5 和 Enterprise 行動性 + 代表政治 campaign 虛構組織的安全性 (EMS) E5 試用版的訂閱。
+在這個階段中，您會為代表政治活動的虛構組織取得 Office 365 E5 與 Enterprise Mobility + Security (EMS) E5 試用訂閱。
   
-首先，請遵循**階段 2**的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)中的指示。
+首先，請遵循 [Office 365 開發/測試環境](office-365-dev-test-environment.md)的**階段 2** 中的指示進行。
   
-接下來，註冊 EMS E5 試用訂閱並將其新增至您的 Office 365 試用版訂閱相同的組織。
+接著，註冊 EMS E5 試用訂閱，並將它新增至與 Office 365 試用訂閱相同的組織。
   
-1. 必要時，登入 Office 365 入口網站與您的試用版訂閱的全域管理員帳戶的認證。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
+1. 如果需要，請使用試用訂閱的全域管理員帳戶認證登入 Office 365 入口網站。 如需說明，請參閱[在何處登入 Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
     
-2. 按一下 [**系統**] 磚。
+2. 按一下 [管理]**** 磚。
     
-3. 在**Office 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**帳務 > 購買服務**。
+3. 在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [**購買服務**] 頁面上尋找**企業行動性 + 安全性 E5**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
+4. 在 [購買服務]**** 頁面上，尋找 **Enterprise Mobility + Security E5** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [**順序回條**] 頁面上按一下 [**繼續**]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
     
-接下來，可讓您的全域管理員帳戶 EMS E5 授權。
+接下來，啟用全域管理員帳戶的 EMS E5 授權。
   
-1. 在**Office 365 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**使用者 > 作用中使用者**。
+1. 在瀏覽器的 [Office 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]****。
     
-2. 按一下 [您的全域管理員帳戶] 和 [**編輯****產品**授權。
+2. 按一下您的全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯]****。
     
-3. 在**產品授權**] 窗格中，開啟**企業行動性 + 安全性 E5** **上**至產品授權、 按一下 [**儲存]**及 [**關閉**兩次。
+3. 在 [產品授權]**** 窗格中，將 **Enterprise Mobility + Security E5** 的產品授權設為 [開啟]**，按一下 [儲存]，然後按兩次 [關閉]。
     
-## <a name="phase-2-create-and-configure-your-azure-active-directory-ad-groups"></a>階段 2： 建立及設定您的 Azure Active Directory (AD) 群組
+## <a name="phase-2-create-and-configure-your-azure-active-directory-ad-groups"></a>階段 2：建立和設定 Azure Active Directory (AD) 群組
 
-在此階段中，您建立及設定您的行銷活動的 Azure AD 群組。
+在這個階段中，您會為活動建立和設定 Azure AD 群組。
   
-首先，建立一組群組的一般政治行銷活動的 Azure 入口網站。
+首先，利用 Azure 入口網站建立一組典型政治活動的群組。
   
-1. 在瀏覽器中個別] 索引標籤上移至[https://portal.azure.com](https://portal.azure.com)Azure 入口網站。必要時，登入的全域管理員帳戶認證的 Office 365 E5 試用版訂閱。
+1. 在瀏覽器中建立個別索引標籤，然後移至 Azure 入口網站 (網址為 [https://portal.azure.com](https://portal.azure.com))。若有需要，請使用 Office 365 E5 試用訂閱的全域管理員帳戶認證登入。
     
-2. 在 Azure 入口網站中，按一下 [ **Azure Active Directory > 使用者和群組 > 的所有群組**。
+2. 在 Azure 入口網站中，按一下 [Azure Active Directory] > [使用者和群組] > [所有群組]****。
     
-3. 不要在此清單中每個群組名稱的下列步驟：
+3. 針對此清單中的每個群組名稱執行下列步驟：
     
-  - 資深和策略的人員
+  - 資深和策略人員
     
   - IT 人員
     
-  - 分析的人員
+  - 分析人員
     
-  - 一般核心人員
+  - 一般的核心人員
     
   - 作業人員
     
-  - 欄位的人員
+  - 現場人員
     
-1. 在**所有群組**blade 中，按一下 [ **+ 新群組**。
+1. 在 [所有群組]**** 刀鋒視窗中，按一下 [+ 新增群組]****。
     
-2. 在 [**名稱**輸入從清單中的群組名稱。
+2. 從**名稱**中的清單輸入群組名稱。
     
-3. 在 [**成員資格**選取**動態的使用者**。
+3. 選取在 [成員資格] **** 中的 [動態使用者]****。
     
-4. 按一下 [**是]**以**啟用 Office**功能。
+4. 對 [啟用 Office 功能]**** 按一下 [是]****。
     
-5. 按一下 [**新增動態查詢**。
+5. 按一下 [新增動態查詢]****。
     
-6. 在**將使用者新增其中**、 選取**部門**。
+6. 在 [新增使用者位置]****，請選取 [部門]****。
     
-7. 在下一步] 欄位中，選取 [**等於**]。
+7. 在下一個欄位中，選取 [等於]****。
     
-8. 在 [下一步] 欄位中輸入從清單中的群組名稱。
+8. 從下一個欄位中，從該清單中輸入群組名稱。
     
-9. 按一下 [**新增查詢**，並再按一下 [**建立**。
+9. 按一下 [新增查詢]****，然後按一下 [建立]****。
     
-10. 按一下 [**使用者和群組-所有群組**。
+10. 按一下 [使用者和群組 - 所有群組]****。
     
-接下來，設定群組使成員會自動指派 Office 365 E5 以及 EMS E5 授權。
+接下來，設定群組，以讓系統自動為成員指派 Office 365 E5 和 EMS E5 授權。
   
-1. 在 Azure 入口網站中，按一下 [ **Azure Active Directory > 授權 > 所有產品**。
+1. 在 Azure 入口網站中，按一下 [Azure Active Directory] > [授權] > [所有產品]****。
     
-2. 在清單中，選取 [**企業行動性 + 安全性 E5**和**Office 365 企業版 E5**、] 和 [ **+ 指派**。
+2. 在清單中，選取 [Enterprise Mobility + Security E5]**** 和 [Office 365 企業版 E5]****，然後按一下 [+ 指派]****。
     
-3. 在**指派授權給**blade，按一下 [**使用者與群組**]。
+3. 在 [指派授權]**** 刀鋒視窗中，按一下 [使用者和群組]****。
     
 4. 在群組清單中，選取下列項目：
     
-  - 分析的人員
+  - 分析人員
     
-  - 欄位的人員
+  - 現場人員
     
   - IT 人員
     
   - 作業人員
     
-  - 一般核心人員
+  - 一般的核心人員
     
-  - 資深和策略的人員
+  - 資深和策略人員
     
-5. 按一下 [**選取**] 和 [**指派**。
+5. 按一下 [選取]****，然後按一下 [指派]****。
     
-6. 關閉瀏覽器中的 Azure 入口網站] 索引標籤。
+6. 關閉瀏覽器的 Azure 入口網站索引標籤。
     
-## <a name="phase-3-add-your-user-accounts"></a>階段 3： 新增您的使用者帳戶
+## <a name="phase-3-add-your-user-accounts"></a>階段 3：新增使用者帳戶
 
-在此階段中，您將範例中的使用者帳戶新增政治的活動。
+在這個階段，您可以為政治活動新增範例使用者帳戶。
   
-首先，您[使用 Azure Active Directory V2 PowerShell 模組的連線](https://go.microsoft.com/fwlink/?linkid=842218)。
+接著，[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。
   
-下一步] 您填入您的組織名稱、 您位置及常見的密碼，並再從 PowerShell 命令提示字元處或整合式指令碼環境 (ISE) 中執行下列命令：
+接下來，填寫您的組織名稱、位置及常見的密碼，並從 PowerShell 命令提示字元或整合式指令碼環境 (ISE) 執行這些命令：
   
 ```
 $orgName="<organization name, such as contoso for the contoso.onmicrosoft.com trial subscription domain name>"
@@ -162,45 +162,45 @@ foreach ($element in $userNames){ New-AzureADUser -DisplayName $element -Passwor
 ```
 
 > [!IMPORTANT]
-> 自動化及簡化開發人員/測試環境是密碼的設定的使用一般。這是不建議使用實際執行訂閱。當您使用每個這些新的使用者帳戶登入，系統會提示您變更密碼。 
+> 此處常見密碼的使用是為自動化開發/測試環境且讓您方便進行設定而提供。建議您不要將此類密碼用於產品訂閱。當您使用這些新使用者帳戶登入時，系統會提示您變更密碼。 
   
-使用下列步驟以確認動態群組成員資格與群組型授權均運作正常。
+使用這些步驟來確認動態群組成員資格和以群組為基礎之授權是否運作正常。
   
-1. 從您的瀏覽器的 [ **Microsoft Office Home** ] 索引標籤中，按一下 [**系統**] 磚。
+1. 從瀏覽器的 [Microsoft Office 的首頁]**** 索引標籤中，按一下 [管理]**** 磚。
     
-2. 從 [新**Office 系統管理中心**] 索引標籤的瀏覽器中按一下 [**使用者**]。
+2. 從瀏覽器的新 [Office 系統管理中心]**** 索引標籤中，按一下 [使用者]****。
     
-3. 在使用者清單中，按一下 [**應徵者**]。
+3. 在使用者清單中，按一下 [應徵者]****。
     
-4. 在列出**應徵者**的使用者帳戶內容窗格中，確認：
+4. 在列出 [應徵者]**** 使用者帳戶之內容的窗格中，請確認：
     
-  - 它是**資深和策略性人員**（中**群組的成員資格**） 群組的成員。
+  - 它屬於**資深和策略的人員**群組 (在**群組成員資格**)。
     
-  - 已被指派**企業行動性 + 安全性 E5**和**Office 365 企業版 E5** （中的授權**產品授權**）。
+  - 他獲派 **Enterprise Mobility + Security E5** 與 **Office 365 企業版 E5** 授權 (在**產品授權**中)。
     
-5. 關閉 [**應徵者**使用者帳戶] 窗格中。
+5. 關閉 [應徵者]**** 使用者帳戶窗格。
     
-## <a name="record-values-for-future-reference"></a>以供未來參照的記錄值
+## <a name="record-values-for-future-reference"></a>記錄值，以便日後參考
 
-記錄使用 Office 365 與 EMS 此開發/測試環境的試用版訂閱這些值：
+記錄這些值以與 Office 365 和 EMS 試用訂閱在此開發/測試環境中搭配使用：
   
-- 您的試用版訂閱的組織名稱： ___ 
+- 您的試用訂閱組織名稱：_______________________________________________ 
     
-    例如，contoso.onmicrosoft.com 試用訂閱網域名稱、 組織名稱為"contoso"。
+    比方說，針對 contoso.onmicrosoft.com 的試用訂閱網域名稱，組織名稱為「contoso」。
     
-- Office 365 全域管理員名稱： ___.onmicrosoft.com
+- Office 365 全域系統管理員名稱：____________________________________.onmicrosoft.com
     
-    此帳戶的密碼和其他使用者帳戶的常見初始密碼記錄在安全的位置。
+    在安全位置記錄此帳戶的密碼以及其他使用者帳戶的常見初始密碼。
     
 ## <a name="next-step"></a>下一步
 
-建置[在政治 campaign 開發/測試環境中的建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)與此開發/測試環境中的 SharePoint Online 小組網站的四種不同類型。
+透過[在政治活動開發/測試環境中建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)，在此開發/測試環境中建置四種不同類型的 SharePoint Online 小組網站。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
+[適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
-[政治 campaign 開發/測試環境中建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)
+[在政治活動開發/測試環境中建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)
   
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   

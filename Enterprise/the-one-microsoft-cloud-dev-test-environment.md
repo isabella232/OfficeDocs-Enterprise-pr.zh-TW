@@ -1,5 +1,5 @@
 ---
-title: 一個 Microsoft Cloud 開發/測試環境
+title: One Microsoft Cloud 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,183 +7,183 @@ ms.date: 12/15/2017
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-localization_priority: Normal
+localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
-description: 摘要： 使用此測試實驗室指南建立包含所有的 Microsoft cloud 方案的開發人員/測試環境。
-ms.openlocfilehash: c1d0e190e6d7e3871cf4289729b53cc0b4b5d04d
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
-ms.translationtype: MT
+description: 摘要：使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端供應項目。
+ms.openlocfilehash: 29fcb1108ceac6aa488ca71d723789a7a2e6c409
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="the-one-microsoft-cloud-devtest-environment"></a>一個 Microsoft Cloud 開發/測試環境
+# <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
 
- **摘要：**若要建立包含所有的 Microsoft cloud 方案的開發人員/測試環境中使用此測試實驗室指南。
+ **摘要：** 使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端服務。
   
-使用本文中的指示，您可以在 Microsoft Azure 基礎結構服務中建立模擬內部網路然後再新增 [Microsoft Office 365、 Microsoft 企業行動性 + 安全性 (EMS) 及 Microsoft Dynamics 365 訂閱。結果是在單一的開發人員測試環境中同時使用所有 Microsoft cloud 方案簡化的組織。 
+依照本文所述的指示，您可以在 Microsoft Azure 基礎結構服務中建立模擬的內部網路，然後再新增 Microsoft Office 365、Microsoft Enterprise Mobility + Security (EMS)，與 Microsoft Dynamics 365 訂閱。結果是經簡化的組織在單一開發/測試環境中一次使用所有 Microsoft 雲端供應項目。 
   
-![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft 雲端開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
+![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
   
-您可以使用要產生的設定：
+您可以使用所產生的組態來：
   
-- 跨 Microsoft cloud 方案，例如一般身分識別基礎結構所提供的 Azure Active Directory (AD) 體驗整合。
+- 體驗在 Microsoft 雲端供應項目間的整合 (例如 Azure Active Directory (AD) 所提供的常見身分識別基礎結構)。
     
-- 評估包含多個 Microsoft Cloud 方案的端對端案例。
+- 評估包含多個 Microsoft Cloud 供應項目的端對端案例。
     
-- 建立示範 （英文）、 概念證明或使用多個 Microsoft Cloud 方案的開發人員/測試設定。
+- 建立示範、概念證明或使用多個 Microsoft Cloud 供應項目的開發/測試組態。
     
-- 建置專業開發您 Microsoft Cloud 技能。
+- 建置適用於專業開發的 Microsoft Cloud 技能。
     
-## <a name="phase-1-create-a-simulated-intranet-and-add-office-365"></a>階段 1： 建立模擬內部網路及新增 Office 365
+## <a name="phase-1-create-a-simulated-intranet-and-add-office-365"></a>階段 1：建立模擬的內部網路，並新增 Office 365
 
-遵循[DirSync Office 365 開發人員/測試環境](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
+遵循在 [ Office 365 開發/測試環境中的 DirSync ](dirsync-for-your-office-365-dev-test-environment.md) 中的指示。
   
-圖 1 顯示您所產生的組態，包括 Office 365 和 Azure 基礎結構服務和目錄同步處理中執行來自內部部署 Windows Server Active Directory (AD) 樹系模擬內部網路。
+圖 1 顯示您產生的組態，其中包括 Office 365 與在 Azure 基礎結構服務中執行模擬內部網路與來自內部部署 Windows Server Active Directory (AD) 樹系中的目錄同步處理。
   
-**圖 1： 模擬內部網路與 Office 365 搭配 Azure 中**
+**圖 1：含 Office 365 之 Azure 中的模擬內部網路**
 
 ![具有 DirSync 的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 > [!NOTE]
-> Azure 試用版是 30 天。Office 365 企業版 E5 試用版訂閱是 30 天，可輕鬆地延伸的另一個 30 天。在永久的開發人員測試環境中建立新付費 Azure 訂閱和新的授權數目很少付費的 Office 365 企業版 E5 訂閱。 
+> Azure 試用版是 30 天。Office 365 企業版 E5 試用訂閱是 30 天，此可以輕鬆地延長額外 30 天的時間。針對永久開發/測試環境，建立新付費 Azure 訂閱並建立新付費的 Office 365 企業版 E5 訂閱，內含少量的授權。 
   
-## <a name="phase-2-add-ems"></a>階段 2： 新增 EMS
+## <a name="phase-2-add-ems"></a>階段 2：新增 EMS
 
 在這個階段中，您可以註冊 EMS 試用訂閱，並將它新增至與 Office 365 試用訂閱相同的組織。
   
-1. 其中一個瀏覽器與您的桌上型電腦或從 CLIENT1，登入 Office 365 入口網站在[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
+1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://portal.office.com](https://portal.office.com) 的 Office 365 入口網站。
     
-2. 按一下 [管理] 磚。
+2. 按一下 [管理]**** 磚。
     
-3. 在瀏覽器的 [Office 系統管理中心] 索引標籤上，按一下左導覽中的 [計費] > [購買服務]。
+3. 在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [**購買服務**] 頁面上尋找**企業行動性 + 安全性 E5**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
+4. 在 [購買服務]**** 頁面上，尋找 **Enterprise Mobility + Security E5** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [訂單收據] 頁面上，按一下 [繼續]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
     
 > [!NOTE]
 > Enterprise Mobility + Security E5 試用訂閱為 90 天。針對永久開發/測試環境，建立具有少數授權的新付費訂閱。 
   
-接下來，可讓企業行動性 + 安全性 E5 授權的所有使用者帳戶。
+接下來，啟用適用於所有使用者帳戶的 Enterprise Mobility + Security E5 授權。
   
-1. 在瀏覽器的 [Office 365 系統管理中心] 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]。
+1. 在瀏覽器的 [Office 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]****。
     
-2. 按一下 [您的全域管理員帳戶] 和 [**編輯****產品**授權。
+2. 按一下您的全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯]****。
     
-3. 在**產品授權**] 窗格中，開啟**企業行動性 + 安全性 E5** **上**至產品授權、 按一下 [**儲存]**及 [**關閉**兩次。
+3. 在 [產品授權]**** 窗格中，將 **Enterprise Mobility + Security E5** 的產品授權設為 [開啟]**，按一下 [儲存]，然後按兩次 [關閉]。
     
-4. 所有其他帳戶 （User1、 使用者 2、 3 使用者、 使用者 4 和使用者 5），請執行步驟 2 和 3。
+4. 針對您的所有其他帳戶 (User1、User 2、User 3、User 4 及 User 5) 執行步驟 2 和 3。
     
-開發/測試環境現在有：
+開發/測試環境現在擁有：
   
-- Azure 基礎結構服務中執行模擬內部網路。
+- 在 Azure 基礎結構服務中執行的模擬內部網路。
     
 - Office 365 E5 Enterprise 和 EMS 試用訂閱會與您的使用者帳戶清單共用相同的組織和相同的 Azure AD 租用戶。
     
 - 您的所有使用者帳戶都會啟用以使用 Office 365 E5 Enterprise 和 EMS。
     
-圖 2 顯示您所產生的設定，會新增 EMS。
+圖 2 顯示產生的組態，其中會新增 EMS。
   
-**圖 2： 模擬內部網路與 Office 365 和 EMS Azure 中**
+**圖 2：含 Office 365 和 EMS 之 Azure 中的模擬內部網路**
 
-![具有 Azure、Office 365 及 EMS 之 One Microsoft 雲端開發/測試環境的階段 2 ](images/fdb520fe-ebbd-4681-a80e-b60df52f07c5.png)
+![具有 Azure、Office 365 及 EMS 之 One Microsoft Cloud 開發/測試環境的階段 2 ](images/fdb520fe-ebbd-4681-a80e-b60df52f07c5.png)
   
-## <a name="phase-3-add-dynamics-365"></a>階段 3： 新增 Dynamics 365
+## <a name="phase-3-add-dynamics-365"></a>階段 3：新增 Dynamics 365
 
-在此階段中，您註冊 Dynamics 365 試用版訂閱並將其新增至 Office 365 和 EMS 試用版訂閱相同的組織。
+在這個階段中，您可以註冊 Dynamics 365 試用訂閱，並將它新增至與 Office 365 與 EMS 試用訂閱的相同組織。
   
-1. 在 [您的桌上型電腦使用瀏覽器或從 CLIENT1，登入 Office 365 入口網站在[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
+1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://portal.office.com](https://portal.office.com) 的 Office 365 入口網站。
     
-2. 按一下 [管理] 磚。
+2. 按一下 [管理]**** 磚。
     
-3. 在**Office 系統管理中心**] 索引標籤的 [在左導覽列中，按一下 [**帳務 > 購買服務**。
+3. 在 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [**購買服務**] 頁面上尋找**Dynamics 365 計劃 1 Enterprise Edition**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
+4. 在 [購買服務]**** 頁面上，尋找 [Dynamics 365 方案 1 企業版]**** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用] ****。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [訂單收據] 頁面上，按一下 [繼續]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
     
 > [!NOTE]
-> Dynamics 365 計劃 1 Enterprise Edition 試用訂閱是 30 天。您可以輕鬆地擴充另一個 30 天的軌跡訂閱。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 
+> Dynamics 365 方案 1 企業版試用訂閱是 30 天。您可以輕鬆地將試用訂閱延長額外 30 天的時間。針對永久開發/測試環境，建立內含少量授權的新付費訂閱。 
   
-使用下列步驟將 Dynamics 365 授權指派給全域管理員、 使用者 2 及 3 使用者帳戶，並使其系統管理員。
+使用這些步驟，將 Dynamics 365 授權指派給全域系統管理員、使用者 2 和使用者 3 帳戶，並將他們設為系統管理員。
   
-1. 在 [ **Office 系統管理中心**] 索引標籤上按一下 [**使用者 > 作用中使用者**。
+1. 在 [Office 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
     
-2. 在作用中使用者清單中，按一下您的全域管理員帳戶] 和 [**編輯****產品**授權。
+2. 在作用中使用者清單中，按一下全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯] ****。
     
-3. 在**產品授權**] 窗格中，開啟**Dynamics 365 計劃 1 Enterprise Edition** **上**至產品授權、 按一下 [**儲存]**及 [**關閉**兩次。
+3. 在 [產品授權] **** 窗格中，將 [Dynamics 365 方案 1 企業版]**** 的產品授權設為 [開啟]****，按一下 [儲存]****，然後按兩次 [關閉]****。
     
-4. 使用者 2 和 3 使用者帳戶執行步驟 2 和 3。
+4. 對使用者 2 和使用者 3 帳戶執行步驟 2 和 3。
     
-5. 關閉**Office 系統管理中心**] 索引標籤。
+5. 關閉 [Office 系統管理中心]**** 索引標籤。
     
-使用下列步驟來設定使用者 2 和 3 使用者帳戶為 Dynamics 365 系統管理員。
+使用這些步驟，將使用者 2 和使用者 3 帳戶設定為 Dynamics 365 系統管理員。
   
-1. 在瀏覽器中，在左導覽列中， **Office 系統管理中心**] 索引標籤上 [ **Admin 中心**，和 [ **Dynamics 365**。
+1. 在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，依序按一下 [系統管理中心]****、[Dynamics 365]****。
     
-    您可能需要等候 Dynamics 365 完成佈建之前 Dynamics 365 出現的功能表中。
+    您可能需要等待 Dynamics 365 完成佈建，Dynamics 365 才會顯示在功能表中。
     
-2. 在 [Dynamics 365] 索引標籤上按一下 [**全部都**、] 和 [**完成安裝。**
+2. 在 [Dynamics 365] 索引標籤上，按一下 [這些所有]****，然後按一下 [完成安裝]****。
     
-    等候安裝程式完成。
+    請等候安裝完成。
     
-    當安裝完成後時，它會顯示根據屬於軌跡訂閱資料範例銷售活動儀表板。需要一些時間來檢視**您的試用版歡迎使用**視訊。關閉 [視訊] 視窗時完成。
+    安裝完成後，就會顯示根據屬於試用訂閱之範例資料的銷售活動儀表板。花幾分鐘來檢視**歡迎使用試用版**影片。完成時關閉 [影片] 視窗。
     
-3. 在頂端工具列上，按一下 [**銷售**] 旁的向下箭號、 按一下 [**設定**] 及 [**安全性**。
+3. 在頂端的工具列上，按一下 [銷售]**** 旁的向下箭號，按一下 [設定]****，然後按一下 [安全性]****。
     
-4. 按一下 [**安全性**] 索引標籤的 [**使用者**]。
+4. 在 [安全性]**** 頁面，按一下 [使用者] ****。
     
-5. 在使用者清單中，按一下 [**使用者 2**。
+5. 在使用者清單中，按一下 [使用者 2]****。
     
-6. 在 [工具] 列中，按一下 [**管理角色**。
+6. 在工具列中，按一下 [管理角色]****。
     
-7. 在**管理角色**、 按一下 [**系統管理員**，並再按一下 [**確定]**。
+7. 在 [管理角色]****，按一下 [系統管理員]****，然後按一下 [確定]****。
     
-8. 在上方的 [工具] 列中按一下 [**安全性**]。
+8. 在頂部的工具列上按一下 [安全性]****。
     
-9. 使用者 3 帳戶重複步驟 5-8。
+9. 對使用者 3 帳戶重複步驟 5 至 8。
     
-10. 關閉**使用者： User3** ] 索引標籤。
+10. 關閉 [使用者：User3]**** 索引標籤。
     
 > [!NOTE]
-> 您的 Office 365 全域管理員帳戶會自動指派 Dynamics 365 系統管理員角色。 
+> Office 365 全域系統管理員帳戶已自動指派 Dynamics 365 系統管理員角色。 
   
-開發/測試環境現在有：
+開發/測試環境現在擁有：
   
-- Azure 基礎結構服務中執行模擬內部網路。
+- 在 Azure 基礎結構服務中執行的模擬內部網路。
     
-- Office 365 E5 企業、 EMS 及 Dynamics 365 試用版訂閱共用相同的組織與相同的 Azure AD 租用戶與您的使用者帳戶的清單。
+- Office 365 E5 Enterprise、EMS 和 Dynamics 365 試用訂閱會與您的使用者帳戶清單共用相同的組織和相同的 Azure AD 租用戶。
     
 - 您的所有使用者帳戶都會啟用以使用 Office 365 E5 Enterprise 和 EMS。
     
-- 您的全域企業系統管理員、 使用者 2 和 3 使用者帳戶能夠使用 Dynamics 365 且 Dynamics 365 系統管理員。
+- 您的全域企業系統管理員、使用者 2 和使用者 3 帳戶已啟用，可使用 Dynamics 365 且為 Dynamics 365 系統管理員。
     
-圖 3 是您所產生的設定。
+圖 3 顯示產生的組態。
   
-**圖 3： 模擬內部網路與 Office 365、 EMS、 和 Dynamics 365 Azure 中**
+**圖 3：含 Office 365、EMS 和 Dynamics 365 之 Azure 中的模擬內部網路**
 
-![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft 雲端開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
+![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
   
 ## <a name="next-steps"></a>後續步驟
 
-您現在可以實驗一個 Microsoft Cloud 開發/測試環境。導引式體驗的某些概念如下：
+您現在可以使用 One Microsoft Cloud 開發/測試環境來進行實驗。以下是一些引導經驗的構想：
   
-- [在 EMS for Office 365 應用程式設定行動裝置應用程式管理 (MAM) 原則](https://technet.microsoft.com/library/mt764059.aspx)
+- [在適用於 Office 365 應用程式的 EMS 中設定行動應用程式管理 (MAM) 原則](https://technet.microsoft.com/library/mt764059.aspx)
     
-- [在 Office 365 整合 Dynamics 365 連絡人示範 Exchange Online](https://technet.microsoft.com/library/mt798313.aspx)
+- [在含 Dynamics 365 連絡人的 Office 365 整合中示範 Exchange Online](https://technet.microsoft.com/library/mt798313.aspx)
     
-- [在主控伺服器為基礎的工作負載的 Azure 基礎結構服務中建立模擬的跨內部網路](https://technet.microsoft.com/library/mt745150.aspx)
+- [在 Azure 基礎結構服務建立模擬的跨部署網路來主控以伺服器為基礎的工作負載](https://technet.microsoft.com/library/mt745150.aspx)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   

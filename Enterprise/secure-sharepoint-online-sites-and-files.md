@@ -7,25 +7,25 @@ ms.date: 12/15/2017
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
-localization_priority: Normal
+localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
 - Ent_Architecture
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
-description: 摘要： 設定建議保護 SharePoint Online 和 Office 365 中的檔案。
-ms.openlocfilehash: 800d81d657164b2a936b95764d57fd092cfa21cc
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
-ms.translationtype: MT
+description: 摘要：在 SharePoint Online 和 Office 365 中保護檔案的設定建議。
+ms.openlocfilehash: 88ad010e10949c9ef4e761dbca95b7afd0e1f901
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="secure-sharepoint-online-sites-and-files"></a>保護 SharePoint Online 網站與檔案
 
- **摘要：**設定建議的保護 SharePoint Online 和 Office 365 中的檔案。
+ **摘要：** 在 SharePoint Online 和 Office 365 中保護檔案的設定建議。
   
-本文提供設定 SharePoint Online 小組網站及檔案保護，簡化共同作業與平衡安全性建議。本文定義四個不同的設定，啟動與公用網站最開啟的共用原則與組織內。每個額外的設定向上代表有意義的步驟中保護，但可存取及進行共同作業的資源的能力降低至相關的一組使用者。使用這些建議當做起點並調整以符合組織需求的設定。 
+本文提供設定 SharePoint Online 小組網站和檔案保護的建議，以在安全性和順暢的共同作業間取得平衡。本文定義四種不同的設定，首先是組織內的公用網站，並搭配最開放的共用原則。每項額外設定均代表有意識的保護升級，但資源的存取和共同作業能力則會減少為只提供給相關使用者。使用建議作為起點，並且調整組態以符合您的組織的需求。 
   
 本文的設定符合 Microsoft 針對資料、身分識別和裝置的下列三層保護建議：
   
@@ -39,13 +39,13 @@ ms.lasthandoff: 04/16/2018
   
 - [Office 365 的身分識別與裝置保護](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
     
-- [Office 365 的檔案保護解決方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
+- [Office 365 的檔案保護方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
     
 ## <a name="capability-overview"></a>功能概觀
 
 建議的 SharePoint Online 小組網站依據各種不同 Office 365 功能而定。 針對高度機密的網站，建議您使用 Azure 資訊保護。 Enterprise Mobility + Security (EMS) 包含這項功能。 
   
-下圖顯示四個 SharePoint Online 小組網站的建議的設定。
+下圖顯示四種 SharePoint Online 小組網站的建議設定。
   
 ![SharePoint 網站的建議設定](images/ad0dcd70-f6f5-465c-8d16-1889481ca07a.png)
   
@@ -79,7 +79,7 @@ SharePoint Online 和商務用 OneDrive 包含的租用戶整體設定會影響�
   
 - 根據預設，Outlook 會共用檔案的連結，而非以電子郵件傳送檔案。 
     
-- SharePoint Online 和 OneDrive for Business 輕鬆與所組織內外的參與者共用檔案的連結
+- SharePoint Online 與商務用 OneDrive 可讓您輕易地與組織內外的參與者共用檔案連結
     
 您也可以使用相關控制來協助控管外部共用。 例如，您可以：
   
@@ -95,11 +95,11 @@ SharePoint Online 和商務用 OneDrive 包含的租用戶整體設定會影響�
     
 ### <a name="use-external-sharing-together-with-data-loss-prevention-dlp"></a>搭配使用外部共用與資料外洩防護 (DLP)
 
-如果您不允許外部共用，請使用商務使用者需要找到替代工具和方法。Microsoft 建議您將合併與 DLP 原則，以保護機密和高度機密檔案的外部共用。
+如果您不允許外部共用，有業務需求的使用者就必須找到替代工具和方法。Microsoft 建議您結合外部共用與 DLP 原則來保護敏感性與高度機密檔案。
   
 ### <a name="device-access-settings"></a>裝置存取設定
 
-SharePoint Online 和 OneDrive for Business 的裝置存取設定可讓您判斷是否限制為僅使用瀏覽器存取 （無法下載檔案） 或如果封鎖存取。這些設定是目前正在第一個版本及套用租用戶全。即將推出的是能夠在網站層級設定裝置存取原則。此解決方案，建議您不使用適用於整個租用戶的裝置存取設定。
+SharePoint Online 和商務用 OneDrive 的裝置存取設定可讓您決定要僅限瀏覽器存取 (無法下載檔案)，或是封鎖存取。這些設定目前是初次發行，並會套用至租用戶整體。我們即將推出在網站層級設定裝置存取原則的功能。針對這個解決方案，我們不建議您使用套用至租用戶整體的裝置存取設定。
   
 若要使用初次發行的裝置存取設定：[在 Office 365 中設定標準或初次發行選項](https://support.office.com/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3B3ADFA4-1777-4FF0-B606-FB8732101F47)。
   
@@ -114,28 +114,28 @@ SharePoint Online 和 OneDrive for Business 的裝置存取設定可讓您判斷
 ||||||
 |:-----|:-----|:-----|:-----|:-----|
 ||**基準保護 #1** <br/> |**基準保護 #2** <br/> |**敏感性保護** <br/> |**高度機密** <br/> |
-|說明  <br/> |開啟組織內的探索及共同作業。  <br/> |私用網站和群組，其可在群組外部共用。  <br/> |隔離的網站，其存取層級會依據特定群組的成員資格而定義。 只允許網站的成員共用。 當使用者嘗試將檔案傳送到組織外部時，DLP 會對其發出警告。  <br/> |使用 Azure 資訊保護的隔離網站 + 檔案加密與權限。 DLP 可防止使用者將檔案傳送到組織外部。  <br/> |
+|描述  <br/> |開啟組織內的探索及共同作業。  <br/> |私用網站和群組，其可在群組外部共用。  <br/> |隔離的網站，其存取層級會依據特定群組的成員資格而定義。 只允許網站的成員共用。 當使用者嘗試將檔案傳送到組織外部時，DLP 會對其發出警告。  <br/> |使用 Azure 資訊保護的隔離網站 + 檔案加密與權限。 DLP 可防止使用者將檔案傳送到組織外部。  <br/> |
 |私用或公用的小組網站  <br/> |公用  <br/> |Private  <br/> |Private  <br/> |Private  <br/> |
 |誰可以存取？  <br/> |組織中所有人，包括 B2B 使用者和訪客使用者。  <br/> |僅限網站的成員。 其他人可以要求存取權。  <br/> |僅限網站的成員。 其他人可以要求存取權。  <br/> |僅限成員。 其他人無法要求存取權。  <br/> |
 |網站層級的共用控制  <br/> |允許與任何人共用。 預設設定。  <br/> |允許與任何人共用。 預設設定。  <br/> |成員無法共用網站的存取權。  <br/> 非成員可以要求存取網站，但這些要求需要網站系統管理員處理。  <br/> |成員無法共用網站的存取權。  <br/> 非成員無法要求存取網站或內容。  <br/> |
 |網站層級的裝置存取控制  <br/> |無額外控制。  <br/> |無額外控制。  <br/> |網站層級的控制功能即將推出，其可防止使用者下載檔案到不相容或非加入網域的裝置。 如此一來，所有其他裝置僅可進行瀏覽器存取。  <br/> |網站層級的控制功能即將推出，其會封鎖檔案下載到不相容或非加入網域的裝置。  <br/> |
 |Office 365 標籤  <br/> |內部公用  <br/> |Private  <br/> |敏感性  <br/> |高度機密  <br/> |
 |DLP 原則  <br/> |||當使用者將標記為「敏感性」的檔案傳送到組織外部時，會對其發出警告。  <br/> 若要封鎖敏感性資料類型的外部共用，例如信用卡號碼或其他個人資料，您可以為這些資料類型 (包括您設定的自訂資料類型) 設定額外的 DLP 原則。  <br/> |封鎖使用者，使其無法將標示為高度機密的檔案傳送到組織外部。 允許使用者提供理由來覆寫這項預設，包括共用檔案的對象。  <br/> |
-|Azure 資訊保護  <br/> ||||使用 Azure 資訊保護自動加密，並授與權限的檔案。萬一他們洩露與檔案一起出差此保護。  <br/> Office 365 無法讀取使用 Azure 資訊保護加密的檔案。此外，DLP 原則可以只使用中繼資料 （包括標籤），但不是 （例如檔案內的信用卡號碼） 這些檔案的內容。  <br/> |
+|Azure 資訊保護  <br/> ||||使用 Azure 資訊保護以自動為檔案加密及授與權限。萬一檔案外洩，這個保護會隨附於檔案。  <br/> Office 365 無法讀取以 Azure 資訊保護加密的檔案。此外，DLP 原則僅會使用中繼資料 (包括標籤)，而不會使用這些檔案的內容 (例如檔案中的信用卡號碼)。  <br/> |
    
-如需部署這個解決方案中的 SharePoint Online 小組網站的四種不同類型的步驟，請參閱[部署 SharePoint Online 網站的三層的保護](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)。如需建立開發/測試環境，請參閱[Secure SharePoint Online 網站的開發人員/測試環境中](secure-sharepoint-online-sites-in-a-dev-test-environment.md)的步驟。 
+如需在此解決方案中部署四種不同類型 SharePoint Online 小組網站的步驟，請參閱＜[針對三層式保護部署 SharePoint Online 網站](deploy-sharepoint-online-sites-for-three-tiers-of-protection.md)＞。如需建立開發/測試環境的步驟，請參閱＜[在開發/測試環境中保護 SharePoint Online 網站](secure-sharepoint-online-sites-in-a-dev-test-environment.md)＞。 
   
 ## <a name="office-365-classification-and-labels"></a>Office 365 分類和標籤
 
-使用 Office 365 標籤建議與機密資料的環境。後設定並發佈 Office 365 標籤：
+建議您在含有敏感性資料的環境中使用 Office 365 標籤。在設定及發佈 Office 365 標籤之後：
   
-- 您可以將預設標籤套用至 SharePoint Online 小組網站、 文件庫使所有文件的文件庫中取得的預設標籤。 
+- 您可以將預設標籤套用至 SharePoint Online 小組網站的文件庫，以便讓該文件庫中的所有文件取得預設標籤。 
     
-- 您可以套用標籤內容自動是否符合特定條件。
+- 您可以自動將標籤套用到內容 (如果內容符合特定條件的話)。
     
-- 您可以套用 Office 365 標籤為基礎的 DLP 原則。
+- 您可以套用以 Office 365 標籤為基礎的 DLP 原則。
     
-- 在組織中的人員可以套用標籤手動在 web 上的 Outlook 中的內容 Outlook 2010 及更新版本、 OneDrive for Business、 SharePoint Online 和 Office 365 的群組。使用者經常知道最佳的內容類型他們正在處理，讓他們可以用它來分類及已套用適當的 DLP 原則。
+- 組織的人員可以手動套用標籤至 Outlook 網頁版、Outlook 2010 及更新版本、商務用 OneDrive、SharePoint Online 以及 Office 365 群組中的內容。使用者通常最清楚自己使用的內容類型，因此可以對其分類並套用適當的 DLP 原則。
     
 ![SharePoint 網站的建議設定](images/7fed0126-ab4a-4480-922c-681970642339.png)
   
@@ -149,7 +149,7 @@ SharePoint Online 和 OneDrive for Business 的裝置存取設定可讓您判斷
     
 - 內部公用
     
-這些標籤會對應至在圖例中建議的網站和本文稍早的圖表。此解決方案建議設定 DLP 原則，以協助防止檔案標示為機密和高度機密外的洩。
+這些標籤會對應到本文稍早的圖例與圖表中的建議網站。此解決方案建議您設定 DLP 原則，以協助避免標示為「敏感性」和「高度機密」的檔案外洩。
   
 如需在此解決方案中設定 Office 365 標籤和 DLP 原則的步驟，請參閱[使用 Office 365 標籤與 DLP 來保護 SharePoint Online 檔案](protect-sharepoint-online-files-with-office-365-labels-and-dlp.md)。
   
@@ -163,27 +163,27 @@ SharePoint Online 和 OneDrive for Business 的裝置存取設定可讓您判斷
   
 如圖例所示：
   
-- 您在 Microsoft Azure 入口網站中設定 Azure 資訊保護原則和標籤。建議設定子範圍的 Azure 資訊保護原則的標籤。
+- 您可以在 Microsoft Azure 入口網站中設定 Azure 資訊保護原則和標籤。建議您設定限域 Azure 資訊保護原則的子標籤。
     
-- Azure 的資訊保護會向上顯示標籤為 Office 應用程式中的**資訊保護**長條。
+- Azure 資訊保護標籤會顯示為 Office 應用程式中的 [資訊保護]**** 列。
     
 ### <a name="adding-permissions-for-external-users"></a>新增外部使用者的權限
 
-有兩種方式可授與外部使用者存取權與 Azure 資訊保護受保護的檔案。在這兩個這些情況下，外部使用者必須具備 Azure AD 帳戶。如果外部使用者不會使用 Azure AD 組織中的成員，他們可以使用此註冊頁面為個別取得 Azure AD 帳戶： [https://aka.ms/aip-signup](https://aka.ms/aip-signup)。
+您可以使用兩種方式，將 Azure 資訊保護所保護的檔案存取權授與外部使用者。在這兩種情況下，外部使用者皆必須擁有 Azure AD 帳戶。如果外部使用者不屬於使用 Azure AD 的組織成員，可以使用 [https://aka.ms/aip-signup](https://aka.ms/aip-signup) 這個註冊頁面，以個人身分取得 Azure AD 帳戶。
   
-- 將外部使用者新增至可用來設定標籤保護 Azure AD 群組
+- 將外部使用者新增至用來設定保護標籤的 Azure AD 群組
     
-     必須先將帳戶新增為 B2B 使用者您的目錄中。可能需要幾個小時的[群組成員資格的 Azure Rights Management 快取](https://docs.microsoft.com/information-protection/plan-design/prepare#group-membership-caching-by-azure-rights-management)。使用此方法之後，權限會授與所有受保護的標籤 （偶數之前將使用者新增至 Azure AD 群組受保護的檔案） 與現有的檔案。
+     您必須先將帳戶新增為目錄中的 B2B 使用者。當 [Azure 版權管理進行群組成員資格的快取](https://docs.microsoft.com/information-protection/plan-design/prepare#group-membership-caching-by-azure-rights-management)時，可能需要花費數小時的時間。使用此方法時，會授與所有受標籤保護的現有檔案權限 (包括將使用者新增至 Azure AD 群組之前即受保護的檔案)。
     
-- 外部使用者直接新增至標籤保護
+- 將外部使用者直接新增至標籤保護。
     
-     您可以新增所有使用者的組織 (例如 Fabrikam.com)、 Azure AD 的群組 （如 finance 組織內的群組） 或個別使用者。例如，您可以新增以及外部小組來保護標籤。使用此方法之後，權限會授與僅外部的實體新增至 [保護之後標籤以受保護的檔案。
+     您可以從組織 (例如 Fabrikam.com)、Azure AD 群組 (例如組織內的財務部門) 或個別使用者，新增所有使用者。例如，您可以將外部的監理人員小組新增至標籤保護。使用此方法時，僅會授與在外部實體新增至保護之後受標籤保護的檔案權限。
     
 ### <a name="deploying-and-using-azure-information-protection"></a>部署並使用 Azure 資訊保護
 
 如需在此解決方案中設定 Azure 資訊保護的步驟，請參閱[使用 Azure 資訊保護來保護 SharePoint Online 檔案](protect-sharepoint-online-files-with-azure-information-protection.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
