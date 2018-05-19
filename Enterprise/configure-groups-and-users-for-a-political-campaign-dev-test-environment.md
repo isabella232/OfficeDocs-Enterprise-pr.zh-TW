@@ -1,5 +1,5 @@
 ---
-title: "設定群組及使用者政治 campaign 開發/測試環境"
+title: 設定政治活動開發/測試環境的群組和使用者
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,127 +10,127 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.service: o365-solutions
-localization_priority: None
-ms.custom: Strat_O365_Enterprise
+localization_priority: Priority
+ms.custom: ''
 ms.assetid: 0e22bcf3-bad3-42a4-b44f-276e0cf4790f
-description: "摘要： 建立 Office 365 和 Enterprise 行動性 + 安全性 （EMS） 試用版訂閱使用者和群組政治 campaign 開發/測試環境。"
-ms.openlocfilehash: 25d03e0aa521c8fdbf20c2dc3ff2fc46e1aabe2f
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
-ms.translationtype: MT
+description: 摘要：為政治活動開發/測試環境建立具備使用者與群組的 Office 365 和 Enterprise Mobility + Security (EMS) 之試用訂閱。
+ms.openlocfilehash: 8556040a648937d4c1bc338292be121e5d290dd9
+ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a><span data-ttu-id="bc488-103">設定群組及使用者政治 campaign 開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="bc488-103">Configure groups and users for a political campaign dev/test environment</span></span>
+# <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a><span data-ttu-id="67ce8-103">設定政治活動開發/測試環境的群組和使用者</span><span class="sxs-lookup"><span data-stu-id="67ce8-103">Configure groups and users for a political campaign dev/test environment</span></span>
 
- <span data-ttu-id="bc488-104">**摘要：**使用使用者和群組政治 campaign 開發/測試環境中建立 Office 365 和 Enterprise 行動性 + 安全性 （EMS） 試用版訂閱。</span><span class="sxs-lookup"><span data-stu-id="bc488-104">**Summary:** Create Office 365 and Enterprise Mobility + Security (EMS) trial subscriptions with users and groups for a political campaign dev/test environment.</span></span>
+ <span data-ttu-id="67ce8-104">**摘要：** 為政治活動開發/測試環境建立具備使用者與群組的 Office 365 和 Enterprise Mobility + Security (EMS) 之試用訂閱。</span><span class="sxs-lookup"><span data-stu-id="67ce8-104">**Configure groups and users**. Create Office 365 and Enterprise Mobility + Security (EMS) trial subscriptions with users and groups for a political campaign dev/test environment.</span></span>
   
-<span data-ttu-id="bc488-105">若要建立包含簡化的使用者帳戶和群組[政治活動、 非營利機構，與其他靈活組織的 Microsoft 安全性指引](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)解決方案的開發人員/測試環境中使用本文中的指示。</span><span class="sxs-lookup"><span data-stu-id="bc488-105">Use the instructions in this article to create a dev/test environment that includes simplified user accounts and groups for the [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md) solution.</span></span>
+<span data-ttu-id="67ce8-105">使用本文中的指示來建立開發/測試環境，其中包括簡化使用者帳戶和群組，其適用於 [ Microsoft 安全性指導方針的政治活動、非營利組織，以及其他靈活組織](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)解決方法。</span><span class="sxs-lookup"><span data-stu-id="67ce8-105">Use the instructions in this article to create a dev/test environment that includes simplified user accounts and groups for the [Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md) solution.</span></span>
   
-## <a name="phase-1-create-your-office-365-devtest-environment"></a><span data-ttu-id="bc488-106">階段 1：建立 Office 365 開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="bc488-106">Phase 1: Create your Office 365 dev/test environment</span></span>
+## <a name="phase-1-create-your-office-365-devtest-environment"></a><span data-ttu-id="67ce8-106">階段 1：建立 Office 365 開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="67ce8-106">Phase 1: Create your Office 365 dev/test environment</span></span>
 
-<span data-ttu-id="bc488-107">在此階段中，您可以取得 Office 365 E5 和 Enterprise 行動性 + 代表政治 campaign 虛構組織的安全性 (EMS) E5 試用版的訂閱。</span><span class="sxs-lookup"><span data-stu-id="bc488-107">In this phase, you obtain trial subscriptions for Office 365 E5 and Enterprise Mobility + Security (EMS) E5 for a fictional organization that represents a political campaign.</span></span>
+<span data-ttu-id="67ce8-107">在這個階段中，您會為代表政治活動的虛構組織取得 Office 365 E5 與 Enterprise Mobility + Security (EMS) E5 試用訂閱。</span><span class="sxs-lookup"><span data-stu-id="67ce8-107">In this phase, you obtain trial subscriptions for Office 365 and Enterprise Mobility + Security for a fictional organization.</span></span>
   
-<span data-ttu-id="bc488-108">首先，請遵循**階段 2**的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="bc488-108">First, follow the instructions in **Phase 2** of the [Office 365 dev/test environment](office-365-dev-test-environment.md).</span></span>
+<span data-ttu-id="67ce8-108">首先，請遵循 [Office 365 開發/測試環境](office-365-dev-test-environment.md)的**階段 2** 中的指示進行。</span><span class="sxs-lookup"><span data-stu-id="67ce8-108">First, follow the instructions in **Phase 2** of the [Office 365 dev/test environment](office-365-dev-test-environment.md).</span></span>
   
-<span data-ttu-id="bc488-109">接下來，註冊 EMS E5 試用訂閱並將其新增至您的 Office 365 試用版訂閱相同的組織。</span><span class="sxs-lookup"><span data-stu-id="bc488-109">Next, sign up for the EMS E5 trial subscription and add it to the same organization as your Office 365 trial subscription.</span></span>
+<span data-ttu-id="67ce8-109">接著，註冊 EMS E5 試用訂閱，並將它新增至與 Office 365 試用訂閱相同的組織。</span><span class="sxs-lookup"><span data-stu-id="67ce8-109">Next, sign up for the EMS trial subscription and add it to the same organization as your Office 365 trial subscription, and then follow these steps:</span></span>
   
-1. <span data-ttu-id="bc488-p101">必要時，登入 Office 365 入口網站與您的試用版訂閱的全域管理員帳戶的認證。為了協助，請參閱 ＜[登入 Office 365 的位置](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="bc488-p101">If needed, sign in to the Office 365 portal with the credentials of the global administrator account of your trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
+1. <span data-ttu-id="67ce8-p101">如果需要，請使用試用訂閱的全域管理員帳戶認證登入 Office 365 入口網站。 如需說明，請參閱[在何處登入 Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。</span><span class="sxs-lookup"><span data-stu-id="67ce8-p101">If needed, sign in to the Office 365 portal with the credentials of the global administrator account of your trial subscription. For help, see [Where to sign in to Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4).</span></span>
     
-2. <span data-ttu-id="bc488-112">按一下 [**系統**] 磚。</span><span class="sxs-lookup"><span data-stu-id="bc488-112">Click the **Admin** tile.</span></span>
+2. <span data-ttu-id="67ce8-112">按一下 [管理]**** 磚。</span><span class="sxs-lookup"><span data-stu-id="67ce8-112">Click the **Admin** tile.</span></span>
     
-3. <span data-ttu-id="bc488-113">在**Office 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**帳務 > 購買服務**。</span><span class="sxs-lookup"><span data-stu-id="bc488-113">On the **Office Admin center** tab in your browser, in the left navigation, click **Billing > Purchase services**.</span></span>
+3. <span data-ttu-id="67ce8-113">在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-113">On the **Office Admin center** tab in your browser, in the left navigation, click **Billing > Purchase services**.</span></span>
     
-4. <span data-ttu-id="bc488-p102">在 [**購買服務**] 頁面上尋找**企業行動性 + 安全性 E5**項目。滑鼠指標停留並按一下 [**開始免費試用版**。</span><span class="sxs-lookup"><span data-stu-id="bc488-p102">On the **Purchase services** page, find the **Enterprise Mobility + Security E5** item. Hover your mouse pointer over it and click **Start free trial**.</span></span>
+4. <span data-ttu-id="67ce8-p102">在 [購買服務]**** 頁面上，尋找 **Enterprise Mobility + Security E5** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-p102">On the **Purchase services** page, find the **Enterprise Mobility + Security E5** item. Hover your mouse pointer over it and click **Start free trial**.</span></span>
     
-5. <span data-ttu-id="bc488-116">在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。</span><span class="sxs-lookup"><span data-stu-id="bc488-116">On the **Confirm your order** page, click **Try now**.</span></span>
+5. <span data-ttu-id="67ce8-116">在 [確認訂單]**** 頁面上，按一下 [立即試用]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-116">On the **Confirm your order** page, click **Try now**.</span></span>
     
-6. <span data-ttu-id="bc488-117">在 [**順序回條**] 頁面上按一下 [**繼續**]。</span><span class="sxs-lookup"><span data-stu-id="bc488-117">On the **Order receipt** page, click **Continue**.</span></span>
+6. <span data-ttu-id="67ce8-117">在 [訂單收據]**** 頁面上，按一下 [繼續]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-117">On the **Order receipt** page, click **Continue**.</span></span>
     
-<span data-ttu-id="bc488-118">接下來，可讓您的全域管理員帳戶 EMS E5 授權。</span><span class="sxs-lookup"><span data-stu-id="bc488-118">Next, enable the EMS E5 license for your global administrator account.</span></span>
+<span data-ttu-id="67ce8-118">接下來，啟用全域管理員帳戶的 EMS E5 授權。</span><span class="sxs-lookup"><span data-stu-id="67ce8-118">Next, enable the Enterprise Mobility + Security E5 license for your global administrator account.</span></span>
   
-1. <span data-ttu-id="bc488-119">在**Office 365 系統管理中心**] 索引標籤中瀏覽器中，在左導覽列中，按一下 [**使用者 > 作用中使用者**。</span><span class="sxs-lookup"><span data-stu-id="bc488-119">On the **Office 365 Admin center** tab in your browser, in the left navigation, click **Users > Active users**.</span></span>
+1. <span data-ttu-id="67ce8-119">在瀏覽器的 [Office 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [使用者] > [作用中使用者]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-119">On the **Office 365 Admin center** tab in your browser, in the left navigation, click **Users > Active users**.</span></span>
     
-2. <span data-ttu-id="bc488-120">按一下 [您的全域管理員帳戶] 和 [**編輯****產品**授權。</span><span class="sxs-lookup"><span data-stu-id="bc488-120">Click your global administrator account, and then click **Edit** for **Product licenses**.</span></span>
+2. <span data-ttu-id="67ce8-120">按一下您的全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-120">Click your global administrator  account, and then click **Edit** for **Product licenses**.</span></span>
     
-3. <span data-ttu-id="bc488-121">在**產品授權**] 窗格中，開啟**企業行動性 + 安全性 E5** **上**至產品授權、 按一下 [**儲存]**及 [**關閉**兩次。</span><span class="sxs-lookup"><span data-stu-id="bc488-121">On the **Product licenses** pane, turn the product license for **Enterprise Mobility + Security E5** to **On**, click **Save,** and then click **Close** twice.</span></span>
+3. <span data-ttu-id="67ce8-121">在 [產品授權]**** 窗格中，將 **Enterprise Mobility + Security E5** 的產品授權設為 [開啟]**，按一下 [儲存]，然後按兩次 [關閉]。</span><span class="sxs-lookup"><span data-stu-id="67ce8-121">On the **Product licenses** pane, turn the product license for **Enterprise Mobility + Security E5** to **On**, click **Save,** and then click **Close** twice.</span></span>
     
-## <a name="phase-2-create-and-configure-your-azure-active-directory-ad-groups"></a><span data-ttu-id="bc488-122">階段 2： 建立及設定您的 Azure Active Directory (AD) 群組</span><span class="sxs-lookup"><span data-stu-id="bc488-122">Phase 2: Create and configure your Azure Active Directory (AD) groups</span></span>
+## <a name="phase-2-create-and-configure-your-azure-active-directory-ad-groups"></a><span data-ttu-id="67ce8-122">階段 2：建立和設定 Azure Active Directory (AD) 群組</span><span class="sxs-lookup"><span data-stu-id="67ce8-122">Phase 2: Create and configure your Azure Active Directory (AD) groups and users</span></span>
 
-<span data-ttu-id="bc488-123">在此階段中，您建立及設定您的行銷活動的 Azure AD 群組。</span><span class="sxs-lookup"><span data-stu-id="bc488-123">In this phase, you create and configure the Azure AD groups for your campaign.</span></span>
+<span data-ttu-id="67ce8-123">在這個階段中，您會為活動建立和設定 Azure AD 群組。</span><span class="sxs-lookup"><span data-stu-id="67ce8-123">In this phase, you create and configure the Azure AD groups and users for your fictional organization.</span></span>
   
-<span data-ttu-id="bc488-124">首先，建立一組群組的一般政治行銷活動的 Azure 入口網站。</span><span class="sxs-lookup"><span data-stu-id="bc488-124">First, create a set of groups for a typical political campaign with the Azure portal.</span></span>
+<span data-ttu-id="67ce8-124">首先，利用 Azure 入口網站建立一組典型政治活動的群組。</span><span class="sxs-lookup"><span data-stu-id="67ce8-124">First, create a set of groups for a typical organization with the Azure portal.</span></span>
   
-1. <span data-ttu-id="bc488-125">在瀏覽器中個別] 索引標籤上移至[https://portal.azure.com](https://portal.azure.com)Azure 入口網站。必要時，登入的全域管理員帳戶認證的 Office 365 E5 試用版訂閱。</span><span class="sxs-lookup"><span data-stu-id="bc488-125">On a separate tab in your browser, go to the Azure portal at [https://portal.azure.com](https://portal.azure.com). If needed, sign in with the credentials of the global administrator account for your Office 365 E5 trial subscription.</span></span>
+1. <span data-ttu-id="67ce8-125">在瀏覽器中建立個別索引標籤，然後移至 Azure 入口網站 (網址為 [https://portal.azure.com](https://portal.azure.com))。若有需要，請使用 Office 365 E5 試用訂閱的全域管理員帳戶認證登入。</span><span class="sxs-lookup"><span data-stu-id="67ce8-125">Create a separate tab in your browser, and then go to the Azure portal at https://portal.azure.com. If needed, sign in with the credentials of the global administrator account for your Office 365 E5 trial subscription.</span></span>
     
-2. <span data-ttu-id="bc488-126">在 Azure 入口網站中，按一下 [ **Azure Active Directory > 使用者和群組 > 的所有群組**。</span><span class="sxs-lookup"><span data-stu-id="bc488-126">In the Azure portal, click **Azure Active Directory > Users and groups > All groups**.</span></span>
+2. <span data-ttu-id="67ce8-126">在 Azure 入口網站中，按一下 [Azure Active Directory] > [使用者和群組] > [所有群組]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-126">In the Azure portal, click **Azure Active Directory > Users and groups > All groups**.</span></span>
     
-3. <span data-ttu-id="bc488-127">不要在此清單中每個群組名稱的下列步驟：</span><span class="sxs-lookup"><span data-stu-id="bc488-127">Do the following steps for each group name in this list:</span></span>
+3. <span data-ttu-id="67ce8-127">針對此清單中的每個群組名稱執行下列步驟：</span><span class="sxs-lookup"><span data-stu-id="67ce8-127">Do the following steps for each group name in this list:</span></span>
     
-  - <span data-ttu-id="bc488-128">資深和策略的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-128">Senior and strategic staff</span></span>
+  - <span data-ttu-id="67ce8-128">資深和策略人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-128">Senior and strategic staff</span></span>
     
-  - <span data-ttu-id="bc488-129">IT 人員</span><span class="sxs-lookup"><span data-stu-id="bc488-129">IT staff</span></span>
+  - <span data-ttu-id="67ce8-129">IT 人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-129">IT staff</span></span>
     
-  - <span data-ttu-id="bc488-130">分析的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-130">Analytics staff</span></span>
+  - <span data-ttu-id="67ce8-130">分析人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-130">Analytics staff</span></span>
     
-  - <span data-ttu-id="bc488-131">一般核心人員</span><span class="sxs-lookup"><span data-stu-id="bc488-131">Regular core staff</span></span>
+  - <span data-ttu-id="67ce8-131">一般的核心人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-131">Regular core staff</span></span>
     
-  - <span data-ttu-id="bc488-132">作業人員</span><span class="sxs-lookup"><span data-stu-id="bc488-132">Operations staff</span></span>
+  - <span data-ttu-id="67ce8-132">作業人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-132">Operations staff</span></span>
     
-  - <span data-ttu-id="bc488-133">欄位的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-133">Field staff</span></span>
+  - <span data-ttu-id="67ce8-133">現場人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-133">Field staff</span></span>
     
-1. <span data-ttu-id="bc488-134">在**所有群組**blade 中，按一下 [ **+ 新群組**。</span><span class="sxs-lookup"><span data-stu-id="bc488-134">On the **All groups** blade, click **+ New group**.</span></span>
+1. <span data-ttu-id="67ce8-134">在 [所有群組]**** 刀鋒視窗中，按一下 [+ 新增群組]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-134">On the **All groups** blade, click **+ New group**.</span></span>
     
-2. <span data-ttu-id="bc488-135">在 [**名稱**輸入從清單中的群組名稱。</span><span class="sxs-lookup"><span data-stu-id="bc488-135">Type the group name from the list in **Name**.</span></span>
+2. <span data-ttu-id="67ce8-135">從**名稱**中的清單輸入群組名稱。</span><span class="sxs-lookup"><span data-stu-id="67ce8-135">Type the group name from the list in **Name**.</span></span>
     
-3. <span data-ttu-id="bc488-136">在 [**成員資格**選取**動態的使用者**。</span><span class="sxs-lookup"><span data-stu-id="bc488-136">Select **Dynamic user** in **Membership**.</span></span>
+3. <span data-ttu-id="67ce8-136">選取在 [成員資格] **** 中的 [動態使用者]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-136">Select **Dynamic user** in **Membership**.</span></span>
     
-4. <span data-ttu-id="bc488-137">按一下 [**是]**以**啟用 Office**功能。</span><span class="sxs-lookup"><span data-stu-id="bc488-137">Click **Yes** for **Enable Office features**.</span></span>
+4. <span data-ttu-id="67ce8-137">對 [啟用 Office 功能]**** 按一下 [是]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-137">Click **Yes** for **Enable Office features**.</span></span>
     
-5. <span data-ttu-id="bc488-138">按一下 [**新增動態查詢**。</span><span class="sxs-lookup"><span data-stu-id="bc488-138">Click **Add dynamic query**.</span></span>
+5. <span data-ttu-id="67ce8-138">按一下 [新增動態查詢]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-138">Click **Add dynamic query**.</span></span>
     
-6. <span data-ttu-id="bc488-139">在**將使用者新增其中**、 選取**部門**。</span><span class="sxs-lookup"><span data-stu-id="bc488-139">In **Add users where**, select **department**.</span></span>
+6. <span data-ttu-id="67ce8-139">在 [新增使用者位置]****，請選取 [部門]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-139">In **Add users where**, select **department**.</span></span>
     
-7. <span data-ttu-id="bc488-140">在下一步] 欄位中，選取 [**等於**]。</span><span class="sxs-lookup"><span data-stu-id="bc488-140">In the next field, select **Equals**.</span></span>
+7. <span data-ttu-id="67ce8-140">在下一個欄位中，選取 [等於]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-140">In the next field, select **Equals**.</span></span>
     
-8. <span data-ttu-id="bc488-141">在 [下一步] 欄位中輸入從清單中的群組名稱。</span><span class="sxs-lookup"><span data-stu-id="bc488-141">In the next field, type the group name from the list.</span></span>
+8. <span data-ttu-id="67ce8-141">從下一個欄位中，從該清單中輸入群組名稱。</span><span class="sxs-lookup"><span data-stu-id="67ce8-141">In the next field, type the group name from the list.</span></span>
     
-9. <span data-ttu-id="bc488-142">按一下 [**新增查詢**，並再按一下 [**建立**。</span><span class="sxs-lookup"><span data-stu-id="bc488-142">Click **Add query**, and then click **Create**.</span></span>
+9. <span data-ttu-id="67ce8-142">按一下 [新增查詢]****，然後按一下 [建立]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-142">Click **Add query**, and then click **Create**.</span></span>
     
-10. <span data-ttu-id="bc488-143">按一下 [**使用者和群組-所有群組**。</span><span class="sxs-lookup"><span data-stu-id="bc488-143">Click **Users and groups - All groups**.</span></span>
+10. <span data-ttu-id="67ce8-143">按一下 [使用者和群組 - 所有群組]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-143">Click **Users and groups - All groups**.</span></span>
     
-<span data-ttu-id="bc488-144">接下來，設定群組使成員會自動指派 Office 365 E5 以及 EMS E5 授權。</span><span class="sxs-lookup"><span data-stu-id="bc488-144">Next, you configure the groups so that members are automatically assigned Office 365 E5 and EMS E5 licenses.</span></span>
+<span data-ttu-id="67ce8-144">接下來，設定群組，以讓系統自動為成員指派 Office 365 E5 和 EMS E5 授權。</span><span class="sxs-lookup"><span data-stu-id="67ce8-144">Next, you configure the groups so that members are automatically assigned Office 365 E5 and EMS E5 licenses.</span></span>
   
-1. <span data-ttu-id="bc488-145">在 Azure 入口網站中，按一下 [ **Azure Active Directory > 授權 > 所有產品**。</span><span class="sxs-lookup"><span data-stu-id="bc488-145">In the Azure portal, click **Azure Active Directory > Licenses > All products**.</span></span>
+1. <span data-ttu-id="67ce8-145">在 Azure 入口網站中，按一下 [Azure Active Directory] > [授權] > [所有產品]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-145">In the Azure portal, click **Azure Active Directory > Licenses > All products**.</span></span>
     
-2. <span data-ttu-id="bc488-146">在清單中，選取 [**企業行動性 + 安全性 E5**和**Office 365 企業版 E5**、] 和 [ **+ 指派**。</span><span class="sxs-lookup"><span data-stu-id="bc488-146">In the list, select **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5**, and then click **+ Assign**.</span></span>
+2. <span data-ttu-id="67ce8-146">在清單中，選取 [Enterprise Mobility + Security E5]**** 和 [Office 365 企業版 E5]****，然後按一下 [+ 指派]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-146">In the list, select **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5**, and click **Assign**.</span></span>
     
-3. <span data-ttu-id="bc488-147">在**指派授權給**blade，按一下 [**使用者與群組**]。</span><span class="sxs-lookup"><span data-stu-id="bc488-147">In the **Assign license** blade, click **Users and groups**.</span></span>
+3. <span data-ttu-id="67ce8-147">在 [指派授權]**** 刀鋒視窗中，按一下 [使用者和群組]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-147">In the **Assign license** blade, click **Users and groups**.</span></span>
     
-4. <span data-ttu-id="bc488-148">在群組清單中，選取下列項目：</span><span class="sxs-lookup"><span data-stu-id="bc488-148">In the list of groups, select the following:</span></span>
+4. <span data-ttu-id="67ce8-148">在群組清單中，選取下列項目：</span><span class="sxs-lookup"><span data-stu-id="67ce8-148">In the list of groups, select the following:</span></span>
     
-  - <span data-ttu-id="bc488-149">分析的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-149">Analytics staff</span></span>
+  - <span data-ttu-id="67ce8-149">分析人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-149">Analytics staff</span></span>
     
-  - <span data-ttu-id="bc488-150">欄位的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-150">Field staff</span></span>
+  - <span data-ttu-id="67ce8-150">現場人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-150">Field staff</span></span>
     
-  - <span data-ttu-id="bc488-151">IT 人員</span><span class="sxs-lookup"><span data-stu-id="bc488-151">IT staff</span></span>
+  - <span data-ttu-id="67ce8-151">IT 人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-151">IT staff</span></span>
     
-  - <span data-ttu-id="bc488-152">作業人員</span><span class="sxs-lookup"><span data-stu-id="bc488-152">Operations staff</span></span>
+  - <span data-ttu-id="67ce8-152">作業人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-152">Operations staff</span></span>
     
-  - <span data-ttu-id="bc488-153">一般核心人員</span><span class="sxs-lookup"><span data-stu-id="bc488-153">Regular core staff</span></span>
+  - <span data-ttu-id="67ce8-153">一般的核心人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-153">Regular core staff</span></span>
     
-  - <span data-ttu-id="bc488-154">資深和策略的人員</span><span class="sxs-lookup"><span data-stu-id="bc488-154">Senior and strategic staff</span></span>
+  - <span data-ttu-id="67ce8-154">資深和策略人員</span><span class="sxs-lookup"><span data-stu-id="67ce8-154">Senior and strategic staff</span></span>
     
-5. <span data-ttu-id="bc488-155">按一下 [**選取**] 和 [**指派**。</span><span class="sxs-lookup"><span data-stu-id="bc488-155">Click **Select**, and then click **Assign**.</span></span>
+5. <span data-ttu-id="67ce8-155">按一下 [選取]****，然後按一下 [指派]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-155">Click **Select**, and click **Assign**.</span></span>
     
-6. <span data-ttu-id="bc488-156">關閉瀏覽器中的 Azure 入口網站] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="bc488-156">Close the Azure portal tab in your browser.</span></span>
+6. <span data-ttu-id="67ce8-156">關閉瀏覽器的 Azure 入口網站索引標籤。</span><span class="sxs-lookup"><span data-stu-id="67ce8-156">Close the Azure portal tab in your browser.</span></span>
     
-## <a name="phase-3-add-your-user-accounts"></a><span data-ttu-id="bc488-157">階段 3： 新增您的使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="bc488-157">Phase 3: Add your user accounts</span></span>
+## <a name="phase-3-add-your-user-accounts"></a><span data-ttu-id="67ce8-157">階段 3：新增使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="67ce8-157">Phase 3: Add your user accounts</span></span>
 
-<span data-ttu-id="bc488-158">在此階段中，您將範例中的使用者帳戶新增政治的活動。</span><span class="sxs-lookup"><span data-stu-id="bc488-158">In this phase, you add the example user accounts for your political campaign.</span></span>
+<span data-ttu-id="67ce8-158">在這個階段，您可以為政治活動新增範例使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="67ce8-158">In this phase, you add the example user accounts for your political campaign.</span></span>
   
-<span data-ttu-id="bc488-159">首先，您[使用 Azure Active Directory V2 PowerShell 模組的連線](https://go.microsoft.com/fwlink/?linkid=842218)。</span><span class="sxs-lookup"><span data-stu-id="bc488-159">First, you [Connect with the Azure Active Directory V2 PowerShell module](https://go.microsoft.com/fwlink/?linkid=842218).</span></span>
+<span data-ttu-id="67ce8-159">接著，[與 Azure Active Directory V2 PowerShell 模組連線](https://go.microsoft.com/fwlink/?linkid=842218)。</span><span class="sxs-lookup"><span data-stu-id="67ce8-159">Next, you [Connect with the Azure Active Directory V2 PowerShell module](https://go.microsoft.com/fwlink/?linkid=842218).</span></span>
   
-<span data-ttu-id="bc488-160">下一步] 您填入您的組織名稱、 您位置及常見的密碼，並再從 PowerShell 命令提示字元處或整合式指令碼環境 (ISE) 中執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="bc488-160">Next, you fill in your organization name, your location, and a common password, and then run these commands from the PowerShell command prompt or Integrated Script Environment (ISE):</span></span>
+<span data-ttu-id="67ce8-160">接下來，填寫您的組織名稱、位置及常見的密碼，並從 PowerShell 命令提示字元或整合式指令碼環境 (ISE) 執行這些命令：</span><span class="sxs-lookup"><span data-stu-id="67ce8-160">Next, you fill in your organization name, your location, and a common password, and then run these commands from the PowerShell command prompt or Integrated Script Environment (ISE):</span></span>
   
 ```
 $orgName="<organization name, such as contoso for the contoso.onmicrosoft.com trial subscription domain name>"
@@ -162,49 +162,49 @@ foreach ($element in $userNames){ New-AzureADUser -DisplayName $element -Passwor
 ```
 
 > [!IMPORTANT]
-> <span data-ttu-id="bc488-p103">自動化及簡化開發人員/測試環境是密碼的設定的使用一般。這是不建議使用實際執行訂閱。當您使用每個這些新的使用者帳戶登入，系統會提示您變更密碼。</span><span class="sxs-lookup"><span data-stu-id="bc488-p103">The use of a common password here is for automation and ease of configuration for a dev/test environment. This is not recommended for production subscriptions. As you sign in with each of these new user accounts, you will be prompted to change the password.</span></span> 
+> <span data-ttu-id="67ce8-p103">此處常見密碼的使用是為自動化開發/測試環境且讓您方便進行設定而提供。建議您不要將此類密碼用於產品訂閱。當您使用這些新使用者帳戶登入時，系統會提示您變更密碼。</span><span class="sxs-lookup"><span data-stu-id="67ce8-p103">The use of a common password here is for automation and ease of configuration for a dev/test environment. This is not recommended for production subscriptions. As you sign in with each of these new user accounts, you will be prompted to change the password.</span></span> 
   
-<span data-ttu-id="bc488-164">使用下列步驟以確認動態群組成員資格與群組型授權均運作正常。</span><span class="sxs-lookup"><span data-stu-id="bc488-164">Use these steps to verify that dynamic group membership and group-based licensing are working correctly.</span></span>
+<span data-ttu-id="67ce8-164">使用這些步驟來確認動態群組成員資格和以群組為基礎之授權是否運作正常。</span><span class="sxs-lookup"><span data-stu-id="67ce8-164">Use these steps to verify that dynamic group membership and group-based licensing are working correctly.</span></span>
   
-1. <span data-ttu-id="bc488-165">從您的瀏覽器的 [ **Microsoft Office Home** ] 索引標籤中，按一下 [**系統**] 磚。</span><span class="sxs-lookup"><span data-stu-id="bc488-165">From the **Microsoft Office Home** tab of your browser, click the **Admin** tile.</span></span>
+1. <span data-ttu-id="67ce8-165">從瀏覽器的 [Microsoft Office 的首頁]**** 索引標籤中，按一下 [管理]**** 磚。</span><span class="sxs-lookup"><span data-stu-id="67ce8-165">From the **Microsoft Office Home** tab of your browser, click the **Admin** tile.</span></span>
     
-2. <span data-ttu-id="bc488-166">從 [新**Office 系統管理中心**] 索引標籤的瀏覽器中按一下 [**使用者**]。</span><span class="sxs-lookup"><span data-stu-id="bc488-166">From the new **Office Admin center** tab of your browser, click **Users**.</span></span>
+2. <span data-ttu-id="67ce8-166">從瀏覽器的新 [Office 系統管理中心]**** 索引標籤中，按一下 [使用者]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-166">From the new **Office Admin center** tab of your browser, click **Users**.</span></span>
     
-3. <span data-ttu-id="bc488-167">在使用者清單中，按一下 [**應徵者**]。</span><span class="sxs-lookup"><span data-stu-id="bc488-167">In the list of users, click **Candidate**.</span></span>
+3. <span data-ttu-id="67ce8-167">在使用者清單中，按一下 [應徵者]****。</span><span class="sxs-lookup"><span data-stu-id="67ce8-167">In the list of users, click **CEO**.</span></span>
     
-4. <span data-ttu-id="bc488-168">在列出**應徵者**的使用者帳戶內容窗格中，確認：</span><span class="sxs-lookup"><span data-stu-id="bc488-168">In the pane that lists the properties of the **Candidate** user account, verify that:</span></span>
+4. <span data-ttu-id="67ce8-168">在列出 [應徵者]**** 使用者帳戶之內容的窗格中，請確認：</span><span class="sxs-lookup"><span data-stu-id="67ce8-168">In the pane that lists the properties of the **Candidate** user account, verify that:</span></span>
     
-  - <span data-ttu-id="bc488-169">它是**資深和策略性人員**（中**群組的成員資格**） 群組的成員。</span><span class="sxs-lookup"><span data-stu-id="bc488-169">It is a member of the **Senior and strategic staff** group (in **Group memberships**).</span></span>
+  - <span data-ttu-id="67ce8-169">它屬於**資深和策略的人員**群組 (在**群組成員資格**)。</span><span class="sxs-lookup"><span data-stu-id="67ce8-169">It is a member of the **Senior and strategic staff** group (in **Group memberships**).</span></span>
     
-  - <span data-ttu-id="bc488-170">已被指派**企業行動性 + 安全性 E5**和**Office 365 企業版 E5** （中的授權**產品授權**）。</span><span class="sxs-lookup"><span data-stu-id="bc488-170">It has been assigned the **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** licenses (in **Product licenses**).</span></span>
+  - <span data-ttu-id="67ce8-170">他獲派 **Enterprise Mobility + Security E5** 與 **Office 365 企業版 E5** 授權 (在**產品授權**中)。</span><span class="sxs-lookup"><span data-stu-id="67ce8-170">It has been assigned the **Enterprise Mobility + Security E5** and **Office 365 Enterprise E5** licenses (in **Product licenses**).</span></span>
     
-5. <span data-ttu-id="bc488-171">關閉 [**應徵者**使用者帳戶] 窗格中。</span><span class="sxs-lookup"><span data-stu-id="bc488-171">Close the **Candidate** user account pane.</span></span>
+5. <span data-ttu-id="67ce8-171">關閉 [應徵者]**** 使用者帳戶窗格。</span><span class="sxs-lookup"><span data-stu-id="67ce8-171">Close the **Candidate** user account pane.</span></span>
     
-## <a name="record-values-for-future-reference"></a><span data-ttu-id="bc488-172">以供未來參照的記錄值</span><span class="sxs-lookup"><span data-stu-id="bc488-172">Record values for future reference</span></span>
+## <a name="record-values-for-future-reference"></a><span data-ttu-id="67ce8-172">記錄值，以便日後參考</span><span class="sxs-lookup"><span data-stu-id="67ce8-172">Record values for future reference</span></span>
 
-<span data-ttu-id="bc488-173">記錄使用 Office 365 與 EMS 此開發/測試環境的試用版訂閱這些值：</span><span class="sxs-lookup"><span data-stu-id="bc488-173">Record these values for working with the Office 365 and EMS trial subscriptions for this dev/test environment:</span></span>
+<span data-ttu-id="67ce8-173">記錄這些值以與 Office 365 和 EMS 試用訂閱在此開發/測試環境中搭配使用：</span><span class="sxs-lookup"><span data-stu-id="67ce8-173">Record these values for working with the Office 365 and EMS trial subscriptions for this dev/test environment:</span></span>
   
-- <span data-ttu-id="bc488-174">您的試用版訂閱的組織名稱： ___</span><span class="sxs-lookup"><span data-stu-id="bc488-174">Your trial subscription organization name: _______________________________________________</span></span> 
+- <span data-ttu-id="67ce8-174">您的試用訂閱組織名稱：_______________________________________________</span><span class="sxs-lookup"><span data-stu-id="67ce8-174">Your trial subscription organization name: _______________________________________________</span></span> 
     
-    <span data-ttu-id="bc488-175">例如，contoso.onmicrosoft.com 試用訂閱網域名稱、 組織名稱為"contoso"。</span><span class="sxs-lookup"><span data-stu-id="bc488-175">For example, for the trial subscription domain name of contoso.onmicrosoft.com, the organization name is "contoso".</span></span>
+    <span data-ttu-id="67ce8-175">比方說，針對 contoso.onmicrosoft.com 的試用訂閱網域名稱，組織名稱為「contoso」。</span><span class="sxs-lookup"><span data-stu-id="67ce8-175">For example, for the trial subscription domain name of contoso.onmicrosoft.com, the organization name is "contoso".</span></span>
     
-- <span data-ttu-id="bc488-176">Office 365 全域管理員名稱： ___.onmicrosoft.com</span><span class="sxs-lookup"><span data-stu-id="bc488-176">The Office 365 global administrator name: ____________________________________.onmicrosoft.com</span></span>
+- <span data-ttu-id="67ce8-176">Office 365 全域系統管理員名稱：____________________________________.onmicrosoft.com</span><span class="sxs-lookup"><span data-stu-id="67ce8-176">The Office 365 global administrator name: ____________________________________.onmicrosoft.com</span></span>
     
-    <span data-ttu-id="bc488-177">此帳戶的密碼和其他使用者帳戶的常見初始密碼記錄在安全的位置。</span><span class="sxs-lookup"><span data-stu-id="bc488-177">Record the password for this account and the common initial password for the other user accounts in a secure location.</span></span>
+    <span data-ttu-id="67ce8-177">在安全位置記錄此帳戶的密碼以及其他使用者帳戶的常見初始密碼。</span><span class="sxs-lookup"><span data-stu-id="67ce8-177">Record the password for this account and the common initial password for the other user accounts in a secure location.</span></span>
     
-## <a name="next-step"></a><span data-ttu-id="bc488-178">下一步</span><span class="sxs-lookup"><span data-stu-id="bc488-178">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="67ce8-178">下一步</span><span class="sxs-lookup"><span data-stu-id="67ce8-178">Next step</span></span>
 
-<span data-ttu-id="bc488-179">建置[在政治 campaign 開發/測試環境中的建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)與此開發/測試環境中的 SharePoint Online 小組網站的四種不同類型。</span><span class="sxs-lookup"><span data-stu-id="bc488-179">Build the four different types of SharePoint Online team sites in this dev/test environment with [Create team sites in a political campaign dev/test environment](create-team-sites-in-a-political-campaign-dev-test-environment.md).</span></span>
+<span data-ttu-id="67ce8-179">透過[在政治活動開發/測試環境中建立小組網站](create-team-sites-in-a-political-campaign-dev-test-environment.md)，在此開發/測試環境中建置四種不同類型的 SharePoint Online 小組網站。</span><span class="sxs-lookup"><span data-stu-id="67ce8-179">Build the four different types of SharePoint Online team sites in this dev/test environment with [Create team sites in a political campaign dev/test environment](create-team-sites-in-a-political-campaign-dev-test-environment.md).</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="bc488-180">請參閱</span><span class="sxs-lookup"><span data-stu-id="bc488-180">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67ce8-180">另請參閱</span><span class="sxs-lookup"><span data-stu-id="67ce8-180">See Also</span></span>
 
-[<span data-ttu-id="bc488-181">Microsoft 安全性指導政治活動、 非營利機構，以及其他靈活的組織</span><span class="sxs-lookup"><span data-stu-id="bc488-181">Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations</span></span>](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
+[<span data-ttu-id="67ce8-181">適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南</span><span class="sxs-lookup"><span data-stu-id="67ce8-181">Microsoft Security Guidance for Political Campaigns, Nonprofits, and Other Agile Organizations</span></span>](microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o.md)
   
-[<span data-ttu-id="bc488-182">政治 campaign 開發/測試環境中建立小組網站</span><span class="sxs-lookup"><span data-stu-id="bc488-182">Create team sites in a political campaign dev/test environment</span></span>](create-team-sites-in-a-political-campaign-dev-test-environment.md)
+[<span data-ttu-id="67ce8-182">在政治活動開發/測試環境中建立小組網站</span><span class="sxs-lookup"><span data-stu-id="67ce8-182">Create team sites in a political campaign dev/test environment</span></span>](create-team-sites-in-a-political-campaign-dev-test-environment.md)
   
-[<span data-ttu-id="bc488-183">雲端採用測試實驗室指南 (TLG)</span><span class="sxs-lookup"><span data-stu-id="bc488-183">Cloud adoption Test Lab Guides (TLGs)</span></span>](cloud-adoption-test-lab-guides-tlgs.md)
+[<span data-ttu-id="67ce8-183">雲端採用測試實驗室指南 (TLG)</span><span class="sxs-lookup"><span data-stu-id="67ce8-183">Cloud adoption Test Lab Guides (TLGs)</span></span>](cloud-adoption-test-lab-guides-tlgs.md)
   
-[<span data-ttu-id="bc488-184">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="bc488-184">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
+[<span data-ttu-id="67ce8-184">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="67ce8-184">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
 
 
 
