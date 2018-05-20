@@ -1,5 +1,5 @@
 ---
-title: "混合式雲端概觀 （英文)"
+title: 混合式雲端概觀
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,16 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 3ea3ee10-411e-4690-b9e5-f1b46f1f4d59
-description: "摘要： 了解的定義和 Microsoft 混合雲端的元素。"
-ms.openlocfilehash: 3cf828b8411605a9d0bdd338c3b6c16a5892f6b7
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解的定義和 Microsoft 混合雲端的元素。
+ms.openlocfilehash: 6d23f4f759e882ed925bd8bcb4c21ee365b231a0
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/19/2018
 ---
-# <a name="hybrid-cloud-overview"></a>混合式雲端概觀 （英文)
+# <a name="hybrid-cloud-overview"></a>混合式雲端概觀
 
- **摘要：**了解的定義和 Microsoft 混合雲端的元素。
+ **摘要：** 了解的定義和 Microsoft 混合雲端的元素。
   
 在內部網路上與雲端中混合式雲端會使用 compute 或儲存資源。您可以使用混合式雲端為路徑將您的業務與其 IT 需要移轉至雲端或整合雲端平台及服務與您現有的內部部署基礎結構整體 IT 策略的一部分。
   
@@ -72,7 +72,7 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
     
 - 身分識別
     
-    SaaS 和 Azure PaaS 混合式案例的身分識別可以包含為一般的身分識別提供者，其可與您的內部部署 Windows Server AD、 同步處理或 Windows Server AD 或其他身分識別提供者與同盟的 Azure AD。您也可以擴充您的內部識別基礎結構以 Azure IaaS。如需詳細資訊，請參閱[Microsoft 雲端身分識別的企業架構師](microsoft-cloud-identity-for-enterprise-architects.md)。
+    SaaS 和 Azure PaaS 混合式案例的身分識別可以包含為一般的身分識別提供者，其可與您的內部部署 Windows Server AD、 同步處理或 Windows Server AD 或其他身分識別提供者與同盟的 Azure AD。您也可以擴充您的內部識別基礎結構以 Azure IaaS。如需詳細資訊，請參閱[Microsoft 雲端身分識別的企業架構師](microsoft-cloud-it-architecture-resources.md#identity)。
     
 - 安全性
     
@@ -82,7 +82,7 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
     
     混合式雲端案例的管理包括維護設定、 資料、 帳戶、 原則與權限，以及要監視的案例和與其效能元素的進行中狀況的功能。您也可以使用相同的工具集，例如 Systems Management Server、 管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   

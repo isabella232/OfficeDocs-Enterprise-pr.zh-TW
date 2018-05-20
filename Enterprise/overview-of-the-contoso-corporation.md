@@ -1,5 +1,5 @@
 ---
-title: "Contoso 公司概觀"
+title: Contoso 公司概觀
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,16 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 1de16e29-ac2e-40b5-bf13-9301a51e16a8
-description: "摘要： 了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。"
-ms.openlocfilehash: 7dcbefc82591c4baf65a2b64127d547020109c59
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。
+ms.openlocfilehash: 30a6dd23271fbbd5599053b934e6a1af9dc14d12
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="overview-of-the-contoso-corporation"></a>Contoso 公司概觀
 
- **摘要：**了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。
+ **摘要：** 了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。
   
 Contoso Corporation 是在 Paris、 法國 headquarters 通用的企業。它是 conglomerate 製造流程 」、 「 銷售 」 與 「 超過 100000 產品的支援組織。 
   
@@ -71,7 +71,7 @@ Contoso 的 IT 架構師規劃採用 Microsoft cloud 方案時識別下列項目
     
     Contoso 其內部的身分識別提供者使用的 Windows Server AD 樹系，而且也同盟的客戶和合作夥伴的協力廠商提供者。Contoso 必須利用 Microsoft cloud 方案的帳戶的內部集。客戶與合作夥伴的雲端應用程式存取必須利用協力廠商身分識別提供者。
     
-    如需詳細資訊，請參閱[Microsoft 雲端身分識別的企業架構師](microsoft-cloud-identity-for-enterprise-architects.md)海報 （英文）。
+    如需詳細資訊，請參閱[Microsoft 雲端身分識別的企業架構師](microsoft-cloud-it-architecture-resources.md#identity)海報 （英文）。
     
 - 安全性
     
@@ -83,9 +83,9 @@ Contoso 的 IT 架構師規劃採用 Microsoft cloud 方案時識別下列項目
     
     雲端應用程式及 saas 和工作負載管理需要維護設定、 資料、 帳戶、 原則與權限以及監視進行中的狀況與效能的功能。現有的伺服器管理工具將用來管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

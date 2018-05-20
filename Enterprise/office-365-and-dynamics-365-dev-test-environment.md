@@ -3,7 +3,7 @@ title: Office 365 和 Dynamics 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -14,17 +14,20 @@ ms.collection:
 ms.custom: Ent_TLGs
 ms.assetid: 098c1a1d-83a1-40eb-bbc9-47de7af8bb23
 description: 摘要： 將 Dynamics 365 新增至 Office 365 開發人員/測試環境用於此測試實驗室指南。
-ms.openlocfilehash: ccf0615befe2ba74f85177dc252516f685655ed6
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 00d5cc0fd347aff7e201056f6af9ca271008d285
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
 
- **摘要：**將 Dynamics 365 新增至 Office 365 開發人員/測試環境中使用此測試實驗室指南。
+ **摘要：** 將 Dynamics 365 新增至 Office 365 開發人員/測試環境中使用此測試實驗室指南。
   
 使用本文中的指示，新增 [Dynamics 365 試用版訂閱至 Office 365 開發人員/測試環境中，相同的組織建立 Office 365 和 Dynamics 365 開發人員/測試環境。
+
+![Office 365 和 Dynamics 365 開發/測試環境](images/o365-dynamics365-dev-test.png)
+  
   
 您可以使用 Dynamics 365 試用版訂閱示範 Dynamics 365 的特性與功能。下列的解決方案所含 Dynamics 365 計劃 1，Enterprise Edition 試用版：
   
@@ -38,16 +41,18 @@ ms.lasthandoff: 04/27/2018
     
 您可以探索一或多個以上的 Dynamics 365 試用版訂閱。
   
-![Microsoft 雲端中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
+![Microsoft Cloud 中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
 如果您只是要測試的基本需求的輕量型方式的 Office 365 和 Dynamics 365，請在階段 2 和 3 的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)中遵循的指示。
   
 如果您想要測試的模擬企業的 Office 365 和 Dynamics 365，請遵循[DirSync Office 365 開發人員/測試環境](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
+
+![Office 365 開發/測試環境](images/48fb91aa-09b0-4020-a496-a8253920c45d.png)
   
 > [!NOTE]
 > 本文中的設定不需要模擬的 enterprise 開發人員/測試環境中，其中包含連線至網際網路模擬內部網路和 Windows Server AD 樹系目錄同步處理。它會提供這裡是做為選項，讓您可以試驗 Office 365 和 Dynamics 365 代表的典型組織的環境中。 
@@ -60,18 +65,20 @@ ms.lasthandoff: 04/27/2018
 
 1. 在 [您的桌上型電腦 （輕量型） 使用瀏覽器或從 CLIENT1 （模擬企業） 登入 Office 365 入口網站[https://portal.office.com](https://portal.office.com)以全域管理員帳戶的認證。
     
-2. 按一下 [管理] 磚。
+2. 按一下 [管理]**** 磚。
     
-3. 在**Office 系統管理中心**] 索引標籤的 [在左導覽列中，按一下 [**帳務 > 購買服務**。
+3. 在 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [**購買服務**] 頁面上尋找**Dynamics 365 計劃 1 Enterprise Edition**項目。滑鼠指標停留並按一下 [**開始免費試用版**。
+4. 在 [購買服務]**** 頁面上，尋找 [Dynamics 365 方案 1 企業版]**** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用] ****。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [訂單收據] 頁面上，按一下 [繼續]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
+
+![Office 365 和 Dynamics 365 開發/測試環境](images/o365-dynamics365-dev-test.png)
     
 > [!NOTE]
-> Dynamics 365 計劃 1 Enterprise Edition 試用訂閱是 30 天。您可以輕鬆地擴充另一個 30 天的軌跡訂閱。在永久的開發人員測試環境中建立新付費少量的授權與訂閱。 
+> Dynamics 365 方案 1 企業版試用訂閱是 30 天。您可以輕鬆地將試用訂閱延長額外 30 天的時間。針對永久開發/測試環境，建立內含少量授權的新付費訂閱。 
   
 ## <a name="phase-3-assign-dynamics-365-licenses-and-system-administrators"></a>階段 3： 指派 Dynamics 365 授權和系統管理員
 
@@ -79,48 +86,48 @@ ms.lasthandoff: 04/27/2018
   
 使用下列步驟來指派 Dynamics 365 授權。
   
-1. 在 [ **Office 系統管理中心**] 索引標籤上按一下 [**使用者 > 作用中使用者**。
+1. 在 [Office 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
     
-2. 在作用中使用者清單中，按一下您的全域管理員帳戶] 和 [**編輯****產品**授權。
+2. 在作用中使用者清單中，按一下全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯] ****。
     
-3. 在**產品授權**] 窗格中，開啟**Dynamics 365 計劃 1 Enterprise Edition** **上**至產品授權、 按一下 [**儲存]** 及 [**關閉**兩次。
+3. 在 [產品授權] **** 窗格中，將 [Dynamics 365 方案 1 企業版]**** 的產品授權設為 [開啟]****，按一下 [儲存]****，然後按兩次 [關閉]****。
     
-4. 使用者 2 和 3 使用者帳戶執行步驟 2 和 3。
+4. 對使用者 2 和使用者 3 帳戶執行步驟 2 和 3。
     
-5. 關閉**Office 系統管理中心**] 索引標籤。
+5. 關閉 [Office 系統管理中心]**** 索引標籤。
     
-使用下列步驟來設定使用者 2 和 3 使用者帳戶為 Dynamics 365 系統管理員。
+使用這些步驟，將使用者 2 和使用者 3 帳戶設定為 Dynamics 365 系統管理員。
   
 1. 從**Microsoft Office Home** ] 索引標籤上，按一下 [**管理**]。
     
 2. 在**Office 系統管理中心**] 索引標籤的左方導覽，按一下 [**系統中心**，和 [ **Dynamics 365**。
     
-    您可能需要等候 Dynamics 365 完成佈建之前 Dynamics 365 出現的功能表中。
+    您可能需要等待 Dynamics 365 完成佈建，Dynamics 365 才會顯示在功能表中。
     
-3. 在 [Dynamics 365] 索引標籤上按一下 [**全部都**、] 和 [**完成安裝。**
+3. 在 [Dynamics 365] 索引標籤上，按一下 [這些所有]****，然後按一下 [完成安裝]****。
     
-    等候安裝程式完成。
+    請等候安裝完成。
     
-    當安裝完成後時，它會顯示根據屬於軌跡訂閱資料範例銷售活動儀表板。需要一些時間來檢視**您的試用版歡迎使用**視訊。關閉 [視訊] 視窗時完成。
+    安裝完成後，就會顯示根據屬於試用訂閱之範例資料的銷售活動儀表板。花幾分鐘來檢視**歡迎使用試用版**影片。完成時關閉 [影片] 視窗。
     
-4. 在頂端工具列上，按一下 [**銷售**] 旁的向下箭號、 按一下 [**設定**] 及 [**安全性**。
+4. 在頂端的工具列上，按一下 [銷售]**** 旁的向下箭號，按一下 [設定]****，然後按一下 [安全性]****。
     
-5. 按一下 [**安全性**] 索引標籤的 [**使用者**]。
+5. 在 [安全性]**** 頁面，按一下 [使用者] ****。
     
-6. 在使用者清單中，按一下 [**使用者 2**。
+6. 在使用者清單中，按一下 [使用者 2]****。
     
-7. 在 [工具] 列中，按一下 [**管理角色**。
+7. 在工具列中，按一下 [管理角色]****。
     
-8. 在**管理角色**、 按一下 [**系統管理員**，並再按一下 [**確定]**。
+8. 在 [管理角色]****，按一下 [系統管理員]****，然後按一下 [確定]****。
     
-9. 在上方的 [工具] 列中按一下 [**安全性**]。
+9. 在頂部的工具列上按一下 [安全性]****。
     
-10. 使用者 3 帳戶重複步驟 5-8。
+10. 對使用者 3 帳戶重複步驟 5 至 8。
     
-11. 關閉**使用者： User3** ] 索引標籤。
+11. 關閉 [使用者：User3]**** 索引標籤。
     
 > [!NOTE]
-> 您的 Office 365 全域管理員帳戶會自動指派 Dynamics 365 系統管理員角色。 
+> Office 365 全域系統管理員帳戶已自動指派 Dynamics 365 系統管理員角色。 
   
 Office 365 和 Dynamics 365 開發人員/測試環境現在有：
   
