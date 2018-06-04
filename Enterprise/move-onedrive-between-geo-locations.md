@@ -3,7 +3,6 @@ title: 將 OneDrive 網站移至不同的地理位置
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
-ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,168 +10,181 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 6bac98cc0707f977b7b585e8ae0a570f4b9662ee
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 80768d0838d1d5d072d3e221c4c2b4b1af78dae6
+ms.sourcegitcommit: aabd369fc8b397f9e738374d42d8afd18b96d469
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "19174899"
 ---
-# <a name="move-a-onedrive-site-to-a-different-geo-location"></a><span data-ttu-id="3ca2d-103">將 OneDrive 網站移至不同的地理位置</span><span class="sxs-lookup"><span data-stu-id="3ca2d-103">Move a OneDrive site to a different geo-location</span></span> 
+# <a name="move-a-onedrive-site-to-a-different-geo-location"></a><span data-ttu-id="68aff-103">將 OneDrive 網站移至不同的地理位置</span><span class="sxs-lookup"><span data-stu-id="68aff-103">Move a OneDrive site to a different geo-location</span></span> 
 
-<span data-ttu-id="3ca2d-p101">使用 OneDrive 異地移動時，您可以將使用者的 OneDrive 移到不同的地理位置。OneDrive 異地移動是由 SharePoint Online 系統管理員或 Office 365 全域系統管理員所執行。在啟動 OneDrive 異地移動前，請務必告知使用者 OneDrive 即將移動，並建議使用者在移動期間關閉所有檔案。(如果在移動期間使用者使用 Office 用戶端開啟文件，則在移動完成後，文件必須儲存到新位置。) 如有需要，移動可排程至日後的時間。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p101">With OneDrive geo move, you can move a user’s OneDrive to a different geo location. OneDrive geo move is performed by the SharePoint Online administrator or the Office 365 global administrator. Before you start a OneDrive geo move, be sure to notify the user whose OneDrive is being moved and recommend they close all files for the duration of the move. (If the user has a document open using the Office client during the move, then upon move completion the document will need to be saved to the new location.) The move can be scheduled for a future time, if desired.</span></span>
+<span data-ttu-id="68aff-p101">使用 OneDrive 異地移動時，您可以將使用者的 OneDrive 移到不同的地理位置。OneDrive 異地移動是由 SharePoint Online 系統管理員或 Office 365 全域系統管理員所執行。在啟動 OneDrive 異地移動前，請務必告知使用者 OneDrive 即將移動，並建議使用者在移動期間關閉所有檔案。(如果在移動期間使用者使用 Office 用戶端開啟文件，則在移動完成後，文件必須儲存到新位置。) 如有需要，移動可排程至日後的時間。</span><span class="sxs-lookup"><span data-stu-id="68aff-p101">With OneDrive geo move, you can move a user’s OneDrive to a different geo location. OneDrive geo move is performed by the SharePoint Online administrator or the Office 365 global administrator. Before you start a OneDrive geo move, be sure to notify the user whose OneDrive is being moved and recommend they close all files for the duration of the move. (If the user has a document open using the Office client during the move, then upon move completion the document will need to be saved to the new location.) The move can be scheduled for a future time, if desired.</span></span>
 
-<span data-ttu-id="3ca2d-p102">OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDrive 相關聯的儲存體 blob 會在使用者能夠使用目的地 OneDrive 的 40 天內，從來源移動到目的地理位置。在目的地 OneDrive 可以使用後，將會還原使用者 OneDrive 的存取。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p102">The OneDrive service uses Azure Blob Storage to store content. The Storage blob associated with the user’s OneDrive will be moved from the source to destination geo location within 40 days of destination OneDrive being available to the user. The access to the user’s OneDrive will be restored as soon as the destination OneDrive is available.</span></span>
+<span data-ttu-id="68aff-p102">OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDrive 相關聯的儲存體 blob 會在使用者能夠使用目的地 OneDrive 的 40 天內，從來源移動到目的地理位置。在目的地 OneDrive 可以使用後，將會還原使用者 OneDrive 的存取。</span><span class="sxs-lookup"><span data-stu-id="68aff-p102">The OneDrive service uses Azure Blob Storage to store content. The Storage blob associated with the user’s OneDrive will be moved from the source to destination geo location within 40 days of destination OneDrive being available to the user. The access to the user’s OneDrive will be restored as soon as the destination OneDrive is available.</span></span>
 
-<span data-ttu-id="3ca2d-p103">在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Office 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p103">During OneDrive geo move window (about 2-6 hours) the user's OneDrive is set to read-only. The user can still access their files via the OneDrive sync client or their OneDrive site in SharePoint Online. After OneDrive geo move is complete, the user will be automatically connected to their OneDrive at the destination geo location when they navigate to OneDrive in the Office 365 app launcher. The sync client will automatically begin syncing from the new location.</span></span>
+<span data-ttu-id="68aff-p103">在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Office 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。</span><span class="sxs-lookup"><span data-stu-id="68aff-p103">During OneDrive geo move window (about 2-6 hours) the user's OneDrive is set to read-only. The user can still access their files via the OneDrive sync client or their OneDrive site in SharePoint Online. After OneDrive geo move is complete, the user will be automatically connected to their OneDrive at the destination geo location when they navigate to OneDrive in the Office 365 app launcher. The sync client will automatically begin syncing from the new location.</span></span>
 
-<span data-ttu-id="3ca2d-115">本文所述的程序需要 [Microsoft SharePoint Online PowerShell 模組](https://www.microsoft.com/en-us/download/details.aspx?id=35588)。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-115">The procedures in this article require the [Microsoft SharePoint Online PowerShell Module](https://www.microsoft.com/en-us/download/details.aspx?id=35588).</span></span>
+<span data-ttu-id="68aff-115">本文所述的程序需要 [Microsoft SharePoint Online PowerShell 模組](https://www.microsoft.com/en-us/download/details.aspx?id=35588)。</span><span class="sxs-lookup"><span data-stu-id="68aff-115">The procedures in this article require the [Microsoft SharePoint Online PowerShell Module](https://www.microsoft.com/en-us/download/details.aspx?id=35588).</span></span>
 
-## <a name="moving-a-onedrive-site"></a><span data-ttu-id="3ca2d-116">移動 OneDrive 網站</span><span class="sxs-lookup"><span data-stu-id="3ca2d-116">Moving a OneDrive site</span></span>
+## <a name="communicating-to-your-users"></a><span data-ttu-id="68aff-116">與使用者溝通</span><span class="sxs-lookup"><span data-stu-id="68aff-116">Communicating to your users</span></span>
 
-<span data-ttu-id="3ca2d-p104">若要執行 OneDrive 異地移動，租用戶系統管理員必須先將使用者的慣用資料位置 (PDL) 設定至適當的地理位置。設定好 PDL 後，請等候至少 24 小時，讓 PDL 更新可在地理位置之間同步處理，才能開始 OneDrive 異地移動。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p104">To perform a OneDrive geo move, the tenant administrator must first set the user’s Preferred Data Location (PDL) to the appropriate geo location. Once the PDL is set, wait for at least 24 hours for the PDL update to sync across the geo locations before starting the OneDrive geo move.</span></span>
+<span data-ttu-id="68aff-p104">在地理位置之間移動 OneDrive 網站時，請務必將預期要發生的事傳達給使用者。這可以幫助減少使用者的困惑和技術支援中心的電話。在移動前發送電子郵件給使用者，並讓他們知道以下資訊：</span><span class="sxs-lookup"><span data-stu-id="68aff-p104">When moving OneDrive sites between geo-locations, it's important to communicate to your users what to expect. This can help reduce user confusion and calls to your help desk. Email your users before the move and let them know the following information:</span></span>
 
-<span data-ttu-id="3ca2d-119">使用異地移動 Cmdlet 時，請使用下列語法連線到使用者目前 OneDrive 地理位置的 SPO 服務：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-119">When using the geo move cmdlets, connect to SPO Service at the user’s current OneDrive geo location, using the following syntax:</span></span>
+- <span data-ttu-id="68aff-120">預計何時將開始移動，並預計需要多久</span><span class="sxs-lookup"><span data-stu-id="68aff-120">When the move is expected to start and how long it is expected to take</span></span>
+- <span data-ttu-id="68aff-121">OneDrive 新的地理位置以及存取新位置的 URL</span><span class="sxs-lookup"><span data-stu-id="68aff-121">What geo location their OneDrive is moving to, and the URL to access the new location</span></span>
+- <span data-ttu-id="68aff-122">他們應該關閉文件，並且不要在移動期間編輯檔案</span><span class="sxs-lookup"><span data-stu-id="68aff-122">They should close their files and not make edits during the move.</span></span>
+- <span data-ttu-id="68aff-123">檔案權限和共用不會因為移動而變更</span><span class="sxs-lookup"><span data-stu-id="68aff-123">File permissions and sharing will not change as a result of the move.</span></span>
+- <span data-ttu-id="68aff-124">[在多地理位置環境中的使用者體驗](multi-geo-user-experience.md)將有何不同</span><span class="sxs-lookup"><span data-stu-id="68aff-124">What to expect from the [user experience in a multi-geo environment](multi-geo-user-experience.md)</span></span>
+
+<span data-ttu-id="68aff-125">移動成功完成後，請務必向用戶發送電子郵件，通知他們可以在 OneDrive 中繼續工作。</span><span class="sxs-lookup"><span data-stu-id="68aff-125">Be sure to send your users an email when the move has successfully completed informing them that they can resume working in OneDrive.</span></span>
+
+## <a name="moving-a-onedrive-site"></a><span data-ttu-id="68aff-126">移動 OneDrive 網站</span><span class="sxs-lookup"><span data-stu-id="68aff-126">Moving a OneDrive site</span></span>
+
+<span data-ttu-id="68aff-p105">若要執行 OneDrive 異地移動，租用戶系統管理員必須先將使用者的慣用資料位置 (PDL) 設定至適當的地理位置。設定好 PDL 後，請等候至少 24 小時，讓 PDL 更新可在地理位置之間同步處理，才能開始 OneDrive 異地移動。</span><span class="sxs-lookup"><span data-stu-id="68aff-p105">To perform a OneDrive geo move, the tenant administrator must first set the user’s Preferred Data Location (PDL) to the appropriate geo location. Once the PDL is set, wait for at least 24 hours for the PDL update to sync across the geo locations before starting the OneDrive geo move.</span></span>
+
+<span data-ttu-id="68aff-129">使用異地移動 Cmdlet 時，請使用下列語法連線到使用者目前 OneDrive 地理位置的 SPO 服務：</span><span class="sxs-lookup"><span data-stu-id="68aff-129">When using the geo move cmdlets, connect to SPO Service at the user’s current OneDrive geo location, using the following syntax:</span></span>
 
 `connect-sposervice -url https://<tenantName>-admin.sharepoint.com`
 
-<span data-ttu-id="3ca2d-120">例如：若要移動使用者 ‘Matt@contosoenergy.onmicrosoft.com’ 的 OneDrive，因使用者的 OneDrive 位於 EUR 地理位置，請連線到 EUR SharePoint 管理中心：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-120">For example: To move OneDrive of user ‘Matt@contosoenergy.onmicrosoft.com’, connect to EUR SharePoint Admin center as the user’s OneDrive is in EUR geo location:</span></span>
+<span data-ttu-id="68aff-130">例如：若要移動使用者 ‘Matt@contosoenergy.onmicrosoft.com’ 的 OneDrive，因使用者的 OneDrive 位於 EUR 地理位置，請連線到 EUR SharePoint 管理中心：</span><span class="sxs-lookup"><span data-stu-id="68aff-130">For example: To move OneDrive of user ‘Matt@contosoenergy.onmicrosoft.com’, connect to EUR SharePoint Admin center as the user’s OneDrive is in EUR geo location:</span></span>
 
 `connect-sposervice -url https://contosoenergyeur-admin.sharepoint.com`
 
 ![](media/move-onedrive-between-geo-locations_image1.png)
 
-## <a name="validating-the-environment"></a><span data-ttu-id="3ca2d-121">驗證環境</span><span class="sxs-lookup"><span data-stu-id="3ca2d-121">Validating the environment</span></span>
+## <a name="validating-the-environment"></a><span data-ttu-id="68aff-131">驗證環境</span><span class="sxs-lookup"><span data-stu-id="68aff-131">Validating the environment</span></span>
 
-<span data-ttu-id="3ca2d-122">在您開始 OneDrive 異地移動之前，我們建議您先驗證環境。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-122">Before you start a OneDrive geo move, we recommend that you validate the environment.</span></span>
+<span data-ttu-id="68aff-132">在您開始 OneDrive 異地移動之前，我們建議您先驗證環境。</span><span class="sxs-lookup"><span data-stu-id="68aff-132">Before you start a OneDrive geo move, we recommend that you validate the environment.</span></span>
 
-<span data-ttu-id="3ca2d-123">若要確保所有地理位置相容，請執行：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-123">To ensure that all geo locations are compatible, run:</span></span>
+<span data-ttu-id="68aff-133">若要確保所有地理位置相容，請執行：</span><span class="sxs-lookup"><span data-stu-id="68aff-133">To ensure that all geo locations are compatible, run:</span></span>
 
 `Get-SPOGeoMoveCompatibilityStatus -AllLocations 1`
 
-<span data-ttu-id="3ca2d-p105">如果 OneDrive 處於法務保存狀態或包含子網站，則無法移動。您可以使用 Start-SPOUserAndContentMove Cmdlet 以及 -ValidationOnly 參數驗證 OneDrive 是否可以移動：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p105">If a OneDrive is under legal hold or if it contains a subsite, it cannot be moved. You can use the Start-SPOUserAndContentMove cmdlet with the -ValidationOnly parameter to validate if the OneDrive is able to be moved:</span></span>
+<span data-ttu-id="68aff-p106">如果 OneDrive 處於法務保存狀態或包含子網站，則無法移動。您可以使用 Start-SPOUserAndContentMove Cmdlet 以及 -ValidationOnly 參數驗證 OneDrive 是否可以移動：</span><span class="sxs-lookup"><span data-stu-id="68aff-p106">If a OneDrive is under legal hold or if it contains a subsite, it cannot be moved. You can use the Start-SPOUserAndContentMove cmdlet with the -ValidationOnly parameter to validate if the OneDrive is able to be moved:</span></span>
 
 `Start-SPOUserAndContentMove -UserPrincipalName <UPN> -DestinationDataLocation <DestinationDataLocation> -ValidationOnly`
 
-<span data-ttu-id="3ca2d-p106">如果 OneDrive 已準備好要移動會傳回成功，如果有防止移動的法務保存狀態或子網站，則會傳回失敗。在您已驗證 OneDrive 移動準備就緒之後，就可以開始移動。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p106">This will return Success if the OneDrive is ready to be moved or Fail if there is a legal hold or subsite that would prevent the move. Once you have validated that the OneDrive is ready to move, you can start the move.</span></span>
+<span data-ttu-id="68aff-p107">如果 OneDrive 已準備好要移動會傳回成功，如果有防止移動的法務保存狀態或子網站，則會傳回失敗。在您已驗證 OneDrive 移動準備就緒之後，就可以開始移動。</span><span class="sxs-lookup"><span data-stu-id="68aff-p107">This will return Success if the OneDrive is ready to be moved or Fail if there is a legal hold or subsite that would prevent the move. Once you have validated that the OneDrive is ready to move, you can start the move.</span></span>
 
-## <a name="start-a-onedrive-geo-move"></a><span data-ttu-id="3ca2d-128">啟動 OneDrive 異地移動</span><span class="sxs-lookup"><span data-stu-id="3ca2d-128">Start a OneDrive geo move</span></span>
+## <a name="start-a-onedrive-geo-move"></a><span data-ttu-id="68aff-138">啟動 OneDrive 異地移動</span><span class="sxs-lookup"><span data-stu-id="68aff-138">Start a OneDrive geo move</span></span>
 
-<span data-ttu-id="3ca2d-129">若要啟動移動，請執行：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-129">To start the move, run:</span></span>  
+<span data-ttu-id="68aff-139">若要啟動移動，請執行：</span><span class="sxs-lookup"><span data-stu-id="68aff-139">To start the move, run:</span></span>  
 
 `Start-SPOUserAndContentMove -UserPrincipalName <UserPrincipalName> -DestinationDataLocation <DestinationDataLocation>`
 
-<span data-ttu-id="3ca2d-130">使用下列參數：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-130">Using these parameters:</span></span>
+<span data-ttu-id="68aff-140">使用下列參數：</span><span class="sxs-lookup"><span data-stu-id="68aff-140">Using these parameters:</span></span>
 
--   <span data-ttu-id="3ca2d-131">_UserPrincipalName_ – OneDrive 即將移動的使用者 UPN。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-131">_UserPrincipalName_ – UPN of the user whose OneDrive is being moved.</span></span>
+-   <span data-ttu-id="68aff-141">_UserPrincipalName_ – OneDrive 即將移動的使用者 UPN。</span><span class="sxs-lookup"><span data-stu-id="68aff-141">_UserPrincipalName_ – UPN of the user whose OneDrive is being moved.</span></span>
 
--   <span data-ttu-id="3ca2d-p107">_DestinationDataLocation_ – OneDrive 要移動到的地理位置。這應與使用者慣用資料位置相同。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p107">_DestinationDataLocation_ – Geo-Location where the OneDrive needs to be moved. This should be same as the user’s preferred data location.</span></span>
+-   <span data-ttu-id="68aff-p108">_DestinationDataLocation_ – OneDrive 要移動到的地理位置。這應與使用者慣用資料位置相同。</span><span class="sxs-lookup"><span data-stu-id="68aff-p108">_DestinationDataLocation_ – Geo-Location where the OneDrive needs to be moved. This should be same as the user’s preferred data location.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="3ca2d-134">在起始 OneDrive 異地移動前，建議您執行 `Get-SPOGeoMoveStateCompatibility` 與 `ValidationOnly`。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-134">We recommend running `Get-SPOGeoMoveStateCompatibility` with `ValidationOnly` prior to initiating OneDrive geo move.</span></span>
+> <span data-ttu-id="68aff-144">在起始 OneDrive 異地移動前，建議您執行 `Get-SPOGeoMoveStateCompatibility` 與 `ValidationOnly`。</span><span class="sxs-lookup"><span data-stu-id="68aff-144">We recommend running `Get-SPOGeoMoveStateCompatibility` with `ValidationOnly` prior to initiating OneDrive geo move.</span></span>
 
-<span data-ttu-id="3ca2d-135">比方說，若要將 matt@contosoenergy.onmicrosoft.com 的 OneDrive 從 EUR 移動到 AUS，請執行：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-135">For example, to move the OneDrive of matt@contosoenergy.onmicrosoft.com from EUR to AUS, run:</span></span>
+<span data-ttu-id="68aff-145">比方說，若要將 matt@contosoenergy.onmicrosoft.com 的 OneDrive 從 EUR 移動到 AUS，請執行：</span><span class="sxs-lookup"><span data-stu-id="68aff-145">For example, to move the OneDrive of matt@contosoenergy.onmicrosoft.com from EUR to AUS, run:</span></span>
 
 `Start-SPOUserAndContentMove -UserPrincipalName matt@contosoenergy.onmicrosoft.com -DestinationDataLocation AUS`
 
 ![](media/move-onedrive-between-geo-locations_image2.png)
 
-<span data-ttu-id="3ca2d-136">若要排程稍後進行異地移動，請使用下列參數的其中一個：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-136">To schedule a geo move for a later time, use one of the following parameters:</span></span>
+<span data-ttu-id="68aff-146">若要排程稍後進行異地移動，請使用下列參數的其中一個：</span><span class="sxs-lookup"><span data-stu-id="68aff-146">To schedule a geo move for a later time, use one of the following parameters:</span></span>
 
--   <span data-ttu-id="3ca2d-p108">_PreferredMoveBeginDate_ – 移動會在指定的時間開始。必須以國際標準時間 (UTC) 來指定時間。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p108">_PreferredMoveBeginDate_ – The move will likely begin at this specified time. Time must be specified in Coordinated Universal Time (UTC).</span></span>
+-   <span data-ttu-id="68aff-p109">_PreferredMoveBeginDate_ – 移動會在指定的時間開始。必須以國際標準時間 (UTC) 來指定時間。</span><span class="sxs-lookup"><span data-stu-id="68aff-p109">_PreferredMoveBeginDate_ – The move will likely begin at this specified time. Time must be specified in Coordinated Universal Time (UTC).</span></span>
 
--   <span data-ttu-id="3ca2d-p109">_PreferredMoveEndDate_ – 移動會以最佳方式在指定的時間前完成。必須以國際標準時間 (UTC) 來指定時間。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p109">_PreferredMoveEndDate_ – The move will likely be completed by this specified time, on a best effort basis. Time must be specified in Coordinated Universal Time (UTC).</span></span> 
+-   <span data-ttu-id="68aff-p110">_PreferredMoveEndDate_ – 移動會以最佳方式在指定的時間前完成。必須以國際標準時間 (UTC) 來指定時間。</span><span class="sxs-lookup"><span data-stu-id="68aff-p110">_PreferredMoveEndDate_ – The move will likely be completed by this specified time, on a best effort basis. Time must be specified in Coordinated Universal Time (UTC).</span></span> 
 
-## <a name="cancel-a-onedrive-geo-move"></a><span data-ttu-id="3ca2d-141">取消 OneDrive 異地移動</span><span class="sxs-lookup"><span data-stu-id="3ca2d-141">Cancel a OneDrive geo move</span></span> 
+## <a name="cancel-a-onedrive-geo-move"></a><span data-ttu-id="68aff-151">取消 OneDrive 異地移動</span><span class="sxs-lookup"><span data-stu-id="68aff-151">Cancel a OneDrive geo move</span></span> 
 
-<span data-ttu-id="3ca2d-142">只要移動非正在進行或已完成，您即可使用 Cmdlet 停止使用者 OneDrive 的異地移動：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-142">You can stop the geo move of a user’s OneDrive, provided the move is not in progress or completed by using the cmdlet:</span></span>
+<span data-ttu-id="68aff-152">只要移動非正在進行或已完成，您即可使用 Cmdlet 停止使用者 OneDrive 的異地移動：</span><span class="sxs-lookup"><span data-stu-id="68aff-152">You can stop the geo move of a user’s OneDrive, provided the move is not in progress or completed by using the cmdlet:</span></span>
 
 `Stop-SPOUserAndContentMove – UserPrincipalName <UserPrincipalName>`
 
-<span data-ttu-id="3ca2d-143">其中 _UserPrincipalName_ 是您要停止的 OneDrive 移動之使用者 UPN。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-143">Where _UserPrincipalName_ is the UPN of the user whose OneDrive move you want to stop.</span></span>
+<span data-ttu-id="68aff-153">其中 _UserPrincipalName_ 是您要停止的 OneDrive 移動之使用者 UPN。</span><span class="sxs-lookup"><span data-stu-id="68aff-153">Where _UserPrincipalName_ is the UPN of the user whose OneDrive move you want to stop.</span></span>
 
-## <a name="determining-current-status"></a><span data-ttu-id="3ca2d-144">判斷目前狀態</span><span class="sxs-lookup"><span data-stu-id="3ca2d-144">Determining current status</span></span>
+## <a name="determining-current-status"></a><span data-ttu-id="68aff-154">判斷目前狀態</span><span class="sxs-lookup"><span data-stu-id="68aff-154">Determining current status</span></span>
 
-<span data-ttu-id="3ca2d-145">您可以使用 Get-SPOUserAndContentMoveState Cmdlet 查看 OneDrive 異地移動的狀態是位於或已移出您連線的地理位置。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-145">You can check the status of a OneDrive geo move in or out of the geo that you’re connected to by using the Get-SPOUserAndContentMoveState cmdlet.</span></span>
+<span data-ttu-id="68aff-155">您可以使用 Get-SPOUserAndContentMoveState Cmdlet 查看 OneDrive 異地移動的狀態是位於或已移出您連線的地理位置。</span><span class="sxs-lookup"><span data-stu-id="68aff-155">You can check the status of a OneDrive geo move in or out of the geo that you’re connected to by using the Get-SPOUserAndContentMoveState cmdlet.</span></span>
 
-<span data-ttu-id="3ca2d-146">下表說明移動狀態。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-146">The fields in alerts are described in the following table.</span></span>
+<span data-ttu-id="68aff-156">下表說明移動狀態。</span><span class="sxs-lookup"><span data-stu-id="68aff-156">The fields in alerts are described in the following table.</span></span>
 
 <table>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="3ca2d-147"><strong>狀態</strong></span><span class="sxs-lookup"><span data-stu-id="3ca2d-147"><strong>Status</strong></span></span></th>
-<th align="left"><span data-ttu-id="3ca2d-148"><strong>描述</strong></span><span class="sxs-lookup"><span data-stu-id="3ca2d-148"><strong>Description</strong></span></span></th>
+<th align="left"><span data-ttu-id="68aff-157"><strong>狀態</strong></span><span class="sxs-lookup"><span data-stu-id="68aff-157"><strong>Status</strong></span></span></th>
+<th align="left"><span data-ttu-id="68aff-158"><strong>描述</strong></span><span class="sxs-lookup"><span data-stu-id="68aff-158"><strong>Description</strong></span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span data-ttu-id="3ca2d-149">NotStarted</span><span class="sxs-lookup"><span data-stu-id="3ca2d-149">NotStarted</span></span></td>
-<td align="left"><span data-ttu-id="3ca2d-150">移動尚未啟動。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-150">The move has not started.</span></span></td>
+<td align="left"><span data-ttu-id="68aff-159">NotStarted</span><span class="sxs-lookup"><span data-stu-id="68aff-159">NotStarted</span></span></td>
+<td align="left"><span data-ttu-id="68aff-160">移動尚未啟動。</span><span class="sxs-lookup"><span data-stu-id="68aff-160">The move has not started.</span></span></td>
 </tr>
 <tr class="even">
-<td align="left"><span data-ttu-id="3ca2d-151">InProgress (<em>n</em>/4)</span><span class="sxs-lookup"><span data-stu-id="3ca2d-151">InProgress (<em>n</em>/4)</span></span></td>
-<td align="left"><span data-ttu-id="3ca2d-152">移動正在進行中，可能是下列其中一種狀態：驗證 (1/4)、備份 (2/4)、還原 (3/4)、清除 (4/4)。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-152">The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).</span></span></td>
+<td align="left"><span data-ttu-id="68aff-161">InProgress (<em>n</em>/4)</span><span class="sxs-lookup"><span data-stu-id="68aff-161">InProgress (<em>n</em>/4)</span></span></td>
+<td align="left"><span data-ttu-id="68aff-162">移動正在進行中，可能是下列其中一種狀態：驗證 (1/4)、備份 (2/4)、還原 (3/4)、清除 (4/4)。</span><span class="sxs-lookup"><span data-stu-id="68aff-162">The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).</span></span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span data-ttu-id="3ca2d-153">成功</span><span class="sxs-lookup"><span data-stu-id="3ca2d-153">Success</span></span></td>
-<td align="left"><span data-ttu-id="3ca2d-154">已成功完成移動。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-154">The move has completed successfully.</span></span></td>
+<td align="left"><span data-ttu-id="68aff-163">成功</span><span class="sxs-lookup"><span data-stu-id="68aff-163">Success</span></span></td>
+<td align="left"><span data-ttu-id="68aff-164">已成功完成移動。</span><span class="sxs-lookup"><span data-stu-id="68aff-164">The move has completed successfully.</span></span></td>
 </tr>
 <tr class="even">
-<td align="left"><span data-ttu-id="3ca2d-155">失敗</span><span class="sxs-lookup"><span data-stu-id="3ca2d-155">Failed</span></span></td>
-<td align="left"><span data-ttu-id="3ca2d-156">移動失敗。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-156">The move failed.</span></span></td>
+<td align="left"><span data-ttu-id="68aff-165">失敗</span><span class="sxs-lookup"><span data-stu-id="68aff-165">Failed</span></span></td>
+<td align="left"><span data-ttu-id="68aff-166">移動失敗。</span><span class="sxs-lookup"><span data-stu-id="68aff-166">The move failed.</span></span></td>
 </tr>
 </tbody>
 </table>
 
-<span data-ttu-id="3ca2d-157">若要尋找特定使用者的移動狀態，請使用 UserPrincipalName 參數：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-157">To find the status of a specific user’s move, use the UserPrincipalName parameter:</span></span>
+<span data-ttu-id="68aff-167">若要尋找特定使用者的移動狀態，請使用 UserPrincipalName 參數：</span><span class="sxs-lookup"><span data-stu-id="68aff-167">To find the status of a specific user’s move, use the UserPrincipalName parameter:</span></span>
 
 `Get-SPOUserAndContentMoveState -UserPrincipalName <UPN>`
 
-<span data-ttu-id="3ca2d-158">若要找出位於或已移出您連線地理位置的所有移動之狀態，請使用 MoveState 參數搭配下列值的其中一個：NotStarted、InProgress、成功、失敗、全部。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-158">To find the status of all of the moves in or out of the geo location that you’re connected to, use the MoveState parameter with one of the following values: NotStarted, InProgress, Success, Failed, All.</span></span>
+<span data-ttu-id="68aff-168">若要找出位於或已移出您連線地理位置的所有移動之狀態，請使用 MoveState 參數搭配下列值的其中一個：NotStarted、InProgress、成功、失敗、全部。</span><span class="sxs-lookup"><span data-stu-id="68aff-168">To find the status of all of the moves in or out of the geo location that you’re connected to, use the MoveState parameter with one of the following values: NotStarted, InProgress, Success, Failed, All.</span></span>
 
 `Get-SPOUserAndContentMoveState -MoveState <value>`
 
-<span data-ttu-id="3ca2d-159">您也可以新增 `-Verbose` 參數，以取得移動狀態更詳細的說明。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-159">You can also add the `-Verbose` parameter for more verbose descriptions of the move state.</span></span>
+<span data-ttu-id="68aff-169">您也可以新增 `-Verbose` 參數，以取得移動狀態更詳細的說明。</span><span class="sxs-lookup"><span data-stu-id="68aff-169">You can also add the `-Verbose` parameter for more verbose descriptions of the move state.</span></span>
 
-## <a name="user-experience"></a><span data-ttu-id="3ca2d-160">使用者體驗</span><span class="sxs-lookup"><span data-stu-id="3ca2d-160">User Experience</span></span>
+## <a name="user-experience"></a><span data-ttu-id="68aff-170">使用者體驗</span><span class="sxs-lookup"><span data-stu-id="68aff-170">User Experience</span></span>
 
-<span data-ttu-id="3ca2d-p110">如果 OneDrive 移到不同的地理位置，OneDrive 使用者應注意是否有服務中斷。除了在移動期間會發生簡短的唯讀狀態，在移動完成後，現有的連結和權限會如預期般繼續運作。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p110">Users of OneDrive should notice minimal disruption if their OneDrive is moved to a different geo location. Aside from a brief read-only state during the move, existing links and permissions will continue to work as expected once the move is completed.</span></span>
+<span data-ttu-id="68aff-p111">如果 OneDrive 移到不同的地理位置，OneDrive 使用者應注意是否有服務中斷。除了在移動期間會發生簡短的唯讀狀態，在移動完成後，現有的連結和權限會如預期般繼續運作。</span><span class="sxs-lookup"><span data-stu-id="68aff-p111">Users of OneDrive should notice minimal disruption if their OneDrive is moved to a different geo location. Aside from a brief read-only state during the move, existing links and permissions will continue to work as expected once the move is completed.</span></span>
 
-### <a name="onedrive-for-business"></a><span data-ttu-id="3ca2d-163">商務用 OneDrive</span><span class="sxs-lookup"><span data-stu-id="3ca2d-163">OneDrive for Business</span></span>
+### <a name="onedrive-for-business"></a><span data-ttu-id="68aff-173">商務用 OneDrive</span><span class="sxs-lookup"><span data-stu-id="68aff-173">OneDrive for Business</span></span>
 
-<span data-ttu-id="3ca2d-p111">移動正在進行時，使用者的 OneDrive 會設為唯讀狀態。完成移動後，若使用者瀏覽至 Office 365 應用程式啟動器或網頁瀏覽器中的 OneDrive，使用者會導向至新地理位置中的 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p111">While the move is in progress the user’s OneDrive is set to read-only. Once the move is completed, the user is directed to their OneDrive in the new geo location when they navigate to OneDrive the Office 365 app launcher or a web browser.</span></span>
+<span data-ttu-id="68aff-p112">移動正在進行時，使用者的 OneDrive 會設為唯讀狀態。完成移動後，若使用者瀏覽至 Office 365 應用程式啟動器或網頁瀏覽器中的 OneDrive，使用者會導向至新地理位置中的 OneDrive。</span><span class="sxs-lookup"><span data-stu-id="68aff-p112">While the move is in progress the user’s OneDrive is set to read-only. Once the move is completed, the user is directed to their OneDrive in the new geo location when they navigate to OneDrive the Office 365 app launcher or a web browser.</span></span>
 
-### <a name="permissions-on-onedrive-content"></a><span data-ttu-id="3ca2d-166">OneDrive 內容的權限</span><span class="sxs-lookup"><span data-stu-id="3ca2d-166">Permissions on OneDrive content</span></span>
+### <a name="permissions-on-onedrive-content"></a><span data-ttu-id="68aff-176">OneDrive 內容的權限</span><span class="sxs-lookup"><span data-stu-id="68aff-176">Permissions on OneDrive content</span></span>
 
-<span data-ttu-id="3ca2d-167">具有 OneDrive 內容權限的使用者將在移動期間和移動完成後繼續擁有內容的存取權。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-167">Users with permissions to OneDrive content will continue to have access to the content during the move and after it’s complete.</span></span>
+<span data-ttu-id="68aff-177">具有 OneDrive 內容權限的使用者將在移動期間和移動完成後繼續擁有內容的存取權。</span><span class="sxs-lookup"><span data-stu-id="68aff-177">Users with permissions to OneDrive content will continue to have access to the content during the move and after it’s complete.</span></span>
 
-### <a name="onedrive-sync-client"></a><span data-ttu-id="3ca2d-168">OneDrive 同步處理用戶端</span><span class="sxs-lookup"><span data-stu-id="3ca2d-168">OneDrive Sync Client</span></span> 
+### <a name="onedrive-sync-client"></a><span data-ttu-id="68aff-178">OneDrive 同步處理用戶端</span><span class="sxs-lookup"><span data-stu-id="68aff-178">OneDrive Sync Client</span></span> 
 
-<span data-ttu-id="3ca2d-p112">OneDrive 異地移動完成後，OneDrive 同步處理用戶端會自動偵測並順暢地傳輸同步處理至 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p112">The OneDrive sync client will automatically detect and seamlessly transfer syncing to the new OneDrive location once the OneDrive geo move is complete. The user does not need to sign-in again or take any other action.</span></span>
+<span data-ttu-id="68aff-p113">OneDrive 異地移動完成後，OneDrive 同步處理用戶端會自動偵測並順暢地傳輸同步處理至 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。(同步處理用戶端需要 17.3.6943.0625 版或更新的版本。)</span><span class="sxs-lookup"><span data-stu-id="68aff-p113">The OneDrive sync client will automatically detect and seamlessly transfer syncing to the new OneDrive location once the OneDrive geo move is complete. The user does not need to sign-in again or take any other action.  (Version 17.3.6943.0625 or later of the sync client required.)</span></span>
 
-<span data-ttu-id="3ca2d-171">如果使用者在進行 OneDrive 異地移動時更新檔案，同步處理用戶端會告知使用者，進行異地移動時上傳的檔案會擱置。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-171">If a user updates a file while the OneDrive geo move is in progress, the sync client will notify them that file uploads are pending while the move is underway.</span></span>
+<span data-ttu-id="68aff-182">如果使用者在進行 OneDrive 異地移動時更新檔案，同步處理用戶端會告知使用者，進行異地移動時上傳的檔案會擱置。</span><span class="sxs-lookup"><span data-stu-id="68aff-182">If a user updates a file while the OneDrive geo move is in progress, the sync client will notify them that file uploads are pending while the move is underway.</span></span>
 
-### <a name="sharing-links"></a><span data-ttu-id="3ca2d-172">共用連結</span><span class="sxs-lookup"><span data-stu-id="3ca2d-172">Sharing links</span></span> 
+### <a name="sharing-links"></a><span data-ttu-id="68aff-183">共用連結</span><span class="sxs-lookup"><span data-stu-id="68aff-183">Sharing links</span></span> 
 
-<span data-ttu-id="3ca2d-173">在 OneDrive 異地移動完成後，移動的檔案之現有共用連結將會自動重新導向至新的地理位置。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-173">Upon OneDrive geo move completion, the existing shared links for the files that were moved will automatically redirect to the new geo location.</span></span>
+<span data-ttu-id="68aff-184">在 OneDrive 異地移動完成後，移動的檔案之現有共用連結將會自動重新導向至新的地理位置。</span><span class="sxs-lookup"><span data-stu-id="68aff-184">Upon OneDrive geo move completion, the existing shared links for the files that were moved will automatically redirect to the new geo location.</span></span>
 
-### <a name="onenote-experience"></a><span data-ttu-id="3ca2d-174">OneNote 體驗</span><span class="sxs-lookup"><span data-stu-id="3ca2d-174">OneNote Experience</span></span> 
+### <a name="onenote-experience"></a><span data-ttu-id="68aff-185">OneNote 體驗</span><span class="sxs-lookup"><span data-stu-id="68aff-185">OneNote Experience</span></span> 
 
-<span data-ttu-id="3ca2d-p113">OneDrive 異地移動完成後，OneNote win32 用戶端和 UWP (通用) 應用程式會自動偵測並順暢地將筆記本同步處理到 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。使用者唯一可見的指標是，若 OneDrive 異地移動正在進行時，筆記本同步處理會失敗。此體驗適用於下列 OneNote 用戶端版本：</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p113">OneNote win32 client and UWP (Universal) App will automatically detect and seamlessly sync notebooks to the new OneDrive location once OneDrive geo move is complete. The user does not need to sign-in again or take any other action. The only visible indicator to the user is notebook sync would fail when OneDrive geo move is in progress. This experience is available on the following OneNote client versions:</span></span>
+<span data-ttu-id="68aff-p114">OneDrive 異地移動完成後，OneNote win32 用戶端和 UWP (通用) 應用程式會自動偵測並順暢地將筆記本同步處理到 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。使用者唯一可見的指標是，若 OneDrive 異地移動正在進行時，筆記本同步處理會失敗。此體驗適用於下列 OneNote 用戶端版本：</span><span class="sxs-lookup"><span data-stu-id="68aff-p114">OneNote win32 client and UWP (Universal) App will automatically detect and seamlessly sync notebooks to the new OneDrive location once OneDrive geo move is complete. The user does not need to sign-in again or take any other action. The only visible indicator to the user is notebook sync would fail when OneDrive geo move is in progress. This experience is available on the following OneNote client versions:</span></span>
 
--   <span data-ttu-id="3ca2d-179">OneNote win32 – 版本 16.0.8326.2096 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="3ca2d-179">OneNote win32 – Version 16.0.8326.2096 (and later)</span></span>
+-   <span data-ttu-id="68aff-190">OneNote win32 – 版本 16.0.8326.2096 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="68aff-190">OneNote win32 – Version 16.0.8326.2096 (and later)</span></span>
 
--   <span data-ttu-id="3ca2d-180">OneNote UWP – 版本 16.0.8431.1006 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="3ca2d-180">OneNote UWP – Version 16.0.8431.1006 (and later)</span></span>
+-   <span data-ttu-id="68aff-191">OneNote UWP – 版本 16.0.8431.1006 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="68aff-191">OneNote UWP – Version 16.0.8431.1006 (and later)</span></span>
 
--   <span data-ttu-id="3ca2d-181">OneNote 行動應用程式 – 版本 16.0.8431.1011 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="3ca2d-181">OneNote Mobile App – Version 16.0.8431.1011 (and later)</span></span>
+-   <span data-ttu-id="68aff-192">OneNote 行動應用程式 – 版本 16.0.8431.1011 (及更新版本)</span><span class="sxs-lookup"><span data-stu-id="68aff-192">OneNote Mobile App – Version 16.0.8431.1011 (and later)</span></span>
 
-### <a name="teams-app"></a><span data-ttu-id="3ca2d-182">Teams 應用程式</span><span class="sxs-lookup"><span data-stu-id="3ca2d-182">Teams app</span></span>
+### <a name="teams-app"></a><span data-ttu-id="68aff-193">Teams 應用程式</span><span class="sxs-lookup"><span data-stu-id="68aff-193">Teams app</span></span>
 
-<span data-ttu-id="3ca2d-p114">OneDrive 異地移動完成後，使用者可以在 Teams 應用程式上存取其 OneDrive 檔案。此外，在異地移動之前從 OneDrive 透過 Teams 交談共用的檔案，在移動完成後將會繼續運作。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p114">Upon OneDrive geo move completion, users will have access to their OneDrive files on the Teams app. Additionally, files shared via Teams chat from their OneDrive prior to geo move will continue to work after move is complete.</span></span>
+<span data-ttu-id="68aff-p115">OneDrive 異地移動完成後，使用者可以在 Teams 應用程式上存取其 OneDrive 檔案。此外，在異地移動之前從 OneDrive 透過 Teams 交談共用的檔案，在移動完成後將會繼續運作。</span><span class="sxs-lookup"><span data-stu-id="68aff-p115">Upon OneDrive geo move completion, users will have access to their OneDrive files on the Teams app. Additionally, files shared via Teams chat from their OneDrive prior to geo move will continue to work after move is complete.</span></span>
 
-### <a name="onedrive-for-business-mobile-app-ios"></a><span data-ttu-id="3ca2d-185">商務用 OneDrive 行動應用程式 (iOS)</span><span class="sxs-lookup"><span data-stu-id="3ca2d-185">OneDrive for Business Mobile App (iOS)</span></span> 
+### <a name="onedrive-for-business-mobile-app-ios"></a><span data-ttu-id="68aff-196">商務用 OneDrive 行動應用程式 (iOS)</span><span class="sxs-lookup"><span data-stu-id="68aff-196">OneDrive for Business Mobile App (iOS)</span></span> 
 
-<span data-ttu-id="3ca2d-186">在 OneDrive 異地移動完成後，使用者必須在 iOS 行動應用程式上登出並重新登入，以同步處理到 OneDrive 的新位置。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-186">Upon OneDrive geo move completion, the user would need to sign out and sign in again on the iOS Mobile App to sync to the new OneDrive location.</span></span>
+<span data-ttu-id="68aff-197">在 OneDrive 異地移動完成後，使用者必須在 iOS 行動應用程式上登出並重新登入，以同步處理到 OneDrive 的新位置。</span><span class="sxs-lookup"><span data-stu-id="68aff-197">Upon OneDrive geo move completion, the user would need to sign out and sign in again on the iOS Mobile App to sync to the new OneDrive location.</span></span>
 
-### <a name="existing-followed-groups-and-sites"></a><span data-ttu-id="3ca2d-187">現有的已追蹤群組和網站</span><span class="sxs-lookup"><span data-stu-id="3ca2d-187">Existing followed groups and sites</span></span>
+### <a name="existing-followed-groups-and-sites"></a><span data-ttu-id="68aff-198">現有的已追蹤群組和網站</span><span class="sxs-lookup"><span data-stu-id="68aff-198">Existing followed groups and sites</span></span>
 
-<span data-ttu-id="3ca2d-p115">已追蹤的網站和群組會針對業務顯示在使用者的 OneDrive 中，無論其地理位置。裝載於其他地理位置的網站和群組會在不同的索引標籤中開啟。</span><span class="sxs-lookup"><span data-stu-id="3ca2d-p115">Followed sites and groups will show up in the user's OneDrive for business regardless of their geo location. Sites and Groups hosted in another geo location will open in a separate tab.</span></span>
+<span data-ttu-id="68aff-p116">已追蹤的網站和群組會針對業務顯示在使用者的 OneDrive 中，無論其地理位置。裝載於其他地理位置的網站和群組會在不同的索引標籤中開啟。</span><span class="sxs-lookup"><span data-stu-id="68aff-p116">Followed sites and groups will show up in the user's OneDrive for business regardless of their geo location. Sites and Groups hosted in another geo location will open in a separate tab.</span></span>
