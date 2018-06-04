@@ -15,11 +15,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6f916a77-301c-4be2-b407-6cec4d80df76
 description: 摘要：使用此測試實驗室指南來建立開發/測試環境，其中包含 Office 365 E5、Enterprise Mobility + Security (EMS) E5 與執行 Windows 10 企業版的電腦。
-ms.openlocfilehash: 5a4c23b3bde309a75a61e574e91823ecdd4629fe
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 03fa8e0a4e8d90fcb834eeb2491d3dd39b67ff05
+ms.sourcegitcommit: 771f227d3049498fcbd7cfbeaf649e3d77e73c86
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "19178645"
 ---
 # <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 企業版開發/測試環境
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/27/2018
     
 3. 在瀏覽器的 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
-4. 在 [購買服務]**** 頁面上，尋找 [Enterprise Mobility + Security E5] **** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。
+4. 在 [購買服務]**** 頁面上，尋找 **Enterprise Mobility + Security E5** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用]****。
     
 5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
@@ -92,10 +93,10 @@ ms.lasthandoff: 04/27/2018
   
 ### <a name="virtual-machine-in-azure"></a>Azure 中的虛擬機器
 
-若要在 Microsoft Azure 中建立 Windows 10 虛擬機器，***您必須擁有以 Visual Studio 為基礎的訂閱***，其具有 Windows 10 企業版的影像存取權。其他類型的 Azure 訂閱，例如試用版與付費訂閱，沒有此影像的存取權。
+若要在 Microsoft Azure 中建立 Windows 10 虛擬機器，***您必須擁有以 Visual Studio 為基礎的訂閱***，其具有 Windows 10 企業版的影像存取權。其他類型的 Azure 訂閱，例如試用版與付費訂閱，沒有此影像的存取權。如需最新資訊，請參閱[在 Azure 中使用 Windows 用戶端進行開發/測試案例](https://docs.microsoft.com/azure/virtual-machines/windows/client-images)。
   
 > [!NOTE]
-> 下列命令集使用最新版本的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。這些命令集會建置名為 WIN10 的 Windows 10 企業版虛擬機器，以及所有必要的基礎結構，包括資源群組、儲存體帳戶及虛擬網路。如果您已熟悉 Azure 基礎結構服務，請調整這些指示以符合您目前所部署的基礎結構。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。這些命令集會建置名為 WIN10 的 Windows 10 企業版虛擬機器，以及所有必要的基礎結構，包括資源群組、儲存體帳戶及虛擬網路。如果您已熟悉 Azure 基礎結構服務，請調整這些指示以符合您目前所部署的基礎結構。 
   
 首先，啟動 Microsoft PowerShell 提示字元。
   
@@ -172,9 +173,9 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
     
 5. 系統提示您確認這是您的組織時，按一下 [加入]****，然後按一下 [完成]****。
     
-6. 關閉 [設定] 視窗。
+6. 關閉設定視窗。
     
-接下來，在 WIN10 電腦上安裝 Office 2016。
+接下來，在 WIN10 電腦上安裝 Office 365 專業增強版。
   
 1. 開啟 Microsoft Edge 瀏覽器，並使用全域管理員帳戶認證登入 Office 365 入口網站。如需說明，請參閱[在何處登入 Office 365](https://support.office.com/Article/Where-to-sign-in-to-Office-365-e9eb7d51-5430-4929-91ab-6157c5a050b4)。
     
@@ -184,9 +185,13 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
     
 4. 等待 Office 完成安裝。當您看到 **「一切就緒！」** 時，按兩次 [關閉]****。
     
-圖 3 顯示您產生的環境，其中包括已加入 Office 365 和 EMS 訂閱的 Azure AD 租用戶之 WIN10 電腦。
+圖 3 顯示產生的環境，其中包括以下的 WIN10 電腦：
+
+- 已加入 Office 365 和 EMS 訂閱的 Azure AD 租用戶
+- 已在 Intune 中註冊為 Azure AD 裝置 (EMS)
+- 已安裝 Office 365 專業增強版
   
-**圖 3：將 WIN10 電腦帳戶新增至 Azure AD 租用戶**
+**圖3：Microsoft 365 開發/測試環境的最終組態**
 
 ![Microsoft 365 企業版 開發/測試環境的階段 4](images/20680f6a-f77e-4333-aaa9-f7cf5e4b0d03.png)
   

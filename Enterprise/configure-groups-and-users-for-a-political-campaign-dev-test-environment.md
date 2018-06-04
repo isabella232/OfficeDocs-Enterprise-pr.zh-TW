@@ -14,11 +14,12 @@ localization_priority: Priority
 ms.custom: ''
 ms.assetid: 0e22bcf3-bad3-42a4-b44f-276e0cf4790f
 description: 摘要：為政治活動開發/測試環境建立具備使用者與群組的 Office 365 和 Enterprise Mobility + Security (EMS) 之試用訂閱。
-ms.openlocfilehash: 8556040a648937d4c1bc338292be121e5d290dd9
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: df737e3f745ba0fa4ab4752609e09e8af64ce6b0
+ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
+ms.locfileid: "19168507"
 ---
 # <a name="configure-groups-and-users-for-a-political-campaign-devtest-environment"></a>設定政治活動開發/測試環境的群組和使用者
 
@@ -184,11 +185,11 @@ foreach ($element in $userNames){ New-AzureADUser -DisplayName $element -Passwor
 
 記錄這些值以與 Office 365 和 EMS 試用訂閱在此開發/測試環境中搭配使用：
   
-- 您的試用訂閱組織名稱：_______________________________________________ 
+- 試用訂閱組織名稱：![](./images/Common_Images/TableLine.png) 
     
-    比方說，針對 contoso.onmicrosoft.com 的試用訂閱網域名稱，組織名稱為「contoso」。
+    例如，針對 contoso.onmicrosoft.com 的試用訂閱網域名稱，組織名稱為「contoso」。
     
-- Office 365 全域系統管理員名稱：____________________________________.onmicrosoft.com
+- Office 365 全域系統管理員名稱：![](./images/Common_Images/TableLine.png).onmicrosoft.com
     
     在安全位置記錄此帳戶的密碼以及其他使用者帳戶的常見初始密碼。
     

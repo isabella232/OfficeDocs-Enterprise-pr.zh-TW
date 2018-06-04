@@ -1,9 +1,9 @@
 ---
-title: 模擬的跨部署在 Azure 虛擬網路
+title: Azure 中模擬的跨單位部署虛擬網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 05/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -14,78 +14,79 @@ ms.collection:
 ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
-description: 摘要： 會建立模擬的跨內部虛擬網路 in Microsoft Azure 為開發人員/測試環境。
-ms.openlocfilehash: 4a34126bba4561da621dc3faf37dd30d4dcc9ff3
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
-ms.translationtype: MT
+description: 摘要：在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
+ms.openlocfilehash: 42ef04a92794c8df53d3de32970db78d4dcf3119
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "19193663"
 ---
-# <a name="simulated-cross-premises-virtual-network-in-azure"></a>模擬的跨部署在 Azure 虛擬網路
+# <a name="simulated-cross-premises-virtual-network-in-azure"></a>Azure 中模擬的跨單位部署虛擬網路
 
- **摘要：**為開發人員/測試環境中建立 in Microsoft Azure 模擬的跨內部虛擬網路。
+ **摘要：** 在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
   
-本文會引導您完成建立模擬的混合式雲端環境與 Microsoft Azure 中使用兩個 Azure 虛擬網路。以下是所產生的設定。 
+本文逐步引導您建立模擬的混合式雲端環境，具有使用兩個 Azure 虛擬網路的 Microsoft Azure。以下是產生的組態配置。 
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 中 DC2 虛擬機器的階段 3](images/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-這會模擬 Azure IaaS 混合雲端實際執行環境，而且所組成：
+它模擬 Azure IaaS 混合式雲端生產環境，包括：
   
-- 架設在 Azure 虛擬網路 （TestLab 虛擬網路） 模擬及簡化內部網路。
+- 裝載在 Azure 虛擬網路 (TestLab 虛擬網路) 中模擬簡化的內部部署網路。
     
-- 模擬的跨內部虛擬網路架設在 Azure (XPrem)。
+- 裝載在 Azure 中模擬的跨單位部署虛擬網路 (XPrem)。
     
-- 兩個虛擬網路之間的 VNet 對等的關係。
+- 兩個虛擬網路之間的 VNet 對等關係。
     
-- XPrem 虛擬網路的次要網域控制站。
+- 在 XPrem 虛擬網路中的第二個網域控制站。
     
-這提供基礎與一般起始點其中您可以： 
+這可作為基礎通用的起點，讓您可以： 
   
-- 開發和測試應用程式模擬 Azure IaaS 混合雲端環境中。
+- 在模擬的 Azure IaaS 混合式雲端環境中開發和測試應用程式。
     
-- 建立電腦、 TestLab 虛擬網路內某些和一些 XPrem 虛擬網路內，來模擬混合雲端式 IT 工作負載的測試設定。
+- 建立電腦的測試組態，一些在 TestLab 中虛擬網路、一些在 XPrem 虛擬網路中，以模擬混合式雲端的 IT 工作負載。
     
 設定此開發/測試環境有三個主要階段︰
   
-1. 設定測試實驗室虛擬網路。
+1. 設定 TestLab 虛擬網路。
     
-2. 建立跨內部虛擬網路。
+2. 建立跨單位的虛擬網路
     
 3. 設定 DC2。
     
 > [!NOTE]
-> [!附註] 此組態需要付費的 Azure 訂用帳戶。 
+> 此組態需要付費的 Azure 訂用帳戶。 
   
-![Microsoft 雲端中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
+![Microsoft Cloud 中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
-## <a name="phase-1-configure-the-testlab-virtual-network"></a>階段 1： 設定 TestLab 虛擬網路
+## <a name="phase-1-configure-the-testlab-virtual-network"></a>階段 1：設定 TestLab 虛擬網路
 
-使用[基本設定開發/測試環境](base-configuration-dev-test-environment.md)中的指示設定 DC1、 APP1 和 CLIENT1 電腦中名為 TestLab Azure 虛擬網路。
+使用[基底組態開發/測試環境](base-configuration-dev-test-environment.md)中的說明，在名為 TestLab 的 Azure 虛擬網路中設定 DC1、APP1、CLIENT1 電腦。
   
 這是您目前的設定。 
   
 ![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
-## <a name="phase-2-create-the-xprem-virtual-network"></a>階段 2： 建立 XPrem 虛擬網路
+## <a name="phase-2-create-the-xprem-virtual-network"></a>階段 2：建立 XPrem 虛擬網路
 
-在此階段中，您可以建立並設定新的 XPrem 虛擬網路並再將其連線至 TestLab 虛擬網路與 VNet 對等。
+在這個階段，要建立並設定新的 XPrem 虛擬網路，然後使用 VNet 對等將其連線至 TestLab 虛擬網路。
   
-首先，您的本機電腦上啟動 Azure PowerShell 提示字元處。
+首先，在本機電腦上啟動 Azure PowerShell 提示字元。
   
 > [!NOTE]
-> [!附註] 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/)。 
   
-下列命令以 Azure 帳戶登入。
+使用下列命令登入您的 Azure 帳戶。
   
 ```
 Login-AzureRMAccount
 ```
 
 > [!TIP]
-> [!提示] 請按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0) 以取得此文件所包含的全部 PowerShell 命令文字檔案。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0)可取得包含本文中所有 PowerShell 命令的文字檔案。
   
 使用下列命令取得訂用帳戶名稱。
   
@@ -93,14 +94,14 @@ Login-AzureRMAccount
 Get-AzureRMSubscription | Sort Name | Select Name
 ```
 
-設定您的 Azure 訂閱。括住，包括所有內容取代為\<和 > 字元，以正確的名稱。
+設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 \< 和 > 字元)。
   
 ```
 $subscrName="<subscription name>"
 Get-AzureRmSubscription -SubscriptionName $subscrName | Select-AzureRmSubscription
 ```
 
-接下來，建立 XPrem 虛擬網路，並保護與網路安全性群組與這些命令。
+接下來，建立 XPrem 虛擬網路，並使用這些命令以網路安全性群組保護它。
   
 ```
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -114,7 +115,7 @@ $nsg=Get-AzureRMNetworkSecurityGroup -Name "Testnet" -ResourceGroupName $rgName
 Set-AzureRMVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name "Testnet" -AddressPrefix 192.168.0.0/24 -NetworkSecurityGroup $nsg
 ```
 
-接下來，使用這些命令建立 TestLab 和 XPrem VNets 之間的 VNet 對等關係。
+接下來，使用這些命令在 TestLab 和 XPrem VNets 之間建立 VNet 對等關係。
   
 ```
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -128,11 +129,11 @@ Add-AzureRmVirtualNetworkPeering -Name XPrem2TestLab -VirtualNetwork $vnet2 -Rem
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 與 VNet 的對等關係的階段 2](images/cac5e999-69c7-4f4c-bfce-a7f4006115ef.png)
   
-## <a name="phase-3-configure-dc2"></a>階段 3： 設定 DC2
+## <a name="phase-3-configure-dc2"></a>階段 3：設定 DC2
 
-在此階段中，您可以在 XPrem 虛擬網路中建立 DC2 虛擬機器並再將它設定為在複本網域控制站。
+在這個階段，要在 XPrem 虛擬網路中建立 DC2 虛擬機器，然後將它設定為複本網域控制站。
   
-首先，建立 DC2 虛擬機器。本機電腦上 Azure PowerShell 命令提示字元執行這些命令。
+首先，為 DC2 建立虛擬機器。在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   
 ```
 $rgName="<your resource group name>"
@@ -152,33 +153,33 @@ $vm=Add-AzureRmVMDataDisk -VM $vm -Name "DC2-DataDisk1" -CreateOption Attach -Ma
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
-下一步] 連線至新的 DC2 虛擬機器從[Azure 入口網站](https://portal.azure.com)使用它的本機系統管理員帳戶名稱和密碼。
+然後，使用本機系統管理員帳戶的名稱和密碼從 [Azure 入口網站](https://portal.azure.com)連線到 DC2 虛擬機器。
   
-接下來，設定 Windows 防火牆規則允許流量的基本連線測試。以系統管理員層級 Windows PowerShell 命令提示字元上 DC2，執行下列命令。 
+接下來，設定 Windows 防火牆規則以允許流量進行基本連線能力測試。在 DC2 上的系統管理員層級的 Windows PowerShell 命令提示字元中，執行下列命令。 
   
 ```
 Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv4-In)" -enabled True
 ping dc1.corp.contoso.com
 ```
 
-Ping 命令應該就來自 IP 位址 10.0.0.4 四個成功的回覆。這是流量的測試跨 VNet 對等關係。 
+ping 命令應會得到來自 IP 位址 10.0.0.4 四次成功的回覆。這是對 VNet 對等關係流量的測試。 
   
-下一步] 新增為新的磁碟區使用此命令使用的磁碟機代號 LATER 額外資料磁碟上 DC2 在 Windows PowerShell 命令提示字元。
+接著，從 DC2 上的 PowerShell 命令提示字元，使用此命令將額外的資料磁碟新增為新的磁碟區 (磁碟機代號 F:)。
   
 ```
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
-接下來，設定 DC2 為 corp.contoso.com 網域的複本網域控制站。在 Windows PowerShell 命令提示字元中執行下列命令在 DC2 中。
+接著，將 DC2 設定為 corp.contoso.com 網域的複本網域控制站。從 DC2 上的 PowerShell 命令提示字元執行下列命令。
   
 ```
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSDomainController -Credential (Get-Credential CORP\User1) -DomainName "corp.contoso.com" -InstallDns:$true -DatabasePath "F:\NTDS" -LogPath "F:\Logs" -SysvolPath "F:\SYSVOL"
 ```
 
-請注意系統提示您提供兩個公司\\User1 密碼] 和 [目錄服務還原模式 (DSRM) 的密碼，並重新啟動 DC2。 
+請注意，系統會提示您提供 CORP\\User1 的密碼和目錄服務復原模式 (DSRM) 的密碼，並重新啟動 DC2。 
   
-既然 XPrem 虛擬網路有其專屬 DNS 伺服器 (DC2)，您必須設定成使用此 DNS 伺服器 XPrem 虛擬網路。本機電腦上 Azure PowerShell 命令提示字元執行這些命令。
+既然 XPrem 虛擬網路有自己的 DNS 伺服器 (DC2)，您必須將 XPrem 虛擬網絡設定為使用此 DNS 伺服器。在本機電腦上使用 Azure PowerShell 命令提示字元執行下列命令。
   
 ```
 $vnet=Get-AzureRmVirtualNetwork -ResourceGroupName $rgName -name "XPrem"
@@ -187,7 +188,7 @@ Set-AzureRmVirtualNetwork -VirtualNetwork $vnet
 Restart-AzureRmVM -ResourceGroupName $rgName -Name "DC2"
 ```
 
-從本機電腦上 Azure 入口網站中，連線至公司與 DC1\\User1 認證。在 DC1 設定 CORP 網域，以便電腦和使用者使用其本機網域控制站進行驗證，請以系統管理員層級 Windows PowerShell 命令提示字元執行這些命令。
+在本機電腦從 Azure 入口網站，使用 CORP\\User1 的憑證連線到 DC1。若要設定 CORP 網域以便讓電腦和使用者可使用其本機網域控制站進行驗證，在 DC1 上以系統管理員層級的 Windows PowerShell 命令提示字元執行下列命令。
   
 ```
 New-ADReplicationSite -Name "TestLab" 
@@ -200,11 +201,11 @@ New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 中 DC2 虛擬機器的階段 3](images/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-模擬 Azure 混合式雲端環境現在已備妥可供測試。
+模擬的 Azure 混合式雲端環境已準備好進行測試。
   
 ## <a name="next-step"></a>下一步
 
-使用此開發/測試環境來模擬[架設在 Azure 中的 SharePoint Server 2016 內部網路伺服器陣列](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。
+使用此開發/測試環境模擬[裝載在 Azure 中的 SharePoint Server 2016 內部網路伺服器陣列](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -214,9 +215,9 @@ New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
   
 [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+[Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的進階威脅保護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
+[適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

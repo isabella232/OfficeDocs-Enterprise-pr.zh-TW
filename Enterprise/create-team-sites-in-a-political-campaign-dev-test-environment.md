@@ -14,11 +14,12 @@ localization_priority: Priority
 ms.custom: ''
 ms.assetid: c2112ce8-1c4b-424f-b200-59e161db2d21
 description: 摘要：在政治活動開發/測試環境中，建立公用、私用、敏感性及高度機密的 SharePoint Online 小組網站。
-ms.openlocfilehash: 146632ede567be4bf412304960605e6d87de7657
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 1651d89a1c17dfa5af592727bb534717763288e0
+ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/16/2018
+ms.locfileid: "19168487"
 ---
 # <a name="create-team-sites-in-a-political-campaign-devtest-environment"></a>在政治活動開發/測試環境中建立小組網站
 
@@ -62,13 +63,13 @@ ms.lasthandoff: 04/27/2018
     
 11. 在 [選擇要發佈的標籤]**** 窗格中，按一下 [選擇要發佈的標籤]****。
     
-12. 在 [選擇標籤]**** 窗格中，按一下 [新增]**** 並選取所有四個標籤。
+12. 在 [Choose labels]\(選擇標籤)**** 窗格中，按一下 [新增]**** 並選取所有四個標籤。
     
 13. 按一下 [完成]****。
     
 14. 在 [選擇要發佈的標籤]**** 窗格上，按一下 [下一步]****。
     
-15. 在 [選擇標籤]**** 窗格中，按一下 [下一步]****。
+15. 在 [選擇位置]**** 窗格中，按一下 [下一步]****。
     
 16. 在 [命名您的原則]**** 窗格上，於 [名稱]**** 中鍵入 **Campaign**，然後按一下 [下一步]****。
     
@@ -370,7 +371,7 @@ ms.lasthandoff: 04/27/2018
     
 3. 如果這是您第一次設定 Azure 資訊保護，請參閱這些[指示](https://docs.microsoft.com/information-protection/deploy-use/configure-policy#to-access-the-azure-information-protection-blade-for-the-first-time)。
     
-4. 在清單窗格中，按一下 [更多服務]****，輸入**資訊**，然後按一下 [Azure 資訊保護]****。
+4. 在清單窗格中，按一下 [所有服務]****，輸入**資訊**，然後按一下 [Azure 資訊保護]****。
     
 5. 在 [Azure 資訊保護]**** 刀鋒視窗中，按一下 [限域原則] > [+ 新增原則]****。
     

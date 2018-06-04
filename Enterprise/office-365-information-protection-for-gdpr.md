@@ -14,22 +14,24 @@ localization_priority: Priority
 ms.custom: ''
 ms.assetid: ''
 description: 這個解決方案示範如何保護 Office 365 服務中儲存的敏感資料。
-ms.openlocfilehash: 276a7659d2bb23cf10099c0dbd3dd388f9b2442a
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: 8e63f75ffa87d6013f0d7e9be754ce72868645dd
+ms.sourcegitcommit: 565a6275c719be61636bc43d0f8c000b440992bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "19434960"
 ---
 # <a name="office-365-information-protection-for-gdpr"></a>GDPR 的 Office 365 資訊保護
 
- **摘要：**這個解決方案示範如何保護 Office 365 服務中儲存的敏感資料。
+ **摘要：** 這個解決方案示範如何保護 Office 365 服務中儲存的敏感資料。
   
 這個解決方案包含了探索、分類、保護及監控個人資料的規範性建議。這個解決方案會使用一般資料保護規定 (GDPR) 做為範例，但您可以套用相同的程序，以遵守許多其他法規。
 
-[![GDPR 海報的 Office 365 資訊保護的縮圖影像](images/InfoProtectGDPR_Poster/o365infoprotectforgdpr_thumb.png)](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information protection for GDPR.pdf)
+[![GDPR 海報的 Office 365 資訊保護的縮圖影像](images/InfoProtectGDPR_Poster/o365infoprotectforgdpr_thumb.png)](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.pdf)
+
+[PDF](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.pdf)  |  [Visio](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.vsdx)
   
-[PDF](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information protection for GDPR.pdf)  | [Visio](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information protection for GDPR.vsdx)
-  
+如需執行 GDPR 資料主體要求的相關資訊，請參閱 [GDPR 的 Office 365 資料主體要求](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr-dsr-office365?toc=/microsoft-365/enterprise/toc.json)。 
 
 ## <a name="see-also"></a>另請參閱
 

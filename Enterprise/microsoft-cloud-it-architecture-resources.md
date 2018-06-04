@@ -3,7 +3,7 @@ title: Microsoft Cloud IT 架構資源
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 12/18/2017
+ms.date: 05/18/2018
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -15,15 +15,16 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 description: 摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
-ms.openlocfilehash: ccc10e2ba369d711c26936a88385fdb3c1cae3ac
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+ms.openlocfilehash: a2e2431d0ace5a77722da844feb3aaaea61b0e6f
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "19193703"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
- **摘要：**深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
+ **摘要：** 深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
   
 這些架構工具和海報可提供關於 Microsoft 雲端服務和平台的資訊，包括 Office 365、Microsoft Azure、Microsoft Intune、Microsoft Dynamics 365、私人雲端資料中心和混合式內部部署與雲端解決方案。IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。 
   
@@ -82,7 +83,7 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台設計組織的身分
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 雲端身分識別模型的縮圖影像](images/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png)          ](https://www.microsoft.com/download/details.aspx?id=54431) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd)           \| ![文章](images/5cec453d-5fc4-4657-8980-16543b2316ea.png)[文章](https://technet.microsoft.com/library/mt613459.aspx)  <br/>![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54431) <br/> | 此模型包含： <ul><li>使用 Microsoft 雲端識別簡介 </li> <li>Azure AD 的 IDaaS 功能 </li><li>將內部部署的 Active Directory 網域服務帳戶，與 Microsoft Azure Active Directory 整合 </li> <li>將目錄元件置入 Azure 中 </li><li>Azure IaaS 中工作負載的網域服務選項 </li></ul> <br/>|
+|[![Microsoft 雲端身分識別模型的縮圖影像](images/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png)          ](https://www.microsoft.com/download/details.aspx?id=54431) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd)           \| ![請參閱其他語言版本的頁面](images/e16c992d-b0f8-48ae-bf44-db7a9fcaab9e.png)[更多語言](https://www.microsoft.com/download/details.aspx?id=54431) <br/> | 此模型包含： <ul><li>使用 Microsoft 雲端識別簡介 </li> <li>Azure AD 的 IDaaS 功能 </li><li>將內部部署的 Active Directory 網域服務帳戶，與 Microsoft Azure Active Directory 整合 </li> <li>將目錄元件置入 Azure 中 </li><li>Azure IaaS 中工作負載的網域服務選項 </li></ul> <br/>|
    
 <a name="security"> </a>
 ### <a name="microsoft-cloud-security-for-enterprise-architects"></a>Microsoft Cloud Security for Enterprise Architects
@@ -206,9 +207,9 @@ IT 結構設計師需要了解的關於在 Windows 10 上部署和管理 Office 
 |:-----|:-----|
 |[![使用 Microsoft 模型部署現代和安全的桌面縮圖](images/321dd59c-d992-4c7a-a7b6-c23a783858bd.png)          ](https://www.microsoft.com/download/details.aspx?id=55987) <br/> ![PDF 檔案](images/ITPro_Other_PDFicon.png)[PDF](http://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.pdf)  \| ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg)[Visio](http://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.vsdx) <br/> | 此模型包含： <ul><li>  從 Microsoft Cloud 部署 Windows 10 和 Office ProPlus </li><li>  使用 System Center Configuration Manager 部署 Windows 10 和 Office ProPlus </li><li>  從 Microsoft Cloud 管理 Windows 10 和 Office ProPlus 的更新 </li><li>  使用 System Center Configuration Manager 管理 Windows 10 和 Office ProPlus 的更新 </li><li>  Windows 10 立即可用和額外的保護功能 </li></ul><br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[適用於 SharePoint、Exchange、Skype for Business 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
+[適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
   
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   

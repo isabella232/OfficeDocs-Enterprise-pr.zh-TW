@@ -14,11 +14,12 @@ localization_priority: Priority
 ms.custom: Strat_O365_Enterprise
 ms.assetid: 10d1004b-42b6-4e2b-aaa2-18ddd9118f64
 description: 摘要：此計劃與實作指南適用於因快速發展而導致威脅增加的組織。
-ms.openlocfilehash: 9f8979a674dd61710268df5b67857a5a8d641609
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 80ffac68dab2f89efa491be657dc89b8f1f64ade
+ms.sourcegitcommit: 565a6275c719be61636bc43d0f8c000b440992bc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/24/2018
+ms.locfileid: "19434950"
 ---
 # <a name="microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南
 
@@ -33,8 +34,8 @@ ms.lasthandoff: 04/27/2018
 |||
 |:-----|:-----|
 |**項目** <br/> |**描述** <br/> |
-|**適用於政治活動的 Microsoft 安全性指南** <br/> [![迷你海報集的縮略圖。](images/d370ce28-ca40-4930-9a2c-907312aa06c8.png)](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security for political campaigns.pdf) <br/> [PDF](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security for political campaigns.pdf)  \| [Visio](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security for political campaigns.vsdx) <br/> |此指南以政治活動組織為例。您可以針對任何環境使用此指南作為起點。  <br/> |
-|**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載的檔案的縮略圖](images/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud Architecture_Security for Nonprofits.pdf) <br/> [PDF](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud Architecture_Security for Nonprofits.pdf)  \| [Visio](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud Architecture_Security for Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
+|**適用於政治活動的 Microsoft 安全性指南** <br/> [![迷你海報集的縮略圖。](images/d370ce28-ca40-4930-9a2c-907312aa06c8.png)](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br/> [PDF](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf)  \| [Visio](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx) <br/> |此指南以政治活動組織為例。您可以針對任何環境使用此指南作為起點。  <br/> |
+|**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載的檔案的縮略圖](images/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br/> [PDF](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf)  \| [Visio](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
    
 ## <a name="test-lab-guides"></a>測試實驗室指南
 

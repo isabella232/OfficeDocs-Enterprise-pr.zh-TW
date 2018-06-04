@@ -3,7 +3,6 @@ title: 將 OneDrive 網站移至不同的地理位置
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
-ms.date: 4/3/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 6bac98cc0707f977b7b585e8ae0a570f4b9662ee
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 80768d0838d1d5d072d3e221c4c2b4b1af78dae6
+ms.sourcegitcommit: aabd369fc8b397f9e738374d42d8afd18b96d469
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "19174899"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
@@ -26,6 +26,18 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Office 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。
 
 本文所述的程序需要 [Microsoft SharePoint Online PowerShell 模組](https://www.microsoft.com/en-us/download/details.aspx?id=35588)。
+
+## <a name="communicating-to-your-users"></a>與使用者溝通
+
+在地理位置之間移動 OneDrive 網站時，請務必將預期要發生的事傳達給使用者。這可以幫助減少使用者的困惑和技術支援中心的電話。在移動前發送電子郵件給使用者，並讓他們知道以下資訊：
+
+- 預計何時將開始移動，並預計需要多久
+- OneDrive 新的地理位置以及存取新位置的 URL
+- 他們應該關閉文件，並且不要在移動期間編輯檔案
+- 檔案權限和共用不會因為移動而變更
+- [在多地理位置環境中的使用者體驗](multi-geo-user-experience.md)將有何不同
+
+移動成功完成後，請務必向用戶發送電子郵件，通知他們可以在 OneDrive 中繼續工作。
 
 ## <a name="moving-a-onedrive-site"></a>移動 OneDrive 網站
 
@@ -147,7 +159,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ### <a name="onedrive-sync-client"></a>OneDrive 同步處理用戶端 
 
-OneDrive 異地移動完成後，OneDrive 同步處理用戶端會自動偵測並順暢地傳輸同步處理至 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。
+OneDrive 異地移動完成後，OneDrive 同步處理用戶端會自動偵測並順暢地傳輸同步處理至 OneDrive 的新位置。使用者不必重新登入或採取任何其他動作。(同步處理用戶端需要 17.3.6943.0625 版或更新的版本。)
 
 如果使用者在進行 OneDrive 異地移動時更新檔案，同步處理用戶端會告知使用者，進行異地移動時上傳的檔案會擱置。
 

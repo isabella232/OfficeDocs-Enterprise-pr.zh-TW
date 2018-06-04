@@ -3,7 +3,7 @@ title: 基底組態開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/05/2018
+ms.date: 05/18/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,11 +15,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: a6c0610531482d5d264b582f7a3550b57f21841d
-ms.sourcegitcommit: ac7a37049e3c96e32ea91a4d97105028b0dbb2c5
+ms.openlocfilehash: 6d53bb61ea7d325b15590c8aabe0740df3b92750
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "19193753"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -164,7 +165,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 
 1. 在 [Azure 入口網站](https://portal.azure.com)中，按一下 **[資源群組] >** [新的資源群組名稱] **> [DC1] > [連線]**。
     
-2. 開啟所下載的 DC1.rdp 檔案，然後按一下 [連線]****。
+2. 在開啟的窗格中，按一下 [下載 RDP 檔案]****。開啟所下載的 DC1.rdp 檔案，然後按一下 [連線]****。
     
 3. 指定 DC1 本機系統管理員帳戶名稱：
     
@@ -192,7 +193,6 @@ Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR 
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSForest -DomainName corp.contoso.com -DatabasePath "F:\NTDS" -SysvolPath "F:\SYSVOL" -LogPath "F:\Logs"
 ```
-
 您必須指定安全模式的系統管理員密碼。將此密碼儲存在安全的位置。
   
 請注意，這些命令可能需要數分鐘才能完成。
@@ -257,7 +257,7 @@ $cred=Get-Credential -Message "Type the name and password of the local administr
 $vm=Set-AzureRMVMOperatingSystem -VM $vm -Windows -ComputerName APP1 -Credential $cred -ProvisionVMAgent -EnableAutoUpdate
 $vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version "latest"
 $vm=Add-AzureRMVMNetworkInterface -VM $vm -Id $nic.Id
-$vm=Set-AzureRmVMOSDisk -VM $vm -Name "APP1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType "StandardLRS"
+$vm=Set-AzureRmVMOSDisk -VM $vm -Name "APP1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType StandardLRS
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
@@ -311,7 +311,7 @@ $cred=Get-Credential -Message "Type the name and password of the local administr
 $vm=Set-AzureRMVMOperatingSystem -VM $vm -Windows -ComputerName CLIENT1 -Credential $cred -ProvisionVMAgent -EnableAutoUpdate
 $vm=Set-AzureRMVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version "latest"
 $vm=Add-AzureRMVMNetworkInterface -VM $vm -Id $nic.Id
-$vm=Set-AzureRmVMOSDisk -VM $vm -Name "CLIENT1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType "StandardLRS"
+$vm=Set-AzureRmVMOSDisk -VM $vm -Name "CLIENT1-OS" -DiskSizeInGB 128 -CreateOption FromImage -StorageAccountType StandardLRS
 New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
@@ -342,7 +342,7 @@ CLIENT1 重新啟動之後，使用 CORP\\User1 帳戶名稱和密碼連線至 C
     
 4. 從 [開始] 畫面，按一下 [Internet Explorer]****，然後按 [確定]****。
     
-5. 在網址列中，輸入 **http://app1.corp.contoso.com/**，然後按 ENTER 鍵。您應該會看到 APP1 的預設網際網路資訊服務網頁。
+5. 在網址列中，輸入 **http:\//app1.corp.contoso.com/**，然後按 ENTER 鍵。您應該會看到 APP1 的預設網際網路資訊服務網頁。
     
 6. 在桌面工作列中，按一下 [檔案總管] 圖示。
     

@@ -15,15 +15,16 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Enterprise Mobility + Security (EMS)、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
-ms.openlocfilehash: 87e9be912b7e53dea07915ae236b057273285718
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 1ca74f7fdb83cf730c4f6d003c9f9e325299f33d
+ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "19193673"
 ---
 # <a name="cloud-adoption-test-lab-guides-tlgs"></a>雲端採用測試實驗室指南 (TLG)
 
- **摘要：**使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Enterprise Mobility + Security (EMS)、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
+ **摘要：** 使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Enterprise Mobility + Security (EMS)、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
   
 TLG 可協助您快速學習 Microsoft 各項產品。它們非常適合在決定是否適合您使用或將其推廣給使用者之前，用來評估技術或組態的情況。「我自己建置它且可以運作」的實際經驗有助您了解新產品或解決方案的部署需求，因此您可以更妥善地規劃在生產環境中進行裝載。
   
@@ -38,7 +39,6 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
 - 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
     
 ## <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
-<a name="O365"> </a>
 
 使用這些文章來建置您的 Office 365 開發/測試環境︰
   
@@ -89,7 +89,6 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     示範如何建立 SharePoint Online 小組網站，該網站針對高度機密的資源，獨立於組織的其他網站。
     
 ## <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 企業版開發/測試環境
-<a name="O365"> </a>
 
 使用以下文章，建立 [Microsoft 365 企業版](https://docs.microsoft.com/microsoft-365-enterprise/)案例的開發/測試環境。
   
@@ -106,7 +105,6 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     註冊 iOS 或 Android 裝置並從遠端管理。
     
 ## <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
-<a name="O365_D365"> </a>
 
 透過這些文章，新增 Dynamics 365 試用版訂閱，並測試 Office 365 和 Dynamics 365 整合式功能與案例︰
   
@@ -119,12 +117,10 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     設定然後示範 Office 365 與 Dynamics 365 如何在 Exchange Online 信箱中共同運作。
     
 ## <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
-<a name="O365_D365"> </a>
 
 建立開發/測試環境，其中包含所有 Microsoft 的雲端供應項目：Office 365、Azure、EMS 及 Dynamics 365。請參閱 [One Microsoft Cloud 開發/測試環境](the-one-microsoft-cloud-dev-test-environment.md)以取得逐步指示。
   
 ## <a name="simulated-cross-premises-devtest-environments"></a>模擬的跨單位部署開發/測試環境
-<a name="O365_D365"> </a>
 
 透過這些文章，您可以建立一個跨單位部署開發/測試環境，它包含 Azure 虛擬網路和模擬的內部部署網路︰
   
@@ -137,7 +133,6 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     在 Azure 虛擬網路中建立單一伺服器 SharePoint Server 2016 陣列，並從模擬的內部部署網路測試連線能力和管理。
     
 ## <a name="additional-cloud-based-devtest-environments"></a>其他雲端式開發/測試環境
-<a name="ADD_TLGs"> </a>
 
 以下是您可以在 Azure 基礎結構服務中建立的其他雲端式開發/測試環境︰
   
