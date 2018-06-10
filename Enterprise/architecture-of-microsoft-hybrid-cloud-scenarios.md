@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 混合雲端案例的架構"
+title: Microsoft 混合式雲端案例的架構
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 06d8c959-39e5-4150-b1ae-aaf0eee4c058
-description: "摘要： 了解 Microsoft 的混合式雲端方案的架構。"
-ms.openlocfilehash: 33d98d88a10b18cdd357250f46c5414f1c1b6a75
-ms.sourcegitcommit: c16db80a2be81db876566c578bb04f3747dbd50c
+description: 摘要： 了解 Microsoft 的混合式雲端方案的架構。
+ms.openlocfilehash: bb5f72ee8fe6f1d5ffd81822edbf0e9f931b70dd
+ms.sourcegitcommit: b2058b34196022668eac15e723962fefd82d6774
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "19631384"
 ---
-# <a name="architecture-of-microsoft-hybrid-cloud-scenarios"></a>Microsoft 混合雲端案例的架構
+# <a name="architecture-of-microsoft-hybrid-cloud-scenarios"></a>Microsoft 混合式雲端案例的架構
 
- **摘要：**了解 Microsoft 的混合式雲端方案的架構。
+ **摘要：** 了解 Microsoft 的混合式雲端方案的架構。
   
 若要規劃並實作搭配 Microsoft 雲端服務與平台的混合式雲端案例使用架構的方法。
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 02/13/2018
     
 - 工作列最右邊的網路
     
-    有兩個選擇 Microsoft cloud 平台及服務的連線： 您的現有 Internet 管道和 ExpressRoute。如果可預測的效能，請務必使用 ExpressRoute 連線。您可以使用一個 ExpressRoute 連線至直接連接到 Microsoft saas 和服務 （Office 365 和 Dynamics 365）、 Azure PaaS 服務及 Azure PaaS 服務。
+    有兩個選擇 Microsoft cloud 平台及服務的連線： 您的現有 Internet 管道和 ExpressRoute。如果可預測的效能，請務必使用 ExpressRoute 連線。您可以使用一個 ExpressRoute 連線至直接連接到 Microsoft saas 和服務 （Office 365 和 Dynamics 365）、 Azure PaaS 服務及 Azure IaaS 服務。
     
 - 身分識別
     
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/13/2018
     
     增益 shift 並在雲端建立案例的伺服器端 Azure Vm 上執行的應用程式提供簡單佈建與縮放比例。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
