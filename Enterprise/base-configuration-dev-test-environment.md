@@ -15,12 +15,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: 6d53bb61ea7d325b15590c8aabe0740df3b92750
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 86f2f6ec907639c9aa513c6868f6ce5ed021f3d4
+ms.sourcegitcommit: b2058b34196022668eac15e723962fefd82d6774
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "19193753"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "19631404"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -241,9 +241,6 @@ Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv
 
 APP1 提供網頁和檔案共用服務。
 
--> [!NOTE]  
--> 下列命令集可建立執行 Windows Server 2016 資料中心的 CLIENT1，其適用於所有類型的 Azure 訂閱。如果您有以 Visual Studio 為基礎的 Azure 訂閱，您可以使用 [Azure 入口網站](https://portal.azure.com)建立執行 Windows 10 的 CLIENT1。 
-
 若要建立 APP1 的 Azure 虛擬機器，請填入您的資源群組，並在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   
 ```
@@ -297,6 +294,9 @@ New-SmbShare -name files -path c:\files -changeaccess CORP\User1
 ## <a name="phase-4-configure-client1"></a>階段 4：設定 CLIENT1
 
 CLIENT1 可在 Contoso 內部網路上做為一般的膝上型電腦、平板電腦或桌上型電腦。
+
+> [!NOTE]  
+> 下列命令集可建立執行 Windows Server 2016 資料中心的 CLIENT1，其適用於所有類型的 Azure 訂閱。如果您有以 Visual Studio 為基礎的 Azure 訂閱，則可以使用 [Azure 入口網站](https://portal.azure.com)建立執行 Windows 10 的 CLIENT1。 
   
 若要建立 CLIENT1 的 Azure 虛擬機器，請填入您的資源群組，並在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   

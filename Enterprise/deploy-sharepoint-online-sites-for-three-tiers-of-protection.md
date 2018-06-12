@@ -3,7 +3,7 @@ title: 部署三種保護層級的 SharePoint Online 網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 06/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -15,11 +15,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 1e8e3cfd-b878-4088-b941-9940363a5fae
 description: 摘要：建立及設定各種資訊保護等級的 SharePoint Online 小組網站。
-ms.openlocfilehash: 7349616f130c5fc01108fb85ed172e9bc6bba05e
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 84b455809e210fb40d4a92396b2d8c4eb18245b1
+ms.sourcegitcommit: b2058b34196022668eac15e723962fefd82d6774
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "19631394"
 ---
 # <a name="deploy-sharepoint-online-sites-for-three-tiers-of-protection"></a>部署三種保護層級的 SharePoint Online 網站
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 04/27/2018
     
 接下來，從新的 SharePoint Online 小組網站，使用下列步驟設定權限。
   
-1. 決定 IT 系統管理員或其他將負責回應網站及向網站提出存取要求之人員的使用者主體名稱 (UPN) (belindan@contoso.com 為 UPN 範例)。在此寫下該 UPN：_________________________________________。
+1. 決定 IT 系統管理員或將負責回應網站及向網站提出存取要求之其他人員的使用者主體名稱 (UPN) (belindan@contoso.com 為 UPN 範例)。在此寫下該 UPN：![](./images/Common_Images/TableLine.png)。
     
 2. 在工具列中，按一下設定圖示，然後按一下 [網站權限]****。
     
