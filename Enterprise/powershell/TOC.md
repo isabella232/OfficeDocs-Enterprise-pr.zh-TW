@@ -5,7 +5,6 @@
 ### [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 ### [在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](connect-to-all-office-365-services-in-a-single-windows-powershell-window.md)
 ### [使用 Windows PowerShell 在 Office 365 中建立報告](use-windows-powershell-to-create-reports-in-office-365.md)
-#### [使用 Excel 擷取 Office 365 報表資料](using-excel-to-retrieve-office-365-reporting-data.md)
 ### [Office 365 服務的 Cmdlet 參考資料](cmdlet-references-for-office-365-services.md)
 ### [Office 365 PowerShell 社群資源](office-365-powershell-community-resources.md)
 ## [使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
