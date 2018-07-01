@@ -1,5 +1,5 @@
 ---
-title: SharePoint Server 驗證使用 Azure AD
+title: 針對 SharePoint Server 驗證使用 Azure AD
 ms.author: tracyp
 author: MSFTTracyP
 ms.reviewer:
@@ -18,13 +18,13 @@ ms.custom: Ent_Solutions
 ms.assetid: ''
 description: 摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。
 ms.openlocfilehash: dfaede331233444413d82b500e14fc68195eaca1
-ms.sourcegitcommit: b6c8b044963d8df24ea7d63917e0203ba40fb822
+ms.sourcegitcommit: fe406eacd92dd5b3bd8c127b7bd8f2d0ef216404
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "19702983"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "19856268"
 ---
-# <a name="using-azure-ad-for-sharepoint-server-authentication"></a>SharePoint Server 驗證使用 Azure AD
+# <a name="using-azure-ad-for-sharepoint-server-authentication"></a>針對 SharePoint Server 驗證使用 Azure AD
 
  **摘要：** 了解如何驗證您的 SharePoint Server 2016 使用者利用 Azure Active Directory。 
 
@@ -94,7 +94,7 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
     - 使用者識別碼：`user.userprincipalname`</br>
     - 請注意： 請記得變更 Url 以想要保護的 SharePoint 網站的 URL 取代*portal.contoso.local*的方式。</br>
 3. 設定包含下列資料列的表格 （類似以下的表格 1）：</br> 
-    - 領域
+    - Realm
     - SAML 簽署憑證檔案的完整路徑
     - SAML 單一登入服務的 URL （將 */saml2*取代 */wsfed*）
     - 應用程式物件識別碼。 </br>
@@ -109,7 +109,7 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
 
 | 擷取的表格 1： 值  |  |
 |---------|---------|
-|領域 | `urn:sharepoint:portal.contoso.local` |
+|Realm | `urn:sharepoint:portal.contoso.local` |
 |SAML 簽署憑證檔案的完整路徑 | `C:/temp/SharePoint SAML Integration.cer`  |
 |SAML 單一登入服務 URL （取代為 /saml2 /wsfed） | `https://login.microsoftonline.com/b1726649-b616-460d-8d20-defab80d476c/wsfed` |
 |應用程式物件識別碼 | `a812f48b-d1e4-4c8e-93be-e4808c8ca3ac` |
@@ -161,9 +161,9 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 
 1. 在管理中心中，按一下 [應用程式管理]****。
 2. 按一下 [**應用程式管理**] 頁面上的 [ **Web 應用程式**] 區段中的 [**管理 web 應用程式**]。
-3. 按一下適當的 web 應用程式] 和 [**使用者原則**。
+3. 按一下適當的 Web 應用程式，然後按一下 [使用者原則]****。
 4. 在 [Web 應用程式的原則，按一下 [**新增使用者**]。</br>![搜尋使用者及其名稱宣告](images/SAML11/fig11-searchbynameclaim.png)</br>
-5. 在 [**新增使用者**] 對話方塊中按一下適當的區域中**的區域**]，並再按 [**下一步**。
+5. 在 [新增使用者]**** 對話方塊中，按一下 [區域]**** 中的適當區域，然後按 [下一步]****。
 6. 在 [ **Web 應用程式的原則**] 對話方塊的 [**選擇使用者**] 區段中按一下 [**瀏覽**] 圖示。
 7. 在 [**尋找**] 文字方塊中，在您的目錄中輸入使用者的登入名稱並按一下 [**搜尋**]。 </br>範例： *demouser@blueskyabove.onmicrosoft.com*。
 8. 在清單檢視中 AzureAD 標題、 下的 [選取的 name 屬性並按一下 [**新增**] 然後按一下 **[確定]** 以關閉 [] 對話方塊。

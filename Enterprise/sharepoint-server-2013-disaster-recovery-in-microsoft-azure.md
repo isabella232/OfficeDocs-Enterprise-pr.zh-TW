@@ -1,5 +1,5 @@
 ---
-title: SharePoint Server 2013 Disaster Recovery in Microsoft Azure
+title: Microsoft Azure 中的 SharePoint Server 2013 災害復原
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
@@ -12,15 +12,16 @@ ms.collection: Ent_O365
 ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: 摘要： 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。
-ms.openlocfilehash: 499b296040eaf02bd679ee422429f08ed669ba85
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
+ms.openlocfilehash: 553b2e6bb9d35ab3dba471b01938914a95af23d6
+ms.sourcegitcommit: 9f57825b10f20e3813732372541128ef187d52c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "20161796"
 ---
-# <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>SharePoint Server 2013 Disaster Recovery in Microsoft Azure
+# <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>Microsoft Azure 中的 SharePoint Server 2013 災害復原
 
- **摘要：**使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。
+ **摘要：** 使用 Azure，您可以為您的內部部署 SharePoint 伺服器陣列建立嚴重損壞修復環境。本文說明如何設計及實作此解決方案。
 
  **觀賞 SharePoint Server 2013 嚴重損壞修復概觀影片**
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/1b73ec8f-29bd-44eb-aa3a-f7932784bfd9?autoplay=false]
@@ -29,9 +30,9 @@ ms.lasthandoff: 04/20/2018
   
 使用本文使用下列解決方案模型： **SharePoint Disaster Recovery in Microsoft Azure**。
   
-[![Azure 的 SharePoint 災害復原程序](images/SP_DR_Azure.png)](https://go.microsoft.com/fwlink/p/?LinkId=392555)
+[![SharePoint 到 Azure 的災害復原程序](images/SP_DR_Azure.png)](https://go.microsoft.com/fwlink/p/?LinkId=392555)
   
-![PDF 檔案](images/ITPro_Other_PDFicon.png) [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555) | ![Visio 檔案](images/ITPro_Other_VisioIcon.jpg) [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)
+ [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555) |  [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)
   
 本文內容：
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/20/2018
     
 - [解決方案描述](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#SOL)
     
-- [詳細的架構](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#arch)
+- [詳細架構](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#arch)
     
 - [嚴重損壞復原藍圖](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#RDmap)
     
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/20/2018
     
 - [Microsoft 概念證明環境](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#POC)
     
-- [疑難排解秘訣](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#Troubleshooting)
+- [疑難排解提示](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md#Troubleshooting)
     
 ## <a name="use-azure-infrastructure-services-for-disaster-recovery"></a>使用 Azure 基礎結構服務的嚴重損壞修復
 <a name="AZ"> </a>
@@ -490,9 +491,9 @@ restore database WSS_Content with recovery
   
 從這裡，您可能會執行到幾個不同的嚴重損壞修復案例：
   
- **範例案例： 內部部署 SharePoint 伺服器陣列是無法使用，因為在內部部署 SharePoint 伺服器陣列的硬體故障。**在此例中完成 Azure SharePoint 伺服器陣列的容錯移轉的步驟之後，您可以設定網路上的負載平衡復原 SharePoint 伺服器陣列的 web 前端伺服器，您並未與內部部署伺服器陣列的方式相同。然後可以將主機記錄重新導向內部 DNS 提供者以指向復原伺服器陣列的叢集 IP 位址。請注意，它可能需要一些時間快取的 DNS 記錄之前用戶端上會重新整理並指向 [復原伺服器陣列。
+ **範例案例： 內部部署 SharePoint 伺服器陣列是無法使用，因為在內部部署 SharePoint 伺服器陣列的硬體故障。** 在此例中完成 Azure SharePoint 伺服器陣列的容錯移轉的步驟之後，您可以設定網路上的負載平衡復原 SharePoint 伺服器陣列的 web 前端伺服器，您並未與內部部署伺服器陣列的方式相同。然後可以將主機記錄重新導向內部 DNS 提供者以指向復原伺服器陣列的叢集 IP 位址。請注意，它可能需要一些時間快取的 DNS 記錄之前用戶端上會重新整理並指向 [復原伺服器陣列。
   
- **範例案例： 內部部署資料中心是完全遺失。**此案例中可能會由於天然災害時，例如消防或泛光 」。在此例中為 enterprise 中，您可能必須裝載於另一個區域，以及您有其專屬的目錄服務和 DNS 的 Azure 子網路的次要資料中心。如同前一個災害案例中，您可以重新導向內部和外部 DNS 記錄以指向 Azure SharePoint 伺服器陣列。同樣地，記下的 DNS 記錄傳播可能需要一些時間。
+ **範例案例： 內部部署資料中心是完全遺失。** 此案例中可能會由於天然災害時，例如消防或泛光 」。在此例中為 enterprise 中，您可能必須裝載於另一個區域，以及您有其專屬的目錄服務和 DNS 的 Azure 子網路的次要資料中心。如同前一個災害案例中，您可以重新導向內部和外部 DNS 記錄以指向 Azure SharePoint 伺服器陣列。同樣地，記下的 DNS 記錄傳播可能需要一些時間。
   
 如果您的[主機命名型網站集合架構與部署 (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=393120)建議使用主機命名型網站集合，您可能必須在 SharePoint 伺服器陣列，以唯一相同的 web 應用程式所主控的數個網站集合DNS 名稱 (例如http://sales.contoso.com和http://marketing.contoso.com)。在此例中，您可以建立指向您的叢集 IP 位址的 DNS 記錄每個網站集合。要求達到您的 SharePoint web 前端伺服器之後，他們處理每個要求路由到適當的網站集合。
   
@@ -518,7 +519,7 @@ restore database WSS_Content with recovery
   
 **表格： Front End 網頁的虛擬機器的磁碟機需求與內部部署的應用程式伺服器測試**
 
-|**磁碟機代號**|**大小**|**目錄名稱**|**Path**|
+|**磁碟機代號**|**大小**|**目錄名稱**|**路徑**|
 |:-----|:-----|:-----|:-----|
 |C  <br/> |80  <br/> |系統磁碟機  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\  <br/> |
 |E  <br/> |80  <br/> |記錄檔磁碟 (40 GB)  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\資料  <br/> |
@@ -528,7 +529,7 @@ restore database WSS_Content with recovery
   
 **表格： 內部部署的資料庫伺服器的虛擬機器的磁碟機需求測試**
 
-|**磁碟機代號**|**大小**|**目錄名稱**|**Path**|
+|**磁碟機代號**|**大小**|**目錄名稱**|**路徑**|
 |:-----|:-----|:-----|:-----|
 |C  <br/> |80  <br/> |資料根目錄  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\  <br/> |
 |E  <br/> |500 個  <br/> |使用者資料庫目錄  <br/> |<DriveLetter>：\\程式檔案\\Microsoft SQL Server\\MSSQL10_50.MSSQLSERVER\\MSSQL\\資料  <br/> |
@@ -679,11 +680,11 @@ Ipconfig /flushdns
 ## <a name="additional-resources"></a>其他資源
 <a name="Troubleshooting"> </a>
 
-[高可用性和嚴重損壞修復資料庫支援的 SharePoint (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=393121)
+[SharePoint 資料庫支援的高可用性和災害復原選項 (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=393121)
   
 [設定 SharePoint 2013 的 SQL Server 2012 AlwaysOn 可用性群組](https://go.microsoft.com/fwlink/p/?LinkId=393122)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <a name="Troubleshooting"> </a>
 
