@@ -1,5 +1,5 @@
 ---
-title: "資料分類和 Office 365 開發人員/測試環境中顯示標籤"
+title: Office 365 開發/測試環境中的資料分類和標示
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,21 +13,22 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: 919b8fc7-b0bc-46db-91f5-37342564e01b
-description: "摘要： 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。"
-ms.openlocfilehash: 7243acecca0dd4c39ff6ef2aecd25091f25f2f53
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。
+ms.openlocfilehash: f9674f5e2bac804f5bd23b5f67e733580c50450f
+ms.sourcegitcommit: c23b95d32a865e45be7843f38a1f23b5693ba76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "20188091"
 ---
-# <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>資料分類和 Office 365 開發人員/測試環境中顯示標籤
+# <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的資料分類和標示
 
- **摘要：**設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。
+ **摘要：** 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。
   
 Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Office 365 中的 SharePoint Online 資料夾。使用本文中的指示、 安裝 Azure 資訊保護用戶端及示範資料分類。如需詳細資訊，請參閱[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)。
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建立 Office 365 開發人員/測試環境
 
@@ -41,7 +42,7 @@ Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Offi
   
 ### <a name="sign-up-for-an-azure-information-protection-trial-subscription"></a>註冊 Azure 資訊保護試用訂閱
 
-1. 在 Internet Explorer 或瀏覽器中，移至[http://portal.office.com](http://portal.office.com)並使用您的 Office 365 全域管理員帳戶登入。
+1. 在 Internet Explorer 或瀏覽器中，移至[http://portal.office.com](http://portal.office.com)和登入您的 Office 365 全域管理員帳戶。
     
 2. 在 [ **Microsoft Office Home** ] 索引標籤上按一下**系統管理**磚。
     
@@ -49,9 +50,9 @@ Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Offi
     
 4. 在 [**購買服務**] 頁面上尋找**Azure 資訊保護 Premium P2**項目。將滑鼠停留並按一下 [**開始免費試用版**。
     
-5. 在 [**確認您的訂單**] 頁面上按一下 [**立即試用**。
+5. 在 [確認訂單]**** 頁面上，按一下 [立即試用]****。
     
-6. 在 [**順序回條**] 頁面上按一下 [**繼續**]。
+6. 在 [訂單收據]**** 頁面上，按一下 [繼續]****。
     
 接下來，您可讓所有使用者帳戶的 Azure 資訊保護授權。
   
@@ -59,7 +60,7 @@ Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Offi
     
 2.  在 [使用者帳戶] 清單選取您的全域管理員帳戶] 和 [**編輯****產品**授權。
     
-3. 開啟以**在** **Azure 資訊保護 Premium P2**產品授權、 按一下 [**儲存]**和 [**關閉**兩次。
+3. 開啟以**在** **Azure 資訊保護 Premium P2**產品授權、 按一下 [**儲存]** 和 [**關閉**兩次。
     
 4. 針對其他使用者帳戶 (使用者 1 到使用者 5) 重複步驟 2 和 3。
     
@@ -79,9 +80,9 @@ Office 365 開發人員/測試環境現在有：
     
 2. 按一下 [**資源群組 >** [您資源群組名稱] **> CLIENT1 > Connect**。
     
-3. 在 CLIENT1 中，執行 Internet Explorer、 移至[http://portal.office.com](http://portal.office.com)、 Office 入口網站並再登入 User5 帳戶名稱及密碼。
+3. 從 CLIENT1 中，執行 [Internet Explorer 中，移至 Office 入口網站[http://portal.office.com](http://portal.office.com)，並再登入 User5 帳戶名稱及密碼。
     
-4. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [**安裝 Office 2016**。
+4. 在 [Microsoft Office 首頁]**** 索引標籤上，按一下 [安裝 Office 2016]****。
     
 5. 執行時提示並且**是**由使用者帳戶控制提示時按一下下載。等候安裝 Office。完成後，按一下 [**關閉**兩次。
     
@@ -97,7 +98,7 @@ Office 365 開發人員/測試環境現在有：
     
 3. 出現提示時，執行 AzInfoProtection.exe。
     
-4. 在 [**安裝 Azure 資訊保護**用戶端] 方塊中，按一下 [**我同意**] 並再按一下**[是]**的使用者帳戶控制提示時。
+4. 在 [**安裝 Azure 資訊保護**用戶端] 方塊中，按一下 [**我同意**] 並再按一下 **[是]** 的使用者帳戶控制提示時。
     
 5. 在 [**成功**] 方塊中按一下 [ **Close。**
     
@@ -137,7 +138,7 @@ Office 365 開發人員/測試環境現在有：
     
 5. 在 SharePoint 群組的清單中，按一下**支援網站集合的成員**。
     
-6. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+6. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
 7. 在**共用 '支援網站集合 」**，輸入**所有人**、 [**所有人以外的外部使用者**，和 [**共用。**
     
@@ -147,9 +148,9 @@ Office 365 開發人員/測試環境現在有：
   
 1. 在 [ **Microsoft Office Home** ] 索引標籤中右上方，按一下 [使用者] 圖示及 [**登出**。
     
-2. 移至[http://portal.office.com](http://portal.office.com)。
+2. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
-3. 在 * * Office 365 登入 * *] 頁面上，按一下 User5 帳戶名稱及登入。
+3. 在**Office 365 登入**] 頁面上按一下 [User5 帳戶名稱及登入。
     
 4. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [ **SharePoint > 支援網站集合**。
     
@@ -157,12 +158,12 @@ Office 365 開發人員/測試環境現在有：
     
     您應該會看到 [文件] 資料夾中的 AfterAIP.docx 支援網站集合中。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
 
 [Office 365 和 EMS 開發/測試環境](http://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)
   
-[Azure 的資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)
+[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
 

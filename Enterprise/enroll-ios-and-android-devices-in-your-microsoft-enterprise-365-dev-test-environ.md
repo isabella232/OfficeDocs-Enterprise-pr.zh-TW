@@ -1,5 +1,5 @@
 ---
-title: 註冊 iOS 和 Microsoft 企業 365 開發人員/測試環境中的 Android 裝置
+title: 在您的 Microsoft 365 企業版開發/測試環境中註冊 iOS 和 Android 裝置
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -12,13 +12,14 @@ ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 49c7758a-1c01-4153-9b63-5eae3f6305ce
 description: 摘要： 使用此測試實驗室指南註冊 Microsoft 365 開發人員/測試環境中的裝置並從遠端管理它們。
-ms.openlocfilehash: 8765a7ffb1bff1f257d7cd1ce5181561c2cf0080
-ms.sourcegitcommit: 771f227d3049498fcbd7cfbeaf649e3d77e73c86
+ms.openlocfilehash: a5d43a0ef3ed090f84c8415de3ac26f53fdafe0a
+ms.sourcegitcommit: c23b95d32a865e45be7843f38a1f23b5693ba76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "20188101"
 ---
-# <a name="enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-devtest-environment"></a>註冊 iOS 和 Microsoft 企業 365 開發人員/測試環境中的 Android 裝置
+# <a name="enroll-ios-and-android-devices-in-your-microsoft-365-enterprise-devtest-environment"></a>在您的 Microsoft 365 企業版開發/測試環境中註冊 iOS 和 Android 裝置
 
  **摘要：** 使用此測試實驗室指南註冊 Microsoft 365 開發人員/測試環境中的裝置並從遠端管理它們。
   

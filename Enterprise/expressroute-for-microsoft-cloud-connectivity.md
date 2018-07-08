@@ -1,9 +1,9 @@
 ---
-title: "Microsoft 雲端連線 ExpressRoute"
+title: Microsoft 雲端連線的 ExpressRoute
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 07/03/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
-description: "摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。"
-ms.openlocfilehash: 40cde8753a5e6de6a76a04198fe90d510ee9a315
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
+ms.openlocfilehash: 55ac09e3c3cf65649d24d67ea79e185808d83cdb
+ms.sourcegitcommit: c23b95d32a865e45be7843f38a1f23b5693ba76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "20188111"
 ---
-# <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線 ExpressRoute
+# <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的 ExpressRoute
 
- **摘要：**了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
+ **摘要：** 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
   
 ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高輸送量網路連線。
   
@@ -28,7 +29,7 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
 
 以下是 Microsoft cloud ExpressRoute 連線的網路路徑。
   
-**圖 1： 網路路徑不 ExpressRoute**
+**圖 1：不使用 ExpressRoute 的網路路徑**
 
 ![圖 1：不使用 ExpressRoute 的網路路徑](images/Network_Poster/ExpressRoute.png)
   
@@ -42,13 +43,13 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
   
 以下是 Microsoft cloud ExpressRoute 連線的網路路徑。
   
-**圖 2： 網路路徑與 ExpressRoute**
+**圖 2：使用 ExpressRoute 的網路路徑**
 
 ![圖 2：使用 ExpressRoute 的網路路徑](images/Network_Poster/ExpressRoute_post.png)
   
 圖 2 顯示兩個網路路徑。Microsoft Intune 流量一起出差標準網際網路流量為相同的路徑。Office 365、 Microsoft Azure 和 Dynamics 365 達成跨 ExpressRoute 連線、 專用的路徑與內部網路的 edge 和 Microsoft cloud 緣之間的流量。
   
-包含 ExpressRoute 連線，您現在可控制，透過與服務提供者的關係，透過 Microsoft 自您的整個流量路徑雲端 edge。可預測的效能與達 99.9%執行時間 SLA 可以提供此連線。
+包含 ExpressRoute 連線，您現在可控制，透過與服務提供者的關係，透過 Microsoft 自您的整個流量路徑雲端 edge。可預測的效能與[99.95%執行時間 SLA](https://azure.microsoft.com/support/legal/sla/expressroute/v1_3/)可以提供此連線。
   
 您現在可以計算上可預測的輸送量和延遲，根據到 Office 365、 Azure、 和 Dynamics 365 服務的服務提供者的連線。Microsoft Intune ExpressRoute 連線不支援這一次。
   
@@ -60,7 +61,7 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
   
 請參閱如需詳細資訊下列額外資源：
   
-- [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
+- [ExpressRoute for Office 365](https://aka.ms/expressrouteoffice365)
     
 - [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/)
     
@@ -68,13 +69,13 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
 
 以下是使用 ExpressRoute Azure 型雲端服務的部分優點：
   
-- **可預測的效能：**包含 Microsoft cloud 緣專用路徑，您的效能不會受限於網際網路提供者中斷與暴增在網際網路的流量。您可以決定並保留以 Microsoft cloud 努力輸送量和延遲 SLA 來提供者。
+- **可預測的效能：** 包含 Microsoft cloud 緣專用路徑，您的效能不會受限於網際網路提供者中斷與暴增在網際網路的流量。您可以決定並保留以 Microsoft cloud 努力輸送量和延遲 SLA 來提供者。
     
-- **您流量資料隱私權：**透過專用的 ExpressRoute 連線傳送的流量不會受限於網際網路監控或封包擷取及分析惡意使用者。它會為安全使用多重通訊協定標籤切換 MPLS 為基礎的 WAN 連結。
+- **您流量資料隱私權：** 透過專用的 ExpressRoute 連線傳送的流量不會受限於網際網路監控或封包擷取及分析惡意使用者。它會為安全使用多重通訊協定標籤切換 MPLS 為基礎的 WAN 連結。
     
-- **高輸送量連線：**整體 ExpressRoute 連線 exchange 提供者及網路服務提供者支援，您可以取得最多 10 個 Gbps 連結到 Microsoft 雲端。
+- **高輸送量連線：** 整體 ExpressRoute 連線 exchange 提供者及網路服務提供者支援，您可以取得最多 10 個 Gbps 連結到 Microsoft 雲端。
     
-- **降低成本的一些設定：**雖然 ExpressRoute 連線的其他成本，但在某些情況下的單一 ExpressRoute 連線可以成本小於增加提供適當輸送量 Microsoft 雲端服務在多個位置貴組織的網際網路容量。
+- **降低成本的一些設定：** 雖然 ExpressRoute 連線的其他成本，但在某些情況下的單一 ExpressRoute 連線可以成本小於增加提供適當輸送量 Microsoft 雲端服務在多個位置貴組織的網際網路容量。
     
 ExpressRoute 連線不保證郵件可以在每個設定較高的效能。有可能已透過低頻寬 ExpressRoute 連線比為只從地區的 Microsoft 資料中心幾個躍點高頻寬網際網路連線的較低的效能。
   
@@ -95,7 +96,7 @@ ExpressRoute 連線不保證郵件可以在每個設定較高的效能。有可�
 
 單一 ExpressRoute 連線支援多達三個不同框線閘道通訊協定 (BGP) 對等關聯至 Microsoft cloud 的不同組件。BPG 使用對等的關聯性建立信任及 exchange 路由資訊。
   
-**圖 3: 三個不同 BGP 關係中的單一 ExpressRoute 連線**
+**圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係**
 
 ![圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係](images/Network_Poster/ERPeering.png)
   
@@ -125,7 +126,7 @@ Microsoft 對等 BGP 關係：
 
 流量一起出差 ExpressRoute 連線和 Microsoft cloud 內是在路徑的來源與目的地及應用程式的行為之間旋入之路由的函數。以下是透過網站 VPN 連線存取內部部署 SharePoint 伺服器陣列 Azure 虛擬機器上執行的應用程式的範例。
   
-**圖 4： 應用程式存取內部部署 SharePoint 伺服器陣列 Azure 虛擬機器上**
+**圖 4：Azure 虛擬機器上的應用程式，會存取內部部署 Sharepoint 伺服器陣列**
 
 ![圖 4：Azure 虛擬機器上的應用程式，會存取內部部署 Sharepoint 伺服器陣列](images/Network_Poster/ER_App_Flow1.png)
 
@@ -136,7 +137,7 @@ Microsoft 對等 BGP 關係：
   
 此組織移轉至 SharePoint Online 在 Office 365 中的其內部部署 SharePoint 伺服器陣列並部署 ExpressRoute 連線。
   
-**圖 5： 將內部部署 SharePoint 伺服器陣列移至 SharePoint Online**
+**圖 5：將內部部署 SharePoint 伺服器陣列移動到 SharePoint Online**
 
 ![圖 5：將內部部署 SharePoint 伺服器陣列移動到 SharePoint Online](images/Network_Poster/Hairpin1.png)
   
@@ -154,7 +155,7 @@ Microsoft 與私人的對等關係：
   
 時使用 proxy 伺服器尋找 SharePoint Online 的 IP 位址，它會回復 ExpressRoute 連轉送流量。回應流量一起出差反向的路徑。
   
-**圖 6： 流量已移轉至 SharePoint Online 在 Office 365 中的 SharePoint 伺服器陣列**
+**圖 6：當 SharePoint 伺服器陣列已移轉至 Office 365 的 SharePoint Online 時的流量**
 
 ![圖 6：當 SharePoint 伺服器陣列已移轉至 Office 365 的 SharePoint Online 時的流量](images/Network_Poster/Hairpin2.png)
 
@@ -183,7 +184,7 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
   
 這可能會導致非最佳傳遞到任何-任何 connectivity 模型的本機 Microsoft 資料中心。
   
-**地理位置分散之組織所使用的單一 ExpressRoute 連線的圖 7： 範例**
+**圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例**
 
 ![圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例](images/Network_Poster/MSNet1.png)
   
@@ -191,7 +192,7 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
   
 最佳傳遞的使用多個 ExpressRoute 連線至區域 Microsoft cloud 對等的位置。 
   
-**圖 8： 使用多個 ExpressRoute 連線到地區資料中心的最佳傳遞**
+**圖 8：使用多重 ExpressRoute 連線，以求對區域資料中心傳遞的最佳化**
 
 ![圖 8：使用多重 ExpressRoute 連線，以求對區域資料中心傳遞的最佳化](images/Network_Poster/MSNet2.png)
   
@@ -233,11 +234,11 @@ ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，
     
 - Office 365 資料中心中另一個大陸一起出差洲際 Microsoft cloud 網路。
     
-如需詳細資訊，請參閱：
+如需相關資訊，請參閱：
   
 - [Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer/)
     
-- [網路規劃和 Office 365 的效能調整](https://aka.ms/tune)
+- [Office 365 的網路規劃和效能調整](https://aka.ms/tune)
     
 - [Office 365 績效管理](https://mva.microsoft.com/en-US/training-courses/office-365-performance-management-8416)
     
@@ -245,17 +246,17 @@ ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，
 
 您也可以將下列選項併入 ExpressRoute 部署中：
   
-- **您邊緣的安全性：**若要提供進階的安全性的流量傳送和接收透過 ExpressRoute 連線，例如流量檢查或入侵/惡意程式碼偵測置於您 DMZ 內或在您的內部網路的框線的流量路徑中的安全性設備。
+- **您邊緣的安全性：** 若要提供進階的安全性的流量傳送和接收透過 ExpressRoute 連線，例如流量檢查或入侵/惡意程式碼偵測置於您 DMZ 內或在您的內部網路的框線的流量路徑中的安全性設備。
     
     若要防止 Azure Vm 初始化直接與網際網路位置流量的 Vm 的網際網路流量 advertise 預設路由給 Microsoft。跨 ExpressRoute 連線及透過您的內部部署 proxy 伺服器路由傳送至網際網路的流量。Azure Vm Azure PaaS 服務或 Office 365 的流量路由傳送回跨 ExpressRoute 連線。
     
-- **WAN 最佳化程式：**您可以部署在私人的對等連線的兩側 WAN 最佳化程式跨部署 azure 虛擬網路 (VNet)。Azure VNet、 內使用 Azure marketplace 和使用者定義路由的 WAN 最佳化網路 appliance 透過 appliance 的流量路由傳送。
+- **WAN 最佳化程式：** 您可以部署在私人的對等連線的兩側 WAN 最佳化程式跨部署 azure 虛擬網路 (VNet)。Azure VNet、 內使用 Azure marketplace 和使用者定義路由的 WAN 最佳化網路 appliance 透過 appliance 的流量路由傳送。
     
-- **服務品質：**使用您的流量 IPv4 標頭中的區別服務代碼點 (DSCP) 值標示語音、 互動式視訊/，或最大的努力傳遞。這是特別重要的 Microsoft 對等關係與 Skype 商務 Online 流量。
+- **服務品質：** 使用您的流量 IPv4 標頭中的區別服務代碼點 (DSCP) 值標示語音、 互動式視訊/，或最大的努力傳遞。這是特別重要的 Microsoft 對等關係與 Skype 商務 Online 流量。
     
 請參閱如需詳細資訊下列額外資源：
   
-- [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
+- [ExpressRoute for Office 365](https://aka.ms/expressrouteoffice365)
     
 - [Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer/)
     
