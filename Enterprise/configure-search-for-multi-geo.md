@@ -16,6 +16,7 @@ ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "18908327"
 ---
 # <a name="configure-search-for-onedrive-for-business-multi-geo"></a>設定商務用 OneDrive 多地理位置的搜尋
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/27/2018
 
 -   搜尋中心
 
--   會使用 SharePoint 搜尋 API 的自訂搜尋應用程式
+-   使用 SharePoint 搜尋 API 的自訂搜尋應用程式
 
 ### <a name="onedrive-for-business"></a>商務用 OneDrive
 
@@ -47,19 +48,19 @@ ms.lasthandoff: 04/27/2018
 
 多地理位置環境一設定好之後，在 Delve 中搜尋的使用者就會取得來自所有地理位置的結果。
 
-Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的預覽。針對在衛星地理位置儲存的檔案，則會改為顯示檔案類型的圖示。
+Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的預覽。針對儲存在衛星地理位置的檔案，則會改為顯示檔案類型的圖示。
 
 ### <a name="the-sharepoint-home-page"></a>SharePoint 首頁
 
-多地理位置環境一設定好，使用者就會看到 SharePoint 首頁上來自多個地理位置的最新消息、最新動向及追蹤網站。如果他們使用 SharePoint 首頁上的 [搜尋] 方塊，他們會收到來自多個地理位置合併的結果。
+多地理位置環境一設定好，使用者就會在 SharePoint 首頁上看到來自多個地理位置的最新消息、最新動向及追蹤網站。如果他們使用 SharePoint 首頁上的 [搜尋] 方塊，他們會收到來自多個地理位置合併的結果。
 
 ### <a name="the-search-center"></a>搜尋中心
 
-在多地理位置環境設定好之後，每個搜尋中心會繼續只顯示來自本身地理位置的結果。系統管理員必須[變更每個搜尋中心的設定](#_Set_up_a_1)，以從所有地理位置取得結果。之後，在搜尋中心中搜尋的使用者會取得來自所有地理位置的結果。
+在多地理位置環境設定好之後，每個搜尋中心都會繼續只顯示來自本身地理位置的結果。系統管理員必須[變更每個搜尋中心的設定](#_Set_up_a_1)，以取得來自所有地理位置的結果。之後，在搜尋中心中搜尋的使用者會取得來自所有地理位置的結果。
 
 ### <a name="custom-search-applications"></a>自訂搜尋應用程式
 
-按慣例，自訂搜尋應用程式會使用現有的 SharePoint 搜尋 REST API 與搜尋索引互動。若要取得全部或部分地理位置的結果，應用程式必須在要求中[呼叫 API，並包含新多地理位置查詢參數](#_Get_custom_search)。此會觸發將查詢展開傳送至所有地理位置。
+按慣例，自訂搜尋應用程式會使用現有的 SharePoint 搜尋 REST API 與搜尋索引互動。若要取得來自全部或部分地理位置的結果，應用程式必須在要求中[呼叫 API，並包含新多地理位置查詢參數](#_Get_custom_search)。這會觸發將查詢展開傳送至所有地理位置。
 
 ## <a name="whats-different-about-search-in-a-multi-geo-environment"></a>在多地理位置環境中搜尋的差異為何？
 
@@ -76,13 +77,13 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 <tbody>
 <tr class="odd">
 <td align="left">升階的結果</td>
-<td align="left">您可以在不同層級建立含升階結果的查詢規則：針對整個租用戶、網站集合或網站。在多地理位置環境中，如果您想要將結果升級至<strong>所有</strong>地理位置中的搜尋中心，以<strong>租用戶</strong>層級定義升階結果。如果您<strong>只</strong>想要升級搜尋中心內的結果，該結果就位於網站集合或網站的地理位置中，請以<strong>網站集合</strong>或<strong>網站</strong>層級定義結果。</td>
-<td align="left">如果您不需要每個地理位置的其他升階結果 (例如出差的不同規則)，我們建議您以租用戶層級定義升階結果。</td>
+<td align="left">您可以在不同層級建立含升階結果的查詢規則：針對整個租用戶、網站集合或網站。在多地理位置環境中，如果您想要將結果升級至<strong>所有</strong>地理位置中的搜尋中心，請在<strong>租用戶</strong>層級定義升階結果。如果您<strong>只</strong>想要升級搜尋中心內的結果，該結果就位於網站集合或網站的地理位置中，請以<strong>網站集合</strong>或<strong>網站</strong>層級定義結果。</td>
+<td align="left">如果您不需要每個地理位置的其他升階結果 (例如出差的不同規則)，我們建議您在租用戶層級定義升階結果。</td>
 </tr>
 <tr class="even">
 <td align="left">搜尋精簡器</td>
-<td align="left">搜尋會傳回來自某租用戶所有地理位置的精簡器，然後會對它們進行彙總。彙總是最佳效果，這表示精簡器計數可能不是 100% 正確的。在大部分以搜尋為導向的情況下，此精確度就已足夠。</td>
-<td align="left">針對根據精簡器完整性的以搜尋為導向的應用程式，查詢每個地理位置是獨立的，而不需使用多地理位置展開傳送。</td>
+<td align="left">搜尋會傳回來自某租用戶所有地理位置的精簡器，然後會對它們進行彙總。彙總是最大努力的結果，這表示精簡器計數可能不是 100% 正確的。在大部分以搜尋為導向的情況下，此精確度就已足夠。</td>
+<td align="left">針對依賴精簡器完整性且以搜尋為導向的應用程式，查詢每個地理位置都是獨立的，而不需使用多地理位置展開傳送。</td>
 </tr>
 <tr class="odd">
 <td align="left"></td>
@@ -90,9 +91,9 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 <td align="left">將<a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
 </tr>
 <tr class="even">
-<td align="left">文件 ID</td>
-<td align="left">如果您要開發根據文件 ID 之以搜尋為導向的應用程式，請注意，在多地理位置環境中的文件 ID 在跨地理位置間不是唯一的，每個地理位置的文件 ID 是唯一的。</td>
-<td align="left">我們新增了可識別地理位置的欄。使用此欄來達到唯一性。此欄名為「GeoLocationSource」。</td>
+<td align="left">文件識別碼</td>
+<td align="left">如果您要開發依賴文件識別碼且以搜尋為導向的應用程式，請注意，在多地理位置環境中的文件識別碼在跨地理位置間不是唯一的，每個地理位置的文件識別碼是唯一的。</td>
+<td align="left">我們新增了可識別地理位置的欄。使用此欄來達到唯一性。此欄名為 “GeoLocationSource”。</td>
 </tr>
 <tr class="odd">
 <td align="left">結果數目</td>
@@ -115,24 +116,24 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">僅應用程式驗證</td>
-<td align="left">在多地理位置搜尋中不支援僅應用程式驗證 (來自服務的特殊權限存取)。</td>
+<td align="left">僅 App 驗證</td>
+<td align="left">在多地理位置搜尋中不支援僅 App 驗證 (來自服務的特殊權限存取)。</td>
 </tr>
 <tr class="even">
 <td align="left">來賓使用者</td>
-<td align="left">來賓使用者只能取得他們透過其中搜尋之地理位置的結果。</td>
+<td align="left">來賓使用者只能取得他們在其中搜尋之地理位置的結果。</td>
 </tr>
 </tbody>
 </table>
 
-## <a name="how-does-search-work-in-a-multi-geo-environment"></a>在多地理位置環境中搜尋的運作方式？
+## <a name="how-does-search-work-in-a-multi-geo-environment"></a>搜尋在多地理位置環境中的運作方式？
 
-**所有**搜尋用戶端會使用現有 SharePoint 搜尋 REST API 與搜尋索引互動。
+**所有**搜尋用戶端都會使用現有 SharePoint 搜尋 REST API 與搜尋索引互動。
 <img src="media/configure-search-for-multi-geo_image1-1.png" />
 
 1. 搜尋用戶端會使用查詢屬性 EnableMultiGeoSearch = true 來呼叫搜尋 REST 端點。
-2. 系統會將查詢傳送至租用戶中所有的地理位置中。
-3. 每個地理位置的搜尋結果會合併並排名。
+2. 系統會將查詢傳送至租用戶中的所有地理位置中。
+3. 來自每個地理位置的搜尋結果會合併並排名。
 4. 用戶端會取得整合的搜尋結果。
 
 
@@ -142,37 +143,37 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 <span id="_Set_up_a_1" class="anchor"><span id="_Ref505252370" class="anchor"></span></span>
 ## <a name="get-a-search-center-to-show-results-from-all-geo-locations"></a>取得搜尋中心以顯示來自所有地理位置的結果
 
-每個搜尋中心提供數種類別，您必須個別設定每個類別。
+每個搜尋中心都提供數種類別，而且您必須個別設定每個類別。
 
-1.  請確定您使用有權編輯搜尋結果網頁與搜尋結果網頁組件的帳戶來執行這些步驟。
+1.  請務必使用有權編輯搜尋結果網頁與搜尋結果網頁組件的帳戶來執行這些步驟。
 
-2.  瀏覽至 [搜尋結果] 頁面 (請參閱搜尋結果網頁的[清單](https://support.office.com/article/174d36e0-2f85-461a-ad9a-8b3f434a4213))
+2.  瀏覽至 [搜尋結果] 頁面 (請參閱搜尋結果頁面的[清單](https://support.office.com/article/174d36e0-2f85-461a-ad9a-8b3f434a4213))
 
 3.  選取要設定的類別，請按一下右上角的 [設定]**** 圖示，然後按一下 [編輯頁面] ****。在編輯模式中搜尋結果網頁會開啟。
 
      ![](media/configure-search-for-multi-geo_image2.png)
 1.  在搜尋結果網頁組件中，請將指標移至右上角的 [網頁組件]，按一下箭號，然後按一下功能表上的 [編輯網頁組件]**** 。搜尋結果網頁組件工具窗格隨即在頁面左上方的功能區中開啟。![](media/configure-search-for-multi-geo_image3.png)
 
-1.  在網頁組件工具窗格中 [設定]**** 區段中，在 [結果控制設定]****，請選取 [顯示多地理位置結果]**** 以取得搜尋結果網頁組件，以顯示來自所有地理位置的結果。
+1.  在網頁組件工具窗格 [設定]**** 區段中，在 [結果控制設定]****，請選取 [顯示多地理位置結果]**** 以取得搜尋結果網頁組件，以顯示來自所有地理位置的結果。
 
 2.  按一下 [確定]**** 以儲存變更並且關閉網頁組件工具窗格。
 
 3.  檢查您對搜尋結果網頁組件所做的變更，請在主功能表的 [頁面] 索引標籤上按一下 [存回]****。
 
-4.  使用頁面頂端之註解中提供的連結發佈變更。
+4.  使用頁面頂端之附註中提供的連結發佈變更。
 
 <span id="_Get_custom_search" class="anchor"><span id="_Ref501388387" class="anchor"></span></span>
-## <a name="get-custom-search-applications-to-show-results-from-all-or-some-geo-locations"></a>取得自訂搜尋應用程式，以顯示所有或部分地理位置的結果
+## <a name="get-custom-search-applications-to-show-results-from-all-or-some-geo-locations"></a>取得自訂搜尋應用程式，以顯示來自全部或部分地理位置的結果
 
-自訂搜尋應用程式會透過指定含對 SharePoint 搜尋 REST API 之要求的查詢參數，來從全部或部分地理位置取得結果。根據查詢參數，系統會將查詢展開傳送至所有地理位置或部分的地理位置。比方說，如果您只需要查詢地理位置的子集來尋找相關資訊，您可以控制只對這些項目進行展開傳送。如果要求成功，SharePoint 搜尋 REST API 會傳回回應資料。
+自訂搜尋應用程式會透過指定含對 SharePoint 搜尋 REST API 之要求的查詢參數，以取得來自全部或部分地理位置的結果。視查詢參數而定，系統會將查詢展開傳送至所有地理位置或部分的地理位置。例如，如果您只需要查詢地理位置的子集來尋找相關資訊，您可以控制只對這些項目進行展開傳送。如果要求成功，SharePoint 搜尋 REST API 會傳回回應資料。
 
 ### <a name="query-parameters"></a>查詢參數
 
-EnableMultiGeoSearch - 這是布林值，其會指出是否應將查詢展開傳送至多地理位置租用戶的其他地理位置之索引。將其設為 **true** 以展開傳送查詢。**false** 則不展開傳送查詢。預設值是 **false**。如果您不包含此參數，系統**不**會將查詢展開傳送至其他地理位置。如果您在非多地理位置環境中使用該參數，則該參數會遭到忽略。
+EnableMultiGeoSearch - 這是布林值，它會指出是否應該將查詢展開傳送至多地理位置租用戶的其他地理位置之索引。將它設定為 **true** 以展開傳送查詢；設定為 **false** 則不展開傳送查詢。預設值是 **false**。如果您不包含此參數，系統**不**會將查詢展開傳送至其他地理位置。如果您在非多地理位置環境中使用該參數，則該參數會被忽略。
 
 ClientType - 這是一個字串。輸入每個搜尋應用程式的唯一用戶端名稱。如果您不包含此參數，則系統**不**會將查詢展開傳送至其他地理位置。
 
-MultiGeoSearchConfiguration - 這是在 **EnableMultiGeoSearch** 為 **true** 時，在多地理位置租用戶中要將查詢展開傳送至哪些地理位置的選用清單。如果您不包含此參數，或將它留白，則系統會將查詢展開傳送至所有地理位置。針對每個地理位置，請以 JSON 格式輸入下列項目：
+MultiGeoSearchConfiguration - 這是在 **EnableMultiGeoSearch** 為 **true** 時，要將查詢展開傳送至多地理位置租用戶中哪些地理位置的選用清單。如果您不包含此參數，或將它留白，則系統會將查詢展開傳送至所有地理位置。針對每個地理位置，請以 JSON 格式輸入下列項目：
 
 <table>
 <thead>
@@ -212,11 +213,11 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">完整</td>
+<td align="left">Full</td>
 <td align="left">來自<strong>所有</strong>地理位置的完整結果。</td>
 </tr>
 <tr class="even">
-<td align="left">部分</td>
+<td align="left">Partial</td>
 <td align="left">從一或多個地理位置的部分結果。結果會因為暫時性錯誤而不完整。</td>
 </tr>
 
@@ -239,7 +240,7 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 <tbody>
 <tr class="odd">
 <td align="left">Content-Type</td>
-<td align="left">應用程式/json; odata = 詳細資訊</td>
+<td align="left">application/json;odata=verbose</td>
 </tr>
 </tbody>
 </table>
@@ -248,7 +249,7 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 
 https://\<tenant\>/\_api/search/query?querytext='sharepoint'&Properties='EnableMultiGeoSearch:true'&ClientType='my\_client\_id'
 
-#### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>要展開傳送至**一些**地理位置的範例 GET 要求
+#### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>要展開傳送至**部分**地理位置的範例 GET 要求
 
 https:// <tenant>/_api/search/query?querytext='site'&ClientType='my_client_id'&Properties='EnableMultiGeoSearch:true, MultiGeoSearchConfiguration:[{DataLocation\:"NAM"\,Endpoint\:"https\://contosoNAM.sharepoint.com"\,SourceId\:"B81EAB55-3140-4312-B0F4-9459D1B4FFEE"}\,{DataLocation\:"CAN"\,Endpoint\:"https\://contosoCAN.sharepoint-df.com"}]'
 
