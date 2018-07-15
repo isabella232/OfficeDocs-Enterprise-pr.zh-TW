@@ -15,21 +15,22 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
-ms.openlocfilehash: eac56ae28ab48bb53842725d703bf81fb37d31eb
-ms.sourcegitcommit: def3e311db9322e469753bac59ff03624349b140
+ms.openlocfilehash: b603e019564f85d490dd560bda9967c9bb164d4b
+ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "20319244"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
- **摘要：**連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行管理工作。
+ **摘要：** 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行管理工作。
   
 Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 365 PowerShell 是包含三個步驟的簡單程序，您可以在其中安裝必要的軟體、執行必要的軟體，然後連線至您的 Office 365 組織。 
 
   
 > [!TIP]
-> **第一次使用 PowerShell？**請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/en-us/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
+> **第一次使用 PowerShell？** 請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/en-us/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
   
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
@@ -71,10 +72,11 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 
 1. 執行 Windows PowerShell 命令提示字元。
 2. 在 [Windows PowerShell]**** 命令視窗中，執行下列命令：
     
-```
-$UserCredential = Get-Credential
-Connect-MsolService -Credential $UserCredential
-```
+  ```
+  $UserCredential = Get-Credential
+  Connect-MsolService -Credential $UserCredential
+
+  ```
 
 3. 在 [Windows PowerShell 認證要求] **** 對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
     
@@ -83,9 +85,9 @@ Connect-MsolService -Credential $UserCredential
 1. 執行 Windows PowerShell 命令提示字元。
 2. 在 [Windows PowerShell 的 Microsoft Azure Active Directory 模組]**** 命令視窗中，執行下列命令。
     
-```
-Connect-MsolService
-```
+  ```
+  Connect-MsolService
+  ```
 
 3. 在 [Azure Active Directory PowerShell] **** 對話方塊中，鍵入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [登入]****。
     
@@ -99,7 +101,7 @@ Connect-MsolService
   
 - **密碼錯誤是常見的問題** 。再次執行步驟 3，並密切注意您輸入的使用者名稱和密碼。
     
-- * *Microsoft Azure Active Directory Module for Windows PowerShell 需要的 Microsoft.NET Framework 3.5。*在您電腦 * * 啟用 x * 功能。很有可能您的電腦已安裝的較新版本 (例如 4 或 4.5。*x *），但回溯相容性與較舊版本的.NET Framework 可以啟用或停用。如需詳細資訊，請參閱下列主題：
+- * *Microsoft Azure Active Directory Module for Windows PowerShell 需要的 Microsoft.NET Framework 3.5。* 在您電腦 * * 啟用 x * 功能。很有可能您的電腦已安裝的較新版本 (例如 4 或 4.5。* x *），但回溯相容性與較舊版本的.NET Framework 可以啟用或停用。如需詳細資訊，請參閱下列主題：
     
   - 針對 Windows Server 2012 或 Windows Server 2012 R2，請參閱[使用新增角色及功能精靈來啟用 .NET Framework 3.5](https://go.microsoft.com/fwlink/p/?LinkId=532368)
     
@@ -151,6 +153,7 @@ Connect-MsolService
 ```
 $UserCredential = Get-Credential
 Connect-AzureAD -Credential $UserCredential
+
 ```
 
 在 [Windows PowerShell 認證要求] **** 對話方塊中，輸入您的 Office 365工作或學校帳戶 使用者名稱和密碼，然後按一下 [確定]****。
