@@ -3,7 +3,7 @@ title: 高可用性同盟驗證階段 2 設定網域控制站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/06/2018
+ms.date: 07/09/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
-description: 摘要： 設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。
-ms.openlocfilehash: 9713e6b0f5241ece4e0f90aa5e0343582e38cdaa
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
+description: 摘要：在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
+ms.openlocfilehash: 3f898fea8fc92d4f7ea392bfe854425beafb1eb4
+ms.sourcegitcommit: 3a4ab28f3f4172d596426f0da40bcab8c46ef74d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "20215865"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
- **摘要：**設定網域控制站與您的高可用性同盟驗證 Office 365 DirSync server in Microsoft Azure。
+ **摘要：** 在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
   
 在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會在 Azure 虛擬網路中設定兩個網域控制站和 DirSync 伺服器。然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。
   
@@ -35,13 +36,13 @@ ms.lasthandoff: 04/20/2018
   
 |**項目**|**虛擬機器名稱**|**圖庫影像**|**儲存類型**|**大小下限**|
 |:-----|:-----|:-----|:-----|:-----|
-|1.  <br/> |![](./images/Common_Images/TableLine.png)（第一個網域控制站，範例 DC1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|2.  <br/> |![](./images/Common_Images/TableLine.png)（第二個網域控制站，範例 DC2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|3.  <br/> |![](./images/Common_Images/TableLine.png)（DirSync 伺服器、 範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|4.  <br/> |![](./images/Common_Images/TableLine.png)（第一部 AD FS 伺服器、 範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|5.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 AD FS 伺服器、 範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|6.  <br/> |![](./images/Common_Images/TableLine.png)（第一個 web 應用程式 proxy 伺服器、 範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
-|7.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 web 應用程式 proxy 伺服器、 範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |StandardLRS  <br/> |Standard_D2  <br/> |
+|1.  <br/> |![](./images/Common_Images/TableLine.png) (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|2.  <br/> |![](./images/Common_Images/TableLine.png) (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|3.  <br/> |![](./images/Common_Images/TableLine.png)（DirSync 伺服器、 範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|4.  <br/> |![](./images/Common_Images/TableLine.png)（第一部 AD FS 伺服器、 範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|5.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 AD FS 伺服器、 範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|6.  <br/> |![](./images/Common_Images/TableLine.png)（第一個 web 應用程式 proxy 伺服器、 範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|7.  <br/> |![](./images/Common_Images/TableLine.png)（第二個 web 應用程式 proxy 伺服器、 範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
    
  **表 M-Azure 中的 Office 365 的高可用性同盟驗證的虛擬機器**
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/20/2018
 重新叫用您定義資料表 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
   
 > [!NOTE]
-> [!附註] 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
   
@@ -242,17 +243,17 @@ Restart-Computer
 
 以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
   
-**階段 2： 的網域控制站和 DirSync server 高可用性同盟的驗證基礎結構 Azure 中**
+**階段 2：Azure 中的高可用性同盟驗證基礎結構的網域控制站和 DirSync 伺服器。**
 
 ![具有網域控制站的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 2](images/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[高可用性同盟驗證階段 3： 設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)繼續設定此工作量。
+使用[High availability federated authentication Phase 3: Configure AD FS servers](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)以繼續設定此工作負載。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   

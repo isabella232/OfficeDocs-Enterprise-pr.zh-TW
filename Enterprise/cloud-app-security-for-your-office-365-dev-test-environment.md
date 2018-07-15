@@ -1,9 +1,9 @@
 ---
-title: "Office 365 開發人員/測試環境的雲端應用程式安全性"
+title: Office 365 開發人員/測試環境的雲端 App 安全性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 07/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -13,23 +13,24 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: 22248f2f-b370-435e-b6ac-0ae0cae36b96
-description: "摘要： 設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。"
-ms.openlocfilehash: ac5f5c25ecb4d97ac1c8fe3b48096ee02da2ec3e
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。
+ms.openlocfilehash: d62524b6c4373c851a67b4039146ad8b6a610790
+ms.sourcegitcommit: 3a4ab28f3f4172d596426f0da40bcab8c46ef74d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "20215875"
 ---
-# <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的雲端應用程式安全性
+# <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的雲端 App 安全性
 
- **摘要：**設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。
+ **摘要：** 設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。
   
 Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全性管理，可讓您建立的監控和通知您在 Office 365 訂閱中可疑的活動，讓您可以調查並採取可能的原則修復動作。如需詳細資訊，請參閱[概觀 （英文) 的雲端應用程式 Office 365 的安全性](https://support.office.com/article/Overview-of-Advanced-Security-Management-in-Office-365-81f0ee9a-9645-45ab-ba56-de9cbccab475)。
   
 使用本文中的指示，您可以啟用並測試您的 Office 365 試用版訂閱中的雲端應用程式安全性。
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
@@ -52,9 +53,9 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
     
   - 如果您使用模擬的企業版 Office 365 開發人員/測試環境，使用[Azure 入口網站](https://portal.azure.com)連線到 CLIENT1 虛擬機器，並從 CLIENT1 登入。
     
-2. 從主要的入口網站] 頁面上，按一下 [**管理**]。
+2. 從主要的入口網站頁面中，按一下 [管理]****。
     
-3. 在左導覽列中，按一下 [**使用者 > 作用中使用者**。
+3. 在左方的瀏覽區域中，按一下 [使用者] > [作用中的使用者]****。
     
 4. 按一下 [**使用者 4**帳戶。
     
@@ -78,7 +79,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
 
 1. 移至 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 並登入您的 Office 365 試用版訂閱以全域管理員帳戶。
     
-2. 按一下 [**安全性&amp;規範**並排顯示。
+2. 按一下 [**系統**] 磚。在 [ **Office 系統管理中心**] 索引標籤上按一下 [**系統中心 > 安全性與規範**。
     
 3. 在左側的導覽窗格中，按一下 [**提醒 > 管理進階提醒**。
     
@@ -108,7 +109,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
 
 1. 在右上角中按一下 [使用者] 圖示，和 [**登出**。
     
-2. 移至[https://portal.office.com](https://portal.office.com)。
+2. 移至 [ [https://portal.office.com](https://portal.office.com)。
     
 3. 在 Office 365 登入頁面中，按一下 [**使用另一個帳戶**。
     
@@ -120,25 +121,25 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
     
 7. 必要時，按一下 [**取消**當系統提示您輸入來更新您的系統管理連絡人資訊。
     
-8. 從主要的入口網站] 頁面上，按一下 [**管理**]。
+8. 從主要的入口網站頁面中，按一下 [管理]****。
     
-9. 在左導覽列中，按一下 [**使用者 > 作用中使用者**。
+9. 在左方的瀏覽區域中，按一下 [使用者] > [作用中的使用者]****。
     
 10. 按一下 [**使用者 5**帳戶。
     
 11. **使用者 5** ] 索引標籤上按一下 [**角色**] 列中的 [**編輯**]。
     
-12. 在 [**編輯使用者角色**] 頁面上按一下**[自訂管理員**、 [**密碼管理員**及**使用者管理管理員**、**替代電子郵件地址**中，輸入**user5@contoso.com**和 [**儲存**。按一下 [**關閉**] 兩次。
+12. 在 [**編輯使用者角色**] 頁面上按一下 **[自訂管理員**、 [**密碼管理員**及**使用者管理管理員**、**替代電子郵件地址**中，輸入**user5@contoso.com**和 [**儲存**。按一下 [**關閉**] 兩次。
     
 13. 按一下右上角中的 [使用者] 圖示] 和 [**登出**。 
     
-14. 移至[https://portal.office.com](https://portal.office.com)。
+14. 移至 [ [https://portal.office.com](https://portal.office.com)。
     
 15. 在 [ **Office 365 登入**] 頁面上，按一下 [全域管理員帳戶名稱。
     
 16. 輸入密碼，然後按一下 [**登入**。
     
-17. 從主要的入口網站] 頁面上，按一下 [**管理**]。
+17. 從主要的入口網站頁面中，按一下 [管理]****。
     
 18. 按一下 [**安全性&amp;規範**並排顯示。
     
@@ -154,7 +155,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
     
 您現在可以使用此環境中建立新的原則及進一步實驗 Office 365 雲端應用程式安全性。請參閱[備妥可供 Office 365 雲端應用程式安全性](https://support.office.com/article/Get-ready-for-Office-365-Cloud-App-Security-d9ee4d67-f2b3-42b4-9c9e-c4529904990a)的其他設定的文章連結。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
