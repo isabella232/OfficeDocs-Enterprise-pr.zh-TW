@@ -15,11 +15,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: c9f837af-8d71-4df1-a285-dedb1c5618b3
 description: 摘要：使用各種資訊保護層級，對 SharePoint Online 小組網站套用 Office 365 標籤和資料外洩防護 (DLP) 原則。
-ms.openlocfilehash: 52617e43f5c1bcb2ab958e751734a2f948ceba37
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 439f59f683090d39ea98730854aa1ca5dc8db482
+ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "20319264"
 ---
 # <a name="protect-sharepoint-online-files-with-office-365-labels-and-dlp"></a>使用 Office 365 標籤與 DLP 來保護 SharePoint Online 檔案
 
@@ -27,6 +28,13 @@ ms.lasthandoff: 04/27/2018
   
 您可以使用本文中的步驟，為基準、機密和高度機密 SharePoint Online 小組網站設計及部署 Office 365 標籤和資料外洩防護 (DLP) 原則。如需這三種保護層級的詳細資訊，請參閱[保護 SharePoint Online 網站與檔案](secure-sharepoint-online-sites-and-files.md)。
   
+## <a name="how-this-works"></a>如何進行此作業
+1. 建立所需標籤並加以發行。發行這些標籤可能長達 12 小時的時間。
+2. 針對所需的 SharePoint 網站，請編輯文件庫設定，將標籤套用至文件庫中的項目。
+3. 建立 DLP 原則，以根據標籤採取行動。
+
+當使用者將文件新增至文件庫時，文件依預設會接收指派的標籤。使用者可以視需要變更標籤。當使用者在組織外部共用文件時，DLP 會檢查是否已指派標籤，且如果 DLP 原則符合標籤則採取行動。DLP 也會尋找其他原則相符項目，例如若設定這類原則，則使用信用卡號碼來保護檔案。 
+
 ## <a name="office-365-labels-for-your-sharepoint-online-sites"></a>適用於 SharePoint Online 網站的 Office 365 標籤
 
 建立 Office 365 標籤並將其指派給 SharePoint Online 小組網站時的三個階段。
@@ -139,13 +147,13 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 7. 在位置清單中，停用 [Exchange 電子郵件]**** 和 [OneDrive 帳戶]**** 位置，然後按一下 [下一步]****。
     
-8. 在 [自訂您要保護的機密資訊類型]**** 窗格中，按一下 [編輯]****。
+8. 在 [Customize the types of sensitive info you want to protect]\(自訂您要保護的機密資訊類型)**** 窗格中，按一下 [編輯]****。
     
 9. 在 [選擇要保護的內容類型]**** 窗格中，從下拉式方塊按一下 [新增]****，然後按一下 [標籤]****。
     
 10. 在 [標籤]**** 窗格中，按一下 [+ 新增]**** 並選取 [敏感性]**** 標籤，然後依序按一下 [新增]**** 和 [完成]****。
     
-11. 在 [選擇要保護的內容類型]**** 窗格中，按一下 [儲存]****。
+11. 在 [Choose the types of content to protect]\(選擇要保護的內容類型)**** 窗格中，按一下 [儲存]****。
     
 12. 在 [Customize the types of sensitive info you want to protect]\(自訂您要保護的機密資訊類型)**** 窗格中，按一下 [下一步]****。
     
@@ -153,11 +161,12 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 14. 在 [Customize policy tips and email notifications]\(自訂原則提示和電子郵件通知)**** 窗格中，按一下 [Customize the policy tip text]\(自訂原則提示文字)****。
     
-15. 在文字方塊中，鍵入或貼上下列內容：
+15. 在文字方塊中，根據您是否實作 Azure 資訊保護來保護高度機密的檔案，以鍵入或貼上下列其中一個提示：
     
   - 若要與組織外部的使用者共用，請下載檔案，然後將它開啟。 依序按一下 [檔案]、[保護文件] 和 [以密碼加密]，然後指定強式密碼。 以個別電子郵件或其他通訊方式傳送密碼。
+  - 高度機密的檔案會受加密保護。只有獲得您 IT 部門授與權限的外部使用者可以讀取它們。
     
-    或者，鍵入或貼上您自己的原則提示，以指示使用者如何共用組織外部的檔案。
+    或者，鍵入或貼上您自己的原則提示，以指示使用者如何共用組織外部的檔案。如需有關將 Azure 資訊保護所保護的檔案權限授與外部使用者的詳細資訊，請參閱新增外部使用者的權限。
     
 16. 按一下 [確定]****。
     
@@ -187,13 +196,13 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 7. 在位置清單中，停用 [Exchange 電子郵件]**** 和 [OneDrive 帳戶]**** 位置，然後按一下 [下一步]****。
     
-8. 在 [自訂您要保護的機密資訊類型]**** 窗格中，按一下 [編輯]****。
+8. 在 [Customize the types of sensitive info you want to protect]\(自訂您要保護的機密資訊類型)**** 窗格中，按一下 [編輯]****。
     
 9. 在 [選擇要保護的內容類型]**** 窗格中，從下拉式方塊按一下 [新增]****，然後按一下 [標籤]****。
     
 10. 在 [標籤]**** 窗格中，按一下 [+ 新增]****，並選取 [高度機密]**** 標籤，然後依序按一下 [新增]**** 和 [完成]****。
     
-11. 在 [選擇要保護的內容類型]**** 窗格中，按一下 [儲存]****。
+11. 在 [Choose the types of content to protect]\(選擇要保護的內容類型)**** 窗格中，按一下 [儲存]****。
     
 12. 在 [Customize the types of sensitive info you want to protect]\(自訂您要保護的機密資訊類型)**** 窗格中，按一下 [下一步]****。
     

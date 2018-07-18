@@ -15,23 +15,29 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 5b9c8e41-25d2-436d-89bb-9aecb9ec2b80
 description: 摘要：套用 Azure 資訊保護來保護高度機密 SharePoint Online 小組網站中的檔案。
-ms.openlocfilehash: bab799a784cac579c92fb06ea17592d85fd59af2
-ms.sourcegitcommit: 29c8571ca4912549bac55ec9d1642d21eba5b0e4
+ms.openlocfilehash: 2c4776f5795a5a0b07be0f04b4872abadb4d31ca
+ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2018
-ms.locfileid: "19168497"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "20319284"
 ---
 # <a name="protect-sharepoint-online-files-with-azure-information-protection"></a>使用 Azure 資訊保護來保護 SharePoint Online 檔案
 
  **摘要：** 套用 Azure 資訊保護來保護高度機密 SharePoint Online 小組網站中的檔案。
   
-使用本文中的步驟來設定 Azure 資訊保護，為高度機密 SharePoint Online 小組網站中的檔案提供加密和權限。從網站下載檔案時，加密和權限保護會隨附於檔案。如需高度機密 SharePoint Online 小組網站的詳細資訊，請參閱＜[ SharePoint Online 網站和檔案](secure-sharepoint-online-sites-and-files.md)＞。
-  
-> [!NOTE]
-> 將 Azure 資訊保護加密套用至儲存於 Office 365 中的檔案時，服務會無法處理這些檔案的內容。 共同撰寫、eDiscovery、搜尋、Delve 和其他共同作業功能無法運作。 此外，資料外洩防護 (DLP) 原則只可用於中繼資料 (包括 Office 365 標籤)，但無法用於這些檔案的內容 (例如檔案中的信用卡號碼)。 
-  
-首先，針對您的 Office 365 訂閱使用＜[使用 Office 365 系統管理中心啟用 Azure RMS](https://docs.microsoft.com/information-protection/deploy-use/activate-office365)＞中的指示。
+使用本文中的步驟來設定 Azure 資訊保護，為檔案提供加密和權限。這些檔案可新增至針對高度機密保護所設定的 SharePoint 文件庫。或者，您可以直接從網站開啟檔案，並使用 Azure 資訊保護用戶端來新增加密。此加密和權限保護會與檔案一起移動，即使是從網站下載檔案也一樣。 
+
+這些步驟是屬於較大的解決方案，用於設定 SharePoint 網站和這些網站中檔案的高度機密保護。如需詳細資訊，請參閱[保護 SharePoint Online 網站與檔案](secure-sharepoint-online-sites-and-files.md)。 
+
+不建議針對所有的客戶在 SharePoint Online 中的檔案使用 Azure 資訊保護，但可供需要此檔案子集合保護層級的客戶選擇使用。
+
+這套解決方案的一些相關重要注意事項：
+- 將 Azure 資訊保護加密套用至儲存於 Office 365 中的檔案時，服務會無法處理這些檔案的內容。 共同撰寫、eDiscovery、搜尋、Delve 和其他共同作業功能無法運作。 此外，資料外洩防護 (DLP) 原則只可用於中繼資料 (包括 Office 365 標籤)，但無法用於這些檔案的內容 (例如檔案中的信用卡號碼)。
+- 此解決方案需要使用者選取標籤，適用 Azure 資訊保護所提供的保護。如果您需要自動加密，以及 SharePoint 編製索引並檢查檔案的功能，請考慮使用 SharePoint Online 中的資訊版權管理 (IRM)。當您設定 IRM 的 SharePoint 文件庫時，下載檔案以進行編輯時，會自動進行加密。SharePoint IRM 包含可能會影響決策的限制。如需詳細資訊，請參閱[在 SharePoint 系統管理中心中設定資訊版權管理 (IRM)](https://support.office.com/zh-TW/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239CE6EB-4E81-42DB-BF86-A01362FED65C)。
+
+##<a name="admin-setup"></a>系統管理員設定
+首先，針對您的 Office 365 訂閱，使用[如何從 Office 365 系統管理中心啟用 Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-office365) 中的指示。
   
 接著，為 Azure 資訊保護設定新的限域原則和子標籤，為高度機密 SharePoint Online 小組網站提供保護與權限。
   
@@ -75,10 +81,8 @@ ms.locfileid: "19168497"
     
 20. 在 [Azure 資訊保護 – 限域原則]**** 刀鋒視窗中，按一下 [發佈]****。
     
-以下是高度機密 SharePoint Online 小組網站的設定結果。
-  
-![適用於隔離 SharePoint Online 小組網站的 Azure 資訊保護。](images/8cc92aa4-e7bc-4c2f-a4a4-3b034b21aebf.png)
-  
+ 
+##<a name="client-setup"></a>用戶端設定
 現在您已可開始建立文件，並利用 Azure 資訊保護和新標籤進行保護。
   
 您必須在自己的裝置或以 Windows 為基礎的電腦上[安裝 Azure 資訊保護用戶端](https://docs.microsoft.com/information-protection/rms-client/install-client-app)。您可以編寫指令碼並自動化安裝，使用者也可以手動安裝用戶端。請參閱下列資源：
@@ -94,6 +98,12 @@ ms.locfileid: "19168497"
 > [!NOTE]
 > 如果您有多個極機密 SharePoint Online 小組網站，應利用上述設定來建立多個 Azure 資訊保護限域原則，並設定子標籤，再將每個子標籤的權限設為特定 SharePoint Online 小組網站的網站成員存取群組。 
   
+##<a name="adding-permissions-for-external-users"></a>新增外部使用者的權限
+您可以使用兩種方式，將 Azure 資訊保護所保護的檔案存取權授與外部使用者。在這兩種情況下，外部使用者皆必須擁有 Azure AD 帳戶。如果外部使用者不屬於使用 Azure AD 的組織成員，則可以使用下列註冊頁面以個人身分取得 Azure AD 帳戶：[https://aka.ms/aip-signup](https://aka.ms/aip-signup)。
+
+ - 將外部使用者新增至用來設定保護標籤的 Azure AD 群組。您必須先新增帳戶作為目錄中的 B2B 使用者。[Azure 資訊保護快取的群組成員資格](https://docs.microsoft.com/zh-TW/azure/information-protection/plan-design/prepare#group-membership-caching-by-azure-information-protection)可能需要幾個小時的時間。  
+ - 將外部使用者直接新增至標籤保護。您可以從組織 (例如 Fabrikam.com)、Azure AD 群組 (例如組織內的財務部門) 或使用者，新增所有使用者。例如，您可以將外部的監理人員小組新增至標籤保護。
+
 ## <a name="see-also"></a>另請參閱
 
 [保護 SharePoint Online 網站與檔案](secure-sharepoint-online-sites-and-files.md)

@@ -15,11 +15,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 description: 摘要：在 SharePoint Online 和 Office 365 中保護檔案的設定建議。
-ms.openlocfilehash: 88ad010e10949c9ef4e761dbca95b7afd0e1f901
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 806f9880347a5fa4aff29206651d86b0e18da3a4
+ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "20319224"
 ---
 # <a name="secure-sharepoint-online-sites-and-files"></a>保護 SharePoint Online 網站與檔案
 
@@ -46,9 +47,9 @@ ms.lasthandoff: 04/27/2018
 建議的 SharePoint Online 小組網站依據各種不同 Office 365 功能而定。 針對高度機密的網站，建議您使用 Azure 資訊保護。 Enterprise Mobility + Security (EMS) 包含這項功能。 
   
 下圖顯示四種 SharePoint Online 小組網站的建議設定。
-  
-![SharePoint 網站的建議設定](images/ad0dcd70-f6f5-465c-8d16-1889481ca07a.png)
-  
+
+![SharePoint 網站的建議設定](Media/SharePoint-site-configuration-v2.png)
+
 如圖例所示：
   
 - 基準保護包括公用網站與私用網站這兩個 SharePoint Online 小組網站的選項。 公用網站可供組織中的任何人探索及存取。 私用網站則僅供網站成員探索及存取。 這兩個網站的設定都允許群組外部共用。 
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/27/2018
     
 - 系統會針對「敏感性」和「高度機密」的 Office 365 標籤設定資料外洩防護 (DLP) 原則，以在使用者嘗試將這類檔案傳送到組織外部時，對他們發出警告或阻止此動作。
     
-- 如果網站設有高度機密的保護，Azure 資訊保護會進行加密，並授與檔案的權限。
+- 如您的案例有需要，可以使用 Azure 資訊保護進行加密，並將權限授與高度機密的檔案。並不建議用於所有客戶。
     
 ## <a name="tenant-wide-settings-for-sharepoint-online-and-onedrive-for-business"></a>SharePoint Online 和商務用 OneDrive 的租用戶整體設定
 
@@ -155,7 +156,7 @@ SharePoint Online 和商務用 OneDrive 的裝置存取設定可讓您決定要�
   
 ## <a name="azure-information-protection"></a>Azure 資訊保護
 
-您可以使用 Azure 資訊保護，來套用與檔案隨行的標籤和保護。 建議您為此解決方案使用限域的 Azure 資訊保護原則以及高度機密標籤的子標籤，來加密需要以最高安全性等級保護的檔案，和為其授予權限。 
+如果適用於您的安全性案例，則您可以使用 Azure 資訊保護，來套用與檔案隨行的標籤和保護。Azure 資訊保護標籤與 Office 365 標籤不同。建議您為此解決方案使用限域的 Azure 資訊保護原則以及高度機密標籤的子標籤，來加密需要以最高安全性等級保護的檔案，和為其授予權限。 
   
 請留意，若將 Azure 資訊保護套用至儲存於 Office 365 中的檔案，服務就無法處理這些檔案的內容。 共同撰寫、eDiscovery、搜尋、Delve 和其他共同作業功能無法運作。 此外，DLP 原則只可用於中繼資料 (包括 Office 365 標籤)，但不可用於這些檔案的內容 (例如檔案中的信用卡號碼)。
   
