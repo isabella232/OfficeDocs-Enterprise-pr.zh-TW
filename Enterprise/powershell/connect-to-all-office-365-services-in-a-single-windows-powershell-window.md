@@ -16,12 +16,12 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 連線至單一 Windows PowerShell 視窗中的所有 Office 365 服務的 Windows PowerShell。
-ms.openlocfilehash: ba23dde0fd79d13274244b52c5914d9249640570
-ms.sourcegitcommit: f496a401245240ec01754edcd4d44e7a0194d068
+ms.openlocfilehash: bf5e81012eaa3e7e200f9b1984b3d3fe01c30799
+ms.sourcegitcommit: c3869a332512dd1cc25cd5a92a340050f1da0418
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "19907184"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "20720369"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
@@ -60,7 +60,7 @@ ms.locfileid: "19907184"
     
 - 您需要安裝所需的 Azure AD 模組 SharePoint Online 和 Skype 的商務 Online：
     
-   - [Azure Active Directory V2](connect-to-office-365-powershell.md#ConnectV2)
+   - [Azure Active Directory V2](connect-to-office-365-powershell.md##connect-with-the-azure-active-directory-powershell-for-graph-module)
    - [SharePoint Online 管理命令介面](https://go.microsoft.com/fwlink/p/?LinkId=255251)
    - [Skype Online，企業版 Windows PowerShell 模組](https://go.microsoft.com/fwlink/p/?LinkId=532439)
     
@@ -197,7 +197,7 @@ Import-PSSession $sfboSession
 
 Exchange Online 和安全性&amp;規範中心，請參閱下列主題使用多重要素驗證連線：
 
-- [連線至 Exchange Online PowerShell 使用多重要素驗證](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell)
+- [使用多重要素驗證連線至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell)
 - [連線至 Office 365 的安全性與規範中心 PowerShell 使用多重要素驗證](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell?view=exchange-ps)
  
 請注意，在這兩種情況下，您必須使用不同的 Exchange Online 遠端 PowerShell 模組的工作階段進行連線。
@@ -207,7 +207,7 @@ Exchange Online 和安全性&amp;規範中心，請參閱下列主題使用多�
 
 [!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>See also
 
 - [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
