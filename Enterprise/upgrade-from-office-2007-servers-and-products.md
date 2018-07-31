@@ -10,7 +10,6 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
 search.appverid:
-- MET150
 - LCC120
 - OFF120
 - OFF140
@@ -21,12 +20,12 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援的 Office 2007 伺服器與用戶端應用程式推出結束時並不提供自訂的支援協定。若要啟動立即規劃升級使用本文。
-ms.openlocfilehash: 6935fab5e91de05c427d2bb1c233f988dc13e8ce
-ms.sourcegitcommit: a9c84d02e94c99ff6b1099b4a9ae695be08210e2
+ms.openlocfilehash: 9318dd4f85d02673137498375e7ecdcfe2b4b553
+ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "21169855"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "21548884"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a>可協助您升級從 Office 2007 的伺服器和用戶端的資源
 
@@ -52,13 +51,13 @@ ms.locfileid: "21169855"
 選擇下列選項之一：
 - **移至 Office 365**： 許多客戶，這是有效率且符合成本效益的解決方案。請參閱[如何執行我們移至 Office 365 企業版？](https://support.office.com/article/62084652-f051-4b0b-87b3-f766418386bf.aspx)
     
-- **升級您的內部伺服器和應用程式。** 請參閱[Exchange 2007](exchange-2007-end-of-support.md)、 [SharePoint Server 2007](sharepoint-2007-end-of-support.md)、 [Project Server 2007](project-server-2007-end-of-support.md)、 [Office Communications Server](/Skype/SfbServer/plan-your-deployment/upgrade.md)，與[PerformancePoint Server 2007](pps-2007-end-of-support.md)規劃的內容。 
+- **升級您的內部伺服器和應用程式。** 請參閱[Exchange 2007](exchange-2007-end-of-support.md)、 [SharePoint Server 2007](sharepoint-2007-end-of-support.md)、 [Project Server 2007](project-server-2007-end-of-support.md)、 [Office Communications Server](https://docs.microsoft.com/Skype/SfbServer/plan-your-deployment/upgrade)，與[PerformancePoint Server 2007](pps-2007-end-of-support.md)規劃的內容。 
     
 - **實作包括 Office 365 的混合式解決方案**和您的內部伺服器和應用程式。請參閱[Office 365 的混合式雲端解決方案概觀。](https://support.office.com/article/59616fab-acdb-40e9-b414-cf0c965c80b7.aspx)
     
 **需要說明嗎？** 請考慮使用協力廠商或大量授權專家。請參閱**[尋找 Office 365 協力廠商或轉售商](https://support.office.com/article/b6c18a9b-2aed-4c84-9d75-af709160258c.aspx)**。 
 > [!TIP]
-> 如果您購買 50 個或多個 Office 365 授權，我們 FastTrack 小組可協助您透過設定 Office 365 的程序。請造訪[FastTrack.Microsoft.com](https://fasttrack.microsoft.com)。
+> 如果您購買 50 個或多個 Office 365 授權，我們 FastTrack 小組可協助您透過設定 Office 365 的程序。請造訪[FastTrack.Microsoft.com](https://www.microsoft.com/fasttrack/microsoft-365/office-365)。
   
 如果您的組織有少於 50 台 Office 365 授權，請參閱[Admins： 升級為最新 Office 用戶端使用適用於企業的 Office 365 的使用者](https://support.office.com/article/f6b00895-b5fd-4af6-a656-b7788ea20cbb.aspx)。 
   
@@ -81,14 +80,12 @@ ms.locfileid: "21169855"
 ## <a name="what-is-office-365"></a>什麼是 Office 365？
 
 Office 365 是屬於 Microsoft Cloud 堆疊為軟體為-a-服務 (SaaS) 方案。[Office 365 企業版方案](https://aka.ms/viirjv)的商業電子郵件、 商務 Online IM 與線上會議及 OneDrive for Business 的線上存放 Skype 包括 Exchange Online。大部分的商業計畫包括可以安裝在電腦 （PC 或 Mac） 智慧型電話 （android （英文）、 iOS、 和 Windows） 與平板電腦 （Android 和 iOS） 的 Office 軟體。與 Office 365，您可以從剛約位置和裝置的各種提高工作效率。 
-  
+
 |**資源**|**描述**|
 |:-----|:-----|
-|**[影片： 什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)** <br/> |觀賞此影片以取得 Office 365 的概觀。  <br/> |
-|**[我們如何移至 Office 365 企業版？](https://support.office.com/article/62084652-f051-4b0b-87b3-f766418386bf.aspx)** <br/> |請閱讀本篇文章以取得如何企業組織可以移至 Office 365 的整體概觀。  <br/> |
 |**[選取 [計劃](https://aka.ms/viirjv)** <br/> |請造訪此頁面，以了解 Office 365 商務方案  <br/> |
 |**[Office 的系統需求](https://aka.ms/o365sysrequirements)** <br/> |檢視系統需求的詳細資料的**Office 365 計劃商務、 教育和政府**] 區段中。  <br/> |
-|**[Microsoft Cloud 平台選項](https://www.microsoft.com/download/details.aspx?id=54432)** <br/> |下載此海報，以了解 Office 365 及 Microsoft Cloud 堆疊。您將了解 Microsoft Cloud 堆疊，包括 Office 365，以及您、 我們客戶和 Microsoft 的責任區域的核心功能。您可以下載海報中的 PDF 或 Visio 格式。  <br/> |
+|**[Microsoft 雲端 IT 架構的資源](microsoft-cloud-it-architecture-resources.md)** <br/> |下載一或多個海報 （英文） 若要深入了解 Microsoft Cloud 及伺服器平台選項。您可以下載海報 （英文） 中 PDF 或 Visio 格式。  <br/> |
 |**[Office 365 常見問題集](https://aka.ms/office365faqs)** <br/> |請造訪此頁面才能看見常見問題 Office 365 的其他資訊連結的清單。  <br/> |
    
 ## <a name="what-is-microsoft-365"></a>什麼是 Microsoft 365？

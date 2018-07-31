@@ -10,7 +10,6 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
 search.appverid:
-- MET150
 - LCC120
 - OFF120
 - OFF140
@@ -21,12 +20,12 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援的 Office 2010 伺服器與用戶端應用程式推出結束時並不提供自訂的支援協定。若要啟動立即規劃升級使用本文。
-ms.openlocfilehash: dd2d8d3a5ad629dcdbddab07cf9209a305a3024c
-ms.sourcegitcommit: a9c84d02e94c99ff6b1099b4a9ae695be08210e2
+ms.openlocfilehash: deca71195aec15370d10003b979e7222dead7418
+ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "21169775"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "21549974"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可協助您升級從 Office 2010 伺服器和用戶端的資源
 
@@ -39,22 +38,21 @@ ms.locfileid: "21169775"
 |Office 2010 （包括 Word 2010、 Excel 2010、 PowerPoint 2010，and Outlook 2010）  <br/> |[Office 2010 結尾的支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
 |Exchange Server 2010  <br/> |[Exchange 2010 結尾的支援藍圖](exchange-2010-end-of-support.md) <br/> |
 |SharePoint 2010 或 SharePoint Server 2010  <br/> |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
-   
-> [!TIP]
-> 更多規劃藍圖即將推出 ！請務必以供未來參照此頁面設為書籤。 
-  
+|Project Server 2010 </br> | [規劃 Project Server 和 Project Online](https://docs.microsoft.com/project/planning-project-server-and-project-online-for-technical-decision-makers) </br> |
+|Lync Server 2010 </br> | [規劃升級至 Skype Business server](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) </br> |
+    
 Office 2010 產品與接近其結尾支援的服務，這是更好的時間考量移至 Office 365。您的裝置各種，取得最新功能、 安全性更新和存取至您的內容。
 
 選擇下列選項之一：
 - **移至 Office 365**： 許多客戶，這是有效率且符合成本效益的解決方案。請參閱[如何執行我們移至 Office 365 企業版？](https://support.office.com/article/62084652-f051-4b0b-87b3-f766418386bf.aspx)
     
-- **升級您的內部伺服器和應用程式。** 請參閱[Office 2010](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap)、 [Exchange 2010](exchange-2010-end-of-support.md)及[SharePoint 2010](upgrade-from-sharepoint-2010.md)規劃藍圖。 
+- **升級您的內部伺服器和應用程式。** 請參閱[Office](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap)、 [Exchange](exchange-2010-end-of-support.md)、 [SharePoint](upgrade-from-sharepoint-2010.md)、 [Project Server 和 Project Online](https://docs.microsoft.com/project/planning-project-server-and-project-online-for-technical-decision-makers)以及[Skype 企業版](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade)規劃的內容。 
     
 - **實作包括 Office 365 的混合式解決方案**和您的內部伺服器和應用程式。請參閱[Office 365 的混合式雲端解決方案概觀。](https://support.office.com/article/59616fab-acdb-40e9-b414-cf0c965c80b7.aspx)
     
 **需要說明嗎？** 請考慮使用協力廠商或大量授權專家。**[尋找 Office 365 協力廠商或轉售商](https://support.office.com/article/b6c18a9b-2aed-4c84-9d75-af709160258c.aspx)**。 
 > [!TIP]
-> 如果您的組織購買 50 個或多個 Office 365 授權，我們 FastTrack 小組可協助您透過設定 Office 365 的程序。請造訪[FastTrack.Microsoft.com](https://fasttrack.microsoft.com)。
+> 如果您的組織購買 50 個或多個 Office 365 授權，我們 FastTrack 小組可協助您透過設定 Office 365 的程序。請造訪[FastTrack.Microsoft.com](https://www.microsoft.com/fasttrack/microsoft-365/office-365)。
   
 如果您的組織購買少於 50 台 Office 365 授權，請參閱[Admins： 升級為最新 Office 用戶端使用適用於企業的 Office 365 的使用者](https://support.office.com/article/f6b00895-b5fd-4af6-a656-b7788ea20cbb.aspx)。 
   
@@ -80,11 +78,9 @@ Office 365 是屬於 Microsoft Cloud 堆疊為軟體為-a-服務 (SaaS) 方案�
   
 |**資源**|**描述**|
 |:-----|:-----|
-|**[影片： 什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)** <br/> |觀賞此影片以取得 Office 365 的概觀。  <br/> |
-|**[我們如何移至 Office 365 企業版？](https://support.office.com/article/62084652-f051-4b0b-87b3-f766418386bf.aspx)** <br/> |請閱讀本篇文章以取得如何企業組織可以移至 Office 365 的整體概觀。  <br/> |
 |**[選取 [計劃](https://aka.ms/viirjv)** <br/> |請造訪此頁面，以了解 Office 365 商務方案  <br/> |
 |**[Office 的系統需求](https://aka.ms/o365sysrequirements)** <br/> |檢視系統需求的詳細資料的**Office 365 計劃商務、 教育和政府**] 區段中。  <br/> |
-|**[Microsoft Cloud 平台選項](https://www.microsoft.com/download/details.aspx?id=54432)** <br/> |下載此海報，以了解 Office 365 及 Microsoft Cloud 堆疊。您將了解 Microsoft Cloud 堆疊，包括 Office 365，以及您、 我們客戶和 Microsoft 的責任區域的核心功能。您可以下載海報中的 PDF 或 Visio 格式。  <br/> |
+|**[Microsoft 雲端 IT 架構的資源](microsoft-cloud-it-architecture-resources.md)** <br/> |下載一或多個海報 （英文） 若要深入了解 Microsoft Cloud 及伺服器平台選項。您可以下載海報 （英文） 中 PDF 或 Visio 格式。  <br/> |
 |**[Office 365 常見問題集](https://aka.ms/office365faqs)** <br/> |請造訪此頁面才能看見常見問題 Office 365 的其他資訊連結的清單。  <br/> |
    
 ## <a name="what-is-microsoft-365"></a>什麼是 Microsoft 365？
