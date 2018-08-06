@@ -10,121 +10,126 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 596db0e2cffedc74a4840ae4427a3350ba1e27d8
-ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
+ms.openlocfilehash: 12da695b44c5102c985a8d64960b1d20e092c8cd
+ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "21550056"
 ---
-# <a name="administering-a-multi-geo-environment"></a><span data-ttu-id="bf70c-103">管理多地理位置環境</span><span class="sxs-lookup"><span data-stu-id="bf70c-103">Administering a multi-geo environment</span></span>
+# <a name="administering-a-multi-geo-environment"></a><span data-ttu-id="1b2c0-103">管理多地理位置環境</span><span class="sxs-lookup"><span data-stu-id="1b2c0-103">Administering a multi-geo environment</span></span>
 
-<span data-ttu-id="bf70c-104">查看 OneDrive 和 SharePoint 服務在多地理位置環境中的運作方式。</span><span class="sxs-lookup"><span data-stu-id="bf70c-104">Here's a look at how OneDrive and SharePoint services work in a multi-geo environment.</span></span>
+<span data-ttu-id="1b2c0-104">查看 OneDrive 和 SharePoint 服務在多地理位置環境中的運作方式。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-104">Here's a look at how OneDrive and SharePoint services work in a multi-geo environment.</span></span>
 
-#### <a name="onedrive-administrator-experience"></a><span data-ttu-id="bf70c-105">OneDrive 系統管理員體驗</span><span class="sxs-lookup"><span data-stu-id="bf70c-105">OneDrive Administrator Experience</span></span>
+#### <a name="onedrive-administrator-experience"></a><span data-ttu-id="1b2c0-105">OneDrive 系統管理員體驗</span><span class="sxs-lookup"><span data-stu-id="1b2c0-105">OneDrive Administrator Experience</span></span>
 
-<span data-ttu-id="bf70c-p101">[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [地理位置]**** 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p101">The [OneDrive admin center](https://admin.onedrive.com) has a **Geo locations** tab in the left navigation which features a geo-locations map where you can view and manage your geo locations. Use this page to add or delete geo locations for your tenant.</span></span>
+<span data-ttu-id="1b2c0-p101">[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [地理位置]**** 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p101">The [OneDrive admin center](https://admin.onedrive.com) has a **Geo locations** tab in the left navigation which features a geo-locations map where you can view and manage your geo locations. Use this page to add or delete geo locations for your tenant.</span></span>
 
-#### <a name="taxonomy"></a><span data-ttu-id="bf70c-108">分類</span><span class="sxs-lookup"><span data-stu-id="bf70c-108">Taxonomy</span></span>
+#### <a name="taxonomy"></a><span data-ttu-id="1b2c0-108">分類</span><span class="sxs-lookup"><span data-stu-id="1b2c0-108">Taxonomy</span></span>
 
-<span data-ttu-id="bf70c-p102">我們支援整合[分類](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC)，以用於跨地理位置中的企業管理中繼資料，內含在貴公司之中央位置中主控的主機。我們建議您從中央位置管理全域分類，並只將特定位置的詞彙新增至衛星地理位置。通用的分類詞彙會同步處理至衛星地理位置。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p102">We support a unified [taxonomy](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC) for enterprise managed metadata across geo locations, with the master being hosted in the central location for your company. We recommend that you manage your global taxonomy from the central location and only add location-specific terms to the satellite geo location’s Taxonomy. Global taxonomy terms will synchronize to the satellite geo locations.</span></span>
+<span data-ttu-id="1b2c0-p102">我們支援整合[分類](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC)，以用於跨地理位置中的企業管理中繼資料，內含在貴公司之中央位置中主控的主機。我們建議您從中央位置管理全域分類，並只將特定位置的詞彙新增至衛星地理位置。通用的分類詞彙會同步處理至衛星地理位置。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p102">We support a unified [taxonomy](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC) for enterprise managed metadata across geo locations, with the master being hosted in the central location for your company. We recommend that you manage your global taxonomy from the central location and only add location-specific terms to the satellite geo location’s Taxonomy. Global taxonomy terms will synchronize to the satellite geo locations.</span></span>
 
-#### <a name="sharing"></a><span data-ttu-id="bf70c-112">共用</span><span class="sxs-lookup"><span data-stu-id="bf70c-112">Sharing</span></span>
+#### <a name="sharing"></a><span data-ttu-id="1b2c0-112">共用</span><span class="sxs-lookup"><span data-stu-id="1b2c0-112">Sharing</span></span>
 
-<span data-ttu-id="bf70c-p103">系統管理員可以為每個位置設定並管理共用的原則。每個地理位置中的 OneDrive 網站會接受僅與特定地理位置相對應的共用設定。(例如，您可以允許[外部共用](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85)中央位置，但無法外部共用衛星位置 (反之亦然)。) 請注意，共用的設定不允許設定地理位置間的共用限制。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p103">Administrators can set and manage sharing policies for each of their locations. The OneDrive sites in each geo location will honor only the corresponding geo specific sharing settings. (For example, you can allow [external sharing](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85) for your central location, but not for your satellite location or vice versa.) Note that the sharing settings do not allow configuring sharing limitations between geo-locations.</span></span>
+<span data-ttu-id="1b2c0-p103">系統管理員可以為每個位置設定並管理共用的原則。每個地理位置中的 OneDrive 網站會接受僅與特定地理位置相對應的共用設定。(例如，您可以允許[外部共用](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85)中央位置，但無法外部共用衛星位置 (反之亦然)。) 請注意，共用的設定不允許設定地理位置間的共用限制。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p103">Administrators can set and manage sharing policies for each of their locations. The OneDrive sites in each geo location will honor only the corresponding geo specific sharing settings. (For example, you can allow [external sharing](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85) for your central location, but not for your satellite location or vice versa.) Note that the sharing settings do not allow configuring sharing limitations between geo-locations.</span></span>
 
-<span data-ttu-id="bf70c-p104">針對 OneDrive 多地理位置，您必須管理每個地理位置的共用設定，因為系統不會在租用戶間同步處理這些設定。若要管理共用，請造訪 [OneDrive 系統管理中心的共用設定] [](https://admin.onedrive.com/?v=SharingSettings)頁面。依預設，每個衛星位置中的任何人都能啟用外部共用。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p104">For OneDrive Multi-Geo, you must manage your sharing settings at each geo location as these are not synchronized across the tenant. To manage sharing visit the [OneDrive admin center sharing settings](https://admin.onedrive.com/?v=SharingSettings) page. By default external sharing is enabled with Anyone in each satellite location.</span></span>
+<span data-ttu-id="1b2c0-p104">針對 OneDrive 多地理位置，您必須管理每個地理位置的共用設定，因為系統不會在租用戶間同步處理這些設定。若要管理共用，請造訪 [OneDrive 系統管理中心的共用設定] [](https://admin.onedrive.com/?v=SharingSettings)頁面。依預設，每個衛星位置中的任何人都能啟用外部共用。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p104">For OneDrive Multi-Geo, you must manage your sharing settings at each geo location as these are not synchronized across the tenant. To manage sharing visit the [OneDrive admin center sharing settings](https://admin.onedrive.com/?v=SharingSettings) page. By default external sharing is enabled with Anyone in each satellite location.</span></span>
 
-#### <a name="user-profile-application"></a><span data-ttu-id="bf70c-119">使用者設定檔應用程式</span><span class="sxs-lookup"><span data-stu-id="bf70c-119">User Profile Application</span></span>
+#### <a name="user-profile-application"></a><span data-ttu-id="1b2c0-119">使用者設定檔應用程式</span><span class="sxs-lookup"><span data-stu-id="1b2c0-119">User Profile Application</span></span>
 
-<span data-ttu-id="bf70c-p105">在每個地理位置中有[使用者設定檔應用程式](https://support.office.com/article/494bec9c-6654-41f0-920f-f7f937ea9723)。系統會在每位使用者的地理位置主控其設定檔資訊，且該設定檔資料可供該地理位置的系統管理員使用。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p105">There is a [user profile application](https://support.office.com/article/494bec9c-6654-41f0-920f-f7f937ea9723) in each geo location. Each user’s profile information is hosted in their geo location and available to the administrator for that geo location.</span></span>
+<span data-ttu-id="1b2c0-p105">在每個地理位置中有[使用者設定檔應用程式](https://support.office.com/article/494bec9c-6654-41f0-920f-f7f937ea9723)。系統會在每位使用者的地理位置主控其設定檔資訊，且該設定檔資料可供該地理位置的系統管理員使用。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p105">There is a [user profile application](https://support.office.com/article/494bec9c-6654-41f0-920f-f7f937ea9723) in each geo location. Each user’s profile information is hosted in their geo location and available to the administrator for that geo location.</span></span>
 
-<span data-ttu-id="bf70c-p106">如果您有自訂的設定檔屬性，則建議您使用跨地理位置的相同設定檔結構描述，然後在所有的地理位置或所需的位置填入自訂設定檔屬性。如需有關如何以程式設計方式填入使用者設定檔資料的指導方針，請參閱[大量使用者設定檔更新 API](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)</span><span class="sxs-lookup"><span data-stu-id="bf70c-p106">If you have custom profile properties, then we recommend that you use the same profile schema across geographies and populate your custom profile properties either in all geo locations or where needed. For guidance regarding how to populate user profile data programmatically, please refer to the [Bulk User Profile Update API](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)</span></span>
+<span data-ttu-id="1b2c0-p106">如果您有自訂的設定檔屬性，則建議您使用跨地理位置的相同設定檔結構描述，然後在所有的地理位置或所需的位置填入自訂設定檔屬性。如需有關如何以程式設計方式填入使用者設定檔資料的指導方針，請參閱[大量使用者設定檔更新 API](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p106">If you have custom profile properties, then we recommend that you use the same profile schema across geographies and populate your custom profile properties either in all geo locations or where needed. For guidance regarding how to populate user profile data programmatically, please refer to the [Bulk User Profile Update API](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)</span></span>
 
-#### <a name="bcs-secure-store-apps"></a><span data-ttu-id="bf70c-124">BCS、Secure Store、應用程式</span><span class="sxs-lookup"><span data-stu-id="bf70c-124">BCS: Secure Store Service</span></span>
+#### <a name="bcs-secure-store-apps"></a><span data-ttu-id="1b2c0-124">BCS、Secure Store、應用程式</span><span class="sxs-lookup"><span data-stu-id="1b2c0-124">BCS, Secure Store, Apps</span></span>
 
-<span data-ttu-id="bf70c-125">BCS、Secure Store 及應用程式都有個別的地理位置執行個體，因此 Sharepoint Online 系統管理員應從他們希望這些服務出現的每個地理執行個體中管理及設定這些服務。</span><span class="sxs-lookup"><span data-stu-id="bf70c-125">BCS, Secure Store, and Apps all have separate geo instances, therefore the SharePoint Online administrator should manage and configure these services from each geo instance where they want them to be present.</span></span>
+<span data-ttu-id="1b2c0-125">BCS、Secure Store 及應用程式都有個別的地理位置執行個體，因此 Sharepoint Online 系統管理員應從他們希望這些服務出現的每個地理執行個體中管理及設定這些服務。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-125">BCS, Secure Store, and Apps all have separate geo instances, therefore the SharePoint Online administrator should manage and configure these services from each geo instance where they want them to be present.</span></span>
 
-#### <a name="security-and-compliance-admin-center"></a><span data-ttu-id="bf70c-126">安全性與合規性管理中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-126">Security and Compliance Admin Center</span></span>
+#### <a name="security-and-compliance-admin-center"></a><span data-ttu-id="1b2c0-126">安全性與合規性管理中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-126">Security and Compliance Admin Center</span></span>
 
-<span data-ttu-id="bf70c-127">有一個適用於多地理位置租用戶的中央合規性中心：[Office 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。</span><span class="sxs-lookup"><span data-stu-id="bf70c-127">There is one central compliance center for the Multi-Geo tenant: [Office 365 Security & Compliance Center](https://protection.office.com/?rfr=AdminCenter\#/homepage).</span></span>
+<span data-ttu-id="1b2c0-127">有一個適用於多地理位置租用戶的中央合規性中心：[Office 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-127">There is one central compliance center for the Multi-Geo tenant: [Office 365 Security & Compliance Center](https://protection.office.com/?rfr=AdminCenter\#/homepage).</span></span>
 
-#### <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a><span data-ttu-id="bf70c-128">資訊保護 (IP) 的資料外洩防護 (DLP) 原則</span><span class="sxs-lookup"><span data-stu-id="bf70c-128">Information Protection (IP) Data Loss Prevention (DLP) Policy</span></span>
+#### <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a><span data-ttu-id="1b2c0-128">資訊保護 (IP) 的資料外洩防護 (DLP) 原則</span><span class="sxs-lookup"><span data-stu-id="1b2c0-128">Information Protection (IP) Data Loss Prevention (DLP) Policy</span></span>
 
-<span data-ttu-id="bf70c-p107">您可以在安全性與合規性中心中為商務用 OneDrive 設定您的 IP DLP 原則，將所需的原則範圍設為整個租用戶或適用的使用者。例如：如果您想要為衛星位置中的 OneDrive 使用者選取原則，選取以將原則套用至特定 OneDrive，然後輸入使用者的 OneDrive 的 Url。請參閱[資料外洩防護原則概觀](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e)，以了解建立 DLP 原則的一般指導方針。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p107">You can set your IP DLP policies for OneDrive for Business in the Security and Compliance center, scoping policies as needed to the whole tenant or to applicable users. For example: If you wish to select a policy for a OneDrive user in a satellite location, select to apply the policy to a specific OneDrive and enter the user’s OneDrive url. See [Overview of data loss prevention policies](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e) for general guidance in creating DLP policies.</span></span>
+<span data-ttu-id="1b2c0-p107">您可以在安全性與合規性中心中為商務用 OneDrive 設定您的 IP DLP 原則，將所需的原則範圍設為整個租用戶或適用的使用者。例如：如果您想要為衛星位置中的 OneDrive 使用者選取原則，選取以將原則套用至特定 OneDrive，然後輸入使用者的 OneDrive 的 Url。請參閱[資料外洩防護原則概觀](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e)，以了解建立 DLP 原則的一般指導方針。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p107">You can set your IP DLP policies for OneDrive for Business in the Security and Compliance center, scoping policies as needed to the whole tenant or to applicable users. For example: If you wish to select a policy for a OneDrive user in a satellite location, select to apply the policy to a specific OneDrive and enter the user’s OneDrive url. See [Overview of data loss prevention policies](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e) for general guidance in creating DLP policies.</span></span>
 
-<span data-ttu-id="bf70c-132">系統會根據 DLP 原則對每個地理位置的適用性來自動同步處理這些原則。</span><span class="sxs-lookup"><span data-stu-id="bf70c-132">The DLP policies are automatically synchronized based on their applicability to each geo location.</span></span>
+<span data-ttu-id="1b2c0-132">系統會根據 DLP 原則對每個地理位置的適用性來自動同步處理這些原則。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-132">The DLP policies are automatically synchronized based on their applicability to each geo location.</span></span>
 
-<span data-ttu-id="bf70c-133">對某個地理位置中的所有使用者執行資訊保護和資料外洩防護原則，不是 UI 中的可用選項，您反而必須選取該原則適用的 OneDrive 帳戶，或將該原則全域套用至所有 OneDrive 帳戶。</span><span class="sxs-lookup"><span data-stu-id="bf70c-133">Implementing Information Protection and Data Loss prevention policies to all users in a geo location is not an option available in the UI, instead you must select the applicable OneDrive accounts for the policy or apply the policy globally to all OneDrive accounts.</span></span>
+<span data-ttu-id="1b2c0-133">對某個地理位置中的所有使用者執行資訊保護和資料外洩防護原則，不是 UI 中的可用選項，您反而必須選取該原則適用的 OneDrive 帳戶，或將該原則全域套用至所有 OneDrive 帳戶。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-133">Implementing Information Protection and Data Loss prevention policies to all users in a geo location is not an option available in the UI, instead you must select the applicable OneDrive accounts for the policy or apply the policy globally to all OneDrive accounts.</span></span>
 
-#### <a name="ediscovery"></a><span data-ttu-id="bf70c-134">eDiscovery</span><span class="sxs-lookup"><span data-stu-id="bf70c-134">eDiscovery</span></span> 
+#### <a name="ediscovery"></a><span data-ttu-id="1b2c0-134">eDiscovery</span><span class="sxs-lookup"><span data-stu-id="1b2c0-134">eDiscovery</span></span> 
 
-<span data-ttu-id="bf70c-p108">依預設，電子文件探索管理員或多地理位置租用戶的系統管理員僅能在該租用戶的中央位置中進行 eDiscovery。若要支援對衛星位置進行 eDiscovery 的能力，則可透過 PowerShell 取得名為「地區」的新合規性安全性篩選參數。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p108">By default, an eDiscovery Manager or Administrator of a multi-geo tenant will be able to conduct eDiscovery only in the central location of that tenant. To support the ability to conduct eDiscovery for satellite locations, a new Compliance Security Filter parameter called “Region” is available via PowerShell.</span></span>
+<span data-ttu-id="1b2c0-p108">依預設，電子文件探索管理員或多地理位置租用戶的系統管理員僅能在該租用戶的中央位置中進行 eDiscovery。若要支援對衛星位置進行 eDiscovery 的能力，則可透過 PowerShell 取得名為「地區」的新合規性安全性篩選參數。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p108">By default, an eDiscovery Manager or Administrator of a multi-geo tenant will be able to conduct eDiscovery only in the central location of that tenant. To support the ability to conduct eDiscovery for satellite locations, a new Compliance Security Filter parameter called “Region” is available via PowerShell.</span></span>
 
-<span data-ttu-id="bf70c-137">Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。</span><span class="sxs-lookup"><span data-stu-id="bf70c-137">The Office 365 global administrator must assign eDiscovery Manager permissions to allow others to perform eDiscovery and assign a “Region” parameter in their applicable Compliance Security Filter to specify the region for conducting eDiscovery as satellite location, otherwise no eDiscovery will be carried out for the satellite location.</span></span>
+<span data-ttu-id="1b2c0-137">Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-137">The Office 365 global administrator must assign eDiscovery Manager permissions to allow others to perform eDiscovery and assign a “Region” parameter in their applicable Compliance Security Filter to specify the region for conducting eDiscovery as satellite location, otherwise no eDiscovery will be carried out for the satellite location.</span></span>
 
-<span data-ttu-id="bf70c-p109">當為特定地理位置設定電子文件探索管理員或系統管理員角色時，電子文件探索管理員或系統管理員只能對位於該地理位置中的 SharePoint 網站和 OneDrive 網站執行 eDiscovery 搜尋動作。如果電子文件探索管理員或系統管理員嘗試搜尋指定範圍外的 SharePoint 或 OneDrive 網站，則不會傳回任何結果。此外，當某地區的電子文件探索管理員或系統管理員區域觸發匯出時，系統會將資料匯出至該區域的 Azure 執行個體。這可透過禁止匯出控制框線外的內容來協助組織保持合規。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p109">When the eDiscovery Manager or Administrator role is set for a particular-geo location, the eDiscovery Manager or Administrator will only be able to perform eDiscovery search actions against the SharePoint sites and OneDrive sites located in that geo-location. If an eDiscovery Manager or Administrator attempts to search SharePoint or OneDrive sites outside the specified region, no results will be returned. Also, when the eDiscovery Manager or Administrator for a region triggers an export, data is exported to the Azure instance of that region. This helps organizations stay in compliance by not allowing content to be exported across controlled borders.</span></span>
+<span data-ttu-id="1b2c0-p109">當為特定地理位置設定電子文件探索管理員或系統管理員角色時，電子文件探索管理員或系統管理員只能對位於該地理位置中的 SharePoint 網站和 OneDrive 網站執行 eDiscovery 搜尋動作。如果電子文件探索管理員或系統管理員嘗試搜尋指定範圍外的 SharePoint 或 OneDrive 網站，則不會傳回任何結果。此外，當某地區的電子文件探索管理員或系統管理員區域觸發匯出時，系統會將資料匯出至該區域的 Azure 執行個體。這可透過禁止匯出控制框線外的內容來協助組織保持合規。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p109">When the eDiscovery Manager or Administrator role is set for a particular-geo location, the eDiscovery Manager or Administrator will only be able to perform eDiscovery search actions against the SharePoint sites and OneDrive sites located in that geo-location. If an eDiscovery Manager or Administrator attempts to search SharePoint or OneDrive sites outside the specified region, no results will be returned. Also, when the eDiscovery Manager or Administrator for a region triggers an export, data is exported to the Azure instance of that region. This helps organizations stay in compliance by not allowing content to be exported across controlled borders.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bf70c-142">如果此對跨多個 SharePoint 區域的電子文件探索管理員是必要的，將必須為指定 OneDrive 或 SharePoint 網站所在位置之替代區域的電子文件探索管理員建立另一個使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="bf70c-142">If it's necessary for an eDiscovery Manager to search across multiple SharePoint regions, another user account will need to be created for the eDiscovery Manager which specifies the alternate region where the OneDrive or SharePoint sites are located.</span></span>
+> <span data-ttu-id="1b2c0-142">如果此對跨多個 SharePoint 區域的電子文件探索管理員是必要的，將必須為指定 OneDrive 或 SharePoint 網站所在位置之替代區域的電子文件探索管理員建立另一個使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-142">If it's necessary for an eDiscovery Manager to search across multiple SharePoint regions, another user account will need to be created for the eDiscovery Manager which specifies the alternate region where the OneDrive or SharePoint sites are located.</span></span>
 
 <table>
 <thead>
 <tr class="header">
-<th align="left"><span data-ttu-id="bf70c-143"><strong>多地理位置支援的地理位置</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-143"><strong>Multi-Geo supported Geo Locations</strong></span></span></th>
-<th align="left"><span data-ttu-id="bf70c-144"><strong>SharePoint 匯出資料的 eDiscovery 將會位於 Azure Blob 資料位置中…</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-144"><strong>eDiscovery for SharePoint Exported data will be in this Azure Blob data location…</strong></span></span></th>
+<th align="left"><span data-ttu-id="1b2c0-143"><strong>多地理位置支援的地理位置</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-143"><strong>Multi-Geo supported Geo Locations</strong></span></span></th>
+<th align="left"><span data-ttu-id="1b2c0-144"><strong>SharePoint 匯出資料的 eDiscovery 將會位於 Azure Blob 資料位置中…</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-144"><strong>eDiscovery for SharePoint Exported data will be in this Azure Blob data location…</strong></span></span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><span data-ttu-id="bf70c-145"><strong>北美洲</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-145"><strong>NAM</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-146">美國資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-146">US Data Centers</span></span></td>
-</tr>
-<tr class="even">
-<td align="left"><span data-ttu-id="bf70c-147"><strong>歐洲</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-147"><strong>EUR</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-148">歐洲資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-148">Europe Data Centers</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-145"><strong>APC</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-145"><strong>APC</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-146">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-146">Southeast or East Asia datacenters</span></span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span data-ttu-id="bf70c-149"><strong>APC</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-149"><strong>APC</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-150">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-150">South East or East Asia Data Centers</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-147"><strong>AUS</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-147"><strong>AUS</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-148">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-148">Southeast or East Asia datacenters</span></span></td>
 </tr>
 <tr class="even">
-<td align="left"><span data-ttu-id="bf70c-151"><strong>加拿大</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-151"><strong>CAN</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-152">美國資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-152">US Data Centers</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-149"><strong>CAN</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-149"><strong>CAN</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-150">美國資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-150">US datacenters</span></span></td>
+</tr>
+<tr class="even">
+<td align="left"><span data-ttu-id="1b2c0-151"><strong>EUR</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-151"><strong>EUR</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-152">歐洲資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-152">Europe datacenters</span></span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span data-ttu-id="bf70c-153"><strong>澳洲</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-153"><strong>AUS</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-154">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-154">South East or East Asia Data Centers</span></span></td>
-</tr>
-<tr class="even">
-<td align="left"><span data-ttu-id="bf70c-155"><strong>韓國</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-155"><strong>KOR</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-156">租用戶的預設資料位置</span><span class="sxs-lookup"><span data-stu-id="bf70c-156">Tenant's default data location</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-153"><strong>FRA</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-153"><strong>FRA</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-154">歐洲資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-154">Europe datacenters</span></span></td>
 </tr>
 <tr class="odd">
-<td align="left"><span data-ttu-id="bf70c-157"><strong>英國</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-157"><strong>GBR</strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-158">歐洲資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-158">Europe Data Centers</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-155"><strong>GBR</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-155"><strong>GBR</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-156">歐洲資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-156">Europe datacenters</span></span></td>
 </tr>
 <tr class="even">
-<td align="left"><span data-ttu-id="bf70c-159"><strong>日本</strong></span><span class="sxs-lookup"><span data-stu-id="bf70c-159"><strong>JPN </strong></span></span></td>
-<td align="left"><span data-ttu-id="bf70c-160">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="bf70c-160">South East or East Asia Data Centers</span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-157"><strong>KOR</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-157"><strong>KOR</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-158">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-158">Southeast or East Asia datacenters</span></span></td>
+</tr>
+<tr class="even">
+<td align="left"><span data-ttu-id="1b2c0-159"><strong>JPN</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-159"><strong>JPN </strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-160">東南亞或東亞資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-160">Southeast or East Asia datacenters</span></span></td>
+</tr>
+<tr class="odd">
+<td align="left"><span data-ttu-id="1b2c0-161"><strong>NAM</strong></span><span class="sxs-lookup"><span data-stu-id="1b2c0-161"><strong>NAM</strong></span></span></td>
+<td align="left"><span data-ttu-id="1b2c0-162">美國資料中心</span><span class="sxs-lookup"><span data-stu-id="1b2c0-162">US datacenters</span></span></td>
 </tr>
 </tbody>
 </table>
 
-<span data-ttu-id="bf70c-161">若要為某地區設定合規性安全性篩選：</span><span class="sxs-lookup"><span data-stu-id="bf70c-161">To set the Compliance Security Filter for a Region:</span></span>
+<span data-ttu-id="1b2c0-163">若要為某地區設定合規性安全性篩選：</span><span class="sxs-lookup"><span data-stu-id="1b2c0-163">To set the Compliance Security Filter for a Region:</span></span>
 
-1.  <span data-ttu-id="bf70c-162">開啟 [Windows PowerShell]。</span><span class="sxs-lookup"><span data-stu-id="bf70c-162">Open Windows PowerShell.</span></span>
+1.  <span data-ttu-id="1b2c0-164">開啟 [Windows PowerShell]。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-164">Open Windows PowerShell</span></span>
 
-2.  <span data-ttu-id="bf70c-163">Enter 鍵</span><span class="sxs-lookup"><span data-stu-id="bf70c-163">Enter</span></span>  
-    <span data-ttu-id="bf70c-164">$s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)</span><span class="sxs-lookup"><span data-stu-id="bf70c-164">$s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)</span></span>
+2.  <span data-ttu-id="1b2c0-165">Enter 鍵</span><span class="sxs-lookup"><span data-stu-id="1b2c0-165">Enter</span></span>  
+    <span data-ttu-id="1b2c0-166">$s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)</span><span class="sxs-lookup"><span data-stu-id="1b2c0-166">$s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)</span></span>
 
-    <span data-ttu-id="bf70c-165">$a = Import-PSSession $s -AllowClobber</span><span class="sxs-lookup"><span data-stu-id="bf70c-165">$a = Import-PSSession $s -AllowClobber</span></span>  
+    <span data-ttu-id="1b2c0-167">$a = Import-PSSession $s -AllowClobber</span><span class="sxs-lookup"><span data-stu-id="1b2c0-167">$a = Import-PSSession $s -AllowClobber</span></span>  
 
-3.  <span data-ttu-id="bf70c-166">**New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName</span><span class="sxs-lookup"><span data-stu-id="bf70c-166">**New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName</span></span>
+3.  <span data-ttu-id="1b2c0-168">**New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName</span><span class="sxs-lookup"><span data-stu-id="1b2c0-168">**New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName</span></span>
 
-    <span data-ttu-id="bf70c-167">For Example: **New-ComplianceSecurityFilter -Action** ALL **-FilterName** NAMEDISCOVERYMANAGERS **-Region** NAM **-Users** adwood@contosodemosx.onmicrosoft.com</span><span class="sxs-lookup"><span data-stu-id="bf70c-167">For Example: **New-ComplianceSecurityFilter -Action** ALL **-FilterName** NAMEDISCOVERYMANAGERS **-Region** NAM **-Users** adwood@contosodemosx.onmicrosoft.com</span></span>
+    <span data-ttu-id="1b2c0-169">For Example: **New-ComplianceSecurityFilter -Action** ALL **-FilterName** NAMEDISCOVERYMANAGERS **-Region** NAM **-Users** adwood@contosodemosx.onmicrosoft.com</span><span class="sxs-lookup"><span data-stu-id="1b2c0-169">For Example: **New-ComplianceSecurityFilter -Action** ALL **-FilterName** NAMEDISCOVERYMANAGERS **-Region** NAM **-Users** adwood@contosodemosx.onmicrosoft.com</span></span>
 
-<span data-ttu-id="bf70c-168">請參閱 [New-ComplianceSecurityFilter](https://technet.microsoft.com/library/mt210915(v=exchg.160).aspx) 一文以了解額外的參數和語法</span><span class="sxs-lookup"><span data-stu-id="bf70c-168">See the [New-ComplianceSecurityFilter](https://technet.microsoft.com/library/mt210915(v=exchg.160).aspx) article for additional parameters and syntax</span></span>
+<span data-ttu-id="1b2c0-170">請參閱 [New-ComplianceSecurityFilter](https://technet.microsoft.com/library/mt210915(v=exchg.160).aspx) 一文以了解額外的參數和語法</span><span class="sxs-lookup"><span data-stu-id="1b2c0-170">See the [New-ComplianceSecurityFilter](https://technet.microsoft.com/library/mt210915(v=exchg.160).aspx) article for additional parameters and syntax</span></span>
 
-#### <a name="audit-log-search"></a><span data-ttu-id="bf70c-169">稽核記錄檔搜尋</span><span class="sxs-lookup"><span data-stu-id="bf70c-169">Audit log search</span></span>
+#### <a name="audit-log-search"></a><span data-ttu-id="1b2c0-171">稽核記錄檔搜尋</span><span class="sxs-lookup"><span data-stu-id="1b2c0-171">Audit log search</span></span>
 
-<span data-ttu-id="bf70c-p110">適用於所有地理位置的整合式[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)可從 Office 365 稽核記錄搜尋頁面中取得。您可以看到跨地區的所有稽核記錄項目，例如，北美洲與歐洲地理使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選，以查看特定使用者的活動。</span><span class="sxs-lookup"><span data-stu-id="bf70c-p110">A unified [Audit log](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c) for all your geo locations is available from the Office 365 audit log search page. You can see all the audit log entries from across geos, for example, NAM & EUR geo users’ activities will show up in one org view and then you can apply existing filters to see specific user’s activities.</span></span>
+<span data-ttu-id="1b2c0-p110">適用於所有地理位置的整合式[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)可從 Office 365 稽核記錄搜尋頁面中取得。您可以看到跨地區的所有稽核記錄項目，例如，北美洲與歐洲地理使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選，以查看特定使用者的活動。</span><span class="sxs-lookup"><span data-stu-id="1b2c0-p110">A unified [Audit log](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c) for all your geo locations is available from the Office 365 audit log search page. You can see all the audit log entries from across geos, for example, NAM & EUR geo users’ activities will show up in one org view and then you can apply existing filters to see specific user’s activities.</span></span>
