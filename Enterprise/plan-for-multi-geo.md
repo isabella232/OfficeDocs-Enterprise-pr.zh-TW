@@ -11,12 +11,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解商務用 OneDrive 多地理位置、多地理位置的運作方式，以及哪些地理位置可供資料儲存區使用。
-ms.openlocfilehash: 54efc6092338e505ef44344f9c3d3a7efe9ae498
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 26dc9d1b0f0f78e1740088036be4b77bea3ce176
+ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "18908357"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "21549984"
 ---
 # <a name="plan-for-onedrive-for-business-multi-geo"></a>規劃商務用 OneDrive 多地理位置
 
@@ -64,39 +64,42 @@ ms.locfileid: "18908357"
 <td align="left">APC</td>
 </tr>
 <tr class="even">
-<td align="left">歐洲/中東/非洲</td>
-<td align="left">歐洲</td>
-</tr>
-<tr class="odd">
-<td align="left">北美洲</td>
-<td align="left">北美洲</td>
-</tr>
-<tr class="even">
 <td align="left">澳大利亞</td>
-<td align="left">澳洲</td>
+<td align="left">AUS</td>
 </tr>
 <tr class="odd">
 <td align="left">加拿大</td>
-<td align="left">加拿大</td>
+<td align="left">CAN</td>
+</tr>
+<tr class="even">
+<td align="left">歐洲/中東/非洲</td>
+<td align="left">EUR</td>
+</tr>
+<tr class="odd">
+<td align="left">法國</td>
+<td align="left">FRA</td>
 </tr>
 <tr class="odd">
 <td align="left">日本</td>
-<td align="left">日本</td>
+<td align="left">JPN</td>
 </tr>
 <tr class="even">
 <td align="left">韓國</td>
-<td align="left">韓國</td>
+<td align="left">KOR</td>
+</tr>
+<tr class="odd">
+<td align="left">北美洲</td>
+<td align="left">NAM</td>
 </tr>
 <tr class="odd">
 <td align="left">英國</td>
-<td align="left">英國</td>
+<td align="left">GBR</td>
 </tr>
 </tbody>
 </table>
 
 即將推出的地理位置：
   
-- 法國
 - 印度
 
 設定多地理位置時，請考慮在移轉到 Office 365 時合併內部部署基礎結構的可能性。比方說，如果您在新加坡和馬來西亞有內部部署伺服器陣列，然後您可以將他們合併至 APC 衛星位置中，提供的資料常駐要求可讓您執行此動作。

@@ -10,11 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 596db0e2cffedc74a4840ae4427a3350ba1e27d8
-ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
+ms.openlocfilehash: 12da695b44c5102c985a8d64960b1d20e092c8cd
+ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "21550056"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
@@ -76,36 +77,40 @@ Office 365 全域系統管理員必須指派電子文件探索管理員權限，
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><strong>北美洲</strong></td>
-<td align="left">美國資料中心</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>歐洲</strong></td>
-<td align="left">歐洲資料中心</td>
-</tr>
-<tr class="odd">
 <td align="left"><strong>APC</strong></td>
 <td align="left">東南亞或東亞資料中心</td>
 </tr>
-<tr class="even">
-<td align="left"><strong>加拿大</strong></td>
-<td align="left">美國資料中心</td>
-</tr>
 <tr class="odd">
-<td align="left"><strong>澳洲</strong></td>
+<td align="left"><strong>AUS</strong></td>
 <td align="left">東南亞或東亞資料中心</td>
 </tr>
 <tr class="even">
-<td align="left"><strong>韓國</strong></td>
-<td align="left">租用戶的預設資料位置</td>
+<td align="left"><strong>CAN</strong></td>
+<td align="left">美國資料中心</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>EUR</strong></td>
+<td align="left">歐洲資料中心</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>英國</strong></td>
+<td align="left"><strong>FRA</strong></td>
+<td align="left">歐洲資料中心</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>GBR</strong></td>
 <td align="left">歐洲資料中心</td>
 </tr>
 <tr class="even">
-<td align="left"><strong>日本</strong></td>
+<td align="left"><strong>KOR</strong></td>
 <td align="left">東南亞或東亞資料中心</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>JPN</strong></td>
+<td align="left">東南亞或東亞資料中心</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>NAM</strong></td>
+<td align="left">美國資料中心</td>
 </tr>
 </tbody>
 </table>
