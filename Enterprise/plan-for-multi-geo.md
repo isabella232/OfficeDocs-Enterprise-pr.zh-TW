@@ -112,14 +112,14 @@ ms.locfileid: "21549984"
 
 每個使用者都應該有*慣用資料位置* (PDL) 設定，以便 Office 365 可以判斷應該在哪一個地理位置佈建其 OneDrive。使用者的慣用資料位置必須符合其中一個所選的衛星位置或您的中央位置。PDL 欄位為非必要時，我們建議為所有使用者設定一個 PDL。系統將根據多地理位置邏輯在中央位置中佈建不具 PDL 的使用者工作負載。   
 
-建立使用者清單，並包含使用者主體名稱 (UPN) 與適當慣用資料位置的位置代碼。包含測試使用者與您起始的試驗群組來開始進行。您將需要該組態程序的此清單。
+建立使用者清單，並包含使用者主體名稱 (UPN) 與適當慣用資料位置的位置代碼。包含測試使用者與您起始的試驗群組來開始進行。您將需要該設定程序的此清單。
 
-如果您的使用者從內部部署 Active Directory (AD) 系統同步處理至 Azure Active Directory (AAD)，則您必須使用 Azure Active Directory Connect 為已同步處理的使用者設定慣用資料位置。您無法直接使用 Azure AD PowerShell 來為已同步處理的使用者設定慣用資料位置。[Azure Active Directory Connect 同步：設定 Office 365 資源的慣用資料位置](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中已涵蓋在 AD 中設定 PDL 並同步處理的步驟。
+如果您的使用者從內部部署 Active Directory (AD) 系統同步處理至 Azure Active Directory (AAD)，則您必須使用 Azure Active Directory Connect 為已同步處理的使用者設定慣用資料位置。您無法直接使用 Azure AD PowerShell 來為已同步處理的使用者設定慣用資料位置。[Azure Active Directory Connect 同步處理：設定 Office 365 資源的慣用資料位置](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中已涵蓋在 AD 中設定 PDL 並同步處理的步驟。
 
-多地理位置租用戶的管理可能與非多地理位置租用戶不同，因為許多 SharePoint 和 OneDrive 設定與服務具有多地理位置意識。我們建議您檢閱[管理多地理位置環境](administering-a-multi-geo-environment.md)，再繼續進行您的組態。
+多地理位置租用戶的管理可能與非多地理位置租用戶不同，因為許多 SharePoint 和 OneDrive 設定與服務具有多地理位置意識。我們建議您檢閱[管理多地理位置環境](administering-a-multi-geo-environment.md)，再繼續進行您的設定。
 
 閱讀[多地理位置環境中的使用者體驗](multi-geo-user-experience.md)，以了解多地理環境中的使用者體驗之詳細資訊。
 
 若要開始設定商務用 OneDrive 多地理位置，請參閱[設定商務用 OneDrive 多地理位置](multi-geo-tenant-configuration.md)。
 
-當您完成組態時，請視需要記得[移轉使用者的 OneDrive 文件庫](move-onedrive-between-geo-locations.md)，以讓使用者可從自己的慣用資料位置來工作。
+當您完成設定時，請視需要記得[移轉使用者的 OneDrive 文件庫](move-onedrive-between-geo-locations.md)，以讓使用者可從自己的慣用資料位置來工作。

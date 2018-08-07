@@ -112,7 +112,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
 ### <a name="synchronize-users-preferred-data-location-using-ad-connect"></a>使用 AD Connect 同步處理使用者的慣用資料位置 
 
-如果貴公司的使用者已從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設組態](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 AD 將慣用的資料位置同步處理到 AAD。
+如果貴公司的使用者已從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設設定](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 AD 將慣用的資料位置同步處理到 AAD。
 
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 

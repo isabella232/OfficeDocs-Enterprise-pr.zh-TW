@@ -26,7 +26,7 @@ ms.locfileid: "18908327"
 
 例如，單一地理位置中的使用者可以搜尋儲存在其他地理位置的內容，或限制為不同地理位置之 SharePoint 網站上的內容。如果使用者可存取此內容，搜尋會顯示結果。
 
-## <a name="which-search-clients-work-in-a-multi-geo-environment"></a>在多地理位置中運作的是哪些搜尋用戶端？
+## <a name="which-search-clients-work-in-a-multi-geo-environment"></a>哪些搜尋用戶端可以在多地理位置中運作？
 
 這些用戶端可以從所有地理位置傳回結果：
 
@@ -185,7 +185,7 @@ MultiGeoSearchConfiguration - 這是在 **EnableMultiGeoSearch** 為 **true** �
 <tbody>
 <tr class="odd">
 <td align="left">DataLocation</td>
-<td align="left">地理位置，例如北美洲。</td>
+<td align="left">地理位置，例如NAM。</td>
 </tr>
 <tr class="even">
 <td align="left">端點</td>
@@ -198,7 +198,7 @@ MultiGeoSearchConfiguration - 這是在 **EnableMultiGeoSearch** 為 **true** �
 </tbody>
 </table>
 
-如果您省略 DataLocation 或端點，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/multigeo-discovery)。
+如果您省略 DataLocation 或EndPoint，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/multigeo-discovery)。
 
 ### <a name="response-data"></a>回應資料
 
@@ -226,7 +226,7 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 
 ### <a name="query-using-the-rest-service"></a>使用 REST 服務的查詢
 
-您可以透過 GET 要求來指定 URL 中的查詢參數。有了 POST 要求時，您可以 JavaScript 物件標記法 (JSON) 格式在內文中傳遞查詢參數。
+使用 GET 要求時，您可以在 URL 中指定查詢參數。使用 POST 要求時，您能以 JavaScript 物件標記法 (JSON) 格式在內文中傳遞查詢參數。
 
 #### <a name="request-headers"></a>要求標頭
 
