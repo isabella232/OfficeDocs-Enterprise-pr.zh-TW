@@ -1,9 +1,9 @@
 ---
-title: "使用 Office 365 PowerShell 停用服務存取權"
+title: 使用 Office 365 PowerShell 停用服務存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 02/13/2018
+ms.date: 08/08/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,16 +14,17 @@ ms.custom:
 - PowerShell
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
-description: "說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。"
-ms.openlocfilehash: 61d92a1a0c55a381f10fedbb43403dd099fcb69b
-ms.sourcegitcommit: 07416472be80566370c30631aff740177b37b24c
+description: 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
+ms.openlocfilehash: 44b0ed84bb8fd098412c69258834194b2b1eeb2f
+ms.sourcegitcommit: f42ca73d23beb5770981e7a93995ef3be5e341bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "22196820"
 ---
 # <a name="disable-access-to-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用服務存取權
 
-**摘要：**說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
+**摘要：** 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
   
 當 Office 365 帳戶已指派授權的授權方案時、 Office 365 服務是供使用者從該授權。不過，您可以控制使用者可以存取 Office 365 服務。例如，即使授權允許存取 SharePoint Online，您可以停用其存取權。事實上，您可以使用 Office 365 PowerShell 停用的存取權的服務之任何數字：
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 02/19/2018
   $LO = New-MsolLicenseOptions -AccountSkuId "litwareinc:ENTERPRISEPACK" -DisabledPlans "SHAREPOINTWAC", "SHAREPOINTENTERPRISE"
   ```
 
-2. 使用步驟 1 中的**LicenseOptions**物件上一或多個使用者。
+2. 對一或多位使用者使用步驟 1 的 **LicenseOptions** 物件。
     
   - 若要建立已停用服務的新帳戶，請使用下列語法：
     
@@ -151,9 +152,9 @@ for($i = 0; $i -lt $AllLicensingPlans.Count; $i++)
 
 2. 為您的環境自訂下列值：
     
-  -  _<UndesirableService>_在這個範例中，我們將使用 Office Online 和 SharePoint Online。
+  -  _<UndesirableService>_ 在這個範例中，我們將使用 Office Online 和 SharePoint Online。
     
-  -  _<Account>_在這個範例中，我們將使用 belindan@litwareinc.com。
+  -  _<Account>_ 在這個範例中，我們將使用 belindan@litwareinc.com。
     
     自訂的指令碼如下所示：
     
@@ -177,20 +178,9 @@ for($i = 0; $i -lt $AllLicensingPlans.Count; $i++)
 > [!NOTE]
 > 若要反向的任何這些程序 (亦即重新啟用已停用的服務)、 重新執行此程序，但使用值`$null` _DisabledPlans_參數。
   
-[返回頁首](disable-access-to-services-with-office-365-powershell.md#RTT)
+[回到頁首](disable-access-to-services-with-office-365-powershell.md#RTT)
 
 
-## <a name="all-office-365-services-for-all-users-for-a-single-licensing-plan"></a>單一授權的所有使用者的所有 Office 365 服務計都劃
- 
-若要停用所有 Office 365 服務的所有使用者在特定的授權方案中，指定授權計劃的名稱 （例如**litwareinc: enterprisepack**)、 $acctSKU，然後 PowerShell 命令視窗中執行下列命令：
-
-```
-$acctSKU="<AccountSkuId>"
-$servicesList=(Get-MsolAccountSku | Select -ExpandProperty ServiceStatus).ServicePlan.ServiceName
-$lo = New-MsolLicenseOptions -AccountSkuId $acctSKU -DisabledPlans $servicesList
-$AllLicensed = Get-MsolUser -All | Where {$_.isLicensed -eq $true -and $_.licenses[0].AccountSku.SkuPartNumber -eq ($acctSKU).Substring($acctSKU.IndexOf(":")+1, $acctSKU.Length-$acctSKU.IndexOf(":")-1)}
-$AllLicensed | ForEach {Set-MsolUserLicense -ObjectID $_.ObjectID -LicenseOptions $lo}
-```
 
 ## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？
 <a name="LinkedIn"> </a>
