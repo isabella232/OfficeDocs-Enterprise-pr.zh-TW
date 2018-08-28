@@ -1,36 +1,38 @@
 ---
-title: 雲端採用測試實驗室指南 (TLG)
+title: 使用雲端採用測試實驗室指南 (TLG) 測試 Office 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 08/23/2018
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
-description: 摘要：使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Enterprise Mobility + Security (EMS)、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
-ms.openlocfilehash: ac48a9d3d0941b1152aa2bc22a8d9aa5dde7ad77
-ms.sourcegitcommit: c23b95d32a865e45be7843f38a1f23b5693ba76d
+description: 摘要：使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
+ms.openlocfilehash: 796d34294ef92702214df30ca5553759554996d3
+ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "20188161"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "23041497"
 ---
-# <a name="cloud-adoption-test-lab-guides-tlgs"></a>雲端採用測試實驗室指南 (TLG)
+# <a name="test-office-365-with-cloud-adoption-test-lab-guides-tlgs"></a>使用雲端採用測試實驗室指南 (TLG) 測試 Office 365
 
- **摘要：** 使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Enterprise Mobility + Security (EMS)、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
+ **摘要：** 使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
   
 TLG 可協助您快速學習 Microsoft 各項產品。它們非常適合在決定是否適合您使用或將其推廣給使用者之前，用來評估技術或組態的情況。「我自己建置它且可以運作」的實際經驗有助您了解新產品或解決方案的部署需求，因此您可以更妥善地規劃在生產環境中進行裝載。
   
 TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦稱為開發/測試環境。
   
-![Microsoft Cloud 中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
+![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 請在深入之前參閱這些額外資源：
   
@@ -88,21 +90,10 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     
     示範如何建立 SharePoint Online 小組網站，該網站針對高度機密的資源，獨立於組織的其他網站。
     
-## <a name="the-microsoft-365-enterprise-devtest-environment"></a>Microsoft 365 企業版開發/測試環境
+## <a name="the-microsoft-365-enterprise-test-environment"></a>Microsoft 365 企業版測試環境
 
-使用以下文章，建立 [Microsoft 365 企業版](https://docs.microsoft.com/microsoft-365-enterprise/)案例的開發/測試環境。
-  
-- [Microsoft 365 企業版開發/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
-    
-    建立包含 Office 365 E5、EMS E5 及在 Windows 10 企業版上執行之電腦的初始環境。
-    
-- [Microsoft 365 企業版開發/測試環境的 MAM 原則](mam-policies-for-your-microsoft-365-enterprise-dev-test-environment.md)
-    
-    建立使用者群組和適用於 iOS 和 Android 裝置的行動應用程式管理 (MAM) 原則。
-    
-- [在您的 Microsoft 365 企業版開發/測試環境中註冊 iOS 和 Android 裝置](enroll-ios-and-android-devices-in-your-microsoft-enterprise-365-dev-test-environ.md)
-    
-    註冊 iOS 或 Android 裝置並從遠端管理。
+使用[以下文章](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)，建立 [Microsoft 365 企業版](https://docs.microsoft.com/microsoft-365-enterprise/)的測試環境。
+ 
     
 ## <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
 
@@ -148,17 +139,7 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     
     在 Azure 基礎結構服務中建置基本和高可用性的 SharePoint Server 2013 伺服器陣列。
     
-**參與討論**
-
-|**連絡我們**|**描述**|
-|:-----|:-----|
-|**您需要什麼樣的雲端採用內容？** <br/> |我們正在建立涵蓋多個 Microsoft 雲端平台及服務的雲端採用內容。請傳送電子郵件至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)，讓我們知道您對雲端採用內容的看法或對特定內容的要求。<br/> |
-|**加入雲端採用討論** <br/> |如果您熱愛雲端解決方案，請考慮加入雲端採用諮詢委員會 (Cloud Adoption Advisory Board，CAAB)，與更大且活躍的 Microsoft 內容開發人員、產業專業人員及全球的客戶接觸。若要加入，請新增為 Microsoft 技術社群 [CAAB (雲端採用諮詢委員會) 空間](https://aka.ms/caab)的成員，並傳送電子郵件給我們，地址為：[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)。所有人都可以在 [CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)上讀取社群相關內容。不過，CAAB 成員可獲得新雲端採用資源和解決方案說明的私人網路研討會邀請。<br/> |
-|**取得您在這裡看到的美工圖案** <br/> |如果您想要此文章中所看到之美工圖案的可編輯複本，我們很樂於將它傳送給您。請以電子郵件將您的要求 (包括美工圖案的 URL 和標題) 傳送至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)。<br/> |
-   
 ## <a name="see-also"></a>另請參閱
-
-<a name="ADD_TLGs"> </a>
 
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
   
