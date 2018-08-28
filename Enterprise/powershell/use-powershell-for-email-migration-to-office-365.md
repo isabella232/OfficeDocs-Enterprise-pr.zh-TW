@@ -17,10 +17,11 @@ ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "17115242"
 ---
 # <a name="use-powershell-for-email-migration-to-office-365"></a>使用 PowerShell 將電子郵件移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 將電子郵件移轉至 Office 365。
+ **摘要：** 了解如何使用 Windows PowerShell 將電子郵件移轉至 Office 365。
   
 許多系統管理員會在第一次設定 Office 365 時，從現有系統移轉電子郵件。您也可以使用 Office 365 管理使用者介面來執行相同的操作。您也可以使用 Windows PowerShell 來移轉電子郵件。
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 01/11/2018
 [使用 Windows PowerShell 在 Office 365 中建立報告](use-windows-powershell-to-create-reports-in-office-365.md)
 #### 
 
-[使用 Windows PowerShell 管理 Office 365 的優點]((http://technet.microsoft.com/library/15144a50-453e-4cd5-befd-bc6736697967.aspx))
+[使用 Windows PowerShell 管理 Office 365 的優點](http://technet.microsoft.com/library/15144a50-453e-4cd5-befd-bc6736697967.aspx)
   
-[Office 365 中的 Windows PowerShell 技術參照]((http://technet.microsoft.com/library/10d5c66a-7579-4319-aaa5-7a5e21d49cea.aspx))
+[Office 365 中的 Windows PowerShell 技術參照](http://technet.microsoft.com/library/10d5c66a-7579-4319-aaa5-7a5e21d49cea.aspx)
   
-[Office 365 授權和 Windows PowerShell]((http://technet.microsoft.com/library/6ca0e430-f7ba-4184-becf-14c6c5c8dde5.aspx))
+[Office 365 授權和 Windows PowerShell](http://technet.microsoft.com/library/6ca0e430-f7ba-4184-becf-14c6c5c8dde5.aspx)
 
