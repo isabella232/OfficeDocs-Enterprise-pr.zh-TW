@@ -66,7 +66,7 @@
 #### [PerformancePoint Server 2007](pps-2007-end-of-support.md)
 #### [Project Server 2007](project-server-2007-end-of-support.md)
 
-# 測試 Office 365
+# [測試 Office 365](cloud-adoption-test-lab-guides-tlgs.md)
 ## [基底組態開發/測試環境](base-configuration-dev-test-environment.md)
 ## [Office 365 開發/測試環境](office-365-dev-test-environment.md)
 ### [適用於 Office 365 開發/測試環境的目錄同步作業](dirsync-for-your-office-365-dev-test-environment.md)
