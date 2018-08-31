@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150s
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,15 +17,16 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
 description: 摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
-ms.openlocfilehash: a95a079c8bdee6d36769461666769f9a75ea9f40
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: c72090638bcdcb580353baa7a733051971598e66
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914898"
 ---
 # <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
 
- **摘要：**在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
+ **摘要：** 在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
   
 本文包含的逐步指示，說明如何使用這些虛擬機器在 Azure 基礎結構服務中的 Microsoft Office 365 部署高可用性聯盟的驗證：
   
@@ -39,7 +42,7 @@ ms.lasthandoff: 04/27/2018
   
 **Azure 中適用於 Office 365 基礎結構的高可用性同盟驗證**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](images/c5da470a-f2aa-489a-a050-df09b4d641df.png)
+![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
   
 所有虛擬機器位於單一跨單位 Azure 虛擬網路中 (VNet)。 
   

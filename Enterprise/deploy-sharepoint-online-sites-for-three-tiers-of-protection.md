@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 1e8e3cfd-b878-4088-b941-9940363a5fae
 description: 摘要：建立及設定各種資訊保護等級的 SharePoint Online 小組網站。
-ms.openlocfilehash: 84b455809e210fb40d4a92396b2d8c4eb18245b1
-ms.sourcegitcommit: b2058b34196022668eac15e723962fefd82d6774
+ms.openlocfilehash: 6103675941802fcdee50c06ac3212d90f95c6d35
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "19631394"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915618"
 ---
 # <a name="deploy-sharepoint-online-sites-for-three-tiers-of-protection"></a>部署三種保護層級的 SharePoint Online 網站
 
@@ -54,7 +56,7 @@ ms.locfileid: "19631394"
     
 以下是您產生的組態。
   
-![適用於公用 SharePoint Online 小組網站的基準層級保護。](images/bcd46b8d-3f89-4398-80ce-4da17ee85e03.png)
+![適用於公用 SharePoint Online 小組網站的基準層級保護。](media/bcd46b8d-3f89-4398-80ce-4da17ee85e03.png)
   
 ### <a name="private"></a>Private
 
@@ -80,7 +82,7 @@ ms.locfileid: "19631394"
     
 以下是您產生的組態。
   
-![適用於私人 SharePoint Online 小組網站的基準層級保護。](images/91769026-37e3-4383-ac3c-dbf7aca98e41.png)
+![適用於私人 SharePoint Online 小組網站的基準層級保護。](media/91769026-37e3-4383-ac3c-dbf7aca98e41.png)
   
 ## <a name="sensitive-sharepoint-online-team-sites"></a>機密 SharePoint Online 小組網站
 
@@ -142,7 +144,7 @@ ms.locfileid: "19631394"
     
 接下來，從新的 SharePoint Online 小組網站，使用下列步驟設定權限。
   
-1. 決定 IT 系統管理員或將負責回應網站及向網站提出存取要求之其他人員的使用者主體名稱 (UPN) (belindan@contoso.com 為 UPN 範例)。在此寫下該 UPN：![](./images/Common_Images/TableLine.png)。
+1. 決定 IT 系統管理員或將負責回應網站及向網站提出存取要求之其他人員的使用者主體名稱 (UPN) (belindan@contoso.com 為 UPN 範例)。在此寫下該 UPN：![](./media/Common-Images/TableLine.png)。
     
 2. 在工具列中，按一下設定圖示，然後按一下 [網站權限]****。
     
@@ -196,7 +198,7 @@ ms.locfileid: "19631394"
     
 以下是您產生的組態。
   
-![適用於隔離 SharePoint Online 小組網站的敏感性層級保護。](images/7a6ab9c6-560a-4674-ac39-8175644dbe6f.png)
+![適用於隔離 SharePoint Online 小組網站的敏感性層級保護。](media/7a6ab9c6-560a-4674-ac39-8175644dbe6f.png)
   
 網站成員現在可以透過其中一個存取群組的群組成員資格，安全地在網站的資源上共同作業。
   
@@ -256,7 +258,7 @@ ms.locfileid: "19631394"
     
 以下是您產生的組態。
   
-![適用於隔離 SharePoint Online 小組網站的高度機密層級保護。](images/196359ab-d7ed-4fcf-97b4-61820a74aca4.png)
+![適用於隔離 SharePoint Online 小組網站的高度機密層級保護。](media/196359ab-d7ed-4fcf-97b4-61820a74aca4.png)
   
 網站成員現在可以透過其中一個存取群組的群組成員資格，安全地在網站的資源上共同作業。
   

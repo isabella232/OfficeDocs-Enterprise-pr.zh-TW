@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 1d51bd87-17bf-457c-b698-61821de3afa0
 description: 摘要：在 SharePoint Online 和 Office 365 中保護檔案的設定建議。
-ms.openlocfilehash: 806f9880347a5fa4aff29206651d86b0e18da3a4
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: 5ee7ce0f5d52076ec27a3478a39b998a96e0e270
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319224"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915078"
 ---
 # <a name="secure-sharepoint-online-sites-and-files"></a>保護 SharePoint Online 網站與檔案
 
@@ -138,7 +140,7 @@ SharePoint Online 和商務用 OneDrive 的裝置存取設定可讓您決定要�
     
 - 組織的人員可以手動套用標籤至 Outlook 網頁版、Outlook 2010 及更新版本、商務用 OneDrive、SharePoint Online 以及 Office 365 群組中的內容。使用者通常最清楚自己使用的內容類型，因此可以對其分類並套用適當的 DLP 原則。
     
-![SharePoint 網站的建議設定](images/7fed0126-ab4a-4480-922c-681970642339.png)
+![SharePoint 網站的建議設定](media/7fed0126-ab4a-4480-922c-681970642339.png)
   
 如圖例所示，此解決方案包括建立下列標籤：
   
@@ -160,7 +162,7 @@ SharePoint Online 和商務用 OneDrive 的裝置存取設定可讓您決定要�
   
 請留意，若將 Azure 資訊保護套用至儲存於 Office 365 中的檔案，服務就無法處理這些檔案的內容。 共同撰寫、eDiscovery、搜尋、Delve 和其他共同作業功能無法運作。 此外，DLP 原則只可用於中繼資料 (包括 Office 365 標籤)，但不可用於這些檔案的內容 (例如檔案中的信用卡號碼)。
   
-![Azure 資訊保護設定於 Azure 中，且標籤顯示在用戶端工具列中](images/1266a7a0-5078-49ab-bbf1-b0cf41451f62.png)
+![Azure 資訊保護設定於 Azure 中，且標籤顯示在用戶端工具列中](media/1266a7a0-5078-49ab-bbf1-b0cf41451f62.png)
   
 如圖例所示：
   

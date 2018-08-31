@@ -9,6 +9,8 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -16,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 53d2f7f32402d8c05d22c0661a0f625c756da6d4
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: ebddd97afb2c45821cd25eae5e8124459720df0b
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319214"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915198"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -65,7 +67,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 **圖 1：組織的多個訂用帳戶範例**
 
-![具有多個 Microsoft 雲端供應項目訂用帳戶的組織範例。](images/Subscriptions/Subscriptions_Fig1.png)
+![具有多個 Microsoft 雲端供應項目訂用帳戶的組織範例。](media/Subscriptions/Subscriptions-Fig1.png)
 
   
 圖 1 顯示單一組織有多個 Office 365 訂用帳戶、一個 Intune 訂用帳戶、一個 Dynamics 365 訂用帳戶、多個 Azure 訂用帳戶。
@@ -76,7 +78,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 **圖 2：SaaS 型訂用帳戶中的組織授權**
 
-![Microsoft SaaS 型雲端供應項目訂用帳戶中多個授權的範例。](images/Subscriptions/Subscriptions_Fig2.png)
+![Microsoft SaaS 型雲端供應項目訂用帳戶中多個授權的範例。](media/Subscriptions/Subscriptions-Fig2.png)
   
 使用 Azure PaaS 型雲端服務時，服務費用已包含軟體授權。
   
@@ -92,7 +94,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 **圖 3：組織的多個訂用帳戶使用相同 Azure AD 租用戶的範例。**
 
-![多個訂用帳戶皆使用相同 Azure AD 租用戶的組織範例。](images/Subscriptions/Subscriptions_Fig3.png)
+![多個訂用帳戶皆使用相同 Azure AD 租用戶的組織範例。](media/Subscriptions/Subscriptions-Fig3.png)
   
 ### <a name="tenants"></a>租用戶
 
@@ -136,7 +138,7 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
   
 **圖 4： 組織同步處理的內部部署帳戶和 IDaaS**
 
-![組織的身分識別即服務 (IaaS) IDaaS。](images/Subscriptions/Subscriptions_Fig4.png)
+![組織的身分識別即服務 (IaaS) IDaaS。](media/Subscriptions/Subscriptions-Fig4.png)
   
 在圖 4 中，Microsoft 的 SaaS 雲端供應項目、Azure PaaS 應用程式、使用 Azure AD 網域服務的 Azure IaaS 中的虛擬機器，三者使用同一個 Azure AD 租用戶。Azure AD Connect 將內部部署的 Windows Server AD 樹系和 Azure AD 租用戶同步。
   

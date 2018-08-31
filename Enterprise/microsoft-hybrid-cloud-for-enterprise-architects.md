@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 54deae50-9442-4b6a-bd86-e5edb0ec6d74
 description: 摘要： IT 架構設計人員在使用 Microsoft 雲端服務和平台時，有關混合案例需要瞭解的資訊。
-ms.openlocfilehash: a729c770fee5a6484e8a8efbfe014b54fe266bc0
-ms.sourcegitcommit: 9f57825b10f20e3813732372541128ef187d52c3
+ms.openlocfilehash: a2859d6ce677a37541948d481530aee8f46adf7b
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "20161816"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915548"
 ---
 # <a name="microsoft-hybrid-cloud-for-enterprise-architects"></a>Microsoft Hybrid Cloud for Enterprise Architects
 
@@ -28,7 +30,7 @@ ms.locfileid: "20161816"
   
 本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，混合結構和設定所需的資訊。您也可以 7 頁海報的形式檢視本文，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。
   
-[![Microsoft 混合式雲端模型的縮圖影像](images/Hybrid_Poster/Hybrid_Cloud_Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54424
+[![Microsoft 混合式雲端模型的縮圖影像](media/Hybrid-Poster/Hybrid-Cloud-Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54424
 )
   
 [PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842083) | 

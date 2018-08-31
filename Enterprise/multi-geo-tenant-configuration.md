@@ -11,12 +11,12 @@ ms.custom: ''
 localization_priority: Priority
 ms.collection: Strat_SP_gtc
 description: 了解如何設定商務用 OneDrive 多地理位置。
-ms.openlocfilehash: 561025efc38199f3a92e228d5414a28df6eb12f0
-ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
+ms.openlocfilehash: 1817eee1bb2ceefa0e2e167e327af417dd0c517d
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "21549964"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915248"
 ---
 # <a name="onedrive-for-business-multi-geo-tenant-configuration"></a>商務用 OneDrive 多地理位置租用戶設定
 
@@ -112,7 +112,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
 ### <a name="synchronize-users-preferred-data-location-using-ad-connect"></a>使用 AD Connect 同步處理使用者的慣用資料位置 
 
-如果貴公司的使用者已從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設設定](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 AD 將慣用的資料位置同步處理到 AAD。
+如果貴公司的使用者已從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設設定](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 AD 將慣用的資料位置同步處理到 AAD。
 
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 
@@ -129,7 +129,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
 2.  執行 `Connect-MsolService` 並輸入租用戶的全域系統管理員認證。
 
-3.  使用 [Set-MsolUser](https://docs.microsoft.com/zh-TW/powershell/msonline/v1/set-msoluser) Cmdlet 為每個使用者設定慣用資料位置。例如：
+3.  使用 [Set-MsolUser](https://docs.microsoft.com/powershell/msonline/v1/set-msoluser) Cmdlet 為每個使用者設定慣用資料位置。例如：
 
     `Set-MsolUser -userprincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR`
 
@@ -137,7 +137,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
     `(Get-MsolUser -userprincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation`
 
-![](media/multi-geo-tenant-configuration_image3.png)
+![](media/multi-geo-tenant-configuration-image3.png)
 
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 

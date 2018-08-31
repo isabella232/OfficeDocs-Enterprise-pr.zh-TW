@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 4194020a-3847-4259-9f2d-5c556a4510f9
 description: 摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
-ms.openlocfilehash: 4cfbeab3d90703e17c86e707988a8a62c937df9a
-ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
+ms.openlocfilehash: 94118022b86a5e732467599632e30c058827468f
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915468"
 ---
 # <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
 
- **摘要：**了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
+ **摘要：** 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
   
 若要針對 Microsoft SaaS 服務最佳化您的網路，需要仔細分析您的網際網路邊緣、用戶端裝置以及一般 IT 作業。
   
@@ -42,9 +45,9 @@ ms.lasthandoff: 05/03/2018
 
 以下是一些考量事項最佳化您的網際網路 edge 和 Microsoft saas 和服務的輸送量。
   
-**圖 1： Microsoft saas 和服務的連線選項**
+**圖 1：Microsoft SaaS 服務的連線選項**
 
-![圖 1：Microsoft SaaS 服務的連線選項](images/Network_Poster/SaaS1.png)
+![圖 1：Microsoft SaaS 服務的連線選項](media/Network-Poster/SaaS1.png)
   
 圖 1 顯示透過網際網路管道或 ExpressRoute 連線至 Microsoft saas 和服務的內部網路。
   
@@ -180,9 +183,9 @@ ms.lasthandoff: 05/03/2018
     
 如需詳細資訊，請參閱：
   
-- [網路與 Office 365 規劃移轉](https://aka.ms/tune)
+- [Office 365 的網路和移轉規劃](https://aka.ms/tune)
     
-- [Office 365 ExpressRoute](https://aka.ms/expressrouteoffice365)
+- [ExpressRoute for Office 365](https://aka.ms/expressrouteoffice365)
 
 ## <a name="next-step"></a>下一步
 

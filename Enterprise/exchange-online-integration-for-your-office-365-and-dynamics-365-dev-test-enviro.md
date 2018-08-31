@@ -1,5 +1,5 @@
 ---
-title: "適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合"
+title: 適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 499c5823-427a-4ba2-8fc1-9553bc2ff2d3
-description: "摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。"
-ms.openlocfilehash: 4acfc4c676482131160ca82b5e8e405cca938cac
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
-ms.translationtype: HT
+description: 摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
+ms.openlocfilehash: 320a59043ab2a8810f9bfc03fdcf896241ec6b20
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915498"
 ---
 # <a name="exchange-online-integration-for-your-office-365-and-dynamics-365-devtest-environment"></a>適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 
- **摘要：**使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
+ **摘要：** 使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
   
 Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一個位置，以便有適當的權限任何人都可以查看所有的相關客戶記錄。例如，檢視與特定連絡人、帳戶、機會或案例相關聯的所有電子郵件。
   
@@ -39,13 +42,13 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
 
 若要設定全域系統管理員的信箱將 Dynamics 365 與 Exchange Online 整合，請使用這些步驟：
   
-1. 使用瀏覽器的私人工作階段，請移至 [http://portal.office.com](http://portal.office.com)，並使用您的 Office 365 全域系統管理員帳戶登入。
+1. 使用的私用的工作階段的瀏覽器中移至[http://portal.office.com](http://portal.office.com)並使用您的 Office 365 全域管理員帳戶登入。
     
 2. 在 [Microsoft Office Home]**** 頁面上，按一下 [郵件]**** 磚。
     
 3. 在瀏覽器的新 [郵件]**** 索引標籤上，按一下 [新增]****，並注意輸入訊息的方塊下方之窗格底部角落包含的 [我的範本] 圖示。
     
-     ![不與 Dynamics 365 整合的全新空白電子郵件訊息。](images/879b54fd-a68f-4581-9f89-d5050df6f4de.png)
+     ![不與 Dynamics 365 整合的全新空白電子郵件訊息。](media/879b54fd-a68f-4581-9f89-d5050df6f4de.png)
   
 4. 按一下 [捨棄]****，並將 [郵件]**** 索引標籤保持開啟。
     
@@ -85,15 +88,15 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
     
 5. 按一下瀏覽器中的 [Microsoft Office Home]**** 索引標籤，然後按一下 [郵件]**** 磚。
     
-6. 在瀏覽器的新 [郵件]**** 索引標籤上，按一下 [新增]****請注意，輸入訊息的方塊下方之窗格底部角落現在包含 Dynamics 365 的圖示。
+6. 在瀏覽器的新 [郵件]**** 索引標籤上，按一下 [新增]**** 請注意，輸入訊息的方塊下方之窗格底部角落現在包含 Dynamics 365 的圖示。
     
-     ![與 Dynamics 365 整合的全新空白電子郵件訊息，顯示新的圖示。](images/ecb822e1-45fe-4481-99a1-294317d1d2de.png)
+     ![與 Dynamics 365 整合的全新空白電子郵件訊息，顯示新的圖示。](media/ecb822e1-45fe-4481-99a1-294317d1d2de.png)
   
 7. 按一下 [Dynamics 365] 圖示。您應該會看到 [Dynamics 365]**** 窗格，可從這裡追蹤此電子郵件或存取範本、銷售資料或文章。
     
 8. 在電子郵件訊息的 [收件者]**** 欄位中，輸入 **alex.y.wu@outlook.com**，然後按一下 [Dynamics 365]**** 窗格中的 [重試]****。您應該會在 [Dynamics 365]**** 窗格中看到包含 Alex Wu 相關資訊的 [收件者]**** 區段，這是銷售應用程式中的連絡人，隨試用版訂閱的範例資料所提供。
     
-     ![儲存於 Dynamics 365 中銷售連絡人的 Dynamics 365 資訊窗格。](images/a010fa5f-3f1b-47d4-ab5e-d00d85a24a3f.png)
+     ![儲存於 Dynamics 365 中銷售連絡人的 Dynamics 365 資訊窗格。](media/a010fa5f-3f1b-47d4-ab5e-d00d85a24a3f.png)
   
 9. 按一下 [捨棄]****。
 

@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: c9f837af-8d71-4df1-a285-dedb1c5618b3
 description: 摘要：使用各種資訊保護層級，對 SharePoint Online 小組網站套用 Office 365 標籤和資料外洩防護 (DLP) 原則。
-ms.openlocfilehash: 439f59f683090d39ea98730854aa1ca5dc8db482
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: 1e83f8c08dde55c22b7b9e8e6f9fe966c9fe9c02
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319264"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915778"
 ---
 # <a name="protect-sharepoint-online-files-with-office-365-labels-and-dlp"></a>使用 Office 365 標籤與 DLP 來保護 SharePoint Online 檔案
 
@@ -127,7 +129,7 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 以下是您產生的組態。
   
-![用於四種類型 SharePoint Online 小組網站的 Office 365 標籤。](images/e0a4fdd2-1c30-4d93-8af4-a6f0c6c29966.png)
+![用於四種類型 SharePoint Online 小組網站的 Office 365 標籤。](media/e0a4fdd2-1c30-4d93-8af4-a6f0c6c29966.png)
   
 ## <a name="dlp-policies-for-your-sharepoint-online-sites"></a>適用於 SharePoint Online 網站的 DLP 原則
 
@@ -178,7 +180,7 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 以下是敏感性 SharePoint Online 小組網站的設定結果。
   
-![使用敏感性 Office 365 標籤之隔離 SharePoint Online 小組網站的 DLP 原則。](images/2ff4cc53-87a8-43e3-b637-3068d88409f3.png)
+![使用敏感性 Office 365 標籤之隔離 SharePoint Online 小組網站的 DLP 原則。](media/2ff4cc53-87a8-43e3-b637-3068d88409f3.png)
   
 接下來，使用下列步驟來設定 DLP 原則，以在使用者共用組織外部 SharePoint Online 高度機密小組網站上的文件時封鎖使用者。
   
@@ -226,7 +228,7 @@ ForEach ($element in $labelNames){ New-ComplianceTag -Name $element }
     
 以下是高度機密 SharePoint Online 小組網站的設定結果。
   
-![使用高度機密 Office 365 標籤之隔離 SharePoint Online 小組網站的 DLP 原則。](images/f705d3d0-23c9-4333-8b70-ad3b91f835ea.png)
+![使用高度機密 Office 365 標籤之隔離 SharePoint Online 小組網站的 DLP 原則。](media/f705d3d0-23c9-4333-8b70-ad3b91f835ea.png)
   
 ## <a name="next-step"></a>下一步
 

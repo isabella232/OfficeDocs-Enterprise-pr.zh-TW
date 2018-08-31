@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,11 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
 description: 摘要：使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端供應項目。
-ms.openlocfilehash: 29fcb1108ceac6aa488ca71d723789a7a2e6c409
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: e5391b88a964261ad0698890bbb5c99866fbb57d
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915628"
 ---
 # <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
 
@@ -27,7 +30,7 @@ ms.lasthandoff: 04/27/2018
   
 依照本文所述的指示，您可以在 Microsoft Azure 基礎結構服務中建立模擬的內部網路，然後再新增 Microsoft Office 365、Microsoft Enterprise Mobility + Security (EMS)，與 Microsoft Dynamics 365 訂閱。結果是經簡化的組織在單一開發/測試環境中一次使用所有 Microsoft 雲端供應項目。 
   
-![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
+![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](media/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
   
 您可以使用所產生的組態來：
   
@@ -47,7 +50,7 @@ ms.lasthandoff: 04/27/2018
   
 **圖 1：含 Office 365 之 Azure 中的模擬內部網路**
 
-![具有 DirSync 的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![具有 DirSync 的 Office 365 開發/測試環境](media/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 > [!NOTE]
 > Azure 試用版是 30 天。Office 365 企業版 E5 試用訂閱是 30 天，此可以輕鬆地延長額外 30 天的時間。針對永久開發/測試環境，建立新付費 Azure 訂閱並建立新付費的 Office 365 企業版 E5 訂閱，內含少量的授權。 
@@ -93,7 +96,7 @@ ms.lasthandoff: 04/27/2018
   
 **圖 2：含 Office 365 和 EMS 之 Azure 中的模擬內部網路**
 
-![具有 Azure、Office 365 及 EMS 之 One Microsoft Cloud 開發/測試環境的階段 2 ](images/fdb520fe-ebbd-4681-a80e-b60df52f07c5.png)
+![具有 Azure、Office 365 及 EMS 之 One Microsoft Cloud 開發/測試環境的階段 2 ](media/fdb520fe-ebbd-4681-a80e-b60df52f07c5.png)
   
 ## <a name="phase-3-add-dynamics-365"></a>階段 3：新增 Dynamics 365
 
@@ -171,7 +174,7 @@ ms.lasthandoff: 04/27/2018
   
 **圖 3：含 Office 365、EMS 和 Dynamics 365 之 Azure 中的模擬內部網路**
 
-![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](images/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
+![具有 Azure、Office 365、EMS 及 Dynamics 365 之 One Microsoft Cloud 開發/測試環境的階段 3 ](media/31714fcc-0c7d-411f-bcd1-c62d9be090ee.png)
   
 ## <a name="next-steps"></a>後續步驟
 

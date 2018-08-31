@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 13c71689-59a9-4cdf-8175-808a20c1e879
 description: 摘要： 設計您的 Microsoft 雲端服務與平台的網路功能。
-ms.openlocfilehash: eebfb0537ba3166ded84c899f22efcd11825601b
-ms.sourcegitcommit: 9f57825b10f20e3813732372541128ef187d52c3
+ms.openlocfilehash: ac499dde3db65d3594704d13e40aad6e6bd45f94
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "20161866"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915398"
 ---
 # <a name="microsoft-cloud-networking-for-enterprise-architects"></a>Microsoft Cloud Networking for Enterprise Architects
 
@@ -28,7 +30,7 @@ ms.locfileid: "20161866"
   
 本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，設計組織的網路功能時所需的資訊。您也可以 12 頁海報的形式檢視此資訊，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。
   
-[![Microsoft 雲端網路模型的縮圖影像](images/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
+[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
 ](https://go.microsoft.com/fwlink/p/?linkid=842073)
   
 [PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074) | [更多語言](https://www.microsoft.com/download/details.aspx?id=54425)

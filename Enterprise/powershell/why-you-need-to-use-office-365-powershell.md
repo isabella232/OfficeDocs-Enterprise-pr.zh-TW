@@ -12,15 +12,16 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: 375ab283385431ea975782f9b7b8bf97ed0cb6ed
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
-ms.translationtype: HT
+ms.openlocfilehash: 7149478efcbffcec56423a6c8ade5377992f3352
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915038"
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
- **摘要：**了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
+ **摘要：** 了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
   
 使用 Office 365 系統管理中心，您不僅能管理 Office 365 使用者帳戶和使用者授權，還能管理 Office 365 伺服器產品：Exchange、商務用 Skype Online 及 SharePoint Online。不過，您也可以使用 Office 365 PowerShell 命令來管理這些元素 (利用命令列與指令碼語言環境，可獲得速度、自動化和其他功能等優勢)。
   
@@ -65,11 +66,10 @@ Get-SPOSite -Limit All | Get-SPWeb -Limit All | % {$_.Lists} | ? {$_ -is [Micros
 了解這些基本技術之後，您不需要使用 **Get-mailbox** 命令列出信箱使用者，也不需要了解如何建立新命令 (例如前一個命令來計算所有 Web 應用程式之所有網站的所有清單中的所有項目)。Microsoft 和 Office 365 系統管理員社群可視需要協助您使用該作業。
   
 ## <a name="office-365-powershell-can-reveal-additional-information-that-you-cannot-see-with-the-office-365-admin-center"></a>Office 365 PowerShell 可以揭露使用 Office 365 系統管理中心看不到的其他資訊
-<a name="reveal"> </a>
 
 Office 365 系統管理中心會顯示許多有用的資訊，但這不表示它會顯示 Office 365 所儲存之使用者、授權、信箱和網站的所有可能資訊。以下是 Office 365 系統管理中心內的 **使用者和群組** 範例：
   
-![Office 365 系統管理中心內，使用者及群組顯示方式的範例。](images/o365_powershell_users_and_groups.png)
+![Office 365 系統管理中心內，使用者及群組顯示方式的範例。](media/o365-powershell-users-and-groups.png)
   
 在許多用途中，這會顯示您需要知道的資訊。不過，您有時需要更多的資訊。例如，Office 365 授權 (以及使用者可以使用的 Office 365 功能) 一部分取決於使用者的地理位置。您可延伸到美國使用者的原則和功能，與您可延伸到印度或比利時使用者的原則和功能可能不大一樣。您可以使用 Office 365 系統管理中心，透過下列步驟來判斷使用者的地理位置：
   
@@ -81,7 +81,7 @@ Office 365 系統管理中心會顯示許多有用的資訊，但這不表示它
     
 4. 向下捲動，直到您看到 **[國家或地區]** 標題為止。
     
-     ![Office 365 系統管理中心內，使用者區域資訊的範例。](images/o365_powershell_usage_location.png)
+     ![Office 365 系統管理中心內，使用者區域資訊的範例。](media/o365-powershell-usage-location.png)
   
 5. 在一張紙上寫下使用者的顯示名稱和位置，或複製並貼到 [記事本]。 
     
@@ -92,7 +92,7 @@ Get-MsolUser | Select DisplayName, UsageLocation
 ```
 
 > [!NOTE]
-> 此命令需要您安裝 [Windows Azure Active Directory 模組](https://technet.microsoft.com/zh-TW/library/jj151815.aspx)。 
+> 此命令需要您安裝 [Windows Azure Active Directory 模組](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0)。 
   
 以下是顯示範例：
   
@@ -173,13 +173,12 @@ $x | Select DisplayName, UsageLocation
 - 顯示變數 $x 的內容，但只會包括每位使用者的名稱和位置 ( **$x | Select DisplayName, UsageLocation** )。
   
 ## <a name="office-365-has-features-that-you-can-only-configure-with-office-365-powershell"></a>Office 365 具有的功能，僅供您搭配 Office 365 PowerShell 所設定
-<a name="only"> </a>
 
 Office 365 系統管理中心是要提供大部分人都適用之最常見或有意義系統管理工作的存取權。換句話說，Office 365 系統管理中心 系統管理中心的設計目的是讓一般系統管理員可以使用工具來執行最常見的管理工作。根據這項定義，這表示有一些工作無法使用 Office 365 系統管理中心來完成。
   
 例如，商務用 Skype Online 系統管理中心提供一些選項來建立自訂會議邀請：
   
-![在商務用 Skype Online 系統管理中心內，自訂會議邀請顯示方式的範例。](images/o365_powershell_meeting_invitation.png)
+![在商務用 Skype Online 系統管理中心內，自訂會議邀請顯示方式的範例。](media/o365-powershell-meeting-invitation.png)
   
 使用這些設定，您可以新增會議邀請的一些個人化和專門技術。不過，這不只是建立自訂會議邀請，還會進行其他會議組態設定。例如，會議預設允許：
   
@@ -210,7 +209,6 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $True -AllowConferenceR
 這只是其中一個範例。還有其他範例，這就是為什麼您身為 Office 365 系統管理員必須熟悉如何執行 Office 365 PowerShell 命令。
   
 ## <a name="office-365-powershell-is-great-at-carrying-out-bulk-operations"></a>Office 365 PowerShell 十分適合執行大量作業
-<a name="bulk"> </a>
 
 從歷史角度，執行單一作業時，視覺介面 (例如 Office 365 系統管理中心) 最為重要。例如，如果您需要停用一個使用者帳戶，則可以使用 Office 365 系統管理中心快速找出並清除核取方塊。這可能會比在 Office 365 PowerShell 中執行類似作業還要簡單。
   
@@ -226,7 +224,7 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $True -AllowConferenceR
     
 4. 在 [共用] 對話方塊中，按一下連結，以顯示所有具有網站權限的使用者：
     
-     ![在 SharePoint Online 系統管理中心內，檢視 SharePoint Online 網站成員的範例。](images/o365_powershell_view_permissions.png)
+     ![在 SharePoint Online 系統管理中心內，檢視 SharePoint Online 網站成員的範例。](media/o365-powershell-view-permissions.png)
   
 5. 在 [共用對象] 對話方塊中，按一下 [進階]。
     
@@ -241,7 +239,7 @@ Get-SPOSite | ForEach {Remove-SPOUser -Site $_.Url -LoginName "kenmyer@litwarein
 ```
 
 > [!NOTE]
-> 此指令需要您安裝[連線到 SharePoint Online PowerShell](https://technet.microsoft.com/library/fp161372.aspx)。 
+> 此指令需要您安裝[連線到 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)。 
   
 > [!TIP]
 >  此 Office 365 PowerShell 命令的解譯如下：取得目前 Office 365 訂閱中的所有 SharePoint 網站 ( **Get-SPOSite** )，並且針對每個網站，從可存取它的使用者清單中移除 Ken Meyer ( **ForEach {Remove-SPOUser -Site $\_.Url -LoginName "kenmyer@litwareinc.com"}** )。
@@ -258,11 +256,10 @@ Get-SPOSite | ForEach {Add-SPOUser -Site $_.Url -LoginName "bkearney@litwareinc.
 >  此 Office 365 PowerShell 命令的解譯如下：取得目前 Office 365 訂閱中的所有 SharePoint 網站，並針對每個網站，將 Bonnie Kearney 的登入名稱新增至網站的 [成員] 群組來允許她的存取權 ( **ForEach {Add-SPOUser -Site $\_.Url -LoginName "bkearney@litwareinc.com" -Group "Members"}** )。
   
 ## <a name="office-365-powershell-is-great-at-filtering-data"></a>Office 365 PowerShell 十分適合篩選資料
-<a name="filter"> </a>
 
 Office 365 系統管理中心提供多種不同的資料篩選方式，可快速並輕鬆地找出資訊的目標子集。例如，Exchange 可輕鬆篩選使用者信箱的任何內容。例如，以下是住在布魯民頓市中所有使用者的信箱清單：
   
-![在 Office 365 系統管理中心內，進行針對所有居住在 Bloomington 市的使用者信箱清單的進階搜尋範例。](images/o365_powershell_advanced_search.png)
+![在 Office 365 系統管理中心內，進行針對所有居住在 Bloomington 市的使用者信箱清單的進階搜尋範例。](media/o365-powershell-advanced-search.png)
   
 Exchange 系統管理中心也可讓您合併篩選準則。例如，您可以找到住在布魯民頓市並且在財務部門工作之所有人的信箱。 
   
@@ -337,11 +334,10 @@ Get-User -Filter '{LastName -like "*son"}'
 >  此 Office 365 PowerShell 命令的解譯如下：取得目前 Office 365 訂閱中的所有使用者，但使用只會列出姓氏結尾為 "son" 之使用者的篩選器 ( **-Filter '{LastName -like "\*son"}'** )。\* 代表任何字元集 (即使用者姓氏中的字母)。
   
 ## <a name="office-365-powershell-makes-it-easy-to-print-or-save-data"></a>Office 365 PowerShell 可讓您輕鬆地列印或儲存資料
-<a name="printsave"> </a>
 
 Office 365 系統管理中心可讓您檢視資料清單。以下是商務用 Skype Online 系統管理中心範例，其中顯示已啟用商務用 Skype Online 的使用者清單：
   
-![商務用 Skype Online 系統管理中心，顯示商務用 Skype Online 已啟用的使用者清單的範例。](images/o365_powershell_lync_users.png)
+![商務用 Skype Online 系統管理中心，顯示商務用 Skype Online 已啟用的使用者清單的範例。](media/o365-powershell-lync-users.png)
   
 若要將該資訊儲存至檔案，您必須複製該資訊，並將它貼到文件或 Excel。在任一情況下，複本可能都需要進行其他格式設定。此外，Office 365 系統管理中心不提供方法來直接列印所顯示的清單。
   
@@ -353,7 +349,7 @@ Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Export
 
 以下是顯示範例：
   
-![儲存成逗點分隔值 (CSV) 檔案的商務用 Skype Online 使用者資料表，匯入到 Excel 工作表中的範例。](images/o365_powershell_data_in_excel.png)
+![儲存成逗點分隔值 (CSV) 檔案的商務用 Skype Online 使用者資料表，匯入到 Excel 工作表中的範例。](media/o365-powershell-data-in-excel.png)
   
 > [!TIP]
 >  此 Office 365 PowerShell 命令的解譯如下：取得目前 Office 365 訂閱中的所有商務用 Skype Online 使用者 ( **Get-CsOnlineUser** )、只取得使用者名稱、UPN 和位置 ( **Select DisplayName, UserPrincipalName, UsageLocation** )，然後將資訊儲存至名稱為 C:\\Logs\\SfBUsers.csv 的 CSV 檔案中 ( **Export-Csv -Path "C:\\Logs\\SfBUsers.csv" -NoTypeInformation** )。
@@ -368,7 +364,7 @@ Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Out-Pr
 
 以下是您將列印出的文件樣貌：
   
-![Office 365 PowerShell 命令直接列在 Windows 預設印表機上，所輸出的列印文件範例。](images/o365_powershell_printed_data.png)
+![Office 365 PowerShell 命令直接列在 Windows 預設印表機上，所輸出的列印文件範例。](media/o365-powershell-printed-data.png)
   
 > [!TIP]
 >  此 Office 365 PowerShell 命令的解譯如下：取得目前 Office 365 訂閱中的所有商務用 Skype Online 使用者、只取得使用者名稱、UPN 和位置，然後將該資訊傳送至預設 Windows 印表機 ( **Out-Printer** )。
@@ -376,7 +372,6 @@ Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Out-Pr
 列印出的文件與 Office 365 PowerShell 命令視窗內所顯示的內容，具有相同的簡單格式，但建立 Office 365 PowerShell 命令來列出您需要的內容之後，只要將 **| Out-Printer** 新增至命令的結尾，即可取得可使用的複本。
   
 ## <a name="office-365-powershell-lets-you-manage-across-server-products"></a>Office 365 PowerShell 可讓您管理數個伺服器產品
-<a name="printsave"> </a>
 
 構成 Office 365 的不同元件是設計為一起使用。例如，假設您新增 Office 365 的新使用者，並在新增時指定使用者部門和電話號碼之類的資訊。如果您使用任何 Office 365 伺服器產品存取使用者的資訊，即可使用這些資訊。商務用 Skype Online、Exchange 或 SharePoint Online。
   
@@ -439,9 +434,6 @@ Molly Dempsey           False        True               False
 - 顯示使用者清單，但只包括其名稱、是否獲得授權，以及指出是否已啟用其信箱以及其是否已啟用商務用 Skype Online 的兩個新屬性 ( **$x | Select DisplayName, IsLicensed, IsMailboxEnabled, EnabledforSfB** )。
   
 ## <a name="see-also"></a>另請參閱
-
-
-#### 
 
 [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
   

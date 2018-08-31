@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: 03e729e2211320cac1adc88258e59b18b3ff0719
-ms.sourcegitcommit: 3a4ab28f3f4172d596426f0da40bcab8c46ef74d
+ms.openlocfilehash: f065f9fa31b6793933dc4eec0d840bd1320a8891
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "20215845"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915278"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -30,7 +32,7 @@ ms.locfileid: "20215845"
   
 **圖 1：基底組態開發/測試環境**
 
-![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
 圖 1 中的基底組態開發/測試環境包含名為 TestLab 的雲端專用 Azure 虛擬網路中的 Corpnet 子網路，其可模擬連線到網際網路的簡化私人內部網路。它包含執行 WIndows Server 2016 的三個 Azure 虛擬機器：
   
@@ -67,7 +69,7 @@ ms.locfileid: "20215845"
 > [!NOTE]
 > Azure 中的虛擬機器在執行時會持續產生成本。此成本是根據您的免費試用版、MSDN 訂閱或付費訂閱收費。如需執行 Azure 虛擬機器的成本相關資訊，請參閱[虛擬機器價格詳細資料](https://azure.microsoft.com/pricing/details/virtual-machines/)與 [Azure 價格計算機](https://azure.microsoft.com/pricing/calculator/)。若要降低成本，請參閱[降低 Azure 中測試環境虛擬機器的成本](base-configuration-dev-test-environment.md#mincost)。 
   
-![Microsoft Cloud 中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
+![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
 > 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
@@ -131,7 +133,7 @@ Set-AzureRMVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name Corpnet -Addre
 
 這是您目前的設定。
   
-![Azure 中具有虛擬網路與子網路的基底組態的階段 1](images/0b5634fc-4e1c-469d-873d-97ed7e587411.png)
+![Azure 中具有虛擬網路與子網路的基底組態的階段 1](media/0b5634fc-4e1c-469d-873d-97ed7e587411.png)
   
 ## <a name="phase-2-configure-dc1"></a>階段 2：設定 DC1
 
@@ -235,7 +237,7 @@ Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv
 
 這是您目前的設定。
   
-![Azure 中具有 DC1 虛擬機器的基底組態的階段 2](images/49069908-29c3-4d73-87f7-debbea067261.png)
+![Azure 中具有 DC1 虛擬機器的基底組態的階段 2](media/49069908-29c3-4d73-87f7-debbea067261.png)
   
 ## <a name="phase-3-configure-app1"></a>階段 3：設定 APP1
 
@@ -289,7 +291,7 @@ New-SmbShare -name files -path c:\files -changeaccess CORP\User1
 
 這是您目前的設定。
   
-![Azure 中具有 APP1 虛擬機器的基底組態的階段 3](images/92cfabb0-7f9d-4291-964d-ac32d52748d7.png)
+![Azure 中具有 APP1 虛擬機器的基底組態的階段 3](media/92cfabb0-7f9d-4291-964d-ac32d52748d7.png)
   
 ## <a name="phase-4-configure-client1"></a>階段 4：設定 CLIENT1
 
@@ -354,7 +356,7 @@ CLIENT1 重新啟動之後，使用 CORP\\User1 帳戶名稱和密碼連線至 C
     
 這是您的最終設定。
   
-![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
 Azure 中的基底組態已準備好進行應用程式開發與測試，或建立其他測試環境。 
   
