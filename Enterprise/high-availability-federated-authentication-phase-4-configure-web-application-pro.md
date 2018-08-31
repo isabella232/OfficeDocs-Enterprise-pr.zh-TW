@@ -1,5 +1,5 @@
 ---
-title: "高可用性同盟驗證階段 4 設定 web 應用程式 proxy"
+title: 高可用性同盟驗證階段 4 設定 web 應用程式 proxy
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
-description: "摘要： 設定 Microsoft Azure 中的 Office 365 在高可用性同盟驗證的 web 應用程式 proxy 伺服器。"
-ms.openlocfilehash: 3465281c6ba27c52cc7a991e400fb4f4a892b244
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 設定 Microsoft Azure 中的 Office 365 在高可用性同盟驗證的 web 應用程式 proxy 伺服器。
+ms.openlocfilehash: 0f0299fe8fecdea608330eebc12aea01098f8cec
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915808"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
- **摘要：**Microsoft Azure 中設定您的 Office 365 的高可用性同盟驗證的 web 應用程式 proxy 伺服器。
+ **摘要：** Microsoft Azure 中設定您的 Office 365 的高可用性同盟驗證的 web 應用程式 proxy 伺服器。
   
 在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。
   
@@ -31,7 +32,7 @@ ms.lasthandoff: 02/09/2018
 您必須先建立網際網路對應負載平衡器，讓 Azure 將從網際網路傳入的用戶端驗證流量分散到兩個 Web 應用程式 Proxy 伺服器。
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 當您已提供位置和資源群組的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
@@ -63,13 +64,13 @@ Write-Host (Get-AzureRMPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**Name**|**類型**|**TTL**|**值**|
+|**名稱**|**類型**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
-|同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對向負載平衡器 （由上一節中的命令會**寫入主機**顯示） 的公用 IP 位址 <br/> |
+|同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對應負載平衡器的公用 IP 位址 (透過上一節中的 **Write-Host** 命令顯示) <br/> |
    
 範例如下：
   
-|**Name**|**類型**|**TTL**|**值**|
+|**名稱**|**類型**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    
@@ -149,26 +150,26 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用其私人 IP 位址] 或 [內部網路的 DNS 名稱與本機系統管理員帳戶的認證。
+> 由於這些虛擬機器是用於內部網路應用程式，系統並不會指派公用 IP 位址或 DNS 網域名稱標籤給它們，它們也不會公開在網際網路上。不過，這也表示您無法從 Azure 入口網站連線到這些虛擬機器。當您檢視虛擬機器的屬性時，無法使用**連線**選項。請使用遠端桌面連線附屬應用程式或另一個遠端桌面工具，透過使用虛擬機器的私人 IP 位址或內部網路 DNS 名稱，以及本機管理員帳戶的認證來與其連線。
   
 以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
   
-**階段 4： 網際網路對向的負載平衡器與高可用性同盟的驗證基礎結構 Azure 中的 web 應用程式 proxy 伺服器**
+**階段 4：Azure 中高可用性同盟驗證基礎結構的網際網路對應負載平衡器和 Web 應用程式 Proxy 伺服器**
 
-![具有 Web 應用程式 Proxy 伺服器的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 4](images/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
+![具有 Web 應用程式 Proxy 伺服器的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 4](media/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[高可用性同盟驗證階段 5： 設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)繼續設定此工作量。
+使用[High availability federated authentication Phase 5: Configure federated authentication for Office 365](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)以繼續設定此工作負載。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
-[Office 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
+[同盟的驗證選項](about-office-365-identity.md#federated-authentication-options)
 
 

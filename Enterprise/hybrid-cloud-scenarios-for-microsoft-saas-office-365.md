@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SaaS (Office 365) 的混合式雲端案例"
+title: Microsoft SaaS (Office 365) 混合式雲端案例
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: db117e59-389f-46f5-a5df-4eeac0040aa8
-description: "摘要： 瞭解混合架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。"
-ms.openlocfilehash: 65b1841a155e286af8862c2fb7c37d0bfb61e1e8
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 瞭解混合架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。
+ms.openlocfilehash: 53187d53b55eedf1fca4f0b98e34accf454c67df
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915588"
 ---
-# <a name="hybrid-cloud-scenarios-for-microsoft-saas-office-365"></a>Microsoft SaaS (Office 365) 的混合式雲端案例
+# <a name="hybrid-cloud-scenarios-for-microsoft-saas-office-365"></a>Microsoft SaaS (Office 365) 混合式雲端案例
 
- **摘要：**了解混合式架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。
+ **摘要：** 了解混合式架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。
   
 合併與與其對應的雲端移轉或長期整合策略的一部分的 Office 365 中的內部部署 Exchange、 SharePoint、 或 Skype for Business。
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/09/2018
   
 **圖 1： Office 365 的 Microsoft SaaS 為基礎的混合式案例**
 
-![Office 365 的 Microsoft IaaS 型混合式案例](images/Hybrid_Poster/Hybrid_Cloud_Stack_SaaS.png)
+![Office 365 的 Microsoft IaaS 型混合式案例](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS.png)
   
 之架構的每個圖層：
   
@@ -66,7 +67,7 @@ Skype 商務 2015年混合式可讓您將現有的內部部署與 Skype 合併�
   
 **圖 2： Skype 商務 2015年混合組態**
 
-![商務用 Skype 2015 混合式組態](images/Hybrid_Poster/Hybrid_Cloud_Stack_SaaS_SfB.png)
+![商務用 Skype 2015 混合式組態](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-SfB.png)
   
 圖 2 顯示組成商務 2015年前端集區與 edge server 通訊的 Skype 商務 Online 在 Office 365 中的內部部署 Skype Skype 商務 2015年混合式設定。
   
@@ -84,7 +85,7 @@ Skype 商務 2015年混合式可讓您將現有的內部部署與 Skype 合併�
   
 **圖 3: Cloud PBX 與 Skype Business server**
 
-![含商務用 Skype Server 的雲端 PBX](images/Hybrid_Poster/Hybrid_Cloud_Stack_SaaS_SfB_CloudPBX.png)
+![含商務用 Skype Server 的雲端 PBX](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-SfB-CloudPBX.png)
   
 圖 3 是雲端 PBX 與 Skype Business Server 設定、 組成的內部現有的 PBX 或電話閘道、 Skype 商務伺服器和 PSTN 連線至 Office 365，其中包含 Skype for Business 中 Microsoft Cloud PBX線上。
   
@@ -104,19 +105,19 @@ SharePoint 混合式應 SharePoint Online 在 Office 365 搭配內部部署 Shar
   
 **圖 4： SharePoint 混合式設定**
 
-![SharePoint 混合式組態](images/Hybrid_Poster/Hybrid_Cloud_Stack_SaaS_SP.png)
+![SharePoint 混合式組態](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-SP.png)
   
 圖 4 顯示組成通訊的 SharePoint Online 在 Office 365 中內部部署 SharePoint 伺服器陣列的 SharePoint 混合式組態。
   
 SharePoint 混合式案例：
   
-- [混合式 OneDrive for Business](https://technet.microsoft.com/library/mt147425%28v=office.16%29.aspx)
+- [混合式商務用 OneDrive](https://technet.microsoft.com/library/mt147425%28v=office.16%29.aspx)
     
 - [混合式小組網站](https://technet.microsoft.com/library/mt346110%28v=office.16%29.aspx)
     
 - [混合式外部網路 B2B](https://support.office.com/article/SharePoint-Business-to-Business-Collaboration-Extranet-for-Partners-with-Office-365-7b087413-165a-4e94-8871-4393e0b9c037)
     
-- [混合式搜尋](https://technet.microsoft.com/library/dn720906%28v=office.16%29.aspx)
+- [混合搜尋](https://technet.microsoft.com/library/dn720906%28v=office.16%29.aspx)
     
 - [混合式設定檔](https://support.office.com/article/Plan-hybrid-profiles-96d1eaf0-94eb-40c5-ab76-c82907777db4)
     
@@ -124,7 +125,7 @@ SharePoint 混合式案例：
     
     很容易啟用使用自動化可從 SharePoint Online 系統管理中心在 Office 365 的混合式組態精靈的混合式案例。
     
-- [可延伸的混合式應用程式啟動器](https://support.office.com/article/The-extensible-hybrid-app-launcher-617a7cb5-53da-4128-961a-64a840c0ab91)
+- [可延伸混合式 App 啟動器](https://support.office.com/article/The-extensible-hybrid-app-launcher-617a7cb5-53da-4128-961a-64a840c0ab91)
     
     可讓使用者檢視及使用 Office 365 影片和 Delve 應用程式與經驗內其內部部署 SharePoint 伺服器陣列的頁面。
     
@@ -138,7 +139,7 @@ SharePoint 混合式案例：
   
 **圖 5： Exchange 2016 混合組態**
 
-![Exchange 2016 混合式組態](images/Hybrid_Poster/Hybrid_Cloud_Stack_SaaS_EX.png)
+![Exchange 2016 混合式組態](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-EX.png)
   
 圖 5 顯示通訊與 Exchange Online Protection 和 Office 365 中的信箱的內部部署 Exchange 信箱伺服器所組成的 Exchange 2016 混合式組態。
   
@@ -158,7 +159,7 @@ SharePoint 混合式案例：
   
 如需詳細資訊，請參閱[Exchange Server 混合式部署](https://technet.microsoft.com/library/jj200581%28v=exchg.150%29.aspx)與[Exchange 混合](http://hybrid.office.com/exchange/)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   

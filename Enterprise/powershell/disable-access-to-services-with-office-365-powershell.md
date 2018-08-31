@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 停用服務存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/08/2018
+ms.date: 08/20/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,18 +15,18 @@ ms.custom:
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
-ms.openlocfilehash: 44b0ed84bb8fd098412c69258834194b2b1eeb2f
-ms.sourcegitcommit: f42ca73d23beb5770981e7a93995ef3be5e341bb
+ms.openlocfilehash: d65308746ac5c2b60f4749588455fa66471069e3
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "22196820"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914988"
 ---
 # <a name="disable-access-to-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用服務存取權
 
 **摘要：** 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
   
-當 Office 365 帳戶已指派授權的授權方案時、 Office 365 服務是供使用者從該授權。不過，您可以控制使用者可以存取 Office 365 服務。例如，即使授權允許存取 SharePoint Online，您可以停用其存取權。事實上，您可以使用 Office 365 PowerShell 停用的存取權的服務之任何數字：
+當 Office 365 帳戶已指派授權的授權方案時、 Office 365 服務是供使用者從該授權。不過，您可以控制使用者可以存取 Office 365 服務。例如，即使授權可讓 SharePoint Online 服務的權限，您可以停用來加以存取。您可以使用 Office 365 PowerShell 停用的存取權的服務之特定的授權方案的任何數字：
 
 - 個別帳戶。
     
@@ -47,9 +47,9 @@ ms.locfileid: "22196820"
     
 - 如果您使用**Get-msoluser** cmdlet 而不需使用的_所有_參數時，會傳回第一個 500 的使用者帳戶。
     
-## <a name="specific-office-365-services-for-specific-users-for-a-single-licensing-plan"></a>單一授權的特定使用者的特定 Office 365 服務計劃
+## <a name="disable-specific-office-365-services-for-specific-users-for-a-specific-licensing-plan"></a>停用特定的授權方案之特定使用者的特定 Office 365 服務
   
-若要停用一組特定的 Office 365 服務讓使用者從單一的授權方案，請執行下列步驟：
+若要停用一組特定的 Office 365 服務之使用者的特定的授權方案，請執行下列步驟：
   
 1. 識別授權的計劃中的非預期的服務使用下列語法：
     
@@ -133,53 +133,12 @@ ms.locfileid: "22196820"
   Get-Content "C:\My Documents\Accounts.txt" | foreach {Set-MsolUserLicense -UserPrincipalName $_ -LicenseOptions $LO}
   ```
 
+如果您要停用的多個授權方案的服務存取權，重複上述的指示確保每種授權計劃：
+
+- 使用者帳戶已指派授權方案。
+- 若要停用服務都可以在授權方案。
+
 當您要指派它們至授權計劃停用 Office 365 服務的使用者，請參閱 ＜[停用時指派使用者授權的服務存取權](disable-access-to-services-while-assigning-user-licenses.md)。
-  
-## <a name="specific-office-365-services-for-users-from-all-licensing-plans"></a>讓使用者從所有授權的計劃的特定 Office 365 服務
-  
-若要停用使用者的 Office 365 服務中所有可用的授權方案，請執行下列步驟：
-  
-1. 複製此指令碼，並將其貼入 [記事本]。
-    
-  ```
-  $AllLicensingPlans = Get-MsolAccountSku
-for($i = 0; $i -lt $AllLicensingPlans.Count; $i++)
-{
-    $O365Licences = New-MsolLicenseOptions -AccountSkuId $AllLicensingPlans[$i].AccountSkuId -DisabledPlans "<UndesirableService1>", "<UndesirableService2>"...
-    Set-MsolUserLicense -UserPrincipalName <Account> -LicenseOptions $O365Licences
-}
-  ```
-
-2. 為您的環境自訂下列值：
-    
-  -  _<UndesirableService>_ 在這個範例中，我們將使用 Office Online 和 SharePoint Online。
-    
-  -  _<Account>_ 在這個範例中，我們將使用 belindan@litwareinc.com。
-    
-    自訂的指令碼如下所示：
-    
-  ```
-  $AllLicensingPlans = Get-MsolAccountSku
-for($i = 0; $i -lt $AllLicensingPlans.Count; $i++)
-{
-    $O365Licences = New-MsolLicenseOptions -AccountSkuId $AllLicensingPlans[$i].AccountSkuId -DisabledPlans "SHAREPOINTWAC", "SHAREPOINTENTERPRISE"
-    Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -LicenseOptions $O365Licences
-}
-  ```
-
-3. 儲存為指令碼`RemoveO365Services.ps1`中更容易尋找的位置。此範例中，我們將儲存在檔案`C:\\O365 Scripts`。
-    
-4. 使用下列命令在 Office 365 PowerShell 中執行指令碼。
-    
-  ```
-  & "C:\O365 Scripts\RemoveO365Services.ps1"
-  ```
-
-> [!NOTE]
-> 若要反向的任何這些程序 (亦即重新啟用已停用的服務)、 重新執行此程序，但使用值`$null` _DisabledPlans_參數。
-  
-[回到頁首](disable-access-to-services-with-office-365-powershell.md#RTT)
-
 
 
 ## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？

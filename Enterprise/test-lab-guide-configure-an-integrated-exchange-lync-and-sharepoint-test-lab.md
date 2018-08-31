@@ -9,17 +9,20 @@ ms.topic: article
 ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.assetid: 48e16935-3429-456a-8fe6-50afa257924c
 description: 摘要： 了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器與執行 SharePoint Server 2013 伺服器的整合式的測試實驗室。
-ms.openlocfilehash: a15bdefe1749bca98933a8b9a4c4874130732eda
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
+ms.openlocfilehash: bb668dcaff53f37127f43551cb4b108589a39def
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915598"
 ---
 # <a name="test-lab-guide-configure-an-integrated-exchange-lync-and-sharepoint-test-lab"></a>Test Lab Guide: Configure 整合了的 Exchange、 Lync 和 SharePoint 測試實驗室
 
- **摘要：**了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器與執行 SharePoint Server 2013 伺服器的整合式的測試實驗室。
+ **摘要：** 了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器與執行 SharePoint Server 2013 伺服器的整合式的測試實驗室。
  
 **觀賞整合式的 Exchange、 Lync 和 SharePoint 測試實驗室指南概觀影片**
 
@@ -53,7 +56,7 @@ ms.lasthandoff: 04/20/2018
 
 [測試實驗室指南： 設定整合式的 Exchange、 Lync 和 SharePoint 測試實驗室](https://go.microsoft.com/fwlink/p/?LinkId=313670)(https://go.microsoft.com/fwlink/p/?LinkId=313670)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [測試實驗室指南](https://go.microsoft.com/fwlink/p/?LinkId=202817)
 

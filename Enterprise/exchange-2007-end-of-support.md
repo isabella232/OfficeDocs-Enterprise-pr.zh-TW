@@ -11,12 +11,12 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.assetid: c3024358-326b-404e-9fe6-b618e54d977d
 description: 11 2017 年，在 Exchange Server 2007 達到支援結束。如果您已經尚未開始移轉至 Office 365 的 Exchange 2007 或 Exchange 2016、 現在是以啟動您進行規劃的時間。
-ms.openlocfilehash: 4bb8933977c280b4bfaa686e858fc818a1dc4ace
-ms.sourcegitcommit: a9c84d02e94c99ff6b1099b4a9ae695be08210e2
+ms.openlocfilehash: 674de8904d03e024a8a75b945b5ef94319214f92
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "21169805"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915568"
 ---
 # <a name="exchange-2007-end-of-support-roadmap"></a>Exchange 2007 終止支援藍圖
 
@@ -193,7 +193,7 @@ Office 365 也會取得新功能與經驗第一個和您和使用者可以通常
     
 - [混合組態精靈常見問題集](https://technet.microsoft.com/en-us/library/mt488940%28v=exchg.150%29.aspx)
     
-- [混合部署必要條件](https://technet.microsoft.com/en-us/library/hh534377%28v=exchg.150%29.aspx)
+- [混合式部署必要條件](https://technet.microsoft.com/en-us/library/hh534377%28v=exchg.150%29.aspx)
     
 ### <a name="migrate-to-a-newer-version-of-exchange-server"></a>移轉至新版 Exchange Server
 

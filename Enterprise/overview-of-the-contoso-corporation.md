@@ -12,11 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 1de16e29-ac2e-40b5-bf13-9301a51e16a8
 description: 摘要： 了解 Contoso Corporation 的業務以及其全世界的辦公室分層的結構。
-ms.openlocfilehash: 30a6dd23271fbbd5599053b934e6a1af9dc14d12
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 66171ee872f9b526860ae1436b0e8cb51de119de
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915858"
 ---
 # <a name="overview-of-the-contoso-corporation"></a>Contoso 公司概觀
 
@@ -30,7 +31,7 @@ Contoso 的全球組織有辦公室中的下列位置：
   
 **圖 1： 全球各地的 Contoso 的辦公室**
 
-![在世界各地的 Contoso 公司辦公室](images/Contoso_Poster/Contoso_WW_Org.png)
+![在世界各地的 Contoso 公司辦公室](media/Contoso-Poster/Contoso-WW-Org.png)
 
   
 圖 1 顯示 headquarters office Paris 和區域的中樞與衛星辦公室中各種 continents。

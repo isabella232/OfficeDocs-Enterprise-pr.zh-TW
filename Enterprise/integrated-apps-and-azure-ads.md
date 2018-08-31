@@ -1,5 +1,5 @@
 ---
-title: 整合式應用程式及 Office 365 系統管理員的 Azure AD
+title: Office 365 系統管理員的整合式 App 和 Azure AD
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -10,18 +10,19 @@ ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
 search.appverid:
+- MET150
 - MOE150
 - BCS160
 ms.assetid: cb2250e3-451e-416f-bf4e-363549652c2a
 description: 了解如何 O365 整合應用程式已註冊和管理 Azure AD 的項目
-ms.openlocfilehash: 666bfca5c2621d25f13dff7c5753c5ef47591b68
-ms.sourcegitcommit: f42ca73d23beb5770981e7a93995ef3be5e341bb
+ms.openlocfilehash: 0482271f15dc5e2b81e36fd265b49da6eba18702
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "22213108"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914998"
 ---
-# <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>整合式應用程式及 Office 365 系統管理員的 Azure AD
+# <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>Office 365 系統管理員的整合式 App 和 Azure AD
 
 有多個管理超過剛[開啟整合式應用程式開啟或關閉](https://support.office.com/article/7e453a40-66df-44ab-92a1-96786cb7fb34#__toc379982114)的整合式應用程式。與 Office 365 REST Api 推出，使用者可以授與應用程式存取其 Office 365 資料，例如郵件、 行事曆、 連絡人、 使用者、 群組、 檔案及資料夾。根據預設，使用者必須個別授與權限給每個應用程式，但這不會擴充以及如果您想要授權一次在全域管理員層級的應用程式與導透過 app 啟動器整個組織。為達成此目的，您必須在 Azure AD 中登錄應用程式。有一些所需您可以在 Azure AD 登錄應用程式和一些背景資訊時應該知道可幫助您管理 Office 365 組織中的應用程式之前可採取的步驟。本文指引您閱讀這些資源。
   

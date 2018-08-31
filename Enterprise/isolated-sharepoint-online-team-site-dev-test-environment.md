@@ -1,5 +1,5 @@
 ---
-title: "隔離的 SharePoint Online 小組網站開發/測試環境"
+title: 隔離的 SharePoint Online 小組網站開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,26 +13,27 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: d1795031-beef-49ea-a6fc-5da5450d320d
-description: "摘要： 設定隔離與 Office 365 開發人員/測試環境中之組織的其餘的 SharePoint Online 小組網站。"
-ms.openlocfilehash: c6115e48f1b2453aaf173b384a30c1cc34ce7b5a
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要：設定 SharePoint Online 小組網站，該網站與 Office 365 開發/測試環境中組織的其他網站隔離。
+ms.openlocfilehash: d2a75f3a3a410116c454892c9ecf3747fb3da53d
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915048"
 ---
 # <a name="isolated-sharepoint-online-team-site-devtest-environment"></a>隔離的 SharePoint Online 小組網站開發/測試環境
 
- **摘要：**設定隔離與 Office 365 開發人員/測試環境中之組織的其餘的 SharePoint Online 小組網站。
+ **摘要：** 設定 SharePoint Online 小組網站，該網站與 Office 365 開發/測試環境中組織的其他網站隔離。
   
 在 Office 365 中的 SharePoint Online 小組網站都是使用一般的文件庫、 OneNote 筆記本，以及其他服務的共同作業的位置。在許多情況下，您跨部門或組織要寬存取及共同作業。不過，在某些情況下，您想要緊密控制存取及一小群人員之間的共同作業的權限。
   
 由 SharePoint 群組與權限層級控制存取 SharePoint Online 小組網站與使用者可以執行的動作。根據預設，SharePoint Online 網站會有三種存取層級：
   
-- **成員**可以檢視、 建立及修改在網站上的資源。
+- **成員**，該使用者可以檢視、建立及修改網站上的資源。
     
-- **擁有者**，擁有完整控制網站，包括變更權限的能力。
+- **擁有者**，該使用者擁有網站的完整控制權，包括變更權限的能力。
     
-- **訪**客只可以檢視網站上的資源。
+- **訪客**，該使用者只能夠檢視網站上的資源。
     
 本文章步驟您完成秘密研究專案隔離 SharePoint Online 小組網站的設定名為 ProjectX。存取需求是：
   
@@ -42,14 +43,15 @@ ms.lasthandoff: 02/14/2018
     
 在您的 Office 365 開發/測試環境中設定隔離的 SharePoint Online 小組網站有三個階段：
   
-1. 建立 Office 365 開發人員/測試環境。
+1. 建立 Office 365 開發/測試環境。
+
     
 2. 為 ProjectX 建立使用者和群組。
     
 3. 建立新的 ProjectX SharePoint Online 小組網站並且隔離它。
     
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
@@ -66,7 +68,7 @@ ms.lasthandoff: 02/14/2018
   
 - 您的電腦 (適用於輕量型 Office 365 開發/測試環境)。
     
-- CLIENT1 虛擬機器 （適用於模擬的企業版 Office 365 開發人員/測試環境中）。
+- CLIENT1 虛擬機器 (適用於模擬的企業 Office 365 開發/測試環境)。
     
 若要建立新的存取群組 ProjectX SharePoint Online 小組網站，請在 Windows Azure Active Directory Module for Windows PowerShell 提示字元處執行下列命令：
   
@@ -95,7 +97,7 @@ $userName= "designer@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "Lead Designer" -FirstName Lead -LastName Designer -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment -ForceChangePassword $false
 ```
 
-從**New-msoluser**命令顯示，記下所產生會導致 Designer 帳戶的密碼並將其記錄在安全的位置。
+從 **New-MsolUser** 命令的顯示畫面中，記下針對 Lead Designer 帳戶產生的密碼，並且將密碼記錄在安全的位置。
   
 從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
   
@@ -104,7 +106,7 @@ $userName= "researcher@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "Lead Researcher" -FirstName Lead -LastName Researcher -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment -ForceChangePassword $false
 ```
 
-從**New-msoluser**命令顯示，記下所產生會導致研究者帳戶的密碼並將其記錄在安全的位置。
+從 **New-MsolUser** 命令的顯示畫面中，記下針對 Lead Researcher 帳戶產生的密碼，並且將密碼記錄在安全的位置。
   
 從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
   
@@ -113,7 +115,7 @@ $userName= "devvp@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "Development VP" -FirstName Development -LastName VP -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment -ForceChangePassword $false
 ```
 
-從**New-msoluser**命令顯示，請注意開發 VP 帳戶產生的密碼並將其記錄在安全的位置。
+從 **New-MsolUser** 命令的顯示畫面中，記下針對 Development VP 帳戶產生的密碼，並且將密碼記錄在安全的位置。
   
 下一步] 將帳戶新增至新的存取群組，請從 Windows Azure Active Directory Module for Windows PowerShell 提示字元下執行下列 PowerShell 命令：
   
@@ -142,7 +144,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
   
 **圖 1**
 
-![獨立的 SharePoint Online 群組網站的 Office 365 群組及其成員資格](images/5b7373b9-2a80-4880-afe5-63ffb17237e6.png)
+![獨立的 SharePoint Online 群組網站的 Office 365 群組及其成員資格](media/5b7373b9-2a80-4880-afe5-63ffb17237e6.png)
   
 ## <a name="phase-3-create-a-new-projectx-sharepoint-online-team-site-and-isolate-it"></a>階段 3：建立新的 ProjectX SharePoint Online 小組網站並且隔離它
 
@@ -150,7 +152,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
   
 1. 在 [您的本機電腦 （輕量級的設定） 使用瀏覽器或在 CLIENT1 上 （模擬的企業組態） 登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 使用全域管理員帳戶。
     
-2. 在 [並排顯示] 清單中按一下 [ **SharePoint**]。
+2. 在磚清單中，按一下 [SharePoint]****。
     
 3. 在 [新增 SharePoint] 索引標籤在瀏覽器中按一下 [ **+ 建立網站**。
     
@@ -162,7 +164,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
     
 7. 在瀏覽器中的 [工具] 列中新的**ProjectX 首頁**] 索引標籤上按一下 [設定] 圖示，和 [**網站權限**。
     
-8. 在 [**網站權限**] 窗格中，按一下 [**進階權限設定**。
+8. 在 [網站權限]**** 窗格中，按一下 [進階權限設定]****。
     
 9. 在新**權限： X 專案**在瀏覽器] 索引標籤中按一下 [**存取要求的設定**。
     
@@ -170,7 +172,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
     
 11. 清單中的 [ **ProjectX 成員**。
     
-12. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+12. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
 13. 在 [**共用**] 對話方塊中，輸入**ProjectX 成員**、 選取它，，然後按一下 [**共用**]。
     
@@ -178,7 +180,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
     
 15. 按一下 [ **ProjectX 擁有者**] 清單中。
     
-16. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+16. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
 17. 在 [**共用**] 對話方塊中，輸入**ProjectX Admins**、 選取它，，然後按一下 [**共用**。
     
@@ -186,13 +188,13 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
     
 19. 按一下 [ **ProjectX 訪客**] 清單中。
     
-20. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+20. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
 21. 在 [**共用**] 對話方塊中，輸入**ProjectX 檢視**、 選取它，，然後按一下 [**共用**。
     
 22. 關閉瀏覽器中的 [**人員與群組**] 索引標籤、 按一下 [瀏覽器上**ProjectX 常用**] 索引標籤，然後關閉 [**網站權限**] 窗格。
     
-設定權限的結果如下︰
+以下是設定權限的結果：
   
 - ProjectX 成員 SharePoint 群組包含只 ProjectX 成員存取群組 （其中包含只會導致設計工具] 和 [導致研究者使用者帳戶） 和 ProjectX 群組 （其中包含只有一個全域管理員使用者帳戶）。
     
@@ -208,7 +210,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
   
 **圖 2**
 
-![獨立的 SharePoint Online 群組網站的 SharePoint Online 群組及其成員資格](images/595abff4-64f9-49de-a37a-c70c6856936b.png)
+![獨立的 SharePoint Online 群組網站的 SharePoint Online 群組及其成員資格](media/595abff4-64f9-49de-a37a-c70c6856936b.png)
   
 現在我們示範使用導致 Designer 使用者帳戶的存取：
   
@@ -218,7 +220,7 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
     
 3. 登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 使用導致 Designer 帳戶名稱和其密碼。
     
-4. 在 [並排顯示] 清單中按一下 [ **SharePoint**]。
+4. 在磚清單中，按一下 [SharePoint]****。
     
 5. 在 [新**SharePoint** ] 索引標籤在瀏覽器在 [搜尋] 方塊中輸入**ProjectX**啟動搜尋] 及 [ **ProjectX**小組網站。您應該 ProjectX 小組網站的瀏覽器中看到新的索引標籤。
     
@@ -248,13 +250,13 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
   
 1. 登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 使用開發 VP 帳戶名稱和其密碼。
     
-2. 在 [並排顯示] 清單中按一下 [ **SharePoint**]。
+2. 在磚清單中，按一下 [SharePoint]****。
     
 3. 在 [新**SharePoint** ] 索引標籤在瀏覽器在 [搜尋] 方塊中輸入**ProjectX**啟動搜尋] 及 [ **ProjectX**小組網站。您應該 ProjectX 小組網站的瀏覽器中看到新的索引標籤。
     
 4. 按一下 [**文件**，然後按一下 [ **Document.docx**檔案。
     
-5. 在瀏覽器中的 [ **Document.docx** ] 索引標籤中嘗試修改的文字。您應該會看到訊息表示**本文件是唯讀屬性。**這被預期因為開發 VP 使用者帳戶只有網站檢視權限。
+5. 在瀏覽器中的 [ **Document.docx** ] 索引標籤中嘗試修改的文字。您應該會看到訊息表示**本文件是唯讀屬性。** 這被預期因為開發 VP 使用者帳戶只有網站檢視權限。
     
 6. 關閉 [在瀏覽器中的 [ **Document.docx**、 **ProjectX 文件**和**SharePoint** ] 索引標籤。
     
@@ -264,27 +266,27 @@ Add-MsolGroupMember -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $
   
 1. 登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 使用的使用者 3 帳戶名稱和其密碼。
     
-2. 在 [並排顯示] 清單中按一下 [ **SharePoint**]。
+2. 在磚清單中，按一下 [SharePoint]****。
     
 3. [新增**SharePoint** ] 索引標籤在瀏覽器中的搜尋方塊中輸入**ProjectX**並再啟動搜尋。您應該會看到郵件**Nothing 以下符合您的搜尋。**
     
-4. 從 [記事本] 或文字編輯器開啟的執行個體，將 ProjectX 網站的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到**「 拒絕存取 」**頁面。
+4. 從 [記事本] 或文字編輯器開啟的執行個體，將 ProjectX 網站的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到 **「 拒絕存取 」** 頁面。
     
-5. 從 [記事本] 或文字編輯器，將 ProjectX 文件] 資料夾的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到**「 拒絕存取 」**頁面。
+5. 從 [記事本] 或文字編輯器，將 ProjectX 文件] 資料夾的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到 **「 拒絕存取 」** 頁面。
     
-6. 從 [記事本] 或文字編輯器，將 Documents.docx 檔案的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到**「 拒絕存取 」**頁面。
+6. 從 [記事本] 或文字編輯器，將 Documents.docx 檔案的 URL 複製到您的瀏覽器的位址列並按**Enter**。您應該會看到 **「 拒絕存取 」** 頁面。
     
 7. 關閉瀏覽器中的 [ **SharePoint** ] 索引標籤、 [ **Microsoft Office Home** ] 索引標籤、 [**使用者 3**的名稱，和 [**登出**。
     
 隔離的 SharePoint Online 網站現在已備妥可供您其他試驗。
   
-## <a name="next-step"></a>下一個步驟
+## <a name="next-step"></a>下一步
 
-當您準備好要部署在生產環境中的隔離的 SharePoint Online 小組網站時，請參閱[設計隔離的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)中的逐步說明設計考量。
+當您準備好要在生產環境中部署獨立的 SharePoint Online 小組網站時，請參閱＜[設計獨立的 SharePoint Online 小組網站](design-an-isolated-sharepoint-online-team-site.md)＞中的逐步設計考量。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)
+[隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)。
   
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   

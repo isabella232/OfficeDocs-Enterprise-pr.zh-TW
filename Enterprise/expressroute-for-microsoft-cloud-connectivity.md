@@ -8,16 +8,18 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
 description: 摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
-ms.openlocfilehash: 55ac09e3c3cf65649d24d67ea79e185808d83cdb
-ms.sourcegitcommit: c23b95d32a865e45be7843f38a1f23b5693ba76d
+ms.openlocfilehash: d3a19dcd3ce8732b3349c5cacce5b64159850682
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "20188111"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915488"
 ---
 # <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的 ExpressRoute
 
@@ -31,7 +33,7 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
   
 **圖 1：不使用 ExpressRoute 的網路路徑**
 
-![圖 1：不使用 ExpressRoute 的網路路徑](images/Network_Poster/ExpressRoute.png)
+![圖 1：不使用 ExpressRoute 的網路路徑](media/Network-Poster/ExpressRoute.png)
   
 圖 1 顯示的內部網路與 Microsoft cloud 之間的一般路徑。在內部網路邊緣連線至網際網路透過 WAN 連結的 ISP。流量然後一起出差經由網際網路 Microsoft cloud 的邊緣。Microsoft 雲端中的雲端方案包含 Office 365、 Microsoft Azure、 Microsoft Intune 及 Dynamics 365。組織中的使用者可以是位在內部網路或網際網路上。
   
@@ -45,7 +47,7 @@ ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高�
   
 **圖 2：使用 ExpressRoute 的網路路徑**
 
-![圖 2：使用 ExpressRoute 的網路路徑](images/Network_Poster/ExpressRoute_post.png)
+![圖 2：使用 ExpressRoute 的網路路徑](media/Network-Poster/ExpressRoute-post.png)
   
 圖 2 顯示兩個網路路徑。Microsoft Intune 流量一起出差標準網際網路流量為相同的路徑。Office 365、 Microsoft Azure 和 Dynamics 365 達成跨 ExpressRoute 連線、 專用的路徑與內部網路的 edge 和 Microsoft cloud 緣之間的流量。
   
@@ -87,7 +89,7 @@ ExpressRoute 連線不保證郵件可以在每個設定較高的效能。有可�
   
 |**共同位於雲端 exchange**|**點對點乙太網路**|**任何-任何 (IP VPN) 連線**|
 |:-----|:-----|:-----|
-|![ExpressRoute 連接模型：共置在雲端 Exchange 中](images/Network_Poster/ER_Conn1.png)|![ExpressRoute 連接模型：點對點乙太網路](images/Network_Poster/ER_Conn2.png)|![ExpressRoute 連接模型：多點對多點 (IP VPN) 連線](images/Network_Poster/ER_Conn3.png)|
+|![ExpressRoute 連接模型：共置在雲端 Exchange 中](media/Network-Poster/ER-Conn1.png)|![ExpressRoute 連接模型：點對點乙太網路](media/Network-Poster/ER-Conn2.png)|![ExpressRoute 連接模型：多點對多點 (IP VPN) 連線](media/Network-Poster/ER-Conn3.png)|
 |如果您的資料中心共同位於與雲端 exchange 設備、 可排序虛擬跨連線至 Microsoft 雲端透過代管提供者的乙太網路交換。  <br/> |如果您的資料中心位於您內部部署，您可以使用的點對點乙太網路連結來連線至 Microsoft cloud。  <br/> |如果您已經在使用的 IP VPN (MPLS) 提供者連接組織的網站、 Microsoft cloud ExpressRoute 連線 bot 通常在私人的 WAN 的另一個位置。  <br/> |
    
  **表 1: ExpressRoute connectivity 模型**
@@ -98,7 +100,7 @@ ExpressRoute 連線不保證郵件可以在每個設定較高的效能。有可�
   
 **圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係**
 
-![圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係](images/Network_Poster/ERPeering.png)
+![圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係](media/Network-Poster/ERPeering.png)
   
 圖 3 是從內部網路 ExpressRoute 連線。ExpressRoute 連線包含三個邏輯的對等關係。Microsoft 對等關係前往 Microsoft saas 和服務，包括 Office 365 和 Dynamcs CRM Online。公用的對等關係會移至 Azure PaaS 服務。私人的對等關係會移至 Azure IaaS 以及主控虛擬機器時的虛擬網路閘道。
   
@@ -128,7 +130,7 @@ Microsoft 對等 BGP 關係：
   
 **圖 4：Azure 虛擬機器上的應用程式，會存取內部部署 Sharepoint 伺服器陣列**
 
-![圖 4：Azure 虛擬機器上的應用程式，會存取內部部署 Sharepoint 伺服器陣列](images/Network_Poster/ER_App_Flow1.png)
+![圖 4：Azure 虛擬機器上的應用程式，會存取內部部署 Sharepoint 伺服器陣列](media/Network-Poster/ER-App-Flow1.png)
 
   
 圖 4 顯示內部部署 SharePoint 伺服器陣列、 網站 VPN 連線與內部網路和虛擬網路以 Azure IaaS、 Azure IaaS 虛擬機器與流量所執行的應用程式伺服器之間的應用程式伺服器之間的流程和SharePoint 伺服器陣列。
@@ -139,7 +141,7 @@ Microsoft 對等 BGP 關係：
   
 **圖 5：將內部部署 SharePoint 伺服器陣列移動到 SharePoint Online**
 
-![圖 5：將內部部署 SharePoint 伺服器陣列移動到 SharePoint Online](images/Network_Poster/Hairpin1.png)
+![圖 5：將內部部署 SharePoint 伺服器陣列移動到 SharePoint Online](media/Network-Poster/Hairpin1.png)
   
 圖 5 顯示的對等相關聯的 ExpressRoute 連線至 Microsoft saas 和與 Office 365 和 Azure IaaS 包含應用程式伺服器上的虛擬網路。SharePoint 內部部署伺服器陣列已移轉至 Office 365。
   
@@ -157,7 +159,7 @@ Microsoft 與私人的對等關係：
   
 **圖 6：當 SharePoint 伺服器陣列已移轉至 Office 365 的 SharePoint Online 時的流量**
 
-![圖 6：當 SharePoint 伺服器陣列已移轉至 Office 365 的 SharePoint Online 時的流量](images/Network_Poster/Hairpin2.png)
+![圖 6：當 SharePoint 伺服器陣列已移轉至 Office 365 的 SharePoint Online 時的流量](media/Network-Poster/Hairpin2.png)
 
   
 圖 6 顯示應用程式伺服器與 SharePoint Online 在 Office 365 之間的流量透過 Microsoft 對等關係流向透過私人對等關係從應用程式伺服器的內部網路邊緣，然後從邊緣Office 365。
@@ -186,7 +188,7 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
   
 **圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例**
 
-![圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例](images/Network_Poster/MSNet1.png)
+![圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例](media/Network-Poster/MSNet1.png)
   
 圖 7 顯示兩個位置與組織中的美國西北位置 1 和東北中的位置 2。他們是透過任何-任何 WAN 提供者連接。此組織也有 ExpressRoute 連線到西岸上的 Microsoft 對等位置。東北目的地東岸 datacenter 位置 2 流量必須旅行社一直跨組織的 WAN 西岸到 Microsoft 對等的位置並再回到跨國家透過 Microsoft 雲端網路東岸資料中心。
   
@@ -194,7 +196,7 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
   
 **圖 8：使用多重 ExpressRoute 連線，以求對區域資料中心傳遞的最佳化**
 
-![圖 8：使用多重 ExpressRoute 連線，以求對區域資料中心傳遞的最佳化](images/Network_Poster/MSNet2.png)
+![圖 8：使用多重 ExpressRoute 連線，以求對區域資料中心傳遞的最佳化](media/Network-Poster/MSNet2.png)
   
 圖 8 顯示含有兩個 ExpressRoute 連線，一個用於每個位置、 地域本機 Microsoft 對等位置相同組織。在此組態中，位置 2 東北目的地東岸資料中心中的流量會移至東岸對等位置直接、 Microsoft cloud 網路]、 [東岸資料中心。
   
@@ -224,7 +226,7 @@ ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，
   
 **圖 9： World wide Microsoft cloud 網路**
 
-![圖 9：全球 Microsoft 雲端網路](images/Network_Poster/MSNet3.png)
+![圖 9：全球 Microsoft 雲端網路](media/Network-Poster/MSNet3.png)
   
 圖 9 顯示組成的全球 Microsoft 雲端網路涵蓋 continents 與全球和其相對的區域網路的邏輯圖。與 Microsoft cloud 網路中每一個大陸的部分全域企業 ExpressRoute Premium 連線從建立其區域 hub 辦公室本機 Microsoft 對等的位置。
   
@@ -234,7 +236,7 @@ ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，
     
 - Office 365 資料中心中另一個大陸一起出差洲際 Microsoft cloud 網路。
     
-如需相關資訊，請參閱：
+如需詳細資訊，請參閱：
   
 - [Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer/)
     

@@ -1,5 +1,5 @@
 ---
-title: "設計隔離的 SharePoint Online 小組網站"
+title: 設計隔離的 SharePoint Online 小組網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 775a4e9e-3135-4a48-b32f-bbdd9f2bd0aa
-description: "摘要： 透過隔離的 SharePoint Online 小組網站的設計程序的步驟。"
-ms.openlocfilehash: efd55ce780cf2951bfafd31215201459965c0e78
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 透過隔離的 SharePoint Online 小組網站的設計程序的步驟。
+ms.openlocfilehash: 4807b7cef0a401901eb5abec3d683ca67b2193db
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914838"
 ---
 # <a name="design-an-isolated-sharepoint-online-team-site"></a>設計隔離的 SharePoint Online 小組網站
 
- **摘要：**逐步解說隔離的 SharePoint Online 小組網站的設計程序的步驟。
+ **摘要：** 逐步解說隔離的 SharePoint Online 小組網站的設計程序的步驟。
   
 本文會引導您完成建立隔離的 SharePoint Online 小組網站之前，您必須進行的重要的設計決策。
   
@@ -38,17 +41,17 @@ ms.lasthandoff: 02/09/2018
   
 會決定 SharePoint 群組的成員可以執行網站中的特定權限集是權限等級。SharePoint Online 小組網站的預設有三個權限層級： 編輯、 讀取、 及完全控制。下表顯示預設相互關聯之 SharePoint 群組及指派權限層級：
   
-|**SharePoint 群組**|**權限層級**|
+|**SharePoint 群組**|**權限等級**|
 |:-----|:-----|
 |\<站台名稱 > 成員  <br/> |編輯  <br/> |
 |\<站台名稱 > 訪客  <br/> |讀取  <br/> |
 |\<站台名稱 > 擁有者  <br/> |完全控制  <br/> |
    
- **最佳作法：**您可以建立其他 SharePoint 群組與權限等級。不過，我們建議您隔離的 SharePoint Online 網站使用的預設 SharePoint 群組和權限層級。
+ **最佳作法：** 您可以建立其他 SharePoint 群組與權限等級。不過，我們建議您隔離的 SharePoint Online 網站使用的預設 SharePoint 群組和權限層級。
   
 以下是預設 SharePoint 群組與權限等級。
   
-![SharePoint Online 網站的預設 SharePoint 群組和權限等級。](images/3f892ab4-6479-42f0-a505-1ba0ef94b9c6.png)
+![SharePoint Online 網站的預設 SharePoint 群組和權限等級。](media/3f892ab4-6479-42f0-a505-1ba0ef94b9c6.png)
   
 ## <a name="phase-2-assign-permissions-to-users-with-access-groups"></a>階段 2： 指派給使用者的存取群組與權限
 
@@ -62,7 +65,7 @@ ms.lasthandoff: 02/09/2018
     
 - 成員**\<站台名稱 > 擁有者**SharePoint 群組，其中可能包含使用者帳戶和群組，已指派的**完全控制**」 權限層級
     
- **最佳作法：**雖然您可以透過管理權限的個別使用者帳戶，我們建議您使用單一 Azure AD] 群組中，而稱為 access] 群組中。這可透過在 [存取] 群組的成員資格的權限管理簡化而不是每個 SharePoint 群組管理清單的使用者帳戶。
+ **最佳作法：** 雖然您可以透過管理權限的個別使用者帳戶，我們建議您使用單一 Azure AD] 群組中，而稱為 access] 群組中。這可透過在 [存取] 群組的成員資格的權限管理簡化而不是每個 SharePoint 群組管理清單的使用者帳戶。
   
 Office 365 的 azure AD 群組是 Office 365 群組與不同。Azure AD 群組會出現在**安全性**其**型別**組與 Office 系統管理中心和不具有電子郵件地址。您可以管理 azure AD 群組內：
   
@@ -74,21 +77,21 @@ Office 365 的 azure AD 群組是 Office 365 群組與不同。Azure AD 群組�
     
     這些是透過 Office 系統管理中心、 Azure 入口網站，或使用 Microsoft PowerShell 已建立的群組。在 Office 系統管理中心，這些群組會有**雲端**的**狀態**。
     
- **最佳作法：**如果您使用 Windows Server AD 的內部使用者和群組管理與 Windows Server AD 同步處理與您的 Office 365 訂閱執行。
+ **最佳作法：** 如果您使用 Windows Server AD 的內部使用者和群組管理與 Windows Server AD 同步處理與您的 Office 365 訂閱執行。
   
 隔離 SharePoint Online 小組網站的建議的群組結構如下：
   
-|**SharePoint 群組**|**Azure AD 式存取群組**|**權限層級**|
+|**SharePoint 群組**|**Azure AD 式存取群組**|**權限等級**|
 |:-----|:-----|:-----|
 |\<站台名稱 > 成員  <br/> |\<站台名稱 > 成員  <br/> |編輯  <br/> |
 |\<站台名稱 > 訪客  <br/> |\<站台名稱 > 檢視器  <br/> |讀取  <br/> |
 |\<站台名稱 > 擁有者  <br/> |\<站台名稱 > 系統管理員  <br/> |完全控制  <br/> |
    
- **最佳作法：**雖然您可以使用 Office 365 或 Azure AD 群組 SharePoint 群組的成員身分，我們建議您使用 Azure AD 群組。Azure AD 群組、 受管理的透過 Windows Server AD 或 Office 365 提供您更多彈性，可使用巢狀的群組來指派權限。
+ **最佳作法：** 雖然您可以使用 Office 365 或 Azure AD 群組 SharePoint 群組的成員身分，我們建議您使用 Azure AD 群組。Azure AD 群組、 受管理的透過 Windows Server AD 或 Office 365 提供您更多彈性，可使用巢狀的群組來指派權限。
   
 以下是預設值設定為使用 Azure AD 型的存取群組的 SharePoint 群組。
   
-![使用存取群組作為預設 SharePoint Online 網站群組的成員。](images/50a76328-ae69-483e-9029-ac4e7357b5ef.png)
+![使用存取群組作為預設 SharePoint Online 網站群組的成員。](media/50a76328-ae69-483e-9029-ac4e7357b5ef.png)
   
 設計的三種存取群組、 時請謹記下列事項：
   
@@ -98,7 +101,7 @@ Office 365 的 azure AD 群組是 Office 365 群組與不同。Azure AD 群組�
     
 以下是範例中的 SharePoint 群組和名為 ProjectX 隔離網站的存取群組。
   
-![為名為 ProjectX 的 SharePoint Online 網站使用存取群組的範例。](images/13afe542-9ffd-4671-9f48-210a0e2a502a.png)
+![為名為 ProjectX 的 SharePoint Online 網站使用存取群組的範例。](media/13afe542-9ffd-4671-9f48-210a0e2a502a.png)
   
 ## <a name="phase-3-use-nested-azure-ad-groups"></a>階段 3： 使用巢狀 Azure AD 群組
 
@@ -121,7 +124,7 @@ Office 365 的 azure AD 群組是 Office 365 群組與不同。Azure AD 群組�
   
 以下是巢狀的 Azure AD 的範例群組 ProjectX 成員存取群組。
   
-![針對 ProjectX 網站之成員存取群組使用巢狀存取群組的範例。](images/2abca710-bf9e-4ce8-9bcd-a8e128264fb1.png)
+![針對 ProjectX 網站之成員存取群組使用巢狀存取群組的範例。](media/2abca710-bf9e-4ce8-9bcd-a8e128264fb1.png)
   
 因為參考資料、 工程和專案中的使用者帳戶的所有負責人小組都是設為網站成員、 將其 Azure AD 群組新增至 ProjectX 成員存取群組變得更容易。
   
@@ -129,15 +132,15 @@ Office 365 的 azure AD 群組是 Office 365 群組與不同。Azure AD 群組�
 
 當您準備好建立及設定在生產環境中隔離的網站時，請參閱 ＜ [Deploy 隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)
+[隔離的 SharePoint Online 小組網站](isolated-sharepoint-online-team-sites.md)。
   
-[管理隔離的 SharePoint Online 小組網站](manage-an-isolated-sharepoint-online-team-site.md)
+[管理獨立的 SharePoint Online 小組網站](manage-an-isolated-sharepoint-online-team-site.md)
   
 [安全性解決方案](security-solutions.md)
 
-[部署隔離的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)
+[部署獨立的 SharePoint Online 小組網站](deploy-an-isolated-sharepoint-online-team-site.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Office 365 開發人員/測試環境中的機密檔案保護"
+title: Office 365 開發/測試環境中的機密檔案保護
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,28 +8,31 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
-description: "摘要： 設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。"
-ms.openlocfilehash: 236272a90bb6ff7f310c95f1494b68750e363f40
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 摘要： 設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。
+ms.openlocfilehash: d866c8ef9d81ec3a80c466040dab34de8af2c1de
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915698"
 ---
-# <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發人員/測試環境中的機密檔案保護
+# <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的機密檔案保護
 
- **摘要：**設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。
+ **摘要：** 設定及示範如何 Office 365 資訊版權管理會保護敏感性檔案，甚至是當他們會張貼至錯誤的 SharePoint Online 網站集合。
   
 資訊版權管理 (IRM) 設定在 Office 365 是一組的保護從 SharePoint Online 的文件庫及清單下載的文件的功能。下載的檔案加密及儲存 」、 「 包含開啟複本，且列印反映已儲存的 SharePoint Online 文件庫的權限。
   
 使用本文中的指示，啟用並測試 IRM 在 Office 365 中包含在您的 Office 365 試用版訂閱可能敏感資訊的檔案。
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建立 Office 365 開發人員/測試環境
 
@@ -50,7 +53,7 @@ ms.lasthandoff: 02/14/2018
   
 - 您的電腦 (適用於輕量型 Office 365 開發/測試環境)。
     
-- CLIENT1 虛擬機器 （適用於模擬的企業版 Office 365 開發人員/測試環境中）。
+- CLIENT1 虛擬機器 (適用於模擬的企業 Office 365 開發/測試環境)。
     
 在 [ **Windows PowerShell 認證要求**] 對話方塊中，輸入 Office 365 全域管理員名稱 (範例： jdoe@contosotoycompany.onmicrosoft.com) 和 Office 365 試用版訂閱的密碼。
   
@@ -89,7 +92,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 接下來，您建立專用的高階主管群組並將新的高階主管帳戶新增至其。
   
-1. 在瀏覽器中移至[http://portal.office.com](http://portal.office.com) Office 入口網站並登入您的 Office 365 試用版訂閱以全域管理員帳戶。
+1. 在瀏覽器中移至 Office 入口網站[http://portal.office.com](http://portal.office.com)並登入您的 Office 365 試用版訂閱以全域管理員帳戶。
     
   - 如果您使用輕量型 Office 365 開發人員/測試環境，開啟 Internet Explorer 或瀏覽器中的私人工作階段並登入從本機電腦。
     
@@ -137,9 +140,9 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 8. 在 SharePoint 群組的清單中，按一下 [**高階主管成員**。
     
-9. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+9. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
-10. 在**共用 'Executives'**輸入**高階主管**、**高階主管**] 群組中，按一下 [，然後按一下 [**共用**。
+10. 在**共用 'Executives'** 輸入**高階主管**、**高階主管**] 群組中，按一下 [，然後按一下 [**共用**。
     
 11. 關閉 [**人員與群組**] 索引標籤。
     
@@ -153,7 +156,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 4. 在 SharePoint 群組的清單中，按一下 [**銷售網站集合的成員**。
     
-5. 在 [**人員與群組**] 頁面上按一下 [**新增**]。
+5. 在 [人員與群組]**** 頁面上，按一下 [新增]****。
     
 6. 在**共用 'Sales 網站集合 」**，輸入**所有人**、 按一下 [**所有人以外的外部使用者**，和 [**共用**。
     
@@ -163,7 +166,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [使用者] 圖示的右上角和 [**登出**。
     
-2. 移至[http://portal.office.com](http://portal.office.com)。
+2. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
 3. 按一下 [ **Office 365 登入**] 索引標籤的 [**使用其他帳戶**]。
     
@@ -171,7 +174,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 5. 在瀏覽器的新] 索引標籤上輸入高階主管的網站集合的 URL ( **https://**\<組織名稱 >**.sharepoint.com/sites/executives**)。
     
-6. 按一下 [**文件**、 按一下 [**新增]**和 [ **Word 文件**。
+6. 按一下 [**文件**、 按一下 [**新增]** 和 [ **Word 文件**。
     
 7. 按一下標題列中，輸入**SensitiveData BeforeIRM**。
     
@@ -201,7 +204,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [使用者] 圖示的右上角和 [**登出**。
     
-2. 移至[http://portal.office.com](http://portal.office.com)。
+2. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
 3. 按一下 [ **Office 365 登入**] 索引標籤的 [**使用其他帳戶**]。
     
@@ -221,7 +224,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [使用者] 圖示的右上角和 [**登出**。
     
-2. 移至[http://portal.office.com](http://portal.office.com)。
+2. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
 3. 在**Office 365 登入**] 頁面上按一下 [全域管理員帳戶名稱、 並輸入其密碼，然後按一下 [**登入**。
     
@@ -241,7 +244,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在瀏覽器的新] 索引標籤上輸入高階主管的網站集合的 URL。
     
-2. 按一下 [**文件**。
+2. 按一下 [文件]****。
     
 3. 右上角的 [設定] 圖示，和 [**文件庫設定**。
     
@@ -277,7 +280,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 5. 從您的瀏覽器的 [ **Microsoft Office Home** ] 索引標籤按一下 [在右上角的 [使用者] 圖示] 和 [**登出**。
     
-6. 移至[http://portal.office.com](http://portal.office.com)。
+6. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
 7. 在**Office 365 登入**] 頁面上按一下 [CEO 帳戶名稱、 並輸入其密碼，然後按一下 [**登入**。
     
@@ -293,7 +296,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 13. 在瀏覽器的新] 索引標籤上輸入業務部網站集合的 URL。
     
-14. 按一下 [**文件**。
+14. 按一下 [文件]****。
     
 15. 在 [**文件**] 頁面上，按一下 [**上傳**、 指定**SensitiveData AfterIRM.docx**文件您在本機資料夾、，然後按一下 [**開啟**。
     
@@ -303,13 +306,13 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 從您的瀏覽器的 [ **Microsoft Office Home** ] 索引標籤按一下 [在右上角的 [使用者] 圖示] 和 [**登出**。
     
-2. 移至[http://portal.office.com](http://portal.office.com)。
+2. 移至 [ [http://portal.office.com](http://portal.office.com)。
     
 3. 在**Office 365 登入**] 頁面上按一下 [User5 帳戶名稱，並輸入其密碼，然後按一下 [**登入**。
     
 4. 在瀏覽器的新] 索引標籤上輸入業務部網站集合的 URL。
     
-5. 按一下 [**文件**。
+5. 按一下 [文件]****。
     
 6. 在 [**文件**] 頁面開啟**SensitiveData AfterIRM.docx**文件。
     
@@ -327,7 +330,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 若要查看 IRM 保護的另一種方式是要查看您的本機資料夾中的檔案。**SensitiveData AfterIRM.docx**應該更加大於**SensitiveData BeforeIRM.docx**檔案。加密**SensitiveData AfterIRM.docx**檔案，而且已新增 IRM 保護資訊。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   

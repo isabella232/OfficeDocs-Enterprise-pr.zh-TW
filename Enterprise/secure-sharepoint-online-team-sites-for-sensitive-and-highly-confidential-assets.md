@@ -1,5 +1,5 @@
 ---
-title: "保護敏感和最高機密資產的 SharePoint Online 小組網站"
+title: 保護敏感性和高度機密資產的 SharePoint Online 小組網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 8c088e88-a9ba-4044-bced-722196f4496d
-description: "摘要： 如何 Contoso 變得容易實作機密保護和高度機密的 SharePoint Online 的小組網站，尚未安全、 高階主管的共同作業和其參考資料中心。"
-ms.openlocfilehash: c615280d39117f68515fb13d4ba83428d73e4fd3
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 如何 Contoso 變得容易實作機密保護和高度機密的 SharePoint Online 的小組網站，尚未安全、 高階主管的共同作業和其參考資料中心。
+ms.openlocfilehash: 23511e4156bb04e8bacf970913b00ed36e8ff9c8
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914858"
 ---
-# <a name="secure-sharepoint-online-team-sites-for-sensitive-and-highly-confidential-assets"></a>保護敏感和最高機密資產的 SharePoint Online 小組網站
+# <a name="secure-sharepoint-online-team-sites-for-sensitive-and-highly-confidential-assets"></a>保護敏感性和高度機密資產的 SharePoint Online 小組網站
 
- **摘要：**如何實作的 Contoso 機密保護和高度機密 SharePoint Online 小組高階主管和其參考資料中心的更容易，尚未安全共同作業的網站。
+ **摘要：** 如何實作的 Contoso 機密保護和高度機密 SharePoint Online 小組高階主管和其參考資料中心的更容易，尚未安全共同作業的網站。
   
 Contoso executive 領導想要使用 Office 365 和其檔案儲存在單一位置進行共同作業，不論可能主管。同樣地，Contoso 的研究 （英文） 部門 — 搭配中 Paris、 莫斯科、 紐約、 北京及班加羅爾部門 — 想要轉換至更輕鬆地存取與更多 open 共同作業雲端其內部部署數位資產跨小組。
   
@@ -30,7 +33,7 @@ Contoso executive 領導想要使用 Office 365 和其檔案儲存在單一位�
   
 **圖 1： 比較的機密保護和高度機密的 SharePoint Online 小組網站**
 
-![敏感性保護和高度機密的 SharePoint Online 小組網站](images/Contoso_Poster/SP_Solution.png)
+![敏感性保護和高度機密的 SharePoint Online 小組網站](media/Contoso-Poster/SP-Solution.png)
   
 Contoso 為其行政人員及的研究小組建立安全的 SharePoint Online 小組網站使用下列步驟：
   
@@ -42,7 +45,7 @@ Contoso 為其行政人員及的研究小組建立安全的 SharePoint Online �
     
     將現有的內部部署 executive 檔案及資料夾移至新的高階主管 SharePoint Online 小組網站。
     
-3. 建立**[參考資料**高度機密 SharePoint Online 小組網站
+3. 建立 **[參考資料**高度機密 SharePoint Online 小組網站
     
     新的小組網站會使用現有的 Azure AD 研究小組群組做為完全控制 」 權限等級的擁有者的編輯權限等級與 SharePoint 系統管理員帳戶一小群成員。指派給研究檔案 AIP 標籤確保他們會加密和只有研究 （英文） 群組的成員可以開啟它們。
     
@@ -56,11 +59,11 @@ Contoso 為其行政人員及的研究小組建立安全的 SharePoint Online �
   
  若要將此以為示範、 概念證明或開發人員/測試，請參閱 ＜[保護 SharePoint Online 開發人員/測試環境中的網站](https://docs.microsoft.com/microsoft-365-enterprise/secure-sharepoint-online-sites-dev-test)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Contoso Corporation 的企業案例](enterprise-scenarios-for-the-contoso-corporation.md)
   
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

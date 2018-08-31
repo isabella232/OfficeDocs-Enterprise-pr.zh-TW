@@ -1,5 +1,5 @@
 ---
-title: "訂閱、 授權及使用者帳戶為 Contoso Corporation"
+title: Contoso 公司的訂用帳戶、授權及使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: ec3b08f0-288c-4ba3-b822-dbf6352fa761
-description: "摘要： 了解與結構的 Contoso 的雲端訂閱、 授權、 使用者帳戶的承租人。"
-ms.openlocfilehash: 6e62fbbc0f52019e5d233fc73992b000952344f5
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解與結構的 Contoso 的雲端訂閱、 授權、 使用者帳戶的承租人。
+ms.openlocfilehash: cd196e0800f6a39973f4c5c82001ed3e9c330fee
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915508"
 ---
-# <a name="subscriptions-licenses-and-user-accounts-for-the-contoso-corporation"></a>訂閱、 授權及使用者帳戶為 Contoso Corporation
+# <a name="subscriptions-licenses-and-user-accounts-for-the-contoso-corporation"></a>Contoso 公司的訂用帳戶、授權及使用者帳戶
 
- **摘要：**了解與結構的 Contoso 的雲端訂閱、 授權、 使用者帳戶的承租人。
+ **摘要：** 了解與結構的 Contoso 的雲端訂閱、 授權、 使用者帳戶的承租人。
   
 若要提供用於所有雲端方案一致的身分識別和計費、 Microsoft 提供組織/訂閱/授權/使用者帳戶階層：
   
@@ -28,7 +31,7 @@ ms.lasthandoff: 02/09/2018
     
     使用 Microsoft cloud 方案，通常是由公用 DNS 網域名稱，例如 contoso.com 識別商務實體。
     
-- 訂閱
+- 訂用帳戶
     
     對於 Microsoft saas 和雲端方案 （Office 365、 Intune/EMS 和 Dynamics 365）、 訂閱會為某項特定產品和使用者授權購買的組。Azure、 訂閱允許組織使用的雲端服務的帳單。
     
@@ -46,7 +49,7 @@ Contoso 取決於組織其訂閱、 授權、 帳戶、 及租用戶的下列結
   
 **圖 1： Contoso 的組織、 訂閱、 授權、 使用者帳戶及承租人**
 
-![Contoso 的組織、訂用帳戶授權、使用者帳戶及租用戶](images/Contoso_Poster/Subscriptions.png)
+![Contoso 的組織、訂用帳戶授權、使用者帳戶及租用戶](media/Contoso-Poster/Subscriptions.png)
   
 圖 1 顯示如何 Contoso 組織包含多個訂閱便繫結至一般的 Azure AD 租用戶包含從 contoso.com Windows Server AD 樹系同步處理之使用者帳戶。
   
@@ -82,7 +85,7 @@ Contoso 取決於組織其訂閱、 授權、 帳戶、 及租用戶的下列結
   
 **圖 2： Azure 訂閱 Contoso 的結構**
 
-![Contoso 的 Azure 訂用帳戶結構](images/Contoso_Poster/Subscriptions_Nested.png)
+![Contoso 的 Azure 訂用帳戶結構](media/Contoso-Poster/Subscriptions-Nested.png)
   
 - Contoso 是在上方，根據與 Microsoft 其 Enterprise 合約。
     
@@ -92,9 +95,9 @@ Contoso 取決於組織其訂閱、 授權、 帳戶、 及租用戶的下列結
     
 每個 Azure 訂閱可以與單一相關聯 Azure AD 租用戶包含驗證和授權 Azure 服務的使用者帳戶和群組。實際執行訂閱使用一般的 Contoso Azure AD 租用戶。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

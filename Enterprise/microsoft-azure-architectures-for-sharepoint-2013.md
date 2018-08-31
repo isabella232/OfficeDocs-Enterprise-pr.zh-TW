@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure Architectures for SharePoint 2013
+title: 適用於 SharePoint 2013 的 Microsoft Azure 架構
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
@@ -11,22 +11,23 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
-description: "摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。了解解決方案的類型有良好的調整及如何設定 Microsoft Azure 至其中的主機。"
-ms.openlocfilehash: 5156f3e8cabb3acabc7ad23a680a016c200c676e
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。了解解決方案的類型有良好的調整及如何設定 Microsoft Azure 至其中的主機。
+ms.openlocfilehash: f7d34f5f9640a8f404265433806ccc39a35c8fd5
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915378"
 ---
-# <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure Architectures for SharePoint 2013
+# <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>適用於 SharePoint 2013 的 Microsoft Azure 架構
 
- **摘要：**SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。了解解決方案的類型有良好的調整及如何設定 Microsoft Azure 至其中的主機。
+ **摘要：** SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。了解解決方案的類型有良好的調整及如何設定 Microsoft Azure 至其中的主機。
   
 Azure 是架設 SharePoint Server 2013 解決方案良好環境。在大多數情況下，我們建議 Office 365 但架設在 Azure 中的 SharePoint 伺服器陣列可特定解決方案的良好的選擇。本文說明如何包括工程師的 SharePoint 解決方案所以是優符合 Azure 平台。下列兩個特定解決方案作為範例：
   
-- [SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
+- [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
     
-- [Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)
+- [Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)
     
 ## <a name="recommended-sharepoint-solutions-for-azure-infrastructure-services"></a>建議的 SharePoint 解決方案的 Azure 基礎結構服務
 
@@ -36,7 +37,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
 |:-----|:-----|
 |開發及測試環境  <br/> |很容易建立及管理這些環境。  <br/> |
 |Azure 至內部部署 SharePoint 伺服器陣列的災害復原  <br/> |**裝載次要資料中心**使用 Azure 演變次要資料中心內的不同區域中。 <br/> **較低成本嚴重損壞修復環境**維護及工資資源少於內部嚴重損壞修復環境。資源數目取決於您選擇嚴重損壞修復環境： 冷待命、 暖待命或熱待命。<br/> **更多彈入平台**在發生災害時輕鬆地向外延展負載要求修復 SharePoint 伺服器陣列。當您不再需要資源的向外。<br/> 請參閱[SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)。  <br/> |
-|使用功能與刻度不適用於 Office 365 的網際網路網站  <br/> |**整個計畫重心在工作**專注於建置更好的網站而不是建置基礎結構。 <br/> **利用 Azure 中的 elasticity**大小需求的伺服器陣列來新增伺服器，然後只工資您需要的資源。動態機器配置不支援 （自動調整大小）。<br/> **使用 Azure Active Directory (AD)**善用客戶帳戶的 Azure AD。 <br/> **無法使用 Office 365 中新增的 SharePoint 功能**新增深報告與 web 分析。 <br/> 請參閱[Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
+|使用功能與刻度不適用於 Office 365 的網際網路網站  <br/> |**整個計畫重心在工作**專注於建置更好的網站而不是建置基礎結構。 <br/> **利用 Azure 中的 elasticity**大小需求的伺服器陣列來新增伺服器，然後只工資您需要的資源。動態機器配置不支援 （自動調整大小）。<br/> **使用 Azure Active Directory (AD)** 善用客戶帳戶的 Azure AD。 <br/> **無法使用 Office 365 中新增的 SharePoint 功能**新增深報告與 web 分析。 <br/> 請參閱[Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
 |若要支援 Office 365 或內部部署環境的應用程式伺服器陣列  <br/> |**建立、 測試與代管應用程式**以支援兩個內部部署和雲端環境 Azure 中。 <br/> Azure 而不是購買新硬體的內部部署環境中的**主機此角色**。 <br/> |
    
 內部網路與共同作業解決方案及工作負載，請考慮下列選項：
@@ -55,13 +56,13 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 - [SharePoint 2013 IT 專業人員的架構設計](http://technet.microsoft.com/en-us/sharepoint/fp123594.aspx)
     
-- [規劃效能和容量管理 SharePoint Server 2013](http://technet.microsoft.com/library/8dd52916-f77d-4444-b593-1f7d6f330e5f.aspx)
+- [規劃 SharePoint 2013 的效能與容量管理](http://technet.microsoft.com/library/8dd52916-f77d-4444-b593-1f7d6f330e5f.aspx)
     
 ## <a name="determine-the-active-directory-domain-type"></a>決定 Active Directory 網域類型
 
 每個 SharePoint 伺服器陣列依賴 Active Directory 提供給伺服器陣列安裝程式的管理帳戶。在此階段中，有兩個 Azure 中的 SharePoint 解決方案的選項。下表說明這些。
   
-|**選項**|**說明**|
+|**選項**|**描述**|
 |:-----|:-----|
 |專用的網域  <br/> |您可對 Azure 以支援您的 SharePoint 伺服器陣列部署專用和隔離的 Active Directory 網域。這是不錯的選擇的公用對向網際網路網站。  <br/> |
 |擴充跨部署連線到內部部署網域  <br/> |當您擴充跨部署連線到內部網域時、 使用者會存取透過您的內部網路 SharePoint 伺服器陣列主控內部部署一樣。您可以運用您的內部部署 Active Directory 和 DNS 實作。  <br/> 跨部署的連線，則需要建置 Azure 容錯移轉至從內部部署伺服器陣列中的嚴重損壞修復環境。  <br/> |
@@ -76,7 +77,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 **圖 1： 內部部署環境與 Azure 虛擬網路**
 
-![為 SharePoint 解決方案設計的 Microsoft Azure 虛擬網路。Azure 閘道的一個子網路。虛擬機器的一個子網路。](images/OPrrasconWA_AZarch.png)
+![為 SharePoint 解決方案設計的 Microsoft Azure 虛擬網路。Azure 閘道的一個子網路。虛擬機器的一個子網路。](media/OPrrasconWA-AZarch.png)
   
 在此圖表中：
   
@@ -92,7 +93,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 **圖 2： 使用 Azure 閘道和內部閘道裝置來提供內部部署環境及 Azure 之間的網站連線**
 
-![內部部署環境已透過跨單位連線連接至 Azure 虛擬網路，其可以是網站對網站 VPN 連線或是 ExpressRoute](images/AZarch_VPNgtwyconnct.png)
+![內部部署環境已透過跨單位連線連接至 Azure 虛擬網路，其可以是網站對網站 VPN 連線或是 ExpressRoute](media/AZarch-VPNgtwyconnct.png)
   
 在此圖表中：
   
@@ -110,13 +111,13 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 **圖 3： 混合式 Active Directory 網域組態**
 
-![STwo 虛擬機器部署到 Azure 虛擬網路和 SharePoint 伺服器陣列子網路是複本網域控制站和 DNS 伺服器](images/AZarch_HyADdomainConfig.png)
+![STwo 虛擬機器部署到 Azure 虛擬網路和 SharePoint 伺服器陣列子網路是複本網域控制站和 DNS 伺服器](media/AZarch-HyADdomainConfig.png)
   
 此圖建置在先前圖表加入至 Windows Server AD 的兩個虛擬機器與 DNS 的子網路。這些虛擬機器複本的網域控制站和 DNS 伺服器。他們是副檔名為內部部署 Windows Server AD 環境。 
   
 下表提供這些 Azure 中的虛擬機器設定建議。使用這些當做起點來設計您自己環境 — 即使為專用網域 Azure 環境不會與內部部署環境通訊的地方。
   
-|**項目**|**設定**|
+|**項目**|**組態**|
 |:-----|:-----|
 |在 Azure 虛擬機器大小  <br/> |標準層中的 A1 或 A2 大小  <br/> |
 |作業系統  <br/> |Windows Server 2012 R2  <br/> |
@@ -134,7 +135,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 **圖 4： 位置的 SharePoint 虛擬機器**
 
-![資料庫伺服器和 SharePoint 伺服器角色加入 SharePoint 伺服器陣列子網路內的 Azure 虛擬網路](images/AZarch_SPVMsinCloudSer.png)
+![資料庫伺服器和 SharePoint 伺服器角色加入 SharePoint 伺服器陣列子網路內的 Azure 虛擬網路](media/AZarch-SPVMsinCloudSer.png)
   
 此圖建置在先前圖表其各自的各層中加入 SharePoint 伺服器陣列伺服器角色。
   
@@ -150,7 +151,7 @@ Azure 基礎結構服務是架設 SharePoint 解決方案迫切] 選項。某些
   
 **圖 5： 使用 Azure 可用性設定以提供在 SharePoint 伺服器陣列各層的高可用性**
 
-![Azure 基礎結構中針對 SharePoint 2013 解決方案的可用性設定組設定](images/AZenv_WinAzureAvailSetsHA.png)
+![Azure 基礎結構中針對 SharePoint 2013 解決方案的可用性設定組設定](media/AZenv-WinAzureAvailSetsHA.png)
   
 此圖呼叫出 Azure 基礎結構內的可用性設定的設定。每個下列角色共用個別可用性設定：
   
@@ -170,7 +171,7 @@ SharePoint 伺服器陣列可能會需要可調整的 Azure 平台。若要確�
   
 **圖 6： 規劃在三層式伺服器陣列中的容量和效能目標的範例**
 
-![標準 SharePoint 2013 Internet Sites 架構具有符合特定容量和效能目標的元件配置](images/AZarch_CapPerfexmpArch.png)
+![標準 SharePoint 2013 Internet Sites 架構具有符合特定容量和效能目標的元件配置](media/AZarch-CapPerfexmpArch.png)
   
 在此圖表中：
   
@@ -186,7 +187,7 @@ SharePoint 伺服器陣列可能會需要可調整的 Azure 平台。若要確�
   
 **圖 7： 應用程式伺服器層之前可調整**
 
-![調整為 Microsoft Azure 可用性設定組之前的 SharePoint Server 2013 應用程式伺服器層範例](images/AZarch_AppServtierBefore.png)
+![調整為 Microsoft Azure 可用性設定組之前的 SharePoint Server 2013 應用程式伺服器層範例](media/AZarch-AppServtierBefore.png)
   
 在此圖表中：
   
@@ -202,7 +203,7 @@ SharePoint 伺服器陣列可能會需要可調整的 Azure 平台。若要確�
   
 **圖 8： 應用程式伺服器層後可調整**
 
-![調整為 Microsoft Azure 可用性設定組之後的 SharePoint Server 2013 應用程式伺服器層範例](images/AZarch_AppServtierAfter.png)
+![調整為 Microsoft Azure 可用性設定組之後的 SharePoint Server 2013 應用程式伺服器層範例](media/AZarch-AppServtierAfter.png)
   
 此圖顯示相同的四個元件進行完全相同設定的所有三個應用程式伺服器。
   
@@ -210,24 +211,24 @@ SharePoint 伺服器陣列可能會需要可調整的 Azure 平台。若要確�
   
 **圖 9： 完成的 SharePoint 伺服器陣列中 Azure 基礎結構服務**
 
-![Azure Infrastructure Services 中的 SharePoint 2013 伺服器陣列以及虛擬網路、跨單位連線能力、子網路、VM 以及可用性設定組的範例 ](images/7256292f-bf11-485b-8917-41ba206153ee.png)
+![Azure Infrastructure Services 中的 SharePoint 2013 伺服器陣列以及虛擬網路、跨單位連線能力、子網路、VM 以及可用性設定組的範例 ](media/7256292f-bf11-485b-8917-41ba206153ee.png)
   
 此圖顯示實作於 Azure 基礎結構服務，以提供容錯網域的每一層中的伺服器的可用性設定 SharePoint 伺服器陣列。
   
-**加入討論區**
+**參與討論**
 
-|**與我們連絡**|**描述**|
+|**連絡我們**|**描述**|
 |:-----|:-----|
-|**雲端採用內容您是否需要吗？** <br/> |我們會建立橫跨多個 Microsoft cloud 平台及服務的雲端採用的內容。我們知道什麼構思我們雲端採用內容，或藉由傳送電子郵件給[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)要求特定的內容。<br/> |
+|**您需要什麼樣的雲端採用內容？** <br/> |我們正在建立涵蓋多個 Microsoft 雲端平台及服務的雲端採用內容。請傳送電子郵件至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)，讓我們知道您對雲端採用內容的看法或對特定內容的要求。<br/> |
 |**加入雲端採用討論** <br/> |如果您是找到他們需雲端式解決方案，請考慮加入雲端採用 Advisory 董 (CAAB) 與 Microsoft 內容的開發人員、 產業專業人員和客戶的從遍更大型、 加上鮮豔社群連線。若要加入，新增您自己的 Microsoft 技術社群[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員身分並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送意見。任何人都可以讀取上[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)社群相關內容。不過，CAAB 成員取得說明新雲端採用資源和解決方案的私人研討會的邀請。<br/> |
-|**取得您在此處看到美工圖案** <br/> |如果您想編輯您在本文中看到藝術複本，我們樂於傳送給您。您的要求，包含 URL 及標題的圖案、 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)的電子郵件。<br/> |
+|**取得您在這裡看到的美工圖案** <br/> |如果您想要此文章中所看到之美工圖案的可編輯複本，我們很樂於將它傳送給您。請以電子郵件將您的要求 (包括美工圖案的 URL 和標題) 傳送至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)。<br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
   
-[Microsoft Azure using SharePoint Server 2013 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)
+[Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)
   
-[SharePoint Server 2013 Disaster Recovery in Microsoft Azure](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
+[Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
 
 

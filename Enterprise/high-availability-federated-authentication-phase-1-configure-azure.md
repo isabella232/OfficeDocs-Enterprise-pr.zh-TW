@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
-description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
-ms.openlocfilehash: 465c53efe8464ac823ebb3cd0e847a854eed82bb
-ms.sourcegitcommit: a4322cac992ce64b92f0335bf005a7420195d9be
+description: 摘要：設定 Microsoft Azure 基礎結構以裝載 Office 365 的高可用性同盟驗證。
+ms.openlocfilehash: e88204d7f69c56c951f5d6ebd4d978c96e4c52ba
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915458"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
- **摘要：**設定 Office 365 的主機同盟的高可用性驗證 Microsoft Azure 基礎結構。
+ **摘要：** 設定 Microsoft Azure 基礎結構以裝載 Office 365 的高可用性同盟驗證。
   
 在此階段中，您會建立資源群組、 階段 2、 3 及 4 主控虛擬機器的 Azure 中的虛擬網路 (VNet) 和可用性設定。您必須完成此階段中的將移入之前[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)的所有階段。
   
@@ -40,11 +41,11 @@ Azure 必須佈建使用這些基本元件：
   
 |**項目**|**組態設定**|**描述**|**值**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |VNet 名稱  <br/> |要指派給 VNet 的名稱 (例如 FedAuthNet)。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|2.  <br/> |VNet 位置  <br/> |將包含虛擬網路的區域性 Azure 資料中心  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|3.  <br/> |VPN 裝置 IP 位址  <br/> |網際網路上 VPN 裝置介面的公用 IPv4 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|4.  <br/> |VNet 位址空間  <br/> |虛擬網路的位址空間。請與您的 IT 部門合作以決定此位址空間。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](http://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|1.  <br/> |VNet 名稱  <br/> |要指派給 VNet 的名稱 (例如 FedAuthNet)。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |VNet 位置  <br/> |將包含虛擬網路的區域性 Azure 資料中心  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |VPN 裝置 IP 位址  <br/> |網際網路上 VPN 裝置介面的公用 IPv4 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |VNet 位址空間  <br/> |虛擬網路的位址空間。請與您的 IT 部門合作以決定此位址空間。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |IPsec 共用金鑰  <br/> |32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](http://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
  **表格 V：跨單位虛擬網路設定**
   
@@ -62,10 +63,10 @@ Azure 必須佈建使用這些基本元件：
   
 |**項目**|**子網路名稱**|**子網路位址空間**|**用途**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器虛擬機器 (VM) 使用的子網路。  <br/> |
-|2.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |AD FS VM 使用的子網路。  <br/> |
-|3.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |Web 應用程式 Proxy VM 使用的子網路。  <br/> |
-|4.  <br/> |GatewaySubnet  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |Azure 閘道 VM 使用的子網路。  <br/> |
+|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器虛擬機器 (VM) 使用的子網路。  <br/> |
+|2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |AD FS VM 使用的子網路。  <br/> |
+|3.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Web 應用程式 Proxy VM 使用的子網路。  <br/> |
+|4.  <br/> |GatewaySubnet  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Azure 閘道 VM 使用的子網路。  <br/> |
    
  **表格 S：虛擬網路中的子網路**
   
@@ -73,14 +74,14 @@ Azure 必須佈建使用這些基本元件：
   
 |**項目**|**用途**|**子網路上的 IP 位址**|**值**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |第一個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|2.  <br/> |第二個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|3.  <br/> |DirSync 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第六個可能 IP 位址。   <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|4.  <br/> |AD FS 伺服器內部負載平衡器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第四個可能 IP 位址。   <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|5.  <br/> |第一個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|6.  <br/> |第二個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第六個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|7.  <br/> |第一個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|8.  <br/> |第二個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|1.  <br/> |第一個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |第二個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |DirSync 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第六個可能 IP 位址。   <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|4.  <br/> |AD FS 伺服器內部負載平衡器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第四個可能 IP 位址。   <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|5.  <br/> |第一個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|6.  <br/> |第二個 AD FS 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 2 中，子網路位址空間的第六個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|7.  <br/> |第一個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|8.  <br/> |第二個 Web 應用程式 Proxy 伺服器的靜態 IP 位址  <br/> |定義於表格 S 的項目 3 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
  **表格 I：虛擬網路中的靜態 IP 位址**
   
@@ -88,8 +89,8 @@ Azure 必須佈建使用這些基本元件：
   
 |**項目**|**DNS 伺服器的易記名稱**|**DNS 伺服器 IP 位址**|
 |:-----|:-----|:-----|
-|1.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|2.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
  **表格 D：內部部署 DNS 伺服器**
   
@@ -99,16 +100,16 @@ Azure 必須佈建使用這些基本元件：
   
 |**項目**|**區域網路位址空間**|
 |:-----|:-----|
-|1.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|2.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|3.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
  **表格 L：區域網路的網址前置詞**
   
 現在讓我們開始建置 Azure 基礎結構以裝載您的 Office 365 同盟驗證。
   
 > [!NOTE]
-> [!附註] 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 首先，啟動 Azure PowerShell 提示並登入您的帳戶。
   
@@ -131,7 +132,7 @@ Azure PowerShell 較舊版本，請改用以下命令。
 Get-AzureRMSubscription | Sort Name | Select SubscriptionName
 ```
 
-設定您的 Azure 訂閱。括住，包括所有內容取代為\<和 > 具有正確的名稱的字元。
+設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 \< 和 > 字元)。
   
 ```
 $subscr="<subscription name>"
@@ -148,10 +149,10 @@ Get-AzureRMResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
   
 |**項目**|**資源群組名稱**|**用途**|
 |:-----|:-----|:-----|
-|1.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |網域控制站  <br/> |
-|2.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |AD FS 伺服器  <br/> |
-|3.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |Web 應用程式 Proxy 伺服器  <br/> |
-|4.  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |基礎結構元素  <br/> |
+|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |網域控制站  <br/> |
+|2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |AD FS 伺服器  <br/> |
+|3.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Web 應用程式 Proxy 伺服器  <br/> |
+|4.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |基礎結構元素  <br/> |
    
  **表格 R：資源群組**
   
@@ -273,9 +274,9 @@ Get-AzureRMPublicIpAddress -Name $publicGatewayVipName -ResourceGroupName $rgNam
   
 |**項目**|**用途**|**可用性設定組名稱**|
 |:-----|:-----|:-----|
-|1.  <br/> |網域控制站  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|2.  <br/> |AD FS 伺服器  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
-|3.  <br/> |Web 應用程式 Proxy 伺服器  <br/> |![](./images/Common_Images/TableLine.png)  <br/> |
+|1.  <br/> |網域控制站  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|2.  <br/> |AD FS 伺服器  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|3.  <br/> |Web 應用程式 Proxy 伺服器  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
  **表格 A：可用性設定組**
   
@@ -298,13 +299,13 @@ New-AzureRMAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $l
 
 以下是成功完成此階段的設定結果。
   
-**階段 1： Azure 基礎結構的高可用性同盟驗證 Office 365**
+**階段 1：適用於 Office 365 高可用性同盟驗證的 Azure 基礎結構**
 
-![具有 Azure 基礎結構的 Azure 中之高可用性 Office 365 同盟驗證的階段 1](images/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
+![具有 Azure 基礎結構的 Azure 中之高可用性 Office 365 同盟驗證的階段 1](media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)繼續執行此工作負載的組態。
+使用[High availability federated authentication Phase 2: Configure domain controllers](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)以繼續設定此工作負載。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -314,6 +315,6 @@ New-AzureRMAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $l
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
-[Office 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
+[了解 Office 365 身分識別和 Azure Active Directory](about-office-365-identity.md)
 
 

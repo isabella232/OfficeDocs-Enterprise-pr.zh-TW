@@ -1,5 +1,5 @@
 ---
-title: "Contoso Corporation 的身分識別"
+title: Contoso Corporation 的身分識別
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 78a407e4-2d8b-4561-b308-b22c95f60eeb
-description: "摘要： 了解如何利用 IDaaS Contoso，並提供地理位置分散變得多餘的和驗證其使用者。"
-ms.openlocfilehash: 7a6448969a90f1f646f70fee4c67a6da992dd2bc
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何利用 IDaaS Contoso，並提供地理位置分散變得多餘的和驗證其使用者。
+ms.openlocfilehash: 25e708147bda51fa8f8b4d0ea5e83eb4a9cd10b0
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915438"
 ---
 # <a name="identity-for-the-contoso-corporation"></a>Contoso Corporation 的身分識別
 
- **摘要：**了解如何利用 IDaaS Contoso，並提供地理位置分散變得多餘的和驗證其使用者。
+ **摘要：** 了解如何利用 IDaaS Contoso，並提供地理位置分散變得多餘的和驗證其使用者。
   
 Microsoft 會提供跨其雲端方案以服務 (IDaaS) 的身分識別。若要採用雲端 （含） 的基礎結構，Contoso 的 IDaaS 解決方案必須並用其內部身分識別提供者並包括使用其現有的受信任、 協力廠商身分識別提供者同盟的驗證。
   
@@ -30,7 +31,7 @@ Contoso 會使用單一 Windows Server Active Directory (AD) 樹系與另一個�
   
 **圖 1： Contoso 的樹系及網域組成的全球**
 
-![Contoso 的 Windows Server AD 樹系和世界各地的網域](images/Contoso_Poster/Contoso_WW_ID.png)
+![Contoso 的 Windows Server AD 樹系和世界各地的網域](media/Contoso-Poster/Contoso-WW-ID.png)
   
 圖 1 顯示與區域不同組件的全球包含區域的集線器網域 Contoso 樹系。
   
@@ -46,7 +47,7 @@ Contoso 可讓：
     
 **圖 2： Contoso 的驗證支援的同盟的客戶與合作夥伴**
 
-![Contoso 現有的基礎結構，用以支援客戶和合作夥伴同盟驗證](images/Contoso_Poster/Federated_ID.png)
+![Contoso 現有的基礎結構，用以支援客戶和合作夥伴同盟驗證](media/Contoso-Poster/Federated-ID.png)
   
 圖 2 顯示包含公用網站、 外部網路是合作夥伴與 AD FS 伺服器的一組 Contoso DMZ。DMZ 被連線至網際網路包含客戶和合作夥伴與網際網路服務。
   
@@ -60,7 +61,7 @@ Contoso 已部署在其 Paris 資料中心伺服器的叢集上 「 Azure AD 連
   
 **圖 3： Contoso 的目錄同步處理基礎結構**
 
-![Contoso 的目錄同步處理基礎結構](images/Contoso_Poster/DirSync.png)
+![Contoso 的目錄同步處理基礎結構](media/Contoso-Poster/DirSync.png)
   
 圖 3 是執行使用 Azure AD 租用戶同步處理 Contoso Windows Server AD 樹系的 Azure AD 連線的伺服器叢集。
   
@@ -74,7 +75,7 @@ Contoso 已設定的同盟的驗證，Contoso 的工作者提供單一登入。�
   
 **圖 4： 地區分公司的驗證流量的地理位置分布**
 
-![地區辦公室 Contoso 驗證流量的地理分配](images/Contoso_Poster/Auth_GeoDist.png)
+![地區辦公室 Contoso 驗證流量的地理分配](media/Contoso-Poster/Auth-GeoDist.png)
   
 圖 4 顯示區域辦公室的用戶端電腦、 Azure 流量管理員和驗證伺服器層級。每個區域的 office 會使用 web proxy 伺服器和 AD FS 伺服器來驗證使用者認證與 Windows Server AD 網域控制站。
   
@@ -106,7 +107,7 @@ Contoso 已設定的同盟的驗證，Contoso 的工作者提供單一登入。�
   
 **圖 5： Azure IaaS 變得多餘的驗證基礎結構**
 
-![巴黎總部 Azure IaaS 中的備援驗證基礎結構](images/Contoso_Poster/Paris_Auth_Redun.png)
+![巴黎總部 Azure IaaS 中的備援驗證基礎結構](media/Contoso-Poster/Paris-Auth-Redun.png)
   
 圖 5 顯示 web proxy 伺服器和 AD FS 伺服器中 DMZ 以及跨部署 Azure 中的每個其他設定虛擬網路。
   
@@ -118,9 +119,9 @@ Headquarters DMZ 中主要的驗證伺服器變成無法使用，IT 人員切換
     
 - 當 DMZ 驗證伺服器無法使用，在 Azure IaaS 中使用之伺服器的 IP 位址。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

@@ -8,16 +8,18 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Strat_O365_IP
 ms.custom: Ent_Solutions
 ms.assetid: ''
 description: 若要深入了解 Office 365 中的權限的存取管理功能使用本主題
-ms.openlocfilehash: b2db3e16e53cca7deb2bf8fbff61b5b981f42fa6
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: 22286d4f91ffa0bd3c49f028681d20e36d14283d
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319204"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915388"
 ---
 # <a name="privileged-access-management-in-office-365"></a>權限存取 Office 365 中的管理
 
@@ -46,7 +48,7 @@ Beta 公開期間特殊權限存取管理功能可用只能透過 Office 365 中
 ### <a name="step-1---create-an-approvers-group"></a>步驟 1-建立核准者群組
 從 Office 365 系統管理入口網站，選取 [**群組** > **加入群組**]，然後建立啟用郵件功能的安全性群組的預設權限存取核准者。完成後，選取 [**新增**] 以建立並儲存核准者群組。
 
-![Office 365 系統入口網站的權限的存取核准者畫面](images/privileged-access-approvers-ui.png)
+![Office 365 系統入口網站的權限的存取核准者畫面](media/privileged-access-approvers-ui.png)
 
 > [!NOTE] 
 > 在此階段中，只有系統管理存取權的使用者可以核准來自 Office 365 造就存取要求。在未來任何已核准者的群組之一部分的使用者將能夠核准存取要求。
@@ -140,7 +142,7 @@ Disable-ElevatedAccessControl
 ## <a name="managed-access-to-microsoft-graph-in-microsoft-azure"></a>受管理的 Microsoft Graph in Microsoft Azure 存取
 
 > [!IMPORTANT]
-> 本節涵蓋 beta 公開 Microsoft Graph 功能僅在 Office 365 E5 和進階規範 Sku 中目前可用的部署和設定指導。
+> 本節涵蓋有關目前只適用於預覽功能的詳細資訊。
 
 受管理的存取權 Microsoft Graph in Microsoft Azure 是可幫助組織執行控制其 Office 365 資料細微層級的服務。此 system 允許應用程式開發人員創造見解與該資料。 
 

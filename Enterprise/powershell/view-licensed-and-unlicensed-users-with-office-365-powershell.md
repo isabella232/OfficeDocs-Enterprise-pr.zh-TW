@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 檢視經授權與未經授權的使用者"
+title: 使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,16 +14,17 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
-description: "說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。"
-ms.openlocfilehash: b26c98c1c294e2f1369d4368d0b1415702580a83
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
-ms.translationtype: HT
+description: 說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。
+ms.openlocfilehash: d182e53992b189e8ede52e6d133b864a17ba7232
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914868"
 ---
 # <a name="view-licensed-and-unlicensed-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 
-**摘要：**說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。
+**摘要：** 說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。
   
 在您的 Office 365 組織中的使用者帳戶，可能具有從組織的可用授權方案指派給他們的部分授權、全部授權或完全沒有授權。您可以使用 Office 365 PowerShell 快速尋找組織中的經授權和未經授權的使用者。
   
@@ -57,9 +58,9 @@ Get-MsolUser -All | where {$_.isLicensed -eq $true}
 
 ## <a name="the-long-version-instructions-with-detailed-explanations"></a>冗長版本 (包含詳細說明的指示)
 
-Office 365 使用者帳戶與 Office 365 授權不必具備一對一的對應關係：Office 365 使用者不一定具有 Office 365 授權，而 Office 365 授權不一定已指派給使用者。(事實上，單一使用者帳戶甚至可以有多個** Office 365 授權。) 當您建立新的 Office 365 使用者帳戶時 (請參閱[License Office 365 users with Windows PowerShell](http://technet.microsoft.com/library/0ab9fcac-e5ea-4b5b-b72c-8c92c55565ac.aspx)一文以了解詳細資訊)，您不必為該使用者指派授權：新使用者會擁有一個有效的帳戶，但是無法登入 Office 365。如果他們嘗試登入，就會看見如下的內容：
+Office 365 使用者帳戶和 Office 365 授權不需要有一對一的對應關係： 很可能有不具有 Office 365 授權、 Office 365 使用者很可能已尚未被指派給使用者的 Office 365 授權。（事實上，單一使用者帳戶可以即使有*多個*Office 365 的授權）。當您建立新的 Office 365 使用者帳戶 （請參閱下列文章[指派授權指派給 Office 365 powershell 的使用者帳戶](assign-licenses-to-user-accounts-with-office-365-powershell.md)的詳細資訊） 您沒有指派授權給使用者： 新的使用者會具有有效的帳戶，但他就是看不到簽章Office 365 中 n。如果嘗試登入，他們看到類似：
   
-![沒有有效 Office 365 授權的使用者。](images/o365_powershell_no_license.png)
+![沒有有效 Office 365 授權的使用者。](media/o365-powershell-no-license.png)
   
 同樣地，您可能會有使用者請長假，或許是學術休假或產假/陪產假。在那樣的情況下，您可以移除該使用者的授權，但是維持使用者帳戶原封不動 (也就是將其地址、電話號碼等所有屬性值維持原樣)。如此一來，您就可以將該授權指派給其他人 (例如替補請假人員的臨時員工)。當該使用者返回工作崗位時，您可以發給他們新的授權，他們將能夠繼續工作，彷彿從未離開過一般。
   
@@ -125,7 +126,6 @@ AlexD@litwareinc.com        Alex Darrow                     True
 如您所見，其中並未傳回 Belinda Newman 的資訊。為什麼？您知道的：因為 Belinda 的帳戶未將 **isLicensed** 屬性設為 `True`。
   
 ## <a name="see-also"></a>另請參閱
-<a name="SeeAlso"> </a>
 
 如需這些程序中所使用之 Cmdlet 的相關資訊，請參閱下列主題：
   

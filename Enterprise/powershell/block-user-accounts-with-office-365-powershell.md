@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 封鎖使用者帳戶"
+title: 使用 Office 365 PowerShell 封鎖使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,12 +13,13 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
-description: "說明如何使用 Office 365 PowerShell 封鎖及解除封鎖存取 Office 365 帳戶。"
-ms.openlocfilehash: 34d144c982210ddc9d557b6094f71706f8edbb7f
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+description: 說明如何使用 Office 365 PowerShell 封鎖及解除封鎖存取 Office 365 帳戶。
+ms.openlocfilehash: 748d24f95f9dca651158dae2fe15e9c655eb021e
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915408"
 ---
 # <a name="block-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 封鎖使用者帳戶
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 02/14/2018
   
 封鎖 Office 365 帳戶存取權防止其他人使用帳戶來登入及存取服務和 Office 365 組織中的資料。當您封鎖的存取權之帳戶時，請當他們嘗試登入使用者會收到下列錯誤訊息：
   
-![封鎖的 Office 365 帳戶。](images/o365_powershell_account_blocked.png)
+![封鎖的 Office 365 帳戶。](media/o365-powershell-account-blocked.png)
   
 您可以使用 Office 365 PowerShell 封鎖存取個別和多個使用者帳戶。
   
@@ -161,7 +162,6 @@ Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID
 ```
 
 ## <a name="see-also"></a>另請參閱
-<a name="SeeAlso"> </a>
 
 請參閱下列有關透過 Office 365 PowerShell 管理使用者的其他主題：
   

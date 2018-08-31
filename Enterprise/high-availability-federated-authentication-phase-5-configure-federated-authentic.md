@@ -12,15 +12,16 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 0f1dbf52-5bff-44cc-a264-1b48641af98f
 description: 摘要： 設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。
-ms.openlocfilehash: 93e872098b31326de67fb0557354e9f4fc1de9ed
-ms.sourcegitcommit: a337ac253054f571a8304e18e426f74bcd385857
+ms.openlocfilehash: 797429e508a0a0c2b91d837e5475e840ca26b3d8
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915358"
 ---
-# <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-office-365"></a>高可用性同盟驗證階段 5： 設定 Office 365 同盟的驗證
+# <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-office-365"></a>高可用性同盟驗證階段 5：設定 Office 365 的同盟驗證
 
- **摘要：**設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。
+ **摘要：** 設定您的 Office 365 的高可用性同盟驗證的 Azure AD Connect in Microsoft Azure。
  
 此部署高可用性同盟的驗證 Office 365 Azure 基礎結構服務中的最後階段中，在您取得並安裝的公用憑證授權單位所發出的憑證、 驗證您的設定，然後安裝並執行 Azure AD連線的目錄同步處理伺服器上。Azure AD 連線設定您的 Office 365 訂閱和您的 Active Directory Federation Services (AD FS) 和同盟驗證的 web 應用程式 proxy 伺服器。
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/08/2018
   
 **高可用性的範例設定同盟 Azure 中的驗證基礎結構**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的範例設定](images/ac1a6a0d-0156-4407-9336-6e4cd6db8633.png)
+![Azure 中高可用性 Office 365 同盟驗證基礎結構的範例設定](media/ac1a6a0d-0156-4407-9336-6e4cd6db8633.png)
   
 ## <a name="run-azure-ad-connect-to-configure-federated-authentication"></a>執行設定同盟的驗證的 Azure AD 連線
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/08/2018
     
 6. 按一下 [**安裝所需的元件**] 頁面的 [**安裝**]。
     
-7. 在 [**使用者登入**] 頁面上按一下 [**與 AD FS 同盟**，然後按 [**下一步**。
+7. 在 [使用者登入]**** 頁面上，按一下 [和 AD FS 的同盟]****，然後按 [下一步]****。
     
 8. 在 [**連接到 Azure AD** ] 頁面輸入名稱與您的 Office 365 訂閱的全域管理員帳戶的密碼並再按 [**下一步**。
     
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/08/2018
     
 25. 在**Azure AD 網域**] 頁面的 [**網域**] 中，選取您的組織 DNS 網域名稱，並再按 [**下一步**。
     
-26. 在 [**準備好設定**] 頁面上按一下 [**安裝**]。
+26. 在 [準備設定]**** 頁面上，按一下 [安裝]****。
     
 27. 按一下 [**安裝完成**] 頁面的 [**驗證**]。您應該在內部網路和網際網路看到兩個訊息，指出已順利驗證組態。
     
@@ -128,19 +129,19 @@ ms.lasthandoff: 04/08/2018
     
   - 網際網路訊息應列出 web 應用程式 proxy 伺服器您 Azure 網際網路對向負載平衡器的公用 IP 位址。
     
-28. 在 [**安裝完成**] 頁面上按一下 [**結束**]。
+28. 在 [安裝完成]**** 頁面上，按一下 [結束]****。
     
 以下是與伺服器的版面配置區名稱的最後一個設定。
   
 **階段 5： 高可用性的最後一個設定同盟 Azure 中的驗證基礎結構**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](images/c5da470a-f2aa-489a-a050-df09b4d641df.png)
+![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
   
 您在 Azure 中的 Office 365 的高可用性同盟的驗證基礎架構即完成。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   

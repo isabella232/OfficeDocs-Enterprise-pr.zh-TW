@@ -1,5 +1,5 @@
 ---
-title: "Contoso Corporation 的安全性"
+title: Contoso Corporation 的安全性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 8f6f9894-5394-4110-8b0a-b8765028c10b
-description: "摘要： 了解如何 Contoso 其安全性需求對應至 Microsoft cloud 方案中的功能和取決於雲端安全性整備的路徑。"
-ms.openlocfilehash: f8df7f6437159aefe88851a22cc8da8b19c3838c
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何 Contoso 其安全性需求對應至 Microsoft cloud 方案中的功能和取決於雲端安全性整備的路徑。
+ms.openlocfilehash: 722c01995c95c36b9975b0682858c38063f79d2c
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22914828"
 ---
 # <a name="security-for-the-contoso-corporation"></a>Contoso Corporation 的安全性
 
- **摘要：**了解如何 Contoso 其安全性需求對應至 Microsoft cloud 方案中的功能和取決於雲端安全性整備的路徑。
+ **摘要：** 了解如何 Contoso 其安全性需求對應至 Microsoft cloud 方案中的功能和取決於雲端安全性整備的路徑。
   
 Contoso 是嚴重其資訊安全性和保護相關。轉換至雲端內含一個其 IT 基礎結構，他們進行確認其內部安全性需求所支援及 Microsoft cloud 方案中實作。
   
@@ -66,7 +69,7 @@ Contoso 是嚴重其資訊安全性和保護相關。轉換至雲端內含一個
 
 下表列出 Contoso 的資訊原則。
   
-||**存取**|**資料保留**|**資訊保護**|
+||**Access**|**資料保留**|**資訊保護**|
 |:-----|:-----|:-----|:-----|
 |層級 1： 低商業價值  <br/> | 允許所有的存取權 <br/> |6 個月  <br/> |使用加密  <br/> |
 |層級 2： 中型企業價值  <br/> | 允許存取 Contoso 員工、 承包商，與協力廠商 <br/>  使用 MFA]、 [TLS] 和 [MAM <br/> |2 年  <br/> |使用雜湊值的資料完整性  <br/> |
@@ -122,25 +125,25 @@ Contoso 以備妥 Microsoft cloud 其安全性使用下列步驟：
     
   - [Office 365 電子郵件反垃圾郵件保護](https://support.office.com/article/Office-365-Email-AntiSpam-Protection-6a601501-a6a8-4559-b2e7-56b59c96a586)
     
-  - [進階的威脅保護安全附件和安全連結](https://technet.microsoft.com/library/mt148491.aspx)
+  - [安全附件和安全連結的進階威脅防護](https://technet.microsoft.com/library/mt148491.aspx)
     
-  - [啟用信箱稽核在 Office 365](https://go.microsoft.com/fwlink/p/?LinkID=626109)
+  - [啟用 Office 365中的信箱稽核](https://go.microsoft.com/fwlink/p/?LinkID=626109)
     
 - **資料外洩防護 (DLP)**
     
     Contoso 已識別出其機密資料並設定 DLP 原則的 Exchange Online、 SharePoint Online 和 OneDrive 以協助防止使用者有意或無意之間共用資料。 
     
-    如需詳細資訊，請參閱 ＜[資料外洩防護原則的概觀](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e)。
+    如需詳細資訊，請參閱[資料外洩防護原則概觀](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e)。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
 [Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
   
-[Office 365 的安全性最佳作法](https://support.office.com/article/Security-best-practices-for-Office-365-9295e396-e53d-49b9-ae9b-0b5828cdedc3)
+[Office 365 的安全性最佳做法](https://support.office.com/article/Security-best-practices-for-Office-365-9295e396-e53d-49b9-ae9b-0b5828cdedc3)
 
 
 

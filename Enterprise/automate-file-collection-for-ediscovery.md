@@ -1,5 +1,5 @@
 ---
-title: 自動化檔案集合 ediscovery （英文）
+title: eDiscovery 的自動化檔案收集
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -11,16 +11,19 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 8d751419-d81b-4eb7-a2e5-8b03ccbf670c
+search.appverid:
+- MET150
 description: 摘要： 了解如何自動化 ediscovery （英文） 的使用者電腦從檔案集合。
-ms.openlocfilehash: 0a09eb8ec997f62e0f8c3149d35422b0ee0e4a98
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
+ms.openlocfilehash: 12d61d2c43a297001eecf463991654afbcfccb1a
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915748"
 ---
-# <a name="automate-file-collection-for-ediscovery"></a>自動化檔案集合 ediscovery （英文）
+# <a name="automate-file-collection-for-ediscovery"></a>eDiscovery 的自動化檔案收集
 
- **摘要：**了解如何自動化 ediscovery （英文） 的使用者電腦從檔案集合。
+ **摘要：** 了解如何自動化 ediscovery （英文） 的使用者電腦從檔案集合。
   
 所有的公司正面可能會訴訟或其他類型的法律巨集指令。雖然法務部門可以使用，以減少的曝光度、 訴訟暫止的商務循環之事實。當公司朝法律巨集指令時，為必要項目，透過的法律調查，以提供所有相關的記錄運送巷以及一顧問程序。 
   
@@ -37,29 +40,29 @@ eDiscovery 是依據公司清查、 搜尋、 識別、 保留、 篩選和提�
   
 下圖會帶領您完成所有步驟及的解決方案項目。
   
-![自動化檔案收集解決方案的概觀](images/dbb447b5-c74c-4956-986c-10a1d047ac99.png)
+![自動化檔案收集解決方案的概觀](media/dbb447b5-c74c-4956-986c-10a1d047ac99.png)
   
 |圖例 * * *||
 |:-----|:-----|
-|![洋紅色圖說文字 1](images/000026a3-2bf0-4678-b468-ccb5f81da6f1.png)|建立群組原則物件 (GPO)，並將其關聯集合登入指令碼。  <br/> |
-|![洋紅色圖說文字 2](images/a31b11e2-3597-42a4-933e-b6af11ed6ef1.png)| 設定 GPO 僅套用至 Custodians 群組的 GPO 安全性篩選。 <br/> |
-|![洋紅色圖說文字 3](images/3ced060c-daec-460d-a9b5-260a3dfcae36.png)|Okay 登入並執行 GPO，呼叫集合登入指令碼。  <br/> |
-|![洋紅色圖說文字 4](images/6f269d84-2559-49e3-b18e-af6ac94d0419.png)|集合登入指令碼清查搜尋您想將的檔案及記錄其位置 Custodians 電腦上的所有附加在本機磁碟機。  <br/> |
-|![洋紅色圖說文字 5](images/4bf8898c-44ad-4524-b983-70175804eb85.png)|集合登入指令碼會將清查的檔案複製到臨時伺服器上的隱藏的檔案共用。  <br/> |
-|![洋紅色圖說文字 6](images/99589726-0c7e-406b-a276-44301a135768.png)| （選項的）手動執行要收集的 PST 檔案匯入 Exchange Server 2013 的 PST 匯入指令碼。 <br/> |
-|![洋紅色圖說文字 7](images/ff15e89c-d2fd-4614-9838-5e18287d578b.png)|（選項 B）使用 Office 365 匯入工具及程序，匯入收集的 PST 檔案 Exchange Online。  <br/> |
-|![洋紅色圖說文字 8](images/aaf3bd3d-9508-4aaf-a3af-44ba501da63a.png)|將所有收集的檔案移至長期儲存與 MoveToColdStorage System Center Orchestrator 2012 R2 runbook Azure 檔案共用。 <br/> |
-|![洋紅色圖說文字 9](images/b354642e-445e-4723-a84a-b41f7ac6e774.png)|索引中與 SharePoint 2013 的寒冷儲存檔案共用的檔案。  <br/> |
-|![洋紅色圖說文字 10](images/cebf7de5-7525-413b-9e52-638a4f8b2f74.png)|執行 eDiscovery 寒冷儲存區與內部部署 Exchange Server 2013 中的內容。  <br/> |
-|![洋紅色圖說文字 11](images/e59ab403-2f19-497a-92a5-549846dded66.png)|在 Office 365 中的內容上執行 eDiscovery。  <br/> |
+|![洋紅色圖說文字 1](media/000026a3-2bf0-4678-b468-ccb5f81da6f1.png)|建立群組原則物件 (GPO)，並將其關聯集合登入指令碼。  <br/> |
+|![洋紅色圖說文字 2](media/a31b11e2-3597-42a4-933e-b6af11ed6ef1.png)| 設定 GPO 僅套用至 Custodians 群組的 GPO 安全性篩選。 <br/> |
+|![洋紅色圖說文字 3](media/3ced060c-daec-460d-a9b5-260a3dfcae36.png)|Okay 登入並執行 GPO，呼叫集合登入指令碼。  <br/> |
+|![洋紅色圖說文字 4](media/6f269d84-2559-49e3-b18e-af6ac94d0419.png)|集合登入指令碼清查搜尋您想將的檔案及記錄其位置 Custodians 電腦上的所有附加在本機磁碟機。  <br/> |
+|![洋紅色圖說文字 5](media/4bf8898c-44ad-4524-b983-70175804eb85.png)|集合登入指令碼會將清查的檔案複製到臨時伺服器上的隱藏的檔案共用。  <br/> |
+|![洋紅色圖說文字 6](media/99589726-0c7e-406b-a276-44301a135768.png)| （選項的）手動執行要收集的 PST 檔案匯入 Exchange Server 2013 的 PST 匯入指令碼。 <br/> |
+|![洋紅色圖說文字 7](media/ff15e89c-d2fd-4614-9838-5e18287d578b.png)|（選項 B）使用 Office 365 匯入工具及程序，匯入收集的 PST 檔案 Exchange Online。  <br/> |
+|![洋紅色圖說文字 8](media/aaf3bd3d-9508-4aaf-a3af-44ba501da63a.png)|將所有收集的檔案移至長期儲存與 MoveToColdStorage System Center Orchestrator 2012 R2 runbook Azure 檔案共用。 <br/> |
+|![洋紅色圖說文字 9](media/b354642e-445e-4723-a84a-b41f7ac6e774.png)|索引中與 SharePoint 2013 的寒冷儲存檔案共用的檔案。  <br/> |
+|![洋紅色圖說文字 10](media/cebf7de5-7525-413b-9e52-638a4f8b2f74.png)|執行 eDiscovery 寒冷儲存區與內部部署 Exchange Server 2013 中的內容。  <br/> |
+|![洋紅色圖說文字 11](media/e59ab403-2f19-497a-92a5-549846dded66.png)|在 Office 365 中的內容上執行 eDiscovery。  <br/> |
    
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 此解決方案的設定需要許多元素最其中您可能已經備妥及設定若您的想法有關 eDiscovery。元素可能沒有或類需要特定設定，我們將會提供您下列連結，您需要建立取出您基底的設定。您必須基本組態備妥之前設定本身的解決方案。
   
-### <a name="base-configuration"></a>基本組態
+### <a name="base-configuration"></a>基本設定
 
-|**項目**|**連結**|
+|**元素**|**連結**|
 |:-----|:-----|
 |Active Directory 網域服務 (AD DS) 網域  <br/> ||
 |從內部網路的網際網路連線能力  <br/> ||
@@ -112,7 +115,7 @@ eDiscovery 是依據公司清查、 搜尋、 識別、 保留、 篩選和提�
     
 2. 將檔案的情況下 $ 資料夾中。
     
-3. 為使用者、 瀏覽至臨時伺服器，例如瀏覽至\\\\臨時查看哪些共用所提供的共用。您不應該會看到所列的**情況下 $**共用。
+3. 為使用者、 瀏覽至臨時伺服器，例如瀏覽至\\\\臨時查看哪些共用所提供的共用。您不應該會看到所列的**情況下 $** 共用。
     
 4. 手動輸入瀏覽器的情況下 $ 共用的完整路徑。這應該會開啟的情況下 $ 共用。
     
@@ -266,10 +269,10 @@ Write-Host -ForegroundColor Cyan "Finished."
     
 3. 在 [記事本] 中使用移至] 功能。視需要進行變更如下：
     
-|**線條 #**|**您需要變更**|**所需/選用**|
+|**行號**|**您需要變更**|**所需/選用**|
 |:-----|:-----|:-----|
 |71  <br/> |**$FileTypes**變數。包含您想要清查並收集陣列變數中的指令碼的所有檔案類型副檔名。<br/> |選用  <br/> |
-|76 和 77  <br/> |變更的方式**$CaseNo**變數內建以符合您的需求。指令碼擷取目前的日期及時間並將它附加的使用者名稱。<br/> |選用  <br/> |
+|76 和 77  <br/> |變更的方式 **$CaseNo**變數內建以符合您的需求。指令碼擷取目前的日期及時間並將它附加的使用者名稱。<br/> |選用  <br/> |
 |80  <br/> |**$CaseRootLocation**變數必須設為您的臨時伺服器集合檔案共用，例如**\\\\臨時\\情況下 $**。 <br/> |必要  <br/> |
    
 4. CollectionScript.ps1 檔案放在網域控制站的 Netlogon 檔案共用。 
@@ -324,10 +327,10 @@ $AllFiles | ForEach-Object {
     
 3. 使用 [記事本] 中移至功能並視需要進行下列變更：
     
-|**線條 #**|**您需要變更**|**所需/選用**|
+|**行號**|**您需要變更**|**所需/選用**|
 |:-----|:-----|:-----|
 |12  <br/> |**$FolderIdentifier** tags Pst 所匯入的信箱資料夾。這在必要時變更。<br/> |選用  <br/> |
-|第 17  <br/> |**$ConnectionUri**必須設為您自己的伺服器。 <br/> > [!IMPORTANT]> 確定您**$ConnectionUri**指引的 http 位置，而不是 https。將不會使用 https:。          |必要  <br/> |
+|17   <br/> |**$ConnectionUri**必須設為您自己的伺服器。 <br/> > [!IMPORTANT]> 確定您 **$ConnectionUri**指引的 http 位置，而不是 https。將不會使用 https:。          |必要  <br/> |
    
 4. 確認 Exchange 受信任子系統帳戶是否有讀取、 寫入、 和執行權限\\\\臨時\\的情況下 $ 共用。
     
@@ -361,13 +364,13 @@ $AllFiles | ForEach-Object {
     
 4. 選取 [**匯入 runbooks**和**匯入 Orchestrator 加密資料**。清除**計數器**、**排程**、**變數**、 **Computer Groups**、**匯入通用設定**，以及**要覆寫現有的全域設定**。
     
-5. 按一下 [完成]。
+5. 按一下 **[完成]**。
     
 6. 編輯**MoveFilesToColdStorage** runbook，如下所示：
     
 1. **移動檔案**活動-設定的**來源檔案**路徑為集合檔案共用，例如\\\\臨時\\情況下 $。設定要寒冷儲存檔案的**目的資料夾**中的共用 Azure，例如\\ \\AZFile1\\ContentColdStorage。選取 [**建立的檔案使用唯一的名稱**。
     
-2. **刪除資料夾**活動-設定**路徑：**集合檔案共用，例如\\\\臨時\\情況下 $\\*，然後選取 [**刪除所有檔案及子資料夾**。 
+2. **刪除資料夾**活動-設定**路徑：** 集合檔案共用，例如\\\\臨時\\情況下 $\\*，然後選取 [**刪除所有檔案及子資料夾**。 
     
 7. 部署使用本節的程序中[部署 Runbooks](https://go.microsoft.com/fwlink/p/?LinkId=615120) **MoveToColdStorage** runbook。
     
@@ -426,7 +429,7 @@ $AllFiles | ForEach-Object {
     
 2. 將執行原則設定為 [沒有限制。類型`Set-ExecutionPolicy Unrestricted -Scope Process`到 Windows PowerShell]，然後按 Enter。
     
-3. 執行 PSTImportScript.ps1 檔，並提供**$SourcePath**與**$MailboxAlias**參數。如需執行 Windows PowerShell 指令碼的詳細資訊，請參閱[執行指令碼](https://go.microsoft.com/fwlink/p/?LinkID=615117)。
+3. 執行 PSTImportScript.ps1 檔，並提供 **$SourcePath**與 **$MailboxAlias**參數。如需執行 Windows PowerShell 指令碼的詳細資訊，請參閱[執行指令碼](https://go.microsoft.com/fwlink/p/?LinkID=615117)。
     
 4. 檢閱錯誤的輸出。
     

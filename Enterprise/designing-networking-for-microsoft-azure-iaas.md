@@ -1,5 +1,5 @@
 ---
-title: "設計 Microsoft Azure IaaS 的網路"
+title: 設計 Microsoft Azure IaaS 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 9cb70c9d-9ed9-47cc-af5a-6403d87d3372
-description: "摘要： 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。"
-ms.openlocfilehash: 2430b62e04392ddd4266d37797b18ae7e890c092
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。
+ms.openlocfilehash: 0e7af14768aa1a21548b25a20a465b644b749f3e
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915118"
 ---
 # <a name="designing-networking-for-microsoft-azure-iaas"></a>設計 Microsoft Azure IaaS 的網路
 
- **摘要：**了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。
+ **摘要：** 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。
   
 最佳化網路的 IT 工作量架設在 Azure IaaS 需要瞭解 Azure 虛擬網路 (VNets) 地址空格、 路由、 DNS、 和負載平衡。
   
@@ -42,7 +45,7 @@ ms.lasthandoff: 02/09/2018
   
 **圖 1： 僅限雲端 VNet**
 
-![圖 1：Azure 中只存在於雲端的虛擬網路](images/8be19104-02b3-4a7f-b0a0-30d6fcf8890b.png)
+![圖 1：Azure 中只存在於雲端的虛擬網路](media/8be19104-02b3-4a7f-b0a0-30d6fcf8890b.png)
   
 圖 1 顯示虛擬機器的一的組中僅限雲端 VNet。
   
@@ -50,7 +53,7 @@ A 跨部署 VNet 具有至網站 (S2S) 透過 Azure 閘道的內部網路的 VPN
   
 **圖 2： 跨部署 VNet**
 
-![圖 2：Azure 中跨部署的虛擬網路](images/caacf007-e0dc-45d3-9531-441109776d25.png)
+![圖 2：Azure 中跨部署的虛擬網路](media/caacf007-e0dc-45d3-9531-441109776d25.png)
   
 圖 2 顯示一組的虛擬機器在跨部署 VNet，連線至內部網路中。
   
@@ -85,9 +88,9 @@ A 跨部署 VNet 具有至網站 (S2S) 透過 Azure 閘道的內部網路的 VPN
 
 有兩種類型的子網路中 VNet、 閘道子網路和虛擬機器裝載的子網路。
   
-**圖 3： 兩種類型的 Azure 中的子網路**
+**圖 3：Azure 中的兩種子網路類型**
 
-![圖 3：Azure 中的兩種子網路類型](images/2eaa512d-1293-4e9b-b927-6bfe0fc0acb4.png)
+![圖 3：Azure 中的兩種子網路類型](media/2eaa512d-1293-4e9b-b927-6bfe0fc0acb4.png)
   
 圖 3 是含有包含 Azure 閘道與一組的虛擬機器裝載含有虛擬機器時的子網路的閘道子網路 VNet。
   
@@ -116,7 +119,7 @@ Azure 閘道子網路會需要 Azure 主控兩個虛擬機器的 Azure 的閘道
   
 虛擬機器裝載的子網路會放置 Azure 虛擬機器，您可以根據內部一般指導方針，例如一般角色或應用程式或子網路隔離層中執行的位置。
   
-Azure 每個子網路上使用的前 3 的地址。因此，可能 Azure 的子網路上的地址的數目是 2<sup>n</sup> -5，其中 n 是主機位元數。表 3 顯示的虛擬機器時所需、 數目範圍主控需要的位元和相對應的子網路大小。
+Azure 每個子網路上使用的前 3 的地址。因此，可能 Azure 的子網路上的地址的數目是 2<sup>n</sup> -5、 其中 n 是主機位元數。表 3 顯示的虛擬機器時所需、 數目範圍主控需要的位元和相對應的子網路大小。
   
 |**所需的虛擬機器**|**主機位元**|**子網路大小**|
 |:-----|:-----|:-----|
@@ -157,17 +160,17 @@ Azure 指派虛擬機器時的 DHCP 的 DNS 伺服器的位址。DNS 伺服器�
   
 Azure 的網際網路對向負載平衡隨機分散每個來路不明傳入流量從網際網路到負載平衡的一組的成員。
   
-**圖 4： 外部負載平衡器 Azure 中**
+**圖 4：Azure 中的外部負載平衡器**
 
-![圖 4：Azure 中的外部負載平衡器](images/eb5945e5-0c2b-40f1-b9ed-54bb2b0f9e59.png)
+![圖 4：Azure 中的外部負載平衡器](media/eb5945e5-0c2b-40f1-b9ed-54bb2b0f9e59.png)
   
 圖 4 顯示分散每個撥入的 NAT 規則或一組負載平衡集內的虛擬機器時的端點上的內送流量的 Azure 中的外部負載平衡器。
   
 Azure 內部的負載平衡隨機分散每個來自其他 Azure Vm 或從內部網路負載平衡的一組的成員電腦的來路不明傳入流量。 
   
-**圖 5： 內部負載平衡器 Azure 中**
+**圖 5：Azure 中的內部負載平衡器**
 
-![圖 5：Azure 中的內部負載平衡器](images/d1451b73-6465-449d-b3e6-22160ce51f35.png)
+![圖 5：Azure 中的內部負載平衡器](media/d1451b73-6465-449d-b3e6-22160ce51f35.png)
   
 圖 5 顯示分散每個撥入的 NAT 規則或一組負載平衡集內的虛擬機器時的端點上的內送流量的 Azure 中的內部負載平衡器。
   
@@ -177,9 +180,9 @@ Azure 內部的負載平衡隨機分散每個來自其他 Azure Vm 或從內部�
 
 如果您需要轉寄至虛擬設備中您 VNet 流量，您可能需要將一或多個使用者定義的路由新增至子網路。
   
-**圖 6： 虛擬設備和 Azure 中的使用者定義路由**
+**圖 6：Azure 中的虛擬設備和使用者定義路由**
 
-![圖 6：Azure 中的虛擬設備和使用者定義路由](images/f181d0f4-ebf9-439e-9c98-dec17428c32b.png)
+![圖 6：Azure 中的虛擬設備和使用者定義路由](media/f181d0f4-ebf9-439e-9c98-dec17428c32b.png)
   
 圖 6 顯示跨部署 VNet 和使用者定義的路由指派給指向虛擬 appliance 的虛擬機器裝載子網路。
   
@@ -200,9 +203,9 @@ Azure 內部的負載平衡隨機分散每個來自其他 Azure Vm 或從內部�
    
  **連線至虛擬機器和其對應的 Azure 部署模型的表 5： 方法**
   
-**圖 7： 透過網際網路連線至 Azure 虛擬機器**
+**圖 7：透過網際網路連線到 Azure 虛擬機器**
 
-![圖 7：透過網際網路連線到 Azure 虛擬機器](images/c5e3531b-170a-4482-a6ff-fb8fbbe81b35.png)
+![圖 7：透過網際網路連線到 Azure 虛擬機器](media/c5e3531b-170a-4482-a6ff-fb8fbbe81b35.png)
   
 圖 7 顯示網際網路連線的電腦連線至虛擬機器使用端點的雲端服務、 使用網路安全性] 群組中，將子網路上的虛擬機器及虛擬機器上使用外部負載平衡器和撥入的 NAT 規則的子網路。
   
@@ -226,7 +229,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 8： Daisy 鏈結設定 VNets**
 
-![圖 8：Azure 虛擬網路的菊輪鍊設定](images/264d5dd4-06c5-483f-9428-a18cc1f68ac1.png)
+![圖 8：Azure 虛擬網路的菊輪鍊設定](media/264d5dd4-06c5-483f-9428-a18cc1f68ac1.png)
   
 圖 8 顯示五個 VNets 連線使用 daisy 鏈結組態的數列。
   
@@ -234,7 +237,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 9： 支點和中樞設定 VNets**
 
-![圖 9：Azure 虛擬網路的輪輻和中樞設定](images/dd442a38-5b76-4ac5-b743-8fc7711a91ba.png)
+![圖 9：Azure 虛擬網路的輪輻和中樞設定](media/dd442a38-5b76-4ac5-b743-8fc7711a91ba.png)
   
 圖 9 顯示六個 VNets 兩個 VNets 連接至彼此和也兩個其他支點 VNets 的集線器。
   
@@ -242,7 +245,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 10： 完整網狀結構 VNets 組態**
 
-![圖 10：Azure 虛擬網路的網狀設定](images/9dda0738-10db-4a63-95b3-79851a399b71.png)
+![圖 10：Azure 虛擬網路的網狀設定](media/9dda0738-10db-4a63-95b3-79851a399b71.png)
   
 圖 10 說明四種 VNets 連接至彼此、 使用六個 VNet-VNet 連線的總。
   
@@ -275,7 +278,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 11： 四種方式連線至跨部署 VNet**
 
-![圖 11：連線到跨部署 Azure 虛擬網路的三種方式](images/d5d4a625-cfbd-4a77-9159-eaca69d07e93.png)
+![圖 11：連線到跨部署 Azure 虛擬網路的三種方式](media/d5d4a625-cfbd-4a77-9159-eaca69d07e93.png)
   
 圖 11 顯示 VNet 與四種類型的連線： P2S 連線的電腦、 從內部網路 S2S VPN 連線、 從內部網路、 ExpressRoute 連線及來自另一個 VNet VNet-VNet 連線。 
   
@@ -305,9 +308,9 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
     
 - 私人的對等 ExpressRoute 連線 BPG 對等和終止點。
     
-**圖 12： 內部部署 VPN 路由器或裝置**
+**圖 12：內部部署 VPN 路由器或裝置**
 
-![圖 12：內部部署 VPN 路由器或裝置](images/bd221468-a660-4730-aa55-0426986480b9.png)
+![圖 12：內部部署 VPN 路由器或裝置](media/bd221468-a660-4730-aa55-0426986480b9.png)
   
 圖 12 顯示跨部署 VNet 連線至內部部署 VPN 路由器或裝置。
   
@@ -323,7 +326,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
     
 **圖 13： 內部部署路由所需進行 VNet 連至**
 
-![圖 13：內部部署路由需要讓 Azure VNet 可以連線](images/7a1e20c1-fbc4-4cb9-9961-735da4e23307.png)
+![圖 13：內部部署路由需要讓 Azure VNet 可以連線](media/7a1e20c1-fbc4-4cb9-9961-735da4e23307.png)
   
 圖 13 顯示內部路由器和 VPN 路由器或代表 VNet 位址空間的裝置所需的路由資訊。
   
@@ -339,7 +342,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
     
 **圖 14： 使用 ExpressRoute 連線至跨部署 VNet**
 
-![圖 14：使用 ExpressRoute 連線到跨部署 Azure 虛擬網路](images/7030bd39-69a6-4283-8567-3434e1ab6ba6.png)
+![圖 14：使用 ExpressRoute 連線到跨部署 Azure 虛擬網路](media/7030bd39-69a6-4283-8567-3434e1ab6ba6.png)
   
 圖 14 顯示跨部署 VNet 和 ExpressRoute 由內部路由器連線至 Microsoft Azure。
   
@@ -351,7 +354,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 15： 本機網路位址空間以便跨部署 VNet**
 
-![圖 15：跨部署 Azure 虛擬網路的區域網路位址空間](images/e3af2652-8b8e-4551-9a0b-b550e6e7e3c0.png)
+![圖 15：跨部署 Azure 虛擬網路的區域網路位址空間](media/e3af2652-8b8e-4551-9a0b-b550e6e7e3c0.png)
   
 圖 15 會顯示在 Azure 的閘道，代表在內部網路上的連至位址空間跨部署 VNet 與區域網路位址空間。 
   
@@ -365,7 +368,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 **圖 16: 位址空間內徑建立 VNet 位址空間**
 
-![圖 16：虛擬網路的位址空間所建立的地址空間漏洞](images/e79c4840-f9e3-4741-9b72-59db6043aefa.png)
+![圖 16：虛擬網路的位址空間所建立的地址空間漏洞](media/e79c4840-f9e3-4741-9b72-59db6043aefa.png)
   
 圖 16 顯示與根空間的位址空間和 VNet 位址空間的表示法。
   
@@ -393,7 +396,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
     
 **圖 17： DNS 複寫及轉寄跨部署 VNet 的 DNS 伺服器**
 
-![圖 17：跨部署 Azure 虛擬網路中 DNS 伺服器的 DNS 複寫和轉送](images/ab55e5ce-ccb0-49d4-a301-657a727f97b2.png)
+![圖 17：跨部署 Azure 虛擬網路中 DNS 伺服器的 DNS 複寫和轉送](media/ab55e5ce-ccb0-49d4-a301-657a727f97b2.png)
   
 圖 17 顯示具有 DNS 伺服器跨部署 VNet 在內部網路及 VNet 中的子網路。DNS 複寫及轉寄已設定兩部 DNS 伺服器之間。
   
@@ -403,7 +406,7 @@ Azure 的子網路的預設系統路由會指向網際網路。若要確保從�
   
 **圖 18： 使用者定義的路由和強制通道的跨單位 VNet**
 
-![圖 18：跨部署 Azure 虛擬網路的使用者定義路由和強制通道](images/1e545ec6-c2d9-48d2-bb5e-e0a581fee004.png)
+![圖 18：跨部署 Azure 虛擬網路的使用者定義路由和強制通道](media/1e545ec6-c2d9-48d2-bb5e-e0a581fee004.png)
   
 圖 18 顯示以指向 Azure 閘道的子網路的使用者定義路由跨部署 VNet。
   
@@ -414,7 +417,7 @@ IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多�
   
 **圖 19： 高度可用的內部網路 SharePoint Server 2016 中的伺服器陣列 Azure IaaS**
 
-![Azure IaaS 中高可用性的 SharePoint Server 2016 伺服器陣列](images/3a922e21-df91-455f-ba90-78abdd48d98d.png)
+![Azure IaaS 中高可用性的 SharePoint Server 2016 伺服器陣列](media/3a922e21-df91-455f-ba90-78abdd48d98d.png)
   
 圖 19 顯示部署中使用內部負載平衡器的前端和資料層跨部署 VNet 的 SharePoint Server 2016 伺服器陣列的九個伺服器。如需詳細資訊，包括逐步設計及部署指示，請參閱[Microsoft Azure 中的 SharePoint Server 2016](https://technet.microsoft.com/library/mt779107%28v=office.16%29.aspx)。
   

@@ -1,5 +1,5 @@
 ---
-title: "發展您的雲端連線的網路"
+title: 將您的網路提升為雲端連線網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 83e2859a-c673-47c4-880a-01cdfdadb93e
-description: "摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。"
-ms.openlocfilehash: 1fe3b2cbacb0fff31de1c368fa36650adc7d570c
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。
+ms.openlocfilehash: 16dbbafe46e903fa41163e12c1741a45b47c5f45
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915138"
 ---
-# <a name="evolving-your-network-for-cloud-connectivity"></a>發展您的雲端連線的網路
+# <a name="evolving-your-network-for-cloud-connectivity"></a>將您的網路提升為雲端連線網路
 
- **摘要：**了解如何雲端採用需要網路基礎結構投資的新方法。
+ **摘要：** 了解如何雲端採用需要網路基礎結構投資的新方法。
   
 雲端移轉改變了公司網路內外部的流量大小與本質。它也會影響降低安全性風險的方法。
   
@@ -34,13 +37,13 @@ ms.lasthandoff: 02/09/2018
     
 網路基礎結構投資的開頭連線。其他投資取決於雲端服務的類別。
   
-- **軟體即服務 (SaaS)**Microsoft saas 和服務包括 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。Saas 和服務使用者所擁有的成功採用取決於高可用性和效能低落連線至網際網路，或直接 Microsoft 雲端服務。
+- **軟體即服務 (SaaS)** Microsoft saas 和服務包括 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。Saas 和服務使用者所擁有的成功採用取決於高可用性和效能低落連線至網際網路，或直接 Microsoft 雲端服務。
     
     網路架構著重於可靠而變得多餘連線和容許足夠的頻寬。進行中的投資包括效能監視與調整。
     
-- **Azure 平台服務 (PaaS)**除了 Microsoft saas 和服務的投資、 多個網站或地理位置分散 PaaS 應用程式可能會需要架構 Azure 流量管理員來散佈的用戶端流量。進行中的投資包括效能和流量通訊監控與容錯移轉測試。
+- **Azure 平台服務 (PaaS)** 除了 Microsoft saas 和服務的投資、 多個網站或地理位置分散 PaaS 應用程式可能會需要架構 Azure 流量管理員來散佈的用戶端流量。進行中的投資包括效能和流量通訊監控與容錯移轉測試。
     
-- **Azure 基礎架構以服務 (IaaS)**Microsoft SaaS 和 PaaS 服務成本，除了 IaaS 中執行 IT 工作量需要設計及設定的 Azure 虛擬網路該主機虛擬機器、 它們、 路由、 IP 上執行應用程式的安全連線處理、 DNS、 和負載平衡。進行中的投資包括效能及安全性監視與疑難排解。
+- **Azure 基礎架構以服務 (IaaS)** Microsoft SaaS 和 PaaS 服務成本，除了 IaaS 中執行 IT 工作量需要設計及設定的 Azure 虛擬網路該主機虛擬機器、 它們、 路由、 IP 上執行應用程式的安全連線處理、 DNS、 和負載平衡。進行中的投資包括效能及安全性監視與疑難排解。
     
 ## <a name="areas-of-networking-investment-for-success-in-the-cloud"></a>區域的網路投資在雲端中成功
 
