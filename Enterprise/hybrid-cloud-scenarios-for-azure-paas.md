@@ -1,5 +1,5 @@
 ---
-title: "Azure PaaS 的混合式雲端案例"
+title: Azure PaaS 的混合式雲端案例
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 5f4f5d0d-4638-48e8-a517-bd804856b617
-description: "摘要： 了解混合式架構與案例的 Microsoft 平台服務 (PaaS)-以 Azure 中的雲端方案。"
-ms.openlocfilehash: 96548b74341474ff2bd0720f982cbdba96b06e4b
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解混合式架構與案例的 Microsoft 平台服務 (PaaS)-以 Azure 中的雲端方案。
+ms.openlocfilehash: e60bc92eed45e5d29fe0be80320dee65b8325028
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915008"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-paas"></a>Azure PaaS 的混合式雲端案例
 
- **摘要：**了解混合式架構與案例的 Microsoft 平台做為服務 (PaaS)-以 Azure 中的雲端方案。
+ **摘要：** 了解混合式架構與案例的 Microsoft 平台做為服務 (PaaS)-以 Azure 中的雲端方案。
   
 合併內部資料或運算資源與新的或已轉換應用程式在 Azure PaaS，可以利用雲端效能、 可靠性及向外與行動裝置使用者提供較佳的支援。 
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 02/09/2018
   
 **Azure 中的圖 1： Microsoft PaaS 為基礎的混合式案例**
 
-![Azure 中的 Microsoft PaaS 型混合式案例](images/Hybrid_Poster/Hybrid_Cloud_Stack_PaaS.png)
+![Azure 中的 Microsoft PaaS 型混合式案例](media/Hybrid-Poster/Hybrid-Cloud-Stack-PaaS.png)
   
 之架構的每個圖層：
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 02/09/2018
   
 **圖 2： Azure PaaS 為基礎的混合式應用程式**
 
-![Azure PaaS 型混合式應用程式](images/Hybrid_Poster/Hybrid_Cloud_Stack_PaaS_Apps.png)
+![Azure PaaS 型混合式應用程式](media/Hybrid-Poster/Hybrid-Cloud-Stack-PaaS-Apps.png)
   
 圖 2] 中的內部網路主控儲存裝置或應用程式伺服器與 DMZ 包含 proxy 伺服器上。它會透過網際網路或 ExpressRoute 連線以連線至 Azure PaaS 服務。
   
@@ -78,7 +79,7 @@ Azure 應用程式可以使用認證：
   
 **圖 3： 範例 Azure PaaS 為基礎的混合式應用程式**
 
-![Azure PaaS 型混合式應用程式的範例](images/Hybrid_Poster/Hybrid_Cloud_Stack_PaaS_Apps_Ex.png)
+![Azure PaaS 型混合式應用程式的範例](media/Hybrid-Poster/Hybrid-Cloud-Stack-PaaS-Apps-Ex.png)
   
 圖 3、 LOB 的內部網路主機 app Azure PaaS 主控自訂的行動裝置應用程式。Smartphone 在網際網路上的存取 Azure、 將資料要求傳送至內部部署 LOB 應用程式中自訂的行動裝置應用程式。
   
@@ -104,7 +105,7 @@ Azure 應用程式可以使用認證：
   
 **圖 4： 以 SQL Server 2016 伸展的資料庫**
 
-![運用 SQL Server 2016 延展資料庫](images/Hybrid_Poster/Hybrid_Cloud_Stack_PaaS_Apps_SQL.png)
+![運用 SQL Server 2016 延展資料庫](media/Hybrid-Poster/Hybrid-Cloud-Stack-PaaS-Apps-SQL.png)
   
 圖 4] 中的內部網路主控執行 SQL Server 2016 使用小型的本機資料庫伺服器。Azure PaaS 主控 Azure SQL Server 拉大資料庫執行個體與資料庫的延伸部分。T-SQL 查詢傳送至內部部署 SQL server 的內部部署使用者安全地轉寄給 Azure SQL 拉大資料庫，將結果傳回給要求的使用者。
   
@@ -114,7 +115,7 @@ Azure 應用程式可以使用認證：
   
 如需詳細資訊，請參閱[延展資料庫](https://msdn.microsoft.com/library/dn935011.aspx)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   

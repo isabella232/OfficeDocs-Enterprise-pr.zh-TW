@@ -1,5 +1,5 @@
 ---
-title: "設計 Microsoft 雲端儲存空間"
+title: 設計 Microsoft 雲端的儲存
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 7e511118-1b75-413a-b959-ad0d3ffc9516
-description: "摘要： 了解為何需要雲端儲存空間和檢閱 Microsoft 雲端儲存選項和主要儲存區案例的清單。"
-ms.openlocfilehash: ed816743e2d85a622a3fbfbb129bf90a7db93881
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解為何需要雲端儲存空間和檢閱 Microsoft 雲端儲存選項和主要儲存區案例的清單。
+ms.openlocfilehash: d96992d63115095dd6a1b7277886d0a4bb2bc02f
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915228"
 ---
-# <a name="designing-storage-for-the-microsoft-cloud"></a>設計 Microsoft 雲端儲存空間
+# <a name="designing-storage-for-the-microsoft-cloud"></a>設計 Microsoft 雲端的儲存
 
- **摘要：**了解為何需要雲端儲存並檢閱 Microsoft 雲端儲存選項和主要儲存區案例的清單。
+ **摘要：** 了解為何需要雲端儲存並檢閱 Microsoft 雲端儲存選項和主要儲存區案例的清單。
   
 整合您儲存與 Microsoft 雲端服務可讓您存取多種服務與雲端平台選項。
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 02/09/2018
 
 為了協助您了解各種不同的雲端存放區選項，我們使用情況下比喻。
   
-### <a name="move-in-ready"></a>移入就緒
+### <a name="move-in-ready"></a>支援遷入作業
 
 會於這些預先套裝的解決方案中使用現有的服務。使用立即和最少的設定。
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 02/09/2018
     
 - Visual Studio Team Services
     
-- Azure 網站復原
+- Azure Site Recovery
     
 - Yammer 網站共用
     
@@ -74,7 +77,7 @@ ms.lasthandoff: 02/09/2018
     
 這每一項的詳細資料的雲端存放區選項，請參閱[移入就緒](move-in-ready.md)。
   
-### <a name="some-assembly-required"></a>有部分組件
+### <a name="some-assembly-required"></a>某些必要組件
 
 使用這些現有服務以與其他設定起始點的儲存解決方案或自訂調整的編碼。
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 02/09/2018
     
 如上述每個雲端儲存選項的詳細資訊，請參閱[部分組件所需](some-assembly-required.md)。
   
-### <a name="build-from-the-ground-up"></a>為基礎而建置
+### <a name="build-from-the-ground-up"></a>從頭開始建置
 
 使用這些儲存建置組塊，與撰寫程式碼、 從頭開始建立您自己的儲存解決方案或應用程式。
   
@@ -154,7 +157,7 @@ ms.lasthandoff: 02/09/2018
 
 檢閱[準備移入](move-in-ready.md)雲端儲存選項。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-storage-for-enterprise-architects.md)
   

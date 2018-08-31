@@ -1,5 +1,5 @@
 ---
-title: "高可用性同盟驗證階段 3 設定 AD FS 伺服器"
+title: 高可用性同盟驗證階段 3 設定 AD FS 伺服器
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
-description: "摘要： 建立並設定您的高可用性同盟驗證 Office 365 的 Active Directory Federation Services (AD FS) 伺服器 in Microsoft Azure。"
-ms.openlocfilehash: a9daecddb572bf2432d68ae76ed8d81571ef4b79
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要：在 Microsoft Azure 中，建立並設定 Office 365 高可用性同盟驗證的 Active Directory 同盟服務 (AD FS) 伺服器。
+ms.openlocfilehash: 93b2ed3c0935aee586d5aa236e79ab1e89a61b93
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915428"
 ---
 # <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 
- **摘要：**建立及設定您的高可用性同盟驗證 Office 365 的 Active Directory Federation Services (AD FS) 伺服器 in Microsoft Azure。
+ **摘要：** 在 Microsoft Azure 中，建立並設定 Office 365 高可用性同盟驗證的 Active Directory 同盟服務 (AD FS) 伺服器。
   
 在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/09/2018
 重新叫用您定義中的表格 M[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)和表格 R、 V、 S、 I、 及中的 A[高可用性同盟驗證階段 1： 設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
   
 > [!NOTE]
-> 下列的命令會使用 Azure PowerShell 的最新版本。請參閱[開始使用 Azure PowerShell cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 首先，您建立 Azure 內部負載平衡器的兩個 AD FS 伺服器。指定的變數，移除值\<和 > 字元。當您有提供所有適當的值時，在 Azure PowerShell 命令提示字元處或 PowerShell ISE 中執行的結果區塊。
   
@@ -128,7 +129,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 因為這些虛擬機器時 intranet 應用程式，他們不會指派公用 IP 位址] 或 [DNS 網域名稱] 標籤並公開到網際網路。但是，這也表示您無法連線至其從 Azure 入口網站。檢視時的虛擬機器屬性無法使用 [**連線**] 選項。使用遠端桌面連線裝飾或另一個遠端桌面工具來連線至虛擬機器使用私人 IP 位址] 或 [內部網路 DNS 名稱。
+> 由於這些虛擬機器是用於內部網路應用程式，並不會指派公用 IP 位址或 DNS 網域名稱標籤，也不會曝露在網際網路上。不過，這也表示您無法透過 Azure 入口網站與虛擬機器連線。當您檢視虛擬機器的屬性時，無法使用**連線**選項。請使用遠端桌面連線附屬應用程式或另一個遠端桌面工具，透過使用其私人 IP 位址或內部網路 DNS 名稱來與虛擬機器連線。
   
 針對每一部虛擬機器，使用您所選的遠端桌面用戶端建立遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
@@ -143,17 +144,17 @@ Restart-Computer
 
 以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
   
-**階段 3： AD FS 伺服器與高可用性同盟的驗證基礎結構 Azure 中的內部負載平衡器**
+**階段 3：Azure 中高可用性同盟驗證基礎結構的 AD FS 伺服器和內部負載平衡器**
 
-![具有 AD FS 伺服器的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 3](images/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
+![具有 AD FS 伺服器的 Azure 中之高可用性 Office 365 同盟驗證基礎結構的階段 3](media/f39b2d2f-8a5b-44da-b763-e1f943fcdbc4.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[高可用性同盟驗證階段 4： 設定 web 應用程式 proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)繼續設定此工作量。
+使用[High availability federated authentication Phase 4: Configure web application proxies](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)以繼續設定此工作負載。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[部署在 Azure 中的 Office 365 的高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
 

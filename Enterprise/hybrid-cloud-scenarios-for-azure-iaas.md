@@ -12,15 +12,16 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: 摘要： 了解混合式架構與案例的 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。
-ms.openlocfilehash: e64d20987946e05afa7afc4d64e071112ef58d10
-ms.sourcegitcommit: 21cc62118b78b76d16ef12e2c3eff2c0c789e3d0
+ms.openlocfilehash: 4aecca0c4ac189af7048c712dbdf277aa0ef0dec
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915028"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 
- **摘要：**了解混合式架構與案例 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。
+ **摘要：** 了解混合式架構與案例 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。
   
 擴充您的內部運算並將架設 IT 工作量中執行雲端身分識別基礎結構跨部署 Azure 虛擬網路 (VNets)。 
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/05/2018
   
 **Azure 中的圖 1： Microsoft IaaS 為基礎的混合式案例**
 
-![Azure 中的 Microsoft IaaS 型混合式案例](images/Hybrid_Poster/Hybrid_Cloud_Stack_IaaS.png)
+![Azure 中的 Microsoft IaaS 型混合式案例](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS.png)
   
 之架構的每個圖層：
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/05/2018
   
 **圖 2： Azure IaaS 中的 Office 365 DirSync 伺服器**
 
-![Azure IaaS 中 Office 365 DirSync 伺服器](images/Hybrid_Poster/Hybrid_Cloud_Stack_IaaS_DirSync.png)
+![Azure IaaS 中 Office 365 DirSync 伺服器](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-DirSync.png)
   
 圖 2] 中的內部網路主控 Windows Server AD 基礎結構、 proxy 伺服器和其邊緣路由器。路由器請連接至緣的網站 VPN 或 ExpressRoute 連線 Azure VNet Azure 閘道。內部 VNet DirSync 伺服器執行 Azure AD 連線。
   
@@ -66,7 +67,7 @@ DirSync Windows 型伺服器是執行 Azure AD 連線。更快的佈建或減少
   
 DirSync server 輪詢 Windows Server AD 的變更，然後將其同步與 Office 365 訂閱。
   
-如需詳細資訊，請參閱[Azure 中部署 Office 365 DirSync](https://technet.microsoft.com/library/dn635310.aspx)。
+如需詳細資訊，請參閱 ＜[設定 Office 365 的目錄同步處理](set-up-directory-synchronization.md)。
   
 ## <a name="line-of-business-lob-application"></a>列的業務 (LOB) 應用程式
 
@@ -74,7 +75,7 @@ DirSync server 輪詢 Windows Server AD 的變更，然後將其同步與 Office
   
 **圖 3： 在 Azure IaaS 的 LOB 應用程式**
 
-![Azure IaaS 中的伺服器型 LOB 應用程式](images/Hybrid_Poster/Hybrid_Cloud_Stack_IaaS_Ex.png)
+![Azure IaaS 中的伺服器型 LOB 應用程式](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-Ex.png)
   
 圖 3-內部網路主控身分識別基礎結構與使用者。所連接的網站 VPN 或 ExpressRoute 連線的 Azure IaaS 閘道。Azure IaaS 主控的 LOB 應用程式伺服器所在的虛擬網路。
   
@@ -112,7 +113,7 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
   
 **圖 4： 在高可用性 SharePoint 伺服器 2016年伺服器陣列中 Azure IaaS**
 
-![Azure IaaS 中高可用性的 SharePoint Server 2016 伺服器陣列](images/Hybrid_Poster/Hybrid_Cloud_Stack_IaaS_SP2016.png)
+![Azure IaaS 中高可用性的 SharePoint Server 2016 伺服器陣列](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-SP2016.png)
   
 圖 4] 中的內部網路主控身分識別基礎結構與使用者。所連接的網站 VPN 或 ExpressRoute 連線的 Azure IaaS 閘道。Azure VNet 包含 SharePoint Server 2016 伺服器陣列，其中包含前端伺服器、 應用程式伺服器、 SQL Server 叢集，並在網域控制站的不同層的伺服器。
   
@@ -138,17 +139,17 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
   
 1. 評估及試驗
     
-    請參閱[Microsoft Azure 中的 SharePoint Server 2016](https://technet.microsoft.com/library/mt779107%28v=office.16%29.aspx)了解 SharePoint Server 2016 執行 Azure 中的優點。
+    請參閱[Microsoft Azure 中的 SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/sharepoint-server-2016-in-microsoft-azure)了解 SharePoint Server 2016 執行 Azure 中的優點。
     
-    請參閱[在 Azure 的開發人員測試環境中的內部網路 SharePoint Server 2016](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)建置模擬的開發人員測試環境
+    請參閱[在 Azure 的開發人員測試環境中的內部網路 SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/intranet-sharepoint-server-2016-in-azure-dev-test-environment)建置模擬的開發人員測試環境
     
 2. 設計
     
-    請參閱逐一檢視程序，以決定 Azure IaaS 網路、 compute、 及儲存項目來架設在伺服器陣列和其設定一組[設計 Azure 中的 SharePoint Server 2016 伺服器陣列](https://technet.microsoft.com/library/mt779108%28v=office.16%29.aspx)。
+    請參閱逐一檢視程序，以決定 Azure IaaS 網路、 compute、 及儲存項目來架設在伺服器陣列和其設定一組[設計 Azure 中的 SharePoint Server 2016 伺服器陣列](https://docs.microsoft.com/SharePoint/administration/designing-a-sharepoint-server-2016-farm-in-azure)。
     
 3. 部署
     
-    請參閱[使用 SQL Server AlwaysOn 可用性群組 Azure 中部署 SharePoint Server 2016](https://technet.microsoft.com/library/mt793552%28v=office.16%29.aspx)逐一檢視端對端陣列的設定高可用性的五個階段。
+    請參閱[使用 SQL Server AlwaysOn 可用性群組 Azure 中部署 SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/deploying-sharepoint-server-2016-with-sql-server-alwayson-availability-groups-in)逐一檢視端對端陣列的設定高可用性的五個階段。
     
 ## <a name="federated-identity-for-office-365-in-azure"></a>在 Azure 中的 Office 365 同盟身分識別
 
@@ -156,15 +157,15 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
   
 **圖 5： 在高可用性同盟身分識別基礎結構的 Azure IaaS 中的 Office 365**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](images/Hybrid_Poster/Hybrid_Cloud_Stack_IaaS_ADFS.png)
+![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-ADFS.png)
   
 圖 5-內部網路主控身分識別基礎結構與使用者。所連接的網站 VPN 或 ExpressRoute 連線的 Azure IaaS 閘道。Azure VNet 包含 web proxy 伺服器、 Active Directory Federation Services (AD FS) 伺服器及 Windows Server Active Directory (AD) 的網域控制站。
   
 此設定包含在 Azure 中 LOB 應用程式的下列屬性：
   
-- **層：**有各層的 web proxy 伺服器、 AD FS 伺服器及 Windows Server AD 網域控制站。
+- **層：** 有各層的 web proxy 伺服器、 AD FS 伺服器及 Windows Server AD 網域控制站。
     
-- **載入通訊：**外部 Azure 負載平衡器將傳入用戶端驗證要求的 web proxy 至和內部 Azure 負載平衡器散佈 AD FS 伺服器的驗證要求。
+- **載入通訊：** 外部 Azure 負載平衡器將傳入用戶端驗證要求的 web proxy 至和內部 Azure 負載平衡器散佈 AD FS 伺服器的驗證要求。
     
 請遵循成功採用此路徑：
   
@@ -182,7 +183,7 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
     
 - [設計與建置在 Azure 中的 LOB 應用程式](https://techcommunity.microsoft.com/t5/CAAB-Cloud-Adoption-Advisory/EXTRA-November-2016-Webinar/m-p/30058#M41)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   

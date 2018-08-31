@@ -1,5 +1,5 @@
 ---
-title: "為基礎而建置"
+title: 從頭開始建置
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 84348d0c-d9d1-4a98-9b99-8433f9b70e45
-description: "摘要： 取得雲端一組的詳細資料儲存區可用來建立您自己的存放服務或解決方案的建置組塊。"
-ms.openlocfilehash: be7ea3e7526115f1a983ec89f2afeb5d130daee1
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 取得雲端一組的詳細資料儲存區可用來建立您自己的存放服務或解決方案的建置組塊。
+ms.openlocfilehash: 8ef5d7a99c4e82d9a4fc3eb281a4af505887b792
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915678"
 ---
-# <a name="build-from-the-ground-up"></a>為基礎而建置
+# <a name="build-from-the-ground-up"></a>從頭開始建置
 
- **摘要：**取得在雲端的詳細資訊可用來建立您自己的存放服務或解決方案的儲存空間建置組塊。
+ **摘要：** 取得在雲端的詳細資訊可用來建立您自己的存放服務或解決方案的儲存空間建置組塊。
   
 "從頭開始建置"儲存解決方案：
   
@@ -190,7 +193,7 @@ ms.lasthandoff: 02/09/2018
     
 - 在垂直 （由表格） 或水平 （跨多個擊碎線段資料表） 資料分割負載分散到多個資料庫。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-storage-for-enterprise-architects.md)
   

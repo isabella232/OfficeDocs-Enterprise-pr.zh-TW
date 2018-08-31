@@ -1,5 +1,5 @@
 ---
-title: "Contoso 的 IT 基礎結構與需求"
+title: Contoso 的 IT 基礎結構與需求
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 5d6a58b8-bec3-4629-9737-8733c7b7ec92
-description: "摘要： 了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。"
-ms.openlocfilehash: b8282c4bd04448266bc68e65f95aaaff0a7a5db8
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。
+ms.openlocfilehash: e500aa1f3105c1e605d0d3c1d5f66651acb82b34
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915728"
 ---
 # <a name="contosos-it-infrastructure-and-needs"></a>Contoso 的 IT 基礎結構與需求
 
- **摘要：**了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。
+ **摘要：** 了解 Contoso 的基本結構內部 IT 基礎結構和如何其商務需要可符合由 Microsoft cloud 方案。
   
 Contoso 正從內部部署轉換、 至雲端 （含） 的一個納入雲端式個人產能工作量、 應用程式以及混合式案例的集中式的 IT 基礎結構。
   
@@ -30,7 +31,7 @@ Contoso 使用多半集中式內部 IT 基礎結構與 Paris headquarters 中的
   
 **圖 1： Contoso 的現有 IT 基礎結構**
 
-![Contoso 現有的 IT 基礎結構](images/Contoso_Poster/Existing_IT.png)
+![Contoso 現有的 IT 基礎結構](media/Contoso-Poster/Existing-IT.png)
   
 圖 1 顯示 headquarters office 應用程式資料中心、 DMZ 與網際網路。
   
@@ -76,11 +77,11 @@ Contoso 使用多半集中式內部 IT 基礎結構與 Paris headquarters 中的
   
 |**軟體即服務 (SaaS)**|**以服務 (Azure PaaS) 的平台**|**基礎架構以服務 (Azure IaaS)**|
 |:-----|:-----|:-----|
-|**Office 365：**在雲端中主要個人及群組的產能應用程式。 <br/> 業務需求： 1 3 5  <br/> |主控銷售和支援文件並使用雲端應用程式的資訊系統。  <br/> 業務需求： 3  <br/> |將封存與舊版系統移至雲端架構的伺服器。  <br/> 業務需求： 5  <br/> |
-|**Dynamics 365:**使用雲端式客戶與廠商管理。移除網路 DMZ 中的協力廠商。<br/> 業務需求： 2  <br/> |行動應用程式的雲端式而不是 Paris 資料中心架構。  <br/> 業務需求： 3 4  <br/> |移轉使用率低的應用程式和不在內部部署資料中心的資料。  <br/> 業務需求： 5  <br/> |
-|**Intune/EMS:**管理 iOS 及 Android 裝置。 <br/> 業務需求： 3  <br/> ||新增暫時伺服器和結束一季處理需求的儲存空間。  <br/> 商務需要： 6  <br/> |
+|**Office 365：** 在雲端中主要個人及群組的產能應用程式。 <br/> 業務需求： 1 3 5  <br/> |主控銷售和支援文件並使用雲端應用程式的資訊系統。  <br/> 業務需求： 3  <br/> |將封存與舊版系統移至雲端架構的伺服器。  <br/> 業務需求： 5  <br/> |
+|**Dynamics 365:** 使用雲端式客戶與廠商管理。移除網路 DMZ 中的協力廠商。<br/> 業務需求： 2  <br/> |行動應用程式的雲端式而不是 Paris 資料中心架構。  <br/> 業務需求： 3 4  <br/> |移轉使用率低的應用程式和不在內部部署資料中心的資料。  <br/> 業務需求： 5  <br/> |
+|**Intune/EMS:** 管理 iOS 及 Android 裝置。 <br/> 業務需求： 3  <br/> ||新增暫時伺服器和結束一季處理需求的儲存空間。  <br/> 商務需要： 6  <br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   

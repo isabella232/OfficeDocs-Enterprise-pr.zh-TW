@@ -1,5 +1,5 @@
 ---
-title: "有部分組件"
+title: 某些必要組件
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: ccf1b8b3-0d50-4c66-b314-f480245fad5e
-description: "摘要： 取得可用來建立自訂的儲存解決方案的雲端儲存選項的詳細資料。"
-ms.openlocfilehash: 7cff1c80f1b210ee8906cf9703ba6400181f2e9d
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 取得可用來建立自訂的儲存解決方案的雲端儲存選項的詳細資料。
+ms.openlocfilehash: 2c80b0cdf0829e80a7916133ee51a45c91b96efa
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915518"
 ---
-# <a name="some-assembly-required"></a>有部分組件
+# <a name="some-assembly-required"></a>某些必要組件
 
- **摘要：**取得在雲端的詳細資訊可用來建立自訂的儲存解決方案的儲存選項。
+ **摘要：** 取得在雲端的詳細資訊可用來建立自訂的儲存解決方案的儲存選項。
   
 「 必要部分組件 」 儲存解決方案：
   
@@ -138,11 +141,11 @@ ms.lasthandoff: 02/09/2018
     
 使用垂直調整，您可以變更 Azure database 效能層級/版或使用彈入資料庫集區。
   
-![Azure SQL Database 提供的垂直縮放比例。](images/Storage_Poster/CloudStor-VertScale.png)
+![Azure SQL Database 提供的垂直縮放比例。](media/Storage-Poster/CloudStor-VertScale.png)
   
 具有水平調整，您可依需要新增新的資料庫。
   
-![Azure SQL Database 提供的水平縮放比例。](images/Storage_Poster/CloudStor-HorizScale.png)
+![Azure SQL Database 提供的水平縮放比例。](media/Storage-Poster/CloudStor-HorizScale.png)
   
 按一下[這裡](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)如需詳細資訊。
   
@@ -150,7 +153,7 @@ ms.lasthandoff: 02/09/2018
 
 伸展資料庫功能可讓您透明和安全地移動冷資料，例如大型表格包含客戶訂單資訊、 Azure 中的 SQL 拉大資料庫已關閉的商務資料的 SQL Server 2016。當拉長、 SQL Server 執行個體、 資料庫、 或甚至是一個表格的內容是 SQL Server 2016 伺服器中的本機資料和 Azure 中的遠端資料的組合。如拉長 SQL Server 2016 自動移到 Azure 會變成合格的資料。
   
-![運用 SQL Server 2016 的 Stretch Database。](images/Storage_Poster/CloudStor-Stretch.png)
+![運用 SQL Server 2016 的 Stretch Database。](media/Storage-Poster/CloudStor-Stretch.png)
   
 包含的歷程資料的使用者查詢透明轉寄給 Azure SQL 延展資料庫。查詢不需要重新寫入，即使表格會拉長。
   
@@ -202,7 +205,7 @@ ms.lasthandoff: 02/09/2018
     
 下表顯示不尋常的 Azure 宇宙 DB、 Azure 表格儲存及 Azure SQL Database 屬性。
   
-![Cosmos DB 的非通用屬性與Azure 資料表與Azure SQL Database](images/Storage_Poster/CloudStor-Table.png)
+![Cosmos DB 的非通用屬性與Azure 資料表與Azure SQL Database](media/Storage-Poster/CloudStor-Table.png)
   
 ### <a name="resources"></a>資源
 
@@ -402,7 +405,7 @@ ms.lasthandoff: 02/09/2018
 
 檢閱[設定為基礎而建置](build-from-the-ground-up.md)雲端儲存選項。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-storage-for-enterprise-architects.md)
   

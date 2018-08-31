@@ -1,5 +1,5 @@
 ---
-title: "將歷程交易資料移至雲端"
+title: 將歷程記錄交易資料移至雲端
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 3e9c405a-415b-4584-aa7e-f2489299c457
-description: "摘要： 如何實作 Contoso SQL Server 伸展以減少其內部部署資料儲存需求及每日執行成本的資料庫。"
-ms.openlocfilehash: 9d8d51aa1bc7a304d1148111aedd54916d9e8052
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 如何實作 Contoso SQL Server 伸展以減少其內部部署資料儲存需求及每日執行成本的資料庫。
+ms.openlocfilehash: 791b5d4f14ba7246221cf9b459c31c9ba1b54099
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915718"
 ---
-# <a name="moving-historical-transaction-data-to-the-cloud"></a>將歷程交易資料移至雲端
+# <a name="moving-historical-transaction-data-to-the-cloud"></a>將歷程記錄交易資料移至雲端
 
- **摘要：**Contoso 的實作方式以減少其內部部署資料儲存需求及每日執行成本的 SQL Server 延展資料庫。
+ **摘要：** Contoso 的實作方式以減少其內部部署資料儲存需求及每日執行成本的 SQL Server 延展資料庫。
   
 Contoso 的企業版的儲存系統儲存大量的嚴格該法規需求與行銷 research 歷史交易資料和 BI 耗費趨勢分析。Contoso 也需要從磁帶、 大量消耗時間的程序還原封存的資料。Contoso 的企業儲存系統中的硬體已接近其週期結束並取代其就是很高。 
   
@@ -28,7 +31,7 @@ Contoso 的企業版的儲存系統儲存大量的嚴格該法規需求與行銷
   
 **圖 1： SQL Server 伸展資料庫**
 
-![SQL Server Stretch Database 做為混合式資料解決方案](images/Contoso_Poster/StretchDB01.png)
+![SQL Server Stretch Database 做為混合式資料解決方案](media/Contoso-Poster/StretchDB01.png)
   
 圖 1 顯示的 SQL 用戶端執行 SQL Server 2016、 將其轉寄到 Azure PaaS Azure SQL 延展資料庫的伺服器所傳送的 T-SQL 查詢。
   
@@ -52,7 +55,7 @@ Contoso 用來將其歷程資料移至雲端的下列步驟：
   
 **圖 2： 使用延展資料庫中的伺服器 Contoso 的資料中心**
 
-![針對執行 SQL Server 的單一電腦的 Contoso 的組態 SQL Server Stretch Database](images/Contoso_Poster/StretchDB02.png)
+![針對執行 SQL Server 的單一電腦的 Contoso 的組態 SQL Server Stretch Database](media/Contoso-Poster/StretchDB02.png)
 
   
 圖 2 顯示 Contoso 的資料中心中的應用程式伺服器的使用者查詢成為傳遞至 Azure PaaS Azure SQL 延展資料庫的 SQL 查詢的方式。
@@ -67,11 +70,11 @@ Contoso 用來將其歷程資料移至雲端的下列步驟：
     
 - 大幅減少其每日執行成本。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Contoso Corporation 的企業案例](enterprise-scenarios-for-the-contoso-corporation.md)
   
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 

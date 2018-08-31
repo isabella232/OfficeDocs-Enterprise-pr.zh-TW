@@ -8,14 +8,16 @@ audience: ITPro
 ms.topic: article
 ms.service: Office 365 Administration
 localization_priority: None
+search.appverid:
+- MET150
 ms.collection: Strat_O365_Enterprise
 description: 了解 Office 365 用戶端應用程式支援的行動應用程式管理
-ms.openlocfilehash: 679212563b78cceffe8a1f7b75672c5f355bcf6f
-ms.sourcegitcommit: 4e654517825b74a3bbe171b915b134ba49231e2e
+ms.openlocfilehash: 309353a70bcfb1641a24ed6798a98aaddd27681c
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "21541943"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915418"
 ---
 # <a name="office-365-client-app-support---mobile-application-management"></a>Office 365 用戶端應用程式支援行動裝置應用程式管理
 
@@ -32,10 +34,10 @@ ms.locfileid: "21541943"
 
 | | | | | | |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| ![Dynamics 365 圖示](images/o365-dynamics365-64x64.png) <br> [Dynamics 365](https://dynamics.microsoft.com) | ![Excel 圖示](images/o365-excel-64x64.png) <br> [Excel](https://products.office.com/excel) | ![Kaizala 圖示](images/o365-kaizala-64x64.png) <br> [Kaizala](https://products.office.com/en/business/microsoft-kaizala) | ![OneDrive for Business 圖示](images/o365-OneDrive-64x64.png) <br> [OneDrive](https://products.office.com/onedrive-for-business/online-cloud-storage) | ![OneNote 圖示](images/o365-OneNote-64x64.png) <br> [OneNote](https://products.office.com/onenote)
-| ![Outlook 圖示](images/o365-outlook-64x64.png) <br> [Outlook](https://products.office.com/outlook) | ![規劃圖示](images/o365-planner-64x64.png) <br> [Planner](https://products.office.com/business/task-management-software) | ![PowerBI 圖示](images/o365-powerbi-64x64.png) <br> [Power BI](https://powerbi.microsoft.com) | ![PowerPoint 圖示](images/o365-powerpoint-64x64.png) <br> [PowerPoint](https://products.office.com/powerpoint) | ![SharePoint 圖示](images/o365-sharepoint-64x64.png) <br> [Sharepoint](https://products.office.com/sharepoint)
-| ![Skype 商務圖示](images/o365-skypeforbusiness-64x64.png) <br> [針對 Skype<br>商務](https://www.skype.com/business/) | ![StaffHub 圖示](images/o365-staffhub-64x64.png) <br> [StaffHub](https://products.office.com/microsoft-staffhub/staff-scheduling-software) | ![Sway 圖示](images/o365-sway-64x64.png) <br> [Sway<sup>1</sup>](https://sway.com) | ![小組圖示](images/o365-teams-64x64.png) <br> [Teams](https://products.office.com/microsoft-teams/group-chat-software) | ![Visio 圖示](images/o365-visio-64x64.png) <br> [Visio](https://products.office.com/visio/flowchart-software)
-| ![Word 圖示](images/o365-word-64x64.png) <br> [Word](https://products.office.com/word) | ![Yammer 圖示](images/o365-yammer-64x64.png) <br> [Yammer](https://products.office.com/yammer/yammer-overview)
+| ![Dynamics 365 圖示](media/o365-dynamics365-64x64.png) <br> [Dynamics 365](https://dynamics.microsoft.com) | ![Excel 圖示](media/o365-excel-64x64.png) <br> [Excel](https://products.office.com/excel) | ![Kaizala 圖示](media/o365-kaizala-64x64.png) <br> [Kaizala](https://products.office.com/en/business/microsoft-kaizala) | ![OneDrive for Business 圖示](media/o365-OneDrive-64x64.png) <br> [OneDrive](https://products.office.com/onedrive-for-business/online-cloud-storage) | ![OneNote 圖示](media/o365-OneNote-64x64.png) <br> [OneNote](https://products.office.com/onenote)
+| ![Outlook 圖示](media/o365-outlook-64x64.png) <br> [Outlook](https://products.office.com/outlook) | ![規劃圖示](media/o365-planner-64x64.png) <br> [Planner](https://products.office.com/business/task-management-software) | ![PowerBI 圖示](media/o365-powerbi-64x64.png) <br> [Power BI](https://powerbi.microsoft.com) | ![PowerPoint 圖示](media/o365-powerpoint-64x64.png) <br> [PowerPoint](https://products.office.com/powerpoint) | ![SharePoint 圖示](media/o365-sharepoint-64x64.png) <br> [Sharepoint](https://products.office.com/sharepoint)
+| ![Skype 商務圖示](media/o365-skypeforbusiness-64x64.png) <br> [針對 Skype<br>商務](https://www.skype.com/business/) | ![StaffHub 圖示](media/o365-staffhub-64x64.png) <br> [StaffHub](https://products.office.com/microsoft-staffhub/staff-scheduling-software) | ![Sway 圖示](media/o365-sway-64x64.png) <br> [Sway<sup>1</sup>](https://sway.com) | ![小組圖示](media/o365-teams-64x64.png) <br> [Teams](https://products.office.com/microsoft-teams/group-chat-software) | ![Visio 圖示](media/o365-visio-64x64.png) <br> [Visio](https://products.office.com/visio/flowchart-software)
+| ![Word 圖示](media/o365-word-64x64.png) <br> [Word](https://products.office.com/word) | ![Yammer 圖示](media/o365-yammer-64x64.png) <br> [Yammer](https://products.office.com/yammer/yammer-overview)
 
 > [!NOTE]
 > 在即將推出的 iOS Sway <sup>1</sup>支援。

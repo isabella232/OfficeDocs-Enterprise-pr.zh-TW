@@ -1,5 +1,5 @@
 ---
-title: "設計 Microsoft Azure PaaS 的網路"
+title: 設計 Microsoft Azure PaaS 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -8,19 +8,22 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 19568184-705b-493b-b713-b484367adba9
-description: "摘要： 了解如何最佳化您的網路存取 Microsoft Azure PaaS。"
-ms.openlocfilehash: 151701223c6cf21890fcd961c5dc3acda8de4915
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解如何最佳化您的網路存取 Microsoft Azure PaaS。
+ms.openlocfilehash: d20bb5adb46592363926a2926752ed345823c26e
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915108"
 ---
 # <a name="designing-networking-for-microsoft-azure-paas"></a>設計 Microsoft Azure PaaS 的網路
 
- **摘要：**了解如何最佳化您的網路存取 Microsoft Azure PaaS。
+ **摘要：** 了解如何最佳化您的網路存取 Microsoft Azure PaaS。
   
 若要針對 Azure PaaS 應用程式最佳化網路，必須具備充足的網際網路頻寬，且可能需要跨多個站台或應用程式分散網路流量。
   
@@ -40,13 +43,13 @@ ms.lasthandoff: 02/09/2018
 
 架設在 Azure PaaS 的組織應用程式的內部網路的使用者需要的網際網路頻寬。有兩個選項：
   
-- **選項 1:**使用您現有的管道、 最佳化處理尖峰負載的容量與網際網路流量。請參閱[設計的 Microsoft saas 和網路](designing-networking-for-microsoft-saas.md)網際網路 edge、 用戶端使用狀況和 IT 作業考量。
+- **選項 1:** 使用您現有的管道、 最佳化處理尖峰負載的容量與網際網路流量。請參閱[設計的 Microsoft saas 和網路](designing-networking-for-microsoft-saas.md)網際網路 edge、 用戶端使用狀況和 IT 作業考量。
     
-- **選項 2：**高頻寬或低延遲需求使用 Azure ExpressRoute 連線。
+- **選項 2：** 高頻寬或低延遲需求使用 Azure ExpressRoute 連線。
     
 **圖 1： 連接 Azure PaaS 服務的連線選項**
 
-![圖 1：Azure PaaS 服務的連線選項](images/Network_Poster/PaaS1.png)
+![圖 1：Azure PaaS 服務的連線選項](media/Network-Poster/PaaS1.png)
   
 圖 1 顯示透過網際網路管道或 ExpressRoute Azure PaaS 服務連線至內部部署網路。
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 02/09/2018
   
 **圖 2： Azure Application Gateway**
 
-![圖 2：Azure 應用程式閘道服務](images/Network_Poster/PaaS2.png)
+![圖 2：Azure 應用程式閘道服務](media/Network-Poster/PaaS2.png)
   
 圖 2 顯示 Azure Application Gateway 以及使用者要求來自網際網路的方式可以轉接至 Azure 的 web 應用程式、 雲端服務或虛擬機器。
   
@@ -76,17 +79,17 @@ Application Gateway 目前支援階層 7 應用程式傳遞下列：
   
 流量管理員會使用下列的路由方法：
   
-- **容錯移轉：**端點的相同或不同的 Azure 資料中心，且您想要使用的所有流量的主要端點，但提供備份主要索引器或備份端點已無法使用。
+- **容錯移轉：** 端點的相同或不同的 Azure 資料中心，且您想要使用的所有流量的主要端點，但提供備份主要索引器或備份端點已無法使用。
     
-- **循環配置資源：**您想要在相同的資料中心的端點一組或跨越不同的資料中心散佈負載。
+- **循環配置資源：** 您想要在相同的資料中心的端點一組或跨越不同的資料中心散佈負載。
     
-- **效能：**必須在不同地理位置端點和您要要求用戶端使用方面的最低的延遲 」 最接近"的端點。
+- **效能：** 必須在不同地理位置端點和您要要求用戶端使用方面的最低的延遲 」 最接近"的端點。
     
 以下是三個地理位置分散的 web 應用程式的範例。
   
-**圖 3： Azure 流量管理員**
+**圖 3：Azure 流量管理員**
 
-![圖 3：Azure 流量管理員](images/Network_Poster/PaaS3.png)
+![圖 3：Azure 流量管理員](media/Network-Poster/PaaS3.png)
   
 圖 3 是基本程序將要求路由傳送至美國、 歐洲和亞洲中的三個不同的 Azure web 應用程式使用流量管理員。在範例：
   

@@ -16,12 +16,12 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 連線至單一 Windows PowerShell 視窗中的所有 Office 365 服務的 Windows PowerShell。
-ms.openlocfilehash: bf5e81012eaa3e7e200f9b1984b3d3fe01c30799
-ms.sourcegitcommit: c3869a332512dd1cc25cd5a92a340050f1da0418
+ms.openlocfilehash: b4d7b163bfba433196f46046030078c5559c4459
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "20720369"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915828"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
@@ -29,12 +29,11 @@ ms.locfileid: "20720369"
   
 當您使用 PowerShell 管理 Office 365 時，有可能有最多可以有五個不同 Windows PowerShell 工作階段，同時對應至 Office 365 系統管理中心、 SharePoint Online、 Exchange Online、 商務 online Skype 及安全性&amp;規範中心。使用個別的 Windows PowerShell 工作階段中的五個不同的連接方法，您的桌面可能看起來如下：
   
-![一次執行五個 Windows PowerShell 主控台](images/a1a852c2-89ea-4e8e-8d8b-dcdf596763d1.png)
+![一次執行五個 Windows PowerShell 主控台](media/a1a852c2-89ea-4e8e-8d8b-dcdf596763d1.png)
   
 這不是因為您不能交換資料之間的跨服務管理那些五個 windows 管理 Office 365 的最佳。本主題說明如何使用單一執行個體您可以從中管理 Office 365、 商務 Online、 Exchange Online、 SharePoint online、 Skype 和安全性的 Windows PowerShell&amp;規範中心。
 
 ## <a name="before-you-begin"></a>開始之前
-<a name="BeforeYouBegin"> </a>
 
 您可以從單一執行個體的 Windows PowerShell 管理 Office 365 的所有之前，請考慮下列先決條件：
   
@@ -71,7 +70,6 @@ ms.locfileid: "20720369"
   ```
 
 ## <a name="connection-steps-when-using-a-password"></a>連線步驟時使用的密碼
-<a name="ConnStepsPassword"> </a>
 
 以下是連線至單一 PowerShell 視窗中的所有服務的步驟。
   
@@ -165,7 +163,6 @@ Remove-PSSession $sfboSession ; Remove-PSSession $exchangeSession ; Remove-PSSes
 ```
 
 ## <a name="connection-steps-when-using-multi-factor-authentication"></a>使用多重要素驗證時的連線步驟
-<a name="ConnStepsMFA"> </a>
 
 以下是連線至 Azure AD 單一區塊中的所有命令 SharePoint Online 和 Skype 的 Buiness 使用單一視窗中的多重要素驗證。指定全域管理員帳戶的使用者主要名稱 (UPN) 名稱與您的網域主機名稱和一次執行所有它們。
 
@@ -203,11 +200,7 @@ Exchange Online 和安全性&amp;規範中心，請參閱下列主題使用多�
 請注意，在這兩種情況下，您必須使用不同的 Exchange Online 遠端 PowerShell 模組的工作階段進行連線。
 
 
-## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？
-
-[!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
-
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 - [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)

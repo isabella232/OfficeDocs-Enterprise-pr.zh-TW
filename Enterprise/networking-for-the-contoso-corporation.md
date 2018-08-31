@@ -1,5 +1,5 @@
 ---
-title: "Contoso Corporation 的網路"
+title: Contoso Corporation 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,16 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 014b3710-e6e9-485c-8550-975d510eb2fc
-description: "摘要： 了解的定義和 Microsoft 混合雲端的元素。"
-ms.openlocfilehash: 1f023364c4b2e9c64af954ec9ba63a6197ebc01a
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+description: 摘要： 了解 Contoso 網路基礎結構以及如何將其可以使用以 Microsoft cloud 方案的最佳化存取 ExpressRoute。
+ms.openlocfilehash: 89d4182d8a5ef44f936977ec51cc002b51f4b379
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915218"
 ---
 # <a name="networking-for-the-contoso-corporation"></a>Contoso Corporation 的網路
 
- **摘要：**了解的定義和 Microsoft 混合雲端的元素。
+ **摘要：** 了解 Contoso 網路基礎結構和它可以如何運用 ExpressRoute 進行至 Microsoft cloud 方案的最佳化存取。
   
 若要採用雲端 （含） 的基礎結構，Contoso 的網路工程師實現網路流量傳送到雲端架構服務針對這趟旅行方式基本 shift 鍵。而不是只最佳化的內部伺服器和資料中心流量，等於廣告必須付費來最佳化網際網路邊緣和網際網路之間的流量。
   
@@ -30,7 +31,7 @@ Contoso 具有圖 1 所示的網路基礎結構。
   
 **圖 1： Contoso 的 WAN 基礎結構**
 
-![Contoso 的 WAN 基礎結構，連結了總部、區域中樞和分公司辦公室](images/Contoso_Poster/Contoso_WW_Net.png)
+![Contoso 的 WAN 基礎結構，連結了總部、區域中樞和分公司辦公室](media/Contoso-Poster/Contoso-WW-Net.png)
   
 圖 1 顯示 Contoso 的辦公室跨全球的環境的地區設定與兩者之間衛星 office WAN 連結。
   
@@ -54,7 +55,7 @@ Contoso 具有架構台下列其應用程式及伺服器基礎結構：
   
 **圖 2： Contoso 的基礎結構的內部應用程式**
 
-![Contoso 的內部應用程式基礎結構](images/Contoso_Poster/App_Infra.png)
+![Contoso 的內部應用程式基礎結構](media/Contoso-Poster/App-Infra.png)
   
 - 衛星辦公室使用快取的本機伺服器以儲存常存取文件與內部網路網站。
     
@@ -80,7 +81,7 @@ ExpressRoute 是從所在位置到您的網路連線至 Microsoft cloud 網路 M
   
 **圖 3： Microsoft cloud 網路組成的全球**
 
-![全球 Microsoft 雲端網路](images/Contoso_Poster/MS_WW_Cloud.png)
+![全球 Microsoft 雲端網路](media/Contoso-Poster/MS-WW-Cloud.png)
   
 圖 3 是生活的各區域互連的 Microsoft cloud 網路。
   
@@ -126,9 +127,9 @@ Contoso 以備妥 Microsoft cloud 其網路使用下列步驟：
     
     根據預計的簡短和長期伺服器在 Azure IaaS 的數字，保留私人位址空間 Azure VNets 和其子網路。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Cloud 中的 Contoso](contoso-in-the-microsoft-cloud.md)
+[Microsoft 雲端中的 Contoso](contoso-in-the-microsoft-cloud.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
 
