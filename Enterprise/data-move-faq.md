@@ -3,7 +3,7 @@ title: 資料移動一般常見問題集
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 9/14/2017
+ms.date: 09/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 description: 以下是對一般問題的回答關於將核心資料移至新的資料中心地理位置。
-ms.openlocfilehash: 40f83ee94aaa7c919f08d91d888ff131da02df67
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: fe2399afa81a189416c41e3acba67e53eb99c674
+ms.sourcegitcommit: 75ad9af1fa8adc73611fc6140546222b001861d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540096"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "23839591"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -149,4 +149,12 @@ A.[是]。
   
 A.[是]。Microsoft 維護含有超過 50 個位置中具有超過 1500 個網際網路服務提供者 (Isp) 使用的對等協議全球各地 23 國家/地區中的公用網際網路連線的大型通用網路。使用者無法從他們是在網際網路上的任何位置存取資料中心。
   
+## <a name="related-topics"></a>相關主題
 
+[將核心資料移至新的 Office 365 datacenter geos](moving-data-to-new-datacenter-geos.md)
+
+[如何要求資料移動](request-your-data-move.md)
+
+[Microsoft Dynamics CRM Online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
+  
+[依地區 azure 服務](https://azure.microsoft.com/en-us/regions/)

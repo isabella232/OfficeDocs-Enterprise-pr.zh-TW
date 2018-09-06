@@ -3,7 +3,7 @@ title: 資料移動期間和之後
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 3/20/2018
+ms.date: 09/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是以使用者影響最小的後端作業。雖然 Microsoft 移動每個服務與相關的資料的租用戶至新的資料中心地理位置不不需要任何動作。資料傳輸和驗證發生事先以影響最小背景中的使用者。
-ms.openlocfilehash: 8813e73dcbce7b6ea24e497929ca6b8e0928e4e7
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 7b012a8cbf1eb3756cc5b06660e414a327c2ae76
+ms.sourcegitcommit: 75ad9af1fa8adc73611fc6140546222b001861d5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540085"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "23839601"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -165,4 +165,13 @@ EDiscovery 及稽核的 Office 365 安全性功能&amp;規範中心支援跨地�
 
 我們只將客戶資料移動的 Exchange Online、 SharePoint Online 和 Skype for Business。我們不會移動資料的其他服務。不會變更或給您的客戶或其他這些服務的使用者身分的影響。移動程序不會影響，以及其客戶資料的位置會維持不變。
   
+## <a name="related-topics"></a>相關主題 
+ 
+[如何要求資料移動](request-your-data-move.md)
+    
+[資料移動一般常見問題集](data-move-faq.md)
+  
+[Microsoft Dynamics CRM Online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
+  
+[依地區 azure 服務](https://azure.microsoft.com/en-us/regions/)
 
