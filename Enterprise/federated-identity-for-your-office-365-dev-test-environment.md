@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -16,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
 description: 摘要：設定適用於 Office 365 開發/測試環境的同盟驗證。
-ms.openlocfilehash: 2877fa7f85643057c6ba8630939c690256bb8918
-ms.sourcegitcommit: 3a4ab28f3f4172d596426f0da40bcab8c46ef74d
+ms.openlocfilehash: f028acb99d0687bb3fcfbc1c66bdd8885850565b
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "20215855"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915238"
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -33,7 +35,7 @@ Office 365 支援同盟身分識別。這表示 Office 365 的連線使用者指
   
 **圖 1：適用於 Office 365 開發/測試環境的同盟驗證**
 
-![將 Web 應用程式 Proxy 伺服器新增至 Office 365 開發/測試環境的 DirSync](images/f50039e4-796a-42c0-bfdc-87c2026b1579.png)
+![適用於 Office 365 開發/測試環境的同盟驗證](media/f50039e4-796a-42c0-bfdc-87c2026b1579.png)
   
 圖 1 所示的設定包含： 
   
@@ -73,7 +75,7 @@ Office 365 支援同盟身分識別。這表示 Office 365 的連線使用者指
   
 **圖 2：適用於 Office 365 開發/測試環境的目錄同步作業**
 
-![具有目錄同步作業的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![具有目錄同步作業的 Office 365 開發/測試環境](media/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 圖 2 顯示 Office 365 開發/測試環境的目錄同步處理，其中包含 Azure 虛擬網路中的 Office 365 和 CLIENT1、APP1 和 DC1 虛擬機器。
   
@@ -121,7 +123,7 @@ Restart-Computer
   
 **圖 3：新增 AD FS 伺服器**
 
-![將 AD FS 伺服器新增至 Office 365 開發/測試環境的 DirSync](images/da82f39e-426d-41e2-842a-c13b382d63d5.png)
+![將 AD FS 伺服器新增至 Office 365 開發/測試環境的 DirSync](media/da82f39e-426d-41e2-842a-c13b382d63d5.png)
   
 圖 3 顯示將 ADFS1 伺服器新增至 Office 365 開發/測試環境的 DirSync。
   
@@ -192,7 +194,7 @@ Add-DnsServerResourceRecordA -Name "fs" -ZoneName $testZone -AllowUpdateAny -IPv
   
 **圖 4：新增 Web 應用程式 Proxy 伺服器**
 
-![將 Web 應用程式 Proxy 伺服器新增至 Office 365 開發/測試環境的 DirSync](images/f50039e4-796a-42c0-bfdc-87c2026b1579.png)
+![將 Web 應用程式 Proxy 伺服器新增至 Office 365 開發/測試環境的 DirSync](media/f50039e4-796a-42c0-bfdc-87c2026b1579.png)
   
 圖 4 顯示 PROXY1 伺服器之新增。
   

@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -16,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: 摘要：設定適用於 Office 365 開發/測試環境的目錄同步作業
-ms.openlocfilehash: d1c48bcf4018088b527c3f85f8923413f9ffd268
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 106e902c9da46c7c3c0fc6eb8af96d6695c7bdce
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "19193533"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915838"
 ---
 # <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的目錄同步作業
 
@@ -29,7 +31,7 @@ ms.locfileid: "19193533"
   
 許多組織使用 Azure AD Connect 和目錄同步作業，將其內部部署 Windows Server Active Directory (AD) 樹系中的帳戶集同步處理至 Office 365 中的帳戶集。本文說明如何使用密碼雜湊同步作業將目錄同步作業新增至 Office 365 開發/測試環境，進而產生下列組態。
   
-![具有目錄同步作業的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![具有目錄同步作業的 Office 365 開發/測試環境](media/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 此組態組成為： 
   
@@ -48,7 +50,7 @@ ms.locfileid: "19193533"
 
 遵循＜[Office 365 開發/測試環境](office-365-dev-test-environment.md)＞一文階段 1、2、3 中的指示。以下是所產生的組態。
   
-![Office 365 開發/測試環境](images/48fb91aa-09b0-4020-a496-a8253920c45d.png)
+![Office 365 開發/測試環境](media/48fb91aa-09b0-4020-a496-a8253920c45d.png)
   
 此組態組成為： 
   
@@ -104,7 +106,7 @@ Stop-Process -Name Explorer -Force
     
 這是所產生的組態。
   
-![具有目錄同步作業的 Office 365 開發/測試環境](images/be5b37b0-f832-4878-b153-436c31546e21.png)
+![具有目錄同步作業的 Office 365 開發/測試環境](media/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 此組態組成為： 
   

@@ -3,11 +3,13 @@ title: 使用 Azure 資訊保護來保護 SharePoint Online 檔案
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 08/08/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 5b9c8e41-25d2-436d-89bb-9aecb9ec2b80
 description: 摘要：套用 Azure 資訊保護來保護高度機密 SharePoint Online 小組網站中的檔案。
-ms.openlocfilehash: 2c4776f5795a5a0b07be0f04b4872abadb4d31ca
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: 4ea6c1da8b39f22a56ba4f4d555518b671f07b70
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319284"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915308"
 ---
 # <a name="protect-sharepoint-online-files-with-azure-information-protection"></a>使用 Azure 資訊保護來保護 SharePoint Online 檔案
 
@@ -33,7 +35,7 @@ ms.locfileid: "20319284"
 不建議針對所有的客戶在 SharePoint Online 中的檔案使用 Azure 資訊保護，但可供需要此檔案子集合保護層級的客戶選擇使用。
 
 這套解決方案的一些相關重要注意事項：
-- 將 Azure 資訊保護加密套用至儲存於 Office 365 中的檔案時，服務會無法處理這些檔案的內容。 共同撰寫、eDiscovery、搜尋、Delve 和其他共同作業功能無法運作。 此外，資料外洩防護 (DLP) 原則只可用於中繼資料 (包括 Office 365 標籤)，但無法用於這些檔案的內容 (例如檔案中的信用卡號碼)。
+- 將 Azure 資訊保護加密套用至儲存於 Office 365 中的檔案時，服務會無法處理這些檔案的內容。共同撰寫、電子文件探索、搜尋、Delve 和其他共同作業功能無法運作。此外，資料外洩防護 (DLP) 原則只可用於中繼資料 (包括 Office 365 標籤)，但無法用於這些檔案的內容 (例如檔案中的信用卡號碼)。
 - 此解決方案需要使用者選取標籤，適用 Azure 資訊保護所提供的保護。如果您需要自動加密，以及 SharePoint 編製索引並檢查檔案的功能，請考慮使用 SharePoint Online 中的資訊版權管理 (IRM)。當您設定 IRM 的 SharePoint 文件庫時，下載檔案以進行編輯時，會自動進行加密。SharePoint IRM 包含可能會影響決策的限制。如需詳細資訊，請參閱[在 SharePoint 系統管理中心中設定資訊版權管理 (IRM)](https://support.office.com/zh-TW/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239CE6EB-4E81-42DB-BF86-A01362FED65C)。
 
 ##<a name="admin-setup"></a>系統管理員設定
@@ -46,41 +48,42 @@ ms.locfileid: "20319284"
 2. 在您瀏覽器的個別索引標籤中，移至 Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com))。
     
 3. 如果這是您第一次設定 Azure 資訊保護，請參閱這些[指示](https://docs.microsoft.com/information-protection/deploy-use/configure-policy#to-access-the-azure-information-protection-blade-for-the-first-time)。
-    
+
 4. 在清單窗格中，按一下 [所有服務]****，輸入**資訊**，然後按一下 [Azure 資訊保護]****。
+
+5. 按一下 [標籤]****。
     
-5. 在 [Azure 資訊保護]**** 刀鋒視窗中，按一下 [限域原則] > [+ 新增原則]****。
+6. 以滑鼠右鍵按一下 [高度機密]**** 標籤，然後再按一下 [新增子標籤]****。
     
-6. 在 [原則名稱]**** 中輸入新原則的名稱，並在 [描述]**** 中輸入描述。
+7. 在 [名稱]**** 中鍵入子標籤的名稱，並在 [描述]**** 中輸入子標籤的描述。
     
-7. 按一下 [選取取得此原則的使用者或群組] > [使用者/群組]****，然後選取極機密 SharePoint Online 小組網站的網站成員存取群組。 
+8. 在 [為包含此標籤的文件與電子郵件設定權限]**** 中，按一下 [保護]****。
     
-8. 按一下 [選取] > [確定]****。
+9. 在 [保護]**** 區段中，按一下 [Azure (雲端金鑰)]****。
     
-9. 針對 [高度機密]**** 標籤，按一下省略符號 (...)，然後再按一下 [新增子標籤]****。
+10. 在 [保護]**** 刀鋒視窗中，按一下 [保護設定]**** 下的 [新增權限]****。
     
-10. 在 [名稱]**** 中鍵入子標籤的名稱，並在 [描述]**** 中鍵入標籤的描述。
+11. 在 [新增權限]**** 刀鋒視窗中，按一下 [指定使用者與群組]**** 下的 [瀏覽目錄]****。
     
-11. 在 [為包含此標籤的文件與電子郵件設定權限]**** 中，按一下 [保護]****。
+12. 在 [AAD 使用者與群組]**** 窗格中，選取您高度機密 SharePoint Online 小組網站的網站成員存取群組，然後按一下 [選取]****。
     
-12. 在 [保護]**** 區段中，按一下 [Azure (雲端金鑰)]****。
+13. 在 [選擇預設的權限，或設定自訂]**** 下，按一下 [自訂]****，然後選取 [檢視權限]****、[編輯內容]****、[儲存]****、[回覆]****、[全部回覆]**** 核取方塊。
     
-13. 在 [保護]**** 刀鋒視窗中，按一下 [保護設定]**** 下的 [+ 新增權限]****。
+14. 按兩次 [確定]****。
     
-14. 在 [新增權限]**** 刀鋒視窗中，按一下 [指定使用者與群組]**** 下的 [+ 瀏覽目錄]****。
+15. 在 [子標籤]**** 刀鋒視窗中，按一下 [儲存]****，然後按一下 [確定]****。
+
+16. 在 [Azure 資訊保護]**** 刀鋒視窗中，按一下 [原則] > [+ 新增原則]****。
     
-15. 在 [AAD 使用者與群組]**** 窗格中，選取您高度機密 SharePoint Online 小組網站的網站成員存取群組，然後按一下 [選取]****。
+17. 在 [原則名稱]**** 中輸入新原則的名稱，並在 [描述]**** 中輸入描述。
     
-16. 在 [從預設選擇權限]**** 下，清除 [列印]****、[複製並擷取內容]**** 和 [轉寄]**** 核取方塊。
+18. 按一下 [選取取得此原則的使用者或群組] > [使用者/群組]****，然後選取極機密 SharePoint Online 小組網站的網站成員存取群組。
     
-17. 按兩次 [確定]****。
-    
-18. 在 [子標籤]**** 刀鋒視窗中，按一下 [儲存]****。
-    
-19. 關閉新的限域原則刀鋒視窗。
-    
-20. 在 [Azure 資訊保護 – 限域原則]**** 刀鋒視窗中，按一下 [發佈]****。
-    
+19. 按一下 [選取] > [確定]****。
+
+20. 按一下 [新增或移除標籤]****。在 [原則: 新增或移除標籤]**** 窗格中，按一下新子標籤的名稱，然後按一下 [確定]****。   
+
+21. 按一下 [儲存]****，然後按一下 [確定]****。
  
 ##<a name="client-setup"></a>用戶端設定
 現在您已可開始建立文件，並利用 Azure 資訊保護和新標籤進行保護。
@@ -101,7 +104,7 @@ ms.locfileid: "20319284"
 ##<a name="adding-permissions-for-external-users"></a>新增外部使用者的權限
 您可以使用兩種方式，將 Azure 資訊保護所保護的檔案存取權授與外部使用者。在這兩種情況下，外部使用者皆必須擁有 Azure AD 帳戶。如果外部使用者不屬於使用 Azure AD 的組織成員，則可以使用下列註冊頁面以個人身分取得 Azure AD 帳戶：[https://aka.ms/aip-signup](https://aka.ms/aip-signup)。
 
- - 將外部使用者新增至用來設定保護標籤的 Azure AD 群組。您必須先新增帳戶作為目錄中的 B2B 使用者。[Azure 資訊保護快取的群組成員資格](https://docs.microsoft.com/zh-TW/azure/information-protection/plan-design/prepare#group-membership-caching-by-azure-information-protection)可能需要幾個小時的時間。  
+ - 將外部使用者新增至用來設定保護標籤的 Azure AD 群組。您必須先新增帳戶作為目錄中的 B2B 使用者。[Azure 版權管理快取的群組成員資格](https://docs.microsoft.com/zh-TW/azure/information-protection/plan-design/prepare#group-membership-caching-by-azure-information-protection)可能需要幾個小時的時間。  
  - 將外部使用者直接新增至標籤保護。您可以從組織 (例如 Fabrikam.com)、Azure AD 群組 (例如組織內的財務部門) 或使用者，新增所有使用者。例如，您可以將外部的監理人員小組新增至標籤保護。
 
 ## <a name="see-also"></a>另請參閱

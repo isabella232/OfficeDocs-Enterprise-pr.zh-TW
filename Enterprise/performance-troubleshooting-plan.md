@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c
 description: 您需要知道要找出並修正 lags、 擱置，與 SharePoint Online、 OneDrive for Business、 Exchange Online 或 Skype 商務 online 與您的用戶端電腦之間的效能低落所採取的步驟嗎？連絡支援之前，這篇文章可協助您疑難排解 Office 365 的效能問題及即使修正的一些常見的問題。
-ms.openlocfilehash: c7eed9498920c601b3b345e8d1879ddbb16c56c3
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 629e65fe6d35237f33ae06fdeec380c670cd5e62
+ms.sourcegitcommit: 0466a88133a42e2db4245f972cecb371721c9b5d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540091"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "23849366"
 ---
 # <a name="performance-troubleshooting-plan-for-office-365"></a>Office 365 的效能疑難排解規劃
 
@@ -120,14 +120,14 @@ Microsoft 的網路監視工具 ([Netmon](https://www.microsoft.com/download/det
   
  **執行 HTTPWatch 和重現問題**
   
-1. HTTPWatch 是瀏覽器外掛程式，因此公開工具在瀏覽器中的每個版本的 Internet Explorer 稍微不同。一般而言，您可以下的命令列中找到 HTTPWatch Internet Explorer 瀏覽器中。</br></br>如果您沒有看到外掛程式 HTTPWatch 瀏覽器視窗中，檢查您的瀏覽器版本藉由按一下 [說明]\>有關，或者在更新版本的 Internet Explorer 中，按一下 [齒輪符號和有關 Internet Explorer。若要啟動的**命令**列、 Internet Explorer 中的功能表列上按一下滑鼠右鍵，按一下 [**命令列**。在過去，HTTPWatch 已產生關聯命令與瀏覽器列中，所以一次安裝，如果您立即未看見 （即使後重新開機） 檢查**工具**] 和圖示在工具列的圖示。請記住可自訂工具列和選項可新增到它們。</br>
+1. HTTPWatch 是瀏覽器外掛程式，因此公開工具在瀏覽器中的每個版本的 Internet Explorer 稍微不同。一般而言，您可以下的命令列中找到 HTTPWatch Internet Explorer 瀏覽器中。</br>如果您沒有看到外掛程式 HTTPWatch 瀏覽器視窗中，檢查您的瀏覽器版本藉由按一下 [說明]\>有關，或者在更新版本的 Internet Explorer 中，按一下 [齒輪符號和有關 Internet Explorer。若要啟動的**命令**列、 Internet Explorer 中的功能表列上按一下滑鼠右鍵，按一下 [**命令列**。在過去，HTTPWatch 已產生關聯命令與瀏覽器列中，所以一次安裝，如果您立即未看見 （即使後重新開機） 檢查**工具**] 和圖示在工具列的圖示。請記住可自訂工具列和選項可新增到它們。</br>
     ![Internet Explorer 命令工具列顯示 HTTPWatch 圖示。](media/198590b0-d7b1-4bff-a6ad-e4ec3a1e83df.png)
   
 2. 啟動 HTTPWatch Internet Explorer 瀏覽器視窗中。它會顯示固定至該視窗底部瀏覽器。按一下 [**記錄**]。
     
 3. 重現參與效能問題的的確切步驟。按一下 [HTTPWatch 中的 [**停止**] 按鈕。 
     
-4. **儲存**HTTPWatch 或**電子郵件來傳送**。請記得的檔案名稱，使其包含日期及時間的資訊和指示您的監看是否包含的示範良好或不正確的效能。</br></br>![HTTPWatch，顯示 Office 365 首頁的頁面載入之 [網路] 索引標籤。](media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)</br></br>
+4. **儲存**HTTPWatch 或**電子郵件來傳送**。請記得的檔案名稱，使其包含日期及時間的資訊和指示您的監看是否包含的示範良好或不正確的效能。</br>![HTTPWatch，顯示 Office 365 首頁的頁面載入之 [網路] 索引標籤。](media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)</br>
     這個螢幕擷取畫面會從 HTTPWatch 專業版。您可以開啟採取基本版本的電腦上以專業版中的追蹤項目和那里讀取。額外的資訊可能可從透過該方法將追蹤檔。
     
 ## <a name="problem-steps-recorder"></a>問題步驟錄製

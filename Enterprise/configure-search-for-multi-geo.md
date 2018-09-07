@@ -11,12 +11,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: d7e9109eaa7afcf36ea047d00c0bba8f16dd0fde
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: c1cf057383015c35e0dd75c8100f66ce35871878
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "18908327"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915058"
 ---
 # <a name="configure-search-for-onedrive-for-business-multi-geo"></a>設定商務用 OneDrive 多地理位置的搜尋
 
@@ -82,7 +82,7 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 </tr>
 <tr class="even">
 <td align="left">搜尋精簡器</td>
-<td align="left">搜尋會傳回來自某租用戶所有地理位置的精簡器，然後會對它們進行彙總。彙總是最大努力的結果，這表示精簡器計數可能不是 100% 正確的。在大部分以搜尋為導向的情況下，此精確度就已足夠。</td>
+<td align="left">搜尋會傳回來自某租用戶所有地理位置的精簡器，然後會對它們進行彙總。彙總是最大努力的結果，這表示精簡器計數可能不是 100% 正確的。在大部分以搜尋為導向的情況下，此精確度就已足夠。 </td>
 <td align="left">針對依賴精簡器完整性且以搜尋為導向的應用程式，查詢每個地理位置都是獨立的，而不需使用多地理位置展開傳送。</td>
 </tr>
 <tr class="odd">
@@ -129,7 +129,8 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 ## <a name="how-does-search-work-in-a-multi-geo-environment"></a>搜尋在多地理位置環境中的運作方式？
 
 **所有**搜尋用戶端都會使用現有 SharePoint 搜尋 REST API 與搜尋索引互動。
-<img src="media/configure-search-for-multi-geo_image1-1.png" />
+
+<img src="media/configure-search-for-multi-geo-image1-1.png" />
 
 1. 搜尋用戶端會使用查詢屬性 EnableMultiGeoSearch = true 來呼叫搜尋 REST 端點。
 2. 系統會將查詢傳送至租用戶中的所有地理位置中。
@@ -151,8 +152,8 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 
 3.  選取要設定的類別，請按一下右上角的 [設定]**** 圖示，然後按一下 [編輯頁面] ****。在編輯模式中搜尋結果網頁會開啟。
 
-     ![](media/configure-search-for-multi-geo_image2.png)
-1.  在搜尋結果網頁組件中，請將指標移至右上角的 [網頁組件]，按一下箭號，然後按一下功能表上的 [編輯網頁組件]**** 。搜尋結果網頁組件工具窗格隨即在頁面左上方的功能區中開啟。![](media/configure-search-for-multi-geo_image3.png)
+     ![](media/configure-search-for-multi-geo-image2.png)
+1.  在搜尋結果網頁組件中，請將指標移至右上角的 [網頁組件]，按一下箭號，然後按一下功能表上的 [編輯網頁組件]**** 。搜尋結果網頁組件工具窗格隨即在頁面左上方的功能區中開啟。![](media/configure-search-for-multi-geo-image3.png)
 
 1.  在網頁組件工具窗格 [設定]**** 區段中，在 [結果控制設定]****，請選取 [顯示多地理位置結果]**** 以取得搜尋結果網頁組件，以顯示來自所有地理位置的結果。
 
@@ -228,6 +229,7 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 
 使用 GET 要求時，您可以在 URL 中指定查詢參數。使用 POST 要求時，您能以 JavaScript 物件標記法 (JSON) 格式在內文中傳遞查詢參數。
 
+
 #### <a name="request-headers"></a>要求標頭
 
 <table>
@@ -251,7 +253,10 @@ https://\<tenant\>/\_api/search/query?querytext='sharepoint'&Properties='EnableM
 
 #### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>要展開傳送至**部分**地理位置的範例 GET 要求
 
-https:// <tenant>/_api/search/query?querytext='site'&ClientType='my_client_id'&Properties='EnableMultiGeoSearch:true, MultiGeoSearchConfiguration:[{DataLocation\:"NAM"\,Endpoint\:"https\://contosoNAM.sharepoint.com"\,SourceId\:"B81EAB55-3140-4312-B0F4-9459D1B4FFEE"}\,{DataLocation\:"CAN"\,Endpoint\:"https\://contosoCAN.sharepoint-df.com"}]'
+https:// \<tenant\>/\_api/search/query?querytext='site'&ClientType='my_client_id'&Properties='EnableMultiGeoSearch:true, MultiGeoSearchConfiguration:[{DataLocation\\:"NAM"\\,Endpoint\\:"https\\://contosoNAM.sharepoint.com"\\,SourceId\\:"B81EAB55-3140-4312-B0F4-9459D1B4FFEE"}\\,{DataLocation\\:"CAN"\\,Endpoint\\:"https\\://contosoCAN.sharepoint-df.com"}]'
+
+> [!NOTE]
+> MultiGeoSearchConfiguration 屬性的地理位置清單中的逗號和冒號前面會加上**反斜線**字元。這是因為 GET 要求使用冒號來分隔屬性，並使用逗號來分隔屬性的引數。若未使用反斜線做為逸出字元，就會發生 MultiGeoSearchConfiguration 屬性解讀錯誤的問題。
 
 #### <a name="sample-post-request-thats-fanned-out-to-all-geo-locations"></a>已展開傳送至**所有**地理位置的範例 POST 要求
 

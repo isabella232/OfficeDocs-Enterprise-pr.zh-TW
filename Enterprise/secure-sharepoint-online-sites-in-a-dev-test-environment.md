@@ -11,15 +11,17 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.custom: ''
 ms.assetid: 06af70f3-e7dc-4ee2-a385-fb4d61a5e93b
 description: 摘要：在開發/測試環境中建立公用、私用、敏感性及高度機密的 SharePoint Online 小組網站。
-ms.openlocfilehash: fecb725999c7958dca1278c1236fcf251adc33cd
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 49153a5c4256e7aa0e5ba5f6d2ac53c4e56b5bdc
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "19193723"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915768"
 ---
 # <a name="secure-sharepoint-online-sites-in-a-devtest-environment"></a>在開發/測試環境中保護 SharePoint Online 網站
 
@@ -27,7 +29,7 @@ ms.locfileid: "19193723"
   
 本文提供建立開發/測試環境的逐步指示，以在環境中包含[保護 SharePoint Online 網站與檔案解決方案](secure-sharepoint-online-sites-and-files.md)所提之四種不同類型的 SharePoint Online 小組網站。
   
-![安全的 SharePoint Online 開發/測試環境中的所有四個小組網站。](images/b0fea489-359c-4c85-a0ad-e4efb4a1e47f.png)
+![安全的 SharePoint Online 開發/測試環境中的所有四個小組網站。](media/b0fea489-359c-4c85-a0ad-e4efb4a1e47f.png)
   
 您可以先使用此開發/測試環境，來試驗資訊保護行為，並針對特定需求微調設定，然後再將 SharePoint Online 小組網站部署在生產環境中。
   
@@ -270,7 +272,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
 以下是產生的組態。
   
-![用於整個組織之公用 SharePoint Online 小組網站的基準層級保護。](images/25c86847-a38d-49ad-bb5f-c7c04206b6dc.png)
+![用於整個組織之公用 SharePoint Online 小組網站的基準層級保護。](media/25c86847-a38d-49ad-bb5f-c7c04206b6dc.png)
   
 ### <a name="project-1-team-site"></a>專案 1 小組網站
 
@@ -304,7 +306,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
 以下是產生的組態。
   
-![用於 Project1 私人 SharePoint Online 小組網站的基準層級保護。](images/ecd96376-b5dc-4042-9cbd-b3765507ace7.png)
+![用於 Project1 私人 SharePoint Online 小組網站的基準層級保護。](media/ecd96376-b5dc-4042-9cbd-b3765507ace7.png)
   
 ### <a name="marketing-campaigns-team-site"></a>行銷活動小組網站
 
@@ -420,7 +422,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
     
 以下是產生的組態。
   
-![用於行銷活動隔離之 SharePoint Online 小組網站的敏感性層級保護。](images/33992bd5-96ee-4bfb-9ecf-c8a6736dd100.png)
+![用於行銷活動隔離之 SharePoint Online 小組網站的敏感性層級保護。](media/33992bd5-96ee-4bfb-9ecf-c8a6736dd100.png)
   
 ### <a name="company-strategy-team-site"></a>公司策略小組網站
 
@@ -568,7 +570,7 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
 
 16. 在 [Azure 資訊保護]**** 刀鋒視窗中，按一下 [原則] > [+ 新增原則]****。
     
-17. 在 [原則名稱]**** 中輸入 **公司策略**，並在 [描述]**** 中輸入**公司策略小組網站中的文件標籤**。
+17. 在 [原則名稱]**** 中輸入 **公司策略**，並在 [描述]**** 中輸入**公司策略小組網站中的文件**。
     
 18. 按一下 [選取取得此原則的使用者或群組] > [使用者/群組]****，然後選取 [高階主管]****。
     
@@ -582,13 +584,13 @@ Add-AzureADGroupMember -RefObjectId (Get-AzureADUser | Where { $_.DisplayName -e
   
 以下是產生的組態。
   
-![用於公司策略隔離之 SharePoint Online 小組網站的高度機密層級保護。](images/c22695f9-50a1-4abf-a0dd-344b0c92cf94.png)
+![用於公司策略隔離之 SharePoint Online 小組網站的高度機密層級保護。](media/c22695f9-50a1-4abf-a0dd-344b0c92cf94.png)
   
 您現在準備好建立這四個網站中的文件，以及使用您試用訂用帳戶中的不同使用者帳戶來測試與其的存取。
   
 以下是所有四種 SharePoint Online 小組網站的整體設定。
   
-![安全的 SharePoint Online 開發/測試環境中的所有四個小組網站。](images/b0fea489-359c-4c85-a0ad-e4efb4a1e47f.png)
+![安全的 SharePoint Online 開發/測試環境中的所有四個小組網站。](media/b0fea489-359c-4c85-a0ad-e4efb4a1e47f.png)
   
 ## <a name="next-step"></a>下一步
 

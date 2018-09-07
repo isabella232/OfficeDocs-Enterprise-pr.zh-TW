@@ -8,6 +8,8 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,11 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: 摘要：在 Azure 中的虛擬機器上部署 Azure AD Connect，以同步處理內部部署目錄和您 Office 365 訂閱下 Azure AD 租用戶之間的帳戶。
-ms.openlocfilehash: c37fd1e31684590b0b564b3fed402b5c33c062a3
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 01dede756142c08722e3cf21d91a0028eb815051
+ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "22915638"
 ---
 # <a name="deploy-office-365-directory-synchronization-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Office 365 目錄同步作業
 
@@ -43,11 +46,10 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
 > Office 365 使用 Azure Active Directory (Azure AD) 作為其目錄的服務。此 Office 365 訂閱包含 Azure AD 租用戶。此租用戶也可用於管理組織中具有其他雲端工作負載的身分，包括其他 SaaS 應用程式和 Azure 中的應用程式。 
   
 ## <a name="overview-of-deploying-office-365-directory-synchronization-in-azure"></a>在 Azure 中部署 Office 365 目錄同步作業的概觀
-<a name="Overview"> </a>
 
 下圖顯示 Azure 的虛擬機器 (DirSync 伺服器) 上執行 Azure AD Connect 將 Windows Server AD 樹系同步處理和內部部署至 Office 365 訂閱。
   
-![Azure 同步處理內部部署帳戶中虛擬機器上的 Azure AD Connect 工具，至具有流量之 Office 365 訂閱的 Azure AD 租用戶](images/CP_DirSyncOverview.png)
+![Azure 同步處理內部部署帳戶中虛擬機器上的 Azure AD Connect 工具，至具有流量之 Office 365 訂閱的 Azure AD 租用戶](media/CP-DirSyncOverview.png)
   
 在此圖表中，有兩個使用站對站 VPN 或 ExpressRoute 連線連接的網路。有一個其中存在 Windows Server AD 網域控制器的內部部署網路，和一個 Azure 虛擬網路，其中包含目錄同步處理伺服器 (執行 [Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) 的虛擬機器)。從目錄同步處理伺服器會產生二個主要流量：
   
@@ -87,11 +89,11 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
 
 開始之前，請先檢閱本解決方案的下列必要條件：
   
-- 檢閱＜[規劃您的 Azure 虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#PlanningVirtual)＞中的相關規劃內容。
+- 檢閱＜[規劃您的 Azure 虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#plan-your-azure-virtual-network)＞中的相關規劃內容。
     
-- 確保您符合設定 Azure 虛擬網路的所有[必要條件](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#Prerequisites)。
+- 確保您符合設定 Azure 虛擬網路的所有[必要條件](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#prerequisites)。
     
-- 具備包括 Active Directory 整合功能的 Office 365 訂閱。如需 Office 365 訂閱的相關資訊，請前往 [Office 365 訂閱頁面](https://go.microsoft.com/fwlink/p/?LinkId=394278)。
+- 具備包括 Active Directory 整合功能的 Office 365 訂閱。如需 Office 365 訂閱的相關資訊，請前往 [Office 365 訂閱頁面](https://products.office.com/compare-all-microsoft-office-products?tab=2)。
     
 - 佈建一個執行 Azure AD Connect 的 Azure 虛擬機器，將您的內部部署 Windows Server AD 樹系與 Office 365 同步。
     
@@ -103,7 +105,7 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
   
 - 本解決方案使用具備站對站 VPN 連線的單一 Azure 虛擬網路。Azure 虛擬網路會裝載單一子網路，內含一部執行 Azure AD Connect 的目錄同步處理伺服器。 
     
-- 在內部部署網路上會有網域控制站 和 DNS 伺服器。
+- 在內部部署網路上會有網域控制站和 DNS 伺服器。
     
 - Azure AD Connect 會執行密碼雜湊同步處理，而非單一登入。您不需要部署 Active Directory 同盟服務 (AD FS) 基礎結構。若要深入了解密碼雜湊同步處理與單一登入選項，請參閱＜[為您的 Azure Active Directory 混合式識別解決方案選擇正確的驗證方法](http://aka.ms/auth-options)＞。
     
@@ -114,7 +116,6 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
 - 如果現有的 Azure 虛擬網路中有網域控制站，請判斷設定 Active Directory 網站及服務是否是較好的選擇。目錄同步處理伺服器可以將 Azure 虛擬網路的網域控制器排入佇列，來處理帳戶和密碼的變更，而非內部部署網路上的網域控制器。
     
 ## <a name="deployment-roadmap"></a>部署藍圖
-<a name="DeploymentRoadmap"> </a>
 
 在 Azure 中的虛擬機器上部署 Azure AD Connect 由三個階段所組成：
   
@@ -131,11 +132,11 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
   
 ### <a name="phase-1-create-and-configure-the-azure-virtual-network"></a>階段 1：建立及設定 Azure 虛擬網路
 
-若要建立及設定 Azure 虛擬網路，請完成＜[使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)＞中的＜[階段 1：準備內部部署網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#Phase1)＞和＜[階段 2：在 Azure 中建立跨單位的虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#Phase2)＞。
+若要建立及設定 Azure 虛擬網路，請完成＜[使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)＞中的＜[階段 1：準備內部部署網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#phase-1-prepare-your-on-premises-network)＞和＜[階段 2：在 Azure 中建立跨單位的虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#phase-2-create-the-cross-premises-virtual-network-in-azure)＞。
   
 這是您產生的組態。
   
-![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 1](images/aab6a9a4-eb78-4d85-9b96-711e6de420d7.png)
+![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 1](media/aab6a9a4-eb78-4d85-9b96-711e6de420d7.png)
   
 本圖顯示使用站對站 VPN 或 ExpressRoute 連線方式，連線到 Azure 虛擬網路的內部部署網路。
   
@@ -157,7 +158,7 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
   
 這是您產生的組態。
   
-![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 2](images/9d8c9349-a207-4828-9b2b-826fe9c06af3.png)
+![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 2](media/9d8c9349-a207-4828-9b2b-826fe9c06af3.png)
   
 本圖顯示在跨部署 Azure 虛擬網路中的目錄同步處理伺服器虛擬機器。
   
@@ -167,14 +168,14 @@ Azure Active Directory (AD) Connect (先前稱為目錄同步作業工具、目�
   
 1. 透過具有本機系統管理員權限的 Windows Server AD 網域帳戶使用遠端桌面連線，連線到目錄同步處理伺服器。請參閱＜[連線到虛擬機器並且登入](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hero-tutorial?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json#connect-to-the-virtual-machine-and-sign-on)＞。
     
-2. 從目錄同步處理伺服器，開啟＜[在 Office 365 中設定目錄同步處理](https://support.office.com/article/Set-up-directory-synchronization-in-Office-365-1b3b5318-6977-42ed-b5c7-96fa74b08846)＞一文，然後遵循目錄同步處理與密碼雜湊同步處理的指示。
+2. 從目錄同步處理伺服器，開啟＜[在 Office 365 中設定目錄同步處理](set-up-directory-synchronization.md)＞一文，然後遵循目錄同步處理與密碼雜湊同步處理的指示。
     
 > [!CAUTION]
 > 安裝程式會在本機使用者組織單位 (OU) 中建立 **AAD_xxxxxxxxxxxx** 帳戶。請勿移動或移除此帳戶，否則同步處理將會失敗。
   
 這是您產生的組態。
   
-![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 3](images/3f692b62-b77c-4877-abee-83c7edffa922.png)
+![裝載於 Azure 中 Office 365 目錄同步處理伺服器的階段 3](media/3f692b62-b77c-4877-abee-83c7edffa922.png)
   
 本圖顯示在跨部署 Azure 虛擬網路中的 Azure AD Connect 目錄同步處理伺服器。
   
@@ -190,7 +191,7 @@ Azure AD Connect 會從內部部署 Windows Server AD 新增帳戶至您的 Offi
     
 4. 在使用者的頁面上，按一下 [產品授權]**** 的 [編輯]****。
     
-5. 在 [產品授權]**** 頁面上，為 位置的使用者選取一個**位置**，然後啟用適用的適當授權。
+5. 在 [產品授權]**** 頁面上，為**位置**的使用者選取一個位置，然後啟用適用的適當授權。
     
 6. 完成時，按一下 [儲存]****，然後按兩下 [關閉]****。
     
@@ -198,15 +199,13 @@ Azure AD Connect 會從內部部署 Windows Server AD 新增帳戶至您的 Offi
     
 ## <a name="see-also"></a>另請參閱
 
-<a name="DeploymentRoadmap"> </a>
-
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
   
 [使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 
 [下載 Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594)
   
-[在 Office 365 中設定目錄同步處理](https://support.office.com/article/Set-up-directory-synchronization-in-Office-365-1b3b5318-6977-42ed-b5c7-96fa74b08846)
+[設定 Office 365 的目錄同步處理](set-up-directory-synchronization.md)
   
 [Azure 部署套件中的目錄同步處理伺服器](https://gallery.technet.microsoft.com/DirSync-Server-in-Azure-32cb2ded)
 
