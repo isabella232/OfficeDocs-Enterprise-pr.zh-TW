@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: 為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。
-ms.openlocfilehash: 3abd6a0692ae4d66c76f8c0d65653b83646c6e23
-ms.sourcegitcommit: d07feeba2e886febc6a57a5c33b0df02b3db5631
+ms.openlocfilehash: 21222f4c1c2010517bdfe1a425b47c8f4fde8b0e
+ms.sourcegitcommit: ca4d3ec34300d7d39f1a42dc6f29a34915de5c87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "23830884"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "23831898"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>**Office 365 IP 位址和 URL Web 服務**
 
@@ -66,13 +66,15 @@ Microsoft 會在每個月底更新 Office 365 IP 位址和 FQDN 項目，有時�
 
 - **AllVersions=true** - 查詢字串參數。根據預設，傳回的版本是最新版本。包含此選擇性參數，以要求所有已發佈的版本。
 - **Format=JSON** | **CSV** | **RSS** – 除了 JSON 和 CSV 格式之外，版本 Web 方法也支援 RSS。您可以搭配 allVersions=true 參數使用這個格式來要求 RSS 摘要，此摘要可以與 Outlook 或其他 RSS 讀取器搭配使用。
-- **Instance** - 路由參數。這個選擇性參數會指定要傳回其版本的執行個體。如果省略，則會傳回所有執行個體。有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh
+- **Instance** - 路由參數。這個選擇性參數會指定要傳回其版本的執行個體。如果省略，則會傳回所有執行個體。有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
 
 版本 Web 方法的結果可能是單一記錄或記錄陣列。每個記錄的元素是：
 
 - instance - Office 365 服務執行個體的簡短名稱。
 - latest - 指定執行個體端點的最新版本。
 - versions - 指定執行個體所有舊版的清單。這個元素只有在 AllVersions 參數為 true 時才會納入。
+
+您可以使用 Microsoft Flow 取得 IP 位址和 URL 變更的電子郵件通知。請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651) (英文)。
 
 ### <a name="examples"></a>**範例：**
 
@@ -487,24 +489,10 @@ else:
 
 [對 Office 365 的網路連線](network-connectivity.md)
   
-[Azure ExpressRoute for Office 365](azure-expressroute.md)
-  
-[管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
-  
-[使用 ExpressRoute for Office 365 進行路由傳送](routing-with-expressroute.md)
-  
-[實作 ExpressRoute for Office 365](implementing-expressroute.md)
-  
-[在 ExpressRoute for Office 365 案例中使用 BGP 社群 (預覽)](bgp-communities-in-expressroute.md)
-  
 [商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   
 [針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
-  
-[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d) (英文)
-  
-[使用 ExpressRoute 的通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab) (英文)
-  
+
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
