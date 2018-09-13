@@ -92,7 +92,7 @@
 ### [如何為目錄同步處理準備無法路由傳送的網域](prepare-a-non-routable-domain-for-directory-synchronization.md)
 ### [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
 ### [使用 ExpressRoute for Office 365 進行路由傳送](routing-with-expressroute.md)
-### [Office 365 網路連線原則](network-connectivity.md)
+### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 ### Office 365 端點
 #### [全球端點](urls-and-ip-address-ranges.md)
 #### [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md)
