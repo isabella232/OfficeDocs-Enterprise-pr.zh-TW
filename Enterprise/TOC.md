@@ -1,4 +1,4 @@
-# 雲端架構模型
+# [雲端架構模型](microsoft-cloud-it-architecture-resources.md)
 ## [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
 ### [發展您的雲端連線的網路](evolving-your-network-for-cloud-connectivity.md)
 ### [Microsoft 雲端連線的常見的元素](common-elements-of-microsoft-cloud-connectivity.md)
