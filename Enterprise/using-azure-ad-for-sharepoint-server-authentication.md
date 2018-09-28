@@ -16,12 +16,12 @@ ms.collection:
 ms.custom: Ent_Solutions
 ms.assetid: ''
 description: 摘要： 了解如何將略過 Azure Access Control Service 並用 SAML 1.1 來驗證您的 SharePoint Server 使用者利用 Azure Active Directory。
-ms.openlocfilehash: 465f333638401402c743dc66d3ebecc33be00749
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 5c95501d73c59a4af89147d3eec6c5d4e206d067
+ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915448"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "23975221"
 ---
 # <a name="using-azure-ad-for-sharepoint-server-authentication"></a>針對 SharePoint Server 驗證使用 Azure AD
 
@@ -75,34 +75,34 @@ SharePoint Server 2016 提供以驗證使用者使用宣告式驗證，使其成
 
 使用 SAML 需要使用 SSL 設定應用程式。如果您的 SharePoint web 應用程式未設定成使用 SSL，請使用下列步驟來建立新的自我簽署的憑證來設定 SSL 的 web 應用程式。此設定僅供用於在實驗室環境和不能用於實際執行。實際執行環境應使用的簽署的憑證。
 
-1. 移至 [**管理中心** > **應用程式管理** > **管理 Web 應用程式**，然後選擇 [需要可延伸以使用 SSL 的 web 應用程式。選取 web 應用程式並按一下 [**延伸功能區**] 按鈕。擴充 web 應用程式使用相同的 URL，但使用 SSL 搭配連接埠 443。</br>![擴充至其他 IIS 網站的 web 應用程式](media/SAML11/fig3-extendwebapptoiis.png)</br>
+1. 移至 [**管理中心** > **應用程式管理** > **管理 Web 應用程式**，然後選擇 [需要可延伸以使用 SSL 的 web 應用程式。選取 web 應用程式並按一下 [**延伸功能區**] 按鈕。擴充 web 應用程式使用相同的 URL，但使用 SSL 搭配連接埠 443。<br/>![擴充至其他 IIS 網站的 web 應用程式](media/SAML11/fig3-extendwebapptoiis.png)<br/>
 2. 在 IIS 管理員中，按兩下 [**伺服器憑證**]。
 3. 在 [**動作**] 窗格中，按一下 [**建立自我簽署憑證**。在指定的易記名稱] 的 [憑證] 方塊中輸入憑證的易記名稱及 [**確定]**。
-4. 從 [**編輯網站繫結**] 對話方塊中，確定主機名稱的好記的名稱相同下圖所示。</br>![在 IIS 中編輯網站繫結](media/SAML11/fig4-editsitebinding.png)</br>
+4. 從 [**編輯網站繫結**] 對話方塊中，確定主機名稱的好記的名稱相同下圖所示。<br/>![在 IIS 中編輯網站繫結](media/SAML11/fig4-editsitebinding.png)<br/>
 
 每個 SharePoint 伺服器陣列中的 web 前端伺服器需要在 IIS 中設定網站繫結的憑證。
 
 
 ## <a name="step-3-create-a-new-enterprise-application-in-azure-ad"></a>步驟 3： 在 Azure AD 中建立新的企業應用程式
 
-1. 在 Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com))，開啟您 Azure AD 的目錄。按一下 [**企業應用程式**，然後按一下 [**新的應用程式**。選擇 [**非圖庫應用程式**。提供的名稱，例如*SharePoint SAML 整合*並按一下 [**新增**]。</br>![新增新的非圖庫應用程式](media/SAML11/fig5-addnongalleryapp.png)</br>
-2. 按一下 [單一登入連結功能窗格設定應用程式中。將 [**單一登入模式**] 下拉式清單變更為**saml 登入**以顯示應用程式的 SAML 設定屬性。設定具有下列內容：</br>
+1. 在 Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com))，開啟您 Azure AD 的目錄。按一下 [**企業應用程式**，然後按一下 [**新的應用程式**。選擇 [**非圖庫應用程式**。提供的名稱，例如*SharePoint SAML 整合*並按一下 [**新增**]。<br/>![新增新的非圖庫應用程式](media/SAML11/fig5-addnongalleryapp.png)<br/>
+2. 按一下 [單一登入連結功能窗格設定應用程式中。將 [**單一登入模式**] 下拉式清單變更為**saml 登入**以顯示應用程式的 SAML 設定屬性。設定具有下列內容：<br/>
     - 識別碼：`urn:sharepoint:portal.contoso.local`
     - 回覆 URL：`https://portal.contoso.local/_trust/default.aspx`
     - 登入 URL：`https://portal.contoso.local/_trust/default.aspx`
-    - 使用者識別碼：`user.userprincipalname`</br>
-    - 請注意： 請記得變更 Url 以想要保護的 SharePoint 網站的 URL 取代*portal.contoso.local*的方式。</br>
-3. 設定包含下列資料列的表格 （類似以下的表格 1）：</br> 
+    - 使用者識別碼：`user.userprincipalname`<br/>
+    - 請注意： 請記得變更 Url 以想要保護的 SharePoint 網站的 URL 取代*portal.contoso.local*的方式。<br/>
+3. 設定包含下列資料列的表格 （類似以下的表格 1）：<br/> 
     - Realm
     - SAML 簽署憑證檔案的完整路徑
     - SAML 單一登入服務的 URL （將 */saml2*取代 */wsfed*）
-    - 應用程式物件識別碼。 </br>
+    - 應用程式物件識別碼。 <br/>
 將 [ *Identifier* ] 值複製到插入資料表 (請參閱表 1 下方) 的*領域*屬性。
 4. 儲存變更。
-5. 按一下以存取設定登入] 頁面上的**設定 （應用程式名稱）** 連結。</br>![設定單一登入頁面](media/SAML11/fig7-configssopage.png)</br> 
+5. 按一下以存取設定登入] 頁面上的**設定 （應用程式名稱）** 連結。<br/>![設定單一登入頁面](media/SAML11/fig7-configssopage.png)<br/> 
     -  按一下 [下載為副檔名為.cer 檔的 SAML 簽署憑證的**SAML 簽署憑證-原始**連結。複製並貼到表格的下載檔案的完整路徑。
-    - 複製並貼上的 SAML 單一登入服務 URL 連結到您、 取代 */wsfed* */saml2*部分 URL。</br>
-6.  瀏覽至 [應用程式的 [**內容**] 窗格。複製並貼到您在步驟 3 設定表格的物件 ID 值。</br>![應用程式的 [內容] 窗格](media/SAML11/fig8-propertiespane.png)</br>
+    - 複製並貼上的 SAML 單一登入服務 URL 連結到您、 取代 */wsfed* */saml2*部分 URL。<br/>
+6.  瀏覽至 [應用程式的 [**內容**] 窗格。複製並貼到您在步驟 3 設定表格的物件 ID 值。<br/>![應用程式的 [內容] 窗格](media/SAML11/fig8-propertiespane.png)<br/>
 7. 使用您所擷取的值，請確定您在步驟 3 設定表格的格式類似於下表 1。
 
 
@@ -161,12 +161,12 @@ $ap = New-SPTrustedIdentityTokenIssuer -Name "AzureAD" -Description "SharePoint 
 1. 在管理中心中，按一下 [應用程式管理]****。
 2. 按一下 [**應用程式管理**] 頁面上的 [ **Web 應用程式**] 區段中的 [**管理 web 應用程式**]。
 3. 按一下適當的 Web 應用程式，然後按一下 [使用者原則]****。
-4. 在 [Web 應用程式的原則，按一下 [**新增使用者**]。</br>![搜尋使用者及其名稱宣告](media/SAML11/fig11-searchbynameclaim.png)</br>
+4. 在 [Web 應用程式的原則，按一下 [**新增使用者**]。<br/>![搜尋使用者及其名稱宣告](media/SAML11/fig11-searchbynameclaim.png)<br/>
 5. 在 [新增使用者]**** 對話方塊中，按一下 [區域]**** 中的適當區域，然後按 [下一步]****。
 6. 在 [ **Web 應用程式的原則**] 對話方塊的 [**選擇使用者**] 區段中按一下 [**瀏覽**] 圖示。
-7. 在 [**尋找**] 文字方塊中，在您的目錄中輸入使用者的登入名稱並按一下 [**搜尋**]。 </br>範例： *demouser@blueskyabove.onmicrosoft.com*。
+7. 在 [**尋找**] 文字方塊中，在您的目錄中輸入使用者的登入名稱並按一下 [**搜尋**]。 <br/>範例： *demouser@blueskyabove.onmicrosoft.com*。
 8. 在清單檢視中 AzureAD 標題、 下的 [選取的 name 屬性並按一下 [**新增**] 然後按一下 **[確定]** 以關閉 [] 對話方塊。
-9. 在權限，按一下 [**完全控制**]。</br>![宣告使用者授與完全控制](media/SAML11/fig12-grantfullcontrol.png)</br>
+9. 在權限，按一下 [**完全控制**]。<br/>![宣告使用者授與完全控制](media/SAML11/fig12-grantfullcontrol.png)<br/>
 10. 按一下 [完成]****，然後按一下 [確定]****。
 
 ## <a name="step-6-add-a-saml-11-token-issuance-policy-in-azure-ad"></a>步驟 6： 在 Azure AD 中新增的 SAML 1.1 token 發行原則

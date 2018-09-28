@@ -3,7 +3,6 @@ title: 使用 Office 365 PowerShell 建立 SharePoint Online 網站並新增使�
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/01/2018
 ms.audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -14,15 +13,16 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 建立新的 SharePoint Online 網站，並再新增至這些網站的 [使用者和群組。
-ms.openlocfilehash: 0a0438917f6e7010b56703ce0bf73e89e1db0533
-ms.sourcegitcommit: 74cdb2534bce376abc9cf4fef85ff039c46ee790
+ms.openlocfilehash: 41ca26249bd494d5603a425689e47f9fe6809f1a
+ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "23975201"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 建立 SharePoint Online 網站並新增使用者
 
- **摘要：**使用 Office 365 PowerShell 建立新的 SharePoint Online 網站，並再新增至這些網站的 [使用者和群組。
+ **摘要：** 使用 Office 365 PowerShell 建立新的 SharePoint Online 網站，並再新增至這些網站的 [使用者和群組。
 
 當您使用 Office 365 PowerShell 來建立 SharePoint Online 網站和新增使用者時，您可以快速且重複地執行工作速度快多了比您可以在 Office 356 系統管理中心。您也可以執行不可以在 Office 356 系統管理中心中執行的工作。 
 
@@ -36,88 +36,125 @@ ms.lasthandoff: 05/03/2018
 
 Office 365 PowerShell 指令程式會匯入之.csv 檔案並將其傳送至迴圈內的大括弧括會讀取檔案的第一行做為資料行標題。Office 365 PowerShell 指令程式然後逐一查看剩餘的記錄、 建立新的網站集合的每筆記錄，並指派根據資料行標頭之網站集合的屬性。
 
-###<a name="create-a-csv-file"></a>建立 .csv 檔案
+### <a name="create-a-csv-file"></a>建立 .csv 檔案
 
-1. 開啟 [記事本]，並貼入下列的文字區塊：</br>
+1. 開啟 [記事本]，並貼入下列的文字區塊：<br/>
+
 ```
 Owner,StorageQuota,Url,ResourceQuota,Template,TimeZoneID,Name
 owner@tenant.onmicrosoft.com,100,https://tenant.sharepoint.com/sites/TeamSite01,25,EHS#1,10,Contoso Team Site
 owner@tenant.onmicrosoft.com,100,https://tenant.sharepoint.com/sites/Blog01,25,BLOG#0,10,Contoso Blog
 owner@tenant.onmicrosoft.com,150,https://tenant.sharepoint.com/sites/Project01,25,PROJECTSITE#0,10,Project Alpha
 owner@tenant.onmicrosoft.com,150,https://tenant.sharepoint.com/sites/Community01,25,COMMUNITY#0,10,Community Site
-```</br>Where *tenant* is the name of your tenant, and *owner* is the user name of the user on your tenant to whom you want to grant the role of primary site collection administrator.</br>(You can press Ctrl+H when you use Notepad to bulk replace faster.)</br>
-2. Save the file on your desktop as **SiteCollections.csv**.
-
- > [!TIP]
-> Before you use this or any other .csv or Windows PowerShell script file, it is good practice to make sure that there are no extraneous or nonprinting characters. Open the file in Word, and in the ribbon, click the paragraph icon to show nonprinting characters. There should be no extraneous nonprinting characters. For example, there should be no paragraph marks beyond the final one at the end of the file.
-
-### Run the Windows PowerShell command
-
-1. At the Windows PowerShell prompt, type or copy and paste the following cmdlet, and press Enter:</br>
 ```
-匯入 Csv C:\users\MyAlias\desktop\SiteCollections.csv |Foreach-object {新 SPOSite-擁有者 $_。擁有者-StorageQuota $_。StorageQuota-Url $_。Url [不等待-ResourceQuota $_。ResourceQuota-範本 $_。範本-TimeZoneID $_。TimeZoneID-Title $_。名稱}
-```
-</br>Where *MyAlias* equals your user alias.</br>
-2. Wait for the Windows PowerShell prompt to reappear. It might take a minute or two.</br>
-3. At the Windows PowerShell prompt, type or copy and paste the following cmdlet, and press Enter:</br>
-```
-Get-sposite-詳細 |Format-table-AutoSize
-```</br>
-4. Note the new site collections in the list. You should see the following site collections: **contosotest**, **TeamSite01**, **Blog01**, and **Project01**.
+<br/>其中*租用戶*是您的租用戶名稱及*擁有者*是在您的租用戶其使用者的使用者名稱您想要授與主要網站集合管理員角色。<br/>（您可以可以按 Ctrl + H 當您使用 [記事本] 速度大量取代）。<br/>
 
-That’s it. You’ve created multiple site collections using the .csv file you created and a single Windows PowerShell cmdlet. You’re now ready to create and assign users to these sites.
+2. 將桌面上的檔案儲存為**SiteCollections.csv**。<br/>
 
-## Step 2: Add users and groups
+> [!TIP]
+> 使用 this 或任何其他.csv 或 Windows PowerShell 指令碼檔案之前，它會是很好的作法以確保沒有任何無關或非列印字元。在 Word 中，並在功能區中開啟檔案，按一下 [段落] 圖示以顯示非列印字元。應該會有任何無關的非列印字元。例如，應超過檔案結尾處的最後一個沒有段落標記。
 
-Now you’re going to create users and add them to a site collection group. You will then use a .csv file to bulk upload new groups and users.
+### <a name="run-the-windows-powershell-command"></a>執行 Windows PowerShell 命令
 
-The following procedures assume that you successfully created the site collections contosotest, TeamSite01, Blog01, and Project01.
-
-### Create .csv and .ps1 files
-
-1. Open Notepad, and paste the following text block into it:</br>
+1. 在 Windows PowerShell 提示中輸入或複製並貼上下列指令程式，並按 Enter：<br/>
 ```
-網站、 群組、 PermissionLevels https://tenant.sharepoint.com/sites/contosotest，Contoso 專案負責人、 完全控制https://tenant.sharepoint.com/sites/contosotest，Contoso Auditors 僅供檢視https://tenant.sharepoint.com/sites/contosotest，Contoso 設計者設計https://tenant.sharepoint.com/sites/TeamSite01、 XT1000 小組負責人、 完全控制https://tenant.sharepoint.com/sites/TeamSite01、 XT1000 顧問編輯https://tenant.sharepoint.com/sites/Blog01，Contoso 部落格設計者設計https://tenant.sharepoint.com/sites/Blog01，Contoso 部落格編輯器編輯https://tenant.sharepoint.com/sites/Project01、 Project Alpha 核准者、 完全控制
+Import-Csv C:\users\MyAlias\desktop\SiteCollections.csv | ForEach-Object {New-SPOSite -Owner $_.Owner -StorageQuota $_.StorageQuota -Url $_.Url -NoWait -ResourceQuota $_.ResourceQuota -Template $_.Template -TimeZoneID $_.TimeZoneID -Title $_.Name}
 ```
-</br>Where *tenant* equals your tenant name.</br>
-2. Save the file to your desktop as **GroupsAndPermissions.csv**.</br>
-3. Open a new instance of Notepad, and paste the following text block into it:</br>
-```
-群組中，LoginName、 網站 Contoso 專案負責人、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/contosotest Contoso 稽核者、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/contosotest Contoso 設計者、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/contosotest XT1000 小組負責人、username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/TeamSite01 XT1000 顧問、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/TeamSite01 Contoso 部落格設計者、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/Blog01 Contoso 部落格編輯者、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/Blog01Project Alpha 核准者、 username@tenant.onmicrosoft.com、https://tenant.sharepoint.com/sites/Project01
-```
-</br>Where *tenant* equals your tenant name, and *username* equals the user name of an existing user.</br>
-4. Save the file to your desktop as **Users.csv**.</br>
-5. Open a new instance of Notepad, and paste the following text block into it:</br>
-```
-匯入 Csv C:\users\MyAlias\desktop\GroupsAndPermissions.csv |Foreach-object {新 Get-spositegroup-群組 $_。群組-PermissionLevels $_。PermissionLevels-網站 $_。Site} 匯入 Csv C:\users\MyAlias\desktop\Users.csv |其中 {新增 SPOUser-群組 $_。群組 – LoginName $_。LoginName-網站 $_。Site}
-```
-</br>Where MyAlias equals the user name of the user that is currently logged on.</br>
-6. Save the file to your desktop as **UsersAndGroups.ps1**. This is a simple Windows PowerShell script.
+<br/>其中*MyAlias*等於您的使用者別名。<br/>
 
-You’re now ready to run the UsersAndGroup.ps1 script to add users and groups to multiple site collections.
+2. 等待來重新顯現的 Windows PowerShell 提示字元。可能需要數分鐘。<br/>
 
-### Run UsersAndGroups.ps1 script
+3. 在 Windows PowerShell 提示中輸入或複製並貼上下列指令程式，並按 Enter：<br/>
 
-1. Return to the SharePoint Online Management Shell.</br>
-2. At the Windows PowerShell prompt, type or copy and paste the following line, and press Enter:</br>
 ```
-Set-executionpolicy 略過
-```</br>
-3. At the confirmation prompt, press **Y**.</br>
-4. At the Windows PowerShell prompt, type or copy and paste the following, and press Enter:</br>
+Get-SPOSite -Detailed | Format-Table -AutoSize
+```
+<br/>
+
+4. 請注意新網站集合清單中。您應該會看到下列網站集合： **contosotest**、 **TeamSite01**、 **Blog01**、 和**Project01**
+
+這是它。您已建立使用您所建立之.csv 檔案的多個網站集合和單一 Windows PowerShell cmdlet。您現在準備好建立並將使用者指派給這些網站。
+
+## <a name="step-2-add-users-and-groups"></a>步驟 2：新增使用者和群組
+
+現在，您即將建立使用者，並將他們新增至網站集合群組。您接著將使用 .csv 檔案大量上傳新的群組和使用者。
+
+下列程序假設您已順利建立網站集合 contosotest、TeamSite01、Blog01 和 Project01。
+
+### <a name="create-csv-and-ps1-files"></a>建立 .csv 和 .ps1 檔案
+
+1. 開啟 [記事本]，並貼入下列的文字區塊：<br/>
+```
+Site,Group,PermissionLevels
+https://tenant.sharepoint.com/sites/contosotest,Contoso Project Leads,Full Control
+https://tenant.sharepoint.com/sites/contosotest,Contoso Auditors,View Only
+https://tenant.sharepoint.com/sites/contosotest,Contoso Designers,Design
+https://tenant.sharepoint.com/sites/TeamSite01,XT1000 Team Leads,Full Control
+https://tenant.sharepoint.com/sites/TeamSite01,XT1000 Advisors,Edit
+https://tenant.sharepoint.com/sites/Blog01,Contoso Blog Designers,Design
+https://tenant.sharepoint.com/sites/Blog01,Contoso Blog Editors,Edit
+https://tenant.sharepoint.com/sites/Project01,Project Alpha Approvers,Full Control
+```
+<br/>其中*租用戶*等於您的租用戶名稱。<br/>
+
+2. **Groupsandpermissions.csv 儲存至**將檔案儲存至您的桌面。<br/>
+
+3. 開啟新的 [記事本] 執行個體，並貼入下列的文字區塊：<br/>
+
+```
+Group,LoginName,Site
+Contoso Project Leads,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/contosotest
+Contoso Auditors,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/contosotest
+Contoso Designers,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/contosotest
+XT1000 Team Leads,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/TeamSite01
+XT1000 Advisors,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/TeamSite01
+Contoso Blog Designers,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/Blog01
+Contoso Blog Editors,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/Blog01
+Project Alpha Approvers,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/Project01
+```
+<br/>其中*租用戶*等於您的租用戶名稱與*username*等於現有使用者的使用者名稱。<br/>
+
+4. **Users.csv 儲存至**將檔案儲存至您的桌面。<br/>
+
+5. 開啟新的 [記事本] 執行個體，並貼入下列的文字區塊：<br/>
+
+```
+Import-Csv C:\users\MyAlias\desktop\GroupsAndPermissions.csv | ForEach-Object {New-SPOSiteGroup -Group $_.Group -PermissionLevels $_.PermissionLevels -Site $_.Site}
+Import-Csv C:\users\MyAlias\desktop\Users.csv | where {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
+```
+<br/>其中 MyAlias 等於目前已登入使用者的使用者名稱。<br/>
+
+6. 為**UsersAndGroups.ps1**將檔案儲存至您的桌面。這是簡易的 Windows PowerShell 指令碼。
+
+您現在準備好執行 UsersAndGroup.ps1 指令碼，以將使用者和群組新增至多個網站集合。
+
+### <a name="run-usersandgroupsps1-script"></a>執行 UsersAndGroups.ps1 指令碼
+
+1. 回到 SharePoint Online 管理命令介面。<br/>
+2. 在 Windows PowerShell 提示中輸入或複製並貼上下行，並按 Enter：<br/>
+```
+Set-ExecutionPolicy Bypass
+```
+<br/>
+
+3. 確認提示，請按**Y**。<br/>
+
+4. 在 Windows PowerShell 提示字元、 類型或複製和貼上下列項目，然後按 Enter：<br/>
+
 ```
 c:\users\MyAlias\desktop\UsersAndGroups.ps1
 ```
-</br>Where *MyAlias* equals your user name.</br>
-5. Wait for the prompt to return before moving on. You will first see the groups appear as they are created. Then you will see the group list repeated as users are added.
+<br/>其中*MyAlias*等於您的使用者名稱。<br/>
 
-## See also
+5. 等待返回提示，再繼續進行。您會先看到在建立群組時出現群組。然後，您會看到在新增使用者時重複群組清單。
 
-[Connect to SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+## <a name="see-also"></a>另請參閱
 
-[Manage SharePoint Online site groups Office 365 PowerShell](manage-sharepoint-site-groups-with-powershell.md)
+[連線至 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Manage Office 365 with Office 365 PowerShell](manage-office-365-with-office-365-powershell.md)
+[管理 SharePoint Online 網站群組 Office 365 PowerShell](manage-sharepoint-site-groups-with-powershell.md)
+
+[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   
-[Getting started with Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
 

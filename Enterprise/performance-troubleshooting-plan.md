@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c
 description: 您需要知道要找出並修正 lags、 擱置，與 SharePoint Online、 OneDrive for Business、 Exchange Online 或 Skype 商務 online 與您的用戶端電腦之間的效能低落所採取的步驟嗎？連絡支援之前，這篇文章可協助您疑難排解 Office 365 的效能問題及即使修正的一些常見的問題。
-ms.openlocfilehash: 629e65fe6d35237f33ae06fdeec380c670cd5e62
-ms.sourcegitcommit: 0466a88133a42e2db4245f972cecb371721c9b5d
+ms.openlocfilehash: 0e588d35ff6caaa0796092bb2f964bced15f4e47
+ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "23849366"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "23975181"
 ---
 # <a name="performance-troubleshooting-plan-for-office-365"></a>Office 365 的效能疑難排解規劃
 
@@ -120,14 +120,14 @@ Microsoft 的網路監視工具 ([Netmon](https://www.microsoft.com/download/det
   
  **執行 HTTPWatch 和重現問題**
   
-1. HTTPWatch 是瀏覽器外掛程式，因此公開工具在瀏覽器中的每個版本的 Internet Explorer 稍微不同。一般而言，您可以下的命令列中找到 HTTPWatch Internet Explorer 瀏覽器中。</br>如果您沒有看到外掛程式 HTTPWatch 瀏覽器視窗中，檢查您的瀏覽器版本藉由按一下 [說明]\>有關，或者在更新版本的 Internet Explorer 中，按一下 [齒輪符號和有關 Internet Explorer。若要啟動的**命令**列、 Internet Explorer 中的功能表列上按一下滑鼠右鍵，按一下 [**命令列**。在過去，HTTPWatch 已產生關聯命令與瀏覽器列中，所以一次安裝，如果您立即未看見 （即使後重新開機） 檢查**工具**] 和圖示在工具列的圖示。請記住可自訂工具列和選項可新增到它們。</br>
+1. HTTPWatch 是瀏覽器外掛程式，因此公開工具在瀏覽器中的每個版本的 Internet Explorer 稍微不同。一般而言，您可以下的命令列中找到 HTTPWatch Internet Explorer 瀏覽器中。<br/>如果您沒有看到外掛程式 HTTPWatch 瀏覽器視窗中，檢查您的瀏覽器版本藉由按一下 [說明]\>有關，或者在更新版本的 Internet Explorer 中，按一下 [齒輪符號和有關 Internet Explorer。若要啟動的**命令**列、 Internet Explorer 中的功能表列上按一下滑鼠右鍵，按一下 [**命令列**。在過去，HTTPWatch 已產生關聯命令與瀏覽器列中，所以一次安裝，如果您立即未看見 （即使後重新開機） 檢查**工具**] 和圖示在工具列的圖示。請記住可自訂工具列和選項可新增到它們。<br/>
     ![Internet Explorer 命令工具列顯示 HTTPWatch 圖示。](media/198590b0-d7b1-4bff-a6ad-e4ec3a1e83df.png)
   
 2. 啟動 HTTPWatch Internet Explorer 瀏覽器視窗中。它會顯示固定至該視窗底部瀏覽器。按一下 [**記錄**]。
     
 3. 重現參與效能問題的的確切步驟。按一下 [HTTPWatch 中的 [**停止**] 按鈕。 
     
-4. **儲存**HTTPWatch 或**電子郵件來傳送**。請記得的檔案名稱，使其包含日期及時間的資訊和指示您的監看是否包含的示範良好或不正確的效能。</br>![HTTPWatch，顯示 Office 365 首頁的頁面載入之 [網路] 索引標籤。](media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)</br>
+4. **儲存**HTTPWatch 或**電子郵件來傳送**。請記得的檔案名稱，使其包含日期及時間的資訊和指示您的監看是否包含的示範良好或不正確的效能。<br/>![HTTPWatch，顯示 Office 365 首頁的頁面載入之 [網路] 索引標籤。](media/021a2c64-d581-49fd-adf4-4c364f589d75.PNG)<br/>
     這個螢幕擷取畫面會從 HTTPWatch 專業版。您可以開啟採取基本版本的電腦上以專業版中的追蹤項目和那里讀取。額外的資訊可能可從透過該方法將追蹤檔。
     
 ## <a name="problem-steps-recorder"></a>問題步驟錄製
@@ -279,11 +279,11 @@ Ping 要求傳送至 outlook.office365.com 會告訴您收到要求的資料中�
 
 1. Ping URL`ping outlook.office365.com`和結果中的名稱和記錄的 DNS 伺服器來傳送 ping 要求的 IP 位址。 
 2. 網路追蹤 [開啟] 頁面上，或執行巨集指令可讓您的效能問題，或如果您看到高延遲 ping 本身，在網路追蹤它。 
-3. Netmon 和篩選器中開啟追蹤的 DNS (此篩選器也運作中 Wireshark，但會區分大小寫`-- dns`)。由於您知道您 ping 從的 DNS 伺服器的名稱也可能會篩選類似的多個能快速以 Netmon:`DNS AND ContainsBin(FrameData, ASCII, "namnorthwest")`且哪一個看起來如下 Wireshark dns 中圖文框包含"namnorthwest"。</br>開啟回應封包及在框架詳細資料視窗中的 Netmon，按一下 [DNS 展開如需詳細資訊。您會發現要求至 Office 365-中發生的 DNS 伺服器的 IP 位址的 DNS 資訊在您將需要此 IP 位址 （PsPing 工具） 的下一個步驟。移除篩選，請以滑鼠右鍵按一下 Netmon 的框架摘要中的 DNS 回應\>尋找交談\>DNS 以查看 DNS 查詢和回應-並排。 
+3. Netmon 和篩選器中開啟追蹤的 DNS (此篩選器也運作中 Wireshark，但會區分大小寫`-- dns`)。由於您知道您 ping 從的 DNS 伺服器的名稱也可能會篩選類似的多個能快速以 Netmon:`DNS AND ContainsBin(FrameData, ASCII, "namnorthwest")`且哪一個看起來如下 Wireshark dns 中圖文框包含"namnorthwest"。<br/>開啟回應封包及在框架詳細資料視窗中的 Netmon，按一下 [DNS 展開如需詳細資訊。您會發現要求至 Office 365-中發生的 DNS 伺服器的 IP 位址的 DNS 資訊在您將需要此 IP 位址 （PsPing 工具） 的下一個步驟。移除篩選，請以滑鼠右鍵按一下 Netmon 的框架摘要中的 DNS 回應\>尋找交談\>DNS 以查看 DNS 查詢和回應-並排。 
 4. 在 Netmon，也請注意之間的 DNS 要求及回應時間位移] 欄。在下一步、 輕鬆安裝及使用[PsPing](https://technet.microsoft.com/en-us/sysinternals/jj729731.aspx)工具有非常實用同時 ICMP 通常會封鎖在防火牆，因為和 PsPing 精細追蹤延遲 （毫秒）。PsPing 完成 TCP 連線到位址及連接埠 （在我們 case 開啟連接埠 443）。 
 5. 安裝 PsPing。 
 6. 開啟命令提示字元 (啟動\>執行\>輸入 cmd 或 Windows 鍵\>輸入 cmd) 並將目錄變更為 PsPing 執行 PsPing 命令的安裝所在的目錄。在 「 我的範例您可以看到我做 'Qfe' 資料夾上根目錄的 c。您可以執行相同的快速存取。 
-7. 輸入命令，讓您針對 Office 365 的 DNS 伺服器的 IP 位址 PsPing 進行從舊版的 Netmon 追蹤--若要新增的連接埠號碼，請記得。 </br>換句話說， `psping -n 20 132.245.24.82:445`。這會提供您的 20 ping 取樣並時 PsPing 停駐點的平均延遲。 
+7. 輸入命令，讓您針對 Office 365 的 DNS 伺服器的 IP 位址 PsPing 進行從舊版的 Netmon 追蹤--若要新增的連接埠號碼，請記得。 <br/>換句話說， `psping -n 20 132.245.24.82:445`。這會提供您的 20 ping 取樣並時 PsPing 停駐點的平均延遲。 
 
 如果您正在透過 proxy 伺服器移至 Office 365、 所有點不同的步驟。您將第一個 PsPing 至 proxy 伺服器，以取得平均延遲值以毫秒為單位 proxy/輸出後再回復，然後再其中一個執行 PsPing proxy 或取得遺失值 （有一個 Office 365 後再回復） 的直接網際網路連線的電腦上。  
 
@@ -490,6 +490,6 @@ Outlook Online 中第一個 DNS 查閱完成後，該 DNS 的位置會用以連�
 
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
   
 

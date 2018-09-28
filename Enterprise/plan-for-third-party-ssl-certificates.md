@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
 description: 摘要：說明 Exchange 內部和混合部署、使用 AD FS 的 SSO、Exchange Online 服務及 Exchange Web 服務所需的 SSL 憑證。
-ms.openlocfilehash: 5092734c66f39583d32d4cd9f926e76ed794668b
-ms.sourcegitcommit: ad5bdc53ca67ee6a663c27648511c1ad768a76d4
+ms.openlocfilehash: 82e37ebb058b8a6b4b618649bea31a4137897690
+ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "23223015"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "23975211"
 ---
 # <a name="plan-for-third-party-ssl-certificates-for-office-365"></a>Office 365 協力廠商的 SSL 憑證的計劃
 
@@ -54,8 +54,8 @@ ms.locfileid: "23223015"
 ||||
 |:-----|:-----|:-----|
 |**憑證類型** <br/> |**描述** <br/> |**開始部署之前您必須了解的資訊** <br/> |
-|**SSL 憑證 (也稱為伺服器驗證憑證)** <br/> |這是一個標準 SSL 憑證，用來保護同盟伺服器、用戶端及同盟伺服器 Proxy 電腦之間的通訊安全。  <br/> |AD FS 需要 SSL 憑證。根據預設，AD FS 會使用預設網站在網際網路資訊服務 (IIS) 設定 SSL 憑證。<br/> 這個 SSL 憑證的主體名稱用於判斷每個您所部署的 AD FS 執行個體的同盟服務 (FS) 名稱。請考慮選擇任何新的憑證授權單位 (CA) 的主體名稱-發出憑證適合代表公司或組織至 Office 365 的名稱。此名稱必須是網際網路可路由。<br/>**小心：** AD FS 會要求這個 SSL 憑證沒有無點 （簡短名稱） 的主體名稱。          </br> **建議：** 因為此憑證必須由用戶端的 AD FS 信任，建議您依照公用 （第三方） CA 或公開受信任的根; 從屬於 CA 所發出的 SSL 憑證例如，VeriSign 或 Thawte。  <br/> |
-|**權杖簽署憑證** <br/> |這是標準的 X.509 憑證，用來安全地簽署同盟伺服器問題以及 Office 365 所接受並驗證的所有 token。  <br/> |權杖簽署憑證必須包含鏈結到受信任的根 FS 中的私密金鑰。根據預設，AD FS 會建立自我簽署的憑證。不過，根據組織的需求，您可以變更此憑證 CA 發行的憑證來使用 AD FS 管理] 嵌入式管理單元。<br/>**小心：** 權杖簽署憑證是重要的 FS 穩定性。如果變更憑證，Office 365 必須通知的變更。如果未提供通知使用者無法登入其 Office 365 服務方案。</br>**建議：** 我們建議您使用自我簽署的權杖簽署憑證產生的 AD FS。如此一來，它會管理此憑證您預設。例如，此憑證即將到期時，AD FS 將會產生新的自我簽署的憑證。<br/> |
+|**SSL 憑證 (也稱為伺服器驗證憑證)** <br/> |這是一個標準 SSL 憑證，用來保護同盟伺服器、用戶端及同盟伺服器 Proxy 電腦之間的通訊安全。  <br/> |AD FS 需要 SSL 憑證。根據預設，AD FS 會使用預設網站在網際網路資訊服務 (IIS) 設定 SSL 憑證。<br/> 這個 SSL 憑證的主體名稱用於判斷每個您所部署的 AD FS 執行個體的同盟服務 (FS) 名稱。請考慮選擇任何新的憑證授權單位 (CA) 的主體名稱-發出憑證適合代表公司或組織至 Office 365 的名稱。此名稱必須是網際網路可路由。<br/>**小心：** AD FS 會要求這個 SSL 憑證沒有無點 （簡短名稱） 的主體名稱。          <br/> **建議：** 因為此憑證必須由用戶端的 AD FS 信任，建議您依照公用 （第三方） CA 或公開受信任的根; 從屬於 CA 所發出的 SSL 憑證例如，VeriSign 或 Thawte。  <br/> |
+|**權杖簽署憑證** <br/> |這是標準的 X.509 憑證，用來安全地簽署同盟伺服器問題以及 Office 365 所接受並驗證的所有 token。  <br/> |權杖簽署憑證必須包含鏈結到受信任的根 FS 中的私密金鑰。根據預設，AD FS 會建立自我簽署的憑證。不過，根據組織的需求，您可以變更此憑證 CA 發行的憑證來使用 AD FS 管理] 嵌入式管理單元。<br/>**小心：** 權杖簽署憑證是重要的 FS 穩定性。如果變更憑證，Office 365 必須通知的變更。如果未提供通知使用者無法登入其 Office 365 服務方案。<br/>**建議：** 我們建議您使用自我簽署的權杖簽署憑證產生的 AD FS。如此一來，它會管理此憑證您預設。例如，此憑證即將到期時，AD FS 將會產生新的自我簽署的憑證。<br/> |
    
 同盟伺服器 Proxy 需要下表中所述的憑證。
   

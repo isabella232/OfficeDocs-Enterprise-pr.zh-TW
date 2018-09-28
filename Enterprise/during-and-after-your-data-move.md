@@ -12,12 +12,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是以使用者影響最小的後端作業。雖然 Microsoft 移動每個服務與相關的資料的租用戶至新的資料中心地理位置不不需要任何動作。資料傳輸和驗證發生事先以影響最小背景中的使用者。
-ms.openlocfilehash: 7b012a8cbf1eb3756cc5b06660e414a327c2ae76
-ms.sourcegitcommit: 75ad9af1fa8adc73611fc6140546222b001861d5
+ms.openlocfilehash: 0c715e80acbac126626c73a75fac1bbc809367e2
+ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "23839601"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "23975171"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -96,8 +96,8 @@ EDiscovery 及稽核的 Office 365 安全性功能&amp;規範中心支援跨地�
   
 ||**Exchange 系統管理中心**|**安全性&amp;規範中心**|
 |:-----|:-----|:-----|
-|eDiscovery  <br/> | 移至 [ https://portal.office.com，然後按一下 [**系統管理**並排顯示。 </br> 按一下 [**系統中心** \> **Exchange**。 </br> 選取 [**相符性管理** \> **就地 eDiscovery&amp;保留**。 | 移至 [ https://portal.office.com，然後按一下 [系統管理並排顯示。 </br> 按一下 [**系統中心** \> **安全性&amp;規範**。 </br> 選取 [**搜尋&amp;調查** \> **eDiscovery**。|
-|稽核  <br/> | 移至 [ https://portal.office.com，然後按一下 [**系統管理**並排顯示。 </br> 按一下 [**系統中心** \> **Exchange**。選取 [**相符性管理** \> **稽核**。 | 移至 [ https://portal.office.com，然後按一下 [系統管理並排顯示。 </br> 按一下 [**系統中心** \> **安全性&amp;規範**。 </br> 選取 [**搜尋&amp;調查** \> **稽核記錄搜尋**。 |
+|eDiscovery  <br/> | 移至 [ https://portal.office.com，然後按一下 [**系統管理**並排顯示。 <br/> 按一下 [**系統中心** \> **Exchange**。 <br/> 選取 [**相符性管理** \> **就地 eDiscovery&amp;保留**。 | 移至 [ https://portal.office.com，然後按一下 [系統管理並排顯示。 <br/> 按一下 [**系統中心** \> **安全性&amp;規範**。 <br/> 選取 [**搜尋&amp;調查** \> **eDiscovery**。|
+|稽核  <br/> | 移至 [ https://portal.office.com，然後按一下 [**系統管理**並排顯示。 <br/> 按一下 [**系統中心** \> **Exchange**。選取 [**相符性管理** \> **稽核**。 | 移至 [ https://portal.office.com，然後按一下 [系統管理並排顯示。 <br/> 按一下 [**系統中心** \> **安全性&amp;規範**。 <br/> 選取 [**搜尋&amp;調查** \> **稽核記錄搜尋**。 |
    
 ### <a name="mailbox-migration"></a>信箱移轉
 
