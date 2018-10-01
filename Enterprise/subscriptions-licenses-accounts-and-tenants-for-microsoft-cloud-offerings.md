@@ -18,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: ebddd97afb2c45821cd25eae5e8124459720df0b
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 5f434fef42777034d32970dd55e15be35b76961e
+ms.sourcegitcommit: d0f1f34b1702e304fec85ca72f1f660e9b328dd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915198"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "24022072"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -185,7 +185,3 @@ Office 365 管理中心會將組織和 Office 365 訂用帳戶的 Azure AD 租�
   
 [混合式解決方案](hybrid-solutions.md)
   
-[Contoso 公司的訂用帳戶、授權及使用者帳戶](subscriptions-licenses-and-user-accounts-for-the-contoso-corporation.md)
-
-
-
