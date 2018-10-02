@@ -36,6 +36,10 @@
 ### [Azure ExpressRoute for Office 365](azure-expressroute.md)
 ### [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](modern-auth-for-office-2013-and-2016.md)
 ### [Office 365 租用戶間共同作業](office-365-inter-tenant-collaboration.md)
+## Office 365 用戶端支援
+### [條件式存取](office-365-client-support-conditional-access.md)
+### [行動應用程式管理](office-365-client-support-mobile-application-management.md)
+### [摩登的驗證](office-365-client-support-modern-authentication.md)
 ## 混合式選項
 ### [商務用 Skype Server 和 Exchange Server 的混合式新式驗證與必要條件](hybrid-modern-auth-overview.md)
 ### [如何設定 Exchange Server 內部部署以使用混合式新式驗證](configure-exchange-server-for-hybrid-modern-authentication.md)
@@ -169,6 +173,8 @@
 ### [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
 ### [調整 Exchange Online 效能](tune-exchange-online-performance.md)
 ### [調整 SharePoint Online 效能](tune-sharepoint-online-performance.md)
+#### [SharePoint Online 效能調整的簡介](introduction-to-performance-tuning-for-sharepoint-online.md)
+#### [診斷 SharePoint Online 的效能問題](diagnosing-performance-issues-with-sharepoint-online.md)
 ### [線上商務效能調整 Skype](tune-skype-for-business-online-performance.md)
 ### [調整 Project Online 的效能](https://docs.microsoft.com/ProjectOnline/tune-project-online-performance)
 ### [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
