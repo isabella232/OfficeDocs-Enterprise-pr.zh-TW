@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 某些網路的設計被用來限制存取網際網路，以確保這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦組成的 Office 365 端點清單。這些需要在要新增至 proxy 或防火牆規則和 PAC 以確保網路要求的檔案都能夠連絡 Office 365。
-ms.openlocfilehash: 42613b45b8395c3f81064bbc2171866bc922a657
-ms.sourcegitcommit: ca4d3ec34300d7d39f1a42dc6f29a34915de5c87
+ms.openlocfilehash: a1a658ff04bc7306cb953477798d3e32d894d695
+ms.sourcegitcommit: 854653f927c9515024a1c9e0a86fd5f2fadb92f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "23831918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "25359495"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -42,7 +42,7 @@ ms.locfileid: "23831918"
   
 ## <a name="update-your-firewalls-outbound-allow-lists"></a>更新的輸出防火牆允許清單
 
-您可以藉由傳送的所有受信任直接透過防火牆的 Office 365 網路要求、 略過所有其他的封包層級檢查或處理最佳化您的網路。這可減少從延遲的效能低落並減少周邊容量需求。選擇 [建立信任關係要求的網路最簡單的方法是使用上述**Proxy** ] 索引標籤上的我們預先建置的 PAC 檔案。 
+您可以藉由傳送的所有受信任直接透過防火牆的 Office 365 網路要求、 略過所有其他的封包層級檢查或處理最佳化您的網路。這可減少從延遲的效能低落並減少周邊容量需求。選擇 [建立信任關係要求的網路最簡單的方法是使用我們[預先建置的 PAC 檔案](managing-office-365-endpoints.md#pacfiles)。 
   
 如果您防火牆封鎖輸出流量會想要確保所有 IP 和 Fqdn 列為此[XML 檔案](https://go.microsoft.com/fwlink/?LinkId=533185)中**所需**的 [允許] 清單上。辨識所有服務都需要使用一些 3rd 廠商服務。我們不提供的憑證提供者、 內容傳遞網路、 DNS 提供者，例如這些 3rd 廠商服務的 IP 位址等等。完整 Office 365 功能，您必須能夠抵達所有要求的 Office 365 不論多少資訊我們發佈目的地的目的地。 
   
@@ -888,9 +888,9 @@ Office 365 是一組透過網際網路內建函數的服務、 可靠性與可�
   
 ## <a name="related-topics"></a>相關主題
 
-[Office 365 IP 位址及 URL Web 服務](office-365-ip-web-service.md)
+[Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 
-[Microsoft Azure 資料中心 IP 範圍](https://www.microsoft.com/download/details.aspx?id=41653)
+[Microsoft Azure Datacenter IP 範圍](https://www.microsoft.com/download/details.aspx?id=41653)
   
 [Microsoft 公用 IP 空間](https://www.microsoft.com/download/details.aspx?id=53602)
   
@@ -898,7 +898,7 @@ Office 365 是一組透過網際網路內建函數的服務、 可靠性與可�
   
 [Power BI 和 ExpressRoute](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
   
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
   
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
   
