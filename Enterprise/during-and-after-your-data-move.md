@@ -3,7 +3,7 @@ title: 資料移動期間和之後
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 09/05/2018
+ms.date: 10/02/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是以使用者影響最小的後端作業。雖然 Microsoft 移動每個服務與相關的資料的租用戶至新的資料中心地理位置不不需要任何動作。資料傳輸和驗證發生事先以影響最小背景中的使用者。
-ms.openlocfilehash: 0c715e80acbac126626c73a75fac1bbc809367e2
-ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
+ms.openlocfilehash: 6975a2ea4a1f2b2ebabe5f64b12ae58657180903
+ms.sourcegitcommit: b745d570fd6691606d226f6232cfaafd2d875a2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "23975171"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "25361501"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -34,7 +34,7 @@ ms.locfileid: "23975171"
 |澳洲、 紐西蘭、 斐濟群島  <br/> |2017 年 10 月 31 日  <br/> |
 |日本  <br/> |2018 年 10 月 31 日  <br/> |
 |印度  <br/> |2018 年 10 月 31 日  <br/> |
-|加拿大  <br/> |2018 年 10 月 31 日  <br/> |
+|加拿大  <br/> |2019 年 6 月 30 日  <br/> |
 |South 韓國  <br/> |2018 年 10 月 31 日  <br/> |
 |英國  <br/> |2019 年 9 月 15 日  <br/> |
 |法國  <br/> |2020 年 9 月 15 日  <br/> |
