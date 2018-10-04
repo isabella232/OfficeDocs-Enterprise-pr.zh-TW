@@ -3,7 +3,7 @@ title: 基底組態開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/09/2018
+ms.date: 10/01/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,23 +17,23 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: f065f9fa31b6793933dc4eec0d840bd1320a8891
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 9ffa35a6318d83d489ec51051547ce22c16b5b5f
+ms.sourcegitcommit: 9ce1da973b8c91b0926142a28c5b90f95f0422d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "25353309"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
  **摘要：** 在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
   
-本文提供逐步指示，以在 Azure 中建立下列基底組態開發/測試環境：
+本文提供指示，以在 Azure 中建立下列基底組態開發/測試環境：
+  
+![在 Azure 中建立基底組態](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
 **圖 1：基底組態開發/測試環境**
 
-![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
-  
 圖 1 中的基底組態開發/測試環境包含名為 TestLab 的雲端專用 Azure 虛擬網路中的 Corpnet 子網路，其可模擬連線到網際網路的簡化私人內部網路。它包含執行 WIndows Server 2016 的三個 Azure 虛擬機器：
   
 - DC1 已設定為內部網路網域控制站和網域名稱系統 (DNS) 伺服器
@@ -52,9 +52,41 @@ ms.locfileid: "22915278"
   
 - 用於應用程式開發與測試。
     
-- 做為自己設計的延伸測試環境之初始設定，其中包含其他虛擬機器、Azure 服務或其他 Microsoft 雲端產品，如 Office 365 及 Enterprise Security + Mobility (EMS)。
+- 做為自己設計的延伸測試環境之初始設定，其中包含其他虛擬機器、Azure 服務或其他 Microsoft 雲端產品，如 Office 365 及 Enterprise Mobility + Security (EMS)。
     
-設定 Azure 中的基底組態測試環境有四個階段：
+有兩種方法可以建立此環境：
+
+1. Azure Resource Manager 範本
+2. Azure Powershell
+
+## <a name="method-1-build-your-simulated-intranet-with-an-azure-resource-manager-template"></a>方法 1：使用 Azure Resource Manager 範本建立模擬內部網路
+
+在這個方法中，您可以使用 Azure Resource Manager (ARM) 範本來建立模擬內部網路。ARM 範本包含建立及設定 Azure 網路基礎結構和虛擬機器的所有指示。
+
+部署範本之前，請先閱讀[範本讀我檔案頁面](https://github.com/maxskunkworks/TLG/tree/master/tlg-base-config_3-vm)並準備好下列資訊：
+
+- Azure 訂用帳戶名稱。您必須在 [自訂部署]**** 頁面的 [訂用帳戶]**** 欄位中輸入此標籤。
+- Azure 資源群組名稱。您必須在 [自訂部署]**** 頁面的 [資源群組]**** 欄位中輸入此標籤。
+- 虛擬機器公用 IP 位址 URL 上的 DNS 標籤前置詞。您必須在 [自訂部署]**** 頁面的 [DNS 標籤前置詞]**** 欄位中輸入此標籤。
+
+閱讀指示之後，請在[範本讀我檔案頁面](https://github.com/maxskunkworks/TLG/tree/master/tlg-base-config_3-vm)上按一下 [部署至 Azure]**** 以開始使用。
+
+>[!Note]
+>ARM 範本所建立的模擬內部網路需要 Azure 付費訂用帳戶。
+>
+
+範本完成後，您的組態如下。
+
+![在 Azure 中建立基底組態](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+
+
+## <a name="method-2-build-your-simulated-intranet-with-azure-powershell"></a>方法 2：使用 Azure PowerShell 建立模擬內部網路
+
+在這個方法中，您使用 Windows PowerShell 和 Azure PowerShell 模組建置網路基礎結構、虛擬機器及其設定。
+
+如果您想要使用 PowerShell 獲得一次建立一個 Azure 基礎結構命令區塊元素的體驗，則使用此方法。然後，您可以自行定義 PowerShell 命令區塊，以便在 Azure 中部署其他虛擬機器。
+
+設定 Azure PowerShell 中的基底組態測試環境有四個步驟：
   
 1. 建立虛擬網路。
     
@@ -74,7 +106,9 @@ ms.locfileid: "22915278"
 > [!TIP]
 > 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
-## <a name="phase-1-create-the-virtual-network"></a>階段 1：建立虛擬網路
+### <a name="step-1-create-the-virtual-network"></a>步驟 1：建立虛擬網路
+
+在此步驟中，您會在 Azure 中對虛擬網路進行測試實驗。
 
 首先，啟動 Azure PowerShell 提示。
   
@@ -131,13 +165,16 @@ $nsg=Get-AzureRMNetworkSecurityGroup -Name Corpnet -ResourceGroupName $rgName
 Set-AzureRMVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name Corpnet -AddressPrefix "10.0.0.0/24" -NetworkSecurityGroup $nsg
 ```
 
-這是您目前的設定。
+這是您目前的組態。
   
-![Azure 中具有虛擬網路與子網路的基底組態的階段 1](media/0b5634fc-4e1c-469d-873d-97ed7e587411.png)
+![Azure 中具有虛擬網路與子網路的基底組態的步驟 1](media/0b5634fc-4e1c-469d-873d-97ed7e587411.png)
   
-## <a name="phase-2-configure-dc1"></a>階段 2：設定 DC1
+### <a name="step-2-configure-dc1"></a>步驟 2：設定 DC1
 
-在此階段中，我們會建立 DC1 虛擬機器，並將其設定為 corp.contoso.com Windows Server Active Directory (AD) 網域的網域控制站以及 TestLab 虛擬網路之虛擬機器的 DNS 伺服器。
+在此步驟中，我們會建立 DC1 虛擬機器，並將其設定為 corp.contoso.com Windows Server Active Directory (AD) 網域的網域控制站以及 TestLab 虛擬網路之虛擬機器的 DNS 伺服器。
+
+> [!NOTE]
+> 在執行下列命令區塊之前，請確定您所選擇的 Azure 區域 (位置) 支援 Azure 虛擬機器大小，預設設為 Standard_A1。按一下[這裡](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines)以查看 Azure 虛擬機器大小和位置的最新資訊。
   
 若要建立 DC1 的 Azure 虛擬機器，請填入您的資源群組，並在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   
@@ -163,8 +200,6 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 接下來，連線到 DC1 虛擬機器。
   
-### <a name="connect-to-dc1-using-local-administrator-account-credentials"></a>使用本機系統管理員帳戶認證連線到 DC1
-
 1. 在 [Azure 入口網站](https://portal.azure.com)中，按一下 **[資源群組] >** [新的資源群組名稱] **> [DC1] > [連線]**。
     
 2. 在開啟的窗格中，按一下 [下載 RDP 檔案]****。開啟所下載的 DC1.rdp 檔案，然後按一下 [連線]****。
@@ -199,10 +234,8 @@ Install-ADDSForest -DomainName corp.contoso.com -DatabasePath "F:\NTDS" -SysvolP
   
 請注意，這些命令可能需要數分鐘才能完成。
   
-DC1 重新啟動後，重新連線到 DC1 虛擬機器。
+DC1 重新啟動後，使用網域認證以重新連線到 DC1 虛擬機器。
   
-### <a name="connect-to-dc1-using-domain-credentials"></a>使用網域認證連線到 DC1
-
 1. 在 [Azure 入口網站](https://portal.azure.com)中，按一下 **[資源群組] >** [您的資源群組名稱] **> [DC1] > [連線]**。
     
 2. 執行所下載的 DC1.rdp 檔案，然後按一下 [連線]****。
@@ -235,14 +268,17 @@ Add-ADPrincipalGroupMembership -Identity "CN=User1,CN=Users,DC=corp,DC=contoso,D
 Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv4-In)" -enabled True
 ```
 
-這是您目前的設定。
+這是您目前的組態。
   
-![Azure 中具有 DC1 虛擬機器的基底組態的階段 2](media/49069908-29c3-4d73-87f7-debbea067261.png)
+![Azure 中具有 DC1 虛擬機器的基底組態的步驟 2](media/49069908-29c3-4d73-87f7-debbea067261.png)
   
-## <a name="phase-3-configure-app1"></a>階段 3：設定 APP1
+### <a name="step-3-configure-app1"></a>步驟 3：設定 APP1
 
-APP1 提供網頁和檔案共用服務。
+在這個步驟，您會建立及設定 APP1，它會提供 Web 和檔案共用服務。
 
+> [!NOTE]
+> 在執行下列命令區塊之前，請確定您所選擇的 Azure 區域 (位置) 支援 Azure 虛擬機器大小，預設設為 Standard_A1。按一下[這裡](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines)以查看 Azure 虛擬機器大小和位置的最新資訊。
+  
 若要建立 APP1 的 Azure 虛擬機器，請填入您的資源群組，並在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   
 ```
@@ -289,16 +325,20 @@ Write-Output "This is a shared file." | out-file c:\files\example.txt
 New-SmbShare -name files -path c:\files -changeaccess CORP\User1
 ```
 
-這是您目前的設定。
+這是您目前的組態。
   
-![Azure 中具有 APP1 虛擬機器的基底組態的階段 3](media/92cfabb0-7f9d-4291-964d-ac32d52748d7.png)
+![Azure 中具有 APP1 虛擬機器的基底組態的步驟 3](media/92cfabb0-7f9d-4291-964d-ac32d52748d7.png)
   
-## <a name="phase-4-configure-client1"></a>階段 4：設定 CLIENT1
+### <a name="step-4-configure-client1"></a>步驟 4：設定 CLIENT1
 
-CLIENT1 可在 Contoso 內部網路上做為一般的膝上型電腦、平板電腦或桌上型電腦。
+在這個步驟中，建立及設定 CLIENT1，其可在 Contoso 內部網路上作為一般的膝上型電腦、平板電腦或桌上型電腦。
 
 > [!NOTE]  
 > 下列命令集可建立執行 Windows Server 2016 資料中心的 CLIENT1，其適用於所有類型的 Azure 訂閱。如果您有以 Visual Studio 為基礎的 Azure 訂閱，則可以使用 [Azure 入口網站](https://portal.azure.com)建立執行 Windows 10 的 CLIENT1。 
+  
+
+> [!NOTE]
+> 在執行下列命令區塊之前，請確定您所選擇的 Azure 區域 (位置) 支援 Azure 虛擬機器大小，預設設為 Standard_A1。按一下[這裡](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines)以查看 Azure 虛擬機器大小和位置的最新資訊。
   
 若要建立 CLIENT1 的 Azure 虛擬機器，請填入您的資源群組，並在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。
   
@@ -334,8 +374,6 @@ CLIENT1 重新啟動之後，使用 CORP\\User1 帳戶名稱和密碼連線至 C
   
 接下來，確認您可以從 CLIENT1 存取 APP1 上的 Web 及檔案共用資源。
   
-### <a name="verify-client-access-to-app1"></a>確認 CLIENT 存取 APP1
-
 1. 在 [伺服器管理員] 的樹狀窗格中，按一下 [本機伺服器]****。
     
 2. 在 [CLIENT1 的屬性]**** 中，按一下 [IE 增強式安全性設定]**** 旁邊的 [開啟]****。
@@ -354,9 +392,9 @@ CLIENT1 重新啟動之後，使用 CORP\\User1 帳戶名稱和密碼連線至 C
     
 9. 關閉 **example.txt - 記事本**以及 [檔案]**** 共用資料夾視窗。
     
-這是您的最終設定。
+這是您的最終組態。
   
-![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+![Azure 中具有 CLIENT1 虛擬機器的基底組態的步驟 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
 Azure 中的基底組態已準備好進行應用程式開發與測試，或建立其他測試環境。 
   
