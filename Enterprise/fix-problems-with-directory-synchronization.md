@@ -15,12 +15,12 @@ search.appverid:
 - MBS150
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中目錄同步處理的常見問題原因，並提供許多方法來協助疑難排解和解決它們。
-ms.openlocfilehash: ad3b6e27439354a2ede9b1a4b100e0f9e06148d3
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: a1ccf7aa8c6d450cdd3d658ef0bc8d9ed6d25753
+ms.sourcegitcommit: 6a4611bb474c783efd361890fe6f41c26c5aeeb3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540000"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "25405126"
 ---
 # <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 的目錄同步處理問題
 
@@ -63,7 +63,7 @@ ms.locfileid: "22540000"
 - [Azure Active Directory 停駐點或您的目錄同步作業是同步處理尚未在多個一天中註冊也警告](https://support.microsoft.com/help/2882421/directory-synchronization-to-azure-active-directory-stops-or-you-re-warned-that-sync-hasn-t-registered-in-more-than-a-day)
 
 ### <a name="password-hashes-arent-synchronizing-or-im-seeing-an-alert-in-the-office-365-admin-center-that-there-hasnt-been-a-recent-password-hash-synchronization"></a>**密碼雜湊不同步處理，或 I 看不到 Office 365 系統管理中心尚未最近的密碼雜湊同步處理的通知**
-- [實作密碼雜湊同步處理與 Azure AD 連線同步處理](https://go.microsoft.com/fwlink/p/?LinkId=820600)
+- [實作密碼雜湊同步處理與 Azure AD 連線同步處理](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization)
 
 ### <a name="im-seeing-an-alert-that-object-quota-exceeded"></a>**我正在看不到物件配額超出提醒**
 - 我們具有內建物件配額可協助保護服務。如果您有您需要將資料庫同步至 Office 365 的目錄中有太多物件，您必須以增加您配額[連絡人商務產品的支援](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)。
