@@ -12,15 +12,16 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: f92d5116-5b66-4150-ad20-1452fc3dd712
 description: 摘要：使用 Windows PowerShell for Office 365 來管理客戶租用。
-ms.openlocfilehash: f4c6f1a0275e9b483a30b31564426b62241029bf
-ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
+ms.openlocfilehash: 86bf5f10862c7eb3f3b9e17e9d8431bb0602a090
+ms.sourcegitcommit: 5cb4dbdd10ab399af414503cb518a9f530919ef5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "25498243"
 ---
 # <a name="manage-office-365-tenants-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 管理 Office 365 租用戶
 
- **摘要：**使用 Windows PowerShell for Office 365 來管理客戶租用。
+ **摘要：** 使用 Windows PowerShell for Office 365 來管理客戶租用。
   
 Windows PowerShell 可讓新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴輕鬆地管理及報告 Office 365 系統管理中心 未提供的客戶租用設定。請注意，合作夥伴系統管理員帳戶須有管理代表 (AOBO) 權限才能連接其客戶租用。
   
@@ -41,7 +42,7 @@ Windows PowerShell 可讓新聞訂閱方式和雲端解決方案提供者 (CSP) 
 若要列出所有可存取的客戶租用戶識別碼，請執行此命令。
   
 ```
-Get-MsolPartnerContract -All | Select-Object -TenantId
+Get-MsolPartnerContract -All | Select-Object TenantId
 ```
 
 這會顯示按照 **TenantId** 排列的所有客戶租用戶清單。
@@ -51,7 +52,7 @@ Get-MsolPartnerContract -All | Select-Object -TenantId
 若要依據網域名稱來取得特定客戶租用戶的 **TenantId** ，請執行此命令。將 _<domainname.onmicrosoft.com>_ 取代為所需的實際客戶租用戶網域名稱。
   
 ```
-Get-MsolPartnerContract -DomainName <domainname.onmicrosoft.com> | Select-Object -TenantId
+Get-MsolPartnerContract -DomainName <domainname.onmicrosoft.com> | Select-Object TenantId
 ```
 
 ### <a name="list-all-domains-for-a-tenant"></a>列出租用戶的所有網域
