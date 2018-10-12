@@ -10,12 +10,12 @@ ms.custom: ''
 localization_priority: Normal
 ms.assetid: ''
 description: Exchange Online 中的多個地理位置功能的多個地理區域展開您的 Office 365 目前狀態。
-ms.openlocfilehash: 9834b102365f11623a1decc00460f85f36552ccb
-ms.sourcegitcommit: d88307a32fd3439a09a87b260e0c0cf9074ebeb0
+ms.openlocfilehash: aa83b5040cdc98a1c651388fa82d746b852c2313
+ms.sourcegitcommit: 5cb4dbdd10ab399af414503cb518a9f530919ef5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "22914778"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "25498223"
 ---
 # <a name="multi-geo-capabilities-in-exchange-online"></a>Exchange Online 中的多個地理位置功能
 
@@ -52,7 +52,7 @@ Office 365 的多重地理位置功能啟用單一租用戶至跨多個地理位
 - 美國
 
 ## <a name="prerequisite-configuration"></a>必要的設定
-您可以開始使用多個地理位置功能在 Exchange Online 之前，Microsoft 需要設定多個地理位置支援 Exchange Online 租用。此單次設定程序就會觸發之後您訂購多重地理位置和授權顯示我們租用戶中。此單次設定程序通常應該採取早於 30 天才能完成。
+您可以開始使用多個地理位置功能在 Exchange Online 之前，Microsoft 需要設定多個地理位置支援 Exchange Online 租用。您訂購多重地理位置和授權在顯示您的租用戶之後觸發此單次設定程序。此單次設定程序通常應該採取早於 30 天才能完成。若要讓多個地理位置，連絡 Microsoft 代表。如需詳細資訊，請參閱https://aka.ms/Multi-Geo。
 
 將會收到通知在[Office 365 郵件內](https://support.office.com/article/Message-center-in-Office-365-38FB3333-BFCC-4340-A37B-DEDA509C2093)完成您的設定之後。設定自動觸發之後在您的租用戶中顯示多個地理位置授權。
 

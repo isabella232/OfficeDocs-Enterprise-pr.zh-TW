@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 停用服務存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/20/2018
+ms.date: 10/11/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
-ms.openlocfilehash: d65308746ac5c2b60f4749588455fa66471069e3
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 3bab553bd23d6179eb60ff61ae3edb56c528946d
+ms.sourcegitcommit: 5cb4dbdd10ab399af414503cb518a9f530919ef5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22914988"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "25498233"
 ---
 # <a name="disable-access-to-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用服務存取權
 
@@ -57,7 +57,7 @@ ms.locfileid: "22914988"
   $LO = New-MsolLicenseOptions -AccountSkuId <AccountSkuId> -DisabledPlans "<UndesirableService1>", "<UndesirableService2>"...
   ```
 
-    下列範例會建立名為授權計劃中停用的 Office Online 和 SharePoint Online 服務**LicenseOptions**物件`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3)。
+  下列範例會建立名為授權計劃中停用的 Office Online 和 SharePoint Online 服務**LicenseOptions**物件`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3)。
     
   ```
   $LO = New-MsolLicenseOptions -AccountSkuId "litwareinc:ENTERPRISEPACK" -DisabledPlans "SHAREPOINTWAC", "SHAREPOINTENTERPRISE"
@@ -71,13 +71,13 @@ ms.locfileid: "22914988"
   New-MsolUser -UserPrincipalName <Account> -DisplayName <DisplayName> -FirstName <FirstName> -LastName <LastName> -LicenseAssignment <AccountSkuId> -LicenseOptions $LO -UsageLocation <CountryCode>
   ```
 
-    下列範例會建立新帳戶的 Allie Bellew 指派授權並停用 [步驟 1 中所述的服務。
+  下列範例會建立新帳戶的 Allie Bellew 指派授權並停用 [步驟 1 中所述的服務。
     
   ```
   New-MsolUser -UserPrincipalName allieb@litwareinc.com -DisplayName "Allie Bellew" -FirstName Allie -LastName Bellew -LicenseAssignment litwareinc:ENTERPRISEPACK -LicenseOptions $LO -UsageLocation US
   ```
 
-    如需在 Office 365 PowerShell 中建立使用者帳戶的詳細資訊，請參閱[Office 365 PowerShell 建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)。
+  如需在 Office 365 PowerShell 中建立使用者帳戶的詳細資訊，請參閱[Office 365 PowerShell 建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)。
     
   - 若要停用現有授權使用者的服務，請使用下列語法：
     
@@ -85,7 +85,7 @@ ms.locfileid: "22914988"
   Set-MsolUserLicense -UserPrincipalName <Account> -LicenseOptions $LO
   ```
 
-    本範例會停用使用者 BelindaN@litwareinc.com 的服務。
+  本範例會停用使用者 BelindaN@litwareinc.com 的服務。
     
   ```
   Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -LicenseOptions $LO
@@ -108,7 +108,7 @@ ms.locfileid: "22914988"
   $x | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -LicenseOptions $LO}
   ```
 
-    下列範例會停用使用者在美國銷售部門中的服務。
+  下列範例會停用使用者在美國銷售部門中的服務。
     
   ```
   $USSales = Get-MsolUser -All -Department "Sales" -UsageLocation "US"
@@ -125,7 +125,7 @@ ms.locfileid: "22914988"
   kakers@contoso.com
   ```
 
-    在此範例中的文字檔案是 c:\\我的文件\\Accounts.txt。
+  在此範例中的文字檔案是 c:\\我的文件\\Accounts.txt。
     
 2. 執行下列命令：
     
