@@ -3,7 +3,7 @@ title: 連線至 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/20/2018
+ms.date: 10/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,20 +15,26 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
-ms.openlocfilehash: 96406fbc23adadbf77a3cd02f8c167081f908977
-ms.sourcegitcommit: c3869a332512dd1cc25cd5a92a340050f1da0418
+ms.openlocfilehash: e35dfd48f86cd4767f2e87786c4a6d1ea3aa608b
+ms.sourcegitcommit: 22db89d5b13f7d85e03f35f21f25fa288aadf1b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "20720399"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "25575277"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
  **摘要：** 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行管理工作。
   
-Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 365 PowerShell 是包含三個步驟的簡單程序，您可以在其中安裝必要的軟體、執行必要的軟體，然後連線至您的 Office 365 組織。 
+Office 365 PowerShell 可讓您可以從命令列管理您的 Office 365 設定。連線至 Office 365 PowerShell 是您安裝的必要的軟體，然後連線至 Office 365 組織簡單的程序。 
 
-  
+有兩個版本的您用來連線至 Office 365 及管理使用者帳戶、 群組及授權的 PowerShell 模組：
+
+- Azure Active Directory PowerShell 圖表 （指令程式會包含在其名稱**AzureAD** ） 
+- Microsoft Azure Active Directory Module for Windows PowerShell （指令程式會包含在其名稱**MSol** ） 
+
+本文章的日期，Azure Active Directory PowerShell 圖模組的並非完全取代指令程式的使用者、 群組及授權管理的 Microsoft Azure Active Directory Module for Windows PowerShell 模組中的功能.在許多情況下，您需要使用兩個版本。您安全地可以安裝在同一部電腦上的兩個版本。
+
 > [!TIP]
 > **第一次使用 PowerShell？** 請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/en-us/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
   
@@ -38,14 +44,15 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 
     
 - 您可以使用下列 Windows 版本：
     
-  - Windows 10、Windows 8.1、Windows 8 或 Windows 7 Service Pack 1 (SP1) 
+  - Windows 10、 Windows 8.1、 Windows 8 或 Windows 7 Service Pack 1 (SP1) 
     
-  - Windows Server 2016、Windows Server 2012 R2、Windows Server 2012 或 Windows Server 2008 R2 SP1
+  - Windows Server 2019、 Windows Server 2016、 Windows Server 2012 R2、 Windows Server 2012 或 Windows Server 2008 R2 SP1
     
     > [!NOTE]
     >請使用 64 位元的 Windows 版本。對 Windows PowerShell 的 Microsoft Azure Active Directory 模組 32 位元版本的支援已在 2014 年 10 月終止。
     
 -  這些程序適用於使用者的 Office 365 系統管理員角色的成員。如需詳細資訊，請參閱 ＜[關於 Office 365 系統管理員角色](https://go.microsoft.com/fwlink/p/?LinkId=532367)。
+
 
 ## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組的連線
 
@@ -73,7 +80,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。Office 
 
 ### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2： 連線至 Office 365 訂閱的 Azure AD
 
-若要連線至 Azure AD 的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 會執行此命令 （它沒有要提高權限） Windows PowerShell 命令提示字元：
+若要連線至您的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 的 Azure AD，請從 Windows PowerShell 命令提示字元 （它沒有要提高權限） 執行此命令：
     
 ```
 Connect-AzureAD
@@ -128,8 +135,6 @@ Connect-MsolService
     
   - 針對 Windows Server 2012 或 Windows Server 2012 R2，請參閱[使用新增角色及功能精靈來啟用 .NET Framework 3.5](https://go.microsoft.com/fwlink/p/?LinkId=532368)
     
-  - 針對 Windows 8 或 Windows 8.1，請參閱[在 Windows 8 或 8.1 上安裝 .NET Framework 3.5](https://go.microsoft.com/fwlink/p/?LinkId=532369)
-    
   - 針對 Windows 7 或 Windows Server 2008 R2，請參閱[您無法開啟 Windows PowerShell 的 Azure Active Directory 模組](https://go.microsoft.com/fwlink/p/?LinkId=532370)
 
   - Windows 10、 Windows 8.1 及 Windows 8，請參閱[安裝 Windows 10、 Windows 8.1 及 Windows 8 上.NET Framework 3.5](https://docs.microsoft.com/en-us/dotnet/framework/install/dotnet-35-windows-10)
@@ -146,7 +151,7 @@ Connect-MsolService
 - **如果您收到連線錯誤，請參閱本主題：** [「Connect-MsolService：擲回類型例外狀況」錯誤](https://go.microsoft.com/fwlink/p/?LinkId=532377)。
     
 
-## <a name="see-also"></a>See also
+## <a name="see-also"></a>另請參閱
 
 - [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
 - [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
