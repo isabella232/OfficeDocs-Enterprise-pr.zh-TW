@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 檢視授權與服務
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/20/2018
+ms.date: 10/17/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.custom:
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
 description: 說明如何使用 Office 365 PowerShell 檢視授權的計劃、 服務及 Office 365 組織中可用的授權的相關資訊。
-ms.openlocfilehash: 4ee4a5d0173f97520075f146e50bd234e767cc95
-ms.sourcegitcommit: b39b8ae3b4268d6475b54e2fdb62982b2c7d9943
+ms.openlocfilehash: 21dda5bfc1bf1fa975b4a94879435c1842c383ec
+ms.sourcegitcommit: 8cacedcba4627042d4bd17f1a94fddcfd87f77b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "20319254"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "25601627"
 ---
 # <a name="view-licenses-and-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視授權與服務
 
@@ -67,7 +67,7 @@ Get-MsolAccountSku
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
-下表顯示 Office 365 服務計劃和最常見的服務及其易記名稱。您的服務計劃清單可能會不同。如需服務計劃和其好記名稱的完整清單，請連絡[商務使用者的支援選項](https://support.microsoft.com/gp/support-options-for-business)。
+下表顯示 Office 365 服務計劃和最常見的服務及其易記名稱。您的服務計劃清單可能會不同。 
   
 |**服務計劃**|**描述**|
 |:-----|:-----|
@@ -81,6 +81,8 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |
 | `EXCHANGE_S_ENTERPRISE` <br/> |Exchange Online Plan 2  <br/> |
    
+如需授權計劃 （也稱為產品名稱）、 其包含的服務計劃和其對應的易記名稱的完整清單，請參閱[產品名稱和授權的服務計劃識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
+
 若要檢視特定的授權方案中可用的 Office 365 服務相關的詳細資訊，請使用下列語法。
   
 ```
