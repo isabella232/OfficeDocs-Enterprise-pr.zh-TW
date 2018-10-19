@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 0fb6e77aef4495b2284256c13cb21320e6292746
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 14d1ec8a3ebc4620a72f831c0ec80253f7b3072c
+ms.sourcegitcommit: dcb57859ad40090cf70586ac350472eb0fc8d9c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22914978"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "25639632"
 ---
 # <a name="understanding-office-365-identity-and-azure-active-directory"></a>了解 Office 365 身分識別和 Azure Active Directory
 
@@ -53,7 +53,7 @@ Office 365 管理使用者使用的雲端使用者身分識別與驗證服務 Az
   
 ### <a name="pass-through-authentication-with-seamless-single-sign-on"></a>通過驗證與順暢單一登入
 
-提供使用一或多個內部部署伺服器上執行的軟體代理程式驗證的使用者直接與您在內部部署 Active Directory 的 Azure AD 驗證服務的簡單密碼驗證。與通過驗證 (PTA) 與 Office 365 同步處理內部部署 Active Directory 使用者帳戶物件及管理您的使用者在內部。可讓使用者登入內部部署和 Office 365 資源和使用其內部部署帳戶及密碼的應用程式。此設定會對您的內部部署 Active Directory 直接使用者的密碼驗證而不傳送給 Office 365 的密碼雜湊。會指出與安全性需求來立即強制執行內部部署使用者帳戶的公司、 密碼原則和登入時間可使用此驗證方法。以順暢單一登入，使用者會自動登入時位於其公司裝置並連線至公司網路的 Azure AD。
+提供使用一或多個內部部署伺服器上執行的軟體代理程式驗證的使用者直接與您在內部部署 Active Directory 的 Azure AD 驗證服務的簡單密碼驗證。與通過驗證 (PTA) 與 Office 365 同步處理內部部署 Active Directory 使用者帳戶物件及管理您的使用者在內部。可讓使用者登入內部部署和 Office 365 資源和使用其內部部署帳戶及密碼的應用程式。此設定會對您的內部部署 Active Directory 直接使用者密碼驗證而不傳送給 Office 365 的密碼雜湊。會指出與安全性需求來立即強制執行內部部署使用者帳戶的公司、 密碼原則和登入時間可使用此驗證方法。以順暢單一登入，使用者會自動登入時位於其公司裝置並連線至公司網路的 Azure AD。
   
 深入了解[選擇通過驗證](https://docs.microsoft.com/azure/security/azure-ad-choose-authn)和[順暢單一登入](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-sso)。
   
