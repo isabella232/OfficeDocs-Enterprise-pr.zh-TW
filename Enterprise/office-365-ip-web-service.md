@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: 為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。
-ms.openlocfilehash: 2b5763b9f8f08f2cc619331dac70743474a8515b
-ms.sourcegitcommit: d67e73f6cdc1e8d220d90a239e23e218f24528d2
+ms.openlocfilehash: 1765a35e961d6aa3da42c36e5a04333e57ae010b
+ms.sourcegitcommit: 7f1e19fb2d7a448a2dec73d8b2b4b82f851fb5f7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "24961822"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "25697979"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>**Office 365 IP 位址和 URL Web 服務**
 
@@ -107,8 +107,8 @@ Microsoft 會在每個月底更新 Office 365 IP 位址和 FQDN 項目，有時�
 ]
 ```
 
-[!IMPORTANT]
-這些 URI 中 ClientRequestID 參數的 GUID 只是範例。若要試用 Web 服務 URI，請產生您自己的 GUID。這些範例中所顯示的 GUID 未來可能會遭到 Web 服務封鎖。
+> [!IMPORTANT]
+> 這些 URI 中 ClientRequestID 參數的 GUID 只是範例。若要試用 Web 服務 URI，請產生您自己的 GUID。這些範例中所顯示的 GUID 未來可能會遭到 Web 服務封鎖。
 
 範例 2 要求 URI：[https://endpoints.office.com/version/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/version/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
 
