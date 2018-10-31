@@ -7,7 +7,7 @@ ms.date: 10/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
-localization_priority: Normal
+localization_priority: Priority
 ms.collection: Ent_O365
 ms.custom:
 - LIL_Placement
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
-ms.openlocfilehash: 2ea9c3eaa9a589bed6bf7ac575ffd241b7a72f01
-ms.sourcegitcommit: 8cacedcba4627042d4bd17f1a94fddcfd87f77b2
+ms.openlocfilehash: d9bee7060f599120d2d6036c45b44e485ea9a0bd
+ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "25601637"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "25849889"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -80,20 +80,22 @@ Office 365 PowerShell 可讓您可以從命令列管理您的 Office 365 設定�
 
 ### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2： 連線至 Office 365 訂閱的 Azure AD
 
-若要連線至您的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 的 Azure AD，請從 Windows PowerShell 命令提示字元 （它沒有要提高權限） 執行此命令：
-    
-```
-Connect-AzureAD
-```
+若要連線至您的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 的 Azure AD，請執行下列命令之一 （它沒有要提高權限） Windows PowerShell 命令提示字元。
+
+|||
+|:-------|:-----|
+| **Office 365 雲端** | **命令** |
+| Office 365 Worldwide （+ GCC） | `Connect-AzureAD` |
+| Office 365 21vianet 來 21 Vianet | `Connect-AzureAD -AzureEnvironmentName AzureChinaCloud` |
+| Office 365 Germany | `Connect-AzureAD -AzureEnvironmentName AzureGermanyCloud` |
+| Office 365 美國政府 DoD 與 Office 365 美國政府 GCC 高 | `Connect-AzureAD -AzureEnvironmentName AzureUSGovernment` |
+|||
 
 在 [**登入您的帳戶**] 對話方塊中，輸入您的 Office 365 工作或學校帳戶使用者名稱和密碼，並再按一下 [**確定]**。
 
 如果您使用 MFA，請遵循在 [其他] 對話方塊中的指示以提供更多的驗證資訊，例如驗證碼。
 
->[!Tip]
->若要連線至 Office 365 德國，請參閱[Connect to 使用 PowerShell 的 Azure 德國。](https://docs.microsoft.com/azure/germany/germany-get-started-connect-with-ps)
->
-    
+
 連接之後，您可以使用的新 cmdlet 的[Azure Active Directory PowerShell 圖模組的](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)。
   
 
@@ -116,27 +118,28 @@ Connect-AzureAD
     
 ### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2： 連線至 Office 365 訂閱的 Azure AD
 
-若要連線至您的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 的 Azure AD，請從 Windows PowerShell 命令提示字元 （它沒有要提高權限） 執行此命令：
-    
-```
-Connect-MsolService
-```
+若要連線至您的 Office 365 訂閱使用的帳戶名稱及密碼或*多重要素驗證 (MFA)* 的 Azure AD，請執行下列命令之一 （它沒有要提高權限） Windows PowerShell 命令提示字元。
+
+|||
+|:-------|:-----|
+| **Office 365 雲端** | **命令** |
+| Office 365 Worldwide （+ GCC） | `Connect-MsolService` |
+| Office 365 21vianet 來 21 Vianet | `Connect-MsolService -AzureEnvironmentName AzureChinaCloud` |
+| Office 365 Germany | `Connect-MsolService -AzureEnvironmentName AzureGermanyCloud` |
+| Office 365 美國政府 DoD 與 Office 365 美國政府 GCC 高 | `Connect-MsolService -AzureEnvironmentName USGovernment` |
+|||
 
 在 [**登入您的帳戶**] 對話方塊中，輸入您的 Office 365 工作或學校帳戶使用者名稱和密碼，並再按一下 [**確定]**。
 
 如果您使用 MFA，請遵循在 [其他] 對話方塊中的指示以提供更多的驗證資訊，例如驗證碼。
 
->[!Tip]
->若要連線至 Office 365 德國，請參閱[Connect to 使用 PowerShell 的 Azure 德國。](https://docs.microsoft.com/azure/germany/germany-get-started-connect-with-ps)
->
-    
 ### <a name="how-do-you-know-this-worked"></a>如何知道這是否正常運作？
 
 如果您未收到任何錯誤，便已順利連線。若要做快速測試，您可以執行一個 Office 365 Cmdlet (例如 **Get-MsolUser** )，然後檢視結果。
   
 如果出現錯誤，請檢查下列需求：
   
-- **密碼錯誤是常見的問題** 。再次執行步驟 3，並密切注意您輸入的使用者名稱和密碼。
+- **常見的問題會不正確的密碼**。再次執行步驟 2。與密切注意您輸入使用者名稱和密碼。
     
 - * *Microsoft Azure Active Directory Module for Windows PowerShell 需要的 Microsoft.NET Framework 3.5。* 在您電腦 * * 啟用 x * 功能。很有可能您的電腦已安裝的較新版本 (例如 4 或 4.5。* x *），但回溯相容性與較舊版本的.NET Framework 可以啟用或停用。如需詳細資訊，請參閱下列主題：
     
