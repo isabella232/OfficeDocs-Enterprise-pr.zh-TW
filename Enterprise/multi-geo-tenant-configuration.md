@@ -11,16 +11,16 @@ ms.custom: ''
 localization_priority: Priority
 ms.collection: Strat_SP_gtc
 description: 了解如何設定商務用 OneDrive 多地理位置。
-ms.openlocfilehash: 1817eee1bb2ceefa0e2e167e327af417dd0c517d
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 6c4a1012f3f26265ef88d82c55bb3ac11cc82da4
+ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915248"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "25849869"
 ---
 # <a name="onedrive-for-business-multi-geo-tenant-configuration"></a>商務用 OneDrive 多地理位置租用戶設定
 
-在您為商務用 OneDrive 多地理位置設定租用戶之前，請務必先閱讀[規劃商務用 OneDrive 多地理位置](plan-for-multi-geo.md)。若要按照本文所述步驟，您需要一份要啟用的位置，以及要為那些位置佈建的測試使用者清單。
+在您為商務用 OneDrive 多地理位置設定租用戶之前，請務必先閱讀[規劃商務用 OneDrive 多地理位置](plan-for-multi-geo.md)。若要按照本文所述步驟，您需要一份要啟用為衛星位置的地理位置，以及要為那些位置佈建的測試使用者清單。
 
 ## <a name="add-the-multi-geo-capabilities-in-office-365-plan-to-your-tenant"></a>將 Office 365 方案中的多地理位置功能新增到您的租用戶
 
@@ -30,9 +30,9 @@ ms.locfileid: "22915248"
 
 在租用戶佈建 _Office 365 的多地理位置功能_方案後，[OneDrive 系統管理中心](https://admin.onedrive.com)的 [地理位置]**** 索引標籤即變成可用。
 
-## <a name="set-the-allowed-data-locations-adl-to-your-tenant"></a>設定租用戶允許的資料位置 (ADL)
+## <a name="add-satellite-locations-to-your-tenant"></a>將衛星位置新增至您的租用戶
 
-您必須針對要使用商務用 OneDrive 的每個地理位置設定 SharePoint 允許的資料位置。下表顯示可用的地理位置：
+您必須針對要使用商務用 OneDrive 的每個地理位置新增衛星位置。下表顯示可用的地理位置：
 
 <table>
 <thead>
@@ -81,7 +81,7 @@ ms.locfileid: "22915248"
 </tbody>
 </table>
 
-新增衛星地理位置
+新增衛星位置
 
 1. 開啟 [OneDrive 系統管理中心](https://admin.onedrive.com)。
 
@@ -95,35 +95,35 @@ ms.locfileid: "22915248"
 
 6. 按一下 [關閉]****。
 
-佈建可能需要幾小時，最多 72 小時，視租用戶大小而定。衛星位置的佈建完成後，您將會收到電子郵件確認。當新的地理位置在 OneDrive 系統管理中心的**地理位置**索引標籤上以藍色顯示在地圖上，您就可以繼續將使用者慣用的資料位置設定到該地理位置。 
+佈建可能需要幾小時，最多 72 小時，視租用戶大小而定。衛星位置的佈建完成後，您將會收到電子郵件確認。當新的地理位置在 OneDrive 系統管理中心的 [**地理位置**] 索引標籤上以藍色顯示在地圖上，您就可以繼續將使用者慣用的資料位置設定到該地理位置。 
 
 > [!IMPORTANT]
-> 您的新衛星地理位置將會以預設設定進行設定。這可讓您依當地合規性需求來設定該地理位置。
+> 您的新衛星位置將會以預設設定進行設定。這可讓您依當地合規性需求來設定該衛星位置。
 
 ## <a name="setting-users-preferred-data-location"></a>設定使用者的慣用資料位置
 <span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span> 
 
-啟用所需的資料位置後，您可以更新使用者帳戶以使用適當的資料位置。建議您為每個使用者設定慣用的資料位置，即使該使用者會停留在預設的資料位置。
+一旦啟用所需的衛星位置，您就可以更新使用者帳戶以使用適當的慣用資料位置。建議您為每個使用者設定慣用的資料位置，即使該使用者會停留在中央位置。
 
 > [!TIP]
-> 建議您從測試使用者或一小群使用者開始驗證，再向整個組織推出多地理位置功能。
+> 建議您從測試使用者或一小群使用者開始驗證，再向整個組織推出多地理位置。
 
 AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理的使用者。請針對使用者類型遵從適當的指示。
 
 ### <a name="synchronize-users-preferred-data-location-using-ad-connect"></a>使用 AD Connect 同步處理使用者的慣用資料位置 
 
-如果貴公司的使用者已從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設設定](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 AD 將慣用的資料位置同步處理到 AAD。
+如果貴公司的使用者已從內部部署 Active Directory 系統同步處理到 Azure Active Directory，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設組態](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 Active Directory 將慣用的資料位置同步處理到 Azure Active Directory。
 
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 
 > [!IMPORTANT]
-> 對於未佈建 OneDrive 的新使用者，在使用者的 PDL 同步處理到 AAD 後，請等候至少 24 小時讓變更傳播，使用者才能登入商務用 OneDrive。(在使用者登入以佈建商務用 OneDrive 之前設定慣用資料位置，如此可確保使用者的新 OneDrive 會佈建在正確位置。)
+> 對於未佈建 OneDrive 的新使用者，在使用者的 PDL 同步處理到 Azure Active Directory 後，請等候至少 24 小時讓變更傳播，使用者才能登入商務用 OneDrive。(在使用者登入以佈建商務用 OneDrive 之前設定慣用資料位置，如此可確保使用者的新 OneDrive 會佈建在正確位置。)
 
 ### <a name="setting-preferred-data-location-for-cloud-only-users"></a>為雲端專用使用者設定慣用的資料位置為雲端專用使用者設定慣用的資料位置 
 
-如果貴公司的使用者不是從內部部署 Active Directory (AD) 系統同步處理到 Azure Active Directory (AAD)，這表示使用者是在 Office 365 或 AAD 中建立，則必須使用 AAD PowerShell 設定 PDL。
+如果貴公司的使用者不是從內部部署 Active Directory 系統同步處理到 Azure Active Directory，這表示使用者是在 Office 365 或 Azure Active Directory 中建立，則必須使用 Azure Active Directory PowerShell 設定 PDL。
 
-本節的程序需要[適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組](https://www.powershellgallery.com/packages/MSOnline/1.1.166.0)。如果您已安裝 AAD PowerShell，請確認您已更新到最新版本。
+本節的程序需要[適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組](https://www.powershellgallery.com/packages/MSOnline/1.1.166.0)。如果您已安裝 Azure Active Directory PowerShell，請確認您已更新到最新版本。
 
 1.  開啟適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
@@ -142,13 +142,13 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 
 > [!IMPORTANT]
-> 對於未佈建 OneDrive 的新使用者，在使用者的 PDL 設定好後，請等候至少 24 小時讓變更傳播，使用者才能登入 SharePoint OneDrive。(在使用者登入以佈建商務用 OneDrive 之前設定慣用資料位置，如此可確保使用者的新 OneDrive 會佈建在正確位置。)
+> 對於未佈建 OneDrive 的新使用者，在使用者的 PDL 設定好後，請等候至少 24 小時讓變更傳播，使用者才能登入 OneDrive。(在使用者登入以佈建商務用 OneDrive 之前設定慣用資料位置，如此可確保使用者的新 OneDrive 會佈建在正確位置。)
 
 ## <a name="onedrive-provisioning-and-the-effect-of-pdl"></a>OneDrive 佈建及 PDL 的影響
 
 如果使用者已在租用戶中建立 OneDrive 網站，設定其 PDL 不會自動移動其現有的 OneDrive。若要移動使用者的 OneDrive，請參閱[商務用 OneDrive 異地移動](move-onedrive-between-geo-locations.md)，請按照「在地理位置之間移動 OneDrive」中的指示。
 
-如果使用者在租用戶中沒有 OneDrive 網站，OneDrive 會根據其 PDL 值進行佈建，並假設使用者的 PDL 符合其中一個公司的允許資料位置 (ADL)。
+如果使用者在租用戶中沒有 OneDrive 網站，OneDrive 會根據其 PDL 值進行佈建，並假設使用者的 PDL 符合公司的其中一個衛星位置。
 
 ## <a name="configuring-multi-geo-search"></a>設定多地理位置搜尋
 
@@ -182,7 +182,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
 **OneDrive 同步處理用戶端**
 
-確認 OneDrive 同步處理用戶端會在登入時自動偵測商務用 OneDrive 的地理位置。如果您要下載同步處理用戶端，請按一下 OneDrive 文件庫中的 [同步處理]****。
+確認 OneDrive 同步處理用戶端會在登入時自動偵測商務用 OneDrive 的地理位置。如果您要下載同步處理用戶端，請按一下 OneDrive 文件庫中的 [**同步處理**]。
 
 **Office 應用程式**
 

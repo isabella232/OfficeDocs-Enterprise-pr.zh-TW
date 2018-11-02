@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 12da695b44c5102c985a8d64960b1d20e092c8cd
-ms.sourcegitcommit: 92d16c0926e4be3fd493fe9b4eb317fb54996bca
+ms.openlocfilehash: 0113c20eab59e4d0a3122344346d31ae9f0a35a8
+ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "21550056"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "25849879"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
@@ -23,11 +23,11 @@ ms.locfileid: "21550056"
 
 #### <a name="onedrive-administrator-experience"></a>OneDrive 系統管理員體驗
 
-[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [地理位置]**** 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。
+[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [**地理位置**] 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。
 
 #### <a name="taxonomy"></a>分類
 
-我們支援整合[分類](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC)，以用於跨地理位置中的企業管理中繼資料，內含在貴公司之中央位置中主控的主機。我們建議您從中央位置管理全域分類，並只將特定位置的詞彙新增至衛星地理位置。通用的分類詞彙會同步處理至衛星地理位置。
+我們支援整合[分類](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC)，以用於跨地理位置中的企業管理中繼資料，內含在貴公司之中央位置中主控的主機。我們建議您從中央位置管理全域分類，並只將特定位置的詞彙新增至衛星位置。通用的分類詞彙會同步處理至衛星位置。
 
 #### <a name="sharing"></a>共用
 
@@ -43,7 +43,7 @@ ms.locfileid: "21550056"
 
 #### <a name="bcs-secure-store-apps"></a>BCS、Secure Store、應用程式
 
-BCS、Secure Store 及應用程式都有個別的地理位置執行個體，因此 Sharepoint Online 系統管理員應從他們希望這些服務出現的每個地理執行個體中管理及設定這些服務。
+BCS、Secure Store 及應用程式在每個衛星位置中都有個別的執行個體，因此 Sharepoint Online 系統管理員應該從每個衛星位置中個別管理及設定這些服務。
 
 #### <a name="security-and-compliance-admin-center"></a>安全性與合規性管理中心
 
@@ -63,10 +63,10 @@ BCS、Secure Store 及應用程式都有個別的地理位置執行個體，因�
 
 Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。
 
-當為特定地理位置設定電子文件探索管理員或系統管理員角色時，電子文件探索管理員或系統管理員只能對位於該地理位置中的 SharePoint 網站和 OneDrive 網站執行 eDiscovery 搜尋動作。如果電子文件探索管理員或系統管理員嘗試搜尋指定範圍外的 SharePoint 或 OneDrive 網站，則不會傳回任何結果。此外，當某地區的電子文件探索管理員或系統管理員區域觸發匯出時，系統會將資料匯出至該區域的 Azure 執行個體。這可透過禁止匯出控制框線外的內容來協助組織保持合規。
+當為特定衛星位置設定電子文件探索管理員或系統管理員角色時，電子文件探索管理員或系統管理員只能對位於該衛星位置中的 SharePoint 網站和 OneDrive 網站執行 eDiscovery 搜尋動作。如果電子文件探索管理員或系統管理員嘗試搜尋指定的衛星位置外的 SharePoint 或 OneDrive 網站，則不會傳回任何結果。此外，當某衛星位置的電子文件探索管理員或系統管理員區域觸發匯出時，系統會將資料匯出至該區域的 Azure 執行個體。這可透過禁止匯出控制框線外的內容來協助組織保持合規。
 
 > [!NOTE]
-> 如果此對跨多個 SharePoint 區域的電子文件探索管理員是必要的，將必須為指定 OneDrive 或 SharePoint 網站所在位置之替代區域的電子文件探索管理員建立另一個使用者帳戶。
+> 如果此對跨多個 SharePoint 衛星位置的電子文件探索管理員是必要的，將必須為指定 OneDrive 或 SharePoint 網站所在位置之替代衛星位置的電子文件探索管理員建立另一個使用者帳戶。
 
 <table>
 <thead>
@@ -122,7 +122,7 @@ Office 365 全域系統管理員必須指派電子文件探索管理員權限，
 2.  Enter 鍵  
     $s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)
 
-    $a = Import-PSSession $s -AllowClobber  
+    $a = Import-PSSession $s -AllowClobber  
 
 3.  **New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName
 
@@ -132,4 +132,4 @@ Office 365 全域系統管理員必須指派電子文件探索管理員權限，
 
 #### <a name="audit-log-search"></a>稽核記錄檔搜尋
 
-適用於所有地理位置的整合式[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)可從 Office 365 稽核記錄搜尋頁面中取得。您可以看到跨地區的所有稽核記錄項目，例如，北美洲與歐洲地理使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選，以查看特定使用者的活動。
+適用於所有衛星位置的整合式[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)可從 Office 365 稽核記錄搜尋頁面中取得。您可以看到跨地區的所有稽核記錄項目，例如，北美洲與歐洲地理使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選，以查看特定使用者的活動。
