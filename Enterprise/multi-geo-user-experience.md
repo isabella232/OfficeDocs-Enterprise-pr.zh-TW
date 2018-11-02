@@ -11,11 +11,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解多地理位置環境中 SharePoint 和 OneDrive 使用者經驗。
-ms.openlocfilehash: 3c7e4b6802bddc78db016c9c282f5add0c71c491
-ms.sourcegitcommit: 75842294e1ba7973728e984f5654a85d5d6172cf
+ms.openlocfilehash: 951efb636ce00f59393f624687d44a406fcf3fc0
+ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "25849829"
 ---
 # <a name="user-experience-in-a-multi-geo-environment"></a>在多地理位置環境中的使用者體驗
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/27/2018
 
 #### <a name="sharing"></a>共用
 
-人員選擇器體驗會顯示所有使用者 (不論其地理位置為何)。這可讓使用者與在其相同地理位置或在任何其他租用戶之地理位置的其他使用者共用。來自不同地理位置的內容會顯示在使用者商務用 OneDrive 中 [與我共用]**** 檢視中，並可透過單一登入體驗來存取 (無論其在哪一個地理位置受到主控)。
+人員選擇器體驗會顯示所有使用者 (不論其地理位置為何)。這可讓使用者與在其相同地理位置或在任何其他租用戶之地理位置的其他使用者共用。來自不同地理位置的內容會顯示在使用者商務用 OneDrive 中 [**與我共用**] 檢視中，並可透過單一登入體驗來存取 (無論其在哪一個地理位置受到主控)。
 
 #### <a name="office-applications"></a>Office 應用程式
 
