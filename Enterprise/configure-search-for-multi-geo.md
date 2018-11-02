@@ -11,16 +11,16 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: c1cf057383015c35e0dd75c8100f66ce35871878
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 5ca2a35385ab2c246b78dc8811e8435bbdec25c7
+ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915058"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "25849909"
 ---
 # <a name="configure-search-for-onedrive-for-business-multi-geo"></a>設定商務用 OneDrive 多地理位置的搜尋
 
-在多地理位置 SharePoint Online (SPO) 環境中，組織可以有一個 Office 365 租用戶，但將其 SharePoint 內容儲存在多個地理位置 (一個中央位置，與一或多個衛星地理位置)。
+在商務用 OneDrive 多地理位置環境中，組織可以有一個 Office 365 租用戶，但將其 OneDrive 內容儲存在多個地理位置 (一個中央位置與一或多個衛星位置) 中。
 
 每個地理位置有其專屬的搜尋索引和搜尋中心。當使用者搜尋時，系統會將查詢展開傳送到所有索引，並合併傳回的結果。
 
