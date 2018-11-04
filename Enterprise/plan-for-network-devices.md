@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 摘要：說明連線到 Office 365 時所用之網路容量、WAN 加速器和負載平衡裝置的注意事項。
-ms.openlocfilehash: c384ba043e64ec83eda74b234937efaf72f29815
-ms.sourcegitcommit: ad5bdc53ca67ee6a663c27648511c1ad768a76d4
+ms.openlocfilehash: 023eb3f5ed4d81d1d49d18c69ef8c81032fd5851
+ms.sourcegitcommit: 317c2753be2aedb60698e94606ba59b63c962328
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "23223065"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "25933120"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>連線到 Office 365 服務的網路裝置的計劃
 
@@ -37,7 +37,7 @@ ms.locfileid: "23223065"
   
 商務說明文章的下列 Skype 具備商務設定 Skype 的詳細資訊：
   
-- [疑難排解 Skype 商務登入錯誤 （管理員）](https://go.microsoft.com/fwlink/p/?LinkID=243624)
+- [疑難排解商務 Online 登入錯誤 Skype 系統管理員](https://docs.microsoft.com/skypeforbusiness/set-up-skype-for-business-online/troubleshooting-sign-in-errors-for-admins)
 
 - [您無法連線至 Skype for Business，或某些功能無法運作，因為在內部部署防火牆封鎖連線](https://go.microsoft.com/fwlink/p/?LinkID=243625)
 
