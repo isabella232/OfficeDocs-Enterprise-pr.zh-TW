@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: fd16c8d2-4799-4c39-8fd7-045f06640166
 description: 如果您的網際網路連線永遠是 fast 且永遠不向下，不是很好吗？或許會跳那天。但同時，有要怎麼做才能解決 balky 網路和仍屬可以完成您日常工作的實用事項。
-ms.openlocfilehash: 52c3bde04aa58f9e24a49d2034e6b6433c44f21c
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 2287de562672f5ceb1ab32949168e8dfdeb31585
+ms.sourcegitcommit: 317c2753be2aedb60698e94606ba59b63c962328
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540185"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "25933140"
 ---
 # <a name="best-practices-for-using-office-365-on-a-slow-network"></a>在慢速網路上使用 Office 365 的最佳作法
 
@@ -162,7 +162,7 @@ OneDrive for Business 同步處理應用程式皆可使用 Office 2013 （Profes
 
 當您自訂網頁時，可能不經意會導致不佳的效能與頁。數個因素可以影響，例如複雜度及大小] 頁面上、 多少網頁組件會新增最初顯示多少個清單或文件庫項目，及程式碼] 頁面上的方式。
   
-如需詳細資訊，請參閱 ＜[調整 SharePoint Online 的效能](https://technet.microsoft.com/library/f97c2f06-0426-443d-8a16-d98abb0da252#TuneSharePoint)。
+如需詳細資訊，請參閱 ＜[調整 SharePoint Online 的效能](https://docs.microsoft.com/office365/enterprise/tune-sharepoint-online-performance)。
   
 ## <a name="best-practices-for-using-project-online"></a>使用 Project Online 的最佳作法
 
@@ -192,5 +192,5 @@ Microsoft 持續改善藉由監視網路測量的頻寬的 Office 365 的整體�
   
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
 
