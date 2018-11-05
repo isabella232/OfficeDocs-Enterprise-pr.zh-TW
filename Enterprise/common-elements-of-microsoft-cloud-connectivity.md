@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 061d4507-7360-4029-8f4b-3d4bc6b4ade0
 description: 摘要： 了解一般的網路基礎結構元素，以及如何準備您的網路。
-ms.openlocfilehash: 492d13a2a62425201c727c039e45db2750202da6
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 1bd56da2b3ede08a8ef6be3834b246200970a690
+ms.sourcegitcommit: 236bf086f0596de8b612a9d8f40df4f3ce199146
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915648"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "25897026"
 ---
 # <a name="common-elements-of-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的共同項目
 
@@ -60,7 +60,7 @@ ms.locfileid: "22915648"
     
 - **外部工作量：** 網站或其他工作負載供外部使用者在網際網路上。
     
-- **Proxy 伺服器：** 服務要求代表內部網路使用者的 web 內容。反向 proxy 允許來路不明的輸入的要求。
+- **Proxy 伺服器：** 服務要求代表內部網路使用者的 web 內容。反向 proxy，允許來路不明的輸入的要求。
     
 - **外部防火牆：** 允許輸出流量及指定的輸入的流量。可執行位址轉譯。
     
@@ -80,7 +80,7 @@ ms.locfileid: "22915648"
 - **網際網路 DNS：** A、 AAAA、 CNAME、 MX、 PTR 及其他記錄以找出 Microsoft cloud 或雲端服務。例如，您可能需要 CNAME 記錄為您的應用程式架設在 Azure PaaS。
     
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 [Microsoft 雲端連線 ExpressRoute](expressroute-for-microsoft-cloud-connectivity.md)
 
