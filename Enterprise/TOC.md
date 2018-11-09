@@ -81,13 +81,13 @@
 ## [為貴組織部署 Office 365 企業版](setup-overview-for-enterprises.md)
 ### [部署 Office 365 規劃檢查清單](deployment-planning-checklist.md)
 ### [Office 365 的安全性最佳做法](https://docs.microsoft.com/Office365/SecurityCompliance/security-best-practices)
-## 設定網路
+## [設定網路](set-up-network-for-office-365.md)
 ### [Office 365 網路連線能力概觀](office-365-networking-overview.md)
 ### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 ### [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
 ### [對 Office 365 的網路連線](network-connectivity.md)
 ### [Office 365 網路合作夥伴計劃](office-365-networking-partner-program.md)
-### Office 365 IP 位址和 URL
+### [Office 365 IP 位址和 URL](office-365-endpoints.md)
 #### [管理 Office 365 端點](managing-office-365-endpoints.md)
 #### [全球端點](urls-and-ip-address-ranges.md)
 #### [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md)
