@@ -15,21 +15,23 @@ search.appverid:
 - BSA160
 ms.assetid: dbab2593-dc6a-40f7-adfe-031b9baa620f
 description: 使用 SharePoint 工具] 頁面上診斷來分析傳統根據建議的最佳作法頁面的 SharePoint Online。
-ms.openlocfilehash: 0fc2e16867b54e644d00c57fbfc41d4f7d042f88
-ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
+ms.openlocfilehash: 1524befc0003006cfab9100aafc7d3deda2a37d2
+ms.sourcegitcommit: 5be99683fb2de87f723264c8a1123451d31ea43b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "23975161"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "26253614"
 ---
 # <a name="use-the-page-diagnostics-tool-for-sharepoint-online"></a>使用 SharePoint Online 頁面診斷工具
 
 本文說明如何使用頁面診斷工具來分析您的傳統發佈的頁面和針對**SharePoint Online**中的建議作法的子集的傳統小組網站上的頁面。 
   
 不需要啟用的發佈功能的小組網站無法利用的 Cdn 但所有的其餘規則都適用。發佈新增額外負荷，不要開啟只是要為它將會造成負面影響頁面載入次數取得 CDN 功能的發佈功能。
+
+**請注意已經發行 V1.05 因此請更新您如果您有其已安裝的擴充**。如果您不確定您有哪些版本然後請按一下 ["約"連結以確認它。
   
 > [!IMPORTANT]
-> 頁面診斷工具不會執行對文件庫或 system 頁面為此工具的設計檢閱 SharePoint 網站] 頁面。*Allitems.aspx*頁面為系統頁面。如果您嘗試在系統] 頁面上執行工具，您會收到讀取郵件、"此應用程式應只執行 SharePoint 頁面上。 」<br/> ![必須在 SharePoint 頁面上執行](media/34aadfff-1009-496b-9c87-4fc2780e017c.png)<br/>這是不工具中的錯誤如下在評估文件庫或系統頁面沒有值。請瀏覽至 [非系統 SharePoint] 頁面上使用此工具。如果您想要提供意見反應給相關工具請按一下 [關於] 索引標籤並依照[提供意見反應] 連結](https://go.microsoft.com/fwlink/?linkid=874109)。 
+> 頁面診斷工具不會執行對文件庫或 system 頁面為此工具的設計檢閱 SharePoint 網站] 頁面。*Allitems.aspx*頁面為系統頁面。如果您嘗試在系統] 頁面上執行工具，您會收到讀取郵件、"此應用程式應只執行 SharePoint 頁面上。 」<br/> ![必須在 SharePoint 頁面上執行](media/34aadfff-1009-496b-9c87-4fc2780e017c.png)<br/>這是不工具中的錯誤如下在評估文件庫或系統頁面沒有值。請瀏覽至 [非系統 SharePoint] 頁面上使用此工具。如果發生此情況 SharePoint 頁面上再請檢查 MasterPage 視為我們已客戶移除 SharePoint 中繼標籤及則頁面不再是 SharePoint 頁面。如果您想要提供意見反應給相關工具請按一下 [關於] 索引標籤並依照[提供意見反應] 連結](https://go.microsoft.com/fwlink/?linkid=874109)。 
   
 ## <a name="install-the-page-diagnostic-tool"></a>安裝] 頁面上診斷工具
 

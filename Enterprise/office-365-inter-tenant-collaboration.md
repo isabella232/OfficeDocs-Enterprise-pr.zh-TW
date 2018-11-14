@@ -3,7 +3,7 @@ title: Office 365 租用戶間共同作業
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.date: 6/28/2018
+ms.date: 11/08/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -14,12 +14,12 @@ search.appverid:
 - MOE150
 ms.assetid: eb45fd8b-1d5d-4b0c-9c5a-479dbb176e7d
 description: 了解 Office 365 共同作業租用戶及組織間的運作方式。
-ms.openlocfilehash: 932c837f9dc09dd0469a17ad4e6a05f09966d29c
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: ec844f78a0ae31469c2ca92c5cb97d965bdb3508
+ms.sourcegitcommit: ba91a1d2d785c1df425617b309fec2edc093793a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539993"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "26219883"
 ---
 # <a name="office-365-inter-tenant-collaboration"></a>Office 365 租用戶間共同作業
 
@@ -49,7 +49,7 @@ Office 365 之間的租用戶共同作業選項包括使用的集中位置的檔
 
 |**共用目標**|**系統管理巨集指令**|**用法資訊**|
 |:-----|:-----|:-----|
-|Skype 商務 online-IM、 通話及顯示狀態與商務使用者的其他 Skype  <br/> |系統管理員可以啟用其 Skype 商務 Online 使用者 IM、 進行音訊/視訊通話及請參閱其他 Office 365 租用戶中的使用者的目前狀態。  <br/> |[允許使用者商務使用者的連絡人外部 Skype](https://support.office.com/article/b414873a-0059-4cd5-aea1-e5d0857dbc94) <br/> |
+|Skype 商務 online-IM、 通話及顯示狀態與商務使用者的其他 Skype  <br/> |系統管理員可以啟用其 Skype 商務 Online 使用者 IM、 進行音訊/視訊通話及請參閱其他 Office 365 租用戶中的使用者的目前狀態。  <br/> |[允許使用者連絡外部商務用 Skype 使用者](https://support.office.com/article/b414873a-0059-4cd5-aea1-e5d0857dbc94) <br/> |
 |Skype 商務 online-IM、 通話及顯示狀態與 Skype （消費者） 的使用者  <br/> |系統管理員可以讓商務 Online IM 使用者及其 Skype、 進行通話，並查看與 Skype （消費者） 使用者的目前狀態。  <br/> |[讓商務使用者的 Skype 新增 Skype 連絡人](https://support.office.com/article/08666236-1894-42ae-8846-e49232bbc460) <br/> |
    
 ## <a name="azure-ad-b2b-collaboration-options"></a>Azure AD B2B 共同作業選項
@@ -68,7 +68,7 @@ Office 365 之間的租用戶共同作業選項包括使用的集中位置的檔
 
 |**共用目標**|**系統管理巨集指令**|**用法資訊**|
 |:-----|:-----|:-----|
-|Yammer-透過企業社交 medium 的共同作業  <br/> |建立外部群組的功能已停用 Yammer 管理員，除非使用者可以建立外部進行共同作業 Yammer 中透過能夠想要遵循的文章、 共用檔案、 與線上聊天室的交談群組。  <br/> |[建立及管理外部 Yammer 中的群組](https://support.office.com/article/9ccd15ce-0efc-4dc1-81bc-4a424ab6f92a) <br/> |
+|Yammer-透過企業社交 medium 的共同作業  <br/> |建立外部群組的功能已停用 Yammer 管理員，除非使用者可以建立外部進行共同作業 Yammer 中透過能夠想要遵循的文章、 共用檔案、 與線上聊天室的交談群組。  <br/> |[在 Yammer 建立及管理外部群組](https://support.office.com/article/9ccd15ce-0efc-4dc1-81bc-4a424ab6f92a) (機器翻譯) <br/> |
    
 ## <a name="teams-collaboration-options"></a>小組共同作業選項
 
@@ -77,7 +77,13 @@ Office 365 之間的租用戶共同作業選項包括使用的集中位置的檔
 |與組織外部的使用者在小組共同作業  <br/> |邀請的 Office 365 租用戶的全域系統管理員必須啟用小組中的外部共同作業。全域系統管理員和小組擁有者現在可以邀請進行共同作業的小組電子郵件地址的任何人。  <br/> 系統管理員也可以管理和編輯來賓其租用戶中已經存在。  <br/> |[授權來賓存取](https://docs.microsoft.com/en-us/microsoftteams/teams-dependencies) <br/> [開啟或關閉開啟來賓存取小組中](https://docs.microsoft.com/en-us/microsoftteams/set-up-guests) <br/> [使用 PowerShell 來控制來賓存取](https://docs.microsoft.com/en-us/microsoftteams/guest-access-powershell) <br/> [來賓存取檢查清單](https://docs.microsoft.com/en-us/microsoftteams/guest-access-checklist) <br/> [檢視來賓使用者](https://docs.microsoft.com/en-us/microsoftteams/view-guests) <br/> [編輯來賓使用者資訊](https://docs.microsoft.com/en-us/microsoftteams/edit-guests-information) <br/> |
 |小組擁有者可以邀請和管理來賓內其小組的共同作業。  <br/> |小組擁有者可在來賓可執行其小組內的其他控制項。  <br/> |[新增來賓](https://support.office.com/en-us/article/teams-and-channels-df38ae23-8f85-46d3-b071-cb11b9de5499?ui=en-US&amp;rs=en-US&amp;ad=US#bkmk_addingguests&amp;ID0EAABAAA=Add_guests) <br/> [新增至小組的來賓](https://docs.microsoft.com/en-us/microsoftteams/add-guests) <br/> [管理小組中的來賓存取](https://docs.microsoft.com/en-us/microsoftteams/manage-guests) <br/> [看誰在小組或通道中](https://support.office.com/en-us/article/see-who-s-on-a-team-or-in-a-channel-5c6be9be-9c45-4a0f-a1a0-f332b23cb6b7?ui=en-US&amp;rs=en-US&amp;ad=US) <br/> |
 |從其他租用戶的來賓可在小組中檢視內容並與其他成員共同作業  <br/> |無。  <br/> |[來賓存取經驗](https://docs.microsoft.com/en-us/microsoftteams/guest-experience) <br/> |
-   
+
+## <a name="power-bi-collaboration-options"></a>Power BI 共同作業選項
+
+|**共用目標**|**系統管理巨集指令**|**用法資訊**|
+|:-----|:-----|:-----|
+|Power BI 讓外部來賓使用者可以使用透過連結共用的內容。這可讓組織中的使用者內容的安全方式分散組織。<br/> | Power BI 系統可以控制使用者是否可以邀請外部使用者能夠檢視組織內的內容。 <br/> |[散佈外部來賓使用者與 Azure AD B2B Power BI 內容](https://docs.microsoft.com/en-us/power-bi/service-admin-azure-ad-b2b) <br/> |
+ 
 ## <a name="points-to-be-aware-of-about-office-365-inter-tenant-collaboration"></a>指向要知道 Office 365 之間的租用戶共同作業的相關
 
 ### <a name="sharing-of-user-accounts-licenses-subscriptions-and-storage"></a>共用的使用者帳戶、 授權、 訂閱及儲存

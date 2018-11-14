@@ -13,27 +13,18 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 81c4be5f-327e-435d-a568-526d68cffef0
 description: 本文說明設計的 SharePoint Online 中的最佳效能頁面時需要考量您需要何種特定部分。
-ms.openlocfilehash: 96aeec19a6b582d0dc8701cd2e99329ec8ce156b
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 07938770d711477126f78fc583e8d2533ba5c1d1
+ms.sourcegitcommit: ba91a1d2d785c1df425617b309fec2edc093793a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539937"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "26219873"
 ---
 # <a name="introduction-to-performance-tuning-for-sharepoint-online"></a>SharePoint Online 效能調整的簡介
 
 本文說明設計的 SharePoint Online 中的最佳效能頁面時需要考量您需要何種特定部分。
-  
-## <a name="in-this-article"></a>本文內容
-
-- [SharePoint Online 的評量](introduction-to-performance-tuning-for-sharepoint-online.md#spometrics)和[結論達到因為資料](introduction-to-performance-tuning-for-sharepoint-online.md#data)
-    
-- [檢查效能時使用的標準使用者帳戶](introduction-to-performance-tuning-for-sharepoint-online.md#standuser)
-    
-- [連線類別的效能調整](introduction-to-performance-tuning-for-sharepoint-online.md#connect)：[伺服器的連線](introduction-to-performance-tuning-for-sharepoint-online.md#server)、[網路連線](introduction-to-performance-tuning-for-sharepoint-online.md#network)和[瀏覽器連線](introduction-to-performance-tuning-for-sharepoint-online.md#browser)
-    
+     
 ## <a name="sharepoint-online-metrics"></a>SharePoint Online 度量資訊
-<a name="spometrics"> </a>
 
 下列廣泛的 SharePoint Online 度量值提供有關效能的實際環境資料：
   
@@ -46,7 +37,6 @@ ms.locfileid: "22539937"
 - 導致效能降低的其他事項
     
 ### <a name="conclusions-reached-because-of-the-data"></a>資料所導出的結論
-<a name="data"> </a>
 
 資料會告訴我們：
   
@@ -61,7 +51,6 @@ ms.locfileid: "22539937"
 您可使用的一項簡單基準測試是透過比較您的入口網站載入時間和商務用 OneDrive 首頁載入時間來測量效能，因其使用的自訂功能不多。在進行網路效能問題疑難排解時，這通常是支援人員要求您完成的第一個步驟。
   
 ## <a name="use-a-standard-user-account-when-checking-performance"></a>檢查效能時使用的標準使用者帳戶
-<a name="standuser"> </a>
 
 網站集合管理員、 網站擁有者、 編輯器或參與者屬於其他安全性群組、 具有其他權限，且因此 SharePoint 會載入頁面的其他元素。
   
@@ -70,15 +59,14 @@ ms.locfileid: "22539937"
 才能正確地評估] 頁面上將如何執行使用者，您應該使用標準的使用者帳戶以避免載入撰寫控制項與其他安全性群組與相關的流量。
   
 ## <a name="connection-categories-for-performance-tuning"></a>效能調整的連線類別
-<a name="connect"> </a>
 
 您可將伺服器與使用者之間的連線分類成三種主要元件。在設計 SharePoint Online 頁面以深入瞭解載入時間時，請將這些元件納入考量。
   
-- **伺服器。** Microsoft 主控的資料中心伺服器。
+- **伺服器**Microsoft 主控的資料中心伺服器。
     
-- **網路。** Microsoft network、 網際網路及內部網路之間的資料中心與您的使用者。
+- **網路**Microsoft network、 網際網路及內部網路之間的資料中心與您的使用者。
     
-- **瀏覽器。** 其中載入頁面。
+- **瀏覽器**其中載入頁面。
     
 在這三種連線中，通常有五個原因會造成 95% 的頁面緩滿情形。本文將討論這些原因：
   
@@ -93,19 +81,18 @@ ms.locfileid: "22539937"
 - 網頁組件處理
     
 ### <a name="server-connection"></a>伺服器連線
-<a name="server"> </a>
 
 許多影響 SharePoint 內部部署效能的問題也會在 SharePoint Online 上出現。
   
 一如預期，您有許多手段可控制伺服器在內部部署 SharePoint 中的執行效能。但在 SharePoint Online 上，情形略有不同。您讓伺服器執行的工作越多，呈現頁面所需的時間就越長。而在 SharePoint 中，含有多個網頁組件的複雜頁面才是造成這方面問題的最大禍首。
   
+SharePoint Server 的內部
+  
+![內部部署伺服器的螢幕擷取畫面](media/a8e9b646-cdff-4131-976a-b5f891da44ac.png)
+  
 SharePoint Online
   
-![伺服器連線的螢幕擷取畫面](media/a8e9b646-cdff-4131-976a-b5f891da44ac.png)
-  
-SharePoint
-  
-![內部部署伺服器的螢幕擷取畫面](media/46b27ded-d8a4-4287-b3e0-2603a764b8f8.png)
+![伺服器連線的螢幕擷取畫面](media/46b27ded-d8a4-4287-b3e0-2603a764b8f8.png)
   
 在 SharePoint Online 上，某些網頁要求可能實際上最後會呼叫多部伺服器。原本只是一個要求，最後卻可能演變成涉及多部伺服器的多個要求。從頁面載入的觀點來看，這些互動不僅成本昂貴且會讓效率變慢。
   
@@ -118,7 +105,6 @@ SharePoint
 另一個導致伺服器互動速度變慢的因素是快取遺漏。不同於內部部署 SharePoint，雖然機率微乎其微，但您有可能會叫用相同伺服器來取得之前造訪的頁面；這個情形會讓物件快取過時。
   
 ### <a name="network-connection"></a>網路連線
-<a name="network"> </a>
 
 使用不會利用的 WAN 的內部部署 SharePoint，您可能會使用資料中心及使用者之間的高速連線。一般而言，事項很容易管理觀點的網路。
   
@@ -138,12 +124,11 @@ SharePoint
     
 - 與伺服器的實體距離太遠
     
-您可以運用 SharePoint Online 中的其中一個功能是 Microsoft CDN （內容傳遞網路）。CDN 基本上是跨多個資料中心部署伺服器的分散式的集合。CDN 與頁面上的內容可以架設在接近用戶端的伺服器上即使用戶端遠從原始的 SharePoint 伺服器。Microsoft 將會使用此更未來來儲存的頁面以無法自訂，例如 SharePoint Online 的管理首頁上的本機執行個體。如需 Cdn 的詳細資訊，請參閱 ＜[內容傳遞網路](https://support.office.com/article/Content-delivery-networks-0140f704-6614-49bb-aa6c-89b75dcd7f1f)。
+您可以運用 SharePoint Online 中的其中一個功能是 Microsoft CDN （內容傳遞網路）。CDN 基本上是跨多個資料中心部署伺服器的分散式的集合。CDN 與頁面上的內容可以架設在接近用戶端的伺服器上即使用戶端遠從原始的 SharePoint 伺服器。Microsoft 將會使用此更未來來儲存的頁面以無法自訂，例如 SharePoint Online 的管理首頁上的本機執行個體。如需 Cdn 的詳細資訊，請參閱 ＜[內容傳遞網路](https://docs.microsoft.com/en-us/office365/enterprise/content-delivery-networks)。
   
 您必須注意但可能無能為力的因素是您的 ISP 連線速度。簡單的速度測試工具會告訴您連線速度。
   
 ### <a name="browser-connection"></a>瀏覽器連線
-<a name="browser"> </a>
 
 從效能的觀點來看，有幾個與網頁瀏覽器有關的因素要考慮進去。
   

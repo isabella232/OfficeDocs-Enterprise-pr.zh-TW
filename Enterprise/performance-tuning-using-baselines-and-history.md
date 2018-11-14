@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1492cb94-bd62-43e6-b8d0-2a61ed88ebae
 description: 有一些簡單的方法來檢查 Office 365 與業務，將可讓您建立您的連線能力的粗略基準之間的連線效能。了解效能歷程記錄的用戶端電腦連線可協助您偵測新問題早期、 識別及預測的問題。
-ms.openlocfilehash: bb1fe1e1450798e43c15a07610e27450bce6ea5b
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 30a0903d95ccfcd2018d8971c74c7f80223c005d
+ms.sourcegitcommit: e334616f1b357365b380990eda63f6e63d52ec5b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540087"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "26024685"
 ---
 # <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄進行 Office 365 效能調整
 
@@ -196,7 +196,7 @@ Office 365 儲存而不只是由 「 自動化，但實際的人為穩定受監�
 ![基本網路與用戶端、 proxy 與雲端及工具建議 PSPing、 TraceTCP，以及網路追蹤。](media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
 > [!NOTE]
-> TraceTCP 隨附於此螢幕擷取畫面很有用的工具的顯示，以毫秒為單位，多久要求所需程序和多少網路躍點或連線至下一步]，一部電腦從要求採用以到達目的地。TraceTCP 也可以授與伺服器旋入可支援的 Microsoft Office 365 疑難排解員有用期間使用的名稱。> TraceTCP 命令可以是非常簡單，例如： > `tracetcp.exe outlook.office365.com:443`> 命令中包含的連接埠號碼，請記得 ！> [TraceTCP](https://simulatedsimian.github.io/tracetcp.mdl)免費下載，但依賴 Wincap。Wincap 是一種工具，也用於及安裝 Netmon。我們也會使用 Netmon 進階的方法 ＞ 一節中。 
+> TraceTCP 隨附於此螢幕擷取畫面很有用的工具的顯示，以毫秒為單位，多久要求所需程序和多少網路躍點或連線至下一步]，一部電腦從要求採用以到達目的地。TraceTCP 也可以授與伺服器旋入可支援的 Microsoft Office 365 疑難排解員有用期間使用的名稱。> TraceTCP 命令可以是非常簡單，例如： > `tracetcp.exe outlook.office365.com:443`> 命令中包含的連接埠號碼，請記得 ！> [TraceTCP](http://simulatedsimian.github.io/tracetcp_download.html)免費下載，但依賴 Wincap。Wincap 是一種工具，也用於及安裝 Netmon。我們也會使用 Netmon 進階的方法 ＞ 一節中。 
   
  如果您有多個辦公室，您需要從用戶端的每個這些位置，以及保留的資料集。這項測試會測量延遲，這在此例中是說明將要求傳送至 Office 365 與 Office 365 的回應要求用戶端之間的時間量的數值。測試內部網域的用戶端電腦上，於並尋找測量從您的網路內來回輸出點，透過網際網路到 Office 365 及備份。 
   

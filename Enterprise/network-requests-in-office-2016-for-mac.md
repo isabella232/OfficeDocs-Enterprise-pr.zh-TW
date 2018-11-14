@@ -1,9 +1,9 @@
 ---
-title: Mac 版 Office 2016 中的網路要求
+title: Office for Mac 中的網路要求
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 8/13/2018
+ms.date: 11/9/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -12,17 +12,18 @@ ms.collection: Ent_O365
 ms.custom: Adm_O365_Setup
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
-description: Office for Mac 應用程式的 2016 macOS 平台上提供原生 app 經驗。每個應用程式的設計在各種案例，包括狀態時沒有網路存取權是可用的工作。當電腦連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。此白皮書說明的端點和連絡，嘗試應用程式的 Url 及提供的服務。此資訊在疑難排解網路組態問題和設定網路 proxy 伺服器的原則時很有用。指定與 Office 365 URL 和地址範圍文章旨在本文中的詳細資料。
-ms.openlocfilehash: b94b77a0ff8cd37b0fa1c881ba590853615bfe93
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+description: Office for Mac 應用程式提供 macOS 平台上的原生 app 經驗。每個應用程式的設計在各種案例，包括狀態時沒有網路存取權是可用的工作。當電腦連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。此白皮書說明的端點和連絡，嘗試應用程式的 Url 及提供的服務。此資訊在疑難排解網路組態問題和設定網路 proxy 伺服器的原則時很有用。指定與 Office 365 URL 和地址範圍文章旨在本文中的詳細資料。
+ms.openlocfilehash: 929b93433f5d990952b540a1b28fe2ac74edfb5d
+ms.sourcegitcommit: ba91a1d2d785c1df425617b309fec2edc093793a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540183"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "26219893"
 ---
-# <a name="network-requests-in-office-2016-for-mac"></a>Mac 版 Office 2016 中的網路要求
+# <a name="network-requests-in-office-for-mac"></a>Office for Mac 中的網路要求
 
-Office for Mac 應用程式的 2016 macOS 平台上提供原生 app 經驗。每個應用程式的設計在各種案例，包括狀態時沒有網路存取權是可用的工作。當電腦連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。此白皮書說明的端點和連絡，嘗試應用程式的 Url 及提供的服務。此資訊在疑難排解網路組態問題和網路 proxy 伺服器的設定原則時很有用。本文中的詳細資料都是以指定與[Office 365 URL 和地址範圍文章](urls-and-ip-address-ranges.md)，其中包含執行 Microsoft Windows 的電腦的端點。
+Office for Mac 應用程式提供 macOS 平台上的原生 app 經驗。每個應用程式的設計在各種案例，包括狀態時沒有網路存取權是可用的工作。當電腦連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。下列資訊說明的端點和連絡，嘗試應用程式的 Url 及提供的服務。此資訊在疑難排解網路組態問題和網路 proxy 伺服器的設定原則時很有用。本文中的詳細資料都是要輔助[Office 365 URL 和地址範圍文章](urls-and-ip-address-ranges.md)，其中包含執行 Microsoft Windows 的電腦的端點。除非另有說明，本文中的資訊也適用於 Office 2019 for Mac 和 Office 2016 for Mac，可用以一次性購買零售商店或透過大量授權合約。 
+
   
 充分運用本文是資料表細部網路 Url、 類型及描述服務或該端點所提供的功能。每個 Office 應用程式可能會不同服務和端點使用方式。下列應用程式定義表所示：
   
@@ -39,12 +40,13 @@ URL 類型定義如下：
 - SS： 分號靜態-URL 編碼為網頁或重新導向程式的一部分。
     
 - CS： Config Service-URL 會傳回 Office 設定服務的一部分。
+
     
-## <a name="office-2016-for-mac-default-configuration"></a>Office、 2016、 Mac 預設設定
+## <a name="office-for-mac-default-configuration"></a>Office for Mac 預設設定
 
  **安裝和更新**
   
-若要下載 Office 2016 for Mac 安裝程式從 Microsoft 內容傳遞網路 (CDN) 可用下列網路端點。
+若要下載 Office for Mac 安裝程式從 Microsoft 內容傳遞網路 (CDN) 可用下列網路端點。
   
 |**URL**|**類型**|**描述**|
 |:-----|:-----|:-----|
@@ -127,7 +129,7 @@ URL 類型定義如下：
    
  **研究工具**
   
-下列的網路端點套用至這兩種 Office 365 訂閱。
+下列的網路端點僅適用於 Office 365 訂閱。
   
 |**URL**|**應用程式**|**類型**|**描述**|
 |:-----|:-----|:-----|:-----|
@@ -171,7 +173,7 @@ URL 類型定義如下：
 |:-----|:-----|:-----|:-----|
 |```https://sas.office.microsoft.com/```  <br/> |WXPON  <br/> |CS  <br/> |傳送 Smile 服務  <br/> |
    
- **連絡客戶支援**
+ **連絡支援人員**
   
 下列的網路端點適用於零售/大量授權和 Office 365 訂閱啟用。
   
@@ -220,7 +222,7 @@ URL 類型定義如下：
    
  **安全連結**
   
-下列的網路端點適用於 Office 2016 應用程式。
+所有 Office 應用程式的 Office 365 訂閱僅適都用於下列網路端點。
   
 |**URL**|**類型**|**描述**|
 |:-----|:-----|:-----|
@@ -228,7 +230,7 @@ URL 類型定義如下：
    
  **當機報告**
   
-下列的網路端點套用至所有 Office 2016 應用程式和授權類型。當程序意外損毀時，報表會產生並傳送給 Watson 服務。
+下列的網路端點適用於 Office 365 訂閱和零售/大量授權啟用的所有 Office 應用程式。當程序意外損毀時，報表會產生並傳送給 Watson 服務。
   
 |**URL**|**類型**|**描述**|
 |:-----|:-----|:-----|
@@ -237,7 +239,7 @@ URL 類型定義如下：
    
 ## <a name="options-for-reducing-network-requests-and-traffic"></a>減少網路要求和流量的選項
 
-Mac Office 2016 的預設設定提供最佳使用者經驗包括類功能和保持最新的電腦。在某些情況下，您可能會想要防止從連絡網路端點的應用程式。本章節將討論能力的選項。
+預設設定的 Office for Mac 提供最佳使用者經驗包括類功能和保持最新的電腦。在某些情況下，您可能會想要防止從連絡網路端點的應用程式。本章節將討論能力的選項。
   
  ### <a name="disabling-cloud-sign-in-and-office-add-ins"></a>停用雲端登入和 Office 增益集
   
@@ -266,11 +268,11 @@ Mac Office 2016 的預設設定提供最佳使用者經驗包括類功能和保�
 若要重新建立使用者的完整功能，其中一個設定為 '2' 的喜好設定或移除它。
   
 > [!NOTE]
-> 這個喜好設定需要 Office 2016 for Mac 組建 15.25 [160726] 或更新版本。 
+> 這個喜好設定需要 Office for Mac 組建 15.25 [160726] 或更新版本。 
   
 ### <a name="telemetry"></a>遙測
   
-Office for Mac 的 2016年會每隔將遙測資訊傳送回至 Microsoft。資料上傳至 '連結關係' 端點。將遙測資料可協助評估狀況和每個 Office 應用程式的任何非預期的行為工程小組。有兩種類別的遙測：
+Office for Mac 會每隔將遙測資訊傳送回給 Microsoft。資料上傳至 '連結關係' 端點。將遙測資料可協助評估狀況和每個 Office 應用程式的任何非預期的行為工程小組。有兩種類別的遙測：
   
 - **活動訊號**包含版本及授權資訊。在 [應用程式啟動時立即傳送此資料。 
     
@@ -307,7 +309,7 @@ Microsoft 會非常嚴重引導您的隱私。您可以了解在 Microsoft 的�
   
 ### <a name="updates"></a>更新
   
-Microsoft 發行 Office 2016 Mac 更新每隔 （通常是一次個月）。我們強烈鼓勵使用者和 it 專業人員適用保留機器最新以確保最新的安全性修正程式會安裝。在其中 IT 管理員要緊密控制及管理機器更新的情況下，下列喜好設定可以設定為防止從自動偵測並提供產品更新的 AutoUpdate 程序：
+Microsoft 發行 Office for Mac 更新每隔 （通常是一次個月）。我們強烈鼓勵使用者和 it 專業人員適用保留機器最新以確保最新的安全性修正程式會安裝。在其中 IT 管理員要緊密控制及管理機器更新的情況下，下列喜好設定可以設定為防止從自動偵測並提供產品更新的 AutoUpdate 程序：
   
 ```defaults write com.microsoft.autoupdate2 HowToCheck -string 'Manual'```
 
@@ -315,10 +317,10 @@ Microsoft 發行 Office 2016 Mac 更新每隔 （通常是一次個月）。我�
   
 如果您的組織封鎖透過防火牆或 proxy 伺服器要求 url 務必設定為 [允許]，此文件中列出的 Url 或封鎖列出 40 X 回應 （例如 403 或 404）。40 X 回應將允許正常接受無法存取資源的 Office 應用程式，並可提供更快的使用者經驗，比只之間的連線，接著會導致重試的用戶端。
   
-若 proxy 伺服器需要驗證，則會傳回 407 回應給用戶端。最佳的體驗，請確定您使用的 Office 2016 組建 15.27 或更新版本，如它們包括使用 NTLM 和 Kerberos 伺服器特定的修正程式。
+若 proxy 伺服器需要驗證，則會傳回 407 回應給用戶端。最佳的體驗，請確定您使用的 Office for Mac 組建 15.27 或更新版本，如它們包括使用 NTLM 和 Kerberos 伺服器特定的修正程式。
   
   
 ## <a name="see-also"></a>另請參閱
 
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
 
