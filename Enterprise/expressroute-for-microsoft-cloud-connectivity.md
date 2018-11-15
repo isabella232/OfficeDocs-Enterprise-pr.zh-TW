@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
 description: 摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
-ms.openlocfilehash: d3a19dcd3ce8732b3349c5cacce5b64159850682
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 1cd78372d37e40a53ba7725ff3653ef01daa48b0
+ms.sourcegitcommit: 9da69a749ba557a4c4ae80070ce57e606148521f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915488"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "26525834"
 ---
 # <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的 ExpressRoute
 
@@ -102,7 +102,7 @@ ExpressRoute 連線不保證郵件可以在每個設定較高的效能。有可�
 
 ![圖 3：單一的 ExpressRoute 連線中三種不同的 BGP關係](media/Network-Poster/ERPeering.png)
   
-圖 3 是從內部網路 ExpressRoute 連線。ExpressRoute 連線包含三個邏輯的對等關係。Microsoft 對等關係前往 Microsoft saas 和服務，包括 Office 365 和 Dynamcs CRM Online。公用的對等關係會移至 Azure PaaS 服務。私人的對等關係會移至 Azure IaaS 以及主控虛擬機器時的虛擬網路閘道。
+圖 3 是從內部網路 ExpressRoute 連線。ExpressRoute 連線有三個邏輯的對等關係。Microsoft 對等關係前往 Microsoft saas 和服務，包括 Office 365 和 Dynamcs CRM Online。公用的對等關係會移至 Azure PaaS 服務。私人的對等關係會移至 Azure IaaS 以及主控虛擬機器時的虛擬網路閘道。
   
 Microsoft 對等 BGP 關係： 
   
@@ -186,9 +186,9 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
   
 這可能會導致非最佳傳遞到任何-任何 connectivity 模型的本機 Microsoft 資料中心。
   
-**圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例**
+**圖 7： 範例中的地理位置分散的組織使用的單一 ExpressRoute 連線**
 
-![圖 7：地理位置分散的組織使用單一 ExpressRoute 連線的範例](media/Network-Poster/MSNet1.png)
+![圖 7： 範例中的地理位置分散的組織使用的單一 ExpressRoute 連線](media/Network-Poster/MSNet1.png)
   
 圖 7 顯示兩個位置與組織中的美國西北位置 1 和東北中的位置 2。他們是透過任何-任何 WAN 提供者連接。此組織也有 ExpressRoute 連線到西岸上的 Microsoft 對等位置。東北目的地東岸 datacenter 位置 2 流量必須旅行社一直跨組織的 WAN 西岸到 Microsoft 對等的位置並再回到跨國家透過 Microsoft 雲端網路東岸資料中心。
   

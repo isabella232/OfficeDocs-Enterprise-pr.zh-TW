@@ -135,3 +135,22 @@
 | 11/2/2018 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改 |
 | 11/2/2018 | [可協助您升級從 Office 2007 的伺服器和用戶端的資源](/Office365/Enterprise/upgrade-from-office-2007-servers-and-products) | 修改 |
 | 11/2/2018 | [可協助您升級從 Office 2010 伺服器和用戶端的資源](/Office365/Enterprise/upgrade-from-office-2010-servers-and-products) | 修改 |
+
+
+## <a name="week-of-november-05-2018"></a>2018 年 11 月 05、 當週
+
+
+| 在發佈 |主題標題 | 變更 |
+|------|------------|--------|
+| 第 11/5/2018 | [使內部部署網路與 Microsoft Azure 虛擬網路連線](/Office365/Enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) | 修改 |
+| 第 11/5/2018 | [在 Microsoft Azure 中部署 Office 365 目錄同步作業](/Office365/Enterprise/deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure) | 修改 |
+| 第 11/5/2018 | [針對 Office 365 設定您的網路](/Office365/Enterprise/set-up-network-for-office-365) | 新增 |
+| 第 11/6/2018 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改 |
+| 第 11/6/2018 | [Azure 中的 Office 365 高可用性同盟驗證](/Office365/Enterprise/deploy-high-availability-federated-authentication-for-office-365-in-azure) | 修改 |
+| 第 11/6/2018 | [使用基準與效能歷程記錄進行 Office 365 效能調整](/Office365/Enterprise/performance-tuning-using-baselines-and-history) | 修改 |
+| 第 11/7/2018 | [Office 365 端點](/Office365/Enterprise/office-365-endpoints) | 新增 |
+| 第 11/7/2018 | [針對 Office 365 設定您的網路](/Office365/Enterprise/set-up-network-for-office-365) | 修改 |
+| 第 11/8/2018 | [Office for Mac 中的網路要求](/Office365/Enterprise/network-requests-in-office-2016-for-mac) | 修改 |
+| 第 11/8/2018 | [Office 365 租用戶間共同作業](/Office365/Enterprise/office-365-inter-tenant-collaboration) | 修改 |
+| 第 11/8/2018 | [SharePoint Online 效能調整的簡介](/Office365/Enterprise/introduction-to-performance-tuning-for-sharepoint-online) | 修改 |
+| 第 11/9/2018 | [使用 SharePoint Online 頁面診斷工具](/Office365/Enterprise/page-diagnostics-for-spo) | 修改 |
