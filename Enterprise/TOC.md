@@ -94,7 +94,7 @@
 #### [美國政府 GCC High 端點](office-365-u-s-government-gcc-high-endpoints.md)
 #### [21Vianet 端點運作的 Office 365](urls-and-ip-address-ranges-21vianet.md)
 #### [Office 365 Germany 端點](office-365-germany-endpoints.md)
-#### [Mac 版 Office 2016 中的網路要求](network-requests-in-office-2016-for-mac.md)
+#### [Mac 版 Office 中的網路要求](network-requests-in-office-2016-for-mac.md)
 #### [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 #### [未包含在 Web 服務中的其他端點](additional-office365-ip-addresses-and-urls.md)
 ### [內容傳遞網路](content-delivery-networks.md)
@@ -191,5 +191,5 @@
 ### [用戶端連線](client-connectivity.md)
 # [Office 365 PowerShell](powershell/manage-office-365-with-office-365-powershell.md)
 # [安全性與合規性](https://docs.microsoft.com/Office365/SecurityCompliance)
-# [商務用 Office 365](https://support.office.com/office365admin)
+# [商務用 Office 365](https://docs.microsoft.com/office365/admin/admin-home)
   
