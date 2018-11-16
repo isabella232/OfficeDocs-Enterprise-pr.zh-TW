@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
 description: 摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
-ms.openlocfilehash: c72090638bcdcb580353baa7a733051971598e66
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 9ab2cf992a0170e8b6528c74c868f0db5feeb6e1
+ms.sourcegitcommit: e334616f1b357365b380990eda63f6e63d52ec5b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22914898"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "26024655"
 ---
 # <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
 
@@ -88,15 +88,15 @@ ms.locfileid: "22914898"
 
 您可以在下列階段部署此工作負載：
   
-- [高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
+- [階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
     
-- [High availability federated authentication Phase 2: Configure domain controllers](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
+- [階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定複本 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器。
     
-- [高可用性同盟驗證階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。建立並設定兩個 AD FS 伺服器。
+- [階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。建立並設定兩個 AD FS 伺服器。
     
-- [高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。建立並設定兩個 Web 應用程式 Proxy 伺服器。
+- [階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。建立並設定兩個 Web 應用程式 Proxy 伺服器。
     
-- [高可用性同盟驗證階段 5：設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。設定 Office 365 訂用帳戶的聯盟驗證。
+- [階段 5：設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。設定 Office 365 訂用帳戶的聯盟驗證。
     
 這些文章是預先定義之架構的引導式、階段式指引，用以在 Azure 基礎結構服務中建立功能性、高可用性的 Office 365 聯盟驗證。請記住下列事項：
   

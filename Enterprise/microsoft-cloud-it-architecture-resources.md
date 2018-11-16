@@ -3,7 +3,7 @@ title: Microsoft Cloud IT 架構資源
 ms.author: bcarter
 author: brendacarter
 manager: laurawi
-ms.date: 05/18/2018
+ms.date: 11/13/2018
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -17,12 +17,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
-ms.openlocfilehash: 32d56908ebed809b0a1acb327e42eea559f6fe82
-ms.sourcegitcommit: d0f1f34b1702e304fec85ca72f1f660e9b328dd5
+ms.openlocfilehash: c7fb024492ad77155f8d375d9f4f90f14f9682d2
+ms.sourcegitcommit: 9da69a749ba557a4c4ae80070ce57e606148521f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "24022092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "26525844"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -38,7 +38,6 @@ ms.locfileid: "24022092"
     - [Microsoft Cloud Security for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#security)
     - [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#networking)
     - [Microsoft Mobility and Security for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#mobility)
-    - [Microsoft Cloud Storage for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#storage)
     - [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-cloud-it-architecture-resources.md#hybrid)
     - [常見攻擊和保護您組織的 Microsoft 功能](#common-attacks-and-microsoft-capabilities-that-protect-your-organization)
     
@@ -112,15 +111,6 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關行動性
 |**項目**|**描述**|
 |:-----|:-----|
 |[![Office 365 資訊保護海報的縮圖影像](media/b3c3554f-3ce1-4610-86c7-032e9054ca8b.png)          ](https://www.microsoft.com/download/details.aspx?id=55023) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842076)  \| [Visio](https://go.microsoft.com/fwlink/p/?linkid=842077)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=55023) <br/> | 此模型包含： <ul><li>熱門商務用行動應用程式 </li><li>開發行動應用程式的平台、服務和資源 </li><li>從行動裝置管理雲端式應用程式和資料的存取權 </li><li>Office 365 MDM、Azure Active Directory 進階版和 Intune 的功能與平台支援比較 </li></ul><br/> |
-   
-<a name="storage"> </a>
-### <a name="microsoft-cloud-storage-for-enterprise-architects"></a>Microsoft Cloud Storage for Enterprise Architects
-
-IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關儲存需要瞭解的資訊。
-  
-|**項目**|**描述**|
-|:-----|:-----|
-|[![Microsoft 雲端儲存模型的縮圖影像](media/0d4e2eb9-1109-4b3b-bf9e-2f3eff2e2cc4.png)          ](https://www.microsoft.com/download/details.aspx?id=49552) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842079)  \| [Visio](https://go.microsoft.com/fwlink/p/?linkid=842080)           \| [文章](hhttps://technet.microsoft.com/library/mt842597.aspx) <br/>[更多語言](https://www.microsoft.com/download/details.aspx?id=49552) <br/> | 此模型包含： <ul><li>使用雲端儲存的原因和關鍵案例 </li><li>搭配現有服務的雲端儲存選項 </li><li>可用來作為儲存解決方案起點的儲存選項 </li><li>可建立您自己的儲存解決方案或應用程式儲存體的儲存體建置區塊。</li></ul><br/>|
    
 <a name="hybrid"> </a>
 ### <a name="microsoft-hybrid-cloud-for-enterprise-architects"></a>Microsoft Hybrid Cloud for Enterprise Architects
