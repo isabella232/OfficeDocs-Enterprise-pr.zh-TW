@@ -12,12 +12,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: 本文說明與 SharePoint 發佈啟用在 SharePoint Online 中的導覽選項的網站。選擇及導覽的設定會大幅影響效能及延展性的 SharePoint Online 中的網站。
-ms.openlocfilehash: 08790dcee343e9e69bbaab149cce8a390470e7d6
-ms.sourcegitcommit: 5731dce2440e5a7a261f6360e8e2e9639d339d4e
+ms.openlocfilehash: 5a190ca643c20b6644ca1eecdac2a4a2e281a09e
+ms.sourcegitcommit: 45633b7034ee98d0cd833db9743f283b638237f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "23957448"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "26547175"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
@@ -193,7 +193,7 @@ ms.locfileid: "23957448"
 var root = “https://spperformance.sharepoint.com/sites/NavigationBySearch”;
 ```
 <br/>
-8. 結果會指派給 self.nodes 陣列和不在使用 linq.js 將輸出指派給陣列 self.heirarchy 物件的內建階層。此陣列是繫結至 HTML 物件。做法是 toggleView() 函數中自我物件傳遞至 ko.applyBinding() 函數。<br/>然後這會使要繫結至下列 HTML 的階層陣列：<br/>
+8. 結果會指派給 self.nodes 陣列和不在使用 linq.js 將輸出指派給陣列 self.hierarchy 物件的內建階層。此陣列是繫結至 HTML 物件。做法是 toggleView() 函數中自我物件傳遞至 ko.applyBinding() 函數。<br/>然後這會使要繫結至下列 HTML 的階層陣列：<br/>
 
 ```
 <div data-bind=”foreach: hierarchy” class=”noindex ms-core-listMenu-horizontalBox”>

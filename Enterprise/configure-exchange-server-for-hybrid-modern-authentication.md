@@ -3,7 +3,7 @@ title: 如何設定 Exchange Server 內部部署以使用混合式新式驗證
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 09/28/2018
+ms.date: 11/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: cef3044d-d4cb-4586-8e82-ee97bd3b14ad
 description: 混合式現代驗證 (HMA)，是一種方法提供較安全的使用者驗證和授權，以及適用於 Exchange server 內部部署混合部署的身分識別管理。
-ms.openlocfilehash: 4267eaff8dfce71461f230310141a98be8a39e80
-ms.sourcegitcommit: 9f921c0cae9a5dd4e66ec1a1261cb88284984a91
+ms.openlocfilehash: df5ea03b06ee1c101b03e19c7acb445c9543586b
+ms.sourcegitcommit: 45633b7034ee98d0cd833db9743f283b638237f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "25347603"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "26547155"
 ---
 # <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>如何設定 Exchange Server 內部部署以使用混合式新式驗證
 
@@ -72,7 +72,9 @@ Get-OABVirtualDirectory | FL server,*url*
     
 確定用戶端可以連線至列為 AAD 中 HTTPS 服務主要名稱的 Url。
   
-1. 首先，連線至 AAD[這些指示](https://docs.microsoft.com/en-us/office365/enterprise/powershell/connect-to-office-365-powershell)。
+1. 首先，連線至 AAD[這些指示](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)。 
+
+ **附註**您需要使用從此頁面 Connect-msolservice 選項，可以使用下列命令。 
     
 2. 針對 Exchange 相關的 Url，輸入下列命令：
     
@@ -148,7 +150,7 @@ Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
   
 您也應該以滑鼠右鍵按一下圖示 Outlook 用戶端 （也是在 Windows 通知紙匣中） 的同時按住 CTRL 鍵並按一下 ' 連線狀態 」。針對 「 驗證 」 類型的用戶端的 SMTP 位址看起來 ' 承載\*'，這代表用於 OAuth 承載 token。
   
- **附註**需要使用 HMA 設定適用於企業的 Skype 吗？您將需要兩篇文章： 一個列出[支援的拓撲](https://technet.microsoft.com/en-us/library/mt803262.aspx)，另一個教您[如何進行的設定](configure-skype-for-business-for-hybrid-modern-authentication.md)。
+ **附註**需要使用 HMA 設定適用於企業的 Skype 吗？您將需要兩篇文章： 一個列出[支援的拓撲](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)，另一個教您[如何進行的設定](configure-skype-for-business-for-hybrid-modern-authentication.md)。
   
 
 ## <a name="related-topics"></a>相關主題
