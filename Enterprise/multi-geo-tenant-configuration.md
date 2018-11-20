@@ -11,12 +11,12 @@ ms.custom: ''
 localization_priority: Priority
 ms.collection: Strat_SP_gtc
 description: 了解如何設定商務用 OneDrive 多地理位置。
-ms.openlocfilehash: 6c4a1012f3f26265ef88d82c55bb3ac11cc82da4
-ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
+ms.openlocfilehash: e6a4ee9bd933b3f0db278ca2a7b04661bf123184
+ms.sourcegitcommit: 444efa9e5ea6c0102bb7611d2a9a6b9e072e8a48
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "25849869"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "26539135"
 ---
 # <a name="onedrive-for-business-multi-geo-tenant-configuration"></a>商務用 OneDrive 多地理位置租用戶設定
 
@@ -112,7 +112,7 @@ AAD 中有兩種類型的使用者物件：雲端專用使用者及同步處理�
 
 ### <a name="synchronize-users-preferred-data-location-using-ad-connect"></a>使用 AD Connect 同步處理使用者的慣用資料位置 
 
-如果貴公司的使用者已從內部部署 Active Directory 系統同步處理到 Azure Active Directory，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure AD Connect 同步處理：變更預設組態](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-change-the-configuration)中的程序，設定從內部部署 Active Directory 將慣用的資料位置同步處理到 Azure Active Directory。
+如果貴公司的使用者已從內部部署 Active Directory 系統同步處理到 Azure Active Directory，其 PreferredDataLocation 必須在 AD 中填入，並同步處理到 AAD。請依照 [Azure Active Directory Connect 同步處理：設定 Office 365 資源的慣用資料位置](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)中的程序，設定從內部部署 Active Directory 將慣用的資料位置同步處理到 Azure Active Directory。
 
 建議您將設定使用者的慣用資料位置納入標準使用者建立工作流程的一部分。
 
