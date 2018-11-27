@@ -3,7 +3,6 @@ title: 非路由傳送的網域準備目錄同步作業
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 ms.audience: Admin
 ms.topic: article
 f1_keywords:
@@ -18,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
 description: 了解新如果有非 routale 網域與 Office 365 同步處理之前與您的內部部署使用者相關聯。
-ms.openlocfilehash: 62779ba879522177ba15a491644ab42f5961ece0
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 9ec96c34e1dc4a6c755ea97fce3f5f2a5ba21bb3
+ms.sourcegitcommit: 9c493c4e18e83491d106c5e9bab55d1a89298879
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540199"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "26674437"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>非路由傳送的網域準備目錄同步作業
 當您與 Office 365 同步處理您的內部部署目錄必須有 Azure Active Directory 中的已驗證的網域。僅限使用者主體名稱 (UPN) 相關聯的內部部署網域進行同步處理。不過，包含非路由傳送的網域，例如.local （例如 billa@contoso.local)、 任何 UPN 會同步處理至。 onmicrosoft.com 網域 （例如 billa@contoso.onmicrosoft.com)。 
@@ -32,7 +31,7 @@ ms.locfileid: "22540199"
   
 ## <a name="what-if-i-only-have-a-local-on-premises-domain"></a>如果僅有.local 內部網域吗？
 
-您可以使用 Azure Active directory Active Directory 同步處理的最新工具名為 Azure AD 連線]。如需詳細資訊，請參閱[您的內部部署身分識別與 Azure Active Directory 的整合](https://go.microsoft.com/fwlink/p/?LinkId=624168)。
+您可以使用 Azure Active directory Active Directory 同步處理的最新工具名為 Azure AD 連線]。如需詳細資訊，請參閱[您的內部部署身分識別與 Azure Active Directory 的整合](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad)。
   
 Azure AD 連線同步處理使用者的 UPN 和密碼，讓使用者可以登入使用的相同認證他們使用內部部署。不過，Azure AD 連接僅同步處理至 Office 365 檢定的網域的使用者。這表示該網域也會通過 Azure Active Directory 因為 Azure Active Directory 管理 Office 365 身分識別。換句話說，網域必須為有效的網際網路網域 （例如.com、.org、.net、.us 等等）。如果您內部部署 Active Directory 僅使用非路由傳送的網域 (例如.local)，這可能是不能符合 Office 365 中有已驗證的網域。您可以透過變更主要在您內部部署 Active Directory 網域或新增一或多個 UPN 尾碼來修正此問題。
   

@@ -3,7 +3,6 @@ title: 安裝和執行 Office 365 IdFix 工具
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 ms.audience: Admin
 ms.topic: get-started-article
 f1_keywords:
@@ -16,12 +15,12 @@ search.appverid:
 - MOE150
 ms.assetid: f4bd2439-3e41-4169-99f6-3fabdfa326ac
 description: 如何安裝和執行 Office 365 IdFix 工具可協助清除您的 active directory 同步處理至 Office 365 之前。
-ms.openlocfilehash: 642273c0171603d627a19273a78fe66662f4caaf
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: c485d8397aa32005a34b77f886b9bc8f4e857f1b
+ms.sourcegitcommit: 9c493c4e18e83491d106c5e9bab55d1a89298879
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539949"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "26674427"
 ---
 # <a name="install-and-run-the-office-365-idfix-tool"></a>安裝和執行 Office 365 IdFix 工具
 
@@ -36,30 +35,30 @@ ms.locfileid: "22539949"
     
 ## <a name="what-you-need-to-run-idfix"></a>執行 IdFix 所需的項目
 
-最簡單方式以取得 IdFix 並執行已安裝已加入網域的電腦上。您可以執行該網域控制站上如果您想要但不需要。
+最簡單方式以取得 IdFix 並執行已安裝已加入網域的電腦上。您可以執行該網域控制站上如果您想，但不需要。
   
 ### <a name="idfix-hardware-requirements"></a>IdFix 硬體需求
 
-安裝 IdFix 的電腦必須符合下列硬體需求：
+安裝 IdFix 的電腦必須符合下列基本硬體需求：
   
-- 4 GB RAM (最少)
-- 2 GB 的硬碟空間 (最少)
+- 4 GB RAM
+- 2 GB 的硬碟空間
     
 ### <a name="idfix-software-requirements"></a>IdFix 軟體需求
 
-安裝 IdFix 必須電腦必須加入至您要使用者同步處理至 Office 365 的同一個 Active Directory 網域。電腦也必須安裝.NET Framework 4.0。 
+安裝 IdFix 的電腦必須加入至您要使用者同步處理至 Office 365 的同一個 Active Directory 網域。電腦也必須安裝.NET Framework 4.0。 
   
-如果您執行 Windows Server 2008 或 Windows Server 2012，是可能已經安裝.NET Framework。如果您不可以[下載從下載中心.NET 4.0](https://go.microsoft.com/fwlink/p/?LinkId=400475)或使用 Windows Update。 
+如果您執行 Windows Server 2008 或 Windows Server 2012，是可能已經安裝.NET Framework。如果您不可以[下載從下載中心.NET 4.0](https://go.microsoft.com/fwlink/p/?LinkId=400475)或透過 Windows Update。 
   
 ### <a name="idfix-permissions-requirements"></a>IdFix 權限需求
 
 您用來執行 IdFix 的使用者帳戶需要有目錄的讀寫權限。
   
-如果您不確定您的使用者帳戶符合這些需求，而且您不確定如何檢查，您仍然可以安裝並繼續執行 IdFix。如果您的使用者帳戶沒有正確的權限，IdFix 只會顯示錯誤當您嘗試執行它。
+如果您不確定您的使用者帳戶符合這些需求，而且您不確定如何檢查，仍可安裝及執行 IdFix。如果您的使用者帳戶沒有正確的權限，IdFix 只會顯示錯誤當您嘗試執行它。
   
 ## <a name="install-idfix"></a>安裝 IdFix
 
-若要安裝 IdFix，請下載並解壓縮 **IdFix.exe** (如這些步驟所述)： 
+若要安裝 IdFix，請下載並解壓縮**IdFix.exe**： 
   
 1. 登入您想要安裝 IdFix 工具的電腦。
     
@@ -69,7 +68,7 @@ ms.locfileid: "22539949"
     
 4. 出現提示時，選擇 [**執行**]。
     
-5. 在 [ **WinZip Self-extractor** ] 對話方塊的 [**解壓縮至資料夾**] 文字方塊中輸入或瀏覽至您要安裝 IdFix 工具的位置。依預設，將 C:\Deployment 工具安裝 IdFix\. 
+5. 在 [ **WinZip Self-extractor** ] 對話方塊的 [**解壓縮至資料夾**] 文字方塊中輸入或瀏覽至您要安裝 IdFix 工具的位置。依預設，將安裝 IdFix `C:\Deployment Tools\`。 
     
 6. 選擇 [**解壓縮**]。
     
@@ -79,7 +78,7 @@ ms.locfileid: "22539949"
   
 1. 使用具有目錄讀寫權限的帳戶，登入已安裝 IdFix 的電腦。
     
-2. 在 [檔案總管] 中，移至已安裝 IdFix 的電腦。如果您在安裝期間選擇預設資料夾，請移至 C:\Deployment Tools\IdFix。
+2. 在檔案總管] 中，移至您安裝 IdFix 的位置。如果您選擇在安裝期間的預設資料夾，請移至`C:\Deployment Tools\IdFix`。
     
 3. 連按兩下 [IdFix.exe]****。 
     
@@ -97,7 +96,7 @@ ms.locfileid: "22539949"
     
     ![IdFix 查詢和錯誤計數。](media/da0198a0-7d4d-4afe-a256-e82f1330ada5.JPG)
   
-7. IdFix 完成查詢之後，而且，如果您的目錄中沒有錯誤，則可以繼續進行並同步處理您的目錄。如果您的目錄中有錯誤，則建議您先修正它們，再進行同步處理。如果您想要錯誤類型的更特定資訊以及修正所有錯誤之最佳方式的建議，請查看本主題結尾的連結。 
+7. IdFix 完成查詢之後，您可以繼續進行並同步處理您的目錄如果沒有任何錯誤。如果您的目錄中有錯誤，建議的您修正其再進行同步處理。如果您想更詳細的錯誤類型資訊和有關修正這些項目的的最佳方式的建議，請參閱本主題結尾處的連結。 
     
     雖然不需要先修正錯誤再進行同步處理，但是強烈建議您至少檢閱 IdFix 所傳回的所有錯誤。
     
@@ -121,8 +120,8 @@ ms.locfileid: "22539949"
 - [參照：IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)  
 - [參照：Office 365 IdFix 交易記錄](idfix-transaction-log.md)
     
-## <a name="video-training"></a>影片訓練
+## <a name="video-training"></a>影片訓練課程
 
-如需詳細資訊，請參閱致力提供依 LinkedIn 學習課程[安裝及使用 IDFix 工具](https://support.office.com/article/4d81d73c-f172-4fd5-8542-f601c0c96aa9.aspx)。
+如需詳細資訊，請參閱致力提供依 LinkedIn 學習課程[安裝及使用 IDFix 工具](https://support.office.com/article/install-and-use-the-idfix-tool-4d81d73c-f172-4fd5-8542-f601c0c96aa9?ui=en-US&rs=en-US&ad=US)。
   
 

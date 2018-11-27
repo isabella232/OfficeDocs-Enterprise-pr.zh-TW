@@ -3,7 +3,6 @@ title: Azure 與 Office 365 的整合
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -16,12 +15,12 @@ search.appverid:
 - BCS160
 ms.assetid: a5efce5d-9c9c-4190-b61b-fd273c1d425f
 description: 您的 Office 365 訂閱包括 Azure AD 訂閱。如果您想密碼同步或單一登入搭配內部部署環境，整合 Office 365 Azure AD。
-ms.openlocfilehash: 276243b953d18953ef3ea8f1189d1af8292dca6a
-ms.sourcegitcommit: b1cd20300a616ebef2f00668f42ba14e8aa5fcab
+ms.openlocfilehash: 8b7af5ba8d5106900384369a3e6548af40f9e201
+ms.sourcegitcommit: 9c493c4e18e83491d106c5e9bab55d1a89298879
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "23531836"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "26674417"
 ---
 # <a name="azure-integration-with-office-365"></a>Azure 與 Office 365 的整合
 
@@ -57,7 +56,7 @@ Azure 也提供其他功能，例如管理整合式應用程式，可用來擴�
    
 如需 Microsoft Cloud 和 Office 365 其他資源，請參閱下列資源：
   
-- [Microsoft Cloud Identity for Enterprise Architects](https://go.microsoft.com/fwlink/p/?LinkId=828642)
+- [Microsoft Cloud Identity for Enterprise Architects](https://go.microsoft.com/fwlink/p/?LinkId=524586)
     
 - [在 Microsoft Azure 中部署 Office 365 目錄同步作業 (DirSync)](https://go.microsoft.com/fwlink/p/?LinkId=517887)
     
