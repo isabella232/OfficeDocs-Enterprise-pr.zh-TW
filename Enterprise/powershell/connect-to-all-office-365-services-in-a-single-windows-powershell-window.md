@@ -3,7 +3,7 @@ title: 在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 06/11/2018
+ms.date: 11/27/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 連線至單一 Windows PowerShell 視窗中的所有 Office 365 服務的 Windows PowerShell。
-ms.openlocfilehash: 44f00364d1f81633e06663770f32e0c9f9e99ed8
-ms.sourcegitcommit: 22db89d5b13f7d85e03f35f21f25fa288aadf1b4
+ms.openlocfilehash: 5635cf8b03490c2b2f811f22c231c271d5204552
+ms.sourcegitcommit: 65de707bd1c389eea48767a68c31032dd5198359
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "25575257"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "26706687"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
@@ -32,6 +32,10 @@ ms.locfileid: "25575257"
 ![一次執行五個 Windows PowerShell 主控台](media/a1a852c2-89ea-4e8e-8d8b-dcdf596763d1.png)
   
 這不是因為您不能交換資料之間的跨服務管理那些五個 windows 管理 Office 365 的最佳。本主題說明如何使用單一執行個體您可以從中管理 Office 365、 商務 Online、 Exchange Online、 SharePoint online、 Skype 和安全性的 Windows PowerShell&amp;規範中心。
+
+>[!Note]
+>目前本文僅包含該命令以連線至 Office 365 Worldwide （+ GCC） 雲端。其他附註，提供有關連線至其他 Office 365 雲朵資訊的文章連結。
+>
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -117,12 +121,20 @@ ms.locfileid: "25575257"
   Import-PSSession $exchangeSession
   ```
 
+>[!Note]
+>若要連線至 Exchange Online for Office 365 雲朵 Worldwide 以外，請參閱[Connect to Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)。
+>
+
 7. 執行下列命令以連線至安全性&amp;規範中心。
     
   ```
   $SccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $credential -Authentication "Basic" -AllowRedirection
   Import-PSSession $SccSession -Prefix cc
   ```
+
+>[!Note]
+>若要連線至安全性&amp;規範中心的 Office 365 雲朵以外的全球網站，請參閱[Connect to Office 365 的安全性與規範中心 PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)。
+>
 
 以下是所有命令單一區塊圖模組的使用 Azure Active Directory PowerShell 時。指定您的網域主機名稱和一次執行所有它們。
   
