@@ -3,7 +3,7 @@ title: 將您的網路提升為雲端連線網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/28/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 83e2859a-c673-47c4-880a-01cdfdadb93e
 description: 摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。
-ms.openlocfilehash: 16dbbafe46e903fa41163e12c1741a45b47c5f45
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: c8fba120292b89894850312a84fd6067d925a07f
+ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915138"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26872254"
 ---
 # <a name="evolving-your-network-for-cloud-connectivity"></a>將您的網路提升為雲端連線網路
 
@@ -44,6 +44,8 @@ ms.locfileid: "22915138"
 - **Azure 平台服務 (PaaS)** 除了 Microsoft saas 和服務的投資、 多個網站或地理位置分散 PaaS 應用程式可能會需要架構 Azure 流量管理員來散佈的用戶端流量。進行中的投資包括效能和流量通訊監控與容錯移轉測試。
     
 - **Azure 基礎架構以服務 (IaaS)** Microsoft SaaS 和 PaaS 服務成本，除了 IaaS 中執行 IT 工作量需要設計及設定的 Azure 虛擬網路該主機虛擬機器、 它們、 路由、 IP 上執行應用程式的安全連線處理、 DNS、 和負載平衡。進行中的投資包括效能及安全性監視與疑難排解。
+
+[Microsoft 365](https://www.microsoft.com/microsoft-365)是 Office 365、 企業管理 + 安全性 (EMS) 和 Windows 10 的組合。Microsoft 365 結合多個 SaaS 及完成的智慧型解決方案可讓所有人設為小小寫 Azure 服務及安全共同作業。
     
 ## <a name="areas-of-networking-investment-for-success-in-the-cloud"></a>區域的網路投資在雲端中成功
 

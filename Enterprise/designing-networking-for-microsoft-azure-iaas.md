@@ -3,7 +3,7 @@ title: 設計 Microsoft Azure IaaS 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/28/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 9cb70c9d-9ed9-47cc-af5a-6403d87d3372
 description: 摘要： 了解如何設計的 Microsoft Azure IaaS 中的工作負載最佳化的網路。
-ms.openlocfilehash: 0e7af14768aa1a21548b25a20a465b644b749f3e
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: d13c1d4b985c633b8336dc33253e1350a54b5a39
+ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915118"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26872334"
 ---
 # <a name="designing-networking-for-microsoft-azure-iaas"></a>設計 Microsoft Azure IaaS 的網路
 
@@ -92,11 +92,11 @@ A 跨部署 VNet 具有至網站 (S2S) 透過 Azure 閘道的內部網路的 VPN
 
 ![圖 3：Azure 中的兩種子網路類型](media/2eaa512d-1293-4e9b-b927-6bfe0fc0acb4.png)
   
-圖 3 是含有包含 Azure 閘道與一組的虛擬機器裝載含有虛擬機器時的子網路的閘道子網路 VNet。
+圖 3 是包含具有 Azure 閘道與一組的虛擬機器裝載含有虛擬機器時的子網路的閘道子網路 VNet。
   
 Azure 閘道子網路會需要 Azure 主控兩個虛擬機器的 Azure 的閘道。使用至少 29 位元前置詞長度指定位址空間 (範例： 192.168.15.248/29)。建議的 28 位元或較小的前置詞長度，特別是如果您打算使用 ExpressRoute。
   
-決定 Azure 閘道子網路的位址空間的最佳作法是下列：
+決定 Azure 閘道子網路的位址空間的最佳作法是：
   
 1. 決定閘道子網路的大小。
     
@@ -358,7 +358,7 @@ VNets 可以使用類似用來連接組織的站台的拓撲彼此進行連線�
   
 圖 15 會顯示在 Azure 的閘道，代表在內部網路上的連至位址空間跨部署 VNet 與區域網路位址空間。 
   
-您可以透過下列方式定義的區域網路位址空間：
+您可以以下列方式定義的區域網路位址空間：
   
 - 做法 1： 目前所需的位址空間或 （更新時可能需要新增新的子網路時） 的使用中的前置詞的清單。
     
@@ -419,22 +419,17 @@ IT 工作負載架設在 Azure IaaS 內部網路的範例是高可用性、 多�
 
 ![Azure IaaS 中高可用性的 SharePoint Server 2016 伺服器陣列](media/3a922e21-df91-455f-ba90-78abdd48d98d.png)
   
-圖 19 顯示部署中使用內部負載平衡器的前端和資料層跨部署 VNet 的 SharePoint Server 2016 伺服器陣列的九個伺服器。如需詳細資訊，包括逐步設計及部署指示，請參閱[Microsoft Azure 中的 SharePoint Server 2016](https://technet.microsoft.com/library/mt779107%28v=office.16%29.aspx)。
+圖 19 顯示部署中使用內部負載平衡器的前端和資料層跨部署 VNet 的 SharePoint Server 2016 伺服器陣列的九個伺服器。如需詳細資訊，包括逐步設計及部署指示，請參閱[Microsoft Azure 中的 SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/sharepoint-server-2016-in-microsoft-azure)。
   
 > [!TIP]
-> 若要建立單一伺服器的 SharePoint Server 2016 伺服器陣列中模擬的跨部署 VNet，請參閱[Azure 的開發人員測試環境中的內部網路 SharePoint Server 2016](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。 
+> 若要建立單一伺服器的 SharePoint Server 2016 伺服器陣列中模擬的跨部署 VNet，請參閱[Azure 的開發人員測試環境中的內部網路 SharePoint Server 2016](https://docs.microsoft.com/SharePoint/administration/intranet-sharepoint-server-2016-in-azure-dev-test-environment)。 
   
-如需其他範例虛擬跨部署 Azure 中的虛擬機器上部署的 IT 工作負載的網路，請參閱[Azure IaaS 的混合式雲端案例](https://technet.microsoft.com/library/mt750502.aspx)。
+如需其他範例虛擬跨部署 Azure 中的虛擬機器上部署的 IT 工作負載的網路，請參閱[Azure IaaS 的混合式雲端案例](https://docs.microsoft.com/office365/enterprise/hybrid-cloud-scenarios-for-azure-iaas)。
   
 ## <a name="see-also"></a>另請參閱
-
-<a name="cross_prem"> </a>
 
 [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
-
 
 

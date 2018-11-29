@@ -3,7 +3,7 @@ title: Office 365 美國政府 GCC 高端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 8/13/2018
+ms.date: 11/28/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
 description: 如果您的組織會使用 Office 365 及限制您網路上的電腦連線至網際網路，以下您會發現端點 （Fqdn、 連接埠、 Url、 IPv4 及 IPv6 位址範圍），您應該包含在您輸出允許清單以確保您電腦可以成功地使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: eb1ac47ad8317b46ce19106e8eeab5dae3c25432
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: f9e421af1d15d4b8376e6dd279c5cedb9198911c
+ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540168"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26872274"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府 GCC 高端點
 
@@ -28,31 +28,31 @@ ms.locfileid: "22540168"
 **摘要：** Office 365 需要網際網路連線。下面的端點應可使用 Office 365 美國政府 GCC 高計劃的客戶。
   
 > [!NOTE]
-> Microsoft 已開發 rest web 服務 IP 位址及 FQDN 此頁面上的項目。此新服務可協助您設定及更新例如防火牆及 proxy 伺服器的網路周邊裝置。您可以下載端點、 清單或特定變更的目前版本的清單。XML 文件、 RSS 摘要、 和 IP 位址及 FQDN 此頁面上的項目最後會取代此服務。若要嘗試取出這個新的服務，請移至[Web 服務](managing-office-365-endpoints.md#webservice)。
+> Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
   
- **Office 365 端點：**[全球網站 （包括 GCC）](urls-and-ip-address-ranges.md) |  [Office 365 21vianet 來 21 Vianet](urls-and-ip-address-ranges-21vianet.md)  | [Office 365 德國](office-365-germany-endpoints.md)  | [Office 365 美國政府 DoD](office-365-u-s-government-dod-endpoints.md) | *Office 365 美國政府 GCC 高* |
+ **Office 365 端點：** [全球 (包括 GCC)](urls-and-ip-address-ranges.md) | [21 Vianet 提供的 Office 365](urls-and-ip-address-ranges-21vianet.md)  | [Office 365 德國](office-365-germany-endpoints.md)  |  [Office 365 美國政府 DoD](office-365-u-s-government-dod-endpoints.md) | *Office 365 美國政府 GCC High* |
   
 |||
 |:-----|:-----|
-|**上次更新：** 7/2/2018- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://aka.ms/usendpointrss) <br/> |**下載：** 以[XML 格式](https://aka.ms/usdefenseendpoints)的完整清單 <br/> |
+|**上次更新：** 11/28/2018- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)格式的完整清單 <br/> |
    
- 若要了解我們建議管理使用此資料的網路連線的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。端點資料更新每個月利用新的 IP 位址及發佈前正在使用中的 30 天的 Url 的開頭。這可讓客戶不要尚未有自動更新以完成其程序，才需要的新連線。如果地址支援呈報、 安全性事件或其他立即操作需求所需的端點可能也更新期間月。以下這個頁面上顯示的資料會從 rest web 服務產生。如果您使用指令碼或網路裝置存取此資料，您應直接移至[Web 服務](managing-office-365-endpoints.md#webservice)。
+ 若要了解我們建議管理使用此資料的網路連線的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。端點資料更新每個月利用新的 IP 位址及發佈前正在使用中的 30 天的 Url 的開頭。這可讓客戶不要尚未有自動更新以完成其程序，才需要的新連線。如果地址支援呈報、 安全性事件或其他立即操作需求所需的端點可能也更新期間月。以下這個頁面上顯示的資料會從 rest web 服務產生。如果您使用指令碼或網路裝置存取此資料，您應直接移至[Web 服務](office-365-ip-web-service.md)。
 
-以下的端點資料是從使用者的電腦連線到 Office 365 需求。它不包含使用 microsoft 的網路連線到客戶網路、 有時稱為的混合或傳入的網路連線。
+下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
 
-端點是由四個服務區域所組成。第三個服務區域可以單獨選取進行連線。第四個服務區域是常見的相依性 （稱為 Microsoft 365 一般與 Office Online） 且必須一律網路連線。
+端點則被歸類成四個服務區域。前三個服務區域可以個別選取進行連線。第四個服務區域 (稱為 Microsoft 365 Common 與 Office Online) 的常見相依性，且必須一律具有網路連線能力。
 
-資料行所示︰
+所顯示的資料行為︰
 
-- **ID**： 識別碼號碼] 列中，也稱為端點設定。此識別碼為相同的 web 服務的端點組所傳回。
+- **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**： 顯示端點集是否分類為 「 最佳化"、"Allow"或"Default"。您可以閱讀這些類別和指引適用於管理放在[http://aka.ms/pnc](http://aka.ms/pnc)。此欄也會列出哪些端點集所需具備網路連線。不需要有網路連線的端點組，我們提供在此欄位表示如果封鎖端點集功能就是遺失的附註。如果您要排除整個服務] 區域中，列出所需的端點組不需要連線。
+- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[http://aka.ms/pnc](http://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
 - **增**： 這是 **[是]** 如果端點組支援 Azure ExpressRoute 透過 Office 365 路由前置詞。包含所示的路由前置詞 BGP 社群對齊 [服務] 區域中所列。**無**增時，這表示 ExpressRoute 不支援此端點組。不過，它不應該假定任何路由已通告增為 [**否**] 所在集的端點。如果您打算使用 Azure AD 連線，請閱讀[特殊考量] 區段中](https://docs.microsoft.com/azure/active-directory/connect/active-directory-AADconnect-instances#microsoft-azure-government-cloud)，確定您具有適當 Azure AD 連線設定。
 
-- **地址**： 列出的 Fqdn 或萬用字元網域名稱和 IP 位址範圍的結束點組。請注意 IP 位址範圍新增一個 CIDR 格式而可能會在指定的網路中包含許多個別的 IP 位址。
+- **地址**：列出端點設定的 FQDN 或萬用字元網域名稱及 IP 位址範圍。請注意，IP 位址範圍為 CIDR 格式，且在指定的網路中可能包含讓多個個別的 IP 位址。
  
-- **連接埠**： 列出會結合表單網路端點位址的 TCP 或 UDP 連接埠。您可能會注意到一些重複 IP 位址範圍中的沒有列出不同的連接埠。
+- **連接埠**：列出與地址結合以形成網路端點的 TCP 或 UDP 連接埠。您可能會注意到列出不同連接埠的某些 IP 位址範圍中有重複項目。
  
 [!INCLUDE [Office 365 U.S. Government GCC High endpoints](./includes/office-365-u.s.-government-gcc-high-endpoints.md)]
 

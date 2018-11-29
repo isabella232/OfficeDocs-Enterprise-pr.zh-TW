@@ -3,7 +3,7 @@ title: Microsoft 雲端連線的共同項目
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/28/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 061d4507-7360-4029-8f4b-3d4bc6b4ade0
 description: 摘要： 了解一般的網路基礎結構元素，以及如何準備您的網路。
-ms.openlocfilehash: 1bd56da2b3ede08a8ef6be3834b246200970a690
-ms.sourcegitcommit: 236bf086f0596de8b612a9d8f40df4f3ce199146
+ms.openlocfilehash: e00ad8820ef37c818c270323cf2aa036bb86a804
+ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "25897026"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26872214"
 ---
 # <a name="common-elements-of-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的共同項目
 
@@ -62,7 +62,7 @@ ms.locfileid: "25897026"
     
 - **Proxy 伺服器：** 服務要求代表內部網路使用者的 web 內容。反向 proxy，允許來路不明的輸入的要求。
     
-- **外部防火牆：** 允許輸出流量及指定的輸入的流量。可執行位址轉譯。
+- **外部防火牆：** 允許輸出流量及指定的輸入的流量。可執行位址轉譯、 封包檢查、 SSL 會自動換行及檢查，或是資料外洩防護。
     
 - **WAN 連線的 ISP:** ISP 具有網際網路連線能力與路由的對等電信業者式連線。
     
@@ -80,7 +80,7 @@ ms.locfileid: "25897026"
 - **網際網路 DNS：** A、 AAAA、 CNAME、 MX、 PTR 及其他記錄以找出 Microsoft cloud 或雲端服務。例如，您可能需要 CNAME 記錄為您的應用程式架設在 Azure PaaS。
     
 
-## <a name="next-step"></a>後續步驟
+## <a name="next-step"></a>下一步
 
 [Microsoft 雲端連線 ExpressRoute](expressroute-for-microsoft-cloud-connectivity.md)
 
