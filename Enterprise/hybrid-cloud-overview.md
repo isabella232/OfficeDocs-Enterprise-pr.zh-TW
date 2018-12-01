@@ -3,7 +3,7 @@ title: 混合式雲端概觀
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 3ea3ee10-411e-4690-b9e5-f1b46f1f4d59
 description: 摘要： 了解的定義和 Microsoft 混合雲端的元素。
-ms.openlocfilehash: b77df519dc89a5ab97d965c16dc9f54955614903
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 04c1a80009b1136ae4575ea4d454cebdb26bed3c
+ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915818"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "27123310"
 ---
 # <a name="hybrid-cloud-overview"></a>混合式雲端概觀
 
@@ -55,7 +55,7 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
   
 - Saas 和
     
-    Microsoft saas 和服務包括 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。使用 Microsoft saas 和混合式雲端案例結合這些服務與內部部署服務或應用程式。例如，Exchange Online 在 Office 365 中執行與整合的內部部署的 Business 2015 Skype。
+    Microsoft saas 和服務包括 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。使用 Microsoft saas 和混合式雲端案例結合這些服務與內部部署服務或應用程式。例如，Exchange Online 在 Office 365 中執行與整合的內部部署的 Business 2019 Skype。
     
 - Azure PaaS
     
@@ -85,13 +85,9 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
     
     混合式雲端案例的管理包括維護設定、 資料、 帳戶、 原則與權限，以及要監視的案例和與其效能元素的進行中狀況的功能。您也可以使用相同的工具集，例如 Systems Management Server、 管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
- 
-
 

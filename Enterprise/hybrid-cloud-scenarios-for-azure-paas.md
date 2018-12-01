@@ -3,7 +3,7 @@ title: Azure PaaS 的混合式雲端案例
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 5f4f5d0d-4638-48e8-a517-bd804856b617
 description: 摘要： 了解混合式架構與案例的 Microsoft 平台服務 (PaaS)-以 Azure 中的雲端方案。
-ms.openlocfilehash: e60bc92eed45e5d29fe0be80320dee65b8325028
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: e536d81b6b14b05bef49d7c91b0404faec64303b
+ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915008"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "27123330"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-paas"></a>Azure PaaS 的混合式雲端案例
 
@@ -95,33 +95,9 @@ Azure 應用程式可以使用認證：
     
 因為已與 Azure AD 同步處理在內部身分識別提供者，自訂的行動裝置應用程式與 LOB 應用程式可以驗證要求的使用者帳戶名稱。
   
-## <a name="stretch-database-with-sql-server-2016"></a>運用 SQL Server 2016 延展資料庫
-
-伸展資料庫功能可讓您透明和安全地移動冷資料，例如大型表格包含客戶訂單資訊、 Azure 中的 SQL 拉大資料庫已關閉的商務資料的 SQL Server 2016。
-  
-當拉長、 SQL Server 執行個體、 資料庫、 或甚至是一個表格的內容是 SQL Server 2016 伺服器中的本機資料和 Azure 中的遠端資料的組合。如拉長 SQL Server 2016 自動移到 Azure 會變成合格的資料。
-  
-圖 4 顯示與 SQL Server 2016 延展資料庫。
-  
-**圖 4： 以 SQL Server 2016 伸展的資料庫**
-
-![運用 SQL Server 2016 延展資料庫](media/Hybrid-Poster/Hybrid-Cloud-Stack-PaaS-Apps-SQL.png)
-  
-圖 4] 中的內部網路主控執行 SQL Server 2016 使用小型的本機資料庫伺服器。Azure PaaS 主控 Azure SQL Server 拉大資料庫執行個體與資料庫的延伸部分。T-SQL 查詢傳送至內部部署 SQL server 的內部部署使用者安全地轉寄給 Azure SQL 拉大資料庫，將結果傳回給要求的使用者。
-  
- 包含的歷程資料的使用者查詢透明轉寄給 Azure SQL 延展資料庫。查詢不需要重新寫入，即使表格會拉長。
-  
-伸展資料庫提供長期儲存區與透明資料的存取權歷史符合成本效益的選項。它也求解效能及可用性問題發生時表格會變得非常大。
-  
-如需詳細資訊，請參閱[延展資料庫](https://msdn.microsoft.com/library/dn935011.aspx)。
-  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
-
-
 

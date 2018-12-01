@@ -3,7 +3,7 @@ title: Microsoft SaaS (Office 365) 混合式雲端案例
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: db117e59-389f-46f5-a5df-4eeac0040aa8
 description: 摘要： 瞭解混合架構與案例的 Microsoft 的 saas 和型雲端方案 (Office 365)。
-ms.openlocfilehash: 53187d53b55eedf1fca4f0b98e34accf454c67df
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 063cbd03a2cc65a6cd278ab2efcea235079f801b
+ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915588"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "27123410"
 ---
 # <a name="hybrid-cloud-scenarios-for-microsoft-saas-office-365"></a>Microsoft SaaS (Office 365) 混合式雲端案例
 
@@ -43,7 +43,7 @@ ms.locfileid: "22915588"
     
   - Skype Business server 與 Skype 結合商務線上和新的雲端 PBX 與雲端連接器 Edition 案例
     
-  - SharePoint Server 2016 或 SharePoint Server 2013 與 SharePoint Online （多個案例） 合併
+  - SharePoint Server 2019、 SharePoint Server 2016、 或 SharePoint Server 2013 與 SharePoint Online （多個案例） 合併
     
     也有 Exchange Online 與 Skype for Business Server 內部部署、 跨產品混合式案例。
     
@@ -59,29 +59,23 @@ ms.locfileid: "22915588"
     
     可以包含現有伺服器的 Exchange、 SharePoint 及 Skype for Business，應該更新其最新版本。您可以結合它們與 Office 365 與對應的混合式案例。
     
-設定您自己的[Office 365 開發人員/測試環境](office-365-dev-test-environment.md)。
+設定您的 Office 365 開發人員/測試環境，請參閱[Office 365 測試實驗室指南](cloud-adoption-test-lab-guides-tlgs.md)。
   
-## <a name="skype-for-business-2015-hybrid"></a>Skype 商務 2015年混合式
+## <a name="skype-for-business-hybrid"></a>Skype 商務混合式
 
-Skype 商務 2015年混合式可讓您將現有的內部部署與 Skype 合併商務 online。某些使用者位於的內部和某些使用者的主伺服器皆線上，但使用者共用相同的工作階段初始通訊協定 (SIP) 網域，例如 contoso.com。您可以使用此混合式組態移轉從內部部署到 Office 365 一段時間，在您的排程。也可以與 Exchange Online 整合的商務 2015 Skype。
+Skype 商務混合式可讓您將現有的內部部署與 Skype 合併商務 online。某些使用者位於的內部和某些使用者的主伺服器皆線上，但使用者共用相同的工作階段初始通訊協定 (SIP) 網域，例如 contoso.com。您可以使用此混合式組態移轉從內部部署到 Office 365 一段時間，在您的排程。也可以與[Exchange Online](https://docs.microsoft.com/skypeforbusiness/skype-for-business-hybrid-solutions/integration-with-exchange-and-sharepoint)整合 Skype for Business。
   
-**圖 2： Skype 商務 2015年混合組態**
+**圖 2： Skype 商務混合組態**
 
-![商務用 Skype 2015 混合式組態](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-SfB.png)
+![Skype 商務混合設定](media/Hybrid-Poster/Hybrid-Cloud-Stack-SaaS-SfB.png)
   
-圖 2 顯示組成商務 2015年前端集區與 edge server 通訊的 Skype 商務 Online 在 Office 365 中的內部部署 Skype Skype 商務 2015年混合式設定。
+圖 2 顯示組成商務前端集區與 edge server 通訊的 Skype 商務 Online 在 Office 365 中的內部部署 Skype Skype 商務混合式設定。
   
-如需詳細資訊，請參閱：
-  
-- [規劃 Business server Skype 與 Skype 商務 online 之間的混合式連線](https://technet.microsoft.com/library/jj205403.aspx)
-    
-- [支援混合式組態 Business Server 2015 Skype](https://technet.microsoft.com/library/jj945633.aspx)
-    
-- [Skype 商務混合式](http://hybrid.office.com/skype-for-business/)
+如需詳細資訊，請參閱 ＜ [Plan Business Server 和 Skype 的商務 Online Skype 之間的混合式連線](https://docs.microsoft.com/skypeforbusiness/skype-for-business-hybrid-solutions/plan-hybrid-connectivity)。
     
 ## <a name="cloud-pbx-with-skype-for-business-server"></a>含商務用 Skype Server 的雲端 PBX
 
-雲端 PBX 與 Skype Business server 可讓您以利 Business Server 內部部署拓撲的現有 Skype 與內部部署公用交換電話網路 (PSTN) 連線。 
+雲端 PBX 與 Skype Business server 可讓您轉換 Business Server 內部部署拓撲的現有 Skype 與內部部署公用交換電話網路 (PSTN) 連線。 
   
 **圖 3: Cloud PBX 與 Skype Business server**
 
@@ -93,11 +87,12 @@ Skype 商務 2015年混合式可讓您將現有的內部部署與 Skype 合併�
   
 這是更好的範例可讓您逐步移轉至雲端架構服務的混合式組態。您可以在您開始進行商務 Online 將其移至 Skype 保留使用者的語音功能。您可以移動使用者在自己步調，了解其語音功能會繼續否專家隸屬的。 
   
-如需詳細資訊，請參閱[規劃 Skype Business Server 和 Skype 商務 Online 或 Lync Server 2013 之間的混合式連線](https://technet.microsoft.com/library/jj205403.aspx)。
+如需詳細資訊，請參閱 ＜ [Plan Business Server 和 Skype 的商務 Online Skype 之間的混合式連線](https://docs.microsoft.com/skypeforbusiness/skype-for-business-hybrid-solutions/plan-hybrid-connectivity)。
   
 如果您已經沒有現有的 Lync Server 或 Skype 商務伺服器部署，您可以使用 Skype Business Cloud 連接器 edition、 封裝的虛擬機器 (Vm) 實作內部部署 PSTN 連線能力與雲端 PBX 的一組。
   
-如需詳細資訊，請參閱 ＜ [Plan for Business Cloud 連接器 edition Skype](https://technet.microsoft.com/library/mt605227.aspx)。
+如需詳細資訊，請參閱 ＜ [Plan for Business Cloud 連接器 edition Skype](https://docs.microsoft.com/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/plan-skype-for-business-cloud-connector-edition)。
+
   
 ## <a name="sharepoint-hybrid"></a>SharePoint 混合式
 
@@ -111,27 +106,23 @@ SharePoint 混合式應 SharePoint Online 在 Office 365 搭配內部部署 Shar
   
 SharePoint 混合式案例：
   
-- [混合式商務用 OneDrive](https://technet.microsoft.com/library/mt147425%28v=office.16%29.aspx)
+- [混合式商務用 OneDrive](https://docs.microsoft.com/SharePoint/hybrid/configure-hybrid-onedrive-for-businessroadmap)
     
-- [混合式小組網站](https://technet.microsoft.com/library/mt346110%28v=office.16%29.aspx)
+- [混合式外部網路 B2B](https://docs.microsoft.com/sharepoint/create-b2b-extranet)
     
-- [混合式外部網路 B2B](https://support.office.com/article/SharePoint-Business-to-Business-Collaboration-Extranet-for-Partners-with-Office-365-7b087413-165a-4e94-8871-4393e0b9c037)
+- [混合搜尋](https://docs.microsoft.com/SharePoint/hybrid/configure-cloud-hybrid-searchroadmap)
     
-- [混合搜尋](https://technet.microsoft.com/library/dn720906%28v=office.16%29.aspx)
+- [混合式設定檔](https://docs.microsoft.com/SharePoint/hybrid/plan-hybrid-profiles)
     
-- [混合式設定檔](https://support.office.com/article/Plan-hybrid-profiles-96d1eaf0-94eb-40c5-ab76-c82907777db4)
-    
-- [混合式選擇器](https://support.office.com/article/Hybrid-picker-in-the-SharePoint-Online-admin-center-efce8417-c9bc-4a2c-ac9d-cce6c4e84a9c)
+- [混合式選擇器](https://docs.microsoft.com/SharePoint/hybrid/hybrid-picker-in-the-sharepoint-online-admin-center)
     
     很容易啟用使用自動化可從 SharePoint Online 系統管理中心在 Office 365 的混合式組態精靈的混合式案例。
     
-- [可延伸混合式 App 啟動器](https://support.office.com/article/The-extensible-hybrid-app-launcher-617a7cb5-53da-4128-961a-64a840c0ab91)
+- [可延伸混合式 App 啟動器](https://docs.microsoft.com/SharePoint/hybrid/the-extensible-hybrid-app-launcher)
     
     可讓使用者檢視及使用 Office 365 影片和 Delve 應用程式與經驗內其內部部署 SharePoint 伺服器陣列的頁面。
     
 這些 SharePoint 混合式案例，可延伸的混合式應用程式啟動器、 以外的所有可用的 SharePoint 2016 與 SharePoint 2013 的使用者。
-  
-如需詳細資訊，請參閱[SharePoint 混合式](http://hybrid.office.com/sharepoint/)。
   
 ## <a name="exchange-server-2016-hybrid"></a>Exchange Server 2016 混合式
 
@@ -157,15 +148,11 @@ SharePoint 混合式案例：
     
 您也可以與其他 Microsoft Office 365 應用程式，包括 Skype 商務 Online 與 SharePoint Online 整合此混合式組態。
   
-如需詳細資訊，請參閱[Exchange Server 混合式部署](https://technet.microsoft.com/library/jj200581%28v=exchg.150%29.aspx)與[Exchange 混合](http://hybrid.office.com/exchange/)。
+如需詳細資訊，請參閱[Exchange Server 混合式部署](https://docs.microsoft.com/exchange/exchange-hybrid)。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
-
-
 

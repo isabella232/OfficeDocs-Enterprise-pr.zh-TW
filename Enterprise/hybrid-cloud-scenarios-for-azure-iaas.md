@@ -3,7 +3,7 @@ title: Azure IaaS 的混合式雲端案例
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: 摘要： 了解混合式架構與案例的 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。
-ms.openlocfilehash: 4aecca0c4ac189af7048c712dbdf277aa0ef0dec
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: bb6611f51cc346273438e879d957597fe3299c58
+ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915028"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "27123240"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 
@@ -67,7 +67,7 @@ DirSync Windows 型伺服器是執行 Azure AD 連線。更快的佈建或減少
   
 DirSync server 輪詢 Windows Server AD 的變更，然後將其同步與 Office 365 訂閱。
   
-如需詳細資訊，請參閱 ＜[設定 Office 365 的目錄同步處理](set-up-directory-synchronization.md)。
+如需詳細資訊，請參閱[Microsoft Azure 中部署 Office 365 目錄同步](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)。
   
 ## <a name="line-of-business-lob-application"></a>列的業務 (LOB) 應用程式
 
@@ -157,7 +157,7 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
   
 **圖 5： 在高可用性同盟身分識別基礎結構的 Azure IaaS 中的 Office 365**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-ADFS.png)
+![高可用性 Office 365 同盟 Azure 中的驗證基礎結構](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-ADFS.png)
   
 圖 5-內部網路主控身分識別基礎結構與使用者。所連接的網站 VPN 或 ExpressRoute 連線的 Azure IaaS 閘道。Azure VNet 包含 web proxy 伺服器、 Active Directory Federation Services (AD FS) 伺服器及 Windows Server Active Directory (AD) 的網域控制站。
   
@@ -177,19 +177,11 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
     
     請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)逐一檢視五個階段中的 [AD FS 基礎結構的高可用性的端對端設定。
     
-請參閱下列額外資源：
-  
-- [架構雲端的混合式環境](https://gallery.technet.microsoft.com/Architecting-Hybrid-Cloud-a7dc9f24/file/147475/1/Architecting%20Hybrid%20Cloud%20Environments%20V1.docx)
     
-- [設計與建置在 Azure 中的 LOB 應用程式](https://techcommunity.microsoft.com/t5/CAAB-Cloud-Adoption-Advisory/EXTRA-November-2016-Webinar/m-p/30058#M41)
-    
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
-
 
 
