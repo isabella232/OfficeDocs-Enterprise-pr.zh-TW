@@ -17,12 +17,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：深入了解 Microsoft 雲端服務和平台。檢閱我們的企業雲端藍圖，探索我們的雲端架構系列，以及更多選擇。
-ms.openlocfilehash: c7fb024492ad77155f8d375d9f4f90f14f9682d2
-ms.sourcegitcommit: 9da69a749ba557a4c4ae80070ce57e606148521f
+ms.openlocfilehash: 8a95cb5904907984b393c5e4c67840bd7c0b0311
+ms.sourcegitcommit: 7db45f3c81f38908ac2d6f64ceb79a4f334ec3cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "26525844"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26985758"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -137,7 +137,7 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關混合雲
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Santa Cloud 海報的縮圖影像](media/d47e1448-329b-41b7-9e51-cfc4ea5d0069.png)          ](https://www.microsoft.com/download/details.aspx?id=55039) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842088) <br/> |聖誕老人和他的小精靈 IT 部門使用了 Office 365、Azure、Dynamics 365 和 Intune，來判斷小孩子們乖不乖，好在聖誕夜 (12 月 24 日) 發送聖誕禮物。  <br/>|
+|[![Santa Cloud 海報的縮圖影像](media/d47e1448-329b-41b7-9e51-cfc4ea5d0069.png)](https://www.microsoft.com/download/details.aspx?id=55039) <br/> [線上檢視](https://onedrive.live.com/?authkey=%21ANT1PMgxEdniCyY&cid=8A8EC4F6612625E0&id=8A8EC4F6612625E0%21440&parId=8A8EC4F6612625E0%21218&o=OneUp) \| [PDF](https://go.microsoft.com/fwlink/p/?linkid=842088) <br/> |聖誕老人和他的小精靈 IT 部門使用了 Office 365、Azure、Dynamics 365 和 Intune，來判斷小孩子們乖不乖，好在聖誕夜 (12 月 24 日) 發送聖誕禮物。  <br/>|
    
 <a name="BKMK_o365solutions"> </a>
 ## <a name="office-365-enterprise-solution-series"></a>Office 365 企業方案系列

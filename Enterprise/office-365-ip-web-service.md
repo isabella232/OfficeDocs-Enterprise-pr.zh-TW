@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: 為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。
-ms.openlocfilehash: 1765a35e961d6aa3da42c36e5a04333e57ae010b
-ms.sourcegitcommit: 7f1e19fb2d7a448a2dec73d8b2b4b82f851fb5f7
+ms.openlocfilehash: 8a9b3981f833705b0d77e87a6f0588730b9fb170
+ms.sourcegitcommit: 7db45f3c81f38908ac2d6f64ceb79a4f334ec3cf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "25697979"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "26985768"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>**Office 365 IP 位址和 URL Web 服務**
 
@@ -68,7 +68,7 @@ Microsoft 會在每個月底更新 Office 365 IP 位址和 FQDN 項目，有時�
 - **Format=JSON** | **CSV** | **RSS** – 除了 JSON 和 CSV 格式之外，版本 Web 方法也支援 RSS。您可以搭配 allVersions=true 參數使用這個格式來要求 RSS 摘要，此摘要可以與 Outlook 或其他 RSS 讀取器搭配使用。
 - **Instance** - 路由參數。這個選擇性參數會指定要傳回其版本的執行個體。如果省略，則會傳回所有執行個體。有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
 
-版本 Web 方法的結果可能是單一記錄或記錄陣列。每個記錄的元素是：
+版本 Web 方法沒有速率限制，也不會傳回 429 HTTP 回應碼。版本 Web 方法的回應會包含建議快取資料達 1 小時的快取控制 (cache-control) 標頭。版本 Web 方法的結果可能是單一記錄或記錄的陣列。每一筆記錄的項目如下：
 
 - instance - Office 365 服務執行個體的簡短名稱。
 - latest - 指定執行個體端點的最新版本。
@@ -168,12 +168,14 @@ Worldwide,2018063000
 
 ## <a name="endpoints-web-method"></a>**端點 Web 方法**
 
-端點 Web 方法會傳回組成 Office 365 服務之 IP 位址範圍和 URL 的所有記錄。雖然應該針對網路裝置組態使用端點 Web 方法的最新資料，因為會提供事先通知作為額外項目，所以資料在發佈之後可以快取最多 30 天。端點 Web 方法的參數為：
+端點 Web 方法會傳回組成 Office 365 服務之 IP 位址範圍和 URL 的所有記錄。雖然應該針對網路裝置組態使用端點 Web 方法的最新資料，因為會提供事先通知作為額外項目，所以資料在發佈之後可以快取最多 30 天。我們建議您只在版本 Web 方法指出有新版資料可用時，再重新呼叫端點 Web 方法。端點 Web 方法的參數為：
 
 - **ServiceAreas** - 查詢字串參數。服務區域的以逗點分隔清單。有效項目為 Common、Exchange、SharePoint、Skype。因為通用服務區域項目是其他所有服務區域的必要條件，Web 服務一律會包含它們。如果您未包含此參數，則會傳回所有服務區域。
 - **TenantName** - 查詢字串參數。您的 Office 365 租用戶名稱。Web 服務會採用您提供的名稱並且插入包含租用戶名稱的 URL 當中。如果您未提供租用戶名稱，則 URL 的這些部分會是萬用字元 (\*)。
 - **NoIPv6** - 查詢字串參數。將這個參數設為 true 以從輸出排除 IPv6 位址，例如，如果您未在網路中使用 IPv6。
 - **Instance** - 路由參數。這個必要參數會指定要傳回端點的執行個體。有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
+
+如果您從相同用戶端 IP 位址呼叫端點 Web 方法的次數多到不合理，您可能會收到 HTTP 回應碼 429：太多要求。大部分的人永遠不會看到此回應碼。如果您收到此回應碼，則必須等到 1 小時後，再呼叫此方法。請只在版本 Web 方法指出有新版本可用時，再呼叫端點 Web 方法。 
 
 端點 Web 方法的結果是記錄的陣列，每個記錄代表端點集。每個記錄的元素為：
 
@@ -239,11 +241,22 @@ Worldwide,2018063000
 
 - **Version** - 必要 URL 路由參數。您目前實作的版本，以及您想要在該版本之後查看的變更。格式為 _YYYYMMDDNN_。
 
+變更 Web 方法與端點 Web 方法有同樣的速率限制。如果您收到 429 HTTP 回應碼，則必須等到 1 小時後，才能再次呼叫。 
+
 變更 Web 方法的結果是記錄的陣列，每個記錄代表特定版本端點中的變更。每個記錄的元素為：
 
 - id - 變更記錄的固定識別碼。
 - endpointSetId - 已變更的端點集記錄識別碼。必要。
 - disposition - 可以是變更、新增或移除，並且說明對端點集記錄進行什麼變更。必要。
+- impact - 對每個環境來說，每個變更的重要性不一定相同。此項目會說明此變更對企業網路周邊環境造成的預期影響。此屬性僅包含在 2018112800 和更新版本的變更記錄中。影響選項如下：
+  - AddedIp - 已將 IP 位址新增至 Office 365，而且很快就能在服務上生效。這表示您需要在防火牆或其他第 3 層網路周邊裝置上執行變更。如果您沒有在我們開始使用此項目之前進行新增，您可能會遇到作業中斷的情形。
+  - AdedUrl - 已將 URL 新增至 Office 365，而且很快就能在服務上生效。這表示您需要在 Proxy 伺服器或 URL 剖析網路周邊裝置上執行變更。如果您沒有在我們開始使用此項目之前進行新增，您可能會遇到作業中斷的情形。
+  - AddedIpAndUrl - 已新增 IP 位址和 URL。這表示您需要在防火牆第 3 層裝置或 Proxy 伺服器或 URL 剖析裝置上執行變更。如果您沒有在我們開始使用此項目前進行新增，您可能會遇到作業中斷的情形。
+  - RemovedIpOrUrl – 已從 Office 365 移除至少一個 IP 位址或 URL。您應該從周邊裝置中移除網路端點，但沒有限制您要在什麼時候之前完成此動作。
+  - ChangedIsExpressRoute – ExpressRoute 支援屬性已變更。如果您使用 ExpressRoute，則可能需要根據組態來採取動作。
+  - MovedIpOrUrl - 我們已在此端點集和另一個端點集之間移動 IP 位址或 URL。通常不需要採取任何動作。
+  - RemovedDuplicateIpOrUrl - 我們已移除重複的 IP 位址或 URL，但仍會在 Office 365 上發佈。通常不需要採取任何動作。
+  - OtherNonPriorityChanges – 我們已變更重要性比其他所有選項低的一些項目 (例如附註欄位)
 - version - 在其中引入變更的已發佈端點集版本。版本號碼的格式為 _YYYYMMDDNN_，其中 NN 是當一天中有多個版本需要發佈時，遞增的自然數。
 - previous - 子結構，詳細說明端點集上已變更元素的先前值。新增的端點集不會包含這個項目。包含 tcpPorts、udpPorts、ExpressRoute、category、required、notes。
 - current - 子結構，詳細說明端點集上變更元素的更新值。包含 tcpPorts、udpPorts、ExpressRoute、category、required、notes。
