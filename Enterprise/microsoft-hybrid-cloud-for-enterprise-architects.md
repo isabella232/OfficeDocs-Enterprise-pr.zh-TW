@@ -3,7 +3,7 @@ title: Microsoft Hybrid Cloud for Enterprise Architects
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/30/2018
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 54deae50-9442-4b6a-bd86-e5edb0ec6d74
 description: 摘要： IT 架構設計人員在使用 Microsoft 雲端服務和平台時，有關混合案例需要瞭解的資訊。
-ms.openlocfilehash: 06400dd4f49c51bc3f4712701d9fe6a387de5cff
-ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
+ms.openlocfilehash: 40a46c6d289011a0e0c6065573a5b67a3ac66756
+ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "26872244"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "27123370"
 ---
 # <a name="microsoft-hybrid-cloud-for-enterprise-architects"></a>Microsoft Hybrid Cloud for Enterprise Architects
 
@@ -33,8 +33,7 @@ ms.locfileid: "26872244"
 [![Microsoft 混合式雲端模型的縮圖影像](media/Hybrid-Poster/Hybrid-Cloud-Thumbnail.png)](https://www.microsoft.com/download/details.aspx?id=54424
 )
   
-[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842083) | 
-[更多語言](https://www.microsoft.com/download/details.aspx?id=54424)
+[PDF](https://go.microsoft.com/fwlink/p/?linkid=842082) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842083)
   
 您也可以在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)中看見所有模組。
   
@@ -61,13 +60,9 @@ ms.locfileid: "26872244"
     Azure IaaS 混合案例結構，以及裝載在 Azure IaaS 中適用於企業營運 (LOB) 應用程式的說明。
     
 > [!NOTE]
-> 這幾篇文章說明在 **2017 年 6 月** 發佈的 Microsoft Hybrid Cloud for Enterprise Architects 海報。
+> 這幾篇文章說明在 **2018 年 12 月** 發佈的 Microsoft Hybrid Cloud for Enterprise Architects 海報。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-
-[Microsoft 的 Enterprise Cloud 藍圖：IT 決策者的資源](https://sway.com/FJ2xsyWtkJc2taRD)
-
-
 
