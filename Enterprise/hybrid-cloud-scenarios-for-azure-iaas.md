@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: 摘要： 了解混合式架構與案例的 Microsoft 的基礎結構以服務 (IaaS)-以 Azure 中的雲端方案。
-ms.openlocfilehash: bb6611f51cc346273438e879d957597fe3299c58
-ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
+ms.openlocfilehash: 441565adae46d50ad1b7139525ff3146c5f88ca3
+ms.sourcegitcommit: 82c8fe6393457f0271d1737a09402a420a81c986
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "27123240"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "27181034"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 
@@ -51,21 +51,21 @@ ms.locfileid: "27123240"
     
     包含已同步處理身分識別執行的伺服器在 Azure 中的身分識別伺服器。也可以包含在 Azure 中執行的 Vm 可以存取，例如儲存區與系統管理基礎結構的資源。
     
-## <a name="dirsync-server-for-office-365"></a>Office 365 DirSync 伺服器
+## <a name="directory-synchronization-server-for-office-365"></a>Office 365 的目錄同步處理伺服器
 
-圖 2 所示在 Azure VNet，從執行您的目錄同步處理 (DirSync) 伺服器是擴充到雲端您運算與身分識別基礎結構的範例。
+圖 2 所示在 Azure VNet，從執行您的目錄同步處理伺服器是擴充到雲端您運算與身分識別基礎結構的範例。
   
-**圖 2： Azure IaaS 中的 Office 365 DirSync 伺服器**
+**Office 365 中 Azure IaaS 圖 2： 目錄同步處理伺服器**
 
-![Azure IaaS 中 Office 365 DirSync 伺服器](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-DirSync.png)
+![在 Azure IaaS 中的 Office 365 的目錄同步處理伺服器](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-DirSync.png)
   
-圖 2] 中的內部網路主控 Windows Server AD 基礎結構、 proxy 伺服器和其邊緣路由器。路由器請連接至緣的網站 VPN 或 ExpressRoute 連線 Azure VNet Azure 閘道。內部 VNet DirSync 伺服器執行 Azure AD 連線。
+圖 2] 中的內部網路主控 Windows Server AD 基礎結構、 proxy 伺服器和其邊緣路由器。路由器請連接至緣的網站 VPN 或 ExpressRoute 連線 Azure VNet Azure 閘道。VNet 內部目錄同步處理伺服器執行 Azure AD 連線。
   
-Office 365 DirSync server 與 Office 365 訂閱 Azure AD 租用同步在 Windows Server AD 帳戶的清單。
+Office 365 的目錄同步處理伺服器與 Office 365 訂閱 Azure AD 租用同步在 Windows Server AD 帳戶的清單。
   
-DirSync Windows 型伺服器是執行 Azure AD 連線。更快的佈建或減少您組織中的內部部署伺服器的數目，部署您 DirSync server Azure IaaS 虛擬網路 (VNet) 中。
+目錄同步處理伺服器是執行 Azure AD 連線的 Windows 型伺服器。更快的佈建或減少您組織中的內部部署伺服器的數目，部署在 Azure IaaS 虛擬網路 (VNet) 您目錄同步處理伺服器。
   
-DirSync server 輪詢 Windows Server AD 的變更，然後將其同步與 Office 365 訂閱。
+目錄同步處理伺服器輪詢 Windows Server AD 的變更，然後將其同步與 Office 365 訂閱。
   
 如需詳細資訊，請參閱[Microsoft Azure 中部署 Office 365 目錄同步](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)。
   
@@ -178,7 +178,7 @@ Azure Vm 上裝載的 LOB 應用程式的屬性如下所示：
     請參閱[在 Azure 中的 Office 365 的部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)逐一檢視五個階段中的 [AD FS 基礎結構的高可用性的端對端設定。
     
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
