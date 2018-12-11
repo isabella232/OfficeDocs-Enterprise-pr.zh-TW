@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/27/2018
+ms.date: 12/10/2018
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
 description: 說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。
-ms.openlocfilehash: 78608c3a52151c115eaf80b5315bb71b61e62356
-ms.sourcegitcommit: ad5bdc53ca67ee6a663c27648511c1ad768a76d4
+ms.openlocfilehash: 5d575ea9e0b45ddc453b3b1c73bd53bf73adab2e
+ms.sourcegitcommit: 16806849f373196797d65e63ced825d547aef956
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "23223105"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "27213950"
 ---
 # <a name="view-account-license-and-service-details-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料
 
@@ -63,30 +63,6 @@ ms.locfileid: "23223105"
   
 ```
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses[0].ServiceStatus
-```
-
-若要尋找已啟用或未啟用特定服務的所有授權使用者，使用下列語法：
-  
-```
-Get-MsolUser -All | where {$_.isLicensed -eq $true -and $_.Licenses[<LicenseIndexNumber> ].ServiceStatus[<ServiceIndexNumber> ].ProvisioningStatus <-eq | -ne> "Disabled" -and $_.Licenses[<LicenseIndexNumber> ].ServiceStatus[<ServiceIndexNumber> ].ProvisioningStatus <-eq | -ne> "Disabled"...}
-```
-
-這些範例使用下列資訊：
-  
-- 提供我們感興趣的 Office 365 服務的存取授權已指派給 （索引編號為 0） 的所有使用者的第一個授權。
-    
-- 我們感興趣的 Office 365 服務是 Skype 商務 Online 與 Exchange Online。相關聯的授權方案授權，Skype 商務 online 是 6 列出的服務 （索引編號為 5），與 Exchange Online 是 9th 服務列出 （索引編號為 8）。
-    
-此範例會傳回所有已獲授權的商務 Online 與 Exchange Online Skype 所啟用的使用者。
-  
-```
-Get-MsolUser -All | where {$_.isLicensed -eq $true -and $_.Licenses[0].ServiceStatus[5].ProvisioningStatus -ne "Disabled" -and $_.Licenses[0].ServiceStatus[8].ProvisioningStatus -ne "Disabled"}
-```
-
-此範例會傳回所有已獲授權的使用者未啟用 Skype 商務 Online 或 Exchange Online。
-  
-```
-Get-MsolUser -All | where {$_.isLicensed -eq $true -and $_.Licenses[0].ServiceStatus[5].ProvisioningStatus -eq "Disabled" -and $_.Licenses[0].ServiceStatus[8].ProvisioningStatus -eq "Disabled"}
 ```
 
 若要檢視已被指派*多個授權*之使用者的所有服務，請使用下列語法：
@@ -133,7 +109,7 @@ $licArray
     
 
   
-## <a name="new-to-office-365"></a>初次使用 Office 365 嗎？
+## <a name="new-to-office-365"></a>第一次使用 Office 365？
 
 
 [!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]

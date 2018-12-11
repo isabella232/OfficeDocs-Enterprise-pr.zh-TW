@@ -3,7 +3,7 @@ title: Microsoft 雲端連線的 ExpressRoute
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/28/2018
+ms.date: 12/05/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
 description: 摘要： 了解如何 ExpressRoute 可協助您更快且更可靠連線至 Microsoft 雲端服務和平台。
-ms.openlocfilehash: 3ac8d52f50ff6df612de68ea51136fc16d5c9169
-ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
+ms.openlocfilehash: a72533673618af01fc2ce6dcc44f84cf94afc215
+ms.sourcegitcommit: 16806849f373196797d65e63ced825d547aef956
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "26872324"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "27213970"
 ---
 # <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的 ExpressRoute
 
@@ -222,11 +222,11 @@ Microsoft 資料中心及雲端對等位置所有連線至 Microsoft cloud 網�
     
 - 以全域 Microsoft cloud 本機 ExpressRoute 連線變成無法使用時的較高可用性。
     
-ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。不過，是企業版與 500 或更多授權使用者的其他成本。
+ExpressRoute Premium 是必要的 Office 365 型 ExpressRoute 連線。
   
 **圖 9： World wide Microsoft cloud 網路**
 
-![圖 9：全球 Microsoft 雲端網路](media/Network-Poster/MSNet3.png)
+![圖 9： World wide Microsoft cloud 網路](media/Network-Poster/MSNet3.png)
   
 圖 9 顯示組成的全球 Microsoft 雲端網路涵蓋 continents 與全球和其相對的區域網路的邏輯圖。與 Microsoft cloud 網路中每一個大陸的部分全域企業 ExpressRoute Premium 連線從建立其區域 hub 辦公室本機 Microsoft 對等的位置。
   
