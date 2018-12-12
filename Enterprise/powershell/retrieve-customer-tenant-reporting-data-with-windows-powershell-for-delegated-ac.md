@@ -1,5 +1,5 @@
 ---
-title: "利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料"
+title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -9,18 +9,19 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: 893e5275-30b3-433f-8ecd-644f78f513e2
-description: "摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。"
+description: 摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
 ms.openlocfilehash: d764f34b89ee55fd7015f01c0c48446fc73a6ac0
 ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "17114662"
 ---
 # <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料
 
- **摘要：**使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
+ **摘要：** 使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
   
 新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可透過遠端 Windows PowerShell for Exchange Online PowerShell 直接存取構成客戶租用戶報告的資料。這可讓合作夥伴收集和儲存報告資料，再據此執行其他作業。開啟遠端連線之後，擷取客戶租用相關報告資料的程序與針對客戶租用執行任何 Cmdlet 相同。
   

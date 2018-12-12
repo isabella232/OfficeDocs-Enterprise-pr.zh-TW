@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 0113c20eab59e4d0a3122344346d31ae9f0a35a8
-ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
+ms.openlocfilehash: 09f8816fc0ba748ced5bd104710677829d893198
+ms.sourcegitcommit: 03bb9edd52b1b7cd49791baf90645828b89b32b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "25849879"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "27200697"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
@@ -99,6 +99,10 @@ Office 365 全域系統管理員必須指派電子文件探索管理員權限，
 <tr class="odd">
 <td align="left"><strong>GBR</strong></td>
 <td align="left">歐洲資料中心</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>IND</strong></td>
+<td align="left">東南亞或東亞資料中心</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>KOR</strong></td>

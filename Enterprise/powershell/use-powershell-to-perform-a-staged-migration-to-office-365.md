@@ -1,5 +1,5 @@
 ---
-title: "使用 PowerShell 來執行分段移轉至 Office 365"
+title: 使用 PowerShell 來執行分段移轉至 Office 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -9,18 +9,19 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
-description: "摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。"
+description: 摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
 ms.openlocfilehash: d30bb27700199379ea96b157051110af49bf95fa
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17504366"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
+ **摘要：** 了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
   
 您可以使用分段移轉，逐漸將使用者信箱的內容從來源電子郵件系統移轉到 Office 365。
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 02/09/2018
   
  **停用整合通訊 (UM)** 如果您要移轉的內部部署信箱已開啟 UM，請先關閉 UM 再進行移轉。移轉完成後再開啟信箱的 UM。如需操作步驟，請參閱[如何對使用者停用整合通訊](https://go.microsoft.com/fwlink/?LinkId=521891)。
   
- **使用目錄同步處理在 Office 365 中建立新的使用者。**您可以使用目錄同步處理在 Office 365 組織中建立所有內部部署使用者。
+ **使用目錄同步處理在 Office 365 中建立新的使用者。** 您可以使用目錄同步處理在 Office 365 組織中建立所有內部部署使用者。
   
 您必須授權已建立的使用者。您必須在建立使用者後的 30 天內增加授權。若要增加授權的步驟，請參閱[步驟 8：完成移轉後工作](use-powershell-to-perform-a-staged-migration-to-office-365.md#BK_Postmigration)。
   
@@ -240,17 +241,17 @@ Get-MigrationBatch StagedBatch1
 ### <a name="step-8-complete-post-migration-tasks"></a>步驟 8：完成移轉後工作
 <a name="BK_Postmigration"> </a>
 
-- **建立自動探索 DNS 記錄，讓使用者可以輕鬆存取信箱。**將所有內部部署信箱移轉至 Office 365 後，您可以為 Office 365 組織設定自動探索 DNS 記錄，讓使用者能夠以 Outlook 和行動用戶端輕鬆連線至新的 Office 365 信箱。這個新的自動探索 DNS 記錄必須使用和您的 Office 365 組織所用相同的命名空間。舉例來說，如果您的雲端架構命名空間是 cloud.contoso.com，則您需要建立的自動探索 DNS 記錄是 autodiscover.cloud.contoso.com。
+- **建立自動探索 DNS 記錄，讓使用者可以輕鬆存取信箱。** 將所有內部部署信箱移轉至 Office 365 後，您可以為 Office 365 組織設定自動探索 DNS 記錄，讓使用者能夠以 Outlook 和行動用戶端輕鬆連線至新的 Office 365 信箱。這個新的自動探索 DNS 記錄必須使用和您的 Office 365 組織所用相同的命名空間。舉例來說，如果您的雲端架構命名空間是 cloud.contoso.com，則您需要建立的自動探索 DNS 記錄是 autodiscover.cloud.contoso.com。
     
     Office 365 會使用 CNAME 記錄來實作 Outlook 和行動用戶端的自動探索服務。自動探索 CNAME 記錄必須包含下列資訊：
     
-  - **別名：**自動探索
+  - **別名：** 自動探索
     
-  - **目標：**autodiscover.outlook.com
+  - **目標：** autodiscover.outlook.com
     
     如需詳細資訊，請參閱[管理 DNS 記錄時為 Office 365 建立 DNS 記錄](https://go.microsoft.com/fwlink/p/?LinkId=535028)。
     
-- **解除委任內部部署 Exchange 伺服器。**確認所有電子郵件會直接路由傳送到 Office 365 信箱後，如果不再需要維護內部部署電子郵件組織，或沒打算實作 SSO 解決方案，您可以從伺服器解除安裝 Exchange，並移除內部部署 Exchange 組織。
+- **解除委任內部部署 Exchange 伺服器。** 確認所有電子郵件會直接路由傳送到 Office 365 信箱後，如果不再需要維護內部部署電子郵件組織，或沒打算實作 SSO 解決方案，您可以從伺服器解除安裝 Exchange，並移除內部部署 Exchange 組織。
     
     如需詳細資訊，請參閱下列各主題：
     

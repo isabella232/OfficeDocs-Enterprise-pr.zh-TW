@@ -1,5 +1,5 @@
 ---
-title: "線上商務原則與 Office 365 PowerShell 管理 Skype"
+title: 線上商務原則與 Office 365 PowerShell 管理 Skype
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -9,18 +9,19 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: ff93a341-6f0f-4f06-9690-726052e1be64
-description: "摘要： 使用 Office 365 PowerShell 來管理您 Skype 商務線上與原則的使用者帳戶屬性。"
+description: 摘要： 使用 Office 365 PowerShell 來管理您 Skype 商務線上與原則的使用者帳戶屬性。
 ms.openlocfilehash: 6698bd43b2a55e1c98fbe8e536a46e2de604b4d2
 ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "17114912"
 ---
 # <a name="manage-skype-for-business-online-policies-with-office-365-powershell"></a>線上商務原則與 Office 365 PowerShell 管理 Skype
 
- **摘要：**使用 Office 365 PowerShell 來管理您 Skype 商務線上與原則的使用者帳戶屬性。
+ **摘要：** 使用 Office 365 PowerShell 來管理您 Skype 商務線上與原則的使用者帳戶屬性。
   
 商務 online 中管理 Skype 的使用者帳戶的許多屬性，則必須將其指定為原則與 Office 365 PowerShell 的屬性。
   

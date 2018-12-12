@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 刪除及還原使用者帳戶"
+title: 使用 Office 365 PowerShell 刪除及還原使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,16 +14,17 @@ ms.custom:
 - Ent_Office_Other
 - O365ITProTrain
 ms.assetid: 209c9868-448c-49bc-baae-11e28b923a39
-description: "了解如何使用 Office 365 PowerShell 來刪除和還原 Office 365 使用者帳戶。"
+description: 了解如何使用 Office 365 PowerShell 來刪除和還原 Office 365 使用者帳戶。
 ms.openlocfilehash: 09f3595ed7cd5434efb2897a43ba1bbca5286c25
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/14/2018
+ms.locfileid: "17552776"
 ---
 # <a name="delete-and-restore-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 刪除及還原使用者帳戶
 
-**摘要：**了解如何使用 Office 365 PowerShell 來刪除和還原 Office 365 使用者帳戶。
+**摘要：** 了解如何使用 Office 365 PowerShell 來刪除和還原 Office 365 使用者帳戶。
   
 當您使用 Office 365 PowerShell 來刪除使用者帳戶時，該帳戶並不會永久刪除。您可以在 30 天內還原已刪除的使用者帳戶。
   

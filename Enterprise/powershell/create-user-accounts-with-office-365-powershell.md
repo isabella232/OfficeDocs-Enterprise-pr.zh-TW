@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 建立使用者帳戶"
+title: 使用 Office 365 PowerShell 建立使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,16 +14,17 @@ ms.custom:
 - Ent_Office_Other
 - O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
-description: "了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。"
+description: 了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。
 ms.openlocfilehash: e5fed572d0b835a42071e77b4aeaf8714f2178bd
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/14/2018
+ms.locfileid: "17553256"
 ---
 # <a name="create-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 建立使用者帳戶
 
-**摘要：**了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。
+**摘要：** 了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。
   
 您可以使用 Office 365 PowerShell 有效率地建立使用者帳戶 (尤其是多個使用者帳戶時)。當您在 Office 365 PowerShell 中建立使用者帳戶時，一律需要某些帳戶屬性。其他屬性不一定用於建立帳戶，但卻很重要。下表將說明這些屬性：
   

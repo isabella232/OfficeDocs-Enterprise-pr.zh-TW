@@ -1,5 +1,5 @@
 ---
-title: "指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell"
+title: 指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -9,18 +9,19 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
-description: "摘要： 使用 Office 365 PowerShell 指派個別使用者線上商務原則與 Skype 通訊設定。"
+description: 摘要： 使用 Office 365 PowerShell 指派個別使用者線上商務原則與 Skype 通訊設定。
 ms.openlocfilehash: 7f819b619c5b3607c98c10791fe30c3944e862a4
 ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "17114808"
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 
- **摘要：**使用 Office 365 PowerShell 指派個別使用者的通訊設定與 Skype 線上商務原則。
+ **摘要：** 使用 Office 365 PowerShell 指派個別使用者的通訊設定與 Skype 線上商務原則。
   
 使用 Office 365 PowerShell 是要指派個別使用者線上商務原則與 Skype 通訊設定的有效方法。
   

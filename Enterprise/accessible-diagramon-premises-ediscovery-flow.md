@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-內部部署 eDiscovery 流程"
+title: 存取圖表-內部部署 eDiscovery 流程
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: b9dcd692-0485-4eec-870d-87ab6b89d97b
-description: "本文是名為內部部署 eDiscovery 流程圖表可存取的文字版本。"
+description: 本文是名為內部部署 eDiscovery 流程圖表可存取的文字版本。
 ms.openlocfilehash: e137a75fb80c9198a332144d82fe405c6884aa52
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17503056"
 ---
 # <a name="accessible-diagram---on-premises-ediscovery-flow"></a>存取圖表-內部部署 eDiscovery 流程
 
-**摘要：**本文是名為內部部署 eDiscovery 流程圖表可存取的文字版本。
+**摘要：** 本文是名為內部部署 eDiscovery 流程圖表可存取的文字版本。
   
 此海報提供詳細資訊架構及流程資料的伺服器產品。 
   

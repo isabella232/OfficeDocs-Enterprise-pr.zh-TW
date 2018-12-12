@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-至 Microsoft Azure 的 SharePoint 災害復原"
+title: 存取圖表-至 Microsoft Azure 的 SharePoint 災害復原
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 4b855224-8e67-4efa-a3a4-908ee0ca6412
-description: "本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。"
+description: 本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。
 ms.openlocfilehash: 545aaae05e3becbde60fe01c0e50e5610ee69f98
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17503546"
 ---
 # <a name="accessible-diagram---sharepoint-disaster-recovery-to-microsoft-azure"></a>存取圖表-至 Microsoft Azure 的 SharePoint 災害復原
 
-**摘要：**本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。
+**摘要：** 本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。
   
 此海報提供可用以建置 Azure 中的復原環境架構的範例。 
   

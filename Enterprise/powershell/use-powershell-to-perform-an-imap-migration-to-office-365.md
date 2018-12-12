@@ -17,10 +17,11 @@ ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "18812204"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-office-365"></a>使用 PowerShell 來執行 IMAP 移轉至 Office 365
 
- **摘要：**了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
+ **摘要：** 了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
   
 在部署 Office 365 的過程中，您可以選擇將使用者信箱的內容從網際網路訊息存取通訊協定 (IMAP) 電子郵件服務移轉到 Office 365。本文會引導您使用 Exchange Online PowerShell 來進行電子郵件 IMAP 移轉的工作。 
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 04/20/2018
 ### <a name="step-1-prepare-for-an-imap-migration"></a>步驟 1：準備進行 IMAP 移轉
 <a name="BK_Step1"> </a>
 
-- **如果您擁有適用於 IMAP 組織的網域，請將其新增為 Office 365 組織的公認網域。**如果您想使用已擁有並適用於 Office 365 信箱的相同網域，必須先將其新增為 Office 365 的公認網域。新增後，您可以在 Office 365 內建立使用者。如需詳細資訊，請參閱[在 Office 365 中驗證您的網域](https://go.microsoft.com/fwlink/p/?LinkId=534110)。
+- **如果您擁有適用於 IMAP 組織的網域，請將其新增為 Office 365 組織的公認網域。** 如果您想使用已擁有並適用於 Office 365 信箱的相同網域，必須先將其新增為 Office 365 的公認網域。新增後，您可以在 Office 365 內建立使用者。如需詳細資訊，請參閱[在 Office 365 中驗證您的網域](https://go.microsoft.com/fwlink/p/?LinkId=534110)。
     
-- **將每位使用者新增到 Office 365，讓他們都擁有 Office 365 信箱。**如需指示，請參閱[新增使用者到商務用 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=535065)。
+- **將每位使用者新增到 Office 365，讓他們都擁有 Office 365 信箱。** 如需指示，請參閱[新增使用者到商務用 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=535065)。
     
 - **取得 IMAP 伺服器的 FQDN**。您必須提供 IMAP 伺服器的完整網域名稱 (FQDN) (也稱為「完整電腦名稱」)，當您建立 IMAP 移轉端點時，將會從此伺服器移轉信箱資料。使用 IMAP 用戶端或 PING 命令，確認是否可以使用 FQDN，透過網際網路與 IMAP 伺服器通訊。
     

@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-Microsoft SharePoint 2013 平台選項"
+title: 存取圖表-Microsoft SharePoint 2013 平台選項
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: b88200bf-ced0-4ae6-bbe5-5517377d1be1
-description: "本文是圖表的名為 Microsoft SharePoint 2013 Platform Options 可存取的文字版本。"
+description: 本文是圖表的名為 Microsoft SharePoint 2013 Platform Options 可存取的文字版本。
 ms.openlocfilehash: 1f0d2bf4e74c7e1d28aaa27c6f88dac04f02b4a9
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17504316"
 ---
 # <a name="accessible-diagram---microsoft-sharepoint-2013-platform-options"></a>存取圖表-Microsoft SharePoint 2013 平台選項
 
-**摘要：**本文是圖表的名為 Microsoft SharePoint 2013 Platform Options 可存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft SharePoint 2013 Platform Options 可存取的文字版本。
   
 了解 Office 365、 Microsoft Azure 和內部部署需要何種商務決策者 (Bdm) 與架構師。 
   

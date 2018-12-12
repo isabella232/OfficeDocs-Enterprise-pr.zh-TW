@@ -1,5 +1,5 @@
 ---
-title: "使用 Office 365 PowerShell 中設定使用者帳戶屬性"
+title: 使用 Office 365 PowerShell 中設定使用者帳戶屬性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,16 +14,17 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: 30813f8d-b08d-444b-98c1-53df7c29b4d7
-description: "摘要： 使用 Office 365 PowerShell Office 365 租用戶中設定的個人或多個使用者帳戶屬性。"
+description: 摘要： 使用 Office 365 PowerShell Office 365 租用戶中設定的個人或多個使用者帳戶屬性。
 ms.openlocfilehash: 60b3c1d91df0cb28f19f60a285093de7337904a9
 ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/14/2018
+ms.locfileid: "17552686"
 ---
 # <a name="configure-user-account-properties-with-office-365-powershell"></a>使用 Office 365 PowerShell 中設定使用者帳戶屬性
 
- **摘要：**使用 Office 365 PowerShell 來設定您的 Office 365 租用戶中的個人或多個使用者帳戶的屬性。
+ **摘要：** 使用 Office 365 PowerShell 來設定您的 Office 365 租用戶中的個人或多個使用者帳戶的屬性。
   
 雖然您可以使用 Office 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行一些無法在 Office 365 系統管理中心。
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 02/14/2018
 Set-MsolUser -UserPrincipalName "BelindaN@litwareinc.onmicosoft.com" -UsageLocation "FR"
 ```
 
-您使用**-UserPrincipalName**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。
+您使用 **-UserPrincipalName**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。
   
 - --市/鎮"\<城市名稱 >"
     
@@ -93,7 +94,7 @@ Get-MSolUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalName |
     
 - 顯示一個畫面 （**更多**） 一次。
     
-此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：
+此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下 **$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：
   
 ```
 $userName="<Display name>"
@@ -107,7 +108,7 @@ $userName="Caleb Sills"
 Write-Host (Get-MsolUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：
+藉由使用 **$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：
   
 ```
 $userName="<Display name>"
@@ -159,7 +160,7 @@ Get-MsolUser | Where-Object {$_.Department -eq "Accounting"} | Set-MsolUser -Usa
 Set-AzureADUser -ObjectID "BelindaN@litwareinc.onmicosoft.com" -UsageLocation "FR"
 ```
 
-您使用**-ObjectID**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。
+您使用 **-ObjectID**參數來識別帳戶及設定或變更的額外參數的特定屬性。這裡是清單的最常見的參數。
   
 - -部門"\<部門名稱 >"
     
@@ -210,7 +211,7 @@ Get-AzureADUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalNam
 - 顯示使用者主體名稱屬性的每個帳戶 ( **Select-object UserPrincipalName** )。
 - 顯示一個畫面 （**更多**） 一次。
     
-此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下**$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：
+此命令會列出所有的帳戶。如果您想要顯示根據其帳戶的使用者主體名稱名稱 （第一個及最後一個名稱）、 填滿下 **$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：
   
 ```
 $userName="<Display name>"
@@ -224,7 +225,7 @@ $userName="Caleb Sills"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-藉由使用**$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：
+藉由使用 **$upn**變數，您可以變更其顯示名稱為基礎的個別帳戶。以下是範例將 Belinda Newman 的使用狀況位置設定為法國，但指定其顯示名稱而不是其使用者主體名稱：
   
 ```
 $userName="Belinda Newman"

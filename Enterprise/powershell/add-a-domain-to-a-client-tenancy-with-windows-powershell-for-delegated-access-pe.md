@@ -1,5 +1,5 @@
 ---
-title: "利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域"
+title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -9,18 +9,19 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
-ms.custom: 
+ms.custom: ''
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
-description: "摘要：使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。"
+description: 摘要：使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
 ms.openlocfilehash: f99039ffa9f921b33829767a08f33db500a5d2ed
 ms.sourcegitcommit: 9f1fe023f7e2924477d6e9003fdc805e3cb6e2be
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "17114692"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
- **摘要：**使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
+ **摘要：** 使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
   
 您可以使用 Windows PowerShell for Office 365 來建立新網域，並與客戶的租用建立關聯，速度勝於使用 Office 365 系統管理中心。
   

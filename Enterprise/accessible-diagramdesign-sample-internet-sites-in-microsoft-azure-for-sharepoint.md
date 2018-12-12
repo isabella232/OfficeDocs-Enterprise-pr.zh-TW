@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-Microsoft Azure 中的 SharePoint 2013 設計範例網際網路網站"
+title: 存取圖表-Microsoft Azure 中的 SharePoint 2013 設計範例網際網路網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: b91124bc-c7ec-4929-b77c-d6293db9f15e
-description: "本文是名為設計範例中的圖表可存取的文字版本： Microsoft Azure 中的 SharePoint 2013 的網際網路網站。"
+description: 本文是名為設計範例中的圖表可存取的文字版本： Microsoft Azure 中的 SharePoint 2013 的網際網路網站。
 ms.openlocfilehash: 0d42a96f80d47b360084557fea47c4155d106d30
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17502756"
 ---
 # <a name="accessible-diagram---design-sample-internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>存取圖表-設計範例： Microsoft Azure 中的 SharePoint 2013 的網際網路網站
 
-**摘要：**本文是名為設計範例中的圖表可存取的文字版本： Microsoft Azure 中的 SharePoint 2013 的網際網路網站。
+**摘要：** 本文是名為設計範例中的圖表可存取的文字版本： Microsoft Azure 中的 SharePoint 2013 的網際網路網站。
   
 使用此設計範例為起點在 Azure 中使用 SharePoint 2013 的網際網路對向網站。
   

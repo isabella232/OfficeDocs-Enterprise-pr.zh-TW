@@ -3,7 +3,6 @@ title: OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
-ms.date: 4/16/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -12,12 +11,12 @@ ms.collection: Strat_SP_gtc
 localization_priority: Priority
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
 description: 使用 OneDrive 和 Sharepoint 中的多地理位置功能，將 Office 365 的目前狀態拓展至多個地理區域。
-ms.openlocfilehash: 725a7a88e3459f73ff00554b14afc740db1244b3
-ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
+ms.openlocfilehash: b62603759caf7a285896c1c87199a9bf59c546e3
+ms.sourcegitcommit: 03bb9edd52b1b7cd49791baf90645828b89b32b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "25849819"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "27200726"
 ---
 # <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365"></a>OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
 
@@ -64,27 +63,25 @@ ms.locfileid: "25849819"
 目前在這些地區與國家中提供的 OneDrive 多地理位置：
   
 - 亞太地區
-    
+
 - 澳大利亞
-    
+
 - 加拿大
-    
+
 - 歐盟 (EMEA)
 
 - 法國
-    
-- 日本
-    
-- 英國
-    
-- 美國 (北美洲)
-    
-- 韓國
-      
-即將推出的地理位置：
-  
+
 - 印度
-    
+
+- 日本
+
+- 英國
+
+- 美國 (北美洲)
+
+- 韓國
+
 ## <a name="getting-started"></a>快速入門
 
 若要開始使用商務用 OneDrive 的多地理位置，第一個步驟是[規劃您的商務用 OneDrive 多地理位置環境](plan-for-multi-geo.md)。接下來，[了解管理多地理位置環境](administering-a-multi-geo-environment.md)與[使用者經歷多地理位置環境的方式](multi-geo-user-experience.md)。當您準備好設定商務用 OneDrive 多地理位置時，[設定多地理位置的租用戶](multi-geo-tenant-configuration.md)，然後[將任何現有的 OneDrive 網站移至其新地理位置](move-onedrive-between-geo-locations.md)和[設定搜尋](configure-search-for-multi-geo.md)。

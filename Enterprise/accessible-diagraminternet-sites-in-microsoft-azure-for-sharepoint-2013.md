@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站"
+title: 存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 71636974-fb99-487c-ac67-f15e9401acba
-description: "本文是圖表的名為 Microsoft Azure 中的網際網路網站的 SharePoint 2013 可存取的文字版本。"
+description: 本文是圖表的名為 Microsoft Azure 中的網際網路網站的 SharePoint 2013 可存取的文字版本。
 ms.openlocfilehash: 59c84e34ab4d748a80ab0a597817ae4d3464a43c
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17503046"
 ---
 # <a name="accessible-diagram---internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>存取圖表-Microsoft Azure 中的 SharePoint 2013 的網際網路網站
 
-**摘要：**本文是圖表的名為 Microsoft Azure 中的網際網路網站的 SharePoint 2013 可存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Azure 中的網際網路網站的 SharePoint 2013 可存取的文字版本。
   
 此海報說明及圖解如何公開網際網路網站福利從雲端 elasticity 和客戶帳戶的 Azure AD。有六個不同的案例說明網際網路網站獲益 Azure 的方式： 
   

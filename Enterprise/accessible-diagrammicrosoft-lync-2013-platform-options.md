@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-Microsoft Lync 2013 平台選項"
+title: 存取圖表-Microsoft Lync 2013 平台選項
 ms.author: josephd
 author: JoeDavies-MSFT
 ms.date: 12/15/2017
@@ -9,16 +9,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 2858d1e7-be37-4484-b121-a99779742a38
-description: "本文是圖表的名為 Microsoft Lync 2013 平台選項，這是圖表的可在技術圖表可存取的文字版本。"
+description: 本文是圖表的名為 Microsoft Lync 2013 平台選項，這是圖表的可在技術圖表可存取的文字版本。
 ms.openlocfilehash: 4a660df4bfacad2a00f5d9fbb5e1b668840e3b9f
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17504086"
 ---
 # <a name="accessible-diagram---microsoft-lync-2013-platform-options"></a>存取圖表-Microsoft Lync 2013 平台選項
 
-**摘要：**本文是圖表的名為 Microsoft Lync 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)可存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Lync 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)可存取的文字版本。
   
 此海報說明 business decision makers (Bdm) 和架構師需要知道什麼有關 Lync Online (Office 365) 和 Lync Server 部署並包括：
   

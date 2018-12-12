@@ -17,10 +17,11 @@ ms.sourcegitcommit: 8ff1cd7733dba438697b68f90189d4da72bbbefd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "18812104"
 ---
 # <a name="aggregate-customer-reporting-data-via-windows-powershell-for-delegated-access-permission-dap-partners"></a>透過適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 彙總客戶報告資料
 
- **摘要：**使用 Windows PowerShell for Office 365 來擷取有關所有客戶租用的報告，以及將資料彙集到單一位置。
+ **摘要：** 使用 Windows PowerShell for Office 365 來擷取有關所有客戶租用的報告，以及將資料彙集到單一位置。
   
 依預設，Windows PowerShell for Office 365 沒有從多個客戶租用彙總報告資料的內建功能。不過，您可以使用這個範例 Windows PowerShell for Office 365 指令碼，逐一查看所有客戶租用以針對每位客戶擷取單一報告，再將報告資料彙集到單一位置。最後您將擁有一份涵蓋所有客戶租用戶的報告。 
   

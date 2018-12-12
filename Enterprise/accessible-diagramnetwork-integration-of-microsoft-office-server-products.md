@@ -1,5 +1,5 @@
 ---
-title: "存取圖表-網路整合的 Microsoft Office 伺服器產品"
+title: 存取圖表-網路整合的 Microsoft Office 伺服器產品
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,16 +10,17 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 89f564eb-95c3-4077-bb92-75bf71b51270
-description: "本文是圖表的名為網路整合的 Microsoft Office Server 產品可存取的文字版本。"
+description: 本文是圖表的名為網路整合的 Microsoft Office Server 產品可存取的文字版本。
 ms.openlocfilehash: 3fa27b99bf0babf00c536057b9d21da784b6d94f
 ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 02/09/2018
+ms.locfileid: "17504426"
 ---
 # <a name="accessible-diagram---network-integration-of-microsoft-office-server-products"></a>存取圖表-網路整合的 Microsoft Office 伺服器產品
 
-**摘要：**本文是圖表的名為網路整合的 Microsoft Office Server 產品可存取的文字版本。
+**摘要：** 本文是圖表的名為網路整合的 Microsoft Office Server 產品可存取的文字版本。
   
 這張海報提供網路環境包含 Lync Server 2013、 SharePoint 2013 與 Exchange Server 2013 一般圖。它也會說明這些產品都通用的下列網路元素： 遠端及內部存取、 驗證、 用戶端流量及共用裝置透過路由流量。 
   
