@@ -3,7 +3,7 @@ title: 使用 ExpressRoute for Office 365 進行路由傳送
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 12/7/2017
+ms.date: 12/14/2017
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: e1da26c6-2d39-4379-af6f-4da213218408
 description: 正確了解 Office 365 使用 Azure ExpressRoute 路由流量，您將需要公司掌握核心 ExpressRoute 路由需求及 ExpressRoute 電路和路由的網域。使用 Office 365 客戶會依賴的 ExpressRoute 基礎版面配置這些設定。
-ms.openlocfilehash: e80ce78c0b229881349a4d02c7708fb9509748a9
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: d8fa0c606a5aedd3760236cb46bcf9e1c584ecb8
+ms.sourcegitcommit: d165aef59fe9a9ef538e6756fb014909a7cf975b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539976"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "27294473"
 ---
 # <a name="routing-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行路由傳送
 
@@ -53,13 +53,11 @@ Office 365 前端伺服器可存取網際網路和 ExpressRoute 上。這些伺�
   
 以下為的案例將起始通訊來自 Office 365 的內部網路的位置。若要簡化您的網路設計、 建議路由這些透過網際網路路徑。
   
+- 例如信箱從 Exchange Online 租用戶至內部部署主機或從 SharePoint Online 傳送至內部部署主機的 SharePoint Online 郵件的 SMTP 服務。比透過 ExpressRoute 電路共用的路由前置詞和廣告內部 SMTP 伺服器透過 ExpressRoute 會導致失敗與這些其他服務 SMTP 通訊協定就會更廣泛使用 Microsoft 的網路內。
+
 - 在 [密碼驗證登入期間 ADFS。
 
 - [Exchange Server 混合式部署](https://technet.microsoft.com/library/jj200581%28v=exchg.150%29.aspx)。
-
-- 將郵件從 Exchange Online 租用戶至內部部署主機.
-
-- SharePoint Online 郵件將傳送至內部部署主機的 [從 SharePoint Online。
 
 - [ [SharePoint 同盟混合式搜尋](https://technet.microsoft.com/library/dn197174.aspx)]。
 
@@ -69,7 +67,13 @@ Office 365 前端伺服器可存取網際網路和 ExpressRoute 上。這些伺�
 
 - [Skype Business Cloud 連接器](https://technet.microsoft.com/library/mt605227.aspx )。
 
-針對 Microsoft 路由傳送回至您的網路之這些雙向流量流程、 BGP 路由至內部部署裝置必須與 Microsoft 共用。
+針對 Microsoft 路由傳送回至您的網路之這些雙向流量流程、 BGP 路由至內部部署裝置必須與 Microsoft 共用。當您透過 ExpressRoute advertise 路由傳送給 Microsoft 的前置詞時，您應該遵循這些最佳作法：
+
+1) 未通告相同公用 IP 位址路由的前置詞至公用網際網路和透過 ExpressRoute。強烈建議 IP BGP 路由首碼廣告 ExpressRoute 透過 microsoft 是來自未通告網際網路所有的範圍。如果這是不可能達到因為可用的 IP 位址空間，最好是確定透過 ExpressRoute advertise 比任何網際網路電路更多特定範圍的基本。
+
+2) 使用個別 ExpressRoute 電路分開的 NAT IP 集區和個別的網際網路電路。
+
+3) 請注意對 Microsoft 通告任何路由會吸引來自 Microsoft 的網路，不只以外的路由會對您的網路通告透過 ExpressRoute 中任何伺服器的網路流量。僅限 advertise 的伺服器路由案例所定義及了解您的小組所其中的路由。Advertise 每一層的多個 ExpressRoute 電路從您網路的不同 IP 位址路由前置詞。 
   
 ## <a name="deciding-which-applications-and-features-route-over-expressroute"></a>決定哪些應用程式和功能透過 ExpressRoute 路由
 
@@ -222,7 +226,7 @@ Microsoft 的資料中心、 網路和應用程式架構的設計被用進行全
 
 4. **BGP 社群 （英文）** -篩選根據[BGP 社群標記](https://aka.ms/bgpexpressroute365)可讓客戶來判斷哪些 Office 365 應用程式會周遊 ExpressRoute 和其將周遊網際網路。
 
-以下是您可以使用回來的簡短連結：[https://aka.ms/erorouting](https://aka.ms/erorouting)
+您可以使用下列短連結返回這裡：[https://aka.ms/erorouting](https://aka.ms/erorouting)
   
 ## <a name="related-topics"></a>相關主題
 
@@ -236,13 +240,13 @@ Microsoft 的資料中心、 網路和應用程式架構的設計被用進行全
   
 [實作 ExpressRoute for Office 365](implementing-expressroute.md)
   
-[媒體品質和 Skype 的線上商務的網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   
-[Skype 的最佳化您的網路的線上商務](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
   
-[ExpressRoute 和 Skype Online 企業版的 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
+[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d) (英文)
   
-[使用 ExpressRoute 通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
+[使用 ExpressRoute 的通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab) (英文)
   
 [使用 Office 365 案例 ExpressRoute BGP 社群 （英文）](bgp-communities-in-expressroute.md)
   
@@ -250,6 +254,6 @@ Microsoft 的資料中心、 網路和應用程式架構的設計被用進行全
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
   
-[Office 365 網路和效能調整](network-planning-and-performance.md)
+[Office 365 網路與效能調整](network-planning-and-performance.md)

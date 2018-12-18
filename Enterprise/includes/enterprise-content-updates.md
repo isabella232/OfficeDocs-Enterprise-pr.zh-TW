@@ -3,25 +3,6 @@
 
 
 
-## <a name="week-of-november-05-2018"></a>2018 年 11 月 5 日當週
-
-
-| 發佈於 |主題標題 | 變更 |
-|------|------------|--------|
-| 11/5/2018 | [使內部部署網路與 Microsoft Azure 虛擬網路連線](/Office365/Enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) | 修改時間 |
-| 11/5/2018 | [在 Microsoft Azure 中部署 Office 365 目錄同步作業](/Office365/Enterprise/deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure) | 修改時間 |
-| 11/5/2018 | [為 Office 365 設定網路](/Office365/Enterprise/set-up-network-for-office-365) | 新增 |
-| 第 11/6/2018 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 第 11/6/2018 | [Azure 中的 Office 365 高可用性同盟驗證](/Office365/Enterprise/deploy-high-availability-federated-authentication-for-office-365-in-azure) | 修改時間 |
-| 第 11/6/2018 | [使用基準與效能歷程記錄進行 Office 365 效能調整](/Office365/Enterprise/performance-tuning-using-baselines-and-history) | 修改時間 |
-| 第 11/7/2018 | [Office 365 端點](/Office365/Enterprise/office-365-endpoints) | 新增 |
-| 第 11/7/2018 | [為 Office 365 設定網路](/Office365/Enterprise/set-up-network-for-office-365) | 修改時間 |
-| 第 11/8/2018 | [Mac 版 Office 中的網路要求](/Office365/Enterprise/network-requests-in-office-2016-for-mac) | 修改時間 |
-| 第 11/8/2018 | [Office 365 租用戶間共同作業](/Office365/Enterprise/office-365-inter-tenant-collaboration) | 修改時間 |
-| 第 11/8/2018 | [SharePoint Online 效能調整的簡介](/Office365/Enterprise/introduction-to-performance-tuning-for-sharepoint-online) | 修改時間 |
-| 第 11/9/2018 | [使用 SharePoint Online 頁面診斷工具](/Office365/Enterprise/page-diagnostics-for-spo) | 修改時間 |
-
-
 ## <a name="week-of-november-12-2018"></a>2018 年 11 月 12 日當週
 
 
@@ -104,3 +85,12 @@
 | 12/7/2018 | [Exchange Online 中的多個地理位置功能](/Office365/Enterprise/multi-geo-capabilities-in-exchange-online) | 修改時間 |
 | 12/7/2018 | [商務用 OneDrive 多地理位置租用戶設定](/Office365/Enterprise/multi-geo-tenant-configuration) | 修改時間 |
 | 12/7/2018 | [規劃商務用 OneDrive 多地理位置](/Office365/Enterprise/plan-for-multi-geo) | 修改時間 |
+
+
+## <a name="week-of-december-10-2018"></a>2018 年 12 月 10 日當週
+
+
+| 發佈於 |主題標題 | 變更 |
+|------|------------|--------|
+| 12/10/2018 | [Microsoft 雲端連線 ExpressRoute](/Office365/Enterprise/expressroute-for-microsoft-cloud-connectivity) | 修改時間 |
+| 12/10/2018 | [使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料](/Office365/Enterprise/powershell/view-account-license-and-service-details-with-office-365-powershell) | 修改時間 |

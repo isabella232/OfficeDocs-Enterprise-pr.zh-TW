@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: c08786fb-298e-437c-8222-dab7625fc815
 description: 摘要： 說明在 Microsoft Office 365 元件和 Office 365 政府版方案的 IPv6 支援。
-ms.openlocfilehash: ed06f1eac3c6a3d631445db1d623bd25c62a309c
-ms.sourcegitcommit: ae7f2087d51698d3c5ef371888278544a7046205
+ms.openlocfilehash: 75ed1c8ffe96ed1b09aa8802e11ae195ad60a4f2
+ms.sourcegitcommit: d165aef59fe9a9ef538e6756fb014909a7cf975b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "25493828"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "27294461"
 ---
 # <a name="ipv6-support-in-office-365-services"></a>Office 365 服務中的 IPv6 支援
 
@@ -51,9 +51,7 @@ Office 365 支援 IPv6 和 IPv4;不過，不是所有的 Office 365 功能已完
   
 ### <a name="skype-for-business-and-ipv6"></a>Skype 商務和 IPv6
 
-Microsoft 將在您要求公用多承租人 cloud 與 Office 365 政府版 G1/G3/G4/K1 訂閱啟用 IPv6 Skype for Business 的。已啟用，如果您用來連線至 Skype for Business 的程式支援 IPv6 後，它會依預設使用 IPv6。如果您想要控制 Skype for Business 的通訊，請在[Office 365 Url 和 IP 位址範圍](https://go.microsoft.com/fwlink/?LinkId=293744)使用 IP 位址範圍。
-  
-請注意 IPv6 不提供中的所有區域和 Microsoft 可能無法針對您的租用戶啟動這一次。
+請注意 IPv6 不支援的商務 Skype 並不會再啟用。
   
 ### <a name="exchange-online-protection-and-ipv6"></a>Exchange Online Protection 和 IPv6
 
