@@ -4,19 +4,19 @@ ms.author: tracyp
 ms.reviewer: smithre4
 author: MSFTTracyP
 manager: laurawi
-ms.date: 8/27/2018
+ms.date: 10/02/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.assetid: ef753b32-7251-4c9e-b442-1a5aec14e58d
 description: 現代驗證是一種方法提供較安全的使用者驗證和授權的身分識別管理。使用混合式部署的 Skype Business server 內部部署與 Exchange server 內部部署，以及商務混合的分隔網域 Skype。本文章的連結與相關文件需安裝程式/停用經過驗證的必要條件以及部分相關的用戶端 （例如 Outlook 和 Skype 用戶端） 資訊。
-ms.openlocfilehash: 3d510c6d3e9f8ff885279dc008eeefb5d1014639
-ms.sourcegitcommit: 2ffe998e58ce1466366d697d99f0dd3e85b0605c
+ms.openlocfilehash: c10e5660d43ccce50497fccfd9d830d31ac07d55
+ms.sourcegitcommit: c5761d3c41aa2d26815f0d24c73dbcd53ab37957
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "23240588"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "27371107"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>經過驗證的混合式概觀及使用內部部署 Skype 中的商務與 Exchange 伺服器的先決條件
 
@@ -51,7 +51,8 @@ ms.locfileid: "23240588"
   
 請注意與 Exchange 密切合作 Skype for Business，因為使用者會看到的商務用戶端登入行為 Skype 將會受到 Exchange 摩登的驗證狀態。這也會套用如果您有商務分隔網域混合式的 Skype。此外，Skype 支援使用經過驗證的商務混合式的類型通常稱為 「 分割網域 」 （在分隔網域中具有商務 online Skype 和 Skype 的業務上-prem 和使用者皆位於兩個位置）。
   
- **重要**您知道 2017 年 8 月、 年所有新 Office 365 租用戶的線上包括 Skype for Business 和 Exchange online 會有預設啟用的現代驗證嗎？既承租人不會有變更其預設 MA 的狀態，但所有新的租用戶自動支援擴充的功能集的識別您看到以上所列。若要線上檢查 for Business Skype MA 狀態，您可以使用 Skype 商務 powershell online 以全域管理員認證。執行 'Get-csoauthconfiguration' 檢查-ClientADALAuthOverride 的輸出。若啟用-ClientADALAuthOverride 則' ' 摩登的驗證是上。 
+> [!IMPORTANT]
+> 您知道 2017 年 8 月、 年所有新 Office 365 租用戶的線上包括 Skype for Business 和 Exchange online 會有預設啟用的現代驗證嗎？既承租人不會有變更其預設 MA 的狀態，但所有新的租用戶自動支援擴充的功能集的識別您看到以上所列。若要線上檢查 for Business Skype MA 狀態，您可以使用 Skype 商務 powershell online 以全域管理員認證。執行`Get-CsOAuthConfiguration`檢查-ClientADALAuthOverride 的輸出。若啟用-ClientADALAuthOverride 則' ' 摩登的驗證是上。 
   
 ## <a name="what-changes-when-i-use-modern-authentication"></a>有什麼變更時使用經過驗證？
 <a name="BKMK_WhatChanges"> </a>
@@ -66,12 +67,13 @@ EvoSTS 變更可讓您在內部伺服器的授權您的用戶端充分運用 OAu
   
 項目不會變更？無論您是在分隔網域混合式或使用 Skype 的業務與 Exchange server 內部部署中，所有使用者必須先進行都驗證*的內部*。在經過驗證的混合式實作、 Lyncdiscovery 和自動探索指向內部伺服器。 
   
- **重要**如果您需要知道特定 Skype 商務拓撲支援 MA，這是[記載以下右邊](https://technet.microsoft.com/en-us/library/mt803262.aspx)。
+> [!IMPORTANT]
+> 如果您需要知道特定 Skype 商務拓撲支援 MA，這是[記載以下右邊](https://technet.microsoft.com/en-us/library/mt803262.aspx)。
   
 ## <a name="check-the-modern-authentication-status-of-your-on-premises-environment"></a>檢查您的內部部署環境的現代驗證狀態
 <a name="BKMK_CheckStatus"> </a>
 
-因為現代驗證變更服務運用 OAuth/S2S 時所使用的授權伺服器，您需要知道經過驗證的業務與 Exchange 環境您 Skype 是否是開啟或關閉。您可以在 PowerShell 中執行 Get-csoauthconfiguration 命令來檢查商務伺服器，在內部部署，Exchange 或 Skype 上的狀態。如果此命令會傳回空的 'OAuthServers' 屬性、 現代驗證已停用。
+因為現代驗證變更服務運用 OAuth/S2S 時所使用的授權伺服器，您需要知道經過驗證的業務與 Exchange 環境您 Skype 是否是開啟或關閉。您可以藉由執行檢查業務伺服器，在內部部署，Exchange 或 Skype 上的狀態`Get-CSOAuthConfiguration`powershell 命令。如果此命令會傳回空的 'OAuthServers' 屬性、 現代驗證已停用。
   
 ## <a name="do-you-meet-modern-authentication-prerequisites"></a>您符合經過驗證的必要條件嗎？
 
@@ -85,35 +87,28 @@ EvoSTS 變更可讓您在內部伺服器的授權您的用戶端充分運用 OAu
     
   - SIP 網域會新增為 Office 365 中的同盟網域
     
-  - 所有 SFB 前端都必須連線至網際網路，Office 365 驗證 Url (TCP 443) 和熟知憑證根 Crl (TCP 80) 撥出的列 1 及 2 的[Office 365 Url 和 IP 的 'Office 365 驗證及身分識別 」 一節中列出處理範圍](https://www.bing.com/search?q=%22Office+365+URLs+and+IP+address+ranges%22&amp;src=IE-SearchBox&amp;FORM=IESR3N&amp;redir=5&amp;itrid=96B6C7422F9F4019B37C1B7FDAF8831E)。
+  - 所有 SFB 前端都必須連線至網際網路、 至 Office 365 驗證 Url (TCP 443) 撥出及熟知憑證根 Crl (TCP 80) 列的列 56 及 125 ['Microsoft 365 一般與 Office Online 」 一節的 Office 365 Url 和 IP處理範圍](urls-and-ip-address-ranges.md)。
     
  **附註**如果您 Skype 商務前端伺服器用於網際網路存取 proxy 伺服器，必須輸入 proxy 伺服器 IP 和連接埠號碼用在 [設定] 區段中的每個前端的 web.config 檔案中。 
   
-- 針對 Business Server 2015\Web Components\Web ticket\int\web.config c:\program files\Skype
+- 針對 Business Server 2015\Web Components\Web C:\Program Files\Skype ticket\int\web.config
     
-- 針對 Business Server 2015\Web Components\Web ticket\ext\web.config c:\program files\Skype
+- 針對 Business Server 2015\Web Components\Web C:\Program Files\Skype ticket\ext\web.config
     
-- \</system.identityModel.services\>
+```xml
+<system.identityModel.services>
+  <system.net>
+    <defaultProxy>
+      <proxy
+        proxyaddress="http://192.168.100.60:8080"
+        bypassonlocal="true" />
+    </defaultProxy>
+  </system.net>
+</system.identityModel.services>
+```
     
-     \<system.net\> 
-    
-     \<defaultProxy\> 
-    
-     \<proxy 
-    
-     proxyaddress ="http://192.168.100.60:8080" 
-    
-     bypassonlocal ="true" 
-    
-     /\> 
-    
-     \</defaultProxy\> 
-    
-     \</system.net\> 
-    
-    \</configuration\>
-    
- **重要**請務必以訂閱 RSS 摘要的[Office 365 Url 和 IP 位址範圍](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)保持最新的 Url 所需的最新的清單。 
+> [!IMPORTANT]
+> 請務必以訂閱 RSS 摘要的[Office 365 Url 和 IP 位址範圍](urls-and-ip-address-ranges.md)保持最新的 Url 所需的最新的清單。 
   
 - **特定的 Exchange Server**
     
@@ -132,7 +127,7 @@ EvoSTS 變更可讓您在內部伺服器的授權您的用戶端充分運用 OAu
   |**用戶端**|**主要的通訊協定**|**附註**|
   |:-----|:-----|:-----|
   |Outlook 2013 與 Outlook 2016  <br/> |MAPI over HTTP  <br/> |MAPI over HTTP 必須啟用 Exchange 內才能並用摩登的驗證與這些用戶端 （通常被啟用或新安裝 Exchange 2013 Service Pack 1 和上方則為 True） ；如需詳細資訊請參閱 ＜ [Office 2013 與 Office 2016 用戶端應用程式如何經過驗證的運作](https://docs.microsoft.com/en-us/office365/enterprise/modern-auth-for-office-2013-and-2016)。  <br/> 確定您正在執行 Outlook; 最小必要的建置請參閱[的 Outlook 會使用 Windows Installer (MSI) 版本的最新更新](https://docs.microsoft.com/en-us/officeupdates/outlook-updates-msi)。  <br/> |
-  |Outlook 2016 for Mac  <br/> |Exchange Web 服務  <br/> |  <br/> |
+  |Mac 版 Outlook 2016  <br/> |Exchange Web 服務  <br/> |  <br/> |
   |Outlook for iOS 和 Android  <br/> |  <br/> |如需詳細資訊，請參閱[使用 hybrid 現代 Authentication with Outlook iOS 及 android （英文）](https://docs.microsoft.com/en-us/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) 。  <br/> |
   |Exchange ActiveSync 用戶端 （例如 iOS11 郵件）  <br/> |Exchange ActiveSync  <br/> |支援經過驗證的 Exchange ActiveSync 用戶端，則必須重新設定檔建立以從基本驗證切換至經過驗證。  <br/> |
 
