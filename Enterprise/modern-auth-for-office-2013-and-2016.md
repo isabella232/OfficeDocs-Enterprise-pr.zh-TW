@@ -1,7 +1,7 @@
 ---
 title: 新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式
-ms.author: sirkkuw
-author: Sirkkuw
+ms.author: tracyp
+author: MSFTTracyP
 manager: laurawi
 ms.date: 8/1/2017
 ms.audience: Admin
@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: e4c45989-4b1a-462e-a81b-2a13191cf517
 description: 了解 Office 365 經過驗證的運作方式不同的 Office 2013 和 2016年用戶端應用程式。
-ms.openlocfilehash: 78df8c12ab008922592516cf1d3cda10c594e552
-ms.sourcegitcommit: 7a12a46019970fcd45a6461f4f4cbcd1f76c9b4e
+ms.openlocfilehash: 2a5e218ca751f341e2a3a0ffd164f000ee503279
+ms.sourcegitcommit: fd7a56f38ba2c2d2e7fcd6e165ec58b31be299d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "25436081"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "27378499"
 ---
 # <a name="how-modern-authentication-works-for-office-2013-and-office-2016-client-apps"></a>新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式
 
@@ -54,8 +54,7 @@ Office 2016 用戶端支援現代驗證根據預設，而且採取任何動作�
     
 - [SharePoint Online](modern-auth-for-office-2013-and-2016.md#BK_SharePointOnline)
     
-- 
-  [商務用 Skype Online](modern-auth-for-office-2013-and-2016.md#BK_SFBO)
+- [商務用 Skype Online](modern-auth-for-office-2013-and-2016.md#BK_SFBO)
     
 ### <a name="exchange-online"></a>Exchange Online
 
@@ -97,7 +96,7 @@ Office 2016 用戶端支援現代驗證根據預設，而且採取任何動作�
    
 ## <a name="see-also"></a>另請參閱
 
-[啟用 Windows 裝置上的 Office 2013 的現代驗證](https://support.office.com/article/enable-modern-authentication-for-office-2013-on-windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910)
+[為 Windows 裝置上的 Office 2013 啟用新式驗證](https://support.office.com/article/enable-modern-authentication-for-office-2013-on-windows-devices-7dc1c01a-090f-4971-9677-f1b192d6c910)
 
 [規劃 Office 365 部署的多重要素驗證 （適用於 Office 365 系統管理員）](https://support.office.com/article/plan-for-multi-factor-authentication-for-office-365-deployments-043807b2-21db-4d5c-b430-c8a6dee0e6ba)
 

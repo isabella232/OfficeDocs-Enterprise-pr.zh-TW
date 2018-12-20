@@ -1,7 +1,7 @@
 ---
 title: Office 365 的工作階段逾時
-ms.author: sirkkuw
-author: Sirkkuw
+ms.author: tracyp
+author: MSFTTracyP
 manager: scotv
 ms.date: 6/29/2018
 ms.audience: Admin
@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: 37a5c116-5b07-4f70-8333-5b86fd2c3c40
 description: 工作階段逾時可用來平衡 securtiy 與 Office 365 用戶端應用程式中存取的簡易性。
-ms.openlocfilehash: dda13f280149c969354ae1f0eac336f1d8ed23e7
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 4ef50b876fd97e2de2449d324464b466243a6691
+ms.sourcegitcommit: fd7a56f38ba2c2d2e7fcd6e165ec58b31be299d9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540053"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "27378489"
 ---
 # <a name="session-timeouts-for-office-365"></a>Office 365 的工作階段逾時
 
