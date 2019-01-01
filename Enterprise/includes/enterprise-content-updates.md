@@ -3,16 +3,6 @@
 
 
 
-## <a name="week-of-november-19-2018"></a>2018 年 11 月 19 日當週
-
-
-| 發佈於 |主題標題 | 變更 |
-|------|------------|--------|
-| 第 11/19/2018 | [PerformancePoint Server 2007 終止支援藍圖](/Office365/Enterprise/pps-2007-end-of-support) | 修改時間 |
-| 第 11/19/2018 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 第 11/19/2018 | [Office 365 系統管理員的整合式 App 和 Azure AD](/Office365/Enterprise/integrated-apps-and-azure-ads) | 修改時間 |
-
-
 ## <a name="week-of-november-26-2018"></a>2018 年 11 月 26 日當週
 
 
@@ -90,3 +80,10 @@
 | 12/19/2018 | [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](/Office365/Enterprise/modern-auth-for-office-2013-and-2016) | 修改時間 |
 | 12/19/2018 | [Office 365 的工作階段逾時](/Office365/Enterprise/session-timeouts) | 修改時間 |
 | 12/20/2018 | [Exchange 2010 結尾的支援藍圖](/Office365/Enterprise/exchange-2010-end-of-support) | 修改時間 |
+
+
+## <a name="week-of-december-24-2018"></a>2018 年 12 月 24 日當週
+
+
+| 發佈於 |主題標題 | 變更 |
+|------|------------|--------|
