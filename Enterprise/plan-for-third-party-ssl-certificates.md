@@ -16,18 +16,18 @@ search.appverid:
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
 description: 摘要：說明 Exchange 內部和混合部署、使用 AD FS 的 SSO、Exchange Online 服務及 Exchange Web 服務所需的 SSL 憑證。
-ms.openlocfilehash: 82e37ebb058b8a6b4b618649bea31a4137897690
-ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
+ms.openlocfilehash: c9e968ef7ec9015be398b4eef9184451dd316bea
+ms.sourcegitcommit: 15db0f1e5f8036e46063662d7df22387906f8ba7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "23975211"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "27546514"
 ---
 # <a name="plan-for-third-party-ssl-certificates-for-office-365"></a>Office 365 協力廠商的 SSL 憑證的計劃
 
  **摘要：** 說明 Exchange 內部和混合部署、 使用 AD FS 的 SSO 所需的 SSL 憑證 Exchange Online 服務及 Exchange Web 服務。 
   
-若要將用戶端與 [Office 365Office 365 環境之間的通訊加密，必須基礎結構伺服器上安裝協力廠商安全通訊端層 (SSL) 憑證。
+若要將用戶端與 Office 365 環境之間的通訊加密，必須基礎結構伺服器上安裝協力廠商安全通訊端層 (SSL) 憑證。
 
 ||
 |:-----|
