@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: bb12f49d-a85d-4f3b-ada2-5c4e33977b10
 description: 摘要： 檢視、 清單或顯示您的使用者帳戶的各種方式與 Office 365 PowerShell。
-ms.openlocfilehash: dc33b64207341576968867fbeea6f211034eeca6
-ms.sourcegitcommit: 15db0f1e5f8036e46063662d7df22387906f8ba7
+ms.openlocfilehash: e95353602b96babe5c80f7d57462370636dd26fa
+ms.sourcegitcommit: a39d15b7cf758dfb262d2724bcfd283bba3d2ce1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 01/04/2019
-ms.locfileid: "27546524"
+ms.locfileid: "27730318"
 ---
 # <a name="view-user-accounts-with-office-365-powershell"></a>檢視與 Office 365 PowerShell 的使用者帳戶
 
@@ -55,10 +55,16 @@ be4bdddd-c790-424c-9f96-a0cf609b7815 Allan Deyoung                              
 
 ### <a name="view-a-specific-account"></a>檢視特定的帳戶
 
-若要顯示特定的使用者帳戶，填入的使用者帳戶的使用者主體名稱 (UPN)、 移除"<"和">"字元並執行下列命令：
+若要顯示特定的使用者帳戶，登入帳戶名稱的使用者帳戶，也稱為使用者主體名稱 (UPN) 中的填滿移除"<"和">"字元並執行下列命令：
   
 ```
-Get-AzureADUser -ObjectID <UPN of user account>
+Get-AzureADUser -ObjectID <sign-in name of the user account>
+```
+
+範例如下：
+  
+```
+Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com
 ```
 
 ### <a name="view-additional-property-values-for-a-specific-account"></a>檢視其他屬性值為特定帳戶
@@ -80,13 +86,13 @@ Get-AzureADUser | Select-Object DisplayName,Department,UsageLocation
 若要查看所有的使用者帳戶屬性，使用**Select-object**指令程式和萬用字元 （*） 來顯示其所有針對特定的使用者帳戶。以下是範例：
   
 ```
-Get-AzureADUser -ObjectID "BelindaN@litwareinc.onmicosoft.com" | Select-Object *
+Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com | Select-Object *
 ```
 
 另一個範例，您可以檢查啟用的狀態之特定使用者帳戶具有下列命令：
   
 ```
-Get-AzureADUser -ObjectID <UPN of user account> | Select-Object DisplayName,UserPrincipalName,AccountEnabled
+Get-AzureADUser -ObjectID <sign-in name of the user account> | Select-Object DisplayName,UserPrincipalName,AccountEnabled
 ```
 
 ### <a name="view-some-accounts-based-on-a-common-property"></a>檢視一些常見的屬性為基礎的帳戶
@@ -106,7 +112,7 @@ Get-AzureADUser | Where-Object {$_.UsageLocation -eq $Null}
 **UsageLocation**屬性可以是其中一個的使用者帳戶相關聯的許多屬性。若要查看所有的使用者帳戶屬性，使用**Select-object**指令程式和萬用字元 （*） 來顯示其所有針對特定的使用者帳戶。以下是範例：
   
 ```
-Get-AzureADUser -ObjectID "BelindaN@litwareinc.onmicosoft.com" | Select-Object *
+Get-AzureADUser -ObjectID BelindaN@litwareinc.onmicosoft.com | Select-Object *
 ```
 
 例如，此清單中，從**City**是使用者帳戶屬性的名稱。這表示您可以使用下列命令以列出所有住倫敦在使用者的使用者帳戶：
@@ -164,10 +170,10 @@ ScottW@litwareinc.onmicrosoft.com     Scott Wallace         False
 
 ### <a name="view-a-specific-account"></a>檢視特定的帳戶
 
-若要顯示特定的使用者帳戶，填入的使用者帳戶的使用者主體名稱 (UPN)、 移除"<"和">"字元並執行下列命令：
+若要顯示特定的使用者帳戶，登入的使用者帳戶名稱的使用者帳戶，也稱為使用者主體名稱 (UPN) 中的填滿移除"<"和">"字元並執行下列命令：
   
 ```
-Get-MsolUser -UserPrincipalName <UPN of user account>
+Get-MsolUser -UserPrincipalName <sign-in name of the user account>
 ```
 
 ### <a name="view-some-accounts-based-on-a-common-property"></a>檢視一些常見的屬性為基礎的帳戶
@@ -197,7 +203,7 @@ ScottW@litwareinc.onmicrosoft.com     Scott Wallace         False
 **UsageLocation**屬性可以是其中一個的使用者帳戶相關聯的許多屬性。若要查看所有的使用者帳戶屬性，使用**Select-object**指令程式和萬用字元 （*） 來顯示其所有針對特定的使用者帳戶。以下是範例：
   
 ```
-Get-MsolUser -UserPrincipalName "BelindaN@litwareinc.onmicosoft.com" | Select-Object *
+Get-MsolUser -UserPrincipalName BelindaN@litwareinc.onmicosoft.com | Select-Object *
 ```
 
 例如，此清單中，從**City**是使用者帳戶屬性的名稱。這表示您可以使用下列命令以列出所有住倫敦在使用者的使用者帳戶：
@@ -254,7 +260,7 @@ Scott Wallace           Operations
 **Select-object**指令程式可讓您挑選您想要顯示的命令的屬性。若要查看所有的使用者帳戶屬性，使用萬用字元 （*） 來顯示其所有針對特定的使用者帳戶。以下是範例：
   
 ```
-Get-MsolUser -UserPrincipalName "BelindaN@litwareinc.onmicosoft.com" | Select-Object *
+Get-MsolUser -UserPrincipalName BelindaN@litwareinc.onmicosoft.com | Select-Object *
 ```
 
 若要為多個選擇性有關要顯示的帳戶清單您也可以使用**Where-object**指令程式。以下是範例命令會顯示未指定的使用狀況位置的使用者帳戶：
