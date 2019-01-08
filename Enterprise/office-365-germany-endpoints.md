@@ -3,7 +3,7 @@ title: Office 365 Germany 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/28/2018
+ms.date: 01/07/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ search.appverid: MOE150
 ms.assetid: 8a113a50-0071-4155-bb8e-eba5a8dbd4c8
 description: 如果您的組織會使用 Office 365 及限制您網路上的電腦連線至網際網路，以下您會發現端點 （Fqdn、 連接埠、 Url 及 IPv4 和 IPv6 位址範圍），您應該包含在您輸出允許清單以確保您電腦可以成功地使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 016fc3073ece232a0e12e298d745cd18d8e5cb9d
-ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
+ms.openlocfilehash: 05bbcb1cb4e6b90b3f7a61d84ae3488ce97245c2
+ms.sourcegitcommit: e3fa9998321f6fa5d31217d107b672258993826e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "26872294"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "27746133"
 ---
 # <a name="office-365-germany-endpoints"></a>Office 365 Germany 端點
 
@@ -34,7 +34,7 @@ ms.locfileid: "26872294"
   
 |||
 |:-----|:-----|
-|**上次更新：** 11/28/2018- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
+|**上次更新：** 01/07/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
 
 若要了解我們建議管理使用此資料的網路連線的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。端點資料更新每個月利用新的 IP 位址及發佈前正在使用中的 30 天的 Url 的開頭。這可讓客戶不要尚未有自動更新以完成其程序，才需要的新連線。如果地址支援呈報、 安全性事件或其他立即操作需求所需的端點可能也更新期間月。一律可以參照的[變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
 
