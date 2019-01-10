@@ -16,12 +16,12 @@ ms.custom:
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
 description: 說明如何使用 Office 365 PowerShell 檢視授權的計劃、 服務及 Office 365 組織中可用的授權的相關資訊。
-ms.openlocfilehash: f673ac984e504a740dfac474821366d34de5ccbc
-ms.sourcegitcommit: a39d15b7cf758dfb262d2724bcfd283bba3d2ce1
+ms.openlocfilehash: 8efc123e2820560b4bd8547f4c99bccae242956f
+ms.sourcegitcommit: 96313c3c812bae47819f603af995839f4da034c5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27730328"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "27786149"
 ---
 # <a name="view-licenses-and-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視授權與服務
 
@@ -38,9 +38,9 @@ ms.locfileid: "27730328"
 您可以使用 Office 365 PowerShell Office 365 組織中檢視可用的授權方案、 授權及服務的相關的詳細資料。如需產品、 功能及不同 Office 365 訂閱中可用的服務的詳細資訊，請參閱[Office 365 計劃選項](https://go.microsoft.com/fwlink/p/?LinkId=691147)。
 
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>使用 Azure Active Directory PowerShell 圖模組
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
-第一筆、[連線至您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
 若要檢視目前的授權方案和每種計劃可用授權的摘要資訊，請執行下列命令：
   
@@ -71,7 +71,7 @@ $licenses = Get-AzureADSubscribedSku
 下一步] 顯示特定授權計劃中的服務。
 
 ````
-$licenses[<index>].ServicePlan
+$licenses[<index>].ServicePlans
 ````
 
 \<索引 > 會指定從顯示的授權方案的列數的整數`Get-AzureADSubscribedSku | Select SkuPartNumber`command 減 1。
@@ -90,16 +90,16 @@ FLOW_FREE
 然後命令以顯示 ENTERPRISEPREMIUM 授權方案的服務是：
 
 ````
-$licenses[2].ServicePlan
+$licenses[2].ServicePlans
 ````
 
 ENTERPRISEPREMIUM 是第三列。因此的索引值是 (3-1） 或 2。
 
 如需授權計劃 （也稱為產品名稱）、 其包含的服務計劃和其對應的易記名稱的完整清單，請參閱[產品名稱和授權的服務計劃識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用 Windows PowerShell 的 Microsoft Azure Active Directory 模組
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-第一筆、[連線至您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 >[!Note]
 >PowerShell 指令碼是可用的可本主題所述的程序。主要是針對指令碼可讓您檢視和停用 Office 365 組織中包括 Sway 服務。如需詳細資訊，請參閱 ＜[停用 Office 365 powershell Sway 存取](disable-access-to-sway-with-office-365-powershell.md)。
