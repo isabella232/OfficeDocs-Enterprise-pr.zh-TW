@@ -14,12 +14,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 description: 開始規劃您的 Office 365 網路連線的網路之前，請務必了解連線原則可安全地管理 Office 365 流量和快速獲得最佳效能。本文可協助您了解可安全地最佳化 Office 365 網路連線的最新的指引。
-ms.openlocfilehash: be41162833a7442ac65af1e973a00923841fca6b
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: d319d99cdd413fe1df9e8f88d18742ad464bbb3b
+ms.sourcegitcommit: f0ba0d8c62f802447bc9d07f5d877067156fbed5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540093"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "28021804"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 
@@ -54,8 +54,8 @@ Microsoft 建議以達到最佳的 Office 365 連線能力與效能的原則如�
   
 網路設計中的主要目標應該是以延遲降至最低降低的來回時間 (RTT) 從您的網路到 Microsoft 通用網路、 連接 Microsoft 資料中心的所有具備低延遲的 Microsoft 的公用網路骨幹部署及雲端擴張全球各地的應用程式進入點。您可以深入了解在[如何 Microsoft 是以其快速且可靠的通用網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)Microsoft 通用網路。
   
-### <a name="identify-and-differentiate-office-365-traffic"></a>識別及區分不同 Office 365 的流量
 <a name="BKMK_P1"> </a>
+### <a name="identify-and-differentiate-office-365-traffic"></a>識別及區分不同 Office 365 的流量
 
 ![確認 Office 365 的流量](media/621aaec9-971d-4f19-907a-1ae2ef6d72fc.png)
   
@@ -67,10 +67,10 @@ Microsoft 建議以達到最佳的 Office 365 連線能力與效能的原則如�
   
 Microsoft 現在將所有的 Office 365 端點發佈成 web 服務並提供如何最佳使用此資料的指導。如需如何以擷取及使用 Office 365 端點的詳細資訊，請參閱[Office 365 Url 和 IP 位址範圍](https://support.office.com/en-us/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&amp;rs=en-US&amp;ad=US)。
   
-### <a name="egress-network-connections-locally"></a>在本機上輸出網路連線
 <a name="BKMK_P2"> </a>
+### <a name="egress-network-connections-locally"></a>在當地輸出網路連線
 
-![在本機上輸出網路連線](media/b42a45be-1ab4-4073-a7dc-fbdfb4aedd24.png)
+![在當地輸出網路連線](media/b42a45be-1ab4-4073-a7dc-fbdfb4aedd24.png)
   
 本機 DNS 和網際網路的輸出是重要性的進入的嚴重降低連線延遲和確保使用者會連線到最接近點至 Office 365 服務。在複雜的網路拓撲中，請務必一起實作本機 DNS 和本機網際網路的輸出。如需 Office 365 如何路由的用戶端連線到最接近的進入點的詳細資訊，請參閱[用戶端連線](https://support.office.com/en-us/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b)。
   
@@ -102,8 +102,8 @@ Microsoft 現在將所有的 Office 365 端點發佈成 web 服務並提供如�
 - 允許本機輸出減少公司網路基礎結構的負載。
 - 保護連線兩端上的利用用戶端端點安全性與雲端安全性功能。
 
-### <a name="avoid-network-hairpins"></a>避免網路 hairpins
 <a name="BKMK_P3"> </a>
+### <a name="avoid-network-hairpins"></a>避免網路 hairpin
 
 ![避免 hairpins](media/ee53e8af-f57b-4292-a256-4f36733b263a.png)
   
@@ -115,8 +115,8 @@ Microsoft 現在將所有的 Office 365 端點發佈成 web 服務並提供如�
   
 由於分散式位置與 Office 365 的進入點及向使用者及其鄰近大型數目，路由到任何協力廠商網路或安全性提供者的 Office 365 流量對可能造成負面的影響 Office 365 的連線如果提供者網路不為取得最佳的 Office 365 對等設定。
   
-### <a name="bypass-proxies-traffic-inspection-devices-and-duplicate-security-technologies"></a>略過 proxy 流量檢查裝置及重複安全性技術
 <a name="BKMK_P4"> </a>
+### <a name="bypass-proxies-traffic-inspection-devices-and-duplicate-security-technologies"></a>略過 proxy 流量檢查裝置及重複安全性技術
 
 ![略過 proxy 流量檢查裝置及重複安全性技術](media/0131930d-c6cb-4ae1-bbff-fe4cf6939a23.png)
   
@@ -124,8 +124,8 @@ Microsoft 現在將所有的 Office 365 端點發佈成 web 服務並提供如�
   
 大部分的企業網路強制使用 like proxy、 SSL 檢查、 封包檢查及資料遺失防護系統技術的網際網路流量的網路安全性。這些技術提供一般的網際網路要求降低重要的風險，但可大幅減少效能、 延展性及套用至 Office 365 端點時的使用者體驗的品質。
   
-#### <a name="office-365-endpoints-web-service"></a>Office 365 端點 web 服務
 <a name="BKMK_WebSvc"> </a>
+#### <a name="office-365-endpoints-web-service"></a>Office 365 端點 web 服務
 
 Office 365 系統管理員可以使用指令碼或 REST 通話以結構化來自 Office 365 端點的端點清單中取用 web 服務並更新周邊防火牆的設定和其他網路裝置。如此可確保結合 Office 365 的流量會識別、 適當地視為及不同 managed 從一般和通常未知的網際網路網站的繫結的網路流量。如需如何使用 Office 365 端點的詳細資訊的 web 服務，請參閱 ＜ [Office 365 Url 和 IP 位址範圍](https://support.office.com/en-us/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&amp;rs=en-US&amp;ad=US)。
   
@@ -151,7 +151,7 @@ Office 365 端點代表具有不同的網路位址和子網路。端點可能是
   
 管理 Office 365 流量我們先前指引，在端點所組織成兩個**必要**及**選用**的類別。許多客戶面臨的調整的 Office 365 Url 和 IP 位址的完整清單相同網路最佳化的應用程式的挑戰和每個類別中的端點所需根據重要性不同的最佳化的服務]。 
   
-在新模型中，端點分為三種類別，**最佳化**、**所需**和**預設值**，在焦點網路最佳化致力於實現最佳的效能改進的位置上提供的優先順序為基礎之樞紐分析表和會傳回投資報酬。端點合併為基礎的案例的網路品質、 大量及效能信封及簡化的實作有效的使用者體驗的敏感度上述類別中。建議的最佳化可套用至指定的類別中的所有端點的相同方式。
+在新模型中，端點被分為三種類別，**最佳化**、**允許**和**預設值**，在焦點網路最佳化致力於實現最佳的效能改良功能，並傳回的位置上提供的優先順序為基礎之樞紐分析表報酬率。端點合併為基礎的案例的網路品質、 大量及效能信封及簡化的實作有效的使用者體驗的敏感度上述類別中。建議的最佳化可套用至指定的類別中的所有端點的相同方式。
   
 - **最佳化**端點所需的每一個 Office 365 服務的連線和代表超過 75%的 Office 365 頻寬、 連線和資料量。這些端點代表寫至網路效能、 延遲及可用性的 Office 365 案例。所有端點會都裝載於 Microsoft 資料中心。預期的變更到這個類別的端點速度會能更加低於其他兩個類別的端點。此類別包含 Url 和 IP 子網路定義的組專用商務 Online 及 Microsoft 小組例如 Exchange Online、 SharePoint Online、 Skype 核心 Office 365 工作負載的機碼非常小 （依照順序 ~ 10) 設定。
 
