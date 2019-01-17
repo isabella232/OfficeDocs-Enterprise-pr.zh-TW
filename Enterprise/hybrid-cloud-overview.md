@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 3ea3ee10-411e-4690-b9e5-f1b46f1f4d59
 description: 摘要： 了解的定義和 Microsoft 混合雲端的元素。
-ms.openlocfilehash: 04c1a80009b1136ae4575ea4d454cebdb26bed3c
-ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
+ms.openlocfilehash: 21f107c9f096e90cd0eb1dfc17f14431dec54a73
+ms.sourcegitcommit: c5ee713709d76f519cb77de0e12c435d8409f571
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "27123310"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "28327345"
 ---
 # <a name="hybrid-cloud-overview"></a>混合式雲端概觀
 
@@ -79,13 +79,13 @@ Microsoft 混合雲端是一組與內部部署的元件，例如合併的 Micros
     
 - 安全性
     
-    混合式雲端案例的安全性包括保護以及管理您的身分識別、 資料保護、 系統管理的最低權限管理、 威脅傳達及實作的控管和安全性原則。如需詳細資訊，請參閱[Microsoft 雲端 Security for Enterprise 架構師](https://technet.microsoft.com/library/dn919927.aspx#security)。
+    混合式雲端案例的安全性包括保護以及管理您的身分識別、 資料保護、 系統管理的最低權限管理、 威脅傳達及實作的控管和安全性原則。如需詳細資訊，請參閱[Microsoft 雲端 Security for Enterprise 架構師](microsoft-cloud-it-architecture-resources.md#security)。
     
 - 管理
     
     混合式雲端案例的管理包括維護設定、 資料、 帳戶、 原則與權限，以及要監視的案例和與其效能元素的進行中狀況的功能。您也可以使用相同的工具集，例如 Systems Management Server、 管理 Azure IaaS 中的虛擬機器。
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Hybrid Cloud for Enterprise Architects](microsoft-hybrid-cloud-for-enterprise-architects.md)
   
