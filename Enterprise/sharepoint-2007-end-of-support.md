@@ -3,7 +3,7 @@ title: SharePoint Server 2007 終止支援藍圖
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 1/31/2018
+ms.date: 01/28/2019
 ms.audience: ITPro
 ms.topic: conceptual
 f1_keywords:
@@ -32,12 +32,12 @@ search.appverid:
 - OSU160
 ms.assetid: ba124775-d5c0-4d68-b88d-8458ad4c3717
 description: 在 2017 年 10 月 10、 支援的結束 for SharePoint Server 2007。閱讀本文以了解您的升級選項、 疑難排解、 最佳作法、 系統需求、 升級步驟及如何從 Microsoft 協力廠商取得協助。
-ms.openlocfilehash: b548e7623a72d57793c18409a80506bb832df858
-ms.sourcegitcommit: a9c84d02e94c99ff6b1099b4a9ae695be08210e2
+ms.openlocfilehash: b0d3eda690733b45ee82054e145642a5c76125d5
+ms.sourcegitcommit: 792fe2ccc860517fe3dcbc9c668bae97f39ae7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "21169795"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "29604514"
 ---
 # <a name="sharepoint-server-2007-end-of-support-roadmap"></a>SharePoint Server 2007 終止支援藍圖
 
@@ -60,7 +60,7 @@ SharePoint Server 幾乎所有的 Microsoft 產品，例如有支援週期的期
 > [!TIP]
 > 如果您已經尚未升級或移轉計劃，請參閱： [SharePoint 2007 要考慮的移轉選項](sharepoint-2007-migration-options.md)，以開始的所在位置的一些範例。您也可以搜尋適用於[Microsoft 合作夥伴](https://go.microsoft.com/fwlink/?linkid=841249)可以協助升級或 Office 365 遷移 （或兩者）。 
   
-如需即將達到支援結束的 Office 2007 伺服器的詳細資訊，請參閱[規劃升級為 Office 2007 的伺服器](https://support.office.com/article/4e5eab5f-05db-4627-9e17-421a6bf89606.aspx)。
+如需即將達到支援結束的 Office 2007 伺服器的詳細資訊，請參閱[資源以協助您升級從 Office 2007 的伺服器和用戶端](upgrade-from-office-2007-servers-and-products.md)。
   
 ## <a name="what-are-my-options"></a>我的選項為何？
 
@@ -104,7 +104,7 @@ SharePoint Server 可以是安裝於內部您自己的伺服器上也可以使�
 
 請確定 SharePoint Online 有您需要透過檢閱相關聯的服務描述的所有功能。以下是所有的 Office 365 服務說明連結：
   
-[Office 365 服務說明](https://go.microsoft.com/fwlink/?linkid=272060)
+[Office 365 服務描述](https://go.microsoft.com/fwlink/?linkid=272060)
   
 沒有直接從 SharePoint 2007 移轉至 SharePoint Online; 方法在移至 SharePoint Online 會手動完成。如果您升級至 SharePoint Server 2013 或 SharePoint Server 2016、 您移動也可能會涉及使用 SharePoint 移轉 API （例如移轉至 OneDrive for Business，資訊）。
   

@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶需要以便讓他們參與的 Office 365 服務移至其新的地理位置的客戶資料送出要求之前其國家/地區的期限。
-ms.openlocfilehash: d66818590a7972dc67832f55a3fdb3f2a9adf99c
-ms.sourcegitcommit: 75ad9af1fa8adc73611fc6140546222b001861d5
+ms.openlocfilehash: 15edbb41c14a1b3061d0d1923eeec4defab58a7b
+ms.sourcegitcommit: 792fe2ccc860517fe3dcbc9c668bae97f39ae7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "23839571"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "29604504"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -80,7 +80,7 @@ ms.locfileid: "23839571"
   
 ## <a name="microsoft-teams"></a>Microsoft Teams
 
-Microsoft 小組還不支援移轉的客戶在可用的 Microsoft 小組的資料 residency 所在的國家/地區資料中心來從區域中的其餘部分的內容。 因此，只有新客戶必須所有其儲存所在的 Microsoft 小組支援資料 residency 新地區中的國家/地區內的資料。 深入了解您的公司位置的 Office 365 資料 residency[所在資料位於吗？](https://office/com/datamaps)   
+Microsoft 小組還不支援移轉的客戶在可用的 Microsoft 小組的資料 residency 所在的國家/地區資料中心來從區域中的其餘部分的內容。 因此，只有新客戶必須所有其儲存所在的 Microsoft 小組支援資料 residency 新地區中的國家/地區內的資料。 深入了解您的公司位置的 Office 365 資料 residency[所在資料位於吗？](https://products.office.com/where-is-your-data-located)   
 
 ## <a name="optional-actions-before-you-request-a-move"></a>選擇性的動作要求移動之前
 

@@ -3,29 +3,6 @@
 
 
 
-## <a name="week-of-december-10-2018"></a>2018 年 12 月 10 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 12/10/2018 | [Microsoft 雲端連線 ExpressRoute](/Office365/Enterprise/expressroute-for-microsoft-cloud-connectivity) | 修改時間 |
-| 12/10/2018 | [使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料](/Office365/Enterprise/powershell/view-account-license-and-service-details-with-office-365-powershell) | 修改時間 |
-
-
-## <a name="week-of-december-17-2018"></a>2018 年 12 月 17 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 12/17/2018 | [使用 ExpressRoute for Office 365 進行路由傳送](/Office365/Enterprise/routing-with-expressroute) | 修改時間 |
-| 12/17/2018 | [Office 365 服務中的 IPv6 支援](/Office365/Enterprise/ipv6-support) | 修改時間 |
-| 12/18/2018 | [經過驗證的混合式概觀及使用內部部署 Skype 中的商務與 Exchange 伺服器的先決條件](/Office365/Enterprise/hybrid-modern-auth-overview) | 修改時間 |
-| 12/18/2018 | [準備透過目錄同步作業將使用者佈建至 Office 365](/Office365/Enterprise/prepare-for-directory-synchronization) | 修改時間 |
-| 12/19/2018 | [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](/Office365/Enterprise/modern-auth-for-office-2013-and-2016) | 修改時間 |
-| 12/19/2018 | [Office 365 的工作階段逾時](/Office365/Enterprise/session-timeouts) | 修改時間 |
-| 12/20/2018 | [Exchange 2010 結尾的支援藍圖](/Office365/Enterprise/exchange-2010-end-of-support) | 修改時間 |
-
-
 ## <a name="week-of-december-24-2018"></a>2018 年 12 月 24 日當週
 
 
@@ -54,7 +31,7 @@
 | 1/4/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
 
 
-## <a name="week-of-january-07-2019"></a>2019 年 1 月 07、 當週
+## <a name="week-of-january-07-2019"></a>2019 年 1 月 7 日當週
 
 
 | 發佈時間 |主題標題 | 變更 |
@@ -63,8 +40,36 @@
 | 1/7/2019 | [Office 365 Germany 端點](/Office365/Enterprise/office-365-germany-endpoints) | 修改時間 |
 | 1/7/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
 | 1/7/2019 | [Office 365 美國政府 GCC 高端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
-| 1/7/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
+| 1/7/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) | 修改時間 |
 | 1/8/2019 | [設定 Office 365 的目錄同步處理](/Office365/Enterprise/set-up-directory-synchronization) | 修改時間 |
 | 1/9/2019 | [使用 Office 365 PowerShell 檢視授權與服務](/Office365/Enterprise/powershell/view-licenses-and-services-with-office-365-powershell) | 修改時間 |
 | 1/11/2019 | [管理 Office 365 端點](/Office365/Enterprise/managing-office-365-endpoints) | 修改時間 |
 | 1/11/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
+
+
+## <a name="week-of-january-14-2019"></a>2019 年 1 月 14 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 1/15/2019 | [Office 365 網路連線原則](/Office365/Enterprise/office-365-network-connectivity-principles) | 修改時間 |
+| 1/15/2019 | [Office 365 的網路規劃和效能調整](/Office365/Enterprise/network-planning-and-performance) | 修改時間 |
+| 1/16/2019 | [Office 365 服務中的 IPv6 支援](/Office365/Enterprise/ipv6-support) | 修改時間 |
+| 1/16/2019 | [使用 Office 365 PowerShell 檢視經授權與未經授權的使用者](/Office365/Enterprise/powershell/view-licensed-and-unlicensed-users-with-office-365-powershell) | 修改時間 |
+| 1/16/2019 | [檢視 Office 365 中目錄同步處理錯誤](/Office365/Enterprise/identify-directory-synchronization-errors) | 修改時間 |
+| 1/16/2019 | [混合式雲端概觀 (英文)](/Office365/Enterprise/hybrid-cloud-overview) | 修改時間 |
+| 1/17/2019 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
+| 1/17/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
+| 1/17/2019 | [Office 365 美國政府 GCC 高端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
+
+
+## <a name="week-of-january-21-2019"></a>2019 年 1 月 21 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 1/25/2019 | [Office 365 服務的部署建議](/Office365/Enterprise/deployment-advisors-for-office-365) | 修改時間 |
+| 1/25/2019 | [使用 PowerShell 管理 Office 365 群組](/Office365/Enterprise/manage-office-365-groups-with-powershell) | 修改時間 |
+| 1/25/2019 | [將 OneDrive 網站移至不同的地理位置](/Office365/Enterprise/move-onedrive-between-geo-locations) | 修改時間 |
+| 1/25/2019 | [使用 SharePoint Online 透過使用 Office 365 內容傳遞網路](/Office365/Enterprise/use-office-365-cdn-with-spo) | 修改時間 |
+| 1/25/2019 | [設定 Office 365 的目錄同步處理](/Office365/Enterprise/set-up-directory-synchronization) | 修改時間 |
