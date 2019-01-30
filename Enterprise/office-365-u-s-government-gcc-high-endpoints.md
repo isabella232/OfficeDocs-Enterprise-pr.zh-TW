@@ -3,7 +3,7 @@ title: Office 365 美國政府 GCC 高端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 01/17/2019
+ms.date: 01/28/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
 description: 如果您的組織會使用 Office 365 及限制您網路上的電腦連線至網際網路，以下您會發現端點 （Fqdn、 連接埠、 Url、 IPv4 及 IPv6 位址範圍），您應該包含在您輸出允許清單以確保您電腦可以成功地使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 5c849775c8fd55d9e4196ebad6c55cdf56d2ab60
-ms.sourcegitcommit: 0c4f50aa55699b8390038efbb8b50dbe10f3eefe
+ms.openlocfilehash: b40e38b1adeedc49e175e3d901b1283688de17e1
+ms.sourcegitcommit: 51cb8941a15f6d77b85f47cdf95822ae00d8f7e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "28723380"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "29612123"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府 GCC 高端點
 
@@ -34,7 +34,7 @@ ms.locfileid: "28723380"
   
 |||
 |:-----|:-----|
-|**上次更新：** 01/17/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)格式的完整清單 <br/> |
+|**上次更新：** 01/28/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)格式的完整清單 <br/> |
    
  若要了解我們建議管理使用此資料的網路連線的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。端點資料更新每個月利用新的 IP 位址及發佈前正在使用中的 30 天的 Url 的開頭。這可讓客戶不要尚未有自動更新以完成其程序，才需要的新連線。如果地址支援呈報、 安全性事件或其他立即操作需求所需的端點可能也更新期間月。以下這個頁面上顯示的資料會從 rest web 服務產生。如果您使用指令碼或網路裝置存取此資料，您應直接移至[Web 服務](office-365-ip-web-service.md)。
 
