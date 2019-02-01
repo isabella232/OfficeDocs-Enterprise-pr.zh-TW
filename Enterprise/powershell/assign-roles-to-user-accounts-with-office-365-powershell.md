@@ -3,7 +3,7 @@ title: 將角色指派給 Office 365 powershell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 01/31/2019
 ms.audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,24 +14,58 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
-description: 摘要： 使用 Office 365 PowerShell 並新增 MsolRoleMember cmdlet 來為使用者帳戶指派的角色。
-ms.openlocfilehash: 2af4409020cc4a4e3dd6ff3b8bfcf5f1138f26cd
-ms.sourcegitcommit: 3b474e0b9f0c12bb02f8439fb42b80c2f4798ce1
+description: 摘要： 使用 Office 365 PowerShell 將角色指派給使用者帳戶。
+ms.openlocfilehash: 702c7358ccca9bb36bd106d742b5c454283ee8b4
+ms.sourcegitcommit: d0c870c7a487eda48b11f649b30e4818fd5608aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "29690434"
 ---
 # <a name="assign-roles-to-user-accounts-with-office-365-powershell"></a>將角色指派給 Office 365 powershell 的使用者帳戶
 
- **摘要：**使用 Office 365 PowerShell 和**新增 MsolRoleMember**指令程式來為使用者帳戶指派的角色。
-  
-您可以快速又輕鬆地將角色指派使用 Office 365 PowerShell 所識別的使用者帳戶的顯示名稱及角色名稱的使用者帳戶。
-  
-## <a name="before-you-begin"></a>開始之前
+您可以快速又輕鬆地將角色指派使用 Office 365 PowerShell 的使用者帳戶。
 
-本主題中的程序要求您重新連線至 Office 365 PowerShell 使用的全域管理員帳戶。指示，請參閱[Connect to Office 365 PowerShell](connect-to-office-365-powershell.md)。
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
+
+第一筆、[連線至您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)使用全域管理員帳戶。
   
-## <a name="for-a-single-role-change"></a>如需單一角色變更
+接下來，決定您想要新增至角色的使用者帳戶登入名稱 (範例： fredsm@contoso.com)。這也稱為是使用者主要名稱 (UPN)。
+
+下一步]，以判斷角色的名稱。使用此命令以列出您可以使用 PowerShell 中指派的角色。
+
+````
+Get-AzureADDirectoryRole
+````
+
+接下來，在登入和角色名稱填滿並執行下列命令。
+  
+```
+$userName="<sign-in name of the account>"
+$roleName="<role name>"
+Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | Where {$_.DisplayName -eq $roleName}).ObjectID -RefObjectId (Get-AzureADUser | Where {$_.UserPrincipalName -eq $userName}).ObjectID
+```
+
+以下是一組完整的命令的範例：
+  
+```
+$userName="belindan@contoso.com"
+$roleName="Lync Service Administrator"
+Add-AzureADDirectoryRoleMember -ObjectId (Get-AzureADDirectoryRole | Where {$_.DisplayName -eq $roleName}).ObjectID -RefObjectId (Get-AzureADUser | Where {$_.UserPrincipalName -eq $userName}).ObjectID
+```
+
+若要顯示特定角色的使用者名稱的清單，請使用這些命令。
+
+```
+$roleName="<role name>"
+Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADDirectoryRoleMember | Ft DisplayName
+```
+
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
+
+第一筆、[連線至您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)使用全域管理員帳戶。
+  
+### <a name="for-a-single-role-change"></a>如需單一角色變更
 
 決定下列項目：
   
@@ -77,7 +111,7 @@ $roleName="SharePoint Service Administrator"
 Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
 ```
 
-## <a name="for-multiple-role-changes"></a>是否有多個角色變更
+### <a name="for-multiple-role-changes"></a>是否有多個角色變更
 
 決定下列項目：
   
@@ -105,7 +139,7 @@ Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-接下來，建立內含 DisplayName 和角色逗點分隔值 (CSV) 的文字檔案名稱的欄位。以下是範例：
+接下來，建立逗點分隔值 (CSV) 文字檔具有 DisplayName 和角色名稱的欄位。以下是範例：
   
 ```
 DisplayName,RoleName
@@ -117,7 +151,7 @@ DisplayName,RoleName
 接下來，填入 CSV 檔案的位置與在 PowerShell 命令提示字元中執行所產生的命令。
   
 ```
-$fileName="<path and file name of the input CSV file that contains the role changes, example: C:\admin\RoleUpdates.CSV>"
+$fileName="<path and file name of the input CSV file that has the role changes, example: C:\admin\RoleUpdates.CSV>"
 $roleChanges=Import-Csv $fileName | ForEach {Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq $_.DisplayName).UserPrincipalName -RoleName $_.RoleName }
 
 ```
@@ -127,4 +161,3 @@ $roleChanges=Import-Csv $fileName | ForEach {Add-MsolRoleMember -RoleMemberEmail
 - [使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
 - [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
-- [新增 MsolRoleMember](https://msdn.microsoft.com/library/dn194120.aspx)
