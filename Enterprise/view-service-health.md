@@ -20,12 +20,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 檢視 Office 365 服務的健康狀態之前呼叫支援以查看是否有作用中服務中斷
-ms.openlocfilehash: 7e04e1309c990ccced67663576285f7276603ccc
-ms.sourcegitcommit: 6826e0ea4a777f7d98500209a9d3bc75e89f8d15
+ms.openlocfilehash: 52a7b762b8e86c3e538579f7c1e1611515469389
+ms.sourcegitcommit: c7ad181394a8a3ee261dc44e7a1e70f6ebe7cbcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29651184"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "29696350"
 ---
 # <a name="how-to-check-office-365-service-health"></a>如何檢查 Office 365 服務健康情況
 
@@ -108,7 +108,7 @@ ms.locfileid: "29651184"
    
 ## <a name="history"></a>[歷程記錄] 
 
-服務健康狀況可讓您查看目前的健全狀況狀態及檢視過去 30 天中的任何服務摘要報告和事件的歷程記錄。若要檢視所有服務的過去狀況，選取 [**服務健康狀況**] 頁面上的 [**檢視歷程記錄**]。 
+服務健康狀況可讓您查看目前的健全狀況狀態和檢視歷程任何的記錄服務摘要報告及有影響您的租用戶在過去 30 天的事件。若要檢視所有服務的過去狀況，選取 [**服務健康狀況**] 頁面上的 [**檢視歷程記錄**]。 
   
 ![Show link to health history](media/12a3e484-1eb4-497f-8cab-8064bccc2ef5.png)
   
