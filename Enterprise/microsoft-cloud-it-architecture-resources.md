@@ -16,12 +16,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: 88ff136002ea1a5a580d5d03e4e64aa7dd81d368
-ms.sourcegitcommit: bd50d505b134da4e46606c9580d67f34f6199ecb
+ms.openlocfilehash: a32b73facd54da98d7c5df84223237d857883cfe
+ms.sourcegitcommit: e56f830ccff8d74d9edbff4a46a9ee1d613291ed
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "27118166"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29741236"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -38,9 +38,12 @@ ms.locfileid: "27118166"
     - [Microsoft hybrid cloud for enterprise architects](microsoft-cloud-it-architecture-resources.md#hybrid)
     - [常見攻擊和保護您組織的 Microsoft 功能](#common-attacks-and-microsoft-capabilities-that-protect-your-organization)
     
-- **[Office 365 企業解決方案系列](microsoft-cloud-it-architecture-resources.md#BKMK_o365solutions)**:   <!--- [Information Protection for Office 365](microsoft-cloud-it-architecture-resources.md#BKMK_infoprotect) --->
+- **[Microsoft 365 企業解決方案系列](microsoft-cloud-it-architecture-resources.md#BKMK_o365solutions)**：
     - [Office 365 的身分識別與裝置保護](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
     - [Office 365 的檔案保護解決方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
+    - [GDPR 的 Office 365 資訊保護](#office-365-information-protection-for-gdpr)
+    - [適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](#microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations)
+    - [Microsoft 電話語音解決方案](#microsoft-telephony-solutions) 
     - [使用 Microsoft 部署現代和安全的桌面](microsoft-cloud-it-architecture-resources.md#msd)
     
 
@@ -92,7 +95,7 @@ IT 結構設計師在 Microsoft 雲端服務和平台中，需要瞭解哪些安
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 雲端安全性模型的縮圖影像](media/5dc26f80-8888-4572-8ed9-a120d711e0f0.png)          ](https://www.microsoft.com/download/details.aspx?id=48121) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842070)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=842071)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=48121) <br/> | 此模型包含： <ul><li>Microsoft 在提供安全服務與平台所扮演的角色</li><li>客戶對降低安全性風險的責任</li><li>重要的安全性認證 </li><li>Microsoft 諮詢服務所提供的安全性產品 </ul></li>參加[安全性進入已啟用雲端的世界](https://mva.microsoft.com/training-courses/security-in-a-cloudenabled-world-12725?l=CfLHobAcB_3904300474)，這是根據這個架構海報的 Microsoft Virtual Academy 課程。 <br/>|
+|[![Microsoft 雲端安全性模型的縮圖影像](media/5dc26f80-8888-4572-8ed9-a120d711e0f0.png)          ](https://www.microsoft.com/download/details.aspx?id=48121) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842070)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=842071)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=48121) <br/> | 此模型包含： <ul><li>Microsoft 在提供安全服務與平台所扮演的角色</li><li>客戶對降低安全性風險的責任</li><li>重要的安全性認證 </li><li>Microsoft 諮詢服務所提供的安全性產品 </ul> <br/>|
    
 <a name="networking"> </a>
 ### <a name="microsoft-cloud-networking-for-enterprise-architects"></a>Microsoft cloud networking for enterprise architects
@@ -122,19 +125,19 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
 |[![常見攻擊海報的縮圖影像](media/common%20attacks-thumb3.png) ](http://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) <br/> [PDF](http://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.pdf) \| [Visio](http://download.microsoft.com/download/F/A/C/FACFC1E9-FA35-4DF1-943C-8D4237B4275B/MSFT_Cloud_architecture_security_commonattacks.vsdx) <br/> | 此海報說明常見的攻擊路徑，並描述哪些功能有助於在攻擊的每個階段阻止攻擊者。 <br/>|
 
 
-<a name="santa"> </a>
-### <a name="the-santa-cloud"></a>The Santa Cloud
+<!---<a name="santa"> </a>
+### The Santa cloud
 
-聖誕老人和他的小精靈們，如何使用 Microsoft 的雲端產品來發送一年一度的聖誕禮物。
+How Santa and his elves use Microsoft's cloud offerings to make their annual deliveries.
   
-|**項目**|**描述**|
+|**Item**|**Description**|
 |:-----|:-----|
-|[![Santa Cloud 海報的縮圖影像](media/d47e1448-329b-41b7-9e51-cfc4ea5d0069.png)](https://www.microsoft.com/download/details.aspx?id=55039) <br/> [線上檢視](https://onedrive.live.com/?authkey=%21ANT1PMgxEdniCyY&cid=8A8EC4F6612625E0&id=8A8EC4F6612625E0%21440&parId=8A8EC4F6612625E0%21218&o=OneUp) \| [PDF](https://go.microsoft.com/fwlink/p/?linkid=842088) <br/> |聖誕老人和他的小精靈 IT 部門使用了 Office 365、Azure、Dynamics 365 和 Intune，來判斷小孩子們乖不乖，好在聖誕夜 (12 月 24 日) 發送聖誕禮物。  <br/>|
+|[![Thumbnail image of The Santa Cloud poster](media/d47e1448-329b-41b7-9e51-cfc4ea5d0069.png)](https://www.microsoft.com/download/details.aspx?id=55039) <br/> [View online](https://onedrive.live.com/?authkey=%21ANT1PMgxEdniCyY&cid=8A8EC4F6612625E0&id=8A8EC4F6612625E0%21440&parId=8A8EC4F6612625E0%21218&o=OneUp) \| [PDF](https://go.microsoft.com/fwlink/p/?linkid=842088) <br/> |To determine who is naughty or nice and the presents to deliver on December 24, Santa Claus and his elfish IT department use Office 365, Azure, Dynamics 365, and Intune.  <br/>| --->
    
 <a name="BKMK_o365solutions"> </a>
-## <a name="office-365-enterprise-solution-series"></a>Office 365 企業解決方案系列
+## Microsoft 365 企業解決方案系列
 
-Office 365 企業方案系列提供實作 Office 365 功能的指引，尤其是跨多項技術的功能。
+Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引，尤其是跨多項技術的功能。
 
 <!---  
 <a name="BKMK_infoprotect"> </a>
@@ -147,8 +150,7 @@ Capabilities for enterprise organizations to protect corporate assets.
 |[![Information protection capabilities for Office 365](media/51bf70b4-029c-4189-9425-7ed34038d4dc.png)          ](https://www.microsoft.com/download/details.aspx?id=54429) <br/> [PDF](http://download.microsoft.com/download/2/3/D/23D91386-8349-4F7A-9470-FD5AED861F16/MSFT_cloud_architecture_informationprotection.pdf)  \| [Visio](http://download.microsoft.com/download/2/3/D/23D91386-8349-4F7A-9470-FD5AED861F16/MSFT_cloud_architecture_informationprotection.vsd)  \| [More languages](https://www.microsoft.com/download/details.aspx?id=54429) <br/> |Microsoft provides the most complete set of capabilities to protect your corporate assets. This model helps organizations take a methodical approach when planning which capabilities to implement.  <br/>|
 --->
    
-<a name="BKMK_O365IDP">
- </a>
+<a name="BKMK_O365IDP"> </a>
 ### Office 365 的身分識別與裝置保護
 
 推薦可用於保護身分識別和裝置的功能，其可存取 Office 365、其他 SaaS 服務，以及與 Azure AD 應用程式 Proxy 一起發佈的內部部署應用程式。
@@ -166,7 +168,36 @@ Capabilities for enterprise organizations to protect corporate assets.
 |:-----|:-----|
 |[![Office 365 中檔案保護解決方案的迷你海報組縮圖](media/24be68b5-d852-4fdb-94ad-94491a19edd8.png)          ](https://www.microsoft.com/download/details.aspx?id=55523) <br/> [PDF](https://go.microsoft.com/fwlink/?linkid=2004320)  \| [Visio](http://download.microsoft.com/download/7/8/9/789645A5-BD10-4541-BC33-F8D1EFF5E911/MSFT_cloud_architecture_O365%20file%20protection.vsdx) <br/> |請務必在您的資料、身分識別和裝置之間，使用一致層級的保護。這份文件顯示有哪些可比較的功能，並詳細說明哪些功能可保護 Office 365 中的檔案。  <br/> |
    
-   
+
+### <a name="office-365-information-protection-for-gdpr"></a>GDPR 的 Office 365 資訊保護
+
+探索、分類、保護及監控個人資料的規範性建議。這個解決方案會使用一般資料保護規定 (GDPR) 做為範例，但您可以套用相同的程序，以遵守許多其他法規。
+
+|**項目**|**說明**|
+|:-----|:-----|
+|![GDPR 的 Office 365 資訊保護縮圖](media/o365infoprotectforgdpr-thumb.png)  <br/> [PDF](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.pdf) \| [Visio](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.vsdx)    |若要以文章格式查看此內容，請參閱 [GDPR 的 Office 365 資訊保護](https://docs.microsoft.com/zh-TW/Office365/SecurityCompliance/office-365-information-protection-for-gdpr)。      |
+
+### <a name="microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南 
+
+此指南描述如何實作安全的雲端環境。任何組織都可以使用此解決方案指南。此解決方案指南為具有 BYOD 存取權和來賓帳戶的彈性組織提供額外的說明。您可以使用此指南作為起點，設計您自己的環境。
+
+
+|**項目**|**描述**|
+|:-----|:-----|
+|**適用於政治活動的 Microsoft 安全性指南** <br/> [![迷你海報集的縮略圖。](media/d370ce28-ca40-4930-9a2c-907312aa06c8.png)](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br/> [PDF](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf)  \| [Visio](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx) <br/> |此指南以政治活動組織為例。您可以針對任何環境使用此指南作為起點。  <br/> |
+|**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載的檔案的縮略圖](media/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br/> [PDF](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf)  \| [Visio](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
+
+此指南包含有測試實驗室指南。如需詳細資訊，請參閱[適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](https://docs.microsoft.com/zh-TW/Office365/SecurityCompliance/microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o)。
+
+### <a name="microsoft-telephony-solutions"></a>Microsoft 電話語音解決方案
+
+當您開始加入 Microsoft 雲端中的 Teams，Microsoft 支援數個選項。此海報協助您決定哪個 Microsoft 電話語音解決方案 (雲端的電話系統或內部部署的 Enterprise Voice) 適合您組織中的使用者，以及您的組織如何連線至公用交換電話網路 (PSTN)。
+
+![Microsoft 電話語音解決方案海報的縮圖](media/microsoft-telephony-solutions-thumb.png) <br/>
+[PDF](https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness/blob/live/Teams/downloads/telephony-solutions/microsoft-telephony-solutions-12-18.pdf) | [Visio](https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness/blob/live/Teams/downloads/telephony-solutions/microsoft-telephony-solutions-12-18.vsdx) 
+
+如需詳細資訊，請參閱此海報的文章：[Microsoft 電話語音解決方案](https://docs.microsoft.com/zh-TW/SkypeForBusiness/hybrid/msft-telephony-solutions)。
+  
 <a name="msd"> </a>
 ### <a name="deploy-a-modern-and-secure-desktop-with-microsoft"></a>使用 Microsoft 部署現代和安全的桌面
 
