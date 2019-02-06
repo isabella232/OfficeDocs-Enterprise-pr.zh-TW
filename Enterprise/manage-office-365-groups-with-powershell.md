@@ -1,8 +1,8 @@
 ---
-title: 管理 Office 365 powershell 的群組
-ms.author: dianef
-author: dianef77
-manager: scotv
+title: 使用 PowerShell 管理 Office 365 群組
+ms.author: mikeplum
+author: MikePlumleyMSFT
+manager: pamgreen
 ms.date: 6/29/2018
 ms.audience: Admin
 ms.topic: article
@@ -18,14 +18,14 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 本文提供的群組中使用 Microsoft PowerShell 執行一般管理工作的步驟。
-ms.openlocfilehash: 23dfb7f871496b33bf9c34937977b98dc13cea6d
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 83b7340cea1fd8d38bba073353b61f0b17fad8a0
+ms.sourcegitcommit: e56f830ccff8d74d9edbff4a46a9ee1d613291ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540169"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29741226"
 ---
-# <a name="manage-office-365-groups-with-powershell"></a>管理 Office 365 powershell 的群組
+# <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
 
  *上次更新 18 年 4 月、 2018* 
   
@@ -35,9 +35,9 @@ ms.locfileid: "22540169"
 
 - [Office 365 群組升級的通訊群組清單](https://support.office.com/article/787d7a75-e201-46f3-a242-f698162ff09f.aspx)
     
-- [管理人員可以建立 Office 365 群組](https://support.office.com/article/4c46c8cb-17d0-44b5-9776-005fced8e618.aspx)
+- [管理能建立 Office 365 群組的使用者](https://support.office.com/article/4c46c8cb-17d0-44b5-9776-005fced8e618.aspx)
     
-- [管理 Office 365 群組來賓存取](https://support.office.com/article/7c713d74-a144-4eab-92e7-d50df526ff96.aspx)
+- [管理 Office 365 群組的來賓存取權](https://support.office.com/article/7c713d74-a144-4eab-92e7-d50df526ff96.aspx)
     
 - [以動態方式在 Azure Active Directory 中管理群組](https://go.microsoft.com/fwlink/?linkid=847632)
     
@@ -204,7 +204,7 @@ Office 365 在 Outlook 中建立群組私人為預設值。如果您的組織想
   
 ## <a name="office-365-groups-cmdlets"></a>Office 365 群組指令程式
 
-下列指令程式所最近供 Office 365 群組。如果您不能使用這些群組，您的 Office 365 訂閱已不更新的這項功能尚未。檢查您的訊息中心和[Office 365 藍圖](http://roadmap.office.com/en-us)。
+下列指令程式所最近供 Office 365 群組。如果您不能使用這些群組，您的 Office 365 訂閱已不更新的這項功能尚未。檢查您的訊息中心及[Microsoft 365 藍圖](https://www.microsoft.com/microsoft-365/roadmap)。
   
 |**Cmdlet 名稱**|**描述**|
 |:-----|:-----|

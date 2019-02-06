@@ -1,8 +1,8 @@
 ---
-title: 管理 Office 365 powershell 的群組
-ms.author: dianef
-author: dianef77
-manager: scotv
+title: 使用 PowerShell 管理 Office 365 群組
+ms.author: mikeplum
+author: MikePlumleyMSFT
+manager: pamgreen
 ms.date: 6/29/2018
 ms.audience: Admin
 ms.topic: article
@@ -17,14 +17,14 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 上次更新 18 年 4 月、 2018
-ms.openlocfilehash: 8def3b304a19ad57887c992aa6342ea2cf14ba28
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 518f845099a72d9addac13388d1b281ca63ee408
+ms.sourcegitcommit: e56f830ccff8d74d9edbff4a46a9ee1d613291ed
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540280"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "29741216"
 ---
-# <a name="manage-office-365-groups-with-powershell"></a>管理 Office 365 powershell 的群組
+# <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
 
  *上次更新 18 年 4 月、 2018* 
   
@@ -32,11 +32,11 @@ ms.locfileid: "22540280"
   
 ## <a name="common-tasks-for-managing-office-365-groups"></a>管理 Office 365 群組的一般工作
 
-- [升級的通訊群組清單在 Outlook 中的 Office 365 群組](https://support.office.com/article/787d7a75-e201-46f3-a242-f698162ff09f)
+- [在 Outlook 中將通訊群組清單升級至 Office 365 群組](https://support.office.com/article/787d7a75-e201-46f3-a242-f698162ff09f)
     
-- [管理人員可以建立 Office 365 群組](https://support.office.com/article/4c46c8cb-17d0-44b5-9776-005fced8e618)
+- [管理能建立 Office 365 群組的使用者](https://support.office.com/article/4c46c8cb-17d0-44b5-9776-005fced8e618)
     
-- [管理 Office 365 群組來賓存取](https://support.office.com/article/7c713d74-a144-4eab-92e7-d50df526ff96)
+- [管理 Office 365 群組的來賓存取權](https://support.office.com/article/7c713d74-a144-4eab-92e7-d50df526ff96)
     
 - [以動態方式在 Azure Active Directory 中管理群組](https://go.microsoft.com/fwlink/?linkid=847632)
     
