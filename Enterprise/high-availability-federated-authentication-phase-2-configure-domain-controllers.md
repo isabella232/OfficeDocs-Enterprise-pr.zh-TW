@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: 摘要：在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
-ms.openlocfilehash: 1e66403348bc2cd9a6dfab56f32735d62c986035
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 88e96c8173a209eb9a0a371b65eacda769e1f50f
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915148"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897216"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
@@ -70,7 +70,7 @@ ms.locfileid: "22915148"
 當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
   
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> 具有所有 PowerShell 命令本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的文字檔案，請參閱在 Azure 中的[for Office 365 同盟驗證部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
   
 ```
 # Set up variables common to both virtual machines

@@ -1,9 +1,9 @@
 ---
-title: 對 Office 365 的網路連線
+title: 對 Office 365 的網路連線能力
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/2/2018
+ms.date: 11/01/2018
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,14 +16,14 @@ search.appverid:
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Office 365 的設計啟用全世界的客戶使用網際網路連線服務的連線。隨著服務發展、 安全性、 效能及可靠性的 Office 365 改善根據上客戶使用網際網路來建立服務的連線。
-ms.openlocfilehash: b72b0a4584542e4c8673c7cf009c66aa97c6b81c
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: da086aa3fcd23ccb4a82cde2a1f7d812c111071a
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540172"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25911387"
 ---
-# <a name="network-connectivity-to-office-365"></a>對 Office 365 的網路連線
+# <a name="network-connectivity-to-office-365"></a>對 Office 365 的網路連線能力
 
 Office 365 的設計啟用全世界的客戶使用網際網路連線服務的連線。隨著服務發展、 安全性、 效能及可靠性的 Office 365 改善根據上客戶使用網際網路來建立服務的連線。
   
@@ -31,12 +31,12 @@ Office 365 的設計啟用全世界的客戶使用網際網路連線服務的連
   
 網路評估可執行許多不同的人員和組織視您的大小和喜好設定。評估網路範圍可以有所不同其中您是在您的部署程序中。為了協助您做好花費執行網路評估的改善了解，我們已產生網路評估指南 》 可協助您了解您可用的選項。此評估決定步驟及資源需要什麼新增至以讓您能夠順利採用 Office 365 部署專案。
   
-像這些指定的事[Skype Operations Framework](https://www.skypeoperationsframework.com/)會提供可能的解決方案及實作詳細資料的網路設計挑戰全方位網路評估。大部分的網路評估會表示網路連線至 Office 365 可以容納與[次要設定] 或 [設計變更](https://aka.ms/manageo365endpoints)現有的網路及網際網路輸出基礎結構。
+完整的網路評估，例如[Skype 操作架構](https://www.skypeoperationsframework.com/)中所述會提供網路設計挑戰實作的詳細資訊以及可能的解決方案。大部分的網路評估會表示網路連線至 Office 365 可以容納與[次要設定] 或 [設計變更](https://aka.ms/manageo365endpoints)現有的網路及網際網路輸出基礎結構。
 
 某些評估會表示網路連線至 Office 365 需要額外的投資在網路的元件。例如投資在 WAN 頻寬或最佳化路由的基礎結構以支援透過網際網路連線到 Office 365。有時會評估會表示網路連線至 Office 365 會影響法規或效能需求例如[Skype 商務線上媒體品質](https://support.office.com/article/Media-Quality-and-Network-Connectivity-Performance-in-Skype-for-Business-Online-5fe3e01b-34cf-44e0-b897-b0b2a83f0917)的案例。投資在網際網路連線基礎結構、 傳閱最佳化與特定的直接連線可能會導致下列額外需求。
   
 > [!NOTE]
-> Microsoft 變更 Microsoft Peering 路由網域檢閱的 Azure ExpressRoute 的方式。啟動 2017 年 7 月 31 所有 Azure ExpressRoute 客戶可以都啟用 Microsoft Peering Azure 系統管理主控台從直接或透過 PowerShell。啟用 Microsoft Peering 之後, 任何客戶可以建立路由篩選器以接收 BGP 路由廣告 Dynamics 365 客戶參與應用程式 （前身為 CRM Online）。他們可以建立路由篩選 for Office 365 之前需要 Azure ExpressRoute for Office 365 的客戶必須從 Microsoft 取得檢閱。請連絡您的 Microsoft 帳戶小組來了解如何要求啟用 Office 365 ExpressRoute 檢閱。未經授權的訂閱嘗試建立 Office 365 路由篩選將會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)。
+> Microsoft 授權，才能使用 Office 365 ExpressRoute。Microsoft 檢閱每個客戶要求並僅授權 ExpressRoute 的 Office 365 使用時客戶的法規需求斷定直接連線。如果您有這類需求，請提供您解譯意思是直接連線需要在[Office 365 要求表單 ExpressRoute](https://aka.ms/O365ERReview)開始 Microsoft 檢閱其法規的文字摘錄及網頁連結。未經授權的訂閱嘗試建立 Office 365 路由篩選將會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)。
   
 規劃您網路的評估 Office 365 時需要考量重點：
   
@@ -56,9 +56,9 @@ Office 365 的設計啟用全世界的客戶使用網際網路連線服務的連
 
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
   
-[Office 365 網路和效能調整](network-planning-and-performance.md)
+[Office 365 網路與效能調整](network-planning-and-performance.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -66,9 +66,9 @@ Office 365 的設計啟用全世界的客戶使用網際網路連線服務的連
   
 [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
   
-[使用 Office 365 案例 （預覽） ExpressRoute BGP 社群 （英文）](bgp-communities-in-expressroute.md)
+[在 ExpressRoute for Office 365 案例中使用 BGP 社群 (預覽)](bgp-communities-in-expressroute.md)
   
-[媒體品質和 Skype 的線上商務的網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   
 [Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   

@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: 4dd10db4c27e6d9f28c3638bd8c732701c9dfeac
-ms.sourcegitcommit: 22db89d5b13f7d85e03f35f21f25fa288aadf1b4
+ms.openlocfilehash: 9909d9665817646f7c70c66012af4b8762cceaa1
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "25575267"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897466"
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
@@ -65,7 +65,7 @@ Office 365 系統管理中心會顯示許多有用的資訊，但這不表示它
   
 ![Office 365 系統管理中心內，使用者及群組顯示方式的範例。](media/o365-powershell-users-and-groups.png)
   
-在許多用途中，這會顯示您需要知道的資訊。不過，您有時需要更多的資訊。例如，Office 365 授權 (以及使用者可以使用的 Office 365 功能) 一部分取決於使用者的地理位置。您可延伸到美國使用者的原則和功能，與您可延伸到印度或比利時使用者的原則和功能可能不大一樣。您可以使用 Office 365 系統管理中心，透過下列步驟來判斷使用者的地理位置：
+針對多種目的，這會顯示您需要知道的資訊。但有需要更多時間。例如，Office 365 授權 （與提供給使用者的 Office 365 功能） 部份取決於該使用者的地理位置。原則與功能可以擴充到儲存在美國中的使用者可能不會將相同的原則和功能可以擴充到儲存比利時或印度中的使用者是。您可以使用 Office 365 系統管理中心來判斷使用者的地理位置進行這些步驟：
   
 1. 連按兩下使用者的 **[顯示名稱]** 。
     
@@ -329,7 +329,7 @@ Get-User -Filter '{LastName -like "*son"}'
   
 ## <a name="office-365-powershell-makes-it-easy-to-print-or-save-data"></a>Office 365 PowerShell 可讓您輕鬆地列印或儲存資料
 
-Office 365 系統管理中心可讓您檢視資料清單。以下是商務用 Skype Online 系統管理中心範例，其中顯示已啟用商務用 Skype Online 的使用者清單：
+Office 365 系統管理中心可讓您檢視資料的清單。以下是顯示的已啟用 Skype 商務 Online 的使用者清單的商務 Online 系統管理中心 Skype 的範例：
   
 ![商務用 Skype Online 系統管理中心，顯示商務用 Skype Online 已啟用的使用者清單的範例。](media/o365-powershell-lync-users.png)
   

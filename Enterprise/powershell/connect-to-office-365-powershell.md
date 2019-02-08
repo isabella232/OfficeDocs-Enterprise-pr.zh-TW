@@ -15,18 +15,18 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要： 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行 admin center 工作。
-ms.openlocfilehash: d9bee7060f599120d2d6036c45b44e485ea9a0bd
-ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
+ms.openlocfilehash: ae0449611703759105d92a706cf78ba4a58ad4b2
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "25849889"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897196"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
  **摘要：** 連線至 Office 365 組織使用 Office 365 PowerShell 從命令列執行管理工作。
   
-Office 365 PowerShell 可讓您可以從命令列管理您的 Office 365 設定。連線至 Office 365 PowerShell 是您安裝的必要的軟體，然後連線至 Office 365 組織簡單的程序。 
+Office 365 PowerShell 可讓您從命令列管理您的 Office 365 設定。連線至 Office 365 PowerShell 是您安裝的必要的軟體，然後連線至 Office 365 組織簡單的程序。 
 
 有兩個版本的您用來連線至 Office 365 及管理使用者帳戶、 群組及授權的 PowerShell 模組：
 

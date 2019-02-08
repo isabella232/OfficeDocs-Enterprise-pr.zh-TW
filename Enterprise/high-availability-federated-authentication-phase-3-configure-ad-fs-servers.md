@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
 description: 摘要：在 Microsoft Azure 中，建立並設定 Office 365 高可用性同盟驗證的 Active Directory 同盟服務 (AD FS) 伺服器。
-ms.openlocfilehash: 93b2ed3c0935aee586d5aa236e79ab1e89a61b93
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 16a8173f009ea89ec109a848e058ae02d29d3d12
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915428"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897256"
 ---
 # <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 
@@ -51,7 +51,7 @@ ms.locfileid: "22915428"
 首先，您建立 Azure 內部負載平衡器的兩個 AD FS 伺服器。指定的變數，移除值\<和 > 字元。當您有提供所有適當的值時，在 Azure PowerShell 命令提示字元處或 PowerShell ISE 中執行的結果區塊。
   
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> 具有所有 PowerShell 命令本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的文字檔案，請參閱在 Azure 中的[for Office 365 同盟驗證部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
   
 ```
 # Set up key variables

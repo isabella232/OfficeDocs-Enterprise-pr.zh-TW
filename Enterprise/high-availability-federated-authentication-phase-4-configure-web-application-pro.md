@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
 description: 摘要： 設定 Microsoft Azure 中的 Office 365 在高可用性同盟驗證的 web 應用程式 proxy 伺服器。
-ms.openlocfilehash: 0f0299fe8fecdea608330eebc12aea01098f8cec
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 69c1102326a00592d1f79bec4582fb8c9aa7f344
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915808"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897426"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
@@ -37,7 +37,7 @@ ms.locfileid: "22915808"
 當您已提供位置和資源群組的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> 具有所有 PowerShell 命令本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的文字檔案，請參閱在 Azure 中的[for Office 365 同盟驗證部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
   
 ```
 # Set up key variables

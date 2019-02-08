@@ -13,12 +13,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 38bc9c14-3826-449c-beb6-b1003bcbeaaf
 description: 本文說明使用 SharePoint Server 2013 內部部署和 SharePoint Online 中的物件快取的差異。
-ms.openlocfilehash: 8aa505645bb5f39c65684412ddebbd2b02baa13f
-ms.sourcegitcommit: 7cd210c44622ea2de5fb0e8e91c7be4839c80205
+ms.openlocfilehash: 59f3a69199893cb367d4d28c0c545ebd9dfd1236
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "24056162"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25769852"
 ---
 # <a name="using-the-object-cache-with-sharepoint-online"></a>使用 SharePoint Online 的物件快取
 
@@ -34,7 +34,7 @@ ms.locfileid: "24056162"
   
 因此，使用者第二次造訪頁面時，其載入時間會獲得改善。相同網頁至少載入四次後，所有前端 Web 伺服器皆會快取到該頁面。
   
-相較之下，SharePoint Online 中有許多更多的伺服器，但也許多的多個網站。每位使用者可能連接至其他前端網頁伺服器以沒有填入的快取。或或許快取沒有取得填入伺服器，但該前端網頁伺服器至下一個使用者要求] 頁面上從不同的網站。或者，即使下一個使用者要求相同頁面在其上一個造訪上，其會以其快取中沒有該頁面的其他前端網頁伺服器負載平衡。在最後一個案例中，快取不會協助使用者在所有。
+相較之下，SharePoint Online 中有許多更多的伺服器，但也許多的多個網站。每位使用者可能連接至其他前端網頁伺服器以沒有填入的快取。或者，或許快取沒有取得填入伺服器，但後續的使用者] 頁面上的前端網頁伺服器要求以從不同的網站。或者，即使下一個使用者要求相同頁面在其上一個造訪上，其會以其快取中沒有該頁面的其他前端網頁伺服器負載平衡。在最後一個案例中，快取不會協助使用者在所有。
   
 在下圖中，每個點代表使用者正在要求的頁面及其快取位置。不同顏色代表共用 SaaS 基礎結構的不同客戶。
   

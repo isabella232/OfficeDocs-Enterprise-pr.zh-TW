@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 499c5823-427a-4ba2-8fc1-9553bc2ff2d3
 description: 摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
-ms.openlocfilehash: 320a59043ab2a8810f9bfc03fdcf896241ec6b20
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 97e480bd148092f8e8e5ab610f0aed0a5eb2e20e
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915498"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897116"
 ---
 # <a name="exchange-online-integration-for-your-office-365-and-dynamics-365-devtest-environment"></a>適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 
@@ -46,7 +46,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
     
 2. 在 [Microsoft Office Home]**** 頁面上，按一下 [郵件]**** 磚。
     
-3. 在瀏覽器的新 [郵件]**** 索引標籤上，按一下 [新增]****，並注意輸入訊息的方塊下方之窗格底部角落包含的 [我的範本] 圖示。
+3. 在 [新**郵件**] 索引標籤在瀏覽器中按一下 [**新增**]，請注意的輸入訊息方塊下方窗格下方角落的 「 我的範本所具有的圖示。
     
      ![不與 Dynamics 365 整合的全新空白電子郵件訊息。](media/879b54fd-a68f-4581-9f89-d5050df6f4de.png)
   
@@ -88,7 +88,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
     
 5. 按一下瀏覽器中的 [Microsoft Office Home]**** 索引標籤，然後按一下 [郵件]**** 磚。
     
-6. 在瀏覽器的新 [郵件]**** 索引標籤上，按一下 [新增]**** 請注意，輸入訊息的方塊下方之窗格底部角落現在包含 Dynamics 365 的圖示。
+6. 在 [新**郵件**] 索引標籤在瀏覽器中按一下 [**新增]**。請注意針對現在輸入訊息方塊下方窗格下方角落的具有 Dynamics 365 圖示。
     
      ![與 Dynamics 365 整合的全新空白電子郵件訊息，顯示新的圖示。](media/ecb822e1-45fe-4481-99a1-294317d1d2de.png)
   

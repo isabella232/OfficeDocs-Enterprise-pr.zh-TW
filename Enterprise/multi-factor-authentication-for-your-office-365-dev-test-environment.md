@@ -16,18 +16,18 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e2b354b9-7f18-4da0-9107-6245eae0f33f
 description: 摘要： 設定多重要素驗證使用文字訊息傳送給 Office 365 開發人員/測試環境中的智慧型手機。
-ms.openlocfilehash: 12458e2dd41518deb0b540e809a08c4df865a3df
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 6e2aefa9309e7e268c937055f7fe59600f8c87da
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915658"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897446"
 ---
 # <a name="multi-factor-authentication-for-your-office-365-devtest-environment"></a>適用於您的 Office 365 開發/測試環境的多重要素驗證
 
  **摘要：** 設定使用文字訊息傳送給 Office 365 開發人員/測試環境中的智慧型電話的多重要素驗證。
   
-登入您的 Office 365 訂閱的安全性其他層級，您可以啟用 Azure 需要超過剛使用者名稱和密碼，確認帳戶的多重要素驗證。與 Office 365 的多重要素驗證的使用者所需確認電話、 輸入驗證碼傳送文字郵件內或智慧型電話上指定的應用程式密碼後正確地輸入其密碼。未滿足此第二個驗證因素之後才可以登入。 
+登入您的 Office 365 訂閱的安全性其他層級，您可以啟用 Azure 需要超過剛使用者名稱和密碼驗證帳戶的多重要素驗證。與 Office 365 的多重要素驗證的使用者所需確認電話、 輸入驗證碼傳送文字郵件內或智慧型電話上指定的應用程式密碼後正確地輸入其密碼。未滿足此第二個驗證因素之後才可以登入。 
   
 本文說明如何啟用並測試文字郵件驗證特定的 Office 365 帳戶。
   
@@ -78,7 +78,7 @@ ms.locfileid: "22915658"
   
 1. 開啟瀏覽器中的新執行個體。
     
-2. 移至 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 和登入的使用者 2 帳戶 (user2 @\<組織名稱 >。 onmicrosoft.com) 和密碼。
+2. 移至 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 和登入的使用者 2 帳戶 (user2 @\<組織 name>.onmicrosoft.com) 和密碼。
     
 3. 登入之後, 會提示您設定的其他安全性驗證的帳戶。按一下 [**立即設定**]。
     
@@ -110,5 +110,5 @@ ms.locfileid: "22915658"
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
-[規劃 Office 365 部署的多重要素驗證](https://support.office.com/article/Plan-for-multi-factor-authentication-for-Office-365-Deployments-043807b2-21db-4d5c-b430-c8a6dee0e6ba)
+[Office 365 部署多重要素驗證方案](https://support.office.com/article/Plan-for-multi-factor-authentication-for-Office-365-Deployments-043807b2-21db-4d5c-b430-c8a6dee0e6ba)
 

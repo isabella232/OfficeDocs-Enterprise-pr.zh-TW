@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 管理 SharePoint Online 網站群組。
-ms.openlocfilehash: c68e0905c0abcbea279829be7c841c31409db6cf
-ms.sourcegitcommit: 82219b5f8038ae066405dfb7933c40bd1f598bd0
+ms.openlocfilehash: 62643cabb2377c07117299dc25314cd515a06791
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "23975141"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897156"
 ---
 # <a name="manage-sharepoint-online-site-groups-with-office-365-powershell"></a>Manage SharePoint Online site groups with Office 365 PowerShell
 
@@ -69,7 +69,7 @@ C:\Scripts\SiteGroupsAndUsers.ps1
 
 ![SharePoint Online 網站群組](media/SPO-site-groups.png)
 
-這些是已建立網站的所有群組`https://litwareinc.sharepoint.com/sites/finance`、 以及為所有指派給這些群組的使用者。群組名稱是以黃色可協助您從其成員的不同的群組名稱。
+這些是已建立網站的所有群組`https://litwareinc.sharepoint.com/sites/finance`，並指派給這些群組的所有使用者。群組名稱是以黃色可協助您從其成員的不同的群組名稱。
 
 另一個範例，以下是一組命令列出群組和所有的群組成員資格，所有您的 SharePoint Online 網站。
 

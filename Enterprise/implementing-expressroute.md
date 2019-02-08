@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
 description: Office 365 ExpressRoute 替代路由路徑為提供許多網際網路對向 Office 365 服務。Office 365 ExpressRoute 的架構根據公告公用 IP 前置詞之已可存取網際網路的後續可轉散發至那些 IP 前置字元的您已佈建 ExpressRoute 電路到的 Office 365 服務您的網路。使用 ExpressRoute 有效地啟用數個不同路由路徑，透過網際網路與透過 ExpressRoute，許多 Office 365 服務。此狀態的路由網路上可能代表重大變更您的內部網路拓撲設計的方式。
-ms.openlocfilehash: c4479a236d1419293dbd433e8d3c10a11ea5fb45
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: e535135557f7f2f64077c1d926f120fff78dbd42
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540284"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25715869"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
@@ -115,6 +115,7 @@ Office 365 ExpressRoute 替代路由路徑為提供許多網際網路對向 Offi
 |**路徑對稱性來看控制項** <br/> |**方法**： 來源 NAT  <br/> **網際網路路徑**： 來源 NAT 輸入 192.168.5.5 的連線  <br/> |**ExpressRoute 路徑**： 來源 NAT 連線 192.168.1.0 (Chicago) 和 192.168.2.0 (Dallas)  <br/> |
 
 以下是範例只有在輸出的服務：
+
 |**連線屬性**|**值**|
 |:-----|:-----|
 |**網路流量方向** <br/> |輸出  <br/> |
@@ -563,7 +564,7 @@ QoS 是必要的商務 Online Skype 取得語音與會議的優點。您可以�
   
 請記住，則需要確定這兩個網路組態的 ExpressRoute ExpressRoute 連線以部署 Office 365 時的最佳方式設計及也已進行其他元件最佳化網路等用戶端電腦上。除了使用本規劃指南來疑難排解您可能會有未接的步驟，我們也有寫入[效能疑難排解 Office 365 計劃](https://support.office.com/article/Performance-troubleshooting-plan-for-Office-365-e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c)。
   
-以下是您可以使用回來的簡短連結：[https://aka.ms/implementexpressroute365](https://aka.ms/implementexpressroute365)
+您可以使用下列短連結返回這裡：[https://aka.ms/implementexpressroute365](https://aka.ms/implementexpressroute365)
   
 ## <a name="related-topics"></a>相關主題
 
@@ -577,15 +578,15 @@ QoS 是必要的商務 Online Skype 取得語音與會議的優點。您可以�
   
 [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
   
-[使用 Office 365 案例 （預覽） ExpressRoute BGP 社群 （英文）](bgp-communities-in-expressroute.md)
+[在 ExpressRoute for Office 365 案例中使用 BGP 社群 (預覽)](bgp-communities-in-expressroute.md)
   
-[媒體品質和 Skype 的線上商務的網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   
-[Skype 的最佳化您的網路的線上商務](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
   
-[ExpressRoute 和 Skype Online 企業版的 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
+[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d) (英文)
   
-[使用 ExpressRoute 通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
+[使用 ExpressRoute 的通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab) (英文)
   
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
   
@@ -593,4 +594,4 @@ QoS 是必要的商務 Online Skype 取得語音與會議的優點。您可以�
   
 [Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
-[Office 365 網路和效能調整](network-planning-and-performance.md)
+[Office 365 網路與效能調整](network-planning-and-performance.md)

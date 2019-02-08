@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要：設定 Microsoft Azure 基礎結構以裝載 Office 365 的高可用性同盟驗證。
-ms.openlocfilehash: e88204d7f69c56c951f5d6ebd4d978c96e4c52ba
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: bbaefffb6bfa55d9af11e08c2011c7333cefe46e
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915458"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897476"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
@@ -94,7 +94,7 @@ Azure 必須佈建使用這些基本元件：
    
  **表格 D：內部部署 DNS 伺服器**
   
-若要透過站台對站台的 VPN 連線，將封包從跨單位網路路由傳送至組織網路，您必須透過區域網路來設定虛擬網路，該區域網路會包含組織內部部署網路上所有可觸及位置的位址空間 (以 CIDR 標記法) 清單。定義區域網路的位址空間清單必須是唯一的，且不可與其他虛擬網路或其他區域網路使用的位址空間重疊。
+跨網站 VPN 連線路由從跨內部網路封包至您組織的網路，您必須以具有清單的地址中的空格 （CIDR 表示法） 的連至所有區域網路設定虛擬網路在您的組織內部網路上的位置。定義您的區域網路的位址空間的清單必須是唯一的與用於其他虛擬網路或其他本機網路位址空間必須不重疊。
   
 針對區域網路位址空間集，請填寫表格 L。請注意，雖已列出三個空白項，但一般來說您會需要更多。請與您的 IT 部門合作以決定此位址空間清單。
   
@@ -118,7 +118,7 @@ Login-AzureRMAccount
 ```
 
 > [!TIP]
-> 對於包含本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的 PowerShell 命令的所有文字檔案，請參閱 ＜[同盟驗證 Office 365 中Azure 部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
+> 具有所有 PowerShell 命令本文及產生就緒-隨選即用 PowerShell 命令封鎖根據自訂設定 Microsoft Excel 設定活頁簿中的文字檔案，請參閱在 Azure 中的[for Office 365 同盟驗證部署套件](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664)。 
   
 使用下列命令取得訂用帳戶名稱。
   
@@ -199,7 +199,7 @@ New-AzureRMVirtualNetwork -Name $vnetName -ResourceGroupName $rgName -Location $
 
 ```
 
-接著，為每個包含虛擬機器的子網路建立網路安全性群組。若要執行子網路隔離，您可以針對允許或拒絕子網路安全小組流量的特定類型新增規則。
+接下來，您建立網路的每個具有虛擬機器時的子網路的安全性群組。若要執行的子網路隔離，您可以新增特定類型的流量允許或拒絕的子網路的網路安全性] 群組的規則。
   
 ```
 # Create network security groups

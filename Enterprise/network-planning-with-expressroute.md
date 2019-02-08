@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: Office 365 ExpressRoute 提供第 3 層之間的連線網路和 Microsoft 資料中心。電路使用框線閘道通訊協定 (BGP) 路由廣告的 Office 365 前端伺服器。從您的內部部署裝置的觀點來看時所需選取正確的 TCP/IP 路徑至 Office 365, Azure ExpressRoute 看到另一個到網際網路。
-ms.openlocfilehash: 79cad16a619f048d1ba98b6058127f901211344d
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 7a2c9cb8ee562c0527416aa83184de90cd204476
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540178"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897226"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行網路規劃
 
@@ -35,10 +35,10 @@ Azure ExpressRoute 會直接路徑新增到特定的一段支援的功能與 Mic
 |:-----|:-----|:-----|
 | 存取所需的網際網路服務，包括;  <br/>  DNS 名稱解析  <br/>  憑證撤銷驗證  <br/>  內容傳遞網路  <br/> |是  <br/> |要求送至 Microsoft 擁有 DNS 和/或 CDN 基礎結構可以使用 ExpressRoute 網路。  <br/> |
 | 存取 Office 365 服務，包括;  <br/>  Exchange Online  <br/>  SharePoint Online  <br/>  商務用 Skype Online  <br/>  Office Online  <br/>  Office 365 入口網站及驗證  <br/> |是，所有應用程式和功能  <br/> |是，[特定應用程式與功能](https://aka.ms/o365endpoints) <br/> |
-|內部部署在周邊的安全性。  <br/> |是  <br/> |是  <br/> |
+|內部部署在周邊的安全性。  <br/> |是  <br/> |可以  <br/> |
 |規劃高可用性。  <br/> |容錯移轉至備用網際網路網路連線  <br/> |容錯移轉至備用 ExpressRoute 連線  <br/> |
 |具有可預測的網路設定檔的直接連線。  <br/> |否  <br/> |是  <br/> |
-|IPv6 連線能力。  <br/> |是  <br/> |是  <br/> |
+|IPv6 連線能力。  <br/> |是  <br/> |可以  <br/> |
 
 展開標題下方的多個網路規劃指引。我們也已記錄跤探討 10 組件[的 Office 365 訓練 Azure ExpressRoute](https://channel9.msdn.com/series/aer)數列。
 
@@ -106,7 +106,7 @@ Woodgrove Bank 考慮實作 Azure ExpressRoute 及規劃[與 Office 365 ExpressR
   
 Woodgrove、 多重國家的組織具有多個 continents 中的位置的安全性必須跨所有周邊。Woodgrove 的最佳的連線選項是具有多個對等的位置來服務的每一個大陸其員工需求遍多點連線。每一個大陸包括大陸內的備援 Azure ExpressRoute 電路及安全性必須跨所有這些。
   
-Woodgrove 的現有基礎結構可靠和可處理的其他工作，因此，Woodgrove Bank 是能夠使用其 Azure ExpressRoute 和網際網路周邊安全性的基礎結構。如果這未大小寫、 Woodgrove 可選擇購買額外的設備以輔助其現有的設備或處理不同類型的連線。
+Woodgrove 的現有基礎結構可靠和可處理的其他工作，因此，Woodgrove Bank 是能夠使用基礎結構以其 Azure ExpressRoute 和網際網路周邊安全性。如果這未大小寫、 Woodgrove 可選擇購買額外的設備以輔助其現有的設備或處理不同類型的連線。
   
 ## <a name="high-availability-and-failover-with-azure-expressroute"></a>高可用性和容錯移轉與 Azure ExpressRoute
 <a name="BKMK_high-availability"> </a>
@@ -185,7 +185,7 @@ Woodgrove Bank 的網路組態是根據幾個主要原則而建置：
   
 使用您的提供者或提供者來選取最佳的連線選項、 多點或裝載的點對點。請記住，可以混合及只要頻寬和其他的備援元件支援您路由與高可用性的設計符合連線選項。
   
-以下是您可以使用回來的簡短連結：[https://aka.ms/planningexpressroute365](https://aka.ms/planningexpressroute365)
+您可以使用下列短連結返回這裡：[https://aka.ms/planningexpressroute365](https://aka.ms/planningexpressroute365)
   
 ## <a name="related-topics"></a>相關主題
 <a name="BKMK_high-availability"> </a>
@@ -200,15 +200,15 @@ Woodgrove Bank 的網路組態是根據幾個主要原則而建置：
   
 [實作 ExpressRoute for Office 365](implementing-expressroute.md)
   
-[使用 Office 365 案例 （預覽） ExpressRoute BGP 社群 （英文）](bgp-communities-in-expressroute.md)
+[在 ExpressRoute for Office 365 案例中使用 BGP 社群 (預覽)](bgp-communities-in-expressroute.md)
   
-[媒體品質和 Skype 的線上商務的網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   
-[Skype 的最佳化您的網路的線上商務](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
   
-[ExpressRoute 和 Skype Online 企業版的 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
+[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d) (英文)
   
-[使用 ExpressRoute 通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
+[使用 ExpressRoute 的通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab) (英文)
   
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
   
@@ -216,6 +216,6 @@ Woodgrove Bank 的網路組態是根據幾個主要原則而建置：
   
 [Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
-[Office 365 網路和效能調整](network-planning-and-performance.md)
+[Office 365 網路與效能調整](network-planning-and-performance.md)
   
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)

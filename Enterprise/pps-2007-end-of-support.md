@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: 89d9feee-2285-419c-8c14-0f7f583536e0
 description: PerformancePoint Server 2007、 ProClarity 及 SharePoint Server 2007 已達到支援結束。請閱讀本篇文章以規劃 BI 解決方案升級。
-ms.openlocfilehash: 219349a85f14ddf10058c853d69b58a52bb0d1cc
-ms.sourcegitcommit: ca4d3ec34300d7d39f1a42dc6f29a34915de5c87
+ms.openlocfilehash: 03db75b38bfaa32df20eafb8ede745e403bc964f
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "23831908"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "26617876"
 ---
 # <a name="performancepoint-server-2007-end-of-support-roadmap"></a>PerformancePoint Server 2007 終止支援藍圖
 
@@ -152,5 +152,7 @@ SQL Server Reporting Services 提供強大的報表解決方案，以及安裝�
 [可協助您升級從 Office 2007 的伺服器和用戶端的資源](upgrade-from-office-2007-servers-and-products.md)
   
 [Office 退休群組 （Microsoft 技術社群）](https://go.microsoft.com/fwlink/?linkid=842065)
+
+
   
 

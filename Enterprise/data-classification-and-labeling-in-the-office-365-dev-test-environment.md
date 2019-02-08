@@ -16,18 +16,18 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 919b8fc7-b0bc-46db-91f5-37342564e01b
 description: 摘要： 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。
-ms.openlocfilehash: 91d3b40f43eed750bd33065faa1c57d74179cf58
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 69526f8bf0ae0b6cc7509653cfaa72581e10dbfe
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22914848"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897436"
 ---
 # <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的資料分類和標示
 
  **摘要：** 設定與示範資料分類和 Office 365 開發人員/測試環境中使用 Azure 資訊保護 (AIP) 用戶端顯示標籤。
   
-Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Office 365 中的 SharePoint Online 資料夾。使用本文中的指示、 安裝 Azure 資訊保護用戶端及示範資料分類。如需詳細資訊，請參閱[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)。
+Azure 資訊保護用戶端可讓您之前您將其上傳至 Office 365 中的 SharePoint Online 資料夾分類文件。使用本文中的指示、 安裝 Azure 資訊保護用戶端及示範資料分類。如需詳細資訊，請參閱[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)。
   
 > [!TIP]
 > 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
@@ -48,7 +48,7 @@ Azure 資訊保護用戶端可讓您將分類文件之前您將其上傳至 Offi
     
 2. 在 [ **Microsoft Office Home** ] 索引標籤上按一下**系統管理**磚。
     
-3. 在 Office 365 系統管理員] 索引標籤的 [在左導覽列中，按一下 [**帳務 > 購買服務**。
+3. 在 Office 365 系統管理員] 索引標籤的左方導覽，按一下 [**計費 > 購買服務**]。
     
 4. 在 [**購買服務**] 頁面上尋找**Azure 資訊保護 Premium P2**項目。將滑鼠停留並按一下 [**開始免費試用版**。
     
@@ -80,7 +80,7 @@ Office 365 開發人員/測試環境現在有：
   
 1. 使用您的瀏覽器，並移至[Azure 入口網站](http://portal.azure.com)。
     
-2. 按一下 [**資源群組 >** [您資源群組名稱] **> CLIENT1 > Connect**。
+2. 按一下 [**資源群組 >** [您資源群組名稱] **> CLIENT1 > 連線**。
     
 3. 從 CLIENT1 中，執行 [Internet Explorer 中，移至 Office 入口網站[http://portal.office.com](http://portal.office.com)，並再登入 User5 帳戶名稱及密碼。
     
@@ -118,15 +118,15 @@ Office 365 開發人員/測試環境現在有：
     
 5. 在空白的文件中，輸入一些文字。
     
-6. 按一下 [**檔 > 儲存**且輸入名稱**BeforeAIP**，然後按一下 [**確定]**。 
+6. 按一下 [**儲存檔案 >**、 並輸入名稱**BeforeAIP**，然後按一下 [**確定]**。 
     
 7. 在文件類別的資料列的**密碼**，按一下向下箭頭和 [**全部公司**。
     
-8. 按一下 [**檔 > 另存新檔**且輸入名稱**AfterAIP**，然後按一下 [**確定]**。
+8. 按一下 [**另存新檔的檔案 >**、 並輸入名稱**AfterAIP**，然後按一下 [**確定]**。
     
 9. 在工作列上，按一下 [**檔案總管]** ，然後開啟 [**文件**] 資料夾。
     
-    請注意**BeforeAIP**和**AfterAIP**文件不同的檔案大小。因為包含分類資訊，AfterAIP 文件是更大。
+    請注意**BeforeAIP**和**AfterAIP**文件不同的檔案大小。因為已定義的分類資訊，AfterAIP 文件是更大。
     
 接下來，您讓所有人存取支援網站集合。
   
@@ -150,11 +150,11 @@ Office 365 開發人員/測試環境現在有：
   
 1. 在 [ **Microsoft Office Home** ] 索引標籤中右上方，按一下 [使用者] 圖示及 [**登出**。
     
-2. 移至 [ [http://portal.office.com](http://portal.office.com)。
+2. 請移至 [http://portal.office.com](http://portal.office.com)。
     
 3. 在**Office 365 登入**] 頁面上按一下 [User5 帳戶名稱及登入。
     
-4. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [ **SharePoint > 支援網站集合**。
+4. 在 [ **Microsoft Office Home** ] 索引標籤上按一下 [ **SharePoint > 支援網站集合**]。
     
 5. 按一下 [**文件**、 按一下 [**上載**]、 [ **AfterAIP**文件和 [**開啟**。
     

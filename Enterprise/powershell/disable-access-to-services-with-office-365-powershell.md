@@ -15,12 +15,12 @@ ms.custom:
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: 說明如何使用 Office 365 PowerShell 來停用組織中使用者的 Office 365 服務存取權。
-ms.openlocfilehash: 3bab553bd23d6179eb60ff61ae3edb56c528946d
-ms.sourcegitcommit: 5cb4dbdd10ab399af414503cb518a9f530919ef5
+ms.openlocfilehash: 66f6c04c1488f14d5752974a5475e7ef11279406
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "25498233"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897416"
 ---
 # <a name="disable-access-to-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用服務存取權
 

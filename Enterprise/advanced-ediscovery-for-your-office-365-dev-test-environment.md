@@ -13,23 +13,24 @@ ms.custom:
 - TLG
 - Ent_TLGs
 ms.assetid: d4c49a6f-abfd-4d68-b353-259b4eefb033
-description: 摘要： 設定與示範 Office 365 進階 eDiscovery 與 Office 365 開發人員/測試環境中的範例資料。
-ms.openlocfilehash: e850cf7ebab806d8ff51176a3e88077a692c41ef
-ms.sourcegitcommit: fa8a42f093abff9759c33c0902878128f30cafe2
+description: 摘要：設定並示範 Office 365 開發/測試環境中包含樣本資料的 Office 365 進階電子文件探索
+ms.openlocfilehash: c93900e07b8b9adbe0f1120eca77019b9dcc1eda
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897506"
 ---
 # <a name="advanced-ediscovery-for-your-office-365-devtest-environment"></a>用於 Office 365 開發/測試環境的進階電子文件探索
 
- **摘要：**設定與示範 Office 365 進階 eDiscovery 與 Office 365 開發人員/測試環境中的範例資料。
+ **摘要：** 設定並示範 Office 365 開發/測試環境中包含樣本資料的 Office 365 進階電子文件探索
   
 Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，包括電子郵件和文件中儲存資料的相關資訊。這可以儲存極大的時間量和費用，特別是在訴訟暫止的情況。如需詳細資訊，請參閱[Office 365 進階 eDiscovery](https://support.office.com/article/Office-365-Advanced-eDiscovery-fd53438a-a760-45f6-9df4-861b50161ae4)。
   
 透過本文中的指示，您可以針對合約爭議建立小型資料集，並使用進階電子文件探索進行分析。
   
 > [!TIP]
-> 按一下[此處](http://aka.ms/catlgstack)的視覺對應至一個 Microsoft Cloud 測試實驗室指南堆疊中所有的文章。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
   
 ## <a name="phase-1-create-your-office-365-devtest-environment"></a>階段 1：建立 Office 365 開發/測試環境
 
@@ -54,7 +55,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 3. 在 [**至**] 輸入您的試用版訂閱 User6 帳戶的電子郵件地址 ( **user6 @。**<organization name> **。 onmicrosoft.com**)。
     
-4. 主旨中，輸入**測試電子郵件 1**。
+4. 主旨請輸入**測試電子郵件 1**。
     
 5. 本文中，輸入**Tailspin 合約草稿**]，然後按一下 [**傳送**。
     
@@ -62,7 +63,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 7. 在 [**至**] 輸入您的試用版訂閱 User6 帳戶的電子郵件地址。
     
-8. 主旨中，輸入**測試電子郵件 2**。
+8. 主旨請輸入**測試電子郵件 2**。
     
 9. 本文中，輸入**Tailspin lunch 會議**，然後按一下 [**傳送**。
     
@@ -70,7 +71,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 11. 在 [**至**] 輸入您的試用版訂閱 User6 帳戶的電子郵件地址。
     
-12. 主旨中，輸入**測試電子郵件 3**。
+12. 主旨請輸入**測試電子郵件 3**。
     
 13. 本文中，輸入**Tailspin 合約 disagreement**，，然後按一下 [**傳送**。
     
@@ -80,23 +81,23 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 16. 按一下 [ **Office 365 入口網站**] 索引標籤的 [**郵件**]。
     
-17. **郵件-User6-Outlook**索引標籤上，確認 User6 接收所有的三個電子郵件從 Outlook 電子郵件帳戶。
+17. 在**郵件-User6-Outlook** ] 索引標籤上，勾選 [User6 收到所有三個電子郵件從 Outlook 電子郵件帳戶。
     
-18. 切換回**Office 365 入口網站] 索引標籤**的 User6。
+18. 切換回 User6 的 **Office 365 入口網站索引標籤**。
     
 19. 按一下右上角中的 [使用者] 圖示] 和 [**登出。**
     
 在此程序中，您會建立稍後要在進階電子文件探索案例中分析的兩份 Word 文件。
   
-1. 在 [ **Office** ] 頁面上，按一下 [**登入，**登入您的全域管理員帳戶的認證。
+1. 在 [ **Office** ] 頁面上，按一下 [**登入，** 登入您的全域管理員帳戶的認證。
     
 2. 在 [新增] 索引標籤上存取實際執行 SharePoint 網站的 URL： **https://** <fictional organization name> **.sharepoint.com/sites/production**
     
-3. 在**實際執行網站集合**] 索引標籤的 [**文件**上按一下 [**新增 > Word 文件**。
+3. 在**實際執行網站集合**] 索引標籤上的 [**文件**，按一下 [**新 > Word 文件**。
     
 4. 在 [ **Word Online** ] 頁面上輸入**Tailspin 草稿合約**、 等到在標題中顯示**Saved** ，然後關閉**Word 線上**的 [頁面] 索引標籤。
     
-5. 在**實際執行網站集合**] 索引標籤的 [**文件**上按一下 [**新增 > Word 文件**。
+5. 在**實際執行網站集合**] 索引標籤上的 [**文件**，按一下 [**新 > Word 文件**。
     
 6. 在 [ **Word Online** ] 索引標籤上輸入**Tailspin 合約爭議備忘稿**、 等到在標題中顯示**Saved** ，然後關閉**Word Online** ] 索引標籤。
     
@@ -118,7 +119,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
   
 1. 從**Office 365 入口網站**] 索引標籤上，按一下 [**管理**]。
     
-2. 在 [系統管理中心] 索引標籤的左方導覽，按一下 [**系統中心 > 規範**。
+2. 在 [Admin center] 索引標籤的左方導覽，按一下 [**系統中心 > 規範**。
     
 3. 在**安全性&amp;規範**] 索引標籤中按一下 [**權限**。
     
@@ -144,9 +145,9 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 14. 在 [**新的搜尋**] 視窗中，輸入**Tailspin 合約搜尋**的**名稱**。
     
-15. 在**出您想我們要尋找？**、 按一下 [**搜尋寄件人，**選取 [ **Exchange**、 **SharePoint**及**公用資料夾**] 和 [**下一步。**
+15. 在**出您想我們要尋找？**、 按一下 [**搜尋寄件人，** 選取 [ **Exchange**、 **SharePoint**及**公用資料夾**] 和 [**下一步。**
     
-16. 在**您想什麼我們要尋找的？**且輸入**Tailspin 合約**，然後按一下 [**搜尋**]。
+16. 在**您想什麼我們要尋找的？** 且輸入**Tailspin 合約**，然後按一下 [**搜尋**]。
     
 17. 在 [搜尋] 清單中按一下**Tailspin 合約搜尋**名稱。
     
@@ -166,7 +167,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 4. 在**新增案例**] 窗格中，輸入**Tailspin 合約爭議**在 [**名稱**]，然後按一下 [**確定]**。等待要建立的大小寫。
     
-5. 按兩下 [ **Tailspin 合約爭議**案例清單中。
+5. 連按兩下清單中的 **Tailspin 合約爭議**案例。 
     
 6. 在 [**容器**] 清單中按一下 [ **Tailspin 合約搜尋**] 容器中，和 [**程序**。等待處理完成。
     
@@ -180,7 +181,7 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
     
 您現在可以使用此環境來建立新的內容、新的搜尋和案例，並進一步在 Office 365 中試驗進階電子文件探索。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
@@ -190,10 +191,10 @@ Office 365 進階的 eDiscovery 可讓您快速尋找及分析跨 Office 365，�
   
 [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
   
-[Office 365 開發人員/測試環境的雲端應用程式安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+[Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
-[Office 365 進階的 eDiscovery](https://support.office.com/article/Office-365-Advanced-eDiscovery-fd53438a-a760-45f6-9df4-861b50161ae4)
+[Office 365 進階電子文件探索](https://support.office.com/article/Office-365-Advanced-eDiscovery-fd53438a-a760-45f6-9df4-861b50161ae4)
 
 

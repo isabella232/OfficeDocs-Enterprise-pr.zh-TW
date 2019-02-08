@@ -15,12 +15,12 @@ search.appverid:
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
 description: 說明如何使用 Office 365 內建內容傳遞網路 (CDN) 以加速您的 SharePoint Online 資產傳遞至您的所有使用者不論它們的所在位置或如何存取您的內容。
-ms.openlocfilehash: 958f01419a74e4b8cd007b2627585884496bdfdf
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: fd118e8df404961e1c35c6297a788397f810d1a2
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539960"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "29547111"
 ---
 # <a name="use-the-office-365-content-delivery-network-with-sharepoint-online"></a>使用 SharePoint Online 透過使用 Office 365 內容傳遞網路
 
@@ -138,6 +138,9 @@ CDN 擷取您資產從呼叫原點的位置。Office 365 的原點而言是 Shar
 - \*/masterpage
     
 - \*/style 文件庫
+
+> [!NOTE]
+> Clientsideassets 以便如果您有公用 CDN 之前的時間，就不會看到自動新增的項目，但如果您在稍後建立 Dec 2017 中已新增預設公用原點而言，您就會自動看見這項變更。如果您想要使用此 CDN 原點的範例，請參閱：[主機用戶端的網頁組件從 Office 365 CDN （Hello World 第 4 部分）](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn)
     
 ## <a name="set-up-and-configure-the-office-365-cdn-by-using-the-sharepoint-online-management-shell"></a>安裝及使用 SharePoint Online 管理命令介面來設定 Office 365 CDN
 

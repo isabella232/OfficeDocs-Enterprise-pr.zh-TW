@@ -14,12 +14,12 @@ ms.devlang: na
 ms.topic: landing-page
 ms.date: 8/21/2018
 ms.author: robmazz
-ms.openlocfilehash: ce79b11ccd298a35c23a3ffcd5dd9daa1b594204
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 9b1f6d86914e23ebd9ebf4e00a16018dc8f2bfd2
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22915018"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "27745317"
 ---
 <h1>Office 365 Enterprise</h1>
 <p>Microsoft Office&nbsp;365 提供強大的線上雲端服務可讓共同作業、 安全性及規範、 行動、 和 intellgence 及分析。此頁面提供系統管理員及 IT 專業人員部署、 設定及管理 Office 的指引的連結&nbsp;企業組織中的 365 服務。</p>
@@ -111,7 +111,7 @@ ms.locfileid: "22915018"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>混合部署</h3>
+                        <h3>混合式部署</h3>
                 <p>設定及管理現有的內部部署基礎結構與 Office 之間的混合式部署&nbsp;365。</p>
                     </div>
                 </div>
@@ -243,7 +243,7 @@ ms.locfileid: "22915018"
 </ul>
 
 <hr>
-<h2>社群與支援</h2>
+<h2>更多資源</h2>
 
 <ul class="panelContent cardsF">
     <li>
@@ -275,6 +275,23 @@ ms.locfileid: "22915018"
                     <div class="cardText">
                         <h3>取得支援</h3>
                         <p><a href="https://support.office.com/article/contact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b?ui=en-US&rs=en-US&ad=US">連絡支援人員以與 Office 說明&nbsp;365。</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="https://docs.microsoft.com/office/media/icons/caret-right-blue.svg" alt="Microsoft 365 Caret image" data-linktype="external">
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Microsoft 365</h3>
+                        <p><a href="https://docs.microsoft.com/microsoft-365">深入了解 Microsoft 365。</a></p>
                     </div>
                 </div>
             </div>

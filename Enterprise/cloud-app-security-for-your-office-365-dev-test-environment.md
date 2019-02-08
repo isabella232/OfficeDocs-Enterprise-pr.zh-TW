@@ -16,18 +16,18 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 22248f2f-b370-435e-b6ac-0ae0cae36b96
 description: 摘要： 設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。
-ms.openlocfilehash: 089b9771d0600f8c74bc7b4c30ff2a4931c93ae6
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 2c29e650233348e44bf72adcb8b18580e1de8802
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915758"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897056"
 ---
 # <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的雲端 App 安全性
 
  **摘要：** 設定及示範 Office 365 開發人員/測試環境中的 Office 365 雲端應用程式安全性。
   
-Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全性管理，可讓您建立的監控和通知您在 Office 365 訂閱中可疑的活動，讓您可以調查並採取可能的原則修復動作。如需詳細資訊，請參閱[概觀 （英文) 的雲端應用程式 Office 365 的安全性](https://support.office.com/article/Overview-of-Advanced-Security-Management-in-Office-365-81f0ee9a-9645-45ab-ba56-de9cbccab475)。
+Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全性管理，可讓您建立原則的監視和通知您在 Office 365 訂閱中可疑的活動，讓您可以調查並採取可能補救方法巨集指令。如需詳細資訊，請參閱[概觀 （英文) 的雲端應用程式 Office 365 的安全性](https://support.office.com/article/Overview-of-Advanced-Security-Management-in-Office-365-81f0ee9a-9645-45ab-ba56-de9cbccab475)。
   
 使用本文中的指示，您可以啟用並測試您的 Office 365 試用版訂閱中的雲端應用程式安全性。
   
@@ -81,7 +81,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
 
 1. 移至 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com)) 並登入您的 Office 365 試用版訂閱以全域管理員帳戶。
     
-2. 按一下 [**系統**] 磚。在 [ **Office 系統管理中心**] 索引標籤上按一下 [**系統中心 > 安全性與規範**。
+2. 按一下 [**系統**] 磚。在**Office 系統管理中心**] 索引標籤上，按一下 [**系統中心 > 安全性 & 規範**。
     
 3. 在左側的導覽窗格中，按一下 [**提醒 > 管理進階提醒**。
     
@@ -111,7 +111,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
 
 1. 在右上角中按一下 [使用者] 圖示，和 [**登出**。
     
-2. 移至 [ [https://portal.office.com](https://portal.office.com)。
+2. 請移至 [https://portal.office.com](https://portal.office.com)。
     
 3. 在 Office 365 登入頁面中，按一下 [**使用另一個帳戶**。
     
@@ -135,7 +135,7 @@ Office 365 雲端應用程式安全性] 先前稱為 「 Office 365 進階安全
     
 13. 按一下右上角中的 [使用者] 圖示] 和 [**登出**。 
     
-14. 移至 [ [https://portal.office.com](https://portal.office.com)。
+14. 請移至 [https://portal.office.com](https://portal.office.com)。
     
 15. 在 [ **Office 365 登入**] 頁面上，按一下 [全域管理員帳戶名稱。
     

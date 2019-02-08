@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: 討論為何網路最佳化，務必 saas 和服務的目標的 Office 365 網路和 saas 和需要不同的網路中其他工作負載的方式。
-ms.openlocfilehash: ebd7410ec5fe421561543f1223e455377e99e625
-ms.sourcegitcommit: 09985cb7894725289ef1fc8ddd90b569c285c09e
+ms.openlocfilehash: 4acaee86136c88e5ac5b3c795f594fb056d15204
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "25002352"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897206"
 ---
 # <a name="office-365-network-connectivity-overview"></a>Office 365 網路連線概觀 （英文)
 
@@ -84,7 +84,7 @@ Office 365 的以達最佳效能使用端點安全性和加密的網路連線，
 > [!NOTE]
 > _分散式服務前方門_基礎結構的 Microsoft 通用網路高度可用且擴充度佳的網路邊緣的地理位置分散的位置。它會終止使用者連線並有效率地將這些路由傳送 Microsoft 通用網路內。您可以深入了解在[如何 Microsoft 是以其快速且可靠的通用網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)Microsoft 通用網路。
 
-如需詳細了解及套用 Office 365 網路連線原則的詳細資訊，請參閱[Office 365 網路連線原則](office-365-network-connectivity-principles#office-365-connectivity-principles)。
+如需詳細了解及套用 Office 365 網路連線原則的詳細資訊，請參閱[Office 365 網路連線原則](office-365-network-connectivity-principles.md)。
 
 ## <a name="conclusion"></a>總結
 
@@ -100,7 +100,7 @@ Office 365 網路效能最佳化真正而言向下移除不必要的障礙。藉
 
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[對 Office 365 的網路連線能力](network-connectivity.md)
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
 

@@ -3,7 +3,6 @@ title: 修正 Office 365 的目錄同步處理問題
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 ms.audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
@@ -15,12 +14,12 @@ search.appverid:
 - MBS150
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中目錄同步處理的常見問題原因，並提供許多方法來協助疑難排解和解決它們。
-ms.openlocfilehash: a1ccf7aa8c6d450cdd3d658ef0bc8d9ed6d25753
-ms.sourcegitcommit: 6a4611bb474c783efd361890fe6f41c26c5aeeb3
+ms.openlocfilehash: 2d567daa370d651a6eb9180db2f729d09b380226
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "25405126"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897306"
 ---
 # <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 的目錄同步處理問題
 
@@ -54,12 +53,12 @@ ms.locfileid: "25405126"
 
 ### <a name="synchronized-objects-arent-appearing-or-updating-online-or-im-getting-synchronization-error-reports-from-the-service"></a>**同步處理的物件未出現或線上、 更新或 I 從服務取得同步處理錯誤報告。**
 
-- [身分識別同步處理及 duplicate 屬性恢復能力](https://go.microsoft.com/fwlink/p/?LinkID=798300)
+- [身分識別同步處理及 duplicate 屬性恢復能力](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-syncservice-duplicate-attribute-resiliency)
 
 ### <a name="i-have-an-alert-in-the-office-365-admin-center-or-am-receiving-automated-emails-that-there-hasnt-been-a-recent-synchronization-event"></a>**我的 Office 365 系統管理中心中，有通知或正在接收尚未在最近的同步處理事件的自動化電子郵件**
-- [疑難排解 Azure AD 連線的連線問題](https://go.microsoft.com/fwlink/p/?LinkId=820597)
+- [疑難排解 Azure AD 連線的連線問題](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-connectivity)
 - [Azure AD 連線帳戶和權限](https://go.microsoft.com/fwlink/p/?LinkId=820598)
-- [Azure AD 連線同步處理： 如何管理 Azure AD 的服務帳戶](https://go.microsoft.com/fwlink/p/?LinkId=820599)
+- [Azure AD 連線同步處理： 如何管理 Azure AD 的服務帳戶](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-azureadaccount)
 - [Azure Active Directory 停駐點或您的目錄同步作業是同步處理尚未在多個一天中註冊也警告](https://support.microsoft.com/help/2882421/directory-synchronization-to-azure-active-directory-stops-or-you-re-warned-that-sync-hasn-t-registered-in-more-than-a-day)
 
 ### <a name="password-hashes-arent-synchronizing-or-im-seeing-an-alert-in-the-office-365-admin-center-that-there-hasnt-been-a-recent-password-hash-synchronization"></a>**密碼雜湊不同步處理，或 I 看不到 Office 365 系統管理中心尚未最近的密碼雜湊同步處理的通知**
@@ -79,7 +78,7 @@ ms.locfileid: "25405126"
    
 ## <a name="other-resources"></a>其他資源
 
-- [指令碼以修正重複使用者主要名稱](https://go.microsoft.com/fwlink/p/?LinkId=396725)
+- [用來修正使用者主體名稱重複問題的指令碼](https://go.microsoft.com/fwlink/p/?LinkId=396725) (英文)
     
 - [如何準備目錄同步作業非路由傳送的網域 （例如.local 網域）](prepare-a-non-routable-domain-for-directory-synchronization.md)
     

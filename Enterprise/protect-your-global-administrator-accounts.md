@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: 保護您的 Office 365 訂閱與以下三個步驟的全域系統管理員存取。
-ms.openlocfilehash: 7260e903ea007735c87ab8aa826e3b97e7bd28c1
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 41168643fb8867017865860624c8b436460fa0b8
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540182"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897516"
 ---
 # <a name="protect-your-office-365-global-administrator-accounts"></a>保護您的 Office 365 全域管理員帳戶
 
@@ -92,13 +92,13 @@ Microsoft 提供的功能，可協助保護您的組織，但他們有效只有�
 
 全域管理員帳戶的多重要素驗證 (MFA) 需要以外的帳戶名稱和密碼的其他資訊。Office 365 支援下列驗證方法：
   
-- 撥打的電話
+- 電話
     
-- 隨機產生的複雜的程式碼
+- 隨機產生的密碼
     
-- 智慧卡 （虛擬或實體）
+- 智慧卡 (虛擬或實體)
     
-- 生物特徵裝置
+- 生物特徵辨識裝置
     
 如果您使用的使用者帳戶儲存在雲端 （雲端身分識別模型） 僅適用於小型企業，使用下列步驟來設定 MFA 使用電話或傳送至智慧型手機文字郵件驗證碼：
   
