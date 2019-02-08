@@ -22,6 +22,7 @@
 ### [建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)
 ### [檢視使用者帳戶](view-user-accounts-with-office-365-powershell.md)
 ### [設定使用者帳戶設定](configure-user-account-properties-with-office-365-powershell.md)
+## [管理群組](manage-office-365-groups-with-powershell.md)
 ## [SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
 ### [建立 SharePoint Online 網站並新增使用者](create-sharepoint-sites-and-add-users-with-powershell.md)
 ### [管理 SharePoint Online 使用者和群組](manage-sharepoint-users-and-groups-with-powershell.md)
