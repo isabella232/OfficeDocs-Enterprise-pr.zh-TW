@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: 摘要：在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
-ms.openlocfilehash: 0aee14af136e0874c259faac26d83d85b188a7c7
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 7341c8cc412636e633001882edfdfc661cce9a11
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915338"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897136"
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>Azure 中模擬的跨單位部署虛擬網路
 
@@ -81,16 +81,16 @@ ms.locfileid: "22915338"
 > [!NOTE]
 > 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/)。 
   
-使用下列命令登入您的 Azure 帳戶。
+使用此命令登入您的 Azure 帳戶。
   
 ```
 Login-AzureRMAccount
 ```
 
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0)可取得包含本文中所有 PowerShell 命令的文字檔案。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0)以取得包含本文中所有 PowerShell 命令的文字檔案。
   
-使用下列命令取得訂用帳戶名稱。
+使用此命令取得訂用帳戶名稱。
   
 ```
 Get-AzureRMSubscription | Sort Name | Select Name

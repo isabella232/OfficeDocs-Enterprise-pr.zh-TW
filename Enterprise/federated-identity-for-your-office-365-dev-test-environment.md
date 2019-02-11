@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
 description: 摘要：設定適用於 Office 365 開發/測試環境的同盟驗證。
-ms.openlocfilehash: f028acb99d0687bb3fcfbc1c66bdd8885850565b
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: d22f23d2c5c36f45cff7fde3185e1de3e4961ef9
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915238"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897546"
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -105,11 +105,11 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-f79bc2c2?redir=0)，取得包含本文中所有 PowerShell 命令的文字檔。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-f79bc2c2?redir=0)以取得包含本文中所有 PowerShell 命令的文字檔案。
   
 接下來，使用 ADFS1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](http://portal.azure.com)連線到 ADFS1 虛擬機器，然後開啟 Windows PowerShell 命令提示字元。
   
-若要檢查 ADFS1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並確認有四個回覆。
+若要檢查 ADFS1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
 接下來在 ADFS1 上的 Windows PowerShell 命令提示字元使用以下命令將 ADFS1 虛擬機器加入 CORP 網域。
   
@@ -161,7 +161,7 @@ Get-AzureRmNetworkSecurityGroup -Name CorpNet -ResourceGroupName $rgName | Add-A
 
 接下來，使用 PROXY1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](http://portal.azure.com)連線到 PROXY1 虛擬機器，然後在 PROXY1 上開啟 Windows PowerShell 命令提示字元。
   
-若要檢查 PROXY1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並確認有四個回覆。
+若要檢查 PROXY1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
 接下來在 PROXY1 上的 Windows PowerShell 命令提示字元使用以下命令將 PROXY1 虛擬機器加入 CORP 網域。
   
@@ -401,7 +401,7 @@ Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
     
 13. 在 [安裝完成]**** 頁面上，按一下 [結束]****。
     
-若要證明同盟驗證為正常運作，執行下列動作：
+若要證明同盟驗證為正常運作：
   
 1. 在本機電腦上開啟瀏覽器的新私人執行個體，然後移至 [https://portal.office.com](https://portal.office.com)。
     

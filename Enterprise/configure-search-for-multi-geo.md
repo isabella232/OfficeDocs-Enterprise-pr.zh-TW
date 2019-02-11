@@ -11,12 +11,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: 5ca2a35385ab2c246b78dc8811e8435bbdec25c7
-ms.sourcegitcommit: a3e2b2e58c328238c15d3f9daf042ea3de9d66be
+ms.openlocfilehash: c56e7d310dd6ece53fdea36df4ad94e2ebbc64cb
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "25849909"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "26705457"
 ---
 # <a name="configure-search-for-onedrive-for-business-multi-geo"></a>設定商務用 OneDrive 多地理位置的搜尋
 
@@ -167,6 +167,9 @@ Delve 摘要和設定檔卡只會顯示在**中央**位置中儲存之檔案的�
 ## <a name="get-custom-search-applications-to-show-results-from-all-or-some-geo-locations"></a>取得自訂搜尋應用程式，以顯示來自全部或部分地理位置的結果
 
 自訂搜尋應用程式會透過指定含對 SharePoint 搜尋 REST API 之要求的查詢參數，以取得來自全部或部分地理位置的結果。視查詢參數而定，系統會將查詢展開傳送至所有地理位置或部分的地理位置。例如，如果您只需要查詢地理位置的子集來尋找相關資訊，您可以控制只對這些項目進行展開傳送。如果要求成功，SharePoint 搜尋 REST API 會傳回回應資料。
+
+#### <a name="requirement"></a>需求 #### 
+對於每個地理位置，您必須確保組織中的所有使用者都已被授予根網站的**讀取**權限層級 (例如contoso**APAC**.sharepoint.com/ 和 contoso**EU**.sharepoint.com/)。[了解權限](https://support.office.com/zh-TW/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)。
 
 ### <a name="query-parameters"></a>查詢參數
 

@@ -3,11 +3,13 @@ title: Office 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/11/2018
+ms.date: 08/09/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
+search.appverid:
+- MET150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -15,11 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: 57fdf66f11d9c71faf81e2a88482093f8f17dfbd
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 1606f30e28a482e60610d15b2f1643b9dd5b3240
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897266"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -38,7 +41,7 @@ ms.lasthandoff: 05/19/2018
 > [!NOTE]
 > 您可能會想要列印此文章來記錄此環境在 Office 365 試用訂閱的 30 天期間所需的特定值。您可以輕鬆地延長試用訂閱額外 30 天的時間。針對永久開發/測試環境，新建含少量授權的付費訂閱。 
   
-![Microsoft Cloud 中的測試實驗室指南](images/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
+![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
 > 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
@@ -51,7 +54,7 @@ ms.lasthandoff: 05/19/2018
   
 以下是所產生的組態。
   
-![Azure 基底組態開發/測試環境](images/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
+![Azure 基底組態開發/測試環境](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
 
 
   
@@ -61,13 +64,13 @@ ms.lasthandoff: 05/19/2018
 
 若要開始 Office 365 E5 試用訂閱，您需要虛構的公司名稱和新 Microsoft 帳戶。
   
-1. 我們建議您使用公司名稱 Contoso 的變種作為公司名稱，也就是 Microsoft 範例內容中使用的虛構公司，但此為非必要的動作。在此處記錄您虛構公司名稱：![](./images/Common_Images/TableLine.png)
+1. 我們建議您使用公司名稱 Contoso 的變種作為公司名稱，也就是 Microsoft 範例內容中使用的虛構公司，但此為非必要的動作。在此處記錄您虛構公司名稱：![](./media/Common-Images/TableLine.png)
     
 2. 若要註冊新 Microsoft 帳戶，請移至 [https://outlook.com ](https://outlook.com)，並使用新電子郵件帳戶以及地址建立帳戶。您會使用這個帳戶來登入 Office 365。
     
-  - 在此處記錄您新帳戶的名字和姓氏：![](./images/Common_Images/TableLine.png)
+  - 在此處記錄您新帳戶的名字和姓氏：![](./media/Common-Images/TableLine.png)
     
-  - 在此處記錄新電子郵件帳戶地址：![](./images/Common_Images/TableLine.png)@outlook.com
+  - 在此處記錄新電子郵件帳戶地址：![](./media/Common-Images/TableLine.png)@outlook.com
     
 ### <a name="sign-up-for-an-office-365-e5-trial-subscription"></a>註冊 Office 365 E5 試用訂閱
 
@@ -97,7 +100,7 @@ ms.lasthandoff: 05/19/2018
     
     在安全位置中記錄您輸入的密碼。
     
-    在這裡輸入虛構公司的名稱：![](./images/Common_Images/TableLine.png) (此將稱為**組織名稱**)
+    在這裡輸入虛構公司的名稱：![](./media/Common-Images/TableLine.png) (此將稱為**組織名稱**)
     
 5. 按一下 [建立我的帳戶] ****。
     
@@ -105,9 +108,9 @@ ms.lasthandoff: 05/19/2018
     
 7. 輸入已接收簡訊訊息中的驗證代碼，然後按 [下一步]****。
     
-8. 在此記錄登入頁面 URL (選取並複製)：![](./images/Common_Images/TableLine.png)
+8. 在此記錄登入頁面 URL (選取並複製)：![](./media/Common-Images/TableLine.png)
     
-9. 在此記錄使用者識別碼 (選取與複製)：![](./images/Common_Images/TableLine.png).onmicrosoft.com
+9. 在此記錄使用者識別碼 (選取與複製)：![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
     此值將被稱為 **Office 365 全域系統管理員名稱**。
     
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/19/2018
   
 針對模擬的企業 Office 365 開發/測試環境，此為產生的組態。
   
-![Office 365 開發/測試環境](images/48fb91aa-09b0-4020-a496-a8253920c45d.png)
+![Office 365 開發/測試環境](media/48fb91aa-09b0-4020-a496-a8253920c45d.png)
   
 此組態組成為： 
   
@@ -151,7 +154,7 @@ $userName= "user2@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "User 2" -FirstName User -LastName 2 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
 ```
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34)以取得內含此文章中所有 PowerShell 命令的文字檔案。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34)以取得包含本文中所有 PowerShell 命令的文字檔案。
 
 從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 2 帳戶產生的密碼，並且將密碼記錄在安全的位置。
   
@@ -184,8 +187,10 @@ New-MsolUser -DisplayName "User 5" -FirstName User -LastName 5 -UserPrincipalNam
   
 接下來，您為銷售、產品與支援部門建立三個新 SharePoint Online 小組網站。
   
-### <a name="create-three-new-sharepoint-online-team-sites"></a>新建三個 SharePoint Online 小組網站
+## <a name="phase-4-create-three-new-sharepoint-online-team-sites-optional"></a>階段 4：建立三個新 SharePoint Online 小組網站 (選擇性)
 
+您可以在這個階段設定一組 Sharepoint 小組網站。
+  
 1. 安裝 [SharePoint Online 管理命令介面](https://go.microsoft.com/fwlink/p/?LinkId=255251) (x64 版本)。
     
 2. 按一下 [開始]****，輸入 [sharepoint]****，然後按一下 [SharePoint Online 管理命令介面]****。
@@ -223,11 +228,11 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 
 記錄這些值，以便在此測試環境中處理或部署其他測試實驗室指南：
   
-- Office 365 全域系統管理員名稱：![](./images/Common_Images/TableLine.png).onmicrosoft.com (在階段 2 的步驟 9)
+- Office 365 全域系統管理員名稱：![](./media/Common-Images/TableLine.png).onmicrosoft.com (在階段 2 的步驟 9)
     
     將此帳戶的密碼記錄在安全的位置。
     
-- 您的試用訂閱組織名稱：![](./images/Common_Images/TableLine.png) (從階段 2 的步驟 4)
+- 您的試用訂閱組織名稱：![](./media/Common-Images/TableLine.png) (從階段 2 的步驟 4)
     
 - 若要列出使用者 2、使用者 3、使用者 4 和使用者 5 的帳戶，從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
     
@@ -237,27 +242,27 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 
     在此記錄帳戶名稱：
     
-  - 使用者 2 的帳戶名稱：user2 @![](./images/Common_Images/TableLine.png).onmicrosoft.com
+  - 使用者 2 的帳戶名稱：user2 @![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
-  - 使用者 3 的帳戶名稱：user3 @![](./images/Common_Images/TableLine.png).onmicrosoft.com
+  - 使用者 3 的帳戶名稱：user3 @![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
-  - 使用者 4 的帳戶名稱：user4 @![](./images/Common_Images/TableLine.png).onmicrosoft.com
+  - 使用者 4 的帳戶名稱：user4 @![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
-  - 使用者 5 的帳戶名稱：user5 @![](./images/Common_Images/TableLine.png).onmicrosoft.com
+  - 使用者 5 的帳戶名稱：user5 @![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
     將這些帳戶的密碼記錄於安全的位置。
     
-- 列出銷售、生產和支援小組網站的 URL，請從 SharePoint Online 管理命令介面提示字元執行下列命令：
+- (選擇性) 若要列出銷售、生產和支援小組網站的 URL，請從 SharePoint Online 管理命令介面提示字元執行下列命令：
     
   ```
   Get-SPOSite | Where URL -like "*/sites/*" | Sort URL | Select URL
   ```
 
-  - 產品網站 URL：https://![](./images/Common_Images/TableLine.png).sharepoint.com/sites/production
+  - 產品網站 URL：https://![](./media/Common-Images/TableLine.png).sharepoint.com/sites/production
     
-  - 銷售網站 URL：https://![](./images/Common_Images/TableLine.png).sharepoint.com/sites/sales
+  - 銷售網站 URL：https://![](./media/Common-Images/TableLine.png).sharepoint.com/sites/sales
     
-  - 支援網站 URL：https://![](./images/Common_Images/TableLine.png)
+  - 支援網站 URL：https://![](./media/Common-Images/TableLine.png)
     
 ## <a name="next-steps"></a>後續步驟
 

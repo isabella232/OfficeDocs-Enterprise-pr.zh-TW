@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: 9ffa35a6318d83d489ec51051547ce22c16b5b5f
-ms.sourcegitcommit: 9ce1da973b8c91b0926142a28c5b90f95f0422d8
+ms.openlocfilehash: 71470a20586a0d1992cfafd35f213ec80286419b
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "25353309"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897376"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -34,7 +34,7 @@ ms.locfileid: "25353309"
   
 **圖 1：基底組態開發/測試環境**
 
-圖 1 中的基底組態開發/測試環境包含名為 TestLab 的雲端專用 Azure 虛擬網路中的 Corpnet 子網路，其可模擬連線到網際網路的簡化私人內部網路。它包含執行 WIndows Server 2016 的三個 Azure 虛擬機器：
+圖 1 中的基底組態開發/測試環境包含名為 TestLab 的雲端專用 Azure 虛擬網路中的 Corpnet 子網路，其可模擬連線到網際網路的簡化私人內部網路。它具有執行 WIndows Server 2016 的三部 Azure 虛擬機器：
   
 - DC1 已設定為內部網路網域控制站和網域名稱系統 (DNS) 伺服器
     
@@ -122,7 +122,7 @@ Login-AzureRMAccount
 ```
 
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-ba957d3d)以取得內含此文章中所有 PowerShell 命令的文字檔案。
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-ba957d3d)以取得包含本文中所有 PowerShell 命令的文字檔案。
   
 使用下列命令取得訂用帳戶名稱。
   
@@ -298,7 +298,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 
 接下來，使用 APP1 本機系統管理員帳戶名稱和密碼連線到 APP1 虛擬機器，然後開啟 Windows PowerShell 命令提示字元。
   
-若要檢查 APP1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並確認有四個回覆。
+若要檢查 APP1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
 接下來在 Windows PowerShell 命令提示字元使用以下命令將 APP1 虛擬機器加入 CORP 網域。
   
@@ -359,7 +359,7 @@ New-AzureRMVM -ResourceGroupName $rgName -Location $locName -VM $vm
 
 接下來，使用 CLIENT1 本機系統管理員帳戶名稱和密碼連線到 CLIENT1 虛擬機器，然後開啟系統管理員層級 Windows PowerShell 命令提示字元。
   
-若要檢查 CLIENT1 和 DC1 之間的名稱解析和網路通訊，請在 Windows PowerShell 命令提示字元執行 **ping dc1.corp.contoso.com** 命令，並確認有四個回覆。
+若要檢查 CLIENT1 和 DC1 之間的名稱解析和網路通訊，請在 Windows PowerShell 命令提示字元執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
 接下來在 Windows PowerShell 命令提示字元使用以下命令將 CLIENT1 虛擬機器加入 CORP 網域。
   
@@ -372,7 +372,7 @@ Restart-Computer
   
 CLIENT1 重新啟動之後，使用 CORP\\User1 帳戶名稱和密碼連線至 CLIENT1，然後開啟系統管理員層級 Windows PowerShell 命令提示字元。
   
-接下來，確認您可以從 CLIENT1 存取 APP1 上的 Web 及檔案共用資源。
+接下來，檢查您可以從 CLIENT1 存取 APP1 上的 Web 及檔案共用資源。
   
 1. 在 [伺服器管理員] 的樹狀窗格中，按一下 [本機伺服器]****。
     

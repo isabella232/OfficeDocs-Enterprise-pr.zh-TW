@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: 摘要：設定適用於 Office 365 開發/測試環境的目錄同步作業
-ms.openlocfilehash: 106e902c9da46c7c3c0fc6eb8af96d6695c7bdce
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 12a352bda387b79016edcc62c08ff15b0bf96ee9
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915838"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897496"
 ---
 # <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的目錄同步作業
 
@@ -59,7 +59,7 @@ ms.locfileid: "22915838"
     
 ## <a name="phase-2-install-azure-ad-connect-on-app1"></a>階段 2：在 APP1 上安裝及設定 Azure AD Connect
 
-一旦安裝及設定，Azure AD Connect 就會將 CORP Windows Server AD 網域中的帳戶集與您的 Office 365 試用訂閱中的帳戶集同步處理。下列程序會逐步引導您在 APP1 上安裝 Azure AD Connect，並且驗證它可以運作。
+安裝及設定完成後，Azure AD Connect 就會將 CORP Windows Server AD 網域中的帳戶集與您的 Office 365 試用訂閱中的帳戶集同步處理。下列程序會逐步引導您在 APP1 上安裝 Azure AD Connect，並且確認它可以運作。
   
 ### <a name="install-and-configure-azure-ad-connect-on-app1"></a>在 APP1 上安裝及設定 Azure AD Connect
 

@@ -3,7 +3,7 @@ title: 使內部部署網路與 Microsoft Azure 虛擬網路連線
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/23/2018
+ms.date: 11/05/2018
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,18 +17,18 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 640db506ec49d468dcb09ce3804c76c1f4562f13
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 145c7a082aff436ee3c3bb873f299f9706db72df
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915318"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25976709"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
  **摘要：** 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
   
-跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線允許您內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。 
+跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。 
 
 例如，在 Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢您的內部部署網域控制站是否有帳戶的變更，以將這些變更與您的 Office 365 訂閱進行同步處理。本文示範如何使用已準備好裝載 Azure 虛擬機器的站對站虛擬私人網路 (VPN) 連線，設定跨單位 Azure 虛擬網路。
 
@@ -36,8 +36,8 @@ ms.locfileid: "22915318"
 
 Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azure 虛擬機器與內部部署網路資源連線，您必須設定跨單位 Azure 虛擬網路。下列圖表顯示當 Azure 中有一部虛擬機器時，部署跨單位 Azure 虛擬網路所需要的元件。
   
-![內部部署網路已透過站對站 VPN 連線連線到 Microsoft Azure](media/CP-ConnectOnPremisesNetworkToAzureVPN.png)
-  
+![內部部署網路已透過站對站 VPN 連線連線到 Microsoft Azure](media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
+ 
 在圖表中，有兩個網路透過站對站 VPN 連線來連線：內部部署網路和 Azure 虛擬網路。站對站 VPN 連線是：
 
 - 介於可定址且位於公用網際網路上位置的兩個端點之間。
@@ -174,7 +174,7 @@ Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址
 |1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
-若要透過站台對站台的 VPN 連線將封包從 Azure 虛擬網路路由至組織網路，您必須使用區域網路來設定虛擬網路。此區域網路包含您組織內部部署網路上所有位置的位址空間清單 (CIDR 格式)，且虛擬網路中的虛擬機器必須可觸及這些位址空間。這可以是內部部署網路或子網路上的所有位置。定義區域網路的位址空間清單必須是唯一的，且不可與此虛擬網路使用的位址空間或其他跨單位虛擬網路重疊。
+若要透過站台對站台的 VPN 連線將封包從 Azure 虛擬網路路由至組織網路，您必須使用區域網路來設定虛擬網路。此區域網路具有您組織內部部署網路上所有位置的位址空間清單 (CIDR 格式)，且虛擬網路中的虛擬機器必須可觸及這些位址空間。這可以是內部部署網路或子網路上的所有位置。定義區域網路的位址空間清單必須是唯一的，且不可與此虛擬網路使用的位址空間或其他跨單位虛擬網路重疊。
   
 針對區域網路位址空間集，請填寫表格 L。請注意，雖已列出三個空白項，但一般來說您會需要更多。請與您的 IT 部門合作以決定此清單。
   
@@ -248,28 +248,7 @@ New-AzureRMResourceGroup -Name $rgName -Location $locName
 
 ```
 
-Resource Manager 架構的虛擬機器會需要 Resource Manager 架構的儲存體帳戶。您必須為儲存體帳戶挑選全域中唯一的名稱，且名稱只能包含小寫字母和數字。您可以使用此命令來列出現有的儲存體帳戶。
-  
-```
-Get-AzureRMStorageAccount | Sort Name | Select Name
-```
-
-使用此命令來測試建議的儲存體帳戶名稱是否是唯一的。
-  
-```
-Get-AzureRmStorageAccountNameAvailability "<proposed name>"
-```
-
-若要建立新的儲存體帳戶，請執行以下命令。
-  
-```
-$rgName="<your new resource group name>"
-$locName="<the location of your new resource group>"
-$saName="<unique storage account name>"
-New-AzureRMStorageAccount -Name $saName -ResourceGroupName $rgName -Type Standard_LRS -Location $locName
-```
-
-接下來，建立 Azure 虛擬網路
+接下來，建立 Azure 虛擬網路。
   
 ```
 # Fill in the variables from previous values and from Tables V, S, and D
@@ -346,11 +325,9 @@ $vnetConnection=New-AzureRMVirtualNetworkGatewayConnection -Name $vnetConnection
   
 使用下列設定：
   
-- 在 [基本概念] 窗格中，選取相同的訂閱及資源群組做為您的虛擬網路。在安全的位置中記錄使用者名稱和密碼。您稍後登入虛擬機器時需要這些資訊。
+- 在 [基本概念]**** 索引標籤中，選取相同的訂閱及資源群組做為您的虛擬網路。您稍後登入虛擬機器時需要這些資訊。在 [執行個體詳細資料]**** 區段，選擇適當的虛擬機器大小。將系統管理員帳戶使用者名稱和密碼記錄在安全位置。 
     
-- 在 [大小] 窗格中選擇適當大小。
-    
-- 在 [設定]**** 窗格的＜**儲存體**＞區段中，選取 [標準]**** 儲存體類型和您為虛擬網路設定的儲存體帳戶。在＜**網路**＞區段中，選取您裝載虛擬機器 (不是閘道子網路) 的虛擬網路和子網路名稱。其他所有設定都保留預設值。
+- 在 [網路]**** 索引標籤中，選取您裝載虛擬機器 (不是 GatewaySubnet) 的虛擬網路和子網路名稱。將其他設定保留為設定值。
     
 請檢查您的內部 DNS 以確認虛擬機器正在正確地使用 DNS，藉此確認適用於新虛擬機器的位址 (A) 記錄已新增。若要存取網際網路，您的 Azure 虛擬機器必須設定為使用內部部署網路的 Proxy 伺服器。請連絡您的網路系統管理員，以取得要在伺服器上執行的其他設定步驟。
   

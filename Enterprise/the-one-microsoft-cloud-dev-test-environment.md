@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
 description: 摘要：使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端供應項目。
-ms.openlocfilehash: e5391b88a964261ad0698890bbb5c99866fbb57d
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 51899ceb0cceef0248f6dc10cb21f5353e774cea
+ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915628"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "25897146"
 ---
 # <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
 
@@ -139,7 +139,7 @@ ms.locfileid: "22915628"
     
     請等候安裝完成。
     
-    安裝完成後，就會顯示根據屬於試用訂閱之範例資料的銷售活動儀表板。花幾分鐘來檢視**歡迎使用試用版**影片。完成時關閉 [影片] 視窗。
+    安裝完成後，就會根據屬於試用訂閱的範例資料來顯示銷售活動儀表板。請花幾分鐘觀看**歡迎使用試用版**影片。觀看完畢請關閉影片視窗。
     
 3. 在頂端的工具列上，按一下 [銷售]**** 旁的向下箭號，按一下 [設定]****，然後按一下 [安全性]****。
     
@@ -153,7 +153,7 @@ ms.locfileid: "22915628"
     
 8. 在頂部的工具列上按一下 [安全性]****。
     
-9. 對使用者 3 帳戶重複步驟 5 至 8。
+9. 對使用者 3 帳戶重複步驟 5 到 8。
     
 10. 關閉 [使用者：User3]**** 索引標籤。
     
