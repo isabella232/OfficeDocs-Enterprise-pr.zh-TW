@@ -11,12 +11,12 @@ search.appverid:
 - MET150
 ms.collection: Strat_O365_Enterprise
 description: 了解 Office 365 用戶端應用程式支援的行動應用程式管理
-ms.openlocfilehash: 4dc068bb1a62d71d92af28959c95c7ffda296e45
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 8a6894f0b8cc99820507d1224966ffe41ed9febe
+ms.sourcegitcommit: df40eb730e416f206ca8387ef9e6f559c4e4b8a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "29771112"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "29887579"
 ---
 # <a name="office-365-client-app-support---mobile-application-management"></a>Office 365 用戶端應用程式支援行動裝置應用程式管理
 
@@ -28,6 +28,8 @@ ms.locfileid: "29771112"
 
  - Android
  - iOS<sup>1</sup>
+
+如需在 Office 365 平台支援的詳細資訊，請參閱[Office 365 系統需求](https://products.office.com/office-system-requirements)。
 
 ## <a name="supported-clients"></a>支援的用戶端
 

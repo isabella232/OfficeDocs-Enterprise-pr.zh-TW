@@ -3,27 +3,6 @@
 
 
 
-## <a name="week-of-december-31-2018"></a>2018 年 12 月 31 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 1/2/2019 | [Microsoft 雲端連線 ExpressRoute](/Office365/Enterprise/expressroute-for-microsoft-cloud-connectivity) | 修改時間 |
-| 1/3/2019 | [在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](/Office365/Enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window) | 修改時間 |
-| 1/3/2019 | [Office 365 的第三方 SSL 憑證的計劃](/Office365/Enterprise/plan-for-third-party-ssl-certificates) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 封鎖使用者帳戶](/Office365/Enterprise/powershell/block-user-accounts-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 中設定使用者帳戶屬性](/Office365/Enterprise/powershell/configure-user-account-properties-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 建立使用者帳戶](/Office365/Enterprise/powershell/create-user-accounts-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 刪除使用者帳戶](/Office365/Enterprise/powershell/delete-and-restore-user-accounts-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 檢視經授權與未經授權的使用者](/Office365/Enterprise/powershell/view-licensed-and-unlicensed-users-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [使用 Office 365 PowerShell 檢視授權與服務](/Office365/Enterprise/powershell/view-licenses-and-services-with-office-365-powershell) | 修改時間 |
-| 1/3/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
-| 1/4/2019 | [使用 Office 365 PowerShell 建立使用者帳戶](/Office365/Enterprise/powershell/create-user-accounts-with-office-365-powershell) | 修改時間 |
-| 1/4/2019 | [使用 Office 365 PowerShell 檢視經授權與未經授權的使用者](/Office365/Enterprise/powershell/view-licensed-and-unlicensed-users-with-office-365-powershell) | 修改時間 |
-| 1/4/2019 | [使用 Office 365 PowerShell 檢視授權與服務](/Office365/Enterprise/powershell/view-licenses-and-services-with-office-365-powershell) | 修改時間 |
-| 1/4/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
-
-
 ## <a name="week-of-january-07-2019"></a>2019 年 1 月 7 日當週
 
 
@@ -68,7 +47,7 @@
 | 1/25/2019 | [設定 Office 365 的目錄同步處理](/Office365/Enterprise/set-up-directory-synchronization) | 修改時間 |
 
 
-## <a name="week-of-january-28-2019"></a>2019 年 1 月 28 日當週
+## <a name="week-of-january-28-2019"></a>2019 年 1 月28 日當週
 
 
 | 發佈時間 |主題標題 | 變更 |
@@ -86,3 +65,19 @@
 | 1/30/2019 | [如何檢查 Office 365 服務健康情況](/Office365/Enterprise/view-service-health) | 修改時間 |
 | 1/31/2019 | [將角色指派給 Office 365 powershell 的使用者帳戶](/Office365/Enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell) | 修改時間 |
 | 2/1/2019 | [如何檢查 Office 365 服務健康情況](/Office365/Enterprise/view-service-health) | 修改時間 |
+
+
+## <a name="week-of-february-04-2019"></a>2019 年 2 月 04、 當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 2/5/2019 | [使用 PowerShell 管理 Office 365 群組](/Office365/Enterprise/manage-office-365-groups-with-powershell) | 修改時間 |
+| 2/5/2019 | [Microsoft Cloud IT 架構資源](/Office365/Enterprise/microsoft-cloud-it-architecture-resources) | 修改時間 |
+| 2/5/2019 | [使用 PowerShell 管理 Office 365 群組](/Office365/Enterprise/powershell/manage-office-365-groups-with-powershell) | 修改時間 |
+| 2/6/2019 | 使用 PowerShell 管理 Office 365 群組 | 移除 |
+| 2/6/2019 | [使用 PowerShell 管理 Office 365 群組](/Office365/Enterprise/powershell/manage-office-365-groups-with-powershell) | 修改時間 |
+| 2/7/2019 | [管理 Office 365 端點](/Office365/Enterprise/managing-office-365-endpoints) | 修改時間 |
+| 2/7/2019 | [Office 365 用戶端應用程式支援設定格式化的條件的存取](/Office365/Enterprise/office-365-client-support-conditional-access) | 修改時間 |
+| 2/7/2019 | [Office 365 用戶端應用程式支援行動裝置應用程式管理](/Office365/Enterprise/office-365-client-support-mobile-application-management) | 修改時間 |
+| 2/7/2019 | [Office 365 用戶端應用程式支援摩登的驗證](/Office365/Enterprise/office-365-client-support-modern-authentication) | 修改時間 |
