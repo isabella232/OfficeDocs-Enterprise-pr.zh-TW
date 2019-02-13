@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
 description: 摘要：說明 Exchange 內部和混合部署、使用 AD FS 的 SSO、Exchange Online 服務及 Exchange Web 服務所需的 SSL 憑證。
-ms.openlocfilehash: c9e968ef7ec9015be398b4eef9184451dd316bea
-ms.sourcegitcommit: 15db0f1e5f8036e46063662d7df22387906f8ba7
+ms.openlocfilehash: 1746cf5059ba83e225e4a2d55c8eebc082366362
+ms.sourcegitcommit: bdd0083dc9dc62994de29421a1f4056ebe27f15f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "27546514"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "29952469"
 ---
 # <a name="plan-for-third-party-ssl-certificates-for-office-365"></a>Office 365 協力廠商的 SSL 憑證的計劃
 
@@ -49,7 +49,7 @@ ms.locfileid: "27546514"
   
 ## <a name="certificates-for-single-sign-on"></a>單一登入的憑證
 
-簡化單一登入經驗，包含完善的安全性提供您的使用者，在同盟伺服器或同盟伺服器 proxy 需要下表所示憑證。下表重點在於 Active Directory Federation Services (AD FS)，我們也可以使用[協力廠商身分識別提供者](https://go.microsoft.com/fwlink/?LinkId=532869)的詳細資訊。
+簡化單一登入經驗，包含完善的安全性提供您的使用者，在同盟伺服器或同盟伺服器 proxy 需要下表所示憑證。下表重點在於 Active Directory Federation Services (AD FS)，我們也可以使用[協力廠商身分識別提供者](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-fed-compatibility)的詳細資訊。
   
 ||||
 |:-----|:-----|:-----|
