@@ -3,7 +3,7 @@ title: 管理 Office 365 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 10/22/2018
+ms.date: 02/11/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 某些企業網路一般網際網路位置限制存取或包含明顯 backhaul 或處理的網路流量。若要確定在像是這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理清單的 Fqdn、 Url 和 IP 位址的網路上的電腦組成的 Office 365 端點清單。要新增至直接路由、 proxy 旁路及 （或） 的防火牆規則及 PAC 檔案以確保能夠連絡 Office 365 網路要求這些需求。
-ms.openlocfilehash: 480d2fa1b55507187f9150d02907849178a451b5
-ms.sourcegitcommit: d93f7a51e8cdefdfc9933cdf1f9e413b013bb367
+ms.openlocfilehash: ed3a64ad3cd840987d105ae99a5ba5cbf41567e9
+ms.sourcegitcommit: a8aedcfe0d6a6047a622fb3f68278c81c1e413bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "25719017"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "30052997"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -57,7 +57,7 @@ PAC 檔案部署至網頁瀏覽器在圖 1 點 1。當使用環 Office 365 網�
 
 有兩種類型的 PAC Get PacFile 指令碼會產生的檔案。
 
-|**類型**|**描述**|
+|**類型**|**說明**|
 |:-----|:-----|
 |**1** <br/> |將最佳化端點流量直接與其他人的每個項目傳送至 proxy 伺服器。 <br/> |
 |**2** <br/> |Proxy 伺服器來傳送直接最佳化] 和 [允許端點流量和其他人的每個項目。此類型也可用來傳送所有支援 ExpressRoute ExpressRoute 網路區段到的 Office 365 流量和其他人的 proxy 伺服器的每個項目。 <br/> |
@@ -87,7 +87,7 @@ Get-PacFile -Type 2 -Instance Worldwide -TenantName Contoso -ClientRequestId b10
 
 其中 PAC 檔案不會用於輸出流量導向，您仍想要設定 proxy 伺服器就能節省您周邊網路上的處理。某些 proxy 伺服器廠商已啟用自動的的設定在[Office 365 網路協力廠商程式](office-365-networking-partner-program.md)中所述。 
 
-如果您執行此動作手動必須取得 [最佳化並允許來自 Office 365 IP 位址及 URL Web 服務的端點分類資料並設定 proxy 伺服器略過這些處理。請務必避免 SSL 會自動換行及檢查和 Proxy 驗證的最佳化並允許類別端點。 
+如果您執行此動作手動您必須取得 [最佳化並允許來自 Office 365 IP 位址及 URL Web 服務的端點分類資料並設定 proxy 伺服器略過這些處理。請務必避免 SSL 會自動換行及檢查和 Proxy 驗證的最佳化並允許類別端點。 
   
 <a name="bkmk_changes"> </a>
 ## <a name="change-management-for-office-365-ip-addresses-and-urls"></a>變更管理 Office 365 IP 位址及 Url
@@ -180,17 +180,17 @@ Office 365 套裝軟體細分主要服務區域。這些可以選擇性地啟用
 |:-----|:-----|
 |**Exchange** <br/> |Exchange Online 與 Exchange Online Protection <br/> |
 |**SharePoint** <br/> |SharePoint Online 和商務用 OneDrive <br/> |
-|**Skype** <br/> |Skype 的業務與的 Microsoft 小組 <br/> |
+|**商務用 Skype Online 及 Microsoft Teams** <br/> |Skype 的業務與的 Microsoft 小組 <br/> |
 |**一般** <br/> |Office 365 Pro Plus、 Office Online、 Azure AD 和其他一般網路端點 <br/> |
 
 除了基本的網際網路服務有協力廠商所使用服務的僅限整合功能。雖然這些所需的整合，它們被標示為選用這表示核心功能的服務會繼續運作如果端點不是可存取 Office 365 端點文章中。這是必要的任何網路端點會有 required 屬性設定為 true。這是選用的任何網路端點會有必要的屬性設定為 false 並備忘稿屬性將會詳細說明應可預期如果封鎖連線缺少的功能。
   
-如果您正在嘗試使用 Office 365 及尋找協力廠商服務都可以存取您將想要[確定透過 proxy 和防火牆允許所有標示為必要或選用本文中的 Fqdn](urls-and-ip-address-ranges.md)。
+如果您嘗試使用 Office 365 及尋找協力廠商服務都可以存取您將想要[確定透過 proxy 和防火牆允許所有標示為必要或選用本文中的 Fqdn](urls-and-ip-address-ranges.md)。
   
 ### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>如何封鎖存取 Microsoft 的用戶服務？
 <a name="bkmk_consumer"> </a>
 
-限制存取我們取用者服務應在您自己的風險、 封鎖取用者服務僅可靠方法是以限制存取*login.live.com* FQDN。這個 FQDN 可供廣泛的服務包括非消費者服務，例如 MSDN、 TechNet、 和其他人。限制存取至此 fqdn 可能會導致需要也包含這些服務相關聯的網路要求規則的例外狀況。
+限制存取我們取用者服務應在您自己的風險、 封鎖取用者服務僅可靠方法是以限制存取*login.live.com* FQDN。這個 FQDN 可供廣泛的服務包括非消費者服務，例如 MSDN、 TechNet、 和其他人。至此 FQDN 也由 Microsoft 支援安全檔案 Exchange 計劃並視需要傳輸來協助疑難排解 Microsoft 產品的檔案。 限制存取至此 fqdn 可能會導致需要也包含這些服務相關聯的網路要求規則的例外狀況。
   
 請記住封鎖存取 Microsoft 取用者服務來說不會阻止您網路上的某個人的能力 exfiltrate 使用 Office 365 租用戶或其他服務的資訊。
   
@@ -204,9 +204,9 @@ Office 365 套裝軟體細分主要服務區域。這些可以選擇性地啟用
   
 [Microsoft Intune 的網路基礎結構需求](https://docs.microsoft.com/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)
   
-[Power BI 和 ExpressRoute](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
+[ExpressRoute 和 Power BI](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
   
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
   
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
   

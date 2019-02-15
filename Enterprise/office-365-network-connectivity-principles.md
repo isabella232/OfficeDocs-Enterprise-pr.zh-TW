@@ -14,12 +14,12 @@ ms.collection:
 - Strat_O365_Enterprise
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 description: 開始規劃您的 Office 365 網路連線的網路之前，請務必了解連線原則可安全地管理 Office 365 流量和快速獲得最佳效能。本文可協助您了解可安全地最佳化 Office 365 網路連線的最新的指引。
-ms.openlocfilehash: d319d99cdd413fe1df9e8f88d18742ad464bbb3b
-ms.sourcegitcommit: f0ba0d8c62f802447bc9d07f5d877067156fbed5
+ms.openlocfilehash: 16086af6a77409dcbb126af3b3b9f0853a3dce8c
+ms.sourcegitcommit: a8aedcfe0d6a6047a622fb3f68278c81c1e413bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "28021804"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "30053007"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 
@@ -116,7 +116,7 @@ Microsoft 現在將所有的 Office 365 端點發佈成 web 服務並提供如�
 由於分散式位置與 Office 365 的進入點及向使用者及其鄰近大型數目，路由到任何協力廠商網路或安全性提供者的 Office 365 流量對可能造成負面的影響 Office 365 的連線如果提供者網路不為取得最佳的 Office 365 對等設定。
   
 <a name="BKMK_P4"> </a>
-### <a name="bypass-proxies-traffic-inspection-devices-and-duplicate-security-technologies"></a>略過 proxy 流量檢查裝置及重複安全性技術
+### <a name="assess-bypassing-proxies-traffic-inspection-devices-and-duplicate-security-technologies"></a>評估略過 proxy，流量檢查裝置及重複安全性技術
 
 ![略過 proxy 流量檢查裝置及重複安全性技術](media/0131930d-c6cb-4ae1-bbff-fe4cf6939a23.png)
   
