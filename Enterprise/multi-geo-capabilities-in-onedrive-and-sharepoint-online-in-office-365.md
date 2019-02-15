@@ -1,5 +1,5 @@
 ---
-title: OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
+title: Office 365 的 OneDrive 中的多地理位置功能
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -10,17 +10,17 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
-description: 使用 OneDrive 和 Sharepoint 中的多地理位置功能，將 Office 365 的目前狀態拓展至多個地理區域。
-ms.openlocfilehash: b62603759caf7a285896c1c87199a9bf59c546e3
-ms.sourcegitcommit: 03bb9edd52b1b7cd49791baf90645828b89b32b5
+description: 使用 OneDrive Online 的多地理位置功能，將 Office 365 的目前狀態拓展至多個地理區域。
+ms.openlocfilehash: f89bfe7cb9a287200591746dc6d22430cd6eed1b
+ms.sourcegitcommit: a8aedcfe0d6a6047a622fb3f68278c81c1e413bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "27200726"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "30052987"
 ---
-# <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365"></a>OneDrive 中和 Office 365 中 SharePoint Online 的多地理位置功能
+# <a name="multi-geo-capabilities-in-onedrive-in-office-365"></a>Office 365 的 OneDrive 中的多地理位置功能
 
-使用 OneDrive 和 Sharepoint Online 中的多地理位置功能，貴組織可以將 Office 365 目前狀態拓展至您現有租用戶中的多個地理區域及/或國家。連絡 Microsoft 帳戶小組以註冊商務用 OneDrive 多地理位置的多國家公司。
+使用 OneDrive Online 中的多地理位置功能，貴組織可以將 Office 365 目前狀態拓展至您現有租用戶中的多個地理區域及/或國家。請連絡 Microsoft 帳戶小組以註冊商務用 OneDrive 多地理位置的多國公司。
   
 您可以使用 OneDrive 多地理位置，來佈建待用資料並將資料儲存在您所選擇之符合資料常駐要求的地理位置，和同時將現代化生產力體驗逐步拓展至您的員工。
   
