@@ -12,15 +12,16 @@ search.appverid: MOE150
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
+- M365-subscription-management
 ms.custom: Adm_O365
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
 description: 這些概觀步驟被設計來協助您部署 Office 365、連線您的 Active Directory、 移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
-ms.openlocfilehash: 7540a53f37b08412f24db7798e29fe6149351bc4
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 4dd2dff88ed9ef435b5e36517cee9b3e76c8132f
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540054"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085272"
 ---
 # <a name="deploy-office-365-enterprise-for-your-organization"></a>為貴組織部署 Office 365 企業版
 準備好部署並將 Office 365 企業版與您的內部部署基礎結構整合嗎？這些概觀步驟是設計來協助您連線至目錄、移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
