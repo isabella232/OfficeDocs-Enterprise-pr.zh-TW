@@ -12,14 +12,17 @@ search.appverid:
 - MET150
 - MOE150
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 ms.assetid: cc453ae5-fa9b-4836-b0ce-c7e824b1e36d
 description: 列出已排除和支援 IdFix 工具的屬性。
-ms.openlocfilehash: de8d57bb8ad9a3097ec9da3ff2a485095a140a42
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: d6b7aac023e9fe96b8308483322e718937ab1355
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540078"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085082"
 ---
 # <a name="idfix-excluded-and-supported-objects-and-attributes"></a>IdFix 已排除和支援的物件和屬性
 IdFix 維護兩組規則；多租用戶和 專用的/ITAR。這兩個規則集目前會在其搜尋中排除相同的物件、屬性和屬性值。這可能會在未來的版本中變更。

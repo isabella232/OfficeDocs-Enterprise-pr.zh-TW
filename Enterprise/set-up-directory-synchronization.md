@@ -8,6 +8,9 @@ ms.topic: get-started-article
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOE150
@@ -16,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1b3b5318-6977-42ed-b5c7-96fa74b08846
 description: 了解如何設定 Office 365 與您在內部部署 Active Directory 之間的目錄同步處理。
-ms.openlocfilehash: f2cd29e7a81854bb64f6317aa2b41e674ae22df4
-ms.sourcegitcommit: a4546e1f3fe9e8e25a56ed350400d51eb7dd7f83
+ms.openlocfilehash: 5f6e5be2a2137ee183a7d592d9a3e6b086e5be9a
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "29555439"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085262"
 ---
 # <a name="set-up-directory-synchronization-for-office-365"></a>設定 Office 365 的目錄同步處理
 

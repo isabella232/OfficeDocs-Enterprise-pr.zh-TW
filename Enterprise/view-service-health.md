@@ -13,6 +13,9 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 search.appverid:
 - MET150
 - MOE150
@@ -20,12 +23,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 檢視 Office 365 服務的健康狀態之前呼叫支援以查看是否有作用中服務中斷
-ms.openlocfilehash: 52a7b762b8e86c3e538579f7c1e1611515469389
-ms.sourcegitcommit: c7ad181394a8a3ee261dc44e7a1e70f6ebe7cbcf
+ms.openlocfilehash: 7a8d6c028caa72d332a51123233b2d0642311da0
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "29696350"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085292"
 ---
 # <a name="how-to-check-office-365-service-health"></a>如何檢查 Office 365 服務健康情況
 

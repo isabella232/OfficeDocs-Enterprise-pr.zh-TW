@@ -9,17 +9,20 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MOE150
 - MET150
 ms.assetid: d3577c90-dda5-45ca-afb0-370d2889b10f
 description: 說明 Office 365、 Active Directory 清理作業與 Azure [Active Directory 連線工具的目錄同步處理。
-ms.openlocfilehash: cc2a2ca050facaf53f0a235898c31ae7aaeff4ae
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 5f380efe3293d25e2e208c5fef836a89f6fa0cc8
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540086"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085282"
 ---
 # <a name="plan-for-directory-synchronization-for-office-365"></a>Office 365 的目錄同步處理的計劃
 根據業務需求與技術需求、 目錄同步處理已移至 Office 365 的企業客戶的最常見的佈建選擇。目錄同步處理可讓內部部署 Active Directory 中進行管理的身分識別和所有更新該 identity 會都同步至 Office 365。

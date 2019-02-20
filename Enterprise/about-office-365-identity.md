@@ -3,12 +3,13 @@ title: 了解 Office 365 身分識別和 Azure Active Directory
 ms.author: robmazz
 author: robmazz
 manager: laurawi
-ms.date: 8/21/2018
 ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 14d1ec8a3ebc4620a72f831c0ec80253f7b3072c
-ms.sourcegitcommit: dcb57859ad40090cf70586ac350472eb0fc8d9c8
+ms.openlocfilehash: 0b0dd133979a5f94f7f8322c532c61fd24719359
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "25639632"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085422"
 ---
 # <a name="understanding-office-365-identity-and-azure-active-directory"></a>了解 Office 365 身分識別和 Azure Active Directory
 
@@ -79,6 +80,6 @@ Office 365 管理使用者使用的雲端使用者身分識別與驗證服務 Az
   
 您也可以使用 Azure AD 顧問： [Azure AD Connect 顧問](https://aka.ms/aadconnectpwsync)、 [AD FS 部署顧問](https://aka.ms/adfsguidance)，以及[Azure AD Premium 安裝指南](https://aka.ms/aadpguidance)。
   
-## <a name="video-training"></a>影片訓練
+## <a name="video-training"></a>影片訓練課程
 
 如需詳細資訊，請參閱視訊課程[Office 365： 管理身分識別使用 Azure AD 連接](https://support.office.com/article/90991a1d-c0ab-479a-b413-35c9706f6fed.aspx)、 LinkedIn 學習由致力提供給您。

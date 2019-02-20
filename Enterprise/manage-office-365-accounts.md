@@ -9,6 +9,9 @@ ms.topic: overview
 ms.prod: office-online-server
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 search.appverid:
 - MET150
 - MOE150
@@ -16,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具，以用來管理 Office 365 使用者，及如何您可以使用取決於如何管理使用者身分識別。 '
-ms.openlocfilehash: 24a7dd72603b881ea0810d0712900bc78dc34a81
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 0fa515d89afa3abe4b0fe936b297156b20890b0f
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539939"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085362"
 ---
 # <a name="tools-to-manage-office-365-accounts"></a>用來管理 Office 365 帳戶的工具
 
@@ -59,7 +62,7 @@ ms.locfileid: "22539939"
     
 |**選項**|**附註**|
 |:-----|:-----|
-|Office 365 系統管理中心  <br/> |[將使用者新增個別或大量至 Office 365-Admin 說明](https://support.office.com/article/1970f7d6-03b5-442f-b385-5880b9c256ec) <br/>  提供新增及變更使用者帳戶的簡單 web 介面。  <br/>  無法用以啟用目錄同步作業時變更使用者 （可以設定位置和授權指派）。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
+|Office 365 admin center  <br/> |[個別或大量將使用者新增至 Office 365 - 系統管理說明](https://support.office.com/article/1970f7d6-03b5-442f-b385-5880b9c256ec) <br/>  提供新增及變更使用者帳戶的簡單 web 介面。  <br/>  無法用以啟用目錄同步作業時變更使用者 （可以設定位置和授權指派）。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
 |Windows PowerShell  <br/> |[使用 Windows PowerShell 管理 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698471) <br/>  可讓您使用 Windows PowerShell 指令碼，將使用者加入在大量的使用者。  <br/>  可用來將位置和授權指派給不論如何建立帳戶的帳戶。  <br/> |
 |大量匯入  <br/> |[同時將多位使用者新增至 Office 365 - 系統管理說明](add-several-users-at-the-same-time.md) <br/>  可讓您匯入 CSV 檔案新增至 Office 365 的使用者群組。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
 |Azure Active Directory  <br/> |您可以取得免費版本的 Azure Active Directory 與 Office 365 訂閱。您可以執行類似自助式密碼重設雲端使用者和自訂的登入及存取面板頁面所使用的是可用的版本的功能。若要取得增強的功能，您可以升級的基本的版本，或 premium edition。請參閱[Azure Active Directory 版本](https://go.microsoft.com/fwlink/p/?LinkId=698465)支援的功能的清單。<br/> |
@@ -74,7 +77,7 @@ ms.locfileid: "22539939"
   
 ## <a name="next-steps"></a>後續步驟
 
-[與內部部署環境的 office 365 整合](office-365-integration.md)
+[整合 Office 365 與內部部署環境](office-365-integration.md)
   
 ## <a name="see-also"></a>另請參閱
 

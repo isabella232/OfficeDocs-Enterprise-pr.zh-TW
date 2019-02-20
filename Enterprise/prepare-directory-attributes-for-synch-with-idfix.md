@@ -9,17 +9,20 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOE150
 ms.assetid: 497593cf-24c6-491c-940b-7c86dcde9de0
 description: 使用 IdFix 準備並清除內部目錄，再同步處理至 Office 365 提供的指示。
-ms.openlocfilehash: a4fc8af476ec8ffdd7d762796abe1ec210a1bacb
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: cdfee8178f731d20c799f550d1dacb0a04a72cae
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540184"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085092"
 ---
 # <a name="prepare-directory-attributes-for-synchronization-with-office-365-by-using-the-idfix-tool"></a>使用 IdFix 工具準備目錄屬性以與 Office 365 進行同步處理
 本主題包含執行 IdFix 工具的詳細的指示一些常見的錯誤可能會發生，建議的修正程式、 範例和最佳作法如果您有大量的錯誤。

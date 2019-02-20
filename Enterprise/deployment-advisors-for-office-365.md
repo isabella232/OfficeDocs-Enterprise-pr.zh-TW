@@ -8,7 +8,9 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 ms.custom: Adm_O365_Setup
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Office 365 部署精靈可讓您自行引導的支援 for 設定 Office 365。
-ms.openlocfilehash: 7b677e70332c7a28156c572bb9daf5cc6c9e4e91
-ms.sourcegitcommit: 792fe2ccc860517fe3dcbc9c668bae97f39ae7c8
+ms.openlocfilehash: d948363c640896c8c14e695c5588f322756c92d1
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "29604494"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085432"
 ---
 # <a name="deployment-advisors-for-office-365-services"></a>Office 365 服務的部署建議
 

@@ -10,17 +10,20 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOE150
 ms.assetid: f4bd2439-3e41-4169-99f6-3fabdfa326ac
 description: 如何安裝和執行 Office 365 IdFix 工具可協助清除您的 active directory 同步處理至 Office 365 之前。
-ms.openlocfilehash: c485d8397aa32005a34b77f886b9bc8f4e857f1b
-ms.sourcegitcommit: 9c493c4e18e83491d106c5e9bab55d1a89298879
+ms.openlocfilehash: a35b2a476f2b30eccc955b980eda6315b146af27
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "26674427"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085402"
 ---
 # <a name="install-and-run-the-office-365-idfix-tool"></a>安裝和執行 Office 365 IdFix 工具
 

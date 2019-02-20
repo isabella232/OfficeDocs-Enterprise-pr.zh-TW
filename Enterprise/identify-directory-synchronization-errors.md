@@ -8,6 +8,9 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOE150
@@ -16,12 +19,12 @@ search.appverid:
 - GPA150
 ms.assetid: b4fc07a5-97ea-4ca6-9692-108acab74067
 description: 了解如何在 Office 365 系統管理中心檢視目錄同步作業錯誤。
-ms.openlocfilehash: 8beeeebbb24936abd7c93f4c04c0fa4e27c85c12
-ms.sourcegitcommit: c5ee713709d76f519cb77de0e12c435d8409f571
+ms.openlocfilehash: 8b7bb16aeddbf1765426c3725cd1f670524ef6d1
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "28327335"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085032"
 ---
 # <a name="view-directory-synchronization-errors-in-office-365"></a>檢視 Office 365 中目錄同步處理錯誤
 

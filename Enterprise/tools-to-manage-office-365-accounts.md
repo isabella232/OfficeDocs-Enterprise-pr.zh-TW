@@ -9,6 +9,9 @@ ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 search.appverid:
 - MET150
 - MOE150
@@ -16,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具，以用來管理 Office 365 使用者，及如何您可以使用取決於如何管理使用者身分識別。 '
-ms.openlocfilehash: 62467fb031090a521d0b9e067582b56fabe9e5fd
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: e13b6a998aa6de433d85ef3be60f08703eb914d4
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539996"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085382"
 ---
 # <a name="tools-to-manage-office-365-accounts"></a>用來管理 Office 365 帳戶的工具
 
@@ -35,23 +38,13 @@ ms.locfileid: "22539996"
   
 ### <a name="cloud-authentication"></a>雲端驗證
 
-<<<<<<< 標頭
-- [雲端驗證](about-office-365-identity.md#cloud-authentication)-建立及管理 Office 365 系統管理中心中的使用者，您也可以使用 Windows PowerShell 或 Azure Active Directory，來管理您的使用者。 
-    
-=======
 - [Office 365 身分識別](about-office-365-identity.md)-建立及管理 Office 365 系統管理中心中的使用者，您也可以使用 Windows PowerShell 或 Azure Active Directory，來管理您的使用者。
->>>>>>> robmazz 轉換
 - [密碼雜湊同步處理順暢單一登入搭配](about-office-365-identity.md)-啟用在 Azure AD 驗證內部部署目錄物件的最簡單方式。使用密碼雜湊同步處理 (PHS)，與 Office 365 同步處理內部部署 Active Directory 使用者帳戶物件及管理您的使用者在內部。 
 - [順暢單一登入與通過驗證](about-office-365-identity.md)-提供的 Azure AD 驗證服務來驗證使用者直接與使用一或多個內部部署伺服器上執行的軟體代理程式簡單密碼驗證您內部部署 Active Directory。 
     
 ### <a name="federated-authentication"></a>同盟的驗證
 
-<<<<<<< 標頭
-- [順暢單一登入與通過驗證](about-office-365-identity.md#pass-through-authentication-with-seamless-single-sign-on)-主要針對具有較複雜的驗證需求的大型企業組織內部部署目錄物件與 Office 365 同步處理和管理使用者帳戶內部部署。 
-    
-=======
 - [Office 365 身分識別](about-office-365-identity.md)-主要針對具有較複雜的驗證需求的大型企業組織內部部署目錄物件與 Office 365 同步處理和使用者帳戶是受管理的內部。 
->>>>>>> robmazz 轉換
 - [協力廠商驗證及身分識別提供者](about-office-365-identity.md)物件可能會同步至 Office 365 與雲端資源存取內部部署目錄是主要受管理的協力廠商身分識別提供者 (IdP)。 
     
 ## <a name="managing-accounts"></a>管理帳戶
@@ -66,7 +59,7 @@ ms.locfileid: "22539996"
     
 |**選項**|**附註**|
 |:-----|:-----|
-|**Office 365 系統管理中心** | - [將使用者新增個別或大量至 Office 365-Admin 說明](https://support.office.com/article/1970f7d6-03b5-442f-b385-5880b9c256ec) <br> -提供新增及變更使用者帳戶的簡單 web 介面。 <br> -[無法用以啟用目錄同步作業時變更使用者 （可以設定位置和授權指派）。 <br> -[無法與 SSO 選項搭配使用。 <br> |
+|**Office 365 admin center** | - [將使用者新增個別或大量至 Office 365-Admin 說明](https://support.office.com/article/1970f7d6-03b5-442f-b385-5880b9c256ec) <br> -提供新增及變更使用者帳戶的簡單 web 介面。 <br> -[無法用以啟用目錄同步作業時變更使用者 （可以設定位置和授權指派）。 <br> -[無法與 SSO 選項搭配使用。 <br> |
 |**Windows PowerShell** | - [使用 Windows PowerShell 管理 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=698471) <br> -可讓您將在大量使用者的使用者新增使用 Windows PowerShell 指令碼。 <br> -可用來將位置和授權指派給不論如何建立帳戶的帳戶。 <br> |
 |**大量匯入** | - [將許多使用者同時新增至 Office 365-Admin 說明](add-several-users-at-the-same-time.md) <br> -可讓您匯入 CSV 檔案新增至 Office 365 的使用者群組。 <br> -[無法與 SSO 選項搭配使用。 <br> |
 |**Azure Active Directory** | -您可以取得免費版本的 Azure Active Directory 與 Office 365 訂閱。-您可執行類似自助式密碼重設雲端使用者和自訂的登入及存取面板頁面所使用的是可用的版本的功能。<br> -若要取得增強的功能，您可以升級的基本的版本，或 premium edition。請參閱[Azure Active Directory 版本](https://go.microsoft.com/fwlink/p/?LinkId=698465)支援的功能的清單。<br> |

@@ -8,18 +8,21 @@ ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOE150
 - MBS150
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中目錄同步處理的常見問題原因，並提供許多方法來協助疑難排解和解決它們。
-ms.openlocfilehash: 2d567daa370d651a6eb9180db2f729d09b380226
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: e83ca495ca96ac41fb2f79775c3d5970a6b538fb
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897306"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085392"
 ---
 # <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 的目錄同步處理問題
 

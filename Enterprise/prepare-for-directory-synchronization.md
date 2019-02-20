@@ -14,6 +14,9 @@ f1_keywords:
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 search.appverid:
 - MET150
 - MOP150
@@ -21,12 +24,12 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明如何準備使用目錄同步作業及使用此方法的長期效益佈建到 Office 365 的使用者。
-ms.openlocfilehash: 8e84f4602b79ce321cd9a71e6c35331baf40f7f0
-ms.sourcegitcommit: c5761d3c41aa2d26815f0d24c73dbcd53ab37957
+ms.openlocfilehash: af402950b3681285898d0d87b897d363a693bf98
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "27371117"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085102"
 ---
 # <a name="prepare-to-provision-users-through-directory-synchronization-to-office-365"></a>準備透過 Office 365 的目錄同步佈建使用者
 

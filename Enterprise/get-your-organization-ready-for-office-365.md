@@ -7,7 +7,9 @@ ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -15,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: 712fced7-f9d0-4fde-8b79-286262a5d0bc
 description: 如果您已選擇加入不在 FastTrack 部署並不尋找您需要在我們的基本部署步驟中，這是要啟動的位置。
-ms.openlocfilehash: bb522890880ec77969abe6e2559c3d0293aca372
-ms.sourcegitcommit: 6826e0ea4a777f7d98500209a9d3bc75e89f8d15
+ms.openlocfilehash: a15bd73efe2fd2e2dfd13b3a444f77b9d0bfc764
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29651197"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085372"
 ---
 # <a name="get-your-organization-ready-for-office-365-enterprise"></a>準備讓您的組織使用 Office 365 企業版
 

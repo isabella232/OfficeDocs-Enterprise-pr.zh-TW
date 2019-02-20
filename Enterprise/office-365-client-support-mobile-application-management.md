@@ -6,17 +6,17 @@ manager: laurawi
 audience: ITPro
 ms.topic: article
 ms.service: Office 365 Administration
-localization_priority: None
+localization_priority: Normal
+ms.collection: Strat_O365_Enterprise
 search.appverid:
 - MET150
-ms.collection: Strat_O365_Enterprise
 description: 了解 Office 365 用戶端應用程式支援的行動應用程式管理
-ms.openlocfilehash: 8a6894f0b8cc99820507d1224966ffe41ed9febe
-ms.sourcegitcommit: df40eb730e416f206ca8387ef9e6f559c4e4b8a5
+ms.openlocfilehash: c5cfe356e9c25fd23df298b52100e38b4064655c
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "29887579"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085042"
 ---
 # <a name="office-365-client-app-support---mobile-application-management"></a>Office 365 用戶端應用程式支援行動裝置應用程式管理
 

@@ -1,5 +1,5 @@
 ---
-title: 與內部部署環境的 office 365 整合
+title: 整合 Office 365 與內部部署環境
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -9,6 +9,8 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.custom: Adm_O365
+ms.collection:
+- Ent_O365
 search.appverid:
 - MET150
 - LYN150
@@ -17,14 +19,14 @@ search.appverid:
 - MED150
 ms.assetid: 263faf8d-aa21-428b-aed3-2021837a4b65
 description: 了解如何將與您現有的目錄服務整合 Office 365。
-ms.openlocfilehash: b660dda74303a3bf0fa92bc8e3146cd2c9add662
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 112f543a9c647ea850d5e43bc14483308da0b2c7
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540090"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085332"
 ---
-# <a name="office-365-integration-with-on-premises-environments"></a>與內部部署環境的 office 365 整合
+# <a name="office-365-integration-with-on-premises-environments"></a>整合 Office 365 與內部部署環境
 
 您可以針對 Business Server 2015、 或 SharePoint Server 2013 使用您現有的目錄服務與內部部署安裝的 Exchange Server、 Skype 整合 Office 365。
   

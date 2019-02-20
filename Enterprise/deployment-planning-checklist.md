@@ -11,6 +11,7 @@ localization_priority: Normal
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
+- M365-subscription-management
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -18,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 5fa4f6ef-35ad-4840-91c1-4834df3df5a0
 description: 當您規劃及準備移轉至 Office 365 此檢查清單可協助您的組織。階段與步驟的檢查清單中要對齊的 Onboarding 中心提供的指導。
-ms.openlocfilehash: 623cdb436f70355b259588aba53bceb7cc64c865
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: 42c292f3fe5f8a3753a733e5b362521d95eab827
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22540088"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085302"
 ---
 # <a name="deployment-planning-checklist-for-office-365"></a>部署 Office 365 規劃檢查清單
 

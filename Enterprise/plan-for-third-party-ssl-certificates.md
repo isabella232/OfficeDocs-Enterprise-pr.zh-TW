@@ -8,7 +8,9 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- M365-subscription-management
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
 description: 摘要：說明 Exchange 內部和混合部署、使用 AD FS 的 SSO、Exchange Online 服務及 Exchange Web 服務所需的 SSL 憑證。
-ms.openlocfilehash: 1746cf5059ba83e225e4a2d55c8eebc082366362
-ms.sourcegitcommit: bdd0083dc9dc62994de29421a1f4056ebe27f15f
+ms.openlocfilehash: 3c22daa2315e36c45b5b5dd6271842168c90726d
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "29952469"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085322"
 ---
 # <a name="plan-for-third-party-ssl-certificates-for-office-365"></a>Office 365 協力廠商的 SSL 憑證的計劃
 

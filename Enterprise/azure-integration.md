@@ -7,6 +7,9 @@ ms.audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
+ms.collection:
+- Ent_O365
+- M365-identity-device-management
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -15,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: a5efce5d-9c9c-4190-b61b-fd273c1d425f
 description: 您的 Office 365 訂閱包括 Azure AD 訂閱。如果您想密碼同步或單一登入搭配內部部署環境，整合 Office 365 Azure AD。
-ms.openlocfilehash: 8b7af5ba8d5106900384369a3e6548af40f9e201
-ms.sourcegitcommit: 9c493c4e18e83491d106c5e9bab55d1a89298879
+ms.openlocfilehash: 0ad1c064d2ffe29f0f06e1368cd728d8b3bd630b
+ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "26674417"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "30085472"
 ---
 # <a name="azure-integration-with-office-365"></a>Azure 與 Office 365 的整合
 
