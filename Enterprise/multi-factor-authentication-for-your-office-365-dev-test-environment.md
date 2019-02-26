@@ -3,7 +3,7 @@ title: 適用於您的 Office 365 開發/測試環境的多重要素驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/22/2018
+ms.date: 02/20/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e2b354b9-7f18-4da0-9107-6245eae0f33f
 description: 摘要： 設定多重要素驗證使用文字訊息傳送給 Office 365 開發人員/測試環境中的智慧型手機。
-ms.openlocfilehash: 6e2aefa9309e7e268c937055f7fe59600f8c87da
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 453dbc6bda3cfbc6806159d53c9a805c4c6cac97
+ms.sourcegitcommit: 8e2760cbcaf564923595147ccf6da468edaed364
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897446"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "30242075"
 ---
 # <a name="multi-factor-authentication-for-your-office-365-devtest-environment"></a>適用於您的 Office 365 開發/測試環境的多重要素驗證
 
@@ -60,7 +60,7 @@ ms.locfileid: "25897446"
     
 3. 在左方的瀏覽區域中，按一下 [使用者] > [作用中的使用者]****。
     
-4. 在 [作用中使用者] 窗格中，按一下 [**更多 > 安裝 Azure 多重要素驗證**。
+4. 在 [作用中使用者] 窗格中，按一下 [**更多 > 多重要素驗證設定**]。
     
 5. 在清單中，選取**使用者 2**帳戶。
     
@@ -90,7 +90,7 @@ ms.locfileid: "25897446"
     
   - 在**方法**中，按一下 [**傳送我文字訊息的程式碼**。
     
-5. 按 [下一步]。
+5. 按 [下一步]****。
     
 6. 輸入驗證碼從智慧型手機上接收的文字訊息，然後按一下**確認**。
     
