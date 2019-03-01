@@ -8,24 +8,26 @@ ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- M365-subscription-management
+- Strat_O365_Enterprise
 ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 8a113a50-0071-4155-bb8e-eba5a8dbd4c8
-description: 如果您的組織會使用 Office 365 及限制您網路上的電腦連線至網際網路，以下您會發現端點 （Fqdn、 連接埠、 Url 及 IPv4 和 IPv6 位址範圍），您應該包含在您輸出允許清單以確保您電腦可以成功地使用 Office 365。
+description: 如果您的組織使用 Office 365，而且會限制您網路上的電腦連線到網際網路，以下您會發現的端點 （Fqdn、 連接埠、 Url 和 IPv4 和 IPv6 位址範圍），您應該在包含連出允許清單，以確保您電腦可以順利使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 05bbcb1cb4e6b90b3f7a61d84ae3488ce97245c2
-ms.sourcegitcommit: e3fa9998321f6fa5d31217d107b672258993826e
+ms.openlocfilehash: 397d51f9fb6f176de2ea19d76ca7832ad90ec2e9
+ms.sourcegitcommit: eb52922c0ee34791fd71ae78338ab203f7761eec
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "27746133"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "30341964"
 ---
 # <a name="office-365-germany-endpoints"></a>Office 365 Germany 端點
 
  *適用於： Office 365 系統管理*
 
-**摘要：** Office 365 需要網際網路連線。下面的端點應該是客戶使用**Office 365 德國**計劃僅連至。
+**摘要：** Office 365 需要連線至網際網路。下列端點應該使用僅限**Office 365 Germany**方案的客戶可以到達。
   
 > [!NOTE]
 > Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
@@ -34,11 +36,11 @@ ms.locfileid: "27746133"
   
 |||
 |:-----|:-----|
-|**上次更新：** 01/07/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
+|**上次更新時間：** 2019 年 1 月 7 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) (英文) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
 
-若要了解我們建議管理使用此資料的網路連線的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。端點資料更新每個月利用新的 IP 位址及發佈前正在使用中的 30 天的 Url 的開頭。這可讓客戶不要尚未有自動更新以完成其程序，才需要的新連線。如果地址支援呈報、 安全性事件或其他立即操作需求所需的端點可能也更新期間月。一律可以參照的[變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
+若要了解我們的建議管理網路連線使用此資料的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。起點處的新 IP 位址和 Url 發佈最遲作用在 30 天每月更新端點資料。這可讓客戶不尚未有自動更新至新的連線，則需要先完成其處理程序。端點只有地址支援擴大、 安全性事件或其他即時的操作需求所需的情況下，也可能與月份期間中更新。您總是可以參照的[變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
 
-以下這個頁面上顯示的資料會從 rest web 服務產生。如果您使用指令碼或網路裝置存取此資料，您應直接移至[Web 服務](office-365-ip-web-service.md)。
+所有產生 rest web 服務下此頁面上所顯示的資料。如果您使用指令碼或網路裝置來存取此資料，您應該直接移至[Web 服務](office-365-ip-web-service.md)。
 
 下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
 
