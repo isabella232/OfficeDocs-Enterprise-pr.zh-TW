@@ -3,7 +3,7 @@ title: Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 01/16/2019
+ms.date: 03/04/2019
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -22,12 +22,12 @@ search.appverid:
 ms.assetid: ''
 description: 摘要：新端點 Web 服務不包含特定案例的少量端點。
 hideEdit: true
-ms.openlocfilehash: 02deeb06f73b836d95a738ca8566bc2554010aa4
-ms.sourcegitcommit: 8e2760cbcaf564923595147ccf6da468edaed364
+ms.openlocfilehash: f226e48fa6512e32e505d7ca1a35ab1fec390488
+ms.sourcegitcommit: c0d3007e51950b041569c28a495ee16d51783f28
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "30242085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "30374406"
 ---
 # <a name="additional-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 
@@ -52,7 +52,7 @@ ms.locfileid: "30242085"
 | 6  | 信箱移轉。當您啟動從內部部署 [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant)將信箱移轉至 Office 365，Office 365 會連線到已發佈的 Exchange Web 服務 (EWS)/信箱複寫服務 (MRS) 伺服器。如果您需要 Exchange Online 伺服器所使用的 NAT IP 位址，以限制特定來源 IP 範圍的輸入連線，其會列在「Exchange Online」服務區域底下的 [Office 365 URL 與 IP 範圍](urls-and-ip-address-ranges.md)。請務必注意，在限制特定來源 IP 範圍的 TCP 443 連線之前，先確保 MRS Proxy 解析為個別 FQDN 和公用 IP 位址，以確保存取已發佈的 EWS 端點 (如 OWA) 時不會受到影響。 | 客戶內部部署 EWS/MRS Proxy<br> TCP 通訊埠 443 | 內送伺服器流量 |
 | 7  | [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant)共存功能，例如空閒/忙碌共用。 | 客戶內部部署 Exchange 伺服器 | 內送伺服器流量 |
 | 8  | [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant) Proxy 驗證 | 客戶內部部署 STS | 內送伺服器流量 |
-| 9  | 用來設定 [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant)，使用 Exchange 混合式組態精靈。 <br> 附註：只有在設定 Exchange 混合式時，才需要這些端點  | TCP 通訊埠 80 和 443 上的 ```domains.live.com```，只有 Exchange 2010 SP3 混合式組態精靈才需要。 | 僅限外寄伺服器的流量 |
+| 9  | 用來設定 [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant)，使用 [Exchange 混合式組態精靈](https://docs.microsoft.com/exchange/hybrid-configuration-wizard) <br> 附註：只有在設定 Exchange 混合式時，才需要這些端點  | TCP 通訊埠 80 和 443 上的 domains.live.com，只有 Exchange 2010 SP3 混合式組態精靈才需要。<BR> <BR> GCC 高、DoD IP 位址：40.118.209.192/32；168.62.190.41/32 <BR> <BR> 全球各地Worldwide Commercial & GCC: *.store.core.windows.net; asl.configure.office.com; mshrcstorageprod.blob.core.windows.net; tds.configure.office.com; mshybridservice.trafficmanager.net <BR>  | 僅限外寄伺服器的流量 |
 | 10  | 自動偵測服務用於 [Exchange 混合式](https://docs.microsoft.com/exchange/exchange-deployment-assistant)案例，搭配 [iOS 版 Outlook 和 Android 的混合式新式驗證](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) <BR> <BR> ```*.acompli.net``` <BR> <BR> ```*.outlookmobile.com``` <BR> <BR> ```*.outlookmobile.us``` <BR> <BR> ```52.125.128.0/20``` <BR> ```52.127.96.0/23``` <BR> | 客戶在 TCP 443 上內部部署 Exchange 伺服器 | 內送伺服器流量 |
 | 11  | Office 2016 中的商務用 Skype 包含使用 UDP 通訊埠根據螢幕共用的視訊。Office 2013 及較舊版本中的商務用 Skype 用戶端在 TCP 通訊埠 443 上使用 RDP。 | TCP 通訊埠 443 開放給 52.112.0.0/14 | Office 2013 及較舊版本中的商務用 Skype 更舊用戶端版本 |
 | 12  | 商務用 Skype 混合式內部部署伺服器連線至商務用 Skype Online | 13.107.64.0/18, 52.112.0.0/14 UDP 通訊埠 50,000-59,999 <BR>  TCP 通訊埠 50,000-59,999 | 商務用 Skype 內部部署伺服器輸出連線 |
