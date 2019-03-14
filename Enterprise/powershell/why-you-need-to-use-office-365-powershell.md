@@ -3,7 +3,7 @@ title: 為什麼要使用 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 03/11/2019
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-administration
@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: 9909d9665817646f7c70c66012af4b8762cceaa1
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 32110b56f1123e404b1eb7996a9af5d244874377
+ms.sourcegitcommit: ae4b3c1e2859991f3b94690f2eb3b2838d7db2d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897466"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "30538991"
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
@@ -65,7 +65,7 @@ Office 365 系統管理中心會顯示許多有用的資訊，但這不表示它
   
 ![Office 365 系統管理中心內，使用者及群組顯示方式的範例。](media/o365-powershell-users-and-groups.png)
   
-針對多種目的，這會顯示您需要知道的資訊。但有需要更多時間。例如，Office 365 授權 （與提供給使用者的 Office 365 功能） 部份取決於該使用者的地理位置。原則與功能可以擴充到儲存在美國中的使用者可能不會將相同的原則和功能可以擴充到儲存比利時或印度中的使用者是。您可以使用 Office 365 系統管理中心來判斷使用者的地理位置進行這些步驟：
+在許多用途中，這會顯示您需要知道的資訊。 不過，您有時需要更多的資訊。 例如，Office 365 授權 （和使用者提供的 Office 365 功能） 部份取決於該使用者的地理位置。 您可延伸到美國使用者的原則和功能，與您可延伸到印度或比利時使用者的原則和功能可能不大一樣。 您可以使用 Office 365 系統管理中心，透過下列步驟來判斷使用者的地理位置：
   
 1. 連按兩下使用者的 **[顯示名稱]** 。
     
@@ -93,7 +93,6 @@ Get-MsolUser | Select DisplayName, UsageLocation
 ```
 DisplayName                               UsageLocation
 -----------                               -------------
-Zrinka Makovac                            US
 Bonnie Kearney                            GB
 Fabrice Canel                             BR
 Brian Johnson (TAILSPIN)                  US
@@ -122,7 +121,6 @@ Bonnie Kearney                              GB
 Alex Darrow                                 US
 Anne Wallace                                US
 Brian Johnson (TAILSPIN)                    US
-Zrinka Makovac                              US
 ```
 
 > [!TIP]
@@ -274,7 +272,6 @@ Alex Darrow                              San Diego
 Bonnie Kearney                           San Diego
 Julian Isla                              Bloomington
 Rob Young                                Bloomington
-Zrinka Makovac                           San Diego
 ```
 
 > [!TIP]
@@ -329,7 +326,7 @@ Get-User -Filter '{LastName -like "*son"}'
   
 ## <a name="office-365-powershell-makes-it-easy-to-print-or-save-data"></a>Office 365 PowerShell 可讓您輕鬆地列印或儲存資料
 
-Office 365 系統管理中心可讓您檢視資料的清單。以下是顯示的已啟用 Skype 商務 Online 的使用者清單的商務 Online 系統管理中心 Skype 的範例：
+在 Office 365 系統管理中心可讓您檢視資料的清單。 以下是商務用 Skype Online 系統管理中心範例，其中顯示已啟用商務用 Skype Online 的使用者清單：
   
 ![商務用 Skype Online 系統管理中心，顯示商務用 Skype Online 已啟用的使用者清單的範例。](media/o365-powershell-lync-users.png)
   
@@ -407,7 +404,6 @@ $x | Select DisplayName, IsLicensed, IsMailboxEnabled, EnabledforSfB
 ```
 DisplayName             IsLicensed   IsMailboxEnabled   EnabledForSfB
 -----------             ----------   ----------------   --------------
-Zrinka Makovac          True         True               True
 Bonnie Kearney          True         True               True
 Fabrice Canel           True         True               True
 Brian Johnson           False        True               False

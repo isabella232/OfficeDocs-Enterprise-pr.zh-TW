@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 0140f704-6614-49bb-aa6c-89b75dcd7f1f
 description: 使用此資訊來瞭解內容傳遞網路 (Cdn) 與 Office 365 如何使用它們。 Cdn 協助保護使用者的 Office 365 快速且可靠。 使用 Cdn，雲端服務，例如 Office 365 快速下載圖示] 等的一般內容至使用者的瀏覽器當他們使用透過 web 用戶端的服務。
-ms.openlocfilehash: c38b4c1fae2a40ff702c4d2222ed534e11fa2fc3
-ms.sourcegitcommit: 19f0deee26b6cf2eef316c742054572bb9d98b84
+ms.openlocfilehash: 0c44cb1a17b64f1b2f14cc34e1207f450dbd5bbf
+ms.sourcegitcommit: 7814d01db4d7618fc2f9381faef1a6a45ea063fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "30458333"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "30492953"
 ---
 # <a name="content-delivery-networks"></a>內容傳遞網路
 
@@ -77,7 +77,7 @@ Fqdn，以及它們如何運用一段時間的 Cdn 變更的清單，請參閱�
   
 ## <a name="is-my-data-safe"></a>為我的資料安全嗎？
 
-我們小心謹慎以確保我們保護執行您的業務資料。 客戶特定資料儲存在 Cdn 傳輸中和 rest、 加密，並受保護的資料不會儲存在 CDN 相同的檔案層級權限。
+我們小心謹慎以確保我們保護執行您的業務資料。 傳輸中和靜態加密儲存在 Cdn 的特定客戶的資料。
 
 CDN 提供者可能會有不同於所述的 Office 365 信任中心的承諾的隱私權和法規遵循標準。 透過 CDN 服務快取的資料可能不符合到 Microsoft 資料處理合約 (DPT)，且可能會在 Office 365 信任中心合規性界限之外。
 
@@ -89,7 +89,7 @@ CDN 提供者可能會有不同於所述的 Office 365 信任中心的承諾的�
 
 ## <a name="how-can-i-secure-my-network-with-all-these-3rd-party-services"></a>如何保護我的網路，具有所有這些 3rd 廠商服務？
 
-利用廣泛的協力廠商服務可讓 Office 365 擴充和符合可用性需求，以及使用 Office 365 時強化使用者體驗。 Office 365 採用 3rd 廠商服務包含兩個憑證撤銷清單;例如 crl.microsoft.com 或 sa.symcb.com 和 Cdn;例如 r3.res.outlook.com。 每個 CDN FQDN Office 365 使用 Office 365 自訂 FQDN，如果您正在傳送到 Office 365 要求的 FQDN 您可以確保我們控制 FQDN 和基礎內容在該位置。
+利用廣泛的協力廠商服務可讓 Office 365 擴充和符合可用性需求，以及使用 Office 365 時強化使用者體驗。 Office 365 採用 3rd 廠商服務包含兩個憑證撤銷清單;例如 crl.microsoft.com 或 sa.symcb.com 和 Cdn;例如 r3.res.outlook.com。 每個 CDN FQDN Office 365 使用是 Office 365 自訂 FQDN。 如果您正在傳送到 Office 365 要求的 FQDN 您可以確保 CDN 提供者控制 FQDN 並在該位置的基礎內容。
   
 客戶，還是要隔離目的地要求目的地為 3rd 廠商，從 Microsoft 或 Office 365 資料中心的要求我們已在[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)上寫設定下列項目的指引。
   
