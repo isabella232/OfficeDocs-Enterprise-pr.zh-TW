@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
 description: 摘要：使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端供應項目。
-ms.openlocfilehash: 51899ceb0cceef0248f6dc10cb21f5353e774cea
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 0ccea58e86f2e105704aac01ba4379c21a174e3a
+ms.sourcegitcommit: e5598a1220316122b5ed206c2607092ea1eac65c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897146"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "30573657"
 ---
 # <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
 
@@ -59,7 +59,7 @@ ms.locfileid: "25897146"
 
 在這個階段中，您可以註冊 EMS 試用訂閱，並將它新增至與 Office 365 試用訂閱相同的組織。
   
-1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://portal.office.com](https://portal.office.com) 的 Office 365 入口網站。
+1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://www.office.com](https://www.office.com) 的 Office 365 入口網站。
     
 2. 按一下 [管理]**** 磚。
     
@@ -102,11 +102,11 @@ ms.locfileid: "25897146"
 
 在這個階段中，您可以註冊 Dynamics 365 試用訂閱，並將它新增至與 Office 365 與 EMS 試用訂閱的相同組織。
   
-1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://portal.office.com](https://portal.office.com) 的 Office 365 入口網站。
+1. 使用電腦上的瀏覽器或是從 CLIENT1，以全域系統管理員帳戶的認證，登入位於 [https://www.office.com](https://www.office.com) 的 Office 365 入口網站。
     
 2. 按一下 [管理]**** 磚。
     
-3. 在 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
+3. 在 [Microsoft 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
 4. 在 [購買服務]**** 頁面上，尋找 [Dynamics 365 方案 1 企業版]**** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用] ****。
     
@@ -119,7 +119,7 @@ ms.locfileid: "25897146"
   
 使用這些步驟，將 Dynamics 365 授權指派給全域系統管理員、使用者 2 和使用者 3 帳戶，並將他們設為系統管理員。
   
-1. 在 [Office 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
+1. 在 [Microsoft 365 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
     
 2. 在作用中使用者清單中，按一下全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯] ****。
     
@@ -127,7 +127,7 @@ ms.locfileid: "25897146"
     
 4. 對使用者 2 和使用者 3 帳戶執行步驟 2 和 3。
     
-5. 關閉 [Office 系統管理中心]**** 索引標籤。
+5. 關閉 [Microsoft 365 系統管理中心]**** 索引標籤。
     
 使用這些步驟，將使用者 2 和使用者 3 帳戶設定為 Dynamics 365 系統管理員。
   
