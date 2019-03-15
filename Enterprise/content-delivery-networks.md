@@ -3,7 +3,7 @@ title: 內容傳遞網路
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 3/5/2019
+ms.date: 3/14/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -15,27 +15,21 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 0140f704-6614-49bb-aa6c-89b75dcd7f1f
-description: 使用此資訊來瞭解內容傳遞網路 (Cdn) 與 Office 365 如何使用它們。 Cdn 協助保護使用者的 Office 365 快速且可靠。 使用 Cdn，雲端服務，例如 Office 365 快速下載圖示] 等的一般內容至使用者的瀏覽器當他們使用透過 web 用戶端的服務。
-ms.openlocfilehash: 0c44cb1a17b64f1b2f14cc34e1207f450dbd5bbf
-ms.sourcegitcommit: 7814d01db4d7618fc2f9381faef1a6a45ea063fe
+description: 使用此資訊來瞭解內容傳遞網路 (Cdn) 與 Office 365 如何使用它們。
+ms.openlocfilehash: 50f28e8311a501d9bc5b3f2c709fa84b1633e418
+ms.sourcegitcommit: e5598a1220316122b5ed206c2607092ea1eac65c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "30492953"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "30636094"
 ---
 # <a name="content-delivery-networks"></a>內容傳遞網路
 
-使用此資訊來瞭解內容傳遞網路 (Cdn) 與 Office 365 如何使用它們。 Cdn 協助保護使用者的 Office 365 快速且可靠。 使用 Cdn，雲端服務，例如 Office 365 快速下載圖示] 等的一般內容至使用者的瀏覽器當他們使用透過 web 用戶端的服務。
+本主題中的資訊可協助您了解內容傳遞網路 (Cdn) 以及如何使用 Office 365。
+
+Cdn 協助保護使用者的 Office 365 快速且可靠。 Office 365 等雲端服務會使用 Cdn 快取靜態的資產更接近要求他們的瀏覽器以加速下載項目，並減少延遲。 公用 Cdn 允許加速下載的一般內容，例如 javascript 檔案、 圖示和影像，雖然私人 Cdn 可以提供快速的安全使用者內容，例如影片和 SharePoint Online 的文件庫的存取權。
   
  **Head 回到**[網路規劃和效能調整的 Office 365](https://aka.ms/tune)。
-  
-## <a name="how-should-i-set-up-my-network-so-that-cdns-work-best-with-office-365"></a>如何應該設定我的網路以便 Cdn 運作起來最順暢與 Office 365？
-
-如果您計劃[對 Office 365 的網路連線](network-connectivity.md)，很有幫助 Cdn 的運作方式。 務必了解您不能使用 IP 位址篩選 Cdn 的連線。 我們會提供 Office 365，例如 Exchange Online 中的服務的 Ip 的最佳投入比清單。 深入了解[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)我們建議。
-  
-## <a name="how-do-cdns-make-services-work-faster"></a>Cdn 如何讓服務運作得更快？
-
-超過再次下載常見之類的圖示，可能會耗費可更妥善地用於下載重要的個人內容，例如電子郵件或文件的網路頻寬。 因為 Office 365 使用架構，包括 Cdn、 圖示、 指令碼，以及其他一般內容可從伺服器更接近下載至用戶端電腦，更快速地進行下載。 這表示您個人的內容，安全地儲存在 Office 365 資料中心的快速存取。
   
 ## <a name="what-exactly-is-a-cdn"></a>什麼 CDN 究竟是？
 
@@ -52,11 +46,36 @@ Cdn 可以是私人或公開。 擁有私人 Cdn 且 21vianet 運作的單一的
 4. 如果資料不在 CDN 快取，CDN 節點要求從 Office 365 的資料，然後快取的資料為一段時間之後您的用戶端下載資料。
 
 Cdn 取出的檔案和影像從最接近的 Office 365 資料中心，並接著，您的用戶端的檔案和影像會從提取最接近的 CDN。 當使用者正在存取雲端服務，例如閱讀 Outlook Web App 中的電子郵件使用者的瀏覽器會嘗試從 Office 365 資料中心中擷取的檔案和影像。 而不是花時間與頻寬傳遞檔案，Office 365 會在瀏覽器重新導向至 CDN。 CDN 找出最接近的資料中心到使用者的瀏覽器，並使用重新導向，從該處下載一般的影像。 使用此 CDN 重新導向快速，且它會儲存使用者大量下載時間。
-  
-## <a name="is-there-a-list-of-all-the-fqdns-that-leverage-cdns"></a>是否有利用 Cdn 的所有 Fqdn 的清單？
 
-Fqdn，以及它們如何運用一段時間的 Cdn 變更的清單，請參閱我們已發佈的[Office 365 端點] 頁面上](https://go.microsoft.com/fwlink/p/?LinkID=293744)以取得最新利用 Cdn 的最新 Fqdn。
+## <a name="how-do-cdns-make-services-work-faster"></a>Cdn 如何讓服務運作得更快？
+
+超過再次下載常見之類的圖示，可能會耗費可更妥善地用於下載重要的個人內容，例如電子郵件或文件的網路頻寬。 因為 Office 365 使用架構，包括 Cdn、 圖示、 指令碼，以及其他一般內容可從伺服器更接近下載至用戶端電腦，更快速地進行下載。 這表示您個人的內容，安全地儲存在 Office 365 資料中心的快速存取。
+
+## <a name="how-should-i-set-up-my-network-so-that-cdns-work-best-with-office-365"></a>如何應該設定我的網路以便 Cdn 運作起來最順暢與 Office 365？
+
+如果您計劃[對 Office 365 的網路連線](network-connectivity.md)，很有幫助 Cdn 的運作方式一般而言，以及管理 CDN 網路流量的方式。
+
+當您啟用 CDN 的 Office 365 租用戶時，您首先控管 （稱為 「**原點**Cdn 的內容中） 的內容來源的設定原則資料分類] 或 [您想要透過 CDN 散發的檔案類型。 使用者存取指定的內容將會重新導向至最接近的 CDN 中的檔案位置。 因此，您應該使用[管理 Office 365 端點](managing-office-365-endpoints.md)中所述的最佳作法，以確保您的網路組態允許透過管理中心的 proxy，以避免存取 CDN 直接，而不是路由 CDN 流量的用戶端瀏覽器簡介不必要的延遲。
+
+## <a name="is-my-data-safe"></a>為我的資料安全嗎？
+
+我們小心謹慎以確保我們保護執行您的業務資料。 傳輸中和靜態加密儲存在 Cdn 的特定客戶的資料。
+
+> [!NOTE]
+> CDN 提供者可能會有不同於所述的 Office 365 信任中心的承諾的隱私權和法規遵循標準。 透過 CDN 服務快取的資料可能不符合到 Microsoft 資料處理合約 (DPT)，且可能會在 Office 365 信任中心合規性界限之外。
+
+深入資訊的隱私權和資料保護 Office 365 CDN 提供者的詳細資訊，請造訪下列各項：  
+
++ 深入了解 Office 365 的隱私權和資料保護，在[Microsoft 信任中心](https://www.microsoft.com/trustcenter)
++ 深入了解 Azure 的隱私權和資料保護在[Azure 的 [信任中心](https://azure.microsoft.com/en-us/overview/trusted-cloud/)
++ 深入了解 Akamai 的隱私權和資料保護在[Akamai 隱私權信任中心](https://www.akamai.com/us/en/about/compliance/data-protection-at-akamai.jsp)
+
+## <a name="how-can-i-secure-my-network-with-all-these-3rd-party-services"></a>如何保護我的網路，具有所有這些 3rd 廠商服務？
+
+利用廣泛的協力廠商服務可讓 Office 365 擴充和符合可用性需求，以及使用 Office 365 時強化使用者體驗。 Office 365 採用 3rd 廠商服務包含兩個憑證撤銷清單;例如 crl.microsoft.com 或 sa.symcb.com 和 Cdn;例如 r3.res.outlook.com。 每個 CDN FQDN Office 365 使用是 Office 365 自訂 FQDN。 如果您正在傳送到 Office 365 要求的 FQDN 您可以確保 CDN 提供者控制 FQDN 並在該位置的基礎內容。
   
+客戶，還是要隔離目的地要求目的地為 3rd 廠商，從 Microsoft 或 Office 365 資料中心的要求我們已在[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)上寫設定下列項目的指引。
+
 ## <a name="is-there-a-list-of-all-the-cdns-that-office-365-uses"></a>是否有 Office 365 使用的所有 Cdn 的清單？
 
 使用 Office 365 Cdn 永遠都會受到變更，並在許多情況下，有多個 CDN 合作夥伴設定事件中其中一個已無法使用。 主要是使用中的 Cdn:
@@ -71,28 +90,14 @@ Fqdn，以及它們如何運用一段時間的 Cdn 變更的清單，請參閱�
 
 如需如何使用 Office 365 CDN 的詳細資訊，請參閱 <<c0>使用 SharePoint Online 的 Office 365 內容傳遞網路。
 
+## <a name="is-there-a-list-of-all-the-fqdns-that-leverage-cdns"></a>是否有利用 Cdn 的所有 Fqdn 的清單？
+
+清單中的 Fqdn，以及它們如何運用 Cdn 變更一段時間，請參閱我們已發佈之[Office 365 Url 和 IP 位址範圍](https://go.microsoft.com/fwlink/p/?LinkID=293744)] 頁面，以取得最新利用 Cdn 的最新 Fqdn。
+
 ## <a name="can-i-use-my-own-cdn-and-cache-content-on-my-local-network"></a>可以在我的區域網路使用我自己 CDN 及快取的內容？
 
 我們不斷正在尋找新的方法來支援我們的客戶的需求，目前瀏覽使用快取 proxy 解決方案和其他在內部部署 CDN 解決方案。
-  
-## <a name="is-my-data-safe"></a>為我的資料安全嗎？
 
-我們小心謹慎以確保我們保護執行您的業務資料。 傳輸中和靜態加密儲存在 Cdn 的特定客戶的資料。
-
-CDN 提供者可能會有不同於所述的 Office 365 信任中心的承諾的隱私權和法規遵循標準。 透過 CDN 服務快取的資料可能不符合到 Microsoft 資料處理合約 (DPT)，且可能會在 Office 365 信任中心合規性界限之外。
-
-深入資訊的隱私權和資料保護 Office 365 CDN 提供者的詳細資訊，請造訪下列各項：  
-
-+ 深入了解在[Office 365 信任中心](https://go.microsoft.com/fwlink/p/?LinkId=397383)的 Office 365 的隱私權和資料保護
-+ 深入了解 Azure 的隱私權和資料保護在[Azure 的 [信任中心](https://azure.microsoft.com/en-us/overview/trusted-cloud/)
-+ 深入了解 Akamai 的隱私權和資料保護在[Akamai 隱私權信任中心](https://www.akamai.com/us/en/about/compliance/data-protection-at-akamai.jsp)
-
-## <a name="how-can-i-secure-my-network-with-all-these-3rd-party-services"></a>如何保護我的網路，具有所有這些 3rd 廠商服務？
-
-利用廣泛的協力廠商服務可讓 Office 365 擴充和符合可用性需求，以及使用 Office 365 時強化使用者體驗。 Office 365 採用 3rd 廠商服務包含兩個憑證撤銷清單;例如 crl.microsoft.com 或 sa.symcb.com 和 Cdn;例如 r3.res.outlook.com。 每個 CDN FQDN Office 365 使用是 Office 365 自訂 FQDN。 如果您正在傳送到 Office 365 要求的 FQDN 您可以確保 CDN 提供者控制 FQDN 並在該位置的基礎內容。
-  
-客戶，還是要隔離目的地要求目的地為 3rd 廠商，從 Microsoft 或 Office 365 資料中心的要求我們已在[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)上寫設定下列項目的指引。
-  
 ## <a name="im-using-azure-expressroute-for-office-365-does-that-change-things"></a>我使用 Azure ExpressRoute for Office 365，不會變更事項嗎？
 
 [Azure ExpressRoute for Office 365](azure-expressroute.md)提供從公用的網際網路專用的連線隔離的 Office 365 基礎結構。 這表示用戶端仍將需要透過非 ExpressRoute 連線以連線到 Cdn 和其他 Microsoft 基礎結構，不明確包含清單中的 ExpressRoute 所支援的服務連線。 如需如何路由傳送特定的流量，例如要求目的地 Cdn 的詳細資訊，請參閱[管理 Office 365 網路流量](routing-with-expressroute.md)。
@@ -101,4 +106,10 @@ CDN 提供者可能會有不同於所述的 Office 365 信任中心的承諾的�
   
 ## <a name="see-also"></a>另請參閱
 
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
+[管理 Office 365 端點](https://docs.microsoft.com/en-us/office365/enterprise/managing-office-365-endpoints)
+
+[Office 365 URL 與 IP 位址範圍](https://go.microsoft.com/fwlink/p/?LinkID=293744)
+
+[使用 SharePoint Online 中使用 Office 365 內容傳遞網路](https://docs.microsoft.com/en-us/office365/enterprise/use-office-365-cdn-with-spo)
+
+[Microsoft 信任中心](https://www.microsoft.com/trustcenter)
