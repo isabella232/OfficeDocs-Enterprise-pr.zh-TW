@@ -11,12 +11,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: 摘要：了解如何使用 Windows PowerShell 來完全移轉至 Office 365。
-ms.openlocfilehash: db2782faac86e53ffd4d2794ee77d53605c9484e
-ms.sourcegitcommit: 8fcf6fd9f0c45a5445654ef811410fca3f4f5512
+ms.openlocfilehash: 0f284e2dcccd3d7fc6958922ac4e87da4fc086ec
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "19193683"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30574077"
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-office-365"></a>使用 PowerShell 來執行完全移轉至 Office 365
 
@@ -75,7 +75,7 @@ ms.locfileid: "19193683"
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
-- **指派內部部署使用者帳戶來存取 Exchange 組織中的信箱的必要權限。** 您用來連線至內部部署 Exchange 組織 （也稱為 「 移轉管理員 」） 的內部部署使用者帳戶必須具備存取您要移轉至 Office 365 的內部部署信箱的必要權限。此使用者帳戶用來建立遷移端點至內部部署組織。
+- **指派必要權限給內部部署使用者帳戶來存取 Exchange 組織中的信箱。** 您用來連線至內部部署 Exchange 組織 （也稱為遷移系統管理員） 的內部部署使用者帳戶必須具有存取您要移轉到 Office 365 的內部部署信箱的必要權限。 此使用者帳戶可用來建立內部部署組織的移轉端點。
     
     下列清單顯示使用完全移轉來移轉信箱時所需的系統管理權限。有三個可能的選項。
     
@@ -195,7 +195,7 @@ Remove-MigrationBatch -Identity CutoverBatch
 ### <a name="section-7-assign-user-licenses"></a>第 7 節：指派使用者授權
 <a name="BK_Step7"> </a>
 
- **藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。** 如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。若要在 Office 365 系統管理中心 中指派授權，請參閱[指派或解除指派商務用 Office 365 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
+ **藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。** 如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。 若要在 Microsoft 365 系統管理中心將授權指派，請參閱[指派或取消指派商務用 Office 365 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
   
 ### <a name="step-8-complete-post-migration-tasks"></a>步驟 8：完成移轉後工作
 <a name="BK_Step8"> </a>

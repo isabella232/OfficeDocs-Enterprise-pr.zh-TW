@@ -3,7 +3,7 @@ title: Microsoft Cloud Networking for Enterprise Architects
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/28/2018
+ms.date: 03/12/2019
 ms.audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 13c71689-59a9-4cdf-8175-808a20c1e879
 description: 摘要： 設計您的 Microsoft 雲端服務與平台的網路功能。
-ms.openlocfilehash: 4864e92fd9a916c1aa15a8b921b9e64b486486fb
-ms.sourcegitcommit: 943d58b89459cd1edfc82e249c141d42dcf69641
+ms.openlocfilehash: 6b224ce2db0d247c553428a2e4bfd6ba475fc89a
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "27123350"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573897"
 ---
 # <a name="microsoft-cloud-networking-for-enterprise-architects"></a>Microsoft Cloud Networking for Enterprise Architects
 
@@ -63,8 +63,6 @@ ms.locfileid: "27123350"
     
     逐步執行設計程序，用於主控伺服器架構 IT 工作負載，包括子網路建立最佳 Azure 虛擬的網路 (VNet)、位址空間、路由、DNS、負載平衡，及與您在上場所的網路、其他 VNets 及網際網路連線能力。
     
-如需這張海報重點的 30 分鐘摘要，請參閱 Microsoft Virtual Academy 課程的[針對 Microsoft Cloud 供應項目最佳化您的網路](https://mva.microsoft.com/zh-TW/training-courses/optimize-your-network-for-microsoft-cloud-offerings-17743)。
-  
 > [!NOTE]
 > 這幾篇文章說明在 **2018 年 12 月**發佈的 Microsoft Cloud Networking for Enterprise Architects 海報。
   

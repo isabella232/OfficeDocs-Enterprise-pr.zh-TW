@@ -16,18 +16,18 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 將 Windows PowerShell 連線到單一的 Windows PowerShell 視窗中的所有 Office 365 服務。
-ms.openlocfilehash: 38221a2c9b50aaeab217016336cf4d020abd706a
-ms.sourcegitcommit: 2e5e2c65a1b785e229f1f7fd5b219f1b3de96f97
+ms.openlocfilehash: 3f6153d5ea8b88d8c6853dbbe597f2cf7cc62fab
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "30339511"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573967"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
  **摘要：** 而不是管理個別 PowerShell 主控台視窗中的不同 Office 365 服務，您可以連線至所有 Office 365 服務，並從單一主控台視窗管理它們。
   
-當您使用 PowerShell 來管理 Office 365 時，它可能會有最多可以有五個不同 Windows PowerShell 工作階段開啟對應至 Office 365 系統管理中心、 SharePoint Online、 Exchange Online、 商務用 Skype 線上商務和安全性&amp;合規性中心。 使用個別的 Windows PowerShell 工作階段中的五個不同的連線方法，您的桌面可能看起來像這樣：
+當您使用 PowerShell 來管理 Office 365 時，它可能會有最多可以有五個不同 Windows PowerShell 工作階段開啟同時對應至 Microsoft 365 系統管理中心、 SharePoint Online、 Exchange Online、 商務用 Skype 線上商務和安全性&amp;合規性中心。 使用個別的 Windows PowerShell 工作階段中的五個不同的連線方法，您的桌面可能看起來像這樣：
   
 ![一次執行五個 Windows PowerShell 主控台](media/a1a852c2-89ea-4e8e-8d8b-dcdf596763d1.png)
   
@@ -214,7 +214,7 @@ Exchange Online 和安全性&amp;合規性中心，請參閱下列主題，以�
 請注意，在這兩種情況下，您必須使用不同的工作階段的 Exchange Online 遠端 PowerShell 模組來連線。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)

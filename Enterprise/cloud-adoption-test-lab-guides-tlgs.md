@@ -3,7 +3,7 @@ title: 使用雲端採用測試實驗室指南 (TLG) 測試 Office 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/23/2018
+ms.date: 03/13/2019
 ms.audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365、Dynamics 365 和 Office Server 產品的展示版本、概念證明或開發/測試環境。
-ms.openlocfilehash: df4729c93f3665bdfe072102f2952d7432ad22f0
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 9d3423c1dadf95cd744a393c08b4303bc5cb8832
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897236"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573747"
 ---
 # <a name="test-office-365-with-cloud-adoption-test-lab-guides-tlgs"></a>使用雲端採用測試實驗室指南 (TLG) 測試 Office 365
 
@@ -34,11 +34,7 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
   
 ![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
-請在深入之前參閱這些額外資源：
-  
-- 檢視[使用雲端採用測試實驗室指南來體驗 Microsoft Cloud](https://mva.microsoft.com/en-US/training-courses/experience-the-microsoft-cloud-with-cloud-adoption-test-lab-guides-17960?l=LXNRdhSLE_1000115881 ) Microsoft Virtual Academy 工作階段 (只要 22 分鐘)。
-    
-- 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
     
 ## <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 

@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 499c5823-427a-4ba2-8fc1-9553bc2ff2d3
 description: 摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
-ms.openlocfilehash: 97e480bd148092f8e8e5ab610f0aed0a5eb2e20e
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: be79f58f448799bba9c4a9ee51350f198d721e0d
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897116"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30574017"
 ---
 # <a name="exchange-online-integration-for-your-office-365-and-dynamics-365-devtest-environment"></a>適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 
@@ -42,11 +42,11 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
 
 若要設定全域系統管理員的信箱將 Dynamics 365 與 Exchange Online 整合，請使用這些步驟：
   
-1. 使用的私用的工作階段的瀏覽器中移至[http://portal.office.com](http://portal.office.com)並使用您的 Office 365 全域管理員帳戶登入。
+1. 使用瀏覽器的私人工作階段移至[http://admin.microsoft.com](http://admin.microsoft.com)並使用您的 Office 365 全域系統管理員帳戶登入。
     
 2. 在 [Microsoft Office Home]**** 頁面上，按一下 [郵件]**** 磚。
     
-3. 在 [新**郵件**] 索引標籤在瀏覽器中按一下 [**新增**]，請注意的輸入訊息方塊下方窗格下方角落的 「 我的範本所具有的圖示。
+3. 在 [新**郵件**] 索引標籤瀏覽器中，按一下 [**新增**]，請注意的方塊中輸入訊息] 下的窗格的右下角的 「 我的範本所具有的圖示。
     
      ![不與 Dynamics 365 整合的全新空白電子郵件訊息。](media/879b54fd-a68f-4581-9f89-d5050df6f4de.png)
   
@@ -88,7 +88,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
     
 5. 按一下瀏覽器中的 [Microsoft Office Home]**** 索引標籤，然後按一下 [郵件]**** 磚。
     
-6. 在 [新**郵件**] 索引標籤在瀏覽器中按一下 [**新增]**。請注意針對現在輸入訊息方塊下方窗格下方角落的具有 Dynamics 365 圖示。
+6. 在新**郵件**] 索引標籤瀏覽器中，按一下 [**新增**]。 請注意現在輸入一個訊息方塊下方窗格的右下角的 Dynamics 365 有圖示。
     
      ![與 Dynamics 365 整合的全新空白電子郵件訊息，顯示新的圖示。](media/ecb822e1-45fe-4481-99a1-294317d1d2de.png)
   
