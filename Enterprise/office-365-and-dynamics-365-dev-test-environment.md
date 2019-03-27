@@ -16,12 +16,12 @@ ms.collection:
 ms.custom: Ent_TLGs
 ms.assetid: 098c1a1d-83a1-40eb-bbc9-47de7af8bb23
 description: 摘要：您可以使用這個測試實驗室指南將 Dynamics 365 新增到您的 Office 365 開發/測試環境。
-ms.openlocfilehash: 195e5ab4fd96d1f238c96d47cc7406a45e0e02b1
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.openlocfilehash: 9e4c98129c68ab5d2f0d9fc486ab62740c625af5
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915208"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30574057"
 ---
 # <a name="office-365-and-dynamics-365-devtest-environment"></a>Office 365 和 Dynamics 365 開發/測試環境
 
@@ -66,11 +66,11 @@ ms.locfileid: "22915208"
   
 ### <a name="sign-up-for-a-dynamics-365-trial-subscription"></a>註冊 Dynamics 365 試用訂閱
 
-1. 使用電腦上的瀏覽器 (輕量型) 或是從 CLIENT1 (模擬企業)，以全域系統管理員帳戶的認證，登入位於 [https://portal.office.com](https://portal.office.com) 的 Office 365 入口網站。
+1. 使用電腦上的瀏覽器 (輕量型) 或是從 CLIENT1 (模擬企業)，以全域系統管理員帳戶的認證，登入位於 [https://admin.microsoft.com](https://admin.microsoft.com) 的 Microsoft 365 系統管理中心。
     
 2. 按一下 [管理]**** 磚。
     
-3. 在 [Office 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
+3. 在 [Microsoft 365 系統管理中心]**** 索引標籤上，按一下左導覽中的 [計費] > [購買服務]****。
     
 4. 在 [購買服務]**** 頁面上，尋找 [Dynamics 365 方案 1 企業版]**** 項目。將滑鼠指標停留在上面，並且按一下 [開始免費試用] ****。
     
@@ -89,7 +89,7 @@ ms.locfileid: "22915208"
   
 使用這些步驟來指派 Dynamics 365 授權。
   
-1. 在 [Office 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
+1. 在 [Microsoft 365 系統管理中心]**** 索引標籤上，按一下 [使用者] > [作用中的使用者]****。
     
 2. 在作用中使用者清單中，按一下全域系統管理員帳戶，然後按一下 [產品授權]**** 的 [編輯] ****。
     
@@ -97,7 +97,7 @@ ms.locfileid: "22915208"
     
 4. 對使用者 2 和使用者 3 帳戶執行步驟 2 和 3。
     
-5. 關閉 [Office 系統管理中心]**** 索引標籤。
+5. 關閉 [Microsoft 365 系統管理中心]**** 索引標籤。
     
 使用這些步驟，將使用者 2 和使用者 3 帳戶設定為 Dynamics 365 系統管理員。
   

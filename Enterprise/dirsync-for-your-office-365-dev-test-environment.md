@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: 摘要：設定適用於 Office 365 開發/測試環境的目錄同步作業
-ms.openlocfilehash: 12a352bda387b79016edcc62c08ff15b0bf96ee9
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 374d99bc2433f539451882e1c2affe7bd41290db
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897496"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573947"
 ---
 # <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的目錄同步作業
 
@@ -92,7 +92,7 @@ Stop-Process -Name Explorer -Force
     
 11. 在 [組態完成]**** 頁面上，按一下 [結束]****。
     
-12. 在 Internet Explorer 中，移至 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com))，然後使用您的全域系統管理員帳戶登入 Office 365 試用訂閱。
+12. 在 Internet Explorer 中，移至 Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com))，然後使用您的全域系統管理員帳戶登入 Office 365 試用訂閱。
     
 13. 從主要的入口網站頁面中，按一下 [管理]****。
     

@@ -18,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 4705e8315b2ff0943749518034d63bad58ba178f
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 58b7505e0745ccdfe3e131f543c37f92385877f2
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897316"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30574047"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -150,14 +150,14 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
   
 ||**Office 365**|**Azure**|**Intune/EMS**|**Dynamics 365**|
 |:-----|:-----|:-----|:-----|:-----|
-|**Office 365** <br/> |NA  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |您在  Office 365 入口網站中為組織新增 Intune/EMS 訂用帳戶。  <br/> |您在  Office 365 入口網站中為組織新增 Dynamics 365 訂用帳戶。  <br/> |
+|**Office 365** <br/> |NA  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |您可以透過 Microsoft 365 系統管理中心為組織新增 Intune/EMS 訂閱。  <br/> |您可以透過 Microsoft 365 系統管理中心為組織新增 Dynamics 365 訂閱。  <br/> |
 |**Azure** <br/> |您為組織新增 Office 365 訂用帳戶。  <br/> |NA  <br/> |您為組織新增 Intune/EMS 訂用帳戶。  <br/> |您為組織新增 Dynamics 365 訂用帳戶。  <br/> |
 |**Intune/EMS** <br/> |您為組織新增 Office 365 訂用帳戶。  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |NA  <br/> |您為組織新增 Dynamics 365 訂用帳戶。  <br/> |
 |**Dynamics 365** <br/> |您為組織新增 Office 365 訂用帳戶。  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |您為組織新增 Intune/EMS 訂用帳戶。  <br/> |NA  <br/> |
    
 要將 Microsoft SaaS 服務的訂用帳戶新增到組織，簡單的做法是透過 Office 365 管理中心：
   
-1. 使用全域系統管理員帳戶登入 Office 365 入口網站 ([https://portal.office.com](https://portal.office.com))，然後按一下 [管理]****。
+1. 使用您的全域系統管理員帳戶登入 Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com))。
     
 2. 在 [管理中心]**** 首頁的導覽窗格中，按一下 [計費]****，然後按一下 [購買服務]****。
     

@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: 摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
-ms.openlocfilehash: d30bb27700199379ea96b157051110af49bf95fa
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.openlocfilehash: 3e390502e239573f1b3c93f5e3d46c0aa0f4579a
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "17504366"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30574107"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
@@ -236,7 +236,7 @@ Get-MigrationBatch StagedBatch1
 ### <a name="step7-assign-licenses-to-office-365-users"></a>步驟 7：指派授權給 Office 365 使用者
 <a name="BK_Endpoint"> </a>
 
-藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。若要在 Office 365 系統管理中心 中指派授權，請參閱[指派或解除指派商務用 Office 365 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
+藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。 如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。 若要在 Microsoft 365 系統管理中心中指派授權，請參閱[指派或解除指派商務用 Office 365 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
   
 ### <a name="step-8-complete-post-migration-tasks"></a>步驟 8：完成移轉後工作
 <a name="BK_Postmigration"> </a>

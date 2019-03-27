@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: 1606f30e28a482e60610d15b2f1643b9dd5b3240
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.openlocfilehash: 7a7b12038acf914667655decee52993286faab1e
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "25897266"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573997"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -118,7 +118,7 @@ ms.locfileid: "25897266"
     
 11. 在下一頁中，請稍候直到 Office 365 完成設定且所有的圖標皆可供使用。
     
-您應會看到主要 Office 365 入口網站頁面，您可以從其中存取 Office 線上服務和 Office 365 系統管理中心。
+您應會看到主要 Office 365 入口網站頁面，您可以從其中存取 Office Online 服務和 Microsoft 365 系統管理中心。
   
 針對模擬的企業 Office 365 開發/測試環境，此為產生的組態。
   
@@ -153,8 +153,10 @@ $licAssignment= $orgName + ":ENTERPRISEPREMIUM"
 $userName= "user2@" + $orgName + ".onmicrosoft.com"
 New-MsolUser -DisplayName "User 2" -FirstName User -LastName 2 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
 ```
+<!--
 > [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34)以取得包含本文中所有 PowerShell 命令的文字檔案。
+> Click [here](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34) to get a text file that has all the PowerShell commands in this article.
+-->
 
 從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 2 帳戶產生的密碼，並且將密碼記錄在安全的位置。
   

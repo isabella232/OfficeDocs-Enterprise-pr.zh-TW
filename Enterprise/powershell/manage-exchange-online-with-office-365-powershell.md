@@ -14,17 +14,18 @@ ms.custom:
 - PowerShell
 ms.assetid: b23dda88-f137-4051-9c2c-84035ad63f5e
 description: 摘要︰使用 Office 365 PowerShell 來管理 Microsoft Exchange Online，包括顯示信箱組態，以及進階報告。
-ms.openlocfilehash: 5a4853a8dc5c597b8cdee5a1fbfe1ad130feff4b
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
+ms.openlocfilehash: 93eb2ca11544139f3904126c0ec04fc1ab02ec1b
+ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "30573927"
 ---
 # <a name="manage-exchange-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 Exchange Online
 
- **摘要︰**使用 Office 365 PowerShell 來管理 Microsoft Exchange Online，包括顯示信箱組態，以及進階報告。
+ **摘要︰** 使用 Office 365 PowerShell 來管理 Microsoft Exchange Online，包括顯示信箱組態，以及進階報告。
   
-任何 Microsoft Exchange Online 系統管理員的其中一個主要工作是管理信箱並取得其報告。雖然您可以在 Office 365 系統管理中心 中完成其中某些工作，但是在 Office 365 PowerShell 中可以更快速且更容易地完成其他工作。如需詳細資訊，請參閱下列主題：
+任何 Microsoft Exchange Online 系統管理員的其中一個主要工作是管理信箱並取得其報告。 雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。 如需詳細資訊，請參閱下列主題：
   
 - [ Exchange Online 信箱資訊與 Office 365 PowerShell](https://technet.microsoft.com/zh-TW/library/mt771881%28v=exchg.160%29.aspx)
     
