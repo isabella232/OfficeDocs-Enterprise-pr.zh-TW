@@ -3,7 +3,7 @@
 
 
 
-## <a name="week-of-march-04-2019"></a>2019 年 3 月 04 日當週
+## <a name="week-of-march-04-2019"></a>2019 年 3 月 4 日當週
 
 
 | 發佈時間 |主題標題 | 變更 |
@@ -19,10 +19,10 @@
 | 3/4/2019 | [Office 365 的工作階段逾時](/Office365/Enterprise/session-timeouts) | 修改時間 |
 | 3/4/2019 | [調整 Exchange Online 效能](/Office365/Enterprise/tune-exchange-online-performance) | 修改時間 |
 | 3/4/2019 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 3/6/2019 | [內容傳遞網路](/Office365/Enterprise/content-delivery-networks) | 修改時間 |
-| 3/6/2019 | [混合式新式驗證概觀及使用商務和 Exchange 伺服器內部部署用 Skype 的必要條件](/Office365/Enterprise/hybrid-modern-auth-overview) | 修改時間 |
-| 3/6/2019 | [管理 Office 365 端點](/Office365/Enterprise/managing-office-365-endpoints) | 修改時間 |
-| 3/6/2019 | [將 OneDrive 網站移至不同的地理位置](/Office365/Enterprise/move-onedrive-between-geo-locations) | 修改時間 |
+| 2019 年 3 月 6 日 | [內容傳遞網路](/Office365/Enterprise/content-delivery-networks) | 修改時間 |
+| 2019 年 3 月 6 日 | [混合式新式驗證概觀及使用商務和 Exchange 伺服器內部部署用 Skype 的必要條件](/Office365/Enterprise/hybrid-modern-auth-overview) | 修改時間 |
+| 2019 年 3 月 6 日 | [管理 Office 365 端點](/Office365/Enterprise/managing-office-365-endpoints) | 修改時間 |
+| 2019 年 3 月 6 日 | [將 OneDrive 網站移至不同的地理位置](/Office365/Enterprise/move-onedrive-between-geo-locations) | 修改時間 |
 | 3/7/2019 | [使用 Office 365 PowerShell 移除使用者帳戶中的授權](/Office365/Enterprise/powershell/remove-licenses-from-user-accounts-with-office-365-powershell) | 修改時間 |
 | 3/8/2019 | [設定 Office 365 的目錄同步處理](/Office365/Enterprise/set-up-directory-synchronization) | 修改時間 |
 | 3/8/2019 | [調整 SharePoint Online 效能](/Office365/Enterprise/tune-sharepoint-online-performance) | 修改時間 |
@@ -44,7 +44,7 @@
 | 3/13/2019 | [Office 365 開發人員/測試環境的雲端 App 安全性](/Office365/Enterprise/cloud-app-security-for-your-office-365-dev-test-environment) | 修改時間 |
 | 3/13/2019 | [Office 365 開發/測試環境中的資料分類和標示](/Office365/Enterprise/data-classification-and-labeling-in-the-office-365-dev-test-environment) | 修改時間 |
 | 3/13/2019 | [在 Microsoft Azure 中部署 Office 365 目錄同步作業](/Office365/Enterprise/deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure) | 修改時間 |
-| 3/13/2019 | [適用於 Office 365 開發/測試環境的目錄同步作業](/Office365/Enterprise/dirsync-for-your-office-365-dev-test-environment) | 修改時間 |
+| 3/13/2019 | [Office 365 開發/測試環境的目錄同步處理](/Office365/Enterprise/dirsync-for-your-office-365-dev-test-environment) | 修改時間 |
 | 3/13/2019 | [適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合](/Office365/Enterprise/exchange-online-integration-for-your-office-365-and-dynamics-365-dev-test-enviro) | 修改時間 |
 | 3/13/2019 | [Microsoft 雲端連線 ExpressRoute](/Office365/Enterprise/expressroute-for-microsoft-cloud-connectivity) | 修改時間 |
 | 3/13/2019 | [Office 365 開發人員/測試環境的同盟身分識別](/Office365/Enterprise/federated-identity-for-your-office-365-dev-test-environment) | 修改時間 |
@@ -85,19 +85,16 @@
 | 3/15/2019 | [Azure 中模擬的跨單位部署虛擬網路](/Office365/Enterprise/simulated-cross-premises-virtual-network-in-azure) | 修改時間 |
 
 
-## <a name="week-of-february-11-2019"></a>2019 年 2 月 11 日當週
+## <a name="week-of-march-18-2019"></a>2019 年 3 月 18 日當週
 
 
 | 發佈時間 |主題標題 | 變更 |
 |------|------------|--------|
-| 2/11/2019 | [Office 365 用戶端應用程式支援人員-條件式存取](/Office365/Enterprise/office-365-client-support-conditional-access) | 修改時間 |
-| 2/11/2019 | [Office 365 用戶端應用程式支援行動應用程式管理](/Office365/Enterprise/office-365-client-support-mobile-application-management) | 修改時間 |
-| 2/11/2019 | [Office 365 用戶端應用程式支援新式驗證](/Office365/Enterprise/office-365-client-support-modern-authentication) | 修改時間 |
-| 2/12/2019 | [協力廠商 SSL 憑證的 Office 365 計劃](/Office365/Enterprise/plan-for-third-party-ssl-certificates) | 修改時間 |
-| 2/14/2019 | [管理 Office 365 端點](/Office365/Enterprise/managing-office-365-endpoints) | 修改時間 |
-| 2/14/2019 | [Office 365 的 OneDrive 中的多地理位置功能](/Office365/Enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365) | 修改時間 |
-| 2/14/2019 | [Office 365 網路連線原則](/Office365/Enterprise/office-365-network-connectivity-principles) | 修改時間 |
-| 2/14/2019 | [使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料](/Office365/Enterprise/powershell/view-account-license-and-service-details-with-office-365-powershell) | 修改時間 |
+| 3/18/2019 | [資料移動一般常見問題集](/Office365/Enterprise/data-move-faq) | 修改時間 |
+| 3/18/2019 | [期間和之後資料移動](/Office365/Enterprise/during-and-after-your-data-move) | 修改時間 |
+| 3/18/2019 | [容量規劃和負載測試 SharePoint Online](/Office365/Enterprise/capacity-planning-and-load-testing-sharepoint-online) | 修改時間 |
+| 3/18/2019 | [Office 365 租用戶間共同作業](/Office365/Enterprise/office-365-inter-tenant-collaboration) | 修改時間 |
+| 3/19/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
 
 
 ## <a name="week-of-february-18-2019"></a>2019 年 2 月 18 日當週
