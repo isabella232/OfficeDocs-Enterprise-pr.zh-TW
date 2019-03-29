@@ -17,231 +17,231 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 0bcf5aebf3a469f75ffac6c5df3d1f808038a299
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: ea5ecf6e44c11f8381a8fa75f523a765ce1669f6
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650146"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948624"
 ---
-# <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a><span data-ttu-id="7c560-103">使內部部署網路與 Microsoft Azure 虛擬網路連線</span><span class="sxs-lookup"><span data-stu-id="7c560-103">Connect an on-premises network to a Microsoft Azure virtual network</span></span>
+# <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a><span data-ttu-id="02e80-103">使內部部署網路與 Microsoft Azure 虛擬網路連線</span><span class="sxs-lookup"><span data-stu-id="02e80-103">Connect an on-premises network to a Microsoft Azure virtual network</span></span>
 
- <span data-ttu-id="7c560-104">**摘要：** 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-104">**Summary:** Learn how to configure a cross-premises Azure virtual network for Office server workloads.</span></span>
+ <span data-ttu-id="02e80-104">**摘要：** 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-104">**Summary:** Learn how to configure a cross-premises Azure virtual network for Office server workloads.</span></span>
   
-<span data-ttu-id="7c560-p101">跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="7c560-p101">A cross-premises Azure virtual network is connected to your on-premises network, extending your network to include subnets and virtual machines hosted in Azure infrastructure services. This connection lets computers on your on-premises network to directly access virtual machines in Azure and vice versa.</span></span> 
+<span data-ttu-id="02e80-p101">跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。</span><span class="sxs-lookup"><span data-stu-id="02e80-p101">A cross-premises Azure virtual network is connected to your on-premises network, extending your network to include subnets and virtual machines hosted in Azure infrastructure services. This connection lets computers on your on-premises network to directly access virtual machines in Azure and vice versa.</span></span> 
 
-<span data-ttu-id="7c560-p102">例如，在 Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢您的內部部署網域控制站是否有帳戶的變更，以將這些變更與您的 Office 365 訂閱進行同步處理。本文示範如何使用已準備好裝載 Azure 虛擬機器的站對站虛擬私人網路 (VPN) 連線，設定跨單位 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-p102">For example, a directory synchronization server running on an Azure virtual machine needs to query your on-premises domain controllers for changes to accounts and synchronize those changes with your Office 365 subscription. This article shows you how to set up a cross-premises Azure virtual network using a site-to-site virtual private network (VPN) connection that is ready to host Azure virtual machines.</span></span>
+<span data-ttu-id="02e80-p102">例如，在 Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢您的內部部署網域控制站是否有帳戶的變更，以將這些變更與您的 Office 365 訂閱進行同步處理。本文示範如何使用已準備好裝載 Azure 虛擬機器的站對站虛擬私人網路 (VPN) 連線，設定跨單位 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-p102">For example, a directory synchronization server running on an Azure virtual machine needs to query your on-premises domain controllers for changes to accounts and synchronize those changes with your Office 365 subscription. This article shows you how to set up a cross-premises Azure virtual network using a site-to-site virtual private network (VPN) connection that is ready to host Azure virtual machines.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="7c560-109">概觀</span><span class="sxs-lookup"><span data-stu-id="7c560-109">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="02e80-109">概觀</span><span class="sxs-lookup"><span data-stu-id="02e80-109">Overview</span></span>
 
-<span data-ttu-id="7c560-p103">Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azure 虛擬機器與內部部署網路資源連線，您必須設定跨單位 Azure 虛擬網路。下列圖表顯示當 Azure 中有一部虛擬機器時，部署跨單位 Azure 虛擬網路所需要的元件。</span><span class="sxs-lookup"><span data-stu-id="7c560-p103">Your virtual machines in Azure don't have to be isolated from your on-premises environment. To connect Azure virtual machines to your on-premises network resources, you must configure a cross-premises Azure virtual network. The following diagram shows the required components to deploy a cross-premises Azure virtual network with a virtual machine in Azure.</span></span>
+<span data-ttu-id="02e80-p103">Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azure 虛擬機器與內部部署網路資源連線，您必須設定跨單位 Azure 虛擬網路。下列圖表顯示當 Azure 中有一部虛擬機器時，部署跨單位 Azure 虛擬網路所需要的元件。</span><span class="sxs-lookup"><span data-stu-id="02e80-p103">Your virtual machines in Azure don't have to be isolated from your on-premises environment. To connect Azure virtual machines to your on-premises network resources, you must configure a cross-premises Azure virtual network. The following diagram shows the required components to deploy a cross-premises Azure virtual network with a virtual machine in Azure.</span></span>
   
 ![內部部署網路已透過站對站 VPN 連線連線到 Microsoft Azure](media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
  
-<span data-ttu-id="7c560-p104">在圖表中，有兩個網路透過站對站 VPN 連線來連線：內部部署網路和 Azure 虛擬網路。站對站 VPN 連線是：</span><span class="sxs-lookup"><span data-stu-id="7c560-p104">In the diagram, there are two networks connected by a site-to-site VPN connection: the on-premises network and the Azure virtual network. The site-to-site VPN connection is:</span></span>
+<span data-ttu-id="02e80-p104">在圖表中，有兩個網路透過站對站 VPN 連線來連線：內部部署網路和 Azure 虛擬網路。站對站 VPN 連線是：</span><span class="sxs-lookup"><span data-stu-id="02e80-p104">In the diagram, there are two networks connected by a site-to-site VPN connection: the on-premises network and the Azure virtual network. The site-to-site VPN connection is:</span></span>
 
-- <span data-ttu-id="7c560-116">介於可定址且位於公用網際網路上位置的兩個端點之間。</span><span class="sxs-lookup"><span data-stu-id="7c560-116">Between two endpoints that are addressable and located on the public Internet.</span></span>
-- <span data-ttu-id="7c560-117">由內部部署網路上的 VPN 裝置和 Azure 虛擬網路上的 Azure VPN 閘道加以終止。</span><span class="sxs-lookup"><span data-stu-id="7c560-117">Terminated by a VPN device on the on-premises network and an Azure VPN gateway on the Azure virtual network.</span></span>
+- <span data-ttu-id="02e80-116">介於可定址且位於公用網際網路上位置的兩個端點之間。</span><span class="sxs-lookup"><span data-stu-id="02e80-116">Between two endpoints that are addressable and located on the public Internet.</span></span>
+- <span data-ttu-id="02e80-117">由內部部署網路上的 VPN 裝置和 Azure 虛擬網路上的 Azure VPN 閘道加以終止。</span><span class="sxs-lookup"><span data-stu-id="02e80-117">Terminated by a VPN device on the on-premises network and an Azure VPN gateway on the Azure virtual network.</span></span>
 
-<span data-ttu-id="7c560-p105">Azure 虛擬網路會裝載虛擬機器。Azure 虛擬網路上虛擬機器所產生的網路流量會轉送至 VPN 閘道，然後會將站對站 VPN 連線的流量轉送至內部部署網路上的 VPN 裝置。然後內部部署網路的路由基礎結構會將流量轉送至其目的地。</span><span class="sxs-lookup"><span data-stu-id="7c560-p105">The Azure virtual network hosts virtual machines. Network traffic originating from virtual machines on the Azure virtual network gets forwarded to the VPN gateway, which then forwards the traffic across the site-to-site VPN connection to the VPN device on the on-premises network. The routing infrastructure of the on-premises network then forwards the traffic to its destination.</span></span>
+<span data-ttu-id="02e80-p105">Azure 虛擬網路會裝載虛擬機器。Azure 虛擬網路上虛擬機器所產生的網路流量會轉送至 VPN 閘道，然後會將站對站 VPN 連線的流量轉送至內部部署網路上的 VPN 裝置。然後內部部署網路的路由基礎結構會將流量轉送至其目的地。</span><span class="sxs-lookup"><span data-stu-id="02e80-p105">The Azure virtual network hosts virtual machines. Network traffic originating from virtual machines on the Azure virtual network gets forwarded to the VPN gateway, which then forwards the traffic across the site-to-site VPN connection to the VPN device on the on-premises network. The routing infrastructure of the on-premises network then forwards the traffic to its destination.</span></span>
 
 >[!Note]
-><span data-ttu-id="7c560-p106">您也可以使用 [ExpressRoute](https://azure.microsoft.com/services/expressroute/)，這是您的組織與 Microsoft 網路之間的直接連線。ExpressRoute 的流量不會在公用網際網路上流動。這篇文章不會說明 ExpressRoute 的使用方式。</span><span class="sxs-lookup"><span data-stu-id="7c560-p106">You can also use [ExpressRoute](https://azure.microsoft.com/services/expressroute/), which is a direct connection between your organization and Microsoft's network. Traffic over ExpressRoute does not travel over the public Internet. This article does not describe the use of ExpressRoute.</span></span>
+><span data-ttu-id="02e80-p106">您也可以使用 [ExpressRoute](https://azure.microsoft.com/services/expressroute/)，這是您的組織與 Microsoft 網路之間的直接連線。ExpressRoute 的流量不會在公用網際網路上流動。這篇文章不會說明 ExpressRoute 的使用方式。</span><span class="sxs-lookup"><span data-stu-id="02e80-p106">You can also use [ExpressRoute](https://azure.microsoft.com/services/expressroute/), which is a direct connection between your organization and Microsoft's network. Traffic over ExpressRoute does not travel over the public Internet. This article does not describe the use of ExpressRoute.</span></span>
 >
   
-<span data-ttu-id="7c560-124">若要設定 Azure 虛擬網路和內部部署網路間的 VPN 連線，請執行下列步驟︰</span><span class="sxs-lookup"><span data-stu-id="7c560-124">To set up the VPN connection between your Azure virtual network and your on-premises network, follow these steps:</span></span> 
+<span data-ttu-id="02e80-124">若要設定 Azure 虛擬網路和內部部署網路間的 VPN 連線，請執行下列步驟︰</span><span class="sxs-lookup"><span data-stu-id="02e80-124">To set up the VPN connection between your Azure virtual network and your on-premises network, follow these steps:</span></span> 
   
-1. <span data-ttu-id="7c560-125">**內部部署：** 針對指向您內部部署 VPN 裝置的 Azure 虛擬網路位址空間，定義和建立內部部署網路路由。</span><span class="sxs-lookup"><span data-stu-id="7c560-125">**On-premises:** Define and create an on-premises network route for the address space of the Azure virtual network that points to your on-premises VPN device.</span></span>
+1. <span data-ttu-id="02e80-125">**內部部署：** 針對指向您內部部署 VPN 裝置的 Azure 虛擬網路位址空間，定義和建立內部部署網路路由。</span><span class="sxs-lookup"><span data-stu-id="02e80-125">**On-premises:** Define and create an on-premises network route for the address space of the Azure virtual network that points to your on-premises VPN device.</span></span>
     
-2. <span data-ttu-id="7c560-126">**Microsoft Azure：** 建立具備站對站 VPN 連線的 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-126">**Microsoft Azure:** Create an Azure virtual network with a site-to-site VPN connection.</span></span> 
+2. <span data-ttu-id="02e80-126">**Microsoft Azure：** 建立具備站對站 VPN 連線的 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-126">**Microsoft Azure:** Create an Azure virtual network with a site-to-site VPN connection.</span></span> 
     
-3. <span data-ttu-id="7c560-127">**內部部署：** 設定內部部署硬體或軟體 VPN 裝置來終止使用網際網路通訊協定安全性 (IPsec) 的 VPN 連線。</span><span class="sxs-lookup"><span data-stu-id="7c560-127">**On premises:** Configure your on-premises hardware or software VPN device to terminate the VPN connection, which uses Internet Protocol security (IPsec).</span></span>
+3. <span data-ttu-id="02e80-127">**內部部署：** 設定內部部署硬體或軟體 VPN 裝置來終止使用網際網路通訊協定安全性 (IPsec) 的 VPN 連線。</span><span class="sxs-lookup"><span data-stu-id="02e80-127">**On premises:** Configure your on-premises hardware or software VPN device to terminate the VPN connection, which uses Internet Protocol security (IPsec).</span></span>
     
-<span data-ttu-id="7c560-128">建立站台對站台的 VPN 連線之後，將 Azure 虛擬機器新增至虛擬網路的子網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-128">After you establish the site-to-site VPN connection, you add Azure virtual machines to the subnets of the virtual network.</span></span>
+<span data-ttu-id="02e80-128">建立站台對站台的 VPN 連線之後，將 Azure 虛擬機器新增至虛擬網路的子網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-128">After you establish the site-to-site VPN connection, you add Azure virtual machines to the subnets of the virtual network.</span></span>
   
-## <a name="plan-your-azure-virtual-network"></a><span data-ttu-id="7c560-129">規劃您的 Azure 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="7c560-129">Plan your Azure virtual network</span></span>
+## <a name="plan-your-azure-virtual-network"></a><span data-ttu-id="02e80-129">規劃您的 Azure 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="02e80-129">Plan your Azure virtual network</span></span>
 <a name="PlanningVirtual"></a>
 
-### <a name="prerequisites"></a><span data-ttu-id="7c560-130">必要條件</span><span class="sxs-lookup"><span data-stu-id="7c560-130">Prerequisites</span></span>
+### <a name="prerequisites"></a><span data-ttu-id="02e80-130">必要條件</span><span class="sxs-lookup"><span data-stu-id="02e80-130">Prerequisites</span></span>
 <a name="Prerequisites"></a>
 
-- <span data-ttu-id="7c560-p107">Azure 訂用帳戶。如需有關 Azure 訂用帳戶的資訊，請移至[如何購買 Azure 頁面](https://azure.microsoft.com/pricing/purchase-options/)。</span><span class="sxs-lookup"><span data-stu-id="7c560-p107">An Azure subscription. For information about Azure subscriptions, go to the [How To Buy Azure page](https://azure.microsoft.com/pricing/purchase-options/).</span></span>
+- <span data-ttu-id="02e80-p107">Azure 訂用帳戶。如需有關 Azure 訂用帳戶的資訊，請移至[如何購買 Azure 頁面](https://azure.microsoft.com/pricing/purchase-options/)。</span><span class="sxs-lookup"><span data-stu-id="02e80-p107">An Azure subscription. For information about Azure subscriptions, go to the [How To Buy Azure page](https://azure.microsoft.com/pricing/purchase-options/).</span></span>
     
-- <span data-ttu-id="7c560-133">要指派至虛擬網路和其子網路的可用私人 IPv4 位址空間，需具備足夠的擴充空間，以容納現在或未來所需的虛擬機器數量。</span><span class="sxs-lookup"><span data-stu-id="7c560-133">An available private IPv4 address space to assign to the virtual network and its subnets, with sufficient room for growth to accommodate the number of virtual machines needed now and in the future.</span></span>
+- <span data-ttu-id="02e80-133">要指派至虛擬網路和其子網路的可用私人 IPv4 位址空間，需具備足夠的擴充空間，以容納現在或未來所需的虛擬機器數量。</span><span class="sxs-lookup"><span data-stu-id="02e80-133">An available private IPv4 address space to assign to the virtual network and its subnets, with sufficient room for growth to accommodate the number of virtual machines needed now and in the future.</span></span>
     
-- <span data-ttu-id="7c560-p108">內部部署網路中可用的 VPN 裝置，用於終止可支援 IPsec 需求的站台對站台 VPN 連線。如需詳細資訊，請參閱＜[關於適用於站台對站台虛擬網路連線的 VPN 裝置](https://go.microsoft.com/fwlink/p/?LinkId=393093)＞。</span><span class="sxs-lookup"><span data-stu-id="7c560-p108">An available VPN device in your on-premises network to terminate the site-to-site VPN connection that supports the requirements for IPsec. For more information, see [About VPN devices for site-to-site virtual network connections](https://go.microsoft.com/fwlink/p/?LinkId=393093).</span></span>
+- <span data-ttu-id="02e80-p108">內部部署網路中可用的 VPN 裝置，用於終止可支援 IPsec 需求的站台對站台 VPN 連線。如需詳細資訊，請參閱＜[關於適用於站台對站台虛擬網路連線的 VPN 裝置](https://go.microsoft.com/fwlink/p/?LinkId=393093)＞。</span><span class="sxs-lookup"><span data-stu-id="02e80-p108">An available VPN device in your on-premises network to terminate the site-to-site VPN connection that supports the requirements for IPsec. For more information, see [About VPN devices for site-to-site virtual network connections](https://go.microsoft.com/fwlink/p/?LinkId=393093).</span></span>
     
-- <span data-ttu-id="7c560-136">路由基礎結構的變更，以便讓路由至 Azure 虛擬網路位址空間的流量可轉送至裝載站台對站台 VPN 連線的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="7c560-136">Changes to your routing infrastructure so that traffic routed to the address space of the Azure virtual network gets forwarded to the VPN device that hosts the site-to-site VPN connection.</span></span>
+- <span data-ttu-id="02e80-136">路由基礎結構的變更，以便讓路由至 Azure 虛擬網路位址空間的流量可轉送至裝載站台對站台 VPN 連線的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="02e80-136">Changes to your routing infrastructure so that traffic routed to the address space of the Azure virtual network gets forwarded to the VPN device that hosts the site-to-site VPN connection.</span></span>
     
-- <span data-ttu-id="7c560-137">Web Proxy，讓與內部部署網路和 Azure虛擬網路連線的電腦可存取網際網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-137">A web proxy that gives computers that are connected to the on-premises network and the Azure virtual network access to the Internet.</span></span>
+- <span data-ttu-id="02e80-137">Web Proxy，讓與內部部署網路和 Azure虛擬網路連線的電腦可存取網際網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-137">A web proxy that gives computers that are connected to the on-premises network and the Azure virtual network access to the Internet.</span></span>
     
-### <a name="solution-architecture-design-assumptions"></a><span data-ttu-id="7c560-138">解決方案架構設計假設</span><span class="sxs-lookup"><span data-stu-id="7c560-138">Solution architecture design assumptions</span></span>
+### <a name="solution-architecture-design-assumptions"></a><span data-ttu-id="02e80-138">解決方案架構設計假設</span><span class="sxs-lookup"><span data-stu-id="02e80-138">Solution architecture design assumptions</span></span>
 
-<span data-ttu-id="7c560-139">下列清單會列出針對此解決方案架構所做的設計選擇。</span><span class="sxs-lookup"><span data-stu-id="7c560-139">The following list represents the design choices that have been made for this solution architecture.</span></span> 
+<span data-ttu-id="02e80-139">下列清單會列出針對此解決方案架構所做的設計選擇。</span><span class="sxs-lookup"><span data-stu-id="02e80-139">The following list represents the design choices that have been made for this solution architecture.</span></span> 
   
-- <span data-ttu-id="7c560-p109">本解決方案使用具備站台對站台 VPN 連線的單一 Azure 虛擬網路。Azure 虛擬網路會裝載內含多部虛擬機器的單一子網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-p109">This solution uses a single Azure virtual network with a site-to-site VPN connection. The Azure virtual network hosts a single subnet that can contain multiple virtual machines.</span></span> 
+- <span data-ttu-id="02e80-p109">本解決方案使用具備站台對站台 VPN 連線的單一 Azure 虛擬網路。Azure 虛擬網路會裝載內含多部虛擬機器的單一子網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-p109">This solution uses a single Azure virtual network with a site-to-site VPN connection. The Azure virtual network hosts a single subnet that can contain multiple virtual machines.</span></span> 
     
-- <span data-ttu-id="7c560-p110">您可以使用 Windows Server 2016 中的路由及遠端存取服務 (RRAS) 或 Windows Server 2012，建立內部部署網路和 Azure 虛擬網路間的 IPsec 站台對站台 VPN 連線。您也可以使用其他選項，例如 Cisco 或 Juniper Networks 的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="7c560-p110">You can use the Routing and Remote Access Service (RRAS) in Windows Server 2016 or Windows Server 2012 to establish an IPsec site-to-site VPN connection between the on-premises network and the Azure virtual network. You can also use other options, such as Cisco or Juniper Networks VPN devices.</span></span>
+- <span data-ttu-id="02e80-p110">您可以使用 Windows Server 2016 中的路由及遠端存取服務 (RRAS) 或 Windows Server 2012，建立內部部署網路和 Azure 虛擬網路間的 IPsec 站台對站台 VPN 連線。您也可以使用其他選項，例如 Cisco 或 Juniper Networks 的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="02e80-p110">You can use the Routing and Remote Access Service (RRAS) in Windows Server 2016 or Windows Server 2012 to establish an IPsec site-to-site VPN connection between the on-premises network and the Azure virtual network. You can also use other options, such as Cisco or Juniper Networks VPN devices.</span></span>
     
-- <span data-ttu-id="7c560-p111">內部部署網路可能仍有 Windows Server Active Directory (AD)、網域名稱系統 (DNS) 和 Proxy 伺服器等網路服務。視您的需求而定，將一些此類網路資源放在 Azure 虛擬網路中可能會有助益。</span><span class="sxs-lookup"><span data-stu-id="7c560-p111">The on-premises network might still have network services like Windows Server Active Directory (AD), Domain Name System (DNS), and proxy servers. Depending on your requirements, it might be beneficial to place some of these network resources in the Azure virtual network.</span></span>
+- <span data-ttu-id="02e80-p111">內部部署網路可能仍有 Windows Server Active Directory (AD)、網域名稱系統 (DNS) 和 Proxy 伺服器等網路服務。視您的需求而定，將一些此類網路資源放在 Azure 虛擬網路中可能會有助益。</span><span class="sxs-lookup"><span data-stu-id="02e80-p111">The on-premises network might still have network services like Windows Server Active Directory (AD), Domain Name System (DNS), and proxy servers. Depending on your requirements, it might be beneficial to place some of these network resources in the Azure virtual network.</span></span>
     
-<span data-ttu-id="7c560-p112">對於具備一個或多個子網路的現有 Azure 虛擬網路，請判斷其是否還有位址空間容納其他子網路，以裝載所需的虛擬機器 (視您的需求而定)。如果您沒有其餘位址空間可容納其他子網路，請建立本身具備站台對站台 VPN 連線的其他虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-p112">For an existing Azure virtual network with one or more subnets, determine whether there is remaining address space for an additional subnet to host your needed virtual machines, based on your requirements. If you don't have remaining address space for an additional subnet, create an additional virtual network that has its own site-to-site VPN connection.</span></span>
+<span data-ttu-id="02e80-p112">對於具備一個或多個子網路的現有 Azure 虛擬網路，請判斷其是否還有位址空間容納其他子網路，以裝載所需的虛擬機器 (視您的需求而定)。如果您沒有其餘位址空間可容納其他子網路，請建立本身具備站台對站台 VPN 連線的其他虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-p112">For an existing Azure virtual network with one or more subnets, determine whether there is remaining address space for an additional subnet to host your needed virtual machines, based on your requirements. If you don't have remaining address space for an additional subnet, create an additional virtual network that has its own site-to-site VPN connection.</span></span>
   
-### <a name="plan-the-routing-infrastructure-changes-for-the-azure-virtual-network"></a><span data-ttu-id="7c560-148">規劃適用於 Azure 虛擬網路的路由基礎結構變更</span><span class="sxs-lookup"><span data-stu-id="7c560-148">Plan the routing infrastructure changes for the Azure virtual network</span></span>
+### <a name="plan-the-routing-infrastructure-changes-for-the-azure-virtual-network"></a><span data-ttu-id="02e80-148">規劃適用於 Azure 虛擬網路的路由基礎結構變更</span><span class="sxs-lookup"><span data-stu-id="02e80-148">Plan the routing infrastructure changes for the Azure virtual network</span></span>
 
-<span data-ttu-id="7c560-149">您必須設定內部部署路由基礎結構，以便將目的地為 Azure 虛擬網路位址空間的流量轉送至裝載站台對站台 VPN 連線的內部部署 VPN 裝置</span><span class="sxs-lookup"><span data-stu-id="7c560-149">You must configure your on-premises routing infrastructure to forward traffic destined for the address space of the Azure virtual network to the on-premises VPN device that is hosting the site-to-site VPN connection.</span></span>
+<span data-ttu-id="02e80-149">您必須設定內部部署路由基礎結構，以便將目的地為 Azure 虛擬網路位址空間的流量轉送至裝載站台對站台 VPN 連線的內部部署 VPN 裝置</span><span class="sxs-lookup"><span data-stu-id="02e80-149">You must configure your on-premises routing infrastructure to forward traffic destined for the address space of the Azure virtual network to the on-premises VPN device that is hosting the site-to-site VPN connection.</span></span>
   
-<span data-ttu-id="7c560-150">更新路由基礎結構的確切方法須根據您管理路由資訊的方法而定，可能是以下方法：</span><span class="sxs-lookup"><span data-stu-id="7c560-150">The exact method of updating your routing infrastructure depends on how you manage routing information, which can be:</span></span>
+<span data-ttu-id="02e80-150">更新路由基礎結構的確切方法須根據您管理路由資訊的方法而定，可能是以下方法：</span><span class="sxs-lookup"><span data-stu-id="02e80-150">The exact method of updating your routing infrastructure depends on how you manage routing information, which can be:</span></span>
   
-- <span data-ttu-id="7c560-151">以手動設定更新路由表。</span><span class="sxs-lookup"><span data-stu-id="7c560-151">Routing table updates based on manual configuration.</span></span>
+- <span data-ttu-id="02e80-151">以手動設定更新路由表。</span><span class="sxs-lookup"><span data-stu-id="02e80-151">Routing table updates based on manual configuration.</span></span>
     
-- <span data-ttu-id="7c560-152">以「路由資訊通訊協定 (RIP)」或「先開啟最短的路徑 (OSPF)」等路由通訊協定更新路由表。</span><span class="sxs-lookup"><span data-stu-id="7c560-152">Routing table updates based on routing protocols, such as Routing Information Protocol (RIP) or Open Shortest Path First (OSPF).</span></span>
+- <span data-ttu-id="02e80-152">以「路由資訊通訊協定 (RIP)」或「先開啟最短的路徑 (OSPF)」等路由通訊協定更新路由表。</span><span class="sxs-lookup"><span data-stu-id="02e80-152">Routing table updates based on routing protocols, such as Routing Information Protocol (RIP) or Open Shortest Path First (OSPF).</span></span>
     
-<span data-ttu-id="7c560-153">請洽詢路由專業人員，以確定目的地是 Azure 虛擬網路的流量會轉送到內部部署的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="7c560-153">Consult with your routing specialist to make sure that traffic destined for the Azure virtual network is forwarded to the on-premises VPN device.</span></span>
+<span data-ttu-id="02e80-153">請洽詢路由專業人員，以確定目的地是 Azure 虛擬網路的流量會轉送到內部部署的 VPN 裝置。</span><span class="sxs-lookup"><span data-stu-id="02e80-153">Consult with your routing specialist to make sure that traffic destined for the Azure virtual network is forwarded to the on-premises VPN device.</span></span>
   
-### <a name="plan-for-firewall-rules-for-traffic-to-and-from-the-on-premises-vpn-device"></a><span data-ttu-id="7c560-154">為內部部署 VPN 裝置的流量傳輸規劃防火牆規則</span><span class="sxs-lookup"><span data-stu-id="7c560-154">Plan for firewall rules for traffic to and from the on-premises VPN device</span></span>
+### <a name="plan-for-firewall-rules-for-traffic-to-and-from-the-on-premises-vpn-device"></a><span data-ttu-id="02e80-154">為內部部署 VPN 裝置的流量傳輸規劃防火牆規則</span><span class="sxs-lookup"><span data-stu-id="02e80-154">Plan for firewall rules for traffic to and from the on-premises VPN device</span></span>
 
-<span data-ttu-id="7c560-155">如果 VPN 裝置位於周邊網路上，且周邊網路與網際網路間有防火牆，您可能必須為防火牆設定以下規則，以允許站台對站台的 VPN 連線。</span><span class="sxs-lookup"><span data-stu-id="7c560-155">If your VPN device is on a perimeter network that has a firewall between the perimeter network and the Internet, you might have to configure the firewall for the following rules to allow the site-to-site VPN connection.</span></span>
+<span data-ttu-id="02e80-155">如果 VPN 裝置位於周邊網路上，且周邊網路與網際網路間有防火牆，您可能必須為防火牆設定以下規則，以允許站台對站台的 VPN 連線。</span><span class="sxs-lookup"><span data-stu-id="02e80-155">If your VPN device is on a perimeter network that has a firewall between the perimeter network and the Internet, you might have to configure the firewall for the following rules to allow the site-to-site VPN connection.</span></span>
   
-- <span data-ttu-id="7c560-156">傳輸至 VPN 裝置的流量 (從網際網路傳入)：</span><span class="sxs-lookup"><span data-stu-id="7c560-156">Traffic to the VPN device (incoming from the Internet):</span></span>
+- <span data-ttu-id="02e80-156">傳輸至 VPN 裝置的流量 (從網際網路傳入)：</span><span class="sxs-lookup"><span data-stu-id="02e80-156">Traffic to the VPN device (incoming from the Internet):</span></span>
     
-  - <span data-ttu-id="7c560-157">VPN 裝置的目的地 IP 位址和 IP 通訊協定 50</span><span class="sxs-lookup"><span data-stu-id="7c560-157">Destination IP address of the VPN device and IP protocol 50</span></span>
+  - <span data-ttu-id="02e80-157">VPN 裝置的目的地 IP 位址和 IP 通訊協定 50</span><span class="sxs-lookup"><span data-stu-id="02e80-157">Destination IP address of the VPN device and IP protocol 50</span></span>
     
-  - <span data-ttu-id="7c560-158">VPN 裝置的目的地 IP 位址和 UDP 目的地通訊協定 500</span><span class="sxs-lookup"><span data-stu-id="7c560-158">Destination IP address of the VPN device and UDP destination port 500</span></span>
+  - <span data-ttu-id="02e80-158">VPN 裝置的目的地 IP 位址和 UDP 目的地通訊協定 500</span><span class="sxs-lookup"><span data-stu-id="02e80-158">Destination IP address of the VPN device and UDP destination port 500</span></span>
     
-  - <span data-ttu-id="7c560-159">VPN 裝置的目的地 IP 位址和 UDP 目的地通訊協定 4500</span><span class="sxs-lookup"><span data-stu-id="7c560-159">Destination IP address of the VPN device and UDP destination port 4500</span></span>
+  - <span data-ttu-id="02e80-159">VPN 裝置的目的地 IP 位址和 UDP 目的地通訊協定 4500</span><span class="sxs-lookup"><span data-stu-id="02e80-159">Destination IP address of the VPN device and UDP destination port 4500</span></span>
     
-- <span data-ttu-id="7c560-160">從 VPN 裝置傳輸出去的流量 (傳出至網際網路)︰</span><span class="sxs-lookup"><span data-stu-id="7c560-160">Traffic from the VPN device (outgoing to the Internet):</span></span>
+- <span data-ttu-id="02e80-160">從 VPN 裝置傳輸出去的流量 (傳出至網際網路)︰</span><span class="sxs-lookup"><span data-stu-id="02e80-160">Traffic from the VPN device (outgoing to the Internet):</span></span>
     
-  - <span data-ttu-id="7c560-161">VPN 裝置的來源 IP 位址和 IP 通訊協定 50</span><span class="sxs-lookup"><span data-stu-id="7c560-161">Source IP address of the VPN device and IP protocol 50</span></span>
+  - <span data-ttu-id="02e80-161">VPN 裝置的來源 IP 位址和 IP 通訊協定 50</span><span class="sxs-lookup"><span data-stu-id="02e80-161">Source IP address of the VPN device and IP protocol 50</span></span>
     
-  - <span data-ttu-id="7c560-162">VPN 裝置的來源 IP 位址和 UDP 來源通訊協定 500</span><span class="sxs-lookup"><span data-stu-id="7c560-162">Source IP address of the VPN device and UDP source port 500</span></span>
+  - <span data-ttu-id="02e80-162">VPN 裝置的來源 IP 位址和 UDP 來源通訊協定 500</span><span class="sxs-lookup"><span data-stu-id="02e80-162">Source IP address of the VPN device and UDP source port 500</span></span>
     
-  - <span data-ttu-id="7c560-163">VPN 裝置的來源 IP 位址和 UDP 來源通訊協定 4500</span><span class="sxs-lookup"><span data-stu-id="7c560-163">Source IP address of the VPN device and UDP source port 4500</span></span>
+  - <span data-ttu-id="02e80-163">VPN 裝置的來源 IP 位址和 UDP 來源通訊協定 4500</span><span class="sxs-lookup"><span data-stu-id="02e80-163">Source IP address of the VPN device and UDP source port 4500</span></span>
     
-### <a name="plan-for-the-private-ip-address-space-of-the-azure-virtual-network"></a><span data-ttu-id="7c560-164">規劃 Azure 虛擬網路的私人 IP 位址空間</span><span class="sxs-lookup"><span data-stu-id="7c560-164">Plan for the private IP address space of the Azure virtual network</span></span>
+### <a name="plan-for-the-private-ip-address-space-of-the-azure-virtual-network"></a><span data-ttu-id="02e80-164">規劃 Azure 虛擬網路的私人 IP 位址空間</span><span class="sxs-lookup"><span data-stu-id="02e80-164">Plan for the private IP address space of the Azure virtual network</span></span>
 
-<span data-ttu-id="7c560-165">Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址，以裝載虛擬網路，以及至少具備一個對 Azure 虛擬機器來說有足夠位址的子網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-165">The private IP address space of the Azure virtual network must be able to accommodate addresses used by Azure to host the virtual network and with at least one subnet that has enough addresses for your Azure virtual machines.</span></span>
+<span data-ttu-id="02e80-165">Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址，以裝載虛擬網路，以及至少具備一個對 Azure 虛擬機器來說有足夠位址的子網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-165">The private IP address space of the Azure virtual network must be able to accommodate addresses used by Azure to host the virtual network and with at least one subnet that has enough addresses for your Azure virtual machines.</span></span>
   
-<span data-ttu-id="7c560-166">若要判斷子網路所需的位址數量，請計算您現在需要的虛擬機器數量、預估未來的成長量，然後使用下表來決定子網路的大小。</span><span class="sxs-lookup"><span data-stu-id="7c560-166">To determine the number of addresses needed for the subnet, count the number of virtual machines that you need now, estimate for future growth, and then use the following table to determine the size of the subnet.</span></span>
+<span data-ttu-id="02e80-166">若要判斷子網路所需的位址數量，請計算您現在需要的虛擬機器數量、預估未來的成長量，然後使用下表來決定子網路的大小。</span><span class="sxs-lookup"><span data-stu-id="02e80-166">To determine the number of addresses needed for the subnet, count the number of virtual machines that you need now, estimate for future growth, and then use the following table to determine the size of the subnet.</span></span>
   
-|<span data-ttu-id="7c560-167">**所需的虛擬機器數量**</span><span class="sxs-lookup"><span data-stu-id="7c560-167">**Number of virtual machines needed**</span></span>|<span data-ttu-id="7c560-168">**所需的主機位元數**</span><span class="sxs-lookup"><span data-stu-id="7c560-168">**Number of host bits needed**</span></span>|<span data-ttu-id="7c560-169">**子網路大小**</span><span class="sxs-lookup"><span data-stu-id="7c560-169">**Size of the subnet**</span></span>|
+|<span data-ttu-id="02e80-167">**所需的虛擬機器數量**</span><span class="sxs-lookup"><span data-stu-id="02e80-167">**Number of virtual machines needed**</span></span>|<span data-ttu-id="02e80-168">**所需的主機位元數**</span><span class="sxs-lookup"><span data-stu-id="02e80-168">**Number of host bits needed**</span></span>|<span data-ttu-id="02e80-169">**子網路大小**</span><span class="sxs-lookup"><span data-stu-id="02e80-169">**Size of the subnet**</span></span>|
 |:-----|:-----|:-----|
-|<span data-ttu-id="7c560-170">1-3</span><span class="sxs-lookup"><span data-stu-id="7c560-170">1-3</span></span>  <br/> |<span data-ttu-id="7c560-171">3</span><span class="sxs-lookup"><span data-stu-id="7c560-171">3.</span></span>  <br/> |<span data-ttu-id="7c560-172">/29</span><span class="sxs-lookup"><span data-stu-id="7c560-172">/29</span></span>  <br/> |
-|<span data-ttu-id="7c560-173">4-11</span><span class="sxs-lookup"><span data-stu-id="7c560-173">4-11</span></span>  <br/> |<span data-ttu-id="7c560-174">4</span><span class="sxs-lookup"><span data-stu-id="7c560-174">4.</span></span>  <br/> |<span data-ttu-id="7c560-175">/28</span><span class="sxs-lookup"><span data-stu-id="7c560-175">/28</span></span>  <br/> |
-|<span data-ttu-id="7c560-176">12-27</span><span class="sxs-lookup"><span data-stu-id="7c560-176">12-27</span></span>  <br/> |<span data-ttu-id="7c560-177">5</span><span class="sxs-lookup"><span data-stu-id="7c560-177">5.</span></span>  <br/> |<span data-ttu-id="7c560-178">/27</span><span class="sxs-lookup"><span data-stu-id="7c560-178">/27</span></span>  <br/> |
-|<span data-ttu-id="7c560-179">28-59</span><span class="sxs-lookup"><span data-stu-id="7c560-179">28-59</span></span>  <br/> |<span data-ttu-id="7c560-180">6</span><span class="sxs-lookup"><span data-stu-id="7c560-180">6.</span></span>  <br/> |<span data-ttu-id="7c560-181">/26</span><span class="sxs-lookup"><span data-stu-id="7c560-181">/26</span></span>  <br/> |
-|<span data-ttu-id="7c560-182">60-123</span><span class="sxs-lookup"><span data-stu-id="7c560-182">60-123</span></span>  <br/> |<span data-ttu-id="7c560-183">7</span><span class="sxs-lookup"><span data-stu-id="7c560-183">7.</span></span>  <br/> |<span data-ttu-id="7c560-184">/25</span><span class="sxs-lookup"><span data-stu-id="7c560-184">/25</span></span>  <br/> |
+|<span data-ttu-id="02e80-170">1-3</span><span class="sxs-lookup"><span data-stu-id="02e80-170">1-3</span></span>  <br/> |<span data-ttu-id="02e80-171">3</span><span class="sxs-lookup"><span data-stu-id="02e80-171">3</span></span>  <br/> |<span data-ttu-id="02e80-172">/29</span><span class="sxs-lookup"><span data-stu-id="02e80-172">/29</span></span>  <br/> |
+|<span data-ttu-id="02e80-173">4-11</span><span class="sxs-lookup"><span data-stu-id="02e80-173">4-11</span></span>  <br/> |<span data-ttu-id="02e80-174">4</span><span class="sxs-lookup"><span data-stu-id="02e80-174">4</span></span>  <br/> |<span data-ttu-id="02e80-175">/28</span><span class="sxs-lookup"><span data-stu-id="02e80-175">/28</span></span>  <br/> |
+|<span data-ttu-id="02e80-176">12-27</span><span class="sxs-lookup"><span data-stu-id="02e80-176">12-27</span></span>  <br/> |<span data-ttu-id="02e80-177">5</span><span class="sxs-lookup"><span data-stu-id="02e80-177">5</span></span>  <br/> |<span data-ttu-id="02e80-178">/27</span><span class="sxs-lookup"><span data-stu-id="02e80-178">/27</span></span>  <br/> |
+|<span data-ttu-id="02e80-179">28-59</span><span class="sxs-lookup"><span data-stu-id="02e80-179">28-59</span></span>  <br/> |<span data-ttu-id="02e80-180">6</span><span class="sxs-lookup"><span data-stu-id="02e80-180">6</span></span>  <br/> |<span data-ttu-id="02e80-181">/26</span><span class="sxs-lookup"><span data-stu-id="02e80-181">/26</span></span>  <br/> |
+|<span data-ttu-id="02e80-182">60-123</span><span class="sxs-lookup"><span data-stu-id="02e80-182">60-123</span></span>  <br/> |<span data-ttu-id="02e80-183">7</span><span class="sxs-lookup"><span data-stu-id="02e80-183">7</span></span>  <br/> |<span data-ttu-id="02e80-184">/25</span><span class="sxs-lookup"><span data-stu-id="02e80-184">/25</span></span>  <br/> |
    
-### <a name="planning-worksheet-for-configuring-your-azure-virtual-network"></a><span data-ttu-id="7c560-185">設定您 Azure 虛擬網路的規劃工作表</span><span class="sxs-lookup"><span data-stu-id="7c560-185">Planning worksheet for configuring your Azure virtual network</span></span>
-<span data-ttu-id="7c560-186"><a name="worksheet"> </a></span><span class="sxs-lookup"><span data-stu-id="7c560-186"></span></span>
+### <a name="planning-worksheet-for-configuring-your-azure-virtual-network"></a><span data-ttu-id="02e80-185">設定您 Azure 虛擬網路的規劃工作表</span><span class="sxs-lookup"><span data-stu-id="02e80-185">Planning worksheet for configuring your Azure virtual network</span></span>
+<span data-ttu-id="02e80-186"><a name="worksheet"> </a></span><span class="sxs-lookup"><span data-stu-id="02e80-186"><a name="worksheet"> </a></span></span>
 
-<span data-ttu-id="7c560-187">建立 Azure 虛擬機器以裝載虛擬機器之前，您必須決定下表中的所需設定。</span><span class="sxs-lookup"><span data-stu-id="7c560-187">Before you create an Azure virtual network to host virtual machines, you must determine the settings needed in the following tables.</span></span>
+<span data-ttu-id="02e80-187">建立 Azure 虛擬機器以裝載虛擬機器之前，您必須決定下表中的所需設定。</span><span class="sxs-lookup"><span data-stu-id="02e80-187">Before you create an Azure virtual network to host virtual machines, you must determine the settings needed in the following tables.</span></span>
   
-<span data-ttu-id="7c560-188">針對虛擬網路的設定，填寫表格 V。</span><span class="sxs-lookup"><span data-stu-id="7c560-188">For the settings of the virtual network, fill in Table V.</span></span>
+<span data-ttu-id="02e80-188">針對虛擬網路的設定，填寫表格 V。</span><span class="sxs-lookup"><span data-stu-id="02e80-188">For the settings of the virtual network, fill in Table V.</span></span>
   
- <span data-ttu-id="7c560-189">**表格 V：跨單位虛擬網路設定**</span><span class="sxs-lookup"><span data-stu-id="7c560-189">**Table V: Cross-premises virtual network configuration**</span></span>
+ <span data-ttu-id="02e80-189">**表格 V：跨單位虛擬網路設定**</span><span class="sxs-lookup"><span data-stu-id="02e80-189">**Table V: Cross-premises virtual network configuration**</span></span>
   
-|<span data-ttu-id="7c560-190">**項目**</span><span class="sxs-lookup"><span data-stu-id="7c560-190">**Item**</span></span>|<span data-ttu-id="7c560-191">**Configuration 元素**</span><span class="sxs-lookup"><span data-stu-id="7c560-191">**Configuration element**</span></span>|<span data-ttu-id="7c560-192">**描述**</span><span class="sxs-lookup"><span data-stu-id="7c560-192">**Description**</span></span>|<span data-ttu-id="7c560-193">**值**</span><span class="sxs-lookup"><span data-stu-id="7c560-193">**Value**</span></span>|
+|<span data-ttu-id="02e80-190">**項目**</span><span class="sxs-lookup"><span data-stu-id="02e80-190">**Item**</span></span>|<span data-ttu-id="02e80-191">**Configuration 元素**</span><span class="sxs-lookup"><span data-stu-id="02e80-191">**Configuration element**</span></span>|<span data-ttu-id="02e80-192">**描述**</span><span class="sxs-lookup"><span data-stu-id="02e80-192">**Description**</span></span>|<span data-ttu-id="02e80-193">**值**</span><span class="sxs-lookup"><span data-stu-id="02e80-193">**Value**</span></span>|
 |:-----|:-----|:-----|:-----|
-|<span data-ttu-id="7c560-194">1.</span><span class="sxs-lookup"><span data-stu-id="7c560-194">1.</span></span>  <br/> |<span data-ttu-id="7c560-195">虛擬網路名稱</span><span class="sxs-lookup"><span data-stu-id="7c560-195">Virtual network name</span></span>  <br/> |<span data-ttu-id="7c560-196">指派給 Azure 虛擬網路的名稱 (例如 DirSyncNet)。</span><span class="sxs-lookup"><span data-stu-id="7c560-196">A name to assign to the Azure virtual network (example DirSyncNet).</span></span>  <br/> |![](./media/Common-Images/TableLine.png) |
-|<span data-ttu-id="7c560-197">2.</span><span class="sxs-lookup"><span data-stu-id="7c560-197">2.</span></span>  <br/> |<span data-ttu-id="7c560-198">虛擬網路位置</span><span class="sxs-lookup"><span data-stu-id="7c560-198">Virtual network location</span></span>  <br/> |<span data-ttu-id="7c560-199">將包含虛擬網路的 Azure 資料中心 (例如美國西部)</span><span class="sxs-lookup"><span data-stu-id="7c560-199">The Azure datacenter that will contain the virtual network (such as West US).</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
-|<span data-ttu-id="7c560-200">3.</span><span class="sxs-lookup"><span data-stu-id="7c560-200">3.</span></span>  <br/> |<span data-ttu-id="7c560-201">VPN 裝置 IP 位址</span><span class="sxs-lookup"><span data-stu-id="7c560-201">VPN device IP address</span></span>  <br/> |<span data-ttu-id="7c560-p113">網際網路上 VPN 裝置介面的公用 IPv4 位址請與您的 IT 部門合作以決定此位址。</span><span class="sxs-lookup"><span data-stu-id="7c560-p113">The public IPv4 address of your VPN device's interface on the Internet. Work with your IT department to determine this address.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
-|<span data-ttu-id="7c560-204">4.</span><span class="sxs-lookup"><span data-stu-id="7c560-204">4.</span></span>  <br/> |<span data-ttu-id="7c560-205">虛擬網路位址空間</span><span class="sxs-lookup"><span data-stu-id="7c560-205">Virtual network address space</span></span>  <br/> |<span data-ttu-id="7c560-p114">虛擬網路的位址空間 (定義於單一私人位址前置詞中)。請與您的 IT 部門合作以決定此位址空間。位址空間應是無類別網域間路由選擇 (CIDR) 格式 (也稱為網路前置詞格式)。例如 10.24.64.0/20。</span><span class="sxs-lookup"><span data-stu-id="7c560-p114">The address space (defined in a single private address prefix) for the virtual network. Work with your IT department to determine this address space. The address space should be in Classless Interdomain Routing (CIDR) format, also known as network prefix format. An example is 10.24.64.0/20.</span></span>  <br/> |![](./media/Common-Images/TableLine.png) <br/> |
-|<span data-ttu-id="7c560-210">5.</span><span class="sxs-lookup"><span data-stu-id="7c560-210">5.</span></span>  <br/> |<span data-ttu-id="7c560-211">IPsec 共用金鑰</span><span class="sxs-lookup"><span data-stu-id="7c560-211">IPsec shared key</span></span>  <br/> |<span data-ttu-id="7c560-p115">32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值並將其儲存至安全的位置。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。</span><span class="sxs-lookup"><span data-stu-id="7c560-p115">A 32-character random, alphanumeric string that will be used to authenticate both sides of the site-to-site VPN connection. Work with your IT or security department to determine this key value and then store it in a secure location. Alternately, see [Create a random string for an IPsec preshared key](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  </span></span><br/> |![](./media/Common-Images/TableLine.png) <br/> |
+|<span data-ttu-id="02e80-194">1.</span><span class="sxs-lookup"><span data-stu-id="02e80-194">1.</span></span>  <br/> |<span data-ttu-id="02e80-195">虛擬網路名稱</span><span class="sxs-lookup"><span data-stu-id="02e80-195">Virtual network name</span></span>  <br/> |<span data-ttu-id="02e80-196">指派給 Azure 虛擬網路的名稱 (例如 DirSyncNet)。</span><span class="sxs-lookup"><span data-stu-id="02e80-196">A name to assign to the Azure virtual network (example DirSyncNet).</span></span>  <br/> |![](./media/Common-Images/TableLine.png) |
+|<span data-ttu-id="02e80-197">2.</span><span class="sxs-lookup"><span data-stu-id="02e80-197">2.</span></span>  <br/> |<span data-ttu-id="02e80-198">虛擬網路位置</span><span class="sxs-lookup"><span data-stu-id="02e80-198">Virtual network location</span></span>  <br/> |<span data-ttu-id="02e80-199">將包含虛擬網路的 Azure 資料中心 (例如美國西部)</span><span class="sxs-lookup"><span data-stu-id="02e80-199">The Azure datacenter that will contain the virtual network (such as West US).</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-200">3.</span><span class="sxs-lookup"><span data-stu-id="02e80-200">3.</span></span>  <br/> |<span data-ttu-id="02e80-201">VPN 裝置 IP 位址</span><span class="sxs-lookup"><span data-stu-id="02e80-201">VPN device IP address</span></span>  <br/> |<span data-ttu-id="02e80-p113">網際網路上 VPN 裝置介面的公用 IPv4 位址請與您的 IT 部門合作以決定此位址。</span><span class="sxs-lookup"><span data-stu-id="02e80-p113">The public IPv4 address of your VPN device's interface on the Internet. Work with your IT department to determine this address.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-204">4.</span><span class="sxs-lookup"><span data-stu-id="02e80-204">4.</span></span>  <br/> |<span data-ttu-id="02e80-205">虛擬網路位址空間</span><span class="sxs-lookup"><span data-stu-id="02e80-205">Virtual network address space</span></span>  <br/> |<span data-ttu-id="02e80-p114">虛擬網路的位址空間 (定義於單一私人位址前置詞中)。請與您的 IT 部門合作以決定此位址空間。位址空間應是無類別網域間路由選擇 (CIDR) 格式 (也稱為網路前置詞格式)。例如 10.24.64.0/20。</span><span class="sxs-lookup"><span data-stu-id="02e80-p114">The address space (defined in a single private address prefix) for the virtual network. Work with your IT department to determine this address space. The address space should be in Classless Interdomain Routing (CIDR) format, also known as network prefix format. An example is 10.24.64.0/20.</span></span>  <br/> |![](./media/Common-Images/TableLine.png) <br/> |
+|<span data-ttu-id="02e80-210">5.</span><span class="sxs-lookup"><span data-stu-id="02e80-210">5.</span></span>  <br/> |<span data-ttu-id="02e80-211">IPsec 共用金鑰</span><span class="sxs-lookup"><span data-stu-id="02e80-211">IPsec shared key</span></span>  <br/> |<span data-ttu-id="02e80-p115">32 個字元的隨機英數字元字串，用以驗證站台對站台 VPN 連線的兩端站台。請與您的 IT 或安全性部門合作，以決定此金鑰值並將其儲存至安全的位置。或者，請參閱[建立隨機字串以作為 IPsec 的預先共用金鑰](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx)。</span><span class="sxs-lookup"><span data-stu-id="02e80-p115">A 32-character random, alphanumeric string that will be used to authenticate both sides of the site-to-site VPN connection. Work with your IT or security department to determine this key value and then store it in a secure location. Alternately, see [Create a random string for an IPsec preshared key](https://social.technet.microsoft.com/wiki/contents/articles/32330.create-a-random-string-for-an-ipsec-preshared-key.aspx).  </span></span><br/> |![](./media/Common-Images/TableLine.png) <br/> |
    
-<span data-ttu-id="7c560-215">針對此解決方案的子網路填寫表格 S。</span><span class="sxs-lookup"><span data-stu-id="7c560-215">Fill in Table S for the subnets of this solution.</span></span>
+<span data-ttu-id="02e80-215">針對此解決方案的子網路填寫表格 S。</span><span class="sxs-lookup"><span data-stu-id="02e80-215">Fill in Table S for the subnets of this solution.</span></span>
   
-- <span data-ttu-id="7c560-p116">針對第一個子網路，請決定 Azure 閘道子網路的 28 位元位址空間 (使用 /28 前置長度)。請參閱[針對 Azure 虛擬網路計算閘道子網路位址空間](https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/)，以取得如何決定此位址空間的資訊。</span><span class="sxs-lookup"><span data-stu-id="7c560-p116">For the first subnet, determine a 28-bit address space (with a /28 prefix length) for the Azure gateway subnet. See [Calculating the gateway subnet address space for Azure virtual networks](https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/) for information about how to determine this address space.</span></span>
+- <span data-ttu-id="02e80-p116">針對第一個子網路，請決定 Azure 閘道子網路的 28 位元位址空間 (使用 /28 前置長度)。請參閱[針對 Azure 虛擬網路計算閘道子網路位址空間](https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/)，以取得如何決定此位址空間的資訊。</span><span class="sxs-lookup"><span data-stu-id="02e80-p116">For the first subnet, determine a 28-bit address space (with a /28 prefix length) for the Azure gateway subnet. See [Calculating the gateway subnet address space for Azure virtual networks](https://blogs.technet.microsoft.com/solutions_advisory_board/2016/12/01/calculating-the-gateway-subnet-address-space-for-azure-virtual-networks/) for information about how to determine this address space.</span></span>
     
-- <span data-ttu-id="7c560-218">針對二個的子網路，請指定好記的名稱、以虛擬網路位址空間為基礎的單一 IP 位址空間，以及具描述性的用途。</span><span class="sxs-lookup"><span data-stu-id="7c560-218">For the second subnet, specify a friendly name, a single IP address space based on the virtual network address space, and a descriptive purpose.</span></span>
+- <span data-ttu-id="02e80-218">針對二個的子網路，請指定好記的名稱、以虛擬網路位址空間為基礎的單一 IP 位址空間，以及具描述性的用途。</span><span class="sxs-lookup"><span data-stu-id="02e80-218">For the second subnet, specify a friendly name, a single IP address space based on the virtual network address space, and a descriptive purpose.</span></span>
     
-<span data-ttu-id="7c560-p117">請與您的 IT 部門合作，以從虛擬網路位址空間判斷這些位址空間。兩個位址空間皆應為 CIDR 格式。</span><span class="sxs-lookup"><span data-stu-id="7c560-p117">Work with your IT department to determine these address spaces from the virtual network address space. Both address spaces should be in CIDR format.</span></span>
+<span data-ttu-id="02e80-p117">請與您的 IT 部門合作，以從虛擬網路位址空間判斷這些位址空間。兩個位址空間皆應為 CIDR 格式。</span><span class="sxs-lookup"><span data-stu-id="02e80-p117">Work with your IT department to determine these address spaces from the virtual network address space. Both address spaces should be in CIDR format.</span></span>
   
- <span data-ttu-id="7c560-221">**表格 S：虛擬網路中的子網路**</span><span class="sxs-lookup"><span data-stu-id="7c560-221">**Table S: Subnets in the virtual network**</span></span>
+ <span data-ttu-id="02e80-221">**表格 S：虛擬網路中的子網路**</span><span class="sxs-lookup"><span data-stu-id="02e80-221">**Table S: Subnets in the virtual network**</span></span>
   
-|<span data-ttu-id="7c560-222">**項目**</span><span class="sxs-lookup"><span data-stu-id="7c560-222">**Item**</span></span>|<span data-ttu-id="7c560-223">**子網路名稱**</span><span class="sxs-lookup"><span data-stu-id="7c560-223">**Subnet name**</span></span>|<span data-ttu-id="7c560-224">**子網路位址空間**</span><span class="sxs-lookup"><span data-stu-id="7c560-224">**Subnet address space**</span></span>|<span data-ttu-id="7c560-225">**用途**</span><span class="sxs-lookup"><span data-stu-id="7c560-225">**Purpose**</span></span>|
+|<span data-ttu-id="02e80-222">**項目**</span><span class="sxs-lookup"><span data-stu-id="02e80-222">**Item**</span></span>|<span data-ttu-id="02e80-223">**子網路名稱**</span><span class="sxs-lookup"><span data-stu-id="02e80-223">**Subnet name**</span></span>|<span data-ttu-id="02e80-224">**子網路位址空間**</span><span class="sxs-lookup"><span data-stu-id="02e80-224">**Subnet address space**</span></span>|<span data-ttu-id="02e80-225">**用途**</span><span class="sxs-lookup"><span data-stu-id="02e80-225">**Purpose**</span></span>|
 |:-----|:-----|:-----|:-----|
-|<span data-ttu-id="7c560-226">1.</span><span class="sxs-lookup"><span data-stu-id="7c560-226">1.</span></span>  <br/> |<span data-ttu-id="7c560-227">GatewaySubnet</span><span class="sxs-lookup"><span data-stu-id="7c560-227">GatewaySubnet</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |<span data-ttu-id="7c560-228">由 Azure 閘道使用的子網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-228">The subnet used by the Azure gateway.</span></span>  <br/> |
-|<span data-ttu-id="7c560-229">2.</span><span class="sxs-lookup"><span data-stu-id="7c560-229">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-226">1.</span><span class="sxs-lookup"><span data-stu-id="02e80-226">1.</span></span>  <br/> |<span data-ttu-id="02e80-227">GatewaySubnet</span><span class="sxs-lookup"><span data-stu-id="02e80-227">GatewaySubnet</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |<span data-ttu-id="02e80-228">由 Azure 閘道使用的子網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-228">The subnet used by the Azure gateway.</span></span>  <br/> |
+|<span data-ttu-id="02e80-229">2.</span><span class="sxs-lookup"><span data-stu-id="02e80-229">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
-<span data-ttu-id="7c560-p118">針對虛擬網路中，虛擬機器要使用的內部部署 DNS 伺服器，請填寫表格 D。此易記名稱無須與主機名稱或 DNS 伺服器的電腦名稱相同。請注意，列出的空白項有兩個，但您可以新增更多。請與您的 IT 部門合作以決定此清單。</span><span class="sxs-lookup"><span data-stu-id="7c560-p118">For the on-premises DNS servers that you want the virtual machines in the virtual network to use, fill in Table D. Give each DNS server a friendly name and a single IP address. This friendly name does not need to match the host name or computer name of the DNS server. Note that two blank entries are listed, but you can add more. Work with your IT department to determine this list.</span></span>
+<span data-ttu-id="02e80-p118">針對虛擬網路中，虛擬機器要使用的內部部署 DNS 伺服器，請填寫表格 D。此易記名稱無須與主機名稱或 DNS 伺服器的電腦名稱相同。請注意，列出的空白項有兩個，但您可以新增更多。請與您的 IT 部門合作以決定此清單。</span><span class="sxs-lookup"><span data-stu-id="02e80-p118">For the on-premises DNS servers that you want the virtual machines in the virtual network to use, fill in Table D. Give each DNS server a friendly name and a single IP address. This friendly name does not need to match the host name or computer name of the DNS server. Note that two blank entries are listed, but you can add more. Work with your IT department to determine this list.</span></span>
   
- <span data-ttu-id="7c560-234">**表格 D：內部部署 DNS 伺服器**</span><span class="sxs-lookup"><span data-stu-id="7c560-234">**Table D: On-premises DNS servers**</span></span>
+ <span data-ttu-id="02e80-234">**表格 D：內部部署 DNS 伺服器**</span><span class="sxs-lookup"><span data-stu-id="02e80-234">**Table D: On-premises DNS servers**</span></span>
   
-|<span data-ttu-id="7c560-235">**項目**</span><span class="sxs-lookup"><span data-stu-id="7c560-235">**Item**</span></span>|<span data-ttu-id="7c560-236">**DNS 伺服器的易記名稱**</span><span class="sxs-lookup"><span data-stu-id="7c560-236">**DNS server friendly name**</span></span>|<span data-ttu-id="7c560-237">**DNS 伺服器 IP 位址**</span><span class="sxs-lookup"><span data-stu-id="7c560-237">**DNS server IP address**</span></span>|
+|<span data-ttu-id="02e80-235">**項目**</span><span class="sxs-lookup"><span data-stu-id="02e80-235">**Item**</span></span>|<span data-ttu-id="02e80-236">**DNS 伺服器的易記名稱**</span><span class="sxs-lookup"><span data-stu-id="02e80-236">**DNS server friendly name**</span></span>|<span data-ttu-id="02e80-237">**DNS 伺服器 IP 位址**</span><span class="sxs-lookup"><span data-stu-id="02e80-237">**DNS server IP address**</span></span>|
 |:-----|:-----|:-----|
-|<span data-ttu-id="7c560-238">1.</span><span class="sxs-lookup"><span data-stu-id="7c560-238">1.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
-|<span data-ttu-id="7c560-239">2.</span><span class="sxs-lookup"><span data-stu-id="7c560-239">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-238">1.</span><span class="sxs-lookup"><span data-stu-id="02e80-238">1.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-239">2.</span><span class="sxs-lookup"><span data-stu-id="02e80-239">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
-<span data-ttu-id="7c560-p119">若要透過站台對站台的 VPN 連線將封包從 Azure 虛擬網路路由至組織網路，您必須使用區域網路來設定虛擬網路。此區域網路具有您組織內部部署網路上所有位置的位址空間清單 (CIDR 格式)，且虛擬網路中的虛擬機器必須可觸及這些位址空間。這可以是內部部署網路或子網路上的所有位置。定義區域網路的位址空間清單必須是唯一的，且不可與此虛擬網路使用的位址空間或其他跨單位虛擬網路重疊。</span><span class="sxs-lookup"><span data-stu-id="7c560-p119">To route packets from the Azure virtual network to your organization network across the site-to-site VPN connection, you must configure the virtual network with a local network. This local network has a list of the address spaces (in CIDR format) for all of the locations on your organization's on-premises network that the virtual machines in the virtual network must reach. This can be all of the locations on the on-premises network or a subset. The list of address spaces that define your local network must be unique and must not overlap with the address spaces used for this virtual network or your other cross-premises virtual networks.</span></span>
+<span data-ttu-id="02e80-p119">若要透過站台對站台的 VPN 連線將封包從 Azure 虛擬網路路由至組織網路，您必須使用區域網路來設定虛擬網路。此區域網路具有您組織內部部署網路上所有位置的位址空間清單 (CIDR 格式)，且虛擬網路中的虛擬機器必須可觸及這些位址空間。這可以是內部部署網路或子網路上的所有位置。定義區域網路的位址空間清單必須是唯一的，且不可與此虛擬網路使用的位址空間或其他跨單位虛擬網路重疊。</span><span class="sxs-lookup"><span data-stu-id="02e80-p119">To route packets from the Azure virtual network to your organization network across the site-to-site VPN connection, you must configure the virtual network with a local network. This local network has a list of the address spaces (in CIDR format) for all of the locations on your organization's on-premises network that the virtual machines in the virtual network must reach. This can be all of the locations on the on-premises network or a subset. The list of address spaces that define your local network must be unique and must not overlap with the address spaces used for this virtual network or your other cross-premises virtual networks.</span></span>
   
-<span data-ttu-id="7c560-p120">針對區域網路位址空間集，請填寫表格 L。請注意，雖已列出三個空白項，但一般來說您會需要更多。請與您的 IT 部門合作以決定此清單。</span><span class="sxs-lookup"><span data-stu-id="7c560-p120">For the set of local network address spaces, fill in Table L. Note that three blank entries are listed but you will typically need more. Work with your IT department to determine this list.</span></span>
+<span data-ttu-id="02e80-p120">針對區域網路位址空間集，請填寫表格 L。請注意，雖已列出三個空白項，但一般來說您會需要更多。請與您的 IT 部門合作以決定此清單。</span><span class="sxs-lookup"><span data-stu-id="02e80-p120">For the set of local network address spaces, fill in Table L. Note that three blank entries are listed but you will typically need more. Work with your IT department to determine this list.</span></span>
   
- <span data-ttu-id="7c560-246">**表格 L：區域網路的網址前置詞**</span><span class="sxs-lookup"><span data-stu-id="7c560-246">**Table L: Address prefixes for the local network**</span></span>
+ <span data-ttu-id="02e80-246">**表格 L：區域網路的網址前置詞**</span><span class="sxs-lookup"><span data-stu-id="02e80-246">**Table L: Address prefixes for the local network**</span></span>
   
-|<span data-ttu-id="7c560-247">**項目**</span><span class="sxs-lookup"><span data-stu-id="7c560-247">**Item**</span></span>|<span data-ttu-id="7c560-248">**區域網路位址空間**</span><span class="sxs-lookup"><span data-stu-id="7c560-248">**Local network address space**</span></span>|
+|<span data-ttu-id="02e80-247">**項目**</span><span class="sxs-lookup"><span data-stu-id="02e80-247">**Item**</span></span>|<span data-ttu-id="02e80-248">**區域網路位址空間**</span><span class="sxs-lookup"><span data-stu-id="02e80-248">**Local network address space**</span></span>|
 |:-----|:-----|
-|<span data-ttu-id="7c560-249">1.</span><span class="sxs-lookup"><span data-stu-id="7c560-249">1.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
-|<span data-ttu-id="7c560-250">2.</span><span class="sxs-lookup"><span data-stu-id="7c560-250">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
-|<span data-ttu-id="7c560-251">3.</span><span class="sxs-lookup"><span data-stu-id="7c560-251">3.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-249">1.</span><span class="sxs-lookup"><span data-stu-id="02e80-249">1.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-250">2.</span><span class="sxs-lookup"><span data-stu-id="02e80-250">2.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
+|<span data-ttu-id="02e80-251">3.</span><span class="sxs-lookup"><span data-stu-id="02e80-251">3.</span></span>  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
    
-## <a name="deployment-roadmap"></a><span data-ttu-id="7c560-252">部署藍圖</span><span class="sxs-lookup"><span data-stu-id="7c560-252">Deployment roadmap</span></span>
-<span data-ttu-id="7c560-253"><a name="DeploymentRoadmap"> </a></span><span class="sxs-lookup"><span data-stu-id="7c560-253"></span></span>
+## <a name="deployment-roadmap"></a><span data-ttu-id="02e80-252">部署藍圖</span><span class="sxs-lookup"><span data-stu-id="02e80-252">Deployment roadmap</span></span>
+<span data-ttu-id="02e80-253"><a name="DeploymentRoadmap"> </a></span><span class="sxs-lookup"><span data-stu-id="02e80-253"><a name="DeploymentRoadmap"> </a></span></span>
 
-<span data-ttu-id="7c560-254">建立跨單位虛擬網路與在 Azure 中新增虛擬機器有三個階段：</span><span class="sxs-lookup"><span data-stu-id="7c560-254">Creating the cross-premises virtual network and adding virtual machines in Azure consists of three phases:</span></span>
+<span data-ttu-id="02e80-254">建立跨單位虛擬網路與在 Azure 中新增虛擬機器有三個階段：</span><span class="sxs-lookup"><span data-stu-id="02e80-254">Creating the cross-premises virtual network and adding virtual machines in Azure consists of three phases:</span></span>
   
-- <span data-ttu-id="7c560-255">階段 1：準備內部部署網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-255">Phase 1: Prepare your on-premises network.</span></span>
+- <span data-ttu-id="02e80-255">階段 1：準備內部部署網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-255">Phase 1: Prepare your on-premises network.</span></span>
     
-- <span data-ttu-id="7c560-256">階段 2：在 Azure 中建立跨單位的虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-256">Phase 2: Create the cross-premises virtual network in Azure.</span></span>
+- <span data-ttu-id="02e80-256">階段 2：在 Azure 中建立跨單位的虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-256">Phase 2: Create the cross-premises virtual network in Azure.</span></span>
     
-- <span data-ttu-id="7c560-257">階段 3 (選用)：新增虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="7c560-257">Phase 3 (Optional): Add virtual machines.</span></span>
+- <span data-ttu-id="02e80-257">階段 3 (選用)：新增虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="02e80-257">Phase 3 (Optional): Add virtual machines.</span></span>
     
-### <a name="phase-1-prepare-your-on-premises-network"></a><span data-ttu-id="7c560-258">階段 1：準備內部部署網路</span><span class="sxs-lookup"><span data-stu-id="7c560-258">Phase 1: Prepare your on-premises network</span></span>
+### <a name="phase-1-prepare-your-on-premises-network"></a><span data-ttu-id="02e80-258">階段 1：準備內部部署網路</span><span class="sxs-lookup"><span data-stu-id="02e80-258">Phase 1: Prepare your on-premises network</span></span>
 <a name="Phase1"></a>
 
-<span data-ttu-id="7c560-p121">您必須設定包含路由的內部部署網路，該路由應指向目的地為虛擬網路位址空間的流量，且最終會將流量傳遞至內部部署網路邊緣上的路由器。請洽詢您的網路管理員，以決定如何將路由新增至內部部署網路的路由基礎結構上。</span><span class="sxs-lookup"><span data-stu-id="7c560-p121">You must configure your on-premises network with a route that points to and ultimately delivers traffic destined for the address space of the virtual network to the router on the edge of the on-premises network. Consult with your network administrator to determine how to add the route to the routing infrastructure of your on-premises network.</span></span>
+<span data-ttu-id="02e80-p121">您必須設定包含路由的內部部署網路，該路由應指向目的地為虛擬網路位址空間的流量，且最終會將流量傳遞至內部部署網路邊緣上的路由器。請洽詢您的網路管理員，以決定如何將路由新增至內部部署網路的路由基礎結構上。</span><span class="sxs-lookup"><span data-stu-id="02e80-p121">You must configure your on-premises network with a route that points to and ultimately delivers traffic destined for the address space of the virtual network to the router on the edge of the on-premises network. Consult with your network administrator to determine how to add the route to the routing infrastructure of your on-premises network.</span></span>
   
-<span data-ttu-id="7c560-261">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="7c560-261">Here is your resulting configuration.</span></span>
+<span data-ttu-id="02e80-261">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="02e80-261">Here is your resulting configuration.</span></span>
   
 ![內部部署網路必須有一個指向 VPN 裝置的虛擬網路位址空間的路由。](media/90bab36b-cb60-4ea5-81d5-4737b696d41c.png)
   
-### <a name="phase-2-create-the-cross-premises-virtual-network-in-azure"></a><span data-ttu-id="7c560-263">階段 2：在 Azure 中建立跨單位的虛擬網路</span><span class="sxs-lookup"><span data-stu-id="7c560-263">Phase 2: Create the cross-premises virtual network in Azure</span></span>
+### <a name="phase-2-create-the-cross-premises-virtual-network-in-azure"></a><span data-ttu-id="02e80-263">階段 2：在 Azure 中建立跨單位的虛擬網路</span><span class="sxs-lookup"><span data-stu-id="02e80-263">Phase 2: Create the cross-premises virtual network in Azure</span></span>
 <a name="Phase2"></a>
 
-<span data-ttu-id="7c560-p122">首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="7c560-p122">First, open an Azure PowerShell prompt. If you have not installed Azure PowerShell, see [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/).</span></span>
+<span data-ttu-id="02e80-p122">首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="02e80-p122">First, open an Azure PowerShell prompt. If you have not installed Azure PowerShell, see [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/).</span></span>
 
 <!--  
 > [!NOTE]
 > These commands are for Azure PowerShell 1.0 and above. For a text file that has all the PowerShell commands in this article, click [here](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19). 
 -->
   
-<span data-ttu-id="7c560-266">接著，使用此命令登入您的 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="7c560-266">Next, login to your Azure account with this command.</span></span>
+<span data-ttu-id="02e80-266">接著，使用此命令登入您的 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="02e80-266">Next, login to your Azure account with this command.</span></span>
   
 ```
 Connect-AzAccount
 ```
 
-<span data-ttu-id="7c560-267">使用下列命令取得訂用帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="7c560-267">Get your subscription name using the following command.</span></span>
+<span data-ttu-id="02e80-267">使用下列命令取得訂用帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="02e80-267">Get your subscription name using the following command.</span></span>
   
 ```
 Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
 ```
 
-<span data-ttu-id="7c560-p123">使用這些命令設定您的 Azure 訂用帳戶。以正確的訂用帳戶名稱取代括號中的所有項目 (包括 < 和 > 字元)。</span><span class="sxs-lookup"><span data-stu-id="7c560-p123">Set your Azure subscription with these commands. Replace everything within the quotes, including the < and > characters, with the correct subscription name.</span></span>
+<span data-ttu-id="02e80-p123">使用這些命令設定您的 Azure 訂用帳戶。以正確的訂用帳戶名稱取代括號中的所有項目 (包括 < 和 > 字元)。</span><span class="sxs-lookup"><span data-stu-id="02e80-p123">Set your Azure subscription with these commands. Replace everything within the quotes, including the < and > characters, with the correct subscription name.</span></span>
   
 ```
 $subscrName="<subscription name>"
-Select-AzSubscription -SubscriptionName $subscrName -Current
+Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-<span data-ttu-id="7c560-p124">接著，為您的虛擬網路建立新的資源群組。若要判斷資源群組名稱是否是唯一的，可使用此命令來列出現有的資源群組。</span><span class="sxs-lookup"><span data-stu-id="7c560-p124">Next, create a new resource group for your virtual network. To determine a unique resource group name, use this command to list your existing resource groups.</span></span>
+<span data-ttu-id="02e80-p124">接著，為您的虛擬網路建立新的資源群組。若要判斷資源群組名稱是否是唯一的，可使用此命令來列出現有的資源群組。</span><span class="sxs-lookup"><span data-stu-id="02e80-p124">Next, create a new resource group for your virtual network. To determine a unique resource group name, use this command to list your existing resource groups.</span></span>
   
 ```
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
-<span data-ttu-id="7c560-272">使用這些命令建立新的資源群組。</span><span class="sxs-lookup"><span data-stu-id="7c560-272">Create your new resource group with these commands.</span></span>
+<span data-ttu-id="02e80-272">使用這些命令建立新的資源群組。</span><span class="sxs-lookup"><span data-stu-id="02e80-272">Create your new resource group with these commands.</span></span>
   
 ```
 $rgName="<resource group name>"
@@ -250,7 +250,7 @@ New-AzResourceGroup -Name $rgName -Location $locName
 
 ```
 
-<span data-ttu-id="7c560-273">接下來，建立 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="7c560-273">Next, you create the Azure virtual network.</span></span>
+<span data-ttu-id="02e80-273">接下來，建立 Azure 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="02e80-273">Next, you create the Azure virtual network.</span></span>
   
 ```
 # Fill in the variables from previous values and from Tables V, S, and D
@@ -275,11 +275,11 @@ $nsg=Get-AzNetworkSecurityGroup -Name $SubnetName -ResourceGroupName $rgName
 Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name $SubnetName -AddressPrefix $SubnetPrefix -NetworkSecurityGroup $nsg
 ```
 
-<span data-ttu-id="7c560-274">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="7c560-274">Here is your resulting configuration.</span></span>
+<span data-ttu-id="02e80-274">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="02e80-274">Here is your resulting configuration.</span></span>
   
 ![虛擬網路尚未連接至內部部署網路中。](media/54a37782-a6cc-4d48-b38d-73e128b44a82.png)
   
-<span data-ttu-id="7c560-276">接著，使用以下命令來建立站台對站台 VPN 連線的閘道。</span><span class="sxs-lookup"><span data-stu-id="7c560-276">Next, use these commands to create the gateways for the site-to-site VPN connection.</span></span>
+<span data-ttu-id="02e80-276">接著，使用以下命令來建立站台對站台 VPN 連線的閘道。</span><span class="sxs-lookup"><span data-stu-id="02e80-276">Next, use these commands to create the gateways for the site-to-site VPN connection.</span></span>
   
 ```
 # Fill in the variables from previous values and from Tables V and L
@@ -305,38 +305,38 @@ $vnetConnectionName="S2SConnection"
 $vnetConnection=New-AzVirtualNetworkGatewayConnection -Name $vnetConnectionName -ResourceGroupName $rgName -Location $locName -ConnectionType IPsec -SharedKey $vnetConnectionKey -VirtualNetworkGateway1 $vnetGateway -LocalNetworkGateway2 $localGateway
 ```
 
-<span data-ttu-id="7c560-277">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="7c560-277">Here is your resulting configuration.</span></span>
+<span data-ttu-id="02e80-277">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="02e80-277">Here is your resulting configuration.</span></span>
   
 ![虛擬網路現在有一個閘道。](media/82dd66b2-a4b7-48f6-a89b-cfdd94630980.png)
   
-<span data-ttu-id="7c560-p125">下一步，設定內部部署 VPN 裝置與 Azure VPN 閘道連線。如需詳細資訊，請參閱＜[關於適用於站台對站台虛擬網路連線的 VPN 裝置](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices)＞。</span><span class="sxs-lookup"><span data-stu-id="7c560-p125">Next, configure your on-premises VPN device to connect to the Azure VPN gateway. For more information, see [About VPN Devices for site-to-site Azure Virtual Network connections](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices).</span></span>
+<span data-ttu-id="02e80-p125">下一步，設定內部部署 VPN 裝置與 Azure VPN 閘道連線。如需詳細資訊，請參閱＜[關於適用於站台對站台虛擬網路連線的 VPN 裝置](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices)＞。</span><span class="sxs-lookup"><span data-stu-id="02e80-p125">Next, configure your on-premises VPN device to connect to the Azure VPN gateway. For more information, see [About VPN Devices for site-to-site Azure Virtual Network connections](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpn-devices).</span></span>
   
-<span data-ttu-id="7c560-281">若要設定您的 VPN 裝置，您需要下列項目︰</span><span class="sxs-lookup"><span data-stu-id="7c560-281">To configure your VPN device, you will need the following:</span></span>
+<span data-ttu-id="02e80-281">若要設定您的 VPN 裝置，您需要下列項目︰</span><span class="sxs-lookup"><span data-stu-id="02e80-281">To configure your VPN device, you will need the following:</span></span>
   
-- <span data-ttu-id="7c560-282">虛擬網路 Azure VPN 閘道的公用 IPv4 位址。</span><span class="sxs-lookup"><span data-stu-id="7c560-282">The public IPv4 address of the Azure VPN gateway for your virtual network.</span></span> <span data-ttu-id="7c560-283">使用 **Get-AzPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** 命令可顯示此位址。</span><span class="sxs-lookup"><span data-stu-id="7c560-283">Use the **Get-AzureRMPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** command to display this address.</span></span>
+- <span data-ttu-id="02e80-282">虛擬網路 Azure VPN 閘道的公用 IPv4 位址。</span><span class="sxs-lookup"><span data-stu-id="02e80-282">The public IPv4 address of the Azure VPN gateway for your virtual network.</span></span> <span data-ttu-id="02e80-283">使用 **Get-AzPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** 命令可顯示此位址。</span><span class="sxs-lookup"><span data-stu-id="02e80-283">Use the **Get-AzPublicIpAddress -Name $vnetGatewayIpConfigName -ResourceGroupName $rgName** command to display this address.</span></span>
     
-- <span data-ttu-id="7c560-284">站台對站台 VPN 連線的 IPsec 預先共用金鑰 (表格 V - 項目 5 - 值欄)。</span><span class="sxs-lookup"><span data-stu-id="7c560-284">The IPsec pre-shared key for the site-to-site VPN connection (Table V- Item 5 - Value column).</span></span>
+- <span data-ttu-id="02e80-284">站台對站台 VPN 連線的 IPsec 預先共用金鑰 (表格 V - 項目 5 - 值欄)。</span><span class="sxs-lookup"><span data-stu-id="02e80-284">The IPsec pre-shared key for the site-to-site VPN connection (Table V- Item 5 - Value column).</span></span>
     
-<span data-ttu-id="7c560-285">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="7c560-285">Here is your resulting configuration.</span></span>
+<span data-ttu-id="02e80-285">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="02e80-285">Here is your resulting configuration.</span></span>
   
 ![虛擬網路現在已連線到內部部署網路。](media/6379c423-4f22-4453-941b-7ff32484a0a5.png)
   
-### <a name="phase-3-optional-add-virtual-machines"></a><span data-ttu-id="7c560-287">階段 3 (選用)：新增虛擬機器</span><span class="sxs-lookup"><span data-stu-id="7c560-287">Phase 3 (Optional): Add virtual machines</span></span>
+### <a name="phase-3-optional-add-virtual-machines"></a><span data-ttu-id="02e80-287">階段 3 (選用)：新增虛擬機器</span><span class="sxs-lookup"><span data-stu-id="02e80-287">Phase 3 (Optional): Add virtual machines</span></span>
 
-<span data-ttu-id="7c560-p127">在 Azure 中建立您需要的虛擬機器。如需詳細資訊，請參閱＜[使用 Azure 入口網站建立 Windows 虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393098)＞。</span><span class="sxs-lookup"><span data-stu-id="7c560-p127">Create the virtual machines you need in Azure. For more information, see [Create a Windows virtual machine with the Azure portal](https://go.microsoft.com/fwlink/p/?LinkId=393098).</span></span>
+<span data-ttu-id="02e80-p127">在 Azure 中建立您需要的虛擬機器。如需詳細資訊，請參閱＜[使用 Azure 入口網站建立 Windows 虛擬機器](https://go.microsoft.com/fwlink/p/?LinkId=393098)＞。</span><span class="sxs-lookup"><span data-stu-id="02e80-p127">Create the virtual machines you need in Azure. For more information, see [Create a Windows virtual machine with the Azure portal](https://go.microsoft.com/fwlink/p/?LinkId=393098).</span></span>
   
-<span data-ttu-id="7c560-290">使用下列設定：</span><span class="sxs-lookup"><span data-stu-id="7c560-290">Use the following settings:</span></span>
+<span data-ttu-id="02e80-290">使用下列設定：</span><span class="sxs-lookup"><span data-stu-id="02e80-290">Use the following settings:</span></span>
   
-- <span data-ttu-id="7c560-p128">在 [基本概念]\*\*\*\* 索引標籤中，選取相同的訂閱及資源群組做為您的虛擬網路。您稍後登入虛擬機器時需要這些資訊。在 [執行個體詳細資料]\*\*\*\* 區段，選擇適當的虛擬機器大小。將系統管理員帳戶使用者名稱和密碼記錄在安全位置。</span><span class="sxs-lookup"><span data-stu-id="7c560-p128">On the **Basics** tab, select the same subscription and resource group as your virtual network. You will need these later to sign in to the virtual machine. In the **Instance details** section, choose the appropriate virtual machine size. Record the administrator account user name and password in a secure location.</span></span> 
+- <span data-ttu-id="02e80-p128">在 [基本概念]\*\*\*\* 索引標籤中，選取相同的訂閱及資源群組做為您的虛擬網路。您稍後登入虛擬機器時需要這些資訊。在 [執行個體詳細資料]\*\*\*\* 區段，選擇適當的虛擬機器大小。將系統管理員帳戶使用者名稱和密碼記錄在安全位置。</span><span class="sxs-lookup"><span data-stu-id="02e80-p128">On the **Basics** tab, select the same subscription and resource group as your virtual network. You will need these later to sign in to the virtual machine. In the **Instance details** section, choose the appropriate virtual machine size. Record the administrator account user name and password in a secure location.</span></span> 
     
-- <span data-ttu-id="7c560-p129">在 [網路]\*\*\*\* 索引標籤中，選取您裝載虛擬機器 (不是 GatewaySubnet) 的虛擬網路和子網路名稱。將其他設定保留為設定值。</span><span class="sxs-lookup"><span data-stu-id="7c560-p129">On the **Networking** tab, select the name of your virtual network and the subnet for hosting virtual machines (not the GatewaySubnet). Leave all other settings at their default values.</span></span>
+- <span data-ttu-id="02e80-p129">在 [網路]\*\*\*\* 索引標籤中，選取您裝載虛擬機器 (不是 GatewaySubnet) 的虛擬網路和子網路名稱。將其他設定保留為設定值。</span><span class="sxs-lookup"><span data-stu-id="02e80-p129">On the **Networking** tab, select the name of your virtual network and the subnet for hosting virtual machines (not the GatewaySubnet). Leave all other settings at their default values.</span></span>
     
-<span data-ttu-id="7c560-p130">請檢查您的內部 DNS 以確認虛擬機器正在正確地使用 DNS，藉此確認適用於新虛擬機器的位址 (A) 記錄已新增。若要存取網際網路，您的 Azure 虛擬機器必須設定為使用內部部署網路的 Proxy 伺服器。請連絡您的網路系統管理員，以取得要在伺服器上執行的其他設定步驟。</span><span class="sxs-lookup"><span data-stu-id="7c560-p130">Verify that your virtual machine is using DNS correctly by checking your internal DNS to ensure that Address (A) records were added for you new virtual machine. To access the Internet, your Azure virtual machines must be configured to use your on-premises network's proxy server. Contact your network administrator for additional configuration steps to perform on the server.</span></span>
+<span data-ttu-id="02e80-p130">請檢查您的內部 DNS 以確認虛擬機器正在正確地使用 DNS，藉此確認適用於新虛擬機器的位址 (A) 記錄已新增。若要存取網際網路，您的 Azure 虛擬機器必須設定為使用內部部署網路的 Proxy 伺服器。請連絡您的網路系統管理員，以取得要在伺服器上執行的其他設定步驟。</span><span class="sxs-lookup"><span data-stu-id="02e80-p130">Verify that your virtual machine is using DNS correctly by checking your internal DNS to ensure that Address (A) records were added for you new virtual machine. To access the Internet, your Azure virtual machines must be configured to use your on-premises network's proxy server. Contact your network administrator for additional configuration steps to perform on the server.</span></span>
   
-<span data-ttu-id="7c560-300">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="7c560-300">Here is your resulting configuration.</span></span>
+<span data-ttu-id="02e80-300">以下是您產生的組態。</span><span class="sxs-lookup"><span data-stu-id="02e80-300">Here is your resulting configuration.</span></span>
   
 ![虛擬網路現在主控可從內部部署網路存取的虛擬機器。](media/86ab63a6-bfae-4f75-8470-bd40dff123ac.png)
   
-## <a name="next-step"></a><span data-ttu-id="7c560-302">下一步</span><span class="sxs-lookup"><span data-stu-id="7c560-302">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="02e80-302">下一步</span><span class="sxs-lookup"><span data-stu-id="02e80-302">Next step</span></span>
   
-[<span data-ttu-id="7c560-303">在 Microsoft Azure 中部署 Office 365 目錄同步作業</span><span class="sxs-lookup"><span data-stu-id="7c560-303">Deploy Office 365 Directory Synchronization in Microsoft Azure</span></span>](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
+[<span data-ttu-id="02e80-303">在 Microsoft Azure 中部署 Office 365 目錄同步作業</span><span class="sxs-lookup"><span data-stu-id="02e80-303">Deploy Office 365 Directory Synchronization in Microsoft Azure</span></span>](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
