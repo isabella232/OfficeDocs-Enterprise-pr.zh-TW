@@ -10,130 +10,92 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 823b3a4c1d063a4d398b7f734c2171e856ee1244
-ms.sourcegitcommit: 4a1d6c43da44b559136f2bf422a531bea5f48dbb
+ms.openlocfilehash: 7a9865424a18a681dcdbf89b607ab2ae73f44098
+ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2018
-ms.locfileid: "27210121"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30931672"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
-查看 OneDrive 和 SharePoint 服務在多地理位置環境中的運作方式。
+查看 Office 365 服務在多地理位置環境中的運作方式。
 
-#### <a name="onedrive-administrator-experience"></a>OneDrive 系統管理員體驗
+## <a name="audit-log-search"></a>稽核記錄檔搜尋
 
-[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [**地理位置**] 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。
+可以從 Office 365 稽核記錄搜索頁面取得所有衛星位置的統一[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)。 您可以看到跨地理位置的所有稽核記錄項目，例如，北美洲與歐洲使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選器，以查看特定使用者的活動。
 
-#### <a name="taxonomy"></a>分類
-
-我們支援整合[分類](https://support.office.com/article/A180FA28-6405-4679-9EC3-81D2028C4EFC)，以用於跨地理位置中的企業管理中繼資料，內含在貴公司之中央位置中主控的主機。我們建議您從中央位置管理全域分類，並只將特定位置的詞彙新增至衛星位置。通用的分類詞彙會同步處理至衛星位置。
-
-#### <a name="sharing"></a>共用
-
-系統管理員可以為每個位置設定並管理共用的原則。每個地理位置中的 OneDrive 網站會接受僅與特定地理位置相對應的共用設定。(例如，您可以允許[外部共用](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85)中央位置，但無法外部共用衛星位置 (反之亦然)。) 請注意，共用的設定不允許設定地理位置間的共用限制。
-
-針對 OneDrive 多地理位置，您必須管理每個地理位置的共用設定，因為系統不會在租用戶間同步處理這些設定。若要管理共用，請造訪 [OneDrive 系統管理中心的共用設定] [](https://admin.onedrive.com/?v=SharingSettings)頁面。依預設，每個衛星位置中的任何人都能啟用外部共用。
-
-#### <a name="user-profile-application"></a>使用者設定檔應用程式
-
-在每個地理位置中有[使用者設定檔應用程式](https://support.office.com/article/494bec9c-6654-41f0-920f-f7f937ea9723)。系統會在每位使用者的地理位置主控其設定檔資訊，且該設定檔資料可供該地理位置的系統管理員使用。
-
-如果您有自訂的設定檔屬性，則建議您使用跨地理位置的相同設定檔結構描述，然後在所有的地理位置或所需的位置填入自訂設定檔屬性。如需有關如何以程式設計方式填入使用者設定檔資料的指導方針，請參閱[大量使用者設定檔更新 API](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)
-
-#### <a name="bcs-secure-store-apps"></a>BCS、Secure Store、應用程式
+## <a name="bcs-secure-store-apps"></a>BCS、Secure Store、應用程式
 
 BCS、Secure Store 及應用程式在每個衛星位置中都有個別的執行個體，因此 Sharepoint Online 系統管理員應該從每個衛星位置中個別管理及設定這些服務。
 
-#### <a name="security-and-compliance-admin-center"></a>安全性與合規性管理中心
+## <a name="ediscovery"></a>eDiscovery 
 
-有一個適用於多地理位置租用戶的中央合規性中心：[Office 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。
+根據預設，多地理位置租用戶的電子文件探索管理員或系統管理員只能在該租用戶的中央位置進行電子文件探索。 Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。 若要設定地區的法規遵循安全性篩選器，請參閱[設定 Office 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)。
 
-#### <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a>資訊保護 (IP) 的資料外洩防護 (DLP) 原則
+## <a name="exchange-mailboxes"></a>Exchange 信箱
 
-您可以在安全性與合規性中心中為商務用 OneDrive 設定您的 IP DLP 原則，將所需的原則範圍設為整個租用戶或適用的使用者。例如：如果您想要為衛星位置中的 OneDrive 使用者選取原則，選取以將原則套用至特定 OneDrive，然後輸入使用者的 OneDrive 的 Url。請參閱[資料外洩防護原則概觀](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e)，以了解建立 DLP 原則的一般指導方針。
+如果使用者的 PDL 變更，系統會自動移動使用者的 Exchange 信箱。 建立新的信箱時，如果使用者的 PDL 未設定任何值，信箱會佈建到使用者的 PDL 或中央位置。
+
+## <a name="information-protection-ip-data-loss-prevention-dlp-policy"></a>資訊保護 (IP) 的資料外洩防護 (DLP) 原則
+
+您可以視整個租用戶或適用使用者的需求，在安全性和合規性中心為商務用 OneDrive、SharePoint 和 Exchange 設定 IP DLP 原則和範圍原則。 例如：如果您想為衛星位置的使用者選取原則，請選取將原則套用到特定 OneDrive 並輸入使用者的 OneDrive URL。 如需建立 DLP 原則的一般指導方針，請參閱[資料外洩防護原則概觀](https://support.office.com/article/1966b2a7-d1e2-4d92-ab61-42efbb137f5e)。
 
 系統會根據 DLP 原則對每個地理位置的適用性來自動同步處理這些原則。
 
-對某個地理位置中的所有使用者執行資訊保護和資料外洩防護原則，不是 UI 中的可用選項，您反而必須選取該原則適用的 OneDrive 帳戶，或將該原則全域套用至所有 OneDrive 帳戶。
+對某個地理位置中的所有使用者執行資訊保護和資料外洩防護原則，不是 UI 中的可用選項，您反而必須選取該原則適用的帳戶，或將該原則全域套用至所有帳戶。
 
-#### <a name="ediscovery"></a>eDiscovery 
+## <a name="microsoft-flow"></a>Microsoft Flow
 
-依預設，電子文件探索管理員或多地理位置租用戶的系統管理員僅能在該租用戶的中央位置中進行 eDiscovery。若要支援對衛星位置進行 eDiscovery 的能力，則可透過 PowerShell 取得名為「地區」的新合規性安全性篩選參數。
+為衛星位置建立的流程將使用位於該租用戶預設地理位置的端點。  Microsoft Flow 不是多地理位置服務。 
 
-Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。
+## <a name="microsoft-powerapps"></a>Microsoft PowerApps
 
-當為特定衛星位置設定電子文件探索管理員或系統管理員角色時，電子文件探索管理員或系統管理員只能對位於該衛星位置中的 SharePoint 網站和 OneDrive 網站執行 eDiscovery 搜尋動作。如果電子文件探索管理員或系統管理員嘗試搜尋指定的衛星位置外的 SharePoint 或 OneDrive 網站，則不會傳回任何結果。此外，當某衛星位置的電子文件探索管理員或系統管理員區域觸發匯出時，系統會將資料匯出至該區域的 Azure 執行個體。這可透過禁止匯出控制框線外的內容來協助組織保持合規。
+為衛星位置建立的 PowerApps 將使用位於該租用戶中央位置的端點。 Microsoft PowerApps 不是多地理位置服務。 
 
-> [!NOTE]
-> 如果此對跨多個 SharePoint 衛星位置的電子文件探索管理員是必要的，將必須為指定 OneDrive 或 SharePoint 網站所在位置之替代衛星位置的電子文件探索管理員建立另一個使用者帳戶。
+## <a name="onedrive-administrator-experience"></a>OneDrive 系統管理員體驗
 
-<table>
-<thead>
-<tr class="header">
-<th align="left"><strong>多地理位置支援的地理位置</strong></th>
-<th align="left"><strong>SharePoint 匯出資料的 eDiscovery 將會位於 Azure Blob 資料位置中…</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>APC</strong></td>
-<td align="left">東南亞或東亞資料中心</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>AUS</strong></td>
-<td align="left">東南亞或東亞資料中心</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>CAN</strong></td>
-<td align="left">美國資料中心</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>EUR</strong></td>
-<td align="left">歐洲資料中心</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>FRA</strong></td>
-<td align="left">歐洲資料中心</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>GBR</strong></td>
-<td align="left">歐洲資料中心</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>IND</strong></td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left"><strong>KOR</strong></td>
-<td align="left">東南亞或東亞資料中心</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>JPN</strong></td>
-<td align="left">東南亞或東亞資料中心</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>NAM</strong></td>
-<td align="left">美國資料中心</td>
-</tr>
-</tbody>
-</table>
+[OneDrive 系統管理中心](https://admin.onedrive.com)在左側瀏覽中 (含有地理位置地圖) 具有 [**地理位置**] 索引標籤，您可以在其中檢視及管理您的地理位置。請使用此頁面來新增或刪除您的租用戶地理位置。
 
-若要為某地區設定合規性安全性篩選：
+## <a name="security-and-compliance-admin-center"></a>安全性與合規性管理中心
 
-1.  開啟 [Windows PowerShell]。
+有一個適用於多地理位置租用戶的中央合規性中心：[Office 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。
 
-2.  Enter 鍵  
-    $s = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri <https://ps.compliance.protection.outlook.com/powershell-liveid> -Credential $cred -Authentication Basic -AllowRedirection -SessionOption (New-PSSessionOption -SkipCACheck -SkipCNCheck -SkipRevocationCheck)
+## <a name="sharepoint-storage-quota"></a>SharePoint 儲存空間配額
 
-    $a = Import-PSSession $s -AllowClobber  
+根據預設，多重地理環境的所有地理位置會共用可用的租用戶儲存空間配額。  您也可以為特定的地理位置分配特定配額，以管理儲存空間配額。 如需詳細資訊，請參閱[多地理位置環境中的 SharePoint 儲存空間配額](sharepoint-multi-geo-storage-quota.md)。
 
-3.  **New-ComplianceSecurityFilter** **-Action** ALL **-FilterName** EnterTheNameYouWantToAssign **-Region** EnterTheRegionParameter **-Users** EnterTheUserPrincipalName
+## <a name="sharing"></a>共用
 
-    For Example: **New-ComplianceSecurityFilter -Action** ALL **-FilterName** NAMEDISCOVERYMANAGERS **-Region** NAM **-Users** adwood@contosodemosx.onmicrosoft.com
+系統管理員可以設定並管理每個位置的共用原則。 每個地理位置中的 OneDrive 和 SharePoint 網站只會遵守對應的地理位置特定的共用設定。 (例如，您可以允許在中央位置[外部共用](https://support.office.com/article/C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85)，但不能在衛星位置外部共用，反之亦然。) 請注意，共用設定不允許在地理位置之間設定共用限制。
 
-請參閱 [New-ComplianceSecurityFilter](https://technet.microsoft.com/library/mt210915(v=exchg.160).aspx) 一文以了解額外的參數和語法
+## <a name="taxonomy"></a>分類
 
-#### <a name="audit-log-search"></a>稽核記錄檔搜尋
+我們使用您公司中央位置主控的主機，針對不同地理位置的企業管理中繼資料，支援統一的[分類法](https://docs.microsoft.com/sharepoint/managed-metadata)。 我們建議您從中央位置管理全域分類法，並只將特定位置的詞彙增到衛星位置的分類法。 全域分類法詞彙將同步到衛星位置。
 
-適用於所有衛星位置的整合式[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)可從 Office 365 稽核記錄搜尋頁面中取得。您可以看到跨地區的所有稽核記錄項目，例如，北美洲與歐洲地理使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選，以查看特定使用者的活動。
+如需詳細資訊與開發人員指導方針，請參閱[管理多地理位置租用戶中的中繼資料](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-managedmetadata)。
+
+## <a name="user-profile-application"></a>使用者設定檔應用程式
+
+每個地理位置都有一個[使用者設定檔應用程式](https://docs.microsoft.com/sharepoint/manage-user-profiles)。 系統會在每位使用者的地理位置主控其設定檔資訊，且該設定檔資料可供該地理位置的系統管理員使用。
+
+如果您有自訂的設定檔屬性，則建議您使用跨地理位置的相同設定檔結構描述，然後在所有的地理位置或所需的位置填入自訂設定檔屬性。 如需如何以程式設計方式填入使用者設定檔資料的指導方針，請參閱[大量使用者設定檔更新 API](https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online)。
+
+如需詳細資訊與開發人員指導方針，請參閱[在多地理位置租用戶中使用使用者設定檔](https://docs.microsoft.com/sharepoint/dev/solution-guidance/multigeo-userprofileexperience)。
+
+## <a name="video-portal"></a>影片入口網站
+
+在多地理位置租用戶中，O365影片入口網站只能從預設地理位置提供，所有使用者將被重新導向至該中央入口網站 URL。 因此，會根據您的中央位置使用該地區的遠端媒體服務 (RMS)，如下所示。
+
+Stream 目前提供下列語言：
+
+- 北美地區，主機位於美國 
+- 歐洲
+- 亞太地區
+
+不過，目前支援 Office 365 影片的下列地區尚無法使用 Stream ，因此在這些地區，我們將使用位於最接近支援地區的 RMS。
+
+- 澳大利亞
+- 加拿大
+- 印度
+- 英國
