@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 0bcf5aebf3a469f75ffac6c5df3d1f808038a299
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: ea5ecf6e44c11f8381a8fa75f523a765ce1669f6
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650146"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948624"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
@@ -232,7 +232,7 @@ Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
   
 ```
 $subscrName="<subscription name>"
-Select-AzSubscription -SubscriptionName $subscrName -Current
+Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 接著，為您的虛擬網路建立新的資源群組。若要判斷資源群組名稱是否是唯一的，可使用此命令來列出現有的資源群組。

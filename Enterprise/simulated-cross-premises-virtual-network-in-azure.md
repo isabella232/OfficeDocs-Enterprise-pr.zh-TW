@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: 摘要：在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
-ms.openlocfilehash: f96231294db6d80d267040c0f3e42a02490f281d
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: 9ef0424bad831294066e4ff4b5f7d602babc0a48
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650086"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948594"
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>Azure 中模擬的跨單位部署虛擬網路
 
@@ -102,7 +102,7 @@ Get-AzSubscription | Sort Name | Select Name
   
 ```
 $subscrName="<subscription name>"
-Select-AzSubscription -SubscriptionName $subscrName -Current
+Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 接下來，建立 XPrem 虛擬網路，並使用這些命令以網路安全性群組保護它。

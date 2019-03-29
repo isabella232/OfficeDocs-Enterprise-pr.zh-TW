@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: 6180f9f87509d6ef29c52223c47726ff549de8d5
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: a38fc04ffe4ffa9a76430cf44543174570d398bc
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650096"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948614"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -135,8 +135,8 @@ Get-AzSubscription | Sort Name | Select Name
 設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 < 和 > 字元)。
   
 ```
-$subscr="<subscription name>"
-Select-AzSubscription -SubscriptionName $subscrName -Current
+$subscrName="<subscription name>"
+Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 接著，為您的基底組態測試實驗室建立新的資源群組。若要判斷資源群組名稱是否是唯一的，可使用此命令來列出現有的資源群組。
