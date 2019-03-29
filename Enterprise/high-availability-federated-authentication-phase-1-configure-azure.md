@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
-ms.openlocfilehash: a57085ef066aeaf14235b8901c045911ef97ceed
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: 0268178b12374f200181c0f1b8a38de6a39e7173
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650156"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948604"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1： 設定 Azure
 
@@ -39,7 +39,7 @@ Azure 必須佈建與以下基本元件：
 
 在開始設定 Azure 元件之前，填寫下列表格。 為了可在設定 Azure 的程序中協助您，請列印此節並記下所需資訊，或將此節複製到一份文件並加以填寫。 對於 VNet 的設定，填寫表格 V。
   
-|**Item**|**組態設定**|**描述**|**值**|
+|**項目**|**組態設定**|**描述**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |VNet 名稱  <br/> |要指派給 VNet （例如 FedAuthNet） 的名稱。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |VNet 位置  <br/> |區域性 Azure 資料中心將包含虛擬網路。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
@@ -61,7 +61,7 @@ Azure 必須佈建與以下基本元件：
   
 請與您的 IT 部門合作，以從虛擬網路位址空間判斷這些位址空間。
   
-|**Item**|**子網路名稱**|**子網路位址空間**|**用途**|
+|**項目**|**子網路名稱**|**子網路位址空間**|**用途**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |使用的子網路的 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器虛擬機器 (Vm)。  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |AD FS Vm 所使用的子網路。  <br/> |
@@ -87,7 +87,7 @@ Azure 必須佈建與以下基本元件：
   
 針對您想要使用一開始設定您的虛擬網路中的網域控制站時您在內部網路中的兩個網域名稱系統 (DNS) 伺服器，填寫表格 d 工時與您的 IT 部門，以決定此清單。
   
-|**Item**|**DNS 伺服器的易記名稱**|**DNS 伺服器 IP 位址**|
+|**項目**|**DNS 伺服器的易記名稱**|**DNS 伺服器 IP 位址**|
 |:-----|:-----|:-----|
 |1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
@@ -137,8 +137,8 @@ Get-AzSubscription | Sort Name | Select SubscriptionName
 設定 Azure 訂用帳戶。 取代引號，包括內的所有項目\<和 > 字元，以正確的名稱。
   
 ```
-$subscr="<subscription name>"
-Select-AzSubscription -SubscriptionName $subscrName -Current
+$subscrName="<subscription name>"
+Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 接下來，建立新的資源群組。 若要判斷資源群組名稱是否是唯一一組，可使用此命令來列出現有的資源群組。
