@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 7b9a95d7d9c7fb19163518ad68409a22790d4c6e
-ms.sourcegitcommit: 1d84e2289fc87717f8a9cd12c68ab27c84405348
+ms.openlocfilehash: c9dff7e17e4c0dcceb7cdeab86c1acdd40e01205
+ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "30372890"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "31001556"
 ---
 # <a name="understanding-office-365-identity-and-azure-active-directory"></a>了解 Office 365 身分識別和 Azure Active Directory
 
@@ -37,7 +37,7 @@ Office 365 來管理使用者使用的雲端型使用者身分識別與驗證服
   
 ### <a name="cloud-only"></a>僅雲端
 
-使用僅限雲端模型，您可以管理 Office 365 中的您使用者帳戶僅。 沒有內部部署伺服器是必要的資訊;它是所有處理定域機組中的 Azure AD。 您建立及管理 Office 365 系統管理中心中的使用者或使用 Windows PowerShell [PowerShell cmdlet](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell)與身分識別，並驗證處理完全定域機組中的 Azure AD。 僅限雲端模型通常是很好的選擇如果： 
+使用僅限雲端模型，您可以管理 Office 365 中的您使用者帳戶僅。 沒有內部部署伺服器是必要的資訊;它是所有處理定域機組中的 Azure AD。 您建立及管理[Microsoft 365 系統管理中心](https://admin.microsoft.com)中的使用者或使用 Windows PowerShell [PowerShell cmdlet](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-with-office-365-powershell)與身分識別，並驗證處理完全定域機組中的 Azure AD。 僅限雲端模型通常是很好的選擇如果： 
   
 - 您有任何其他內部部署使用者目錄。
     
