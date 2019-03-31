@@ -1,5 +1,5 @@
 ---
-title: Office 365 的 OneDrive 中的多地理位置功能
+title: OneDrive 和 SharePoint Online 中的多地理位置功能
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -11,77 +11,45 @@ ms.collection: Strat_SP_gtc
 localization_priority: Priority
 ms.assetid: 094e86f2-9ff0-40ac-af31-28fcaba00c1d
 description: 使用 OneDrive Online 的多地理位置功能，將 Office 365 的目前狀態拓展至多個地理區域。
-ms.openlocfilehash: f89bfe7cb9a287200591746dc6d22430cd6eed1b
-ms.sourcegitcommit: a8aedcfe0d6a6047a622fb3f68278c81c1e413bb
+ms.openlocfilehash: 15dcb44943fa1bf331ef6260946f7c3a632d3c4a
+ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "30052987"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "30948584"
 ---
-# <a name="multi-geo-capabilities-in-onedrive-in-office-365"></a>Office 365 的 OneDrive 中的多地理位置功能
+# <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online"></a>OneDrive 和 SharePoint Online 中的多地理位置功能
 
-使用 OneDrive Online 中的多地理位置功能，貴組織可以將 Office 365 目前狀態拓展至您現有租用戶中的多個地理區域及/或國家。請連絡 Microsoft 帳戶小組以註冊商務用 OneDrive 多地理位置的多國公司。
-  
-您可以使用 OneDrive 多地理位置，來佈建待用資料並將資料儲存在您所選擇之符合資料常駐要求的地理位置，和同時將現代化生產力體驗逐步拓展至您的員工。
-  
-以下是多地理位置功能為您組織帶來好處的方式：
-  
-- 以全域連接組織的形式運作，內含跨多個地理位置的單一 Office 365 租用戶。
-    
-- 在指定地理位置中建立及主控待用資料以符合資料常駐要求。
-    
-- 賦與衛星使用者中央位置使用者所享有的相同現代化生產力體驗。
-    
-- 可讓您的使用者隨著角色變更移到各個地理位置，同時對其內容的存取權則保持不變。
-    
-- 為每個地理位置打造共用原則和為每個網站打造資料外洩防護原則。
-    
-- 為每個地理位置指派電子文件探索管理員，並允許管理為您地理位置量身打造的案例。
-    
-- 選擇其他地理位置的唯一 URL 命名空間 (例如 ContosoEUR.sharepoint.com)。
-    
-- 將區域內部部署資料與 Office 365 多地理位置租用戶合併。
-    
-在多地理位置組態中，Office 365 租用包含中央位置 (即原始佈建 Office 365 訂閱之處) 以及一或多個衛星地理位置。多地理位置的重要概念是，單一租用戶會跨越多個地理位置。在多地理位置租用戶中，系統會在 Azure Active Directory (AAD) 中主控地理位置、群組和使用者資訊的相關資訊。因為您的租用戶資訊是集中管理且同步處理到每個地理位置，包含公司任何人的共用與體驗都會包含全域意識。
+OneDrive 和 SharePoint Online 中的多地理位置功能，可讓您控制以待用方式儲存共用資源 (例如 SharePoint 小組網站和 Office 365 群組信箱) 所在的國家/地區或區域。
 
-## <a name="video-introducing-office-365-multi-geo"></a>影片：介紹 Office 365 的多地理位置
+每個使用者、群組信箱和 SharePoint 網站會有慣用的資料位置 (PDL)，這表示儲存相關資料所在的地理位置。 使用者的個人資料 (Exchange 信箱和 OneDrive) 以及他們所建立的任何 Office 365 群組或 SharePoint 網站，可以儲存在指定的地理位置，以滿足資料落地需求。 您可以[為每個地理位置指定不同的系統管理員](add-a-sharepoint-geo-admin.md)。
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1Yk6B?autoplay=false]
-  
-## <a name="get-multi-geo-features-in-three-simple-steps"></a>在三個簡單的步驟中獲得多地理位置功能
+使用者使用 Office 365 服務，包括 Office 應用程式、OneDrive 及搜尋時，可獲得順暢的體驗。 如需詳細資料，請參閱[多地理位置環境中的使用者體驗](multi-geo-user-experience.md)。
 
-設定多地理位置很簡單：
-  
-1. 與您的帳戶小組合作以新增 _Office 365 中的多地理位置功能_服務方案。他們會引導您新增所需的授權數目。
-    
-2. 新增衛星位置。
-    
-3. 設定適當位置的使用者帳戶。
-    
-## <a name="multi-geo-status-and-availability"></a>多地理位置狀態和可用性
+## <a name="onedrive"></a>OneDrive
 
-目前在這些地區與國家中提供的 OneDrive 多地理位置：
-  
-- 亞太地區
+每位使用者的 OneDrive 可以佈建在其中或根據使用者的 PDL [由系統管理員移動](move-onedrive-between-geo-locations.md)到衛星位置。 然後個人檔案會保存在該地理位置，不過可以與其他地理位置中的使用者共用這些檔案。
 
-- 澳大利亞
+## <a name="sites-and-groups"></a>網站與群組
 
-- 加拿大
+當使用者建立 SharePoint 群組連接的網站時，其 PDL 可用來判斷建立網站和其相關聯群組信箱所在的地理位置。 (如果使用者的 PDL 值尚未設定，或是設為尚未設定為衛星位置的地理位置，則會在中央位置建立網站和信箱。)
 
-- 歐盟 (EMEA)
+Exchange、OneDrive 及 SharePoint 以外的 Office 365 服務並非多地理位置。 不過，這些服務所建立的 Office 365 群組會加上建立者的 PDL 戳記，並且會在對應的地理位置佈建其 Exchange 群組信箱和 SharePoint O365 群組網站。 
 
-- 法國
+## <a name="managing-the-multi-geo-environment"></a>管理多地理環境
 
-- 印度
+您會透過 SharePoint 系統管理中心來設定和管理您的多地理環境。 
 
-- 日本
+![SharePoint 系統管理中心中地理位置頁面的螢幕擷取畫面](media/sharepoint-multi-geo-admin-center.png)
 
-- 英國
+(部分動作，例如移動 SharePoint 網站或 OneDrive 網站，需要使用 Microsoft PowerShell。)
 
-- 美國 (北美洲)
+## <a name="see-also"></a>請參閱
 
-- 韓國
+[Aka.ms/GetMultiGeo ](https://Aka.ms/GetMultiGeo)
 
-## <a name="getting-started"></a>快速入門
+[管理多地理位置環境](administering-a-multi-geo-environment.md)
 
-若要開始使用商務用 OneDrive 的多地理位置，第一個步驟是[規劃您的商務用 OneDrive 多地理位置環境](plan-for-multi-geo.md)。接下來，[了解管理多地理位置環境](administering-a-multi-geo-environment.md)與[使用者經歷多地理位置環境的方式](multi-geo-user-experience.md)。當您準備好設定商務用 OneDrive 多地理位置時，[設定多地理位置的租用戶](multi-geo-tenant-configuration.md)，然後[將任何現有的 OneDrive 網站移至其新地理位置](move-onedrive-between-geo-locations.md)和[設定搜尋](configure-search-for-multi-geo.md)。
+[多地理位置環境中的 SharePoint 儲存空間配額](sharepoint-multi-geo-storage-quota.md)
+
+[管理多地理位置環境中的 Exchange Online 信箱](administering-exchange-online-multi-geo.md)
