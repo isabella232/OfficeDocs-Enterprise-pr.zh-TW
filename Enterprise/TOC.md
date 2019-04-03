@@ -143,6 +143,7 @@
 #### [設定 Office 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)
 #### [使用特定 PDL 建立群組](multi-geo-add-group-with-pdl.md)
 #### [刪除地理位置](delete-a-geo-location.md)
+#### [在您的衛星地理位置啟用 SharePoint 多地理位置](enabling-SP-multigeo-satellite-geolocation.md)
 #### [管理 Exchange 多地理位置](administering-exchange-online-multi-geo.md)
 
 ## [移至新的 Office 365 資料中心地理位置](moving-data-to-new-datacenter-geos.md)
