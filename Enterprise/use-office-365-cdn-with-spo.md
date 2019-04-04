@@ -3,7 +3,7 @@ title: 使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/2/2019
+ms.date: 4/3/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ search.appverid:
 - SPO160
 ms.assetid: bebb285f-1d54-4f79-90a5-94985afc6af8
 description: 說明如何使用 Office 365 內容傳遞網路 (CDN) 來加快 SharePoint Online 的資產傳遞至您的所有使用者不論它們的所在位置，或使用者如何存取您的內容。
-ms.openlocfilehash: a718c30a40209a8ee0c8e78700ed3eae72c8347c
-ms.sourcegitcommit: 43d2b7e1d9932182c6cca5164d4d9096dcf4ed36
+ms.openlocfilehash: ceb66b3e17baf25a292b4903c569b931f9448f71
+ms.sourcegitcommit: 100ae697304427dab5ad494a06323656b498c57e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31039500"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "31396921"
 ---
 # <a name="use-the-office-365-content-delivery-network-cdn-with-sharepoint-online"></a>使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online
 
@@ -288,7 +288,7 @@ _ExcludeIfNoScriptDisabled_屬性會從網站層級_NoScript_屬性設定為基�
 Add-SPOTenantCdnOrigin -CdnType <Public | Private> -OriginUrl <path>
 ```
 
-_路徑_的值是文件庫或資料夾，其中包含資產的路徑。 您可以使用萬用字元，除了相對路徑。 原點支援加至 URL 的萬用字元。 這可讓您建立橫跨多個站台的原點。 例如，若要包含在所有網站的 masterpages 資料夾中的所有資產內 CDN 公開原點，輸入下列命令：
+_路徑_的值是文件庫或資料夾，其中包含資產的相對路徑。 您可以使用萬用字元，除了相對路徑。 原點支援加至 URL 的萬用字元。 這可讓您建立橫跨多個站台的原點。 例如，若要包含在所有網站的 masterpages 資料夾中的所有資產內 CDN 公開原點，輸入下列命令：
 
 ``` powershell
 Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
@@ -297,18 +297,18 @@ Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
 - 萬用字元修飾詞 ***/** 只用於起點處的路徑，並會比對 [指定 URL] 下的所有 URL 區段。
 - 路徑可以指向文件庫、 資料夾或網站。 例如，路徑 _* / site1_會比對網站下的所有文件庫。
 
-您可以新增原點搭配使用的完整路徑或相對路徑的特定路徑。
+您可以新增與特定的相對路徑的原點而言。 您無法新增使用的完整路徑原點。
 
-本範例會使用相對路徑的特定網站新增私人原點 siteassets 文件庫：
+本範例會新增 siteassets 文件庫私人原點特定站台：
 
 ``` powershell
 Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
-本範例會在網站集合的網站資產使用的完整路徑的文件庫中新增私人原點_folder1_資料夾：
+本範例會在網站集合的網站資產文件庫中新增私人原點_folder1_資料夾：
 
 ``` powershell
-Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl “https://contoso.sharepoint.com/sites/test/siteassets/folder1”
+Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl “/sites/test/siteassets/folder1”
 ```
 
 如需這個命令和語法的詳細資訊，請參閱 < <b0>Add SPOTenantCdnOrigin</b0>。
@@ -469,7 +469,7 @@ spo cdn origin list --type Public
 
 ### <a name="add-an-office-365-cdn-origin"></a>新增 Office 365 CDN 原始來源
 
-> [!NOTE]
+> [!IMPORTANT]
 > 您應該永遠不會將會被視為機密的 SharePoint 文件庫設定為公用的原始來源組織的資源。
 
 使用[spo cdn 原點 add](https://pnp.github.io/office365-cli/cmd/spo/cdn/cdn-origin-add/)命令來定義 CDN 原點。 您可以定義多個原點。 原點是指向 SharePoint 文件庫或資料夾，其中包含您想要裝載的 CDN 資產的 URL。
@@ -478,7 +478,7 @@ spo cdn origin list --type Public
 spo cdn origin add --type [Public | Private] --origin <path>
 ```
 
-其中`path`是包含資產的資料夾路徑。 您可以使用萬用字元，除了相對路徑。
+其中`path`是包含資產的資料夾的相對路徑。 您可以使用萬用字元，除了相對路徑。
 
 若要為公用的原始來源的所有網站**主版頁面圖庫**中包含所有的資產，請執行：
 
