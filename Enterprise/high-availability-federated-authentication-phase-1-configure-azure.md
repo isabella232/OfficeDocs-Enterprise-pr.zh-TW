@@ -12,14 +12,14 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
-ms.openlocfilehash: 0268178b12374f200181c0f1b8a38de6a39e7173
-ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
+ms.openlocfilehash: 1c9cfeaf930997c30671e5bbaed92d7dde2542e1
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "30948604"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037957"
 ---
-# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1： 設定 Azure
+# <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
  **摘要：** 設定 Microsoft Azure 基礎結構，以主應用程式的 Office 365 的高可用性同盟驗證。
   
@@ -63,7 +63,7 @@ Azure 必須佈建與以下基本元件：
   
 |**項目**|**子網路名稱**|**子網路位址空間**|**用途**|
 |:-----|:-----|:-----|:-----|
-|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |使用的子網路的 Windows Server Active Directory (AD) 網域控制站和 DirSync 伺服器虛擬機器 (Vm)。  <br/> |
+|1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |使用的子網路的 Active Directory 網域服務 (AD DS) 網域控制站和 DirSync 伺服器虛擬機器 (Vm)。  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |AD FS Vm 所使用的子網路。  <br/> |
 |3.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Web 應用程式 proxy Vm 使用的子網路。  <br/> |
 |4.  <br/> |GatewaySubnet  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |Azure 閘道 Vm 使用的子網路。  <br/> |

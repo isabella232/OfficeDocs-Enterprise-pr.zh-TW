@@ -15,19 +15,21 @@ ms.custom:
 - PowerShell
 - O365ITProTrain
 ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
-description: 說明如何使用 Office 365 PowerShell 指派給未授權使用者的 Office 365 授權。
-ms.openlocfilehash: ab9b66065e20d0c2d6cfb673dac24ee2ab79e831
-ms.sourcegitcommit: 6826e0ea4a777f7d98500209a9d3bc75e89f8d15
+search.appverid:
+- MET150
+description: 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
+ms.openlocfilehash: 5040249f29ac8390db5b2933fc04fb1d01f0af2c
+ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29651177"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30931762"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 指派授權至使用者帳戶
 
-**摘要：** 說明如何使用 Office 365 PowerShell 指派給未授權使用者的 Office 365 授權。
+**摘要：** 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
   
-使用者無法使用任何 Office 365 服務之前其帳戶已指派授權的授權方案。您可以使用 Office 365 PowerShell 快速地將授權指派給未授權的帳戶。 
+使用者無法使用任何 Office 365 服務，直到其帳戶具有已指派授權給授權計劃。 您可以使用 Office 365 PowerShell 來快速將授權指派給未經授權的帳戶。 
 
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
@@ -35,15 +37,15 @@ ms.locfileid: "29651177"
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
 
-接下來，列出您使用此命令的租用戶授權計劃。
+接下來，列出您的租用戶使用此命令的授權計劃。
 
 ```
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-接下來，取得您要新增的授權，又稱為使用者主體名稱 (UPN) 的帳戶登入名稱。
+接下來，取得您想要新增的授權，也稱為使用者主體名稱 (UPN) 的帳戶登入名稱。
 
-最後，指定的使用者登入名稱和授權計劃名稱並執行下列命令。
+最後，指定使用者登入名稱及授權計劃名稱，並執行下列命令。
 
 ```
 $userUPN="<user sign-in name (UPN)>"
@@ -59,23 +61,23 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
-執行**Get-msolaccountsku**命令來檢視您組織中每個計劃中可用的授權方案和可用授權數量。每個計劃中的可用授權數量是**ActiveUnits** - **WarningUnits** - **ConsumedUnits**。如需授權方案、 授權及服務的詳細資訊，請參閱[檢視授權和 Office 365 powershell 的服務](view-licenses-and-services-with-office-365-powershell.md)。
+執行**Get-msolaccountsku**命令，以檢視您組織中每個計劃可用的授權計劃與可用授權數量。 在每個方案可用授權數量是**ActiveUnits** - **WarningUnits** - **ConsumedUnits**。 如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。
     
-若要在組織中尋找未授權的帳戶，請執行此命令。
+若要在組織中尋找未經授權的帳戶，請執行此命令。
 
 ```
 Get-MsolUser -All -UnlicensedUsersOnly
 ```
     
-您只可以將授權指派給**UsageLocation**屬性設定為有效的 ISO 3166-1 alpha-2 國家/地區碼的使用者帳戶。例如，我們美國、 和法國的 FR。某些 Office 365 服務都無法提供在某些國家/地區。如需詳細資訊，請參閱[關於授權限制](https://go.microsoft.com/fwlink/p/?LinkId=691730)。
+您只可以將授權指派給使用者帳戶，已將**UsageLocation**屬性設定為有效的 ISO 3166-1 alpha-2http 國碼/地區碼。 例如，US 代表美國、FR 代表法國。 在某些國家/地區中，某些 Office 365 服務無法使用。 如需詳細資訊，請參閱[關於授權限制](https://go.microsoft.com/fwlink/p/?LinkId=691730)。
     
-若要尋找沒有**UsageLocation**值的帳戶，請執行此命令。
+若要找出沒有**UsageLocation**值的帳戶，請執行此命令。
 
 ```
 Get-MsolUser -All | where {$_.UsageLocation -eq $null}
 ```
 
-若要設定**UsageLocation**值帳戶上，執行此命令。
+若要設定**UsageLocation**值帳戶，請執行此命令。
 
 ```
 Set-MsolUser -UserPrincipalName "<Account>" -UsageLocation <CountryCode>
@@ -91,35 +93,35 @@ Set-MsolUser -UserPrincipalName "belindan@litwareinc.com" -UsageLocation US
 
 ### <a name="assigning-licenses-to-user-accounts"></a>將授權指派給使用者帳戶
     
-若要將授權指派給使用者，請在 Office 365 PowerShell 中使用下列命令。
+若要指派授權給使用者，請在 Office 365 PowerShell 中使用下列命令。
   
 ```
 Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "<AccountSkuId>"
 ```
 
-此範例會將授權指派從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權授權的使用者**belindan@litwareinc.com**計劃：
+本範例會從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃授權的使用者**belindan@litwareinc.com**指派授權：
   
 ```
 Set-MsolUserLicense -UserPrincipalName "belindan@litwareinc.com" -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
-若要將授權指派給未授權使用者，執行此命令。
+若要將授權指派給多位未經授權的使用者，請執行此命令。
   
 ```
 Get-MsolUser -All -UnlicensedUsersOnly [<FilterableAttributes>] | ForEach {Set-MsolUserLicense -AddLicenses "<AccountSkuId>"}
 ```
   
 >[!Note]
->您不能指派給使用者的多個授權從相同的授權方案。如果您沒有足夠可用的授權，授權指派給使用者他們正在可用授權執行之前**Get-msoluser** cmdlet 所傳回的順序。
+>您不能指派給使用者的多個授權從相同的授權計劃。 如果您沒有足夠的可用授權，授權指派給他們正在直到可用的授權用完**Get-msoluser** cmdlet 所傳回的順序中的使用者。
 >
 
-此範例會將授權從**litwareinc: enterprisepack** (Office 365 企業版 E3) 的授權方案指派給未授權的所有使用者：
+此範例會將授權從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃指派給所有未經授權的使用者：
   
 ```
 Get-MsolUser -All -UnlicensedUsersOnly | ForEach {Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"}
 ```
 
-此範例會將這些相同的授權指派給未授權使用者在美國銷售部門中：
+此範例會將相同的授權指派給在美國境內銷售部門中未經授權的使用者：
   
 ```
 Get-MsolUser -All -Department "Sales" -UsageLocation "US" -UnlicensedUsersOnly | ForEach {Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"}

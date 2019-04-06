@@ -14,12 +14,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: d4c49a6f-abfd-4d68-b353-259b4eefb033
 description: 摘要： 設定並示範 Office 365 進階 eDiscovery 與 Office 365 開發/測試環境中的範例資料。
-ms.openlocfilehash: 6c52c7c7fdc31616e58f186484d2d8c4506b7ea6
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: b9c12a132eb83f0317503a736313b547dfe475e7
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573817"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31038017"
 ---
 # <a name="advanced-ediscovery-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階電子文件探索
 
@@ -39,7 +39,7 @@ Office 365 進階電子文件可讓您快速地尋找和分析跨 Office 365，�
 如果您想要在模擬的企業中測試進階電子文件，請遵循[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
   
 > [!NOTE]
-> 測試進階電子文件不需要模擬的企業環境，其中包含連線至網際網路的模擬內部網路和 Windows Server AD 樹系中的目錄同步處理。 它提供了此選項，讓您可以代表典型組織環境中執行測試與試驗。 
+> 測試進階電子文件不需要模擬的企業環境，其中包含連線至網際網路的模擬內部網路和目錄同步處理的 Active Directory 網域服務 (AD DS) 樹系。 它提供了此選項，讓您可以代表典型組織環境中執行測試與試驗。 
   
 ## <a name="phase-2-create-example-data-for-advanced-ediscovery"></a>階段 2： 建立進階電子文件探索的範例資料
 

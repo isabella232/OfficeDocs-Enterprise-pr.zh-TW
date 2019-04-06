@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1b3b5318-6977-42ed-b5c7-96fa74b08846
 description: 了解如何設定 Office 365 和您在內部部署 Active Directory 之間的目錄同步處理。
-ms.openlocfilehash: 03f824da6feb41791e12818d8da2e298dc633f4e
-ms.sourcegitcommit: 7814d01db4d7618fc2f9381faef1a6a45ea063fe
+ms.openlocfilehash: 6d635dbcacb5a1c6c6c9c202f2ece4fac35558a4
+ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "30492943"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "31001746"
 ---
 # <a name="set-up-directory-synchronization-for-office-365"></a>設定 Office 365 的目錄同步處理
 
@@ -56,7 +56,7 @@ Office 365 使用雲端型使用者身分識別管理服務 Azure Active Directo
 |**Windows Server 2008** | -在 Windows Management Framework 3.0，位於[Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=717996)中使用 PowerShell 的最新支援的版本。  <br> -.Net 4.5.1 和更新版本的版本是位於[Microsoft 下載中心找到](https://go.microsoft.com/fwlink/p/?LinkId=717996)。 |
 
 > [!NOTE]
-> 如果您使用 Azure Active Directory DirSync，您可以對 Azure Active Directory 同步處理從內部部署 Active Directory 的通訊群組成員的數目上限為 15000。 針對 Azure AD Connect，該數量為 50000。 
+> 如果您使用 Azure Active Directory DirSync，您可以對 Azure Active Directory 同步處理從內部部署 Active Directory 的通訊群組成員的數目上限為 15000。 針對 Azure AD Connect，該數量為 50000。
   
 若要更仔細檢閱 Azure AD Connect 硬體、 軟體、 帳戶及權限需求、 SSL 憑證需求及物件限制，請閱讀[Azure Active Directory Connect 的必要條件](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-prerequisites)。
   
@@ -64,8 +64,8 @@ Office 365 使用雲端型使用者身分識別管理服務 Azure Active Directo
 
 ## <a name="to-set-up-directory-synchronization"></a>若要設定目錄同步處理
 
-1. 登入 Office 365 系統管理中心，選擇 [**使用者**\>左側導覽窗格上的**作用中的使用者**。
-2. 在 Office 365 系統管理中心，在**作用中使用者**] 頁面上，選擇 [**更多** \> **目錄同步處理**。
+1. 登入[Microsoft 365 系統管理中心](https://admin.microsoft.com)，選擇 [**使用者**\>左側導覽窗格上的**作用中的使用者**。
+2. 在系統管理中心中，在**作用中使用者**] 頁面上，選擇 [**更多** \> **目錄同步處理**。
 
     ![在 [更多] 功能表中，選擇 [目錄同步處理](media/dc6669e5-c01b-471e-9cdf-04f5d44e1c4b.png)
   

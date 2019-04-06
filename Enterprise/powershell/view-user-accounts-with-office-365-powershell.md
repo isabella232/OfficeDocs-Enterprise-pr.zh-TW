@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: bb12f49d-a85d-4f3b-ada2-5c4e33977b10
 description: 摘要： 檢視、 清單，或使用 Office 365 PowerShell 的各種方式顯示您的使用者帳戶。
-ms.openlocfilehash: 717a7c11f4e7f6d2e5e0c452854df7d4c419007e
-ms.sourcegitcommit: 1dc7b4731cf9899c5ae867624ed142dbab0c517f
+ms.openlocfilehash: 2858efef6220beed76894414ea99ed922353afc3
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30683700"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037917"
 ---
 # <a name="view-user-accounts-with-office-365-powershell"></a>檢視與 Office 365 PowerShell 的使用者帳戶
 
@@ -217,7 +217,7 @@ Get-MsolUser | Where-Object {$_.City -eq "London"}
 您可以檢查封鎖的狀態的使用者帳戶使用下列命令：
   
 ```
-Get-MolUser -UserPrincipalName <UPN of user account> | Select-Object DisplayName,BlockCredential
+Get-MsolUser -UserPrincipalName <UPN of user account> | Select-Object DisplayName,BlockCredential
 ```
 
 ### <a name="view-additional-property-values-for-accounts"></a>檢視其他屬性值的帳戶

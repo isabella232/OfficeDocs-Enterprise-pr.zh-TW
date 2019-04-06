@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 22248f2f-b370-435e-b6ac-0ae0cae36b96
 description: 摘要： 設定並示範 Office 365 開發/測試環境中的 Office 365 雲端 App 安全性。
-ms.openlocfilehash: f8630f1666286c2f3cced9323eccbe1f73203fdb
-ms.sourcegitcommit: e5598a1220316122b5ed206c2607092ea1eac65c
+ms.openlocfilehash: 7b77c383eb521c51aa03208aae8c1636c7935821
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30573677"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31038035"
 ---
 # <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的雲端 App 安全性
 
@@ -41,7 +41,7 @@ Office 365 雲端 App 安全性，先前稱為 Office 365 進階安全性管理�
 如果您想要在模擬的企業中測試 Cloud App Security，請遵循[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
   
 > [!NOTE]
-> 測試的 Cloud App Security 不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和 Windows Server AD 樹系中的目錄同步處理。 它提供了此選項，讓您可以測試 Cloud App Security 與代表典型組織的環境中實驗。 
+> 測試的 Cloud App Security 不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和目錄同步處理的 Active Directory 網域服務 (AD DS) 樹系。 它提供了此選項，讓您可以測試 Cloud App Security 與代表典型組織的環境中實驗。 
   
 ## <a name="phase-2-before-enabling-cloud-app-security-and-creating-a-policy"></a>階段 2： 啟用 Cloud App Security 和建立原則前
 

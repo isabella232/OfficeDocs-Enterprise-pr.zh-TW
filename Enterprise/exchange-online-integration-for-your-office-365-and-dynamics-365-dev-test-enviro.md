@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_TLGs
 ms.assetid: 499c5823-427a-4ba2-8fc1-9553bc2ff2d3
 description: 摘要：使用此測試實驗室指南，在 Office 365 試用版訂閱中啟用適用於 Exchange Online 的 Dynamics 365 整合。
-ms.openlocfilehash: be79f58f448799bba9c4a9ee51350f198d721e0d
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 47153f9321284d0bb30f59645dfe56ab40cb7982
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30574017"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037997"
 ---
 # <a name="exchange-online-integration-for-your-office-365-and-dynamics-365-devtest-environment"></a>適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合
 
@@ -36,7 +36,7 @@ Microsoft Dynamics 365 的重要用途是將所有的客戶通訊儲存在同一
 請使用 [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)中的指示，建立 Office 365 和 Dynamics 365 開發/測試環境的輕量型或模擬企業版本。
   
 > [!NOTE]
-> 這篇文章中的組態不需要模擬的企業開發/測試環境，其中包括模擬的內部網路 (連線到網際網路) 和 Windows Server Active Directory (AD) 樹系中的目錄同步處理。它在這裡提供作為選項，讓您可以在代表典型組織的環境中試驗 Office 365 和 Dynamics 365 
+> 本文中的設定不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和目錄同步處理的 Active Directory 網域服務 (AD DS) 樹系。 它提供了此選項，讓您可以在環境中，代表的典型組織體驗的 Office 365 和 Dynamics 365 
   
 ## <a name="phase-2-configure-and-demonstrate-dynamics-365-integration-in-exchange-online"></a>階段 2：在 Exchange Online 中設定及示範 Dynamics 365 整合
 

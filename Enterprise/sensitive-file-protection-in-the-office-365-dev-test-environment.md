@@ -3,7 +3,7 @@ title: Office 365 開發/測試環境中的機密檔案保護
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 04/01/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: 摘要： 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
-ms.openlocfilehash: 59d4cf56113f8b787f0caeaefddae135ad8e6249
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: daed3b87983de79268b45dc4f92578c7c8bc59cb
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30574067"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037967"
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的機密檔案保護
 
@@ -232,7 +232,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 5. 在**SharePoint 系統管理中心**] 索引標籤上，按一下 [**設定**]。
     
-6. 在 [**設定**] 頁面中**的資訊版權管理 (IRM)** ] 區段中，選取 [**使用在您的組態中指定的 IRM 服務**，，，然後選取 [**重新整理 IRM 設定**。
+6. 在頁面上，在 [**資訊版權管理 (IRM)** ] 區段中，選取 [**使用在您的組態中指定的 IRM 服務**]，然後選取 [**重新整理 IRM 設定**。
     
 7. 關閉 [ **SharePoint 系統管理中心**] 索引標籤。
     
@@ -264,9 +264,9 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 8. [**設定文件的存取權限**，選取**要列印的允許檢視**和**寫入在下載文件的複本上的允許檢視**。
     
-9. **設定群組保護和認證間隔**] 下選取 [**允許群組保護**並在**預設群組**，輸入**高階主管**。
+9. **設定群組保護和認證間隔**] 下選取 [**允許群組保護]。預設群組**，然後輸入**高階主管**。
     
-10. 按一下 [確定]。
+10. 按一下 [確定]****。
     
 接下來，做為 CEO，您將新的文件上傳至行政人員文件資料夾，下載，然後不小心將其上傳到銷售文件資料夾。
   
