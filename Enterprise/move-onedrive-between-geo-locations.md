@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 13210d354c45c2d4927ac3de34512bc75a09c14b
-ms.sourcegitcommit: 19f0deee26b6cf2eef316c742054572bb9d98b84
+ms.openlocfilehash: 1197d23bdf94fe38ba24138ddde7c1f1fb92b41f
+ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "30458323"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "30931822"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
@@ -59,7 +59,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 `connect-sposervice -url https://contosoenergyeur-admin.sharepoint.com`
 
-![](media/move-onedrive-between-geo-locations-image1.png)
+![顯示 connect-sposervice Cmdlet的 PowerShell 視窗螢幕擷取畫面](media/move-onedrive-between-geo-locations-image1.png)
 
 ## <a name="validating-the-environment"></a>驗證環境
 
@@ -71,7 +71,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 您會看到地理位置清單，而是否可以在其中移動內容會標示為「相容」。 如果命令傳回「不相容」，請之後再重新驗證狀態。
 
-如果 OneDrive 處於法務保存狀態或包含子網站，則無法移動。您可以使用 Start-SPOUserAndContentMove Cmdlet 以及 -ValidationOnly 參數驗證 OneDrive 是否可以移動：
+如果 OneDrive 包含子網站，就無法移動。 您可以使用 Start-SPOUserAndContentMove Cmdlet 以及 -ValidationOnly 參數驗證 OneDrive 是否可以移動：
 
 `Start-SPOUserAndContentMove -UserPrincipalName <UPN> -DestinationDataLocation <DestinationDataLocation> -ValidationOnly`
 
@@ -96,7 +96,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 `Start-SPOUserAndContentMove -UserPrincipalName matt@contosoenergy.onmicrosoft.com -DestinationDataLocation AUS`
 
-![](media/move-onedrive-between-geo-locations-image2.png)
+![顯示 Start-SPOUserAndContentMove Cmdlet 的 PowerShell 視窗螢幕擷取畫面](media/move-onedrive-between-geo-locations-image2.png)
 
 若要排程稍後進行異地移動，請使用下列參數的其中一個：
 

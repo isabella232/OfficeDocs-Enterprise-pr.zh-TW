@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: ea5ecf6e44c11f8381a8fa75f523a765ce1669f6
-ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
+ms.openlocfilehash: f6ee25d7e1564ce5770bada709934e68dd6888ee
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "30948624"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037987"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
@@ -83,7 +83,7 @@ Azure 虛擬網路會裝載虛擬機器。Azure 虛擬網路上虛擬機器所�
     
 - 您可以使用 Windows Server 2016 中的路由及遠端存取服務 (RRAS) 或 Windows Server 2012，建立內部部署網路和 Azure 虛擬網路間的 IPsec 站台對站台 VPN 連線。您也可以使用其他選項，例如 Cisco 或 Juniper Networks 的 VPN 裝置。
     
-- 內部部署網路可能仍有 Windows Server Active Directory (AD)、網域名稱系統 (DNS) 和 Proxy 伺服器等網路服務。視您的需求而定，將一些此類網路資源放在 Azure 虛擬網路中可能會有助益。
+- 內部部署網路可能仍有 Active Directory Domain Services (AD DS)、網域名稱系統 (DNS) 和 Proxy 伺服器等網路服務。視您的需求而定，將一些此類網路資源放在 Azure 虛擬網路中可能會有助益。
     
 對於具備一個或多個子網路的現有 Azure 虛擬網路，請判斷其是否還有位址空間容納其他子網路，以裝載所需的虛擬機器 (視您的需求而定)。如果您沒有其餘位址空間可容納其他子網路，請建立本身具備站台對站台 VPN 連線的其他虛擬網路。
   
@@ -211,10 +211,8 @@ Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址
 
 首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。
 
-<!--  
-> [!NOTE]
-> These commands are for Azure PowerShell 1.0 and above. For a text file that has all the PowerShell commands in this article, click [here](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19). 
--->
+> [!TIP]
+> 按一下[這裡](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19)以取得包含本文中所有 PowerShell 命令的文字檔案。 
   
 接著，使用此命令登入您的 Azure 帳戶。
   

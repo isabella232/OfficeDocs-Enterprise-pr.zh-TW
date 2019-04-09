@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: a1370fe4-2fd6-4fea-ad1d-3555433d6d2e
 description: 摘要：使用這項測試實驗室指南來建立開發/測試環境，其中包含所有的 Microsoft 雲端供應項目。
-ms.openlocfilehash: 0ccea58e86f2e105704aac01ba4379c21a174e3a
-ms.sourcegitcommit: e5598a1220316122b5ed206c2607092ea1eac65c
+ms.openlocfilehash: b8ffd01c9d129d4537c82f0e1f74bd7c1be1388b
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "30573657"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037947"
 ---
 # <a name="the-one-microsoft-cloud-devtest-environment"></a>One Microsoft Cloud 開發/測試環境
 
@@ -46,7 +46,7 @@ ms.locfileid: "30573657"
 
 遵循在 [ Office 365 開發/測試環境中的 DirSync ](dirsync-for-your-office-365-dev-test-environment.md) 中的指示。
   
-圖 1 顯示您產生的組態，其中包括 Office 365 與在 Azure 基礎結構服務中執行模擬內部網路與來自內部部署 Windows Server Active Directory (AD) 樹系中的目錄同步處理。
+圖 1 顯示您產生的組態，其中包括 Office 365 與在 Azure 基礎結構服務中執行模擬內部網路與來自內部部署 Active Directory Domain Services (AD DS) 樹系中的目錄同步處理。
   
 **圖 1：含 Office 365 之 Azure 中的模擬內部網路**
 

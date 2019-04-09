@@ -3,7 +3,7 @@ title: Office 365 開發/測試環境
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/09/2018
+ms.date: 04/02/2019
 ms.audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: 7a7b12038acf914667655decee52993286faab1e
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: a49ba10ab9ddded36f21ca9cc92f0482cbe7a4fb
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31038028"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -132,11 +132,9 @@ ms.locfileid: "30573997"
     
 ## <a name="phase-3-configure-your-office-365-trial-subscription"></a>階段 3：設定 Office 365 試用訂閱
 
-在這個階段中，您可以使用其他使用者與 Sharepoint 小組網站設定 Office 365 訂閱。
+在這個階段中，您可以設定其他使用者使用您的 Office 365 訂閱，並指派他們 Office 365 E5 授權。
   
-首先，請新增四個使用者，並將 E5 授權指派給他們。
-  
-使用「[連線到 Office 365 PowerShell](https://technet.microsoft.com/library/dn975125.aspx)」中的指示來安裝 PowerShell 模組，並從以下位置連線到新 Office 365 訂閱：
+使用[連線到 Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-azure-active-directory-powershell-for-graph-module) 中的指示，透過以下方式將 Azure Active Directory PowerShell for Graph 模組連線到您的 Office 365 訂閱：
   
 - 您的電腦 (適用於輕量型 Office 365 開發/測試環境)。
     
@@ -144,50 +142,45 @@ ms.locfileid: "30573997"
     
  在 [Windows PowerShell 認證要求] 對話方塊中，輸入 Office 365 全域管理員帳戶的使用者名稱 (例如：jdoe@contosotoycompany.onmicrosoft.com) 和密碼。
   
-填入您的組織名稱 (範例︰contosotoycompany)，位置的兩個字元國家/地區代碼，再從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
-  
+填入您的組織名稱 (範例︰contosotoycompany)，代表位置的兩個字元國家/地區代碼、常用帳戶密碼，再從 PowerShell 命令提示字元中執行下列命令：
+
 ```
 $orgName="<organization name>"
 $loc="<two-character country code, such as US>"
-$licAssignment= $orgName + ":ENTERPRISEPREMIUM"
-$userName= "user2@" + $orgName + ".onmicrosoft.com"
-New-MsolUser -DisplayName "User 2" -FirstName User -LastName 2 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
+$commonPW="<common user account password>"
+$PasswordProfile=New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+$PasswordProfile.Password=$commonPW
+
+$userUPN= "user2@" + $orgName + ".onmicrosoft.com"
+New-AzureADUser -DisplayName "User 2" -GivenName User -SurName 2 -UserPrincipalName $userUPN -UsageLocation $loc -AccountEnabled $true -PasswordProfile $PasswordProfile -MailNickName "user2"
+$License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+$License.SkuId = (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value "ENTERPRISEPREMIUM" -EQ).SkuID
+$LicensesToAssign = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+$LicensesToAssign.AddLicenses = $License
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
+
+$userUPN= "user3@" + $orgName + ".onmicrosoft.com"
+New-AzureADUser -DisplayName "User 3" -GivenName User -SurName 3 -UserPrincipalName $userUPN -UsageLocation $loc -AccountEnabled $true -PasswordProfile $PasswordProfile -MailNickName "user3"
+$License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+$License.SkuId = (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value "ENTERPRISEPREMIUM" -EQ).SkuID
+$LicensesToAssign = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+$LicensesToAssign.AddLicenses = $License
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
+
+$userUPN= "user4@" + $orgName + ".onmicrosoft.com"
+New-AzureADUser -DisplayName "User 4" -GivenName User -SurName 4 -UserPrincipalName $userUPN -UsageLocation $loc -AccountEnabled $true -PasswordProfile $PasswordProfile -MailNickName "user4"
+$License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+$License.SkuId = (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value "ENTERPRISEPREMIUM" -EQ).SkuID
+$LicensesToAssign = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+$LicensesToAssign.AddLicenses = $License
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
 ```
+
 <!--
 > [!TIP]
 > Click [here](https://gallery.technet.microsoft.com/PowerShell-commands-for-fe3d7a34) to get a text file that has all the PowerShell commands in this article.
 -->
 
-從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 2 帳戶產生的密碼，並且將密碼記錄在安全的位置。
-  
-從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
-  
-```
-$userName= "user3@" + $orgName + ".onmicrosoft.com"
-New-MsolUser -DisplayName "User 3" -FirstName User -LastName 3 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
-```
-
-從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 3 帳戶產生的密碼，並且將密碼記錄在安全的位置。
-  
-從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
-  
-```
-$userName= "user4@" + $orgName + ".onmicrosoft.com"
-New-MsolUser -DisplayName "User 4" -FirstName User -LastName 4 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
-```
-
-從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 4 帳戶產生的密碼，並且將密碼記錄在安全的位置。
-  
-從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
-  
-```
-$userName= "user5@" + $orgName + ".onmicrosoft.com"
-New-MsolUser -DisplayName "User 5" -FirstName User -LastName 5 -UserPrincipalName $userName -UsageLocation $loc -LicenseAssignment $licAssignment
-```
-
-從 **New-MsolUser** 命令的顯示畫面中，記下針對使用者 5 帳戶產生的密碼，並且將密碼記錄在安全的位置。
-  
-接下來，您為銷售、產品與支援部門建立三個新 SharePoint Online 小組網站。
   
 ## <a name="phase-4-create-three-new-sharepoint-online-team-sites-optional"></a>階段 4：建立三個新 SharePoint Online 小組網站 (選擇性)
 
@@ -239,7 +232,7 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 - 若要列出使用者 2、使用者 3、使用者 4 和使用者 5 的帳戶，從適用於 Windows PowerShell 的 Windows Azure Active Directory 模組提示字元中執行下列命令︰
     
   ```
-  Get-MSolUser | Sort UserPrincipalName | Select UserPrincipalName
+  Get-AzureADUser | Sort UserPrincipalName | Select UserPrincipalName
   ```
 
     在此記錄帳戶名稱：

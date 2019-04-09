@@ -18,25 +18,25 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: 摘要：設定適用於 Office 365 開發/測試環境的目錄同步作業
-ms.openlocfilehash: 374d99bc2433f539451882e1c2affe7bd41290db
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: d5aff42837d3cf4789cf8785383ad213f98d35a3
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573947"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037907"
 ---
 # <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的目錄同步作業
 
  **摘要：** 設定適用於 Office 365 開發/測試環境的目錄同步作業
   
-許多組織使用 Azure AD Connect 和目錄同步作業，將其內部部署 Windows Server Active Directory (AD) 樹系中的帳戶集同步處理至 Office 365 中的帳戶集。本文說明如何使用密碼雜湊同步作業將目錄同步作業新增至 Office 365 開發/測試環境，進而產生下列組態。
+許多組織使用 Azure AD Connect 和目錄同步作業，將其內部部署 Active Directory Domain Services (AD DS) 樹系中的帳戶集同步處理至 Office 365 中的帳戶集。本文說明如何使用密碼雜湊同步作業將目錄同步作業新增至 Office 365 開發/測試環境，進而產生下列組態。
   
 ![具有目錄同步作業的 Office 365 開發/測試環境](media/be5b37b0-f832-4878-b153-436c31546e21.png)
   
 此組態組成為： 
   
 - Office 365 E5 試用訂閱，從您建立的 30 天後到期。
-- 簡化的組織內部網路與網際網路連線，由 Azure 虛擬網路的子網路上的三部虛擬機器 (DC1、APP1 及 CLIENT1) 組成。在 APP1 上執行的 Azure AD Connect 會將 Windows Server AD 網域同步處理至 Office 365。
+- 簡化的組織內部網路與網際網路連線，由 Azure 虛擬網路的子網路上的三部虛擬機器 (DC1、APP1 及 CLIENT1) 組成。在 APP1 上執行的 Azure AD Connect 會將 AD DS 網域同步處理至 Office 365。
     
 設定此開發/測試環境有兩個主要階段︰
   
@@ -59,7 +59,7 @@ ms.locfileid: "30573947"
     
 ## <a name="phase-2-install-azure-ad-connect-on-app1"></a>階段 2：在 APP1 上安裝及設定 Azure AD Connect
 
-安裝及設定完成後，Azure AD Connect 就會將 CORP Windows Server AD 網域中的帳戶集與您的 Office 365 試用訂閱中的帳戶集同步處理。下列程序會逐步引導您在 APP1 上安裝 Azure AD Connect，並且確認它可以運作。
+安裝及設定完成後，Azure AD Connect 就會將 CORP AD DS 網域中的帳戶集與您的 Office 365 試用訂閱中的帳戶集同步處理。下列程序會逐步引導您在 APP1 上安裝 Azure AD Connect，並且確認它可以運作。
   
 ### <a name="install-and-configure-azure-ad-connect-on-app1"></a>在 APP1 上安裝及設定 Azure AD Connect
 
@@ -98,7 +98,7 @@ Stop-Process -Name Explorer -Force
     
 14. 在左方的瀏覽區域中，按一下 [使用者] > [作用中的使用者]****。
     
-    請注意名稱為 **User1** 的帳戶。此帳戶是來自 CORP Windows Server AD 網域，且經過證明目錄同步作業可以運作。
+    請注意名稱為 **User1** 的帳戶。此帳戶是來自 CORP AD DS 網域，且經過證明目錄同步作業可以運作。
     
 15. 按一下 [User1]**** 帳戶。針對產品授權，按一下 [編輯]****。
     
@@ -111,7 +111,7 @@ Stop-Process -Name Explorer -Force
 此組態組成為： 
   
 - Office 365 E5 試用訂閱。
-- 簡化的組織內部網路與網際網路連線，由 Azure 虛擬網路的子網路上的 DC1、APP1 及 CLIENT1 虛擬機器組成。在 APP1 上執行的 Azure AD Connect 會每隔 30 分鐘將 CORP Windows Server AD 網域同步處理至 Office 365。
+- 簡化的組織內部網路與網際網路連線，由 Azure 虛擬網路的子網路上的 DC1、APP1 及 CLIENT1 虛擬機器組成。在 APP1 上執行的 Azure AD Connect 會每隔 30 分鐘將 CORP AD DS 網域同步處理至 Office 365。
     
 ## <a name="next-step"></a>下一步
 

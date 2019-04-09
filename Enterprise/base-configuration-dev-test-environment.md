@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: a38fc04ffe4ffa9a76430cf44543174570d398bc
-ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
+ms.openlocfilehash: b232372654d6244589bf1f10c3d76d4b7558aa23
+ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "30948614"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "31037977"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -121,10 +121,8 @@ ms.locfileid: "30948614"
 Connect-AzAccount
 ```
 
-<!--
 > [!TIP]
-> Click [here](https://gallery.technet.microsoft.com/PowerShell-commands-for-ba957d3d) to get a text file that has all the PowerShell commands in this article.
--->
+> 按一下[這裡](https://gallery.technet.microsoft.com/PowerShell-commands-for-ba957d3d)以取得包含本文中所有 PowerShell 命令的文字檔案。
 
 使用下列命令取得訂用帳戶名稱。
   
@@ -173,7 +171,7 @@ Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name Corpnet -AddressPre
   
 ### <a name="step-2-configure-dc1"></a>步驟 2：設定 DC1
 
-在此步驟中，我們會建立 DC1 虛擬機器，並將其設定為 corp.contoso.com Windows Server Active Directory (AD) 網域的網域控制站以及 TestLab 虛擬網路之虛擬機器的 DNS 伺服器。
+在此步驟中，我們會建立 DC1 虛擬機器，並將其設定為 corp.contoso.com Active Directory Domain Services (AD DS) 網域的網域控制站以及 TestLab 虛擬網路之虛擬機器的 DNS 伺服器。
 
 > [!NOTE]
 > 在執行下列命令區塊之前，請確定您所選擇的 Azure 區域 (位置) 支援 Azure 虛擬機器大小，預設設為 Standard_A1。按一下[這裡](https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines)以查看 Azure 虛擬機器大小和位置的最新資訊。
