@@ -12,14 +12,14 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
 description: 摘要： 建立並在 Microsoft Azure 中設定您的 Office 365 的高可用性同盟驗證的 Active Directory Federation Services (AD FS) 伺服器。
-ms.openlocfilehash: b2ea785aa5bb2237df5509a2a4d4401cd149f36d
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: add154dbce67c76b3f88e205c683711f72cb7b9a
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741159"
 ---
-# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3： 設定 AD FS 伺服器
+# <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 
  **摘要：** 建立並在 Microsoft Azure 中設定您的 Office 365 的高可用性同盟驗證的 Active Directory Federation Services (AD FS) 伺服器。
   
@@ -135,10 +135,10 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 對於每部虛擬機器，使用您所選的遠端桌面用戶端，建立的遠端桌面連線。 請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
-對於每部虛擬機器，請將其加入適當的 Windows Server AD 網域的 Windows PowerShell 提示字元使用以下命令中。
+對於每部虛擬機器，請將其加入適當的 Active Directory 網域服務 (AD DS) 網域的 Windows PowerShell 提示字元使用以下命令中。
   
 ```
-$domName="<Windows Server AD domain name to join, such as corp.contoso.com>"
+$domName="<AD DS domain name to join, such as corp.contoso.com>"
 $cred=Get-Credential -Message "Type the name and password of a domain acccount."
 Add-Computer -DomainName $domName -Credential $cred
 Restart-Computer

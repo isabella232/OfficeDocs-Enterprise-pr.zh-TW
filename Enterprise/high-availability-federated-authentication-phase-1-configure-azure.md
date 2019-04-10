@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
-ms.openlocfilehash: 1c9cfeaf930997c30671e5bbaed92d7dde2542e1
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.openlocfilehash: 937f22c4e54fa4ccc81a1770a3c924e1d9d07a91
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31037957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741309"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
@@ -254,7 +254,7 @@ $vnetConnection=New-AzVirtualNetworkGatewayConnection -Name $vnetConnectionName 
 ```
 
 > [!NOTE]
-> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。 不過，如果此站台對站 VPN 連線變成無法使用，VNet 中的網域控制站也不會收到使用者帳戶和群組在內部部署 Windows Server AD 中所做的更新。 若要確保不是這樣，您可以設定高可用性的站台對站 VPN 連線。 如需詳細資訊，請參閱[高度可用的跨單位和 VNet-VNet 連線](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable)
+> 個別使用者的聯盟驗證不會仰賴任何內部部署資源。 不過，如果此站台對站 VPN 連線變成無法使用，VNet 中的網域控制站也不會收到使用者帳戶和群組在內部部署 Active Directory 網域服務中所做的更新。 若要確保不是這樣，您可以設定高可用性的站台對站 VPN 連線。 如需詳細資訊，請參閱[高度可用的跨單位和 VNet-VNet 連線](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-highlyavailable)
   
 接著，從顯示的以下命令中，記錄虛擬網路 Azure VPN 閘道的公用 IPv4 位址。
   

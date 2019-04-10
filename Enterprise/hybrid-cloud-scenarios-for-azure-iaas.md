@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: 摘要： 了解混合式架構與案例適用於 Microsoft 的基礎結構即服務 (IaaS)-以 Azure 中的雲端供應項目。
-ms.openlocfilehash: 5d125780e8baf3dbbe71b0878f6bf57cbeb5740f
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.openlocfilehash: d3f4b4ccbc9dbfa54e6f1d0988624aeb71f27106
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31037927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741359"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 
@@ -41,7 +41,7 @@ ms.locfileid: "31037927"
     
 - 身分識別
     
-    將身分識別伺服器，例如 Windows Server AD 網域控制站，新增至 Azure Vnet 中執行本機驗證伺服器的設定。
+    將身分識別伺服器，例如 Active Directory 網域服務 (AD DS) 網域控制站，新增至 Azure Vnet 中執行本機驗證伺服器的設定。
     
 - 工作列最右邊的網路
     
@@ -59,13 +59,13 @@ ms.locfileid: "31037927"
 
 ![Azure IaaS 中 Office 365 的目錄同步處理伺服器](media/Hybrid-Poster/Hybrid-Cloud-Stack-IaaS-DirSync.png)
   
-圖 2 內部部署網路主控 Windows Server AD 基礎結構，配合 proxy 伺服器及在其邊緣路由器。 路由器請連接至位於與站台對站台 VPN 或 ExpressRoute 連線，Azure VNet 的緣 Azure 閘道。 VNet 內的目錄同步處理伺服器會執行 Azure AD Connect。
+圖 2 內部部署網路主控 AD DS 基礎結構，配合 proxy 伺服器及在其邊緣路由器。 路由器請連接至位於與站台對站台 VPN 或 ExpressRoute 連線，Azure VNet 的緣 Azure 閘道。 VNet 內的目錄同步處理伺服器會執行 Azure AD Connect。
   
-Office 365 目錄同步處理伺服器與 Office 365 訂閱下 Azure AD 租用戶同步處理的 Windows Server AD 帳戶的清單。
+Office 365 目錄同步處理伺服器與 Office 365 訂閱下 Azure AD 租用戶同步處理帳戶在 AD DS 中的清單。
   
 目錄同步處理伺服器是 Windows 為主的伺服器，執行 Azure AD Connect。 更快的佈建或要減少您組織中的內部部署伺服器的數目，部署在 Azure IaaS 中的虛擬網路 (VNet) 中您的目錄同步處理伺服器。
   
-目錄同步處理伺服器輪詢 Windows Server AD 的變更，並再將其同步處理與 Office 365 訂閱。
+目錄同步處理伺服器輪詢 AD DS 的變更，並再將其同步處理與 Office 365 訂閱。
   
 如需詳細資訊，請參閱 <<c0>在 Microsoft Azure 中部署 Office 365 目錄同步。
   
@@ -163,7 +163,7 @@ Office 365 目錄同步處理伺服器與 Office 365 訂閱下 Azure AD 租用�
   
 此設定在 Azure 中具有 LOB 應用程式的下列屬性：
   
-- **層：** 有 web proxy 伺服器、 AD FS 伺服器和 Windows Server AD 網域控制站的層級。
+- **層：** 有 web proxy 伺服器、 AD FS 伺服器和 AD DS 網域控制站的層級。
     
 - **載入通訊：** 外部 Azure 負載平衡器分散的傳入用戶端驗證要求的 web proxy，並內部 Azure 負載平衡器散發 AD FS 伺服器的驗證要求。
     

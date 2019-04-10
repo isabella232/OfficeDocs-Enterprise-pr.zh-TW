@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 919b8fc7-b0bc-46db-91f5-37342564e01b
 description: 摘要： 設定並示範資料分類和標記您的 Office 365 開發/測試環境中使用 Azure 資訊保護 (AIP) 用戶端。
-ms.openlocfilehash: ff8533cc6f1a5a34335f6ea469f7a8ec0a6be4da
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 66bdbb74ae88e10d5aa4fce2173f9a2b88a15e9b
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741349"
 ---
 # <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的資料分類和標示
 
@@ -30,7 +30,7 @@ ms.locfileid: "30573957"
 Azure 資訊保護用戶端可讓您之前您將其上傳至 Office 365 中的 SharePoint Online 資料夾分類文件。 透過本文中的指示，您可以安裝 Azure 資訊保護用戶端，並示範資料分類。 如需詳細資訊，請參閱[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建置 Office 365 開發/測試環境
 

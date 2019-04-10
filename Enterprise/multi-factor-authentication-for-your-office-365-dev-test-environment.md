@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e2b354b9-7f18-4da0-9107-6245eae0f33f
 description: 摘要： 設定使用文字訊息傳送到 Office 365 開發/測試環境中的智慧型手機的多重要素驗證。
-ms.openlocfilehash: 13dc02cc23d12f6eb6e2898d34271685badd9f5a
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 091b82132b407cfd25b18c3ba8e424e29df58910
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573977"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741219"
 ---
 # <a name="multi-factor-authentication-for-your-office-365-devtest-environment"></a>適用於您的 Office 365 開發/測試環境的多重要素驗證
 
@@ -38,7 +38,7 @@ ms.locfileid: "30573977"
 2. 啟用並測試 「 使用者 2 」 帳戶的多重要素驗證。
     
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
@@ -47,7 +47,7 @@ ms.locfileid: "30573977"
 如果您想要在模擬的企業中測試多重要素驗證，請遵循[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
   
 > [!NOTE]
-> 測試多重要素驗證不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和 Windows Server AD 樹系中的目錄同步處理。 它提供了此選項，讓您可以測試多重要素驗證與代表典型組織的環境中實驗。 
+> 測試多重要素驗證不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和目錄同步處理 Active Directory 網域服務 (AD DS) 樹系中。 它提供了此選項，讓您可以測試多重要素驗證與代表典型組織的環境中實驗。 
   
 ## <a name="phase-2-enable-and-test-multi-factor-authentication-for-the-user-2-account"></a>階段 2： 啟用並測試 「 使用者 2 」 帳戶的多重要素驗證
 
@@ -109,5 +109,5 @@ ms.locfileid: "30573977"
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 
-[規劃 Office 365 部署多重要素驗證](https://support.office.com/article/Plan-for-multi-factor-authentication-for-Office-365-Deployments-043807b2-21db-4d5c-b430-c8a6dee0e6ba)
+[Office 365 部署多重要素驗證方案](https://support.office.com/article/Plan-for-multi-factor-authentication-for-Office-365-Deployments-043807b2-21db-4d5c-b430-c8a6dee0e6ba)
 

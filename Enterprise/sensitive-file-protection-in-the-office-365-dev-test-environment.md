@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: 摘要： 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
-ms.openlocfilehash: daed3b87983de79268b45dc4f92578c7c8bc59cb
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.openlocfilehash: 4b65df7fe194d543acaf1c3ba6f104681a998dc6
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31037967"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741299"
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的機密檔案保護
 
@@ -32,7 +32,7 @@ ms.locfileid: "31037967"
 透過本文中的指示，您可以啟用並測試 Office 365 中的 IRM，包含可能在您的 Office 365 試用版訂閱中的敏感資訊的檔案。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建置 Office 365 開發/測試環境
 
@@ -41,7 +41,7 @@ ms.locfileid: "31037967"
 如果您想要在模擬的企業中測試敏感性檔案保護，請遵循[Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)中的指示。
   
 > [!NOTE]
-> 測試敏感性檔案保護不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和 Windows Server AD 樹系中的目錄同步處理。 它提供了此選項，讓您可以測試敏感性檔案保護與代表典型組織的環境中實驗。 
+> 測試敏感性檔案保護不需要模擬的企業版開發/測試環境，其中包含連線至網際網路的模擬內部網路和目錄同步處理 Active Directory 網域服務 (AD DS) 樹系中。 它提供了此選項，讓您可以測試敏感性檔案保護與代表典型組織的環境中實驗。 
   
 ## <a name="phase-2-demonstrate-how-documents-from-permissions-protected-sites-can-be-leaked"></a>階段 2： 展示如何可以遺漏文件中的權限受保護的網站
 
