@@ -1,9 +1,9 @@
 ---
 title: 容量規劃和負載測試 SharePoint Online
-ms.author: krowley
-author: kccross
+ms.author: kvice
+author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/14/2019
+ms.date: 04/10/2019
 ms.audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -13,12 +13,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: c932bd9b-fb9a-47ab-a330-6979d03688c0
 description: 本文說明如何部署至 SharePoint Online 不執行傳統負載測試，因為不允許使用。
-ms.openlocfilehash: 16525e461d9c6e04b03ffc19376f9a7d93c6aab1
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 615ad96f4fcf3ac939785e3aafb32956f5661e36
+ms.sourcegitcommit: 5e85536a6f53262136acfaac640f5d109a65f643
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "30665186"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "31765055"
 ---
 # <a name="capacity-planning-and-load-testing-sharepoint-online"></a>容量規劃與測試 SharePoint Online 的負載。
 
@@ -44,7 +44,7 @@ ms.locfileid: "30665186"
 - 任何頁面 / 功能 / 用於雲端耗用的自訂項目應針對多個位置進行最佳化，讓使用者在不同區域或區域中的有一致的體驗。 雲端提供最佳化類似內容傳遞網路 (CDN) 最佳化分散式的使用者結構。
 
 在 SharePoint Online 中您可以使用分析主[頁面診斷工具](https://aka.ms/perftool)Chrome 延伸模組可以幫助的傳統發佈頁面的登陸頁面的使用者使用。
-在瀏覽器或[Fiddler](https://www.telerik.com/download/fiddler)的 F12 開發人員工具可以用來檢閱] 頁面上的權數，呼叫和影響整體載入頁面的元素的數目應該檢閱，而且最佳化。 包括使用內容傳遞網路和其他最佳化的建議清單可以檢閱[調整 SharePoint Online 效能](https://aka.ms/spoperformance)文件中。
+在瀏覽器或[Fiddler](https://www.telerik.com/download/fiddler)的 F12 開發人員工具可以用來檢閱] 頁面上的權數，呼叫和影響整體載入頁面的元素的數目應該檢閱，而且最佳化。 包括使用內容傳遞網路和其他最佳化的建議清單可以檢閱[調整 SharePoint Online 效能](https://aka.ms/tuneSPO)文件中。
 
 ### <a name="wave--phase-approach"></a>波浪 / 階段方法
 針對網站啟動的傳統大次方法不有效率地讓驗證該自訂項目，外部來源、 服務或處理程序測試的右邊的規模。 SharePoint 以服務也調整您根據使用狀況和預測的使用狀況及雖然我們不需要您通知的網站啟動中，您應該遵循以下以確保成功的指導方針的容量。
