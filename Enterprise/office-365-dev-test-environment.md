@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: a49ba10ab9ddded36f21ca9cc92f0482cbe7a4fb
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.openlocfilehash: 3e7aafc847b28ad7a81373539c2ea30ce304725a
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31038028"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741239"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -44,7 +44,7 @@ ms.locfileid: "31038028"
 ![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-create-the-base-configuration-in-azure"></a>階段 1：Azure 中建立基本設定
 
@@ -68,7 +68,7 @@ ms.locfileid: "31038028"
     
 2. 若要註冊新 Microsoft 帳戶，請移至 [https://outlook.com ](https://outlook.com)，並使用新電子郵件帳戶以及地址建立帳戶。您會使用這個帳戶來登入 Office 365。
     
-  - 在此處記錄您新帳戶的名字和姓氏：![](./media/Common-Images/TableLine.png)
+  - 在此處記錄您新帳戶的名字和姓氏： ![](./media/Common-Images/TableLine.png)
     
   - 在此處記錄新電子郵件帳戶地址：![](./media/Common-Images/TableLine.png)@outlook.com
     
@@ -100,7 +100,7 @@ ms.locfileid: "31038028"
     
     在安全位置中記錄您輸入的密碼。
     
-    在這裡輸入虛構公司的名稱：![](./media/Common-Images/TableLine.png) (此將稱為**組織名稱**)
+    在這裡記錄虛構公司的名稱：(此將稱為**組織名稱**)： ![](./media/Common-Images/TableLine.png)
     
 5. 按一下 [建立我的帳戶] ****。
     
@@ -108,7 +108,7 @@ ms.locfileid: "31038028"
     
 7. 輸入已接收簡訊訊息中的驗證代碼，然後按 [下一步]****。
     
-8. 在此記錄登入頁面 URL (選取並複製)：![](./media/Common-Images/TableLine.png)
+8. 在此記錄登入頁面 URL (選取並複製)： ![](./media/Common-Images/TableLine.png)
     
 9. 在此記錄使用者識別碼 (選取與複製)：![](./media/Common-Images/TableLine.png).onmicrosoft.com
     
@@ -265,33 +265,25 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
   
 - [適用於 Office 365 開發/測試環境的目錄同步作業](dirsync-for-your-office-365-dev-test-environment.md)
     
-- [適用於您的 Office 365 開發/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
+- [適用於 Office 365 開發/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
     
-- [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+- [適用於 Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
     
-- [Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+- [適用於 Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
     
 - [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
     
 - [適用於 Office 365 開發/測試環境的進階電子文件探索](advanced-ediscovery-for-your-office-365-dev-test-environment.md)
     
-- [Office 365 開發/測試環境中的機密檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境中的敏感檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
     
 - [獨立的 SharePoint Online 小組網站開發/測試環境](isolated-sharepoint-online-team-site-dev-test-environment.md)
     
 - [Office 365 開發/測試環境中的資料分類和標示](data-classification-and-labeling-in-the-office-365-dev-test-environment.md)
     
-擴充 Office 365 開發/測試環境中以包含其他 Microsoft 雲端供應項目：
-  
-- [Microsoft 365 企業版開發/測試環境](the-microsoft-365-enterprise-dev-test-environment.md)
-    
-- [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
-    
 ## <a name="see-also"></a>另請參閱
 
 - [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
-  
-- [Office 365 和 Dynamics 365 開發/測試環境](office-365-and-dynamics-365-dev-test-environment.md)
   
 - [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
 

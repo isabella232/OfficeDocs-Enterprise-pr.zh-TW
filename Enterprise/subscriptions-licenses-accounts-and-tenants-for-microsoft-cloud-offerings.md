@@ -18,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 58b7505e0745ccdfe3e131f543c37f92385877f2
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 55d13e55b597f398189efbafb6b3426609f2d41d
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30574047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741319"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -88,7 +88,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 ### <a name="user-accounts"></a>使用者帳戶
 
-所有 Microsoft 雲端供應項目的使用者帳戶都儲存在 Azure Active Directory (AD) 租用戶，此租用戶包含使用者帳戶和群組。Azure AD Connect 是 Windows 的伺服器型服務，可以將 Azure AD 租用戶與您的現有 Windows Server AD 帳戶同步。這就是所謂的目錄同步處理 (DirSync)。
+所有 Microsoft 雲端供應項目的使用者帳戶都儲存在 Azure Active Directory (AD) 租用戶，此租用戶包含使用者帳戶和群組。Azure AD Connect 是 Windows 的伺服器型服務，可以將 Azure AD 租用戶與您的現有 Active Directory Domain Services (AD DS) 帳戶同步。這就是所謂的目錄同步處理 (DirSync)。
   
 圖 3 顯示組織的多個訂用帳戶使用同一個 Azure AD 租用戶，租用戶包含組織的帳戶。
   
@@ -134,13 +134,13 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
     
   - 組織的使用者帳戶在同一 Azure AD 租用戶中。
     
-多個 Microsoft 雲端供應項目的訂用帳戶可以使用相同 Azure AD 租用戶作為共同的身分識別提供者。集中的 Azure AD 租用戶包含內部部署 Windows Server AD 同步處理的帳戶，可為組織提供雲端上的身分識別即服務 (IDaaS)。如圖 4 所示。
+多個 Microsoft 雲端供應項目的訂用帳戶可以使用相同 Azure AD 租用戶作為共同的身分識別提供者。集中的 Azure AD 租用戶包含內部部署 AD DS 同步處理的帳戶，可為組織提供雲端上的身分識別即服務 (IDaaS)。如圖 4 所示。
   
 **圖 4： 組織同步處理的內部部署帳戶和 IDaaS**
 
 ![組織的身分識別即服務 (IaaS) IDaaS。](media/Subscriptions/Subscriptions-Fig4.png)
   
-在圖 4 中，Microsoft 的 SaaS 雲端供應項目、Azure PaaS 應用程式、使用 Azure AD 網域服務的 Azure IaaS 中的虛擬機器，三者使用同一個 Azure AD 租用戶。Azure AD Connect 將內部部署的 Windows Server AD 樹系和 Azure AD 租用戶同步。
+在圖 4 中，Microsoft 的 SaaS 雲端供應項目、Azure PaaS 應用程式、使用 Azure AD 網域服務的 Azure IaaS 中的虛擬機器，三者使用同一個 Azure AD 租用戶。Azure AD Connect 將內部部署的 AD DS 樹系和 Azure AD 租用戶同步。
   
 有關 Microsoft 雲端供應項目的身分識別整合，詳細資訊請參閱[企業架構的 Microsoft 雲端身分識別](https://aka.ms/cloudarchidentity)。
   

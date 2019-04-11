@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
 description: 摘要：設定適用於 Office 365 開發/測試環境的同盟驗證。
-ms.openlocfilehash: b016e168ac1bfcf180c1c4ba04846416dbd098f4
-ms.sourcegitcommit: dffbcfb1cbc9776a29229a787c1eab4192e55cff
+ms.openlocfilehash: f09aa66fb3183ffa924d6211fb7fa36e7de095eb
+ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "30948634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "31741419"
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -41,7 +41,7 @@ Office 365 支援同盟身分識別。這表示 Office 365 的連線使用者指
   
 - Office 365 E5 試用訂閱，從您建立的 30 天後到期。
     
-- 簡化的組織內部網路連線到網際網路，包含 Azure 虛擬網路子網路上的五部虛擬機器 (DC1、APP1、CLIENT1、ADFS1 和 PROXY1)。Azure AD Connect 在 APP1 上執行，將 Windows Server AD 網域中的帳戶清單同步處理到 Office 365。PROXY1 接收輸入的驗證要求。ADFS1 使用 DC1 驗證認證和發行安全性權杖。
+- 簡化的組織內部網路連線到網際網路，包含 Azure 虛擬網路子網路上的五部虛擬機器 (DC1、APP1、CLIENT1、ADFS1 和 PROXY1)。Azure AD Connect 在 APP1 上執行，將 Active Directory Domain Services 網域中的帳戶清單同步處理到 Office 365。PROXY1 接收輸入的驗證要求。ADFS1 使用 DC1 驗證認證和發行安全性權杖。
     
 設定此開發/測試環境有五個階段︰
   
@@ -61,11 +61,11 @@ Office 365 支援同盟身分識別。這表示 Office 365 的連線使用者指
 > 您無法使用 Azure 試用訂閱設定此開發/測試環境。 
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 One Microsoft Cloud 測試實驗室指南堆疊中文件的所有視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-create-the-simulated-enterprise-office-365-devtest-environment-with-dirsync"></a>階段 1：使用 DirSync 建立模擬的企業 Office 365 開發/測試環境
 
-請依照 [Office 365 開發/測試環境的目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)中的指示，使用 APP1 建立模擬的企業 Office 365 開發/測試環境，Office 365 和 DC1 上的 Windows Server AD 帳戶之間的 DirSync 伺服器及同步處理的身分識別。
+請依照 [Office 365 開發/測試環境的目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)中的指示，使用 APP1 建立模擬的企業 Office 365 開發/測試環境，Office 365 和 DC1 上的 AD DS 帳戶之間的 DirSync 伺服器及同步處理的身分識別。
   
 接下來，根據目前的網域名稱建立新的公用 DNS 網域名稱，並新增到您的 Office 365 訂閱中。建議名稱使用 **testlab.**\<公用網域>。比方說，如果您的公用網域名稱為 contoso.com，請新增公用網域名稱 testlab.contoso.com。
   
@@ -422,7 +422,7 @@ Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
     
     您應該會看到 **Microsoft Office 首頁**頁面。
     
-此程序會示範 Office 365 試用訂閱與 DC1 上裝載的 Windows Server AD corp.contoso.com 網域的同盟。以下是驗證程序的基本概念：
+此程序會示範 Office 365 試用訂閱與 DC1 上裝載的 AD DS corp.contoso.com 網域的同盟。以下是驗證程序的基本概念：
   
 1. 當您使用登入帳戶名稱內在階段 1 建立的同盟網域時，Office 365 會將您的瀏覽器重新導向至同盟服務 FQDN 和 PROXY1。
     
