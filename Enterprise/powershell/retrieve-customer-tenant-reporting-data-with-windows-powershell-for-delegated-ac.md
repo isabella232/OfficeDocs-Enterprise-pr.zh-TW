@@ -11,12 +11,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 893e5275-30b3-433f-8ecd-644f78f513e2
 description: 摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
-ms.openlocfilehash: 8df88e8b00cbd8e14558e423f41f45ea5f9bf26a
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.openlocfilehash: 478cd8736a837dae571e20f38187be087b48231a
+ms.sourcegitcommit: 509bcf92580d7a0bcebbf6f1d10311d6b0014984
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "31992823"
 ---
 # <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料
 
@@ -26,8 +26,7 @@ ms.locfileid: "31001756"
   
 在本文中，您可以使用遠端 Windows PowerShell for Exchange Online 來連接單一客戶租用及擷取報告。依預設，Windows PowerShell 不支援從多個客戶租用彙集資料。使用此程序擷取的報告僅限您連接的  _DelegatedOrg_。
   
-如果您想要為所有客戶租用擷取單一報告，可以在[透過適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 彙總客戶報告資料](aggregate-customer-reporting-data-via-windows-powershell-for-delegated-access-pe.md)中找到適用的範例指令碼。
-  
+ 
 ## <a name="before-you-begin"></a>開始之前
 
 - 您需要使用遠端 Windows PowerShell 連接 Exchange Online 租用戶。如需詳細指示，請參閱[利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)。

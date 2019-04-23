@@ -3,60 +3,6 @@
 
 
 
-## <a name="week-of-march-11-2019"></a>2019 年 3 月 11 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 3/11/2019 | [Microsoft Cloud IT 架構資源](/Office365/Enterprise/microsoft-cloud-it-architecture-resources) | 修改時間 |
-| 3/11/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
-| 3/11/2019 | [為何需要使用 Office 365 PowerShell](/Office365/Enterprise/powershell/why-you-need-to-use-office-365-powershell) | 修改時間 |
-| 3/13/2019 | [適用於 Office 365 開發/測試環境的進階電子文件探索](/Office365/Enterprise/advanced-ediscovery-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [適用於 Office 365 開發/測試環境的進階威脅防護](/Office365/Enterprise/advanced-threat-protection-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [使用雲端採用測試實驗室指南 (Tlg) 測試 Office 365](/Office365/Enterprise/cloud-adoption-test-lab-guides-tlgs) | 修改時間 |
-| 3/13/2019 | [Office 365 開發人員/測試環境的雲端 App 安全性](/Office365/Enterprise/cloud-app-security-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [Office 365 開發/測試環境中的資料分類和標示](/Office365/Enterprise/data-classification-and-labeling-in-the-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [在 Microsoft Azure 中部署 Office 365 目錄同步作業](/Office365/Enterprise/deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure) | 修改時間 |
-| 3/13/2019 | [Office 365 開發/測試環境的目錄同步處理](/Office365/Enterprise/dirsync-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [適用於 Office 365 和 Dynamics 365 開發/測試環境的 Exchange Online 整合](/Office365/Enterprise/exchange-online-integration-for-your-office-365-and-dynamics-365-dev-test-enviro) | 修改時間 |
-| 3/13/2019 | [Microsoft 雲端連線 ExpressRoute](/Office365/Enterprise/expressroute-for-microsoft-cloud-connectivity) | 修改時間 |
-| 3/13/2019 | [Office 365 開發人員/測試環境的同盟身分識別](/Office365/Enterprise/federated-identity-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [Microsoft Cloud Networking for Enterprise Architects](/Office365/Enterprise/microsoft-cloud-networking-for-enterprise-architects) | 修改時間 |
-| 3/13/2019 | [適用於您的 Office 365 開發/測試環境的多重要素驗證](/Office365/Enterprise/multi-factor-authentication-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [Office 365 的網路和移轉規劃](/Office365/Enterprise/network-and-migration-planning) | 修改時間 |
-| 3/13/2019 | [Office 365 和 Dynamics 365 開發/測試環境](/Office365/Enterprise/office-365-and-dynamics-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [Office 365 開發/測試環境](/Office365/Enterprise/office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](/Office365/Enterprise/powershell/connect-to-all-office-365-services-in-a-single-windows-powershell-window) | 修改時間 |
-| 3/13/2019 | [使用 Office 365 PowerShell 管理 Exchange Online](/Office365/Enterprise/powershell/manage-exchange-online-with-office-365-powershell) | 修改時間 |
-| 3/13/2019 | [使用 Office 365 PowerShell 管理 SharePoint Online](/Office365/Enterprise/powershell/manage-sharepoint-online-with-office-365-powershell) | 修改時間 |
-| 3/13/2019 | [Manage SharePoint Online site groups with Office 365 PowerShell](/Office365/Enterprise/powershell/manage-sharepoint-site-groups-with-powershell) | 修改時間 |
-| 3/13/2019 | [使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組](/Office365/Enterprise/powershell/manage-sharepoint-users-and-groups-with-powershell) | 修改時間 |
-| 3/13/2019 | [使用 Office 365 PowerShell 管理使用者帳戶](/Office365/Enterprise/powershell/manage-user-accounts-and-licenses-with-office-365-powershell) | 修改時間 |
-| 3/13/2019 | [使用 PowerShell 來執行移轉至 Office 365 的完全移轉](/Office365/Enterprise/powershell/use-powershell-to-perform-a-cutover-migration-to-office-365) | 修改時間 |
-| 3/13/2019 | [使用 PowerShell 來執行移轉至 Office 365 的完全移轉](/Office365/Enterprise/powershell/use-powershell-to-perform-a-staged-migration-to-office-365) | 修改時間 |
-| 3/13/2019 | [為何需要使用 Office 365 PowerShell](/Office365/Enterprise/powershell/why-you-need-to-use-office-365-powershell) | 修改時間 |
-| 3/13/2019 | [保護您的 Office 365 全域管理員帳戶](/Office365/Enterprise/protect-your-global-administrator-accounts) | 修改時間 |
-| 3/13/2019 | [Office 365 開發/測試環境中的機密檔案保護](/Office365/Enterprise/sensitive-file-protection-in-the-office-365-dev-test-environment) | 修改時間 |
-| 3/13/2019 | [訂閱、 授權、 帳戶及租用戶的 Microsoft 雲端供應項目](/Office365/Enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings) | 修改時間 |
-| 3/13/2019 | [One Microsoft Cloud 開發/測試環境](/Office365/Enterprise/the-one-microsoft-cloud-dev-test-environment) | 修改時間 |
-| 3/14/2019 | [內容傳遞網路](/Office365/Enterprise/content-delivery-networks) | 修改時間 |
-| 3/14/2019 | [網路常見問題集的 office 365 影片](/Office365/Enterprise/office-365-video-networking-faq) | 修改時間 |
-| 3/15/2019 | [將核心資料移至新的 Office 365 資料中心 geos](/Office365/Enterprise/moving-data-to-new-datacenter-geos) | 修改時間 |
-| 3/15/2019 | [資料移動期間和之後](/Office365/Enterprise/during-and-after-your-data-move) | 修改時間 |
-| 3/15/2019 | [基底組態開發/測試環境](/Office365/Enterprise/base-configuration-dev-test-environment) | 修改時間 |
-| 3/15/2019 | [使內部部署網路與 Microsoft Azure 虛擬網路連線](/Office365/Enterprise/connect-an-on-premises-network-to-a-microsoft-azure-virtual-network) | 修改時間 |
-| 3/15/2019 | [Azure 中的 Office 365 高可用性同盟驗證](/Office365/Enterprise/deploy-high-availability-federated-authentication-for-office-365-in-azure) | 修改時間 |
-| 3/15/2019 | [在 Microsoft Azure 中部署 Office 365 目錄同步作業](/Office365/Enterprise/deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure) | 修改時間 |
-| 3/15/2019 | [Office 365 開發人員/測試環境的同盟身分識別](/Office365/Enterprise/federated-identity-for-your-office-365-dev-test-environment) | 修改時間 |
-| 3/15/2019 | [高可用性同盟的驗證階段 1 設定 Azure](/Office365/Enterprise/high-availability-federated-authentication-phase-1-configure-azure) | 修改時間 |
-| 3/15/2019 | [高可用性同盟驗證階段 2 設定網域控制站](/Office365/Enterprise/high-availability-federated-authentication-phase-2-configure-domain-controllers) | 修改時間 |
-| 3/15/2019 | [高可用性同盟驗證階段 3 設定 AD FS 伺服器](/Office365/Enterprise/high-availability-federated-authentication-phase-3-configure-ad-fs-servers) | 修改時間 |
-| 3/15/2019 | [高可用性同盟驗證階段 4 設定 web 應用程式 proxy](/Office365/Enterprise/high-availability-federated-authentication-phase-4-configure-web-application-pro) | 修改時間 |
-| 3/15/2019 | [Office 365 開發/測試環境](/Office365/Enterprise/office-365-dev-test-environment) | 修改時間 |
-| 3/15/2019 | [如何要求資料移動](/Office365/Enterprise/request-your-data-move) | 修改時間 |
-| 3/15/2019 | [Azure 中模擬的跨單位部署虛擬網路](/Office365/Enterprise/simulated-cross-premises-virtual-network-in-azure) | 修改時間 |
-
-
 ## <a name="week-of-march-18-2019"></a>2019 年 3 月 18 日當週
 
 
@@ -197,3 +143,15 @@
 | 4/12/2019 | [Microsoft Cloud IT 架構資源](/Office365/Enterprise/microsoft-cloud-it-architecture-resources) | 修改時間 |
 | 4/12/2019 | [規劃從 Office 2007 或 2010年伺服器和用戶端升級](/Office365/Enterprise/plan-upgrade-previous-versions-office) | 修改時間 |
 | 4/12/2019 | [資源可以幫助您升級從 Office 2007 伺服器和用戶端](/Office365/Enterprise/upgrade-from-office-2007-servers-and-products) | 修改時間 |
+
+
+## <a name="week-of-april-15-2019"></a>2019 年 4 月 15 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 4/18/2019 | [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](/Office365/Enterprise/modern-auth-for-office-2013-and-2016) | 修改時間 |
+| 4/18/2019 | [使用 Office 365 PowerShell 指派授權至使用者帳戶](/Office365/Enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell) | 修改時間 |
+| 4/18/2019 | [將角色指派給 Office 365 powershell 的使用者帳戶](/Office365/Enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell) | 修改時間 |
+| 4/18/2019 | [使用 ExpressRoute for Office 365 進行路由傳送](/Office365/Enterprise/routing-with-expressroute) | 修改時間 |
+| 4/18/2019 | [使用集中式部署 PowerShell Cmdlet 來管理增益集](/Office365/Enterprise/use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins) | 修改時間 |
