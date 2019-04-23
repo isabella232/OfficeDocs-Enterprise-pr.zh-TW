@@ -1,5 +1,5 @@
 ---
-title: 如何新式驗證運作的 Office 2013 和 Office 2016 用戶端應用程式
+title: Office 2013 和 Office 2016 用戶端應用程式的新式驗證運作方式
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
@@ -21,17 +21,20 @@ ms.assetid: e4c45989-4b1a-462e-a81b-2a13191cf517
 ms.collection:
 - M365-security-compliance
 description: 了解 Office 365 新式驗證運作方式的 Office 2013 和 2016年用戶端應用程式。
-ms.openlocfilehash: 0e7b1a91a13fdd1ea5bb5fd3b42fcda60c704d6f
-ms.sourcegitcommit: 1d84e2289fc87717f8a9cd12c68ab27c84405348
+ms.openlocfilehash: 5e42ec2fcf8f27990af187e4ad26ba65909ac709
+ms.sourcegitcommit: 51f9e89e4b9d54f92ef5c70468bda96e664b8a6b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "30372910"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "31957694"
 ---
-# <a name="how-modern-authentication-works-for-office-2013-and-office-2016-client-apps"></a>如何新式驗證運作的 Office 2013 和 Office 2016 用戶端應用程式
+# <a name="how-modern-authentication-works-for-office-2013-and-office-2016-client-apps"></a>Office 2013 和 Office 2016 用戶端應用程式的新式驗證運作方式
 
 請閱讀本篇文章以了解如何在 Office 2013 和 Office 2016 用戶端應用程式使用新式驗證功能為基礎的驗證設定 Office 365 租用戶上的 Exchange Online、 SharePoint Online，與 Skype for Business Online。
-  
+
+> [!NOTE]
+> 舊版用戶端應用程式，例如 Office 2010 和 Office for Mac 2011，不支援新式驗證，並僅能使用基本驗證。
+
 ## <a name="availability-of-modern-authentication-for-office-365-services"></a>新式驗證 Office 365 服務的可用性
 
 Office 365 服務，則新式驗證的預設狀態：
