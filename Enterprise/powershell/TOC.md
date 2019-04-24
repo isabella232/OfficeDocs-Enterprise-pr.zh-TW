@@ -37,7 +37,6 @@
 ### [利用適用於委派存取合作夥伴的 Windows PowerShell 新增用戶端租用網域](add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe.md)
 ### [透過適用於委派存取合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)
 ### [透過適用於委派存取合作夥伴的 Windows PowerShell 擷取客戶報告資料](retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac.md)
-### [透過適用於委派存取合作夥伴的 Windows PowerShell 彙總客戶報告資料](aggregate-customer-reporting-data-via-windows-powershell-for-delegated-access-pe.md)
 ## [管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
 ### [管理商務用 Skype Online 原則](manage-skype-for-business-online-policies-with-office-365-powershell.md)
 ### [指派每個使用者商務用 Skype Online 原則](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
