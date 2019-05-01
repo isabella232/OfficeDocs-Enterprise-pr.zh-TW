@@ -11,11 +11,11 @@ ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
 ms.openlocfilehash: 5a06b30e7850a23ff6443eb8b5b2e9e14850a7db
-ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30931832"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490378"
 ---
 # <a name="configure-search-for-office-365-multi-geo"></a>設定 Office 365 多地理位置的搜尋
 

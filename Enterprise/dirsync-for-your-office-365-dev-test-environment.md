@@ -19,11 +19,11 @@ ms.custom:
 ms.assetid: e6b27e25-74ae-4b54-9421-c8e911aef543
 description: 摘要：設定適用於 Office 365 開發/測試環境的目錄同步作業
 ms.openlocfilehash: 74457cca2d199fe7bfa8839908b0f6a413890f8a
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741229"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487315"
 ---
 # <a name="directory-synchronization-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的目錄同步作業
 
@@ -125,7 +125,7 @@ Stop-Process -Name Explorer -Force
 
 [Office 365 開發/測試環境](office-365-dev-test-environment.md)
 
-[適用於 Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+[Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
 
 [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
 

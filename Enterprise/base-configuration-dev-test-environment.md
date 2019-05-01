@@ -18,11 +18,11 @@ ms.custom:
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
 ms.openlocfilehash: 68edf0dea20674a7dadb4d1e50b8151a9ce13c7b
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741379"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490518"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -437,7 +437,7 @@ Start-AzVM -ResourceGroupName $rgName -Name "CLIENT1"
 ## <a name="see-also"></a>另請參閱
 
 - [Office 365 開發/測試環境](office-365-dev-test-environment.md)
-- [適用於 Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
-- [適用於 Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
 - [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
 - [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)

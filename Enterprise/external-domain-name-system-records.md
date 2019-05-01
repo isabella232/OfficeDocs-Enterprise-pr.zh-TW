@@ -19,11 +19,11 @@ search.appverid:
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
 ms.openlocfilehash: c172275e43b4703172f58287c086562da352f5e9
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539969"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487252"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 

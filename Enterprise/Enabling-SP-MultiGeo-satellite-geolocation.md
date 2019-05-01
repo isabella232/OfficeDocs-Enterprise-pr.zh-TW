@@ -11,11 +11,11 @@ ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 在您的衛星地理位置啟用 SharePoint 多地理位置。
 ms.openlocfilehash: 98666f76a5b3ec055a6f26d30f502c3cc6b6d3bb
-ms.sourcegitcommit: 0ddd9b0c9c23dc6479dce9f5701b69d533d76127
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "31025178"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487865"
 ---
 # <a name="enabling-sharepoint-multi-geo-in-your-satellite-geo-location"></a>在您的衛星地理位置啟用 SharePoint 多地理位置
 

@@ -11,11 +11,11 @@ ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
 ms.openlocfilehash: 7a9865424a18a681dcdbf89b607ab2ae73f44098
-ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30931672"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490889"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
