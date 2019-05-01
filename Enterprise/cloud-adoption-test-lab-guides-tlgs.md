@@ -18,11 +18,11 @@ ms.custom:
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：使用這些雲端採用測試實驗室指南 (TLG) 以設定 Office 365 的展示版本、概念證明或開發/測試環境。
 ms.openlocfilehash: 3531a3185cd52044ee59391d676fff1a7f4a5f64
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741169"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490229"
 ---
 # <a name="test-office-365-with-cloud-adoption-test-lab-guides-tlgs"></a>使用雲端採用測試實驗室指南 (TLG) 測試 Office 365
 
@@ -48,21 +48,21 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     
     建立 Office 365 企業版 E5 試用訂閱，該訂閱可從您的電腦，或從在 Azure 基礎結構服務中執行的簡化內部網路來建立。
     
-- [適用於 Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
     
     安裝和設定 Azure AD Connect 以進行目錄同步作業及密碼雜湊同步化。如果您想要建置模擬的企業組態，這是選擇性的步驟。
     
 針對 Office 365 開發/測試環境，使用這些文章來示範 Office 365 的企業版功能︰
   
-- [適用於 Office 365 開發/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
+- [適用於您的 Office 365 開發/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
     
     使用傳送至您智慧型手機的簡訊為您的 Office 365 訂閱帳戶設定並測試次要驗證。
     
-- [適用於 Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
     
     使用 Active Directory Domain Services (AD DS) 網域的帳戶設定並示範同盟驗證。
     
-- [適用於 Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
+- [Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
     
     設定並示範 Office 365 雲端應用程式安全性，它可讓您建立原則來監視並通知 Office 365 訂閱中的可疑活動。
     
@@ -74,7 +74,7 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     
     新增範例資料並示範進階電子文件探索，它可讓您快速地尋找和分析 Office 365 中儲存的資料，包括電子郵件和文件。
     
-- [Office 365 開發/測試環境中的敏感檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
+- [Office 365 開發/測試環境中的機密檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
     
     示範如何使用 Office 365 資訊版權管理保護機密文件中的資料，即使資料不小心張貼在錯誤的文件資料夾中。
     
