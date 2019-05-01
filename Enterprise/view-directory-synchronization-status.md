@@ -1,5 +1,5 @@
 ---
-title: 在 Office 365 中檢視目錄同步處理狀態
+title: 檢視 Office 365 中的目錄同步處理狀態
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -18,13 +18,13 @@ search.appverid:
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
 description: 了解如何停用目錄同步作業。 您也可以檢視其狀態。
 ms.openlocfilehash: a38b723db6f5bafe246e774972ca89c65bc9c846
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001566"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33492099"
 ---
-# <a name="view-directory-synchronization-status-in-office-365"></a>在 Office 365 中檢視目錄同步處理狀態
+# <a name="view-directory-synchronization-status-in-office-365"></a>檢視 Office 365 中的目錄同步處理狀態
 
 如果您已經與 Office 365 同步內部部署環境，與 Azure AD 整合您的內部部署 Active Directory，您也可以檢查您同步處理的狀態。
   
@@ -39,7 +39,7 @@ ms.locfileid: "31001566"
   
 如果沒有您的目錄同步處理的問題，錯誤會列在此頁面上。 如需不同，可能會遇到的錯誤的詳細資訊，請參閱 <<c0>在 Office 365 中的身分識別目錄同步處理錯誤。
   
-|**項目**|**功能**|
+|**Item**|**功能**|
 |:-----|:-----|
 |**驗證的網域** | 您已經驗證您的 Office 365 租用戶中的網域數目的擁有人。 |
 |**未驗證的網域** | 您可以新增，但卻未驗證的網域。 |

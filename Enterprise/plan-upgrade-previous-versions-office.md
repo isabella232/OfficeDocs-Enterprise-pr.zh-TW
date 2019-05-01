@@ -14,11 +14,11 @@ ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 如果您使用 Office 2007 或 Office 2010，該是時候來規劃升級。 不會停滯使用過期的應用程式。 若要開始使用您的計劃使用這些資源。
 ms.openlocfilehash: ee14250f6bb17a571ff2c2e7e4cbd68d91d13646
-ms.sourcegitcommit: 60578f9fd0bc7d102529274deb02d63822682c09
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "31838225"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33492048"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 

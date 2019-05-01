@@ -17,11 +17,11 @@ search.appverid:
 ms.assetid: eb45fd8b-1d5d-4b0c-9c5a-479dbb176e7d
 description: 了解 Office 365 共同作業跨租用戶和組織的運作方式。
 ms.openlocfilehash: d77146d4b95260e16984a76225cf24e65fe03bcc
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "30665246"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33492089"
 ---
 # <a name="office-365-inter-tenant-collaboration"></a>Office 365 租用戶間共同作業
 

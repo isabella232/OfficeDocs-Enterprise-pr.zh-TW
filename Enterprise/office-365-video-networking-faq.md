@@ -17,11 +17,11 @@ search.appverid:
 ms.assetid: 2bed67a1-4052-49ff-a4ce-b7e6530eb98e
 description: Office 365 影片存放庫與資料流的服務，讓儲存及資料流組織內的影片簡單。 有很棒的資訊有關 Office 365 影片;此網路的常見問題集被設計來回答周圍頻寬規劃、 加密，以及服務如何運用內容傳遞網路 (Cdn) 最常見的問題。
 ms.openlocfilehash: f11bd8baff7c2527287f6e1249ad4dae1928bdd2
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30641520"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491922"
 ---
 # <a name="office-365-video-networking-frequently-asked-questions"></a>網路常見問題集的 office 365 影片
 
@@ -60,7 +60,7 @@ Office 365 影片存放庫與資料流的服務，讓儲存及資料流組織內
   
 ## <a name="can-i-cache-the-videos-locally-for-faster-playback"></a>可以快取到本機的速度播放影片嗎？
 
-可以。 Office 365 不會使您無法將影片或其他 Office 365 內容移入進行快速存取您的區域網路使用本機 CDN 或快取的 proxy。 有幾種方式可以實作您網路上的本機快取解決方案，最常用的方法是使用快取本機內容的 proxy 解決方案。 一旦視訊片段和資訊清單的 proxy 或私人 CDN 已快取，未來要求透過 proxy 或私人 CDN 路由傳送這些檔案是提取從本機快取，並不取自網際網路位置。 類似解決方案的規劃期間，請考慮網路頻寬、 容量及視訊播放並行數目。
+是。 Office 365 不會使您無法將影片或其他 Office 365 內容移入進行快速存取您的區域網路使用本機 CDN 或快取的 proxy。 有幾種方式可以實作您網路上的本機快取解決方案，最常用的方法是使用快取本機內容的 proxy 解決方案。 一旦視訊片段和資訊清單的 proxy 或私人 CDN 已快取，未來要求透過 proxy 或私人 CDN 路由傳送這些檔案是提取從本機快取，並不取自網際網路位置。 類似解決方案的規劃期間，請考慮網路頻寬、 容量及視訊播放並行數目。
   
 ([回到頁首](office-365-video-networking-faq.md))
   
