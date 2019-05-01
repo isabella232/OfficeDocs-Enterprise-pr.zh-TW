@@ -15,11 +15,11 @@ ms.collection:
 - M365-security-compliance
 description: 混合式新式驗證 (HMA)，是一種方法的身分識別管理，提供更安全的使用者驗證和授權，以及適用於 Exchange server 內部部署混合式部署。
 ms.openlocfilehash: 364f95bbbc06f477d258ed55a8711864e7a87e69
-ms.sourcegitcommit: 1d84e2289fc87717f8a9cd12c68ab27c84405348
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "30372860"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490089"
 ---
 # <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>如何設定 Exchange Server 內部部署以使用混合式新式驗證
 

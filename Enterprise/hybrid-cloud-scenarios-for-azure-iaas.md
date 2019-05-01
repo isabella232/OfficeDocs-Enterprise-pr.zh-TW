@@ -13,11 +13,11 @@ ms.custom: Ent_Architecture
 ms.assetid: 978f2b76-5aba-4e11-9434-f0efda987be1
 description: 摘要： 了解混合式架構與案例適用於 Microsoft 的基礎結構即服務 (IaaS)-以 Azure 中的雲端供應項目。
 ms.openlocfilehash: d3f4b4ccbc9dbfa54e6f1d0988624aeb71f27106
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741359"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487624"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-iaas"></a>Azure IaaS 的混合式雲端案例
 
@@ -43,7 +43,7 @@ ms.locfileid: "31741359"
     
     將身分識別伺服器，例如 Active Directory 網域服務 (AD DS) 網域控制站，新增至 Azure Vnet 中執行本機驗證伺服器的設定。
     
-- 工作列最右邊的網路
+- 網路
     
     使用在網際網路上的站台對站 VPN 連線或是 ExpressRoute 連線到 Azure IaaS 的私用對等。
     

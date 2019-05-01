@@ -15,11 +15,11 @@ ms.custom:
 ms.assetid: d4c49a6f-abfd-4d68-b353-259b4eefb033
 description: 摘要： 設定並示範 Office 365 進階 eDiscovery 與 Office 365 開發/測試環境中的範例資料。
 ms.openlocfilehash: b1cf2714f79d38e5a3349b331cee0862cd6aac52
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741450"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491219"
 ---
 # <a name="advanced-ediscovery-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階電子文件探索
 
@@ -30,7 +30,7 @@ Office 365 進階電子文件可讓您快速地尋找和分析跨 Office 365，�
 透過本文中的指示，您可以建立一小群的虛構合約爭議資料及分析使用進階電子文件。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-create-your-office-365-devtest-environment"></a>階段 1：建立 Office 365 開發/測試環境
 
@@ -53,7 +53,7 @@ Office 365 進階電子文件可讓您快速地尋找和分析跨 Office 365，�
     
 2. 在 [ **Outlook 郵件**] 索引標籤上按一下 [**新增**]。
     
-3. 在 [**至**] 輸入您試用版訂閱中 User6 帳戶的電子郵件地址 ( ** user6@。**<organization name> **。 onmicrosoft.com**)。
+3. 在 [**至**] 輸入您試用版訂閱中 User6 帳戶的電子郵件地址 ( **user6 @。**<organization name> **。 onmicrosoft.com**)。
     
 4. 主旨請輸入**測試電子郵件 1**。
     

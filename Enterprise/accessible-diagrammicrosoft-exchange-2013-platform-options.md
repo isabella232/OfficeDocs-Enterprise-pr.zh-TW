@@ -1,5 +1,5 @@
 ---
-title: 存取圖表-Microsoft Exchange 2013 平台選項
+title: 易於存取的圖表-Microsoft Exchange 2013 平台選項
 ms.author: josephd
 author: JoeDavies-MSFT
 ms.date: 12/15/2017
@@ -9,27 +9,27 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 129f4e45-647e-4cf1-92a6-4d86d8396e73
-description: 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表可存取的文字版本。
+description: 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表易於存取的文字版本。
 ms.openlocfilehash: e1c4957c9152c5a23008c657d7e2d0d47b5cce0f
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "17503126"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487787"
 ---
-# <a name="accessible-diagram---microsoft-exchange-2013-platform-options"></a>存取圖表-Microsoft Exchange 2013 平台選項
+# <a name="accessible-diagram---microsoft-exchange-2013-platform-options"></a>易於存取的圖表-Microsoft Exchange 2013 平台選項
 
-**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)可存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)易於存取的文字版本。
   
-此海報說明 business decision makers (Bdm) 和架構師需要知道什麼有關 Exchange Online 與 Exchange Server 部署並包括： 
+此海報描述商務決策者 (Bdm) 和結構設計師需要了解 Exchange Online 和 Exchange Server 部署，項目，並包括： 
   
-- Exchange 2013 的四個可用的平台選項的比較： Exchange Online (Office 365)、 Exchange 混合式 Exchange 伺服器上部署、 和 Provider-Hosted Exchange。 
+- Exchange 2013 的四個可用的平台選項的比較： Exchange Online (Office 365)、 Exchange 混合式時，Exchange 伺服器上部署、 和 Provider-Hosted Exchange。 
     
-- Exchange 2013 中的三種全新或更新功能的說明。 
+- Exchange 2013 中的三個新的或更新功能的描述。 
     
 ## <a name="comparison-of-four-different-deployments-for-the-exchange-2013-platform"></a>四個不同的部署的 Exchange 2013 平台的比較
 
-比較提供下列區域中的每個部署] 選項的相關資訊： 
+比較提供下列項目的每個部署選項的相關資訊： 
   
 - 不同的部署功能的概觀 
     
@@ -39,79 +39,79 @@ ms.locfileid: "17503126"
     
 - 必要的架構工作 
     
-- IT 專業人員責任實作每個部署選項 
+- IT 專業人員負責實作每個部署選項 
     
 ### <a name="overview"></a>概觀
 
 #### <a name="exchange-online-office-365"></a>Exchange Online (Office 365)
 
-您的入侵效率並降低與 Office 365 的成本。
+您取得效率，並減少成本，以及 Office 365。
   
-使用 Azure Active Directory 承租人以同步處理帳戶名稱和密碼的內部部署 Active Directory 網域服務 (AD DS) 環境及 Azure Active Directory 租用戶之間隨附的圖表顯示 Exchange Online。Active Directory Federation Services (AD FS) 是必要的單一登入。 
+隨附圖表顯示 Exchange Online 與 Azure Active Directory 租用戶的帳戶名稱和密碼的內部部署 Active Directory 網域服務 (AD DS) 環境與 Azure Active Directory 租用戶之間會同步處理。 Active Directory Federation Services (AD FS) 是必要的單一登入。 
   
-功能和功用描述：
+描述的特性與功能：
   
 - 伺服器和伺服器軟體的作業是由 Microsoft 處理。
     
-- 豐富型功能集的 Exchange Server 2013 以雲端架構服務。
+- 豐富型功能集的 Exchange Server 2013 作為雲端式服務。
     
-- 永遠保持其最新的最新的功能。
+- 保持最新的最新功能。
     
-- Exchange Online Protection (EOP) 是包含反-垃圾郵件/反惡意程式碼保護。
+- Exchange Online Protection (EOP) 會包含反-垃圾郵件/反惡意程式碼保護。
     
-- 內建的高可用性與達 99.9%服務層級協議 (SLA)。
+- 高達 99.9%的內建高可用性服務層級協議 (SLA)。
     
-- 目錄同步作業包括內部部署 Active Directory 網域服務 (AD DS) 與 Azure Active Directory 租用戶之間的密碼。Active Directory Federation Services (AD FS) 是必要的單一登入。
+- 目錄同步作業包括內部部署 Active Directory 網域服務 (AD DS) 與 Azure Active Directory 租用戶之間的密碼。 Active Directory Federation Services (AD FS) 是必要的單一登入。
     
 #### <a name="exchange-hybrid"></a>Exchange 混合式
 
-維護 Exchange Server 內部部署時，您可以運用 Office 365 的優點。
+您可以利用 Office 365 的優點，同時維持 Exchange Server 內部部署。
   
-隨附的圖表顯示 Office 365 與 Exchange Online 其中某些使用者隸屬於內部部署，且某些使用者的主伺服器皆線上。它也會顯示 Azure Active Directory 承租人以同步處理帳戶名稱和密碼的內部部署 Active Directory 網域服務 (AD DS) 環境及 Azure Active Directory 租用戶之間。
+隨附圖表顯示 Office 365 與 Exchange Online 其中部分使用者為隸屬於內部部署，以及某些使用者位於線上。 它也會顯示 Azure Active Directory 承租人以帳戶名稱和密碼的內部部署 Active Directory 網域服務 (AD DS) 環境與 Azure Active Directory 租用戶之間會同步處理。
   
-功能和功用描述：
+描述的特性與功能：
   
-- 某些使用者隸屬於內部部署和某些使用者的主伺服器皆線上，且使用者共用相同的電子郵件地址空間。
+- 部分使用者位於的內部和部分使用者位於線上，且使用者共用相同的電子郵件地址空間。
     
-- 如何運用現有的 Exchange Server 基礎結構。
+- 運用現有的 Exchange 伺服器基礎結構。
     
-- 一段時間，在您的排程上，從 Exchange 內部部署移轉至 Exchange Online。
+- 經過一段時間，在您的排程上，從 Exchange 內部部署移轉至 Exchange Online。
     
-- 與其他 Office 365 應用程式，包括 Lync Online 和 SharePoint Online 的整合。
+- 與其他 Office 365 應用程式，包括 Lync Online 和 SharePoint Online 整合。
     
 #### <a name="exchange-server-on-premises"></a>Exchange Server 內部部署
 
 您可以設計及管理自己的 Exchange Server 2013 基礎結構。
   
-隨附的圖顯示內部部署 Active Directory 網域服務 (AD DS) 環境如果使用者是所隸屬於內部部署 Exchange Server 基礎結構。
+隨附圖顯示內部部署 Active Directory 網域服務 (AD DS) 環境使用者所在位置，位於的內部部署 Exchange 伺服器基礎結構。
   
-功能和功用描述：
+描述的特性與功能：
   
-- 最大程度控制項及自訂設定的詳細資訊。
+- 最大程度的控制項及自訂設定。
     
-- 在維護工作階段親和性的負載平衡層在沒有相依性。
+- 沒有項目相依於維護工作階段親和性負載平衡層級。
     
-- 簡單高可用性和站台恢復使用資料庫可用性群組 (DAGs)。
+- 簡單高可用性和站台恢復使用資料庫可用性群組 (Dag)。
     
-- 受管理的可用性，可協助您更好的使用者經驗。
+- 受管理的可用性，可協助您維護良好的使用者經驗。
     
-- 運用現有的硬體和存放區基礎結構。
+- 利用現有的硬體和儲存體基礎結構。
     
-#### <a name="provider-hosted-exchange"></a>提供者主控 Exchange
+#### <a name="provider-hosted-exchange"></a>提供者裝載的 Exchange
 
-您可以將您的 Exchange Server 工作負載的 Exchange Server 解決方案提供者。
+您可以將您的 Exchange 伺服器工作負載至 Exchange Server 解決方案提供者。
   
-隨附圖 21vianet 且由供應商維護 Exchange Server 環境。
+隨附圖是運作並提供者所維護的 Exchange Server 環境。
   
-功能和功用描述：
+描述的特性與功能：
   
 - 伺服器和伺服器軟體的作業會處理您的提供者。
     
-- 規劃、 大小、 縮放比例、 及維護 Exchange Server 基礎結構的委派給您的提供者。
+- 規劃、 大小、 縮放比例，以及 Exchange 伺服器基礎結構的維護被委派給您的提供者。
     
-- 服務維護會處理您的提供者。
+- 服務維護是由您的提供者處理。
     
-- Exchange 功能集僅限於提供者所部署的軟體版本。
+- Exchange 功能集僅限於部署您的提供者的軟體版本。
     
 ### <a name="benefits-of-implementing-each-deployment-option"></a>實作每個部署選項的優點
 
@@ -119,19 +119,19 @@ ms.locfileid: "17503126"
 
 此部署選項最適合的：
   
-- 尋找以減少作業成本的內部部署組織的 Exchange 部署。
+- 組織可以減少作業成本，內部部署 Exchange 部署。
     
-- 規劃利用其他 Office 365 方案，例如 SharePoint Online 與 Lync Online 的組織。
+- 若要利用其他 Office 365 方案，例如 SharePoint Online 和 Lync Online 計劃的組織。
     
 #### <a name="exchange-hybrid"></a>Exchange 混合式
 
 此部署選項最適合的：
   
-- 協助從 Exchange 內部部署移轉至 Exchange Online。
+- 促進從 Exchange 內部部署移轉至 Exchange Online。
     
-- 不含演變在分公司的基礎結構支援遠端站台。
+- 不含投資分公司的基礎結構支援遠端站台。
     
-- 與子公司需要資料至位於內部部署的跨國企業。
+- 與需要資料至位於內部部署的分公司的跨國企業。
     
 #### <a name="exchange-server-on-premises"></a>Exchange Server 內部部署
 
@@ -139,44 +139,44 @@ ms.locfileid: "17503126"
   
 - 高度自訂的解決方案。
     
-- 與協力廠商的項目都取決於硬體及軟體的元件不支援的 Exchange Online 的舊版方案。
+- 具有協力廠商元件，取決於硬體和軟體不支援的 Exchange Online 的舊版解決方案。
     
-- 組織主旨至需要至位於內部部署資料的資料控管規定。
+- 組織遭到需要至位於內部部署資料的資料控管法規。
     
-- 想要保留控制整個平台和解決方案的組織。
+- 想要保留整個平台與解決方案的控制的組織。
     
-#### <a name="provider-hosted-exchange"></a>提供者主控 Exchange
+#### <a name="provider-hosted-exchange"></a>提供者裝載的 Exchange
 
 此部署選項最適合的：
   
-- 需要 Exchange Server 功能，但想要將其部署及維護外包的組織。
+- 需要 Exchange 伺服器功能，但想要將其部署及維護的組織。
     
 - 需要個人化的支援選項的組織。
     
-- 自訂的解決方案，以與提供者所提供的自訂應用程式整合。
+- 自訂的解決方案，提供者所提供的自訂應用程式整合。
     
-- 與協力廠商的項目都取決於硬體及軟體的元件不支援的 Exchange Online 的舊版方案。
+- 具有協力廠商元件，取決於硬體和軟體不支援的 Exchange Online 的舊版解決方案。
     
 ### <a name="license-requirements"></a>授權需求
 
-下表詳細說明每個部署選項的授權需求。
+下表詳述每個部署選項的授權需求。
   
 |**部署選項**|**授權需求**|
 |:-----|:-----|
 |Exchange Online (Office 365)  <br/> |訂閱模型  <br/> |
-|Exchange 混合式  <br/> | Office 365-訂閱模型 <br/>  內部-所有內部部署授權套用 （檢閱授權交換伺服器內部部署） <br/>  混合伺服器授權 * <br/> |
+|Exchange 混合式  <br/> | Office 365-訂閱模型 <br/>  內部部署的所有內部部署授權套用 （檢閱授權交換伺服器內部部署） <br/>  混合式伺服器授權 * <br/> |
 |Exchange Server 內部部署  <br/> | 伺服器作業系統 <br/>  Exchange 2013 伺服器授權 <br/>  Exchange 2013 用戶端存取授權 <br/> |
-|提供者主控 Exchange  <br/> |成本根據與提供者協議  <br/> |
+|提供者裝載的 Exchange  <br/> |成本根據提供者合約  <br/> |
    
 ### <a name="architecture-tasks"></a>架構工作
 
-本節列出每個部署選項的架構工作。
+此章節將列出每個部署選項的架構工作。
   
 #### <a name="exchange-online-office-365"></a>Exchange Online (Office 365)
 
-- 規劃及設計目錄同步作業。
+- 規劃及設計的目錄同步處理。
     
-- 確定網路容量和透過防火牆、 proxy 伺服器、 閘道，以及跨 WAN 連結的連線。
+- 請確定網路容量和透過防火牆、 proxy 伺服器、 閘道，以及跨 WAN 連結的連線。
     
 #### <a name="exchange-hybrid"></a>Exchange 混合式
 
@@ -184,27 +184,27 @@ ms.locfileid: "17503126"
   
 - 決定是否要提供單一登入經驗。
     
-- 決定是否要透過內部部署組織或 Exchange Online Protection 的輸入的網際網路郵件路由傳送。
+- 決定是否要路由傳送內送的網際網路郵件透過內部部署組織或 Exchange Online Protection。
     
 #### <a name="exchange-server-on-premises"></a>Exchange Server 內部部署
 
 - 設計 Exchange 拓撲。
     
-- 規劃伺服器硬體的容量。
+- 規劃伺服器硬體容量。
     
 - 設計郵件路由拓撲。
     
-- 設計負載平衡的用戶端存取伺服器。
+- 設計負載平衡的 Client Access server。
     
 - 規劃高可用性使用資料庫可用性群組。
     
-#### <a name="provider-hosted-exchange"></a>提供者主控 Exchange
+#### <a name="provider-hosted-exchange"></a>提供者裝載的 Exchange
 
-確定網路容量和可用性透過防火牆、 proxy 伺服器、 閘道，且跨 WAN 連結可至提供者。
+確保網路容量和透過防火牆、 proxy 伺服器、 閘道、 可用性及跨 WAN 連結可用於您的提供者。
   
 ### <a name="it-pro-responsibilities"></a>IT 專業人員的責任
 
-本節列出每個部署選項以 IT 專業人員的責任。
+此章節將列出每個部署選項的 IT 專業人員的責任。
   
 #### <a name="exchange-online-office-365"></a>Exchange Online (Office 365)
 
@@ -212,23 +212,23 @@ ms.locfileid: "17503126"
     
 - 規劃及實作內部和外部 DNS 記錄和路由。
     
-- 設定 proxy 伺服器或防火牆的 Office 365 IP 位址及 URL 需求。
+- 設定 proxy 伺服器或防火牆的 Office 365 IP 位址和 URL 需求。
     
-- 管理使用者帳戶和 Exchange Online 的設定。
+- 管理使用者帳戶與 Exchange Online 設定。
     
 #### <a name="exchange-hybrid"></a>Exchange 混合式
 
-除了 Office 365 與內部部署環境的 IT 專業人員的責任：
+除了 Office 365 與內部部署環境的 IT 專業人員的職責：
   
-- 設定單一登入的 Active Directory Federation Services (AD FS) 上，（若有需要）。
+- （如有需要），請在設定單一登入的 Active Directory Federation Services (AD FS)。
     
-- 設定 Exchange 2013 伺服器與 Office 365 之間的安全通訊的 Exchange 憑證。
+- 設定 Exchange 憑證的 Exchange 2013 伺服器與 Office 365 之間的安全通訊。
     
-- 設定 DNS 記錄的所需的內送網際網路郵件路徑。
+- 設定 DNS 記錄所需的內送網際網路郵件路徑。
     
 #### <a name="exchange-server-on-premises"></a>Exchange Server 內部部署
 
-- 設定 Exchange 服務所需的憑證。
+- 設定必要的憑證，如 Exchange 服務。
     
 - 佈建伺服器。
     
@@ -236,21 +236,21 @@ ms.locfileid: "17503126"
     
 - 實作資料庫可用性群組。
     
-- 更新及維護 Exchange 伺服器。
+- 更新及維護的 Exchange 伺服器。
     
-- 根據使用率、 新增或移除伺服器所需。
+- 根據使用率，新增或移除伺服器，視需要。
     
-#### <a name="provider-hosted-exchange"></a>提供者主控 Exchange
+#### <a name="provider-hosted-exchange"></a>提供者裝載的 Exchange
 
 提供者的責任包括：
   
 - 系統及服務維護。
     
-- 功能部署。
+- 功能發行。
     
 - 資料保護和嚴重損壞修復。
     
-在組織中的 IT 人員責任包括建立和管理使用者帳戶。
+在您的組織中的 IT 人員的職責包括建立及管理使用者帳戶。
   
 #### <a name="more-information"></a>詳細資訊
 
@@ -262,13 +262,13 @@ ms.locfileid: "17503126"
     
 - [Exchange Online 的入口網站](https://aka.ms/EXO)
     
-若要深入了解 Exchange 的混合，請參閱下列各項：
+若要深入了解 Exchange 混合式，請參閱下列各項：
   
-- [Exchange 2013 混合部署](https://aka.ms/ExchangeHybrid)。您應該注意的混合伺服器授權為只需要在下列情況： Exchange 2010 組織與 Exchange 2013 混合式伺服器和 Exchange 2007 組織與 Exchange 2013 或 Exchange 2010 混合伺服器。
+- [Exchange 2013 混合式部署](https://aka.ms/ExchangeHybrid)。 您應該注意的混合式伺服器授權只有下列案例所需： Exchange 2013 混合式伺服器與 Exchange 2007 組織與 Exchange 2013 或 Exchange 2010 混合伺服器的 Exchange 2010 組織。
     
 - [Office 365 登入](https://aka.ms/HybridKey)
     
-若要深入了解 Exchange Server 內部部署，請參閱下列各項：
+若要深入了解關於 Exchange Server 內部部署的詳細資訊，請參閱下列：
   
 - [TechNet 上的 Exchange Server 2013 文件庫](https://aka.ms/Ex2013TN)
     
@@ -280,25 +280,25 @@ ms.locfileid: "17503126"
   
 [Exchange Server 2013 主控與多重租用解決方案和指引](https://aka.ms/Ex2013Hosting)
   
-## <a name="descriptions-of-three-new-or-updated-features-in-exchange-2013"></a>Exchange 2013 中的三種全新或更新功能的說明
+## <a name="descriptions-of-three-new-or-updated-features-in-exchange-2013"></a>Exchange 2013 中的三個新的或更新功能的描述
 
 ### <a name="exchange-online-protection"></a>Exchange Online Protection
 
-Exchange Online Protection (EOP) 提供任何部署的反垃圾郵件和反惡意程式碼的保護提供一層的部署跨資料中心的通用網路的保護功能。這有助於您簡化的訊息環境的管理。EOP 隨附於 Exchange Online 訂閱，但您也可以運用它混合式和內部部署。
+Exchange Online Protection (EOP) 提供任何部署的反垃圾郵件和反惡意程式碼的保護藉由提供一層的部署跨資料中心全球網路的保護功能。 這可協助您簡化您的郵件環境的管理。 EOP 隨附於 Exchange Online 訂閱，但您也可以利用它用於混合式和內部部署。
   
-隨附的圖表說明 Exchange Online、 Exchange 混合部署和部署的 Exchange 內部部署中通用網路包含 EOP 圖層。
+隨附的圖表顯示 Exchange Online、 Exchange 混合式部署和部署的 Exchange 內部部署中，包含 EOP 層全球網路。
   
 ### <a name="exchange-server-deployment-assistant"></a>Exchange Server 部署助理
 
-Exchange Server 部署助理是 web 式工具，詢問您目前的環境的幾個問題，然後再產生自訂逐步檢查清單可協助您部署 Exchange Server 不同類型的案例。是否從舊版 Exchange 至 Exchange 2013 的升級、 移轉至 Exchange Online 或規劃混合式基礎結構 Exchange Server 部署助理會建立自訂的部署檢查表您的案例。
+Exchange Server 部署助理是 web 型的工具，詢問您一些問題有關您目前的環境，然後再產生自訂的逐步檢查清單，以協助您部署 Exchange 伺服器的不同類型的案例。 是否要從舊版的 Exchange 至 Exchange 2013 移轉，移轉至 Exchange Online，或規劃混合式基礎結構中，Exchange Server 部署助理會建立自訂的部署檢查清單，方便您的案例。
   
-隨附的螢幕擷取畫面顯示使用 Exchange Server 部署助理建立範例檢查清單。
+隨附的螢幕擷取畫面顯示已建立使用 Exchange Server 部署助理範例檢查清單。
   
 ### <a name="integration-with-lync-and-sharepoint"></a>與 Lync 和 SharePoint 整合
 
-Exchange Server 2013 包含整合 Lync Server 2013 與 SharePoint Server 2013 的許多功能。在一起，這些產品提供一組豐富型功能並提升整個組織共同作業。 
+Exchange Server 2013 包含許多整合 Lync Server 2013 和 SharePoint Server 2013 的功能。 在一起，這些產品提供一組豐富型功能，並改善您的組織間的共同作業。 
   
-隨附的圖表顯示伺服器對伺服器驗證海報並包含海報的連結。 
+隨附的圖表顯示伺服器對伺服器驗證海報，並包括海報的連結。 
   
 - 封存、 保留和 eDiscovery
     
@@ -308,7 +308,7 @@ Exchange Server 2013 包含整合 Lync Server 2013 與 SharePoint Server 2013 �
     
 - 高解析度的使用者相片
     
-- Outlook 和 Outlook Web App 中的 Lync 顯示狀態
+- 在 Outlook 和 Outlook Web App 中呈現的 lycn
     
 - 伺服器對伺服器驗證
     
@@ -318,6 +318,6 @@ Exchange Server 2013 包含整合 Lync Server 2013 與 SharePoint Server 2013 �
     
 - Exchange 工作同步處理
     
-隨附的圖表顯示 Exchange Server 2013 SP1 架構海報 （英文） 並包含海報的連結。
+隨附的圖表顯示 Exchange Server 2013 SP1 架構海報，並包括海報的連結。
   
 

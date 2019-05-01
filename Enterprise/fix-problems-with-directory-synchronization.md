@@ -1,5 +1,5 @@
 ---
-title: 修正 Office 365 的目錄同步處理問題
+title: 修正 Office 365 目錄同步處理的問題
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -18,13 +18,13 @@ search.appverid:
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中的目錄同步處理問題的常見原因，並提供一些方法，協助疑難排解，並加以解決。
 ms.openlocfilehash: a5c4b58dd856158b00605f39d8a66b48488086b2
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001836"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487455"
 ---
-# <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 的目錄同步處理問題
+# <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 目錄同步處理的問題
 
 目錄同步處理，您可以繼續管理使用者和群組內部部署及同步處理的加入、 刪除及變更至雲端。 但安裝程式會有點複雜，而且可以有時候是很難找出問題的來源。 我們有資源可以幫助您找出潛在的問題並修正它們。
   

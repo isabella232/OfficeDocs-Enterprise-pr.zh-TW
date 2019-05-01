@@ -13,11 +13,11 @@ ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
 description: 摘要： 設定主機高可用性的 Microsoft Azure 基礎結構的 Office 365 同盟的驗證。
 ms.openlocfilehash: 937f22c4e54fa4ccc81a1770a3c924e1d9d07a91
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741309"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487425"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
@@ -39,7 +39,7 @@ Azure 必須佈建與以下基本元件：
 
 在開始設定 Azure 元件之前，填寫下列表格。 為了可在設定 Azure 的程序中協助您，請列印此節並記下所需資訊，或將此節複製到一份文件並加以填寫。 對於 VNet 的設定，填寫表格 V。
   
-|**項目**|**組態設定**|**描述**|**值**|
+|**Item**|**組態設定**|**描述**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |VNet 名稱  <br/> |要指派給 VNet （例如 FedAuthNet） 的名稱。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |VNet 位置  <br/> |區域性 Azure 資料中心將包含虛擬網路。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
@@ -61,7 +61,7 @@ Azure 必須佈建與以下基本元件：
   
 請與您的 IT 部門合作，以從虛擬網路位址空間判斷這些位址空間。
   
-|**項目**|**子網路名稱**|**子網路位址空間**|**用途**|
+|**Item**|**子網路名稱**|**子網路位址空間**|**用途**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |使用的子網路的 Active Directory 網域服務 (AD DS) 網域控制站和 DirSync 伺服器虛擬機器 (Vm)。  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |AD FS Vm 所使用的子網路。  <br/> |
@@ -72,7 +72,7 @@ Azure 必須佈建與以下基本元件：
   
 下一步，針對指派至虛擬機器和負載平衡器執行個體的靜態 IP 位址填寫表格 I。
   
-|**項目**|**用途**|**子網路上的 IP 位址**|**值**|
+|**Item**|**用途**|**子網路上的 IP 位址**|**值**|
 |:-----|:-----|:-----|:-----|
 |1.  <br/> |第一個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第四個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |第二個網域控制站的靜態 IP 位址  <br/> |定義於表格 S 的項目 1 中，子網路位址空間的第五個可能 IP 位址。  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
@@ -87,7 +87,7 @@ Azure 必須佈建與以下基本元件：
   
 針對您想要使用一開始設定您的虛擬網路中的網域控制站時您在內部網路中的兩個網域名稱系統 (DNS) 伺服器，填寫表格 d 工時與您的 IT 部門，以決定此清單。
   
-|**項目**|**DNS 伺服器的易記名稱**|**DNS 伺服器 IP 位址**|
+|**Item**|**DNS 伺服器的易記名稱**|**DNS 伺服器 IP 位址**|
 |:-----|:-----|:-----|
 |1.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |
 |2.  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |![](./media/Common-Images/TableLine.png)  <br/> |

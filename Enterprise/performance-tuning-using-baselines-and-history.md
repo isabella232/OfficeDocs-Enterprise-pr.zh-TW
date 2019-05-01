@@ -1,5 +1,5 @@
 ---
-title: 使用基準與效能歷程記錄進行 Office 365 效能調整
+title: 使用基準與效能歷程記錄調整 Office 365 效能
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
@@ -19,13 +19,13 @@ ms.collection:
 - Ent_O365
 description: 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
 ms.openlocfilehash: 328b8f66b86f2fc1880b3a9d65f4b9fd63b51d40
-ms.sourcegitcommit: 1d84e2289fc87717f8a9cd12c68ab27c84405348
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "30372940"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491816"
 ---
-# <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄進行 Office 365 效能調整
+# <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄調整 Office 365 效能
 
 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
   

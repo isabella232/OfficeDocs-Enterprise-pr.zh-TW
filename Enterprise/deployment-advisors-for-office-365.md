@@ -1,5 +1,5 @@
 ---
-title: Office 365 服務的部署建議
+title: Office 365 服務的部署建議程式
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -19,13 +19,13 @@ search.appverid:
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: Office 365 的部署建議可讓您自行引導式的支援 for 設定 Office 365。
 ms.openlocfilehash: cbb992b178f98f7149137c5c29569e36190db2e2
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741470"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490079"
 ---
-# <a name="deployment-advisors-for-office-365-services"></a>Office 365 服務的部署建議
+# <a name="deployment-advisors-for-office-365-services"></a>Office 365 服務的部署建議程式
 
 Office 365 的部署建議可讓您自行引導式的支援 for 設定 Office 365 為您的組織。 只要選取安裝輔助線或顧問，然後登入 Office 365。 
 
@@ -73,7 +73,7 @@ Microsoft [Exchange Online Protection (EOP)](https://aka.ms/EOPguidance)是雲�
 ### <a name="azure-active-directory-connect-azure-ad-connect-advisor"></a>Azure Active Directory Connect (Azure AD Connect) 顧問
 [Azure AD Connect 顧問](https://aka.ms/aadconnectpwsync)會示範如何新增至 Office 365 的使用者帳戶資訊，而不需要以手動方式建立每位使用者的逐步指南。 它也會顯示您如何設定密碼雜湊同步處理或通過驗證，讓使用者可以登入他們的電子郵件和您的網域使用相同的密碼。 如果您選擇設定 [同盟登入與 AD FS，本指南也會提供您步驟在新伺服器上或現有的 Windows Server 2012 R2 伺服器陣列中的 AD FS 的部署。 Azure AD Connect 取代較舊版本的身分識別整合工具，例如 DirSync 和 Azure AD 同步處理，並主要用於 for Office 365 中將使用者及其他資料新增至 Azure Active Directory。
   
-### <a name="azure"></a>天藍白
+### <a name="azure"></a>Azure
 [Azure AD 基本安裝指南](https://aka.ms/azureadbasic)可協助您設定功能，如以群組為基礎的存取管理、 自助密碼重設雲端應用程式和 Azure Active Directory 應用程式 Proxy 發佈的內部 web 應用程式。
   
 [Azure AD Premium 設定指南](https://aka.ms/aadpguidance)可協助您啟用 Azure Active Directory Premium (Azure AD Premium)，提供身分識別管理功能，像是多重要素驗證單一登入 (SSO)，裝置註冊的許多功能自助式密碼以及群組管理和安全性監視。

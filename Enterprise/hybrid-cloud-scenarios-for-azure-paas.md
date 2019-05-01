@@ -13,11 +13,11 @@ ms.custom: Ent_Architecture
 ms.assetid: 5f4f5d0d-4638-48e8-a517-bd804856b617
 description: 摘要： 了解混合式架構與案例的 Microsoft 平台即服務 (PaaS)-以 Azure 中的雲端供應項目。
 ms.openlocfilehash: f4d90d51a7627063fae6fd168681bdf96cb4d6bc
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741369"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491188"
 ---
 # <a name="hybrid-cloud-scenarios-for-azure-paas"></a>Azure PaaS 的混合式雲端案例
 
@@ -43,7 +43,7 @@ ms.locfileid: "31741369"
     
     包含目錄同步處理或同盟協力廠商身分識別提供者。
     
-- 工作列最右邊的網路
+- 網路
     
     包含您現有的網際網路管道或與公用對等以 Azure PaaS 的 ExpressRoute 連線。 您必須包含 Azure PaaS 應用程式存取內部部署 compute 或存放裝置資源的方式。
     

@@ -1,5 +1,5 @@
 ---
-title: Office 365 系統管理員的整合式 App 和 Azure AD
+title: 適用於 Office 365 系統管理員的整合式應用程式和 Azure AD
 ms.author: chrfox
 author: chrfox
 manager: laurawi
@@ -16,13 +16,13 @@ search.appverid:
 ms.assetid: cb2250e3-451e-416f-bf4e-363549652c2a
 description: 了解如何 O365 整合式應用程式註冊和 Azure AD 中管理
 ms.openlocfilehash: f4e2061c952a09c4e23aa50bd294b7391e1ca3e6
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001876"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487119"
 ---
-# <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>Office 365 系統管理員的整合式 App 和 Azure AD
+# <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>適用於 Office 365 系統管理員的整合式應用程式和 Azure AD
 
 沒有更多] 以管理比剛[開啟整合式應用程式開啟或關閉](https://support.office.com/article/7e453a40-66df-44ab-92a1-96786cb7fb34#__toc379982114)整合式應用程式。 Office 365 REST Api 推出，使用者可以授與應用程式存取其 Office 365 資料，例如郵件、 行事曆、 連絡人、 使用者、 群組、 檔案及資料夾。 根據預設，使用者需要個別授與每個應用程式的權限，但這不會調整以及如果您要授權的應用程式一次在全域系統管理員層級和推行至整個組織透過應用程式啟動器。 若要這麼做，您必須在 Azure AD 中註冊應用程式。 有一些步驟，您需要採取之前您可以在 Azure AD 中註冊的應用程式和一些背景資訊，您應該了解可協助您管理 Office 365 組織中的應用程式。 本文為您指向這些資源。
   

@@ -1,5 +1,5 @@
 ---
-title: Office 365 開發人員/測試環境的雲端 App 安全性
+title: 適用於 Office 365 開發人員/測試環境的雲端 App 安全性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,13 +17,13 @@ ms.custom:
 ms.assetid: 22248f2f-b370-435e-b6ac-0ae0cae36b96
 description: 摘要： 設定並示範 Office 365 開發/測試環境中的 Office 365 雲端 App 安全性。
 ms.openlocfilehash: aa6fada78ada2f97242ffe8f60c9032d618f3b9b
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741259"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490119"
 ---
-# <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的雲端 App 安全性
+# <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發人員/測試環境的雲端 App 安全性
 
  **摘要：** 設定並示範 Office 365 開發/測試環境中的 Office 365 雲端 App 安全性。
   
@@ -32,7 +32,7 @@ Office 365 雲端 App 安全性，先前稱為 Office 365 進階安全性管理�
 透過本文中的指示，您可以啟用並測試您 Office 365 試用版訂閱中的 Cloud App Security。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
@@ -63,9 +63,9 @@ Office 365 雲端 App 安全性，先前稱為 Office 365 進階安全性管理�
     
 5. 在 [使用者 4]**** 頁面上按一下 [角色] **** 列的 [編輯]****。
     
-6. 在 [**編輯使用者角色**] 頁面上，按一下 [**全域系統管理員**，類型**user4@contoso.com**在**替代的電子郵件地址**]，然後按一下 [**儲存**。 按兩次 [關閉]****。
+6. 在 [編輯使用者角色]**** 頁面上按一下 [全域管理員]****，並在 [備用電子郵件地址]**** 中輸入 **user4@contoso.com**，然後按一下 [儲存]****。按兩次 [關閉]****。
     
-7. 選取左上角的應用程式啟動器圖示 ，然後選擇 [郵件]****。
+7. 	選取左上角的應用程式啟動器圖示 ，然後選擇 [郵件]****。
     
 8. 等候 30 分鐘。 請注意在通知您的全域系統管理員身分的使用者 4 的角色中變更收件匣中沒有任何電子郵件訊息。
     
@@ -131,7 +131,7 @@ Office 365 雲端 App 安全性，先前稱為 Office 365 進階安全性管理�
     
 11. 在 [使用者 5]**** 頁面上按一下 [角色] **** 列的 [編輯]****。
     
-12. 在 [**編輯使用者角色**] 頁面上，按一下 [**自訂的系統管理員**，請按一下 [**密碼系統管理員**和**使用者管理系統管理員**，類型**user5@contoso.com**在**替代的電子郵件地址**]，然後按一下 [**儲存**。 按兩次 [關閉]****。
+12. 在 [編輯使用者角色]**** 頁面上按一下 [自訂的系統管理員]****，再按一下 [密碼管理員]**** 和 [使用者管理管理員]****，在 [備用電子郵件地址]**** 中輸入 **user5@contoso.com**，然後按一下 [儲存]****。按兩次 [關閉]****。
     
 13. 按一下右上角的使用者圖示，然後按一下 [登出]****。 
     

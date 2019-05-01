@@ -1,5 +1,5 @@
 ---
-title: 存取圖表-至 Microsoft Azure 的 SharePoint 災害復原
+title: 易於存取的圖表-Microsoft Azure 的 SharePoint 嚴重損壞修復
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -10,43 +10,43 @@ ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 4b855224-8e67-4efa-a3a4-908ee0ca6412
-description: 本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。
+description: 本文是圖表的名為 Microsoft Azure 的 SharePoint 嚴重損壞修復易於存取的文字版本。
 ms.openlocfilehash: 545aaae05e3becbde60fe01c0e50e5610ee69f98
-ms.sourcegitcommit: d1a1480982c773f2241cb17f85072be8724ea841
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
-ms.locfileid: "17503546"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487719"
 ---
-# <a name="accessible-diagram---sharepoint-disaster-recovery-to-microsoft-azure"></a>存取圖表-至 Microsoft Azure 的 SharePoint 災害復原
+# <a name="accessible-diagram---sharepoint-disaster-recovery-to-microsoft-azure"></a>易於存取的圖表-Microsoft Azure 的 SharePoint 嚴重損壞修復
 
-**摘要：** 本文是圖表的名為至 Microsoft Azure 的 SharePoint 災害復原可存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Azure 的 SharePoint 嚴重損壞修復易於存取的文字版本。
   
-此海報提供可用以建置 Azure 中的復原環境架構的範例。 
+此海報提供架構的範例建置在 Azure 中的復原環境。 
   
-## <a name="on-premises-environment-with-an-azure-recovery-environment"></a>使用 Azure 復原環境的內部部署環境
+## <a name="on-premises-environment-with-an-azure-recovery-environment"></a>內部部署環境與 Azure 復原環境
 
 此圖顯示用於復原使用 Azure 的內部部署環境的實際執行環境的架構的範例。 
   
 ### <a name="on-premises-production-environment"></a>內部部署實際執行環境
 
-隨附顯示 live 實際執行環境的圖表具有四個層的伺服器在伺服器陣列中。 
+隨附圖表顯示四個層級的伺服器的實際生產環境中伺服器陣列。 
   
 #### <a name="tier-1"></a>第 1 層
 
-有兩部前端服務和查詢處理伺服器。有提供兩部伺服器複本的索引磁碟分割。 
+有兩部伺服器的前端服務與查詢處理。 沒有提供兩部伺服器複本的索引分割區。 
   
 #### <a name="tier-2"></a>第 2 層
 
-有兩部伺服器的這一層中的分散式快取。 
+有兩部伺服器，在這一層中的分散式快取。 
   
 #### <a name="tier-3"></a>第 3 層
 
-在此層中有三部伺服器。每個 server 提供下列服務： 
+在這一層中有三部伺服器。 每一部伺服器會提供下列服務： 
   
 - 後端服務 
     
-- 管理員 
+- 系統管理 
     
 - 工作流程管理員 
     
@@ -58,47 +58,47 @@ ms.locfileid: "17503546"
     
 #### <a name="tier-4"></a>第 4 層
 
-在此層中有兩部伺服器。這兩個伺服器有三個可用性群組，如下所示： 
+在這一層中有兩部伺服器。 這兩個伺服器有三個可用性群組，如下所示： 
   
-- 可用性群組 #1 可提供搜尋功能。 
+- 可用性群組 #1 提供搜尋功能。 
     
 - 可用性群組 #2 提供內容、 設定及服務應用程式。 
     
 - 可用性群組 #3 提供內容。 
     
-也有檔案共用中這一層的伺服器。第 4 層的伺服器使用記錄傳送至與此伺服器通訊。此伺服器依次透過分散式檔案系統複寫 (DFSR) 檔案共用與伺服器通訊時在 Azure 暖待命復原環境中下, 一節所述。 
+另外還有檔案共用中這一層的伺服器。 第 4 層伺服器使用記錄傳送與此伺服器進行通訊。 此伺服器]，依序進行通訊透過分散式檔案系統複寫 (DFSR) 檔案共用伺服器在 Azure 暖待命復原環境中下, 一節所述。 
   
 ### <a name="azure-recovery-environment"></a>Azure 復原環境
 
-#### <a name="warm-standby-environment-running-virtual-machines"></a>虛擬機器中執行的暖待命環境
+#### <a name="warm-standby-environment-running-virtual-machines"></a>執行虛擬機器的暖待命環境
 
-隨附圖剛好在 Azure 復原環境中複製的內部部署環境。此環境中的檔案共用伺服器所連結到 DFSR 的內部部署環境。DFSR 會傳送到透過檔案共用伺服器復原環境的實際執行環境中的記錄檔。 
+隨附圖顯示 Azure 復原環境中完全複寫內部部署環境。 在此環境中的檔案共用伺服器會連結到 DFSR 透過內部部署環境。 DFSR 會將記錄從實際執行環境傳送到透過檔案共用伺服器在復原環境。 
   
 ### <a name="overview"></a>概觀
 
-在內部部署 SharePoint 2013 伺服器陣列嚴重損壞修復環境可以裝載於 Azure。 
+內部部署 SharePoint 2013 伺服器陣列的災害復原環境可裝載於 Azure 中。 
   
--  Azure 基礎結構服務提供次要資料中心。
+-  Azure 基礎結構服務提供的次要資料中心。
     
-- 僅限工資您使用的資源。 
+- 僅支付您使用的資源。 
     
-- 小型的復原伺服器陣列可以滿足規模和容量目標嚴重損壞之後向外延展。 
+- 小型的復原伺服器陣列可以向外延展以滿足擴充與容量目標的嚴重損壞後。 
     
-在 Azure 中的復原伺服器陣列已設定為 [同名盡可能實際執行內部部署伺服器陣列。 
+在 Azure 中的復原伺服器陣列已設定為進行完全相同，儘可能在實際執行內部部署伺服器陣列。 
   
 - 相同的伺服器角色的表示法。 
     
-- 相同的自訂的設定。 
+- 相同的自訂設定的詳細組態。 
     
-- （這些可以在實際執行伺服器陣列較小版） 的搜尋功能相同的設定。 
+- 相同的搜尋功能 （這些可以是在實際執行伺服器陣列較小版） 的詳細組態。 
     
 記錄傳送和 DFSR 可用來將資料庫備份和交易記錄檔複製到 Azure 的伺服器陣列。 
   
-- DFSR 用來記錄轉移至復原環境的實際執行環境。在 WAN 案例中，DFSR 會比在 Azure 中傳送直接至次要伺服器的記錄檔更有效率。 
+- DFSR 用來從實際執行環境傳送記錄檔，以在復原環境。 在 WAN 案例中，DFSR 比直接將記錄傳送至 Azure 中的次要伺服器更為有效率。 
     
-- 記錄檔會重新 Azure 型 SQL Server 電腦。 
+- 記錄檔會重新顯示至以 Azure 為基礎的 SQL Server 電腦。 
     
-- 除非執行復原練習，記錄傳送資料庫不會附加至伺服器陣列。 
+- 除非執行復原練習，否則，記錄傳送資料庫不會附加至伺服器陣列。 
     
 容錯移轉程序： 
   
@@ -106,7 +106,7 @@ ms.locfileid: "17503546"
     
 2. 停止接受主要伺服器陣列的流量。 
     
-3. 重新顯示的最後一個交易記錄檔。 
+3. 重新顯示的最後一筆交易記錄檔。 
     
 4. 將內容資料庫附加至伺服器陣列。 
     
@@ -122,27 +122,27 @@ ms.locfileid: "17503546"
     
 - 服務
     
-可以由 Microsoft 諮詢服務或協力廠商定址的其他項目： 
+可以 Microsoft 諮詢服務或協力廠商所提到的其他項目： 
   
-- 同步處理自訂伺服器陣列方案 
+- 同步處理自訂伺服器陣列解決方案 
     
-- 在內部部署 （Business Data Connectivity (BDC) 及搜尋的內容來源） 的資料來源的連線 
+- 內部部署 （Business Data Connectivity (BDC) 和搜尋內容來源） 的資料來源的連線 
     
 - 搜尋還原案例 
     
-- 復原時間目標 (RTO) 及復原點目標 (RPO) 
+- 復原時間目標 (RTO) 和復原點目標 (RPO) 
     
-#### <a name="cold-standby-environment-running-virtual-machines"></a>虛擬機器中執行的冷待命環境
+#### <a name="cold-standby-environment-running-virtual-machines"></a>執行虛擬機器的冷待命環境
 
-冷待命環境需要較長的時間開始，但較不昂貴。 
+冷待命環境需要較長的時間開始，但會較不昂貴。 
   
-- 在伺服器陣列完全建置基礎，但虛擬機器時處於停止之後建立伺服器陣列。您所僅處理成本時執行的虛擬機器，但是儲存空間及網路資料傳輸成本套用。 
+- 完全建置在伺服器陣列，但會在建立伺服器陣列之後，會停止虛擬機器。 當執行虛擬機器，但儲存和網路資料傳輸成本套用支付只處理成本。 
     
 - 發生災害時，伺服器陣列中的所有虛擬機器已啟動並修正的項目。 
     
 - 備份和交易記錄檔會套用至伺服器陣列資料庫。 
     
-下列清單說明冷待命環境中的其他程序： 
+下列清單說明冷待命環境的其他程序： 
   
 - 開啟虛擬機器定期修補程式、 更新及驗證環境。 
     
@@ -150,25 +150,25 @@ ms.locfileid: "17503546"
     
 - 設定 SQL AlwaysOn 容錯移轉後。 
     
-隨附圖複寫的復原環境的虛擬機器上。容錯移轉之後冷待命環境中，所有虛擬機器已都啟用，且可用性群組已設定使用重新顯示記錄檔提供資料庫伺服器。 
+隨附圖表會顯示在虛擬機器上的複寫的復原環境。 容錯移轉之後以冷待命環境，並啟動所有虛擬機器，並使用重新顯示記錄檔若要使用的資料庫伺服器設定可用性群組。 
   
-## <a name="sharepoint-recovery-environment-in-azure"></a>Azure 中的 SharePoint 復原環境
+## <a name="sharepoint-recovery-environment-in-azure"></a>Azure 中 SharePoint 復原環境
 
 設計與建置在 Azure 中的容錯移轉環境。 
   
 - 在 Azure 中建立虛擬網路。 
     
-- 使用 Azure 中使用的網站 VPN 連線虛擬網路連線與內部網路。此連線使用動態閘道 Azure 中使用。 
+- 會連接內部部署網路與在 Azure 中的虛擬網路與站台對站 VPN 連線。 這個連線在 Azure 中使用動態的閘道。 
     
-- 一或多個網域控制站部署至 Azure 虛擬網路，並設定下列使用您的內部網域。這些網域控制站的類別目錄伺服器。 
+- 一或多個網域控制站部署到 Azure 虛擬網路，並設定這些能搭配您的內部部署網域。 這些網域控制站的目錄伺服器。 
     
-- 採用雲端服務和可用性設定 SharePoint 伺服器陣列。 
+- 調整雲端服務和可用性設定的 SharePoint 伺服器陣列。 
     
-- 部署 SharePoint 伺服器陣列加上的檔案伺服器至主機檔案共用。 
+- 將 SharePoint 伺服器陣列加上的檔案伺服器部署至主機檔案共用。 
     
-- 設定記錄傳送和 DFSR，之間的內部部署環境及 Azure 型復原環境。 
+- 設定記錄傳送和 DFSR，內部部署環境與 「 以 Azure 為基礎的復原環境之間。 
     
-隨附的圖顯示內部部署環境及 Azure 虛擬網路的下列功能： 
+隨附的圖顯示內部部署環境及 Azure 虛擬網路，包含下列功能： 
   
 ### <a name="on-premises-environment"></a>內部部署環境
 
@@ -176,40 +176,40 @@ ms.locfileid: "17503546"
     
 - Active Directory 伺服器 
     
-與 Azure 虛擬網路透過虛擬私人網路 (VPN) 閘道的內部網路介面。 
+透過虛擬私人網路 (VPN) 閘道的 Azure 虛擬網路與在內部網路介面。 
   
 ### <a name="azure-virtual-network"></a>Azure 虛擬網路
 
-VPN 閘道介面 （英文） 與作用中的 VPN 閘道子網路。 
+VPN 閘道介面與作用中的 VPN 閘道子網路。 
   
-Azure 虛擬網路中有三個雲端服務： 
+在 Azure 虛擬網路中有三個雲端服務： 
   
 - 第一個雲端服務有兩個 Active Directory 和 DNS 伺服器的可用性與設定。 
     
-- 第二個雲端服務有三種設定的伺服器： 兩個分散式快取伺服器的可用性設定。與可用性的兩部前端伺服器設定]。與可用性的三個後端伺服器設定]。
+- 第二個雲端服務有三個一組伺服器： 兩個分散式快取伺服器的可用性設定組。 可用性設定組與兩部前端伺服器。 具有一個可用性設定組的三個後端伺服器。
     
-- 第三個雲端服務有三個可用性設定的資料庫伺服器。其中一個這些資料庫伺服器是記錄傳送和第三個節點的 SQL Server AlwaysOn 節點多數 」 的檔案共用。 
+- 第三個雲端服務有三個具有一個可用性設定組的資料庫伺服器。 一種資料庫伺服器是記錄傳送和第三個節點的 SQL Server AlwaysOn 節點多數 」 的檔案共用。 
     
-### <a name="build-the-ad-ds-hybrid-environment"></a>建立 AD DS 混合式環境
+### <a name="build-the-ad-ds-hybrid-environment"></a>建立在 AD DS 混合式環境
 
-此解決方案的 AD DS 的組態構成 AD DS 是部分部署在內部和部分 Azure 虛擬機器上部署的混合部署案例。 
+針對此解決方案的 AD ds 設定構成了 AD DS 是部分是部署在內部和部分是在 Azure 虛擬機器上部署的混合式部署案例。 
   
-重要 — 部署在 Azure 中的 AD DS 之前，請閱讀指導方針部署 Windows Server Active directory Microsoft Azure 虛擬機器上 (http://msdn.microsoft.com/en-us/library/windowsazure/jj156090.aspx)。 
+重要事項 — 部署在 Azure 中的 AD DS 之前，請閱讀指導方針部署 Windows Server Active directory 上的 Microsoft Azure 虛擬機器 (http://msdn.microsoft.com/en-us/library/windowsazure/jj156090.aspx)。 
   
-完成指導設計與部署 Active Directory 環境的詳細資訊，請參閱 http://TechNet.microsoft.com。 
+如需設計及部署 Active Directory 環境的完整指導，請參閱http://TechNet.microsoft.com。 
   
-本參考架構包含兩個虛擬機器設定為網域控制站。每個設定如下： 
+本參考架構包含兩部虛擬機器設定為網域控制站。 每個已設定為，如下所示： 
   
 - 大小 — 小。 
     
-- 作業系統 — Windows Server 2012。 
+- 作業系統： Windows Server 2012。 
     
-- 角色 — AD DS 網域控制站指定為通用類別目錄伺服器。此設定可透過 VPN 連線減少輸出的流量。在多重網域環境中使用變更速率高，設定網域控制站的內部與 Azure 中的通用類別目錄伺服器不同步。 
+- 角色 — AD DS 網域控制站指定為通用類別目錄伺服器。 此組態會減少輸出流量透過 VPN 連線。 在變更速率高的多重網域環境，設定網域控制站上內部與在 Azure 中的通用類別目錄伺服器不同步。 
     
-- 資料磁碟 — 將 AD DS 資料庫、 記錄以及 SYSVOL 放在 Azure 資料磁碟上。不放置這些作業系統磁碟或 Azure 所提供的暫存磁碟上。這點很重要。 
+- 資料磁碟 — 將 AD DS 資料庫、 記錄檔及 SYSVOL 放在 Azure 的資料磁碟上。 不放置這些作業系統的磁碟或 Azure 所提供的暫存磁碟上。 這是很重要。 
     
-- 角色 — 安裝及設定 Windows DNS 網域控制站上。 
+- 角色 — 上安裝及設定 Windows DNS 網域控制站。 
     
-- IP 位址 — 使用動態 IP 位址。這需要建立 Azure 虛擬網路。 
+- IP 位址-使用動態 IP 位址。 這需要您建立 Azure 虛擬網路。 
     
 

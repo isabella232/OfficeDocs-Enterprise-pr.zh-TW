@@ -1,5 +1,5 @@
 ---
-title: 停用服務存取權時指派使用者授權
+title: 停用服務存取權，並指派使用者授權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -15,13 +15,13 @@ ms.custom:
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
 description: 了解如何將授權指派給使用者帳戶，並在同時使用 Office 365 PowerShell 停用特定的服務計劃。
 ms.openlocfilehash: c93f54fcd5716a0ea53290c24a2594b8bc63cecf
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001846"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491309"
 ---
-# <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用服務存取權時指派使用者授權
+# <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用服務存取權，並指派使用者授權
 
 **摘要：** 了解如何將授權指派給使用者帳戶，並在同時使用 Office 365 PowerShell 停用特定的服務計劃。
   

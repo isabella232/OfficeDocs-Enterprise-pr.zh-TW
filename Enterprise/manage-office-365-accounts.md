@@ -1,5 +1,5 @@
 ---
-title: 用來管理 Office 365 帳戶的工具
+title: 管理 Office 365 帳戶的工具
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -20,13 +20,13 @@ search.appverid:
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具用來管理您的 Office 365 使用者，以及如何您可以使用取決於您要如何管理使用者身分識別。 '
 ms.openlocfilehash: fb98c7103aaadb16ac6f7d459a2595022110bb94
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001766"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487069"
 ---
-# <a name="tools-to-manage-office-365-accounts"></a>用來管理 Office 365 帳戶的工具
+# <a name="tools-to-manage-office-365-accounts"></a>管理 Office 365 帳戶的工具
 
 您可以根據您的設定，以數種不同的方式，管理 Office 365 使用者。 您可以管理[Microsoft 365 系統管理中心](https://admin.microsoft.com)，Windows PowerShell，您的內部部署目錄，或 Azure Active Directory 系統管理入口網站中的使用者。 只要您購買 Office 365 系統管理中心和 Windows PowerShell 可以用來管理帳戶。 當管理雲端身分識別組織中的每個人的 Office 365 會有個別的使用者識別碼和密碼。 如果您想要整合您的內部部署基礎結構，並具有使用者帳戶與 Office 365 同步處理，您可以使用 Azure Active Directory Connect 提供的身分識別同步處理及選擇性地提供密碼同步處理，或完整單一登入功能。
   

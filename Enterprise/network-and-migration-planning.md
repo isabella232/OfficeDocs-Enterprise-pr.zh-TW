@@ -1,5 +1,5 @@
 ---
-title: 網路和移轉規劃 Office 365
+title: Office 365 的網路和移轉規劃
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -18,13 +18,13 @@ search.appverid:
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
 description: 包含資訊的網路規劃與測試、 連結和移轉到 Office 365。
 ms.openlocfilehash: 02576933a1be615e65b695a7dd72c19eed311c91
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30574037"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487272"
 ---
-# <a name="network-and-migration-planning-for-office-365"></a>網路和移轉規劃 Office 365
+# <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
 本文章包含有關網路規劃和測試資訊的連結和移轉到 Office 365。
   
@@ -108,7 +108,7 @@ ms.locfileid: "30574037"
     
 - [Office 365 影片網路常見問題集 (FAQ)](office-365-video-networking-faq.md)
     
-- [網路裝置的連線至 Office 365 服務計劃](plan-for-network-devices.md)
+- [連線到 Office 365 服務的網路裝置的計劃](plan-for-network-devices.md)
     
 - [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
     

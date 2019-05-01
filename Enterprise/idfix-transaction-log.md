@@ -16,29 +16,29 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: d58b7d45-7947-4193-9456-82ba76f42d89
-description: 提供一個範例，並說明的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
+description: 提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
 ms.openlocfilehash: c652f8dcbc23a6f0165d894ce6317443db72ceee
-ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "30085062"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490939"
 ---
 # <a name="office-365-idfix-transaction-log"></a>Office 365 IdFix 交易記錄檔
 
-提供一個範例，並說明的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
+提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
   
-## <a name="idfix-transaction-log-location"></a>IdFix 交易記錄位置
+## <a name="idfix-transaction-log-location"></a>IdFix 交易記錄檔的位置
 
-Office 365 IdFix 工具會建立新的交易記錄檔每次您按一下 [**套用**在 IdFix 中並變更套用至 Active Directory 樹系。交易記錄檔會儲存在已安裝 IdFix 的相同資料夾中。根據預設，這個資料夾是 C:\Deployment Tools\IDFix。交易記錄檔名稱使用日期和時間戳記格式，例如 Verbose 6-1-2018年 6-17-22 PM 會指出在下午 6： 17:22 2018 年 6 月 1，在產生的檔案 Verbose 指出的記錄層級。 
+Office 365 IdFix 工具在每次您按一下 [**套用**在 IdFix 中，將變更套用至 Active Directory 樹系時，都會建立新的交易記錄檔。 交易記錄檔會儲存在您安裝 IdFix 的相同資料夾中。 根據預設，這個資料夾是 C:\Deployment Tools\IDFix。 交易記錄檔名稱使用日期和時間戳記格式，例如 Verbose 6-1-2018年 6-17-22 PM 指示在 2018 年 6 月 1 日下午 6:17:22 產生的檔案。 Verbose 指出的記錄等級。 
   
-## <a name="idfix-transaction-log-logging-level"></a>IdFix 交易記錄記錄層級
+## <a name="idfix-transaction-log-logging-level"></a>IdFix 交易記錄檔記錄層級
 
-交易記錄檔名中的 verbose 這個字指出檔案中的記錄層級。Verbose 表示在記錄中擷取最大資訊量。這是預設記錄層級。目前您無法變更記錄層級。
+Verbose 在交易記錄檔名稱的字會指出記錄檔中的層的級。 Verbose 表示最高資訊量會擷取在記錄檔。 這是預設記錄等級。 在這個階段中，您無法變更的記錄等級。
   
 ## <a name="idfix-transaction-log-format"></a>IdFix 交易記錄格式
 
-IdFix 會將每個 [ **UPDATE** ] 動作的結果寫入至交易記錄在下列範例所示：
+IdFix 會將每個 [ **UPDATE** ] 動作的結果寫入至交易記錄檔在下列範例所示：
   
 ```
 5/22/2018 6:36:44 AM Initialized - IdFix version 1.07 - Multi-Tenant

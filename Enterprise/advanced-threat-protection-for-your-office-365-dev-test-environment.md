@@ -17,13 +17,13 @@ ms.custom:
 ms.assetid: 51019757-20ac-498c-b51e-cae6d41a8c08
 description: 摘要：設定並示範 Office 365 開發/測試環境中的 Office 365 進階威脅防護。
 ms.openlocfilehash: 53bff386490ed9647a511f75c997cb91b0acc181
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741339"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490149"
 ---
-# <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>用於 Office 365 開發/測試環境的進階威脅防護
+# <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階威脅防護
 
  **摘要：** 設定並示範 Office 365 開發/測試環境中的 Office 365 進階威脅防護。
   
@@ -156,7 +156,7 @@ Office 365 進階威脅防護 (ATP) 是Exchange Online Protection (EOP) 的一�
 您現在可以使用此環境建立新的原則並試驗 ATP。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="see-also"></a>另請參閱
 

@@ -13,11 +13,11 @@ ms.custom: Ent_Architecture
 ms.assetid: db117e59-389f-46f5-a5df-4eeac0040aa8
 description: 摘要： 瞭解混合式架構與案例的 Microsoft 的 SaaS 型雲端供應項目 (Office 365)。
 ms.openlocfilehash: 90b751e4bbea42d723961eb2ac339d23faf8c259
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741389"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487494"
 ---
 # <a name="hybrid-cloud-scenarios-for-microsoft-saas-office-365"></a>Microsoft SaaS (Office 365) 混合式雲端案例
 
@@ -51,7 +51,7 @@ ms.locfileid: "31741389"
     
     可以包含您內部部署 Active Directory 網域服務 (AD DS) 與目錄同步處理。 或者，您可以設定 Azure AD 以使用協力廠商身分識別提供者同盟。
     
-- 工作列最右邊的網路
+- 網路
     
     與 Microsoft Office 365 或 Dynamics 365 對等包含您現有的網際網路管道或 ExpressRoute 連線。
     
@@ -110,7 +110,7 @@ SharePoint 混合式案例：
     
 - [混合式外部網路 B2B](https://docs.microsoft.com/sharepoint/create-b2b-extranet)
     
-- [混合式搜尋](https://docs.microsoft.com/SharePoint/hybrid/configure-cloud-hybrid-searchroadmap)
+- [混合搜尋](https://docs.microsoft.com/SharePoint/hybrid/configure-cloud-hybrid-searchroadmap)
     
 - [混合式設定檔](https://docs.microsoft.com/SharePoint/hybrid/plan-hybrid-profiles)
     

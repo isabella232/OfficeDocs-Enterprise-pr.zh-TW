@@ -13,64 +13,64 @@ search.appverid:
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 4194020a-3847-4259-9f2d-5c556a4510f9
-description: 摘要： 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
+description: 摘要： 了解如何最佳化您的網路存取 Microsoft 的 SaaS 服務，包括 Office 365、 Microsoft Intune 和 Dynamics 365。
 ms.openlocfilehash: 3d47c53de1bc1121ef72eb519c51c0ad9423fff9
-ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "26872264"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487292"
 ---
 # <a name="designing-networking-for-microsoft-saas"></a>設計 Microsoft SaaS 的網路
 
- **摘要：** 了解如何最佳化您的網路存取 Microsoft saas 和服務，包括 Office 365 和 Microsoft Intune Dynamics 365。
+ **摘要：** 了解如何最佳化您的網路存取 Microsoft 的 SaaS 服務，包括 Office 365、 Microsoft Intune 和 Dynamics 365。
   
-最佳化您的網路 Microsoft saas 和服務要求的內部的設定資料庫和路由傳送到 Microsoft saas 和服務的流量的不同類別的邊緣裝置。
+針對 Microsoft SaaS 服務將您的網路最佳化時，必須將內部和邊緣裝置設定為將不同類別的流量路由傳送至 Microsoft SaaS 服務。
   
-## <a name="steps-to-prepare-your-network-for-microsoft-saas-services"></a>準備您的網路 Microsoft saas 和服務的步驟
+## <a name="steps-to-prepare-your-network-for-microsoft-saas-services"></a>步驟來準備用於 Microsoft SaaS 服務的網路
 
-請遵循這些步驟以最佳化您的網路 Microsoft saas 和服務：
+請遵循下列步驟來最佳化您的網路以 Microsoft SaaS 服務：
   
-1. 經歷中[常見的元素 Microsoft cloud 連線的](common-elements-of-microsoft-cloud-connectivity.md)**步驟來準備您的 Microsoft 雲端服務的網路**區段。
+1. 經過[Microsoft 雲端連線能力的共同元素](common-elements-of-microsoft-cloud-connectivity.md)中的**步驟來準備您的 Microsoft 雲端服務的網路**區段。
     
-2. 將網際網路連線新增至每個您辦公室。
+2. 新增至每個您的分公司的網際網路連線。
     
-3. 請確認所有網際網路連線的 Isp 本機的 IP 位址搭配使用的 DNS 伺服器。
+3. 請確定所有的網際網路連線的 Isp，使用具有本機 IP 位址的 DNS 伺服器。
     
-4. 檢查網路 hairpins、 雲端式安全性服務等的中介目的地，並盡可能避免它們。
+4. 檢查您的網路 hairpin 以取得，基於雲端的安全性服務，例如中介目的地，並且盡可能刪除它們。
     
-5. 設定您的 edge 裝置略過最佳化的處理，讓 Microsoft saas 和流量的類別。
+5. 設定您的邊緣裝置能夠略過處理針對最佳化和允許類別的 Microsoft SaaS 流量。
 
-## <a name="optimizing-traffic-to-microsofts-saas-services"></a>最佳化給 Microsoft 的 saas 和服務的流量    
+## <a name="optimizing-traffic-to-microsofts-saas-services"></a>Microsoft 的 SaaS 服務最佳化流量    
 
-有三個類別的 Microsoft saas 和流量：
+有三種類別的 Microsoft SaaS 流量：
 
 - 最佳化
 
-  所需的每一個 Microsoft saas 和服務，以及代表超過 75%的 Microsoft saas 和頻寬、 連線和大量的資料連線。
+  所需的連線至每個 Microsoft SaaS 服務與代表超過 75%的 Microsoft SaaS 頻寬、 連線及資料量。
 
 - 允許
 
-  所需的連線至特定 Microsoft saas 和服務和功能 （英文） 但不是以受到網路效能和外出最佳化類別中的延遲。
+  所需的連線至特定 Microsoft SaaS 服務和功能但不是對網路效能和延遲不如最佳化類別中敏感。
 
 - 預設
 
-  代表 Microsoft saas 和服務並不需要任何最佳化的相依性。您可以將類似標準網際網路流量的預設類別流量。
+  代表 Microsoft SaaS 服務並不需要任何最佳化的相依性。 您可以將視為像是一般網際網路流量的預設類別流量。
 
 
-**圖 1： 適用於建議設定的所有分公司的 Microsoft saas 和流量**
+**圖 1： 建議的針對 Microsoft SaaS 流量的所有辦公室的組態**
 
-![圖 1： 適用於建議設定的所有分公司的 Microsoft saas 和流量](media/Network-Poster/SaaS1.png)
+![圖 1： 建議的針對 Microsoft SaaS 流量的所有辦公室的組態](media/Network-Poster/SaaS1.png)
 
-圖 1 顯示的所有分公司，包括分公司和地區或中央 api，在其中的建議的設定：
+圖 1 顯示所有辦公室，包括分公司和地區或管理中心的在其中建議的組態的設定：
 
-- **預設**類別與一般網際網路的流量路由傳送至具有 proxy 伺服器和其他 edge 裝置提供保護對網際網路型安全性風險的辦公室。
-- **最佳化**] 和 [**允許**類別流量遞給直接 Microsoft 網路前端包含連線的使用者，略過 proxy 伺服器和其他 edge 裝置 office，最靠近的邊緣。
+- **預設**類別和一般網際網路流量路由傳送至有 proxy 伺服器和其他邊緣裝置提供保護針對網際網路型安全性風險的辦公室。
+- **最佳化**和**允許**類別流量會轉送直接向 Microsoft 網路前端包含連線的使用者，略過 proxy 伺服器和其他邊緣裝置在辦公室，最靠近的邊緣。
 
-在分公司的軟體定義廣域網路 (SD WAN) 的網路裝置分隔流量使： 
+軟體定義的廣域網路 (SD WAN) 的網路裝置分公司中分隔流量以便： 
 
-- **預設**類別與一般透過 WAN 骨幹網際網路的流量會移到中央或地區的辦公室。 
-- **最佳化**] 和 [**允許**類別流量前往 ISP 提供本機網際網路連線。
+- **預設**類別和一般網際網路流量前往透過 WAN 骨幹中央或地區辦公室。 
+- **最佳化**和**允許**類別流量前往 ISP 提供當地網際網路連線。
   
 如需詳細資訊，請參閱：
   

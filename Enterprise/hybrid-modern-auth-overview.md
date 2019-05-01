@@ -13,12 +13,12 @@ ms.assetid: ef753b32-7251-4c9e-b442-1a5aec14e58d
 ms.collection:
 - M365-security-compliance
 description: 新式驗證是一種方法提供更安全的使用者驗證及授權的身分識別管理。 使用混合式部署的 Skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合。 此文章連結至相關的文件有關先決條件，安裝程式/停用新式驗證，和某些相關的用戶端 （例如。 Outlook 與 Skype 用戶端） 的資訊。
-ms.openlocfilehash: 26efa77e3c98c0395188e6ca7a2f65cd3b8b939e
-ms.sourcegitcommit: 19f0deee26b6cf2eef316c742054572bb9d98b84
+ms.openlocfilehash: d8d06a3e2d178f68bcb130228ed1834f4eb878f8
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "30458343"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491399"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合式新式驗證概觀及使用商務和 Exchange 伺服器內部部署用 Skype 的必要條件
 
@@ -90,6 +90,18 @@ EvoSTS 變更可讓您在內部伺服器，以利用授權您的用戶端，OAut
   - SIP 網域會新增為 Office 365 中的同盟網域
     
   - 所有 SFB 前端都必須連線到網際網路，以 Office 365 驗證 Url (TCP 443) 輸出，而且熟知憑證根目錄 Crl (TCP 80) 會列出列 56 和 125 的[[Microsoft 365 一般及 Office Online] 區段中，Office 365 Url 和 IP位址範圍](urls-and-ip-address-ranges.md)。
+  
+- **商務用 Skype 內部部署混合式 Office 365 環境中**
+  - 具有執行 Skype for Business Server 2019 的所有伺服器的商務 Server 2019 部署商務用 Skype。
+  
+  - 用 Skype Server 2015 部署與執行用 Skype Server 2015 的所有伺服器。
+  
+  - 最多兩個不同的伺服器版本，如下所示的部署：
+  
+     - Skype for Business Server 2015 與 Skype for Business Server 2019
+     
+  - 所有 Skype for Business 伺服器必須已安裝最新的 cummulative 更新，請參閱[Skype for Business Server 更新](https://docs.microsoft.com/skypeforbusiness/sfb-server-updates)若要尋找與管理所有可用的更新。
+  - 沒有任何 Lync Server 2010 或 2013 混合式環境中。
     
  **附註**如果您 Skype for Business 前端伺服器使用的網際網路存取 proxy 伺服器，必須在 [設定] 區段中的每個前端的 web.config 檔案中輸入 proxy 伺服器 IP 和連接埠號碼使用。 
   
@@ -120,7 +132,17 @@ EvoSTS 變更可讓您在內部伺服器，以利用授權您的用戶端，OAut
     
   - 未設定 SSL 卸載。 支援 SSL 終止並重新加密。
     
-  - 事件中您的環境使用 proxy 伺服器基礎結構，以允許伺服器進行連線到網際網路，請務必在所有 Exchange 伺服器都有[InternetWebProxy](https://technet.microsoft.com/en-us/library/bb123716%28v=exchg.160%29.aspx)屬性中所定義的 proxy 伺服器。
+  - 事件中您的環境使用 proxy 伺服器基礎結構，以允許伺服器進行連線到網際網路，請務必在所有 Exchange 伺服器都有[InternetWebProxy](https://technet.microsoft.com/library/bb123716%28v=exchg.160%29.aspx)屬性中所定義的 proxy 伺服器。
+  
+- **Exchange Server 內部部署混合式 Office 365 環境中**
+
+  - 如果您使用 Exchange server 2013，至少一部伺服器必須已安裝 Mailbox 和 Client Access server role。 雖然可以在個別伺服器上安裝 Mailbox 和 Client Access role，我們強烈建議您安裝在每個伺服器，以提供額外的可靠性與效能改進這兩種角色。
+  
+  - 如果您使用 Exchange server 2016 或更新版本，至少一部伺服器必須已安裝 Mailbox server role。
+  
+  - 沒有任何 Exchange server 2007 或 2010 混合式環境中。
+  
+  - 所有 Exchange 伺服器必須已安裝最新的 cummulative 更新，請參閱[將 Exchange 升級至最新的累計更新](https://docs.microsoft.com/en-us/exchange/plan-and-deploy/install-cumulative-updates?view=exchserver-2019)若要尋找與管理所有可用的更新。
     
 - **Exchange 用戶端和通訊協定需求**
   
@@ -129,7 +151,7 @@ EvoSTS 變更可讓您在內部伺服器，以利用授權您的用戶端，OAut
   |**用戶端**|**主要的通訊協定**|**附註**|
   |:-----|:-----|:-----|
   |Outlook 2013 與 Outlook 2016  <br/> |MAPI over HTTP  <br/> |必須在 Exchange 中啟用 MAPI over HTTP，才能使用這些用戶端 （通常是已啟用或則為 True 的新安裝的 Exchange 2013 Service Pack 1 和上方）; 利用新式驗證如需詳細資訊請參閱 < <b0>Office 2013 和 Office 2016 用戶端應用程式的方式新式驗證運作</b0>。  <br/> 確定您正在執行的 Outlook; 最小必要的建置請參閱 <<c0>使用 Windows Installer (MSI) 的 Outlook 版本的最新更新。  <br/> |
-  |Outlook 2016 for Mac  <br/> |Exchange Web 服務  <br/> |  <br/> |
+  |Mac 版 Outlook 2016  <br/> |Exchange Web 服務  <br/> |  <br/> |
   |Outlook for iOS 和 Android  <br/> |  <br/> |如需詳細資訊，請參閱[使用混合式新式驗證與 Outlook for iOS 和 Android](https://docs.microsoft.com/en-us/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) 。  <br/> |
   |Exchange ActiveSync 用戶端 (例如 iOS11 Mail)  <br/> |Exchange ActiveSync  <br/> |對於支援新式驗證的 Exchange ActiveSync 用戶端，必須重新建立設定檔，以便從基本驗證切換至新式驗證。  <br/> |
 
@@ -164,6 +186,6 @@ EvoSTS 變更可讓您在內部伺服器，以利用授權您的用戶端，OAut
     
 - [如何設定商務用 Skype 內部部署以使用新式驗證](configure-skype-for-business-for-hybrid-modern-authentication.md)
     
-- [移除或停用混合式新式驗證從 Skype for Business 和 Exchange](remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md)
+- [從商務用 Skype 與 Exchange 移除或停用混合式新式驗證](remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md)
     
 

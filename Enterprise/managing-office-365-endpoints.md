@@ -16,11 +16,11 @@ search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
 ms.openlocfilehash: a094e647a0b228527e8702f24e57aa4276589f70
-ms.sourcegitcommit: 19f0deee26b6cf2eef316c742054572bb9d98b84
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "30458353"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487082"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -221,6 +221,6 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
   
 [Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
   
-[管理 ExpressRoute for Office 365 連線能力](managing-expressroute-for-connectivity.md)
+[管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
   
 [Office 365 網路連線原則](office-365-network-connectivity-principles.md)

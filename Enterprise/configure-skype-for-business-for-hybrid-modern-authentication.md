@@ -14,12 +14,12 @@ ms.assetid: 522d5cec-4e1b-4cc3-937f-293570717bc6
 ms.collection:
 - M365-security-compliance
 description: 新式驗證，是一種方法提供了更安全的使用者驗證和授權、 skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合可用的身分識別管理。
-ms.openlocfilehash: 23a9262659ae47f5aeb5577b9bb45ea2c1aad235
-ms.sourcegitcommit: 1d84e2289fc87717f8a9cd12c68ab27c84405348
+ms.openlocfilehash: a9fb93d0269628c0c1d4cd374e3bca36482f7eee
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "30372930"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490315"
 ---
 # <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>如何設定商務用 Skype 內部部署以使用混合式新式驗證
 
@@ -87,8 +87,10 @@ ms.locfileid: "30372930"
     
 您將需要內部和外部 web 服務 URL 的所有部署的 SfB 2015 集區。 若要取得這些，請執行下列從 Skype for Business 管理命令介面：
   
-Get-csservice WebServer |Select-object PoolFqdn，InternalFqdn，ExternalFqdn |FL
-  
+```
+Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | FL
+```
+
 - 例如 內部：https://lyncwebint01.contoso.com
     
 - 例如 外部：https://lyncwebext01.contoso.com
@@ -115,41 +117,46 @@ Get-csservice WebServer |Select-object PoolFqdn，InternalFqdn，ExternalFqdn |F
   
  **附註**服務主要名稱 (Spn) 識別 web 服務，以及其關聯 （例如帳戶名稱或群組） 的安全性主體，讓該服務可對授權的使用者代理。 伺服器進行驗證的用戶端進行使用的資訊的中所含的 Spn。 
   
-1. 首先，連線至 AAD[這些](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0)指示。
+1. 首先，連線至 AAD[這些](https://docs.microsoft.com/en-us/powershell/azure/active-directory/overview?view=azureadps-1.0)指示。
     
 2. 執行此命令中，內部部署，若要取得之 SFB web 服務 Url 的清單。
+
+   請注意，AppPrincipalId 開頭`00000004`。 這會對應到 Skype for Business Online。
     
-  - 取得 MsolServicePrincipal-AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 |選取 [ExpandProperty ServicePrincipalNames
+   此命令，它會包括 SE 和 WS URL，但是大部分所組成的開頭的 Spn 的輸出採取的附註 （和更新版本的比對的螢幕擷取畫面） `00000004-0000-0ff1-ce00-000000000000/`。
     
-    請注意 AppPrincipalId 開頭 '00000004'。 這會對應到 Skype for Business Online。
-    
-    此命令，它會包括 SE 和 WS URL，但是大部分組成 00000004-0000-0ff1-ce00-000000000000 的開頭的 Spn 的輸出採取的附註 （和更新版本的比對的螢幕擷取畫面） /。
+```
+Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 | Select -ExpandProperty ServicePrincipalNames
+```
     
 3. 如果內部**或**外部遺漏了從內部 SFB Url (例如https://lyncwebint01.contoso.com和https://lyncwebext01.contoso.com)我們需要將這些特定記錄新增至這份清單。 
     
     請務必*範例 Url* ] 下方，取代實際 Url 中新增命令 ！ 
-    
-  - $x = get MsolServicePrincipal-AppPrincipalId 00000004-0000-0ff1-ce00-000000000000
-    
-  - $x.ServicePrincipalnames.Add (" *https://lyncwebint01.contoso.com/* ") 
-    
-  - $x.ServicePrincipalnames.Add (" *https://lyncwebext01.contoso.com/* ") 
-    
-  - 設定 MSOLServicePrincipal-AppPrincipalId 00000004-0000-0ff1-ce00-000000000000-ServicePrincipalNames $x.ServicePrincipalNames
-    
-4. 確認您新的記錄已新增步驟 2 中取得 MsolServicePrincipal 命令執行，並將輸出中尋找。 比較清單 / 將螢幕擷取畫面從之前的 Spn （您可能也螢幕擷取畫面新清單以供記錄） 新的清單。 如果您已成功，您會看到兩個新的 Url 清單中。 將由我們的範例，此清單的 Spn 將現在包含特定 Urlhttps://lyncweb01.contoso.com和https://autodiscover.contoso.com。
+  
+```  
+$x= Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000
+$x.ServicePrincipalnames.Add("https://lyncwebint01.contoso.com/")
+$x.ServicePrincipalnames.Add("https://lyncwebext01.contoso.com/")
+Set-MSOLServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
+```
+  
+4. 確認您新的記錄已新增步驟 2 中取得 MsolServicePrincipal 命令執行，並將輸出中尋找。 比較清單 / 將螢幕擷取畫面從之前的 Spn （您可能也螢幕擷取畫面新清單以供記錄） 新的清單。 如果您已成功，您會看到兩個新的 Url 清單中。 將由我們的範例，此清單的 Spn 將現在包含特定 Urlhttps://lyncweb01.contoso.com和https://lyncwebext01.contoso.com/。
     
 ### <a name="create-the-evosts-auth-server-object"></a>建立 EvoSTS 驗證伺服器物件
 
 下列中執行命令 Skype for Business 管理命令介面。
   
-- New-csoauthserver-Identity evoSTS-MetadataURL https://login.windows.net/common/FederationMetadata/2007-06/FederationMetadata.xml -AcceptSecurityIdentifierInformation $true-類型 AzureAD
+```
+New-CsOAuthServer -Identity evoSTS -MetadataURL https://login.windows.net/common/FederationMetadata/2007-06/FederationMetadata.xml -AcceptSecurityIdentifierInformation $true -Type AzureAD
+```
     
 ### <a name="enable-hybrid-modern-authentication"></a>啟用混合式新式驗證
 
 這是實際開啟 MA 的步驟。 所有先前的步驟可以執行事先，而不需要變更用戶端驗證流程。 當您準備好要變更的驗證流程時，執行此命令中 Skype for Business 管理命令介面。 
   
-- Set-csoauthconfiguration-ClientAuthorizationOAuthServerIdentity evoSTS
+```
+Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity evoSTS
+```
     
 ## <a name="verify"></a>確認
 

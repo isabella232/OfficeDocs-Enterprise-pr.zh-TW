@@ -18,66 +18,66 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 5fa4f6ef-35ad-4840-91c1-4834df3df5a0
-description: 當您規劃及準備移轉至 Office 365 此檢查清單可協助您的組織。階段與步驟的檢查清單中要對齊的 Onboarding 中心提供的指導。
+description: 這份檢查清單可協助您的組織，當您規劃及準備移轉至 Office 365。 上架中心所提供的指引與對齊階段與步驟的檢查清單中。
 ms.openlocfilehash: 42c292f3fe5f8a3753a733e5b362521d95eab827
-ms.sourcegitcommit: 1b6ba4043497c27b3a89689766b975f2405e0ec8
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "30085302"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490099"
 ---
 # <a name="deployment-planning-checklist-for-office-365"></a>部署 Office 365 規劃檢查清單
 
-當您將企業組織移至 Office 365 時時，請務必規劃想要取得時重新執行它們，確實步驟與誰將執行它們。當您規劃及準備移轉至 Office 365 此檢查清單可協助您的組織。階段與步驟的檢查清單中要對齊的[Onboarding 中心](https://go.microsoft.com/fwlink/?LinkId=517115)提供的指導。隨時能否此檢查清單，以貴組織的需求。
+當您將企業組織移至 Office 365 時，務必規劃完全採取哪些步驟您想要取得，何時要執行，以及誰可以執行它們。 這份檢查清單可協助您的組織，當您規劃及準備移轉至 Office 365。 [上架中心](https://go.microsoft.com/fwlink/?LinkId=517115)所提供的指引與對齊階段與步驟的檢查清單中。 請隨意適應此檢查清單來組織的需求。
 
-## <a name="need-help-with-your-deployment"></a>需要協助您部署吗？
-您想取得 Office 365 設定的說明嗎？請考慮使用[FastTrack](https://fasttrack.microsoft.com/office)或[部署顧問 for Office 365 服務](deployment-advisors-for-office-365.md)。
+## <a name="need-help-with-your-deployment"></a>需要協助您的部署嗎？
+您想取得 Office 365 設定的說明嗎？ 請考慮使用[FastTrack](https://fasttrack.microsoft.com/office)或[Office 365 服務的部署建議](deployment-advisors-for-office-365.md)。
 
-## <a name="sample-checklist-for-an-office-365-enterprise-deployment"></a>如需 Office 365 企業版部署範例檢查清單
+## <a name="sample-checklist-for-an-office-365-enterprise-deployment"></a>如需 Office 365 企業版部署的範例檢查清單
 
 ||||||
 |:-----|:-----|:-----|:-----|:-----|
 |**部署工作/事件** <br/> |**開始日期** <br/> |**完成日期** <br/> |**資源** <br/> |**相依性** <br/> |
-|**決定您的部署目標** <br/> |||||
-| 與專案關係人內部和外部：<br>  -同意範圍和時間表 <br>  -同意專案追蹤機制  <br>  -開發成功準則和[通訊](https://fasttrack.microsoft.com/office) / [開始使用 Office 365](https://support.office.com/article/396b8d9e-e118-42d0-8a0d-87d1f2f055fb)|||||
-|**清查您目前的環境及做出重要的部署決策** |||||
+|**判斷您的部署目標** <br/> |||||
+| 與您內部和外部專案關係人：<br>  -同意上範圍及時間表 <br>  -同意專案追蹤機制  <br>  -開發成功準則及[通訊](https://fasttrack.microsoft.com/office) / [開始使用 Office 365](https://support.office.com/article/396b8d9e-e118-42d0-8a0d-87d1f2f055fb)|||||
+|**清查您目前的環境，並讓重要的部署決策** |||||
 |清查您目前的環境 |||||
-| 收集使用者帳戶 （登入名稱、 電子郵件地址） 的數目 |||||
-| 收集數目與大小 （包括共用的信箱和會議室） 的信箱 |||||
-| 收集用戶端版本和組態 （瀏覽器、 作業系統、 office 應用程式、 行動版本、 等等） |||||
-| 在您的網路設定 DNS 主機、 proxy 和/或防火牆的設定 （網際網路連線能力） 收集詳細資料 |||||
-| 收集資訊上 （[內部網路檔案存放區中的 [檔案共用） 的檔案儲存位置 |||||
-| 收集需任何打算移轉的內部網路網站的詳細資訊 |||||
-| 收集的線上會議和打算移轉的立即訊息系統 |||||
-| 收集的詳細資訊與現有的系統 （啟用郵件功能的應用程式、 工作流程、 CRM、 等等） 整合的任何應用程式 |||||
+| 收集使用者帳戶 （[電子郵件地址中的 [登入名稱） 的數目 |||||
+| 收集的數目與大小的信箱 （包括共用的信箱和會議室） |||||
+| 收集用戶端版本和組態 （瀏覽器、 作業系統、 office 應用程式、 行動版本，等等） |||||
+| 收集您的網路設定 （DNS 主機、 proxy 和/或防火牆組態、 網際網路連線） 上的 [詳細資料 |||||
+| 收集檔案儲存位置 （[內部網路檔案存放區中的 [檔案共用） 的資訊 |||||
+| 收集需任何想要移轉的內部網路網站的詳細資訊 |||||
+| 收集線上會議和打算移轉的立即訊息系統 |||||
+| 收集有關整合在一起 （擁有郵件功能的應用程式、 工作流程、 CRM，等等） 的現有系統任何應用程式的詳細資料 |||||
 |做出重要的部署決策 |||||
-| 如何將您[建立及 （或） 同步處理帳戶](https://go.microsoft.com/fwlink/?LinkId=534819)？ |||||
+| 如何將您[建立和/或同步處理帳戶](https://go.microsoft.com/fwlink/?LinkId=534819)？ |||||
 | 如何將[使用者帳戶進行驗證](https://go.microsoft.com/fwlink/?LinkId=534820)？ |||||
-| 您會移轉任何資料以及如何將該移轉發生 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)和[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)）？ |||||
-| 將會有任何短或長字詞[與內部部署系統的整合](https://go.microsoft.com/fwlink/?LinkId=534822)吗？ |||||
-| [將使用者能夠從連線的裝置](https://go.microsoft.com/fwlink/?LinkId=534821)（遠端從行動裝置或只是從您的網路）？ |||||
-|**修正潛在部署封鎖程式** |||||
-|使用工具與指南 microsoft： |||||
+| 您將會移轉任何資料，以及如何將該移轉發生 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)和[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)）？ |||||
+| 將會有任何短或長字詞[與內部部署系統的整合](https://go.microsoft.com/fwlink/?LinkId=534822)？ |||||
+| 哪些[作業使用者能夠從連線的裝置](https://go.microsoft.com/fwlink/?LinkId=534821)（遠端電腦上，從行動裝置，或只是從您的網路）？ |||||
+|**修正潛在部署封鎖** |||||
+|使用工具和 Microsoft 的指引： |||||
 | 清理 active directory 帳戶 （[指引](https://go.microsoft.com/fwlink/?LinkId=534825)和[工具](https://go.microsoft.com/fwlink/?LinkId=534826)） |||||
-| 學會使用您的資料以進行移轉 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)和[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)） |||||
-| 取得您的網路準備好 （[指引和工具](https://aka.ms/tune)） |||||
+| 準備您的資料進行移轉 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)和[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)） |||||
+| 取得您的網路準備 （[指引和工具](https://aka.ms/tune)） |||||
 | 更新用戶端軟體版本 （[指引](https://go.microsoft.com/fwlink/?LinkId=534827)） |||||
 | 如果您有 Active Directory Rights Management Services： 準備您的環境 （[指引](https://go.microsoft.com/fwlink/?linkid=844967)）  <br/> |||||
-|**設定供組織的 Office 365 服務** |||||
+|**設定為適用於貴組織的 Office 365 服務** |||||
 |設定您的 Office 365 訂閱 |||||
-|[確認您想要使用您的訂閱所使用的網域](https://go.microsoft.com/fwlink/?LinkId=534828) |||||
+|[確認您想要使用您的訂閱的網域](https://go.microsoft.com/fwlink/?LinkId=534828) |||||
 | 設定[應用程式設定](https://go.microsoft.com/fwlink/?LinkId=534829)（電子郵件、 立即訊息、 線上會議、 web 共同作業、 檔案存放區，Yammer） |||||
 | （選用） [[準備目錄同步作業](https://go.microsoft.com/fwlink/?LinkId=534830) |||||
 | （選用） [[準備單一登入](https://go.microsoft.com/fwlink/?LinkId=534831) |||||
 |準備您的組織 |||||
 |[準備服務台](https://fasttrack.microsoft.com/office)即將來臨的移轉 |||||
-| 測試部署和選用的遷移程序 |||||
-| 關於[即將來臨的變更與它如何影響它們](https://fasttrack.microsoft.com/office)告訴您的使用者 |||||
-|**對使用者首次** |||||
-|安裝程式帳戶及信箱 |||||
-| 新增使用者和[指派給 Office 365 中的商務使用者的授權](https://support.office.com/article/997596b5-4173-4627-b915-36abac6786dc) |||||
-| （選用） 移轉資料 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)，並[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)，依此類推） |||||
-|驗證功能則完整的最後一個步驟 |||||
-| 移轉[以指向 Office 365 的 DNS 設定](https://go.microsoft.com/fwlink/?LinkId=534835) |||||
-| 當他們可以[開始使用 Office 365](https://support.office.com/en-us/article/office-365-basics-video-training-396b8d9e-e118-42d0-8a0d-87d1f2f055fb?ui=en-US&amp;rs=en-US&amp;ad=US)告訴您的使用者 |||||
-| 重新設定用戶端系統以連線至 Office 365 （ [Office](https://go.microsoft.com/fwlink/?LinkId=534836)、 [Outlook](https://go.microsoft.com/fwlink/?LinkId=534837)、 [Outlook for Mac](https://support.office.com/article/6e27792a-9267-4aa4-8bb6-c84ef146101b#PickTab=Outlook_for_Mac)、[行動裝置](https://go.microsoft.com/fwlink/?LinkId=534840)）  |||||
+| 測試部署以及選用的遷移程序 |||||
+| 告訴您的使用者有關[即將進行變更，它會如何影響他們](https://fasttrack.microsoft.com/office) |||||
+|**推行至使用者** |||||
+|安裝程式帳戶和信箱 |||||
+| 新增您的使用者和[指派給商務用 Office 365 中的使用者授權](https://support.office.com/article/997596b5-4173-4627-b915-36abac6786dc) |||||
+| （選用） 將資料 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)，以及[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)，依此類推） 移轉 |||||
+|驗證功能，然後完成的最後一個步驟 |||||
+| 移轉[為指向 Office 365 的 DNS 設定](https://go.microsoft.com/fwlink/?LinkId=534835) |||||
+| 告訴您的使用者，當他們可以[開始使用 Office 365](https://support.office.com/en-us/article/office-365-basics-video-training-396b8d9e-e118-42d0-8a0d-87d1f2f055fb?ui=en-US&amp;rs=en-US&amp;ad=US) |||||
+| 重新設定用戶端系統以連線到 Office 365 （ [Office](https://go.microsoft.com/fwlink/?LinkId=534836)、 [Outlook](https://go.microsoft.com/fwlink/?LinkId=534837)、 [Outlook for Mac](https://support.office.com/article/6e27792a-9267-4aa4-8bb6-c84ef146101b#PickTab=Outlook_for_Mac)、[行動裝置](https://go.microsoft.com/fwlink/?LinkId=534840)）  |||||

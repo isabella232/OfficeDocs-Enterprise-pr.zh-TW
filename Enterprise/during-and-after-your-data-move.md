@@ -1,5 +1,5 @@
 ---
-title: 期間和之後資料移動
+title: 資料移動期間和之後
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
@@ -13,13 +13,13 @@ localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
 ms.openlocfilehash: 7635de71e207ff01b24b8b8df8664e3f57f395cf
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30647991"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487229"
 ---
-# <a name="during-and-after-your-data-move"></a>期間和之後資料移動
+# <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
   
@@ -36,7 +36,7 @@ ms.locfileid: "30647991"
 |印度  <br/> |2018 年 10 月 31日日  <br/> |
 |加拿大  <br/> |2019 年 6 月 30日日  <br/> |
 |南韓  <br/> |2018 年 10 月 31日日  <br/> |
-|United Kingdom  <br/> |2019 年 9 月 15日日  <br/> |
+|英國  <br/> |2019 年 9 月 15日日  <br/> |
 |法國  <br/> |2020 年 9 月 15 日  <br/> |
 |阿拉伯聯合大公國  <br/> |宣佈  <br/> |
 |南非  <br/> |宣佈  <br/> |
@@ -68,7 +68,7 @@ SharePoint Online 移動時，也被移動下列服務的資料：
   
 - 商務用 OneDrive
     
-- Microsoft Project Online
+- Project Online
     
 - Project for Office 365
     

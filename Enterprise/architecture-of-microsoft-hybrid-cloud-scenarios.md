@@ -15,11 +15,11 @@ ms.custom: Ent_Architecture
 ms.assetid: 06d8c959-39e5-4150-b1ae-aaf0eee4c058
 description: 摘要： 了解 Microsoft 的混合式雲端供應項目的的架構。
 ms.openlocfilehash: f5493c0f008b22af412ee95ccb8b7581eee71476
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31038007"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490262"
 ---
 # <a name="architecture-of-microsoft-hybrid-cloud-scenarios"></a>Microsoft 混合式雲端案例的架構
 
@@ -39,7 +39,7 @@ ms.locfileid: "31038007"
     
     混合式案例的內部部署基礎結構可以包含伺服器用於 SharePoint、 Exchange、 Skype for Business 和商務應用程式。 它也可以包含的資料存放區 （資料庫、 清單、 檔案）。 ExpressRoute 連線，而必須透過反向 proxy 或讓伺服器或資料，可在您 DMZ 上存取或外部網路允許存取內部部署資料存放區。
     
-- 工作列最右邊的網路
+- 網路
     
     有兩種選擇進行 Microsoft 雲端平台及服務的連線： 您的現有 Internet 管道和 ExpressRoute。 如果可預測的效能非常重要，請使用 ExpressRoute 連線。 您可以使用一個 ExpressRoute 連線直接連線至 Microsoft SaaS 服務 （Office 365 和 Dynamics 365）、 Azure PaaS 服務和 Azure IaaS 服務。
     

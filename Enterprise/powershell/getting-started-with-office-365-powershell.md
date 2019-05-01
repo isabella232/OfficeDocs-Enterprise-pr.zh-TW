@@ -15,14 +15,15 @@ ms.custom:
 ms.assetid: 4712d6fd-d9c7-4ec2-88c1-3ad9201cbb7f
 description: 摘要：了解 Office 365 PowerShell 的重要性，連線到 Office 365 租用戶，並取得說明。
 ms.openlocfilehash: cc9583fcfeb0822cc9fe1b7a39b090c37442169e
-ms.sourcegitcommit: 07be28bd96826e61b893b9bacbf64ba936400229
-ms.translationtype: HT
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33491229"
 ---
 # <a name="getting-started-with-office-365-powershell"></a>開始使用 Office 365 PowerShell
 
- **摘要：**了解 Office 365 PowerShell 的重要性，連線到 Office 365 租用戶，並取得說明。
+ **摘要：** 了解 Office 365 PowerShell 的重要性，連線到 Office 365 租用戶，並取得說明。
   
 透過 Office 365 PowerShell，您可以使用命令和指令碼來管理 Office 365，以簡化日常工作。了解 Office 365 PowerShell 技巧為何對管理 Office 365 而言非常重要，如何連接至 Office 365 訂閱、建立報表，以及從 Office 365 社群取得其他資訊和協助。
   

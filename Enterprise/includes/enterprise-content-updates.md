@@ -3,18 +3,6 @@
 
 
 
-## <a name="week-of-march-18-2019"></a>2019 年 3 月 18 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 3/18/2019 | [資料移動一般常見問題集](/Office365/Enterprise/data-move-faq) | 修改時間 |
-| 3/18/2019 | [資料移動期間和之後](/Office365/Enterprise/during-and-after-your-data-move) | 修改時間 |
-| 3/18/2019 | [容量規劃和負載測試 SharePoint Online](/Office365/Enterprise/capacity-planning-and-load-testing-sharepoint-online) | 修改時間 |
-| 3/18/2019 | [Office 365 租用戶間共同作業](/Office365/Enterprise/office-365-inter-tenant-collaboration) | 修改時間 |
-| 3/19/2019 | [檢視與 Office 365 PowerShell 的使用者帳戶](/Office365/Enterprise/powershell/view-user-accounts-with-office-365-powershell) | 修改時間 |
-
-
 ## <a name="week-of-march-25-2019"></a>2019 年 3 月 25 日當週
 
 
@@ -22,22 +10,22 @@
 |------|------------|--------|
 | 3/27/2019 | [新增或移除地理位置系統管理員](/Office365/Enterprise/add-a-sharepoint-geo-admin) | 修改時間 |
 | 3/27/2019 | [管理多地理位置環境](/Office365/Enterprise/administering-a-multi-geo-environment) | 修改時間 |
-| 3/27/2019 | [管理多地理位置環境中的 Exchange Online 信箱](/Office365/Enterprise/administering-exchange-online-multi-geo) | 新增 |
+| 3/27/2019 | [管理多地理位置環境中的 Exchange Online 信箱](/Office365/Enterprise/administering-exchange-online-multi-geo) | 已新增 |
 | 3/27/2019 | [設定搜尋的 Office 365 多地理位置](/Office365/Enterprise/configure-search-for-multi-geo) | 修改時間 |
 | 3/27/2019 | [刪除衛星位置](/Office365/Enterprise/delete-a-geo-location) | 修改時間 |
 | 3/27/2019 | [將 OneDrive 網站移至不同的地理位置](/Office365/Enterprise/move-onedrive-between-geo-locations) | 修改時間 |
-| 3/27/2019 | [將 SharePoint 網站移至不同的地理位置 (預覽)](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 新增 |
-| 3/27/2019 | [使用特定 PDL 建立 Office 365 群組](/Office365/Enterprise/multi-geo-add-group-with-pdl) | 新增 |
+| 3/27/2019 | [將 SharePoint 網站移至不同的地理位置 (預覽)](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 已新增 |
+| 3/27/2019 | [使用特定 PDL 建立 Office 365 群組](/Office365/Enterprise/multi-geo-add-group-with-pdl) | 已新增 |
 | 3/27/2019 | [Exchange 多地理位置](/Office365/Enterprise/multi-geo-capabilities-in-exchange-online) | 修改時間 |
 | 3/27/2019 | [OneDrive 和 SharePoint Online 中的多地理位置功能](/Office365/Enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365) | 修改時間 |
-| 3/27/2019 | [設定 Office 365 多地理位置電子文件探索](/Office365/Enterprise/multi-geo-ediscovery-configuration) | 新增 |
+| 3/27/2019 | [設定 Office 365 多地理位置電子文件探索](/Office365/Enterprise/multi-geo-ediscovery-configuration) | 已新增 |
 | 3/27/2019 | [Office 365 多地理位置租用戶組態](/Office365/Enterprise/multi-geo-tenant-configuration) | 修改時間 |
 | 3/27/2019 | [在多地理位置環境中的使用者體驗](/Office365/Enterprise/multi-geo-user-experience) | 修改時間 |
-| 3/27/2019 | [Office 365 多地理位置](/Office365/Enterprise/office-365-multi-geo) | 新增 |
+| 3/27/2019 | [Office 365 多地理位置](/Office365/Enterprise/office-365-multi-geo) | 已新增 |
 | 3/27/2019 | [規劃 Office 365 多地理位置](/Office365/Enterprise/plan-for-multi-geo) | 修改時間 |
 | 3/27/2019 | [使用 Office 365 PowerShell 指派授權至使用者帳戶](/Office365/Enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell) | 修改時間 |
-| 3/27/2019 | [將內容限制在地理位置](/Office365/Enterprise/restrict-content-to-geo-location) | 新增 |
-| 3/27/2019 | [多地理位置環境中的 SharePoint 儲存空間配額](/Office365/Enterprise/sharepoint-multi-geo-storage-quota) | 新增 |
+| 3/27/2019 | [將內容限制在地理位置](/Office365/Enterprise/restrict-content-to-geo-location) | 已新增 |
+| 3/27/2019 | [多地理位置環境中的 SharePoint 儲存空間配額](/Office365/Enterprise/sharepoint-multi-geo-storage-quota) | 已新增 |
 | 3/27/2019 | [將 SharePoint 網站移至不同的地理位置-預覽](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 修改時間 |
 | 3/27/2019 | [將 SharePoint 網站移至不同的地理位置 (預覽)](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 修改時間 |
 | 3/28/2019 | [OneDrive 和 SharePoint Online 中的多地理位置功能](/Office365/Enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365) | 修改時間 |
@@ -49,7 +37,7 @@
 | 3/29/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) | 修改時間 |
 | 3/29/2019 | [內容傳遞網路](/Office365/Enterprise/content-delivery-networks) | 修改時間 |
 | 3/29/2019 | [使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online](/Office365/Enterprise/use-office-365-cdn-with-spo) | 修改時間 |
-| 3/29/2019 | [停用服務存取權時指派使用者授權](/Office365/Enterprise/powershell/disable-access-to-services-while-assigning-user-licenses) | 修改時間 |
+| 3/29/2019 | [停用服務存取權，並指派使用者授權](/Office365/Enterprise/powershell/disable-access-to-services-while-assigning-user-licenses) | 修改時間 |
 | 3/29/2019 | [使用 Office 365 PowerShell 停用服務存取權](/Office365/Enterprise/powershell/disable-access-to-services-with-office-365-powershell) | 修改時間 |
 | 3/29/2019 | [了解 Office 365 身分識別和 Azure Active Directory](/Office365/Enterprise/about-office-365-identity) | 修改時間 |
 | 3/29/2019 | [EDiscovery 的自動化檔案收集](/Office365/Enterprise/automate-file-collection-for-ediscovery) | 修改時間 |
@@ -77,7 +65,7 @@
 
 | 發佈時間 |主題標題 | 變更 |
 |------|------------|--------|
-| 4/1/2019 | [在您的衛星地理位置啟用 SharePoint 多地理位置](/Office365/Enterprise/enabling-sp-multigeo-satellite-geolocation) | 新增 |
+| 4/1/2019 | [在您的衛星地理位置啟用 SharePoint 多地理位置](/Office365/Enterprise/enabling-sp-multigeo-satellite-geolocation) | 已新增 |
 | 4/2/2019 | [適用於 Office 365 開發/測試環境的進階電子文件探索](/Office365/Enterprise/advanced-ediscovery-for-your-office-365-dev-test-environment) | 修改時間 |
 | 4/2/2019 | [適用於 Office 365 開發/測試環境的進階威脅防護](/Office365/Enterprise/advanced-threat-protection-for-your-office-365-dev-test-environment) | 修改時間 |
 | 4/2/2019 | [Microsoft 混合雲端案例的架構](/Office365/Enterprise/architecture-of-microsoft-hybrid-cloud-scenarios) | 修改時間 |
@@ -155,3 +143,15 @@
 | 4/18/2019 | [將角色指派給 Office 365 powershell 的使用者帳戶](/Office365/Enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell) | 修改時間 |
 | 4/18/2019 | [使用 ExpressRoute for Office 365 進行路由傳送](/Office365/Enterprise/routing-with-expressroute) | 修改時間 |
 | 4/18/2019 | [使用集中式部署 PowerShell Cmdlet 來管理增益集](/Office365/Enterprise/use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins) | 修改時間 |
+
+
+## <a name="week-of-april-22-2019"></a>2019 年 4 月 22 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 4/22/2019 | [OneDrive 和 SharePoint Online 中的多地理位置功能](/Office365/Enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365) | 修改時間 |
+| 4/22/2019 | [Office 365 多地理位置](/Office365/Enterprise/office-365-multi-geo) | 修改時間 |
+| 4/22/2019 | 透過適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 彙總客戶報告資料 | 移除 |
+| 4/22/2019 | [利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 管理 Office 365](/Office365/Enterprise/powershell/manage-office-365-with-windows-powershell-for-delegated-access-permissions-dap-p) | 修改時間 |
+| 4/22/2019 | [利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料](/Office365/Enterprise/powershell/retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-ac) | 修改時間 |

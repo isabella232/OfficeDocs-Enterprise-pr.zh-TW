@@ -14,11 +14,11 @@ search.appverid:
 ms.collection: Ent_O365
 ms.date: 2/14/2018
 ms.openlocfilehash: 52eb23707077151ae4876381a03db3e9a4bdb33b
-ms.sourcegitcommit: 9bb65bafec4dd6bc17c7c07ed55e5eb6b94584c4
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "22915708"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490049"
 ---
 <h1>企業雲端解決方案</h1>
 <p>使用 Microsoft Cloud 解決商務問題。尋找最新的混合式與安全雲端解決方案、雲端採用和其他資訊。</p>

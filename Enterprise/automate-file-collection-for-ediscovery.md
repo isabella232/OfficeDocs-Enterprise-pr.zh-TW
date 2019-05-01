@@ -14,11 +14,11 @@ search.appverid:
 - MET150
 description: 摘要： 了解如何自動化檔案收集從使用者電腦 ediscovery （英文）。
 ms.openlocfilehash: bfbe3b9218ed81727f2cc6ad9fabcb02e76d486b
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001606"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33490785"
 ---
 # <a name="automate-file-collection-for-ediscovery"></a>EDiscovery 的自動化檔案收集
 
@@ -328,7 +328,7 @@ $AllFiles | ForEach-Object {
     
 |**行號**|**您需要變更**|**所需/選用**|
 |:-----|:-----|:-----|
-|12   <br/> |**$FolderIdentifier**標記 Pst 匯入至信箱資料夾。 如有必要，請變更此選項。 <br/> |選用  <br/> |
+|12  <br/> |**$FolderIdentifier**標記 Pst 匯入至信箱資料夾。 如有必要，請變更此選項。 <br/> |選用  <br/> |
 |17   <br/> |**$ConnectionUri**必須設為您自己的伺服器。 <br/> > [!IMPORTANT]> 請確定您 **$ConnectionUri**點至 http 位置，而不是 https。 它不適用於 https:。          |必要  <br/> |
    
 4. 確認 Exchange 受信任子系統帳戶具有讀取、 寫入和 Execute 權限\\\\臨時\\的情況下 $ 共用。

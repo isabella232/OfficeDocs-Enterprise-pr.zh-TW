@@ -1,5 +1,5 @@
 ---
-title: 將您的網路提升為雲端連線網路
+title: 進化網路以善用雲端連線能力
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,78 +13,78 @@ search.appverid:
 ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 83e2859a-c673-47c4-880a-01cdfdadb93e
-description: 摘要： 了解如何雲端採用需要網路基礎結構投資的新方法。
+description: 摘要： 了解如何雲端採用需要網路基礎結構的投資的新方法。
 ms.openlocfilehash: c8fba120292b89894850312a84fd6067d925a07f
-ms.sourcegitcommit: 25a022f4ef4e56c5407e8e3a8a34265f8fc94264
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "26872254"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487239"
 ---
-# <a name="evolving-your-network-for-cloud-connectivity"></a>將您的網路提升為雲端連線網路
+# <a name="evolving-your-network-for-cloud-connectivity"></a>進化網路以善用雲端連線能力
 
- **摘要：** 了解如何雲端採用需要網路基礎結構投資的新方法。
+ **摘要：** 了解如何雲端採用需要網路基礎結構的投資的新方法。
   
 雲端移轉改變了公司網路內外部的流量大小與本質。它也會影響降低安全性風險的方法。
   
-- 雲端之前
+- 在雲端之前
     
-    大部分的網路基礎結構投資已所花費的確保可用、 可靠和效能低落連線到內部部署資料中心。許多組織的網際網路連線能力未內部商務作業的關鍵。網路界限已主要防禦安全性缺口。
+    大部分的網路基礎結構投資已所花費的確保可供使用、 可靠性和效能低落連線到內部部署資料中心。 對許多組織而言，網際網路連線能力來說並不重要的內部業務作業。 網路界限的主要防禦安全性弱點。
     
 - 在雲端之後
     
-    新增及已移轉的產能與雲端中執行的 IT 工作量，基礎結構投資移動從內部部署至網際網路連線能力，現在有重大的內部企業營運資料中心。同盟的連線騰出安全性策略來保護身分識別和資料通過其網路與 Microsoft 雲端服務連線點。
+    新的和已移轉的產能與執行在雲端的 IT 工作負載，基礎結構的投資移動從內部部署資料中心，以網際網路連線能力，也就是現在重要的內部企業營運。 同盟的連線會進入安全性策略，保護身分識別和資料通過的網路與 Microsoft 雲端服務的連線點。
     
-網路基礎結構投資的開頭連線。其他投資取決於雲端服務的類別。
+網路基礎結構的投資的開頭的連線。 其他投資取決於雲端服務的類別。
   
-- **軟體即服務 (SaaS)** Microsoft saas 和服務包括 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。Saas 和服務使用者所擁有的成功採用取決於高可用性和效能低落連線至網際網路，或直接 Microsoft 雲端服務。
+- **軟體即服務 (SaaS)** Microsoft SaaS 服務包含 Office 365、 Microsoft Intune 和 Microsoft Dynamics 365。 成功的 SaaS 服務使用者採用取決於高可用性和效能低落連線至網際網路，或直接在 Microsoft 雲端服務。
     
-    網路架構著重於可靠而變得多餘連線和容許足夠的頻寬。進行中的投資包括效能監視與調整。
+    網路架構著重於可靠的備援連線與足夠的頻寬。 進行中的投資包含效能監視與調整。
     
-- **Azure 平台服務 (PaaS)** 除了 Microsoft saas 和服務的投資、 多個網站或地理位置分散 PaaS 應用程式可能會需要架構 Azure 流量管理員來散佈的用戶端流量。進行中的投資包括效能和流量通訊監控與容錯移轉測試。
+- **Azure 的平台即服務 (PaaS)** 除了針對 Microsoft SaaS 服務投資，多站台或地理位置分散 PaaS 應用程式可能需要架構 Azure 流量管理員可將用戶端流量分散。 進行中的投資包括效能和流量通訊監視和容錯移轉測試。
     
-- **Azure 基礎架構以服務 (IaaS)** Microsoft SaaS 和 PaaS 服務成本，除了 IaaS 中執行 IT 工作量需要設計及設定的 Azure 虛擬網路該主機虛擬機器、 它們、 路由、 IP 上執行應用程式的安全連線處理、 DNS、 和負載平衡。進行中的投資包括效能及安全性監視與疑難排解。
+- **Azure 基礎結構即服務 (IaaS)** Microsoft SaaS 和 PaaS 服務投資，除了在 IaaS 中執行的 IT 工作負載需要設計及設定 Azure 虛擬網路的裝載虛擬機器，它們，路由，IP 上執行的應用程式的安全連線解決，DNS 及負載平衡。 進行中的投資包括效能與安全性監視及疑難排解。
 
-[Microsoft 365](https://www.microsoft.com/microsoft-365)是 Office 365、 企業管理 + 安全性 (EMS) 和 Windows 10 的組合。Microsoft 365 結合多個 SaaS 及完成的智慧型解決方案可讓所有人設為小小寫 Azure 服務及安全共同作業。
+[Microsoft 365](https://www.microsoft.com/microsoft-365)是 Office 365、 企業管理 + 安全性 (EMS) 和 Windows 10 的組合。 Microsoft 365 結合多個 SaaS 和 Azure 服務的完整的智慧型解決方案，讓所有人發揮創意並安全地合作。
     
-## <a name="areas-of-networking-investment-for-success-in-the-cloud"></a>區域的網路投資在雲端中成功
+## <a name="areas-of-networking-investment-for-success-in-the-cloud"></a>區域的網路成功定域機組中的投資
 
-企業組織而受益最佳化網路輸送量跨內部網路及網際網路進行條理方法。您可能也會受益從 ExpressRoute 連線。
+企業組織受益於採取有條理的方法，以最佳化網路輸送量，在您內部網路和網際網路。 您也可以受益於 ExpressRoute 連線。
   
 ### <a name="optimize-intranet-connectivity-to-your-edge-network"></a>最佳化您的邊緣網路的內部網路連線
 
-多年來，許多組織已最佳化內部網路的連線能力與內部部署資料中心中執行的應用程式的效能。產能、 方法及執行 Microsoft 雲端中的 IT 工作量其他投資必須確保連線高可用性和邊緣網路與您的內部網路的使用者之間的流量效能是最佳選擇。
+多年來，許多組織有最佳化內部網路連線能力與內部部署資料中心中執行的應用程式的效能。 產能與執行 Microsoft cloud 中的 IT 工作負載，其他投資必須確定連線高可用性和邊緣網路與您的內部網路使用者之間的流量效能是最佳的作法。
   
-### <a name="optimize-throughput-at-your-edge-network"></a>最佳化在邊緣網路輸送量
+### <a name="optimize-throughput-at-your-edge-network"></a>在邊緣網路輸送量最佳化
 
-為多個至雲端您日常產能流量移動，您應該密切在邊緣網路以確保它們是目前、 提供高可用性，並有足夠的容量以符合尖峰負載檢查的系統。
+為多個至雲端您日常生產力流量移動，密切應該在您的邊緣網路，以確保其目前，提供高可用性，且沒有足夠的容量，以滿足尖峰負載檢查系統的集合。
   
-### <a name="for-a-high-sla-to-azure-office-365-and-dynamics-365-use-expressroute"></a>使用 Azure、 Office 365 及 Dynamics 365 高 SLA、 ExpressRoute
+### <a name="for-a-high-sla-to-azure-office-365-and-dynamics-365-use-expressroute"></a>若要在 Azure、 Office 365 和 Dynamics 365 高 SLA，使用 ExpressRoute
 
-雖然您可以使用目前的網際網路連線的邊緣網路，到與 Microsoft 雲端服務的流量必須共用管道與其他移至網際網路的內部網路流量。此外，您以 Microsoft 雲端服務的流量受限於網際網路流量壅塞。
+雖然您可以使用您目前的網際網路連線從您的邊緣網路，到及傳送自 Microsoft 雲端服務的流量必須與其他內部網路流量，移至 [網際網路共用管道。 此外，您對 Microsoft 雲端服務的流量受限於網際網路流量壅塞。
   
-高 SLA 與最佳效能，請使用 ExpressRoute、 網路和 Azure、 Office 365、 Dynamics 365 或所有三個之間的專用 WAN 連線。 
+針對高 SLA 及最佳效能，使用 ExpressRoute，您的網路和 Azure、 Office 365、 Dynamics 365 或所有三個間的專用 WAN 連線。 
   
-ExpressRoute 可以運用您現有的網路提供者的專屬的連線。透過 ExpressRoute 連接的資源便會出現好像他們是在您的 WAN，甚至是針對地理位置分散的組織。
+ExpressRoute 可以利用現有的專用連線的網路提供者。 透過 ExpressRoute 連線的資源會顯示好像他們位於您 WAN，即使的地理位置分散的組織。
   
-如需詳細資訊，請參閱[Microsoft 雲端連線 ExpressRoute](expressroute-for-microsoft-cloud-connectivity.md)。
+如需詳細資訊，請參閱 <<c0>適用於 Microsoft 雲端連線能力。
   
 ## <a name="scope-of-network-investments"></a>網路投資的範圍
 
-網路投資的範圍取決於雲端服務的類別。跨 Microsoft cloud 演變最大化網路團隊的投資。例如投資 IaaS services 套用至所有的投資區域。
+網路投資的範圍取決於雲端服務的類別。 跨 Microsoft 雲端投資會最大化網路團隊的投資。 例如，IaaS services 投資套用到所有投資區域。
   
 |||||
 |:-----|:-----|:-----|:-----|
-|投資區域  <br/> |Saas 和  <br/> |PaaS  <br/> |IaaS  <br/> |
-|以容許足夠的頻寬架構師可靠而變得多餘網際網路連線  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
-|監視與調整效能的網際網路輸送量  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
-|網際網路連線能力與輸送量問題進行疑難排解  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
-|設計以負載平衡流量到不同的端點 Azure 流量管理員  <br/> ||適用於  <br/> |適用於  <br/> |
-|架構師可靠、 備援，與效能低落連線到 Azure 虛擬網路  <br/> |||適用於  <br/> |
-|設計與 Azure 虛擬機器的安全連線  <br/> |||適用於  <br/> |
-|設計和實作內部部署位置和虛擬網路間的路由  <br/> |||適用於  <br/> |
-|包括工程師及實作的內部和網際網路對向 IT 工作量負載平衡  <br/> |||適用於  <br/> |
-|虛擬機器連線及輸送量問題的疑難排解  <br/> |||適用於  <br/> |
+|投資區域  <br/> |SaaS  <br/> |PaaS  <br/> |IaaS  <br/> |
+|架構師可靠的備援網際網路連線能力，具有足夠的頻寬  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
+|效能的監視與調整網際網路輸送量  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
+|網際網路連線及輸送量問題進行疑難排解  <br/> |適用於  <br/> |適用於  <br/> |適用於  <br/> |
+|設計 Azure 流量管理員將流量負載平衡到不同的端點  <br/> ||適用於  <br/> |適用於  <br/> |
+|Azure 虛擬網路的架構設計人員可靠的備援和效能低落連線  <br/> |||適用於  <br/> |
+|設計 Azure 虛擬機器的安全連線  <br/> |||適用於  <br/> |
+|設計和實作內部部署位置和虛擬網路之間的路由  <br/> |||適用於  <br/> |
+|設計和實作內部和網際網路對向的 IT 工作負載的負載平衡  <br/> |||適用於  <br/> |
+|針對虛擬機器連線及輸送量問題進行疑難排解  <br/> |||適用於  <br/> |
    
 ## <a name="next-step"></a>下一步
 

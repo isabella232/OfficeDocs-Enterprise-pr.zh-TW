@@ -1,6 +1,6 @@
 ---
 title: Office 365 Enterprise
-description: Microsoft Office 365 提供強大的線上雲端服務可讓共同作業、 安全性及規範、 行動、 和 intellgence 及分析。此頁面提供系統管理員及 IT 專業人員部署、 設定及管理企業組織中的 Office 365 服務的指引。
+description: Microsoft Office 365 提供功能強大的線上雲端服務，可以讓共同作業、 安全性和合規性、 行動、 和 intellgence 及分析。 本頁面提供系統管理員和 IT 專業人員部署、 設定及管理企業組織中的 Office 365 服務的指引。
 services: o365-solutions
 author: robmazz
 manager: laurawi
@@ -15,14 +15,14 @@ ms.topic: landing-page
 ms.date: 8/21/2018
 ms.author: robmazz
 ms.openlocfilehash: 9b1f6d86914e23ebd9ebf4e00a16018dc8f2bfd2
-ms.sourcegitcommit: bbbe304bb1878b04e719103be4287703fb3ef292
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "27745317"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33487129"
 ---
 <h1>Office 365 Enterprise</h1>
-<p>Microsoft Office&nbsp;365 提供強大的線上雲端服務可讓共同作業、 安全性及規範、 行動、 和 intellgence 及分析。此頁面提供系統管理員及 IT 專業人員部署、 設定及管理 Office 的指引的連結&nbsp;企業組織中的 365 服務。</p>
+<p>Microsoft Office&nbsp;365 提供功能強大的線上雲端服務，可以讓共同作業、 安全性和合規性、 行動、 和 intellgence 及分析。 本頁面提供適用於系統管理員和 IT 專業人員部署、 設定及管理 Office 指南的連結&nbsp;365 在企業組織中的服務。</p>
 <ul class="cardsF panelContent">
     <li>
         <a href="https://www.microsoft.com/fasttrack/microsoft-365/office-365">
@@ -35,8 +35,8 @@ ms.locfileid: "27745317"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>使用 FastTrack 導引式的部署</h3>
-                <p>使用 FastTrack 中心福利 office&nbsp;引導協助規劃、 部署及主導採用的 Office 365&nbsp;365 服務的組織。</p>
+                        <h3>使用 FastTrack 引導式的部署</h3>
+                <p>用於 Office 的 FastTrack Center 權益&nbsp;引導式協助規劃、 部署及推動採用 Office 365&nbsp;365 為您的組織的服務。</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@ ms.locfileid: "27745317"
                     </div>
                     <div class="cardText">
                         <h3>Office 365 專業增強版</h3>
-                <p>規劃、 部署及管理 Office&nbsp;365 ProPlus 企業環境中的。</p>
+                <p>規劃、 部署及管理 Office&nbsp;365 專業增強版企業環境中的。</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@ ms.locfileid: "27745317"
                     </div>
                     <div class="cardText">
                         <h3>部署 Office 365</h3>
-                <p>部署 Office&nbsp;365，包括設定您的租用戶、 設定您的網路和佈建您的使用者。</p>
+                <p>部署 Office&nbsp;365，包括設定您的租用戶、 設定您的網路，並佈建您的使用者。</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,7 @@ ms.locfileid: "27745317"
                     </div>
                     <div class="cardText">
                         <h3>混合式部署</h3>
-                <p>設定及管理現有的內部部署基礎結構與 Office 之間的混合式部署&nbsp;365。</p>
+                <p>設定和管理混合式部署您現有的內部部署基礎結構和 Office 之間&nbsp;365。</p>
                     </div>
                 </div>
             </div>
@@ -131,7 +131,7 @@ ms.locfileid: "27745317"
                     </div>
                     <div class="cardText">
                         <h3>Office 365 訓練</h3>
-                <p>提升您的 Office&nbsp;365 管理知識與技能與 Office&nbsp;365 適用於 IT 專業人員的訓練課程。</p>
+                <p>改善您的 Office&nbsp;365 管理知識與技能與 Office&nbsp;365 適用於 IT 專業人員訓練課程。</p>
                     </div>
                 </div>
             </div>
@@ -256,8 +256,8 @@ ms.locfileid: "27745317"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Office 365 Tech 社群</h3>
-                        <p><a href="https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365">了解最佳作法、 新聞和最新的趨勢和與 Office 相關主題&nbsp;365。</a></p>
+                        <h3>Office 365 技術社群</h3>
+                        <p><a href="https://techcommunity.microsoft.com/t5/Office-365/ct-p/Office365">了解最佳作法、 新聞和最新的趨勢和 Office 的相關主題&nbsp;365。</a></p>
                     </div>
                 </div>
             </div>
@@ -274,7 +274,7 @@ ms.locfileid: "27745317"
                     </div>
                     <div class="cardText">
                         <h3>取得支援</h3>
-                        <p><a href="https://support.office.com/article/contact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b?ui=en-US&rs=en-US&ad=US">連絡支援人員以與 Office 說明&nbsp;365。</a></p>
+                        <p><a href="https://support.office.com/article/contact-support-for-business-products-admin-help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b?ui=en-US&rs=en-US&ad=US">Office 說明連絡支援人員&nbsp;365。</a></p>
                     </div>
                 </div>
             </div>

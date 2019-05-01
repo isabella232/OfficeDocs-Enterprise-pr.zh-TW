@@ -15,11 +15,11 @@ ms.custom: Ent_Architecture
 ms.assetid: bf2295c4-d411-49cd-aaa5-116a4a456c5a
 description: 摘要： 了解如何 ExpressRoute 可協助您使用速度更快且更可靠連線至 Microsoft 雲端服務與平台。
 ms.openlocfilehash: a3b36e98c946bc3ae7281bd38cd4b98820ee8afb
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30574007"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "33488105"
 ---
 # <a name="expressroute-for-microsoft-cloud-connectivity"></a>Microsoft 雲端連線的 ExpressRoute
 
@@ -238,7 +238,7 @@ Microsoft 資料中心和對等位置的雲端所有連線至 Microsoft 雲端�
   
 - [Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer/)
     
-- [Office 365 的網路規劃與效能調整](https://aka.ms/tune)
+- [Office 365 的網路規劃和效能調整](https://aka.ms/tune)
     
 ## <a name="expressroute-options"></a>ExpressRoute 選項
 
@@ -264,7 +264,7 @@ Microsoft 資料中心和對等位置的雲端所有連線至 Microsoft 雲端�
 
 [設計 Microsoft SaaS 的網路](designing-networking-for-microsoft-saas.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud Networking for Enterprise Architects](microsoft-cloud-networking-for-enterprise-architects.md)
   
