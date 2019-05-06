@@ -3,7 +3,7 @@ title: Office 365 IP 位址和 URL Web 服務
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/30/2019
+ms.date: 5/1/2019
 ms.audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: 為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。
-ms.openlocfilehash: 8dedb88c830d51d9d2cf16df783be75fc9d66450
-ms.sourcegitcommit: 89eaafb5e21b80b8dfdc72a93f8588bf9c4512d9
+ms.openlocfilehash: af1ff6f222d4d9563116c4173ebeca9ca9f4470d
+ms.sourcegitcommit: 3b5597cab55bc67890fd6c760102efce513be87b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33497695"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "33512679"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務
 
@@ -180,7 +180,7 @@ Worldwide,2018063000
 - **NoIPv6=<true | false>** - 將這個參數設為 true 以從輸出排除 IPv6 位址，例如，如果您未在網路中使用 IPv6。
 - **Instance=<Worldwide | China | Germany | USGovDoD | USGovGCCHigh>** - 這個必要參數會指定要傳回端點的執行個體。 有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
 
-如果您從相同用戶端 IP 位址呼叫端點 Web 方法大量次數，您可能會收到 HTTP 回應碼 429 (太多要求)。 大部分的人永遠不會看到此回應碼。 如果您收到此回應碼，則必須等候 1 小時，之後再呼叫此方法。 請只在版本 Web 方法指出有新版本可用時，再呼叫端點 Web 方法。
+如果您從相同用戶端 IP 位址呼叫端點 Web 方法大量次數，您可能會收到 HTTP 回應碼 429 (太多要求)。 大部分的人永遠不會看到此回應碼。 如果您收到此回應碼，請先等候 1 小時，再重複您的要求。 請計劃只在版本 Web 方法指出有新版本可用時，再呼叫端點 Web 方法。
 
 端點 Web 方法的結果是記錄的陣列，每個記錄代表端點集。每個記錄的元素為：
 
@@ -227,7 +227,6 @@ Worldwide,2018063000
    [
     "*.mail.protection.outlook.com"
    ],
-...
 ```
 
 此範例中未包含額外的端點集。
@@ -244,9 +243,9 @@ Worldwide,2018063000
 
 變更 Web 方法的必要參數為：
 
-- **Version=<YYYYMMDDNN>** - 必要的 URL 路由參數。 此值必須是您目前實作的版本。 Web 服務會傳回自該版本後所做的變更。 格式為 _YYYYMMDDNN_。
+- **Version=\<YYYYMMDDNN>** - 必要的 URL 路由參數。 此值應該是您目前實作的版本。 Web 服務會傳回自該版本後所做的變更。 格式為 _YYYYMMDDNN_，其中 _NN_ 為零。 Web 服務需要此參數，才能包含確切 10 位數。
 
-變更 Web 方法與端點 Web 方法有同樣的速率限制。如果您收到 429 HTTP 回應碼，則必須等到 1 小時後，才能再次呼叫。
+變更 Web 方法的速率限制方式與端點 Web 方法相同。 如果您收到 429 HTTP 回應碼，請先等候 1 小時，再重複您的要求。
 
 變更 Web 方法的結果是記錄的陣列，每個記錄代表特定版本端點中的變更。每個記錄的元素為：
 
@@ -255,7 +254,7 @@ Worldwide,2018063000
 - disposition - 可以是變更、新增或移除，並且說明對端點集記錄進行什麼變更。
 - impact - 對每個環境來說，每個變更的重要性不一定相同。此項目會說明此變更對企業網路周邊環境造成的預期影響。此屬性僅包含在 2018112800 和更新版本的變更記錄中。影響選項如下：
   - AddedIp - 已將 IP 位址新增至 Office 365，而且很快就能在服務上生效。這表示您需要在防火牆或其他第 3 層網路周邊裝置上執行變更。如果您沒有在我們開始使用此項目之前進行新增，您可能會遇到作業中斷的情形。
-  - AdedUrl - 已將 URL 新增至 Office 365，而且很快就能在服務上生效。這表示您需要在 Proxy 伺服器或 URL 剖析網路周邊裝置上執行變更。如果您沒有在我們開始使用此項目之前進行新增，您可能會遇到作業中斷的情形。
+  - AddedUrl - URL 已新增至 Office 365，並且很快將在服務中推出。 這表示您需要在 Proxy 伺服器或剖析網路周邊裝置的 URL 上執行的變更。 在我們開始使用它之前，如果您未新增此項目，您可能會發生中斷的情況。
   - AddedIpAndUrl - 已新增 IP 位址和 URL。這表示您需要在防火牆第 3 層裝置或 Proxy 伺服器或 URL 剖析裝置上執行變更。如果您沒有在我們開始使用此項目前進行新增，您可能會遇到作業中斷的情形。
   - RemovedIpOrUrl – 已從 Office 365 移除至少一個 IP 位址或 URL。您應該從周邊裝置中移除網路端點，但沒有限制您要在什麼時候之前完成此動作。
   - ChangedIsExpressRoute – ExpressRoute 支援屬性已變更。如果您使用 ExpressRoute，則可能需要根據組態來採取動作。
@@ -263,8 +262,8 @@ Worldwide,2018063000
   - RemovedDuplicateIpOrUrl - 我們已移除重複的 IP 位址或 URL，但仍會在 Office 365 上發佈。通常不需要採取任何動作。
   - OtherNonPriorityChanges – 我們已變更重要性比其他所有選項低的一些項目 (例如附註欄位)
 - version - 在其中引入變更的已發佈端點集版本。版本號碼的格式為 _YYYYMMDDNN_，其中 NN 是當一天中有多個版本需要發佈時，遞增的自然數。
-- previous - 子結構，詳細說明端點集上已變更元素的先前值。新增的端點集不會包含這個項目。包含 tcpPorts、udpPorts、ExpressRoute、category、required、notes。
-- current - 子結構，詳細說明端點集上變更元素的更新值。 包含 _tcpPorts_、_udpPorts_、_ExpressRoute_、_category_、_required_ 和 _notes_。
+- previous - 子結構，詳細說明端點集上變更元素的前一個值。 不會對最近新增的端點集包含此設定。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
+- current - 子結構，詳細說明端點集上變更元素的更新值。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
 - add - 子結構，詳細說明要新增至端點集集合的項目。如果沒有新增項目則省略。
   - effectiveDate - 定義新增項目在服務中生效的日期。
   - ips - 要新增至 _ips_ 陣列的項目。
@@ -311,7 +310,6 @@ Worldwide,2018063000
    {
     "ips":
      [
-...
 ```
 
 範例 2 要求 URI：[https://endpoints.office.com/changes/worldwide/2018062700?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/changes/worldwide/2018062700?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
