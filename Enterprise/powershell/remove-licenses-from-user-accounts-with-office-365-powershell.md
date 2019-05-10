@@ -16,12 +16,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 來移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: 66ffe7275bcfd936c7df70d3969b96fefafb355d
-ms.sourcegitcommit: 0a99abcb67fc8ee7594cb66f5f7fd0e6e94eb3fd
+ms.openlocfilehash: f5154bbec90bc7b9d0a7d944ab1cfaefd401ae87
+ms.sourcegitcommit: 2f172a784d2f6b29c7cf80c0dbca271ab494d514
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "30474174"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "33867748"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -82,6 +82,10 @@ Set-MsolUserLicense -UserPrincipalName <Account> -RemoveLicenses "<AccountSkuId1
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
+>[!Note]
+>您無法使用 Set-msoluserlicense cmdlet，若要取消指派*取消*授權的使用者。 您必須執行這項操作個別的 Microsoft 365 系統管理中心中每個使用者帳戶。
+>
+
 若要從現有的授權使用者的群組中移除授權，請使用下列方法之一：
   
 - **篩選根據現有的帳戶屬性的帳戶**若要這麼做，請使用下列語法：
@@ -108,7 +112,7 @@ tjohnston@contoso.com
 kakers@contoso.com
   ```
 
-2. 使用下列語法：
+2. 請使用下列語法：
     
   ```
   Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }

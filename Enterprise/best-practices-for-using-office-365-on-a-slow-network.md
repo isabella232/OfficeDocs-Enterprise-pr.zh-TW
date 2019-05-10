@@ -17,19 +17,19 @@ search.appverid:
 - BCS160
 ms.assetid: fd16c8d2-4799-4c39-8fd7-045f06640166
 description: 如果您的網際網路連線一律是快速而永遠不會向下，不是很好嗎？ 或許會變成那一天。 但是，同時，您能夠如何解決 balky 網路，還是完成您的日常工作的實際項目。
-ms.openlocfilehash: 2287de562672f5ceb1ab32949168e8dfdeb31585
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 3ddc6483956657485b75a20a540ea83a55b61564
+ms.sourcegitcommit: a35d23929bfbfd956ee853b5e828b36e2978bf36
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490242"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "33655767"
 ---
 # <a name="best-practices-for-using-office-365-on-a-slow-network"></a>在慢速網路上使用 Office 365 的最佳作法
 
 如果您的網際網路連線一律是快速而永遠不會向下，不是很好嗎？ 或許會變成那一天。 但是，同時，您能夠如何解決 balky 網路，還是完成您的日常工作的實際項目。 雖然 Office 365 是一項雲端架構服務，它還提供許多方式能搭配您的內容離線並順暢地讓您同步處理的變更。 此外，有時候會更有效率的方法是使用離線內容，只是因為應用程式更快速地執行，並在使用者介面是回應速度更快。 這是點： Office 365 可讓您運用這兩者的最佳。 以下是如何利用該。 
   
 > [!TIP]
-> 想要查看您的網路連線是如何播放速度很慢 （或 fast）？ 請嘗試[OOKLA 速度測試](https://www.speedtest.net/)或[網路速度測試應用程式](https://www.windowsphone.com/en-us/store/app/network-speed-test/9b9ae06b-2961-41ef-987d-b09567cffe70)。 
+> 想要查看您的網路連線是如何播放速度很慢 （或 fast）？ 請嘗試[OOKLA 速度測試](https://www.speedtest.net/)或[網路速度測試應用程式](https://www.windowsphone.com/store/app/network-speed-test/9b9ae06b-2961-41ef-987d-b09567cffe70)。 
      
 ## <a name="why-is-my-network-so-slow"></a>為何我慢的網路？
 
@@ -57,8 +57,8 @@ ms.locfileid: "33490242"
     
 - 如果可能的話，請購買更多的記憶體。 新增記憶體是最簡單也通常最有效率的方式改善您的裝置上的效能。 使用大型檔案和影片時，它是特別有幫助。
     
-如需詳細資訊，請參閱[Windows 效能及維護](https://windows.microsoft.com/en-us/windows/performance-maintenance-help#performance-maintenance-help)和[修正 Windows 系統效能問題](https://support.microsoft.com/mats/slow_windows_performance/)。
-   
+如需詳細資訊，請參閱[Windows 效能及維護](https://windows.microsoft.com/windows/performance-maintenance-help#performance-maintenance-help)和[以改善在 Windows 10 中的電腦效能的秘訣](https://support.microsoft.com/en-za/help/4002019/windows-10-improve-pc-performance)。
+
 ## <a name="best-practices-for-using-your-browser"></a>使用您的瀏覽器的最佳作法
 
 您的瀏覽器是您的閘道到 Office 365，以便它能造成影響的效能，尤其是載入所花的時間] 頁面上，以及您的圓形頻率成為 office 365 服務。 
@@ -85,9 +85,9 @@ ms.locfileid: "33490242"
   
 以下是一些您特定的瀏覽器的建議：
   
-- **Internet Explorer**升級至 Internet Explorer 版本 11 或更新版本的顯著的效能改進透過舊版。 如需詳細資訊，請參閱[修正 Internet Explorer 問題](https://support.microsoft.com/mats/ie_performance_and_safety)。
+- **Internet Explorer**升級至 Internet Explorer 版本 11 或更新版本的顯著的效能改進透過舊版。 如需詳細資訊，請參閱 < <b0>Internet Explorer 的疑難排解指南</b0>。
     
-- **FireFox**如需詳細資訊，請參閱[Firefox 緩慢或停止運作](https://support.mozilla.org/en-US/products/firefox/fix-problems/slowness-or-hanging)。
+- **FireFox**如需詳細資訊，請參閱[Firefox 緩慢或停止運作](https://support.mozilla.org/products/firefox/fix-problems/slowness-or-hanging)。
     
 - **safari**如需詳細資訊，請參閱[Apple-Safari](https://www.apple.com/safari/)。
     
@@ -97,7 +97,7 @@ ms.locfileid: "33490242"
 
 讀取、 寫入，和組織的電子郵件是 big 部分每個人的一天。 Outlook 和 Outlook Web App (OWA) 提供的離線支援。 智慧型手機上使用電子郵件應用程式是其他有用的替代方式。 使用最符合您需求的下列選項：
   
-- 透過舊版升級至 Outlook 2013 SP1 或更新版本的顯著的效能改進。 
+- 透過舊版升級至 Outlook 的顯著的效能改進的最新版本。 
     
 -  Outlook Web App 可讓您建立離線訊息、 連絡人及行事曆事件時 OWA 下一步是上傳能夠連線到 Office 365。 如需有關設定，並在離線模式下使用 OWA 的詳細資訊，請參閱[使用 Outlook Web App 離線](https://support.office.com/article/3214839c-0604-4162-8a97-6856b4c27b36)。
     
@@ -114,7 +114,7 @@ ms.locfileid: "33490242"
 
 商務用 OneDrive 被為了從頭設定線上與離線工作與您的檔案。 一旦您設定它，自動且可靠地，就會發生的變更同步處理任何與每當您，讓它們。 如果網路速度很慢，您可以使用檔案的離線版本。
   
-OneDrive for Business 同步處理應用程式是隨附於 Office 2013 （Professional Plus，或 Standard edition） 或包含 Office 2013 應用程式的 Office 365 訂閱。 如果您沒有 Office 2013，您可以[下載](https://support.microsoft.com/kb/2903984)OneDrive for Business 同步處理應用程式的可用。 此應用程式也是較快，使用**在檔案總管中開啟**] 或 [**上傳**命令。 如需詳細資訊，請參閱[設定您的電腦同步處理您的 OneDrive for Office 365 中的業務檔案](https://support.office.com/article/23e1f12b-d896-4cb1-a238-f91d19827a16)。
+OneDrive for Business 同步處理應用程式隨附 SharePoint Online 和 Office 365 商務版訂閱，或者您也可以[下載](https://support.microsoft.com/kb/2903984)OneDrive for Business 同步處理應用程式的可用。 此應用程式也是較快，使用**在檔案總管中開啟**] 或 [**上傳**命令。 如需詳細資訊，請參閱[設定您的電腦同步處理您的 OneDrive for Office 365 中的業務檔案](https://support.office.com/article/23e1f12b-d896-4cb1-a238-f91d19827a16)。
   
 以下是一些使用 OneDrive for Business 同步處理應用程式的其他指導方針：
   
@@ -126,35 +126,29 @@ OneDrive for Business 同步處理應用程式是隨附於 Office 2013 （Profes
 
 每一個 SharePoint 小組網站有內建的 OneNote 筆記本，您可以輕鬆地建立您自己。 OneNote 會收集您需要以取得完成的工作每日的即時資訊的絕佳方式。 例如，許多 teams 作為 OneNote 集合點每週會議、 專案備忘稿、 構想、 計劃及狀態報表。 整齊即可將這項異質資訊組織使用頁面、 區段、 和索引標籤。
   
-但 OneNote 的好處是，您可以存取內容從幾乎任何裝置是否桌上型電腦、 膝上型電腦、 平板電腦或智慧型手機。 與您不必擔心儲存，或因為 OneNote 會為您進行同步處理。 
+OneNote 的好處是，您可以存取內容從幾乎任何裝置是否桌上型電腦、 膝上型電腦、 平板電腦或智慧型手機。 與您不必擔心儲存，或因為 OneNote 會為您進行同步處理。 
   
 如需詳細資訊，請參閱 < <b0>Microsoft OneNote</b0>。
-  
-## <a name="best-practices-for-using-lync-online"></a>使用 Lync Online 的最佳作法
 
-以下是使用 Lync Online，當您的網路速度很慢的一般方針：
-  
+## <a name="best-practices-for-using-skype-for-business-and-lync-online"></a>使用 Skype for Business 和 Lync Online 的最佳作法
+
+以下是基於商業或 Lync Online 使用 Skype，當您的網路速度很慢的一般方針：
+
 - 使用立即訊息，每當您可以因為它在慢速網路上的運作方式。
     
 - 請避免進行通話透過虛擬私人網路 (VPN) 或遠端存取服務 (RAS) 連線。
     
-- 請確定您的音訊裝置已核准。 如需詳細資訊，請參閱[電話及裝置合格的 Microsoft Lync](https://technet.microsoft.com/en-us/office/dn788944)。
+- 請確定您的音訊裝置已核准。 如需詳細資訊，請參閱[電話及裝置合格的 Microsoft Lync](https://docs.microsoft.com/skypeforbusiness/lync-cert/ip-phones)。
     
 -  當使用 PowerPoint online 的簡報中，降低的大小和複雜性的投影片。 如需詳細資訊，請參閱 <<c0>的祕訣提升效能的簡報。
-    
-- 請盡可能共用監視器，而不是程式或桌面。 如需詳細資訊，請參閱 <<c0>共用桌面或程式在 Lync 中。
-    
-- 而不是共用、 送出事先為會議的 PowerPoint 投影片要求附件，讓與會者在其用戶端裝置上檢視投影片。 如需詳細資訊，請參閱[設定 Lync 會議](https://support.office.com/article/258f9d20-f06c-49a4-a77f-7f5ac635bb5d)。
-    
+            
 -  視訊的效能是非常密切對網路效能。 避免使用視訊，如果您的網路速度很慢。 
-    
-如需詳細資訊，請參閱[不佳的音訊或視訊品質 Lync online](https://support.microsoft.com/kb/2386655)和[Lync 2013 中更新的速度很慢螢幕](https://support.microsoft.com/kb/2958375)。
+
+如需詳細資訊，請參閱[不佳的音訊或視訊品質 Lync Online 中的](https://support.microsoft.com/kb/2386655)，或者如何[在商務用 Skype 的連線問題進行疑難排解](https://support.office.com/article/troubleshoot-connection-issues-in-skype-for-business-ca302828-783f-425c-bbe2-356348583771)。
   
 ## <a name="best-practices-for-using-sharepoint-lists"></a>使用 SharePoint 清單的最佳作法
 
-使用清單資料離線以 「 快轉 」、 分析或報告資料是在慢速網路的影響降至最低的絕佳方式。 您可以從讀取和寫入大部分列出 Microsoft Access 2013 藉由連結給他們。 您也可以將清單匯出至 Excel 表格，以建立單向之間的資料連線的 Excel 表格和清單。
-  
-此外，如果啟動 Access Services 功能，然後您可以使用很多個資料超過清單檢視臨界值，最多 50000 個預設項目。 同時 Access 2013 和 Excel 2013 自動處理分小批次清單資料，並再重新組合的資料，一種技術，可讓使用更多資料超過清單檢視臨界值，並不會有不良影響的服務效能其他使用者。 
+使用清單資料離線以 「 快轉 」、 分析或報告資料是在慢速網路的影響降至最低的絕佳方式。 您可以從讀取和寫入大部分列出 Microsoft Access 2019 與 Microsoft Access 2016 藉由連結給他們。 您也可以將清單匯出至 Excel 表格，以建立單向之間的資料連線的 Excel 表格和清單。 了解如何[使用離線資料表連結至 SharePoint 清單](https://support.office.com/article/work-offline-with-tables-that-are-linked-to-sharepoint-lists-5d66594a-6176-4a25-a198-320f13ccf41e)。
   
 如需詳細資訊，請參閱中[管理大型清單和 Office 365 中的文件庫](https://support.office.com/article/b4038448-ec0e-49b7-b853-679d3d8fb784)的 「 深入了解管理大型清單 」 一節。
   
@@ -182,13 +176,13 @@ OneDrive for Business 同步處理應用程式是隨附於 Office 2013 （Profes
   
 ## <a name="whats-the-best-way-to-report-problems"></a>報告問題的最佳方式為何？
 
-Microsoft 不斷改善藉由監視網路，測量的頻寬的 Office 365 的整體效能和延遲，改善頁面載入時間，減少的磁碟 I/O，重新設計頁面以使用最少下載策略中，新增到資料中心的硬體和新增多個資料中心。 如需檢查您的目前狀態和報告問題的詳細資訊，請參閱[檢視您服務的狀態](https://office.microsoft.com/en-us/office365-suite-help/view-the-status-of-your-services-HA102817837.aspx)。
+Microsoft 不斷改善藉由監視網路，測量的頻寬的 Office 365 的整體效能和延遲，改善頁面載入時間，減少的磁碟 I/O，重新設計頁面以使用最少下載策略中，新增到資料中心的硬體和新增多個資料中心。 如需有關檢查您的目前狀態和報告問題的詳細資訊，請參閱 <<c0>如何檢查 Office 365 服務健康情況。
   
 ## <a name="see-also"></a>另請參閱
 
 [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
   
-[Microsoft Virtual Academy 課程-Office 365 效能管理](https://blogs.office.com/2014/12/03/microsoft-virtual-academy-course-office-365-performance-management/)
+[Office 365 網路連線原則](office-365-network-connectivity-principles.md)
   
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   
