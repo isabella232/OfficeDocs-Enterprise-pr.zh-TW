@@ -3,19 +3,19 @@ title: 設定 Office 365 多地理位置的搜尋
 ms.author: tlarsen
 author: tklarsen
 manager: arnek
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: 5a06b30e7850a23ff6443eb8b5b2e9e14850a7db
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 39493c4df48af239306d8b22de451d6db6e3bcf9
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490378"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068069"
 ---
 # <a name="configure-search-for-office-365-multi-geo"></a>設定 Office 365 多地理位置的搜尋
 
@@ -85,7 +85,7 @@ Delve 摘要和個人檔案卡片只會顯示儲存在中央位置之檔案的�
 <tr class="odd">
 <td align="left"></td>
 <td align="left">多地理位置搜尋不支援數字精簡器的動態貯體。</td>
-<td align="left">將<a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
+<td align="left">將<a href="https://docs.microsoft.com/zh-TW/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
 </tr>
 <tr class="even">
 <td align="left">文件識別碼</td>

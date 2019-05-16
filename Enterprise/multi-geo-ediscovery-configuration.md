@@ -3,19 +3,19 @@ title: 設定 Office 365 多地理位置電子文件探索
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 ms.custom: ''
 localization_priority: Priority
 ms.collection: Strat_SP_gtc
 description: 了解如何在 Office 365 多地理位置設定電子文件探索。
-ms.openlocfilehash: 11d226605ba1f194393405edd5bb535da6ad7343
-ms.sourcegitcommit: 8ba20f1b1839630a199585da0c83aaebd1ceb9fc
+ms.openlocfilehash: f9d8fe8b65f5772005bf7d6a7ea3735277077d3b
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "30933967"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069959"
 ---
 # <a name="office-365-multi-geo-ediscovery-configuration"></a>Office 365 多地理位置電子文件探索設定
 

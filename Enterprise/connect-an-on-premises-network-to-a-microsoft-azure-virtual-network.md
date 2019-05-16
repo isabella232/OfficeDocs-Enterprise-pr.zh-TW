@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 03/15/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 894d2ae7392b5365c4c074a3c7d48dd815c5b7d1
-ms.sourcegitcommit: 2f172a784d2f6b29c7cf80c0dbca271ab494d514
+ms.openlocfilehash: 634016a2102ef602e9963dadc7ddff36b7381661
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "33867757"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068079"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 

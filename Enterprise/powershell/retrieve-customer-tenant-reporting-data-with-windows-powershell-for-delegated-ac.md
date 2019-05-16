@@ -3,7 +3,7 @@ title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShel
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -11,12 +11,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 893e5275-30b3-433f-8ecd-644f78f513e2
 description: 摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
-ms.openlocfilehash: 478cd8736a837dae571e20f38187be087b48231a
-ms.sourcegitcommit: 509bcf92580d7a0bcebbf6f1d10311d6b0014984
+ms.openlocfilehash: c1c5ca880d73cf226a5ae7dae79df89351b537f1
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "31992823"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34071189"
 ---
 # <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料
 

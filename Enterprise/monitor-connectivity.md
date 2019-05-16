@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 7/6/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Priority
@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 53cdb60c-a6b2-4848-b3ff-e7b75dc3fd1f
 description: 完成 Office 365 部署後，您就可以使用下列某些工具和技巧來維護 Office 365 連線能力。建議您了解官方服務健康狀態與持續性指導方針，以及在網路緩慢的情況下使用 Office 365 的最佳做法。也建議您取得 Office 365 Admin App 並將商務用 Office 365 - 系統管理說明加入瀏覽器書籤中。
-ms.openlocfilehash: 80e1f56ed3ef7ae2e013239ac286e2a804bd9696
-ms.sourcegitcommit: 69d60723e611f3c973a6d6779722aa9da77f647f
+ms.openlocfilehash: ce307e01a3d7da4a24a06e58d293b9598c684d8f
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "22539916"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070049"
 ---
 # <a name="monitor-office-365-connectivity"></a>監控 Office 365 連線能力
 
@@ -35,7 +35,7 @@ ms.locfileid: "22539916"
 |**使用 System Center 監控 Office 365** <br/> |如果您使用 Microsoft System Center，您可以下載 [Office 365 的 System Center 管理套件](https://www.microsoft.com/download/details.aspx?id=43708)，立即開始監控 Office 365。如需詳細指導方針，請參閱管理套件操作指南，或是這篇部落格文章[使用 System Centre Operations Manager 監控 Office 365](https://blogs.msdn.com/b/mvpawardprogram/archive/2015/07/08/office365-monitoring-using-system-centre-operations-manager.aspx)。 <br/> |
 |**監控 Azure ExpressRoute 的健康情況** <br/> |如果您使用 Azure ExpressRoute for Office 365 連線到 Office 365，建議您確認已同時採用 Office 365 服務健康情況儀表板並[利用 Azure 資源健康狀態減少疑難排解的時間](https://azure.microsoft.com/blog/reduce-troubleshooting-time-with-azure-resource-health/)。 <br/> |
 |**使用 Azure AD Connect Health 搭配 AD FS** <br/> |如果您的 Office 365 單一登入採用 AD FS，建議您開始[使用 Azure AD Connect Health 來監控 AD FS 基礎結構](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health-adfs/)。  <br/> |
-|**透過程式設計的方式監控 Office 365** <br/> |請參閱 [Office 365 管理 API](https://msdn.microsoft.com/library/jj984343%28v=office.15%29.aspx) 中的指導方針。  <br/> |
+|**透過程式設計的方式監控 Office 365** <br/> |請參閱 [Office 365 管理 API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview) 中的指導方針。  <br/> |
 
 您可以使用下列短連結返回這裡：[hhttps://aka.ms/monitorconnectivity365](https://aka.ms/monitorconnectivity365)
   

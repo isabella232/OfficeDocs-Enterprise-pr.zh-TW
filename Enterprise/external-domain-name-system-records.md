@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 2/14/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Priority
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
-ms.openlocfilehash: c172275e43b4703172f58287c086562da352f5e9
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: bc1bb822bc0baf376c96c95ff637b93f131605e9
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487252"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067659"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 
@@ -31,7 +31,7 @@ ms.locfileid: "33487252"
   
 |||
 |:-----|:-----|
-|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/zh-TW/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745) (機器翻譯)。<br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune) (機器翻譯)。  <br/> |
+|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/en-us/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745) (機器翻譯)。<br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune) (機器翻譯)。  <br/> |
 
  **堅持使用自訂部署的參照清單嗎？** 以下清單應用來作為自訂 Office 365 部署的參考。您必須選取套用至組織的記錄，並且填入適當的值。
   
