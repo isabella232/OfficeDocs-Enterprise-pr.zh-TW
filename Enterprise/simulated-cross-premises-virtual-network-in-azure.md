@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 07/09/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
@@ -17,71 +17,71 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: 摘要：在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
-ms.openlocfilehash: 1eefbf94549d8af927d93a554418cb2642d1b447
-ms.sourcegitcommit: 2f172a784d2f6b29c7cf80c0dbca271ab494d514
+ms.openlocfilehash: 23e713ee50f1efed9ede07b13c289195d9054f8d
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "33867718"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070419"
 ---
-# <a name="simulated-cross-premises-virtual-network-in-azure"></a><span data-ttu-id="8739d-103">Azure 中模擬的跨單位部署虛擬網路</span><span class="sxs-lookup"><span data-stu-id="8739d-103">Simulated cross-premises virtual network in Azure</span></span>
+# <a name="simulated-cross-premises-virtual-network-in-azure"></a><span data-ttu-id="3a98b-103">Azure 中模擬的跨單位部署虛擬網路</span><span class="sxs-lookup"><span data-stu-id="3a98b-103">Simulated cross-premises virtual network in Azure</span></span>
 
- <span data-ttu-id="8739d-104">**摘要：** 在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。</span><span class="sxs-lookup"><span data-stu-id="8739d-104">**Summary:** Create a simulated cross-premises virtual network in Microsoft Azure as a dev/test environment.</span></span>
+ <span data-ttu-id="3a98b-104">**摘要：** 在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。</span><span class="sxs-lookup"><span data-stu-id="3a98b-104">**Summary:** Create a simulated cross-premises virtual network in Microsoft Azure as a dev/test environment.</span></span>
   
-<span data-ttu-id="8739d-p101">本文逐步引導您建立模擬的混合式雲端環境，具有使用兩個 Azure 虛擬網路的 Microsoft Azure。以下是產生的組態配置。</span><span class="sxs-lookup"><span data-stu-id="8739d-p101">This article steps you through creating a simulated hybrid cloud environment with Microsoft Azure using two Azure virtual networks. Here is the resulting configuration.</span></span> 
+<span data-ttu-id="3a98b-p101">本文逐步引導您建立模擬的混合式雲端環境，具有使用兩個 Azure 虛擬網路的 Microsoft Azure。以下是產生的組態配置。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p101">This article steps you through creating a simulated hybrid cloud environment with Microsoft Azure using two Azure virtual networks. Here is the resulting configuration.</span></span> 
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 中 DC2 虛擬機器的階段 3](media/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-<span data-ttu-id="8739d-108">它模擬 Azure IaaS 混合式雲端生產環境，包括：</span><span class="sxs-lookup"><span data-stu-id="8739d-108">This simulates an Azure IaaS hybrid cloud production environment and consists of:</span></span>
+<span data-ttu-id="3a98b-108">它模擬 Azure IaaS 混合式雲端生產環境，包括：</span><span class="sxs-lookup"><span data-stu-id="3a98b-108">This simulates an Azure IaaS hybrid cloud production environment and consists of:</span></span>
   
-- <span data-ttu-id="8739d-109">裝載在 Azure 虛擬網路 (TestLab 虛擬網路) 中模擬簡化的內部部署網路。</span><span class="sxs-lookup"><span data-stu-id="8739d-109">A simulated and simplified on-premises network hosted in an Azure virtual network (the TestLab virtual network).</span></span>
+- <span data-ttu-id="3a98b-109">裝載在 Azure 虛擬網路 (TestLab 虛擬網路) 中模擬簡化的內部部署網路。</span><span class="sxs-lookup"><span data-stu-id="3a98b-109">A simulated and simplified on-premises network hosted in an Azure virtual network (the TestLab virtual network).</span></span>
     
-- <span data-ttu-id="8739d-110">裝載在 Azure 中模擬的跨單位部署虛擬網路 (XPrem)。</span><span class="sxs-lookup"><span data-stu-id="8739d-110">A simulated cross-premises virtual network hosted in Azure (XPrem).</span></span>
+- <span data-ttu-id="3a98b-110">裝載在 Azure 中模擬的跨單位部署虛擬網路 (XPrem)。</span><span class="sxs-lookup"><span data-stu-id="3a98b-110">A simulated cross-premises virtual network hosted in Azure (XPrem).</span></span>
     
-- <span data-ttu-id="8739d-111">兩個虛擬網路之間的 VNet 對等關係。</span><span class="sxs-lookup"><span data-stu-id="8739d-111">A VNet peering relationship between the two virtual networks.</span></span>
+- <span data-ttu-id="3a98b-111">兩個虛擬網路之間的 VNet 對等關係。</span><span class="sxs-lookup"><span data-stu-id="3a98b-111">A VNet peering relationship between the two virtual networks.</span></span>
     
-- <span data-ttu-id="8739d-112">在 XPrem 虛擬網路中的第二個網域控制站。</span><span class="sxs-lookup"><span data-stu-id="8739d-112">A secondary domain controller in the XPrem virtual network.</span></span>
+- <span data-ttu-id="3a98b-112">在 XPrem 虛擬網路中的第二個網域控制站。</span><span class="sxs-lookup"><span data-stu-id="3a98b-112">A secondary domain controller in the XPrem virtual network.</span></span>
     
-<span data-ttu-id="8739d-113">這可作為基礎通用的起點，讓您可以：</span><span class="sxs-lookup"><span data-stu-id="8739d-113">This provides a basis and common starting point from which you can:</span></span> 
+<span data-ttu-id="3a98b-113">這可作為基礎通用的起點，讓您可以：</span><span class="sxs-lookup"><span data-stu-id="3a98b-113">This provides a basis and common starting point from which you can:</span></span> 
   
-- <span data-ttu-id="8739d-114">在模擬的 Azure IaaS 混合式雲端環境中開發和測試應用程式。</span><span class="sxs-lookup"><span data-stu-id="8739d-114">Develop and test applications in a simulated Azure IaaS hybrid cloud environment.</span></span>
+- <span data-ttu-id="3a98b-114">在模擬的 Azure IaaS 混合式雲端環境中開發和測試應用程式。</span><span class="sxs-lookup"><span data-stu-id="3a98b-114">Develop and test applications in a simulated Azure IaaS hybrid cloud environment.</span></span>
     
-- <span data-ttu-id="8739d-115">建立電腦的測試組態，一些在 TestLab 中虛擬網路、一些在 XPrem 虛擬網路中，以模擬混合式雲端的 IT 工作負載。</span><span class="sxs-lookup"><span data-stu-id="8739d-115">Create test configurations of computers, some within the TestLab virtual network and some within the XPrem virtual network, to simulate hybrid cloud-based IT workloads.</span></span>
+- <span data-ttu-id="3a98b-115">建立電腦的測試組態，一些在 TestLab 中虛擬網路、一些在 XPrem 虛擬網路中，以模擬混合式雲端的 IT 工作負載。</span><span class="sxs-lookup"><span data-stu-id="3a98b-115">Create test configurations of computers, some within the TestLab virtual network and some within the XPrem virtual network, to simulate hybrid cloud-based IT workloads.</span></span>
     
-<span data-ttu-id="8739d-116">設定此開發/測試環境有三個主要階段︰</span><span class="sxs-lookup"><span data-stu-id="8739d-116">There are three major phases to setting up this dev/test environment:</span></span>
+<span data-ttu-id="3a98b-116">設定此開發/測試環境有三個主要階段︰</span><span class="sxs-lookup"><span data-stu-id="3a98b-116">There are three major phases to setting up this dev/test environment:</span></span>
   
-1. <span data-ttu-id="8739d-117">設定 TestLab 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="8739d-117">Configure the TestLab virtual network.</span></span>
+1. <span data-ttu-id="3a98b-117">設定 TestLab 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="3a98b-117">Configure the TestLab virtual network.</span></span>
     
-2. <span data-ttu-id="8739d-118">建立跨單位的虛擬網路</span><span class="sxs-lookup"><span data-stu-id="8739d-118">Create the cross-premises virtual network.</span></span>
+2. <span data-ttu-id="3a98b-118">建立跨單位的虛擬網路</span><span class="sxs-lookup"><span data-stu-id="3a98b-118">Create the cross-premises virtual network.</span></span>
     
-3. <span data-ttu-id="8739d-119">設定 DC2。</span><span class="sxs-lookup"><span data-stu-id="8739d-119">Configure DC2.</span></span>
+3. <span data-ttu-id="3a98b-119">設定 DC2。</span><span class="sxs-lookup"><span data-stu-id="3a98b-119">Configure DC2.</span></span>
     
 > [!NOTE]
-> <span data-ttu-id="8739d-120">此組態需要付費的 Azure 訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="8739d-120">This configuration requires a paid Azure subscription.</span></span> 
+> <span data-ttu-id="3a98b-120">此組態需要付費的 Azure 訂用帳戶。</span><span class="sxs-lookup"><span data-stu-id="3a98b-120">This configuration requires a paid Azure subscription.</span></span> 
   
 ![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
-> <span data-ttu-id="8739d-122">按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。</span><span class="sxs-lookup"><span data-stu-id="8739d-122">Click [here](http://aka.ms/catlgstack) for a visual map to all the articles in the Office 365 Test Lab Guide stack.</span></span>
+> <span data-ttu-id="3a98b-122">按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。</span><span class="sxs-lookup"><span data-stu-id="3a98b-122">Click [here](http://aka.ms/catlgstack) for a visual map to all the articles in the Office 365 Test Lab Guide stack.</span></span>
   
-## <a name="phase-1-configure-the-testlab-virtual-network"></a><span data-ttu-id="8739d-123">階段 1：設定 TestLab 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="8739d-123">Phase 1: Configure the TestLab virtual network</span></span>
+## <a name="phase-1-configure-the-testlab-virtual-network"></a><span data-ttu-id="3a98b-123">階段 1：設定 TestLab 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="3a98b-123">Phase 1: Configure the TestLab virtual network</span></span>
 
-<span data-ttu-id="8739d-124">使用[基底組態開發/測試環境](base-configuration-dev-test-environment.md)中的說明，在名為 TestLab 的 Azure 虛擬網路中設定 DC1、APP1、CLIENT1 電腦。</span><span class="sxs-lookup"><span data-stu-id="8739d-124">Use the instructions in [Base Configuration dev/test environment](base-configuration-dev-test-environment.md) to configure the DC1, APP1, and CLIENT1 computers in the Azure virtual network named TestLab.</span></span>
+<span data-ttu-id="3a98b-124">使用[基底組態開發/測試環境](base-configuration-dev-test-environment.md)中的說明，在名為 TestLab 的 Azure 虛擬網路中設定 DC1、APP1、CLIENT1 電腦。</span><span class="sxs-lookup"><span data-stu-id="3a98b-124">Use the instructions in [Base Configuration dev/test environment](base-configuration-dev-test-environment.md) to configure the DC1, APP1, and CLIENT1 computers in the Azure virtual network named TestLab.</span></span>
   
-<span data-ttu-id="8739d-125">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="8739d-125">This is your current configuration.</span></span> 
+<span data-ttu-id="3a98b-125">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="3a98b-125">This is your current configuration.</span></span> 
   
 ![Azure 中具有 CLIENT1 虛擬機器的基底組態的階段 4](media/25a010a6-c870-4690-b8f3-84421f8bc5c7.png)
   
-## <a name="phase-2-create-the-xprem-virtual-network"></a><span data-ttu-id="8739d-127">階段 2：建立 XPrem 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="8739d-127">Phase 2: Create the XPrem virtual network</span></span>
+## <a name="phase-2-create-the-xprem-virtual-network"></a><span data-ttu-id="3a98b-127">階段 2：建立 XPrem 虛擬網路</span><span class="sxs-lookup"><span data-stu-id="3a98b-127">Phase 2: Create the XPrem virtual network</span></span>
 
-<span data-ttu-id="8739d-128">在這個階段，要建立並設定新的 XPrem 虛擬網路，然後使用 VNet 對等將其連線至 TestLab 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="8739d-128">In this phase, you create and configure the new XPrem virtual network and then connect it to the TestLab virtual network with VNet peering.</span></span>
+<span data-ttu-id="3a98b-128">在這個階段，要建立並設定新的 XPrem 虛擬網路，然後使用 VNet 對等將其連線至 TestLab 虛擬網路。</span><span class="sxs-lookup"><span data-stu-id="3a98b-128">In this phase, you create and configure the new XPrem virtual network and then connect it to the TestLab virtual network with VNet peering.</span></span>
   
-<span data-ttu-id="8739d-129">首先，在本機電腦上啟動 Azure PowerShell 提示字元。</span><span class="sxs-lookup"><span data-stu-id="8739d-129">First, start an Azure PowerShell prompt on your local computer.</span></span>
+<span data-ttu-id="3a98b-129">首先，在本機電腦上啟動 Azure PowerShell 提示字元。</span><span class="sxs-lookup"><span data-stu-id="3a98b-129">First, start an Azure PowerShell prompt on your local computer.</span></span>
   
 > [!NOTE]
-> <span data-ttu-id="8739d-p102">下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="8739d-p102">The following command sets use the latest version of Azure PowerShell. See [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/).</span></span> 
+> <span data-ttu-id="3a98b-p102">下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/)。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p102">The following command sets use the latest version of Azure PowerShell. See [Get started with Azure PowerShell cmdlets](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/).</span></span> 
   
-<span data-ttu-id="8739d-132">使用此命令登入您的 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="8739d-132">Sign in to your Azure account with this command.</span></span>
+<span data-ttu-id="3a98b-132">使用此命令登入您的 Azure 帳戶。</span><span class="sxs-lookup"><span data-stu-id="3a98b-132">Sign in to your Azure account with this command.</span></span>
   
 ```
 Connect-AzAccount
@@ -92,20 +92,20 @@ Connect-AzAccount
 > Click [here](https://gallery.technet.microsoft.com/PowerShell-commands-for-7844edd0) to get a text file that has all of the PowerShell commands in this article.
 -->
   
-<span data-ttu-id="8739d-133">使用此命令取得訂用帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="8739d-133">Get your subscription name using this command.</span></span>
+<span data-ttu-id="3a98b-133">使用此命令取得訂用帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="3a98b-133">Get your subscription name using this command.</span></span>
   
 ```
 Get-AzSubscription | Sort Name | Select Name
 ```
 
-<span data-ttu-id="8739d-p103">設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 \< 和 > 字元)。</span><span class="sxs-lookup"><span data-stu-id="8739d-p103">Set your Azure subscription. Replace everything within the quotes, including the \< and > characters, with the correct names.</span></span>
+<span data-ttu-id="3a98b-p103">設定 Azure 訂用帳戶。以正確的名稱取代括號中的所有項目 (包括 \< 和 > 字元)。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p103">Set your Azure subscription. Replace everything within the quotes, including the \< and > characters, with the correct names.</span></span>
   
 ```
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
-<span data-ttu-id="8739d-136">接下來，建立 XPrem 虛擬網路，並使用這些命令以網路安全性群組保護它。</span><span class="sxs-lookup"><span data-stu-id="8739d-136">Next, create the XPrem virtual network and protect it with a network security group with these commands.</span></span>
+<span data-ttu-id="3a98b-136">接下來，建立 XPrem 虛擬網路，並使用這些命令以網路安全性群組保護它。</span><span class="sxs-lookup"><span data-stu-id="3a98b-136">Next, create the XPrem virtual network and protect it with a network security group with these commands.</span></span>
   
 ```
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -120,7 +120,7 @@ Set-AzVirtualNetworkSubnetConfig -VirtualNetwork $vnet -Name "Testnet" -AddressP
 $vnet | Set-AzVirtualNetwork
 ```
 
-<span data-ttu-id="8739d-137">接下來，使用這些命令在 TestLab 和 XPrem VNets 之間建立 VNet 對等關係。</span><span class="sxs-lookup"><span data-stu-id="8739d-137">Next, you create the VNet peering relationship between the TestLab and XPrem VNets with these commands.</span></span>
+<span data-ttu-id="3a98b-137">接下來，使用這些命令在 TestLab 和 XPrem VNets 之間建立 VNet 對等關係。</span><span class="sxs-lookup"><span data-stu-id="3a98b-137">Next, you create the VNet peering relationship between the TestLab and XPrem VNets with these commands.</span></span>
   
 ```
 $rgName="<name of the resource group that you used for your TestLab virtual network>"
@@ -130,15 +130,15 @@ Add-AzVirtualNetworkPeering -Name TestLab2XPrem -VirtualNetwork $vnet1 -RemoteVi
 Add-AzVirtualNetworkPeering -Name XPrem2TestLab -VirtualNetwork $vnet2 -RemoteVirtualNetworkId $vnet1.Id
 ```
 
-<span data-ttu-id="8739d-138">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="8739d-138">This is your current configuration.</span></span> 
+<span data-ttu-id="3a98b-138">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="3a98b-138">This is your current configuration.</span></span> 
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 與 VNet 的對等關係的階段 2](media/cac5e999-69c7-4f4c-bfce-a7f4006115ef.png)
   
-## <a name="phase-3-configure-dc2"></a><span data-ttu-id="8739d-140">階段 3：設定 DC2</span><span class="sxs-lookup"><span data-stu-id="8739d-140">Phase 3: Configure DC2</span></span>
+## <a name="phase-3-configure-dc2"></a><span data-ttu-id="3a98b-140">階段 3：設定 DC2</span><span class="sxs-lookup"><span data-stu-id="3a98b-140">Phase 3: Configure DC2</span></span>
 
-<span data-ttu-id="8739d-141">在這個階段，要在 XPrem 虛擬網路中建立 DC2 虛擬機器，然後將它設定為複本網域控制站。</span><span class="sxs-lookup"><span data-stu-id="8739d-141">In this phase, you create the DC2 virtual machine in the XPrem virtual network and then configure it as a replica domain controller.</span></span>
+<span data-ttu-id="3a98b-141">在這個階段，要在 XPrem 虛擬網路中建立 DC2 虛擬機器，然後將它設定為複本網域控制站。</span><span class="sxs-lookup"><span data-stu-id="3a98b-141">In this phase, you create the DC2 virtual machine in the XPrem virtual network and then configure it as a replica domain controller.</span></span>
   
-<span data-ttu-id="8739d-p104">首先，為 DC2 建立虛擬機器。在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。</span><span class="sxs-lookup"><span data-stu-id="8739d-p104">First, create a virtual machine for DC2. Run these commands at the Azure PowerShell command prompt on your local computer.</span></span>
+<span data-ttu-id="3a98b-p104">首先，為 DC2 建立虛擬機器。在本機電腦上的 Azure PowerShell 命令提示字元執行這些命令。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p104">First, create a virtual machine for DC2. Run these commands at the Azure PowerShell command prompt on your local computer.</span></span>
   
 ```
 $rgName="<your resource group name>"
@@ -158,33 +158,33 @@ $vm=Add-AzVMDataDisk -VM $vm -Name "DC2-DataDisk1" -CreateOption Attach -Managed
 New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
-<span data-ttu-id="8739d-144">然後，使用本機系統管理員帳戶的名稱和密碼從 [Azure 入口網站](https://portal.azure.com)連線到 DC2 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="8739d-144">Next, connect to the new DC2 virtual machine from the [Azure portal](https://portal.azure.com) using its local administrator account name and password.</span></span>
+<span data-ttu-id="3a98b-144">然後，使用本機系統管理員帳戶的名稱和密碼從 [Azure 入口網站](https://portal.azure.com)連線到 DC2 虛擬機器。</span><span class="sxs-lookup"><span data-stu-id="3a98b-144">Next, connect to the new DC2 virtual machine from the [Azure portal](https://portal.azure.com) using its local administrator account name and password.</span></span>
   
-<span data-ttu-id="8739d-p105">接下來，設定 Windows 防火牆規則以允許流量進行基本連線能力測試。在 DC2 上的系統管理員層級的 Windows PowerShell 命令提示字元中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="8739d-p105">Next, configure a Windows Firewall rule to allow traffic for basic connectivity testing. From an administrator-level Windows PowerShell command prompt on DC2, run these commands.</span></span> 
+<span data-ttu-id="3a98b-p105">接下來，設定 Windows 防火牆規則以允許流量進行基本連線能力測試。在 DC2 上的系統管理員層級的 Windows PowerShell 命令提示字元中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p105">Next, configure a Windows Firewall rule to allow traffic for basic connectivity testing. From an administrator-level Windows PowerShell command prompt on DC2, run these commands.</span></span> 
   
 ```
 Set-NetFirewallRule -DisplayName "File and Printer Sharing (Echo Request - ICMPv4-In)" -enabled True
 ping dc1.corp.contoso.com
 ```
 
-<span data-ttu-id="8739d-p106">ping 命令應會得到來自 IP 位址 10.0.0.4 四次成功的回覆。這是對 VNet 對等關係流量的測試。</span><span class="sxs-lookup"><span data-stu-id="8739d-p106">The ping command should result in four successful replies from IP address 10.0.0.4. This is a test of traffic across the VNet peering relationship.</span></span> 
+<span data-ttu-id="3a98b-p106">ping 命令應會得到來自 IP 位址 10.0.0.4 四次成功的回覆。這是對 VNet 對等關係流量的測試。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p106">The ping command should result in four successful replies from IP address 10.0.0.4. This is a test of traffic across the VNet peering relationship.</span></span> 
   
-<span data-ttu-id="8739d-149">接著，從 DC2 上的 PowerShell 命令提示字元，使用此命令將額外的資料磁碟新增為新的磁碟區 (磁碟機代號 F:)。</span><span class="sxs-lookup"><span data-stu-id="8739d-149">Next, add the extra data disk as a new volume with the drive letter F: with this command from the Windows PowerShell command prompt on DC2.</span></span>
+<span data-ttu-id="3a98b-149">接著，從 DC2 上的 PowerShell 命令提示字元，使用此命令將額外的資料磁碟新增為新的磁碟區 (磁碟機代號 F:)。</span><span class="sxs-lookup"><span data-stu-id="3a98b-149">Next, add the extra data disk as a new volume with the drive letter F: with this command from the Windows PowerShell command prompt on DC2.</span></span>
   
 ```
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
-<span data-ttu-id="8739d-p107">接著，將 DC2 設定為 corp.contoso.com 網域的複本網域控制站。從 DC2 上的 PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="8739d-p107">Next, configure DC2 as a replica domain controller for the corp.contoso.com domain. Run these commands from the Windows PowerShell command prompt on DC2.</span></span>
+<span data-ttu-id="3a98b-p107">接著，將 DC2 設定為 corp.contoso.com 網域的複本網域控制站。從 DC2 上的 PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p107">Next, configure DC2 as a replica domain controller for the corp.contoso.com domain. Run these commands from the Windows PowerShell command prompt on DC2.</span></span>
   
 ```
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 Install-ADDSDomainController -Credential (Get-Credential CORP\User1) -DomainName "corp.contoso.com" -InstallDns:$true -DatabasePath "F:\NTDS" -LogPath "F:\Logs" -SysvolPath "F:\SYSVOL"
 ```
 
-<span data-ttu-id="8739d-152">請注意，系統會提示您提供 CORP\\User1 的密碼和目錄服務復原模式 (DSRM) 的密碼，並重新啟動 DC2。</span><span class="sxs-lookup"><span data-stu-id="8739d-152">Note that you are prompted to supply both the CORP\\User1 password and a Directory Services Restore Mode (DSRM) password, and to restart DC2.</span></span> 
+<span data-ttu-id="3a98b-152">請注意，系統會提示您提供 CORP\\User1 的密碼和目錄服務復原模式 (DSRM) 的密碼，並重新啟動 DC2。</span><span class="sxs-lookup"><span data-stu-id="3a98b-152">Note that you are prompted to supply both the CORP\\User1 password and a Directory Services Restore Mode (DSRM) password, and to restart DC2.</span></span> 
   
-<span data-ttu-id="8739d-p108">既然 XPrem 虛擬網路有自己的 DNS 伺服器 (DC2)，您必須將 XPrem 虛擬網絡設定為使用此 DNS 伺服器。在本機電腦上使用 Azure PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="8739d-p108">Now that the XPrem virtual network has its own DNS server (DC2), you must configure the XPrem virtual network to use this DNS server. Run these commands from the Azure PowerShell command prompt on your local computer.</span></span>
+<span data-ttu-id="3a98b-p108">既然 XPrem 虛擬網路有自己的 DNS 伺服器 (DC2)，您必須將 XPrem 虛擬網絡設定為使用此 DNS 伺服器。在本機電腦上使用 Azure PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p108">Now that the XPrem virtual network has its own DNS server (DC2), you must configure the XPrem virtual network to use this DNS server. Run these commands from the Azure PowerShell command prompt on your local computer.</span></span>
   
 ```
 $vnet=Get-AzVirtualNetwork -ResourceGroupName $rgName -name "XPrem"
@@ -193,7 +193,7 @@ Set-AzVirtualNetwork -VirtualNetwork $vnet
 Restart-AzVM -ResourceGroupName $rgName -Name "DC2"
 ```
 
-<span data-ttu-id="8739d-p109">在本機電腦從 Azure 入口網站，使用 CORP\\User1 的憑證連線到 DC1。若要設定 CORP 網域以便讓電腦和使用者可使用其本機網域控制站進行驗證，在 DC1 上以系統管理員層級的 Windows PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="8739d-p109">From the Azure portal on your local computer, connect to DC1 with the CORP\\User1 credentials. To configure the CORP domain so that computers and users use their local domain controller for authentication, run these commands from an administrator-level Windows PowerShell command prompt on DC1.</span></span>
+<span data-ttu-id="3a98b-p109">在本機電腦從 Azure 入口網站，使用 CORP\\User1 的憑證連線到 DC1。若要設定 CORP 網域以便讓電腦和使用者可使用其本機網域控制站進行驗證，在 DC1 上以系統管理員層級的 Windows PowerShell 命令提示字元執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="3a98b-p109">From the Azure portal on your local computer, connect to DC1 with the CORP\\User1 credentials. To configure the CORP domain so that computers and users use their local domain controller for authentication, run these commands from an administrator-level Windows PowerShell command prompt on DC1.</span></span>
   
 ```
 New-ADReplicationSite -Name "TestLab" 
@@ -202,28 +202,28 @@ New-ADReplicationSubnet -Name "10.0.0.0/8" -Site "TestLab"
 New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
 ```
 
-<span data-ttu-id="8739d-157">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="8739d-157">This is your current configuration.</span></span> 
+<span data-ttu-id="3a98b-157">這是您目前的設定。</span><span class="sxs-lookup"><span data-stu-id="3a98b-157">This is your current configuration.</span></span> 
   
 ![模擬的跨部署虛擬網路開發/測試環境，搭配 XPrem VNet 中 DC2 虛擬機器的階段 3](media/df458c56-022b-4688-ab18-056c3fd776b4.png)
   
-<span data-ttu-id="8739d-159">模擬的 Azure 混合式雲端環境已準備好進行測試。</span><span class="sxs-lookup"><span data-stu-id="8739d-159">Your simulated Azure hybrid cloud environment is now ready for testing.</span></span>
+<span data-ttu-id="3a98b-159">模擬的 Azure 混合式雲端環境已準備好進行測試。</span><span class="sxs-lookup"><span data-stu-id="3a98b-159">Your simulated Azure hybrid cloud environment is now ready for testing.</span></span>
   
-## <a name="next-step"></a><span data-ttu-id="8739d-160">下一步</span><span class="sxs-lookup"><span data-stu-id="8739d-160">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="3a98b-160">下一步</span><span class="sxs-lookup"><span data-stu-id="3a98b-160">Next step</span></span>
 
-<span data-ttu-id="8739d-161">使用此開發/測試環境模擬[裝載在 Azure 中的 SharePoint Server 2016 內部網路伺服器陣列](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。</span><span class="sxs-lookup"><span data-stu-id="8739d-161">Use this dev/test environment to simulate a [SharePoint Server 2016 intranet farm hosted in Azure](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx).</span></span>
+<span data-ttu-id="3a98b-161">使用此開發/測試環境模擬[裝載在 Azure 中的 SharePoint Server 2016 內部網路伺服器陣列](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx)。</span><span class="sxs-lookup"><span data-stu-id="3a98b-161">Use this dev/test environment to simulate a [SharePoint Server 2016 intranet farm hosted in Azure](https://technet.microsoft.com/library/mt806351%28v=office.16%29.aspx).</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="8739d-162">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8739d-162">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3a98b-162">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a98b-162">See Also</span></span>
 
-[<span data-ttu-id="8739d-163">基底組態開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="8739d-163">Base Configuration dev/test environment</span></span>](base-configuration-dev-test-environment.md)
+[<span data-ttu-id="3a98b-163">基底組態開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="3a98b-163">Base Configuration dev/test environment</span></span>](base-configuration-dev-test-environment.md)
   
-[<span data-ttu-id="8739d-164">Office 365 開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="8739d-164">Office 365 dev/test environment</span></span>](office-365-dev-test-environment.md)
+[<span data-ttu-id="3a98b-164">Office 365 開發/測試環境</span><span class="sxs-lookup"><span data-stu-id="3a98b-164">Office 365 dev/test environment</span></span>](office-365-dev-test-environment.md)
   
-[<span data-ttu-id="8739d-165">Office 365 開發/測試環境的 DirSync</span><span class="sxs-lookup"><span data-stu-id="8739d-165">DirSync for your Office 365 dev/test environment</span></span>](dirsync-for-your-office-365-dev-test-environment.md)
+[<span data-ttu-id="3a98b-165">Office 365 開發/測試環境的 DirSync</span><span class="sxs-lookup"><span data-stu-id="3a98b-165">DirSync for your Office 365 dev/test environment</span></span>](dirsync-for-your-office-365-dev-test-environment.md)
   
-[<span data-ttu-id="8739d-166">Office 365 開發人員/測試環境的雲端 App 安全性</span><span class="sxs-lookup"><span data-stu-id="8739d-166">Cloud App Security for your Office 365 dev/test environment</span></span>](cloud-app-security-for-your-office-365-dev-test-environment.md)
+[<span data-ttu-id="3a98b-166">Office 365 開發人員/測試環境的雲端 App 安全性</span><span class="sxs-lookup"><span data-stu-id="3a98b-166">Cloud App Security for your Office 365 dev/test environment</span></span>](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
-[<span data-ttu-id="8739d-167">適用於 Office 365 開發/測試環境的進階威脅防護</span><span class="sxs-lookup"><span data-stu-id="8739d-167">Advanced Threat Protection for your Office 365 dev/test environment</span></span>](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
+[<span data-ttu-id="3a98b-167">適用於 Office 365 開發/測試環境的進階威脅防護</span><span class="sxs-lookup"><span data-stu-id="3a98b-167">Advanced Threat Protection for your Office 365 dev/test environment</span></span>](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
   
-[<span data-ttu-id="8739d-168">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="8739d-168">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
+[<span data-ttu-id="3a98b-168">雲端採用和混合式解決方案</span><span class="sxs-lookup"><span data-stu-id="3a98b-168">Cloud adoption and hybrid solutions</span></span>](cloud-adoption-and-hybrid-solutions.md)
 
 

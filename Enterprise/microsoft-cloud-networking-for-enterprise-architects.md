@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 03/12/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Priority
@@ -17,57 +17,57 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: 13c71689-59a9-4cdf-8175-808a20c1e879
 description: 摘要： 設計您的 Microsoft 雲端服務與平台的網路功能。
-ms.openlocfilehash: 6b224ce2db0d247c553428a2e4bfd6ba475fc89a
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: f26adbb7592ad9095f73d678504138d0b8a21a2e
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573897"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070169"
 ---
-# <a name="microsoft-cloud-networking-for-enterprise-architects"></a><span data-ttu-id="f2da0-103">Microsoft Cloud Networking for Enterprise Architects</span><span class="sxs-lookup"><span data-stu-id="f2da0-103">Microsoft Cloud Networking for Enterprise Architects</span></span>
+# <a name="microsoft-cloud-networking-for-enterprise-architects"></a><span data-ttu-id="db8b6-103">Microsoft Cloud Networking for Enterprise Architects</span><span class="sxs-lookup"><span data-stu-id="db8b6-103">Microsoft Cloud Networking for Enterprise Architects</span></span>
 
- <span data-ttu-id="f2da0-104">**摘要：** 設計您的 Microsoft 雲端服務與平台的網路功能。</span><span class="sxs-lookup"><span data-stu-id="f2da0-104">**Summary:** Design your networking for Microsoft cloud services and platforms.</span></span>
+ <span data-ttu-id="db8b6-104">**摘要：** 設計您的 Microsoft 雲端服務與平台的網路功能。</span><span class="sxs-lookup"><span data-stu-id="db8b6-104">**Summary:** Design your networking for Microsoft cloud services and platforms.</span></span>
   
-<span data-ttu-id="f2da0-p101">本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，設計組織的網路功能時所需的資訊。您也可以 12 頁海報的形式檢視此資訊，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。</span><span class="sxs-lookup"><span data-stu-id="f2da0-p101">This article links you to a set of articles that describe what IT architects need to know about designing networking for organizations using Microsoft cloud services and platforms. You can also view this information as a 12-page poster and print it in tabloid format (also known as ledger, 11 x 17, or A3).</span></span>
+<span data-ttu-id="db8b6-p101">本文會連結至一系列的文章，以說明 IT 架構設計人員使用 Microsoft 雲端服務和平台，設計組織的網路功能時所需的資訊。您也可以 12 頁海報的形式檢視此資訊，並且列印為 tabloid 格式 (也稱為總帳 11 x 17 或 A3)。</span><span class="sxs-lookup"><span data-stu-id="db8b6-p101">This article links you to a set of articles that describe what IT architects need to know about designing networking for organizations using Microsoft cloud services and platforms. You can also view this information as a 12-page poster and print it in tabloid format (also known as ledger, 11 x 17, or A3).</span></span>
   
-<span data-ttu-id="f2da0-107">[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
-](https://go.microsoft.com/fwlink/p/?linkid=842073)</span><span class="sxs-lookup"><span data-stu-id="f2da0-107">[![Thumb image for Microsoft cloud networking model](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
+<span data-ttu-id="db8b6-107">[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
+](https://go.microsoft.com/fwlink/p/?linkid=842073)</span><span class="sxs-lookup"><span data-stu-id="db8b6-107">[![Thumb image for Microsoft cloud networking model](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)  
 ](https://go.microsoft.com/fwlink/p/?linkid=842073)</span></span>
   
-<span data-ttu-id="f2da0-108">[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074)</span><span class="sxs-lookup"><span data-stu-id="f2da0-108">[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074)</span></span>
+<span data-ttu-id="db8b6-108">[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074)</span><span class="sxs-lookup"><span data-stu-id="db8b6-108">[PDF](https://go.microsoft.com/fwlink/p/?linkid=842073) | [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074)</span></span>
   
-<span data-ttu-id="f2da0-109">您也可以在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)中看見所有模組。</span><span class="sxs-lookup"><span data-stu-id="f2da0-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md).</span></span>
+<span data-ttu-id="db8b6-109">您也可以在 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)中看見所有模組。</span><span class="sxs-lookup"><span data-stu-id="db8b6-109">You can also see all of the models in the [Microsoft Cloud IT architecture resources](microsoft-cloud-it-architecture-resources.md).</span></span>
   
-<span data-ttu-id="f2da0-110">請參閱下列各節：</span><span class="sxs-lookup"><span data-stu-id="f2da0-110">See the following sections:</span></span>
+<span data-ttu-id="db8b6-110">請參閱下列各節：</span><span class="sxs-lookup"><span data-stu-id="db8b6-110">See the following sections:</span></span>
   
-- [<span data-ttu-id="f2da0-111">發展您的雲端連線的網路</span><span class="sxs-lookup"><span data-stu-id="f2da0-111">Evolving your network for cloud connectivity</span></span>](evolving-your-network-for-cloud-connectivity.md)
+- [<span data-ttu-id="db8b6-111">發展您的雲端連線的網路</span><span class="sxs-lookup"><span data-stu-id="db8b6-111">Evolving your network for cloud connectivity</span></span>](evolving-your-network-for-cloud-connectivity.md)
     
-    <span data-ttu-id="f2da0-p102">雲端移轉改變了公司網路內外部的流量大小與本質。它也會影響降低安全性風險的方法。</span><span class="sxs-lookup"><span data-stu-id="f2da0-p102">Cloud migration changes the volume and nature of traffic flows within and outside a corporate network. It also affects approaches to mitigating security risk.</span></span>
+    <span data-ttu-id="db8b6-p102">雲端移轉改變了公司網路內外部的流量大小與本質。它也會影響降低安全性風險的方法。</span><span class="sxs-lookup"><span data-stu-id="db8b6-p102">Cloud migration changes the volume and nature of traffic flows within and outside a corporate network. It also affects approaches to mitigating security risk.</span></span>
     
-- [<span data-ttu-id="f2da0-114">Microsoft 雲端連線的常見的元素</span><span class="sxs-lookup"><span data-stu-id="f2da0-114">Common elements of Microsoft cloud connectivity</span></span>](common-elements-of-microsoft-cloud-connectivity.md)
+- [<span data-ttu-id="db8b6-114">Microsoft 雲端連線的常見的元素</span><span class="sxs-lookup"><span data-stu-id="db8b6-114">Common elements of Microsoft cloud connectivity</span></span>](common-elements-of-microsoft-cloud-connectivity.md)
     
-    <span data-ttu-id="f2da0-115">將您的網路與 Microsoft 雲端整合，提供各種服務的最佳存取途徑。</span><span class="sxs-lookup"><span data-stu-id="f2da0-115">Integrating your networking with the Microsoft cloud provides optimal access to a broad range of services.</span></span>
+    <span data-ttu-id="db8b6-115">將您的網路與 Microsoft 雲端整合，提供各種服務的最佳存取途徑。</span><span class="sxs-lookup"><span data-stu-id="db8b6-115">Integrating your networking with the Microsoft cloud provides optimal access to a broad range of services.</span></span>
     
-- [<span data-ttu-id="f2da0-116">Microsoft 雲端連線 ExpressRoute</span><span class="sxs-lookup"><span data-stu-id="f2da0-116">ExpressRoute for Microsoft cloud connectivity</span></span>](expressroute-for-microsoft-cloud-connectivity.md)
+- [<span data-ttu-id="db8b6-116">Microsoft 雲端連線 ExpressRoute</span><span class="sxs-lookup"><span data-stu-id="db8b6-116">ExpressRoute for Microsoft cloud connectivity</span></span>](expressroute-for-microsoft-cloud-connectivity.md)
     
-    <span data-ttu-id="f2da0-117">ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高輸送量網路連線。</span><span class="sxs-lookup"><span data-stu-id="f2da0-117">ExpressRoute provides a private, dedicated, high-throughput network connection to Microsoft's cloud.</span></span>
+    <span data-ttu-id="db8b6-117">ExpressRoute 可提供連線至 Microsoft 雲端服務的隱私、專屬、高輸送量網路連線。</span><span class="sxs-lookup"><span data-stu-id="db8b6-117">ExpressRoute provides a private, dedicated, high-throughput network connection to Microsoft's cloud.</span></span>
     
-- [<span data-ttu-id="f2da0-118">設計 Microsoft SaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="f2da0-118">Designing networking for Microsoft SaaS</span></span>](designing-networking-for-microsoft-saas.md)
+- [<span data-ttu-id="db8b6-118">設計 Microsoft SaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="db8b6-118">Designing networking for Microsoft SaaS</span></span>](designing-networking-for-microsoft-saas.md)
     
-    <span data-ttu-id="f2da0-119">針對 Microsoft SaaS 服務將您的網路最佳化時，必須將內部和邊緣裝置設定為將不同類別的流量路由傳送至 Microsoft SaaS 服務。</span><span class="sxs-lookup"><span data-stu-id="f2da0-119">Optimizing your network for Microsoft SaaS services requires the configuration of internal and edge devices to route the different categories of traffic to Microsoft SaaS services.</span></span>
+    <span data-ttu-id="db8b6-119">針對 Microsoft SaaS 服務將您的網路最佳化時，必須將內部和邊緣裝置設定為將不同類別的流量路由傳送至 Microsoft SaaS 服務。</span><span class="sxs-lookup"><span data-stu-id="db8b6-119">Optimizing your network for Microsoft SaaS services requires the configuration of internal and edge devices to route the different categories of traffic to Microsoft SaaS services.</span></span>
     
-- [<span data-ttu-id="f2da0-120">設計 Microsoft Azure PaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="f2da0-120">Designing networking for Microsoft Azure PaaS</span></span>](designing-networking-for-microsoft-azure-paas.md)
+- [<span data-ttu-id="db8b6-120">設計 Microsoft Azure PaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="db8b6-120">Designing networking for Microsoft Azure PaaS</span></span>](designing-networking-for-microsoft-azure-paas.md)
     
-    <span data-ttu-id="f2da0-121">若要針對 Azure PaaS 應用程式最佳化網路，必須具備充足的網際網路頻寬，且可能需要跨多個站台或應用程式分散網路流量。</span><span class="sxs-lookup"><span data-stu-id="f2da0-121">Optimizing networking for Azure PaaS apps requires adequate Internet bandwidth and can require the distribution of network traffic across multiple sites or apps.</span></span>
+    <span data-ttu-id="db8b6-121">若要針對 Azure PaaS 應用程式最佳化網路，必須具備充足的網際網路頻寬，且可能需要跨多個站台或應用程式分散網路流量。</span><span class="sxs-lookup"><span data-stu-id="db8b6-121">Optimizing networking for Azure PaaS apps requires adequate Internet bandwidth and can require the distribution of network traffic across multiple sites or apps.</span></span>
     
-- [<span data-ttu-id="f2da0-122">設計 Microsoft Azure IaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="f2da0-122">Designing networking for Microsoft Azure IaaS</span></span>](designing-networking-for-microsoft-azure-iaas.md)
+- [<span data-ttu-id="db8b6-122">設計 Microsoft Azure IaaS 的網路</span><span class="sxs-lookup"><span data-stu-id="db8b6-122">Designing networking for Microsoft Azure IaaS</span></span>](designing-networking-for-microsoft-azure-iaas.md)
     
-    <span data-ttu-id="f2da0-123">逐步執行設計程序，用於主控伺服器架構 IT 工作負載，包括子網路建立最佳 Azure 虛擬的網路 (VNet)、位址空間、路由、DNS、負載平衡，及與您在上場所的網路、其他 VNets 及網際網路連線能力。</span><span class="sxs-lookup"><span data-stu-id="f2da0-123">Step through the design process to create an optimal Azure virtual network (VNet) for hosting server-based IT workloads, including subnets, address spaces, routing, DNS, load balancing, and connectivity to your on-premises network, other VNets, and the Internet.</span></span>
+    <span data-ttu-id="db8b6-123">逐步執行設計程序，用於主控伺服器架構 IT 工作負載，包括子網路建立最佳 Azure 虛擬的網路 (VNet)、位址空間、路由、DNS、負載平衡，及與您在上場所的網路、其他 VNets 及網際網路連線能力。</span><span class="sxs-lookup"><span data-stu-id="db8b6-123">Step through the design process to create an optimal Azure virtual network (VNet) for hosting server-based IT workloads, including subnets, address spaces, routing, DNS, load balancing, and connectivity to your on-premises network, other VNets, and the Internet.</span></span>
     
 > [!NOTE]
-> <span data-ttu-id="f2da0-124">這幾篇文章說明在 **2018 年 12 月**發佈的 Microsoft Cloud Networking for Enterprise Architects 海報。</span><span class="sxs-lookup"><span data-stu-id="f2da0-124">These articles reflect the **December 2018** release of the Microsoft Cloud Networking for Enterprise Architects poster.</span></span>
+> <span data-ttu-id="db8b6-124">這幾篇文章說明在 **2018 年 12 月**發佈的 Microsoft Cloud Networking for Enterprise Architects 海報。</span><span class="sxs-lookup"><span data-stu-id="db8b6-124">These articles reflect the **December 2018** release of the Microsoft Cloud Networking for Enterprise Architects poster.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="f2da0-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2da0-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db8b6-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db8b6-125">See also</span></span>
 
-[<span data-ttu-id="f2da0-126">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="f2da0-126">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
+[<span data-ttu-id="db8b6-126">Microsoft Cloud IT 架構資源</span><span class="sxs-lookup"><span data-stu-id="db8b6-126">Microsoft Cloud IT architecture resources</span></span>](microsoft-cloud-it-architecture-resources.md)
 
