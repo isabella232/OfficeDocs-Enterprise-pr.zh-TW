@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 01/03/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -15,34 +15,34 @@ ms.custom:
 - LIL_Placement
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
-description: 說明如何使用 Office 365 PowerShell 檢視授權的計劃、 服務及 Office 365 組織中可用的授權的相關資訊。
-ms.openlocfilehash: bce181445523a2f043caa932f3d4e0ddd81d89cc
-ms.sourcegitcommit: 6826e0ea4a777f7d98500209a9d3bc75e89f8d15
+description: 說明如何使用 Office 365 PowerShell 來檢視有關授權方案、 服務和 Office 365 組織中可用的授權資訊。
+ms.openlocfilehash: 9e84797de29337d9414d9a578a98f6799ee816cb
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "29651207"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34071089"
 ---
 # <a name="view-licenses-and-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視授權與服務
 
-**摘要：** 說明如何使用 Office 365 PowerShell 檢視授權的計劃、 服務及 Office 365 組織中可用的授權的相關資訊。
+**摘要：** 說明如何使用 Office 365 PowerShell 來檢視有關授權方案、 服務和 Office 365 組織中可用的授權資訊。
   
-每個 Office 365 訂閱包含下列元素：
+每個 Office 365 訂閱是由下列元素所組成：
 
-- **授權計劃**這些也稱為是授權方案或 Office 365 計劃。授權方案定義使用者可用的 Office 365 服務。您的 Office 365 訂閱可能包含多個授權方案。範例的授權方案就是 Office 365 企業版 E3。
+- **授權計劃**這些是所謂的授權方案或 Office 365 計劃。 授權計劃定義使用者可用的 Office 365 服務。 Office 365 訂閱可能包含多個授權計劃。 範例授權計劃將 Office 365 企業版 E3。
     
-- **服務**這些也稱為是服務計劃。服務是 Office 365 產品、 功能及可用功能的每個授權的計畫，例如 Exchange Online 與 Office Professional Plus。使用者可以從不同的授權方案所授與不同的服務權限指派給他們的多個授權。
+- **服務**這些是也稱為服務計劃。 服務是 Office 365 產品、 功能及可用功能中每個授權計劃，例如 Exchange Online 和 Office 專業增強版。 使用者可以有多個授權指派給他們從不同的授權方案，授與存取權不同的服務。
     
-- **授權**每個授權方案包含您所購買的授權數。指派授權給使用者，以便他們可以使用 Office 365 服務授權方案所定義。每個使用者帳戶需要從一個授權計劃至少一個授權，讓他們可以登入 Office 365 並使用的服務。
+- **授權**每個授權計劃包含您購買的授權數目。 讓他們可以使用 Office 365 服務所定義的授權方案，您可以指派給使用者的授權。 每個使用者帳戶需要從某個授權計劃的至少一個授權，讓他們可以登入 Office 365，並使用的服務。
     
-您可以使用 Office 365 PowerShell Office 365 組織中檢視可用的授權方案、 授權及服務的相關的詳細資料。如需產品、 功能及不同 Office 365 訂閱中可用的服務的詳細資訊，請參閱[Office 365 計劃選項](https://go.microsoft.com/fwlink/p/?LinkId=691147)。
+您可以使用 Office 365 PowerShell 來檢視 Office 365 組織中的可用授權計劃、 授權及服務的詳細。 如需產品、 功能和不同 Office 365 訂閱中可用的服務的詳細資訊，請參閱 < <b0>Office 365 方案選項</b0>。
 
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
-若要檢視目前的授權方案和每種計劃可用授權的摘要資訊，請執行下列命令：
+若要檢視您目前的授權方案以及每個方案可用授權的摘要資訊，請執行下列命令：
   
 ```
 Get-AzureADSubscribedSku | Select -Property Sku*,ConsumedUnits -ExpandProperty PrepaidUnits
@@ -50,33 +50,33 @@ Get-AzureADSubscribedSku | Select -Property Sku*,ConsumedUnits -ExpandProperty P
 
 結果包含下列資訊：
   
-- **Skupartnumber 劃：** 會顯示您的組織可用的授權方案。例如，`ENTERPRISEPACK`是 Office 365 企業版 E3 授權計劃名稱。
+- **Skupartnumber 劃：** 顯示貴組織的可用授權計劃。 例如，`ENTERPRISEPACK`是 Office 365 企業版 E3 授權計劃名稱。
     
-- **啟用：** 您已為特定的授權方案購買的授權數目。
+- **啟用：** 您已為特定授權方案購買的授權數目。
     
-- **ConsumedUnits:** 您已從特定的授權方案指派給使用者的授權數目。
+- **ConsumedUnits:** 您已從特定的授權計劃指派給使用者的授權數目。
     
-若要檢視關於所有授權計劃中都可用的 Office 365 服務的詳細資訊，請先顯示授權計劃的清單。
+若要檢視 Office 365 服務的可用的授權計劃中的所有相關的詳細資訊，請先顯示一份授權計劃。
 
 ````
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ````
 
-下一步] 儲存在變數中的授權計劃資訊。
+下一步]，儲存在變數中的授權計劃資訊。
 
 ````
 $licenses = Get-AzureADSubscribedSku
 ````
 
-下一步] 顯示特定授權計劃中的服務。
+接下來，在特定的授權計劃中顯示的服務。
 
 ````
 $licenses[<index>].ServicePlans
 ````
 
-\<index> 會指定從顯示的授權方案的列數的整數`Get-AzureADSubscribedSku | Select SkuPartNumber`command 減 1。
+\<index> 為 integer，指定從顯示的授權計劃中的列數`Get-AzureADSubscribedSku | Select SkuPartNumber`命令，減 1。
 
-例如，如果顯示`Get-AzureADSubscribedSku | Select SkuPartNumber`命令這是：
+例如，如果顯示`Get-AzureADSubscribedSku | Select SkuPartNumber`命令如下：
 
 ````
 SkuPartNumber
@@ -87,25 +87,25 @@ ENTERPRISEPREMIUM
 FLOW_FREE
 ````
 
-然後命令以顯示 ENTERPRISEPREMIUM 授權方案的服務是：
+然後命令，以顯示 ENTERPRISEPREMIUM 授權計劃的服務如下：
 
 ````
 $licenses[2].ServicePlans
 ````
 
-ENTERPRISEPREMIUM 是第三列。因此的索引值是 (3-1） 或 2。
+ENTERPRISEPREMIUM 是第三列。 因此，索引值是 (3-1），或 2。
 
-如需授權計劃 （也稱為產品名稱）、 其包含的服務計劃和其對應的易記名稱的完整清單，請參閱[產品名稱和授權的服務計劃識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
+為授權計劃 （也稱為產品名稱） 的完整清單，其包含的服務計劃和其對應的易記名稱，請參閱[產品名稱和授權的服務方案識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 >[!Note]
->PowerShell 指令碼是可用的可本主題所述的程序。主要是針對指令碼可讓您檢視和停用 Office 365 組織中包括 Sway 服務。如需詳細資訊，請參閱 ＜[停用 Office 365 powershell Sway 存取](disable-access-to-sway-with-office-365-powershell.md)。
+>PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。 具體而言，指令碼可讓您檢視及停用您 Office 365 組織，包括 Sway 中的服務。 如需詳細資訊，請參閱[Disable access to Sway with Office 365 PowerShell](disable-access-to-sway-with-office-365-powershell.md)。
 >
     
-若要檢視目前的授權方案和每種計劃可用授權的摘要資訊，請執行下列命令：
+若要檢視您目前的授權方案以及每個方案可用授權的摘要資訊，請執行下列命令：
   
 ```
 Get-MsolAccountSku
@@ -113,21 +113,21 @@ Get-MsolAccountSku
 
 結果包含下列資訊：
   
-- **AccountSkuId:** 使用下列的語法來顯示您的組織可用的授權方案`<CompanyName>:<LicensingPlan>`。 _<CompanyName>_ 為您提供當您在 Office 365 中註冊並為您的組織是唯一的值。_<LicensingPlan>_ 值是每個人都相同。例如，在此值`litwareinc:ENTERPRISEPACK`、 公司名稱是`litwareinc`、 和授權的計劃名稱`ENTERPRISEPACK`，這是 Office 365 企業版 E3 系統名稱。
+- **AccountSkuId:** 藉由使用語法來顯示貴組織的可用授權計劃`<CompanyName>:<LicensingPlan>`。  _<CompanyName>_ 是您提供當您在 Office 365 中註冊，並為您的組織是唯一的值。 _<LicensingPlan>_ 值是每個人都相同。 例如，在值`litwareinc:ENTERPRISEPACK`，公司名稱是`litwareinc`，和授權計劃名稱`ENTERPRISEPACK`，也就是 Office 365 企業版 E3 的系統名稱。
     
-- **ActiveUnits:** 您已為特定的授權方案購買的授權數目。
+- **ActiveUnits:** 您已為特定授權方案購買的授權數目。
     
-- **WarningUnits:** 您尚未已更新，並將期限 30 天的寬限期期間的授權方案中的授權數目。
+- **WarningUnits:** 您還沒有更新，及，將會在 30 天寬限期後過期的授權計劃中的授權數目。
     
-- **ConsumedUnits:** 您已從特定的授權方案指派給使用者的授權數目。
+- **ConsumedUnits:** 您已從特定的授權計劃指派給使用者的授權數目。
     
-若要檢視關於所有授權計劃中都可用的 Office 365 服務的詳細資訊，請執行下列命令：
+若要檢視 Office 365 服務的可用的授權計劃中的所有相關的詳細資訊，請執行下列命令：
   
 ```
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
-下表顯示 Office 365 服務計劃和最常見的服務及其易記名稱。您的服務計劃清單可能會不同。 
+下表顯示 Office 365 服務計劃及最常見的服務的好記的名稱。 您的服務計劃清單可能會不同。 
   
 |**服務計劃**|**描述**|
 |:-----|:-----|
@@ -141,15 +141,15 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |
 | `EXCHANGE_S_ENTERPRISE` <br/> |Exchange Online Plan 2  <br/> |
    
-如需授權計劃 （也稱為產品名稱）、 其包含的服務計劃和其對應的易記名稱的完整清單，請參閱[產品名稱和授權的服務計劃識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
+為授權計劃 （也稱為產品名稱） 的完整清單，其包含的服務計劃和其對應的易記名稱，請參閱[產品名稱和授權的服務方案識別碼](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
 
-若要檢視特定的授權方案中可用的 Office 365 服務相關的詳細資訊，請使用下列語法。
+若要檢視特定的授權計劃中提供的 Office 365 服務相關的詳細資訊，請使用下列語法。
   
 ```
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "<AccountSkuId>"}).ServiceStatus
 ```
 
-此範例會顯示 litwareinc: enterprisepack (Office 365 企業版 E3) 的授權方案中可用的 Office 365 服務。
+本範例顯示 litwareinc: enterprisepack (Office 365 企業版 E3) 授權計劃中提供的 Office 365 服務。
   
 ```
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "litwareinc:ENTERPRISEPACK"}).ServiceStatus

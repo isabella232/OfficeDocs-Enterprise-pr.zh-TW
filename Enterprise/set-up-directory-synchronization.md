@@ -1,9 +1,9 @@
 ---
-title: 設定 Office 365 的目錄同步處理
-ms.author: robmazz
-author: robmazz
+title: 為 Office 365 設定目錄同步處理
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: get-started-article
 ms.service: o365-administration
 localization_priority: Normal
@@ -19,14 +19,14 @@ search.appverid:
 - BCS160
 ms.assetid: 1b3b5318-6977-42ed-b5c7-96fa74b08846
 description: 了解如何設定 Office 365 和您在內部部署 Active Directory 之間的目錄同步處理。
-ms.openlocfilehash: 6d635dbcacb5a1c6c6c9c202f2ece4fac35558a4
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.openlocfilehash: d5c09b006c4e4b9ca9fbe3b0d673435a8ea6637e
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001746"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070869"
 ---
-# <a name="set-up-directory-synchronization-for-office-365"></a>設定 Office 365 的目錄同步處理
+# <a name="set-up-directory-synchronization-for-office-365"></a>為 Office 365 設定目錄同步處理
 
 Office 365 使用雲端型使用者身分識別管理服務 Azure Active Directory 來管理使用者。 您也可以與 Office 365 同步內部部署環境，與 Azure AD 整合您的內部部署 Active Directory。 一旦您設定同步處理您可以決定有您的內部部署目錄或 Azure AD 內進行其使用者驗證。
   

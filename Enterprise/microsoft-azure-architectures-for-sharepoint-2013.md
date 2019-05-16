@@ -4,7 +4,7 @@ ms.author: bcarter
 author: brendacarter
 manager: laurawi
 ms.date: 12/15/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
 description: 摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。 了解何種類型的解決方案是很好的調整，以及如何設定 Microsoft Azure，以其中一個主機。
-ms.openlocfilehash: 7e40b7c4d37e5646d44a14f12a80a9c6cd25834b
-ms.sourcegitcommit: 201d3338d8bbc6da9389e62e2add8a17384fab4d
+ms.openlocfilehash: 913910af1acf1353c3ee9b553178c4f0736eb290
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "31038067"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070289"
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure SharePoint 2013 架構
 
@@ -117,7 +117,7 @@ Azure 基礎結構服務是令人讚嘆裝載 SharePoint 解決方案的選項�
   
 下表提供這些虛擬機器，在 Azure 中的設定建議。 供您自己的環境中使用這些做為起點 — 提供充足的儲存您的 Azure 環境不會與您的內部部署環境通訊的地方專用網域。
   
-|**項目**|**設定**|
+|**Item**|**設定**|
 |:-----|:-----|
 |在 Azure 中的虛擬機器大小  <br/> |在標準層中的 A1 或 A2 大小  <br/> |
 |作業系統  <br/> |Windows Server 2012 R2  <br/> |

@@ -1,9 +1,9 @@
 ---
 title: 了解 Office 365 身分識別和 Azure Active Directory
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: c9dff7e17e4c0dcceb7cdeab86c1acdd40e01205
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 85cfce4b08236bfcee74b6fe6d9c29766e7211c6
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068759"
 ---
 # <a name="understanding-office-365-identity-and-azure-active-directory"></a>了解 Office 365 身分識別和 Azure Active Directory
 

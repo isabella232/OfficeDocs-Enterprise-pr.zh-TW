@@ -1,9 +1,9 @@
 ---
 title: 將貴組織資料移轉到 Office 365 企業版
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -14,12 +14,12 @@ search.appverid:
 - BCS160
 ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 description: 如果您已選擇退出 FastTrack 部署，且您準備好將資料移轉到 Office 365，這就是開始的位置。
-ms.openlocfilehash: ffa239c4f91c4229bb28e918909da06502ba9198
-ms.sourcegitcommit: 0c775dbd2325f95e3f006424d1446f76caadb588
-ms.translationtype: HT
+ms.openlocfilehash: 9efaad6da9723d588cc0e42151bf297b271e4e5c
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "31004394"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070119"
 ---
 # <a name="migrate-your-organization-data-to-office-365-enterprise"></a>將貴組織資料移轉到 Office 365 企業版
 

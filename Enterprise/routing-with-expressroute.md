@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 12/14/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: e1da26c6-2d39-4379-af6f-4da213218408
 description: 若要適當地了解路由至 Azure ExpressRoute Office 365 流量，您需要的核心 ExpressRoute 路由需求和 ExpressRoute 電路及路由網域的公司掌握。 使用 ExpressRoute 的 Office 365 客戶將會依賴的基本概念版面配置這些設定。
-ms.openlocfilehash: 83c3801e7886bf44500f1dc0b185782e2a7f3bc1
-ms.sourcegitcommit: 51f9e89e4b9d54f92ef5c70468bda96e664b8a6b
+ms.openlocfilehash: 60277e9d9f2a5b2fc92465b57b5aa08148b604f7
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "31957714"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070999"
 ---
 # <a name="routing-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行路由傳送
 
@@ -35,7 +35,7 @@ ms.locfileid: "31957714"
 
 - 沒有 ExpressRoute 線路與客戶的鍵之間的 1:1 對應。
 
-- 每個電路可支援最多 3 個獨立的對等關係 （Azure 公用對等、 Azure 私人對等，以及 Microsoft 對等）;Office 365 需要 Microsoft 對等。
+- 每個電路可支援 2 獨立的對等關係 （Azure 私人對等，以及 Microsoft 對等）;Office 365 需要 Microsoft 對等。
 
 - 每個電路具有固定的頻寬共用跨所有對等關係。
 
@@ -254,6 +254,6 @@ Microsoft 的資料中心、 網路和應用程式的架構設計全域全數通
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
   
 [Office 365 網路與效能調整](network-planning-and-performance.md)

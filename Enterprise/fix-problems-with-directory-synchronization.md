@@ -1,9 +1,9 @@
 ---
 title: 修正 Office 365 目錄同步處理的問題
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
@@ -17,12 +17,12 @@ search.appverid:
 - MBS150
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中的目錄同步處理問題的常見原因，並提供一些方法，協助疑難排解，並加以解決。
-ms.openlocfilehash: a5c4b58dd856158b00605f39d8a66b48488086b2
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 3a1cf63122be84dc3e1c60e84a9a3a488f81bc0f
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487455"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067669"
 ---
 # <a name="fixing-problems-with-directory-synchronization-for-office-365"></a>修正 Office 365 目錄同步處理的問題
 

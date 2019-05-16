@@ -1,9 +1,9 @@
 ---
 title: 為貴組織部署 Office 365 企業版
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -16,12 +16,12 @@ ms.collection:
 ms.custom: Adm_O365
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
 description: 這些概觀步驟被設計來協助您部署 Office 365、連線您的 Active Directory、 移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
-ms.openlocfilehash: a49d57978faabfac7131db3178cbff02b500667f
-ms.sourcegitcommit: 0c775dbd2325f95e3f006424d1446f76caadb588
-ms.translationtype: HT
+ms.openlocfilehash: 16e6c60404a9e1f2c49b2e8e23920540e1dd8e49
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "31004404"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070809"
 ---
 # <a name="deploy-office-365-enterprise-for-your-organization"></a>為貴組織部署 Office 365 企業版
 準備好部署並將 Office 365 企業版與您的內部部署基礎結構整合嗎？這些概觀步驟是設計來協助您連線至目錄、移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
@@ -31,7 +31,7 @@ ms.locfileid: "31004404"
 沒有 Office 365 企業版嗎？請參閱[設定商務用 Office 365](https://support.office.com/article/6a3a29a0-e616-4713-99d1-15eda62d04fa)，以取得小型企業的指示。 
   
 ## <a name="guided-enterprise-office-365-setup-process-with-fasttrack"></a>使用 FastTrack 引導企業 Office 365 設定程序
-Office 365 **[FastTrack](https://docs.microsoft.com/fasttrack)** 是部署 Office 365 的最佳方法。FastTrack 會逐步引導您執行最常見的部署設定，同時可回答問題。如果您想要自助或合作夥伴的指導，請使用我們的 [Office 365 設定指南](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)、我們的 [Office 365 設定精靈](https://aka.ms/o365fasttrack)，或[尋找合格的合作夥伴](https://partnercenter.microsoft.com/zh-TW/pcv/search)。
+Office 365 **[FastTrack](https://docs.microsoft.com/fasttrack)** 是部署 Office 365 的最佳方法。FastTrack 會逐步引導您執行最常見的部署設定，同時可回答問題。如果您想要自助或合作夥伴的指導，請使用我們的 [Office 365 設定指南](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)、我們的 [Office 365 設定精靈](https://aka.ms/o365fasttrack)，或[尋找合格的合作夥伴](https://partnercenter.microsoft.com/en-us/pcv/search)。
 
 ## <a name="self-deployment-of-office-365"></a>自助部署 Office 365
 如果您想要自行部署 Office 365，下列的部署步驟可提供協助。

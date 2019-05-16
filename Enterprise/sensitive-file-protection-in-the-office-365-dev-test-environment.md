@@ -1,10 +1,10 @@
 ---
-title: Office 365 開發/測試環境中的機密檔案保護
+title: Office 365 開發/測試環境中的敏感檔案保護
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 04/01/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
@@ -16,14 +16,14 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: 摘要： 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
-ms.openlocfilehash: 4b65df7fe194d543acaf1c3ba6f104681a998dc6
-ms.sourcegitcommit: 682b180061dc63cd602bee567d5414eae6942572
+ms.openlocfilehash: a845742f7ec874d63269f5f380568b7bb59cfe0d
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "31741299"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070889"
 ---
-# <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的機密檔案保護
+# <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的敏感檔案保護
 
  **摘要：** 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
   
@@ -32,7 +32,7 @@ ms.locfileid: "31741299"
 透過本文中的指示，您可以啟用並測試 Office 365 中的 IRM，包含可能在您的 Office 365 試用版訂閱中的敏感資訊的檔案。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)取得 Office 365 測試實驗室指南堆疊中所有文章的視覺對應。
+> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建置 Office 365 開發/測試環境
 

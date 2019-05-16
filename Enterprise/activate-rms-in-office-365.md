@@ -4,7 +4,7 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 5/11/2016
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -15,12 +15,12 @@ search.appverid:
 - BCS160
 ms.assetid: 5b6d3ac7-b1ac-428e-b03e-50e882f85a6e
 description: 說明如何啟動和 Rights Management 服務使用 Office 365 的主題的點。
-ms.openlocfilehash: b3df1f7ff39214d5ab7ab8f5c730299c1c22f30b
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: ffbb88de88b5f90d239698c0600e914266e84048
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487781"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068449"
 ---
 # <a name="activate-rights-management-in-the-office-365-admin-center"></a>在 Office 365 系統管理中心啟動版權管理
 

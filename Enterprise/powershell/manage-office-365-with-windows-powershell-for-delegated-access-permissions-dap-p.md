@@ -3,7 +3,7 @@ title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShel
 ms.author: chrfox
 author: chrfox
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
 localization_priority: Normal
@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 ms.assetid: be497751-596f-431d-b256-0a89d36a47ce
 description: 摘要：新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可以使用 Windows PowerShell 來管理 Office 365 客戶租用戶。
-ms.openlocfilehash: 93b323d8de7016008ba7e4f75ff4b1c011adb9f2
-ms.sourcegitcommit: 509bcf92580d7a0bcebbf6f1d10311d6b0014984
-ms.translationtype: HT
+ms.openlocfilehash: f36762cd8e78485316270f8eec8386229a84a276
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "31992813"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068908"
 ---
 # <a name="manage-office-365-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 管理 Office 365
 

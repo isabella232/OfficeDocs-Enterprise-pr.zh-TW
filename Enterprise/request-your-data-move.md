@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/15/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: 2307cb7d197397044578f9af3037914c83a1e220
-ms.sourcegitcommit: b85d3db24385d7e0bdbfb0d4499174ccd7f573bd
+ms.openlocfilehash: 96556ae231f66dd4448f871a6154b527816933f4
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "30650076"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34071009"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -36,7 +36,7 @@ ms.locfileid: "30650076"
 |澳洲請紐西蘭斐濟群島  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
 |印度  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
 |加拿大  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
-|United Kingdom  <br/> |2017 年 3 月 15日日  <br/> |2017 年 9 月 15日日  <br/> |
+|英國  <br/> |2017 年 3 月 15日日  <br/> |2017 年 9 月 15日日  <br/> |
 |南韓  <br/> |2017 年 5 月 1日日  <br/> |2017 年 10 月 31日日  <br/> |
 |法國  <br/> |2018 年 3 月 14日日  <br/> |2018 年 9 月 15日日  <br/> |
 |阿拉伯聯合大公國  <br/> |計劃  <br/> |計劃  <br/> |

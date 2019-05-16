@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 01/03/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -15,12 +15,12 @@ ms.custom:
 - PowerShell
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
 description: 說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。
-ms.openlocfilehash: eb1ca1d9812b08a6ea932fde546351f664c93066
-ms.sourcegitcommit: c5ee713709d76f519cb77de0e12c435d8409f571
+ms.openlocfilehash: 8b0456b468f4e0f912491f4a138d5868feb5abbc
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "28327325"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34071129"
 ---
 # <a name="view-licensed-and-unlicensed-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 
@@ -33,13 +33,13 @@ ms.locfileid: "28327325"
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
  
-若要檢視清單中所有的使用者帳戶的組織中的未指派任何您授權的計劃 （未授權的使用者），請執行下列命令：
+若要檢視的所有使用者帳戶清單未指派授權計劃 （未授權的使用者） 的任何您組織中，執行下列命令：
   
 ```
 Get-AzureAdUser | ForEach{ $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].disabledplans ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $false) { Write-Host $_.UserPrincipalName} }
 ```
 
-若要檢視已在組織中的所有使用者帳戶清單指派任何您授權的計劃 （已獲授權的使用者），執行下列命令：
+若要檢視的所有使用者帳戶清單中您的組織已指派任何授權計劃 （授權的使用者），執行下列命令：
   
 ```
 Get-AzureAdUser | ForEach { $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].disabledplans ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $true) { Write-Host $_.UserPrincipalName} }

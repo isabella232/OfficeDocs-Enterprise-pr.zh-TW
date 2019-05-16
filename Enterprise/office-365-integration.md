@@ -1,10 +1,9 @@
 ---
 title: Office 365 與內部部署環境整合
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 8/21/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -19,12 +18,12 @@ search.appverid:
 - MED150
 ms.assetid: 263faf8d-aa21-428b-aed3-2021837a4b65
 description: 了解如何將 Office 365 與您現有的目錄服務整合。
-ms.openlocfilehash: 112f543a9c647ea850d5e43bc14483308da0b2c7
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 1fa044a0a9db0d8422239cf301fea21a2c3d47e9
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487395"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069739"
 ---
 # <a name="office-365-integration-with-on-premises-environments"></a>Office 365 與內部部署環境整合
 

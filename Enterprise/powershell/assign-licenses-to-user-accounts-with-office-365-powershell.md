@@ -1,10 +1,10 @@
 ---
-title: 使用 Office 365 PowerShell 指派授權至使用者帳戶
+title: 將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 04/18/2019
-ms.audience: Admin
+audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,14 +18,14 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
-ms.openlocfilehash: ac2cdb8c303cacc5c9664b877ba86a5b196432b1
-ms.sourcegitcommit: 51f9e89e4b9d54f92ef5c70468bda96e664b8a6b
+ms.openlocfilehash: 91fe9f3a14663ebb9adb61700de3004edd236e0c
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "31957644"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069279"
 ---
-# <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 指派授權至使用者帳戶
+# <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
 **摘要：** 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
   

@@ -5,7 +5,7 @@ ms.reviewer: smithre4
 author: MSFTTracyP
 manager: laurawi
 ms.date: ''
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -13,12 +13,12 @@ ms.assetid: ef753b32-7251-4c9e-b442-1a5aec14e58d
 ms.collection:
 - M365-security-compliance
 description: 新式驗證是一種方法提供更安全的使用者驗證及授權的身分識別管理。 使用混合式部署的 Skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合。 此文章連結至相關的文件有關先決條件，安裝程式/停用新式驗證，和某些相關的用戶端 （例如。 Outlook 與 Skype 用戶端） 的資訊。
-ms.openlocfilehash: d8d06a3e2d178f68bcb130228ed1834f4eb878f8
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 17c61b028aacd5abaf72450e197475fa2c0a2589
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33491399"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067199"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合式新式驗證概觀及使用商務和 Exchange 伺服器內部部署用 Skype 的必要條件
 
