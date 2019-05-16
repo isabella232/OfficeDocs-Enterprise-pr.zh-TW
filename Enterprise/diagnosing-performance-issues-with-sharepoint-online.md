@@ -4,7 +4,7 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 2/23/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
@@ -13,12 +13,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86
 description: 本文將告訴您如何診斷常見的問題，以及在 SharePoint Online 網站使用 Internet Explorer 開發人員工具。
-ms.openlocfilehash: 89d4544bfabf6424b5f401bad7d63bd7fa41b5ca
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: dfc66822a98ce26bfd9fd94d9d58882b8b140831
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33492254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067859"
 ---
 # <a name="diagnosing-performance-issues-with-sharepoint-online"></a>診斷 SharePoint Online 的效能問題
 

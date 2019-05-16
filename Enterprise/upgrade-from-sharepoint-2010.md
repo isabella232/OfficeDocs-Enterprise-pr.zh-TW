@@ -4,7 +4,7 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 2/2/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.prod: office-online-server
 localization_priority: Normal
@@ -15,12 +15,12 @@ search.appverid:
 - OSU140
 ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 description: SharePoint 2010 和 SharePoint Server 2010 週期即將結束的支援。 使用本文做為指南，升級至 SharePoint Online 或 SharePoint Server 內部部署的較新版本。
-ms.openlocfilehash: c88c6010aa398d8076fce59976bf6f5c0aa1a743
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 18522f9abb1514e14a172c6f2d661591826dff22
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33492040"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070679"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 

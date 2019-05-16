@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 7/13/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -15,12 +15,12 @@ search.appverid:
 - BCS160
 ms.assetid: e4468915-15e1-4530-9361-cd18ce82e231
 description: ExpressRoute for Office 365 提供了替代的路由路徑，而不需要所有輸出至網際網路的流量到達許多 Office 365 服務。 雖然仍需要網際網路連線到 Office 365，Microsoft 會通告 BGP 透過您的網路特定路由可以讓您直接的 ExpressRoute 線路慣用除非有其他網路中的設定。 您可能想要設定來管理此路由包含三個一般區域首碼篩選、 安全性和合規性。
-ms.openlocfilehash: 5345c4067f4ecf9b1b1bc1a0ad20d6e1f5273f65
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 08c991deaaf1b8fa1e17addbed8a23cbfcf37b87
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487729"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067129"
 ---
 # <a name="managing-expressroute-for-office-365-connectivity"></a>管理 ExpressRoute for Office 365 連線
 
@@ -106,7 +106,7 @@ Microsoft 建議透過網際網路電路接受這些連線，而不是您的 Exp
 
 [內容傳遞網路](content-delivery-networks.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
   
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   

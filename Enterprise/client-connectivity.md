@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 7/6/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 4232abcf-4ae5-43aa-bfa1-9a078a99c78b
 description: 摘要： 說明用戶端電腦如何連線至 Office 365 租用戶，根據用戶端電腦與 Office 365 租用戶資料中心的位置。
-ms.openlocfilehash: 9455147e70a391619e1602f2e36d9162ff2c0928
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: d101af5a0fdd4e29e366b34ad1ab682489f6b3ca
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490561"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068199"
 ---
 # <a name="client-connectivity"></a>用戶端連線能力
 
@@ -31,7 +31,7 @@ ms.locfileid: "33490561"
   
 Office 365 位於 Microsoft 資料中心世界各地的可協助保護設定的服務，並執行即使在一個區域，例如地震或電源中斷中沒有發生重大的問題。 當您連接至您的 Office 365 租用戶時，用戶端連線會被導向適當的資料中心正在主控您的租用戶。 決定可以主控您的租用戶規則是由 Microsoft 與您合約定義。 規則，判斷您的用戶端如何取得從該資料中心位置的資料會因您正在使用的服務架構而定。
   
-例如，當您登入 Office 365 入口網站時，您是通常是連接到最接近的資料中心，用戶端，而且再根據服務導向您使用下一步]。 如果您啟動電子郵件時，顯示 UI 的初始連線可能仍是來自於最接近的資料中心，但可能最接近的資料中心與以顯示您功能的電子郵件您閱讀中位於到您的租用戶資料中心之間開啟第二個連線。 Microsoft 會執行下列其中一個非常快速資料中心到 datacenter 連線速度產生領域中的頂端十個網路。
+例如，當您登入 Office 365 入口網站時，您是通常是連接到最接近的資料中心，用戶端，而且再根據服務導向您使用下一步]。 如果您啟動電子郵件時，顯示 UI 的初始連線可能仍是來自於最接近的資料中心，但可能最接近的資料中心與以顯示您功能的電子郵件您閱讀中位於到您的租用戶資料中心之間開啟第二個連線。 Microsoft 的運作方式的世界，上方十個網路的其中一個產生非常快速資料中心到 datacenter 連線。
   
 閱讀本文之後，您可能了解為什麼我們不提供[Office 365 Url 和 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)每個資料中心，只要是太互連和依賴彼此進行的可行的情況下。
   

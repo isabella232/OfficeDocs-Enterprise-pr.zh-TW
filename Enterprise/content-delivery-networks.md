@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 4/2/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 0140f704-6614-49bb-aa6c-89b75dcd7f1f
 description: 若要深入了解 Office 365 如何使用內容傳遞網路 (Cdn) 來改善效能使用這項資訊。
-ms.openlocfilehash: 5d02b28fad0e47473cc6a75948c9dd27e6728bb5
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 8694f8aa4caf6161d221d1375d97ad5b72fb1818
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490421"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068019"
 ---
 # <a name="content-delivery-networks-cdns"></a>內容傳遞網路 (Cdn)
 
@@ -186,7 +186,7 @@ Fqdn 的清單，以及它們如何運用 Cdn 變更一段時間。 我們已發
 
 [管理 Office 365 端點](https://docs.microsoft.com/en-us/office365/enterprise/managing-office-365-endpoints)
 
-[Office 365 URL 與 IP 位址範圍](https://go.microsoft.com/fwlink/p/?LinkID=293744)
+[Office 365 URL 與 IP 位址範圍](https://go.microsoft.com/fwlink/p/?LinkID=293744) (英文)
 
 [使用 SharePoint Online 中使用 Office 365 內容傳遞網路](https://docs.microsoft.com/en-us/office365/enterprise/use-office-365-cdn-with-spo)
 

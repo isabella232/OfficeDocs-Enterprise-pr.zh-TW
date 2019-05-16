@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 02/21/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: a094e647a0b228527e8702f24e57aa4276589f70
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 37f90ba5c008a4e0b562526d10185e01d07e4918
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487082"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067169"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -219,7 +219,7 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
   
 [ExpressRoute 與 Power BI](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
   
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
   
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
   

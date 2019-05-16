@@ -1,10 +1,9 @@
 ---
 title: 部署 Office 365 規劃檢查清單
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 8/21/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -19,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 5fa4f6ef-35ad-4840-91c1-4834df3df5a0
 description: 這份檢查清單可協助您的組織，當您規劃及準備移轉至 Office 365。 上架中心所提供的指引與對齊階段與步驟的檢查清單中。
-ms.openlocfilehash: 42c292f3fe5f8a3753a733e5b362521d95eab827
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 858ae9520db4cfb18696c817f041b879d66484e3
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490099"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067879"
 ---
 # <a name="deployment-planning-checklist-for-office-365"></a>部署 Office 365 規劃檢查清單
 

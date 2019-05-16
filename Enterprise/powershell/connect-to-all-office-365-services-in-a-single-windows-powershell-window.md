@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 02/28/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -16,12 +16,12 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要： 將 Windows PowerShell 連線到單一的 Windows PowerShell 視窗中的所有 Office 365 服務。
-ms.openlocfilehash: 3f6153d5ea8b88d8c6853dbbe597f2cf7cc62fab
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: ae9487f48439c6f8d98f927c610e5f2af4c1b361
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30573967"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069179"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
@@ -214,7 +214,7 @@ Exchange Online 和安全性&amp;合規性中心，請參閱下列主題，以�
 請注意，在這兩種情況下，您必須使用不同的工作階段的 Exchange Online 遠端 PowerShell 模組來連線。
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)

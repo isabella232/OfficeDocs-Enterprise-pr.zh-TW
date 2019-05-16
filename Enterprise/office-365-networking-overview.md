@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 9/12/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: 討論網路最佳化是重要的 SaaS 服務，Office 365 網路功能的目標為何，而且 SaaS 需要不同的網路功能與其他工作負載的方式。
-ms.openlocfilehash: 4acaee86136c88e5ac5b3c795f594fb056d15204
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 88fde9a142b5394b642a46c19da6979c93fe8f9e
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33491902"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069617"
 ---
 # <a name="office-365-network-connectivity-overview"></a>Office 365 網路連線能力概觀
 

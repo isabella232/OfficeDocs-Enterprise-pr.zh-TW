@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 03/15/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 description: 新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 核心客戶資料 」 一詞指的是 Microsoft 線上服務條款中所定義的客戶資料的子集： Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容） 和 SharePoint Online 站台內容和檔案儲存在該站台內，而且檔案上傳至商務用 OneDrive。
-ms.openlocfilehash: d30ad64c96a3a2e790b911845141e1601758d384
-ms.sourcegitcommit: 4ef8e113fa20b539de1087422455fc26ff123d55
+ms.openlocfilehash: 8dd9295618c765bb9eeaffbcec82ff83af8b2e21
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "30647981"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069989"
 ---
 # <a name="moving-core-data-to-new-office-365-datacenter-geos"></a>將核心資料移至新的 Office 365 資料中心 geos
 
@@ -36,7 +36,7 @@ ms.locfileid: "30647981"
 |澳洲請紐西蘭斐濟 * * *| 亞太地區 / | 澳大利亞 | 2015 年 3 月 |
 |印度 * * *| 亞太地區 / | 印度 | 2015 年 10 月 |
 |加拿大 * * *| 北美 | 加拿大 | 2016 年 5 月 |
-|英國 * * *| 歐洲 | United Kingdom | 2016 年 9 月 |
+|英國 * * *| 歐洲 | 英國 | 2016 年 9 月 |
 |南韓 * * *| 亞太地區 / | 南韓 | 2017 年 4 月 |
 |法國 * * *| 歐洲 | 法國 | 2018 年 3 月 |
 |阿拉伯聯合大公國 * * *| 歐洲 | 阿拉伯聯合大公國 | 宣佈 |

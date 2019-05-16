@@ -1,10 +1,9 @@
 ---
 title: Office 365 的協力廠商 SSL 憑證計劃
-ms.author: robmazz
-author: robmazz
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 10/24/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: b48cdf63-07e0-4cda-8c12-4871590f59ce
 description: 摘要： 說明 Exchange 內部部署和混合部署、 使用 AD FS 的 SSO 所需 SSL 憑證的 Exchange 線上服務，以及 Exchange Web 服務。
-ms.openlocfilehash: 3c22daa2315e36c45b5b5dd6271842168c90726d
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 9b5bcb20272dcaf5c1df39179a4ba4b05fc04a28
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33491409"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069349"
 ---
 # <a name="plan-for-third-party-ssl-certificates-for-office-365"></a>Office 365 的協力廠商 SSL 憑證計劃
 

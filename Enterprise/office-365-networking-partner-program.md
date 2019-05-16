@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 8/20/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -14,12 +14,12 @@ search.appverid: MOE150
 ms.assetid: 8a113a50-0071-4155-bb8e-eba5a8dbd4c8
 description: Office 365 網路合作夥伴計劃可讓您以通過認證成為使用 Office 365 的裝置。
 hideEdit: true
-ms.openlocfilehash: 41dc90c95fff9b3abb7d4ed90f9e1ee6f5f35a17
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: ee18ac3f681702b18f4d9898875ee8b7ba499b27
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33492029"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069589"
 ---
 # <a name="office-365-networking-partner-program"></a>Office 365 網路合作夥伴計劃
 

@@ -4,7 +4,7 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 8/31/2017
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - Ent_O365
 description: 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
-ms.openlocfilehash: 328b8f66b86f2fc1880b3a9d65f4b9fd63b51d40
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: a399cb0057e9cc62e180fea8a6d7b9dbf1993a5f
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33491816"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069519"
 ---
 # <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄調整 Office 365 效能
 

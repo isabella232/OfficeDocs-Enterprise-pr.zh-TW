@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 6/26/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
 description: 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
-ms.openlocfilehash: c6e40dc29df55aa87e8d40c6203100fa1e7ad38f
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 2cce550aa4c14eb0de9daa6eac85cde6d1754add
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490919"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068179"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>使用 BGP 社群中 ExpressRoute for Office 365 案例
 

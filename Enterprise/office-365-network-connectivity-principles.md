@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 6/14/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -14,12 +14,12 @@ ms.collection:
 search.appverid: MET150
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 description: 在您開始規劃您的 Office 365 網路連線的網路之前，請務必了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。 本文可協助您了解安全地最佳化 Office 365 網路連線的最新的指引。
-ms.openlocfilehash: 3dfb0732ff15c7d8f3c20ac659f94b8d807afa07
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 2d8b629d291be44da3d3360e676e7a01d9cd5a35
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33492327"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069819"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 

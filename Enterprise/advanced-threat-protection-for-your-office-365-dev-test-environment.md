@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 12/15/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 51019757-20ac-498c-b51e-cae6d41a8c08
 description: 摘要：設定並示範 Office 365 開發/測試環境中的 Office 365 進階威脅防護。
-ms.openlocfilehash: 53bff386490ed9647a511f75c997cb91b0acc181
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 7063b56762711fdb06c0c879d74b783c0137b550
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490149"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068299"
 ---
 # <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階威脅防護
 

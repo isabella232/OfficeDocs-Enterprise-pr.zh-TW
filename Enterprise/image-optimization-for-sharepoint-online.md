@@ -4,7 +4,7 @@ ms.author: krowley
 author: kccross
 manager: laurawi
 ms.date: 6/19/2018
-ms.audience: Admin
+audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
@@ -13,12 +13,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: c7edb02a-fdab-4f91-9a20-cba01dad28ef
 description: 了解如何使用轉譯和精靈加快來改善您的 SharePoint Online 網站上的影像效能。
-ms.openlocfilehash: 313046dec885a38062635254699301bcf556d698
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: b1210146aa3efb042937abeece4df0e62a579b94
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487351"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067369"
 ---
 # <a name="image-optimization-for-sharepoint-online"></a>SharePoint Online 的影像最佳化
 

@@ -4,7 +4,7 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
 ms.date: 8/1/2017
-ms.audience: Admin
+audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -21,12 +21,12 @@ ms.assetid: e4c45989-4b1a-462e-a81b-2a13191cf517
 ms.collection:
 - M365-security-compliance
 description: 了解 Office 365 新式驗證運作方式的 Office 2013 和 2016年用戶端應用程式。
-ms.openlocfilehash: 5e42ec2fcf8f27990af187e4ad26ba65909ac709
-ms.sourcegitcommit: 51f9e89e4b9d54f92ef5c70468bda96e664b8a6b
+ms.openlocfilehash: 80a5f557fc1f3d189e8852ac3039521cfc31fb2c
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "31957694"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070059"
 ---
 # <a name="how-modern-authentication-works-for-office-2013-and-office-2016-client-apps"></a>Office 2013 和 Office 2016 用戶端應用程式的新式驗證運作方式
 

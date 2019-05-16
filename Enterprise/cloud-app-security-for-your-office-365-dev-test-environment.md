@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 07/05/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 22248f2f-b370-435e-b6ac-0ae0cae36b96
 description: 摘要： 設定並示範 Office 365 開發/測試環境中的 Office 365 雲端 App 安全性。
-ms.openlocfilehash: aa6fada78ada2f97242ffe8f60c9032d618f3b9b
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: af2a2657ede46818b9d705ca38f99d779f98fb11
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33490119"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068099"
 ---
 # <a name="cloud-app-security-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發人員/測試環境的雲端 App 安全性
 

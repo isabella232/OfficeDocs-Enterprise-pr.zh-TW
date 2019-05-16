@@ -4,7 +4,7 @@ ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
 ms.date: 10/10/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: c08786fb-298e-437c-8222-dab7625fc815
 description: 摘要： 說明 Office 365 政府版方案和 Microsoft Office 365 元件中的 IPv6 支援。
-ms.openlocfilehash: 82af5c7659b3c16c8e92b45b65b6868a404eca23
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 2c73f5191cf46ddcb036e9077b855ebf752a2f55
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487750"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34067229"
 ---
 # <a name="ipv6-support-in-office-365-services"></a>Office 365 服務中的 IPv6 支援
 

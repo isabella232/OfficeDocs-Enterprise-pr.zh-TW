@@ -4,7 +4,7 @@ ms.author: deniseb
 author: denisebmsft
 manager: laurawi
 ms.date: 04/12/2019
-ms.audience: ITPro
+audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
 localization_priority: Normal
@@ -13,12 +13,12 @@ search.appverid:
 ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 如果您使用 Office 2007 或 Office 2010，該是時候來規劃升級。 不會停滯使用過期的應用程式。 若要開始使用您的計劃使用這些資源。
-ms.openlocfilehash: ee14250f6bb17a571ff2c2e7e4cbd68d91d13646
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: 3643463e950fdfdf4440a7060383b3e7f21a9037
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33492048"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34069329"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
