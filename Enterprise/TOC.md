@@ -21,7 +21,8 @@
 ### [連線到 Office 365 服務的網路裝置的計劃](plan-for-network-devices.md)
 ### [Office 365 的第三方 SSL 憑證的計劃](plan-for-third-party-ssl-certificates.md)
 ### [了解 Office 365 身分識別和 Azure Active Directory](about-office-365-identity.md)
-### [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/zh-TW/office365/securitycompliance/choose-between-mdm-and-intune)
+### 
+  [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/zh-TW/office365/securitycompliance/choose-between-mdm-and-intune)
 ### [Office 365 的網路和移轉規劃](network-and-migration-planning.md)
 ### [對 Office 365 的網路連線](network-connectivity.md)
 ### [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
@@ -32,9 +33,11 @@
 ### [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](modern-auth-for-office-2013-and-2016.md)
 ### [Office 365 租用戶間共同作業](office-365-inter-tenant-collaboration.md)
 ## Office 365 用戶端支援
+### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
 ### [行動應用程式管理](office-365-client-support-mobile-application-management.md)
 ### [新式驗證](office-365-client-support-modern-authentication.md)
+### [單一登入](office-365-client-support-single-sign-on.md)
 ## 混合式選項
 ### [商務用 Skype Server 和 Exchange Server 的混合式新式驗證與必要條件](hybrid-modern-auth-overview.md)
 ### [如何設定 Exchange Server 內部部署以使用混合式新式驗證](configure-exchange-server-for-hybrid-modern-authentication.md)
@@ -72,7 +75,7 @@
 ## [FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/office-365)
 ## [為貴組織部署 Office 365 企業版](setup-overview-for-enterprises.md)
 ### [部署 Office 365 規劃檢查清單](deployment-planning-checklist.md)
-### [Office 365 的安全性最佳做法](https://docs.microsoft.com/Office365/SecurityCompliance/security-best-practices)
+### [Office 365 的安全性最佳做法](https://docs.microsoft.com/office365/securitycompliance/security-best-practices)
 ## [設定網路](set-up-network-for-office-365.md)
 ### [Office 365 網路連線能力概觀](office-365-networking-overview.md)
 ### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
@@ -161,8 +164,10 @@
 # 管理 Office 365
 ## [服務健康狀況](view-service-health.md)
 ### [監視連線](monitor-connectivity.md)
-### [支援選項](https://support.office.com/zh-TW/article/Contact-support-for-business-products-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-## [管理工具](https://support.office.com/zh-TW/article/Management-tools-for-Office-365-8e715d2a-c20e-492b-a9cb-60f3708f9241)
+### 
+  [支援選項](https://support.office.com/zh-TW/article/Contact-support-for-business-products-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
+## 
+  [管理工具](https://support.office.com/zh-TW/article/Management-tools-for-Office-365-8e715d2a-c20e-492b-a9cb-60f3708f9241)
 ### [用來管理 Office 365 帳戶的工具](manage-office-365-accounts.md)
 ### [同時將多位使用者新增至 Office 365 - 系統管理說明](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件 - 系統管理說明](recover-deleted-items-in-a-mailbox.md)
