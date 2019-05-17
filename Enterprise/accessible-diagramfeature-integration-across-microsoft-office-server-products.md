@@ -4,19 +4,19 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 12/15/2017
-ms.audience: ITPro
+audience: ITPro
 ms.topic: article
 ms.collection: Ent_O365
 ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: d78983fa-0951-49b8-b890-d76a44c70035
 description: 本文是圖表的名為功能整合跨 Microsoft Office Server 產品-SharePoint Server、 Exchange Server、 Lync Server 和 Office Online 易於存取的文字版本。
-ms.openlocfilehash: 809a9272d7088ac069aad6b64daedfe059188247
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: c8bb7a26c6fbf0ed74be0b31fd58a65e7b1b5787
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33487809"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068769"
 ---
 # <a name="accessible-diagram---feature-integration-across-microsoft-office-server-products"></a>易於存取的圖表-功能整合跨 Microsoft Office 伺服器產品
 
