@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: 摘要：在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
-ms.openlocfilehash: f04488ad9a99111734d476725eb8e9d423c167cd
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 299723c8f49cddd4a30ba2defc73dd156792f337
+ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067479"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "34102521"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
@@ -260,7 +260,5 @@ Restart-Computer
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
-
-[同盟的驗證選項](about-office-365-identity.md#federated-authentication-options)
 
 

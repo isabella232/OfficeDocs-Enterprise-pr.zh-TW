@@ -1,9 +1,9 @@
 ---
-title: 用來管理 Office 365 帳戶的工具
-ms.author: robmazz
-author: robmazz
+title: 管理 Office 365 帳戶的工具
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.audience: Admin
+audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,14 +18,14 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具用來管理您的 Office 365 使用者，以及如何您可以使用取決於您要如何管理使用者身分識別。 '
-ms.openlocfilehash: 6e8f35d9b4f753d8e5ddad448d311767971c3c2a
-ms.sourcegitcommit: 29f937b7430c708c9dbec23bdc4089e86c37c225
+ms.openlocfilehash: 3b1a869825991d9c85e16b1cc5f50646806ab3fd
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "31001596"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34070373"
 ---
-# <a name="tools-to-manage-office-365-accounts"></a>用來管理 Office 365 帳戶的工具
+# <a name="tools-to-manage-office-365-accounts"></a>管理 Office 365 帳戶的工具
 
 您可以根據您的設定，以數種不同的方式，管理 Office 365 使用者。 您可以管理[Microsoft 365 系統管理中心](https://admin.microsoft.com)，Windows PowerShell，您的內部部署目錄，或 Azure Active Directory 系統管理入口網站中的使用者。
 

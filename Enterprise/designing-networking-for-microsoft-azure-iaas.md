@@ -4,7 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 11/28/2018
-ms.audience: ITPro
+audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
 localization_priority: Normal
@@ -14,12 +14,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 9cb70c9d-9ed9-47cc-af5a-6403d87d3372
 description: 摘要： 了解如何設計 Microsoft Azure IaaS 中工作負載的最佳化網路功能。
-ms.openlocfilehash: c41e92445dd01a94b7d305b521bbd4330311fcb4
-ms.sourcegitcommit: 85974a1891ac45286efa13cc76eefa3cce28fc22
+ms.openlocfilehash: b06564c8a86c59dac4ac9a5380cd88cf9d045974
+ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "33491006"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "34068129"
 ---
 # <a name="designing-networking-for-microsoft-azure-iaas"></a>設計 Microsoft Azure IaaS 的網路
 
@@ -128,10 +128,10 @@ Azure 每個子網路上使用的第一次 3 的地址。 因此，在 Azure 的
 |**所需的虛擬機器**|**主機位元**|**子網路大小**|
 |:-----|:-----|:-----|
 |1-3  <br/> |3  <br/> |/29  <br/> |
-|4-11  <br/> |4   <br/> |/28  <br/> |
-|12-27  <br/> |5   <br/> |/27  <br/> |
-|28-59  <br/> |6   <br/> |/26  <br/> |
-|60-123  <br/> |7   <br/> |/25  <br/> |
+|4-11  <br/> |4  <br/> |/28  <br/> |
+|12-27  <br/> |5  <br/> |/27  <br/> |
+|28-59  <br/> |6  <br/> |/26  <br/> |
+|60-123  <br/> |7  <br/> |/25  <br/> |
    
  **表 3： 虛擬機器需求和其子網路大小**
   

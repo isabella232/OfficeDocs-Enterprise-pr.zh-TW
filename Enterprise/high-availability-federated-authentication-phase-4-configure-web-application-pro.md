@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
 description: 摘要： 在 Microsoft Azure 中設定 web 應用程式 proxy 伺服器運作的 Office 365 高可用性同盟驗證。
-ms.openlocfilehash: fa8f5d278283f66bda0aa9efb0dddf40e52ee1a6
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: fe98657f1298021d9ed2c32a357051b5faeb4f21
+ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067329"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "34102531"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
@@ -171,7 +171,4 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
-
-[同盟的驗證選項](about-office-365-identity.md#federated-authentication-options)
-
 

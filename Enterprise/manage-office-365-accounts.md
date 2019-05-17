@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具用來管理您的 Office 365 使用者，以及如何您可以使用取決於您要如何管理使用者身分識別。 '
-ms.openlocfilehash: a9bd7cd75902d2b3b3ff17572849fb1a46053eb5
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 007de5844badbaad2c5061c69cae33523438805f
+ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067189"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "34102441"
 ---
 # <a name="tools-to-manage-office-365-accounts"></a>管理 Office 365 帳戶的工具
 
@@ -35,15 +35,15 @@ ms.locfileid: "34067189"
   
 ### <a name="cloud-authentication"></a>雲端驗證
 
-- [雲端驗證](about-office-365-identity.md#cloud-authentication)-建立及管理使用者在系統管理中心中，您也可以使用 Windows PowerShell 或 Azure Active Directory，來管理您的使用者。 
+- 雲端驗證-建立及管理使用者在系統管理中心中，您也可以使用 Windows PowerShell 或 Azure Active Directory 來管理您的使用者。 
     
-- [密碼雜湊同步處理與無縫單一登入](about-office-365-identity.md)-啟用內部部署目錄物件的 [驗證]，在 Azure AD 中的最簡單方式。 使用密碼雜湊同步處理 (PHS)，您可以與 Office 365 同步處理您的內部部署 Active Directory 使用者帳戶物件及管理您內部使用者。 
+- 無縫單一登入-啟用內部部署目錄物件的 [驗證]，在 Azure AD 中的最簡單方式與密碼雜湊同步處理。 使用密碼雜湊同步處理 (PHS)，您可以與 Office 365 同步處理您的內部部署 Active Directory 使用者帳戶物件及管理您內部使用者。 
     
-- [無縫單一登入與通過驗證](about-office-365-identity.md)-提供使用一或多個內部部署伺服器上執行的軟體代理程式來驗證直接與使用者的 Azure AD 驗證服務的簡單密碼驗證您內部部署 Active Directory。 
+- 使用無縫單一登入-通過驗證提供用來驗證直接與您的內部作用中使用者的一或多個內部部署伺服器上執行的軟體代理程式的 Azure AD 驗證服務的簡單密碼驗證目錄。 
     
 ### <a name="federated-authentication"></a>同盟的驗證
 
-- [同盟驗證選項](about-office-365-identity.md#federated-authentication-options)-主要使用於具有較複雜的驗證需求，大型企業組織內部部署與 Office 365 同步處理目錄物件和使用者帳戶為受管理的內部部署。 
+- 同盟的驗證選項-主要使用於具有較複雜的驗證需求，物件會與 Office 365 和使用者帳戶同步處理的內部部署目錄的大型企業組織為受管理的內部部署。 
     
 - [協力廠商驗證與身分識別提供者](about-office-365-identity.md)的內部部署目錄物件可能會同步至 Office 365 部署及雲端資源存取主要是由協力廠商身分識別提供者 (Isp) 所管理。 
     
