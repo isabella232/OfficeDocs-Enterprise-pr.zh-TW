@@ -14,12 +14,12 @@ ms.collection:
 search.appverid: MET150
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 description: 在您開始規劃您的 Office 365 網路連線的網路之前，請務必了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。 本文可協助您了解安全地最佳化 Office 365 網路連線的最新的指引。
-ms.openlocfilehash: 2d8b629d291be44da3d3360e676e7a01d9cd5a35
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: d242196c2136962bf11472b51c28889977c2fc21
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069819"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162496"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 
@@ -200,7 +200,7 @@ Microsoft 提供整體範圍的 Office 365 安全性功能，並提供採用安�
   
 - **使用多重要素驗證 (MFA)** MFA 會藉由要求使用者確認電話、 文字訊息或其智慧型手機上的應用程式通知正確輸入其密碼之後，將額外的保護層級新增至強式密碼策略。
 
-- **使用 Office 365 雲端 App 安全性**設定追蹤異常的活動，並對它的原則。 設定與 Office 365 雲端 App 安全性的提醒，以系統管理員可以檢閱不尋常或高風險使用者活動，例如下載大量的資料，多失敗的登入嘗試或連線來自未知或危險的 IP 位址。
+- **使用 Microsoft Cloud App Security**設定追蹤異常的活動，並對它的原則。 設定提醒與 Microsoft Cloud App Security，讓系統管理員可以檢閱不尋常或高風險使用者活動，例如下載大量的資料，多失敗的登入嘗試或連線來自未知或危險的 IP 位址。
 
 - **設定資料外洩防護 (DLP)** DLP 可讓您識別敏感資料，並建立原則，以協助防止使用者意外或故意共用資料。 DLP 的運作方式，讓您的使用者可以符合規範，而不中斷其工作流程包括 Exchange Online、 SharePoint Online 和 OneDrive 的 Office 365。
 

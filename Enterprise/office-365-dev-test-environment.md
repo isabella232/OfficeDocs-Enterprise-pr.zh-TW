@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: ac234d783685f3812b899491d6c28ffb46a2ecf7
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 2f1856d203e892c98b44ccc1dbe1598d527165de
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069789"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162506"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -268,8 +268,6 @@ New-SPOSite -Url $siteURL -Owner $owner -StorageQuota 1000 -Title "Support site 
 - [適用於您的 Office 365 開發/測試環境的多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
     
 - [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
-    
-- [Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
     
 - [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
     

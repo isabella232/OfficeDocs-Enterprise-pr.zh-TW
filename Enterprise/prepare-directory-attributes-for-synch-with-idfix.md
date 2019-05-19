@@ -16,12 +16,12 @@ search.appverid:
 - MOE150
 ms.assetid: 497593cf-24c6-491c-940b-7c86dcde9de0
 description: 使用 IdFix 準備並清除您的內部部署目錄同步處理至 Office 365 之前加上提供的指示。
-ms.openlocfilehash: 134f9cd60e65b64b91fb42fd7cbfa300626fc867
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: ca00fe1ee8ad829a3b72e51b4e292c8ea3b81e48
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34071069"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162366"
 ---
 # <a name="prepare-directory-attributes-for-synchronization-with-office-365-by-using-the-idfix-tool"></a>使用 IdFix 工具準備目錄屬性以與 Office 365 進行同步處理
 本主題包含有關執行 IdFix 工具的詳細的指示一些常見的錯誤，您可能會遇到，建議的修正程式、 範例，以及如果您有大量的錯誤，該怎麼辦的最佳做法。
@@ -81,3 +81,7 @@ ms.locfileid: "34071069"
   
 ## <a name="rolling-back-your-changes-by-using-the-idfix-gui"></a>使用 IdFix GUI 回復變更
 按一下 [**套用**] 以套用變更，每次 IdFix 工具會建立一個稱為列出您剛才做的變更交易記錄檔的不同檔案。 您可以使用交易記錄檔將回復處於最新的記錄檔，以防您犯只是這些變更。 如果您要更新時出錯，您可以藉由按一下 [**復原**復原最近套用的變更。 當您按一下 [**復原**] 時，IdFix 會使用交易記錄檔來復原只會在最新的交易記錄檔的變更。 如需使用交易記錄檔的詳細資訊，請參閱[參照： Office 365 IdFix 交易記錄檔](idfix-transaction-log.md)。
+
+## <a name="next-step"></a>下一步
+
+[設定目錄同步處理](set-up-directory-synchronization.md)

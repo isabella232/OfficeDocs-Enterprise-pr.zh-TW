@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 0a3555dc-6f96-49a5-b9e2-7760e16630b3
 description: 摘要：在 Microsoft Azure 中建立模擬的跨單位部署虛擬網路，以作為開發/測試環境。
-ms.openlocfilehash: 23e713ee50f1efed9ede07b13c289195d9054f8d
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 595aa20595f43f481aaf090a14d0d7c0df000345
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070419"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162486"
 ---
 # <a name="simulated-cross-premises-virtual-network-in-azure"></a>Azure 中模擬的跨單位部署虛擬網路
 
@@ -219,8 +219,6 @@ New-ADReplicationSubnet -Name "192.168.0.0/16" -Site "XPrem"
 [Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
 [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
-  
-[Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
 [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
   

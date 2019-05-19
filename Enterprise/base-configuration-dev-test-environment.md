@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 6fcbb50c-ac68-4be7-9fc5-dd0f275c1e3d
 description: 摘要：在 Microsoft Azure 中建立簡化的內部網路作為開發/測試環境。
-ms.openlocfilehash: 80011fced526ecf38cf31a89015ff0bbe7fa8b7a
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: f6a9f2f2742b56ffb5f8a7521a14bfe48d3adc22
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068289"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162436"
 ---
 # <a name="base-configuration-devtest-environment"></a>基底組態開發/測試環境
 
@@ -439,6 +439,5 @@ Start-AzVM -ResourceGroupName $rgName -Name "CLIENT1"
 
 - [Office 365 開發/測試環境](office-365-dev-test-environment.md)
 - [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
-- [Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
 - [適用於 Office 365 開發/測試環境的進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
 - [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)

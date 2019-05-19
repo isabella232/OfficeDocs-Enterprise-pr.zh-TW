@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 51019757-20ac-498c-b51e-cae6d41a8c08
 description: 摘要：設定並示範 Office 365 開發/測試環境中的 Office 365 進階威脅防護。
-ms.openlocfilehash: 7063b56762711fdb06c0c879d74b783c0137b550
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 274f8558d23714a73e0891500dac5d5e007b6be2
+ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068299"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "34162416"
 ---
 # <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階威脅防護
 
@@ -167,8 +167,6 @@ Office 365 進階威脅防護 (ATP) 是Exchange Online Protection (EOP) 的一�
 [Office 365 開發/測試環境](office-365-dev-test-environment.md)
   
 [Office 365 開發/測試環境的 DirSync](dirsync-for-your-office-365-dev-test-environment.md)
-  
-[Office 365 開發人員/測試環境的雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md) 
 
