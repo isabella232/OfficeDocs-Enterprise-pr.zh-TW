@@ -30,8 +30,8 @@
 #### [混合式身分識別](plan-for-directory-synchronization.md)
 
 ### [規劃 Office 365 的第三方 SSL 憑證](plan-for-third-party-ssl-certificates.md)
-### [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
-### [Office 365 系統管理員的整合式 App 和 Azure AD](integrated-apps-and-azure-ads.md)
+### [Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
+### [整合的應用程式和 Azure AD](integrated-apps-and-azure-ads.md)
 
 ### Office 365 整合
 #### [與內部部署整合](office-365-integration.md)
@@ -80,7 +80,6 @@
 ### [目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)
 ### [多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
 ### [同盟身份](federated-identity-for-your-office-365-dev-test-environment.md)
-### [雲端 App 安全性](cloud-app-security-for-your-office-365-dev-test-environment.md)
 ### [進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
 ### [進階 eDiscovery](advanced-ediscovery-for-your-office-365-dev-test-environment.md)
 ### [敏感性檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
@@ -123,23 +122,26 @@
 #### [使用 ExpressRoute for Office 365 進行路由傳送](routing-with-expressroute.md)
 
 ## 2. 設定您的身分識別
-### [為目錄同步作業做好準備](prepare-for-directory-synchronization.md)
-### 使用 IdFix 工具
-#### [使用 IdFix 工具準備目錄屬性](prepare-directory-attributes-for-synch-with-idfix.md)
-#### [安裝和執行 IdFix 工具](install-and-run-idfix.md)
-#### [IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)
-#### [IdFix 交易記錄](idfix-transaction-log.md)
-### [設定目錄同步處理](set-up-directory-synchronization.md)
 ### [保護您的全域系統管理員帳戶](protect-your-global-administrator-accounts.md)
+### [僅雲端的身分識別](cloud-only-identities.md)
+### 混合式身分識別
+#### [為目錄同步作業做好準備](prepare-for-directory-synchronization.md)
+#### 使用 IdFix 工具
+##### [使用 IdFix 工具準備目錄屬性](prepare-directory-attributes-for-synch-with-idfix.md)
+##### [安裝和執行 IdFix 工具](install-and-run-idfix.md)
+##### [IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)
+##### [IdFix 交易記錄](idfix-transaction-log.md)
+#### [設定目錄同步處理](set-up-directory-synchronization.md)
+### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts.md)
 
 ## 3. 部署用戶端軟體
 ### [部署 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
 ### [部署商務用 Skype 用戶端](https://docs.microsoft.com/skypeforbusiness/set-up-skype-for-business-online/deploy-the-skype-for-business-client-in-office-365)
 ### [部署及管理行動裝置應用程式](https://support.office.com/article/d35db652-629d-4087-8dc0-1e0ed922307c)
 
-## [4. 使用 Intune 設定裝置管理](https://docs.microsoft.com/intune/setup-steps)
+## [4. 設定行動裝置管理](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 
-## 5. 設定服務與應用程式
+## 5. 設定服務及應用程式
 ### [準備好](configure-services-and-applications.md)
 ### [將資料移轉至 Office 365](migrate-data-to-office-365.md)
 ### [Exchange Online](https://docs.microsoft.com/Exchange/exchange-online)
