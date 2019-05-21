@@ -15,35 +15,65 @@ ms.collection:
 - M365-subscription-management
 ms.custom: Adm_O365
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
-description: 這些概觀步驟被設計來協助您部署 Office 365、連線您的 Active Directory、 移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
-ms.openlocfilehash: 2530b170c607f635f6f1baebf1d83fa7745d23a6
-ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
+description: 這些步驟的概觀被設計來協助您設定您的網路、 建立您設定身分識別、 部署 Office 365 專業增強版、 移轉您的資料，並協助您組織中開始使用 Office 365 的人員。
+ms.openlocfilehash: 74f119b678e04bb9f541af83feb5396ba3bed8f2
+ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "34102541"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34249501"
 ---
-# <a name="deploy-office-365-enterprise-for-your-organization"></a><span data-ttu-id="4668f-103">為貴組織部署 Office 365 企業版</span><span class="sxs-lookup"><span data-stu-id="4668f-103">Deploy Office 365 Enterprise for your organization</span></span>
-<span data-ttu-id="4668f-p101">準備好部署並將 Office 365 企業版與您的內部部署基礎結構整合嗎？這些概觀步驟是設計來協助您連線至目錄、移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。</span><span class="sxs-lookup"><span data-stu-id="4668f-p101">Ready to deploy and integrate Office 365 Enterprise with your on-premises infrastructure? These overview steps are designed to help you connect your directory, migrate your data, and help the people in your organization begin using the latest version of Office 2016.</span></span>
-  
-<span data-ttu-id="4668f-106">這些步驟適用於想要開始使用 Office 365 企業版自訂部署的企業和[非營利組織](https://go.microsoft.com/fwlink/?LinkId=627221)。</span><span class="sxs-lookup"><span data-stu-id="4668f-106">These steps are for businesses and [nonprofits](https://go.microsoft.com/fwlink/?LinkId=627221) that want to start with a custom deployment of Office 365 Enterprise.</span></span> 
-  
-<span data-ttu-id="4668f-p102">沒有 Office 365 企業版嗎？請參閱[設定商務用 Office 365](https://support.office.com/article/6a3a29a0-e616-4713-99d1-15eda62d04fa)，以取得小型企業的指示。</span><span class="sxs-lookup"><span data-stu-id="4668f-p102">Don't have Office 365 Enterprise? See [Set up Office 365 for business](https://support.office.com/article/6a3a29a0-e616-4713-99d1-15eda62d04fa) for instructions for small businesses.</span></span> 
-  
-## <a name="guided-enterprise-office-365-setup-process-with-fasttrack"></a><span data-ttu-id="4668f-109">使用 FastTrack 引導企業 Office 365 設定程序</span><span class="sxs-lookup"><span data-stu-id="4668f-109">Guided enterprise Office 365 setup process with FastTrack</span></span>
-<span data-ttu-id="4668f-p103">Office 365 **[FastTrack](https://docs.microsoft.com/fasttrack)** 是部署 Office 365 的最佳方法。FastTrack 會逐步引導您執行最常見的部署設定，同時可回答問題。如果您想要自助或合作夥伴的指導，請使用我們的 [Office 365 設定指南](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)、我們的 [Office 365 設定精靈](https://aka.ms/o365fasttrack)，或[尋找合格的合作夥伴](https://partnercenter.microsoft.com/en-us/pcv/search)。</span><span class="sxs-lookup"><span data-stu-id="4668f-p103">Office 365 **[FastTrack](https://docs.microsoft.com/fasttrack)** is the best method for deploying Office 365. FastTrack guides you through the most common deployment configurations and can answer questions along the way. If you want to self-help or guidance from a partner, use our [Office 365 setup guide](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa), our [Office 365 setup wizards](https://aka.ms/o365fasttrack), or [find a qualified partner](https://partnercenter.microsoft.com/en-us/pcv/search).</span></span>
+# <a name="deploy-office-365-enterprise-for-your-organization"></a><span data-ttu-id="11f04-103">為貴組織部署 Office 365 企業版</span><span class="sxs-lookup"><span data-stu-id="11f04-103">Deploy Office 365 Enterprise for your organization</span></span>
 
-## <a name="self-deployment-of-office-365"></a><span data-ttu-id="4668f-113">自助部署 Office 365</span><span class="sxs-lookup"><span data-stu-id="4668f-113">Self-deployment of Office 365</span></span>
-<span data-ttu-id="4668f-114">如果您想要自行部署 Office 365，下列的部署步驟可提供協助。</span><span class="sxs-lookup"><span data-stu-id="4668f-114">If you want to deploy Office 365 on your own, the following deployment steps are here to help.</span></span>
+<span data-ttu-id="11f04-104">準備好部署 Office 365 企業版、 整合與您的內部部署基礎結構，並讓您的員工，若要利用雲端生產力和共同作業？</span><span class="sxs-lookup"><span data-stu-id="11f04-104">Are you ready to deploy Office 365 Enterprise, integrate it with your on-premises infrastructure, and enable your employees to take advantage of cloud-based productivity and collaboration?</span></span>
 
-1. <span data-ttu-id="4668f-p104">**[準備好使用 Office 365](get-your-organization-ready-for-office-365.md)**。這些工具和資源可協助您備妥 Office 365 的網路、目錄及使用者。</span><span class="sxs-lookup"><span data-stu-id="4668f-p104">**[Get ready for Office 365](get-your-organization-ready-for-office-365.md)**. These tools and resources will help you get your network, directory, and end users ready for Office 365.</span></span>
+<span data-ttu-id="11f04-105">本文說明兩個部署選項，是否要顯示 [說明或執行它自己。</span><span class="sxs-lookup"><span data-stu-id="11f04-105">This article describes two deployment options, whether you want help or are doing it on your own.</span></span> <span data-ttu-id="11f04-106">在每個案例中，Microsoft 會提供您在部署成功的引導式的路徑。</span><span class="sxs-lookup"><span data-stu-id="11f04-106">In each case, Microsoft provides a guided path for you to follow for deployment success.</span></span>
 
-2. <span data-ttu-id="4668f-117">**登入，並將您的網際網路網域新增至 Office 365**。</span><span class="sxs-lookup"><span data-stu-id="4668f-117">**Sign in and add your internet domain(s) to Office 365**.</span></span> <span data-ttu-id="4668f-118">登入[Microsoft 365 系統管理中心](https://portal.microsoft.com)，按一下 [**安裝程式 > 網域**，，然後按一下 [**新增網域**。</span><span class="sxs-lookup"><span data-stu-id="4668f-118">Sign into the [Microsoft 365 admin center](https://portal.microsoft.com), click **Setup > Domains**, and then click **New domain**.</span></span> <span data-ttu-id="4668f-119">將一或多個網域新增至您的 Office 365 訂閱中，而不需要將使用者新增或移轉電子郵件。</span><span class="sxs-lookup"><span data-stu-id="4668f-119">Add one or more domains to your Office 365 subscription without adding users or migrating email.</span></span> 
+## <a name="guided-enterprise-office-365-setup-process-with-fasttrack"></a><span data-ttu-id="11f04-107">使用 FastTrack 引導企業 Office 365 設定程序</span><span class="sxs-lookup"><span data-stu-id="11f04-107">Guided enterprise Office 365 setup process with FastTrack</span></span>
 
->[!IMPORTANT] 
-><span data-ttu-id="4668f-120">如果您想要從內部部署目錄或使用單一登入同步處理您的使用者，則不適用基本設定指示。</span><span class="sxs-lookup"><span data-stu-id="4668f-120">The basic set up instructions won't work if you want to synchronize your users from an on-premises directory or utilize Single Sign-On.</span></span>
+<span data-ttu-id="11f04-108">**[適用於 Office 365 的 FastTrack](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365)** 是部署 Office 365 的最佳方法。</span><span class="sxs-lookup"><span data-stu-id="11f04-108">**[FastTrack for Office 365](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365)** is the best method for deploying Office 365.</span></span> <span data-ttu-id="11f04-109">FastTrack 引導您完成最常見的部署設定，並可以回答一路的問題。</span><span class="sxs-lookup"><span data-stu-id="11f04-109">FastTrack guides you through the most common deployment configurations and can answer questions along the way.</span></span> 
 
-3. <span data-ttu-id="4668f-p106">**[將目錄連線至 Office 365](about-office-365-identity.md)**。身分識別同步處理及/或單一登入設定選項的引導。使用 [AAD Connect 建議程式](https://aka.ms/aadconnectpwsync)和 [Azure AD Premium 設定指南](https://aka.ms/aadpguidance)以取得自訂的設定指示。</span><span class="sxs-lookup"><span data-stu-id="4668f-p106">**[Connect your directory to Office 365](about-office-365-identity.md)**. Guide to the identity synchronization and/or single sign-on configuration options. Use the [AAD Connect advisor](https://aka.ms/aadconnectpwsync) and the [Azure AD Premium setup guide](https://aka.ms/aadpguidance) to get customized set up guidance.</span></span>
-4. <span data-ttu-id="4668f-p107">**[設定 Office 365 服務與應用程式](configure-services-and-applications.md)**。從這裡開始設定電子郵件、檔案共用、立即訊息或任何其他 Office 365 服務與應用程式。</span><span class="sxs-lookup"><span data-stu-id="4668f-p107">**[Configure Office 365 services and applications](configure-services-and-applications.md)**. Start here to configure email, file sharing, instant messaging, or any of the other Office 365 services and applications.</span></span>
-5. <span data-ttu-id="4668f-p108">**[將資料移轉到 Office 365](migrate-data-to-office-365.md)**。一旦設定服務後，您就可以開始移轉資料。</span><span class="sxs-lookup"><span data-stu-id="4668f-p108">**[Migrate data to Office 365](migrate-data-to-office-365.md)**. Once the services are configured, you can start migrating data.</span></span>
-6. <span data-ttu-id="4668f-p109">**[開始使用商務用 Office 365](https://support.office.com/article/Get-started-with-Office-365-for-business-d6466f0d-5d13-464a-adcb-00906ae87029)**。協助使用者在貴組織使用 Office 365 搭配這些資源建立信心。</span><span class="sxs-lookup"><span data-stu-id="4668f-p109">**[Get people using Office 365](https://support.office.com/article/Get-started-with-Office-365-for-business-d6466f0d-5d13-464a-adcb-00906ae87029)**. Help people in your organization build confidence using Office 365 with these resources.</span></span>
+<span data-ttu-id="11f04-110">若要存取一系列的安裝指南，登入您的 Office 365 訂閱，然後移至[Office 365 的設定](https://aka.ms/o365fasttrack)。</span><span class="sxs-lookup"><span data-stu-id="11f04-110">To access a series of setup guides, sign in to your Office 365 subscription, and then go to [Setting up Office 365](https://aka.ms/o365fasttrack).</span></span>
+
+>[!Note]
+><span data-ttu-id="11f04-111">您也可以從[Microsoft 合作夥伴](https://www.microsoft.com/solution-providers/home)取得協助。</span><span class="sxs-lookup"><span data-stu-id="11f04-111">You can also get help from a [Microsoft partner](https://www.microsoft.com/solution-providers/home).</span></span>
+>
+
+## <a name="self-deployment-of-office-365-enterprise"></a><span data-ttu-id="11f04-112">自助部署 Office 365 企業版</span><span class="sxs-lookup"><span data-stu-id="11f04-112">Self-deployment of Office 365 Enterprise</span></span>
+
+<span data-ttu-id="11f04-113">自行部署 Office 365 企業版會要求您執行要簡化雲端服務的組態，以及使用者採用的設計決策的詳細參考資料。</span><span class="sxs-lookup"><span data-stu-id="11f04-113">Deploying Office 365 Enterprise on your own requires that you perform detailed research to make the design decisions that streamline cloud service configuration and user adoption.</span></span> <span data-ttu-id="11f04-114">開始規劃[以下](get-your-organization-ready-for-office-365.md)。</span><span class="sxs-lookup"><span data-stu-id="11f04-114">Start your planning [here](get-your-organization-ready-for-office-365.md).</span></span>
+
+<span data-ttu-id="11f04-115">若要自行部署 Office 365 企業版，以下是建議的步驟。</span><span class="sxs-lookup"><span data-stu-id="11f04-115">To deploy Office 365 Enterprise on your own, here are the recommended steps.</span></span>
+
+1. <span data-ttu-id="11f04-116">設定網路</span><span class="sxs-lookup"><span data-stu-id="11f04-116">Set up your network</span></span>
+
+   <span data-ttu-id="11f04-117">包含新增您的網際網路網域和最佳化您的內部部署使用者的網路效能。</span><span class="sxs-lookup"><span data-stu-id="11f04-117">Includes adding your Internet domains and optimizing the network performance for your on-premises users.</span></span> <span data-ttu-id="11f04-118">開始[在這裡](set-up-network-for-office-365.md)。</span><span class="sxs-lookup"><span data-stu-id="11f04-118">Start [here](set-up-network-for-office-365.md).</span></span>
+ 
+2. <span data-ttu-id="11f04-119">設定您設定身分識別</span><span class="sxs-lookup"><span data-stu-id="11f04-119">Set up your identities</span></span>
+
+   <span data-ttu-id="11f04-120">包含決定身分識別模型 (僅限雲端或混合式)，以及混合式身分識別，設定您內部部署 Active Directory 網域服務 (AD DS) 和 Office 365 訂閱之間的目錄同步處理。</span><span class="sxs-lookup"><span data-stu-id="11f04-120">Includes determining an identity model (cloud-only or hybrid), and for hybrid identity, setting up directory synchronization between your on-premises Active Directory Domain Services (AD DS) and your Office 365 subscription.</span></span> <span data-ttu-id="11f04-121">開始[在這裡](protect-your-global-administrator-accounts.md)。</span><span class="sxs-lookup"><span data-stu-id="11f04-121">Start [here](protect-your-global-administrator-accounts.md).</span></span>
+
+3. <span data-ttu-id="11f04-122">實作的安全性功能</span><span class="sxs-lookup"><span data-stu-id="11f04-122">Implement security capabilities</span></span>
+
+   <span data-ttu-id="11f04-123">包含設定及推出基本及增強的安全性、 威脅和資訊保護您的租用戶和身分識別中第一個的 30 天、 前 90 天及過後。</span><span class="sxs-lookup"><span data-stu-id="11f04-123">Includes configuring and rolling out basic and enhanced security, threat, and information protections for your tenant and identities in the first 30 days, 90 days, and beyond.</span></span> <span data-ttu-id="11f04-124">開始[在這裡](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。</span><span class="sxs-lookup"><span data-stu-id="11f04-124">Start [here](https://docs.microsoft.com/office365/securitycompliance/security-roadmap).</span></span>
+ 
+4. <span data-ttu-id="11f04-125">部署用戶端軟體</span><span class="sxs-lookup"><span data-stu-id="11f04-125">Deploy client software</span></span>
+
+   <span data-ttu-id="11f04-126">包含部署 Office 365 專業增強版，您的裝置上的 Office 套件 （Word、 Excel、 PowerPoint 和其他人） 的雲端更新，而且一律目前版本。</span><span class="sxs-lookup"><span data-stu-id="11f04-126">Includes deploying Office 365 ProPlus, the cloud-updated and always-current version of the Office suite (Word, Excel, PowerPoint, and others) on your devices.</span></span> <span data-ttu-id="11f04-127">每個 Office 365 用戶端授權包含 Office 365 專業增強版授權。</span><span class="sxs-lookup"><span data-stu-id="11f04-127">Every Office 365 client license includes a license for Office 365 ProPlus.</span></span> <span data-ttu-id="11f04-128">開始[在這裡](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)。</span><span class="sxs-lookup"><span data-stu-id="11f04-128">Start [here](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus).</span></span>
+ 
+5. <span data-ttu-id="11f04-129">設定行動裝置管理</span><span class="sxs-lookup"><span data-stu-id="11f04-129">Set up mobile device management</span></span>
+
+   <span data-ttu-id="11f04-130">Office 365 企業版包含行動裝置管理功能，可協助您保護和管理使用者的行動裝置。</span><span class="sxs-lookup"><span data-stu-id="11f04-130">Office 365 Enterprise includes mobile device management capabilities that help you secure and manage your users' mobile devices.</span></span> <span data-ttu-id="11f04-131">開始[在這裡](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)。</span><span class="sxs-lookup"><span data-stu-id="11f04-131">Start [here](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).</span></span>
+ 
+6. <span data-ttu-id="11f04-132">設定服務及應用程式</span><span class="sxs-lookup"><span data-stu-id="11f04-132">Configure services and applications</span></span>
+
+   <span data-ttu-id="11f04-133">包含有關移轉的詳細資料，協助您開始在金鑰的 Office 365 服務，例如 Exchange Online、 SharePoint Online 和 microsoft Teams 上的文章連結。</span><span class="sxs-lookup"><span data-stu-id="11f04-133">Includes information on migration of your data and links to articles that get you started on key Office 365 services such as Exchange Online, SharePoint Online, and Teams.</span></span> <span data-ttu-id="11f04-134">開始[在這裡](configure-services-and-applications.md)。</span><span class="sxs-lookup"><span data-stu-id="11f04-134">Start [here](configure-services-and-applications.md).</span></span>
+ 
+7. <span data-ttu-id="11f04-135">訓練您的使用者</span><span class="sxs-lookup"><span data-stu-id="11f04-135">Train your users</span></span>
+
+   <span data-ttu-id="11f04-136">包含簡短的影片，以協助使用者充分利用 Office 365 快速。</span><span class="sxs-lookup"><span data-stu-id="11f04-136">Includes short videos that help your users get the most out of Office 365 quickly.</span></span> <span data-ttu-id="11f04-137">開始[在這裡](https://docs.microsoft.com/office365/admin/admin-overview/get-started-with-office-365#training-resources-for-your-users)。</span><span class="sxs-lookup"><span data-stu-id="11f04-137">Start [here](https://docs.microsoft.com/office365/admin/admin-overview/get-started-with-office-365#training-resources-for-your-users).</span></span>
+ 
+
+>[!Note]
+><span data-ttu-id="11f04-138">這些步驟也適用於企業和[非營利組織](https://go.microsoft.com/fwlink/?LinkId=627221)想要開始使用 Office 365 企業版自訂部署。</span><span class="sxs-lookup"><span data-stu-id="11f04-138">These steps are also for businesses and [nonprofits](https://go.microsoft.com/fwlink/?LinkId=627221) that want to start with a custom deployment of Office 365 Enterprise.</span></span> 
+>
