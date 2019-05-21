@@ -15,35 +15,65 @@ ms.collection:
 - M365-subscription-management
 ms.custom: Adm_O365
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
-description: 這些概觀步驟被設計來協助您部署 Office 365、連線您的 Active Directory、 移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
-ms.openlocfilehash: 2530b170c607f635f6f1baebf1d83fa7745d23a6
-ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
+description: 這些步驟的概觀被設計來協助您設定您的網路、 建立您設定身分識別、 部署 Office 365 專業增強版、 移轉您的資料，並協助您組織中開始使用 Office 365 的人員。
+ms.openlocfilehash: 74f119b678e04bb9f541af83feb5396ba3bed8f2
+ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "34102541"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34249501"
 ---
 # <a name="deploy-office-365-enterprise-for-your-organization"></a>為貴組織部署 Office 365 企業版
-準備好部署並將 Office 365 企業版與您的內部部署基礎結構整合嗎？這些概觀步驟是設計來協助您連線至目錄、移轉資料，並協助貴組織中的人員開始使用最新版本的 Office 2016。
-  
-這些步驟適用於想要開始使用 Office 365 企業版自訂部署的企業和[非營利組織](https://go.microsoft.com/fwlink/?LinkId=627221)。 
-  
-沒有 Office 365 企業版嗎？請參閱[設定商務用 Office 365](https://support.office.com/article/6a3a29a0-e616-4713-99d1-15eda62d04fa)，以取得小型企業的指示。 
-  
+
+準備好部署 Office 365 企業版、 整合與您的內部部署基礎結構，並讓您的員工，若要利用雲端生產力和共同作業？
+
+本文說明兩個部署選項，是否要顯示 [說明或執行它自己。 在每個案例中，Microsoft 會提供您在部署成功的引導式的路徑。
+
 ## <a name="guided-enterprise-office-365-setup-process-with-fasttrack"></a>使用 FastTrack 引導企業 Office 365 設定程序
-Office 365 **[FastTrack](https://docs.microsoft.com/fasttrack)** 是部署 Office 365 的最佳方法。FastTrack 會逐步引導您執行最常見的部署設定，同時可回答問題。如果您想要自助或合作夥伴的指導，請使用我們的 [Office 365 設定指南](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)、我們的 [Office 365 設定精靈](https://aka.ms/o365fasttrack)，或[尋找合格的合作夥伴](https://partnercenter.microsoft.com/en-us/pcv/search)。
 
-## <a name="self-deployment-of-office-365"></a>自助部署 Office 365
-如果您想要自行部署 Office 365，下列的部署步驟可提供協助。
+**[適用於 Office 365 的 FastTrack](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365)** 是部署 Office 365 的最佳方法。 FastTrack 引導您完成最常見的部署設定，並可以回答一路的問題。 
 
-1. **[準備好使用 Office 365](get-your-organization-ready-for-office-365.md)**。這些工具和資源可協助您備妥 Office 365 的網路、目錄及使用者。
+若要存取一系列的安裝指南，登入您的 Office 365 訂閱，然後移至[Office 365 的設定](https://aka.ms/o365fasttrack)。
 
-2. **登入，並將您的網際網路網域新增至 Office 365**。 登入[Microsoft 365 系統管理中心](https://portal.microsoft.com)，按一下 [**安裝程式 > 網域**，，然後按一下 [**新增網域**。 將一或多個網域新增至您的 Office 365 訂閱中，而不需要將使用者新增或移轉電子郵件。 
+>[!Note]
+>您也可以從[Microsoft 合作夥伴](https://www.microsoft.com/solution-providers/home)取得協助。
+>
 
->[!IMPORTANT] 
->如果您想要從內部部署目錄或使用單一登入同步處理您的使用者，則不適用基本設定指示。
+## <a name="self-deployment-of-office-365-enterprise"></a>自助部署 Office 365 企業版
 
-3. **[將目錄連線至 Office 365](about-office-365-identity.md)**。身分識別同步處理及/或單一登入設定選項的引導。使用 [AAD Connect 建議程式](https://aka.ms/aadconnectpwsync)和 [Azure AD Premium 設定指南](https://aka.ms/aadpguidance)以取得自訂的設定指示。
-4. **[設定 Office 365 服務與應用程式](configure-services-and-applications.md)**。從這裡開始設定電子郵件、檔案共用、立即訊息或任何其他 Office 365 服務與應用程式。
-5. **[將資料移轉到 Office 365](migrate-data-to-office-365.md)**。一旦設定服務後，您就可以開始移轉資料。
-6. **[開始使用商務用 Office 365](https://support.office.com/article/Get-started-with-Office-365-for-business-d6466f0d-5d13-464a-adcb-00906ae87029)**。協助使用者在貴組織使用 Office 365 搭配這些資源建立信心。
+自行部署 Office 365 企業版會要求您執行要簡化雲端服務的組態，以及使用者採用的設計決策的詳細參考資料。 開始規劃[以下](get-your-organization-ready-for-office-365.md)。
+
+若要自行部署 Office 365 企業版，以下是建議的步驟。
+
+1. 設定網路
+
+   包含新增您的網際網路網域和最佳化您的內部部署使用者的網路效能。 開始[在這裡](set-up-network-for-office-365.md)。
+ 
+2. 設定您設定身分識別
+
+   包含決定身分識別模型 (僅限雲端或混合式)，以及混合式身分識別，設定您內部部署 Active Directory 網域服務 (AD DS) 和 Office 365 訂閱之間的目錄同步處理。 開始[在這裡](protect-your-global-administrator-accounts.md)。
+
+3. 實作的安全性功能
+
+   包含設定及推出基本及增強的安全性、 威脅和資訊保護您的租用戶和身分識別中第一個的 30 天、 前 90 天及過後。 開始[在這裡](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。
+ 
+4. 部署用戶端軟體
+
+   包含部署 Office 365 專業增強版，您的裝置上的 Office 套件 （Word、 Excel、 PowerPoint 和其他人） 的雲端更新，而且一律目前版本。 每個 Office 365 用戶端授權包含 Office 365 專業增強版授權。 開始[在這裡](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)。
+ 
+5. 設定行動裝置管理
+
+   Office 365 企業版包含行動裝置管理功能，可協助您保護和管理使用者的行動裝置。 開始[在這裡](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)。
+ 
+6. 設定服務及應用程式
+
+   包含有關移轉的詳細資料，協助您開始在金鑰的 Office 365 服務，例如 Exchange Online、 SharePoint Online 和 microsoft Teams 上的文章連結。 開始[在這裡](configure-services-and-applications.md)。
+ 
+7. 訓練您的使用者
+
+   包含簡短的影片，以協助使用者充分利用 Office 365 快速。 開始[在這裡](https://docs.microsoft.com/office365/admin/admin-overview/get-started-with-office-365#training-resources-for-your-users)。
+ 
+
+>[!Note]
+>這些步驟也適用於企業和[非營利組織](https://go.microsoft.com/fwlink/?LinkId=627221)想要開始使用 Office 365 企業版自訂部署。 
+>

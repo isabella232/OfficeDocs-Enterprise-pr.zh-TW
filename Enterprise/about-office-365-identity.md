@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 1d4a2f40ebae9fa87d59ee3f7c9b621b40b03640
-ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
+ms.openlocfilehash: 421002825842201fa754b4c5579dc04fde37eeaf
+ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34162386"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "34249461"
 ---
 # <a name="office-365-identity-models-and-azure-active-directory"></a>Office 365 身分識別模型和 Azure Active Directory
 
@@ -91,7 +91,7 @@ Azure AD 租用戶都有一份 AD DS 帳戶。 在此組態中，在內部和遠
 
 如果您需要的僅限雲端身分識別模型，請參閱[僅限雲端身分識別](cloud-only-identities.md)。
 
-如果您需要的混合式身分識別模型，請參閱[規劃您的同步處理的身分識別和驗證方法](plan-for-directory-synchronization.md)。
+如果您需要的混合式身分識別模型，請參閱[目錄同步處理](plan-for-directory-synchronization.md)。
   
 
 ## <a name="video-training"></a>影片訓練課程
