@@ -42,8 +42,7 @@
 ## Office 365 用戶端支援
 ### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
-### 
-  [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/zh-TW/office365/securitycompliance/choose-between-mdm-and-intune)
+### [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/zh-TW/office365/securitycompliance/choose-between-mdm-and-intune)
 ### [行動應用程式管理](office-365-client-support-mobile-application-management.md)
 ### [新式驗證](office-365-client-support-modern-authentication.md)
 ### [單一登入](office-365-client-support-single-sign-on.md)
