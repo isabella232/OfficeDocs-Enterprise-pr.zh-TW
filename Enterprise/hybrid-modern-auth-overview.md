@@ -4,7 +4,6 @@ ms.author: tracyp
 ms.reviewer: smithre4
 author: MSFTTracyP
 manager: laurawi
-ms.date: ''
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -13,12 +12,12 @@ ms.assetid: ef753b32-7251-4c9e-b442-1a5aec14e58d
 ms.collection:
 - M365-security-compliance
 description: 新式驗證是一種方法提供更安全的使用者驗證及授權的身分識別管理。 使用混合式部署的 Skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合。 此文章連結至相關的文件有關先決條件，安裝程式/停用新式驗證，和某些相關的用戶端 （例如。 Outlook 與 Skype 用戶端） 的資訊。
-ms.openlocfilehash: 17c61b028aacd5abaf72450e197475fa2c0a2589
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 0448dfdc46598a6aa4df0108214ff0a4cf290382
+ms.sourcegitcommit: 54c07ffcfe0da286b1780fdc03ba2f2fd0dbc86d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067199"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "34404215"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合式新式驗證概觀及使用商務和 Exchange 伺服器內部部署用 Skype 的必要條件
 
@@ -30,7 +29,7 @@ ms.locfileid: "34067199"
     
 - [檢查您的內部部署環境的新式驗證狀態](hybrid-modern-auth-overview.md#BKMK_CheckStatus)
     
-- [您符合新式驗證必要條件嗎？](hybrid-modern-auth-overview.md#BKMK_MeetPrereq)
+- [您符合新式驗證必要條件嗎？](#do-you-meet-modern-authentication-prerequisites)
     
 - [我需要知道開始前什麼？](hybrid-modern-auth-overview.md#BKMK_Whatelse)
     
@@ -43,7 +42,7 @@ ms.locfileid: "34067199"
   
 新式驗證是組合的驗證和授權方法，以及某些依賴存取原則，您可能已經熟悉的安全性措施雨傘字詞。 其中包括：
   
-- **驗證方法**： 多重要素驗證;用戶端憑證型驗證;與 Active Directory 驗證程式庫 ( [ADAL](https://technet.microsoft.com/en-us/library/mt710548.aspx))。
+- **驗證方法**： 多重要素驗證;用戶端憑證型驗證。
     
 - **授權方法**： Open Authorization (OAuth) 的 Microsoft 實作。 
     
