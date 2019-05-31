@@ -3,7 +3,7 @@ title: 將角色指派給 Office 365 powershell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/18/2019
+ms.date: 05/30/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
 description: 摘要： 使用 Office 365 PowerShell 來指派角色給使用者帳戶。
-ms.openlocfilehash: d7177dc05aff8725a72edf7c9ab7b6ef93c36aaf
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: d06b305c348d014ce526448d7f8401c26f4d1c47
+ms.sourcegitcommit: 3100813cd7dff8b27b1a30a6d6ed5a7c4765c60f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069219"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "34586979"
 ---
 # <a name="assign-roles-to-user-accounts-with-office-365-powershell"></a>將角色指派給 Office 365 powershell 的使用者帳戶
 
@@ -79,7 +79,11 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
   
 ### <a name="for-a-single-role-change"></a>單一角色變更
 
-決定下列項目：
+特定使用者帳戶的常用方法是使用其顯示名稱或其電子郵件名稱，也就是其登入使用者主體名稱 (UPN)。
+
+#### <a name="display-names-of-user-accounts"></a>顯示的使用者帳戶的名稱
+
+如果您是用來使用之使用者帳戶的顯示名稱，決定下列項目：
   
 - 您想要設定使用者帳戶。
     
@@ -92,7 +96,7 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
     此命令會列出您的使用者帳戶，以顯示名稱，一次一個畫面排序顯示名稱。 您可以使用**其中**指令程式來篩選清單，以較小的設定。 範例如下：
     
   ```
-  Get-MsolUser | Where DisplayName -like "John*" | Sort DisplayName | Select DisplayName | More
+  Get-MsolUser -All | Where DisplayName -like "John*" | Sort DisplayName | Select DisplayName | More
   ```
 
     此命令會列出僅為其顯示名稱的開頭 「 百勝 」 的使用者帳戶。
@@ -110,7 +114,7 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
 ```
 $dispName="<The Display Name of the account>"
 $roleName="<The role name you want to assign to the account>"
-Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
+Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
 ```
 
 複製命令，並將它們貼到 [記事本]。 **$DispName**和 **$roleName**變數，將描述文字取代其值，請移除\<和 > 字元，並將保留引號。 複製已修改的行，並將它們貼到您的 Windows Azure Active Directory 模組的 Windows PowerShell 視窗，並執行。 或者，您可以使用 Windows PowerShell 整合式指令碼環境 (ISE)。
@@ -120,28 +124,60 @@ Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq
 ```
 $dispName="Scott Wallace"
 $roleName="SharePoint Service Administrator"
-Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
+Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
+```
+
+#### <a name="sign-in-names-of-user-accounts"></a>登入的使用者帳戶的名稱
+
+如果您是用來使用的登入名稱或使用者帳戶的 Upn，決定下列項目：
+  
+- 使用者帳戶的 UPN。
+    
+    如果您不知道 UPN，使用此命令：
+    
+  ```
+  Get-MsolUser -All | Sort UserPrincipalName | Select UserPrincipalName | More
+  ```
+
+    此命令會列出您的使用者帳戶，排序 UPN，一次一個畫面的 UPN。 您可以使用**其中**指令程式來篩選清單，以較小的設定。 範例如下：
+    
+  ```
+  Get-MsolUser -All | Where DisplayName -like "John*" | Sort UserPrincipalName | Select UserPrincipalName | More
+  ```
+
+    此命令會列出僅為其顯示名稱的開頭 「 百勝 」 的使用者帳戶。
+    
+- 您要指派的角色。
+    
+    若要顯示可用的角色，您可以指派給使用者帳戶的清單，請使用此命令：
+    
+  ```
+  Get-MsolRole | Sort Name | Select Name,Description
+  ```
+
+一旦您有帳戶的 UPN 與角色的名稱，請使用以下命令將角色指派給帳戶：
+  
+```
+$upnName="<The UPN of the account>"
+$roleName="<The role name you want to assign to the account>"
+Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
+```
+
+複製命令，並將它們貼到 [記事本]。 **$UpnName**和 **$roleName**變數，將描述文字取代其值，請移除\<和 > 字元，並將保留引號。 複製已修改的行，並將它們貼到您的 Windows Azure Active Directory 模組的 Windows PowerShell 視窗，並執行。 或者，您可以使用 Windows PowerShell ISE。
+  
+以下是一組完整的命令的範例：
+  
+```
+$upnName="scottw@contoso.com"
+$roleName="SharePoint Service Administrator"
+Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
 ```
 
 ### <a name="for-multiple-role-changes"></a>多個角色變更
 
 決定下列項目：
   
-- 哪一個使用者帳戶，您想要設定。
-    
-    若要指定的使用者帳戶，您必須決定其顯示名稱。 若要取得清單的帳戶，請使用此命令：
-    
-  ```
-  Get-MsolUser -All | Sort DisplayName | Select DisplayName | More
-  ```
-
-    此命令會列出所有使用者帳戶，以顯示名稱，一次一個畫面排序顯示名稱。 您可以使用**其中**指令程式來篩選清單，以較小的設定。 範例如下：
-    
-  ```
-  Get-MsolUser | Where DisplayName -like "John*" | Sort DisplayName | Select DisplayName | More
-  ```
-
-    此命令會列出僅為其顯示名稱的開頭 「 百勝 」 的使用者帳戶。
+- 哪一個使用者帳戶，您想要設定。 您可以使用在前一節中的方法，來蒐集的顯示名稱或 Upn。
     
 - 您想要指派給每個使用者帳戶哪些角色。
     
@@ -151,13 +187,14 @@ Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-接下來，建立具有 DisplayName 和角色逗點分隔值 (CSV) 的文字檔案名稱的欄位。 範例如下：
+接下來，建立具有 UPN 和角色的 [名稱] 欄位的顯示名稱的逗點分隔值 (CSV) 文字檔案。 您可以輕易地與 Microsoft Excel。
+
+以下是範例的顯示名稱：
   
 ```
 DisplayName,RoleName
 "Belinda Newman","Billing Administrator"
-"John Doe","SharePoint Service Administrator"
-"Alice Smithers","Lync Service Administrator"
+"Scott Wallace","SharePoint Service Administrator"
 ```
 
 接下來，填寫 CSV 檔案的位置，並在 PowerShell 命令提示字元執行所產生的命令。
@@ -167,6 +204,23 @@ $fileName="<path and file name of the input CSV file that has the role changes, 
 $roleChanges=Import-Csv $fileName | ForEach {Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser | Where DisplayName -eq $_.DisplayName).UserPrincipalName -RoleName $_.RoleName }
 
 ```
+
+以下是 Upn 範例：
+  
+```
+UserPrincipalName,RoleName
+"belindan@contoso.com","Billing Administrator"
+"scottw@contoso.com","SharePoint Service Administrator"
+```
+
+接下來，填寫 CSV 檔案的位置，並在 PowerShell 命令提示字元執行所產生的命令。
+  
+```
+$fileName="<path and file name of the input CSV file that has the role changes, example: C:\admin\RoleUpdates.CSV>"
+$roleChanges=Import-Csv $fileName | ForEach { Add-MsolRoleMember -RoleMemberEmailAddress $_.UserPrincipalName -RoleName $_.RoleName }
+
+```
+
 
 ## <a name="see-also"></a>另請參閱
 
