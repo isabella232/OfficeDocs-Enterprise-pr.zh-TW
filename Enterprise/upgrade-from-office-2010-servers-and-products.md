@@ -3,7 +3,7 @@ title: 資源可以幫助您升級從 Office 2010 伺服器和用戶端
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/28/2019
+ms.date: 06/03/2019
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -21,16 +21,20 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 11bd2e7acf5c35a427b2acd04fd37605615b42ed
-ms.sourcegitcommit: baf2ace701fa338b12222b6fb08658fd583c40d2
+ms.openlocfilehash: de5c3f8d3e8cc86a2b53d175725e21f764f20df7
+ms.sourcegitcommit: 346fde563ad598598a9832f8a0a6f7cc0a802306
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "34539209"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "34704083"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>資源可以幫助您升級從 Office 2010 伺服器和用戶端
 
-如果您正在使用 Office 2010 產品和服務，您可能已經知道 Office 2010 產品和服務會達到**2020 年 10 月 13，** 支援其結束。 當您計劃升級時，這是很好的時間，才能移至 Office 365，請考慮。 Office 365 具有 for Office 2010 伺服器產品，例如 Exchange Server 和 SharePoint Server 的雲端式服務，例如 Teams 與 OneDrive for Business 的新服務。 Office 365 專業增強版是 Office 2010 用戶端應用程式，在您的本機裝置上安裝和更新為新的生產力和從 Microsoft cloud ongoign 為基礎的安全性功能。 Office 365 專業增強版是隨附於 Office 365 E3 和 E5。
+Exchange 2010 會達到**2020 年 1 月 14，** 支援其結束。 其他 Office 2010 產品和服務會達到**2020 年 10 月 13，** 支援其結束。 當您計劃升級時，這是很好的時間，才能移至 Office 365，請考慮。 
+
+Office 365 具有 for Office 2010 伺服器產品，例如 Exchange Server 和 SharePoint Server 的雲端式服務，例如 Teams 與 OneDrive for Business 的新服務。 
+
+Office 365 專業增強版隨附於 Office 365 E3 和 E5，是您在您的本機裝置安裝的 Office 用戶端應用程式的集合。 他們會以新的生產力和安全性功能，從 Microsoft cloud 持續更新。
 
 使用本文做為起點，檢閱您的選項。
       
