@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
 description: 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
-ms.openlocfilehash: 2cce550aa4c14eb0de9daa6eac85cde6d1754add
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 57b957d151bf49d67577ebd0d75f3a87e102d904
+ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068179"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "34722572"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>使用 BGP 社群中 ExpressRoute for Office 365 案例
 
@@ -103,7 +103,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
   
 ## <a name="related-topics"></a>相關主題
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
