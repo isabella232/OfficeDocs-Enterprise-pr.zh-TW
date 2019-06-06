@@ -20,7 +20,7 @@
 ### [訂閱、授權與租用戶](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)
 
 ### 規劃您的網路
-#### [對 Office 365 的網路連線](network-connectivity.md)
+#### [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 #### [規劃連線到 Office 365 服務的網路裝置](plan-for-network-devices.md)
 #### [Office 365 的網路和移轉規劃](network-and-migration-planning.md)
 
@@ -92,7 +92,7 @@
 ### [Office 365 網路連線能力概觀](office-365-networking-overview.md)
 ### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 ### [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
-### [對 Office 365 的網路連線](network-connectivity.md)
+### [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 ### [Office 365 網路合作夥伴計劃](office-365-networking-partner-program.md)
 ### Office 365 IP 位址和 URL
 #### [Office 365 端點](office-365-endpoints.md)
