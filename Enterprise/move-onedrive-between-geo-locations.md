@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 3315c14debf14c6876e2da90a2ade10ca8a7499a
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 352e8317a3f62e23c4dc0faed4cb412707f525d8
+ms.sourcegitcommit: 921545ad533001a7ab055d3e6b19bfc8869df286
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070129"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "34814715"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
@@ -88,9 +88,6 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 -   _UserPrincipalName_ – OneDrive 即將移動的使用者 UPN。
 
 -   _DestinationDataLocation_ – OneDrive 要移動到的地理位置。這應與使用者慣用資料位置相同。
-
-> [!NOTE]
-> 在起始 OneDrive 異地移動前，建議您執行 `Get-SPOGeoMoveStateCompatibility` 與 `ValidationOnly`。
 
 比方說，若要將 matt@contosoenergy.onmicrosoft.com 的 OneDrive 從 EUR 移動到 AUS，請執行：
 
