@@ -1,9 +1,9 @@
 ---
-title: Office 365 網路連線能力概觀
+title: Office 365 網路連線能力概述
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 9/12/2018
+ms.date: 6/5/2019
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -13,99 +13,107 @@ search.appverid:
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
-description: 討論網路最佳化是重要的 SaaS 服務，Office 365 網路功能的目標為何，而且 SaaS 需要不同的網路功能與其他工作負載的方式。
-ms.openlocfilehash: 88fde9a142b5394b642a46c19da6979c93fe8f9e
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: 討論為何網路優化對於 SaaS 服務非常重要, Office 365 網路的目標, 以及 SaaS 如何與其他工作負載不同的網路。
+ms.openlocfilehash: e1ae446d7a69d0fab83e7dd4aa253bd1120e6c08
+ms.sourcegitcommit: 99bf8739dfe1842c71154ed9548ebdd013c7e59e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069617"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "35017283"
 ---
-# <a name="office-365-network-connectivity-overview"></a>Office 365 網路連線能力概觀
+# <a name="office-365-network-connectivity-overview"></a>Office 365 網路連線能力概述
 
-Office 365 是提供一套多樣化的微型服務和應用程式透過生產力和共同作業案例分散式的軟體為-服務 (SaaS) 雲端。 用戶端元件，例如 Outlook、 Word 和 PowerPoint 的 Office 365 的使用者電腦上執行，並連線至 Office 365 的 Microsoft 資料中心中執行的其他元件。 決定 Office 365 使用者體驗品質的最重要因素是網路可靠性與 Office 365 用戶端與 Office 365 服務前方門之間的低延遲。
+Office 365 是分散式的軟體即服務 (SaaS) 雲端, 可透過一組不同的微服務和應用程式提供生產力和共同作業案例。 Office 365 的用戶端元件, 例如 Outlook、Word 和 PowerPoint 在使用者電腦上執行, 並連接到在 Microsoft 資料中心執行的 Office 365 的其他元件。 決定 Office 365 使用者體驗品質的最重要因素, 是 Office 365 用戶端與 Office 365 服務前端之間的網路可靠性和低延遲。
 
-在本文中，您將了解 Office 365 網路的目標，為什麼 Office 365 網路功能需要不同的方法，以比一般網際網路流量最佳化。
+在本文中, 您將瞭解 Office 365 網路的目標, 以及為什麼 Office 365 網路需要不同的方法來優化一般網際網路流量。
 
 ## <a name="office-365-networking-goals"></a>Office 365 網路目標
 
-Office 365 網路的最終目標是讓用戶端與最接近的 Office 365 端點之間的最嚴格存取權，即可發揮最佳使用者經驗。 使用者體驗的品質直接相關的效能和回應的應用程式的使用者使用。 例如，Microsoft Teams 依賴低延遲，讓使用者電話、 會議及共用的畫面教學空閒問題，且 Outlook 依賴立即搜尋功能，可運用伺服器端編製索引和 AI 很棒的網路連線功能。
+Office 365 網路的最終目標是在用戶端和最接近的 Office 365 端點之間啟用最小限制存取, 以優化使用者體驗。 使用者經驗品質與使用者所使用之應用程式的效能及回應能力直接相關。 例如, Microsoft 團隊依賴低延遲, 讓使用者電話通話、會議和共用螢幕共同作業不會造成任何問題, 而 Outlook 則依賴出色的網路連線來進行即時搜尋功能, 以利用伺服器端的索引和 AI能力.
 
-網路設計中的主要目標應該是以延遲降至最低，藉由減少的來回行程時間 (RTT) 從用戶端機器 Microsoft 全球網路，具有低延遲連接所有 Microsoft 資料中心的 Microsoft 的公用網路骨幹擴張世界各地的高可用性雲端應用程式的進入點。 您可以深入了解在[如何 Microsoft 建置其快速且可靠的全球網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)Microsoft 全球網路。
+網路設計的主要目標是將用戶端電腦的往返時間 (RTT) 減少為 Microsoft 全球網路, 並將所有 Microsoft 資料中心與低延遲互連在一起, 以減少延遲時間。, 高可用性雲端應用程式進入點遍佈世界各地。 您可以在[Microsoft 如何建立其快速且可靠的通用網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/), 深入瞭解 Microsoft 全球網路。
 
-Office 365 網路效能最佳化不需要複雜。 您可以透過下列幾個關鍵獲得最佳效能：
+優化 Office 365 網路效能不需要很複雜。 您可以遵循下列幾個重要的原則, 取得最佳的效能:
 
-- 找出 Office 365 的網路流量
-- 允許 Office 365 的網路流量的本機分支的輸出至網際網路，從每個使用者連線到 Office 365 的位置
-- 允許略過 proxy 和封包檢查裝置的 Office 365 流量
+- 識別 Office 365 網路流量
+- 允許使用者連線至 Office 365 的每個位置, 從每個位置, 允許 Office 365 網路流量的本機分支出口
+- 允許 Office 365 流量略過 proxy 與封包檢查裝置
 
-如需有關 Office 365 網路連線原則的詳細資訊，請參閱 < <b0>Office 365 網路連線原則</b0>。
+如需 Office 365 網路連線原則的詳細資訊, 請參閱[office 365 網路連線原則](office-365-network-connectivity-principles.md)。
 
 ## <a name="traditional-network-architectures-and-saas"></a>傳統的網路架構和 SaaS
 
-傳統的網路架構原則適用於用戶端/伺服器工作負載的設計是繞其用戶端與端點之間的流量不會將公司網路外的假設。 此外，在許多企業網路中，所有輸出網際網路連線周遊公司網路，並從中央位置的輸出。
+用戶端/伺服器工作負載的傳統網路架構原則, 是圍繞用戶端與端點之間的流量所設計, 不會延伸到公司網路周邊之外。 此外, 在許多商業網路中, 所有的輸出網際網路連線都會透過公司網路, 以及從中央位置外出。
 
-傳統網路架構，針對一般網際網路流量較高的延遲是必要的缺點為了維持網路周邊安全性，並升級或向外延展，通常牽涉到的網際網路流量最佳化效能在網路輸出點設備。 不過，這種方法並未涵蓋 SaaS 服務，例如 Office 365 的最佳化網路效能的需求。
+在傳統的網路架構中, 一般網際網路流量的較高延遲是維護網路周邊安全性所需的折衷措施, 而且網際網路流量的效能優化通常包括升級或擴充網路出局點的裝置。 不過, 此方法並不會解決 SaaS 服務 (例如 Office 365) 的最佳網路效能需求。
 
-## <a name="identifying-office-365-network-traffic"></a>識別 Office 365 的網路流量
+## <a name="identifying-office-365-network-traffic"></a>識別 Office 365 網路流量
 
-我們正在使其成為容易識別 Office 365 的網路流量，並使其成為容易管理網路識別。
+我們讓您更容易識別 Office 365 網路流量, 並簡化網路識別的管理。
 
-- 若要從其不會受到網際網路延遲的網路流量區分相當重要的網路流量的網路端點的新類別。 有只是少數幾個 Url 和最重要的 「 最佳化 」 類別中支援的 IP 位址。
-- 用於指令碼分派狀況] 或 [直接裝置組態和變更管理 Office 365 網路識別 web 服務。 變更可從 web 服務，或 RSS 格式，或使用 Microsoft Flow 範本的電子郵件。
-- [Office 365 網路合作夥伴方案](http://aka.ms/Office365NPP)與 Microsoft 合作夥伴提供的裝置或服務，請遵循 Office 365 網路連線原則，並有簡單的設定。
+- 新類別的網路端點, 以區分高重要的網路流量與不受網際網路延遲影響的網路流量。 在最重要的「優化」類別中, 只會有少數 Url 和支援 IP 位址。
+- Web 服務以取得腳本使用方式, 或直接裝置設定, 以及 Office 365 網路識別的變更管理。 您可以從 web 服務或 RSS 格式, 或使用 Microsoft 流程範本在電子郵件上進行變更。
+- [Office 365 網路合作夥伴計畫](http://aka.ms/Office365NPP), 其中的 Microsoft 合作夥伴提供的裝置或服務遵循 Office 365 網路連線原則並具有簡單的設定。
 
-## <a name="securing-office-365-connections"></a>保護 Office 365 連線
+## <a name="securing-office-365-connections"></a>保護 Office 365 連線的安全
 
-傳統的網路安全性的目標是來強化公司網路周邊抵禦入侵和惡意攻擊。 大部分的企業網路強制執行網路安全性的網際網路流量使用如 proxy 伺服器、 防火牆、 SSL 符號的技術，並檢查，深層封包檢查，以及資料外洩防護系統。 這些技術提供重要的風險降低一般網際網路要求，但是可以大幅降低效能、 延展性，以及套用至 Office 365 端點時的使用者體驗的品質。
+傳統網路安全性的目標是加強公司網路周邊, 防範入侵和惡意攻擊。 大部分的商業網路會使用類似 proxy 伺服器、防火牆、SSL 中斷、檢查、深入封包檢查和資料遺失防護系統等技術, 來強制執行網際網路流量的網路安全性。 這些技術可提供一般網際網路要求的重要風險減輕, 但是可以大幅降低效能、擴充性, 以及套用至 Office 365 端點時的使用者體驗品質。
 
-Office 365 協助符合您的組織對於內容的安全性和資料使用狀況與合規性設計特別針對 Office 365 的功能和工作量的內建的安全性和控管功能需求。 如需有關 Office 365 安全性與合規性的詳細資訊，請參閱[Office 365 安全性藍圖](https://docs.microsoft.com/en-us/office365/securitycompliance/security-roadmap)。 如需 Microsoft 的建議與支援位置上執行進階層級處理 Office 365 流量的進階的網路解決方案，請參閱[使用協力廠商的網路裝置或在 Office 365 流量的解決方案](https://support.microsoft.com/en-us/help/2690045)。
+Office 365 使用專為 Office 365 功能和工作負載而設計的內建安全性和控管功能, 協助滿足您組織的內容安全性和資料使用性的需求。 如需有關 Office 365 安全性和合規性的詳細資訊, 請參閱[Office 365 安全性藍圖](https://docs.microsoft.com/en-us/office365/securitycompliance/security-roadmap)。 如需在執行 Office 365 流量的高級網路解決方案上, Microsoft 建議和支援位置的詳細資訊, 請參閱在[office 365 流量上使用協力廠商網路裝置或解決方案](https://support.microsoft.com/en-us/help/2690045)。
 
-## <a name="why-is-office-365-networking-different"></a>原因 Office 365 網路不同？
+## <a name="why-is-office-365-networking-different"></a>為什麼 Office 365 網路是不同的？
 
-Office 365 專為使用端點安全性和加密的網路連線，以減少需要周邊安全性強制的最佳效能。 Office 365 資料中心位於遍佈全球和服務的設計是要使用的用戶端連線到最佳可用的服務端點的各種方法。 因為使用者資料，以及處理為分散式許多 Microsoft 資料中心之間，機器可連線至用戶端沒有單一網路端點。 事實上，動態經過最佳化的資料與 Office 365 租用戶中的服務由 Microsoft 全球網路能否從中他們由使用者存取的地理位置。
+Office 365 的設計是使用端點安全性和加密網路連線來優化效能, 以減少周邊安全性強制執行的需求。 Office 365 資料中心位於全球, 且服務的設計目的是使用各種方法將用戶端連線至最佳可用的服務端點。 因為使用者資料和處理是分散在許多 Microsoft 資料中心, 所以用戶端電腦無法連線的單一網路端點。 事實上, Office 365 租使用者中的資料和服務會透過 Microsoft 全球網路進行動態優化, 以適應使用者存取使用者的地理位置。
 
-Office 365 流量受限於封包檢查和集中式的輸出時會建立某些常見的效能問題：
+當 Office 365 流量受到封包檢查和集中式外出時, 就會建立一些常見的效能問題:
 
-- 高延遲造成視訊和音訊資料流的效能非常不佳及擷取資料、 搜尋、 即時共同作業、 行事曆空閒/忙碌資訊、 產品內的內容及其他服務的回應緩慢
-- Egressing 從中央位置擊敗動態路由功能的 Office 365 全球網路的連線、 新增延遲和來回行程時間
-- 解密受 SSL 安全 Office 365 的網路流量，並重新加密可能會造成通訊協定錯誤，且此安全性風險
+- 高延遲可能會造成影片和音訊資料流程的效能不良, 以及資料檢索、搜尋、即時共同作業、行事曆空閒/忙碌資訊、產品內容及其他服務的回應速度緩慢
+- 來自中央位置的 Egressing 連線會破壞 Office 365 通用網路的動態路由功能、新增延遲時間和往返時間
+- 解密 SSL 安全的 Office 365 網路流量並重新加密可能會造成通訊協定錯誤, 並有安全性風險
 
-藉由使用輸出至其地理位置盡可能關閉用戶端流量縮短 Office 365 進入點的網路路徑可改善連線 Office 365 中的效能及一般使用者體驗。 它也可以協助減少對 Office 365 效能與可靠性的網路架構未來的變更的影響。 一律會提供使用者的位置，不論是否將公司網路或遠端位置，例如 home、 飯店、 咖啡廳及機場上的網路輸出為最佳 connectivity 模型。 一般網際網路流量和 WAN 基礎公司網路流量會分別路由傳送，而不使用本機直接輸出模型。 下圖中表示此本機直接輸出模型。
+透過讓用戶端流量盡可能接近其地理位置, 以縮短 Office 365 進入點的網路路徑, 可改善連線效能和 Office 365 中的使用者體驗。 它也可協助您降低未來對 Office 365 效能和可靠性的網路架構所造成的影響。 最佳連線模型是在使用者的位置始終提供網路出局, 不論這是在公司網路還是在家、酒店、咖啡店和機場等遠端位置。 一般網際網路流量和 WAN 的公司網路流量將會分開路由, 且不會使用本機直接輸出模式。 此本機直接輸出模型會在下圖中表示。
 
-![本機輸出網路架構](media/6bc636b0-1234-4ceb-a45a-aadd1044b39c.png)
+![本機出局網路架構](media/6bc636b0-1234-4ceb-a45a-aadd1044b39c.png)
 
-本機輸出架構具有下列優點針對 Office 365 的網路流量透過傳統模型：
+本機出局架構針對傳統模型的 Office 365 網路流量有下列優點:
   
-- 提供 Office 365 的最佳效能最佳化路由長度。 使用者連線以動態方式路由傳送至最接近的 Office 365 進入點由 Microsoft 全球網路_分散式服務 Front Door_基礎結構，及流量然後路由傳送內部資料與服務端點透過 Microsoft 的高可用性深光纖極端低延遲。
-- 藉由使用 Office 365 流量，略過 proxy 和流量檢查裝置的本機輸出，可減少在公司網路基礎結構上的負載。
-- 利用用戶端端點安全性和雲端安全性功能，避免應用程式的備援網路安全性技術來保護上兩個端點的連線。
+- 優化路由長度, 以提供最佳的 Office 365 效能。 使用者連線會透過 Microsoft 全球網路的_分散式服務前端_基礎結構, 動態路由傳送至最接近的 Office 365 進入點, 然後流量會在內部路由傳送至 microsoft 的資料和服務端點。超低延遲高可用性深纖程。
+- 透過允許 Office 365 流量的本機出口, 以減少公司網路基礎結構的負載, 略過 proxy 和流量檢查裝置。
+- 利用用戶端端點安全性和雲端安全性功能, 以避免應用冗余網路安全性技術, 來保護兩端的連線。
 
 > [!NOTE]
-> _分散式服務 Front Door_基礎結構是 Microsoft 全球網路高度可用且擴充度佳的網路邊緣搭配地理位置分散的位置。 它會終止使用者連線和有效率地將它們路由傳送 Microsoft 全球網路內。 您可以深入了解在[如何 Microsoft 建置其快速且可靠的全球網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)Microsoft 全球網路。
+> _分散式服務前端_基礎結構是 Microsoft 全球網路的高度可用和可伸縮網路 edge, 以及地理位置分散的位置。 它會終止使用者連線, 並有效地將它們路由傳送至 Microsoft 全球網路中。 您可以在[Microsoft 如何建立其快速且可靠的通用網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/), 深入瞭解 Microsoft 全球網路。
 
-如需有關了解及套用 Office 365 網路連線原則的詳細資訊，請參閱 < <b0>Office 365 網路連線原則</b0>。
+如需瞭解並套用 Office 365 網路連線原則的詳細資訊, 請參閱[office 365 網路連線原則](office-365-network-connectivity-principles.md)。
 
 ## <a name="conclusion"></a>總結
 
-Office 365 網路效能最佳化確實說到底就是要移除不必要的障礙。 藉由將 Office 365 連線視為受信任的流量，您可以避免延遲機型封包檢查及 proxy 頻寬競爭。 允許用戶端電腦與 Office 365 端點之間的本機連線啟用以動態方式路由傳送到 Microsoft 全球網路流量。
+優化 Office 365 網路效能實際上會降低移除不必要的障礙。 將 Office 365 連線視為信任的流量, 可防止資料包檢查和競爭的 proxy 頻寬帶來延遲。 允許用戶端機器與 Office 365 端點之間的本機連線可透過 Microsoft 全球網路動態路由傳送流量。
 
 ## <a name="related-topics"></a>相關主題
 
 [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 
-[Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
-
 [管理 Office 365 端點](managing-office-365-endpoints.md)
 
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
+
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
+
+[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
 
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
 
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
 
-[Microsoft 如何建置其快速且可靠的全球網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
+[內容傳遞網路](content-delivery-networks.md)
+
+[Office 365 網路上架工具](https://aka.ms/netonboard)
+
+[Microsoft 如何建立其快速且可靠的通用網路](https://azure.microsoft.com/en-us/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
+
+[Office 365 網路博客](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
