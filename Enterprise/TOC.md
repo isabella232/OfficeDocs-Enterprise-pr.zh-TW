@@ -50,7 +50,7 @@
 ## 混合式新式驗證
 ### [商務用 Skype 和 Exchange Server 的先決條件](hybrid-modern-auth-overview.md)
 ### [設定 Exchange Server](configure-exchange-server-for-hybrid-modern-authentication.md)
-### [設定商務用 Skype](https://docs.microsoft.com/skypeforbusiness/manage/authentication/use-adal)
+### [設定商務用 Skype](configure-skype-for-business-for-hybrid-modern-authentication.md)
 ### [商務用 Skype 和Exchange 的移除或停用](remove-or-disable-hybrid-modern-authentication-from-skype-for-business-and-excha.md)
 
 ## Office 用戶端和伺服器
