@@ -1,5 +1,5 @@
 ---
-title: 將 SharePoint 網站移至不同的地理位置 (預覽)
+title: 將 SharePoint 網站移至不同的地理位置
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -9,16 +9,16 @@ ms.service: o365-solutions
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將 SharePoint 網站移至不同的地理位置。
-ms.openlocfilehash: 74a1ccf7dcfa60d74135211d7b74a2e7096d09b0
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: f1837942a72881578930f94ad8c4b57dbdb0c649
+ms.sourcegitcommit: 59c250b5f62e72fb51fd0b80d2be636ee8078f6b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070109"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "35422372"
 ---
-# <a name="move-a-sharepoint-site-to-a-different-geo-location-preview"></a>將 SharePoint 網站移至不同的地理位置 (預覽)
+# <a name="move-a-sharepoint-site-to-a-different-geo-location"></a>將 SharePoint 網站移至不同的地理位置
 
-利用 Sharepoint 網站地理位置移動，您可以將 SharePoint 網站移至您的多地理環境內的其他地理位置。 此功能目前處於預覽。
+利用 Sharepoint 網站地理位置移動，您可以將 SharePoint 網站移至您多地理環境內的其他地理位置。
 
 您可以在地理位置之間移動下列類型的網站：
 
@@ -95,11 +95,11 @@ Start-SPOSiteContentMove -SourceSiteUrl <SourceSiteUrl> -ValidationOnly -Destina
 
 根據預設，網站的初始 URL 會變更為目的地地理位置的 URL。 例如：
 
-https://Contoso.sharepoint.com/sites/projectx 到 https://Contoso.sharepointEUR.com/sites/projectx
+https://Contoso.sharepoint.com/sites/projectx 到 https://ContosoEUR.sharepoint.com/sites/projectx
 
 針對沒有 Office 365 群組關聯的網站，您也可以使用 `-DestinationUrl` 參數來將網站重新命名。 例如：
 
-https://Contoso.sharepoint.com/sites/projectx 到 https://Contoso.sharepointEUR.com/sites/projecty
+https://Contoso.sharepoint.com/sites/projectx 到 https://ContosoEUR.sharepoint.com/sites/projecty
 
 若要開始網站移動，請執行：
 
