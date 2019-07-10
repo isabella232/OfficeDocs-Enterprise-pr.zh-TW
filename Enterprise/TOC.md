@@ -205,6 +205,8 @@
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
+### 與來賓共同作業
+#### [來賓共用參考](microsoft-365-guest-settings.md)
 
 ## 裝置
 ### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
