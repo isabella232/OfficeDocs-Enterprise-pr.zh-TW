@@ -1,7 +1,7 @@
 ---
 title: Office 365 的 NAT 支援
-ms.author: krowley
-author: kccross
+ms.author: kvice
+author: kelleyvice-msft
 manager: laurawi
 ms.date: 1/24/2017
 audience: Admin
@@ -15,12 +15,12 @@ search.appverid:
 - BCS160
 ms.assetid: 170e96ea-d65d-4e51-acac-1de56abe39b9
 description: 摘要： 提供如何約略算出正確的您可以使用每個 IP 位址使用網路位址轉譯 (NAT) 組織內的用戶端數目的相關詳細資料。
-ms.openlocfilehash: bdbf108163c7b22fd6d7583436af5f0ed655784c
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 63180faab720e32c1066dcca60536db492d52734
+ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069879"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35616866"
 ---
 # <a name="nat-support-with-office-365"></a>Office 365 的 NAT 支援
 
@@ -50,12 +50,12 @@ Outlook 可能會開啟八個以上的連線 (的情況下有增益集、 共用
   
  **例如，如果下列，則為 true:**
   
-- **限制的連接埠：** 4000 operating system 
-    
-- 每個裝置的**尖峰連接埠消耗：** 6 
-    
-- **峰值因數：** 4 
-    
+- **限制的連接埠：** 4000 operating system
+
+- 每個裝置的**尖峰連接埠消耗：** 6
+
+- **峰值因數：** 4
+
 然後，支援的裝置上限單一公用 IP 位址背後 = (64000 4000) / （6 + 4） = 6000
   
 主控套件，從 Microsoft Office Outlook 2007 年 9 月 2011年或 Microsoft Outlook 2010 年 11 月 2011年更新或更新版本的更新，從 Outlook (這兩個 Office Outlook 2007 與服務的連線數目中包含的 Office 365 版本Pack 2 和 Outlook 2010) 到 Exchange 可以是最少 2。 您需要在不同的作業系統，依此類推至判斷您的網路時，需要在尖峰時段的連接埠的最小值和最大數目的使用者行為因素。
@@ -79,4 +79,3 @@ Outlook 可能會開啟八個以上的連線 (的情況下有增益集、 共用
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   
 [Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
-

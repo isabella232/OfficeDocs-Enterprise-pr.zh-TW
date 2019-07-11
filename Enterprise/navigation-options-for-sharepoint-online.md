@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online 的導覽選項
-ms.author: krowley
-author: kccross
+ms.author: kvice
+author: kelleyvice-msft
 manager: laurawi
 audience: Admin
 ms.topic: overview
@@ -12,12 +12,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: 本文說明導覽選項網站與 SharePoint 發佈 SharePoint Online 中啟用。 選擇及設定導覽會大幅影響的效能和延展性的 SharePoint Online 中的網站。
-ms.openlocfilehash: 9bf2010000f14b173b63574fab4ee77cb772b3f4
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: b3194009d21f60093ec80cb2e138df34df60e22e
+ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069939"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35616856"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
@@ -29,7 +29,7 @@ ms.locfileid: "34069939"
 
 第一個選項[**（中繼資料） 的受管理導覽**](#using-managed-navigation-and-metadata-in-sharepoint-online)，建議使用，且 SharePoint Online; 中的預設選項的其中一個不過，我們建議，除非有必要，停用安全性調整。 安全性調整啟用安全--預設設定為此導覽提供者;不過，許多網站不需要安全性調整由於導覽元素通常是一致的網站的所有使用者的額外的負荷。 若要停用安全性修剪的建議組態，此導覽提供者不需要列舉網站結構與延展性極高與可接受的效能影響。
 
-第二個選項，[**結構式導覽**](#using-structural-navigation-in-sharepoint-online)，**不在 SharePoint Online 中的建議瀏覽選項**。 這個導覽提供者所設計的內部拓撲有受限於 SharePoint Online 中的支援。 雖然它會提供一些額外組的功能與其他導覽選項，這些功能，包括安全性修剪和網站結構列舉型別，有其代價過多的伺服器的呼叫並影響延展性和效能時使用它。 使用 structed 瀏覽的網站會耗用過多的資源，可能會受到節流。
+第二個選項，[**結構式導覽**](#using-structural-navigation-in-sharepoint-online)，**不在 SharePoint Online 中的建議瀏覽選項**。 這個導覽提供者所設計的內部拓撲有受限於 SharePoint Online 中的支援。 雖然它會提供一些額外組的功能與其他導覽選項，這些功能，包括安全性修剪和網站結構列舉型別，有其代價過多的伺服器的呼叫並影響延展性和效能時使用它。 網站使用結構化的導覽耗用過多的資源，可能會受到節流。
 
 除了的方塊出導覽提供者，許多客戶已成功實作替代自訂導覽實作。 一種常見的自訂巡覽實作類別樂於儲存瀏覽節點的本機快取的用戶端呈現設計圖樣。 （請參閱**[搜尋導向用戶端指令碼](#using-search-driven-client-side-scripting)** 本文中）。
 
@@ -52,7 +52,7 @@ ms.locfileid: "34069939"
 |Pros:<br/><br/>易於維護<br/>建議的選項<br/>     |Pros:<br/><br/>容易設定<br/>安全性調整<br/>當內容會新增自動更新<br/>|Pros:<br/><br/>安全性調整<br/>當新增網站時會自動更新<br/>快速載入時間，並在本機上快取的導覽結構<br/>|Pros:<br/><br/>寬的選擇，可用的選項<br/>快速載入時快取正確使用<br/>有許多選項適用於回應頁面設計<br/>|
 |缺點：<br/><br/>不會自動更新以反映網站結構<br/>如果已啟用安全性調整的影響效能<br/>|缺點：<br/><br/>**不建議使用**<br/>**影響效能和延展性**<br/>**受到節流限制**<br/>|缺點：<br/><br/>沒有輕鬆排序網站的能力<br/>需要自訂主版頁面 （必須具備技能）<br/>|缺點：<br/><br/>自訂開發，則需要<br/>外部資料來源需要儲存的快取 / 例如 Azure<br/>|
 
-網站需求及您技術的功能取決於您網站的最適當的選項。 如果您想可擴充的方塊出導覽提供者，受管理導覽與停用安全性修剪是很好的選項。 
+網站需求及您技術的功能取決於您網站的最適當的選項。 如果您想可擴充的方塊出導覽提供者，受管理導覽與停用安全性修剪是很好的選項。
 
 受管理導覽選項可以透過維護組態中，沒有牽涉到程式碼的自訂檔案，而且可大幅比結構式導覽。 如果您需要進行安全性調整習慣使用自訂的主版頁面，並維護的 SharePoint Online 中的預設主版頁面可能發生的變更在組織中有某些功能，然後搜尋導向選項可能會產生更好使用者經驗。 如果您有更複雜的需求，自訂的導覽提供者可能會選擇。 不建議使用結構式導覽。
 

@@ -1,7 +1,7 @@
 ---
 title: 延遲載入 SharePoint Online 中的影像和 JavaScript
-ms.author: krowley
-author: kccross
+ms.author: kvice
+author: kelleyvice-msft
 manager: laurawi
 ms.date: 12/29/2016
 audience: Admin
@@ -13,24 +13,24 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
 description: 本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。
-ms.openlocfilehash: 6b2e91ca4b8642ac7129e353f2527db60a32d75b
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 9069fb395465cd9d087c018cc2ae782759ddcb0d
+ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067979"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35616785"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>延遲載入 SharePoint Online 中的影像和 JavaScript
 
-本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。 
+本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。
   
-影像可以造成負面的影響 SharePoint Online 上的頁面載入速度。 根據預設，大部分現代的網際網路瀏覽器預先擷取影像載入的 HTML 網頁時。 這可能會導致是不必要地載入速度緩慢，如果影像不顯示在螢幕上，直到使用者會向下捲動頁面。 影像可以封鎖瀏覽器中載入網頁的可見的一部分。 若要解決此問題，您可以使用 JavaScript 以略過第一次載入影像。 此外，載入非必要 JavaScript 可以減慢 SharePoint 頁面上的載入時間太。 本主題說明您可以用來改善頁面載入時間與 SharePoint Online 中的 JavaScript 一些方法。 
+影像可以造成負面的影響 SharePoint Online 上的頁面載入速度。 根據預設，大部分現代的網際網路瀏覽器預先擷取影像載入的 HTML 網頁時。 這可能會導致是不必要地載入速度緩慢，如果影像不顯示在螢幕上，直到使用者會向下捲動頁面。 影像可以封鎖瀏覽器中載入網頁的可見的一部分。 若要解決此問題，您可以使用 JavaScript 以略過第一次載入影像。 此外，載入非必要 JavaScript 可以減慢 SharePoint 頁面上的載入時間太。 本主題說明您可以用來改善頁面載入時間與 SharePoint Online 中的 JavaScript 一些方法。
   
 ## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint Online 頁面載入透過使用 JavaScript 延遲映像來改善頁面載入時間
 
 您可以使用 JavaScript 來防止從預先擷取映像在網頁瀏覽器。 這會加快整體的文件呈現。 若要執行這項操作您移除從 src 屬性的值\<img\>標記並取代為資料屬性中的檔案路徑如下： 資料來源。例如：
   
-```
+```txt
 <img src="" data-src="/sites/NavigationBySearch/_catalogs/masterpage/media/microsoft-white-8.jpg" />
 ```
 
@@ -40,7 +40,7 @@ ms.locfileid: "34067979"
   
 在文字檔案中，定義**Iselementinviewport** （） 函數來檢查元素是在組件中的使用者可以看見的瀏覽器。 
   
-```
+```txt
 function isElementInViewport(el) {
   if (!el)
     return false;
@@ -52,7 +52,6 @@ function isElementInViewport(el) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth) 
   );
 }
-
 ```
 
 接下來，使用**Iselementinviewport** **loadItemsInView()** 函式中。 **LoadItemsInView()** 函式會載入具有資料 src 屬性的值，如果他們是在組件中的使用者可以看見的瀏覽器的所有影像。 文字檔案中加入下列函式： 
