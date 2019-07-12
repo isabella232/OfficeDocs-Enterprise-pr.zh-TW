@@ -16,12 +16,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: dfb6df46faacf6623a90ac5a4cf95d9512c31289
-ms.sourcegitcommit: baf2ace701fa338b12222b6fb08658fd583c40d2
+ms.openlocfilehash: 7af74f254ffc73251188b23255a35f800b5503f6
+ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "34539322"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35616879"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -39,6 +39,7 @@ ms.locfileid: "34539322"
     - [Microsoft hybrid cloud for enterprise architects](microsoft-cloud-it-architecture-resources.md#hybrid)
     - [常見攻擊和保護您組織的 Microsoft 功能](#common-attacks-and-microsoft-capabilities-that-protect-your-organization)
     - [Microsoft 365 企業版底層基礎結構](#m365foundationinfra)
+    - [Microsoft Cloud 租用戶對租用戶移轉的架構方法](#architecture-approaches-for-microsoft-cloud-tenant-to-tenant-migrations)
     
 - **[Microsoft 365 企業解決方案系列](microsoft-cloud-it-architecture-resources.md#BKMK_o365solutions)**：
     - [適用於 IT 結構設計師的 Microsoft 365 中的Microsoft Teams 和相關生產力服務](#microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects)
@@ -134,6 +135,12 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
 |:-----|:-----|
 |[![Microsoft 365 企業版底層基礎結構海報的縮圖影像](media/Microsoft365EnterpriseFoundInfra-thumb.png)](http://aka.ms/m365efoundinfraposter) <br/> [線上檢視](http://aka.ms/m365efoundinfraposter) \| [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/deploy-foundation-infrastructure/Microsoft365EnterpriseFoundInfra.pdf) <br/> | 此海報針對目標、功能和工具、設計決策、設定結果、上架，以及持續監視和更新，摘要說明底層基礎結構的每個階段。 <br/>| 
 
+### <a name="architecture-approaches-for-microsoft-cloud-tenant-to-tenant-migrations"></a>Microsoft Cloud 租用戶對租用戶移轉的架構方法 
+此系列的主題說明針對合併、併購、分割和其他案例下，可能會導致您移轉到新雲端租用戶的數個架構方法。 這些主題提供進行規劃的起點指導。
+
+|**Item**|**描述**|
+|:-----|:-----|
+|[![Teams 邏輯架構海報的縮圖影像](downloads/msft-tenant-to-tenant-migration-thumb.png)](downloads/Microsoft-365-tenant-to-tenant-migration.pdf) <br/> [PDF](downloads/Microsoft-365-tenant-to-tenant-migration.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/Microsoft-365-tenant-to-tenant-migration.vsdx)     |此模型包含： <ul><li>商務案例與架構方法的對應</li><li>設計考量</li><li>單一事件移轉流程</li><li>分階段移轉流程</li><li>租用戶移動或分割流程</li></ul>|
 
 <!--<a name="santa"></a>
 ### The Santa cloud
