@@ -1,7 +1,7 @@
 ---
 title: Office 365 的網路和移轉規劃
-ms.author: krowley
-author: kccross
+ms.author: kvice
+author: kelleyvice-msft
 manager: laurawi
 ms.date: 6/29/2018
 audience: Admin
@@ -16,83 +16,83 @@ search.appverid:
 - MET150
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
-description: 包含資訊的網路規劃與測試、 連結和移轉到 Office 365。
-ms.openlocfilehash: a32a8584f1aada7e2b82451d520f72bb7577bc4b
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
-ms.translationtype: MT
+description: 包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
+ms.openlocfilehash: 572910f2104ecd90e78bcfe37b2b022ddb3893fa
+ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069919"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35616776"
 ---
 # <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
-本文章包含有關網路規劃和測試資訊的連結和移轉到 Office 365。
+本文包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
   
-在第一次部署或移轉至 Office 365 之前，您可以使用這些主題的資訊來評估您需要的頻寬，然後測試並確認您有足夠頻寬可部署或移轉至 Office 365。
+在首次部署或移轉至 Office 365 前，您可使用這些主題的資訊來預估您需要的頻寬，然後測試並確認您有足夠頻寬可部署或移轉至 Office 365。
 
 ||
 |:-----|
-| 本文是[網路規劃和效能調整的 Office 365](https://aka.ms/tune)的一部分。|
+| 本文是 [Office 365 的網路規劃與效能調整](https://aka.ms/tune)的一部分。|
 
 |||
 |:-----|:-----|
-|![請參閱 Microsoft Cloud Networking for Enterprise Architects 海報](media/3094be9f-2407-4fa5-896d-aa66ef7b9bb9.png)|如需 Office 365 和其他 Microsoft 雲端平台及服務最佳化您的網路的步驟，請參閱 < <b0>Microsoft Cloud Networking for Enterprise Architects</b0>海報。 |
+|![請參閱適用於企業架構的 Microsoft 雲端網路海報](media/3094be9f-2407-4fa5-896d-aa66ef7b9bb9.png)|如需了解針對 Office 365 和其他 Microsoft 雲端平台及服務最佳化網路的步驟，請參閱[適用於企業架構的 Microsoft 雲端網路](https://aka.ms/cloudarchnetworking)海報。 |
    
 ## <a name="estimate-network-bandwidth-requirements"></a>預估網路頻寬需求
 <a name="EstimateBandwidthRequirements"> </a>
 
-使用 Office 365 可能會增加您的組織網際網路電路的使用率。 請務必判斷目前可用的頻寬量是否足以同時至少 20%完整部署 Office 365 之後處理預估的增加容量，以處理最忙碌的天數。
+使用 Office 365 可能會增加貴組織的網際網路電路使用量。 請務必確定目前的頻寬是否足以負荷 Office 365 完整部署後的估計增加量，並且至少預留 20% 的頻寬，以因應極度忙碌時期。
   
-若要估計頻寬，請使用下列步驟：
+若要估計頻寬，請依照下列步驟操作︰
   
-1. 評估會使用每個網際網路輸出的用戶端數目。 讓我們處理最多的連線設定為可能的多 tb 網路。 
+1. 評估會使用每個網際網路出口的用戶端數量。 盡可能地讓我們的多兆位元網路處理連線。 
     
-2. 判斷哪些 Office 365 服務和功能可供用戶端使用。 您可能需要一組不同的服務或使用設定檔的人。
+2. 決定哪些 Office 365 服務與功能可供用戶端使用。 您可能需要一組人員搭配不同的服務或使用設定檔。
     
-3. 測量網路使用試驗群組的用戶端。 確認試驗用戶端都代表一個不同的組織，以及不同的地理位置中的人員設定檔。 您可以跨-檢查您對我們舊計算器的結果[Exchange](https://go.microsoft.com/fwlink/p/?LinkId=321550)和[商務用 Skype](https://go.microsoft.com/fwlink/p/?LinkId=321551)或我們執行自己的網路的[案例研究](https://www.microsoft.com/itshowcase/Article/Content/631/Optimizing-network-performance-for-Microsoft-Office-365)。 
+3. 針對由用戶端組成的試驗群組測量網路使用狀況。 請確保試驗用戶端能代表組織中屬於各種不同設定檔及地理位置的人員。 您可以交叉檢查 [Exchange](https://go.microsoft.com/fwlink/p/?LinkId=321550) 和[商務用 Skype](https://go.microsoft.com/fwlink/p/?LinkId=321551) 使用舊版計算器的結果，或是我們在自有網路上執行的[案例研究](https://www.microsoft.com/itshowcase/Article/Content/631/Optimizing-network-performance-for-Microsoft-Office-365)。 
     
-4. 使用的度量單位從試驗群組推斷整個組織的需求和重新測試來驗證您的網路進行任何變更之前的數量的估計值。
+4. 從試驗群組的測量結果推算整個組織的需求，然後重新測試以驗證估計值，再變更您的網路設定。
     
 ## <a name="test-your-existing-network"></a>測試您現有的網路
 <a name="calculators"> </a>
 
- **網路工具。** 測試及驗證您的網際網路頻寬，以判斷下載、 上載及延遲的條件約束。 這些工具可協助您決定您的網路進行移轉，以及完整部署之後的功能。 
+ **網路工具：** 測試及驗證您的網際網路頻寬，以判斷下載、上傳和延遲限制。 這些工具會協助您確定用於移轉及完整部署後的網路能力。 
   
-- [Microsoft 郵件分析器](https://technet.microsoft.com/library/jj649776.aspx)： 郵件分析器是有效的工具，如網路問題的疑難排解。 郵件分析器擷取、 會顯示，並分析通訊協定為基礎的郵件流量和系統訊息。 郵件分析器也可讓您匯入、 彙總，並分析記錄檔和追蹤檔案中的資料。
+- [Microsoft Message Analyzer](https://technet.microsoft.com/library/jj649776.aspx)：Message Analyzer 是有效的網路問題疑難排解工具。 Message Analyzer 擷取、顯示並分析以通訊協定為基礎的郵件流量和系統郵件。 Message Analyzer 也可讓您匯入、彙總並分析記錄檔和追蹤檔案的資料。
     
-- [Microsoft Remote Connectivity Analyzer](https://go.microsoft.com/fwlink/p/?LinkId=517243): Exchange Online 環境中測試連線。
+- [Microsoft 遠端連線能力分析器](https://go.microsoft.com/fwlink/p/?LinkId=517243)：測試您 Exchange Online 環境的連線能力。
     
-- 使用[Microsoft 的支援及修復小幫手的 Office 365](https://diagnostics.office.com/#/Download?env=SOC)來修正 Outlook 與 Office 365 的問題。 
+- 使用 [Microsoft Office 365 支援服務及修復小幫手](https://diagnostics.office.com/#/Download?env=SOC)修正 Outlook 與 Office 365 問題。 
     
-## <a name="best-practices-for-network-planning-and-improving-migration-performance-for-office-365"></a>網路規劃和改善的 Office 365 移轉效能的最佳做法
+## <a name="best-practices-for-network-planning-and-improving-migration-performance-for-office-365"></a>Office 365 的網路規劃和移轉效能改善最佳作法
 <a name="BestPractices"> </a>
 
-深入探討稍微改善您的 Office 365 使用經驗的詳細資訊的這些最佳作法。
+如需改善 Office 365 體驗的詳細資訊，請進一步閱讀這些最佳做法。
   
-1. 要開始立即幫助您的使用者？ 使用 Office 365，包括 SharePoint Online、 Exchange Online 和 Lync Online 中，當您的網路只要不合作的秘訣，請參閱[使用慢速網路上的 Office 365 的最佳作法](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166)。 本文會連結至 TechNet，Support.office.com 上的內容的負載最佳化您的 Office 365 使用經驗，並包含簡單的方法來自訂您的網頁以及如何設定 Internet Explorer 設定為最佳的 Office 365 經驗的詳細資訊。 
+1. 您想立即開始協助您的使用者嗎？ 如果您在使用包含 SharePoint Online、Exchange Online 和 Lync Online 等 Office 365 產品時網路運作不順暢，請參閱[在網路緩慢的情況下使用 Office 365 的最佳做法](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166)。 本文含有大量 TechNet 及 Support.office.com 的連結，內容介紹如何最佳化您的 Office 365 體驗，並包含輕鬆自訂網頁的方法，以及如何設定 Internet Explorer 以享受最佳 Office 365 體驗等資訊。 
     
-2. 閱讀[Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)來了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。 本文可協助您了解安全地最佳化 Office 365 網路連線的最新的指引。 
+2. 請閱讀 [Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)，了解安全管理 Office 365 流量以及可能獲取最佳效能的連線原則。 本文將協助您了解以安全方式最佳化 Office 365 的網路連線能力的最新指引。 
     
-3. 透過謹慎地管理 Windows 更新的排程來改善郵件移轉效能。 您可以更新批次中的用戶端電腦，並確定所有用戶端電腦會更新之前先移轉到 Office 365 來調整的網路頻寬使用。 如需詳細資訊，請參閱[手動更新及設定桌面的 Office 365 的最新的更新](https://support.microsoft.com/gp/office-2013-365-update)。
+3. 謹慎管理 Windows Updates 排程來改善郵件移轉效能。 您可以批次更新用戶端電腦，確定所有用戶端電腦已在移轉至 Office 365 前更新，以管制網路頻寬的使用。 如需詳細資訊，請參閱[針對 Office 365 手動更新及設定電腦以取得最新更新](https://support.microsoft.com/gp/office-2013-365-update)。
     
-4. 當已被視為受信任的網際網路服務，並允許略過大部分的傳統篩選和掃描，有些組織置於不受信任的網際網路服務的網路流量可獲得最佳執行 office 365 的網路流量。 這通常包括移除輸出 proxy 使用者驗證及封包檢查，例如處理，以及確保本機通往網際網路頻寬容量足以處理增加與適當的網路位址轉譯 (NAT)網路要求。 如需設定您的網路以處理 Office 365 為您的網路上之信任的網際網路服務的其他指引，請參閱[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)。
+4. 有些組織將 Office 365 放置在不受信任網際網路服務的網路流量上，然而，Office 365 網路流量在被視為受信任的網際網路服務而允許略過大部分的篩選和掃描時可以達到最佳效能。 這通常包括移除如 Proxy 使用者驗證和封包檢查等輸出處理，以及確保本機出口至網際網路使用正確的網路位址轉譯 (NAT) 和擁有足夠的頻寬能力可以處理增加的網路需求。 如需有關設定您的網路，將您網路中的 Office 365 視為受信任網際網路服務進行處理的其他指引，請參閱[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)。
     
-1. 請確定[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)。 移至 Office 365 的其他流量會產生輸出 proxy 連線的增加以及增加的安全流量透過 TLS/SSL。
+1. 務必閱讀[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)。 移往 Office 365 的其他流量會導致輸出 Proxy 連線的增加以及 TLS/SSL 安全流量的增加。
     
-2. 如果您的輸出 proxy 需要使用者驗證您可能會遇到慢速連線或遺失的功能。 略過的 Office 365 網域驗證需求，可以降低此額外負荷。
+2. 如果您的輸出 Proxy 需要使用者驗證，您可能會遇到連線速度緩慢或喪失連線能力的狀況。 略過 Office 365 網域的驗證需求可以減少這項負擔。
     
-3. 如果您有大量的共用行事曆及信箱，您可能會看到從 Outlook 連線至 Exchange 數目增加。 比方說，Outlook 用戶端可能開啟使用中每個共用行事曆達兩個額外的連線。 在此情況下，確定 [輸出 proxy 可以處理的連線，或略過的 proxy 連線至 outlook 的 Office 365]。
+3. 如果您有大量的共用行事曆和信箱，可能會看見從 Outlook 至 Exchange 的連線數目增加。 例如，Outlook 用戶端可能會針對每個使用中的共用行事曆，開啟最多兩個額外連線。 在此情況下，請確定出口 Proxy 可以處理連線，或針對 Outlook 對 Office 365 的連線來略過 Proxy。
     
-4. 決定公用 IP 位址支援的裝置數目上限，以及如何負載平衡跨多個 IP 位址。 如需詳細資訊，請參閱[使用 Office 365 的 NAT 支援](nat-support-with-office-365.md)。
+4. 決定公用 IP 位址的支援裝置數目上限，以及如何平衡多個 IP 位址的負載。 如需詳細資訊，請參閱 [Office 365 的 NAT 支援](nat-support-with-office-365.md)。
     
-5. 如果您在您網路上檢查從電腦的輸出連線，略過此篩選至 Office 365 網域會改善連線能力與效能。 此外，略過輸出檢查通常會移除單一的網際網路輸出的需求，並啟用的目的地是 Office 365 的網路要求的本機網際網路輸出。
+5. 如果您正在檢查您網路上電腦的輸出連線，針對 Office 365 網域略過此篩選可以改善連線能力及效能。 此外，略過輸出檢查通常不需要單一網際網路出口，而且會啟用 Office 365 的本機網際網路出口目的地為網路的需求。
     
-6. 有些客戶尋找內部網路設定可能會影響效能。 設定最大傳輸單位 (MTU) 大小，例如網路自動交涉或自動偵測和子最佳路由傳送至網際網路是常見的位置可尋找。
+6. 有些客戶會發現內部網路設定可能會影響效能。 如傳輸單元最大值 (MTU) 的大小、網路自動交涉或自動偵測以及網際網路的次佳路由等設定都是要經常查看的地方。
     
 ## <a name="network-planning-reference-for-office-365"></a>Office 365 的網路規劃參考
 <a name="NetReference"> </a>
 
-這些主題包含詳細的 Office 365 網路參考資訊。
+下列主題包含詳細的 Office 365 網路參考資訊。
   
 - [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
     
@@ -108,8 +108,7 @@ ms.locfileid: "34069919"
     
 - [Office 365 影片網路常見問題集 (FAQ)](office-365-video-networking-faq.md)
     
-- [連線到 Office 365 服務的網路裝置的計劃](plan-for-network-devices.md)
+- [規劃連線到 Office 365 服務的網路裝置](plan-for-network-devices.md)
     
-- [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
-    
-
+- [Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
+ 
