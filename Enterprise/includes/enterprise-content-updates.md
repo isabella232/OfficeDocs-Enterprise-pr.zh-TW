@@ -3,57 +3,6 @@
 
 
 
-## <a name="week-of-may-27-2019"></a>2019 月 27 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 5/28/2019 | [Office 365 企業版](/Office365/Enterprise/index) | 修改時間 |
-| 5/28/2019 | [下載並執行 Office 365 IdFix 工具](/Office365/Enterprise/install-and-run-idfix) | 修改時間 |
-| 5/28/2019 | [用來管理 Office 365 帳戶的工具](/Office365/Enterprise/manage-office-365-accounts) | 修改時間 |
-| 5/28/2019 | [使用 IdFix 工具準備目錄屬性以與 Office 365 進行同步處理](/Office365/Enterprise/prepare-directory-attributes-for-synch-with-idfix) | 修改時間 |
-| 5/28/2019 | [準備目錄同步處理至 Office 365](/Office365/Enterprise/prepare-for-directory-synchronization) | 修改時間 |
-| 5/28/2019 | [用來管理 Office 365 帳戶的工具](/Office365/Enterprise/tools-to-manage-office-365-accounts) | 修改時間 |
-| 5/28/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
-| 5/28/2019 | [Office 365 美國政府 GCC High 端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
-| 5/28/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
-| 5/29/2019 | [Microsoft Cloud IT 架構資源](/Office365/Enterprise/microsoft-cloud-it-architecture-resources) | 修改時間 |
-| 5/29/2019 | [規劃從 Office 2007 或 2010年伺服器和用戶端升級](/Office365/Enterprise/plan-upgrade-previous-versions-office) | 修改時間 |
-| 5/29/2019 | [資源可以幫助您升級從 Office 2010 伺服器和用戶端](/Office365/Enterprise/upgrade-from-office-2010-servers-and-products) | 修改時間 |
-| 5/30/2019 | [將角色指派給 Office 365 powershell 的使用者帳戶](/Office365/Enterprise/powershell/assign-roles-to-user-accounts-with-office-365-powershell) | 修改時間 |
-
-
-## <a name="week-of-june-03-2019"></a>2019 年 6 月 03 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 6/4/2019 | [Office 365 用戶端應用程式支援 — 新式驗證](/Office365/Enterprise/office-365-client-support-modern-authentication) | 修改時間 |
-| 6/4/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
-| 6/4/2019 | [Office 365 美國政府 GCC High 端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
-| 6/4/2019 | [規劃從 Office 2007 或 2010年伺服器和用戶端升級](/Office365/Enterprise/plan-upgrade-previous-versions-office) | 修改時間 |
-| 6/4/2019 | [Project Server 2010 結束的支援藍圖](/Office365/Enterprise/project-server-2010-end-of-support) | 修改時間 |
-| 6/4/2019 | [資源可以幫助您升級從 Office 2010 伺服器和用戶端](/Office365/Enterprise/upgrade-from-office-2010-servers-and-products) | 修改時間 |
-| 6/4/2019 | [從 SharePoint 2010 升級](/Office365/Enterprise/upgrade-from-sharepoint-2010) | 修改時間 |
-| 6/5/2019 | [Azure ExpressRoute for Office 365](/Office365/Enterprise/azure-expressroute) | 修改時間 |
-| 6/5/2019 | [使用 BGP 社群中 ExpressRoute for Office 365 案例](/Office365/Enterprise/bgp-communities-in-expressroute) | 修改時間 |
-| 6/5/2019 | [用戶端連線](/Office365/Enterprise/client-connectivity) | 修改時間 |
-| 6/5/2019 | [內容傳遞網路](/Office365/Enterprise/content-delivery-networks) | 修改時間 |
-| 6/5/2019 | [實作 ExpressRoute for Office 365](/Office365/Enterprise/implementing-expressroute) | 修改時間 |
-| 6/5/2019 | [使用 ExpressRoute for Office 365 進行網路規劃](/Office365/Enterprise/network-planning-with-expressroute) | 修改時間 |
-| 6/5/2019 | [Office 365 IP 位址和 URL Web 服務](/Office365/Enterprise/office-365-ip-web-service) | 修改時間 |
-| 6/5/2019 | [Office 365 網路連線原則](/Office365/Enterprise/office-365-network-connectivity-principles) | 修改時間 |
-| 6/5/2019 | [Office 365 網路連線能力概觀](/Office365/Enterprise/office-365-networking-overview) | 修改時間 |
-| 6/5/2019 | [連線到 Office 365 服務的網路裝置的計劃](/Office365/Enterprise/plan-for-network-devices) | 修改時間 |
-| 6/5/2019 | [使用 ExpressRoute for Office 365 進行路由傳送](/Office365/Enterprise/routing-with-expressroute) | 修改時間 |
-| 6/5/2019 | [為 Office 365 設定您的網路](/Office365/Enterprise/set-up-network-for-office-365) | 修改時間 |
-| 6/5/2019 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 6/5/2019 | [適用於 Office 365 開發/測試環境的進階電子文件探索](/Office365/Enterprise/advanced-ediscovery-for-your-office-365-dev-test-environment) | 修改時間 |
-| 6/7/2019 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 6/7/2019 | [Project Server 2010 結束的支援藍圖](/Office365/Enterprise/project-server-2010-end-of-support) | 修改時間 |
-| 6/7/2019 | [資源可以幫助您升級從 Office 2010 伺服器和用戶端](/Office365/Enterprise/upgrade-from-office-2010-servers-and-products) | 修改時間 |
-
-
 ## <a name="week-of-june-10-2019"></a>2019 年 6 月 10 日當週
 
 
@@ -100,3 +49,42 @@
 | 6/28/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
 | 6/28/2019 | [將核心資料移至新的 Office 365 資料中心 geos](/Office365/Enterprise/moving-data-to-new-datacenter-geos) | 修改時間 |
 | 6/28/2019 | [如何要求資料移動](/Office365/Enterprise/request-your-data-move) | 修改時間 |
+
+
+## <a name="week-of-july-01-2019"></a>2019 年 7 月 01 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 7/2/2019 | [將 SharePoint 網站移至不同的地理位置](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 修改時間 |
+
+
+## <a name="week-of-july-08-2019"></a>2019 年 7 月 08 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 7/9/2019 | [將貴組織資料移轉到 Office 365 企業版](/Office365/Enterprise/migrate-data-to-office-365) | 修改時間 |
+| 7/9/2019 | [診斷 SharePoint Online 的效能問題](/Office365/Enterprise/diagnosing-performance-issues-with-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [規劃從 Office 2007 或 2010年伺服器和用戶端升級](/Office365/Enterprise/plan-upgrade-previous-versions-office) | 修改時間 |
+| 7/10/2019 | [資源可以幫助您升級從 Office 2010 伺服器和用戶端](/Office365/Enterprise/upgrade-from-office-2010-servers-and-products) | 修改時間 |
+| 7/10/2019 | [Microsoft Cloud IT 架構資源](/Office365/Enterprise/microsoft-cloud-it-architecture-resources) | 修改時間 |
+| 7/10/2019 | [資訊版權管理 Office 365 系統管理中心中的指標](/Office365/Enterprise/activate-rms-in-office-365) | 修改時間 |
+| 7/10/2019 | [在慢速網路上使用 Office 365 的最佳作法](/Office365/Enterprise/best-practices-for-using-office-365-on-a-slow-network) | 修改時間 |
+| 7/10/2019 | [延遲載入 SharePoint Online 中的影像和 JavaScript](/Office365/Enterprise/delay-loading-images-and-javascript-in-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [SharePoint Online 的影像最佳化](/Office365/Enterprise/image-optimization-for-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [SharePoint Online 效能調整的簡介](/Office365/Enterprise/introduction-to-performance-tuning-for-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [縮製及統合在 SharePoint Online](/Office365/Enterprise/minification-and-bundling-in-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [Office 365 的 NAT 支援](/Office365/Enterprise/nat-support-with-office-365) | 修改時間 |
+| 7/10/2019 | [SharePoint Online 的導覽選項](/Office365/Enterprise/navigation-options-for-sharepoint-online) | 修改時間 |
+| 7/10/2019 | [Office 365 的網路和移轉規劃](/Office365/Enterprise/network-and-migration-planning) | 修改時間 |
+| 7/10/2019 | [Office 365 的網路規劃和效能調整](/Office365/Enterprise/network-planning-and-performance) | 修改時間 |
+| 7/10/2019 | [使用 SharePoint Online 頁面診斷工具](/Office365/Enterprise/page-diagnostics-for-spo) | 修改時間 |
+| 7/10/2019 | [調整 Office 365 效能](/Office365/Enterprise/tune-office-365-performance) | 修改時間 |
+| 7/10/2019 | [調整 SharePoint Online 效能](/Office365/Enterprise/tune-sharepoint-online-performance) | 修改時間 |
+| 7/10/2019 | [調整商務用 Skype Online 效能](/Office365/Enterprise/tune-skype-for-business-online-performance) | 修改時間 |
+| 7/10/2019 | [若要降低讀取郵件時使用的記憶體使用精簡的快顯](/Office365/Enterprise/use-lean-popouts-to-reduce-memory-used-when-reading-mail-messages) | 修改時間 |
+| 7/10/2019 | [使用內容搜尋網頁組件而不內容查詢網頁組件，來改善 SharePoint Online 中的效能](/Office365/Enterprise/using-content-search-web-part-instead-of-content-query-web-part-to-improve-perfo) | 修改時間 |
+| 7/10/2019 | [使用 SharePoint Online 的物件快取](/Office365/Enterprise/using-the-object-cache-with-sharepoint-online) | 修改時間 |
+| 7/11/2019 | [Project Server 2010 結束的支援藍圖](/Office365/Enterprise/project-server-2010-end-of-support) | 修改時間 |
+| 7/12/2019 | [從 SharePoint 2010 升級](/Office365/Enterprise/upgrade-from-sharepoint-2010) | 修改時間 |
