@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: 2f1856d203e892c98b44ccc1dbe1598d527165de
-ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
+ms.openlocfilehash: 06ffed9ab4b41c5e164cfadb951181a3406c67a3
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34162506"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35781933"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -118,7 +118,7 @@ ms.locfileid: "34162506"
     
 11. 在下一頁中，請稍候直到 Office 365 完成設定且所有的圖標皆可供使用。
     
-您應會看到主要 Office 365 入口網站頁面，您可以從其中存取 Office Online 服務和 Microsoft 365 系統管理中心。
+您應會看到主要 Office 365 入口網站頁面，您可以從其中存取 Office 服務和 Microsoft 365 系統管理中心。
   
 針對模擬的企業 Office 365 開發/測試環境，此為產生的組態。
   
