@@ -3,7 +3,7 @@ title: Azure ExpressRoute for Office 365
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/01/2018
+ms.date: 6/5/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,19 +18,19 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: 了解 Azure ExpressRoute 搭配 Office 365 的方式，以及如何規劃將會需要，如果您要為搭配 Office 365 部署 Azure ExpressRoute 的網路實作專案。
-ms.openlocfilehash: 26aa65cdec5e9e37ee99a283d600d56f79fd85a4
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: d881dc4e65ca2533f511c7f613c38569811b95a7
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068269"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782353"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute for Office 365
 
-了解 Azure ExpressRoute 搭配 Office 365 的方式，以及如何規劃將會需要，如果您要為搭配 Office 365 部署 Azure ExpressRoute 的網路實作專案。 在 Azure 中執行的基礎結構和平台服務通常會受益所定址網路架構與效能考量。 建議 Azure 的 ExpressRoute 在這些情況下。 軟體即 like 已透過網際網路存取安全且可靠地建置 Office 365 和 Dynamics 365 服務方案。 您可以閱讀有關網際網路效能與安全性，以及時，您可能會列入考量 Azure ExpressRoute for Office 365 文章[對 Office 365 的網路連線](network-connectivity.md)。
+了解 Azure ExpressRoute 搭配 Office 365 的方式，以及如何規劃將會需要，如果您要為搭配 Office 365 部署 Azure ExpressRoute 的網路實作專案。 在 Azure 中執行的基礎結構和平台服務通常會受益所定址網路架構與效能考量。 建議 Azure 的 ExpressRoute 在這些情況下。 軟體即 like 已透過網際網路存取安全且可靠地建置 Office 365 和 Dynamics 365 服務方案。 您可以閱讀有關網際網路效能與安全性，以及時，您可能會列入考量 Azure ExpressRoute for Office 365 文章[評估 Office 365 網路連線](assessing-network-connectivity.md)。
 
 > [!NOTE]
-> Microsoft 授權，才能使用 ExpressRoute for Office 365。 Microsoft 檢閱每個客戶要求，以及客戶的法規需求所要求的直接連線時，授權 ExpressRoute for Office 365 流量。 如果您有這類需求，請提供規定您解讀表示直接連線需要在[ExpressRoute for Office 365 要求表單](https://aka.ms/O365ERReview)中，若要開始 Microsoft 檢閱其文字摘錄與網頁連結。 未經授權嘗試建立 Office 365 路由篩選器的訂用帳戶會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)。 
+> Microsoft 授權，才能使用 ExpressRoute for Office 365。 Microsoft 檢閱每個客戶要求，以及客戶的法規需求所要求的直接連線時，授權 ExpressRoute for Office 365 流量。 如果您有這類需求，請提供規定您解讀表示直接連線需要在[ExpressRoute for Office 365 要求表單](https://aka.ms/O365ERReview)中，若要開始 Microsoft 檢閱其文字摘錄與網頁連結。 未經授權嘗試建立 Office 365 路由篩選器的訂用帳戶會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)。
 
 您現在可以新增至 Office 365 的直接的網路連線的所選的 Office 365 網路流量。 Azure ExpressRoute 可提供直接連線，可預測的效能，和隨附的 Microsoft 網路元件的執行時間 SLA 99.95%。 您仍將需要網際網路連線不支援透過 Azure ExpressRoute 的服務。
 
@@ -50,8 +50,6 @@ ms.locfileid: "34068269"
 
 仍需要更多資訊？ 了解如何[管理您的網路流量使用 Azure ExpressRoute for Office 365](https://support.office.com/article/e1da26c6-2d39-4379-af6f-4da213218408)並了解如何[設定 Azure ExpressRoute for Office 365](https://azure.microsoft.com/documentation/articles/expressroute-faqs/)。 我們也已記錄以協助說明的概念更徹底 Channel 9 10 部分的[Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer)系列。
 
-([Azure ExpressRoute Office 365](azure-expressroute.md#BKMK_HOME))
-
 ## <a name="what-office-365-services-are-included"></a>包含哪些 Office 365 服務？
 <a name="BKMK_WhatDoIGet"> </a>
 
@@ -62,13 +60,11 @@ ms.locfileid: "34068269"
 |Exchange Online<sup>1</sup> <br/> Exchange Online Protection<sup>1</sup> <br/> Delve<sup>1</sup> <br/> |
 |Skype 商務 Online<sup>1</sup> <br/> |
 |SharePoint Online<sup>1</sup> <br/> OneDrive for Business<sup>1</sup> <br/> Project Online<sup>1</sup> <br/> |
-|入口網站及共用的<sup>1</sup> <br/> Azure Active Directory<sup>1</sup> <br/> AAD 連線<sup>1</sup> <br/> Office Online<sup>1</sup> <br/> |
+|入口網站及共用的<sup>1</sup> <br/> Azure Active Directory<sup>1</sup> <br/> AAD 連線<sup>1</sup> <br/> Office<sup>1</sup> <br/> |
 
 <sup>1</sup>每個這些應用程式不支援透過 ExpressRoute 的網際網路連線能力需求，請參閱[Office 365 端點文章](https://aka.ms/o365endpoints)如需詳細資訊。
 
 不包含使用 ExpressRoute for Office 365 服務，而 Office 365 專業增強版的用戶端下載項目、 內部部署身分識別提供者登入]，在中國的 Office 365 (21vianet 21 Vianet) 服務。
-
-([Azure ExpressRoute Office 365](azure-expressroute.md#BKMK_HOME))
 
 ## <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
@@ -100,11 +96,9 @@ ms.locfileid: "34068269"
 
 備妥可註冊的[ExpressRoute for Office 365](https://aka.ms/ert)？
 
-([Azure ExpressRoute Office 365](azure-expressroute.md#BKMK_HOME))
-
 ## <a name="related-topics"></a>相關主題
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線](assessing-network-connectivity.md)
 
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
 

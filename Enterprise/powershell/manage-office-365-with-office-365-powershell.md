@@ -15,18 +15,18 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 932d57c0-1520-4f0f-8ec9-9966d646480f
 description: 摘要：了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online、Exchange Online 和 Office 365 安全與規範中心。
-ms.openlocfilehash: 90903c33ebabc426ba95e0c69e71fea985cb464d
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 56c23aca44d09947e7469296c6ed85b2f3d2f3c5
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068899"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782103"
 ---
 # <a name="manage-office-365-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 Office 365
 
  **摘要：** 了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online、Exchange Online 和 Office 365 安全與規範中心。
   
-Office 365 PowerShell 是個功能強大的管理工具，可補充 Office 365 系統管理中心。例如，您可以使用 Office 365 PowerShell 自動化更快速地管理多個使用者帳戶和授權，以及建立報告。了解如何搭配使用 Office 365 PowerShell 與 Office 365 使用者和授權、商務用 Skype Online、SharePoint Online、Exchange Online 和 Office 365 安全與規範中心。
+Office 365 PowerShell 十分輔助 Microsoft 365 系統管理中心功能強大的管理工具。 例如，您可以使用 Office 365 PowerShell 自動化更快速地管理多個使用者帳戶和授權，以及建立報告。 了解如何使用 Office 365 PowerShell 與 Office 365 使用者和授權、 商務用 Skype 商務 Online、 SharePoint Online、 Exchange Online 和 Office 365 安全性 & 合規性中心。
   
 根據您的需求，選取主題：
   

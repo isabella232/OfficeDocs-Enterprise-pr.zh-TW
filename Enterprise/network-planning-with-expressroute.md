@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: 適用於 Office 365 可提供第 3 層之間的連線能力您的網路與 Microsoft 資料中心。 迴路使用框線閘道通訊協定 (BGP) 路由廣告的 Office 365 的前端伺服器。 從您的內部部署裝置的觀點來看，當他們需要選取正確的 TCP/IP 路徑至 Office 365 Azure ExpressRoute 會視為網際網路的替代方案。
-ms.openlocfilehash: 459850a29e87650f1aecfc6a6977cd6e5b77ae07
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: b31d6150ee3eb11a93b485a5eece22eb3a82021e
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069699"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782233"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行網路規劃
 
@@ -34,7 +34,7 @@ Azure ExpressRoute 會新增至一組特定的支援的功能和服務所提供�
 |**網路規劃的差異**|**網際網路網路連線**|**ExpressRoute 的網路連線**|
 |:-----|:-----|:-----|
 | 必要的網際網路服務，包括; 存取權  <br/>  DNS 名稱解析  <br/>  憑證撤銷驗證  <br/>  內容傳遞網路  <br/> |是  <br/> |要求送至 Microsoft 擁有 DNS 及/或 CDN 基礎結構可能使用 ExpressRoute 的網路。  <br/> |
-| 存取 Office 365 服務，包括;  <br/>  Exchange Online  <br/>  SharePoint Online  <br/>  商務用 Skype Online  <br/>  Office Online  <br/>  Office 365 入口網站及驗證  <br/> |是，所有應用程式和功能  <br/> |是，[特定應用程式和功能](https://aka.ms/o365endpoints) <br/> |
+| 存取 Office 365 服務，包括;  <br/>  Exchange Online  <br/>  SharePoint Online  <br/>  商務用 Skype Online  <br/>  在瀏覽器中的 office  <br/>  Office 365 入口網站及驗證  <br/> |是，所有應用程式和功能  <br/> |是，[特定應用程式和功能](https://aka.ms/o365endpoints) <br/> |
 |內部部署在周邊安全性。  <br/> |是  <br/> |是  <br/> |
 |高可用性計劃。  <br/> |容錯移轉至備用網際網路網路連線  <br/> |容錯移轉至備用 ExpressRoute 連線  <br/> |
 |與可預測的網路設定檔的直接連線。  <br/> |否  <br/> |是  <br/> |
@@ -190,7 +190,7 @@ Woodgrove Bank 在網路組態是根據幾個關鍵而建置：
 ## <a name="related-topics"></a>相關主題
 <a name="BKMK_high-availability"> </a>
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   

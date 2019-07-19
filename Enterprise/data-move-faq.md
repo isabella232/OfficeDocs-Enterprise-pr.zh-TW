@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 description: 以下是對一般問題的回答關於將核心資料移至新的資料中心地理位置。
-ms.openlocfilehash: 29706f49ee0faf8c535b50843f224b7b1b2a372e
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: fe0392040f4a78d32e682e4f013db7a8ba49ebd5
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067895"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782323"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -61,7 +61,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
  ## <a name="where-is-my-core-customer-data-is-located"></a>其中是我核心客戶資料所在？
 
-租用戶系統管理員可以檢視資料位置卡在系統管理中心來確認每個服務，特別針對其租用戶 rest 位置的核心客戶資料的任何時候。我們也將發佈的資料中心 geos、 資料中心及在新租用戶的 rest 位置目前的預設核心客戶資料的參照的位置上的 [Office 365 互動式資料中心對應](https://office.com/datamaps)的 Office 365 客戶資料的位置。  您可以在您的組織設定檔，在 Office 365 系統管理中心中確認透過 [資料位置] 區段中的靜態客戶資料的位置。  
+租用戶系統管理員可以檢視資料位置卡在系統管理中心來確認每個服務，特別針對其租用戶 rest 位置的核心客戶資料的任何時候。我們也將發佈的資料中心 geos、 資料中心及在新租用戶的 rest 位置目前的預設核心客戶資料的參照的位置上的 [Office 365 互動式資料中心對應](https://office.com/datamaps)的 Office 365 客戶資料的位置。  您可以在您的組織設定檔，Microsoft 365 系統管理中心中確認透過 [資料位置] 區段中的靜態客戶資料的位置。  
  
 ## <a name="when-will-i-be-able-to-request-a-move"></a>何時我能夠要求的移動？
   
@@ -101,7 +101,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
  ## <a name="how-do-i-know-the-move-is-complete"></a>如何知道移動作業就會完成？
   
-觀看 Office 365 訊息中心，確認每個服務資料的移動作業完成。 每個服務的資料移動時，我們就會張貼完成通知，讓您會看到三個完成通知： 的一對每個 Exchange Online、 SharePoint Online 和商務用 Skype。  您也可以在您的組織設定檔，在 Office 365 系統管理中心中確認您透過 [資料位置] 區段中的靜態的客戶資料的位置。  
+觀看 Office 365 訊息中心，確認每個服務資料的移動作業完成。 每個服務的資料移動時，我們就會張貼完成通知，讓您會看到三個完成通知： 的一對每個 Exchange Online、 SharePoint Online 和商務用 Skype。  您也可以在您的組織設定檔，Microsoft 365 系統管理中心中確認您透過 [資料位置] 區段中的靜態的客戶資料的位置。  
   
 ## <a name="i-am-an-office-365-customer-in-one-of-the-new-datacenter-geos-but-when-i-signed-up-i-selected-a-different-country-how-can-i-be-moved-to-the-new-datacenter-geo"></a>我是下列其中一個新的資料中心 geos，Office 365 客戶，但當我註冊，我選取不同的國家/地區。 如何可以我要移至新的資料中心地理位置？
 

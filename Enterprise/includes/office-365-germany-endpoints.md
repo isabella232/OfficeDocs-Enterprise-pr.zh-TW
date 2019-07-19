@@ -35,7 +35,7 @@ ID | 類別 | ER | Addresses | 連接埠
 6 | 最佳化<BR>必要 | 否 | `*.germeetings.skype.de, *.infra.skype.de, *.online.skype.de, *.resources.skype.de`<BR>`51.4.68.0/26, 51.4.68.128/25, 51.5.69.0/26, 51.5.69.128/25, 2a01:4180:4040:1::/64, 2a01:4180:4040:2::/64, 2a01:4180:4040:7::/64, 2a01:4180:4040:8::/64` | **TCP：** 443、80<BR>**UDP：** 3478
 7 | 預設<BR>必要 | 否 | `*.germeetings.skype.de, *.infra.skype.de, *.online.skype.de, *.resources.skype.de` | **TCP：** 5061、50000-59999<BR>**UDP：** 50000-59999
 
-## <a name="microsoft-365-common-and-office-online"></a>Microsoft 365 Common 與 Office Online
+## <a name="microsoft-365-common-and-office"></a>Microsoft 365 Common 與 Office
 
 ID | 類別 | ER | Addresses | 連接埠
 -- | ------------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------
@@ -43,13 +43,13 @@ ID | 類別 | ER | Addresses | 連接埠
 19 | 預設<BR>必要 | 否 | `broadcast.cdn.office.de, excel.cdn.office.de, officeapps.cdn.office.de, onenote.cdn.office.de, powerpoint.cdn.office.de, view.cdn.office.de, visio.cdn.office.de, word-edit.cdn.office.de, word-view.cdn.office.de` | **TCP：** 443
 20 | 允許<BR>必要 | 否 | `adminwebservice.microsoftonline.de, becws.microsoftonline.de, companymanager.microsoftonline.de, device.login.microsoftonline.de, directoryprovisioning.cloudapi.de, graph.cloudapi.de, login.microsoftonline.de, logincert.microsoftonline.de, pas.cloudapi.de, passwordreset.activedirectory.microsoftazure.de, provisioningapi.microsoftonline.de, syncservice.microsoftonline.de`<BR>`51.4.70.0/24, 51.4.136.0/24, 51.4.144.0/24, 51.5.70.0/24, 51.5.136.0/24, 51.5.144.0/24` | **TCP：** 443、80
 22 | 預設<BR>必要 | 否 | `*.msauth.net, *.msftauth.net, secure.aadcdn.microsoftonline-p.com, secure.aadcdn.microsoftonline-p.de` | **TCP：** 443、80
-word | 預設<BR>必要 | 否 | `*.de.msods.nsatc.net, *.office.de.akadns.net, *.windows.de.nsatc.net, officehome.msocdn.de` | **TCP：** 443、80
-插槽 | 預設<BR>必要 | 否 | `*.d-trust.net` | **TCP：** 443、80
-7 | 允許<BR>必要 | 否 | `*.onmicrosoft.de, *.osi.office.de, office.de, portal.office.de, webshell.suite.office.de, www.office.de`<BR>`51.4.70.0/24, 51.4.71.0/24, 51.4.226.115/32, 51.4.227.178/32, 51.4.230.178/32, 51.5.70.0/24, 51.5.71.0/24, 51.5.147.48/32, 51.5.242.163/32, 51.5.245.67/32, 2a01:4180:2001::92/128, 2a01:4180:2001::234/128, 2a01:4180:2001::3b8/128, 2a01:4180:2401::11f/128, 2a01:4180:2401::33b/128, 2a01:4180:2401::55b/128` | **TCP：** 443、80
-日 | 預設<BR>必要 | 否 | `*.cloudfront.net, prod.msocdn.de, r1.res.office365.com, shellprod.msocdn.de` | **TCP：** 443、80
-5 | 允許<BR>必要 | 否 | `excelcs.osi.office.de, excelps.osi.office.de, ols.osi.office.de, omexdiagnostics.osi.office.de, pptcs.osi.office.de, pptps.osi.office.de, wordcs.osi.office.de, wordps.osi.office.de`<BR>`51.4.144.41/32, 51.4.144.174/32, 51.4.145.38/32, 51.4.147.81/32, 51.4.147.233/32, 51.4.148.12/32, 51.4.150.145/32, 51.5.147.242/32, 51.5.149.100/32, 51.5.149.119/32, 51.5.149.123/32, 51.5.149.180/32, 51.5.149.186/32, 51.18.0.0/21` | **TCP：** 443、80
+25 | 預設<BR>必要 | 否 | `*.de.msods.nsatc.net, *.office.de.akadns.net, *.windows.de.nsatc.net, officehome.msocdn.de` | **TCP：** 443、80
+26 | 預設<BR>必要 | 否 | `*.d-trust.net` | **TCP：** 443、80
+27 | 允許<BR>必要 | 否 | `*.onmicrosoft.de, *.osi.office.de, office.de, portal.office.de, webshell.suite.office.de, www.office.de`<BR>`51.4.70.0/24, 51.4.71.0/24, 51.4.226.115/32, 51.4.227.178/32, 51.4.230.178/32, 51.5.70.0/24, 51.5.71.0/24, 51.5.147.48/32, 51.5.242.163/32, 51.5.245.67/32, 2a01:4180:2001::92/128, 2a01:4180:2001::234/128, 2a01:4180:2001::3b8/128, 2a01:4180:2401::11f/128, 2a01:4180:2401::33b/128, 2a01:4180:2401::55b/128` | **TCP：** 443、80
+28 | 預設<BR>必要 | 否 | `*.cloudfront.net, prod.msocdn.de, r1.res.office365.com, shellprod.msocdn.de` | **TCP：** 443、80
+29 | 允許<BR>必要 | 否 | `excelcs.osi.office.de, excelps.osi.office.de, ols.osi.office.de, omexdiagnostics.osi.office.de, pptcs.osi.office.de, pptps.osi.office.de, wordcs.osi.office.de, wordps.osi.office.de`<BR>`51.4.144.41/32, 51.4.144.174/32, 51.4.145.38/32, 51.4.147.81/32, 51.4.147.233/32, 51.4.148.12/32, 51.4.150.145/32, 51.5.147.242/32, 51.5.149.100/32, 51.5.149.119/32, 51.5.149.123/32, 51.5.149.180/32, 51.5.149.186/32, 51.18.0.0/21` | **TCP：** 443、80
 30 | 預設<BR>必要 | 否 | `graph.microsoft.de, ocws.osi.office.de, odc.osi.office.de, roaming.osi.office.de, sharepoint.de, store.office.de` | **TCP：** 443、80
-之前 | 預設<BR>必要 | 否 | `o15.officeredir.microsoft.com, odc.officeapps.live.com, odcsm.officeapps.live.com, office.microsoft.com, office15client.microsoft.com, officeimg.vo.msecnd.net, roaming.officeapps.live.com` | **TCP：** 443、80
+31 | 預設<BR>必要 | 否 | `o15.officeredir.microsoft.com, odc.officeapps.live.com, odcsm.officeapps.live.com, office.microsoft.com, office15client.microsoft.com, officeimg.vo.msecnd.net, roaming.officeapps.live.com` | **TCP：** 443、80
 32 | 預設<BR>必要 | 否 | `arms.osi.office.de, manage.osi.office.de, plattest.osi.office.de` | **TCP：** 443、80
 33 | 預設<BR>必要 | 否 | `delve.office.de, res.delve.office.com` | **TCP：** 443
 34 | 預設<BR>必要 | 否 | `loki.delve.office.de, lpcres.delve.office.com` | **TCP：** 443

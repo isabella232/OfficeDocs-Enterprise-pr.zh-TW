@@ -13,18 +13,18 @@ ms.collection:
 ms.custom: ''
 ms.assetid: be497751-596f-431d-b256-0a89d36a47ce
 description: 摘要：新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可以使用 Windows PowerShell 來管理 Office 365 客戶租用戶。
-ms.openlocfilehash: f36762cd8e78485316270f8eec8386229a84a276
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: abbd5a0e2f288a6d6d0250cca57ec4c48a0bd88e
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068908"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35781773"
 ---
 # <a name="manage-office-365-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 管理 Office 365
 
  **摘要：** 新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可以使用 Windows PowerShell 來管理 Office 365 客戶租用戶。
   
-委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 Office 365 訂閱。 當他們銷售 Office 365 訂閱時，會自動將管理代表 (AOBO) 權限授與「客戶租用」，讓他們能夠管理和報告客戶租用。 這些工作在 Office 365 系統管理中心中是既艱困又耗時的工作。 透過 Windows PowerShell for Office 365，他們能輕鬆地執行如列出所有客戶 **TenantId** 和其網域，或識別客戶租用中的所有使用者及指派的授權等系統管理工作。 在某些情況下，他們只能在 Windows PowerShell for Office 365 中執行這些管理工作。 以下是新聞訂閱方式和 CSP 合作夥伴最常用來管理客戶租用的範例案例：
+委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 Office 365 訂閱。 當他們銷售 Office 365 訂閱時，會自動將管理代表 (AOBO) 權限授與「客戶租用」，讓他們能夠管理和報告客戶租用。 最佳情況下，這是很困難又費時若要在 Microsoft 365 系統管理中心中執行。 透過 Windows PowerShell for Office 365，他們能輕鬆地執行如列出所有客戶 **TenantId** 和其網域，或識別客戶租用中的所有使用者及指派的授權等系統管理工作。 在某些情況下，他們只能在 Windows PowerShell for Office 365 中執行這些管理工作。 以下是新聞訂閱方式和 CSP 合作夥伴最常用來管理客戶租用的範例案例：
   
 ## 
 

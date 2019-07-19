@@ -18,12 +18,12 @@ ms.collection:
 - M365-security-compliance
 - Ent_O365
 description: 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
-ms.openlocfilehash: a399cb0057e9cc62e180fea8a6d7b9dbf1993a5f
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 755f4c4bde7e040638e768002a528710bcdd48fd
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069519"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35781903"
 ---
 # <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄調整 Office 365 效能
 
@@ -49,7 +49,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
 
 首先，您必須確定您急需確實效能問題，並不服務事件。 效能問題是不同的 Office 365 中服務事件。 以下是如何分辨遠。
   
-如果 Office 365 服務時遇到問題，這會是服務事件。 您會看到紅色或黃色的圖示，在 Office 365 系統管理中心中的**目前健全狀況**下，您可能也會發現連線至 Office 365 的用戶端電腦上的效能降低。 例如，如果目前的狀況報告的紅色圖示，而且您會看到**Investigating**旁 Exchange，您也可能會再接收一堆通話從組織中抱怨使用 Exchange Online 的用戶端信箱執行不良的人員。 在此情況下，則是合理假設您的 Exchange Online 效能剛變成內服務問題的受害者。 
+如果 Office 365 服務時遇到問題，這會是服務事件。 您會看到紅色或黃色的圖示，在 Microsoft 365 系統管理中心中的**目前健全狀況**下，您可能也會發現連線至 Office 365 的用戶端電腦上的效能降低。 例如，如果目前的狀況報告的紅色圖示，而且您會看到**Investigating**旁 Exchange，您也可能會再接收一堆通話從組織中抱怨使用 Exchange Online 的用戶端信箱執行不良的人員。 在此情況下，則是合理假設您的 Exchange Online 效能剛變成內服務問題的受害者。 
   
 ![Office 365 健全狀況儀表板以顯示綠色，除了 Exchange，其會顯示已還原的服務的所有工作負載。](media/ec7f0325-9e61-4e1a-bec0-64b87f4469be.PNG)
   
@@ -59,7 +59,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 效能問題無法服務事件，即使事件可能會導致效能降低。 效能問題看起來像這樣：
   
-- 不論在 Office 365 系統管理中心**目前健全狀況**報告服務就會發生效能問題。 
+- 不論在系統管理中心**目前健全狀況**報告服務就會發生效能問題。 
     
 -  用於是相當一致的行為需要很長的時間才能完成，或從未完成。 
     
@@ -198,7 +198,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
 ![基本網路，以用戶端、 proxy 和雲端，以及工具建議 PSPing、 TraceTCP 和網路追蹤。](media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
 > [!NOTE]
-> TraceTCP 隨附於此 」 螢幕擷取畫面，因為它是很有用的工具，顯示，以毫秒為單位，多久要求所需程序，以及多少網路躍點或連線從一部電腦對下一步]，要求會採用到達目的地。 TraceTCP 也可以授與伺服器旋入，可以用來支援的 Microsoft Office 365 疑難排解員期間使用的名稱。 > TraceTCP 命令可以是非常簡單，例如： > `tracetcp.exe outlook.office365.com:443`> 記住，在命令中包含的連接埠號碼 ！ > [TraceTCP](http://simulatedsimian.github.io/tracetcp_download.html)免費下載，但依賴 Wincap。 Wincap 是一種工具，也是使用及安裝 Netmon。 我們也可以使用 Netmon 中的進階的方法一節。 
+> TraceTCP 隨附於此 」 螢幕擷取畫面，因為它是很有用的工具，顯示，以毫秒為單位，多久要求所需程序，以及多少網路躍點或連線從一部電腦對下一步]，要求會採用到達目的地。 TraceTCP 也可以授與伺服器旋入，可以用來支援的 Microsoft Office 365 疑難排解員期間使用的名稱。 > TraceTCP 命令可以是非常簡單，例如: > `tracetcp.exe outlook.office365.com:443`> 記住，在命令中包含的連接埠號碼 ！ > [TraceTCP](http://simulatedsimian.github.io/tracetcp_download.html)免費下載，但依賴 Wincap。 Wincap 是一種工具，也是使用及安裝 Netmon。 我們也可以使用 Netmon 中的進階的方法一節。 
   
  如果您有多個辦公室，您需要從用戶端的每個位置以及保留的資料集。 這項測試會測量延遲，在此情況下，這是一個數字的值，說明將要求傳送至 Office 365，以及回應要求的 Office 365 用戶端之間的時間長度。 測試的用戶端電腦上，您網域內的來源，並尋找到 Office 365，在網際網路上的輸出點，透過測量從內部網路，來回，重新。 
   

@@ -19,12 +19,12 @@ ms.assetid: 37a5c116-5b07-4f70-8333-5b86fd2c3c40
 ms.collection:
 - M365-security-compliance
 description: 工作階段逾時可用來平衡安全性和 [輕鬆存取 Office 365 用戶端應用程式中。
-ms.openlocfilehash: 82ce98de440175f2190d5da6e4d1c02b8b678b89
-ms.sourcegitcommit: 237e1c485214c2ff75375988febfd7fb70faa5f3
+ms.openlocfilehash: 6c37f53086a840a05e879682c95d6a4f25463707
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "35746691"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782013"
 ---
 # <a name="session-timeouts-for-office-365"></a>Office 365 的工作階段逾時
 
@@ -38,7 +38,7 @@ ms.locfileid: "35746691"
   
 |**Office 365 服務**|**工作階段逾時**|
 |:-----|:-----|
-|Office 365 系統管理中心  <br/> |會要求您提供的認證，在系統管理中心來每隔 8 小時。  <br/> |
+|Microsoft 365 系統管理中心  <br/> |會要求您提供的認證，在系統管理中心來每隔 8 小時。  <br/> |
 |SharePoint Online  <br/> |5 天的閒置時間長達使用者選擇 [**保持我登入**。 如果使用者存取 SharePoint Online 一次之後從舊的登入已傳遞 24 個小時以上，逾時值是重設為 5 天。  <br/> |
 |Outlook Web App  <br/> |6 小時。  <br/> 您可以使用_ActivityBasedAuthenticationTimeoutInterval_參數， [Set-organizationconfig](https://go.microsoft.com/fwlink/p/?LinkId=615378)指令程式中變更此值。  <br/> |
 |Azure Active Directory  <br/> （搭配 Office 2013 Windows 用戶端啟用新式驗證）  <br/> | 新式驗證會使用存取權杖並重新整理權杖來授與使用者存取使用 Azure Active Directory 的 Office 365 資源。 存取權杖是 JSON Web 權杖驗證成功後所提供且有效 （1 小時）。 也提供較長的生命週期與重新整理權杖。 當存取權杖到期時，Office 用戶端會使用有效的重新整理權杖來取得新的存取權杖。 此 exchange 會成功，如果使用者的初始驗證仍然有效。  <br/>  重新整理權杖有效 90 天，且隨著連續使用，它們可以有效直到撤銷。  <br/>  重新整理權杖可以失效由數個事件如下：  <br/>  重新整理權杖已發出後，已變更使用者的密碼。  <br/>  系統管理員可以套用至使用者嘗試存取的資源限制存取條件式存取原則。  <br/> |

@@ -14,12 +14,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
 description: 了解如何將授權指派給使用者帳戶，並在同時使用 Office 365 PowerShell 停用特定的服務計劃。
-ms.openlocfilehash: 82a448e4fc7f068fab3b04519b9689506208bee8
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: f45c76ba0e756aec057e4243ece51de2af26aaec
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069049"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782143"
 ---
 # <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用服務存取權，並指派使用者授權
 
@@ -40,7 +40,7 @@ Get-MsolAccountSku
 
 在顯示的`Get-MsolAccountSku`命令：
   
-- **AccountSkuId**是您組織中的訂閱\<OrganizationName>:\<Subscription> 格式。 \<OrganizationName> 是您提供當您在 Office 365 中註冊，並為您的組織是唯一的值。 \<Subscription> 值是針對特定的訂閱。 例如，如 litwareinc: enterprisepack，組織名稱為 litwareinc，且訂閱名稱 ENTERPRISEPACK (Office 365 企業版 E3)。
+- **AccountSkuId**是您組織中的訂閱\<OrganizationName>:\<訂閱> 格式。 \<OrganizationName> 是您提供當您在 Office 365 中註冊，並為您的組織是唯一的值。 \<訂閱> 值是針對特定的訂閱。 例如，如 litwareinc: enterprisepack，組織名稱為 litwareinc，且訂閱名稱 ENTERPRISEPACK (Office 365 企業版 E3)。
     
 - **Activeunits 作用**是您已購買訂閱的授權數目。
     
@@ -70,7 +70,7 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 | `RMS_S_ENTERPRISE` <br/> |Azure 版權管理 (RMS)  <br/> |
 | `OFFICESUBSCRIPTION` <br/> |Office 專業增強版  <br/> |
 | `MCOSTANDARD` <br/> |商務用 Skype Online  <br/> |
-| `SHAREPOINTWAC` <br/> |Office Online  <br/> |
+| `SHAREPOINTWAC` <br/> |Office   <br/> |
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |
 | `EXCHANGE_S_ENTERPRISE` <br/> |Exchange Online Plan 2  <br/> |
    

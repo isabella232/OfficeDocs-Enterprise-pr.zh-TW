@@ -13,12 +13,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
 description: Office for Mac 的應用程式提供原生應用程式體驗 macOS 平台上。 每個應用程式被專為各種案例，包括沒有網路存取可用時的狀態。 當機器連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。 本白皮書說明哪個端點和 Url 應用程式嘗試聯繫，以及所提供的服務。 疑難排解網路組態問題，以及設定網路 proxy 伺服器原則時，這項資訊非常有用。 指定與 Office 365 URL 和地址範圍文章旨在本文中的詳細資料。
-ms.openlocfilehash: 0493fcc0954456ed190791b089fe4e0a568e82d7
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 44acbc83b2bb32e60a470dc5d3ba27f13cbd033c
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069651"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35781953"
 ---
 # <a name="network-requests-in-office-for-mac"></a>Mac 版 Office 中的網路要求
 
@@ -68,7 +68,7 @@ URL 類型定義如下：
 |```https://nexusrules.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office 規則遙測下載-通知用戶端何種資料及上傳到遙測服務事件。  <br/> |
 |```https://mobile.pipe.aria.microsoft.com/```  <br/> |N  <br/> |CS  <br/> |OneNote 遙測服務  <br/> |
 |```https://nexus.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office 遙測上傳報告-「 Heartbeart 」 及錯誤事件發生在用戶端上傳至遙測服務。  <br/> |
-|```https://templateservice.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office Online 範本服務-為使用者提供線上文件範本。  <br/> |
+|```https://templateservice.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office 範本 Service-為使用者提供線上文件範本。  <br/> |
 |```https://omextemplates.content.office.net/```  <br/> |WXP  <br/> |CS  <br/> |Office 範本下載-PNG 範本映像的儲存空間。  <br/> |
 |```https://store.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office 相關應用程式儲存區設定。  <br/> |
 |```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Office 文件整合服務目錄 （服務和端點的清單） 與首頁領域探索。  <br/> |

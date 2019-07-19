@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
 description: 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
-ms.openlocfilehash: 57b957d151bf49d67577ebd0d75f3a87e102d904
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 37fef66aeccc0fcd2102463384ebc2341b9c37e8
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34722572"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782343"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>使用 BGP 社群中 ExpressRoute for Office 365 案例
 
@@ -54,7 +54,7 @@ Contoso 公司是目前的 Exchange Online 和 SharePoint Online 中使用 Offic
 
 |**使用 BGP 社群標記**|**透過 Azure ExpressRoute 路由傳送的功能**|**所需的網際網路路由**|
 |:-----|:-----|:-----|
-|SharePoint  <br/> (12076:5020)  <br/> |SharePoint Online&amp;商務用 OneDrive  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、 Office 365 驗證、 &amp; Office Online  <br/>  Exchange Online、 Exchange Online 保護，與 Skype for Business Online  <br/> |
+|SharePoint  <br/> (12076:5020)  <br/> |SharePoint Online&amp;商務用 OneDrive  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、 Office 365 驗證、&amp;在瀏覽器中的 Office  <br/>  Exchange Online、 Exchange Online 保護，與 Skype for Business Online  <br/> |
 
 > [!NOTE]
 > 若要達到較低的前置詞計數的每項服務，將會保留最少的服務之間的重疊。 這是預期的行為。
@@ -67,7 +67,7 @@ Fabrikam Inc 大型的跨國企業，與分散式異質網路，是訂戶的許�
 
 |**使用 BGP 社群標記**|**透過 Azure ExpressRoute 路由傳送的功能**|**所需的網際網路路由**|
 |:-----|:-----|:-----|
-|商務用 Skype  <br/> (12076:5030)  <br/> |Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、 Office 365 驗證、 &amp; Office Online  <br/>  Skype 商務遙測、 Skype 用戶端瀏覽的秘訣、 公用 IM 連線  <br/>  Exchange Online、 Exchange Online Protection 和 SharePoint Online  <br/> |
+|商務用 Skype  <br/> (12076:5030)  <br/> |Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、 Office 365 驗證、&amp;在瀏覽器中的 Office  <br/>  Skype 商務遙測、 Skype 用戶端瀏覽的秘訣、 公用 IM 連線  <br/>  Exchange Online、 Exchange Online Protection 和 SharePoint Online  <br/> |
 
 ### <a name="scenario-3-scoping-azure-expressroute-for-office-365-services-only"></a>案例 3： 設定 Azure ExpressRoute 範圍僅限 Office 365 服務
 
@@ -77,7 +77,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
 
 |**使用 BGP 社群標記**|**透過 Azure ExpressRoute 路由傳送的功能**|**所需的網際網路路由**|
 |:-----|:-----|:-----|
-|Exchange、 SharePoint、 商務用 Skype&amp;其他服務  <br/> （12076:5010、 12076:5020、 12076:5030、 12076:5100）  <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint Online&amp;商務用 OneDrive  <br/> Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> Office 365 入口網站、 Office 365 驗證、 &amp; Office Online  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/> |
+|Exchange、 SharePoint、 商務用 Skype&amp;其他服務  <br/> （12076:5010、 12076:5020、 12076:5030、 12076:5100）  <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint Online&amp;商務用 OneDrive  <br/> Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> Office 365 入口網站、 Office 365 驗證、&amp;在瀏覽器中的 Office  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/> |
 
 ## <a name="key-planning-considerations-to-using-bgp-communities"></a>主要的規劃考量，以使用 BGP 社群
 
