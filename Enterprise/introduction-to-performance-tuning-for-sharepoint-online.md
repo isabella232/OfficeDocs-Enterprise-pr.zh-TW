@@ -52,9 +52,9 @@ ms.locfileid: "35616676"
   
 ## <a name="use-a-standard-user-account-when-checking-performance"></a>檢查效能時，請使用標準使用者帳戶
 
-網站集合系統管理員、網站擁有者、編輯者或參與者皆屬於其他的安全性群組，擁有額外的權限，因此擁有 SharePoint 載入頁面之外的其他元素。
+網站集合系統管理員、網站擁有者、編輯者或參與者皆屬於其他的安全性群組，擁有額外的權限，因此擁有 SharePoint 在頁面上載入之外的其他元素。
   
-這適用於 SharePoint 內部部署和 Sharepoint，但在內部部署狀況中，差異不會像在SharePoint Online 中那樣容易發現。
+這適用於 SharePoint 內部部署和 Sharepoint，但在內部部署狀況中，差異不會像在 SharePoint Online 中那樣容易發現。
   
 為了正確評估使用者執行頁面的效能，請使用標準使用者帳戶，以避免載入安全性群組相關的製作控制和其他流量。
   
@@ -68,7 +68,7 @@ ms.locfileid: "35616676"
     
 - **瀏覽器**：載入頁面所在。
     
-在這三種連線中，通常有五個原因會造成 95% 的頁面緩滿情形。 本文將討論這些原因：
+在這三種連線中，通常有五個原因會造成 95% 的頁面緩慢情形。 本文將討論這些原因：
   
 - 瀏覽問題
     
@@ -124,7 +124,7 @@ SharePoint Online
     
 - 與伺服器的實體距離太遠
     
-您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/zh-TW/office365/enterprise/content-delivery-networks)。
+您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/zh-TW/office365/enterprise/content-delivery-networks) (部分機器翻譯)。
   
 您必須注意但可能無能為力的因素是您的 ISP 連線速度。 簡單的速度測試工具會告訴您連線速度。
   
