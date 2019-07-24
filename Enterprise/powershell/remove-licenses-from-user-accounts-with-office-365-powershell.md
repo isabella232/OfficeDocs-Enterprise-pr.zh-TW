@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 移除使用者帳戶中的授權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/07/2019
+ms.date: 07/23/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 來移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: 80b708e5ce2d16f65ed02681d8f3e00a7fe33fcb
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: aebb74404d2f1e40ed65580df2dc114a3645091a
+ms.sourcegitcommit: 9cd3dcf1e90b21c7651d367dcd3306d6fe0bcbcb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068739"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "35834223"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -40,7 +40,7 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 
 接下來，取得您想移除授權，也稱為使用者主體名稱 (UPN) 的帳戶登入名稱。
 
-最後，指定使用者登入和授權計劃的名稱、 移除 「 < 」 和 「 > 」 的字元，並執行下列命令。
+最後，指定使用者登入和授權計劃的名稱、 移除 「 < 」 及 「 > 」 字元，並執行下列命令。
 
 ```
 $userUPN="<user sign-in name (UPN)>"
@@ -115,13 +115,13 @@ kakers@contoso.com
 2. 請使用下列語法：
     
   ```
-  Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }
+  Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }
   ```
 
 此範例會移除`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3) 授權從 C:\My Documents\Accounts.txt 文字檔案中所定義的使用者帳戶。
     
   ```
-  Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK" }
+  Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "litwareinc:ENTERPRISEPACK" }
   ```
 
 若要從所有現有的使用者帳戶移除授權，請使用下列語法：
