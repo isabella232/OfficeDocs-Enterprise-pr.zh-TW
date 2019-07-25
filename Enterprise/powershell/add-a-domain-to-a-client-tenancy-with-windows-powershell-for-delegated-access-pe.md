@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
 description: 摘要：使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
-ms.openlocfilehash: 1a1c1c06a2912f6624e6eb860ea6794f9474c09e
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 60088a9eafa1f5380eef2cc0240b0f5b5b02fe0f
+ms.sourcegitcommit: 68181eca8e43ea7f5dfd89cbaf587bc0c260ca7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35781843"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "35853226"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
@@ -29,7 +29,9 @@ ms.locfileid: "35781843"
 委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 Office 365 訂閱。 當他們銷售 Office 365 訂閱時，會自動將管理代表 (AOBO) 權限授與「客戶租用」，讓他們能夠管理和報告客戶租用。
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
-UNRESOLVED_TOKEN_VAL(GENL_O365_PowerShell_BeforeYouBegin)
+本主題中的程序需要您連線到 Office 365 的 Windows PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+  
+您也需要合作夥伴租用戶系統管理員認證。
   
 您也需要下列資訊︰
   
@@ -61,7 +63,7 @@ New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
  Office 365 會產生需要置入 DNS TXT 驗證記錄中的特定資料。若要取得資料，請執行此命令。
   
 ```
-Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of new domain>
+Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of new domain> -Mode DnsTxtRecord
 ```
 
 這會產生與以下範例相似的輸出：
