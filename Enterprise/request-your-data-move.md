@@ -3,7 +3,7 @@ title: 如何要求資料移動
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 07/22/2019
+ms.date: 07/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: b1fc5606549597eb91990f3675d4d867d0605f04
-ms.sourcegitcommit: 626ffb9907d5225acccf94095f54c8244df8dd49
+ms.openlocfilehash: 4df9c3481782f6d3f0b8431bd91677fb1262812c
+ms.sourcegitcommit: 842ac51577317dfc8d2adc46d09b4d735f29bc4f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "35818019"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "35907646"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -38,7 +38,7 @@ ms.locfileid: "35818019"
 |南韓  <br/> |2017 年 5 月 1日日  <br/> |2017 年 10 月 31日日  <br/> |
 |法國  <br/> |2018 年 3 月 14日日  <br/> |2018 年 9 月 15日日  <br/> |
 |阿拉伯聯合大公國  <br/> |2019 年 7 月 15日日  <br/> |2020 年 1 月 31 日  <br/> |
-|南非  <br/> |計劃  <br/> |計劃  <br/> |
+|南非  <br/> |2019 年 7 月 25日日  <br/> |2020 年 1 月 31 日  <br/> |
    
 ## <a name="how-to-request-a-move"></a>如何要求移動
 
@@ -53,14 +53,14 @@ ms.locfileid: "35818019"
 ![資料常駐卡](media/dataresidencyae.jpg)
   
 **您可能不會看到此區段如果下列其中之一適用於**：
-- 您的租用戶不合格移動計劃。  資格取決於租用戶註冊國家/地區。
-- 所有的資料已位於新的地理位置 （請參閱資料位置] 區段中的頁面）。 
+- 您的租用戶不合格的 Office 365 移動程式。  資格取決於租用戶註冊國家/地區。
+- 所有靜態核心客戶資料已位於新的地理位置 （請參閱資料位置] 區段中的頁面）。 
   
-如果您的組織有資料落地需求，且您需要要求早期移轉，請按一下 [**編輯**在左上方] 區段中。 新區段會出現您解釋移動程式的詳細資料] 畫面的右側。 選取 [切換按鈕旁邊說**是，我的組織具有資料落地需求**的文字。 然後，按一下 [**儲存**]。
+如果您的組織有資料落地需求，且您需要要求早期移轉，請按一下 [**加入]** 在左上方] 區段中。 新區段會出現您說明 Office 365 移動計劃的詳細資料] 畫面的右側。 選取 [切換按鈕旁邊說**我想要移轉的靜態我的組織核心客戶資料**的文字。 然後，按一下 [**儲存**]。
   
 ![資料中心加入動作畫面](media/dataresidencyflyoutae.jpg)
   
-您應該會看到文字在**資料落地選項**] 區段中變更，以指出**貴組織要求來移動其核心客戶資料。** 您也必須確認訊息訊息中心。 這可確認您已成功地要求移動。 
+您應該會看到文字在**資料落地**] 區段中變更，以指出**貴組織要求來移動其核心客戶資料。** 您也必須確認訊息訊息中心。 這可確認您已成功地要求移動。 
 
 
   
