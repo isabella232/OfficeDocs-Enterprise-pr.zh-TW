@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具用來管理您的 Office 365 使用者，以及如何您可以使用取決於您要如何管理使用者身分識別。 '
-ms.openlocfilehash: 007de5844badbaad2c5061c69cae33523438805f
-ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
+ms.openlocfilehash: 3e29af9e3d01184f9edc386148de60897fb03e27
+ms.sourcegitcommit: 10ae1163f8443c53f19dfad6b7c2b2bb952bf759
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "34102441"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "34490736"
 ---
 # <a name="tools-to-manage-office-365-accounts"></a>管理 Office 365 帳戶的工具
 
@@ -53,7 +53,7 @@ ms.locfileid: "34102441"
   
 - 目錄同步處理軟體必須安裝在連線 Office 365 和您的內部部署目錄之間的身分識別在內部部署環境中的伺服器上。
     
-- 任何目錄同步處理] 選項，包括 SSO 選項，需要您在內部 directory 屬性符合標準。 [準備透過目錄同步處理至 Office 365 佈建使用者](prepare-for-directory-synchronization.md)說明哪些屬性用於您的目錄，且需要何種清除 （如果有的話） 的細節。 如需如何使用 IdFix 來自動化目錄清理的指示，請參閱[安裝和執行 Office 365 IdFix 工具](install-and-run-idfix.md)。 
+- 任何目錄同步處理] 選項，包括 SSO 選項，需要您在內部 directory 屬性符合標準。 [準備透過目錄同步處理至 Office 365 佈建使用者](prepare-for-directory-synchronization.md)說明哪些屬性用於您的目錄，且需要何種清除 （如果有的話） 的細節。 如需如何使用 IdFix 來自動化目錄清理的指示，請參閱[下載和執行 Office 365 IdFix 工具](install-and-run-idfix.md)。 
     
 - 規劃您要如何建立 Office 365 帳戶。
     

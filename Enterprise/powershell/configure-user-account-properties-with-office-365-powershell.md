@@ -15,18 +15,18 @@ ms.custom:
 - PowerShell
 ms.assetid: 30813f8d-b08d-444b-98c1-53df7c29b4d7
 description: 摘要： 使用 Office 365 PowerShell 來設定 Office 365 租用戶中的個別或多個使用者帳戶的內容。
-ms.openlocfilehash: 3fdf5c4c5dbb4c44a3c91d343bd77810a1411a20
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 53a99c33dcebebc87e12a468d56e5460b8a0c111
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069235"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782603"
 ---
 # <a name="configure-user-account-properties-with-office-365-powershell"></a>使用 Office 365 PowerShell 中設定使用者帳戶屬性
 
  **摘要：** 使用 Office 365 PowerShell 來設定 Office 365 租用戶中的個別或多個使用者帳戶的內容。
   
-雖然您可以使用 Office 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行 Office 365 系統管理中心無法的一些事項。
+雖然您可以使用 Microsoft 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行動作無法在系統管理中心的一些事項。
   
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
@@ -38,35 +38,35 @@ ms.locfileid: "34069235"
 
 您使用的 **-ObjectID**參數來識別帳戶及設定或變更與其他參數的特定屬性。 以下是最常見的參數清單。
   
-- -Department"\<部門 name> 」
+- -Department"\<部門名稱> 」
     
-- -DisplayName"\<完整使用者 name> 」
+- -DisplayName"\<完整的使用者名稱> 」
     
-- -FacsimilieTelephoneNumber"\<傳真 number> 」
+- -FacsimilieTelephoneNumber"\<傳真號碼> 」
     
-- -GivenName"\<使用者第一張 name> 」
+- -GivenName"\<使用者名字> 」
     
-- -姓氏"\<使用者上次 name> 」
+- -姓氏"\<使用者上次名稱> 」
     
-- -行動"\<行動電話 number> 」
+- -行動"\<行動電話號碼> 」
     
-- -JobTitle"\<工作 title> 」
+- -JobTitle"\<工作標題> 」
     
-- -PreferredLanguage"\<language> 」
+- -PreferredLanguage"\<語言> 」
     
-- -StreetAddress"\<街道 address> 」
+- -StreetAddress"\<路/街> 」
     
-- -City"\<縣/市 name> 」
+- -City"\<縣/市名稱> 」
     
-- -State"\<狀態 name> 」
+- -State"\<狀態命名> 」
     
-- -PostalCode"\<郵遞區號 code> 」
+- -PostalCode"\<郵遞區號> 」
     
-- -Country"\<國家/地區 name> 」
+- -Country"\<國家/地區名稱> 」
     
-- -TelephoneNumber"\<辦公室電話 number> 」
+- -TelephoneNumber"\<辦公室電話號碼> 」
     
-- -UsageLocation"\<2 個字元的國家或地區 code> 」
+- -UsageLocation"\<2 個字元國家或地區程式碼> 」
     
     這是 ISO 3166-1 alpha-2http (A2) 兩個字母國家或地區碼。
     
@@ -151,37 +151,37 @@ Get-AzureADUser | Where-Object {$_.Department -eq "Accounting"} | Set-AzureADUse
 
 使用 **-UserPrincipalName**參數識別的帳戶，並設定或變更與其他參數的特定屬性。 以下是最常見的參數清單。
   
-- -City"\<縣/市 name> 」
+- -City"\<縣/市名稱> 」
     
-- -Country"\<國家/地區 name> 」
+- -Country"\<國家/地區名稱> 」
     
-- -Department"\<部門 name> 」
+- -Department"\<部門名稱> 」
     
-- -DisplayName"\<完整使用者 name> 」
+- -DisplayName"\<完整的使用者名稱> 」
     
-- -Fax"\<傳真 number> 」
+- -Fax"\<傳真號碼> 」
     
-- -FirstName"\<使用者第一張 name> 」
+- -FirstName"\<使用者名字> 」
     
-- -LastName"\<使用者上次 name> 」
+- -LastName"\<使用者上次名稱> 」
     
-- -MobilePhone"\<行動電話 number> 」
+- -MobilePhone"\<行動電話號碼> 」
     
-- -Office"\<office location> 」
+- -Office"\<辦公室位置> 」
     
-- -PhoneNumber"\<辦公室電話 number> 」
+- -PhoneNumber"\<辦公室電話號碼> 」
     
-- -PostalCode"\<郵遞區號 code> 」
+- -PostalCode"\<郵遞區號> 」
     
-- -PreferredLanguage"\<language> 」
+- -PreferredLanguage"\<語言> 」
     
-- -State"\<狀態 name> 」
+- -State"\<狀態命名> 」
     
-- -StreetAddress"\<街道 address> 」
+- -StreetAddress"\<路/街> 」
     
-- -Title"\<標題 name> 」
+- -Title"\<標題名稱> 」
     
-- -UsageLocation"\<2 個字元的國家或地區 code> 」
+- -UsageLocation"\<2 個字元國家或地區程式碼> 」
     
     這是 ISO 3166-1 alpha-2http (A2) 兩個字母國家或地區碼。
     

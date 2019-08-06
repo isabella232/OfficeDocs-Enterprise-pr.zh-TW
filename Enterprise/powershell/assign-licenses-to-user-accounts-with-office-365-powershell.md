@@ -3,7 +3,7 @@ title: 將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/18/2019
+ms.date: 08/05/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,20 +17,23 @@ ms.custom:
 ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
-description: 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
-ms.openlocfilehash: 91fe9f3a14663ebb9adb61700de3004edd236e0c
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
+ms.openlocfilehash: c244e60016cb04008e27e2df444703ac7e41db12
+ms.sourcegitcommit: 6c3003380491fba6dacb299754716901c20ba629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069279"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "36198645"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
-**摘要：** 說明如何使用 Office 365 PowerShell 指派給未經授權的使用者的 Office 365 授權。
+**摘要：** 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
   
 使用者無法使用任何 Office 365 服務，直到其帳戶具有已指派授權給授權計劃。 您可以使用 Office 365 PowerShell 來快速將授權指派給未經授權的帳戶。 
 
+>[!Note]
+>使用者帳戶必須被指派的位置。 您可以從 Microsoft 365 系統管理中心中的使用者帳戶的屬性或 PowerShell 來執行這項操作。
+>
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
@@ -44,6 +47,20 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
 接下來，取得您想要新增的授權，也稱為使用者主體名稱 (UPN) 的帳戶登入名稱。
+
+接下來，請確定的使用者帳戶擁有指派的使用狀況位置。
+
+```
+Get-AzureADUser -ObjectID <user sign-in name (UPN)> | Select DisplayName, UsageLocation
+```
+
+如果沒有指派未使用位置，您可以指派一個使用以下命令：
+
+```
+$userUPN="<user sign-in name (UPN)>"
+$userLoc="<ISO 3166-1 alpha-2 country code>"
+Set-AzureADUser -ObjectID $userUPN -UsageLocation $userLoc
+```
 
 最後，指定使用者登入名稱及授權計劃名稱，並執行下列命令。
 
@@ -68,7 +85,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
 ```
 Get-MsolUser -All -UnlicensedUsersOnly
 ```
-    
+
 您只可以將授權指派給使用者帳戶，已將**UsageLocation**屬性設定為有效的 ISO 3166-1 alpha-2http 國碼/地區碼。 例如，US 代表美國、FR 代表法國。 在某些國家/地區中，某些 Office 365 服務無法使用。 如需詳細資訊，請參閱[關於授權限制](https://go.microsoft.com/fwlink/p/?LinkId=691730)。
     
 若要找出沒有**UsageLocation**值的帳戶，請執行此命令。

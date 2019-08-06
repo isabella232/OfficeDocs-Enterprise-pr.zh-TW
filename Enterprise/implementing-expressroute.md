@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
 description: 適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
-ms.openlocfilehash: c9e4fa4f5c8cb46d32e1b0de6f18f66b3a971aa6
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 3e3171c3058b485ef644af3f1d33a9f80c71345c
+ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067399"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "34722722"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
@@ -568,7 +568,7 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 ## <a name="related-topics"></a>相關主題
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   

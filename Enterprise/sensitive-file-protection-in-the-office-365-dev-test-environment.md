@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: 摘要： 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
-ms.openlocfilehash: a845742f7ec874d63269f5f380568b7bb59cfe0d
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 9608bf68ced2f286f788dd94dfc27755f5ff23c0
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070889"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782493"
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的敏感檔案保護
 
@@ -172,7 +172,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 4. 輸入**CEO**帳戶名稱和密碼，然後再按一下 [**登入**。
     
-5. 在瀏覽器的新索引標籤上，輸入 [高階主管的網站集合的 URL ( **https://**\<組織 name>**.sharepoint.com/sites/executives**)。
+5. 在瀏覽器的新索引標籤上，輸入 [高階主管的網站集合的 URL ( **https://**\<組織名稱>**.sharepoint.com/sites/executives**)。
     
 6. 按一下 [**文件**，按一下 [**新增]** ，然後按一下 [ **Word 文件**。
     
@@ -190,7 +190,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 3. **SensitiveData BeforeIRM.docx**文件儲存在步驟 1 中建立的資料夾中。
     
-4. 在瀏覽器的新索引標籤上，輸入 [業務部網站集合的 URL ( **https://**\<組織 name>**.sharepoint.com/sites/sales**)。
+4. 在瀏覽器的新索引標籤上，輸入 [業務部網站集合的 URL ( **https://**\<組織名稱>**.sharepoint.com/sites/sales**)。
     
 5. 按一下 [**銷售網站集合**的**文件**資料夾。
     
@@ -316,7 +316,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 6. 在 [**文件**] 頁面上，開啟**SensitiveData AfterIRM.docx**文件。
     
-    您應該會看到訊息指出 「 很抱歉，Word Online 無法開啟這份文件，因為它受到資訊版權管理 (IRM) 保護。 」 
+    您應該會看到訊息指出，「 很抱歉，Word 無法開啟這份文件，因為它受到資訊版權管理 (IRM) 保護。 」 
     
 7. 按一下 [**在 Word 中編輯**]。 如果您想要開啟的檔案，會提示您。 按一下 [**是**]。
     

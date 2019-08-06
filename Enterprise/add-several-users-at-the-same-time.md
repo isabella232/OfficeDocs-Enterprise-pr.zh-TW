@@ -24,28 +24,27 @@ search.appverid:
 - BCS160
 ms.assetid: 1f5767ed-e717-4f24-969c-6ea9d412ca88
 description: '了解如何新增多位使用者至 Office 365 商務從清單中的試算表或其他 CSV 格式的檔案。 請觀看上說明如何將帳戶新增至 Office 365 的 YouTube 影片。 在此程序結束時，每位使用者的帳戶必須是 Office 365 信箱。 '
-ms.openlocfilehash: ef4093592d4f6fc8e38ee053b53c73193a821d36
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: ece3cc6f207b5c0caaa03880da925eb3b6ac2c5b
+ms.sourcegitcommit: 6c3003380491fba6dacb299754716901c20ba629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068689"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "36198655"
 ---
 # <a name="add-several-users-at-the-same-time-to-office-365---admin-help"></a>在 Office 365 同時新增多位使用者 - 系統管理說明
 
 小組每一個人都需要使用者帳戶，才能登入並存取 Office 365 服務 (例如電子郵件和 Office)。如果您有許多工作人員，您可以從 Excel 試算表或其他以 CSV 格式儲存的檔案，一鼓作氣新增全部的帳戶。[不確定 CSV 檔案是什麼嗎？](add-several-users-at-the-same-time.md#__toc316652088)
   
-## <a name="add-multiple-users-to-office-365-in-the-office-365-admin-center"></a>在 Office 365 系統管理中心新增多個使用者至 Office 365
+## <a name="add-multiple-users-to-office-365-in-the-microsoft-365-admin-center"></a>新增多位使用者至 Office 365，Microsoft 365 系統管理中心
 
 1. 以公司或學校帳戶登入 Office 365。 
     
-2. 在 Office 365 系統管理中心中，選擇 [**使用者** \> **作用中的使用者**。
+2. 在系統管理中心中，選擇 [**使用者** \> **作用中的使用者**。
     
-    ![In the Admin center choose Users and then Active users](media/12086d98-a8b4-4c48-89cf-b78ad8058ff1.png)
+    ![在系統管理中心選擇 [使用者，然後作用中使用者](media/12086d98-a8b4-4c48-89cf-b78ad8058ff1.png)
   
-3. 在**多個**下拉式清單，選擇 [**匯入多個使用者**。
     
-4. 在**匯入多個使用者**] 面板中，您可以選擇性地下載包含或不含範例資料填入範例 CSV 檔案。 
+3. 在**匯入多個使用者**] 面板中，您可以選擇性地下載包含或不含範例資料填入範例 CSV 檔案。 
     
     ![In the More drop-down, choose Import multiple users](media/77df8a4a-fd00-4fbe-bf1c-d234fc1d5e93.png)
   
@@ -63,15 +62,15 @@ ms.locfileid: "34068689"
   
   ```
 
-5. 在方塊中，輸入檔案路徑，或選擇 [**瀏覽]** 以瀏覽至 CSV 檔案的位置，然後選擇 [**驗證**。
+4. 在方塊中，輸入檔案路徑，或選擇 [**瀏覽]** 以瀏覽至 CSV 檔案的位置，然後選擇 [**驗證**。
     
     ![Your CSV file is verified](media/a43d49db-b2ab-4200-8ddf-0bc846ac6fe5.png)
   
     如果檔案有任何問題，問題會顯示在面板中。您也可以下載記錄檔。
     
-6. 在 [**設定使用者選項**] 對話方塊中，您可以設定登入狀態，並選擇將指派給所有使用者的產品授權。 
+5. 在 [**設定使用者選項**] 對話方塊中，您可以設定登入狀態，並選擇將指派給所有使用者的產品授權。 
     
-7. 在 [**檢視您的結果**] 對話方塊，您可以選擇將結果傳送給自己或其他使用者 （密碼會以純文字），您可以看到建立多少個使用者，而且如果您需要購買更多授權指派給新的使用者部分。 
+6. 在 [**檢視您的結果**] 對話方塊，您可以選擇將結果傳送給自己或其他使用者 （密碼會以純文字），您可以看到建立多少個使用者，而且如果您需要購買更多授權指派給新的使用者部分。 
     
 ## <a name="watch-the-video"></a>觀看影片
 <a name="bk_preview"> </a>
@@ -146,7 +145,7 @@ CSV 檔案是以逗號區分值的檔案。您可以用任何文字編輯器或�
     
 - * * 如果您沒有立刻看到 Office 365 中新的使用者，請稍候幾分鐘的時間。 * * 可能會花費一點的前往 Office 365 中的所有服務的變更。 
     
-## <a name="add-multiple-users-to-office-365-in-the-old-office-365-admin-center"></a>在舊版 Office 365 系統管理中心新增多位使用者至 Office 365
+## <a name="add-multiple-users-to-office-365-in-the-old-admin-center"></a>將多個使用者新增至舊版系統管理中心中的 Office 365
 
 1. 下載[此範例試算表](https://www.microsoft.com/en-us/download/details.aspx?id=45485)，並在 Excel 中開啟。 
     
@@ -162,13 +161,13 @@ CSV 檔案是以逗號區分值的檔案。您可以用任何文字編輯器或�
     
 2. 以公司或學校帳戶登入 Office 365。 
     
-3. 移至 Office 365 系統管理員中心。
+3. 移至系統管理中心。
     
 4. 對於使用 Office 365 服務的使用者，必須先指派授權給他們。 不過您必須先檢查您是否足夠的授權，可以指派給試算表所列的所有人。 選擇 [**計費** \> **訂用帳戶**]，查看是否您有足夠的授權。 如果您需要購買更多授權，選擇 [* * 變更授權數量 * *。 您可以先執行精靈，指派現有的授權，日後再另外購買其他授權，然後重新執行精靈。 
     
 5. 現在移至 [大量新增使用者] 精靈： 選擇 [**使用者**] \> **作用中的使用者**。 選擇 [![新增多位使用者至 Office 365 的圖示](media/3481ffea-d552-4a7f-9a3b-014504e69746.png)，如下圖所示。 
     
-    ![Office 365 系統管理中心 [使用者] 區段的圖像](media/2cd5ff86-9c0b-438e-9bb9-13b12a2675de.png)
+    ![在系統管理中心的 [使用者] 區段的影像](media/2cd5ff86-9c0b-438e-9bb9-13b12a2675de.png)
   
     隨後便會出現 [大量新增使用者] 精靈，逐步引導您在 Office 365 新增一組使用者。 
     
@@ -188,7 +187,7 @@ CSV 檔案是以逗號區分值的檔案。您可以用任何文字編輯器或�
     
     ![[大量新增使用者] 精靈步驟 4 - 授權](media/161ea34c-c67e-43be-962f-029f5426ff1b.png)
   
-    您可以選擇 [**購買更多授權**，但您就會離開 [大量新增使用者] 精靈，然後移至 Office 365 系統管理中心 **] [帳單**。 在購買更多授權後，您必須等待幾分鐘的時間處理訂單，然後從頭開始執行 [大量新增使用者] 精靈。 
+    您可以選擇 [**購買更多授權**，但您就會離開 [大量新增使用者] 精靈，然後移至 Microsoft 365 系統管理中心 **] [帳單**。 在購買更多授權後，您必須等待幾分鐘的時間處理訂單，然後從頭開始執行 [大量新增使用者] 精靈。 
     
     如果沒有另外購買其他授權，就不會針對試算表所列的每一個人建立帳戶。 
     

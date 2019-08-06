@@ -15,12 +15,12 @@ search.appverid:
 - BCS160
 ms.assetid: cb2250e3-451e-416f-bf4e-363549652c2a
 description: 了解如何 O365 整合式應用程式註冊和 Azure AD 中管理
-ms.openlocfilehash: 01bd932ed12e040a0e6dae517d7b4fd360b5da80
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: c52b4beefaefd4a115c132c6f82e7f1d20564b46
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067249"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782523"
 ---
 # <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>適用於 Office 365 系統管理員的整合式應用程式和 Azure AD
 
@@ -32,7 +32,7 @@ ms.locfileid: "34067249"
   
 |**必要條件**|**Comments**|
 |:-----|:-----|
-|[註冊免費的 Azure Active Directory 訂閱](https://go.microsoft.com/fwlink/?LinkId=617127) <br/> |每個 Office 365 的付費的訂閱隨附 Azure Active directory 的免費的訂閱。 您可以使用 Azure AD 來管理您的應用程式，來建立及管理使用者和群組帳戶。 若要啟用此訂閱並存取 Azure 管理入口網站，您必須完成一次性的註冊程序。 之後，您可以從 Office 365 系統管理中心移到 Azure AD。  <br/> |
+|[註冊免費的 Azure Active Directory 訂閱](https://go.microsoft.com/fwlink/?LinkId=617127) <br/> |每個 Office 365 的付費的訂閱隨附 Azure Active directory 的免費的訂閱。 您可以使用 Azure AD 來管理您的應用程式，來建立及管理使用者和群組帳戶。 若要啟用此訂閱並存取 Azure 管理入口網站，您必須完成一次性的註冊程序。 之後，您可以從 Microsoft 365 系統管理中心移到 Azure AD。  <br/> |
 |[開啟或關閉整合式應用程式](https://support.office.com/article/7e453a40-66df-44ab-92a1-96786cb7fb34#__toc379982114) <br/> |為您的使用者，以允許協力廠商應用程式，來存取其 Office 365 的資訊，以及您在 Azure AD 中註冊應用程式，您必須先開啟整合式應用程式。 例如，當有人使用協力廠商應用程式時，該應用程式可能會要求權限來存取其行事曆，以及編輯商務用 OneDrive 資料夾中的檔案。  <br/> |
    
 管理 Office 365 應用程式需要您在 Azure AD 中的應用程式的知識。 這些文章可協助提供您需要的背景。

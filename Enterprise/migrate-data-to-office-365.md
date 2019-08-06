@@ -14,12 +14,12 @@ search.appverid:
 - BCS160
 ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 description: 如果您已選擇退出 FastTrack 部署，且您準備好將資料移轉到 Office 365，這就是開始的位置。
-ms.openlocfilehash: 9efaad6da9723d588cc0e42151bf297b271e4e5c
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: cd9f113f7b8e66e22ad61c4f406ac693a8aa3695
+ms.sourcegitcommit: 1e6e91fbdcbb6d8ef21d30f32c1f8e704f4f31ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070119"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "35597549"
 ---
 # <a name="migrate-your-organization-data-to-office-365-enterprise"></a>將貴組織資料移轉到 Office 365 企業版
 
@@ -35,9 +35,8 @@ ms.locfileid: "34070119"
 - 尋找[組織中人員可以移轉電子郵件、連絡人和行事曆](https://support.office.com/article/Migrate-email-and-contacts-to-Office-365-for-business-a3e3bddb-582e-4133-8670-e61b9f58627e)的其他方式。
 
 ## <a name="migrate-files-and-folders"></a>移轉檔案和資料夾
-- [移轉至 SharePoint Online](https://support.office.com/article/d8c6ce52-f8a2-4661-97f7-45e49351bdb9)。(系統管理員)
-- [設定混合式商務用 OneDrive - 藍圖](https://docs.microsoft.com/SharePoint/hybrid/configure-hybrid-onedrive-for-businessroadmap)。(系統管理員)
-- [將 SharePoint 內部部署文件庫或是內部部署檔案共用中的清單或檔案移轉至 Office 365 的 SharePoint 或 OneDrive 中](https://docs.microsoft.com/sharepointmigration/introducing-the-sharepoint-migration-tool)。(使用者)
+- [移轉至 SharePoint Online 和 OneDrive](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。 （系統管理員）
+- [SharePoint Server 混合式組態藍圖 >](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)。 （系統管理員）
 
 ## <a name="migrate-skype-for-business-users"></a>移轉商務用 Skype 使用者
 - [移轉至商務用 Skype Online](https://technet.microsoft.com/library/jj204969.aspx) (英文)。(系統管理員)

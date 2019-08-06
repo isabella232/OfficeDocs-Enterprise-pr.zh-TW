@@ -3,7 +3,7 @@ title: 資源可以幫助您升級從 Office 2010 伺服器和用戶端
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 06/03/2019
+ms.date: 07/10/2019
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -21,32 +21,38 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 4c0c5101a7d1dbd068fe4bbbd03eb1bdd41b3b05
-ms.sourcegitcommit: c9922eda48f5f533e828ba4cd23adecbfc32223d
+ms.openlocfilehash: 3cd345f60c534ef8c2a464e4f9535f5f691a9110
+ms.sourcegitcommit: c718aae17c8046d5e1ef67f82ffa10e54e1eb23f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "34780862"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "35613449"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>資源可以幫助您升級從 Office 2010 伺服器和用戶端
 
-Exchange Server 2010 會達到**2020 年 1 月 14，** 支援其結束。 Office 2010、 SharePoint 2010 和 Project Server 2010 會達到**2020 年 10 月 13，** 支援其結束。 當您計劃升級時，這是很好的時間，才能移至 Office 365，請考慮。 
+請注意的事項：
 
-Office 365 具有 for Office 2010 伺服器產品，例如 Exchange Server 和 SharePoint Server 的雲端式服務，例如 Teams 與 OneDrive for Business 的新服務。 
+- Exchange Server 2010 會達到**2020 年 1 月 14，** 支援其結束。 
 
-Office 365 專業增強版隨附於 Office 365 E3 和 E5，是您在您的本機裝置安裝的 Office 用戶端應用程式的集合。 他們會以新的生產力和安全性功能，從 Microsoft cloud 持續更新。
+- Office 2010、 SharePoint 2010 和 Project Server 2010 會達到**2020 年 10 月 13，** 支援其結束。 
+
+當您計劃升級時，這是很好的時間，才能移至 Office 365，請考慮。 
+
+- Office 365 具有雲端式服務 for Office 2010 伺服器產品，例如 Exchange Server 和 SharePoint Server 和服務例如 Teams 與 OneDrive for Business。 
+
+- Office 365 專業增強版隨附於 Office 365 E3 和 E5 和 Microsoft 365 企業版，是您在您的本機裝置安裝的 Office 用戶端應用程式的集合。 他們會以新的生產力和安全性功能，從 Microsoft cloud 持續更新。
 
 使用本文做為起點，檢閱您的選項。
       
-## <a name="office-2010-planning-content"></a>Office 2010 規劃內容
+## <a name="office-2010-client-and-server-upgrade-planning"></a>Office 2010 用戶端和伺服器升級規劃
   
-|**此產品**|**請參閱此資源**|
-|:-----|:-----|
-|Office 2010 （包括 Word 2010、 Excel 2010，PowerPoint 2010 和 Outlook 2010）  <br/> |[Office 2010 終止支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
-|Exchange Server 2010  <br/> |[Exchange 2010 終止支援藍圖](exchange-2010-end-of-support.md) <br/> |
-|SharePoint 2010 或 SharePoint Server 2010  <br/> |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
-|Project Server 2010 <br/> | [Project Server 2010 終止支援藍圖](project-server-2010-end-of-support.md) <br/> |
-|Lync Server 2010 <br/> | [升級為 Skype for Business Server 計劃](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) <br/> |
+|**此產品**|**與此結尾支援日期**|**請參閱此資源**|
+|:-----|:-----|:-----|
+|Office 2010 （包括 Word 2010、 Excel 2010，PowerPoint 2010 和 Outlook 2010）  <br/> | 2020 年 10 月 13 日 |[Office 2010 終止支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
+|Exchange Server 2010  <br/> | 2020 年 1 月 14 日  |[Exchange 2010 終止支援藍圖](exchange-2010-end-of-support.md) <br/> |
+|SharePoint 2010 或 SharePoint Server 2010  <br/> | 2020 年 10 月 13 日 |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
+|Project Server 2010 <br/> | 2020 年 10 月 13 日 | [Project Server 2010 終止支援藍圖](project-server-2010-end-of-support.md) <br/> |
+|Lync Server 2010 <br/> | 2021 年 4 月 13 日 | [升級為 Skype for Business Server 計劃](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) <br/> |
     
 ## <a name="im-a-home-user-what-do-i-do"></a>我是家庭使用者。 What do I do?
 

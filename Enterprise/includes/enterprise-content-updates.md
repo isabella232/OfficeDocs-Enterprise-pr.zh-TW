@@ -3,29 +3,6 @@
 
 
 
-## <a name="week-of-june-24-2019"></a>2019 年 6 月 24 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 6/24/2019 | [Office 365 IP 位址和 URL Web 服務中未包含的其他端點](/Office365/Enterprise/additional-office365-ip-addresses-and-urls) | 修改時間 |
-| 6/24/2019 | [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](/Office365/Enterprise/modern-auth-for-office-2013-and-2016) | 修改時間 |
-| 6/24/2019 | [準備目錄同步處理的非路由傳送的網域](/Office365/Enterprise/prepare-a-non-routable-domain-for-directory-synchronization) | 修改時間 |
-| 6/24/2019 | [復原使用者信箱中刪除的郵件 - 系統管理說明](/Office365/Enterprise/recover-deleted-items-in-a-mailbox) | 修改時間 |
-| 6/24/2019 | [Microsoft Azure 中的 SharePoint Server 2013 災害復原](/Office365/Enterprise/sharepoint-server-2013-disaster-recovery-in-microsoft-azure) | 修改時間 |
-| 6/24/2019 | [從 SharePoint 2010 升級](/Office365/Enterprise/upgrade-from-sharepoint-2010) | 修改時間 |
-| 6/26/2019 | [線上商務原則與 Office 365 PowerShell 管理 Skype](/Office365/Enterprise/powershell/manage-skype-for-business-online-policies-with-office-365-powershell) | 修改時間 |
-| 6/26/2019 | [準備目錄同步處理至 Office 365](/Office365/Enterprise/prepare-for-directory-synchronization) | 修改時間 |
-| 6/26/2019 | [調整 SharePoint Online 效能](/Office365/Enterprise/tune-sharepoint-online-performance) | 修改時間 |
-| 6/28/2019 | [Office 365 Germany 端點](/Office365/Enterprise/office-365-germany-endpoints) | 修改時間 |
-| 6/28/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
-| 6/28/2019 | [Office 365 美國政府 GCC High 端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
-| 6/28/2019 | [21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges-21vianet) | 修改時間 |
-| 6/28/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
-| 6/28/2019 | [將核心資料移至新的 Office 365 資料中心 geos](/Office365/Enterprise/moving-data-to-new-datacenter-geos) | 修改時間 |
-| 6/28/2019 | [如何要求資料移動](/Office365/Enterprise/request-your-data-move) | 修改時間 |
-
-
 ## <a name="week-of-july-01-2019"></a>2019 年 7 月 01 日當週
 
 
@@ -131,3 +108,15 @@
 | 7/24/2019 | [利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域](/Office365/Enterprise/powershell/add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-pe) | 修改時間 |
 | 7/25/2019 | [將核心資料移至新的 Office 365 資料中心 geos](/Office365/Enterprise/moving-data-to-new-datacenter-geos) | 修改時間 |
 | 7/25/2019 | [如何要求資料移動](/Office365/Enterprise/request-your-data-move) | 修改時間 |
+
+
+## <a name="week-of-july-29-2019"></a>2019 年 7 月 29 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 7/29/2019 | [Office 365 Germany 端點](/Office365/Enterprise/office-365-germany-endpoints) | 修改時間 |
+| 7/29/2019 | [Office 365 美國政府 DoD 端點](/Office365/Enterprise/office-365-u-s-government-dod-endpoints) | 修改時間 |
+| 7/29/2019 | [Office 365 美國政府 GCC High 端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
+| 7/29/2019 | [21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges-21vianet) | 修改時間 |
+| 7/29/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
