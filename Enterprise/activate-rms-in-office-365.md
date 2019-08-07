@@ -1,5 +1,5 @@
 ---
-title: 指向有關 Office 365 系統管理中心中的版權管理資訊
+title: 系統管理中心中，有關版權管理的資訊指標
 ms.author: krowley
 author: kccross
 manager: laurawi
@@ -15,14 +15,14 @@ search.appverid:
 - BCS160
 ms.assetid: 5b6d3ac7-b1ac-428e-b03e-50e882f85a6e
 description: 指向說明如何啟動版權管理服務及搭配 Office 365 使用的主題。
-ms.openlocfilehash: 7ae954eafacb196dc85f3e4c084de2f704f4ddce
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.openlocfilehash: dca4b547ceee9af32caaaead32dd5251157ca00e
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616706"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782363"
 ---
-# <a name="pointers-to-information-about-rights-management-in-the-office-365-admin-center"></a>指向有關 Office 365 系統管理中心中的版權管理資訊
+# <a name="pointers-to-information-about-rights-management-in-the-admin-center"></a>系統管理中心中，有關版權管理的資訊指標
 
 本主題會指向說明如何啟動 RMS 及搭配 Office 365 使用的主題。
   

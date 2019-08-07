@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: ''
 description: 摘要：請參閱這些文章以了解 Office 365 的網路功能。
-ms.openlocfilehash: 6fb1d4d441719f61886b9263b30cdf27cbe7eaf4
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 958841733259bd01cd16a908cfac65998a3f3127
+ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070819"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "34722682"
 ---
 # <a name="set-up-your-network-for-office-365"></a>為 Office 365 設定您的網路
 
@@ -38,7 +38,7 @@ ms.locfileid: "34070819"
 
 - [Office 365 網路連線能力概觀](office-365-networking-overview.md)
 - [Office 365 網路連線能力原則](office-365-network-connectivity-principles.md)
-- [對 Office 365 的網路連線能力](network-connectivity.md)
+- [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 
 如需提升效能的建議，請參閱 [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)。
 

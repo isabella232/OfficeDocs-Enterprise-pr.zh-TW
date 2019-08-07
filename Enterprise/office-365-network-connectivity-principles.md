@@ -14,12 +14,12 @@ ms.collection:
 search.appverid: MET150
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 description: 在您開始為 Office 365 網路連線規劃網路之前，務必了解安全管理 Office 365 流量以及可能獲取最佳效能的連線原則。 本文將會協助您了解關於安全最佳化 Office 365 網路連線的最新指引。
-ms.openlocfilehash: e8bb819fee5aa53fe3ea23f7b3b691be131ddf1f
-ms.sourcegitcommit: 99bf8739dfe1842c71154ed9548ebdd013c7e59e
+ms.openlocfilehash: 9444cef0a93d10953a726da40d24ab18e29d8f24
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "35017293"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782203"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 
@@ -42,7 +42,7 @@ ms.locfileid: "35017293"
 ## <a name="office-365-architecture"></a>Office 365 架構
 <a name="BKMK_Architecture"> </a>
 
-Office 365 是分散式軟體即服務 (SaaS) 雲端，透過微服務和應用程式 (例如 Exchange Online、SharePoint Online、商務用 Skype Online、Microsoft Teams、Exchange Online Protection、Office Online 等等) 的多元組合，提供生產力和共同作業案例。 雖然特定 Office 365 應用程式在套用至客戶網路以及連線到雲端時，有其獨特的功能，它們都共用一些主要原則、目標和架構模式。 這些連線的原則和架構模式通常適用於其他許多 SaaS 雲端，同時與平台即服務和基礎結構即服務雲端 (例如 Microsoft Azure) 的典型部署模型又相當不同。
+Office 365 是分散式軟體即服務 (SaaS) 雲端，透過微服務和應用程式 (例如 Exchange Online、SharePoint Online、商務用 Skype Online、Microsoft Teams、Exchange Online Protection、Office 網頁版等等) 的多元組合，提供生產力和共同作業案例。 雖然特定 Office 365 應用程式在套用至客戶網路以及連線到雲端時，有其獨特的功能，它們都共用一些主要原則、目標和架構模式。 這些連線的原則和架構模式通常適用於其他許多 SaaS 雲端，同時與平台即服務和基礎結構即服務雲端 (例如 Microsoft Azure) 的典型部署模型又相當不同。
   
 Office 365 的其中一個最重要架構功能 (經常遭到網路規劃工具遺漏或錯誤解譯) 是在使用者連線方式內容中真正的全域分散式服務。 目標 Office 365 租用戶的位置對於了解客戶資料儲存在雲端內哪個位置而言相當重要，但是使用者的 Office 365 體驗並未涉及到直接與包含資料的磁碟連線。 使用者的 Office 365 體驗 (包括效能、可靠性和其他重要的品質特性) 牽涉到透過高度分散服務 front door (在全球數百個 Microsoft 位置之間相應放大) 的連線。 在大多數情況下，可以藉由允許客戶網路將使用者要求路由傳送到最接近的 Office 365 服務進入點，而不是透過中央位置或區域的出口點連線到 Office 365，達到最佳的使用者體驗。
   

@@ -3,7 +3,7 @@ title: Office 365 IP 位址和 URL Web 服務
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 5/7/2019
+ms.date: 8/6/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,23 +17,23 @@ search.appverid:
 - MET150
 - MOE150
 - BCS160
-description: 為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。
-ms.openlocfilehash: fcef7a6a175b043639275fedc77faaa689f0e7d5
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 365 網路流量，讓您更容易評估、設定及掌握變更。
+ms.openlocfilehash: 90de20f28e271e3fb174a883eb9cda3fb1228fb4
+ms.sourcegitcommit: 6db61b95b1b5b4312dd6bc42bec6597e359b1bd7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069729"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "36212978"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務
 
-為了協助您更能識別及區分 Office 365 網路流量，新的 Web 服務會發佈 Office 365 端點，讓您更容易評估、設定及掌握變更。這個新的 Web 服務會取代目前使用中的 XML 可下載檔案。XML 格式計劃於 2018 年 10 月 2 日淘汰。
+Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 365 網路流量，讓您更容易評估、設定及掌握變更。 此 REST 型 Web 服務會取代之前已於 2018 年 10 月 2 日淘汰的 XML 可下載檔案。
 
-身為客戶或網路周邊裝置廠商，您可以根據新的 REST 型 Web 服務，針對 Office 365 IP 位址和 FQDN 項目進行建置。您可以直接在網頁瀏覽器中使用這些 URL 來存取資料。
+身為客戶或網路周邊裝置廠商，您可以根據 Web 服務，針對 Office 365 IP 位址和 FQDN 項目進行建置。 您可以使用這些 URL 直接在網頁瀏覽器中存取資料：
 
 - 如需最新版本的 Office 365 URL 與 IP 位址範圍，請使用 [https://endpoints.office.com/version](https://endpoints.office.com/version?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
 - 如需在 Office 365 URL 與防火牆和 Proxy 伺服器的 IP 位址範圍頁面上的資料，請使用 [https://endpoints.office.com/endpoints/worldwide](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
-- 若要在 Web 服務第一次可用時，取得從 2018 年 7 月底以來的所有最新變更，請使用 [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
+- 若要在 Web 服務第一次可用時，取得從 2018 年 7 月以來的所有最新變更，請使用 [https://endpoints.office.com/changes/worldwide/0000000000](https://endpoints.office.com/changes/worldwide/0000000000?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
 
 身為客戶，您可以使用這個 Web 服務：
 
@@ -58,26 +58,28 @@ ms.locfileid: "34069729"
 
 這些參數為所有 Web 服務方法通用：
 
-- **format=<JSON | CSV>** - 依預設，傳回的資料格式為 JSON。 使用此選擇性參數，以逗點分隔值 (CSV) 格式傳回資料。
-- **ClientRequestId =\<guid >** - 為用戶端關聯所產生的必要 GUID。 您應該為呼叫 Web 服務的每一部電腦產生 GUID。 請勿使用下列範例所示的 GUID，因為未來 Web 服務可能會加以封鎖。 GUID 格式為 _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_，其中 x 代表十六進位數字。 若要產生 GUID，請使用 [New-Guid](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6) PowerShell 命令。
+- **format=<JSON | CSV>** - 依預設，傳回的資料格式為 JSON。 使用此選擇性參數可以逗點分隔值 (CSV) 格式傳回資料。
+- **ClientRequestId =\<guid>** - 您為用戶端關聯所產生的必要 GUID。 針對每個呼叫 Web 服務的電腦產生唯一 GUID (此頁面上包含的指令碼會為您產生 GUID)。 請勿使用下列範例所示的 GUID，因為未來 Web 服務可能會加以封鎖。 GUID 格式為 _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_，其中 x 代表十六進位數字。
+
+  若要產生 GUID，您可以使用 PowerShell 命令 [New-Guid](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6)，或使用線上服務，例如[線上 GUID 產生器](https://www.guidgenerator.com/) (英文)。
 
 ## <a name="version-web-method"></a>版本 Web 方法
 
-Microsoft 會在每個月底更新 Office 365 IP 位址和 FQDN 項目，有時候會在這個定期期間以外針對作業或支援需求進行更新。每個已發佈執行個體的資料會獲得指派版本號碼。版本 Web 方法可讓您輪詢每個 Office 365 服務執行個體的最新版本。我們建議您每天檢查版本，或者最多每小時檢查。新版本預期會在每個月初發行。有時候因為支援事件、安全性或其他作業需求，在每個月當中也會有新版本。
+Microsoft 在每個月底更新 Office 365 IP 位址和 FQDN 項目。 有時也會因為支援事件、安全性更新或其他作業需求而發佈額外的更新。
+
+每個已發佈執行個體的資料都會被指派一個版本號碼，版本 Web 方法可讓您檢查每個 Office 365 服務執行個體的最新版本。 我們建議您檢查版本的頻率是一個小時不超過一次。
 
 版本 Web 方法的參數為：
 
-- **AllVersions=<true | false>** - 依預設，傳回的版本是最新的。 因為此 Web 服務先發佈，請包含此選擇性參數，以要求所有已發佈的版本。
-- **Format=<JSON | CSV | RSS>** - 除了 JSON 和 CSV 格式，版本 Web 方法也支援 RSS。 您可以使用此選擇性參數，以及 _AllVersions=true_ 參數，要求可以與 Outlook 或其他 RSS 讀取程式搭配使用的 RSS 摘要。
-- **Instance=<Worldwide | China | Germany | USGovDoD | USGovGCCHigh>** - 此選擇性參數會指定要傳回版本的執行個體。 如果省略，則會傳回所有執行個體。 有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
+- **AllVersions=<true | false>** - 依預設，傳回的版本是最新的。 由於 Web 服務已先發行，因此包含此選擇性參數可要求所有已發佈的版本。
+- **Format=<JSON | CSV | RSS>** - 除了 JSON 和 CSV 格式，版本 Web 方法也支援 RSS。 您可以使用此選擇性參數搭配 _AllVersions=true_ 參數，要求可以與 Outlook 或其他 RSS 讀取程式搭配使用的 RSS 摘要。
+- **Instance=<Worldwide | China | Germany | USGovDoD | USGovGCCHigh>** - 此選擇性參數可指定要傳回版本的執行個體。 如果省略，則會傳回所有執行個體。 有效的執行個體為：Worldwide、China、Germany、USGovDoD、USGovGCCHigh。
 
-版本 Web 方法沒有速率限制，也不會傳回 429 HTTP 回應碼。版本 Web 方法的回應會包含建議快取資料達 1 小時的快取控制 (cache-control) 標頭。版本 Web 方法的結果可能是單一記錄或記錄的陣列。每一筆記錄的項目如下：
+版本 Web 方法沒有速率限制，也不會傳回 429 HTTP 回應碼。 版本 Web 方法的回應會包含建議快取資料達 1 小時的快取控制 (cache-control) 標頭。 版本 Web 方法的結果可能是單一記錄或記錄陣列。 每個記錄的元素是：
 
 - instance - Office 365 服務執行個體的簡短名稱。
 - latest - 指定執行個體端點的最新版本。
-- versions - 指定執行個體所有舊版的清單。這個元素只有在 AllVersions 參數為 true 時才會納入。
-
-您可以使用 Microsoft Flow 取得 IP 位址和 URL 變更的電子郵件通知。請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651) (英文)。
+- versions - 指定執行個體所有舊版的清單。 此元素只有在 _AllVersions_ 參數為 true 時才會納入。
 
 ### <a name="examples"></a>範例:
 
@@ -169,35 +171,35 @@ Worldwide,2018063000
 
 ## <a name="endpoints-web-method"></a>端點 Web 方法
 
-端點 Web 方法會傳回組成 Office 365 服務的 IP 位址範圍和 URL 的所有記錄。 雖然應該針對網路裝置組態使用端點 Web 方法的最新資料，因為會提供事先通知作為額外項目，所以資料在發佈之後可以快取最多 30 天。 我們建議您只在版本 Web 方法指出有新版資料可用時，再重新呼叫端點 Web 方法。
+端點 Web 方法會傳回組成 Office 365 服務的 IP 位址範圍和 URL 的所有記錄。 網路裝置組態應一律使用端點 Web 方法的最新資料。 Microsoft 會在發佈新增內容前 30 天提供事先通知，讓您有時間可以更新存取控制清單和 Proxy 伺服器略過清單。 我們建議您只在版本 Web 方法指出有新版資料可用時，再重新呼叫端點 Web 方法。
 
 端點 Web 方法的參數為：
 
-- **ServiceAreas=<Common | Exchange | SharePoint | Skype>** - 服務區域以逗點分隔的清單。 有效的項目為 _Common_、_Exchange_、_SharePoint_ 和 _Skype_。 因為通用服務區域項目是其他所有服務區域的必要條件，Web 服務一律會包含它們。 如果您未包含此參數，則會傳回所有服務區域。
+- **ServiceAreas=<Common | Exchange | SharePoint | Skype>** - 以逗點分隔的服務區域清單。 有效的項目為 _Common_、_Exchange_、_SharePoint_ 和 _Skype_。 因為 _Common_ 服務區域項目是其他所有服務區域的必要條件，因此 Web 服務一律會包含。 如果您未包含此參數，則會傳回所有服務區域。
 - **TenantName=<tenant_name>** - 您的 Office 365 租用戶名稱。 Web 服務會取得您提供的名稱，並將它在 URL 中包含租用戶名稱的部分插入。 如果您沒有提供租用戶名稱，則 URL 的這部分會是萬用字元 (\*)。
-- **NoIPv6=<true | false>** - 將這個參數設為 true 以從輸出排除 IPv6 位址，例如，如果您未在網路中使用 IPv6。
-- **Instance=<Worldwide | China | Germany | USGovDoD | USGovGCCHigh>** - 這個必要參數會指定要傳回端點的執行個體。 有效的執行個體為：_Worldwide_、_China_、_Germany_、_USGovDoD_ 及 _USGovGCCHigh_。
+- **NoIPv6=<true | false>** - 如果您未在網路中使用 IPv6，將此參數設為 _true_ 可從輸出排除 IPv6 位址。
+- **Instance=<Worldwide | China | Germany | USGovDoD | USGovGCCHigh>** - 此必要參數指定要傳回端點的執行個體。 有效的執行個體為：_Worldwide_、_China_、_Germany_、_USGovDoD_ 及 _USGovGCCHigh_。
 
-如果您從相同用戶端 IP 位址呼叫端點 Web 方法大量次數，您可能會收到 HTTP 回應碼 429 (太多要求)。 大部分的人永遠不會看到此回應碼。 如果您收到此回應碼，請先等候 1 小時，再重複您的要求。 請計劃只在版本 Web 方法指出有新版本可用時，再呼叫端點 Web 方法。
+如果您從相同用戶端 IP 位址呼叫端點 Web 方法非常多次，您可能會收到 HTTP 回應碼 _429 (太多要求)_。 如果您收到此回應碼，請先等候 1 小時，再重複您的要求，或是針對要求產生新的 GUID。 一般的最佳作法是，只在版本 Web 方法指出有新版本可用時，再呼叫端點 Web 方法。
 
-端點 Web 方法的結果是記錄的陣列，每個記錄代表端點集。每個記錄的元素為：
+端點 Web 方法的結果是記錄的陣列，其中的每個記錄都代表一個特定的端點集。 每個記錄的元素為：
 
 - id - 端點集的固定識別碼。
-- serviceArea - 屬於以下項目的服務區域：Common、Exchange、SharePoint 或 Skype。
-- urls - 端點集的 URL。DNS 記錄的 JSON 陣列。如果空白則省略。
-- tcpPorts - 端點集的 TCP 連接埠。所有連接埠元素會格式化為以逗點分隔的連接埠清單，或以破折號字元 (-) 分隔的連接埠範圍。該端點中套用至所有 IP 位址和所有 URL 的連接部會針對該分類進行設定。如果空白則省略。
-- udpPorts - 此端點集中 IP 位址範圍的 UDP 連接埠。如果空白則省略。
-- ips - 與此端點集相關聯的 IP 位址範圍會設定為與列出的 TCP 或 UDP 連接埠相關聯。IP 位址範圍的 JSON 陣列。如果空白則省略。
-- 類別 - 端點集的連線類別。有效值為「最佳化」、「允許」和「預設」。若使用端點資料來搜尋 IP 位址或 URL 的類別，您的查詢可能會傳回多個類別。有幾個原因會讓這種情況發生。若發生這種情況，請遵循最高優先順序類別的建議。例如，若端點出現「最佳化」和「允許」，請依「最佳化」的需求來處理。此為必要動作。
-- expressRoute - 此端點集是否透過 ExpressRoute 路由傳送，True 或 False。
-- required - 如果需要此端點集才能支援 Office 365 連線，則為 True。如果此端點集為選擇性的，則為 False。
-- notes - 針對選擇性的端點，文字說明無法在網路層存取此端點集中的 IP 位址或 URL 時，會遺失的 Office 365 功能。如果空白則省略。
+- serviceArea - 屬於以下項目的服務區域：_Common_、_Exchange_、_SharePoint_ 或 _Skype_。
+- urls - 端點集的 URL。 DNS 記錄的 JSON 陣列。 如果空白則省略。
+- tcpPorts - 端點集的 TCP 連接埠。 所有連接埠元素會格式化為以逗點分隔的連接埠清單，或以破折號字元 (-) 分隔的連接埠範圍。 連接埠會套用至指定類別的端點集中所有的 IP 位址和所有的 URL。 如果空白則省略。
+- udpPorts - 此端點集中 IP 位址範圍的 UDP 連接埠。 如果空白則省略。
+- ips - 與此端點集相關聯的 IP 位址範圍會設定為與列出的 TCP 或 UDP 連接埠相關聯。 IP 位址範圍的 JSON 陣列。 如果空白則省略。
+- category - 端點集的連線能力類別。 有效值為 _Optimize_、_Allow_ 和 _Default_。 如果您在端點 Web 方法的輸出中搜尋特定 IP 位址或 URL 的類別，您的查詢很有可能會傳回多個類別。 在這種情況下，請遵循最高優先順序類別的建議。 例如，如果端點同時出現在 _Optimize_ 和 _Allow_，您應該遵循 _Optimize_ 的要求。 此為必要動作。
+- expressRoute - 如果此端點集是透過 ExpressRoute 路由傳送，則為 _True_；如果不是，則為 _False_。
+- required - 如果此端點集必須要有連線能力才能支援 Office 365，則為 _True_。 如果此端點集為選擇性，則為 _False_。
+- notes - 針對選擇性的端點，這些文字說明無法在網路層存取此端點集中的 IP 位址或 URL 時，無法使用的 Office 365 功能。 如果空白則省略。
 
-### <a name="examples"></a>範例：
+### <a name="examples"></a>範例:
 
 範例 1 要求 URI：[https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/endpoints/Worldwide?ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
 
-此 URI 會取得所有工作負載之 Office 365 全球執行個體的所有端點。範例結果顯示輸出的摘要：
+此 URI 會取得所有工作負載之 Office 365 全球執行個體的所有端點。 範例結果顯示輸出的摘要：
 
 ```json
 [
@@ -227,7 +229,7 @@ Worldwide,2018063000
    ],
 ```
 
-此範例中未包含額外的端點集。
+請注意，在此範例中，要求的完整輸出會包含有其他端點集。
 
 範例 2 要求 URI：[https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp;ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7](https://endpoints.office.com/endpoints/Worldwide?ServiceAreas=Exchange&amp;ClientRequestId=b10c5ed1-bad1-445f-b386-b919946339a7)
 
@@ -237,36 +239,37 @@ Worldwide,2018063000
 
 ## <a name="changes-web-method"></a>變更 Web 方法
 
-變更 Web 方法會傳回已發佈的最新更新。通常是上個月對於 IP 位址範圍和 URL 的變更。要處理的最重要變更是在無法將 IP 位址新增至防火牆存取控制清單，或無法將 URL 新增至 Proxy 伺服器略過清單之後，新增的新 URL 或 IP 位址會導致該網路裝置後的 Office 365 使用者中斷。儘管_新增_作業是作業需求，但是它會在此類中斷發生之前，新增 30 天通知。
+變更 Web 方法會傳回已發佈的最新更新，通常是上個月對於 IP 位址範圍和 URL 的變更。
+
+端點資料最重要的變更是新的 URL 和 IP 位址。 無法將 IP 位址新增至防火牆存取控制清單，或是無法將 URL 新增至 Proxy 伺服器略過清單，都會導致該網路裝置後方的 Office 365 使用者服務中斷。 儘管有作業要求，新端點會在端點可供使用日期之前 30 天發佈至 Web 服務，讓您有時間更新存取控制清單和 Proxy 伺服器略過清單。
 
 變更 Web 方法的必要參數為：
 
-- **Version=\<YYYYMMDDNN>** - 必要的 URL 路由參數。 此值應該是您目前實作的版本。 Web 服務會傳回自該版本後所做的變更。 格式為 _YYYYMMDDNN_，其中 _NN_ 是在一天中必須發佈多個版本時，遞增的自然數，_00_ 代表當天的第一個更新。 Web 服務需要_版本_參數，才能包含確切 10 位數。
+- **Version=\<YYYYMMDDNN>** - 必要的 URL 路由參數。 此值是您目前實作的版本。 Web 服務會傳回自該版本後所做的變更。 格式為 _YYYYMMDDNN_，其中 _NN_ 是在一天中必須發佈多個版本時，遞增的自然數，_00_ 代表當天的第一個更新。 Web 服務需要_版本_參數，才能包含確切 10 位數。
 
-變更 Web 方法的速率限制方式與端點 Web 方法相同。 如果您收到 429 HTTP 回應碼，請先等候 1 小時，再重複您的要求。
+變更 Web 方法的速率限制方式與端點 Web 方法相同。 如果您收到 429 HTTP 回應碼，請先等候 1 小時，再重複您的要求，或是針對要求產生新的 GUID。
 
-變更 Web 方法的結果是記錄的陣列，每個記錄代表特定版本端點中的變更。每個記錄的元素為：
+變更 Web 方法的結果是記錄的陣列，其中的每個記錄都代表特定端點版本中的一個變更。 每個記錄的元素為：
 
-- id - 變更記錄的固定識別碼。
+- id - 變更記錄的固定 ID。
 - endpointSetId - 已變更的端點集記錄識別碼。
-- disposition - 可以是變更、新增或移除，並且說明對端點集記錄進行什麼變更。
-- impact - 對每個環境來說，每個變更的重要性不一定相同。此項目會說明此變更對企業網路周邊環境造成的預期影響。此屬性僅包含在 **2018112800** 和更新版本的變更記錄中。影響選項如下：
-  - AddedIp - 已將 IP 位址新增至 Office 365，而且很快就能在服務上生效。這表示您需要在防火牆或其他第 3 層網路周邊裝置上執行變更。如果您沒有在我們開始使用此項目之前進行新增，您可能會遇到作業中斷的情形。
-  - AddedUrl - URL 已新增至 Office 365，並且很快將在服務中推出。 這表示您需要在 Proxy 伺服器或剖析網路周邊裝置的 URL 上執行的變更。 在我們開始使用它之前，如果您未新增此項目，您可能會發生中斷的情況。
-  - AddedIpAndUrl - 已新增 IP 位址和 URL。這表示您需要在防火牆第 3 層裝置或 Proxy 伺服器或 URL 剖析裝置上執行變更。如果您沒有在我們開始使用此項目前進行新增，您可能會遇到作業中斷的情形。
-  - RemovedIpOrUrl – 已從 Office 365 移除至少一個 IP 位址或 URL。您應該從周邊裝置中移除網路端點，但沒有限制您要在什麼時候之前完成此動作。
-  - ChangedIsExpressRoute – ExpressRoute 支援屬性已變更。如果您使用 ExpressRoute，則可能需要根據組態來採取動作。
-  - MovedIpOrUrl - 我們已在此端點集和另一個端點集之間移動 IP 位址或 URL。通常不需要採取任何動作。
-  - RemovedDuplicateIpOrUrl - 我們已移除重複的 IP 位址或 URL，但仍會在 Office 365 上發佈。通常不需要採取任何動作。
-  - OtherNonPriorityChanges – 我們已變更重要性比其他所有選項低的一些項目 (例如附註欄位)
-- version - 在其中引入變更的已發佈端點集版本。版本號碼的格式為 _YYYYMMDDNN_，其中 NN 是當一天中有多個版本需要發佈時，遞增的自然數。
-- previous - 子結構，詳細說明端點集上變更元素的前一個值。 不會對最近新增的端點集包含此設定。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
-- current - 子結構，詳細說明端點集上變更元素的更新值。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
-- add - 子結構，詳細說明要新增至端點集集合的項目。如果沒有新增項目則省略。
+- disposition - 說明對端點集記錄進行什麼變更。 有 _change_、_add_ 或 _remove_ 等值。
+- impact - 對每個環境來說，每個變更的重要性不一定相同。 此元素說明此變更與其對企業網路周邊環境造成的影響。 此元素僅包含在 **2018112800** 和更新版本的變更記錄中。 影響選項如下：- AddedIp - IP 位址已新增至 Office 365，而且很快就能在服務上生效。 這表示您需要在防火牆或其他第 3 層網路周邊裝置上執行變更。 如果您沒有在我們開始使用此 IP 位址之前新增此 IP 位址，您可能會遇到服務中斷的情形。
+  - AddedUrl - URL 已新增至 Office 365，而且很快就能在服務上生效。 這表示您需要在 Proxy 伺服器或 URL 剖析網路周邊裝置上執行變更。 如果您沒有在我們開始使用此 URL 之前新增此 URL，您可能會遇到服務中斷的情形。
+  - AddedIpAndUrl - IP 位址和 URL 兩者皆已新增。 這表示您需要在防火牆第 3 層裝置、Proxy 伺服器或 URL 剖析裝置上執行變更。 如果您沒有在我們開始使用此 IP/URL 組合之前新增此 IP/URL 組合，您可能會遇到服務中斷的情形。
+  - RemovedIpOrUrl - 已從 Office 365 移除至少一個 IP 位址或 URL。 請從您的周邊裝置移除網路端點，但沒有限制您要在什麼時候之前完成此動作。
+  - ChangedIsExpressRoute - ExpressRoute 支援屬性已變更。 如果您使用 ExpressRoute，根據您的組態，您可能需要採取動作。
+  - MovedIpOrUrl - 我們已在此端點集和另一個端點集之間移動 IP 位址或 URL。 通常您不需要採取任何動作。
+  - RemovedDuplicateIpOrUrl - 我們已移除重複的 IP 位址或 URL，但仍會在 Office 365 上發佈。 通常您不需要採取任何動作。
+  - OtherNonPriorityChanges – 我們已變更重要性比其他所有選項低的一些項目，例如附註欄位的內容。
+- version - 在其中引入變更的已發佈端點集版本。 版本號碼的格式為 _YYYYMMDDNN_，其中 _NN_ 是單一天中有多個版本需要發佈時，遞增的自然數。
+- previous - 子結構，詳細說明端點集上已變更元素的舊值。 不會對最近新增的端點集包含此設定。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
+- current - 子結構，詳細說明端點集上已變更元素的更新值。 包含 _ExpressRoute_、_serviceArea_、_category_、_required_、_tcpPorts_、_udpPorts_ 和 _notes_。
+- add - 子結構，詳細說明要新增至端點集集合的項目。 如果沒有新增項目則省略。
   - effectiveDate - 定義新增項目在服務中生效的日期。
   - ips - 要新增至 _ips_ 陣列的項目。
   - urls - 要新增至 _urls_ 陣列的項目。
-- remove - 子結構，詳細說明要從端點集移除的項目。 如果沒有移除項目則省略。
+- - remove - 子結構，詳細說明要從端點集移除的項目。 如果沒有移除項目則省略。
   - ips - 要從 _ips_ 陣列移除的項目。
   - urls - 要從 _urls_ 陣列移除的項目。
 
@@ -343,34 +346,93 @@ Worldwide,2018063000
 
 ## <a name="example-powershell-script"></a>範例 PowerShell 指令碼
 
-以下是 PowerShell 指令碼，您可以執行以查看是否需要針對更新的資料採取動作。 此指令碼會檢查 Office 365 全球執行個體端點的版本號碼。 有變更時，它會下載端點並篩選 "Allow" 和 "Optimize" 類別端點。 它也會在多個呼叫之間使用唯一的 _ClientRequestId_，並且在暫存檔案中儲存找到的最新版本。 您應該一小時呼叫此指令碼一次，以檢查版本更新。
+您可以執行此 PowerShell 指令碼，查看是否有需要針對已更新資料採取的動作。 您可以將此指令碼當成是檢查版本更新的排程工作來執行。 為避免對 Web 服務造成過度的負載，請勿嘗試在一小時內執行指令碼一次以上。
+
+此指令碼會執行下列操作：
+
+- 透過呼叫 Web 服務 REST API，檢查目前 Office 365 全球執行個體端點的版本號碼。
+- 檢查位於 _$Env:TEMP\O365_endpoints_latestversion.txt_ 的目前版本檔案。 全域變數 **$Env:TEMP** 的路徑通常是 _C:\Users\\<username\>\AppData\Local\Temp_。
+- 如果這是第一次執行指令碼，指令碼會傳回目前的版本、目前所有的 IP 位址和 URL，然後將端點版本寫入至檔案 _$Env:TEMP\O365_endpoints_latestversion.txt_，接著將端點資料輸出至檔案 _$Env:TEMP\O365_endpoints_data.txt_。 您可以修改路徑和/或輸出檔案的名稱，方法是編輯這些指令行：
+
+    ``` powershell
+    $versionpath = $Env:TEMP + "\O365_endpoints_latestversion.txt"
+    $datapath = $Env:TEMP + "\O365_endpoints_data.txt"
+    ```
+
+- 後續每次執行指令碼時，如果最新的 Web 服務版本與 _O365_endpoints_latestversion.txt_ 檔案中的版本完全相同時，指令碼會不做任何變更就結束。
+- 當最新的 Web 服務版本比 _O365_endpoints_latestversion.txt_ 檔案中的版本還要新時，指令碼會傳回端點並篩選出 **Allow** 和 **Optimize** 類別的端點，更新 _O365_endpoints_latestversion.txt_ 檔案中的版本，然後將已更新資料寫入至 _O365_endpoints_data.txt_ 檔案。
+
+指令碼會針對其執行所在的電腦產生唯一 _ClientRequestId_，並在多個呼叫之間重複使用此識別碼。 此識別碼會儲存在 _O365_endpoints_latestversion.txt_ 檔案。
+
+### <a name="to-run-the-powershell-script"></a>執行 PowerShell 指令碼
+
+1. 複製指令碼，並將指令碼儲存至本機硬碟或指令碼位置，儲存名稱為 _Get-O365WebServiceUpdates.ps1_。
+1. 在您慣用的指令碼編輯器中執行此指令碼，例如 PowerShell ISE 或 VS Code，或在 PowerShell 主控台使用下列命令：
+
+    ``` powershell
+   powershell.exe -file <path>\Get-O365WebServiceUpdates.ps1
+    ```
+
+    沒有參數傳遞給指令碼。
 
 ```powershell
-# webservice root URL
+<# Get-O365WebServiceUpdates.ps1
+From https://aka.ms/ipurlws
+v1.1 8/6/2019
+
+DESCRIPTION
+This script calls the REST API of the Office 365 IP and URL Web Service (Worldwide instance)
+and checks to see if there has been a new update since the version stored in an existing
+$Env:TEMP\O365_endpoints_latestversion.txt file in your user directory's temp folder
+(usually C:\Users\<username>\AppData\Local\Temp).
+If the file doesn't exist, or the latest version is newer than the current version in the
+file, the script returns IPs and/or URLs that have been changed, added or removed in the latest
+update and writes the new version and data to the output file $Env:TEMP\O365_endpoints_data.txt.
+
+USAGE
+Run as a scheduled task every 60 minutes.
+
+PARAMETERS
+n/a
+
+PREREQUISITES
+PS script execution policy: Bypass
+PowerShell 3.0 or later
+Does not require elevation
+#>
+
+#Requires -Version 3.0
+
+# web service root URL
 $ws = "https://endpoints.office.com"
-# path where client ID and latest version number will be stored
-$datapath = $Env:TEMP + "\endpoints_clientid_latestversion.txt"
-# fetch client ID and version if data file exists; otherwise create new file
-if (Test-Path $datapath) {
-    $content = Get-Content $datapath
+# path where output files will be stored
+$versionpath = $Env:TEMP + "\O365_endpoints_latestversion.txt"
+$datapath = $Env:TEMP + "\O365_endpoints_data.txt"
+
+# fetch client ID and version if version file exists; otherwise create new file and client ID
+if (Test-Path $versionpath) {
+    $content = Get-Content $versionpath
     $clientRequestId = $content[0]
     $lastVersion = $content[1]
+    Write-Output ("Version file exists! Current version: " + $lastVersion)
 }
 else {
+    Write-Output ("First run! Creating version file at " + $versionpath + ".")
     $clientRequestId = [GUID]::NewGuid().Guid
     $lastVersion = "0000000000"
-    @($clientRequestId, $lastVersion) | Out-File $datapath
+    @($clientRequestId, $lastVersion) | Out-File $versionpath
 }
+
 # call version method to check the latest version, and pull new data if version number is different
 $version = Invoke-RestMethod -Uri ($ws + "/version/Worldwide?clientRequestId=" + $clientRequestId)
 if ($version.latest -gt $lastVersion) {
     Write-Host "New version of Office 365 worldwide commercial service instance endpoints detected"
-
-    # write the new version number to the data file
-    @($clientRequestId, $version.latest) | Out-File $datapath
+    # write the new version number to the version file
+    @($clientRequestId, $version.latest) | Out-File $versionpath
     # invoke endpoints method to get the new data
     $endpointSets = Invoke-RestMethod -Uri ($ws + "/endpoints/Worldwide?clientRequestId=" + $clientRequestId)
     # filter results for Allow and Optimize endpoints, and transform these into custom objects with port and category
+    # URL results
     $flatUrls = $endpointSets | ForEach-Object {
         $endpointSet = $_
         $urls = $(if ($endpointSet.urls.Count -gt 0) { $endpointSet.urls } else { @() })
@@ -387,15 +449,15 @@ if ($version.latest -gt $lastVersion) {
         }
         $urlCustomObjects
     }
-    $flatIps = $endpointSets | ForEach-Object {
+    # IPv4 results
+    $flatIp4s = $endpointSets | ForEach-Object {
         $endpointSet = $_
         $ips = $(if ($endpointSet.ips.Count -gt 0) { $endpointSet.ips } else { @() })
-        # IPv4 strings have dots while IPv6 strings have colons
+        # IPv4 strings contain dots
         $ip4s = $ips | Where-Object { $_ -like '*.*' }
-
-        $ipCustomObjects = @()
+        $ip4CustomObjects = @()
         if ($endpointSet.category -in ("Allow", "Optimize")) {
-            $ipCustomObjects = $ip4s | ForEach-Object {
+            $ip4CustomObjects = $ip4s | ForEach-Object {
                 [PSCustomObject]@{
                     category = $endpointSet.category;
                     ip = $_;
@@ -404,36 +466,58 @@ if ($version.latest -gt $lastVersion) {
                 }
             }
         }
-        $ipCustomObjects
+        $ip4CustomObjects
     }
+    # IPv6 results
     $flatIp6s = $endpointSets | ForEach-Object {
-    $endpointSet = $_
-    $ips = $(if ($endpointSet.ips.Count -gt 0) { $endpointSet.ips } else { @() })
-    # IPv6 strings have colons while IPv6 strings have dots
-    $ip6s = $ips | Where-Object { $_ -like '*:*' }
-    $ipCustomObjects = @()
-    if ($endpointSet.category -in ("Optimize")) {
-        $ipCustomObjects = $ip6s | ForEach-Object {
-            [PSCustomObject]@{
-                category = $endpointSet.category;
-                ip = $_;
-                tcpPorts = $endpointSet.tcpPorts;
-                udpPorts = $endpointSet.udpPorts;
+        $endpointSet = $_
+        $ips = $(if ($endpointSet.ips.Count -gt 0) { $endpointSet.ips } else { @() })
+        # IPv6 strings contain colons
+        $ip6s = $ips | Where-Object { $_ -like '*:*' }
+        $ip6CustomObjects = @()
+        if ($endpointSet.category -in ("Optimize")) {
+            $ip6CustomObjects = $ip6s | ForEach-Object {
+                [PSCustomObject]@{
+                    category = $endpointSet.category;
+                    ip = $_;
+                    tcpPorts = $endpointSet.tcpPorts;
+                    udpPorts = $endpointSet.udpPorts;
+                }
             }
         }
+        $ip6CustomObjects
     }
-    $ipCustomObjects
-}
+
+    # write output to screen
+    Write-Output ("Client Request ID: " + $clientRequestId)
+    Write-Output ("Last Version: " + $lastVersion)
+    Write-Output ("New Version: " + $version.latest)
+    Write-Output ""
     Write-Output "IPv4 Firewall IP Address Ranges"
-    ($flatIps.ip | Sort-Object -Unique) -join "," | Out-String
+    ($flatIp4s.ip | Sort-Object -Unique) -join "," | Out-String
     Write-Output "IPv6 Firewall IP Address Ranges"
     ($flatIp6s.ip | Sort-Object -Unique) -join "," | Out-String
     Write-Output "URLs for Proxy Server"
     ($flatUrls.url | Sort-Object -Unique) -join "," | Out-String
-    # TODO Call Send-MailMessage with new endpoints data
+    Write-Output ("IP and URL data written to " + $datapath)
+
+    # write output to data file
+    Write-Output "Office 365 IP and UL Web Service data" | Out-File $datapath
+    Write-Output "Worldwide instance" | Out-File $datapath -Append
+    Write-Output "" | Out-File $datapath -Append
+    Write-Output ("Version: " + $version.latest) | Out-File $datapath -Append
+    Write-Output "" | Out-File $datapath -Append
+    Write-Output "IPv4 Firewall IP Address Ranges" | Out-File $datapath -Append
+    ($flatIp4s.ip | Sort-Object -Unique) -join "," | Out-File $datapath -Append
+    Write-Output "" | Out-File $datapath -Append
+    Write-Output "IPv6 Firewall IP Address Ranges" | Out-File $datapath -Append
+    ($flatIp6s.ip | Sort-Object -Unique) -join "," | Out-File $datapath -Append
+    Write-Output "" | Out-File $datapath -Append
+    Write-Output "URLs for Proxy Server" | Out-File $datapath -Append
+    ($flatUrls.url | Sort-Object -Unique) -join "," | Out-File $datapath -Append
 }
 else {
-    Write-Host "Office 365 worldwide commercial service instance endpoints are up-to-date"
+    Write-Host "Office 365 worldwide commercial service instance endpoints are up-to-date."
 }
 ```
 
@@ -505,61 +589,29 @@ else:
 
 ## <a name="web-service-interface-versioning"></a>Web 服務介面版本設定
 
-未來可能需要對於這些 Web 服務方法的參數或結果更新。在這些 Web 服務的正式運作版本發行之後，Microsoft 會致力於提供 Web 服務材料更新的事先通知。當 Microsoft 認為需要對使用 Web 服務的用戶端進行更新時，Microsoft 會讓舊版 (上一個版本) Web 服務在新版本發行之後，仍然保持至少十二 (12) 個月可用。在這段期間未升級的客戶可能無法存取 Web 服務及其方法。如果對 Web 服務介面簽章進行下列變更，客戶必須確保 Web 服務的用戶端持續運作且沒有錯誤：
+未來有可能會需要更新這些 Web 服務方法的參數或結果。 發佈這些 Web 服務的正式運作版本之後，Microsoft 會致力於提供 Web 服務材料更新的事先通知。 當 Microsoft 認為需要對使用 Web 服務的用戶端進行更新時，Microsoft 會讓舊版 (上一個版本) Web 服務在新版本發行之後，仍然保持至少 12 個月可用。 在這段期間未升級的客戶可能無法存取 Web 服務及其方法。 如果對 Web 服務介面簽章進行下列變更，客戶必須確保 Web 服務的用戶端持續運作且沒有錯誤：
 
 - 將新的選擇性參數新增至現有 Web 方法，該方法不一定要由舊的用戶端提供，且不會影響舊用戶端接收的結果。
 - 將其中一個回應 REST 項目中的具名屬性或額外資料行新增至回應 CSV。
 - 新增具有新名稱 (不是舊用戶端使用的名稱) 的新 Web 方法。
 
-## <a name="office-365-endpoint-functions-module"></a>Office 365 端點函數模組
+## <a name="update-notifications"></a>更新通知
 
-Microsoft 主控 REST 服務，以取得 Office 365 服務近期且最新的 URI。  若要能夠使用集合形式的 URI，可使用此模組搭配一些實用的 Cmdlet。
+當 IP 位址和 URL 的變更發佈至 Web 服務時，您可以使用數種不同的方法取得電子郵件通知。
 
-### <a name="calling-the-rest-service"></a>呼叫 REST 服務
+- 若要使用 Microsoft Flow 解決方案，請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651) (英文)。
+- 若要使用 ARM 範本部署 Azure Logic App，請參閱 [Office 365 更新通知 (v1.1)](https://aka.ms/ipurlws-updates-template) (英文)。
+- 若要使用 PowerShell 撰寫您自己的通知指令碼，請參閱 [Send-MailMessage](https://docs.microsoft.com/zh-TW/powershell/module/microsoft.powershell.utility/send-mailmessage) (英文)。
 
-若要使用此模組，只要將模組檔案 [O365EndpointFunctions.psm1](https://github.com/samurai-ka/PS-Module-O365EndpointService/blob/master/O365EndpointFunctions.psm1) 複製到硬碟上的某個位置，並使用此命令直接將它匯入：
+## <a name="exporting-a-proxy-pac-file"></a>匯出 Proxy PAC 檔案
 
-```powershell
-    Import-Module O365EndpointFunctions.psm1
-```
-
-匯入模組後，您將可以呼叫 REST 服務。 這會傳回集合形式的 URI，您可以立即在 PowerShell 中直接處理它。 您必須輸入您的 Office 365 租用戶名稱，如下列命令中所述：
-
-```powershell
-    Invoke-O365EndpointService -tenantName [Name of your tenant]
-```
-
-#### <a name="parameters"></a>參數
-
-- **tenantName** - 您的 Office 365 租用戶的名稱。 此為強制性參數。
-- **ForceLatest** - 此參數會強制 REST API 一律傳回最新 URI 的整個清單。
-- **IPv6** - 此參數也將傳回 IPv6 位址。 預設值為只傳回 IPv4。
-
-### <a name="examples"></a>範例
-
-傳回包含 IPv6 位址的所有 URI 完整清單
-
-```powershell
-    Invoke-O365EndpointService -tenantName [Name of your tenant] -ForceLatest -IPv6 | Format-Table -AutoSize
-```
-
-僅傳回 Exchange Online 服務的 IP 位址
-
-```powershell
-    Invoke-O365EndpointService -tenantName [Name of your tenant] -ForceLatest | where{($_.serviceArea -eq "Exchange") -and ($_.protocol -eq "ip")}| Format-Table -AutoSize
-```
-
-### <a name="exporting-a-proxy-pac-file"></a>匯出 Proxy PAC 檔案
-
-您可以使用此模組來建立 Proxy PAC 檔案。 在此範例中，您會先取得端點，並篩選結果以選取 URL。 這些 URL 會以管線傳送供匯出。  
-
-```powershell
- Invoke-O365EndpointService -tenantName [Name of your tenant] -ForceLatest | where{($_.Protocol -eq "Url") -and (($_.Category -eq "Optimize") -or ($_.category -eq "Allow"))} | select uri -Unique | Export-O365ProxyPacFile
-```
+[Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile) 是 PowerShell 指令碼，會讀取來自 Office 365 IP 位址和 URL Web 服務的最新網路端點，並建立範例 PAC 檔案。 如需有關使用 Get-PacFile 的詳細資訊，請參閱[使用 PAC 檔案進行重要 Office 365 流量的直接路由傳送](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic) (機器翻譯)。
 
 ## <a name="related-topics"></a>相關主題
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+
+[管理 Office 365 端點](managing-office-365-endpoints.md)
   
 [Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
 
@@ -567,7 +619,7 @@ Microsoft 主控 REST 服務，以取得 Office 365 服務近期且最新的 URI
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
 
-[對 Office 365 的網路連線](network-connectivity.md)
+[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
   
 [商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
   

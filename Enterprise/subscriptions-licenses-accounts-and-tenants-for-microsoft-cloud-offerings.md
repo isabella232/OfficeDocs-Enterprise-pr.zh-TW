@@ -18,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 9df81d14cbd18246bf10e66002d9042a3b3d9384
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 29b9954467e2d6dd7ece2e33376f28882152693c
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070429"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782513"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -155,7 +155,7 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
 |**Intune/EMS** <br/> |您為組織新增 Office 365 訂用帳戶。  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |NA  <br/> |您為組織新增 Dynamics 365 訂用帳戶。  <br/> |
 |**Dynamics 365** <br/> |您為組織新增 Office 365 訂用帳戶。  <br/> |您在 Azure 入口網站中為組織新增 Azure 訂用帳戶。  <br/> |您為組織新增 Intune/EMS 訂用帳戶。  <br/> |NA  <br/> |
    
-要將 Microsoft SaaS 服務的訂用帳戶新增到組織，簡單的做法是透過 Office 365 管理中心：
+要將 Microsoft SaaS 服務的訂用帳戶新增到組織，簡單的做法是透過系統管理中心：
   
 1. 使用您的全域系統管理員帳戶登入 Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com))。
     
@@ -163,7 +163,7 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
     
 3. 在 [購買服務]**** 頁面上，購買新的訂用帳戶。
     
-Office 365 管理中心會將組織和 Office 365 訂用帳戶的 Azure AD 租用戶，指派給 SaaS 雲端供應項目的新訂用帳戶。
+系統管理中心會將組織和 Office 365 訂用帳戶的 Azure AD 租用戶，指派給 SaaS 雲端供應項目的新訂用帳戶。
   
 使用與 Office 365 訂用帳戶相同的組織和 Azure AD 租用戶進行新增：
   
@@ -173,8 +173,8 @@ Office 365 管理中心會將組織和 Office 365 訂用帳戶的 Azure AD 租�
     
 3. 在 [新增訂用帳戶]**** 頁面上，選取供應項目，並填寫付款資訊和合約。
     
-如果您已另外購買 Azure 與 Office 365 訂用帳戶，想要從您的 Azure 訂用帳戶存取 Office 365 Azure AD 租用戶，請參閱[建立 Office 365 租用戶與 Azure 訂用帳戶的關聯](https://channel9.msdn.com/Series/Microsoft-Azure-Tutorials/Associate-an-Office-365-tenant-with-an-Azure-subscription)中的指示。
-  
+如果您已另外購買 Azure 與 Office 365 訂用帳戶，並想要從您的 Azure 訂用帳戶存取 Office 365 Azure AD 租用戶，請參閱[將 Azure 訂用帳戶關聯或新增至您的 Azure Active Directory 租用戶](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) (機器翻譯) 中的指示。
+ 
 ## <a name="see-also"></a>另請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
