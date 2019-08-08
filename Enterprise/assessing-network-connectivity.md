@@ -3,7 +3,7 @@ title: 評估 Office 365 網路連線
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 6/5/2019
+ms.date: 8/7/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,12 +16,12 @@ search.appverid:
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
-ms.openlocfilehash: 3ea80ddccaf9fabbe158a10f0af1d35dbf3a9889
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 884c4c0d510de55da4125a3e3b80b4bd869ec697
+ms.sourcegitcommit: c207aafc126a495e700552796ed89da3de254910
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34724823"
+ms.lasthandoff: 08/07/2019
+ms.locfileid: "36233423"
 ---
 # <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 網路連線
 
@@ -31,10 +31,17 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
   
 網路評估可以執行由許多不同的人員或組織根據您的大小和喜好設定。 評估網路範圍也可以視其中您正在閱讀在您的部署程序而異。 若要可協助您開始的花費執行網路評估更深入了解，我們已產生的網路評估指南，協助您了解您可用的選項。 此評定會決定哪些步驟和資源需要新增至部署專案，使您能夠成功地採用 Office 365。
   
-完整網路評估，像是[Skype 操作架構](https://www.skypeoperationsframework.com/)中所述會提供給網路實作細節以及設計挑戰可能的解決方案。 大部分的網路評估會指出對 Office 365 的網路連線可以容納與[次要的設定] 或 [設計變更](https://aka.ms/manageo365endpoints)現有的網路和網際網路輸出基礎結構。
+完整的網路評估會提供可能的解決方案，以及實作詳細資料的網路設計質詢。 某些網路 「 評估 」 會顯示可容納最佳化網路連線至 Office 365 與次要設定或現有的網路和網際網路輸出基礎結構的設計變更。
 
-某些評估會指出對 Office 365 的網路連線時，需要在 [網路元件的額外投資。 WAN 頻寬或最佳化的路由基礎結構，以支援網際網路連線到 Office 365 中的例如投資。 有時會評估會指出對 Office 365 的網路連線受到法規或效能需求，例如[Skype for Business Online 媒體品質](https://support.office.com/article/Media-Quality-and-Network-Connectivity-Performance-in-Skype-for-Business-Online-5fe3e01b-34cf-44e0-b897-b0b2a83f0917)的案例。 這些額外的需求可能會導致網際網路連線能力基礎結構、 路由最佳化及特殊直接連線的投資。
-  
+某些評估會指出對 Office 365 的網路連線時，需要在 [網路元件的額外投資。 例如，橫跨分公司和多個地理區域的企業網路可能需要 SD WAN 解決方案或最佳化的路由基礎結構，以支援網際網路連線到 Office 365 中的投資。 有時會評估會指出對 Office 365 的網路連線受到法規或效能需求，例如[Skype for Business Online 媒體品質](https://support.office.com/article/Media-Quality-and-Network-Connectivity-Performance-in-Skype-for-Business-Online-5fe3e01b-34cf-44e0-b897-b0b2a83f0917)的案例。 這些額外的需求可能會導致網際網路連線能力基礎結構、 路由最佳化及特殊直接連線的投資。
+
+若要協助您評估您的網路一些資源：
+
+- 如需 Office 365 網路功能概念資訊，請參閱[Office 365 網路連線能力概觀](office-365-networking-overview.md)。
+- 請參閱[Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)來了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。
+- 註冊的[Microsoft FastTrack](https://www.microsoft.com/en-us/fasttrack)引導式協助 Office 365 的規劃、 設計及部署。 
+- 請參閱[Office 365 網路上架工具](assessing-network-connectivity.md#the-office-365-network-onboarding-tool)下一節，以執行基本的連線測試可提供網路連線能力增強功能，可以指定的使用者的位置與 Office 365 之間進行的特定指導。
+
 > [!NOTE]
 > Microsoft 授權，才能使用 ExpressRoute for Office 365。 Microsoft 會檢閱每個客戶要求，並僅授權 ExpressRoute for Office 365 流量，當客戶的法規需求所要求的直接連線。 如果您有這類需求，請提供規定您解讀表示直接連線需要在[ExpressRoute for Office 365 要求表單](https://aka.ms/O365ERReview)中，若要開始 Microsoft 檢閱其文字摘錄與網頁連結。 未經授權嘗試建立 Office 365 路由篩選器的訂用帳戶會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)。
   
@@ -44,23 +51,24 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
 
 - 我們會不斷最佳化的核心的 Office 365 的各個層面，例如可用性、 全域達到，與效能的網際網路連線。 例如，有許多 Office 365 服務利用網際網路對向 edge 節點的延伸集。 此 edge 網路提供最佳的近似值和即將透過網際網路連線的效能。
 
-- 考慮使用 Office 365 任何包含服務例如 Skype 商務 Online voice、 視訊或會議功能，客戶必須完成端對端網路評估，並符合使用我們 Skype Operations Framework 的需求。 這些客戶會有數個選項可以符合雲端連線能力，包括 ExpressRoute 的特定需求。
+- 客戶時考慮使用 Office 365 任何包含服務例如 Teams 或 Skype 商務 Online voice、 視訊或會議功能，應該完成端對端網路評估，並符合使用[Microsoft 的連線能力需求FastTrack](https://www.microsoft.com/en-us/fasttrack)。
 
-看看 Microsoft 的案例研究[的 Microsoft Office 365 的最佳化網路效能](https://msdn.microsoft.com/en-us/library/mt450488.aspx)。 如果您正在評估 Office 365，並不確定要開始使用您的網路評估或已找到網路設計挑戰，您必須取得協助若要克服，請使用您的 Microsoft 客戶團隊。
-  
-此外，請閱讀[Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)來了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。 本文可協助您了解安全地最佳化 Office 365 網路連線的最新的指引。
+如果您正在評估 Office 365，並不確定要開始使用您的網路評估或已找到網路設計挑戰，您必須取得協助若要克服，請使用您的 Microsoft 客戶團隊。
 
 ## <a name="the-office-365-network-onboarding-tool"></a>Office 365 網路上架工具
 
-您可以使用[Office 365 網路上架工具](https://aka.ms/netonboard)，新證明 (POC) 的概念工具，來執行基本的連線測試，提供可指定的使用者的位置與 Office 365 之間進行的網路連線能力增強功能的特定指導。
+[Office 365 網路上架工具](https://aka.ms/netonboard)是概念證明 (POC) 網路評定工具執行基本的連線測試對您的 Office 365 租用戶，並讓特定網路設計建議，Office 365 的最佳效能。 此工具會醒目提示一般大型企業網路周邊的設計選擇也就是有用的網際網路網站瀏覽]，但影響大型的 SaaS 應用程式，例如 Office 365 的效能。
 
 網路上架工具會執行下列動作：
 
 - 偵測到您的位置，或者您可以指定要測試的位置
 - 檢查您的網路輸出的位置
 - 測試最接近的 Office 365 服務前哨的網路路徑
+- 提供進階的測試使用可下載的 Windows 10 應用程式能夠讓相關 proxy 伺服器、 防火牆和 DNS 周邊網路設計建議。 此工具也執行效能測試 skype 商務 Online、 Microsoft Teams、 SharePoint Online 和 Exchange Online。
 
-此工具會顯示下列資訊：
+此工具有兩個元件： 瀏覽器型的使用者介面，收集基本連線資訊和可下載的 Windows 10 應用程式，就會執行進階的測試並傳回額外的評估資料。
+
+瀏覽器型的工具會顯示下列資訊：
 
 - 結果和影響] 索引標籤
   - 在地圖上的使用中的服務的前哨位置
@@ -74,7 +82,24 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
   - 最佳的 Office 365 Exchange Online 服務 front door(s) 使用者位置
   - 在您地鐵] 區域中具有較佳效能的客戶
 
-您可以了解 Office 365 網路上架工具版本，並提供意見反應在[Office 365 網路效能工具 POC 版本](https://techcommunity.microsoft.com/t5/Office-365-Networking/Office-365-Network-Performance-tool-POC-release/m-p/319579#M102)部落格文章。 這項工具的未來更新和其他 Office 365 網路更新相關資訊會張貼到[Office 365 網路](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)的部落格。
+進階測試可下載應用程式提供下列的額外資訊：
+
+- 詳細資料和解決方案] 索引標籤 （附加）
+  - 使用者的預設閘道
+  - 用戶端 DNS 伺服器
+  - 用戶端 DNS 遞迴解析程式
+  - Exchange Online DNS 伺服器
+  - SharePoint Online 的 DNS 伺服器
+  - Proxy 伺服器識別碼
+  - 媒體連線檢查
+  - 媒體品質封包遺失
+  - 媒體品質延遲
+  - 媒體品質抖動
+  - 媒體品質封包重新排列
+- 多個特定功能的端點的連線測試
+- 包含 tracert 及延遲的 Exchange Online、 SharePoint Online 和 microsoft Teams 服務資料的網路路徑診斷
+
+您可以了解 Office 365 網路上架工具，並提供意見反應在[更新 Office 365 網路上架工具 POC 新網路設計建議](https://techcommunity.microsoft.com/t5/Office-365-Networking/Updated-Office-365-Network-Onboarding-Tool-POC-with-new-network/m-p/711130#M130)部落格文章。 這項工具的未來更新和其他 Office 365 網路更新相關資訊會張貼到[Office 365 網路](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)的部落格。
   
 以下是您可以使用返回下列短連結： [ https://aka.ms/o365networkconnectivity。](https://aka.ms/o365networkconnectivity)
   
