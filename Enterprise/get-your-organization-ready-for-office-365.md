@@ -3,6 +3,7 @@ title: < Plan for Office 365 企業版
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
+ms.date: 08/12/2019
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 712fced7-f9d0-4fde-8b79-286262a5d0bc
 description: 取得 Office 365 企業版部署的規劃資源的存取權。
-ms.openlocfilehash: 29510c6e3df5dfd6064b6e7e96e236e4bd8c0c47
-ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
+ms.openlocfilehash: de23b8f49968bad949cd01551fdb040882bc00f4
+ms.sourcegitcommit: d58cdc7b2296df12f7a05d14ba05ab224ffb3e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34249471"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302685"
 ---
 # <a name="plan-for-office-365-enterprise"></a>< Plan for Office 365 企業版
 
@@ -38,7 +39,7 @@ ms.locfileid: "34249471"
 
 ## <a name="do-it-yourself-planning-for-office-365"></a>自助式 Office 365 規劃
 
-若要規劃 Office 365 上您自己，判斷這些區域，正確地設計決策：
+若要規劃 Office 365 上您自己，逐步說明這些區域的規劃和設計決策：
 
 - 您的 Office 365 租用戶
 
@@ -56,7 +57,12 @@ ms.locfileid: "34249471"
 
   包含 Office 2007 和 Office 2010 用戶端和伺服器產品的移轉資訊。 開始[在這裡](plan-upgrade-previous-versions-office.md)。
 
-您也可以登入您的訂閱，並使用[Office 365 服務的部署建議](deployment-advisors-for-office-365.md)。
+>[!Note]
+>您可以使用此程序，針對您[Microsoft 365 企業版](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)訂閱。
+>
+
+您也可以登入您的 Office 365 訂閱，並使用[Office 365 服務的部署建議](deployment-advisors-for-office-365.md)。
+
 
 
 <!--

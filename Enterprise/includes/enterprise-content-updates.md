@@ -3,14 +3,6 @@
 
 
 
-## <a name="week-of-july-01-2019"></a>2019 年 7 月 01 日當週
-
-
-| 發佈時間 |主題標題 | 變更 |
-|------|------------|--------|
-| 7/2/2019 | [將 SharePoint 網站移至不同的地理位置](/Office365/Enterprise/move-sharepoint-between-geo-locations) | 修改時間 |
-
-
 ## <a name="week-of-july-08-2019"></a>2019 年 7 月 08 日當週
 
 
@@ -120,3 +112,14 @@
 | 7/29/2019 | [Office 365 美國政府 GCC High 端點](/Office365/Enterprise/office-365-u-s-government-gcc-high-endpoints) | 修改時間 |
 | 7/29/2019 | [21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges-21vianet) | 修改時間 |
 | 7/29/2019 | [Office 365 URL 與 IP 位址範圍](/Office365/Enterprise/urls-and-ip-address-ranges) (英文) | 修改時間 |
+
+
+## <a name="week-of-august-05-2019"></a>2019 年 8 月 05 日當週
+
+
+| 發佈時間 |主題標題 | 變更 |
+|------|------------|--------|
+| 8/5/2019 | [同時將多位使用者新增至 Office 365 - 系統管理說明](/Office365/Enterprise/add-several-users-at-the-same-time) | 修改時間 |
+| 8/5/2019 | [使用 Office 365 PowerShell 指派授權至使用者帳戶](/Office365/Enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell) | 修改時間 |
+| 8/6/2019 | [Office 365 IP 位址和 URL web 服務](/Office365/Enterprise/office-365-ip-web-service) | 修改時間 |
+| 8/7/2019 | [評估 Office 365 網路連線](/Office365/Enterprise/assessing-network-connectivity) | 修改時間 |

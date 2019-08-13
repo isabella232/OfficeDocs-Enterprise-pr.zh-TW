@@ -3,6 +3,7 @@ title: 為貴組織部署 Office 365 企業版
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
+ms.date: 08/12/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,12 +17,12 @@ ms.collection:
 ms.custom: Adm_O365
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
 description: 這些步驟的概觀被設計來協助您設定您的網路、 建立您設定身分識別、 部署 Office 365 專業增強版、 移轉您的資料，並協助您組織中開始使用 Office 365 的人員。
-ms.openlocfilehash: 74f119b678e04bb9f541af83feb5396ba3bed8f2
-ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
+ms.openlocfilehash: 20b970651d2ff432e0bf7b5d74bdc5f02e34f225
+ms.sourcegitcommit: d58cdc7b2296df12f7a05d14ba05ab224ffb3e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34249501"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "36302715"
 ---
 # <a name="deploy-office-365-enterprise-for-your-organization"></a>為貴組織部署 Office 365 企業版
 
@@ -77,3 +78,5 @@ ms.locfileid: "34249501"
 >[!Note]
 >這些步驟也適用於企業和[非營利組織](https://go.microsoft.com/fwlink/?LinkId=627221)想要開始使用 Office 365 企業版自訂部署。 
 >
+
+如果您有 Microsoft 365 企業版訂閱，啟動[以下](https://docs.microsoft.com/microsoft-365/enterprise/deploy-microsoft-365-enterprise)。
