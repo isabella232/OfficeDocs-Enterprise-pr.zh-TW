@@ -72,16 +72,13 @@
 #### [Project Server 2010](project-server-2010-end-of-support.md)
 
 # 測試 Office 365
-## [雲端採用測試實驗室指南](cloud-adoption-test-lab-guides-tlgs.md)
+## [測試 Office 365](cloud-adoption-test-lab-guides-tlgs.md)
 ## [基底組態開發/測試環境](base-configuration-dev-test-environment.md)
 ## [Office 365 開發/測試環境](office-365-dev-test-environment.md)
 ### [目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)
 ### [多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
 ### [同盟身份](federated-identity-for-your-office-365-dev-test-environment.md)
 ### [進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
-### [進階 eDiscovery](advanced-ediscovery-for-your-office-365-dev-test-environment.md)
-### [敏感性檔案保護](sensitive-file-protection-in-the-office-365-dev-test-environment.md)
-### [資料分類和標籤](data-classification-and-labeling-in-the-office-365-dev-test-environment.md)
 ## [Azure 中模擬的跨單位部署虛擬網路](simulated-cross-premises-virtual-network-in-azure.md)
 
 # [部署 Office 365 企業版](setup-overview-for-enterprises.md)
