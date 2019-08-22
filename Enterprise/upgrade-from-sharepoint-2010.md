@@ -3,7 +3,7 @@ title: 從 SharePoint 2010 升級
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 07/11/2019
+ms.date: 08/21/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: office-online-server
@@ -15,12 +15,12 @@ search.appverid:
 - OSU140
 ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 description: 支援結束 for SharePoint 2010 和 SharePoint Server 2010 結束於 2020 年 10 月 13。 使用本文做為指南，升級至 SharePoint Online 或 SharePoint Server 內部部署的較新版本。
-ms.openlocfilehash: c3860e8229c8633ea605228d7d3553d0f673a7d3
-ms.sourcegitcommit: d3f8df9439e9cd15333f01b5cde2001fb4b74113
+ms.openlocfilehash: 944dd4a2980097611de1fa9239acbfca46517960
+ms.sourcegitcommit: 756f1713cab2e46be948f91f6dd87fd60197c4a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "35643057"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "36491322"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 
@@ -178,6 +178,16 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以安裝在內部上�
   
 > [!NOTE]
 > 請記住，您的 SharePoint Server 2010 伺服器陣列必須先升級，在內部部署、 SharePoint Server 2013 或 SharePoint Server 2016 使用 [混合] 選項。 SharePoint Foundation 2010 與 SharePoint Foundation 2013 無法建立與 SharePoint Online 的混合式連線。 
+
+## <a name="summary-of-options-for-office-2010-client-and-servers-and-windows-7"></a>Office 2010 用戶端和伺服器和 Windows 7 的選項摘要
+
+視覺升級摘要移轉，並以雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，下載[服務海報的結尾](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfService.pdf)。
+
+![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-service.png)
+
+這一頁海報是了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援服務，可採取的各種路徑的快速方法。
+
+您可以列印此海報以字母、 法律或 tabloid (11 x 17) 格式。
   
 ## <a name="related-topics"></a>相關主題
 

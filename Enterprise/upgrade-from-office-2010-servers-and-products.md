@@ -3,7 +3,7 @@ title: 資源可以幫助您升級從 Office 2010 伺服器和用戶端
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -21,12 +21,12 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 3cd345f60c534ef8c2a464e4f9535f5f691a9110
-ms.sourcegitcommit: c718aae17c8046d5e1ef67f82ffa10e54e1eb23f
+ms.openlocfilehash: b75aea4775f2471827f472e726ccae8657a22278
+ms.sourcegitcommit: 756f1713cab2e46be948f91f6dd87fd60197c4a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35613449"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "36491332"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>資源可以幫助您升級從 Office 2010 伺服器和用戶端
 
@@ -42,7 +42,13 @@ ms.locfileid: "35613449"
 
 - Office 365 專業增強版隨附於 Office 365 E3 和 E5 和 Microsoft 365 企業版，是您在您的本機裝置安裝的 Office 用戶端應用程式的集合。 他們會以新的生產力和安全性功能，從 Microsoft cloud 持續更新。
 
-使用本文做為起點，檢閱您的選項。
+升級摘要移轉，並以雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，下載[服務海報的結尾](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfService.pdf)。
+
+![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-service.png)
+
+這一頁海報是了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援服務，可採取的各種路徑的快速方法。
+
+您可以列印此海報以字母、 法律或 tabloid (11 x 17) 格式。
       
 ## <a name="office-2010-client-and-server-upgrade-planning"></a>Office 2010 用戶端和伺服器升級規劃
   
