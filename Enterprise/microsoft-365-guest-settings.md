@@ -9,12 +9,12 @@ ms.service: o365-solutions
 ms.custom: ''
 localization_priority: Priority
 description: 深入了解 Microsoft 365 中提供的來賓共用設定。
-ms.openlocfilehash: 8c067374b960ff2cec7cdce87f67da0104697ff3
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 59e51a7118a226bb9c17e9529a517bf681b69849
+ms.sourcegitcommit: c8acfa57a22d7d055500f2e8b84a9ef252c70e82
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782273"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "36493340"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 來賓共用設定參考
 
@@ -72,6 +72,8 @@ Microsoft 365 系統管理中心有用於共用和用於 Office 365 群組的組
 |:-----|:-----|:-----|
 |讓貴組織外部的群組成員存取群組內容|開啟|設為 [開啟]**** 時，來賓可以存取群組內容；設為 [否]**** 時，則無法存取。 針對來賓使用者會與 Office 365 群組或 Teams 互動的案例，此設定應該為 [開啟]****。|
 |讓群組擁有者將貴組織外部的人員新增到群組|開啟|[開啟]**** 時，Office 365 群組或 Teams 的擁有者可以邀請新來賓加入群組。 [關閉]**** 時，擁有者只能邀請已在目錄中的來賓。|
+
+這些設定是在組織層級。 如需如何使用 PowerShell 在群組層級變更這些設定的詳細資訊，請參閱[建立特定群組的設定](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets#create-settings-for-a-specific-group)。
 
 ## <a name="teams"></a>Teams
 
