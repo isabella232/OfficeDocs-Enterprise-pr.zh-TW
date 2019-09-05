@@ -14,12 +14,12 @@ ms.assetid: 522d5cec-4e1b-4cc3-937f-293570717bc6
 ms.collection:
 - M365-security-compliance
 description: 新式驗證，是一種方法提供了更安全的使用者驗證和授權、 skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合可用的身分識別管理。
-ms.openlocfilehash: 5db33a39ff58ae2aa21968c2f092c8ac29af5681
-ms.sourcegitcommit: c8acfa57a22d7d055500f2e8b84a9ef252c70e82
+ms.openlocfilehash: 4a49885fc6276f180872facb777bfe5a5adb61ee
+ms.sourcegitcommit: f9b5e029ed427b7c15cbfb6231a9259b34c9436f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "36493330"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "36759681"
 ---
 # <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>如何設定商務用 Skype 內部部署以使用混合式新式驗證
 
@@ -140,7 +140,7 @@ $x.ServicePrincipalnames.Add("https://lyncwebext01.contoso.com/")
 Set-MSOLServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
 ```
   
-4. 確認您新的記錄已新增步驟 2 中取得 MsolServicePrincipal 命令執行，並將輸出中尋找。 比較清單 / 將螢幕擷取畫面從之前的 Spn （您可能也螢幕擷取畫面新清單以供記錄） 新的清單。 如果您已成功，您會看到兩個新的 Url 清單中。 將由我們的範例，此清單的 Spn 將現在包含特定 Urlhttps://lyncweb01.contoso.com和https://lyncwebext01.contoso.com/。
+4. 確認您新的記錄已新增步驟 2 中取得 MsolServicePrincipal 命令執行，並將輸出中尋找。 比較清單 / 將螢幕擷取畫面從之前的 Spn （您可能也螢幕擷取畫面新清單以供記錄） 新的清單。 如果您已成功，您會看到兩個新的 Url 清單中。 將由我們的範例，此清單的 Spn 將現在包含特定 Urlhttps://lyncwebint01.contoso.com和https://lyncwebext01.contoso.com/。
     
 ### <a name="create-the-evosts-auth-server-object"></a>建立 EvoSTS 驗證伺服器物件
 
