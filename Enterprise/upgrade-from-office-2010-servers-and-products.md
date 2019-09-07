@@ -21,12 +21,12 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 5b34cf1475d8c8fa28d40bb14a310457af5d6177
-ms.sourcegitcommit: f9b5e029ed427b7c15cbfb6231a9259b34c9436f
+ms.openlocfilehash: 31735b0563194603ac391f57bbccbd84805e5f4a
+ms.sourcegitcommit: af8175b2d7f84e5c835bbfba82c0b50fe555d9e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "36759691"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782420"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>資源可以幫助您升級從 Office 2010 伺服器和用戶端
 
@@ -42,13 +42,13 @@ ms.locfileid: "36759691"
 
 - Office 365 專業增強版隨附於 Office 365 E3 和 E5 和 Microsoft 365 企業版，是您在您的本機裝置安裝的 Office 用戶端應用程式的集合。 他們會以新的生產力和安全性功能，從 Microsoft cloud 持續更新。
 
-升級摘要移轉，與要雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，請參閱[服務海報的結尾](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfService.pdf)。
+視覺升級摘要移轉，與要雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，請參閱[支援海報的結尾](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
 
-![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-service.png)
+![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)
 
-這一頁海報是了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援服務，可採取的各種路徑的快速方法。
+這一頁海報是支援的了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援，可採取的各種路徑的快速方法。
 
-您也可以[下載](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfService.pdf)此海報，然後列印在字母、 法律或 tabloid (11 x 17) 格式。
+您也可以[下載](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfSupport.pdf)此海報，然後列印在字母、 法律或 tabloid (11 x 17) 格式。
       
 ## <a name="office-2010-client-and-server-upgrade-planning"></a>Office 2010 用戶端和伺服器升級規劃
   

@@ -15,12 +15,12 @@ search.appverid:
 - OSU140
 ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 description: 支援結束 for SharePoint 2010 和 SharePoint Server 2010 結束於 2020 年 10 月 13。 使用本文做為指南，升級至 SharePoint Online 或 SharePoint Server 內部部署的較新版本。
-ms.openlocfilehash: 944dd4a2980097611de1fa9239acbfca46517960
-ms.sourcegitcommit: 756f1713cab2e46be948f91f6dd87fd60197c4a1
+ms.openlocfilehash: c83d91b3ae8124312459033cb59524dec048fd03
+ms.sourcegitcommit: af8175b2d7f84e5c835bbfba82c0b50fe555d9e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "36491322"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "36782430"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 
@@ -181,14 +181,14 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以安裝在內部上�
 
 ## <a name="summary-of-options-for-office-2010-client-and-servers-and-windows-7"></a>Office 2010 用戶端和伺服器和 Windows 7 的選項摘要
 
-視覺升級摘要移轉，並以雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，下載[服務海報的結尾](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfService.pdf)。
+視覺升級摘要移轉，與要雲端移動選項 Office 2010 用戶端和伺服器和 Windows 7，請參閱[支援海報的結尾](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
 
-![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-service.png)
+![](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)
 
-這一頁海報是了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援服務，可採取的各種路徑的快速方法。
+這一頁海報是支援的了解可防止 Office 2010 用戶端與伺服器產品及 Windows 7 達到結尾的慣用的路徑與反白顯示的 Microsoft 365 企業版中的選項支援，可採取的各種路徑的快速方法。
 
-您可以列印此海報以字母、 法律或 tabloid (11 x 17) 格式。
-  
+您也可以[下載](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/migration-microsoft-365-enterprise-workload/Office2010Windows7EndOfSupport.pdf)此海報，然後列印在字母、 法律或 tabloid (11 x 17) 格式。
+        
 ## <a name="related-topics"></a>相關主題
 
 [資源可以幫助您升級從 Office 2007 或 2010年伺服器和用戶端](upgrade-from-office-2010-servers-and-products.md)
