@@ -1,9 +1,9 @@
 ---
-title: 規劃從 Office 2007 或2010伺服器和用戶端升級
+title: 規劃從 Office 2007 或 2010 伺服器和用戶端升級
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 06/04/2019
+ms.date: 07/09/2019
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -12,91 +12,110 @@ search.appverid:
 - MET150
 ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
-description: 如果您使用的是 Office 2007 或 Office 2010, 請隨時規劃升級。 不會堵塞過時的應用程式。 使用這些資源開始使用您的計畫。
-ms.openlocfilehash: 1867661c158667a6da6108380841f8d9d692ba15
-ms.sourcegitcommit: 346fde563ad598598a9832f8a0a6f7cc0a802306
-ms.translationtype: MT
+description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
+ms.openlocfilehash: 444befb11fdbb3578b30f63615b2f6f1e18a3cf9
+ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "34704104"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "35782173"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
-如果您的組織使用舊版的 Office 產品和伺服器, 這是開始規劃升級的絕佳時間。 Office 2007 產品和服務已到達其支援的結尾。 Exchange 2010 將于**2020 年1月 14**日到達支援的結尾。 其他 Office 2010 產品和服務將于**2020 年10月13日**到達支援的結束。 請使用本節中的資源開始。
+如果貴組織使用的是舊版 Office 產品和伺服器，現在是開始規劃升級的絕佳時機。 Office 2007 產品和服務已終止支援。 Exchange 2010 將於 **2020 年 1 月 14 日**終止支援。 其他 Office 2010 產品和服務將於 **2020 年 10 月 13 日**終止支援。 請使用本節中的資源來開始規劃升級。
 
-- [從 Office 2007 伺服器和用戶端升級](upgrade-from-office-2007-servers-and-products.md)
+- Office 2007 產品和服務已終止支援。 如需詳細資料，請參閱[從 Office 2007 伺服器和用戶端升級](upgrade-from-office-2007-servers-and-products.md)。
 
-- [從 Office 2010 伺服器和用戶端升級](upgrade-from-office-2010-servers-and-products.md)
+- 針對 Office 2010 伺服器和用戶端：
 
-## <a name="what-happens-if-i-dont-upgrade"></a>如果我不升級, 會發生什麼情況？
+  - Exchange 2010 將於 **2020 年 1 月 14 日**終止支援。
 
-您可以選擇在此時間不升級。 您的內部部署伺服器和應用程式將繼續執行。 不過, 當您不再收到安全性更新或支援選項時, 您或您的組織可能會受到安全性違規的影響。 強烈建議您儘快規劃升級, 不論是 Office 365, 還是內部部署伺服器和應用程式的更新版本。
+  - Office 2010、SharePoint 2010 和 Project Server 2010 將於 **2020 年 10 月 13 日**終止支援。
 
-## <a name="what-upgrade-options-are-available"></a>有哪些升級選項可供使用？      
+如需詳細資料，請參閱[從 Office 2010 伺服器和用戶端升級](upgrade-from-office-2010-servers-and-products.md)。
 
-組織有數個選項可供考慮:
+## <a name="what-happens-if-i-dont-upgrade"></a>如果我不升級，會發生什麼事？
 
-- **移至 Microsoft 365**: 針對許多客戶, 移至雲端是一種高效且成本效益的解決方案。 設定和維護較為簡單, 而且您可以取得所有最新的功能和安全性更新。 若要深入瞭解, 請參閱**[何謂 Microsoft 365？](#what-is-microsoft-365)** (在本文中)。
-    
-- **升級您的內部部署伺服器和應用程式。** 如果您是在內部部署使用 Office 產品和伺服器應用程式, 請參閱下列規劃內容:<br/> 
+您可以選擇不要在這時候升級， 內部部署伺服器和應用程式皆會繼續執行。 不過，當您不再收到安全性更新或支援選項時，您或貴組織可能容易受到安全性漏洞的影響。 強烈建議您儘快規劃升級，無論是 Office 365，還是較新版本的內部部署伺服器和應用程式。
+
+## <a name="what-upgrade-options-are-available"></a>有哪些升級選擇？      
+
+組織可考慮數個選擇：
+
+- **升級您的內部部署伺服器和應用程式。** 如果使用內部部署 Office 產品和伺服器應用程式，請參閱下列規劃內容：<br/> 
 
     
     |Office 2007 產品和服務  |Office 2010 產品和服務  |
     |---------|---------|
-    |[Office 2007](https://docs.microsoft.com/DeployOffice/office-2007-end-support-roadmap)桌面上 | [Office 2010](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap)桌面上 |
+    |[Office 2007](https://docs.microsoft.com/DeployOffice/office-2007-end-support-roadmap) (桌面) | [Office 2010](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) (桌面) |
     |[Exchange 2007](exchange-2007-end-of-support.md) |[Exchange 2010](exchange-2010-end-of-support.md) |
     |[SharePoint 2007](sharepoint-2007-end-of-support.md) |[SharePoint 2010](upgrade-from-sharepoint-2010.md) |
     |[Office Communications Server](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) |[Lync Server 2010](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) |
     |[Project Server 2007](project-server-2007-end-of-support.md) |[Project Server 2010](project-server-2010-end-of-support.md) |
     |[PerformancePoint Server 2007](pps-2007-end-of-support.md) | |
  
-- **實施混合式解決方案, 包括 Office 365**和您的內部部署伺服器和應用程式。 如果您是以階段移至雲端, 或必須在內部部署保留某些伺服器和應用程式, 則您的組織可能會使用混合式解決方案。 請參閱**[Office 365 混合式雲端解決方案概述。](hybrid-cloud-overview.md)** 
+- **實作含 Office 365 或 Microsoft 365 的混合式解決方案。** 混合式解決方案使用您的內部部署伺服器和應用程式，以及其同等雲端伺服器和應用程式。 如果您是分階段移至雲端，或必須保留一些內部部署伺服器和應用程式，則混合式解決方案可能適合貴組織。 如需詳細資料，請參閱 [Office 365 混合式雲端解決方案概觀](hybrid-cloud-overview.md)。 
     
-### <a name="help-is-available-for-your-organization"></a>您的組織可使用協助
+- **將 Office 365 或 Microsoft 365 移至雲端。** 對許多客戶來說，移至雲端是有效率且符合成本效益的解決方案。 透過完全移至雲端，設定及持續管理會更容易，而且您可以順暢地取得所有最新的功能和安全性更新。 如需更多資訊，請參閱本文的[什麼是 Microsoft 365？](#what-is-microsoft-365)
+    
+### <a name="help-is-available-for-your-organization"></a>貴組織可取得協助
 
-如果您想要協助規劃升級, 請考慮下列一個或多個選項:
+如需規劃升級的協助，請考慮下列其中一或多個選擇：
 
-- 與合作夥伴或大量授權專家合作。 **[尋找您的 Office 365 合作夥伴或轉銷商](https://support.office.com/article/b6c18a9b-2aed-4c84-9d75-af709160258c.aspx)**。 
+- 與合作夥伴或大量授權專家合作。 [尋找您的 Office 365 合作夥伴或轉銷商](https://support.office.com/article/b6c18a9b-2aed-4c84-9d75-af709160258c.aspx)。 
 
-- 如果您的組織購買特定數目的 Microsoft 雲端授權, 我們的 FastTrack 團隊可協助您完成設定程式。 若要深入瞭解, 請參閱**[FastTrack For Microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365)**。
+- 如果貴組織購買特定數量的 Office 365 授權，我們的 FastTrack 小組能協助您完成安裝程序。 若要深入了解，請參閱 [Office 365 的 FastTrack](https://www.microsoft.com/fasttrack/microsoft-365/office-365)。
 
-- 如果您是小型組織的一部分, 或是您想要自行處理貴組織的 Office 升級, 請參閱將**[您的 office 365 for business 使用者升級至最新的 office 用戶端](https://docs.microsoft.com/office365/admin/setup/upgrade-users-to-latest-office-client)**。 
+- 如果您所在的組織較小，或想要自行處理貴組織的 Office 升級，請參閱[將商務用 Office 365 使用者升級到最新的 Office 用戶端](https://docs.microsoft.com/office365/admin/setup/upgrade-users-to-latest-office-client)。 
   
-## <a name="im-a-home-user-what-do-i-do"></a>我是家庭使用者。 What do I do?
+## <a name="im-a-home-user-what-do-i-do"></a>我是家用版的使用者。 我該怎麼辦？
 
-如果您在家使用 Office 2007 或 Office 2010, 請考慮下列選項:
+如果您使用家用版 Office 2007 或 Office 2010，請考慮下列更新選擇：
 
-- **免費使用 Office Online**。 在您的瀏覽器中建立、查看和編輯 Office 檔案, 並且只從具有網際網路存取權的任何裝置存取這些檔案。 [Office Online](https://products.office.com/office-online/documents-spreadsheets-presentations-office-online)包含[Word Online](http://go.microsoft.com/fwlink/p/?linkid=746664)、 [Excel Online](http://go.microsoft.com/fwlink/p/?linkid=746665)、 [PowerPoint online](http://go.microsoft.com/fwlink/p/?linkid=746666)、 [OneNote Online](http://go.microsoft.com/fwlink/p/?linkid=746674)、 [Sway](http://go.microsoft.com/fwlink/p/?linkid=746675)、[電子郵件](http://go.microsoft.com/fwlink/p/?linkid=746676)、行事[曆](http://go.microsoft.com/fwlink/p/?linkid=746678)和[OneDrive](http://go.microsoft.com/fwlink/p/?linkid=746679)。 若要開始, 請造訪[office.com](https://office.com) , 並使用您的[Microsoft 帳戶](https://account.microsoft.com/account)登入。 (如果您沒有 Microsoft 帳戶, 您可以在[office.com](https://office.com)建立一個帳戶。)
+- **免費使用瀏覽器中的 Office。** 您可以在瀏覽器中建立、檢視及編輯 Office 檔案，也可以從任何可存取網際網路的裝置存取這些檔案。 [Office 網頁版](https://products.office.com/office-online/documents-spreadsheets-presentations-office-online)包括 [Word 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746664)、[Excel 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746665)、[PowerPoint 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746666)、[OneNote 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746674)、[Sway](http://go.microsoft.com/fwlink/p/?linkid=746675)、[電子郵件](http://go.microsoft.com/fwlink/p/?linkid=746676)、[行事曆](http://go.microsoft.com/fwlink/p/?linkid=746678) 和 [OneDrive](http://go.microsoft.com/fwlink/p/?linkid=746679)。 若要開始使用，請造訪 [office.com](https://office.com)，並使用您的 [Microsoft 帳戶](https://account.microsoft.com/account)登入。 (如果您還沒有 Microsoft 帳戶，可以在 [office.com](https://office.com) 建立一個。)
 
-- **試用 Office 365 供家庭使用**。 查看[需求](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm?rtc=1&activetab=pivot:techspecstab), 然後選擇 [ [office 365 Home](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm)或[office 365 個人](https://www.microsoft.com/p/office-365-personal/cfq7ttc0k5bf)]。 啟動試用版, 並查看 Office 365 的運作方式。 使用 Office 365, 您將享有使用 OneDrive 的雲端儲存空間, 您每月會撥打60分鐘的通話和室內電話號碼, 而且您會收到許多其他出色的功能。 若要深入瞭解, 請參閱[office 365 的充分利用 office](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab%3aprimaryr1)。
+- **移轉至家用版 Office 365**。 請檢閱[需求](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm?rtc=1&activetab=pivot:techspecstab)，然後選擇 [Office 365 家用版](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm)或 [Office 365 個人版](https://www.microsoft.com/p/office-365-personal/cfq7ttc0k5bf)。 您可以開始試用，考量 Office 365 是否適合您。 有了 Office 365，您將享有 OneDrive 雲端儲存空間，每月 60 分鐘的 Skype 通話時間 (可用來撥打行動電話及有線電話)，以及許多其他絕佳的功能。 若要深入了解，請參閱[充分運用搭配 Office 365 的 Office](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab%3aprimaryr1)。
+
+   由於 [Windows 7 將於 2020 年 1 月 14 日終止支援](https://www.microsoft.com/windowsforbusiness/end-of-windows-7-support)，在 Windows 7 裝置上執行的 Office 365 家用版或 Office 365 個人版提供的 Word、Excel、PowerPoint、Outlook、Publisher 和 Access版本會收到安全性更新，但不會收到功能更新。 若要繼續接收這些應用程式的功能更新，請[將 Windows 7 裝置升級為 Windows 10](https://support.microsoft.com/help/12435/windows-10-upgrade-faq)。
     
-- **購買 Office 家用&amp;學生版**。 如果您選擇此選項, 您會先購買一次, 然後在您的 Windows 電腦或 Mac 上安裝 Office。 這不是訂閱;這是一部電腦的一次性、永久使用授權。 查看[需求](http://office.com/systemrequirements), 然後選擇您要使用的版本。
-    - 如果您的 Windows 電腦執行 Windows 10, 請考慮取得[Office Home & 學生 2019](https://www.microsoft.com/p/office-home-student-2019/cfq7ttc0k7c8)。
-    - 如果您的 Windows 電腦執行 Windows 7、8或 8.1, 而且您目前不會升級到 Windows 10, 請考慮從授權的轉銷商那裡取得 Office Home & 學生版 2016 (或其他版本的 Microsoft Office)。
+- **購買 Office 家用版 &amp; 學生版。** 如果您選擇此選項，便會在您的 Windows 電腦或 Mac 上一次購買 Office。 這不是訂閱，而是提供一部電腦的一次性永久使用授權。 請檢視[需求](http://office.com/systemrequirements)，然後選擇您要使用的版本。
 
-您也可以選擇在此時間不升級。 您的 Office 應用程式將繼續執行。 ([此處](https://go.microsoft.com/fwlink/p/?linkid=2085724)提供 Office 支援日期時程表。)不過, 升級會讓您存取新的和改進的功能, 包括安全性更新。 
+    - 如果您的 Windows 電腦執行 Windows 10，請考慮取得 [Office 家用及學生版 2019](https://www.microsoft.com/p/office-home-student-2019/cfq7ttc0k7c8)。
+
+    - 如果您的 Windows 電腦執行 Windows 7、8或 8.1，而目前未升級為 Windows 10，請考慮從授權轉銷商取得 Office 家用版及學生版 2016 (或其他 Microsoft Office 版本)。
+     
+     - Windows 7 的支援[將於 2020 年 1 月 14 日結束](https://www.microsoft.com/windowsforbusiness/end-of-windows-7-support)，之後 Microsoft 將不會提供安全性更新或支援。 請將 Windows 7 裝置升級為 Windows 10，以取得持續的安全性和功能更新及後續支援。
+
+您也可以選擇不要在這時候升級， 您的 Office 應用程式將繼續執行。 您可以在[這裡](https://go.microsoft.com/fwlink/p/?linkid=2085724)取得 Office 支援日期的時間表。 不過，升級能提供您安全性更新或新增功能與改良功能。
    
-## <a name="what-is-microsoft-365"></a>何謂 Microsoft 365？
+## <a name="what-is-microsoft-365"></a>什麼是 Microsoft 365？
 
-[Microsoft 365](https://www.microsoft.com/microsoft-365)是 Office 365、Windows 10 和 Enterprise 可移動性 + SECURITY (EMS) 的組合, 可提供完整的智慧解決方案, 讓每個人都能有創造性且安全地協同運作。 
+[Microsoft 365](https://www.microsoft.com/microsoft-365) 是完整的智慧解決方案，包括 Office 365、Windows 10 和 Enterprise Mobility + Security (EMS)，可讓所有人發揮創意及安全地合作。 
   
-雖然您可以將 Office 2007 或 Office 2010 伺服器和用戶端遷移至 Office 365, 但 Microsoft 365 包含授權和功能, 可確保您的組織在最新的 Windows 作業系統和您的裝置上運作, 包括Windows、iOS 及 Android) 已註冊, 並以需要驗證和資料保護的原則保持安全。 此外, Windows 10 和您的 Office 365 用戶端軟體會持續更新, 以包含最新的功能和安全性更新。
+雖然您可以將 Office 2007 或 Office 2010 伺服器和用戶端移轉到 Office 365，但 Microsoft 365 包括授權和功能，可協助確保貴組織使用最新的 Windows 作業系統，並確保您的裝置 (包括 Windows、iOS 和 Android) 使用需要驗證和資料保護的原則進行註冊及維護安全。 此外，Windows 10 和您的 Office 365 專業增強版用戶端軟體會持續更新，以包含最新的功能和安全性更新。
   
-Microsoft 365 是使用不斷改善的裝置和生產力體驗, 以數位方式轉換您的業務, 並由 Microsoft 雲端啟用和保護。
+Microsoft 365 是一種由 Microsoft 雲端提供及保護，且具備不斷改善的裝置和生產力體驗的數位商務轉換方式。
   
 |**資源**|**描述**|
 |:-----|:-----|
 |[Microsoft 365](https://www.microsoft.com/microsoft-365) <br/> |取得不同 Microsoft 365 版本的相關資訊。  <br/> |
-|[Microsoft 365 商務檔](https://docs.microsoft.com/microsoft-365/business/) <br/> |取得適用于中小型企業之 Microsoft 365 版本的詳細資訊。  <br/> |
-|[Microsoft 365 教育版檔](https://docs.microsoft.com/microsoft-365/education/) <br/> |取得適用于教育組織版本的 Microsoft 365 的詳細資訊。  <br/> |
-|[Microsoft 365 企業版文件](https://docs.microsoft.com/microsoft-365/enterprise/) <br/> |取得適用于企業組織之 Microsoft 365 版本的詳細資訊。  <br/> |
+|[Microsoft 365 商務版文件](https://docs.microsoft.com/microsoft-365/business/) <br/> |取得適用於中小企業的 Microsoft 365 版本的詳細資訊。  <br/> |
+|[Microsoft 365 教育版文件](https://docs.microsoft.com/microsoft-365/education/) <br/> |取得適用於教育組織的 Microsoft 365 版本的詳細資訊。  <br/> |
+|[Microsoft 365 企業版文件](https://docs.microsoft.com/microsoft-365/enterprise/) <br/> |取得適用於企業組織的 Microsoft 365 版本的詳細資訊。  <br/> |
 
+## <a name="next-step"></a>下一步
+
+[從 Office 2007 伺服器與用戶端升級](upgrade-from-office-2007-servers-and-products.md)
+
+或
+
+[從 Office 2010 伺服器與用戶端升級](upgrade-from-office-2010-servers-and-products.md)
    
 ## <a name="related-topics"></a>相關主題
   
 [Microsoft 週期原則](https://go.microsoft.com/fwlink/?linkid=865200)
 
-[Office 退休群組 (Microsoft 技術社區)](https://go.microsoft.com/fwlink/?linkid=842065)
+[Office Retirement Group (Microsoft 技術社群)](https://go.microsoft.com/fwlink/?linkid=842065)
 
 
 
