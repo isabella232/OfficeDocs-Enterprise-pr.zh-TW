@@ -1,5 +1,5 @@
 ---
-title: 將內容限制在地理位置
+title: 將 SharePoint 網站內容限制在地理位置
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -10,14 +10,14 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何將多地理位置環境中的 SharePoint 網站限制在特定的地理位置。
-ms.openlocfilehash: 42c382abd254afcf74dd6bdd15e4c69f65b64f85
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 9319ed6229acc7cda48cc52b3a27681c53f1359c
+ms.sourcegitcommit: 7bb48195079ce14aabfa0384771b17db0e4908b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070989"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "36828477"
 ---
-# <a name="restrict-content-to-a-geo-location"></a>將內容限制在地理位置
+# <a name="restrict-sharepoint-site-content-to-a-geo-location"></a>將 SharePoint 網站內容限制在地理位置
 
 在某些情況下，您可以選擇強制將網站及其檔案內容保留在建立網站的地理位置，方法是防止網站移動或防止在另一個地理位置快取網站的檔案內容。
 
