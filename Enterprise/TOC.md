@@ -124,7 +124,7 @@
 #### [設定目錄同步處理](set-up-directory-synchronization.md)
 ### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts.md)
 
-## [3. 實作安全性功能](https://docs.microsoft.com/office365/securitycompliance/security-best-practices)
+## [3. 實作安全性功能](https://docs.microsoft.com/Office365/SecurityCompliance/security-best-practices)
 
 ## 4. 部署用戶端軟體
 ### [部署 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
@@ -204,6 +204,11 @@
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
 ### 與來賓共同作業
 #### [來賓共用參考](microsoft-365-guest-settings.md)
+#### 來賓共用解決方案
+##### [來賓共同作業概觀](collaborating-with-people-outside-your-organization.md)
+##### [在文件上共同作業](collaborate-on-documents.md)
+##### [在網站中共同作業](collaborate-in-a-site.md)
+##### [以小組的形式共同作業](collaborate-as-a-team.md)
 
 ## 裝置
 ### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
