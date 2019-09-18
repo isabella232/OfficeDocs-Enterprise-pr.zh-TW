@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 23f55e22d4c85dcd168c403f50b35f574be9ac07
-ms.sourcegitcommit: 3bba97053caf5f9cff0ef3205afb7869535f38bd
+ms.openlocfilehash: 4b68b50fec4322f12c24969bdd71e7d9c0fda245
+ms.sourcegitcommit: d388c76d25ca67f240db97f7bfc90f0991b0e7f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "36992382"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "37017311"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>與網站中的來賓共同作業
 
@@ -72,28 +72,6 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 2. 在 SharePoint 系統管理中心中，在左側導覽中，按一下 [**共用**]。
 3. 請確定該外部共用 SharePoint 設為**任何人**或**新增和現有的來賓**。
 4. 如果您所做的變更，請按一下 [**儲存**]。
-
-
-## <a name="sharepoint-organization-level-default-link-settings"></a>SharePoint 組織層級預設連結設定
-
-預設檔案和資料夾連結設定會決定哪一個連結選項向使用者顯示預設情況下使用者共用的檔案或資料夾時。 使用者可以將連結類型變更為下列其中一個其他選項共用視之前。
-
-請記住此設定會影響所有的 microsoft teams 和貴組織中的 SharePoint 網站。
-
-選擇 [當使用者共用檔案及資料夾，依預設會選取連結的類型：
-
-- **任何人] 連結**-如果您預期在具有匿名使用者共用檔案和資料夾的許多選擇此選項。 如果您想要允許*任何人*的連結，但擔心意外匿名共用，請考慮下列其中一個其他選項為預設值。 如果您已啟用**的任何人**共用，此連結類型只有。
-- **只有在您的組織中的人員**-如果您預期大部分的檔案和資料夾共用您的組織內的人員都必須選擇此選項。
-- **特定人員**-如果您預期執行許多檔案和資料夾與來賓共用，請考慮此選項。 這種類型的連結與來賓運作，以及需要進行驗證。
- 
-![螢幕擷取畫面的 SharePoint 組織層級檔案和資料夾共用設定](media/sharepoint-organization-files-folders-sharing-settings.png)
-
-
-若要設定 SharePoint 組織層級預設值] 連結
-
-1. 瀏覽至 SharePoint 系統管理中心的 [共用] 頁面上。
-2. [**檔案] 和 [資料夾] 連結**，選取預設共用您想要使用的連結。
-3. 如果您所做的變更，請按一下 [**儲存**]。
 
 ## <a name="create-a-site"></a>建立網站
 
