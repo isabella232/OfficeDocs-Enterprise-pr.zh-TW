@@ -18,12 +18,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-ms.openlocfilehash: c244e60016cb04008e27e2df444703ac7e41db12
-ms.sourcegitcommit: 6c3003380491fba6dacb299754716901c20ba629
+ms.openlocfilehash: 4351feaa1dbe9d657ed8df54a74410991834ea5d
+ms.sourcegitcommit: c16ab90d0b9902228ce4337f1c64900592936cce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "36198645"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "37108213"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
@@ -116,7 +116,7 @@ Set-MsolUser -UserPrincipalName "belindan@litwareinc.com" -UsageLocation US
 Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "<AccountSkuId>"
 ```
 
-本範例會從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃授權的使用者**belindan@litwareinc.com**指派授權：
+本範例會從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃指派授權給未經授權的使用者**belindan\@litwareinc.com**:
   
 ```
 Set-MsolUserLicense -UserPrincipalName "belindan@litwareinc.com" -AddLicenses "litwareinc:ENTERPRISEPACK"

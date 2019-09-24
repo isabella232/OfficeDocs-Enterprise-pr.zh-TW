@@ -8,16 +8,16 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 和 OneDrive 文件上的 guests 與共同作業。
-ms.openlocfilehash: c0c74f2457e9b25b37355c58ed18f120261e3364
-ms.sourcegitcommit: 3bba97053caf5f9cff0ef3205afb7869535f38bd
+ms.openlocfilehash: ebb887e4fc337b4c0e94e85e0a08e87be0e74490
+ms.sourcegitcommit: c16ab90d0b9902228ce4337f1c64900592936cce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "36992402"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "37108223"
 ---
 # <a name="collaborate-with-guests-on-a-document"></a>與文件上的 guests 共同作業
 
-如果您需要在 SharePoint 或 OneDrive 中的文件上的 guests 與共同作業，您可以傳送這些共用連結至文件。 在本文中，我們會逐步設定共用連結 SharePoint 和 OneDrive 所需的 Microsoft 365 組態步驟。
+如果您需要在 SharePoint 或 OneDrive 中的文件上的 guests 與共同作業，您可以傳送這些共用連結至文件。 在本文中，我們會逐步設定您的組織需求的共用連結 SharePoint 和 OneDrive 所需的 Microsoft 365 組態步驟。
 
 ## <a name="azure-organizational-relationships-settings"></a>Azure 的組織關聯性設定
 
@@ -44,7 +44,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 SharePoint 的組織層級設定會決定哪些設定可供個別的 SharePoint 網站。 網站設定不能更寬鬆比組織層級的設定。 OneDrive 的組織層級設定會決定在使用者的 OneDrive 文件庫中時可用的共用層級。
 
-對於 SharePiont 和 OneDrive，如果您想要允許的檔案和資料夾與匿名使用者共用，選擇 [**任何人**。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 
+對於 SharePoint 和 OneDrive，如果您想要允許的檔案和資料夾與匿名使用者共用，選擇 [**任何人**。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 *任何人*連結是最簡單的共用： 來賓可以開啟未經驗證的連結，並且可以自由地將其傳遞給其他人。
 
 For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
 
