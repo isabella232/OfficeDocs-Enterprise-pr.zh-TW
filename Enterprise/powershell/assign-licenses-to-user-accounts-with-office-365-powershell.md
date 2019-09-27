@@ -3,7 +3,7 @@ title: 將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/05/2019
+ms.date: 09/26/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,12 +18,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-ms.openlocfilehash: 4351feaa1dbe9d657ed8df54a74410991834ea5d
-ms.sourcegitcommit: c16ab90d0b9902228ce4337f1c64900592936cce
+ms.openlocfilehash: 1f12c7b55e6766db5b2afc661ee5337448336ba1
+ms.sourcegitcommit: 71e6a99fb585b4eb1aea3f215c234688f28d2050
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "37108213"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "37273678"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
@@ -144,6 +144,58 @@ Get-MsolUser -All -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwa
 Get-MsolUser -All -Department "Sales" -UsageLocation "US" -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
   
+## <a name="move-a-user-to-a-different-subscription-license-plan-with-the-azure-active-directory-powershell-for-graph-module"></a>使用 PowerShell 的 Azure Active Directory 針對 Graph 模組，將使用者移至不同的訂閱 （授權計劃）
+
+首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+  
+接下來，取得您想要的使用者帳戶登入名稱切換訂閱，也稱為使用者主體名稱 (UPN)。
+
+接下來，列出您的租用戶使用此命令的訂閱 （授權方案）。
+
+```
+Get-AzureADSubscribedSku | Select SkuPartNumber
+```
+
+接下來，列出的使用者帳戶目前已使用這些命令的訂閱。
+
+```
+$userUPN=”<user account UPN>”
+$licensePlanList = Get-AzureADSubscribedSku
+$userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty AssignedLicenses | Select SkuID 
+$userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
+```
+
+識別訂閱使用者目前已 （從訂閱） 和使用者所要移動 （TO 訂閱） 訂閱。
+
+最後，指定的 TO 和 FROM 訂閱名稱 （SKU 組件編號），並執行下列命令。
+
+```
+$subscriptionFrom="<SKU part number of the current subscription>"
+$subscriptionTo="<SKU part number of the new subscription>"
+# Unassign
+$license = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
+$licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+$license.SkuId = (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value $subscriptionFrom -EQ).SkuID
+$licenses.AddLicenses = $license
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
+$licenses.AddLicenses = @()
+$licenses.RemoveLicenses =  (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value $subscriptionFrom -EQ).SkuID
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
+# Assign
+$license.SkuId = (Get-AzureADSubscribedSku | Where-Object -Property SkuPartNumber -Value $subscriptionTo -EQ).SkuID
+$licenses = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicenses
+$licenses.AddLicenses = $License
+Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
+```
+
+您可以確認這些命令的使用者帳戶的訂閱中的變更。
+
+```
+$licensePlanList = Get-AzureADSubscribedSku
+$userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty AssignedLicenses | Select SkuID 
+$userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
+```
+
 ## <a name="new-to-office-365"></a>第一次使用 Office 365？
 
 [!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
