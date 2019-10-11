@@ -4,7 +4,7 @@ title: >
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/12/2018
+ms.date: 10/08/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-solutions
@@ -18,12 +18,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 29b9954467e2d6dd7ece2e33376f28882152693c
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 5c0bd0ad10dc1ddfdcb13d09010c69f4e8b5a75a
+ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782513"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "37428130"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -34,21 +34,12 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
 
   
 - Microsoft Office 365
-    
-    詳細資訊請參閱[企業方案與價格](https://products.office.com/business/compare-office-365-for-business-plans)。
-    
 - Microsoft Azure
-    
-    詳細資訊請參閱 [Azure 價格](https://azure.microsoft.com/pricing/)。
-    
 - Microsoft Intune 與 Enterprise Mobility + Security (EMS)
-    
-    詳細資訊請參閱 [Intune 價格](https://www.microsoft.com/cloud-platform/microsoft-intune-pricing)。
-    
 - Microsoft Dynamics 365
-    
-    詳細資訊請參閱 [Dynamics 365 價格](https://dynamics.microsoft.com/)。
-    
+
+[Microsoft 365](https://docs.microsoft.com/microsoft-365/) 將 Office 365、EMS 和 Windows 10 企業版整合到單一訂閱和整合式服務集合中。
+
 ## <a name="elements-of-the-hierarchy"></a>階層的元素
 
 以下是階層的元素：
@@ -57,24 +48,25 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
 
 組織代表正在使用 Microsoft 雲端供應項目的商業實體，通常是用一個或多個公用網域名稱 (DNS)，例如 contoso.com 加以識別。組織是訂用帳戶的容器。
   
-### <a name="subscriptions"></a>訂用帳戶
+### <a name="subscriptions"></a>訂閱
 
-訂用帳戶是與 Microsoft 的協議，同意使用一或多個 Microsoft 雲端平台或服務，並根據每個使用者授權費用或雲端資源耗用量來累算費用。Microsoft 的「軟體即服務」(SaaS) 雲端供應項目 (Office 365、Intune/EMS、Dynamics 365) 會依據每個使用者授權費用收費。Microsoft 的「平台即服務」(PaaS) 和「基礎結構即服務」(IaaS) 雲端供應項目 (Azure) 會依據雲端資源耗用量收費。
-  
+訂閱是與 Microsoft 簽訂使用一或多個 Microsoft 雲端平台或服務的合約，其費用會根據每位使用者的授權費用或雲端資源使用量而產生。 
+
+- Microsoft 的軟體即服務 (SaaS) 型雲端供應項目 (Office 365、Intune/EMS 和 Dynamics 365) 是依每位使用者授權費用來收費。 
+- Microsoft 的平台即服務 (PaaS) 和基礎結構即服務 (IaaS) 雲端供應項目 (Azure) 是根據雲端資源的使用量來收費。
+ 
 您也可以使用試用版的訂用帳戶，但在使用特定一段時間或耗用量之後，訂用帳戶便到期。您可以將試用版訂用帳戶轉換為付費訂用帳戶。
   
-組織可有多個訂用帳戶，用於 Microsoft 的多個雲端供應項目。圖 1 為其範例。
-  
+組織可有多個訂用帳戶，用於 Microsoft 的多個雲端供應項目。 圖 1 顯示單一組織有多個 Office 365 訂用帳戶、一個 Intune 訂用帳戶、一個 Dynamics 365 訂用帳戶、多個 Azure 訂用帳戶。
+
 **圖 1：組織的多個訂用帳戶範例**
 
 ![具有多個 Microsoft 雲端供應項目訂用帳戶的組織範例。](media/Subscriptions/Subscriptions-Fig1.png)
 
   
-圖 1 顯示單一組織有多個 Office 365 訂用帳戶、一個 Intune 訂用帳戶、一個 Dynamics 365 訂用帳戶、多個 Azure 訂用帳戶。
-  
 ### <a name="licenses"></a>授權
 
-使用 Microsoft 的 SaaS 雲端供應項目時，授權允許特定使用者帳戶使用該雲端供應項目的服務。固定的每月費用是訂用帳戶的其中一環。系統管理員將授權指派給訂用帳戶中的個別使用者帳戶。在圖 2 的範例中，Contoso 公司有 100 個 Office 365 企業版 E5 的授權， 可讓最多 100 個個別使用者帳戶使用企業版 E5 的功能與服務。
+針對 Microsoft SaaS 雲端供應項目，授權可讓特定使用者帳戶使用雲端供應項目服務。 會向您收取每月固定的訂閱費用。 系統管理員會將授權指派給訂閱中的個別使用者帳戶。 如圖 2 所示範例，Contoso Corporation 擁有包含 100 個授權的 Office 365 企業版 E5 訂閱，可讓最多 100 個個別使用者帳戶使用 Office 365 企業版 E5 的功能與服務。
   
 **圖 2：SaaS 型訂用帳戶中的組織授權**
 
@@ -88,7 +80,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 ### <a name="user-accounts"></a>使用者帳戶
 
-所有 Microsoft 雲端供應項目的使用者帳戶都儲存在 Azure Active Directory (AD) 租用戶，此租用戶包含使用者帳戶和群組。Azure AD Connect 是 Windows 的伺服器型服務，可以將 Azure AD 租用戶與您的現有 Active Directory Domain Services (AD DS) 帳戶同步。這就是所謂的目錄同步處理 (DirSync)。
+所有 Microsoft 雲端供應項目的使用者帳戶都儲存在 Azure Active Directory (Azure AD) 租用戶中，其中包含使用者帳戶和群組。 Azure AD 租用戶可以使用 Azure AD Connect 這個 Windows 伺服器型服務，與您現有的 Active Directory 網域服務 (AD DS) 帳戶進行同步。 這稱為目錄同步處理 (DirSync)。
   
 圖 3 顯示組織的多個訂用帳戶使用同一個 Azure AD 租用戶，租用戶包含組織的帳戶。
   
@@ -134,15 +126,13 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
     
   - 組織的使用者帳戶在同一 Azure AD 租用戶中。
     
-多個 Microsoft 雲端供應項目的訂用帳戶可以使用相同 Azure AD 租用戶作為共同的身分識別提供者。集中的 Azure AD 租用戶包含內部部署 AD DS 同步處理的帳戶，可為組織提供雲端上的身分識別即服務 (IDaaS)。如圖 4 所示。
+多個 Microsoft 雲端供應項目訂用帳戶可以使用作為共同身分識別提供者的相同 Azure AD 租用戶。 內含內部部署 AD DS 的同步處理帳戶的中央 Azure AD 租用戶，可為組織提供雲端型的身分識別即服務 (IDaaS)。 
   
 **圖 4： 組織同步處理的內部部署帳戶和 IDaaS**
 
 ![組織的身分識別即服務 (IaaS) IDaaS。](media/Subscriptions/Subscriptions-Fig4.png)
   
 在圖 4 中，Microsoft 的 SaaS 雲端供應項目、Azure PaaS 應用程式、使用 Azure AD 網域服務的 Azure IaaS 中的虛擬機器，三者使用同一個 Azure AD 租用戶。Azure AD Connect 將內部部署的 AD DS 樹系和 Azure AD 租用戶同步。
-  
-有關 Microsoft 雲端供應項目的身分識別整合，詳細資訊請參閱[企業架構的 Microsoft 雲端身分識別](https://aka.ms/cloudarchidentity)。
   
 ## <a name="combining-subscriptions-for-multiple-microsoft-cloud-offerings"></a>合併多個 Microsoft 雲端供應項目的訂用帳戶
 
@@ -159,9 +149,9 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
   
 1. 使用您的全域系統管理員帳戶登入 Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com))。
     
-2. 在 [管理中心]**** 首頁的導覽窗格中，按一下 [計費]****，然後按一下 [購買服務]****。
+2. 在 **[管理中心]** 首頁的導覽窗格中，按一下 **[計費]**，然後按一下 **[購買服務]**。
     
-3. 在 [購買服務]**** 頁面上，購買新的訂用帳戶。
+3. 在 **[購買服務]** 頁面上，購買新的訂用帳戶。
     
 系統管理中心會將組織和 Office 365 訂用帳戶的 Azure AD 租用戶，指派給 SaaS 雲端供應項目的新訂用帳戶。
   
@@ -169,19 +159,21 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
   
 1. 使用 Office 365 全域管理員帳戶登入 Azure 入口網站 ([https://portal.azure.com](https://portal.azure.com))。
     
-2. 在左側導覽窗格中，按一下 [訂用帳戶]****，然後按一下 [新增]****。
+2. 在左側導覽窗格中，按一下 **[訂用帳戶]**，然後按一下 **[新增]**。
     
-3. 在 [新增訂用帳戶]**** 頁面上，選取供應項目，並填寫付款資訊和合約。
+3. 在 **[新增訂用帳戶]** 頁面上，選取供應項目，並填寫付款資訊和合約。
     
-如果您已另外購買 Azure 與 Office 365 訂用帳戶，並想要從您的 Azure 訂用帳戶存取 Office 365 Azure AD 租用戶，請參閱[將 Azure 訂用帳戶關聯或新增至您的 Azure Active Directory 租用戶](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) (機器翻譯) 中的指示。
+如果您已另外購買 Azure 與 Office 365 訂閱，並想要從您的 Azure 訂用帳戶存取 Office 365 Azure AD 租用戶，請參閱[將現有的 Azure 訂用帳戶新增到您的 Azure Active Directory 租用戶](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory) 中的指示。
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
-  
-[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
   
 [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
   
 [混合式解決方案](hybrid-solutions.md)
+
+## <a name="next-step"></a>下一步
+
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   

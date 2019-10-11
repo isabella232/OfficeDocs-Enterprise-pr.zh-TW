@@ -4,6 +4,7 @@ ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 audience: Admin
+ms.date: 05/20/2019
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
@@ -18,14 +19,16 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 421002825842201fa754b4c5579dc04fde37eeaf
-ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
+ms.openlocfilehash: b1c1e8f9a56f2bdaa927ef3d096c1c614de647bb
+ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34249461"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "37428080"
 ---
 # <a name="office-365-identity-models-and-azure-active-directory"></a>Office 365 身分識別模型和 Azure Active Directory
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
 
 Office 365 使用 Azure Active Directory (Azure AD)、 隨附於 Office 365 訂閱，來管理身分識別和驗證 Office 365 雲端型使用者身分識別與驗證服務。 取得您正確設定的身分識別基礎結構是管理 Office 365 使用者存取權和權限為您的組織很重要。
 
@@ -97,3 +100,7 @@ Azure AD 租用戶都有一份 AD DS 帳戶。 在此組態中，在內部和遠
 ## <a name="video-training"></a>影片訓練課程
 
 請參閱影片課程[Office 365： 管理身分識別使用 Azure AD Connect](https://support.office.com/article/90991a1d-c0ab-479a-b413-35c9706f6fed.aspx)，由 LinkedIn Learning 帶您。
+
+## <a name="see-also"></a>另請參閱
+
+[Microsoft 365 企業版概觀](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)

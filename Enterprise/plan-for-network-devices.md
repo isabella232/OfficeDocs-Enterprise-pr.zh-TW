@@ -16,17 +16,19 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 摘要： 說明的網路容量、 WAN 加速器和負載平衡裝置用來連線到 Office 365 的考量。
-ms.openlocfilehash: b6804e7922178a3b653b3767a33e02e2a382ef93
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 066d2b07c10009ced1935086ee8d80720bd397ca
+ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34722622"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "37428100"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>連線到 Office 365 服務的網路裝置的計劃
 
- **摘要**： 說明的網路容量、 WAN 加速器和負載平衡裝置用來連線到 Office 365 的考量。
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
   
+**摘要**： 說明的網路容量、 WAN 加速器和負載平衡裝置用來連線到 Office 365 的考量。
+
 某些網路硬體可能會有所限制所支援的並行工作階段數目。 針對具有超過 2000 位使用者的組織，建議他們監視其網路裝置，以確保它們能夠處理其他的 Office 365 服務流量。 簡易網路管理通訊協定 (SNMP) 監視軟體可協助您執行這項操作。
 
 ||
@@ -71,3 +73,5 @@ ms.locfileid: "34722622"
 ## <a name="see-also"></a>另請參閱
 
 [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
+
+[Microsoft 365 企業版概觀](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)

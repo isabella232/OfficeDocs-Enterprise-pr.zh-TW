@@ -16,14 +16,16 @@ search.appverid:
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
-ms.openlocfilehash: 884c4c0d510de55da4125a3e3b80b4bd869ec697
-ms.sourcegitcommit: c207aafc126a495e700552796ed89da3de254910
+ms.openlocfilehash: 2f58bf71c292f57ccef79f7f0f79e1cd474c681d
+ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2019
-ms.locfileid: "36233423"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "37428070"
 ---
 # <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 網路連線
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
 
 Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
   
@@ -116,3 +118,5 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
+
+[Microsoft 365 企業版概觀](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)
