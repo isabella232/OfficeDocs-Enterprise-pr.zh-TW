@@ -3,7 +3,7 @@ title: 規劃從 Office 2007 或 2010 伺服器和用戶端升級
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/09/2019
+ms.date: 09/16/2019
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -13,24 +13,16 @@ search.appverid:
 ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
-ms.openlocfilehash: 444befb11fdbb3578b30f63615b2f6f1e18a3cf9
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 56efdc56824b3f280548a106450c565af4fb2694
+ms.sourcegitcommit: 3bba97053caf5f9cff0ef3205afb7869535f38bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782173"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "36991894"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
-如果貴組織使用的是舊版 Office 產品和伺服器，現在是開始規劃升級的絕佳時機。 Office 2007 產品和服務已終止支援。 Exchange 2010 將於 **2020 年 1 月 14 日**終止支援。 其他 Office 2010 產品和服務將於 **2020 年 10 月 13 日**終止支援。 請使用本節中的資源來開始規劃升級。
-
-- Office 2007 產品和服務已終止支援。 如需詳細資料，請參閱[從 Office 2007 伺服器和用戶端升級](upgrade-from-office-2007-servers-and-products.md)。
-
-- 針對 Office 2010 伺服器和用戶端：
-
-  - Exchange 2010 將於 **2020 年 1 月 14 日**終止支援。
-
-  - Office 2010、SharePoint 2010 和 Project Server 2010 將於 **2020 年 10 月 13 日**終止支援。
+如果貴組織使用的是舊版 Office 產品和伺服器，現在是開始規劃升級的絕佳時機。 Office 2007 產品和服務已[終止支援](upgrade-from-office-2007-servers-and-products.md)。 Office 2010 產品和服務 (包含 Office 2010、Exchange 2010、SharePoint 2010 和 Project Server 2010) 將於 **2020 年 10 月 13 日**終止支援。 請使用本節中的資源來開始。
 
 如需詳細資料，請參閱[從 Office 2010 伺服器和用戶端升級](upgrade-from-office-2010-servers-and-products.md)。
 
