@@ -3,7 +3,7 @@ title: Exchange 2010 終止支援藍圖
 ms.author: dstrome
 author: dstrome
 manager: laurawi
-ms.date: 08/21/2019
+ms.date: 09/16/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -11,21 +11,21 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 description: Exchange 2010 即將終止支援。 使用此規劃藍圖做為準備升級到 Exchange Online 或 Exchange Server 內部部署更新版本的指南。
-ms.openlocfilehash: 94efc456df67017a557b14edcc9348433c862c6a
-ms.sourcegitcommit: af8175b2d7f84e5c835bbfba82c0b50fe555d9e9
+ms.openlocfilehash: c45dbbcfd354a9a9f56a31f90b5b330f4316e816
+ms.sourcegitcommit: 3bba97053caf5f9cff0ef3205afb7869535f38bd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "36782375"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "36991858"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>Exchange 2010 終止支援藍圖
 
-Exchange Server 2010 將於「2020 年 1 月 14 日」**** 終止支援。 如果您尚未開始從 Exchange Server 2010 移轉到 Office 365 或 Exchange 2016，現在就是您著手規劃的時機。
+Exchange Server 2010 將於 **2020 年 10 月 13 日**終止支援。 如果您尚未開始從 Exchange Server 2010 移轉到 Office 365 或 Exchange 2016，現在就是您著手規劃的時機。
 
 ## <a name="what-does-end-of-support-mean"></a>終止支援是什麼意思？
 
 和所有 Microsoft 產品一樣，Exchange Server 也擁有支援生命週期，我們會在這段期間提供新功能、錯誤修正、安全性修正等支援。 產品的生命週期從首次發行日期算起，通常會持續 10 年，而這個生命週期的結束就稱為產品支援結束。
-在 2020 年 1 月 14 日 Exchange 2010 終止支援後，Microsoft 將不再提供：
+在 2020 年 10 月 13 日 Exchange 2010 終止支援後，Microsoft 將不再提供：
 
 - 可能發生之任何問題的技術支援；
 - 所發現且可能會影響伺服器穩定性及可用性之問題的錯誤修正。
@@ -34,7 +34,7 @@ Exchange Server 2010 將於「2020 年 1 月 14 日」**** 終止支援。 如�
 
 在此日期之後，您所安裝的 Exchange 2010 仍可繼續執行。 不過，由於上述列出的變更，強烈建議您盡快從 Exchange 2010 移轉。
 
-如需 Office 2010 伺服器終止支援即將結束的詳細資訊，請參閱[可幫助您從 Office 2010 伺服器和用戶端升級的資源](https://docs.microsoft.com/zh-TW/office365/enterprise/upgrade-from-office-2010-servers-and-products) (機器翻譯)。
+如需 Office 2010 伺服器終止支援即將結束的詳細資訊，請參閱[可幫助您從 Office 2010 伺服器和用戶端升級的資源](https://docs.microsoft.com/zh-TW/office365/enterprise/upgrade-from-office-2010-servers-and-products)。
 
 ## <a name="what-are-my-options"></a>我有哪些選擇？
 
@@ -46,8 +46,8 @@ Exchange 2010 即將終止支援，這是探索選項及準備移轉規劃的絕
 > [!IMPORTANT]
 > 如果您的組織選擇將信箱移轉到 Office 365，但想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署的 Active Directory 管理使用者帳戶，您必須在內部部署至少保留一部 Exchange 伺服器。 如果移除了最後一部 Exchange 伺服器，您將無法在 Exchange Online 中變更 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。 在這個案例中，您有下列選項：
 
-- (**建議**) 如果您能在 2020 年 1 月14 日前將信箱移轉至 Office 365 並升級伺服器，請使用 Exchange 2010 連線至 Office 365 並移轉信箱。 之後，將 Exchange 2010 移轉到 Exchange 2016，並解除委任所有剩下的 Exchange 2010 伺服器。
-- 如果您無法在 2020 年 1 月 14 日之前完成信箱移轉和內部部署伺服器升級，請先將您的內部部署 Exchange 2010 伺服器升級到 Exchange 2016，然後再使用 Exchange 2016 連線至 Office 365 並移轉信箱。
+- (**建議**) 如果您能在 2020 年 10 月 13 日前將信箱移轉至 Office 365 並升級伺服器，請使用 Exchange 2010 連線至 Office 365 並移轉信箱。 之後，將 Exchange 2010 移轉到 Exchange 2016，並解除委任所有剩下的 Exchange 2010 伺服器。
+- 如果您無法在 2020 年 10 月 13 日之前完成信箱移轉和內部部署伺服器升級，請先將您的內部部署 Exchange 2010 伺服器升級到 Exchange 2016，然後再使用 Exchange 2016 連線至 Office 365 並移轉信箱。
 
 > [!NOTE]
 > 雖然有些複雜，但您也可以在將內部部署 Exchange 2010 伺服器移轉到 Exchange 2016 的同時將信箱移轉至 Office 365。
@@ -86,7 +86,7 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 | 基本混合式移轉 | 少於 150 個基座  | 幾周或更短 |
 | 完整混合式移轉    | 超過 150 個基座   | 幾周或更長 |
 
-下列各節提供這些方法的概觀。 請參閱[決定移轉方法](https://support.office.com/zh-TW/article/Decide-on-a-migration-path-0d4f2396-9cef-43b8-9bd6-306d01df1e27) (機器翻譯)，了解每種方法的詳細資料。
+下列各節提供這些方法的概觀。 請參閱[決定移轉方法](https://support.office.com/zh-TW/article/Decide-on-a-migration-path-0d4f2396-9cef-43b8-9bd6-306d01df1e27)，了解每種方法的詳細資料。
 
 ### <a name="cutover-migration"></a>完全移轉
 
@@ -103,12 +103,12 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 - 在開始移轉與開始完成階段之間的時間，Office 365 將定期同步處理 Office 365 和內部部署信箱。 完成移轉後，您不用擔心電子郵件會留在您的內部部署信箱中；
 - 使用者將收到 Office 365 帳戶的新暫時密碼，他們必須在第一次登入信箱時變更密碼；
 - 針對您移轉的每個使用者信箱，您的 Office 365 授權必須包含 Exchange Online；
-- 使用者必須在他們的每個裝置上設定新 Outlook 設定檔，然後再次下載電子郵件。 Outlook 將下載的電子郵件數量可能有所差異。 如需詳細資訊，請參閱[變更保持離線的郵件數](https://support.office.com/zh-TW/article/Change-how-much-mail-to-keep-offline-f3a1251c-6dd5-4208-aef9-7c8c9522d633?ui=en-US&rs=en-US&ad=US&fromAR=1)。
+- 使用者必須在他們的每個裝置上設定新 Outlook 設定檔，然後再次下載電子郵件。 Outlook 將下載的電子郵件數量可能有所差異。 如需詳細資訊，請參閱[變更保持離線的郵件數](https://support.office.com/en-us/article/Change-how-much-mail-to-keep-offline-f3a1251c-6dd5-4208-aef9-7c8c9522d633?ui=en-US&rs=en-US&ad=US&fromAR=1)。
 
 若要深入了解完全移轉，請參閱：
 
-- [將電子郵件完全移轉到 Office 365 所需注意的事項](https://support.office.com/zh-TW/article/What-you-need-to-know-about-a-cutover-email-migration-to-Office-365-961978ef-f434-472d-a811-1801733869da) (機器翻譯)
-- [執行完全移轉以將電子郵件移轉到 Office 365](https://support.office.com/zh-TW/article/Perform-a-cutover-migration-of-email-to-Office-365-9496e93c-1e59-41a8-9bb3-6e8df0cd81b4) (機器翻譯)
+- [將電子郵件完全移轉到 Office 365 所需注意的事項](https://support.office.com/zh-TW/article/What-you-need-to-know-about-a-cutover-email-migration-to-Office-365-961978ef-f434-472d-a811-1801733869da)
+- [執行完全移轉以將電子郵件移轉到 Office 365](https://support.office.com/zh-TW/article/Perform-a-cutover-migration-of-email-to-Office-365-9496e93c-1e59-41a8-9bb3-6e8df0cd81b4)
 
 ### <a name="minimal-hybrid-migration"></a>基本混合式移轉
 
@@ -123,7 +123,7 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 - 針對您移轉的每個使用者信箱，您的 Office 365 授權必須包含 Exchange Online；
 - 使用者在大部分的裝置上不需要設定新 Outlook 設定檔 (某些舊款 Android 手機可能需要新設定檔)，而且不需要重新下載電子郵件。
 
-若要深入了解基本混合式移轉，請參閱[使用 [基本混合式] 以將 Exchange 信箱快速移轉至 Office 365](https://support.office.com/article/Use-Minimal-Hybrid-to-quickly-migrate-Exchange-mailboxes-to-Office-365-fdecceed-0702-4af3-85be-f2a0013937ef) (機器翻譯)
+若要深入了解基本混合式移轉，請參閱[使用 [基本混合式] 以將 Exchange 信箱快速移轉至 Office 365](https://support.office.com/article/Use-Minimal-Hybrid-to-quickly-migrate-Exchange-mailboxes-to-Office-365-fdecceed-0702-4af3-85be-f2a0013937ef)
 
 ### <a name="full-hybrid"></a>完整混合式
 
@@ -152,8 +152,8 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 
 如果您適合使用完整混合式移轉，請參閱下列可協助您進行移轉的相關資源：
 
-- [Exchange 部署助理](https://aka.ms/exdeploy) (機器翻譯)
-- [Exchange Server 混合式部署](https://technet.microsoft.com/zh-TW/library/jj200581%28v=exchg.150%29.aspx) (機器翻譯)
+- [Exchange 部署助理](https://aka.ms/exdeploy)
+- [Exchange Server 混合式部署](https://technet.microsoft.com/zh-TW/library/jj200581%28v=exchg.150%29.aspx)
 - [混合組態精靈](https://technet.microsoft.com/zh-TW/library/hh529921%28v=exchg.150%29.aspx)
 - [混合組態精靈常見問題集](https://technet.microsoft.com/zh-TW/library/mt488940%28v=exchg.150%29.aspx)
 - [混合式部署必要條件](https://technet.microsoft.com/zh-TW/library/hh534377%28v=exchg.150%29.aspx)
@@ -193,19 +193,19 @@ Exchange 2016 包含 Exchange 的先前發行版本隨附的所有功能和改�
 | 作業系統版本                 | 每個版本的最低支援作業系統版本為：                                                                                                                                                                                |
 |                                          | **Exchange 2016** Windows Server 2012                                                                                                                                                                                                                |
 |                                          | **Exchange 2013** Windows Server 2008 R2 SP1                                                                                                                                                                                                         |
-|                                          | 如需作業系統支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx) (機器翻譯)。                                                                        |
+|                                          | 如需作業系統支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx)。                                                                        |
 | Active Directory 樹系功能等級 | 每個版本的最低支援 Active Directory 樹系功能等級為：                                                                                                                                                                |
 |                                          | Exchange 2016** **：Windows Server 2008 R2 SP1                                                                                                                                                                                                         |
 |                                          | **Exchange 2013** Windows Server 2003                                                                                                                                                                                                                |
-|                                          | 如需樹系功能等級支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx) (機器翻譯)。                                                                 |
+|                                          | 如需樹系功能等級支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx)。                                                                 |
 | Office 用戶端版本                   | 每個版本的最低支援 Office 用戶端版本為：                                                                                                                                                                                   |
 |                                          | Exchange 2016** **：Office 2010 (含最新更新)                                                                                                                                                                                              |
 |                                          | **Exchange 2013** Office 2007 SP3                                                                                                                                                                                                                    |
-|                                          | 如需 Office 用戶端支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx) (機器翻譯)。                                                                           |
+|                                          | 如需 Office 用戶端支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/zh-TW/library/ff728623%28v=exchg.150%29.aspx)。                                                                           |
 
 您可以使用下列資源來協助您進行移轉：
 
-- [Exchange 部署助理](https://aka.ms/exdeploy) (機器翻譯)
+- [Exchange 部署助理](https://aka.ms/exdeploy)
 - 適用於 Exchange [2016](https://technet.microsoft.com/zh-TW/library/bb738144%28v=exchg.160%29.aspx)、[2013](https://technet.microsoft.com/zh-TW/library/bb738144%28v=exchg.150%29.aspx) 的 Active Directory 結構描述變更
 - 適用於 Exchange [2016](https://technet.microsoft.com/zh-TW/library/aa996719%28v=exchg.160%29.aspx)、[2013](https://technet.microsoft.com/zh-TW/library/aa996719%28v=exchg.150%29.aspx) 的系統需求
 - 適用於 Exchange [2016](https://technet.microsoft.com/zh-TW/library/bb691354%28v=exchg.160%29.aspx)、[2013](https://technet.microsoft.com/zh-TW/library/bb691354%28v=exchg.150%29.aspx) 的先決條件
@@ -231,6 +231,6 @@ Exchange 2016 包含 Exchange 的先前發行版本隨附的所有功能和改�
 
 ## <a name="related-topics"></a>相關主題
 
-[可幫助您從 Office 2010 伺服器和用戶端升級的資源](https://docs.microsoft.com/zh-TW/office365/enterprise/upgrade-from-office-2010-servers-and-products) (機器翻譯)
+[可幫助您從 Office 2010 伺服器和用戶端升級的資源](https://docs.microsoft.com/zh-TW/office365/enterprise/upgrade-from-office-2010-servers-and-products)
 
 [Office Retirement Group (Microsoft 技術社群)](https://go.microsoft.com/fwlink/?linkid=842065) (英文)
