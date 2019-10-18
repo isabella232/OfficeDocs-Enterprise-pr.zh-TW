@@ -85,7 +85,7 @@ Delve 摘要和個人檔案卡片只會顯示儲存在中央位置之檔案的�
 <tr class="odd">
 <td align="left"></td>
 <td align="left">多地理位置搜尋不支援數字精簡器的動態貯體。</td>
-<td align="left">將<a href="https://docs.microsoft.com/zh-TW/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
+<td align="left">將<a href="https://docs.microsoft.com/en-us/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
 </tr>
 <tr class="even">
 <td align="left">文件識別碼</td>
@@ -172,7 +172,7 @@ Delve 摘要和個人檔案卡片只會顯示儲存在中央位置之檔案的�
 
 **需求**
 
-對於每個地理位置，您必須確保組織中的所有使用者都已被授予根網站的**讀取**權限層級 (例如contoso**APAC**.sharepoint.com/ 和 contoso**EU**.sharepoint.com/)。[了解權限](https://support.office.com/zh-TW/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)。
+對於每個地理位置，您必須確保組織中的所有使用者都已被授予根網站的**讀取**權限層級 (例如contoso**APAC**.sharepoint.com/ 和 contoso**EU**.sharepoint.com/)。[了解權限](https://support.office.com/en-us/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)。
 
 ### <a name="query-parameters"></a>查詢參數
 
@@ -205,7 +205,7 @@ MultiGeoSearchConfiguration - 這是選擇性的清單，它是當 **EnableMulti
 </tbody>
 </table>
 
-如果您省略 DataLocation 或EndPoint，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/multigeo-discovery)。
+如果您省略 DataLocation 或EndPoint，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-discovery)。
 
 ### <a name="response-data"></a>回應資料
 

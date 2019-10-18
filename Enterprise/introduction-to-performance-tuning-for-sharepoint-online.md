@@ -124,7 +124,7 @@ SharePoint Online
     
 - 與伺服器的實體距離太遠
     
-您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/zh-TW/office365/enterprise/content-delivery-networks) (部分機器翻譯)。
+您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/en-us/office365/enterprise/content-delivery-networks) (部分機器翻譯)。
   
 您必須注意但可能無能為力的因素是您的 ISP 連線速度。 簡單的速度測試工具會告訴您連線速度。
   

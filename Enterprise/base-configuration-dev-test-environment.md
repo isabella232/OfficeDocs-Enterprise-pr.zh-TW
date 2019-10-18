@@ -113,7 +113,7 @@ ms.locfileid: "34162436"
 首先，啟動 Azure PowerShell 提示。
   
 > [!NOTE]
-> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/zh-TW/powershell/azureps-cmdlets-docs/)。 
+> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/en-us/powershell/azureps-cmdlets-docs/)。 
   
 使用下列命令登入您的 Azure 帳戶。
   

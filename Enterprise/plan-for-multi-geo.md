@@ -64,7 +64,7 @@ ms.locfileid: "34069419"
 
 建立使用者清單，並包含使用者主體名稱 (UPN) 與適當慣用資料位置的位置代碼。包含測試使用者與您起始的試驗群組來開始進行。您將需要此清單來設定程序。
 
-如果您的使用者是從內部部署 Active Directory 系統同步到 Azure Active Directory，您必須將慣用資料位置設定為 Active Directory 屬性，並使用 Azure Active Directory Connect 進行同步。 您無法使用 Azure AD PowerShell為同步使用者直接設定慣用資料位置。 在 Active Directory 中設定 PDL 並對其進行同步的步驟會於 [Azure Active Directory Connect 同步：為 Office 365 資源設定慣用資料位置](https://docs.microsoft.com/zh-TW/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中說明。
+如果您的使用者是從內部部署 Active Directory 系統同步到 Azure Active Directory，您必須將慣用資料位置設定為 Active Directory 屬性，並使用 Azure Active Directory Connect 進行同步。 您無法使用 Azure AD PowerShell為同步使用者直接設定慣用資料位置。 在 Active Directory 中設定 PDL 並對其進行同步的步驟會於 [Azure Active Directory Connect 同步：為 Office 365 資源設定慣用資料位置](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中說明。
 
 多地理位置租用戶的管理可能與非多地理位置租用戶不同，因為許多 SharePoint 和 OneDrive 設定與服務具有多地理位置意識。我們建議您檢閱[管理多地理位置環境](administering-a-multi-geo-environment.md)，再繼續進行您的組態。
 

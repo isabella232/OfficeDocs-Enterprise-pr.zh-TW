@@ -197,7 +197,7 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 
 |**項目**|**說明**|
 |:-----|:-----|
-|![GDPR 的 Office 365 資訊保護縮圖](media/o365infoprotectforgdpr-thumb.png)  <br/> [PDF](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.pdf) \| [Visio](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.vsdx)    |若要以文章格式查看此內容，請參閱 [GDPR 的 Office 365 資訊保護](https://docs.microsoft.com/zh-TW/Office365/SecurityCompliance/office-365-information-protection-for-gdpr)。      |
+|![GDPR 的 Office 365 資訊保護縮圖](media/o365infoprotectforgdpr-thumb.png)  <br/> [PDF](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.pdf) \| [Visio](http://download.microsoft.com/download/E/C/D/ECD5A339-EF10-4420-B3A9-99098884D716/MSFT_Cloud_architecture_information%20protection%20for%20GDPR.vsdx)    |若要以文章格式查看此內容，請參閱 [GDPR 的 Office 365 資訊保護](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/office-365-information-protection-for-gdpr)。      |
 
 ### <a name="microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations"></a>適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南 
 
@@ -209,7 +209,7 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 |**適用於政治活動的 Microsoft 安全性指南** <br/> [![迷你海報集的縮略圖。](media/d370ce28-ca40-4930-9a2c-907312aa06c8.png)](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br/> [PDF](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf)  \| [Visio](http://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx) <br/> |此指南以政治活動組織為例。您可以針對任何環境使用此指南作為起點。  <br/> |
 |**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載的檔案的縮略圖](media/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br/> [PDF](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf)  \| [Visio](http://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
 
-此指南包含有測試實驗室指南。如需詳細資訊，請參閱[適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](https://docs.microsoft.com/zh-TW/Office365/SecurityCompliance/microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o)。
+此指南包含有測試實驗室指南。如需詳細資訊，請參閱[適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](https://docs.microsoft.com/en-us/Office365/SecurityCompliance/microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o)。
 
 ### <a name="microsoft-telephony-solutions"></a>Microsoft 電話語音解決方案
 
@@ -218,7 +218,7 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 ![Microsoft 電話語音解決方案海報的縮圖](media/microsoft-telephony-solutions-thumb.png) <br/>
 [PDF](https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness/blob/live/Teams/downloads/telephony-solutions/microsoft-telephony-solutions-12-18.pdf) | [Visio](https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness/blob/live/Teams/downloads/telephony-solutions/microsoft-telephony-solutions-12-18.vsdx) 
 
-如需詳細資訊，請參閱此海報的文章：[Microsoft 電話語音解決方案](https://docs.microsoft.com/zh-TW/SkypeForBusiness/hybrid/msft-telephony-solutions)。
+如需詳細資訊，請參閱此海報的文章：[Microsoft 電話語音解決方案](https://docs.microsoft.com/en-us/SkypeForBusiness/hybrid/msft-telephony-solutions)。
   
 <a name="msd"></a>
 ### <a name="deploy-a-modern-and-secure-desktop-with-microsoft"></a>使用 Microsoft 部署現代和安全的桌面
