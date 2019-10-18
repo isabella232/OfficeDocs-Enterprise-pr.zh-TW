@@ -601,7 +601,7 @@ else:
 
 - 若要使用 Microsoft Flow 解決方案，請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651) (英文)。
 - 若要使用 ARM 範本部署 Azure Logic App，請參閱 [Office 365 更新通知 (v1.1)](https://aka.ms/ipurlws-updates-template) (英文)。
-- 若要使用 PowerShell 撰寫您自己的通知指令碼，請參閱 [Send-MailMessage](https://docs.microsoft.com/zh-TW/powershell/module/microsoft.powershell.utility/send-mailmessage) (英文)。
+- 若要使用 PowerShell 撰寫您自己的通知指令碼，請參閱 [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage) (英文)。
 
 ## <a name="exporting-a-proxy-pac-file"></a>匯出 Proxy PAC 檔案
 
