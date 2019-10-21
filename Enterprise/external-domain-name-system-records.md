@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
-ms.openlocfilehash: 24991c4142c33ca80b5b48e8914ce6aeaaa186bc
-ms.sourcegitcommit: 77a25920511c54d7d613f552bdff7ad14cdd8324
+ms.openlocfilehash: 665e5aebee6546ceaa3275249da1bcaac6eb0ba2
+ms.sourcegitcommit: 74b6d9fc3ce0873e8564fc4de51fe3afeb122447
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36385171"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "37387050"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 
@@ -31,7 +31,7 @@ ms.locfileid: "36385171"
   
 |||
 |:-----|:-----|
-|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/en-us/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745) (機器翻譯)。 <br/>  **堅持使用自訂部署的參照清單嗎？** 以下清單應用來作為自訂 Office 365 部署的參考。您必須選取套用至組織的記錄，並且填入適當的值。 <br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune) (機器翻譯)。  <br/> |
+|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/zh-TW/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745)。 <br/>  **堅持使用自訂部署的參照清單嗎？** 以下清單應用來作為自訂 Office 365 部署的參考。您必須選取套用至組織的記錄，並且填入適當的值。 <br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune)。  <br/> |
 
 通常，SPF 和 MX 是最難找出的記錄。我們已更新在本文結尾的 SPF 記錄指引。請務必記住，_您的網域只能擁有單一的 SPF 記錄_。您可以有多個 MX 記錄；不過，這是導致郵件傳遞問題的原因。擁有可將電子郵件導向一個郵件系統的單一 MX 記錄可解決許多的潛在問題。
   
@@ -45,7 +45,7 @@ ms.locfileid: "36385171"
 ||||
 |:-----|:-----|:-----|
 |**DNS 記錄** <br/> |**用途** <br/> |**要使用的值** <br/> |
-|**CNAME** <br/> **(套裝軟體)** <br/> |Office 365 會使用它來將驗證導向正確的身分識別平台。[詳細資訊](https://go.microsoft.com/fwlink/p/?LinkId=322005) (機器翻譯) <br/> **注意：** 此 CNAME 僅適用於 21Vianet 運作的 Office 365。   |**別名：** msoid  <br/> **目標：** clientconfig.microsoftonline-p.net  <br/> |
+|**CNAME** <br/> **(套裝軟體)** <br/> |Office 365 會使用它來將驗證導向正確的身分識別平台。[詳細資訊](https://go.microsoft.com/fwlink/p/?LinkId=322005) <br/> **注意：** 此 CNAME 僅適用於 21Vianet 運作的 Office 365。   |**別名：** msoid  <br/> **目標：** clientconfig.microsoftonline-p.net  <br/> |
 |**TXT** <br/> **(網域驗證)** <br/> |Office 365 只會使用它來驗證網域是否歸您所有。不會影響其他任何項目。  <br/> |**主機：**@ (或者對某些 DNS 主機服務提供者來說是您的網域名稱)  <br/> **TXT 值：** _下者提供的文字字串：_ Office 365  <br/> Office 365 [網域設定]**** 精靈提供用來建立此項記錄的值。  <br/> |
 
 
@@ -67,10 +67,11 @@ Office 365 中電子郵件需要數個不同的記錄，所有的客戶應使用
 |:-----|:-----|:-----|
 |**DNS 記錄** <br/> |**用途** <br/> |**要使用的值** <br/> |
 |**CNAME** <br/> **(Exchange Online)** <br/> |使用自動探索服務協助 Outlook 用戶端輕易地與 Exchange Online 服務連接。自動探索會自動為使用者尋找正確的 Exchange Server 主機並設定 Outlook。  <br/> |**別名：** 自動探索  <br/> **目標：** autodiscover.outlook.com  <br/> |
-|**MX** <br/> **(Exchange Online)** <br/> |將網域的內送郵件傳送到 Office 365 中的 Exchange Online 服務。  <br/> **注意：** 一旦電子郵件流向 Exchange Online，您應該移除指向舊系統的 MX 記錄。   |**網域：** 例如，contoso.com  <br/> **目標電子郵件伺服器：**\<MX 權杖\>.mail.protection.outlook.com  <br/> **喜好設定/優先順序：** 低於其他任何 MX 記錄 (這可確保已傳遞郵件至 Exchange Online) - 如 1 或「低」  <br/>  遵循下列步驟來尋找您的 MX 權杖：  <br/>  1. 登入 Office 365，前往 Office 365 系統管理員 \> [網域]。  <br/>  2. 在您網域的 [動作] 欄中選擇 [修正問題]****。  <br/>  3. 在 [MX 記錄] 區段中，選擇 [我應該修正什麼?]****  <br/>  4. 遵循此頁面上的指示更新您的 MX 記錄：  <br/> [什麼是 MX 優先順序？](https://go.microsoft.com/fwlink/p/?LinkId=396471) <br/> |
-|**SPF (TXT)** <br/> (Exchange Online)  <br/> |有助於防止他人使用您的網域來傳送垃圾郵件或其他惡意電子郵件。寄件者原則架構 (SPF) 記錄的運作方式是識別取得從網域傳送電子郵件之授權的伺服器。  <br/> |[SPF 所需的外部 DNS 記錄](external-domain-name-system-records.md#BKMK_SPFrecords) <br/> |
+|**MX** <br/> **(Exchange Online)** <br/> |將網域的內送郵件傳送到 Office 365 中的 Exchange Online 服務。  <br/> [!NOTE] 一旦電子郵件流向 Exchange Online，您應該移除指向舊系統的 MX 記錄。   |**網域：** 例如，contoso.com  <br/> **目標電子郵件伺服器：**\<MX 權杖\>.mail.protection.outlook.com  <br/> **喜好設定/優先順序：** 低於其他任何 MX 記錄 (這可確保已傳遞郵件至 Exchange Online) - 如 1 或「低」  <br/>  遵循下列步驟來尋找您的 \<MX 權杖\>：  <br/>  登入 Office 365，前往 Office 365 系統管理員\>網域。  <br/>  在您網域的 [動作] 欄中選擇「修正問題」。  <br/>  在 [MX 記錄] 區段中，選擇「我要修正什麼？」  <br/>  遵循此頁面上的指示更新您的 MX 記錄。  <br/> [什麼是 MX 優先順序？](https://go.microsoft.com/fwlink/p/?LinkId=396471) <br/> |
+|**SPF (TXT)** <br/> **(Exchange Online)**  <br/> |有助於防止他人使用您的網域來傳送垃圾郵件或其他惡意電子郵件。寄件者原則架構 (SPF) 記錄的運作方式是識別取得從網域傳送電子郵件之授權的伺服器。  <br/> |[SPF 所需的外部 DNS 記錄](external-domain-name-system-records.md#BKMK_SPFrecords) <br/> |
+|**TXT** <br/> **(Exchange 同盟)** <br/> |用於混合部署的 Exchange 同盟。  <br/> |**TXT 記錄 1：** 例如，contoso.com 和自訂產生的相關網域證明雜湊文字 (如 Y96nu89138789315669824)  <br/> **TXT 記錄 2：** 例如，exchangedelegation.contoso.com 和自訂產生的相關網域證明雜湊文字 (如 Y3259071352452626169)  <br/> |
+|**CNAME** <br/> **(Exchange 同盟)** <br/> |當公司使用 Exchange 同盟時，可藉由使用自動探索服務協助 Outlook 用戶端輕易地與 Exchange Online 服務連接。自動探索會自動為使用者尋找正確的 Exchange Server 主機並設定 Outlook。  <br/> |**別名：** 例如， Autodiscover.service.contoso.com  <br/> **目標：** autodiscover.outlook.com  <br/> |
 
-|**TXT** <br/> **(Exchange 同盟)** <br/> |用於混合部署的 Exchange 同盟。  <br/> |**TXT 記錄 1：** 例如，contoso.com 和自訂產生的相關網域證明雜湊文字 (如 Y96nu89138789315669824)  <br/> **TXT 記錄 2：** 例如，exchangedelegation.contoso.com 和自訂產生的相關網域證明雜湊文字 (如 Y3259071352452626169)  <br/> | |**CNAME** <br/> **(Exchange 同盟)** <br/> |當公司使用 Exchange 同盟時，可藉由使用自動探索服務協助 Outlook 用戶端輕鬆連線到 Exchange Online 服務。 自動探索會自動為使用者尋找正確的 Exchange Server 主機並設定 Outlook。  <br/> |**別名：** 例如，Autodiscover.service.contoso.com  <br/> **目標：** autodiscover.outlook.com  <br/> |
 
 ## <a name="external-dns-records-required-for-skype-for-business-online"></a>商務用 Skype Online 所需的外部 DNS 記錄
 <a name="BKMK_ReqdCore"> </a>
@@ -82,8 +83,8 @@ Office 365 中電子郵件需要數個不同的記錄，所有的客戶應使用
 |**DNS 記錄** <br/> |**用途** <br/> |**要使用的值** <br/> |
 |**SRV** <br/> **(商務用 Skype Online)** <br/> |讓您的 Office 365 網域可啟用 SIP 同盟與外部用戶端共用立即訊息 (IM) 功能。了解更多 [Office 365 URL 和 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) (英文)。<br/> |**服務：** sipfederationtls  <br/> **通訊協定：** TCP  <br/> **優先順序：** 100  <br/> **加權：** 1  <br/> **連接埠：** 5061  <br/> **目標：** sipfed.online.lync.com  <br/> **注意：** 如果防火牆或 Proxy 伺服器封鎖外部 DNS 的 SRV 查閱，您應將此記錄新增至內部 DNS 記錄。   |
 |**SRV** <br/> **(商務用 Skype Online)** <br/> |商務用 Skype 會使用它來協調 Lync 用戶端之間的資訊流程。  <br/> |**服務：** sip  <br/> **通訊協定：** TLS  <br/> **優先順序：** 100  <br/> **加權：** 1  <br/> **連接埠：** 443  <br/> **目標：** sipdir.online.lync.com  <br/> |
-
-|**CNAME** <br/> **(商務用 Skype Online)** <br/> |Lync 用戶端會使用它來協助尋找商務用 Skype Online 服務並登入。  <br/> |**別名：** sip  <br/> **目標：** sipdir.online.lync.com  <br/> 如需詳細資訊，請參閱 [Office 365 URL 和 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) (英文)。  <br/> | |**CNAME** <br/> **(商務用 Skype Online)** <br/> |Lync 行動用戶端會使用它來協助尋找商務用 Skype Online 服務並登入。  <br/> |**別名：** lyncdiscover  <br/> **目標：** webdir.online.lync.com  <br/> |
+|**CNAME** <br/> **(商務用 Skype Online)** <br/> |Lync 用戶端會使用它來協助尋找商務用 Skype Online 服務並登入。  <br/> |**別名：** sip  <br/> **目標：** sipdir.online.lync.com  <br/> 如需詳細資訊，請參閱 [Office 365 URL 和 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2#BKMK_LYO) (英文)。  <br/> |
+|**CNAME** <br/> **(商務用 Skype Online)** <br/> |Lync 行動用戶端會使用它來協助尋找商務用 Skype Online 服務並登入。  <br/> |**別名：** lyncdiscover  <br/> **目標：** webdir.online.lync.com  <br/> |
 
 ## <a name="external-dns-records-required-for-sharepoint-online"></a>SharePoint Online 所需的外部 DNS 記錄
 <a name="BKMK_ReqdCore"> </a>
@@ -102,7 +103,7 @@ SharePoint Online 只需要 DNS 記錄貴組織是否使用 SharePoint Online �
 <a name="BKMK_SPFrecords"> </a>
 
 > [!IMPORTANT]
-> SPF 是設計來協助防止詐騙，但是有 SPF 無法防護的詐騙技術。為了防止這些項目，設定 SPF 之後，您也應該為 Office 365 設定 DKIM 和 DMARC。若要開始使用，請參閱[使用 DKIM 驗證從 Office 365 中的網域傳送的輸出電子郵件](https://technet.microsoft.com/en-us/library/mt695945%28v=exchg.150%29.aspx) (機器翻譯)。接下來，請參閱[使用 DMARC 來驗證 Office 365 中的電子郵件](https://technet.microsoft.com/en-us/library/mt734386%28v=exchg.150%29.aspx) (機器翻譯)。
+> SPF 是設計來協助防止詐騙，但是有 SPF 無法防護的詐騙技術。為了防止這些項目，設定 SPF 之後，您也應該為 Office 365 設定 DKIM 和 DMARC。若要開始使用，請參閱[使用 DKIM 驗證從 Office 365 中的網域傳送的輸出電子郵件](https://technet.microsoft.com/zh-TW/library/mt695945%28v=exchg.150%29.aspx)。接下來，請參閱[使用 DMARC 來驗證 Office 365 中的電子郵件](https://technet.microsoft.com/zh-TW/library/mt734386%28v=exchg.150%29.aspx)。
   
 SPF 記錄是 TXT 記錄，有助於防止他人使用您的網域來傳送垃圾郵件或其他惡意電子郵件。寄件者原則架構 (SPF) 記錄的運作方式是識別取得從網域傳送電子郵件之授權的伺服器。
   
@@ -124,7 +125,7 @@ Values: v=spf1 include:spf.protection.outlook.com -all
 在您不只使用 Office 365 的 Exchange Online 電子郵件的情況下，(例如，當您也使用來自 SharePoint Online 的電子郵件時)，使用下表來決定要包含在記錄值中的內容。
   
 > [!NOTE]
-> 如果您有複雜的案例，包含例如在您的防火牆管理電子郵件流量的 Edge 電子郵件伺服器，您將需要設定更詳細的 SPF 記錄。了解如何：[在 Office 365 中設定 SPF 記錄以協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787656) (機器翻譯)。您也可以了解更多有關 SPF 使用 Office 365 的方式，請閱讀 [Office 365 如何使用寄件者原則架構 (SPF) 協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787065) (機器翻譯)。
+> 如果您有複雜的案例，包含例如在您的防火牆管理電子郵件流量的 Edge 電子郵件伺服器，您將需要設定更詳細的 SPF 記錄。了解如何：[在 Office 365 中設定 SPF 記錄以協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787656)。您也可以了解更多有關 SPF 使用 Office 365 的方式，請閱讀 [Office 365 如何使用寄件者原則架構 (SPF) 協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787065)。
   
 |||||
 |:-----|:-----|:-----|:-----|
@@ -182,6 +183,6 @@ TXT Name @
 Values: v=spf1 include:sharepointonline.com include:mail.contoso.com -all
 ```
 
-以下是一些常見的範例，當您將網域新增至電子郵件的 Office 365 時，可協助您調整現有的 SPF 記錄。如果您有複雜的案例，包含例如在您的防火牆管理電子郵件流量的 Edge 電子郵件伺服器，您將需要設定更詳細的 SPF 記錄。了解如何：[在 Office 365 中設定 SPF 記錄以協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787656) (機器翻譯)。
+以下是一些常見的範例，當您將網域新增至電子郵件的 Office 365 時，可協助您調整現有的 SPF 記錄。如果您有複雜的案例，包含例如在您的防火牆管理電子郵件流量的 Edge 電子郵件伺服器，您將需要設定更詳細的 SPF 記錄。了解如何：[在 Office 365 中設定 SPF 記錄以協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787656)。
   
 您可以使用下列短連結返回這裡：[https://aka.ms/o365edns](https://aka.ms/o365edns)

@@ -3,7 +3,7 @@ title: Office 365 開發人員/測試環境的同盟身分識別
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 09/19/2019
+ms.date: 09/26/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
 description: 摘要：設定適用於 Office 365 開發/測試環境的同盟驗證。
-ms.openlocfilehash: 9cee3ae308b5dc7e97b8711a9b021869478a47b4
-ms.sourcegitcommit: ed9d80a7b4acc42065c94155122f0cdb86dccde6
+ms.openlocfilehash: c2cb4bcd9085cd8dd91df5de2ad936076d11432c
+ms.sourcegitcommit: 74b6d9fc3ce0873e8564fc4de51fe3afeb122447
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "37046988"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "37207388"
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -189,15 +189,12 @@ Write-Host (Get-AzPublicIpaddress -Name "PROXY1-PIP" -ResourceGroup $rgName).IPA
 接下來，使用 CORP\\User1 認證，以使用 [Azure 入口網站](http://portal.azure.com)連線到 DC1 虛擬機器，然後在系統管理員層級 Windows PowerShell 命令提示字元執行下列命令：
   
 ```
-$testZone="<the FQDN of your testlab domain from phase 1, example: testlab.contoso.com>"
-$testZoneFile= $testZone + ".dns"
-Add-DnsServerPrimaryZone -Name $testZone -ZoneFile $testZoneFile
-Add-DnsServerResourceRecordA -Name "fs" -ZoneName $testZone -AllowUpdateAny -IPv4Address "10.0.0.100" -TimeToLive 01:00:00
+Add-DnsServerPrimaryZone -Name corp.contoso.com -ZoneFile corp.contoso.com.dns
+Add-DnsServerResourceRecordA -Name "fs" -ZoneName corp.contoso.com -AllowUpdateAny -IPv4Address "10.0.0.100" -TimeToLive 01:00:00
 ```
-
-這些命令會為同盟服務 FQDN 建立 DNS A 記錄，在 Azure 虛擬網路上的虛擬機器可解析為 ADFS1 的私人 IP 位址。
+這些命令會建立內部 DNS A 記錄，使得 Azure 虛擬網路上的虛擬機器可將內部同盟 FQDN 解析為 ADFS1 的私人 IP 位址。
   
-以下是您產生的組態。
+以下是產生的組態。
   
 **圖 4：新增 Web 應用程式 Proxy 伺服器**
 
@@ -414,7 +411,7 @@ Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
     
 2. 在登入認證中輸入 **user1@**\< (在階段 1> 建立的網域)。 
     
-    比方說，如果您的測試網域是 **testlab.contoso.com**，則輸入 **user1@testlab.contoso.com**。按 TAB 鍵或讓 Office 365 為您自動重新導向。
+    比方說，如果您的測試網域是 **testlab.contoso.com**，則輸入 "user1@testlab.contoso.com"。按 TAB 鍵或讓 Office 365 為您自動重新導向。
     
     您現在應該會看到**您的連線非私人連線**頁面。因為您在 ADFS1 上安裝了自我簽署的憑證，您的桌上型電腦無法加以驗證，才會出現此頁面。在同盟驗證的生產部署中，您可以使用來自受信任憑證授權單位的憑證，使用者即不會看到此頁面。
     
