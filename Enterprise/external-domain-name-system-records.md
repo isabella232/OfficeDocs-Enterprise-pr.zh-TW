@@ -3,7 +3,7 @@ title: Office 365 的外部網域名稱系統記錄
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 8/13/2019
+ms.date: 10/21/2019
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
-ms.openlocfilehash: 665e5aebee6546ceaa3275249da1bcaac6eb0ba2
-ms.sourcegitcommit: 74b6d9fc3ce0873e8564fc4de51fe3afeb122447
+ms.openlocfilehash: 75ada2f8632f880627b525112229ae09742029cd
+ms.sourcegitcommit: 546080809d4f8ee4954943738906eec6c9bac1d8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "37387050"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "37616136"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 
@@ -45,7 +45,7 @@ ms.locfileid: "37387050"
 ||||
 |:-----|:-----|:-----|
 |**DNS 記錄** <br/> |**用途** <br/> |**要使用的值** <br/> |
-|**CNAME** <br/> **(套裝軟體)** <br/> |Office 365 會使用它來將驗證導向正確的身分識別平台。[詳細資訊](https://go.microsoft.com/fwlink/p/?LinkId=322005) <br/> **注意：** 此 CNAME 僅適用於 21Vianet 運作的 Office 365。   |**別名：** msoid  <br/> **目標：** clientconfig.microsoftonline-p.net  <br/> |
+|**CNAME** <br/> **(套裝軟體)** <br/> |Office 365 會使用它來將驗證導向正確的身分識別平台。[詳細資訊](https://go.microsoft.com/fwlink/p/?LinkId=322005) <br/> **注意：** 此 CNAME 僅適用於 21Vianet 運作的 Office 365。   |**別名：** msoid  <br/> **目標：** clientconfig.partner.microsoftonline-p.net.cn  <br/> |
 |**TXT** <br/> **(網域驗證)** <br/> |Office 365 只會使用它來驗證網域是否歸您所有。不會影響其他任何項目。  <br/> |**主機：**@ (或者對某些 DNS 主機服務提供者來說是您的網域名稱)  <br/> **TXT 值：** _下者提供的文字字串：_ Office 365  <br/> Office 365 [網域設定]**** 精靈提供用來建立此項記錄的值。  <br/> |
 
 
