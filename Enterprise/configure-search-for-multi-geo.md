@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: 39493c4df48af239306d8b22de451d6db6e3bcf9
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: e2f3aa9888e3c41c445e4ceeab491a3c5a617a14
+ms.sourcegitcommit: 7f82f6f0146aba0ef5553559ad4e7014ac591769
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068069"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "37643276"
 ---
 # <a name="configure-search-for-office-365-multi-geo"></a>設定 Office 365 多地理位置的搜尋
 
@@ -172,11 +172,11 @@ Delve 摘要和個人檔案卡片只會顯示儲存在中央位置之檔案的�
 
 **需求**
 
-對於每個地理位置，您必須確保組織中的所有使用者都已被授予根網站的**讀取**權限層級 (例如contoso**APAC**.sharepoint.com/ 和 contoso**EU**.sharepoint.com/)。[了解權限](https://support.office.com/en-us/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)。
+對於每個地理位置，您必須確保組織中的所有使用者都已被授予根網站的**讀取**權限層級 (例如contoso**APAC**.sharepoint.com/ 和 contoso**EU**.sharepoint.com/)。[了解權限](https://support.office.com/zh-TW/article/understanding-permission-levels-in-sharepoint-87ecbb0e-6550-491a-8826-c075e4859848)。
 
 ### <a name="query-parameters"></a>查詢參數
 
-EnableMultiGeoSearch - 這是布林值，指出查詢是否應該展開傳送至多地理位置租用戶其他地理位置的索引。 將它設為 **true** 以將查詢展開傳送；**false** 以不要將查詢展開傳送。 預設值為 **false**。 如果您不包含此參數，則不會將查詢展開傳送至其他地理位置。 如果您在非多地理位置的環境中使用此參數，則會忽略此參數。
+EnableMultiGeoSearch - 這是布林值，指出查詢是否應該展開傳送至多地理位置租用戶其他地理位置的索引。 將它設為 **true** 以將查詢展開傳送；**false** 以不要將查詢展開傳送。 如果您不包含此參數，預設值是 **false**，對使用企業搜尋中心範本的網站進行 REST API 呼叫時除外，在此情況下，預設值是 **true**。 如果您在非多地理位置的環境中使用此參數，則會忽略此參數。
 
 ClientType - 這是字串。 為每個搜尋應用程式輸入唯一的用戶端名稱。 如果您不包含此參數，則不會將查詢展開傳送至其他地理位置。
 
@@ -205,7 +205,7 @@ MultiGeoSearchConfiguration - 這是選擇性的清單，它是當 **EnableMulti
 </tbody>
 </table>
 
-如果您省略 DataLocation 或EndPoint，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/multigeo-discovery)。
+如果您省略 DataLocation 或EndPoint，或者 DataLocation 是重複的，要求將會失敗。[您可以透過 Microsoft Graph 來取得租用戶地理位置的端點相關資訊](https://docs.microsoft.com/zh-TW/sharepoint/dev/solution-guidance/multigeo-discovery)。
 
 ### <a name="response-data"></a>回應資料
 
