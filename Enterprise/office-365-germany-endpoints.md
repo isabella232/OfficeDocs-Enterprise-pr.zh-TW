@@ -3,7 +3,7 @@ title: Office 365 Germany 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/28/2019
+ms.date: 10/28/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,12 +16,12 @@ search.appverid: MOE150
 ms.assetid: 8a113a50-0071-4155-bb8e-eba5a8dbd4c8
 description: 如果您的組織使用 Office 365，而且會限制您網路上的電腦連線到網際網路，以下您會發現的端點 （Fqdn、 連接埠、 Url 和 IPv4 和 IPv6 位址範圍），您應該在包含連出允許清單，以確保您電腦可以順利使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 761cf4d6f3b6c214aae624138902d2f75a0e7a01
-ms.sourcegitcommit: 0d21bd4edac07db94269e2a176c92469c02b2e26
+ms.openlocfilehash: 5b87403f0173567d249e3350ef1913378bf1c358
+ms.sourcegitcommit: 653bd752db6be18f2f0d31e5abeb8ad734704772
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656014"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "37765746"
 ---
 # <a name="office-365-germany-endpoints"></a>Office 365 Germany 端點
 
@@ -36,7 +36,7 @@ ms.locfileid: "36656014"
   
 |||
 |:-----|:-----|
-|**上次更新：** 08/28/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
+|**上次更新：** 10/28/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/Germany?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> |
 
 若要了解我們的建議管理網路連線使用此資料的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。 起點處的新 IP 位址和 Url 發佈最遲作用在 30 天每月更新端點資料。 這可讓客戶不尚未有自動更新至新的連線，則需要先完成其處理程序。 端點只有地址支援擴大、 安全性事件或其他即時的操作需求所需的情況下，也可能與月份期間中更新。 您總是可以參照的[變更記錄訂閱](https://endpoints.office.com/version/Germany?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "36656014"
 
 下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
 
-端點會分成四個服務區域。 第三個服務區域可個別選取的連線。 第四個服務區域是常見的相依性 （稱為 Microsoft 365 一般及 Office），且必須一律有網路連線。
+端點則被歸類成四個服務區域。前三個服務區域可以個別選取進行連線。第四個服務區域 (稱為 Microsoft 365 Common 與 Office) 的常見相依性，且必須一律具有網路連線能力。
 
 所顯示的資料行為︰
 
