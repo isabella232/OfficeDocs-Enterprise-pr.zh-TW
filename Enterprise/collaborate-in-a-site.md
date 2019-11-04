@@ -1,5 +1,5 @@
 ---
-title: 與網站中的來賓共同作業
+title: 在網站中與來賓共同作業
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -8,18 +8,24 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 4b68b50fec4322f12c24969bdd71e7d9c0fda245
-ms.sourcegitcommit: d388c76d25ca67f240db97f7bfc90f0991b0e7f8
+ms.openlocfilehash: d0f4528db683795da0f3c949228f902d775f6b7e
+ms.sourcegitcommit: f4469fee3e3f9665298d3052f30a4c6ab12643f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "37017311"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "37920166"
 ---
-# <a name="collaborate-with-guests-in-a-site"></a>與網站中的來賓共同作業
+# <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
 如果您需要整個文件、 資料和清單與來賓共同作業，您可以使用 SharePoint 網站。 新式的 SharePoint 網站連線到 Office 365 群組以管理站台成員資格，並提供其他共同作業工具，例如共用的信箱和行事曆。
 
 在本文中，我們會逐步設定來賓與共同作業的 SharePoint 網站所需的 Microsoft 365 組態步驟。
+
+## <a name="video-demonstration"></a>影片示範
+
+這段影片顯示本文所述的設定步驟。</br>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE44Llg?autoplay=false]
 
 ## <a name="azure-organizational-relationships-settings"></a>Azure 的組織關聯性設定
 
@@ -27,7 +33,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 檢查以確保未封鎖來賓與共用的組織關聯性設定。
 
-![螢幕擷取畫面的 Azure Active Directory 組織關聯性設定頁面](media/azure-ad-organizational-relationships-settings.png)
+![Azure Active Directory 組織關聯性設定頁面的螢幕擷取畫面](media/azure-ad-organizational-relationships-settings.png)
 
 若要設定組織關聯性設定
 
@@ -36,7 +42,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 3. 在 [**概觀**] 窗格中，按一下 [**組織關聯性**。
 4. 在**組織關聯性**] 窗格中，按一下 [**設定**]。
 5. 確保**系統管理員和來賓邀請者角色中的使用者可以邀請**和**成員可以邀請**都會設**為 [是]**。
-6. 如果您所做的變更，請按一下 [**儲存**]。
+6. 如果您做了任何變更，請按一下 [儲存]****。
 
 請注意 [**共同作業限制**] 區段中的設定。 請確定不封鎖的網域的來賓，您想要與共同作業。
 
@@ -44,7 +50,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 新式的 SharePoint 網站使用 Office 365 群組來控制網站存取權。 Office 365 群組的來賓設定必須開啟 SharePoint 網站中的來賓存取工作的順序。
 
-![Office 365 群組的螢幕擷取畫面 guest Microsoft 365 系統管理中心中的設定](media/office-365-groups-guest-settings.png)
+![Microsoft 365 系統管理中心中 Office 365 群組來賓設定的螢幕擷取畫面](media/office-365-groups-guest-settings.png)
 
 若要設定 Office 365 群組的來賓
 
@@ -63,15 +69,15 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 如果您想要允許的檔案和資料夾與匿名使用者共用，選擇 [**任何人**]。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
 
-![螢幕擷取畫面的 SharePoint 組織層級共用設定](media/sharepoint-organization-external-sharing-controls.png)
+![SharePoint 組織層級共用設定的螢幕擷取畫面](media/sharepoint-organization-external-sharing-controls.png)
 
 
 若要設定共用設定的 SharePoint 組織層級
 
 1. 在 Microsoft 365 系統管理中心，在左側導覽中，[**系統管理中心**中，按一下 [ **SharePoint**]。
-2. 在 SharePoint 系統管理中心中，在左側導覽中，按一下 [**共用**]。
+2. 在 SharePoint 管理中心中，按一下左側導覽窗格中的 [共用]****。
 3. 請確定該外部共用 SharePoint 設為**任何人**或**新增和現有的來賓**。
-4. 如果您所做的變更，請按一下 [**儲存**]。
+4. 如果您做了任何變更，請按一下 [儲存]****。
 
 ## <a name="create-a-site"></a>建立網站
 
@@ -79,7 +85,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 若要建立網站
 1. 在 SharePoint 系統管理中心中，[**網站**]，按一下 [**作用中網站**。
-2. 按一下 [建立]****。
+2. 按一下 **[建立]**。
 3. 按一下 [**小組網站**。
 4. 輸入網站名稱，然後輸入群組擁有者 （網站擁有者） 的名稱。
 5. [**進階設定**]，選擇 [是否您想要這是公用或私用網站。
@@ -94,14 +100,14 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 請注意，無法共用網站，在具有匿名使用者 （**任何人都**設定），但是可以個別檔案和資料夾。
 
-![螢幕擷取畫面的 SharePoint 網站外部共用設定](media/sharepoint-site-external-sharing-settings.png)
+![SharePoint 網站外部共用設定的螢幕擷取畫面](media/sharepoint-site-external-sharing-settings.png)
 
 若要設定網站層級共用設定
-1. 在 SharePoint 系統管理中心中，在左側導覽中，展開 [**站台**，按一下 [**作用中網站**。
+1. 在 SharePoint 管理中心中，在左側導覽窗格中展開 [網站]****，然後按一下 [使用中網站]****。
 2. 選取您剛建立的網站。
-3. 在功能區中，按一下 [**共用**]。
+3. 在功能區中，按一下 [共用]****。
 4. 請確定該共用設為**任何人**或**新增和現有的來賓**。
-5. 如果您所做的變更，請按一下 [**儲存**]。
+5. 如果您做了任何變更，請按一下 [儲存]****。
 
 ## <a name="invite-users"></a>邀請使用者
 
@@ -122,3 +128,10 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 4. 按一下 [關閉]****。
 
 ## <a name="see-also"></a>另請參閱
+
+[與匿名使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
+
+[與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
+
+[建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)）
+
