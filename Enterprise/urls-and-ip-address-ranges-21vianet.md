@@ -18,12 +18,12 @@ search.appverid:
 ms.assetid: 5c47c07d-f9b6-4b78-a329-bfdc1b6da7a0
 description: 本文適用於由中國 21Vianet 運作的 Office 365。本文章會列出 21Vianet 運作的 Office 365 所使用的 URL 和 IP 位址範圍。
 hideEdit: true
-ms.openlocfilehash: 518bf8ead4c91a00242f50f00a95c3522bdca692
-ms.sourcegitcommit: 74b6d9fc3ce0873e8564fc4de51fe3afeb122447
+ms.openlocfilehash: 54ebb54211c14d7279d9942372570c1985820d58
+ms.sourcegitcommit: 8d1cc95b3641afe547c6d0e05f2dad5d013a0773
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "37318674"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "37975838"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍
 
@@ -44,13 +44,13 @@ ms.locfileid: "37318674"
 
 下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
 
-端點可分為四個服務區域。 前三個服務區域可個別選取以取得連線。 第四個服務區域是常見的相依性 (稱為 Microsoft 365 Common 和 Office)，且必須一律有網路連線。
+端點則被歸類成四個服務區域。前三個服務區域可以個別選取進行連線。第四個服務區域 (稱為 Microsoft 365 Common 與 Office) 的常見相依性，且必須一律具有網路連線能力。
 
 所顯示的資料行為︰
 
 - **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[http://aka.ms/pnc](http://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
+- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
 - **ER**：如果端點設定透過 Azure ExpressRoute 使用 Office 365 路由首碼支援，則這是 [是]****。包含所顯示路由首碼的 BGP 社群會對齊所列的服務區域。當 ER 為 [否]**** 時，表示 ExpressRoute 不支援此端點集合。不過，不應假設 ER 為 [否]**** 的端點設定不會通告任何路由。
 
