@@ -124,7 +124,7 @@
 #### [設定目錄同步處理](set-up-directory-synchronization.md)
 ### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts.md)
 
-## [3. 實作安全性功能](https://docs.microsoft.com/office365/securitycompliance/security-best-practices)
+## [3. 實作安全性功能](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
 
 ## 4. 部署用戶端軟體
 ### [部署 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
