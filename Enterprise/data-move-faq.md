@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 description: 以下是對一般問題的回答關於將核心資料移至新的資料中心地理位置。
-ms.openlocfilehash: fe0392040f4a78d32e682e4f013db7a8ba49ebd5
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 9e391a1b43ef1a11d9da72b7f78ecf35fd084c90
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782323"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38028887"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -43,7 +43,7 @@ ms.locfileid: "35782323"
 有兩個租用戶系統管理員身分，您可以採取的動作。
 
 - 選擇集。註冊 Office 365 移動計劃中，會收到您的服務，將靜態的核心客戶資料移轉至新的資料中心地理位置的認可的期限。如何在選擇加入的計劃，請參閱[如何要求資料移動](request-your-data-move.md)頁面上的指示。
-- 無任何反應。不採取任何動作，這會使 Microsoft 能夠將核心客戶資料移至新的資料中心地理位置的靜態經過一段時間服務管理和最佳化的一部分。您的資料只可能可以移至您的新資料中心地理，不適用於任何其他地理位置。我們透過訊息中心時通知這類服務管理移動完成。
+- 不執行任何動作。不採取任何動作，這會使 Microsoft 能夠將核心客戶資料移至新的資料中心地理位置的靜態經過一段時間服務管理和最佳化的一部分。您的資料只可能可以移至您的新資料中心地理，不適用於任何其他地理位置。我們透過訊息中心時通知這類服務管理移動完成。
 
 ## <a name="how-do-you-make-sure-my-customer-data-is-safe-during-the-move-and-that-i-wont-experience-downtime"></a>您如何確定我客戶資料在移動期間的安全且我將不會遇到停機時間？
   
@@ -57,7 +57,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
 ## <a name="will-new-office-365-customers-be-automatically-provisioned-in-the-new-datacenter-geos"></a>將新的 Office 365 客戶可自動佈建中新的資料中心 geos 嗎？
   
-是。 提供新的資料中心地理位置之後，新的 Office 365 的商務客戶選取作為其國家/地區的合格的新的地理位置的國家/地區註冊期間會有存放在新的資料中心地理位置中其核心客戶資料。
+會。 提供新的資料中心地理位置之後，新的 Office 365 的商務客戶選取作為其國家/地區的合格的新的地理位置的國家/地區註冊期間會有存放在新的資料中心地理位置中其核心客戶資料。
   
  ## <a name="where-is-my-core-customer-data-is-located"></a>其中是我核心客戶資料所在？
 
@@ -131,11 +131,11 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
  ## <a name="do-the-new-datacenter-geos-use-the-same-versions-of-office-365-services-as-the-current-datacenter-geos"></a>新的資料中心 geos 是否為目前的資料中心 geos 使用相同版本的 Office 365 服務？
 
-是。
+會。
   
 ## <a name="will-office-365-tenants-hosted-in-the-new-datacenters-be-available-to-users-outside-of-the-country"></a>Office 365 租用戶中新的資料中心主控可以外的國家/地區的使用者？
   
-答：是。 是。 Microsoft 的維護大型的全球網路與在具有多個 2700 網際網路服務提供者 (Isp) 的對等協議與世界各地 35 國家/地區的多個 130 位置中的公用網際網路連線。 使用者無法從任何地方網際網路上存取的資料中心。
+答：是。 會。 Microsoft 的維護大型的全球網路與在具有多個 2700 網際網路服務提供者 (Isp) 的對等協議與世界各地 35 國家/地區的多個 130 位置中的公用網際網路連線。 使用者無法從任何地方網際網路上存取的資料中心。
 
 ## <a name="my-tenant-is-configured-for-office-365-multi-geohttpsakamsmulti-geo--can-i-still-enroll-in-my-tenant-in-the-office-365-move-program-to-change-my-default-geo-and-move-any-user-not-in-a-satellite-region-to-the-new-default-geo"></a>我的租用戶已針對[Office 365 多地理位置](https://aka.ms/multi-geo)。  我還是註冊 Office 365 移動在程式中變更我的預設地理位置，並將任何使用者，而不是以衛星區域移至新的預設地理我租用戶中可以嗎？
 
@@ -155,4 +155,4 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
 
 [Microsoft Dynamics CRM online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
   
-[依地區的 azure 服務](https://azure.microsoft.com/en-us/regions/)
+[依地區的 azure 服務](https://azure.microsoft.com/regions/)

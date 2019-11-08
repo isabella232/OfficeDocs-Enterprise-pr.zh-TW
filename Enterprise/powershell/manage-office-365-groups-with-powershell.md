@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 了解如何在 Microsoft PowerShell 中的 Office 365 群組執行一般管理工作。
-ms.openlocfilehash: 7e07041516acd3c2038dd92b464073279c49d1a6
-ms.sourcegitcommit: d388c76d25ca67f240db97f7bfc90f0991b0e7f8
+ms.openlocfilehash: 94aa95de79099b45ea05533e7c22959b9bdf7669
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "37017341"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030998"
 ---
 # <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
 
@@ -46,7 +46,7 @@ ms.locfileid: "37017341"
   
 如果您想要啟用您的 Office 365 群組，以 「 傳送為 」，使用[Add-recipientpermission](https://docs.microsoft.com/powershell/module/exchange/mailboxes/Add-RecipientPermission)和[Get-recipientpermission](https://docs.microsoft.com/powershell/module/exchange/users-and-groups/Get-Recipient)指令程式來設定此。 一旦您啟用此設定時，Office 365 群組使用者可以使用 Outlook 網頁版傳送及回覆的電子郵件做為 Office 365 群組。 使用者可以移至群組時，建立新的電子郵件，以及 「 傳送為 」 欄位變更群組的電子郵件地址。 
 
-（[您也可以此 Exchange 系統管理中心中](https://docs.microsoft.com/en-us/office365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group)）。
+（[您也可以此 Exchange 系統管理中心中](https://docs.microsoft.com/office365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group)）。
   
 使用下列指令碼，取代*\<GroupAlias\>* 與您想要更新，群組的別名和*\<UserAlias\>* 與您要授與使用權之使用者的別名。 若要執行此指令碼以[連線至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell) 。
 
@@ -186,9 +186,9 @@ Office 365 群組在 Outlook 中的預設會建立為私人。 如果您的組�
 
 ## <a name="related-topics"></a>相關主題
 
-[通訊群組清單升級至 Office 365 群組](https://docs.microsoft.com/en-us/office365/admin/manage/upgrade-distribution-lists)
+[通訊群組清單升級至 Office 365 群組](https://docs.microsoft.com/office365/admin/manage/upgrade-distribution-lists)
 
-[管理誰能建立 Office 365 群組](https://docs.microsoft.com/en-us/office365/admin/create-groups/manage-creation-of-groups)
+[管理誰能建立 Office 365 群組](https://docs.microsoft.com/office365/admin/create-groups/manage-creation-of-groups)
 
 [管理 Office 365 群組的來賓存取權](https://support.office.com/article/bfc7a840-868f-4fd6-a390-f347bf51aff6)
 

@@ -3,7 +3,7 @@ title: 資料移動期間和之後
 ms.author: deniseb
 author: denisebmsft
 manager: laurawi
-ms.date: 03/15/2019
+ms.date: 07/18/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
-ms.openlocfilehash: a0fb2e7ad31a2c5492260bd5f1d67d80632024c0
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 67b337ee1ddf34a547ddafc80d886ff6075987ce
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067729"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030777"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -38,7 +38,7 @@ ms.locfileid: "34067729"
 |南韓  <br/> |2018 年 10 月 31日日  <br/> |
 |英國  <br/> |2019 年 9 月 15日日  <br/> |
 |法國  <br/> |2020 年 9 月 15 日  <br/> |
-|阿拉伯聯合大公國  <br/> |宣佈  <br/> |
+|阿拉伯聯合大公國  <br/> |2022 年 2 月 1 日  <br/> |
 |南非  <br/> |宣佈  <br/> |
    
 ## <a name="exchange-online"></a>Exchange Online
@@ -68,13 +68,13 @@ SharePoint Online 移動時，也被移動下列服務的資料：
   
 - 商務用 OneDrive
     
-- Project Online
+- Microsoft Project Online
     
 - Project for Office 365
     
 - Office 365 影片服務
     
-- Office Online
+- 在 s 瀏覽器中的 office
     
 - Office 365 專業增強版
     
@@ -118,7 +118,7 @@ SharePoint Online 移動時，也被移動下列服務的資料：
    
 |**移動完成後**|
 |:-----|
-| 會議資料 （上傳的簡報等） 並不會移動，並將須重新上傳。  <br/>  較舊的 Lync 用戶端，例如 Lync 2010 用戶端和 Lync for Mac 2011 用戶端已知快取服務而造成登入問題的 DNS 資訊。 清除 DNS 快取可能需要如果使用者不是在最新的 Skype for Business Windows 用戶端上。 要求使用者將執行[疑難排解精靈](https://support.microsoft.com/en-us/kb/2541980)，然後遵循指示如何清除的用戶端快取。 Lync for Mac 用戶端使用者應遵循[這些指示](https://support.microsoft.com/en-us/kb/2629861)。  <br/> |
+| 會議資料 （上傳的簡報等） 並不會移動，並將須重新上傳。  <br/>  較舊的 Lync 用戶端，例如 Lync 2010 用戶端和 Lync for Mac 2011 用戶端已知快取服務而造成登入問題的 DNS 資訊。 清除 DNS 快取可能需要如果使用者不是在最新的 Skype for Business Windows 用戶端上。 要求使用者將執行[疑難排解精靈](https://support.microsoft.com/kb/2541980)，然後遵循指示如何清除的用戶端快取。 Lync for Mac 用戶端使用者應遵循[這些指示](https://support.microsoft.com/kb/2629861)。  <br/> |
    
 ### <a name="skype-for-business-moves-that-involve-a-third-party-audio-conferencing-provider"></a>商務用 Skype 移動所涉及之協力廠商音訊會議提供者
 商務用 Skype 的協力廠商音訊會議提供者的附加元件服務都無法使用，如使用者位於新的地理特有的資料中心。  使用協力廠商音訊會議提供者服務的現有客戶應該不會要求移至新的地理特有的資料中心。  部署到新的地理特有的資料中心的新客戶必須要求移至使用協力廠商音訊會議提供者的地區資料中心。
@@ -135,5 +135,5 @@ SharePoint Online 移動時，也被移動下列服務的資料：
   
 [Microsoft Dynamics CRM online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
   
-[依地區的 azure 服務](https://azure.microsoft.com/en-us/regions/)
+[依地區的 azure 服務](https://azure.microsoft.com/regions/)
 

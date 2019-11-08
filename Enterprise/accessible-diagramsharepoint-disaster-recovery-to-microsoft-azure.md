@@ -11,12 +11,12 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 4b855224-8e67-4efa-a3a4-908ee0ca6412
 description: 本文是圖表的名為 Microsoft Azure 的 SharePoint 嚴重損壞修復易於存取的文字版本。
-ms.openlocfilehash: d7df0f44dd4e7f0cbb8580029991bc9280892afb
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: e711452f6e019ceb280d43c2e0167507a0b0ef20
+ms.sourcegitcommit: b4514cd852093181dd4c27009a78aca3ca50d2e2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068519"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38038232"
 ---
 # <a name="accessible-diagram---sharepoint-disaster-recovery-to-microsoft-azure"></a>易於存取的圖表-Microsoft Azure 的 SharePoint 嚴重損壞修復
 
@@ -46,7 +46,7 @@ ms.locfileid: "34068519"
   
 - 後端服務 
     
-- 系統管理 
+- 系統管理員 
     
 - 工作流程管理員 
     
@@ -194,10 +194,9 @@ VPN 閘道介面與作用中的 VPN 閘道子網路。
 
 針對此解決方案的 AD ds 設定構成了 AD DS 是部分是部署在內部和部分是在 Azure 虛擬機器上部署的混合式部署案例。 
   
-重要事項 — 部署在 Azure 中的 AD DS 之前，請閱讀指導方針部署 Windows Server Active directory 上的 Microsoft Azure 虛擬機器 (http://msdn.microsoft.com/en-us/library/windowsazure/jj156090.aspx)。 
+重要事項 — 部署在 Azure 中的 AD DS 之前，請閱讀指導方針部署 Windows Server Active directory 上的 Microsoft Azure 虛擬機器 (https://docs.microsoft.com/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100)。 
   
-如需設計及部署 Active Directory 環境的完整指導，請參閱http://TechNet.microsoft.com。 
-  
+ 
 本參考架構包含兩部虛擬機器設定為網域控制站。 每個已設定為，如下所示： 
   
 - 大小 — 小。 

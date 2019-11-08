@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: 37f90ba5c008a4e0b562526d10185e01d07e4918
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 1a694d516a81fec7d6c619c17414e2245dd6b0ef
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067169"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030607"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -53,7 +53,7 @@ PAC 檔案部署到在圖 1 點 1 的網頁瀏覽器中。 使用時的 PAC 檔�
 
 分開如果您選擇不要只直接針對最佳化類別端點，您傳送給 proxy 伺服器的類別端點將需要略過繼續處理的 proxy 伺服器中所列的任何必要允許進行路由傳送。 例如，SSL 符號並檢查及 Proxy 驗證與不相容的最佳化和允許類別端點。 圖 1 中的資料點 2 proxy 伺服器。
 
-常見的設定為允許而無需處理來自拜訪人次 proxy 伺服器的 Office 365 網路流量的目的地 IP 位址使用 proxy 伺服器的所有輸出流量。 使用 SSL，然後檢查問題的相關資訊，請參閱[使用協力廠商的網路裝置或在 Office 365 流量的解決方案](https://support.microsoft.com/en-us/help/2690045/using-third-party-network-devices-or-solutions-with-office-365)。
+常見的設定為允許而無需處理來自拜訪人次 proxy 伺服器的 Office 365 網路流量的目的地 IP 位址使用 proxy 伺服器的所有輸出流量。 使用 SSL，然後檢查問題的相關資訊，請參閱[使用協力廠商的網路裝置或在 Office 365 流量的解決方案](https://support.microsoft.com/help/2690045/using-third-party-network-devices-or-solutions-with-office-365)。
 
 有兩種類型的 Get-PacFile 指令碼會產生的 PAC 檔案。
 
@@ -125,7 +125,7 @@ Office 365 連線的相關的常見問題集的系統管理員問題：
   
 ### <a name="how-do-i-determine-the-location-of-my-tenant"></a>如何判斷我的租用戶的位置？
 
- **租用戶的位置**是最佳決定使用我們的[資料中心對應](http://aka.ms/datamaps)。
+ **租用戶的位置**是最佳決定使用我們的[資料中心對應](https://aka.ms/datamaps)。
   
 ### <a name="am-i-peering-appropriately-with-microsoft"></a>'M 我對等適當地與 Microsoft 嗎？
 
@@ -140,7 +140,7 @@ Office 365 連線的相關的常見問題集的系統管理員問題：
   
 請參閱 < IP 相關聯 Office 365 上您想要的詳細資訊嗎？
   
-1. 請檢查是否 IP 位址會包含在較大的發佈範圍使用[CIDR [小算盤]](http://jodies.de/ipcalc)。
+1. 請檢查是否 IP 位址會包含在較大的發佈範圍使用[CIDR [小算盤]](https://jodies.de/ipcalc)。
 2. 請參閱協力廠商是否擁有 IP 與[whois 查詢](https://dnsquery.org/)。 如果是 Microsoft 所擁有，可能是內部的協力廠商。
 3. 檢查憑證，在瀏覽器中連線至 IP 位址使用*HTTPS://\<IP_ADDRESS\> * ，檢查憑證，以了解哪些網域相關聯的 IP 位址上列出的網域。 如果它是 Microsoft 所擁有的 IP 位址，而且不在清單上的 Office 365 IP 位址，很可能的 IP 位址是與 Microsoft CDN 例如*MSOCDN.NET*或不含已發佈的 IP 資訊的另一個 Microsoft 網域相關聯。 如果您發現在憑證上的網域是其中一個我們宣告清單的 IP 位址，請讓我們知道。
 
@@ -157,7 +157,7 @@ serviceA.office.com -> CNAME: serviceA.domainA.com -> CNAME: serviceA.domainB.co
 
 Proxy 伺服器會驗證這在上述範例中是 serviceA.office.com 初始 URL，而此 URL 可能會包含在 Office 365 發佈。 Proxy 伺服器要求的 IP 位址至該 URL 的 DNS 解析，也會收到備份 IP_1。 它不會驗證中繼 cname 重新導向。
 
-硬式編碼設定或間接的 Office 365 Fqdn 為基礎的核准清單不建議使用，不受支援的 Microsoft，和已知會造成客戶連線問題。 封鎖 CNAME 重新導向，或，否則不正確的 DNS 解決方案解決 Office 365 DNS 項目，就可以解決透過 DNS 條件轉寄 （範圍限定為直接使用 Office 365 Fqdn） 與 DNS 遞迴啟用。 許多協力廠商周邊網路產品原生整合建議他們使用[Office 365 IP 位址和 URL Web 服務](https://docs.microsoft.com/en-us/office365/enterprise/office-365-ip-web-service)的設定中的 Office 365 端點核准清單。
+硬式編碼設定或間接的 Office 365 Fqdn 為基礎的核准清單不建議使用，不受支援的 Microsoft，和已知會造成客戶連線問題。 封鎖 CNAME 重新導向，或，否則不正確的 DNS 解決方案解決 Office 365 DNS 項目，就可以解決透過 DNS 條件轉寄 （範圍限定為直接使用 Office 365 Fqdn） 與 DNS 遞迴啟用。 許多協力廠商周邊網路產品原生整合建議他們使用[Office 365 IP 位址和 URL Web 服務](https://docs.microsoft.com/office365/enterprise/office-365-ip-web-service)的設定中的 Office 365 端點核准清單。
 
 ### <a name="why-do-i-see-names-such-as-nsatcnet-or-akadnsnet-in-the-microsoft-domain-names"></a>為什麼看名稱，例如 nsatc.net 或 akadns.net Microsoft 網域名稱？
 <a name="bkmk_akamai"> </a>
@@ -194,7 +194,7 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
 |**Exchange** <br/> |Exchange Online 和 Exchange Online Protection <br/> |
 |**SharePoint** <br/> |SharePoint Online 和商務用 OneDrive <br/> |
 |**商務用 Skype Online 及 Microsoft Teams** <br/> |Skype for Business 和 Microsoft Teams <br/> |
-|**通用** <br/> |Office 365 專業增強版、 Office Online、 Azure AD 和其他常見的網路端點 <br/> |
+|**通用** <br/> |Office 365 專業增強版、 瀏覽器中，Azure AD 中的 Office 和其他常見的網路端點 <br/> |
 
 除了基本的網際網路服務，還有只用來整合功能的協力廠商服務。 雖然整合需要這些項目，它們被標示為選用這表示服務的核心功能將會繼續運作如果端點無法存取 Office 365 端點文件中。 任何網路端點，如此才會有 required 屬性設定為 true。 這是選用的任何網路端點會有必要的屬性設定為 false 並備忘稿屬性將詳細說明如果封鎖的連線，您應該會遺失的功能。
   
@@ -219,7 +219,7 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
   
 [ExpressRoute 與 Power BI](https://powerbi.microsoft.com/documentation/powerbi-admin-power-bi-expressroute/)
   
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
   
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
   

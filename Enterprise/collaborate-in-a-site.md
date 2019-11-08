@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: d0f4528db683795da0f3c949228f902d775f6b7e
-ms.sourcegitcommit: f4469fee3e3f9665298d3052f30a4c6ab12643f8
+ms.openlocfilehash: 25b0aea05c922385828e62512d3724da7324c719
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "37920166"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38029157"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -25,7 +25,7 @@ ms.locfileid: "37920166"
 
 這段影片顯示本文所述的設定步驟。</br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE44Llg?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE44Llg?autoplay=false]
 
 ## <a name="azure-organizational-relationships-settings"></a>Azure 的組織關聯性設定
 

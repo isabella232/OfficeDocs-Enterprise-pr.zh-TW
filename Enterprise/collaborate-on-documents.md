@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 和 OneDrive 文件上的 guests 與共同作業。
-ms.openlocfilehash: 1160e26c0aa23da499b8c0ef96bc5dd5d8e77004
-ms.sourcegitcommit: f4469fee3e3f9665298d3052f30a4c6ab12643f8
+ms.openlocfilehash: 9ddbae276252c89ecae31a7f2bf5f1a3bf59af0f
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "37920146"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38029147"
 ---
 # <a name="collaborate-with-guests-on-a-document"></a>在文件上與來賓共同作業
 
@@ -23,7 +23,7 @@ ms.locfileid: "37920146"
 
 這段影片顯示本文所述的設定步驟。</br>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE450Vt?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE450Vt?autoplay=false]
 
 ## <a name="azure-organizational-relationships-settings"></a>Azure 的組織關聯性設定
 

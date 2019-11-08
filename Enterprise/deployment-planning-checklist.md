@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 5fa4f6ef-35ad-4840-91c1-4834df3df5a0
 description: 這份檢查清單可協助您的組織，當您規劃及準備移轉至 Office 365。
-ms.openlocfilehash: 9cd2977a43f26e724d85c723aa6aad70937b1f1f
-ms.sourcegitcommit: 2a7177c666dce3c00462b97463a6855e9e3a81f0
+ms.openlocfilehash: 9248ed4a252990094e91579deb723aa32f04316a
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "34249491"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38028867"
 ---
 # <a name="deployment-planning-checklist-for-office-365"></a>部署 Office 365 規劃檢查清單
 
@@ -78,5 +78,5 @@ ms.locfileid: "34249491"
 | （選用） 將資料 （[電子郵件](https://go.microsoft.com/fwlink/?LinkId=534823)，以及[檔案](https://go.microsoft.com/fwlink/?LinkId=534824)，依此類推） 移轉 |||||
 |驗證功能，然後完成的最後一個步驟 |||||
 | 移轉[為指向 Office 365 的 DNS 設定](https://go.microsoft.com/fwlink/?LinkId=534835) |||||
-| 告訴您的使用者，當他們可以[開始使用 Office 365](https://support.office.com/en-us/article/office-365-basics-video-training-396b8d9e-e118-42d0-8a0d-87d1f2f055fb?ui=en-US&amp;rs=en-US&amp;ad=US) |||||
+| 告訴您的使用者，當他們可以[開始使用 Office 365](https://support.office.com/article/office-365-basics-video-training-396b8d9e-e118-42d0-8a0d-87d1f2f055fb?ui=en-US&amp;rs=en-US&amp;ad=US) |||||
 | 重新設定用戶端系統以連線到 Office 365 （ [Office](https://go.microsoft.com/fwlink/?LinkId=534836)、 [Outlook](https://go.microsoft.com/fwlink/?LinkId=534837)、 [Outlook for Mac](https://support.office.com/article/6e27792a-9267-4aa4-8bb6-c84ef146101b#PickTab=Outlook_for_Mac)、[行動裝置](https://go.microsoft.com/fwlink/?LinkId=534840)）  |||||

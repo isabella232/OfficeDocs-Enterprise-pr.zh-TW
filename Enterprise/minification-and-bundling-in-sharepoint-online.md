@@ -1,5 +1,5 @@
 ---
-title: 縮製及統合在 SharePoint Online
+title: SharePoint Online 中的縮製和統合
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -13,14 +13,14 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 87a52468-994e-43a2-b155-7229ed659291
 description: 本文說明如何使用縮製及統合技術搭配 Web Essentials 來減少 HTTP 要求數目，並降低 SharePoint Online 中載入頁面所花費的時間。
-ms.openlocfilehash: 823011894019e9602d949f1301994d79dc209664
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.openlocfilehash: 3303ea49a1308e4ad7b3139547c20b4351fc84b5
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616846"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031308"
 ---
-# <a name="minification-and-bundling-in-sharepoint-online"></a>縮製及統合在 SharePoint Online
+# <a name="minification-and-bundling-in-sharepoint-online"></a>SharePoint Online 中的縮製和統合
 
 本文說明如何使用縮製及統合技術搭配 Web Essentials 來減少 HTTP 要求數目，並降低 SharePoint Online 中載入頁面所花費的時間。
   
@@ -33,7 +33,7 @@ ms.locfileid: "35616846"
 您可以使用協力廠商軟體如 Web Essentials 來統合 CSS 和 JavaScript 檔案。
   
 > [!IMPORTANT]
-> Web Essentials 是協力廠商、 開放原始碼、 社群為基礎的專案。 軟體會延伸至 Visual Studio 2012 和 Visual Studio 2013 和 Microsoft 並不支援。 若要下載 Web Essentials，請瀏覽網站， [http://vswebessentials.com/download](https://go.microsoft.com/fwlink/p/?LinkId=525629)。 
+> Web Essentials 是協力廠商、 開放原始碼、 社群為基礎的專案。 軟體會延伸至 Visual Studio 2012 和 Visual Studio 2013 和 Microsoft 並不支援。 若要下載 Web Essentials，請瀏覽網站， [https://vswebessentials.com/download](https://go.microsoft.com/fwlink/p/?LinkId=525629)。 
   
 Web Essentials 提供兩種統合形式：
   

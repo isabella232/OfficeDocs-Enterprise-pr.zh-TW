@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
 description: 摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。 了解何種類型的解決方案是很好的調整，以及如何設定 Microsoft Azure，以其中一個主機。
-ms.openlocfilehash: 913910af1acf1353c3ee9b553178c4f0736eb290
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 7bc274098f961ccf9aa6aef05f595dfc6e116bec
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070289"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032288"
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure SharePoint 2013 架構
 
@@ -54,9 +54,9 @@ Azure 基礎結構服務是令人讚嘆裝載 SharePoint 解決方案的選項�
 
 儘管本文使用範例 SharePoint 拓撲，您可以使用這些設計概念與任何 SharePoint 伺服器陣列拓撲。 設計 Azure 環境之前，請使用下列的拓撲、 架構、 容量及效能指引來設計 SharePoint 伺服器陣列：
   
-- [適用於 SharePoint 2013 IT 專業人員的架構設計](http://technet.microsoft.com/en-us/sharepoint/fp123594.aspx)
+- [適用於 SharePoint 2013 IT 專業人員的架構設計](http://technet.microsoft.com/sharepoint/fp123594.aspx)
     
-- [規劃效能和 SharePoint Server 2013 中的容量管理](http://technet.microsoft.com/library/8dd52916-f77d-4444-b593-1f7d6f330e5f.aspx)
+- [規劃效能和 SharePoint Server 2013 中的容量管理](https://technet.microsoft.com/library/8dd52916-f77d-4444-b593-1f7d6f330e5f.aspx)
     
 ## <a name="determine-the-active-directory-domain-type"></a>判定 Active Directory 網域類型
 
@@ -117,7 +117,7 @@ Azure 基礎結構服務是令人讚嘆裝載 SharePoint 解決方案的選項�
   
 下表提供這些虛擬機器，在 Azure 中的設定建議。 供您自己的環境中使用這些做為起點 — 提供充足的儲存您的 Azure 環境不會與您的內部部署環境通訊的地方專用網域。
   
-|**Item**|**設定**|
+|**項目**|**設定**|
 |:-----|:-----|
 |在 Azure 中的虛擬機器大小  <br/> |在標準層中的 A1 或 A2 大小  <br/> |
 |作業系統  <br/> |Windows Server 2012 R2  <br/> |

@@ -10,16 +10,16 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 129f4e45-647e-4cf1-92a6-4d86d8396e73
 description: 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表易於存取的文字版本。
-ms.openlocfilehash: ddf215544b811257e6d43f212784a3a1e5aac7b0
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: ce1fe525b6a339c64d757b82a6f1c9ea4b82d23e
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068589"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38027567"
 ---
 # <a name="accessible-diagram---microsoft-exchange-2013-platform-options"></a>易於存取的圖表-Microsoft Exchange 2013 平台選項
 
-**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)易於存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](https://go.microsoft.com/fwlink/?LinkID=519139&amp;clcid=0x409)易於存取的文字版本。
   
 此海報描述商務決策者 (Bdm) 和結構設計師需要了解 Exchange Online 和 Exchange Server 部署，項目，並包括： 
   

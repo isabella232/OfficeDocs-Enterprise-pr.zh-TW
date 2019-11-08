@@ -13,16 +13,17 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: 摘要： 如何在 Azure Active Directory 中工作的隔離與存取控制。
-ms.openlocfilehash: d1f3a10d44a949511236d5adce38693ad2ad5c04
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 0e6423c53bd0c2823708f59830d1ba628a0c71ca
+ms.sourcegitcommit: 9eb68633728cc78e9906dab222edbf9977b17e21
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067297"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38035780"
 ---
 # <a name="isolation-and-access-control-in-azure-active-directory"></a>Azure Active Directory 中的隔離與存取控制
 
 Azure Active Directory 的設計目的在於多個承租人裝載高度安全的方式透過邏輯資料隔離。 Azure Active Directory 存取控制出入授權層。 Azure Active Directory 隔離客戶與安全性界限以內使用租用戶容器，以保護客戶內容，以便無法存取或洩漏共同的租用戶內容。 由 Azure Active Directory 的授權層執行三個檢查：
+
 - 存取 Azure Active Directory 租用戶啟用主體嗎？
 - 主體已啟用此租用戶中資料的存取權嗎？
 - 授權類型的資料存取要求此租用戶中是主體角色？

@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: 您規劃及設定部署建議與 Office 365 或 Microsoft 365 加速。
-ms.openlocfilehash: 86605b1476916d8510a52009dc20a37eafd7c08f
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: eee8dfedd72ed0e2e1ac6660d32167490a13f504
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782303"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030797"
 ---
 # <a name="deployment-advisors-for-office-365-or-microsoft-365-services"></a>Office 365 或 Microsoft 365 服務的部署建議
 
@@ -34,13 +34,13 @@ Office 365 或 Microsoft 365 的部署建議提供自我引導式的支援您的
 
 如果您未登入以租用戶系統管理員，您最終會看到一則訊息，您必須要有租用戶系統管理員權限。
 
-每個顧問是精靈，引導您完成所選擇的功能和您想要部署的選項。 在某些情況下，您可以使用精靈來設定某個項目，或啟動設定。 以下是範例。
+每個顧問是精靈，引導您完成所選擇的功能和您想要部署的選項。 在某些情況下，您可以使用精靈來設定某個項目，或啟動設定。 範例如下。
 
 ![](./media/deployment-advisors-for-office-365/m365-deploy-advisor1.png)
 
 顧問引導您完成決定自訂您的需求。 一路，您會收到指示、 指令碼，以及其他資源，以進行組態變更。
 
-在結束時，您會收到影片和參考文章的連結。 以下是範例。
+在結束時，您會收到影片和參考文章的連結。 範例如下。
 
 ![](./media/deployment-advisors-for-office-365/m365-deploy-advisor2.png)
 
@@ -320,7 +320,7 @@ Microsoft StaffHub 是雲端式的平台，您所有的裝置上運作。 它可
 
 ### <a name="microsoft-365-admin-center"></a>Microsoft 365 系統管理中心
 
-- [系統管理員中心方向](https://www.microsoft.com/en-us/videoplayer/embed/RWfMut)
+- [系統管理員中心方向](https://www.microsoft.com/videoplayer/embed/RWfMut)
 
 - [在系統管理中心中建立使用者](https://aka.ms/ac-createusers)
 

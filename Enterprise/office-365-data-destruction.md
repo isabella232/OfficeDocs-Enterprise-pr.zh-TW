@@ -13,18 +13,18 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: 回收、 處置或損毀的 Office 365 資料中心的磁碟機和伺服器相關的 Microsoft 原則的概觀。
-ms.openlocfilehash: 41971cc690d0e1560f2cf7f5bc3ad544e8dab5c6
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 1fca278dd23e84db2c6591eefc45d0b75265cf17
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067268"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032088"
 ---
 # <a name="office-365-data-destruction"></a>Office 365 資料毀損
 
 ## <a name="physical-data-destruction"></a>實體資料毀損
 
-Microsoft 的資料處理標準的原則可能會位址回收和處置的磁碟機和失敗或淘汰的伺服器。 之前重複使用任何 Office 365 磁碟機，Microsoft 會執行與國家標準與技術 Special Publication 800-88 （[媒體病毒掃描的 NIST SP 800-88 Guidelines](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf)） 一致的實體的病毒掃描程序。 由於 Office 365 中的所有磁碟機都加密使用 BitLocker 磁碟區層級加密，NIST SP 800-88-相容清除技術上不需要。 不過，Microsoft 會執行此程序。
+Microsoft 的資料處理標準的原則可能會位址回收和處置的磁碟機和失敗或淘汰的伺服器。 之前重複使用任何 Office 365 磁碟機，Microsoft 會執行與國家標準與技術 Special Publication 800-88 （[媒體病毒掃描的 NIST SP 800-88 Guidelines](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf)） 一致的實體的病毒掃描程序。 由於 Office 365 中的所有磁碟機都加密使用 BitLocker 磁碟區層級加密，NIST SP 800-88-相容清除技術上不需要。 不過，Microsoft 會執行此程序。
 
 無法在 Office 365 資料中心實體損毀及稽核透過 ISO 程序中使用的磁碟。 資產類型會決定適當的處理方式。 Microsoft 無法抹除的硬碟，摧毀媒體並呈現資訊的復原無法使用毀損程序。 例如，磁碟是實體損毀、 pulverized，或 incinerated。 Microsoft 會保留毀損的所有記錄，並重複使用 Office 365 內的伺服器上執行類似的病毒掃描程序。 這些指導方針包含電子版與實體的病毒掃描。
 
@@ -32,7 +32,7 @@ Microsoft 的資料處理標準的原則可能會位址回收和處置的磁碟�
 
 資料毀損程序，磁碟清除與 NIST 800-88 相容的方式 （如果可以的話） 並放置於工業碎機且實體摧毀。 Microsoft 的維護離開使用 NIST SP 800-88 一致清除/清除、 資產毀損、 加密、 準確清查、 追蹤，以及傳輸期間保護的監管鏈，資料中心資產的責任。 此程序透過關閉電路電視監視及毀損憑證發行完成時。
 
-Microsoft 會使用資料清除單位，從[極端的通訊協定解決方案](http://www.enterprisedataerasure.com/)(EPS)。 EPS 軟體支援 NIST SP 800-88 需求清除和清除/安全清除。 之前清除或損毀，詳細目錄是由 Microsoft 資產管理員所建立。 如果廠商用於毀損，廠商所提供毀損的損毀，每個資產來驗證的資產管理員的憑證。
+Microsoft 會使用資料清除單位，從[極端的通訊協定解決方案](https://www.enterprisedataerasure.com/)(EPS)。 EPS 軟體支援 NIST SP 800-88 需求清除和清除/安全清除。 之前清除或損毀，詳細目錄是由 Microsoft 資產管理員所建立。 如果廠商用於毀損，廠商所提供毀損的損毀，每個資產來驗證的資產管理員的憑證。
 
 ## <a name="virtual-data-destruction"></a>虛擬資料毀損
 

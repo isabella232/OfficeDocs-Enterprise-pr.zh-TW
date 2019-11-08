@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: a6d6ba01-2562-4c3d-a8f1-78748dd506cf
 description: 本文包含改進網頁型 Outlook 中的郵件下載效能的資訊。
-ms.openlocfilehash: a9070d9aefc8e4c223667848b4af5c06518de076
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.openlocfilehash: bb9a11a27af0b66f1dd557c459d1904c2e57ae92
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616806"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030868"
 ---
 # <a name="use-lean-popouts-to-reduce-memory-used-when-reading-mail-messages"></a>若要降低讀取郵件時使用的記憶體使用精簡的快顯
 
@@ -36,7 +36,7 @@ ms.locfileid: "35616806"
     
  **若要設定的所有使用者在 Office 365 組織的精簡快顯**
   
-1. [連線至 Exchange Online 使用遠端 PowerShell](http://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx )。
+1. [連線至 Exchange Online 使用遠端 PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx )。
     
 2. 執行[Set-organizationconfig](https://technet.microsoft.com/library/aa997443%28v=exchg.160%29.aspx)指令程式搭配 LeanPopoutEnabled 參數如下所示： 
     

@@ -13,17 +13,19 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: 說明如何內部登記錄的 Office 365 工程團隊運作。
-ms.openlocfilehash: 5fff245435d6b21a06bfe8544f991b919dbf15d9
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 3f0a65b618e34e5bba92a0f0b471c5c7c43bb329
+ms.sourcegitcommit: 9eb68633728cc78e9906dab222edbf9977b17e21
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067301"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38035523"
 ---
 # <a name="internal-logging-for-office-365-engineering"></a>Office 365 工程內部記錄
+
 除了事件和供客戶使用的記錄資料，還有就可使用 Office 365 工程內部記錄資料集合系統。 許多不同類型的記錄資料從 Office 365 伺服器上傳至運算稱為宇宙服務內部、 大的資料。 每個服務小組會將稽核記錄檔，從其各自的伺服器上傳至宇宙資料庫以進行彙總及分析。 FIPS 140-2-驗證 TLS 連線特別核准的連接埠和通訊協定使用一個稱為 Office 資料載入器 (ODL) 的專屬的自動化工具，就會發生此資料傳送。 工具在 Office 365 中用來收集和處理程序的稽核記錄不允許永久，或者不能取消變更原始稽核記錄的內容或時間排序。
 
 服務小組會使用為集中存放庫宇宙，以進行分析的應用程式使用量，以測量系統以及操作效能，並尋找異常和可能表示問題或安全性問題的模式。 每個服務小組上傳的基準之記錄到宇宙，根據他們正在分析時，通常包含下列：
+
 - 事件記錄檔
 - AppLocker 記錄檔
 - 效能資料

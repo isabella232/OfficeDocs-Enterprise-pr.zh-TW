@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 27ecff45-06a6-4629-bc45-9dab4eef3a21
 description: 摘要： 設定並示範如何 Office 365 資訊版權管理保護機密檔案，即使公佈到錯誤的 SharePoint Online 網站集合。
-ms.openlocfilehash: 9608bf68ced2f286f788dd94dfc27755f5ff23c0
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 3fa771d63ca30fb53ac2c77466546cf3a2098deb
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782493"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031568"
 ---
 # <a name="sensitive-file-protection-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的敏感檔案保護
 
@@ -32,7 +32,7 @@ ms.locfileid: "35782493"
 透過本文中的指示，您可以啟用並測試 Office 365 中的 IRM，包含可能在您的 Office 365 試用版訂閱中的敏感資訊的檔案。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建置 Office 365 開發/測試環境
 
@@ -92,7 +92,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 接下來，您建立私人的主管群組，並將新的高階主管帳戶新增至它。
   
-1. 在瀏覽器中，移至 Office 入口網站，網址[http://admin.microsoft.com](http://admin.microsoft.com)並登入 Office 365 試用訂閱以全域管理員帳戶。
+1. 在瀏覽器中，移至 Office 入口網站，網址[https://admin.microsoft.com](https://admin.microsoft.com)並登入 Office 365 試用訂閱以全域管理員帳戶。
     
   - 如果您使用輕量型 Office 365 開發/測試環境，開啟 Internet Explorer 或您的瀏覽器的私人工作階段，並從您本機電腦登入。
     
@@ -118,7 +118,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
   - 首席作業長
     
-9. 按一下 [**儲存**]，然後按一下 [**關閉**]。
+9. 按一下 [儲存]****，然後按一下 [關閉]****。
     
 10. 關閉 [ **Office 系統管理中心**] 索引標籤。
     
@@ -166,7 +166,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office 的首頁**] 索引標籤中，按一下右上角的使用者圖示，然後按一下 [**登出]**。
     
-2. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+2. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 3. 在**Office 365 登入**] 頁面上，按一下 [**使用另一個帳戶**。
     
@@ -204,7 +204,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office 的首頁**] 索引標籤中，按一下右上角的使用者圖示，然後按一下 [**登出]**。
     
-2. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+2. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 3. 在**Office 365 登入**] 頁面上，按一下 [**使用另一個帳戶**。
     
@@ -224,7 +224,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 在 [ **Microsoft Office 的首頁**] 索引標籤中，按一下右上角的使用者圖示，然後按一下 [**登出]**。
     
-2. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+2. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 3. 在**Office 365 登入**頁面上，按一下 [全域管理員帳戶名稱，輸入其密碼，然後按一下 [**登入**。
     
@@ -280,7 +280,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
 5. 從瀏覽器的 [ **Microsoft Office 的首頁**] 索引標籤按一下右上角的使用者圖示，然後按一下 [**登出]**。
     
-6. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+6. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 7. 在**Office 365 登入**頁面上，按一下 [CEO 帳戶名稱，輸入其密碼，然後按一下 [**登入**。
     
@@ -306,7 +306,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
   
 1. 從瀏覽器的 [ **Microsoft Office 的首頁**] 索引標籤按一下右上角的使用者圖示，然後按一下 [**登出]**。
     
-2. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+2. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 3. 在**Office 365 登入**頁面上，按一下 [User5 帳戶名稱，輸入其密碼，然後按一下 [**登入**。
     
@@ -318,7 +318,7 @@ New-MsolUser -DisplayName "COO" -FirstName "Chief" -LastName "Operations Officer
     
     您應該會看到訊息指出，「 很抱歉，Word 無法開啟這份文件，因為它受到資訊版權管理 (IRM) 保護。 」 
     
-7. 按一下 [**在 Word 中編輯**]。 如果您想要開啟的檔案，會提示您。 按一下 [**是**]。
+7. 按一下 [**在 Word 中編輯**]。 如果您想要開啟的檔案，會提示您。 按一下 [是]****。
     
 8. 系統提示您登入。 輸入帳戶的 User5 帳戶名稱，然後再按 [**下一步**。
     

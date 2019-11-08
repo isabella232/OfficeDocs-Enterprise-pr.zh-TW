@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
 description: 摘要： 使用 Office 365 PowerShell 來指派個別使用者 Skype 線上商務原則通訊設定。
-ms.openlocfilehash: 3c6c869874329d7efb6d8c417c797c9f81df6bf8
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 2252a6df4298bb36a669404aefac3b14eaa23b7f
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069289"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031038"
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 
@@ -29,7 +29,7 @@ ms.locfileid: "34069289"
 
 使用這些指示以取得設定，請執行命令 （略過您已經完成的步驟）：
   
-1. 下載並安裝[商務用 Skype 商務 Online 連接器模組](https://www.microsoft.com/en-us/download/details.aspx?id=39366)。
+1. 下載並安裝[商務用 Skype 商務 Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)。
     
 2. 開啟 Windows PowerShell 命令提示字元並執行下列命令： 
     

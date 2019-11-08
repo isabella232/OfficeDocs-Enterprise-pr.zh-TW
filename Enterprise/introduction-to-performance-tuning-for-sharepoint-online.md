@@ -8,17 +8,19 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 81c4be5f-327e-435d-a568-526d68cffef0
 description: 本文說明在 SharePoint Online 中設計最佳效能的頁面時所應考量的特定事項。
-ms.openlocfilehash: d0dc4d6eac1a8711d1c93b97eccbf5474092d3af
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
-ms.translationtype: HT
+ms.openlocfilehash: 3c2c6ccc58659aceaaf831b97eb8c4c05141afce
+ms.sourcegitcommit: fa900775790eb369db1983cd3868b628b699f145
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616676"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38033399"
 ---
 # <a name="introduction-to-performance-tuning-for-sharepoint-online"></a>SharePoint Online 效能調整的簡介
 
@@ -124,7 +126,7 @@ SharePoint Online
     
 - 與伺服器的實體距離太遠
     
-您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/en-us/office365/enterprise/content-delivery-networks) (部分機器翻譯)。
+您可以在 SharePoint Online 中利用的其中一項功能為 Microsoft CDN (內容傳遞網路)。 CDN 基本上是部署到多個資料中心的分散式伺服器集合。 使用 CDN 時，頁面上的內容可裝載於接近用戶端的伺服器，即便用戶端離原始 SharePoint 伺服器很遠。 Microsoft 未來將多加利用此功能來儲存無法自訂之頁面的本機執行個體，例如 SharePoint Online 管理首頁。 如需有關 CDN 的詳細資訊，請參閱[內容傳遞網路](https://docs.microsoft.com/office365/enterprise/content-delivery-networks) (部分機器翻譯)。
   
 您必須注意但可能無能為力的因素是您的 ISP 連線速度。 簡單的速度測試工具會告訴您連線速度。
   
@@ -158,6 +160,6 @@ SharePoint Online
     
 - [使用 SharePoint Online 的物件快取](using-the-object-cache-with-sharepoint-online.md)
     
-- [操作方法：如何避免在 SharePoint Online 中受到節流控制或封鎖](https://msdn.microsoft.com/en-us/library/office/dn889829.aspx)
+- [操作方法：如何避免在 SharePoint Online 中受到節流控制或封鎖](https://msdn.microsoft.com/library/office/dn889829.aspx)
     
 

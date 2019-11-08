@@ -13,12 +13,12 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: 摘要： Microsoft 技術控制項做法的 Office 365 的概觀。
-ms.openlocfilehash: 1ddf4efdd8e2c2159f6d6c55cfeead1cfbd54395
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 3063bcaca85d529885fbafddda88f61325b2b83c
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067306"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031138"
 ---
 # <a name="office-365-technology-controls"></a>Office 365 技術控制 
 
@@ -39,7 +39,7 @@ Office 365 客戶加密箱可協助您符合規範，如果您需要在進行中
 
 在極罕見的執行個體時的 Microsoft 服務工程師需要存取您的資料，您授與存取權才能解決此問題： 所需的資料和有限的時間。 如果您拒絕存取要求時，Microsoft 工程師不需要存取您的內容，並將無法完成服務作業。 如果您核准要求，Microsoft 工程師已透過內容提供有限的剛時間存取監控和限制管理介面。
 
-支援工程師所採取的動作用途的稽核記錄，並可透過[Office 365 管理活動 API](https://msdn.microsoft.com/library/office/dn707383.aspx)和[安全性與合規性中心](http://protection.office.com/)。
+支援工程師所採取的動作用途的稽核記錄，並可透過[Office 365 管理活動 API](https://msdn.microsoft.com/library/office/dn707383.aspx)和[安全性與合規性中心](https://protection.office.com/)。
 
 >[!NOTE]
 > 客戶加密箱是在[Office 365 企業版 E5](https://products.office.com/business/office-365-enterprise-e5-business-software)作為附加元件形式購買。 如需詳細資訊，請參閱 [Office 365 Customer Lockbox 要求](https://support.office.com/article/Office-365-Customer-Lockbox-Requests-36f9cdd1-e64c-421b-a7e4-4a54d16440a2)。
@@ -60,7 +60,7 @@ Office 365 伺服器將並行工作階段限制一工作階段的每個服務小
 
 流量限制和 Office 365 人員的連線及設定需求的 Active Directory 群組原則所建立。 這些原則包含下列特性：
 
-- TSGs 使用[FIPS](https://www.microsoft.com/en-us/TrustCenter/Compliance/FIPS) 140-2 驗證的加密。
+- TSGs 使用[FIPS](https://www.microsoft.com/TrustCenter/Compliance/FIPS) 140-2 驗證的加密。
 - 30 分鐘一段時間之後中斷 TSG 工作階段。
 - TSG 工作階段會自動登出 24 小時之後。
 

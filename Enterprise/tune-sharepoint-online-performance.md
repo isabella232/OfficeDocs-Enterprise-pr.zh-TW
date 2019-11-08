@@ -11,16 +11,18 @@ localization_priority: Normal
 search.appverid:
 - MET150
 - SPO160
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 ms.assetid: f0522d4a-fbf4-41f9-854e-c9b59555091d
 description: 包含告訴您如何改善 SharePoint online 的頁面下載時間效能的其他文章連結。
-ms.openlocfilehash: 4352420637974e07a6c9d5ed843c312ea74729f4
-ms.sourcegitcommit: 67dbbf1a5ec8cc4b10ca10f267f871f0bc045e63
+ms.openlocfilehash: 8cd8b3b7a957fac7f3ddaed325cf64850b111fea
+ms.sourcegitcommit: fa900775790eb369db1983cd3868b628b699f145
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "37375491"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38033429"
 ---
 # <a name="tune-sharepoint-online-performance"></a>調整 SharePoint Online 效能
 
@@ -32,31 +34,31 @@ ms.locfileid: "37375491"
   
 - [SharePoint Online 效能調整的簡介](introduction-to-performance-tuning-for-sharepoint-online.md)
 
-- [使用 SharePoint Online 頁面診斷工具](page-diagnostics-for-spo.md)
+- [使用 Sharepoint Online 網頁診斷工具](page-diagnostics-for-spo.md)
 
-- [SharePoint Online 的導覽選項](navigation-options-for-sharepoint-online.md)
+- [SharePoint Online 的瀏覽選項](navigation-options-for-sharepoint-online.md)
 
-- [SharePoint Online 入口網站的效能指導方針](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
+- [SharePoint Online 入口網站的效能指導方針](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-performance)
 
 - [SharePoint Online 的影像最佳化](image-optimization-for-sharepoint-online.md)
 
-- [延遲載入 SharePoint Online 中的影像和 JavaScript](delay-loading-images-and-javascript-in-sharepoint-online.md)
+- [在 SharePoint Online 中延遲載入圖片與 JavaScript](delay-loading-images-and-javascript-in-sharepoint-online.md)
 
-- [縮製及統合在 SharePoint Online](minification-and-bundling-in-sharepoint-online.md)
+- [SharePoint Online 中的縮製和統合](minification-and-bundling-in-sharepoint-online.md)
 
 - [使用內容傳遞網路](using-content-delivery-networks-with-sharepoint-online.md)
 
 - [使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online](use-office-365-cdn-with-spo.md)
 
-- [使用內容搜尋網頁組件而不內容查詢網頁組件，來改善 SharePoint Online 中的效能](using-content-search-web-part-instead-of-content-query-web-part-to-improve-perfo.md)
+- [使用內容搜尋網頁組件 (而非內容查詢網頁組件) 來改善 SharePoint Online 中的效能](using-content-search-web-part-instead-of-content-query-web-part-to-improve-perfo.md)
 
-- [容量規劃和負載測試 SharePoint Online](capacity-planning-and-load-testing-sharepoint-online.md)
+- [SharePoint Online 容量規劃和負載測試](capacity-planning-and-load-testing-sharepoint-online.md)
 
 - [診斷 SharePoint Online 的效能問題](diagnosing-performance-issues-with-sharepoint-online.md)
 
 - [使用 SharePoint Online 的物件快取](using-the-object-cache-with-sharepoint-online.md)
 
-- [操作方法：如何避免在 SharePoint Online 中受到節流控制或封鎖](https://msdn.microsoft.com/en-us/library/office/dn889829.aspx)
+- [操作方法：如何避免在 SharePoint Online 中受到節流控制或封鎖](https://msdn.microsoft.com/library/office/dn889829.aspx)
 
 - [最佳化 SharePoint Online 的新式入口網站頁面的 Iframe](modern-iframe-optimization.md)
 

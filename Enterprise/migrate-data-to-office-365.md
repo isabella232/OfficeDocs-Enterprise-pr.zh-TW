@@ -14,12 +14,12 @@ search.appverid:
 - BCS160
 ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 description: 如果您已選擇退出 FastTrack 部署，且您準備好將資料移轉到 Office 365，這就是開始的位置。
-ms.openlocfilehash: cd9f113f7b8e66e22ad61c4f406ac693a8aa3695
-ms.sourcegitcommit: 1e6e91fbdcbb6d8ef21d30f32c1f8e704f4f31ba
+ms.openlocfilehash: 8fa0b26a1051c33a32fa9a583c76662e998b0692
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "35597549"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031328"
 ---
 # <a name="migrate-your-organization-data-to-office-365-enterprise"></a>將貴組織資料移轉到 Office 365 企業版
 
@@ -36,11 +36,11 @@ ms.locfileid: "35597549"
 
 ## <a name="migrate-files-and-folders"></a>移轉檔案和資料夾
 - [移轉至 SharePoint Online 和 OneDrive](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。 （系統管理員）
-- [SharePoint Server 混合式組態藍圖 >](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)。 （系統管理員）
+- [SharePoint Server 混合式組態藍圖 ](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)。 （系統管理員）
 
 ## <a name="migrate-skype-for-business-users"></a>移轉商務用 Skype 使用者
 - [移轉至商務用 Skype Online](https://technet.microsoft.com/library/jj204969.aspx) (英文)。(系統管理員)
-- 下載[商務用 Skype 會議更新工具](https://www.microsoft.com/en-us/download/details.aspx?id=51659) (英文) 與[商務用 Skype 和 Lync 的 Meeting Update Tool](https://support.office.com/article/Meeting-Update-Tool-for-Skype-for-Business-and-Lync-2b525fe6-ed0f-4331-b533-c31546fcf4d4)。(系統管理員和/或使用者)
+- 下載[商務用 Skype 會議更新工具](https://www.microsoft.com/download/details.aspx?id=51659) (英文) 與[商務用 Skype 和 Lync 的 Meeting Update Tool](https://support.office.com/article/Meeting-Update-Tool-for-Skype-for-Business-and-Lync-2b525fe6-ed0f-4331-b533-c31546fcf4d4)。(系統管理員和/或使用者)
   
 ## <a name="need-to-talk-to-support"></a>需要連絡支援人員？
 [連絡商務產品的客戶支援 - 系統管理說明](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)，適用於商務版產品。

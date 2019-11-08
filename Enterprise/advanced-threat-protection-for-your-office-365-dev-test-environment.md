@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 51019757-20ac-498c-b51e-cae6d41a8c08
 description: 摘要：設定並示範 Office 365 開發/測試環境中的 Office 365 進階威脅防護。
-ms.openlocfilehash: 274f8558d23714a73e0891500dac5d5e007b6be2
-ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
+ms.openlocfilehash: e3efe339550992fba85509cd07a791d916d5d6e7
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34162416"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030557"
 ---
 # <a name="advanced-threat-protection-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的進階威脅防護
 
@@ -74,7 +74,7 @@ Office 365 進階威脅防護 (ATP) 是Exchange Online Protection (EOP) 的一�
     
 13. 選取本文中的「**此網站**」文字，然後按一下工具列中的超連結按鈕。
     
-14. 在 [ **URL**] 中，輸入**http://www.spamlink.contoso.com/**，按一下 [**確定**]，然後按一下 [**傳送**。
+14. 在 [ **URL**] 中，輸入**https://www.spamlink.contoso.com/**，按一下 [**確定**]，然後按一下 [**傳送**。
     
 15. 開啟 Internet Explorer 的私用瀏覽模式中的個別執行個體移至 Microsoft 365 系統管理中心 ([https://admin.microsoft.com](https://admin.microsoft.com))，並登入 Office 365 試用訂閱以全域管理員帳戶。
     
@@ -156,7 +156,7 @@ Office 365 進階威脅防護 (ATP) 是Exchange Online Protection (EOP) 的一�
 您現在可以使用此環境建立新的原則並試驗 ATP。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="see-also"></a>另請參閱
 

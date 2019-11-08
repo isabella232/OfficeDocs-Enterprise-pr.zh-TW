@@ -13,12 +13,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 來建立新的 SharePoint Online 網站，並再將使用者和群組新增至這些網站。
-ms.openlocfilehash: c2ed2afd7915fa5fc3aa936b5aa09cf90679ff97
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 2262c69af7dce7472257512d215c1f0425f875f0
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069099"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031028"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>建立 SharePoint Online 網站並新增使用者使用 Office 365 PowerShell
 
@@ -28,7 +28,7 @@ ms.locfileid: "34069099"
 
 ## <a name="before-you-begin"></a>開始之前
 
-本主題中的程序需要您連線至 SharePoint Online。 如需相關指示，請參閱[連線到 SharePoint Online PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+本主題中的程序需要您連線至 SharePoint Online。 如需相關指示，請參閱[連線到 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 ## <a name="step-1-create-new-site-collections-using-office-365-powershell"></a>步驟 1： 建立新的網站集合使用 Office 365 PowerShell
 

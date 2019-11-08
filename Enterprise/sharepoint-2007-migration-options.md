@@ -21,12 +21,12 @@ search.appverid:
 - OSU160
 ms.assetid: 66325a43-5816-4f8e-81ba-c11b71345b7c
 description: SharePoint Server 2007 已達到終止支援，及該是時候來升級。 使用這篇文章可協助您建立您的計劃。
-ms.openlocfilehash: 98151ecd32f0066f583da1142d6010d46e120a43
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: acf1e0283f70763c0f0fbd458b7c79b23fc31235
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070699"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031548"
 ---
 # <a name="sharepoint-2007-migration-options-to-consider"></a>若要考慮 SharePoint 2007 遷移選項
 
@@ -59,9 +59,9 @@ Microsoft SharePoint 2007 與 SharePoint Server 2007 已達到終止支援。 �
 > [!TIP]
 > Microsoft Office SharePoint Server 2007 也有未深入涵蓋以下逐步升級。 若要查看特定步驟的升級的文章會看到[SharePoint Server 2007 終止支援藍圖](sharepoint-2007-end-of-support.md)。 
   
-請記得檢查任何版本的升級至 SharePoint[產品生命週期](https://support.microsoft.com/en-us/lifecycle/search)與系統需求。 這是讓您將會注意時 （例如，如果您在 SharePoint Server 2010 規劃多個升級，請確定您知道其支援日期結尾，如舊版產品暫停），則必須進行下一次升級，以確保您有支援您的計劃的硬體。 
+請記得檢查任何版本的升級至 SharePoint[產品生命週期](https://support.microsoft.com/lifecycle/search)與系統需求。 這是讓您將會注意時 （例如，如果您在 SharePoint Server 2010 規劃多個升級，請確定您知道其支援日期結尾，如舊版產品暫停），則必須進行下一次升級，以確保您有支援您的計劃的硬體。 
   
-如果您計劃轉換部分，或全部，您的 SharePoint 網站至 Office 365，在雲端中，這是書籤連結至[Office 365 服務說明](https://technet.microsoft.com/en-us/library/office-365-service-descriptions.aspx)的時間。 您需要的服務描述以深入了解 SharePoint Online 的功能以及它們可能之間的差異從內部部署 SharePoint Server。 升級功能的 Microsoft Office SharePoint Server 2007 伺服器陣列。 如果您安裝已損毀的網站，修正它們，在升級之前。
+如果您計劃轉換部分，或全部，您的 SharePoint 網站至 Office 365，在雲端中，這是書籤連結至[Office 365 服務說明](https://technet.microsoft.com/library/office-365-service-descriptions.aspx)的時間。 您需要的服務描述以深入了解 SharePoint Online 的功能以及它們可能之間的差異從內部部署 SharePoint Server。 升級功能的 Microsoft Office SharePoint Server 2007 伺服器陣列。 如果您安裝已損毀的網站，修正它們，在升級之前。
   
 ## <a name="a-note-about-managing-risk"></a>附註的相關風險管理
 
@@ -76,7 +76,7 @@ Microsoft SharePoint 2007 與 SharePoint Server 2007 已達到終止支援。 �
 方法，例如就地升級將擔任直接在 Microsoft Office SharePoint Server 2007 伺服器陣列，提供您放棄路徑，並再次開頭提出環境較少簡單選項。 盡可能，建立一些安全措施，（例如，以及測試原始環境的備份）。 例如，如果您的 Microsoft Office SharePoint Server 2007 伺服器陣列虛擬，且基於備份與還原為重複項目，然後備份和還原您的服務窗口升級前的最新資料庫。 了解您可以還原資料庫備份不會選擇只提供保全，它可讓您的想法和平。
   
 > [!TIP]
-> 升級的最佳做法文件存在[Microsoft Office SharePoint Server 2007](https://technet.microsoft.com/en-us/library/cc261992%28v=office.12%29.aspx)、 [SharePoint Server 2010](https://technet.microsoft.com/en-us/library/cc261992%28v=office.14%29.aspx)、 [SharePoint Server 2013](https://technet.microsoft.com/en-us/library/cc261992%28v=office.15%29.aspx)和[SharePoint Server 2016](https://technet.microsoft.com/en-us/library/cc261992%28v=office.16%29.aspx)。 您也可以搜尋適用於[Microsoft 合作夥伴](https://partnercenter.microsoft.com/en-us/pcv/search)擁有升級或 Office 365 移轉的經驗。 
+> 升級的最佳做法文件存在[Microsoft Office SharePoint Server 2007](https://technet.microsoft.com/library/cc261992%28v=office.12%29.aspx)、 [SharePoint Server 2010](https://technet.microsoft.com/library/cc261992%28v=office.14%29.aspx)、 [SharePoint Server 2013](https://technet.microsoft.com/library/cc261992%28v=office.15%29.aspx)和[SharePoint Server 2016](https://technet.microsoft.com/library/cc261992%28v=office.16%29.aspx)。 您也可以搜尋適用於[Microsoft 合作夥伴](https://partnercenter.microsoft.com/pcv/search)擁有升級或 Office 365 移轉的經驗。 
   
 ## <a name="make-your-plan"></a>讓您的計劃
 
@@ -176,8 +176,8 @@ Microsoft SharePoint 2007 與 SharePoint Server 2007 已達到終止支援。 �
 
 [資源可以幫助您升級從 Office 2007 伺服器和用戶端](upgrade-from-office-2007-servers-and-products.md)
   
-[搜尋 Microsoft 週期原則和生命週期](https://support.microsoft.com/en-us/lifecycle)
+[搜尋 Microsoft 週期原則和生命週期](https://support.microsoft.com/lifecycle)
   
-[適用於 Microsoft 合作夥伴可以協助進行升級或移轉搜尋](https://partnercenter.microsoft.com/en-us/pcv/search)
+[適用於 Microsoft 合作夥伴可以協助進行升級或移轉搜尋](https://partnercenter.microsoft.com/pcv/search)
   
 

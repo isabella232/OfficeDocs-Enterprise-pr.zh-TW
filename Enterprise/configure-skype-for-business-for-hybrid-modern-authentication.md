@@ -14,12 +14,12 @@ ms.assetid: 522d5cec-4e1b-4cc3-937f-293570717bc6
 ms.collection:
 - M365-security-compliance
 description: 新式驗證，是一種方法提供了更安全的使用者驗證和授權、 skype for Business server 內部部署和 Exchange server 內部部署，以及分割網域 Skype for Business 混合可用的身分識別管理。
-ms.openlocfilehash: 4a49885fc6276f180872facb777bfe5a5adb61ee
-ms.sourcegitcommit: f9b5e029ed427b7c15cbfb6231a9259b34c9436f
+ms.openlocfilehash: 17079ab5e47e2e739780d3df4a9a523edccda14f
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "36759681"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38029127"
 ---
 # <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>如何設定商務用 Skype 內部部署以使用混合式新式驗證
 
@@ -67,7 +67,7 @@ ms.locfileid: "36759681"
   
 您可以看到有四個不同的位置，來開啟 MA ！ 為最佳使用者經驗，我們建議您開啟 MA 總共四個這些位置中。 如果您不能在所有這些位置開啟 MA，請調整步驟，讓您開啟 MA 只能在所需的環境的位置。
   
-請參閱支援的拓撲[與 MA 的商務用 Skype 的支援主題](https://technet.microsoft.com/en-us/library/mt803262.aspx)。 
+請參閱支援的拓撲[與 MA 的商務用 Skype 的支援主題](https://technet.microsoft.com/library/mt803262.aspx)。 
   
  **重要**請仔細檢查您開始之前已符合所有必要條件。 您會發現該資訊[以下](hybrid-modern-auth-overview.md)。
   
@@ -117,7 +117,7 @@ Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | 
   
  **附註**服務主要名稱 (Spn) 識別 web 服務，以及其關聯 （例如帳戶名稱或群組） 的安全性主體，讓該服務可對授權的使用者代理。 伺服器進行驗證的用戶端進行使用的資訊的中所含的 Spn。 
   
-1. 首先，連線至 AAD[這些](https://docs.microsoft.com/en-us/powershell/azure/active-directory/overview?view=azureadps-1.0)指示。
+1. 首先，連線至 AAD[這些](https://docs.microsoft.com/powershell/azure/active-directory/overview?view=azureadps-1.0)指示。
     
 2. 執行此命令中，內部部署，若要取得之 SFB web 服務 Url 的清單。
 
@@ -174,7 +174,7 @@ Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity evoSTS
 
 [新式驗證概觀連結](hybrid-modern-auth-overview.md)。 
   
-您需要了解如何使用您 skype 的新式驗證 (ADAL) 的商務用戶端嗎？ 我們是否已取得最新產品步驟[以下](https://technet.microsoft.com/en-us/library/mt710548.aspx)。
+您需要了解如何使用您 skype 的新式驗證 (ADAL) 的商務用戶端嗎？ 我們是否已取得最新產品步驟[以下](https://technet.microsoft.com/library/mt710548.aspx)。
   
 是否要閱讀這些步驟，以讓其顯示 Exchange Server 的內部部署、 執行沒有 SFB？ 在這裡可執行這些步驟。
   

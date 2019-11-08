@@ -10,16 +10,16 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 2ab00633-0f6e-4e4f-b706-2342eb77e539
 description: 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表易於存取的文字版本。
-ms.openlocfilehash: 9d10b9475a2c3a316ad5d23876574a46469e462e
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: b7ee083be0d38770ebe6d79b31f8f34f87fc2905
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068435"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38030577"
 ---
 # <a name="accessible-diagram---sharepoint-server-exchange-lync-office-web-apps---the-mobile-landscape"></a>易於存取的圖表-SharePoint Server、 Exchange、 Lync、 Office Web Apps 行動橫向
 
-**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](http://go.microsoft.com/fwlink/?LinkID=519139&amp;amp;clcid=0x409)易於存取的文字版本。
+**摘要：** 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在[技術圖表](https://go.microsoft.com/fwlink/?LinkID=519139&amp;amp;clcid=0x409)易於存取的文字版本。
   
 此海報顯示 SharePoint Server、 Lync、 Exchange Server 與 Office Web Apps 的行動裝置瀏覽器型橫向與應用程式的詳細的配置。 它包含下列資訊： 
   
@@ -132,7 +132,7 @@ ms.locfileid: "34068435"
     
 - Office 行動裝置上會有 （內建） 的 Windows Phone、 iPhone 及 Android。 For iPhone 和 Android 的使用者，您必須使用此應用程式的 Office 365 訂閱。
     
-### <a name="office"></a>Office
+### <a name="office"></a>辦公室
 
 外部使用 Office Mobile，使用者可以在行動裝置瀏覽器，例如 Windows 8 平板電腦、 Ipad，以及電話檢視 Office 文件。 Office Web Apps 是線上隨附的 Word、 Excel、 PowerPoint 和 OneNote 應用程式。 雖然 Office Web Apps 是適用於多個裝置瀏覽器及製造商，檢視體驗可能會有不同的裝置。 例如，Windows 8 平板電腦和 iPad 提供編輯功能，而電話僅可檢視這些應用程式。 隨附的圖顯示 Office Web Apps 體驗在 iPad 上 Microsoft PowerPoint 和 Microsoft Excel。 它是適用於內部部署與線上部署。
   

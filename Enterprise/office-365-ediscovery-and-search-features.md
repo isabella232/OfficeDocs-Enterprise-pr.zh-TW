@@ -13,22 +13,22 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: EDiscovery 功能，以及其他搜尋功能在 Office 365 稽核使用和透明度的概觀。
-ms.openlocfilehash: e9a120f717c04d5e5570e341aa5d3d93f85f80cb
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: e94c8e27c2ddf7bd50dca15eb849337de6f89c1a
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067331"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032028"
 ---
 # <a name="ediscovery-and-search-features"></a>電子文件探索與搜尋功能 
 
-## <a name="ediscovery"></a>eDiscovery
+## <a name="ediscovery"></a>電子文件探索
 
 「 EDiscovery 」 功能讓系統管理員、 法務人員，提供單一位置和授權的其他使用者進行完整調查 Office 365 使用者活動。 具有適當權限的安全性人員執行搜尋和就地保留的內容。 搜尋的結果是您要取得從內容搜尋中，除了 eDiscovery 案例所建立的任何套用的保留相同的結果。 EDiscovery 搜尋的結果加密的安全性，，您可以分析使用[進階電子文件探索](https://support.office.com/article/office-365-advanced-ediscovery-fd53438a-a760-45f6-9df4-861b50161ae4)匯出的資料。
 
 ## <a name="content-search"></a>內容搜尋
 
-[內容搜尋](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a)是透過先前的 eDiscovery 搜尋工具提供改良的縮放比例的 eDiscovery 搜尋工具和效能功能。 您可以使用內容搜尋來搜尋信箱、 公用資料夾、 SharePoint Online 網站和 OneDrive for Business 位置。 內容搜尋支援大型搜尋。 您可以搜尋的信箱和網站數目沒有限制。 也有上同時執行的搜尋數目沒有限制。 執行搜尋之後，會在 [搜尋] 頁面上的 [詳細資料] 窗格中顯示的內容來源數和預估的搜尋結果數目。 您可預覽結果，或將其匯出至本機電腦。 如果您的組織有 Office 365 企業版 E5 訂閱，您可以[準備的結果](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a#prepare)以供分析使用[Office 365 進階電子文件探索](http://go.microsoft.com/fwlink/p/?LinkID=620116)的功能強大的分析功能。
+[內容搜尋](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a)是透過先前的 eDiscovery 搜尋工具提供改良的縮放比例的 eDiscovery 搜尋工具和效能功能。 您可以使用內容搜尋來搜尋信箱、 公用資料夾、 SharePoint Online 網站和 OneDrive for Business 位置。 內容搜尋支援大型搜尋。 您可以搜尋的信箱和網站數目沒有限制。 也有上同時執行的搜尋數目沒有限制。 執行搜尋之後，會在 [搜尋] 頁面上的 [詳細資料] 窗格中顯示的內容來源數和預估的搜尋結果數目。 您可預覽結果，或將其匯出至本機電腦。 如果您的組織有 Office 365 企業版 E5 訂閱，您可以[準備的結果](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a#prepare)以供分析使用[Office 365 進階電子文件探索](https://go.microsoft.com/fwlink/p/?LinkID=620116)的功能強大的分析功能。
 
 ## <a name="audit-log-search"></a>稽核記錄搜尋
 
@@ -54,7 +54,7 @@ ms.locfileid: "37067331"
 |  | 0 代表一般使用者。 |
 |  | 2 表示您 Office 365 組織中的系統管理員。 |
 |  | 3 表示 Microsoft 資料中心系統管理員或資料中心系統帳戶。 |
-| 工作量 | Office 365 服務發生的活動。 此屬性的可能值包括： |
+| 工作負載 | Office 365 服務發生的活動。 此屬性的可能值包括： |
 |  | Exchange Online |
 |  | SharePoint Online |
 |  | 商務用 OneDrive |

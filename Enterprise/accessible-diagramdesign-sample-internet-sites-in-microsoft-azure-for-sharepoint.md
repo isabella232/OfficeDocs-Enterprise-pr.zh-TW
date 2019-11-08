@@ -11,12 +11,12 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: b91124bc-c7ec-4929-b77c-d6293db9f15e
 description: 本文是名為設計範例圖表的易於存取的文字版本： 在 Microsoft Azure for SharePoint 2013 的網際網路網站。
-ms.openlocfilehash: 28cf28739c476638b5775d170508001f2a9730ed
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 52ae615cbdc6a355155e54e36bc6a3d733d84869
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068795"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38027627"
 ---
 # <a name="accessible-diagram---design-sample-internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>易於存取的圖表-設計範例： 在 Microsoft Azure for SharePoint 2013 的網際網路網站
 
@@ -50,13 +50,13 @@ ms.locfileid: "34068795"
 
 有四種類型的這個設計中的使用者帳戶。 每種類型是驗證的帳戶的網站，以供存取與對使用特定類型一個區域相關聯。 
   
-- 匿名客戶 — 匿名客戶可以存取網站透過例如http://www.contoso.com。 他們使用的區域是 「 網際網路區域 / 匿名 」，這會使用匿名驗證。
+- 匿名客戶 — 匿名客戶可以存取網站透過例如https://www.contoso.com。 他們使用的區域是 「 網際網路區域 / 匿名 」，這會使用匿名驗證。
     
 - 驗證客戶 — 驗證客戶可以存取網站透過例如https://secure.contoso.com。 他們使用的區域是 「 外部網路區域 / SAML 」，可使用 SAML 驗證使用 Azure Active Directory。
     
-- 網站作者及開發人員-網站作者和開發人員可以存取網站透過例如http://authoring.contoso.com:8000或http://www.contoso.com:8000。 它們使用的區域是 「 預設 」 區域 / Windows 整合 」，可使用 Active Directory 網域服務 (AD DS)。
+- 網站作者及開發人員-網站作者和開發人員可以存取網站透過例如https://authoring.contoso.com:8000或https://www.contoso.com:8000。 它們使用的區域是 「 預設 」 區域 / Windows 整合 」，可使用 Active Directory 網域服務 (AD DS)。
     
-- 搜尋編目帳戶-搜尋編目帳戶具有存取網站透過例如http://authoring.contoso.com:8000或http://www.contoso.com:8000。 它會使用的區域是 「 預設 」 區域 / Windows 整合 」，可使用 Windows NTLM 驗證使用 AD DS。
+- 搜尋編目帳戶-搜尋編目帳戶具有存取網站透過例如https://authoring.contoso.com:8000或https://www.contoso.com:8000。 它會使用的區域是 「 預設 」 區域 / Windows 整合 」，可使用 Windows NTLM 驗證使用 AD DS。
     
 ## <a name="server-farm"></a>伺服器陣列
 
@@ -80,21 +80,21 @@ ms.locfileid: "34068795"
     
 ## <a name="application-pools-and-web-applications"></a>應用程式集區和 web 應用程式
 
-在 Azure 中的 [預設] 群組會顯示應用程式集區 3 中，其中包含名為 Contoso 網站的 web 應用程式。 此路徑型網站集合位於http://internal:8000。
+在 Azure 中的 [預設] 群組會顯示應用程式集區 3 中，其中包含名為 Contoso 網站的 web 應用程式。 此路徑型網站集合位於https://internal:8000。
   
 ## <a name="site-collections-and-sites"></a>網站集合與網站
 
 應用程式集區中所包含的網站集合包括：
   
-- 編目 （範例位置的主機命名型網站集合 1http://authoring.contoso.com:8000)
+- 編目 （範例位置的主機命名型網站集合 1https://authoring.contoso.com:8000)
     
-- 主機命名型網站集合 2 的查詢 (範例位置http://www.contoso.com、 https://secure.contoso.com，http://www.contoso.com:8000)
+- 主機命名型網站集合 2 的查詢 (範例位置https://www.contoso.com、 https://secure.contoso.com，https://www.contoso.com:8000)
     
-- 查詢的主機命名型網站集合 3 (範例位置http://assets.contoso.com、 https://secureassets.contoso.com，http://assets.contoso.com:8000)
+- 查詢的主機命名型網站集合 3 (範例位置https://assets.contoso.com、 https://secureassets.contoso.com，https://assets.contoso.com:8000)
     
 ## <a name="content-databases"></a>內容資料庫
 
-此範例顯示兩個內容資料庫。 另一個做為網站集合用於編目的 1 (http://authoring.contoso.com:8000)。 另一個是這兩個網站集合 2 和 3 用於查詢的 (http://www.contoso.com、 https://secure.contoso.com、 http://www.contoso.com:8000，或http://assets.contoso.com、 https://secureassets.contoso.com， http://assets.contoso.com:8000)。
+此範例顯示兩個內容資料庫。 另一個做為網站集合用於編目的 1 (https://authoring.contoso.com:8000)。 另一個是這兩個網站集合 2 和 3 用於查詢的 (https://www.contoso.com、 https://secure.contoso.com、 https://www.contoso.com:8000，或https://assets.contoso.com、 https://secureassets.contoso.com， https://assets.contoso.com:8000)。
   
 ## <a name="zones-and-urls"></a>區域及 URL
 
@@ -106,7 +106,7 @@ ms.locfileid: "34068795"
     
 - 區域的預設值
     
-- 負載平衡 URL-http://authoring.contoso.com:8000
+- 負載平衡 URL-https://authoring.contoso.com:8000
     
 區域及 Url 的第二個清單三個不同的區域中有三種不同類型的使用者。 它與網站集合 2，並包含下列資訊：
   
@@ -116,7 +116,7 @@ ms.locfileid: "34068795"
     
 - 區域的預設值
     
-- 負載平衡 URL-http://www.contoso.com:8000
+- 負載平衡 URL-https://www.contoso.com:8000
     
 第二個區域：
   
@@ -124,7 +124,7 @@ ms.locfileid: "34068795"
     
 - 區域-網際網路
     
-- 負載平衡 URL-http://www.contoso.com
+- 負載平衡 URL-https://www.contoso.com
     
 第三個區域：
   
@@ -142,7 +142,7 @@ ms.locfileid: "34068795"
     
 - 區域-網際網路
     
-- 負載平衡 URL-http://assets.contoso.com:8000
+- 負載平衡 URL-https://assets.contoso.com:8000
     
 第二個區域：
   
@@ -150,7 +150,7 @@ ms.locfileid: "34068795"
     
 - 區域-網際網路
     
-- 負載平衡 URL-http://assets.contoso.com
+- 負載平衡 URL-https://assets.contoso.com
     
 第三個區域：
   
@@ -158,6 +158,6 @@ ms.locfileid: "34068795"
     
 - 區域的外部網路
     
-- 負載平衡 URL-http://secureassets.contoso.com
+- 負載平衡 URL-https://secureassets.contoso.com
     
 

@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: e2b354b9-7f18-4da0-9107-6245eae0f33f
 description: 摘要： 設定使用文字訊息傳送到 Office 365 開發/測試環境中的智慧型手機的多重要素驗證。
-ms.openlocfilehash: 2c53d7fa9239395e28d68487dd0ccea8cc57efb7
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 6e78d826cd010230218048ef320d8f32430ac02b
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069949"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032128"
 ---
 # <a name="multi-factor-authentication-for-your-office-365-devtest-environment"></a>適用於 Office 365 開發/測試環境的多重要素驗證
 
@@ -38,7 +38,7 @@ ms.locfileid: "34069949"
 2. 啟用並測試 「 使用者 2 」 帳戶的多重要素驗證。
     
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-lightweight-or-simulated-enterprise-office-365-devtest-environment"></a>階段 1：建置輕量型或模擬的企業 Office 365 開發/測試環境
 
@@ -77,7 +77,7 @@ ms.locfileid: "34069949"
   
 1. 開啟瀏覽器的新執行個體。
     
-2. 移至 Office 365 入口網站 ([https://www.office.com](https://www.office.com)) 並以 「 使用者 2 」 帳戶登入 (user2 @\<組織 name>.onmicrosoft.com) 和密碼。
+2. 移至 Office 365 入口網站 ([https://www.office.com](https://www.office.com)) 並以 「 使用者 2 」 帳戶登入 (user2 @\<組織名稱>.onmicrosoft.com) 和密碼。
     
 3. 登入後，系統會提示您若要設定之帳戶的其他安全性驗證。 按一下 [**立即進行設定**。
     

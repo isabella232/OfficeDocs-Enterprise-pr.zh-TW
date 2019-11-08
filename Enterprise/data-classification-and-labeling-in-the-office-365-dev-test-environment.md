@@ -16,12 +16,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 919b8fc7-b0bc-46db-91f5-37342564e01b
 description: 摘要： 設定並示範資料分類和標記您的 Office 365 開發/測試環境中使用 Azure 資訊保護 (AIP) 用戶端。
-ms.openlocfilehash: cf369894eb87381e3837a52946a0ba2b9705bf70
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: f16fd41aaa454a3f038fd23c890bbf48be2c3e66
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067930"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38028897"
 ---
 # <a name="data-classification-and-labeling-in-the-office-365-devtest-environment"></a>Office 365 開發/測試環境中的資料分類和標示
 
@@ -30,7 +30,7 @@ ms.locfileid: "34067930"
 Azure 資訊保護用戶端可讓您之前您將其上傳至 Office 365 中的 SharePoint Online 資料夾分類文件。 透過本文中的指示，您可以安裝 Azure 資訊保護用戶端，並示範資料分類。 如需詳細資訊，請參閱[Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)。
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-build-out-your-office-365-devtest-environment"></a>階段 1： 建置 Office 365 開發/測試環境
 
@@ -38,13 +38,13 @@ Azure 資訊保護用戶端可讓您之前您將其上傳至 Office 365 中的 S
   
 ## <a name="phase-2-add-the-azure-information-protection-trial-subscription"></a>階段 2： 新增 Azure 資訊保護試用版訂閱
 
-在這個階段，您新增至您的 Office 365 開發/測試環境的 Azure 資訊保護，並啟用的使用者帳戶。 如果您已設定的[Office 365 和 EMS 開發/測試環境](http://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)，請跳過這個階段中。 Enterprise Mobility Suite 試用版訂閱包含 Azure 資訊保護授權。
+在這個階段，您新增至您的 Office 365 開發/測試環境的 Azure 資訊保護，並啟用的使用者帳戶。 如果您已設定的[Office 365 和 EMS 開發/測試環境](https://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)，請跳過這個階段中。 Enterprise Mobility Suite 試用版訂閱包含 Azure 資訊保護授權。
   
 首先，登入 Azure 資訊保護試用訂用帳戶。
   
 ### <a name="sign-up-for-an-azure-information-protection-trial-subscription"></a>Azure 資訊保護試用訂用帳戶註冊
 
-1. 在 Internet Explorer 或您的瀏覽器中，移至[http://admin.microsoft.com](http://admin.microsoft.com)並以您的 Office 365 全域系統管理員帳戶登入。
+1. 在 Internet Explorer 或您的瀏覽器中，移至[https://admin.microsoft.com](https://admin.microsoft.com)並以您的 Office 365 全域系統管理員帳戶登入。
     
 2. 在**Microsoft Office 的首頁**] 索引標籤上，按一下 [**管理**] 磚。
     
@@ -78,11 +78,11 @@ Office 365 開發/測試環境現在擁有：
   
 如果您使用模擬的企業 Office 365 開發/測試環境，您必須先在 CLIENT1 上安裝 Office 2016。
   
-1. 使用您的瀏覽器並移至[Azure 入口網站](http://portal.azure.com)。
+1. 使用您的瀏覽器並移至[Azure 入口網站](https://portal.azure.com)。
     
 2. 按一下 [**資源群組 >** [您的資源群組名稱] **> CLIENT1 > 連線**]。
     
-3. 從 CLIENT1，執行 [Internet Explorer，請移至 Office 入口網站，網址[http://admin.microsoft.com](http://admin.microsoft.com)，然後使用 User5 帳戶名稱和密碼登入。
+3. 從 CLIENT1，執行 [Internet Explorer，請移至 Office 入口網站，網址[https://admin.microsoft.com](https://admin.microsoft.com)，然後使用 User5 帳戶名稱和密碼登入。
     
 4. 在 [Microsoft Office 首頁]**** 索引標籤上，按一下 [安裝 Office 2016]****。
     
@@ -122,7 +122,7 @@ Office 365 開發/測試環境現在擁有：
     
 7. 在文件類別的列中，按一下向下箭號的**密碼**，，，然後按一下 [**所有公司**。
     
-8. 按一下 [**另存新檔的檔案 >**，輸入名稱**AfterAIP**，，然後按一下 [**確定]**。
+8. 按一下 [**檔案 > 另存為**，輸入名稱**AfterAIP**，，然後按一下 [**確定]**。
     
 9. 在工作列上，按一下 [**檔案總管]** ，然後開啟 [**文件**] 資料夾。
     
@@ -150,7 +150,7 @@ Office 365 開發/測試環境現在擁有：
   
 1. 在**Microsoft Office 的首頁**] 索引標籤右上方，按一下 [使用者] 圖示，然後按一下 [**登出]**。
     
-2. 請移至 [http://admin.microsoft.com](http://admin.microsoft.com)。
+2. 請移至 [https://admin.microsoft.com](https://admin.microsoft.com)。
     
 3. 在**Office 365 登入**頁面上，按一下 User5 帳戶名稱和登入。
     
@@ -164,7 +164,7 @@ Office 365 開發/測試環境現在擁有：
 
 [雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
 
-[Office 365 和 EMS 開發/測試環境](http://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)
+[Office 365 和 EMS 開發/測試環境](https://technet.microsoft.com/library/c76eea86-d4b6-4d35-ad89-341696e89ef7.aspx)
   
 [Azure 資訊保護](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
