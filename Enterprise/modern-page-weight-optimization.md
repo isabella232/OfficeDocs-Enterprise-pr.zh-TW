@@ -16,67 +16,67 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何在 SharePoint Online 新式網站頁面中最佳化頁面權數。
-ms.openlocfilehash: 5e2231468363f58faeac1d7b21e06cd4fa790cf8
-ms.sourcegitcommit: c7764503422922cb333b05d54e8ebbdb894df2f9
+ms.openlocfilehash: 3079298781116c2664217f87715303c99e4d26b6
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "37028210"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032248"
 ---
-# <a name="optimize-page-weight-in-sharepoint-online-modern-site-pages"></a><span data-ttu-id="e4767-103">在 SharePoint Online 新式網站頁面中最佳化頁面權數</span><span class="sxs-lookup"><span data-stu-id="e4767-103">Optimize page weight in SharePoint Online modern site pages</span></span>
+# <a name="optimize-page-weight-in-sharepoint-online-modern-site-pages"></a><span data-ttu-id="c8a6c-103">在 SharePoint Online 新式網站頁面中最佳化頁面權數</span><span class="sxs-lookup"><span data-stu-id="c8a6c-103">Optimize page weight in SharePoint Online modern site pages</span></span>
 
-<span data-ttu-id="e4767-104">SharePoint Online 新式網站頁面包含轉譯頁面的頁面內容所需的序列化代碼，頁面內容包括瀏覽/命令列底下內容區域中的影像、文字、物件，以及形成頁面架構的其他 HTML 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e4767-104">SharePoint Online modern site pages contain serialized code that is required to render page content of the page, including images, text, objects in the content area underneath navigation/command bars and other HTML code that forms the framework of the page.</span></span> <span data-ttu-id="e4767-105">頁面權數是這個 HTML 程式碼的度量，應加以限制，以確保最佳的頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="e4767-105">Page weight is a measurement of this HTML code, and should be limited to ensure optimal page load times.</span></span>
+<span data-ttu-id="c8a6c-104">SharePoint Online 新式網站頁面包含轉譯頁面的頁面內容所需的序列化代碼，頁面內容包括瀏覽/命令列底下內容區域中的影像、文字、物件，以及形成頁面架構的其他 HTML 程式碼。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-104">SharePoint Online modern site pages contain serialized code that is required to render page content of the page, including images, text, objects in the content area underneath navigation/command bars and other HTML code that forms the framework of the page.</span></span> <span data-ttu-id="c8a6c-105">頁面權數是這個 HTML 程式碼的度量，應加以限制，以確保最佳的頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-105">Page weight is a measurement of this HTML code, and should be limited to ensure optimal page load times.</span></span>
 
-<span data-ttu-id="e4767-106">本文可協助您了解如何在新式網站頁面中減少頁面權數。</span><span class="sxs-lookup"><span data-stu-id="e4767-106">This article will help you understand how to reduce page weight in your modern site pages.</span></span>
+<span data-ttu-id="c8a6c-106">本文可協助您了解如何在新式網站頁面中減少頁面權數。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-106">This article will help you understand how to reduce page weight in your modern site pages.</span></span>
 
 >[!NOTE]
-><span data-ttu-id="e4767-107">如需有關 SharePoint Online 新式入口網站效能的詳細資訊，請參閱 [SharePoint 新式體驗中的效能](https://docs.microsoft.com/zh-TW/sharepoint/modern-experience-performance)。</span><span class="sxs-lookup"><span data-stu-id="e4767-107">For more information about performance in SharePoint Online modern portals, see [Performance in the modern SharePoint experience](https://docs.microsoft.com/zh-TW/sharepoint/modern-experience-performance).</span></span>
+><span data-ttu-id="c8a6c-107">如需有關 SharePoint Online 新式入口網站效能的詳細資訊，請參閱 [SharePoint 新式體驗中的效能](https://docs.microsoft.com/sharepoint/modern-experience-performance)。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-107">For more information about performance in SharePoint Online modern portals, see [Performance in the modern SharePoint experience](https://docs.microsoft.com/sharepoint/modern-experience-performance).</span></span>
 
-## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-weight"></a><span data-ttu-id="e4767-108">使用「適用於 SharePoint 的頁面診斷」工具來分析頁面權數</span><span class="sxs-lookup"><span data-stu-id="e4767-108">Use the Page Diagnostics for SharePoint tool to analyze page weight</span></span>
+## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-weight"></a><span data-ttu-id="c8a6c-108">使用「適用於 SharePoint 的頁面診斷」工具來分析頁面權數</span><span class="sxs-lookup"><span data-stu-id="c8a6c-108">Use the Page Diagnostics for SharePoint tool to analyze page weight</span></span>
 
-<span data-ttu-id="e4767-109">**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/en-us/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發佈網站頁面。</span><span class="sxs-lookup"><span data-stu-id="e4767-109">The **Page Diagnostics for SharePoint tool** is a browser extension for Chrome and [Microsoft Edge version 77 or later](https://www.microsoftedgeinsider.com/en-us/download?form=MI13E8&OCID=MI13E8) you can use to analyze SharePoint both modern and classic publishing site pages.</span></span> <span data-ttu-id="e4767-110">該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。</span><span class="sxs-lookup"><span data-stu-id="e4767-110">The tool provides a report for each analyzed page showing how the page performs against a defined set of performance criteria.</span></span> <span data-ttu-id="e4767-111">若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。</span><span class="sxs-lookup"><span data-stu-id="e4767-111">To install and learn about the Page Diagnostics for SharePoint tool, visit [Use the Page Diagnostics tool for SharePoint Online](page-diagnostics-for-spo.md).</span></span>
+<span data-ttu-id="c8a6c-109">**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發佈網站頁面。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-109">The **Page Diagnostics for SharePoint tool** is a browser extension for Chrome and [Microsoft Edge version 77 or later](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8) you can use to analyze SharePoint both modern and classic publishing site pages.</span></span> <span data-ttu-id="c8a6c-110">該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-110">The tool provides a report for each analyzed page showing how the page performs against a defined set of performance criteria.</span></span> <span data-ttu-id="c8a6c-111">若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-111">To install and learn about the Page Diagnostics for SharePoint tool, visit [Use the Page Diagnostics tool for SharePoint Online](page-diagnostics-for-spo.md).</span></span>
 
-<span data-ttu-id="e4767-112">當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [頁面權數低於 500KB]\*\*\*\* 結果中看到關於頁面的資訊。</span><span class="sxs-lookup"><span data-stu-id="e4767-112">When you analyze a SharePoint site page with the Page Diagnostics for SharePoint tool, you can see information about page in the **Page weight under 500KB** result of the _Diagnostic tests_ pane.</span></span> <span data-ttu-id="e4767-113">如果頁面權數低於基準值，則結果會顯示為綠色，如果頁面權數超過基準值，則會顯示為紅色。</span><span class="sxs-lookup"><span data-stu-id="e4767-113">The result will appear in green if the page weight is under the baseline value, and red if the page weight exceeds the baseline value.</span></span>
+<span data-ttu-id="c8a6c-112">當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [頁面權數低於 500KB]\*\*\*\* 結果中看到關於頁面的資訊。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-112">When you analyze a SharePoint site page with the Page Diagnostics for SharePoint tool, you can see information about page in the **Page weight under 500KB** result of the _Diagnostic tests_ pane.</span></span> <span data-ttu-id="c8a6c-113">如果頁面權數低於基準值，則結果會顯示為綠色，如果頁面權數超過基準值，則會顯示為紅色。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-113">The result will appear in green if the page weight is under the baseline value, and red if the page weight exceeds the baseline value.</span></span>
 
-<span data-ttu-id="e4767-114">可能的結果包括：</span><span class="sxs-lookup"><span data-stu-id="e4767-114">Possible results include:</span></span>
+<span data-ttu-id="c8a6c-114">可能的結果包括：</span><span class="sxs-lookup"><span data-stu-id="c8a6c-114">Possible results include:</span></span>
 
-- <span data-ttu-id="e4767-115">**需要注意** (紅色)：頁面權數超過 500KB</span><span class="sxs-lookup"><span data-stu-id="e4767-115">**Attention required** (red): Page weight exceeds 500KB</span></span>
-- <span data-ttu-id="e4767-116">**不需要任何動作** (綠色)：頁面權數低於 500KB</span><span class="sxs-lookup"><span data-stu-id="e4767-116">**No action required** (green): Page weight is under 500KB</span></span>
+- <span data-ttu-id="c8a6c-115">**需要注意** (紅色)：頁面權數超過 500KB</span><span class="sxs-lookup"><span data-stu-id="c8a6c-115">**Attention required** (red): Page weight exceeds 500KB</span></span>
+- <span data-ttu-id="c8a6c-116">**不需要任何動作** (綠色)：頁面權數低於 500KB</span><span class="sxs-lookup"><span data-stu-id="c8a6c-116">**No action required** (green): Page weight is under 500KB</span></span>
 
-<span data-ttu-id="e4767-117">如果 [頁面權數低於 500KB]\*\*\*\* 結果顯示在 [需要注意]\*\*\*\* 區段中，您可以按一下結果以取得詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="e4767-117">If the **Page weight under 500KB** result appears in the **Attention required** section, you can click the result for details.</span></span>
+<span data-ttu-id="c8a6c-117">如果 [頁面權數低於 500KB]\*\*\*\* 結果顯示在 [需要注意]\*\*\*\* 區段中，您可以按一下結果以取得詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-117">If the **Page weight under 500KB** result appears in the **Attention required** section, you can click the result for details.</span></span>
 
 ![對 SharePoint 的要求結果](media/modern-portal-optimization/pagediag-page-weight.png)
 
-## <a name="remediate-page-weight-issues"></a><span data-ttu-id="e4767-119">修復頁面權數問題</span><span class="sxs-lookup"><span data-stu-id="e4767-119">Remediate page weight issues</span></span>
+## <a name="remediate-page-weight-issues"></a><span data-ttu-id="c8a6c-119">修復頁面權數問題</span><span class="sxs-lookup"><span data-stu-id="c8a6c-119">Remediate page weight issues</span></span>
 
-<span data-ttu-id="e4767-120">如果頁面權數超過 500KB，您可以藉由減少網頁組件的數量，並將頁面內容限制在適當的程度，以改善整體頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="e4767-120">If page weight exceeds 500KB, you can improve overall page load time by reducing the number of web parts and limiting page content to an appropriate degree.</span></span>
+<span data-ttu-id="c8a6c-120">如果頁面權數超過 500KB，您可以藉由減少網頁組件的數量，並將頁面內容限制在適當的程度，以改善整體頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-120">If page weight exceeds 500KB, you can improve overall page load time by reducing the number of web parts and limiting page content to an appropriate degree.</span></span>
 
-<span data-ttu-id="e4767-121">降低頁面權數的一般指導方針包括：</span><span class="sxs-lookup"><span data-stu-id="e4767-121">General guidance for reducing page weight includes:</span></span>
+<span data-ttu-id="c8a6c-121">降低頁面權數的一般指導方針包括：</span><span class="sxs-lookup"><span data-stu-id="c8a6c-121">General guidance for reducing page weight includes:</span></span>
 
-- <span data-ttu-id="e4767-122">將頁面內容限制為合理的數量，並且對相關內容使用多個頁面。</span><span class="sxs-lookup"><span data-stu-id="e4767-122">Limit the page content to a reasonable amount and use multiple pages for related content.</span></span>
-- <span data-ttu-id="e4767-123">將具有大型屬性包的網頁組件使用降至最低。</span><span class="sxs-lookup"><span data-stu-id="e4767-123">Minimize the use of web parts that have large property bags.</span></span>
-- <span data-ttu-id="e4767-124">盡可能使用非互動式彙總檢視。</span><span class="sxs-lookup"><span data-stu-id="e4767-124">Use non-interactive rollup views when possible.</span></span>
-- <span data-ttu-id="e4767-125">您可以使用壓縮的影像格式並確保是從 CDN 下載，以適當地調整影像大小。</span><span class="sxs-lookup"><span data-stu-id="e4767-125">Optimize image sizes by sizing images appropriately, using compressed image formats and ensuring that they are downloaded from a CDN.</span></span>
+- <span data-ttu-id="c8a6c-122">將頁面內容限制為合理的數量，並且對相關內容使用多個頁面。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-122">Limit the page content to a reasonable amount and use multiple pages for related content.</span></span>
+- <span data-ttu-id="c8a6c-123">將具有大型屬性包的網頁組件使用降至最低。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-123">Minimize the use of web parts that have large property bags.</span></span>
+- <span data-ttu-id="c8a6c-124">盡可能使用非互動式彙總檢視。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-124">Use non-interactive rollup views when possible.</span></span>
+- <span data-ttu-id="c8a6c-125">您可以使用壓縮的影像格式並確保是從 CDN 下載，以適當地調整影像大小。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-125">Optimize image sizes by sizing images appropriately, using compressed image formats and ensuring that they are downloaded from a CDN.</span></span>
 
-<span data-ttu-id="e4767-126">您可以在下列文章中找到更多關於限制頁面權數的指導方針：</span><span class="sxs-lookup"><span data-stu-id="e4767-126">You can find additional guidance for limiting page weight in the following article:</span></span>
+<span data-ttu-id="c8a6c-126">您可以在下列文章中找到更多關於限制頁面權數的指導方針：</span><span class="sxs-lookup"><span data-stu-id="c8a6c-126">You can find additional guidance for limiting page weight in the following article:</span></span>
 
-- <span data-ttu-id="e4767-127">[在 SharePoint 中最佳化頁面效能](https://docs.microsoft.com/zh-TW/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint) (英文)</span><span class="sxs-lookup"><span data-stu-id="e4767-127">[Optimize page performance in SharePoint](https://docs.microsoft.com/zh-TW/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint)</span></span>
+- <span data-ttu-id="c8a6c-127">[在 SharePoint 中最佳化頁面效能](https://docs.microsoft.com/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint) (英文)</span><span class="sxs-lookup"><span data-stu-id="c8a6c-127">[Optimize page performance in SharePoint](https://docs.microsoft.com/sharepoint/dev/general-development/optimize-page-performance-in-sharepoint)</span></span>
 
-<span data-ttu-id="e4767-128">在您進行頁面修訂以修復效能問題之前，請記下分析結果中的頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="e4767-128">Before you make page revisions to remediate performance issues, make a note of the page load time in the analysis results.</span></span> <span data-ttu-id="e4767-129">在修訂後再次執行工具，以查看新結果是否在基準標準內，並檢查新頁面的載入時間，以查看是否有改善。</span><span class="sxs-lookup"><span data-stu-id="e4767-129">Run the tool again after your revision to see if the new result is within the baseline standard, and check the new page load time to see if there was an improvement.</span></span>
+<span data-ttu-id="c8a6c-128">在您進行頁面修訂以修復效能問題之前，請記下分析結果中的頁面載入時間。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-128">Before you make page revisions to remediate performance issues, make a note of the page load time in the analysis results.</span></span> <span data-ttu-id="c8a6c-129">在修訂後再次執行工具，以查看新結果是否在基準標準內，並檢查新頁面的載入時間，以查看是否有改善。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-129">Run the tool again after your revision to see if the new result is within the baseline standard, and check the new page load time to see if there was an improvement.</span></span>
 
 ![頁面載入時間結果](media/modern-portal-optimization/pagediag-page-load-time.png)
 
 >[!NOTE]
-><span data-ttu-id="e4767-131">頁面載入時間會根據各種因素而有所不同，例如網路負載、一天的時間及其他暫時條件。</span><span class="sxs-lookup"><span data-stu-id="e4767-131">Page load time can vary based on a variety of factors such as network load, time of day, and other transient conditions.</span></span> <span data-ttu-id="e4767-132">您應該在進行變更前後測試幾次頁面載入時間，以協助您計算結果的平均值。</span><span class="sxs-lookup"><span data-stu-id="e4767-132">You should test page load time a few times before and after making changes to help you average the results.</span></span>
+><span data-ttu-id="c8a6c-131">頁面載入時間會因為各種因素而有所不同，例如網路負載、一天的時間及其他暫時條件。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-131">Page load time can vary based on a variety of factors such as network load, time of day, and other transient conditions.</span></span> <span data-ttu-id="c8a6c-132">您應該在進行變更前後測試幾次頁面載入時間，以協助您計算結果的平均值。</span><span class="sxs-lookup"><span data-stu-id="c8a6c-132">You should test page load time a few times before and after making changes to help you average the results.</span></span>
 
-## <a name="related-topics"></a><span data-ttu-id="e4767-133">相關主題</span><span class="sxs-lookup"><span data-stu-id="e4767-133">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="c8a6c-133">相關主題</span><span class="sxs-lookup"><span data-stu-id="c8a6c-133">Related topics</span></span>
 
-[<span data-ttu-id="e4767-134">調整 SharePoint Online 效能</span><span class="sxs-lookup"><span data-stu-id="e4767-134">Tune SharePoint Online performance</span></span>](tune-sharepoint-online-performance.md)
+[<span data-ttu-id="c8a6c-134">調整 SharePoint Online 效能</span><span class="sxs-lookup"><span data-stu-id="c8a6c-134">Tune SharePoint Online performance</span></span>](tune-sharepoint-online-performance.md)
 
-[<span data-ttu-id="e4767-135">調整 Office 365 效能</span><span class="sxs-lookup"><span data-stu-id="e4767-135">Tune Office 365 performance</span></span>](tune-office-365-performance.md)
+[<span data-ttu-id="c8a6c-135">調整 Office 365 效能</span><span class="sxs-lookup"><span data-stu-id="c8a6c-135">Tune Office 365 performance</span></span>](tune-office-365-performance.md)
 
-[<span data-ttu-id="e4767-136">SharePoint 新式體驗中的效能</span><span class="sxs-lookup"><span data-stu-id="e4767-136">Performance in the modern SharePoint experience</span></span>](https://docs.microsoft.com/zh-TW/sharepoint/modern-experience-performance.md)
+[<span data-ttu-id="c8a6c-136">SharePoint 新式體驗中的效能</span><span class="sxs-lookup"><span data-stu-id="c8a6c-136">Performance in the modern SharePoint experience</span></span>](https://docs.microsoft.com/sharepoint/modern-experience-performance.md)
 
-[<span data-ttu-id="e4767-137">內容傳遞網路</span><span class="sxs-lookup"><span data-stu-id="e4767-137">Content delivery networks</span></span>](content-delivery-networks.md)
+[<span data-ttu-id="c8a6c-137">內容傳遞網路</span><span class="sxs-lookup"><span data-stu-id="c8a6c-137">Content delivery networks</span></span>](content-delivery-networks.md)
 
-[<span data-ttu-id="e4767-138">使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="e4767-138">Use the Office 365 Content Delivery Network (CDN) with SharePoint Online</span></span>](use-office-365-cdn-with-spo.md)
+[<span data-ttu-id="c8a6c-138">使用 Office 365 內容傳遞網路 (CDN) 搭配 SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="c8a6c-138">Use the Office 365 Content Delivery Network (CDN) with SharePoint Online</span></span>](use-office-365-cdn-with-spo.md)

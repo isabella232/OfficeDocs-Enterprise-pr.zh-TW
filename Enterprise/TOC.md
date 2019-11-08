@@ -42,7 +42,7 @@
 ## Office 365 用戶端支援
 ### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
-### [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/zh-TW/office365/securitycompliance/choose-between-mdm-and-intune)
+### [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/office365/securitycompliance/choose-between-mdm-and-intune)
 ### [行動應用程式管理](office-365-client-support-mobile-application-management.md)
 ### [新式驗證](office-365-client-support-modern-authentication.md)
 ### [單一登入](office-365-client-support-single-sign-on.md)
@@ -198,7 +198,7 @@
 ### [關閉目錄同步處理](turn-off-directory-synchronization.md)
 
 ## 使用者
-### [Office 365 系統管理說明中心](https://support.office.com/zh-TW/article/Management-tools-for-Office-365-8e715d2a-c20e-492b-a9cb-60f3708f9241)
+### [Office 365 系統管理說明中心](https://support.office.com/article/Management-tools-for-Office-365-8e715d2a-c20e-492b-a9cb-60f3708f9241)
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
@@ -227,7 +227,7 @@
 
 ## 服務健康狀況
 ### [如何檢查](view-service-health.md)
-### [支援選項](https://support.office.com/zh-TW/article/Contact-support-for-business-products-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
+### [支援選項](https://support.office.com/article/Contact-support-for-business-products-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 
 ## 效能
 ### [調整 Office 365 效能](tune-office-365-performance.md)
