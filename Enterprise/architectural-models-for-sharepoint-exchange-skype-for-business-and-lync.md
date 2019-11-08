@@ -11,18 +11,19 @@ localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
+- SPO_Content
 ms.custom:
 - Ent_Architecture
 ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 search.appverid:
 - MET150
 description: 摘要：取得描述 SharePoint、Exchange、商務用 Skype 和 Lync 結構模型、部署、平台選項的 IT 海報。
-ms.openlocfilehash: ed4aca3728d12b1a7828b003f0da219d67da6de3
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: ce12d0a807c71e88d2f989f1b24ce033a63b8b70
+ms.sourcegitcommit: b4514cd852093181dd4c27009a78aca3ca50d2e2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068409"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38038262"
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型
 
@@ -108,7 +109,7 @@ ms.locfileid: "34068409"
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![SharePoint Server 2016 資料庫海報的縮圖](media/c53e9de7-3bf8-446d-8766-e6700c8dd8e1.png)          ](https://www.microsoft.com/download/details.aspx?id=55041) <br/> [PDF](https://download.microsoft.com/download/D/5/D/D5DC1121-8BC5-4953-834F-1B5BB03EB691/DBrefguideSPS2016_tabloid.pdf)  \| [Visio](https://download.microsoft.com/download/D/5/D/D5DC1121-8BC5-4953-834F-1B5BB03EB691/DBrefguideSPS2016_tabloid.vsdx)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=55041) <br/> | 此 IT 海報是適用於 SharePoint Server 2016 資料庫的快速參考指南。每個資料庫均會有以下詳細資料：<br/><br/> - 大小 <br/> - 調整大小指導方針 <br/> - I/O 模式 <br/> - 需求： <br/><br/>  第一頁具有 SharePoint 系統資料庫和有多個資料庫的服務應用程式。第二頁顯示有單一資料庫的所有服務應用程式。<br/><br/>  如需有關 SharePoint Server 2016 資料庫的詳細資訊，請參閱＜[SharePoint Server 2016 中的資料庫類型和描述](https://technet.microsoft.com/en-us/library/cc678868%28v=office.16%29.aspx)＞。 <br/> |
+|[![SharePoint Server 2016 資料庫海報的縮圖](media/c53e9de7-3bf8-446d-8766-e6700c8dd8e1.png)          ](https://www.microsoft.com/download/details.aspx?id=55041) <br/> [PDF](https://download.microsoft.com/download/D/5/D/D5DC1121-8BC5-4953-834F-1B5BB03EB691/DBrefguideSPS2016_tabloid.pdf)  \| [Visio](https://download.microsoft.com/download/D/5/D/D5DC1121-8BC5-4953-834F-1B5BB03EB691/DBrefguideSPS2016_tabloid.vsdx)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=55041) <br/> | 此 IT 海報是適用於 SharePoint Server 2016 資料庫的快速參考指南。每個資料庫均會有以下詳細資料：<br/><br/> - 大小 <br/> - 調整大小指導方針 <br/> - I/O 模式 <br/> - 需求： <br/><br/>  第一頁具有 SharePoint 系統資料庫和有多個資料庫的服務應用程式。第二頁顯示有單一資料庫的所有服務應用程式。<br/><br/>  如需有關 SharePoint Server 2016 資料庫的詳細資訊，請參閱＜[SharePoint Server 2016 中的資料庫類型和描述](https://docs.microsoft.com/SharePoint/technical-reference/database-types-and-descriptions)＞。 <br/> |
    
 <a name="SfB2015_ArchModel"> </a>
 ### <a name="microsoft-skype-for-business-2015-architectural-models"></a>Microsoft 商務用 Skype 2015 架構模型
@@ -138,7 +139,7 @@ ms.locfileid: "34068409"
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![SharePoint 2013 Platform Options 的縮圖影像](media/SP-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=40332) <br/> [PDF](http://go.microsoft.com/fwlink/p/?LinkId=324594)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=324593)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=40332) <br/> |對於企業決策制定者 (BDM) 和架構設計人員，此模型顯示 SharePoint 2013、Office 365 中的 SharePoint、混合 Office 365 的內部部署、Azure 和僅內部部署的部署的平台選項。內含各個架構的概觀、建議、授權需求，以及各個平台的架構設計人員及 IT 專業人員工作清單。其中特別強調幾個 Azure 的 SharePoint 解決方案。<br/><br/>如需此海報的易於存取的文字版本，請參閱[易於存取的圖表 - Microsoft SharePoint 2013 平台選項](accessible-diagrammicrosoft-sharepoint-2013-platform-options.md)。  <br/> |
+|[![SharePoint 2013 Platform Options 的縮圖影像](media/SP-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=40332) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=324594)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=324593)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=40332) <br/> |對於企業決策制定者 (BDM) 和架構設計人員，此模型顯示 SharePoint 2013、Office 365 中的 SharePoint、混合 Office 365 的內部部署、Azure 和僅內部部署的部署的平台選項。內含各個架構的概觀、建議、授權需求，以及各個平台的架構設計人員及 IT 專業人員工作清單。其中特別強調幾個 Azure 的 SharePoint 解決方案。<br/><br/>如需此海報的易於存取的文字版本，請參閱[易於存取的圖表 - Microsoft SharePoint 2013 平台選項](accessible-diagrammicrosoft-sharepoint-2013-platform-options.md)。  <br/> |
    
 <a name="Exch2013_options"> </a>
 ## <a name="exchange-2013-platform-options"></a>Exchange 2013 平台選項
@@ -188,7 +189,7 @@ ms.locfileid: "34068409"
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![SharePoint 到 Azure 的災害復原程序](media/SP-DR-Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報顯示 Azure 中的嚴重損壞修復環境的架構原則。如要取得此海報的易讀文字版，請參閱 [易讀圖表 - 對於 Microsoft Azure 的 SharePoint 災害復原](accessible-diagramsharepoint-disaster-recovery-to-microsoft-azure.md) (機器翻譯)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![SharePoint 到 Azure 的災害復原程序](media/SP-DR-Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報顯示 Azure 中的嚴重損壞修復環境的架構原則。如要取得此海報的易讀文字版，請參閱 [易讀圖表 - 對於 Microsoft Azure 的 SharePoint 災害復原](accessible-diagramsharepoint-disaster-recovery-to-microsoft-azure.md)。<br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 <a name="Lync2013_Options"> </a>
 ## <a name="see-also"></a>另請參閱

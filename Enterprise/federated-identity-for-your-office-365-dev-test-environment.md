@@ -18,12 +18,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 65a6d687-a16a-4415-9fd5-011ba9c5fd80
 description: 摘要：設定適用於 Office 365 開發/測試環境的同盟驗證。
-ms.openlocfilehash: c2cb4bcd9085cd8dd91df5de2ad936076d11432c
-ms.sourcegitcommit: 74b6d9fc3ce0873e8564fc4de51fe3afeb122447
+ms.openlocfilehash: 234e76f16a8bb75f39b301d8084d02944b0778e9
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "37207388"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38028837"
 ---
 # <a name="federated-identity-for-your-office-365-devtest-environment"></a>Office 365 開發人員/測試環境的同盟身分識別
 
@@ -61,7 +61,7 @@ Office 365 支援同盟身分識別。這表示 Office 365 的連線使用者指
 > 您無法使用 Azure 試用訂閱設定此開發/測試環境。 
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-create-the-simulated-enterprise-office-365-devtest-environment-with-dirsync"></a>階段 1：使用 DirSync 建立模擬的企業 Office 365 開發/測試環境
 
@@ -111,7 +111,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 > Click [here](https://gallery.technet.microsoft.com/PowerShell-commands-for-f79bc2c2?redir=0) for a text file that has all the PowerShell commands in this article.
 -->
   
-接下來，使用 ADFS1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](http://portal.azure.com)連線到 ADFS1 虛擬機器，然後開啟 Windows PowerShell 命令提示字元。
+接下來，使用 ADFS1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](https://portal.azure.com)連線到 ADFS1 虛擬機器，然後開啟 Windows PowerShell 命令提示字元。
   
 若要檢查 ADFS1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
@@ -166,7 +166,7 @@ $rgName="<the resource group name of your Base Configuration>"
 Get-AzNetworkSecurityGroup -Name CorpNet -ResourceGroupName $rgName | Add-AzNetworkSecurityRuleConfig -Name "HTTPS-to-PROXY1" -Description "Allow TCP 443 to PROXY1" -Access "Allow" -Protocol "Tcp" -Direction "Inbound" -Priority 101 -SourceAddressPrefix "Internet" -SourcePortRange "*" -DestinationAddressPrefix "10.0.0.101" -DestinationPortRange "443" | Set-AzNetworkSecurityGroup
 ```
 
-接下來，使用 PROXY1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](http://portal.azure.com)連線到 PROXY1 虛擬機器，然後在 PROXY1 上開啟 Windows PowerShell 命令提示字元。
+接下來，使用 PROXY1 本機系統管理員帳戶名稱和密碼，以使用 [Azure 入口網站](https://portal.azure.com)連線到 PROXY1 虛擬機器，然後在 PROXY1 上開啟 Windows PowerShell 命令提示字元。
   
 若要檢查 PROXY1 和 DC1 之間的名稱解析和網路通訊，請執行 **ping dc1.corp.contoso.com** 命令，並檢查有四個回覆。
   
@@ -186,7 +186,7 @@ Write-Host (Get-AzPublicIpaddress -Name "PROXY1-PIP" -ResourceGroup $rgName).IPA
 
 接下來，與公用 DNS 提供者合作，建立 **fs.testlab.**\<您的 DNS 網域名稱> 的新公用 DNS A 記錄，其會解析到**寫入主機**命令所顯示之 IP 位址。**fs.testlab.**\<您的 DNS 網域名稱> 以下稱為*同盟服務 FQDN*。
   
-接下來，使用 CORP\\User1 認證，以使用 [Azure 入口網站](http://portal.azure.com)連線到 DC1 虛擬機器，然後在系統管理員層級 Windows PowerShell 命令提示字元執行下列命令：
+接下來，使用 CORP\\User1 認證，以使用 [Azure 入口網站](https://portal.azure.com)連線到 DC1 虛擬機器，然後在系統管理員層級 Windows PowerShell 命令提示字元執行下列命令：
   
 ```
 Add-DnsServerPrimaryZone -Name corp.contoso.com -ZoneFile corp.contoso.com.dns
@@ -206,7 +206,7 @@ Add-DnsServerResourceRecordA -Name "fs" -ZoneName corp.contoso.com -AllowUpdateA
 
 在這個階段，您可以為同盟服務 FQDN 建立自我簽署的數位憑證，並將 ADFS1 和 PROXY1 設定為 AD FS 伺服器陣列。
   
-首先，使用 CORP\\User1 認證，以使用 [Azure 入口網站](http://portal.azure.com)連線到 DC1 虛擬機器，然後開啟系統管理員層級 Windows PowerShell 命令提示字元。
+首先，使用 CORP\\User1 認證，以使用 [Azure 入口網站](https://portal.azure.com)連線到 DC1 虛擬機器，然後開啟系統管理員層級 Windows PowerShell 命令提示字元。
   
 接下來，在 DC1 上的 Windows PowerShell 命令提示字元中使用此命令建立 AD FS 服務帳戶：
   
@@ -216,7 +216,7 @@ New-ADUser -SamAccountName ADFS-Service -AccountPassword (read-host "Set user pa
 
 請注意，此命令會提示您提供帳戶密碼。請選擇強式密碼，並將其記錄在安全的位置。您在此階段和階段 5 會需要該密碼。
   
-使用 CORP\\User1 認證以使用 [Azure 入口網站](http://portal.azure.com)連線到 ADFS1 虛擬機器。開啟 ADFS1 上的系統管理員層級 Windows PowerShell 命令提示字元，填入您的同盟服務 FQDN，然後執行這些命令以建立自我簽署的憑證：
+使用 CORP\\User1 認證以使用 [Azure 入口網站](https://portal.azure.com)連線到 ADFS1 虛擬機器。開啟 ADFS1 上的系統管理員層級 Windows PowerShell 命令提示字元，填入您的同盟服務 FQDN，然後執行這些命令以建立自我簽署的憑證：
   
 ```
 $fedServiceFQDN="<federation service FQDN>"
@@ -299,7 +299,7 @@ Install-WindowsFeature ADFS-Federation -IncludeManagementTools
     
 14. 依序按一下 [開始]****、電源圖示、[重新啟動]**** 和 [繼續]****。
     
-使用 CORP\\User1 帳戶認證，從 [Azure 入口網站](http://portal.azure.com)連線到 PROXY1。
+使用 CORP\\User1 帳戶認證，從 [Azure 入口網站](https://portal.azure.com)連線到 PROXY1。
   
 接下來，使用這些步驟安裝自我簽署的憑證及設定 PROXY1。
   
@@ -373,7 +373,7 @@ Install-WindowsFeature Web-Application-Proxy -IncludeManagementTools
     
 ## <a name="phase-5-configure-office-365-for-federated-identity"></a>階段 5：設定 Office 365 的同盟身分識別
 
-以 CORP\\User1 帳戶認證使用 [Azure 入口網站](http://portal.azure.com)連線到 APP1 虛擬機器。
+以 CORP\\User1 帳戶認證使用 [Azure 入口網站](https://portal.azure.com)連線到 APP1 虛擬機器。
   
 使用下列步驟為同盟驗證設定 Azure AD Connect 與 Office 365 訂閱：
   

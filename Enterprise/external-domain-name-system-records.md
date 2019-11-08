@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
-ms.openlocfilehash: 75ada2f8632f880627b525112229ae09742029cd
-ms.sourcegitcommit: 546080809d4f8ee4954943738906eec6c9bac1d8
+ms.openlocfilehash: ec05958eaf40fe988245eae808cc78bf60c06136
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "37616136"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38028817"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 
@@ -31,7 +31,7 @@ ms.locfileid: "37616136"
   
 |||
 |:-----|:-----|
-|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/zh-TW/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745)。 <br/>  **堅持使用自訂部署的參照清單嗎？** 以下清單應用來作為自訂 Office 365 部署的參考。您必須選取套用至組織的記錄，並且填入適當的值。 <br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune)。  <br/> |
+|![網域](media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)|**要查看您 Office 365 組織的自訂 DNS 記錄清單嗎？** 您可以[找出建立 Office 365 DNS 記錄所需的資訊](https://support.office.microsoft.com/article/Gather-the-information-you-need-to-create-Office-365-DNS-records-77f90d4a-dc7f-4f09-8972-c1b03ea85a67) (英文) 以用於 Office 365 中的網域。<br/> **需要在網域 DNS 主機 (例如 GoDaddy 或 eNom) 新增這些記錄的逐步說明嗎？** [找出許多常用 DNS 主機的逐步指示連結](https://go.microsoft.com/fwlink/?LinkId=286745)。 <br/>  **堅持使用自訂部署的參照清單嗎？** 以下清單應用來作為自訂 Office 365 部署的參考。您必須選取套用至組織的記錄，並且填入適當的值。 <br/> **回到** [Office 365 的網路規劃和效能調整](https://aka.ms/tune)。  <br/> |
 
 通常，SPF 和 MX 是最難找出的記錄。我們已更新在本文結尾的 SPF 記錄指引。請務必記住，_您的網域只能擁有單一的 SPF 記錄_。您可以有多個 MX 記錄；不過，這是導致郵件傳遞問題的原因。擁有可將電子郵件導向一個郵件系統的單一 MX 記錄可解決許多的潛在問題。
   
@@ -103,7 +103,7 @@ SharePoint Online 只需要 DNS 記錄貴組織是否使用 SharePoint Online �
 <a name="BKMK_SPFrecords"> </a>
 
 > [!IMPORTANT]
-> SPF 是設計來協助防止詐騙，但是有 SPF 無法防護的詐騙技術。為了防止這些項目，設定 SPF 之後，您也應該為 Office 365 設定 DKIM 和 DMARC。若要開始使用，請參閱[使用 DKIM 驗證從 Office 365 中的網域傳送的輸出電子郵件](https://technet.microsoft.com/zh-TW/library/mt695945%28v=exchg.150%29.aspx)。接下來，請參閱[使用 DMARC 來驗證 Office 365 中的電子郵件](https://technet.microsoft.com/zh-TW/library/mt734386%28v=exchg.150%29.aspx)。
+> SPF 是設計來協助防止詐騙，但是有 SPF 無法防護的詐騙技術。為了防止這些項目，設定 SPF 之後，您也應該為 Office 365 設定 DKIM 和 DMARC。若要開始使用，請參閱[使用 DKIM 驗證從 Office 365 中的網域傳送的輸出電子郵件](https://technet.microsoft.com/library/mt695945%28v=exchg.150%29.aspx)。接下來，請參閱[使用 DMARC 來驗證 Office 365 中的電子郵件](https://technet.microsoft.com/library/mt734386%28v=exchg.150%29.aspx)。
   
 SPF 記錄是 TXT 記錄，有助於防止他人使用您的網域來傳送垃圾郵件或其他惡意電子郵件。寄件者原則架構 (SPF) 記錄的運作方式是識別取得從網域傳送電子郵件之授權的伺服器。
   

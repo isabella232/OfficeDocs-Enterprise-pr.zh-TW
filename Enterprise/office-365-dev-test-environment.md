@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 4f6035b8-2da3-4cf9-9657-5284d6364f7a
 description: 摘要：使用此測試實驗室指南來建立 Office 365 試用訂閱以進行評估或開發/測試。
-ms.openlocfilehash: 06ffed9ab4b41c5e164cfadb951181a3406c67a3
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: b51e8c493294885c411ea3a4155b643ba6092313
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35781933"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38032038"
 ---
 # <a name="office-365-devtest-environment"></a>Office 365 開發/測試環境
 
@@ -44,7 +44,7 @@ ms.locfileid: "35781933"
 ![Microsoft Cloud 中的測試實驗室指南](media/24ad0d1b-3274-40fb-972a-b8188b7268d1.png)
   
 > [!TIP]
-> 按一下[這裡](http://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
+> 按一下[這裡](https://aka.ms/catlgstack)，可查看 Office 365 測試實驗室指南堆疊中文章的所有視覺對應。
   
 ## <a name="phase-1-create-the-base-configuration-in-azure"></a>階段 1：Azure 中建立基本設定
 

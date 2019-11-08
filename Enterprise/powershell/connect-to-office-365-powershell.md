@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要：使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
-ms.openlocfilehash: c5bf5204d8ca1c8db35635f080031838e9fbea03
-ms.sourcegitcommit: 86a740dccf273d679a8938e11e60d2a497c01689
+ms.openlocfilehash: 1bcf2438c4a07f3d025ef9cb664875214f1aa289
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "37328151"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031748"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -36,7 +36,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 自本文發行日期起，Azure Active Directory PowerShell for Graph 模組無法完全取代適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組中針對使用者、群組和授權管理的 Cmdlet 功能。 在許多情況下，您需要同時使用這兩個版本。 您可以在同一部電腦上安全地安裝這兩個版本。
 
 > [!TIP]
-> **第一次使用 PowerShell？** 請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/zh-TW/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
+> **第一次使用 PowerShell？** 請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
   
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
@@ -150,7 +150,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
     
   - 針對 Windows 7 或 Windows Server 2008 R2，請參閱[您無法開啟 Windows PowerShell 的 Azure Active Directory 模組](https://go.microsoft.com/fwlink/p/?LinkId=532370)
 
-  - 若為 Windows 10、Windows 8.1 和 Windows 8，請參閱[在 Windows 10、Windows 8.1 以及 Windows 8 上安裝 .NET Framework 3.5](https://docs.microsoft.com/zh-TW/dotnet/framework/install/dotnet-35-windows-10)
+  - 若為 Windows 10、Windows 8.1 和 Windows 8，請參閱[在 Windows 10、Windows 8.1 以及 Windows 8 上安裝 .NET Framework 3.5](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)
 
   
 - **您的 Windows PowerShell 的 Microsoft Azure Active Directory 模組 版本可能已過期。** 若要檢查，請在 Office 365 PowerShell 或 Windows PowerShell 的 Microsoft Azure Active Directory 模組 中執行下列命令：

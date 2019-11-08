@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 365 網路流量，讓您更容易評估、設定及掌握變更。
-ms.openlocfilehash: 90de20f28e271e3fb174a883eb9cda3fb1228fb4
-ms.sourcegitcommit: 6db61b95b1b5b4312dd6bc42bec6597e359b1bd7
+ms.openlocfilehash: 2dd725c39446d7e9cdad6b7e870bf7353ff1f8e3
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "36212978"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031208"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務
 
@@ -51,8 +51,8 @@ Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 3
 
 如需詳細資訊，請參閱：
 
-- [Office 365 技術社群論壇中的宣告部落格文章](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638) (英文)
-- [Office 365 技術社群論壇中關於使用 Web 服務的問題](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking) (英文)
+- [Office 365 技術社群論壇中的宣告部落格文章](https://techcommunity.microsoft.com/t5/Office-365-Blog/Announcing-Office-365-endpoint-categories-and-Office-365-IP/ba-p/177638)
+- [Office 365 技術社群論壇中關於使用 Web 服務的問題](https://techcommunity.microsoft.com/t5/Office-365-Networking/bd-p/Office365Networking)
 
 ## <a name="common-parameters"></a>通用參數
 
@@ -61,7 +61,7 @@ Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 3
 - **format=<JSON | CSV>** - 依預設，傳回的資料格式為 JSON。 使用此選擇性參數可以逗點分隔值 (CSV) 格式傳回資料。
 - **ClientRequestId =\<guid>** - 您為用戶端關聯所產生的必要 GUID。 針對每個呼叫 Web 服務的電腦產生唯一 GUID (此頁面上包含的指令碼會為您產生 GUID)。 請勿使用下列範例所示的 GUID，因為未來 Web 服務可能會加以封鎖。 GUID 格式為 _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_，其中 x 代表十六進位數字。
 
-  若要產生 GUID，您可以使用 PowerShell 命令 [New-Guid](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6)，或使用線上服務，例如[線上 GUID 產生器](https://www.guidgenerator.com/) (英文)。
+  若要產生 GUID，您可以使用 PowerShell 命令 [New-Guid](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6)，或使用線上服務，例如[線上 GUID 產生器](https://www.guidgenerator.com/)。
 
 ## <a name="version-web-method"></a>版本 Web 方法
 
@@ -156,9 +156,9 @@ Worldwide,2018063000
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<rss version="2.0" xmlns:a10="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:a10="https://www.w3.org/2005/Atom">
 <channel>
-<link>http://aka.ms/o365ip</link>
+<link>https://aka.ms/o365ip</link>
 <description/>
 <language>en-us</language>
 <lastBuildDate>Thu, 02 Aug 2018 00:00:00 Z</lastBuildDate>
@@ -599,13 +599,13 @@ else:
 
 當 IP 位址和 URL 的變更發佈至 Web 服務時，您可以使用數種不同的方法取得電子郵件通知。
 
-- 若要使用 Microsoft Flow 解決方案，請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651) (英文)。
-- 若要使用 ARM 範本部署 Azure Logic App，請參閱 [Office 365 更新通知 (v1.1)](https://aka.ms/ipurlws-updates-template) (英文)。
-- 若要使用 PowerShell 撰寫您自己的通知指令碼，請參閱 [Send-MailMessage](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/send-mailmessage) (英文)。
+- 若要使用 Microsoft Flow 解決方案，請參閱[使用 Microsoft Flow 接收有關 Office 365 IP 位址和 URL 變更的電子郵件](https://techcommunity.microsoft.com/t5/Office-365-Networking/Use-Microsoft-Flow-to-receive-an-email-for-changes-to-Office-365/m-p/240651)。
+- 若要使用 ARM 範本部署 Azure Logic App，請參閱 [Office 365 更新通知 (v1.1)](https://aka.ms/ipurlws-updates-template)。
+- 若要使用 PowerShell 撰寫您自己的通知指令碼，請參閱 [Send-MailMessage](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/send-mailmessage)。
 
 ## <a name="exporting-a-proxy-pac-file"></a>匯出 Proxy PAC 檔案
 
-[Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile) 是 PowerShell 指令碼，會讀取來自 Office 365 IP 位址和 URL Web 服務的最新網路端點，並建立範例 PAC 檔案。 如需有關使用 Get-PacFile 的詳細資訊，請參閱[使用 PAC 檔案進行重要 Office 365 流量的直接路由傳送](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic) (機器翻譯)。
+[Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile) 是 PowerShell 指令碼，會讀取來自 Office 365 IP 位址和 URL Web 服務的最新網路端點，並建立範例 PAC 檔案。 如需有關使用 Get-PacFile 的詳細資訊，請參閱[使用 PAC 檔案進行重要 Office 365 流量的直接路由傳送](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-office-365-traffic)。
 
 ## <a name="related-topics"></a>相關主題
   
@@ -613,7 +613,7 @@ else:
 
 [管理 Office 365 端點](managing-office-365-endpoints.md)
   
-[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) (機器翻譯)
+[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
 
 [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 
@@ -621,9 +621,9 @@ else:
 
 [評估 Office 365 網路連線能力](assessing-network-connectivity.md)
   
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
 
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
   

@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解什麼是 Office 365 多地理位置、多地理位置的運作方式，以及哪些地理位置可用於儲存資料。
-ms.openlocfilehash: f3abcf5e2c5cf0b8250b219e2891181365ffa934
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 216ff8e80970630356c36d50beda25f93ec706da
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069419"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031758"
 ---
 # <a name="plan-for-office-365-multi-geo"></a>規劃 Office 365 多地理位置
 
@@ -25,7 +25,7 @@ ms.locfileid: "34069419"
 
 以下是一些重要的多地理位置詞彙，可協助您了解設定的基本概念：
 
--   **租用戶** – 組織在 Office 365 中的呈現方式，通常會有與其相關聯的一個或多個網域 (例如 http://contoso.sharepoint.com))。 
+-   **租用戶** – 組織在 Office 365 中的呈現方式，通常會有與其相關聯的一個或多個網域 (例如 https://contoso.sharepoint.com))。 
 
 -   **地理位置** – 可用來裝載 Office 365 租用戶中資料的地理位置。
 
@@ -64,7 +64,7 @@ ms.locfileid: "34069419"
 
 建立使用者清單，並包含使用者主體名稱 (UPN) 與適當慣用資料位置的位置代碼。包含測試使用者與您起始的試驗群組來開始進行。您將需要此清單來設定程序。
 
-如果您的使用者是從內部部署 Active Directory 系統同步到 Azure Active Directory，您必須將慣用資料位置設定為 Active Directory 屬性，並使用 Azure Active Directory Connect 進行同步。 您無法使用 Azure AD PowerShell為同步使用者直接設定慣用資料位置。 在 Active Directory 中設定 PDL 並對其進行同步的步驟會於 [Azure Active Directory Connect 同步：為 Office 365 資源設定慣用資料位置](https://docs.microsoft.com/en-us/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中說明。
+如果您的使用者是從內部部署 Active Directory 系統同步到 Azure Active Directory，您必須將慣用資料位置設定為 Active Directory 屬性，並使用 Azure Active Directory Connect 進行同步。 您無法使用 Azure AD PowerShell為同步使用者直接設定慣用資料位置。 在 Active Directory 中設定 PDL 並對其進行同步的步驟會於 [Azure Active Directory Connect 同步：為 Office 365 資源設定慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中說明。
 
 多地理位置租用戶的管理可能與非多地理位置租用戶不同，因為許多 SharePoint 和 OneDrive 設定與服務具有多地理位置意識。我們建議您檢閱[管理多地理位置環境](administering-a-multi-geo-environment.md)，再繼續進行您的組態。
 

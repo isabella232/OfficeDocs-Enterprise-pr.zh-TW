@@ -10,12 +10,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 使用 Office 365 多地理位置，將 Office 365 的存在狀態拓展至多個地理區域。
-ms.openlocfilehash: 7aa1933725617bcc1f84bbe6d0f31a6ddd91815d
-ms.sourcegitcommit: a7b2adf4b55df5fc35a617a145e8177caefce28b
+ms.openlocfilehash: 86234cb025d5e0398cbfa626b4867642412e7e0b
+ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "35078507"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "38031928"
 ---
 # <a name="office-365-multi-geo"></a>Office 365 多地理位置
 
@@ -25,7 +25,7 @@ ms.locfileid: "35078507"
 
 #### <a name="video-introducing-office-365-multi-geo"></a>影片：介紹 Office 365 的多地理位置
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1Yk6B?autoplay=false]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1Yk6B?autoplay=false]
 
 在多地理位置環境中，Office 365 租用戶包含一個中央位置(最初佈建 Office 365 訂閱的位置) 和一個或多個衛星位置。 在多地理位置租用戶中，地理位置、群組和使用者資訊的相關資訊掌握在 Azure Active Directory (AAD) 中。 由於您的租用戶資訊會集中管理並同步到每個地理位置，若要共用及體驗，公司的每一位員工都必須擁有全域概念。
 
