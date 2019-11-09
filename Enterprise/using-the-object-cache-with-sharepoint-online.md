@@ -8,17 +8,19 @@ audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 38bc9c14-3826-449c-beb6-b1003bcbeaaf
 description: 本文說明使用物件快取 SharePoint Server 2013 內部部署和 SharePoint Online 中的差異。
-ms.openlocfilehash: 8ae2e2675444c023b69030f3f46f170b450fb390
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.openlocfilehash: 4c6cd225bf0f7324dcb23c55adb87e2365d35472
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616836"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38078022"
 ---
 # <a name="using-the-object-cache-with-sharepoint-online"></a>使用 SharePoint Online 的物件快取
 
@@ -48,12 +50,12 @@ ms.locfileid: "35616836"
 
 因為您不應該依賴 SharePoint Online 中快取，您應該評估使用物件快取的 SharePoint 自訂的替代設計方法。 這表示效能問題，請勿依賴物件快取才能產生良好結果提供給使用者的使用方式。 這部分本系列中的其他文章所述，包括：
   
-- [SharePoint Online 的導覽選項](navigation-options-for-sharepoint-online.md)
+- [SharePoint Online 的瀏覽選項](navigation-options-for-sharepoint-online.md)
     
-- [縮製及統合在 SharePoint Online](minification-and-bundling-in-sharepoint-online.md)
+- [SharePoint Online 中的縮製和統合](minification-and-bundling-in-sharepoint-online.md)
     
 - [使用內容傳遞網路](using-content-delivery-networks-with-sharepoint-online.md)
     
-- [延遲載入 SharePoint Online 中的影像和 JavaScript](delay-loading-images-and-javascript-in-sharepoint-online.md)
+- [在 SharePoint Online 中延遲載入圖片與 JavaScript](delay-loading-images-and-javascript-in-sharepoint-online.md)
     
 

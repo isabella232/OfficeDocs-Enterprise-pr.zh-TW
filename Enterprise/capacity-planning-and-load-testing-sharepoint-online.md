@@ -1,5 +1,5 @@
 ---
-title: 容量規劃和負載測試 SharePoint Online
+title: SharePoint Online 容量規劃和負載測試
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -8,19 +8,21 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: c932bd9b-fb9a-47ab-a330-6979d03688c0
 description: 本文說明如何部署至 SharePoint Online 不執行傳統負載測試，因為不允許使用。
-ms.openlocfilehash: d62b15be38b3f62c64c2943313b94aa99cbd14ab
-ms.sourcegitcommit: 739024fe2862ab646b36e218b57c5cc16ebe7892
+ms.openlocfilehash: 13e71343aa5ec823003791d99e227fc835117b62
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "37422140"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077876"
 ---
-# <a name="capacity-planning-and-load-testing-sharepoint-online"></a>容量規劃和負載測試 SharePoint Online
+# <a name="capacity-planning-and-load-testing-sharepoint-online"></a>SharePoint Online 容量規劃和負載測試
 本文說明如何部署至 SharePoint Online 沒有傳統負載測試，因為 SharePoint Online 上不允許負載測試。 SharePoint Online 的雲端服務和負載功能，狀況且整體的服務中的負載平衡由 Microsoft 所管理。
   
 若要確保成功啟動您的網站的最佳方法是遵循基本原則、 實務和建議的方式反白顯示在[規劃您入口網站啟動推行](https://docs.microsoft.com/office365/enterprise/planportallaunchroll-out)。

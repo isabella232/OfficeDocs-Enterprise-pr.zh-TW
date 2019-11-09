@@ -17,13 +17,14 @@ ms.assetid: 1492cb94-bd62-43e6-b8d0-2a61ed88ebae
 ms.collection:
 - M365-security-compliance
 - Ent_O365
+- SPO_Content
 description: 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
-ms.openlocfilehash: 755f4c4bde7e040638e768002a528710bcdd48fd
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 03aa4f9092154e00201ca0a58f335b70d26f3b11
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35781903"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38078132"
 ---
 # <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄調整 Office 365 效能
 
@@ -39,7 +40,7 @@ ms.locfileid: "35781903"
 Office 365 居住持續監視不只是由 「 自動化，但實際人員高容量、 專用的 Microsoft 網路內。 維護 Office 365 雲端的一部分是角色的建置在效能調整和簡化很可能。 在 Office 365 雲端的用戶端必須透過網際網路連線，因為沒有連續的人力太微調跨 Office 365 服務的效能。 效能改善永遠不會實際停止在雲端中，且沒有與保持在雲端，狀況良好且快速累積體驗的很多。 您應該會遇到從所在位置連線到 Office 365 的效能問題，它最佳為開頭，並不等待 on、 支援案例。 相反地，您應該開始調查從 '深究' 的問題。 也就是啟動內部網路，並擬定雜亂到 Office 365。 與 Office 365 支援開啟案例之前，您可以收集資料，並採取動作，將探索以及可解決您的問題。
   
 > [!IMPORTANT]
-> 請注意的容量規劃與 Office 365 中的限制。 該資訊將會讓您放置在內曲線，嘗試解決效能問題時。 以下是[Office 365 平台服務說明](https://technet.microsoft.com/en-us/library/office-365-service-descriptions.aspx)連結。 這是中樞和 Office 365 所提供的所有服務都從這裡移至自己的服務描述的連結。 這表示，您所需要的 SharePoint Online 中查看的標準的限制，例如，您應按一下 [ [SharePoint Online 服務說明](https://technet.microsoft.com/en-us/library/sharepoint-online-service-description.aspx)，然後找出其[SharePoint Online 限制一節](https://go.microsoft.com/fwlink/p/?LinkID=856113)。 
+> 請注意的容量規劃與 Office 365 中的限制。 該資訊將會讓您放置在內曲線，嘗試解決效能問題時。 以下是[Office 365 平台服務說明](https://technet.microsoft.com/library/office-365-service-descriptions.aspx)連結。 這是中樞和 Office 365 所提供的所有服務都從這裡移至自己的服務描述的連結。 這表示，您所需要的 SharePoint Online 中查看的標準的限制，例如，您應按一下 [ [SharePoint Online 服務說明](https://technet.microsoft.com/library/sharepoint-online-service-description.aspx)，然後找出其[SharePoint Online 限制一節](https://go.microsoft.com/fwlink/p/?LinkID=856113)。 
   
 請確定您進入您必須了解疑難排解效能是滑動刻度，並不需為了達到理想化的值並永遠維持 (如果您認為這種情形，然後偶爾高頻寬工作 like 登入大量的使用者，或執行大型資料移轉將會是非常緊迫的成員，因此請勿規劃效能影響然後)。 您可以而且應該具有粗略的效能目標，了解，但許多變數播放到效能，因此，效能而異。 這是效能的性質。 
   
@@ -198,7 +199,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
 ![基本網路，以用戶端、 proxy 和雲端，以及工具建議 PSPing、 TraceTCP 和網路追蹤。](media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
 > [!NOTE]
-> TraceTCP 隨附於此 」 螢幕擷取畫面，因為它是很有用的工具，顯示，以毫秒為單位，多久要求所需程序，以及多少網路躍點或連線從一部電腦對下一步]，要求會採用到達目的地。 TraceTCP 也可以授與伺服器旋入，可以用來支援的 Microsoft Office 365 疑難排解員期間使用的名稱。 > TraceTCP 命令可以是非常簡單，例如: > `tracetcp.exe outlook.office365.com:443`> 記住，在命令中包含的連接埠號碼 ！ > [TraceTCP](http://simulatedsimian.github.io/tracetcp_download.html)免費下載，但依賴 Wincap。 Wincap 是一種工具，也是使用及安裝 Netmon。 我們也可以使用 Netmon 中的進階的方法一節。 
+> TraceTCP 隨附於此 」 螢幕擷取畫面，因為它是很有用的工具，顯示，以毫秒為單位，多久要求所需程序，以及多少網路躍點或連線從一部電腦對下一步]，要求會採用到達目的地。 TraceTCP 也可以授與伺服器旋入，可以用來支援的 Microsoft Office 365 疑難排解員期間使用的名稱。 > TraceTCP 命令可以是非常簡單，例如: > `tracetcp.exe outlook.office365.com:443`> 記住，在命令中包含的連接埠號碼 ！ > [TraceTCP](https://simulatedsimian.github.io/tracetcp_download.html)免費下載，但依賴 Wincap。 Wincap 是一種工具，也是使用及安裝 Netmon。 我們也可以使用 Netmon 中的進階的方法一節。 
   
  如果您有多個辦公室，您需要從用戶端的每個位置以及保留的資料集。 這項測試會測量延遲，在此情況下，這是一個數字的值，說明將要求傳送至 Office 365，以及回應要求的 Office 365 用戶端之間的時間長度。 測試的用戶端電腦上，您網域內的來源，並尋找到 Office 365，在網際網路上的輸出點，透過測量從內部網路，來回，重新。 
   
@@ -214,7 +215,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
     
 - \*.microsoftonline p.com
     
-- \*。 sharepoint.com
+- \*.sharepoint.com
     
 - \*。 outlook.com
     
@@ -232,13 +233,13 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 來回行程時間或 RTT，是測量至像 outlook.office365.com 伺服器傳送的 HTTP 要求，並取得回應回認可伺服器知道您並未所花費的數值。 有時您會看到這會縮寫成 RTT。 這應該是時間的相對較短量。
   
-您必須使用[PSPing](https://technet.microsoft.com/en-us/sysinternals/jj729731.aspx)或另一項工具，不會使用所封鎖的 Office 365，才能執行這項測試 ICMP 封包。 
+您必須使用[PSPing](https://technet.microsoft.com/sysinternals/jj729731.aspx)或另一項工具，不會使用所封鎖的 Office 365，才能執行這項測試 ICMP 封包。 
   
  **如何使用 PsPing，直接從 Office 365 URL 取得整體來回行程時間 （毫秒）**
   
 1. 執行已提升權限的命令提示字元，請完成下列步驟：
     
-1. 按一下 [啟動]****。
+1. 按一下 **[開始]**。
     
 2. 在**開始搜尋**] 方塊中，輸入 cmd，然後按 CTRL + SHIFT + enter 鍵。
     
@@ -266,7 +267,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 1. 執行已提升權限的命令提示字元，請完成下列步驟：
     
-1. 按一下 [啟動]****。
+1. 按一下 **[開始]**。
     
 2. 在**開始搜尋**] 方塊中，輸入 cmd，然後按 CTRL + SHIFT + enter 鍵。
     
@@ -304,7 +305,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 ### <a name="advanced-methods"></a>進階的方法
 
-如果您真正想知道發生了什麼網際網路要求到 Office 365，您需要熟悉網路追蹤。 並不重要您偏好的 HTTPWatch、 Netmon、 郵件分析器、 Wireshark、 Fiddler，開發人員儀表板工具這些追蹤哪些工具或其他任何會執行只要該工具可以擷取及篩選網路流量。 您會看到此區段中，很有用執行一個以上的這些工具，以取得問題的更完整的圖片。 當您正在測試時，這些工具有些也會做為在其專屬權限的 proxy。 使用在隨附文章中，[效能疑難排解規劃 Office 365](performance-troubleshooting-plan.md)的工具包括[Netmon 3.4](https://www.microsoft.com/en-us/download/details.aspx?id=4865)、 [HTTPWatch](https://www.httpwatch.com/download/)或[WireShark](https://www.wireshark.org/)。
+如果您真正想知道發生了什麼網際網路要求到 Office 365，您需要熟悉網路追蹤。 並不重要您偏好的 HTTPWatch、 Netmon、 郵件分析器、 Wireshark、 Fiddler，開發人員儀表板工具這些追蹤哪些工具或其他任何會執行只要該工具可以擷取及篩選網路流量。 您會看到此區段中，很有用執行一個以上的這些工具，以取得問題的更完整的圖片。 當您正在測試時，這些工具有些也會做為在其專屬權限的 proxy。 使用在隨附文章中，[效能疑難排解規劃 Office 365](performance-troubleshooting-plan.md)的工具包括[Netmon 3.4](https://www.microsoft.com/download/details.aspx?id=4865)、 [HTTPWatch](https://www.httpwatch.com/download/)或[WireShark](https://www.wireshark.org/)。
   
 取得效能基準是這種方法，簡單的一部分，許多步驟都是相同時疑難排解效能問題。 建立效能基準的更進階的方法需要您採取並儲存網路追蹤。 大部分的本文中的範例使用 SharePoint Online 中，但您應該在您訂閱測試並且將密碼記錄到 Office 365 服務間開發的常見動作清單。 以下是基準範例：
   
@@ -322,7 +323,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 若要解決效能問題，*現在*，您需要在您所遇到的效能問題的時間似乎追蹤。 您必須要有適當工具，可收集記錄檔，而且您需要的行動計劃，也就是疑難排解要收集的最佳的資訊，您可以採取的動作清單。 第一件事是測試的記錄的日期和時間，以便反映計時資料夾中會儲存檔案。 接下來，縮小自己的問題步驟。 這些是您要用於測試的確切步驟。 別忘了基本概念： 如果問題是只使用 Outlook，請確定問題行為會發生只有一個 Office 365 服務中的記錄。 向下此問題的範圍縮小，可協助您專注於您可以解決的某個項目。 
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
 

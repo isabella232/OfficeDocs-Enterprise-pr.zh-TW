@@ -7,16 +7,18 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 description: 本文說明如何規劃對入口網站啟動的 SharePoint Online 中，才會成功啟動步驟
-ms.openlocfilehash: cbb2c58498f682d68ac464d224522361a085b062
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: bba38bb188235ed38f3719cb4472ef156a4d76b3
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38027657"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077566"
 ---
 # <a name="planning-your-portal-launch-roll-out-plan-in-sharepoint-online"></a>規劃在 SharePoint Online 入口網站啟動推行計劃
 入口網站是貴公司中; 的預設 SharePoint 網站在大型組織中可能有好幾種。 如果您預期組織中 20% 以上的使用者會存取頁面，您應考慮使用入口網站頁面。 不應將入口網站與部門用來在團隊中共同作業和共用文件的小組網站混淆。

@@ -13,13 +13,14 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 - M365-analytics
+- SPO_Content
 description: 稽核和報告內 Office 365、 Microsoft 365，以及服務保證功能的概觀。
-ms.openlocfilehash: 545c1224a5c7fc181028be555b14deeff6048ca9
-ms.sourcegitcommit: 9eb68633728cc78e9906dab222edbf9977b17e21
+ms.openlocfilehash: 991eb807ee297ea9dc912be53d99c80247220c1b
+ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38035633"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38076227"
 ---
 # <a name="auditing-and-reporting-in-microsoft-cloud-services"></a>稽核和報告在 Microsoft 雲端服務
 
@@ -29,13 +30,13 @@ Microsoft 雲端服務包含數個的稽核和報告您可用來追蹤使用者�
 
 ## <a name="security--compliance-centers"></a>安全性 & 合規性中心
 
-[Office 365 安全性 & 合規性中心](https://protection.office.com)、 [Microsoft 365 安全性中心](https://security.microsoft.com)中， [Microsoft 365 合規性中心](https://compliance.microsoft.com)一次入口網站來保護您組織中的資料，且其包含多個的稽核和報告功能。 這些中心協助您符合您的資料保護或規範需求和稽核使用者和系統管理員活動。 您可以存取這些中心使用您訂閱的系統管理員帳戶。
+在[Office 365 安全性 & 合規性中心](https://protection.office.com)、 [Microsoft 365 安全性中心](https://security.microsoft.com)中， [Microsoft 365 合規性中心](https://compliance.microsoft.com)一次入口網站來保護您組織中的資料，且包含許多稽核和報告功能。 這些中心協助您符合您的資料保護或規範需求和稽核使用者和系統管理員活動。 您可以存取這些中心使用您訂閱的系統管理員帳戶。
 
 這些中心包含數個功能的存取權的導覽窗格：
 
 - **提醒：** 可讓您管理警示、 檢視安全性相關的提醒，以及管理進階的提醒使用[Office 365 雲端 App 安全性](https://docs.microsoft.com/cloud-app-security/what-is-cloud-app-security)。
 - **的權限：** 可讓您[指派權限](https://support.office.com/article/Give-users-access-to-the-Office-365-Security-Compliance-Center-2cfce2c8-20c5-47f9-afc4-24b059c1bd76)等合規性系統管理員、 電子文件探索管理員] 中，其他人給您組織中的人員，他們可以執行這些中心中的工作。 指派每個中心中的大部分功能的權限，但必須使用 Exchange 系統管理中心和 SharePoint 系統管理中心設定其他權限。
-- **威脅管理：** 可讓您建立及套用裝置管理原則使用[Office 365 行動裝置管理](https://support.office.com/article/Overview-of-Mobile-Device-Management-for-Office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a)，以設定您的組織，來設定電子郵件篩選，反惡意程式碼，DomainKeys 識別[資料外洩防護](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e)(DLP) 原則Mail (DKIM)、 安全附件、 安全連結和 OAuth 應用程式。
+- **威脅管理：** 可讓您建立並套用裝置管理原則使用[Office 365 行動裝置管理](https://support.office.com/article/Overview-of-Mobile-Device-Management-for-Office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a)，以設定您的組織，來設定電子郵件篩選、 反惡意程式碼、 DomainKeys Identified Mail (DKIM)、 安全附件、 安全連結和 OAuth 應用程式的[資料外洩防護](https://support.office.com/article/Overview-of-data-loss-prevention-policies-1966b2a7-d1e2-4d92-ab61-42efbb137f5e)(DLP) 原則。
 - **資料控管：** 可讓您以[電子郵件或從其他系統到 Office 365 的 SharePoint 資料匯入](https://support.office.com/article/Import-PST-files-or-SharePoint-data-to-Office-365-ba688e0a-0fcb-4bd7-8e57-2b669564ea84)、[設定封存信箱](https://support.office.com/article/Enable-archive-mailboxes-in-the-Office-365-Security-Compliance-Center-268a109e-7843-405b-bb3d-b9393b2342ce)及電子郵件與其他組織內的內容設定[保留原則](https://docs.microsoft.com/microsoft-365/compliance/retention-policies)。
 - **搜尋 & 調查：** 提供[內容搜尋](https://support.office.com/article/Run-a-Content-Search-in-the-Office-365-Security-Compliance-Center-61852fd9-fe8a-4880-a339-cb19ed3bff4a)、[稽核記錄檔](https://support.office.com/article/Search-the-audit-log-in-the-Office-365-Security-Compliance-Center-0d4d0f35-390b-4518-800e-0c7ec95e946c)、 隔離及[eDiscovery 案例管理](https://support.office.com/article/Manage-eDiscovery-cases-in-the-Office-365-Security-Compliance-Center-edea80d6-20a7-40fb-b8c4-5e8c8395f6da)工具，可快速切入跨 Exchange Online 信箱、 群組和公用資料夾、 SharePoint Online 和商務用 OneDrive 活動。
 - **報告：** 可讓您快速存取[報告](https://support.office.com/article/Reports-in-the-Office-365-Security-Compliance-Center-7acd33ce-1ec8-49fb-b625-43bac7b58c5a)的 SharePoint Online、 OneDrive for Business、 Exchange Online 中，和 Azure AD。

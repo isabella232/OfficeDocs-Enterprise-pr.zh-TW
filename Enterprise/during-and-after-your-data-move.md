@@ -7,17 +7,18 @@ ms.date: 07/18/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
+ms.collection: SPO_Content
 search.appverid:
 - MET150
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
-ms.openlocfilehash: 67b337ee1ddf34a547ddafc80d886ff6075987ce
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 86bdc1679b787952f7999f04a92c0a9e2ff6e347
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38030777"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077596"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 

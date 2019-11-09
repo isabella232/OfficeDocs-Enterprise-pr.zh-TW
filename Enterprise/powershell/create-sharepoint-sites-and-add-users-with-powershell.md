@@ -11,14 +11,15 @@ ms.collection: Ent_O365
 ms.custom:
 - PowerShell
 - Ent_Office_Other
+- SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 來建立新的 SharePoint Online 網站，並再將使用者和群組新增至這些網站。
-ms.openlocfilehash: 2262c69af7dce7472257512d215c1f0425f875f0
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 17f3a6a6444ced647723f417145c6466dd8d284b
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38031028"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077992"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>建立 SharePoint Online 網站並新增使用者使用 Office 365 PowerShell
 
@@ -148,7 +149,7 @@ c:\users\MyAlias\desktop\UsersAndGroups.ps1
 
 5. 等待要傳回才可繼續的提示。 首先，您會看到顯示他們所建立的群組。 然後您會看到重複也當簡報加入使用者的 [群組] 清單。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [連線至 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 

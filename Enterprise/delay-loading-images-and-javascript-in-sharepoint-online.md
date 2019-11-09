@@ -8,17 +8,19 @@ audience: Admin
 ms.topic: troubleshooting
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
 description: 本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。
-ms.openlocfilehash: 9069fb395465cd9d087c018cc2ae782759ddcb0d
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
+ms.openlocfilehash: a015c8ca26c402733eba3b26e641524f38acca21
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616785"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077666"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>延遲載入 SharePoint Online 中的影像和 JavaScript
 
@@ -28,7 +30,7 @@ ms.locfileid: "35616785"
   
 ## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint Online 頁面載入透過使用 JavaScript 延遲映像來改善頁面載入時間
 
-您可以使用 JavaScript 來防止從預先擷取映像在網頁瀏覽器。 這會加快整體的文件呈現。 若要執行這項操作您移除從 src 屬性的值\<img\>標記並取代為資料屬性中的檔案路徑如下： 資料來源。例如：
+您可以使用 JavaScript 來防止從預先擷取映像在網頁瀏覽器。 這會加快整體的文件呈現。 若要執行這項操作您移除從 src 屬性的值\<img\>標記並取代為資料屬性中的檔案路徑如下： 資料來源。 例如：
   
 ```txt
 <img src="" data-src="/sites/NavigationBySearch/_catalogs/masterpage/media/microsoft-white-8.jpg" />
@@ -113,7 +115,7 @@ $('#s4-workspace').on("scroll", function () {
 
 請不要遺漏有關 GitHub 所提供[JavaScript 插入](https://go.microsoft.com/fwlink/p/?LinkId=524759)上的文章和程式碼範例。 
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [在 Office 2013 和 Office 365 專業增強版支援的瀏覽器](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
   

@@ -7,17 +7,19 @@ audience: Admin
 ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: 本文說明導覽選項網站與 SharePoint 發佈 SharePoint Online 中啟用。 選擇及設定導覽會大幅影響的效能和延展性的 SharePoint Online 中的網站。 本文不適用於傳統的小組網站。
-ms.openlocfilehash: 10b4e1cbad4fbb570affe43feb6773aa59c5f2f3
-ms.sourcegitcommit: 77a25920511c54d7d613f552bdff7ad14cdd8324
+ms.openlocfilehash: d86b0462e8ddb93c39eab0d42a24f3a94f785ecd
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36385201"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38078308"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
@@ -456,9 +458,9 @@ function addEventsToElements() {
 
 [上述程式碼](#about-the-javascript-file)具有下列相依性：
 
-- jQuery-http://jquery.com/
-- KnockoutJS-http://knockoutjs.com/
-- Linq.js- http://linqjs.codeplex.com/，或 github.com/neuecc/linq.js
+- jQuery-https://jquery.com/
+- KnockoutJS-https://knockoutjs.com/
+- Linq.js- https://linqjs.codeplex.com/，或 github.com/neuecc/linq.js
 
 目前版本的 LinqJS 不包含在上面的程式碼中使用的 ByHierarchy 方法，並將會中斷瀏覽程式碼。 若要修正此問題，請將下列方法新增至一行之前 Linq.js 檔案`Flatten: function ()`。
 

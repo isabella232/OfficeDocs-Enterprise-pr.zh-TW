@@ -6,16 +6,16 @@ manager: pamgreen
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-ms.custom: ''
 ms.collection: Strat_SP_gtc
+ms.custom: ''
 localization_priority: Priority
 description: 深入了解多地理位置環境中的 SharePoint、OneDrive 和 Exchange 使用者體驗。
-ms.openlocfilehash: d8be4376b551242a372c44e62020ff78823f4dba
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: ca6c27b29eae84a245c6fe22fd6ba928b79a975d
+ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069909"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "38076237"
 ---
 # <a name="user-experience-in-a-multi-geo-environment"></a>在多地理位置環境中的使用者體驗
 

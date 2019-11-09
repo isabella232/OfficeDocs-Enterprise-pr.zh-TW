@@ -8,7 +8,9 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,18 +18,18 @@ search.appverid:
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
 description: 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
-ms.openlocfilehash: 37fef66aeccc0fcd2102463384ebc2341b9c37e8
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: e9b9d78df4898c1bb212b62444e5a9911a0e548c
+ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782343"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "38077932"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>使用 BGP 社群中 ExpressRoute for Office 365 案例
 
 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
   
-- **管理公告的 IP 首碼接受**-內部網路基礎結構或網路電信業者只支援 IP 電話首碼數目有限的客戶和客戶網路電訊廠商接受前置詞的該費用上方的有限的數字將想要評估已通告其網路前置詞的總數，並選取哪些 Office 365 應用程式是適合用在 ExpressRoute。
+- **管理公告的 IP 首碼接受**-內部網路基礎結構或網路電信業者只支援 IP 電話首碼數目有限的客戶和已接受上方有限數量的前置詞的費用會想要評估已通告其網路前置詞的總數，並選取哪些 Office 365 應用程式是最佳選擇網路電訊廠商客戶適合 ExpressRoute。
 
 - **管理的 Azure ExpressRoute 線路上所需的頻寬量**-客戶可能會想要控制對網際網路路徑的 ExpressRoute 路徑的頻寬信封的 Office 365 服務。 這可讓客戶保留特定的應用程式，例如商務用 Skype 的 ExpressRoute 頻寬，並透過網際網路路徑來路由其餘的 Office 365 應用程式。
 
@@ -103,7 +105,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
   
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 網路連線](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -113,7 +115,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
   
 [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
   
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
 [ExpressRoute 與 QoS skype for Business Online](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
