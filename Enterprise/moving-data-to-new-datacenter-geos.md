@@ -12,18 +12,18 @@ search.appverid:
 - MET150
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 description: 新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 核心客戶資料 」 一詞指的是 Microsoft 線上服務條款中所定義的客戶資料的子集： Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容） 和 SharePoint Online 站台內容和檔案儲存在該站台內，而且檔案上傳至商務用 OneDrive。
-ms.openlocfilehash: df52b50f6e291a80aeb7b8d783937d225bfb6e29
-ms.sourcegitcommit: 842ac51577317dfc8d2adc46d09b4d735f29bc4f
+ms.openlocfilehash: e6bd86e7d3eebd0395d50e7668cf32dcabd0f20f
+ms.sourcegitcommit: 6d3420e41a52820729dd417511286bf98d3713ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "35907636"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "38626153"
 ---
 # <a name="moving-core-data-to-new-office-365-datacenter-geos"></a>將核心資料移至新的 Office 365 資料中心 geos
 
 我們繼續進行若要開啟新的資料中心 geos Office 365 的商務服務。 這些新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 
 
-核心客戶資料 」 一詞指的是[Microsoft 線上服務條款](https://go.microsoft.com/fwlink/p/?LinkID=249048)中所定義的客戶資料的子集： 
+核心客戶資料 」 一詞指的是子集客戶資料，包括： 
 - Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容）
 - SharePoint Online 站台內容和儲存在該站台內的檔案
 - 上傳到商務用 OneDrive 檔案 
@@ -68,4 +68,4 @@ ms.locfileid: "35907636"
   
 [Microsoft Dynamics CRM online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
   
-[依地區的 azure 服務](https://azure.microsoft.com/en-us/regions/)
+[依地區的 azure 服務](https://azure.microsoft.com/regions/)
