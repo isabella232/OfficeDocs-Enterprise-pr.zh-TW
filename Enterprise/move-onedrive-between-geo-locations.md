@@ -12,12 +12,12 @@ ms.collection:
 - SPO_Content
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 49fec1359ed839b16c1872ab607d87515a27eaf5
-ms.sourcegitcommit: fa900775790eb369db1983cd3868b628b699f145
+ms.openlocfilehash: ab5540926d5685b4d3055b9aed623048c764044b
+ms.sourcegitcommit: 6d3420e41a52820729dd417511286bf98d3713ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38033449"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "38626163"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
@@ -55,11 +55,11 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 使用異地移動 Cmdlet 時，請使用下列語法連線到使用者目前 OneDrive 地理位置的 SPO 服務：
 
-`connect-sposervice -url https://<tenantName>-admin.sharepoint.com`
+`Connect-SPOService -url https://<tenantName>-admin.sharepoint.com`
 
 例如：若要移動使用者 ‘Matt@contosoenergy.onmicrosoft.com’ 的 OneDrive，因使用者的 OneDrive 位於 EUR 地理位置，請連線到 EUR SharePoint 管理中心：
 
-`connect-sposervice -url https://contosoenergyeur-admin.sharepoint.com`
+`Connect-SPOSservice -url https://contosoenergyeur-admin.sharepoint.com`
 
 ![顯示 connect-sposervice Cmdlet的 PowerShell 視窗螢幕擷取畫面](media/move-onedrive-between-geo-locations-image1.png)
 
