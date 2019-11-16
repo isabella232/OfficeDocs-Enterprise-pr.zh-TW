@@ -17,10 +17,10 @@ search.appverid:
 ms.assetid: eb15194b-63ec-41b0-8d90-1823d3f558e4
 description: '本文適用於系統管理員。 沒有使用者永久刪除項目從其 Outlook 信箱嗎？ 使用者想要他們回，但無法加以復原。 您可能無法復原的已清除的項目，如果它們尚未從使用者的信箱永久移除。 '
 ms.openlocfilehash: 85086288d6bb153f584aa0a527100eb2d7b7de96
-ms.sourcegitcommit: 16a060c0732c6234bb2ebc037786a7c4872fe686
+ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 11/15/2019
 ms.locfileid: "38308598"
 ---
 # <a name="recover-deleted-items-in-a-user-mailbox---admin-help"></a>復原使用者信箱中刪除的郵件 - 系統管理說明

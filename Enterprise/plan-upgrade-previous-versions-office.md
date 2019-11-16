@@ -13,12 +13,12 @@ search.appverid:
 ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
-ms.openlocfilehash: 56efdc56824b3f280548a106450c565af4fb2694
-ms.sourcegitcommit: 3bba97053caf5f9cff0ef3205afb7869535f38bd
+ms.openlocfilehash: 39ae2a80f9f16d70e22f7654c8818155b0ffda91
+ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "36991894"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "38031058"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
@@ -64,13 +64,13 @@ ms.locfileid: "36991894"
 
 如果您使用家用版 Office 2007 或 Office 2010，請考慮下列更新選擇：
 
-- **免費使用瀏覽器中的 Office。** 您可以在瀏覽器中建立、檢視及編輯 Office 檔案，也可以從任何可存取網際網路的裝置存取這些檔案。 [Office 網頁版](https://products.office.com/office-online/documents-spreadsheets-presentations-office-online)包括 [Word 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746664)、[Excel 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746665)、[PowerPoint 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746666)、[OneNote 網頁版](http://go.microsoft.com/fwlink/p/?linkid=746674)、[Sway](http://go.microsoft.com/fwlink/p/?linkid=746675)、[電子郵件](http://go.microsoft.com/fwlink/p/?linkid=746676)、[行事曆](http://go.microsoft.com/fwlink/p/?linkid=746678) 和 [OneDrive](http://go.microsoft.com/fwlink/p/?linkid=746679)。 若要開始使用，請造訪 [office.com](https://office.com)，並使用您的 [Microsoft 帳戶](https://account.microsoft.com/account)登入。 (如果您還沒有 Microsoft 帳戶，可以在 [office.com](https://office.com) 建立一個。)
+- **免費使用瀏覽器中的 Office。** 您可以在瀏覽器中建立、檢視及編輯 Office 檔案，也可以從任何可存取網際網路的裝置存取這些檔案。 [Office 網頁版](https://products.office.com/office-online/documents-spreadsheets-presentations-office-online)包括 [Word 網頁版](https://go.microsoft.com/fwlink/p/?linkid=746664)、[Excel 網頁版](https://go.microsoft.com/fwlink/p/?linkid=746665)、[PowerPoint 網頁版](https://go.microsoft.com/fwlink/p/?linkid=746666)、[OneNote 網頁版](https://go.microsoft.com/fwlink/p/?linkid=746674)、[Sway](https://go.microsoft.com/fwlink/p/?linkid=746675)、[電子郵件](https://go.microsoft.com/fwlink/p/?linkid=746676)、[行事曆](https://go.microsoft.com/fwlink/p/?linkid=746678) 和 [OneDrive](https://go.microsoft.com/fwlink/p/?linkid=746679)。 若要開始使用，請造訪 [office.com](https://office.com)，並使用您的 [Microsoft 帳戶](https://account.microsoft.com/account)登入。 (如果您還沒有 Microsoft 帳戶，可以在 [office.com](https://office.com) 建立一個。)
 
 - **移轉至家用版 Office 365**。 請檢閱[需求](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm?rtc=1&activetab=pivot:techspecstab)，然後選擇 [Office 365 家用版](https://www.microsoft.com/p/office-365-home/cfq7ttc0k5dm)或 [Office 365 個人版](https://www.microsoft.com/p/office-365-personal/cfq7ttc0k5bf)。 您可以開始試用，考量 Office 365 是否適合您。 有了 Office 365，您將享有 OneDrive 雲端儲存空間，每月 60 分鐘的 Skype 通話時間 (可用來撥打行動電話及有線電話)，以及許多其他絕佳的功能。 若要深入了解，請參閱[充分運用搭配 Office 365 的 Office](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab%3aprimaryr1)。
 
    由於 [Windows 7 將於 2020 年 1 月 14 日終止支援](https://www.microsoft.com/windowsforbusiness/end-of-windows-7-support)，在 Windows 7 裝置上執行的 Office 365 家用版或 Office 365 個人版提供的 Word、Excel、PowerPoint、Outlook、Publisher 和 Access版本會收到安全性更新，但不會收到功能更新。 若要繼續接收這些應用程式的功能更新，請[將 Windows 7 裝置升級為 Windows 10](https://support.microsoft.com/help/12435/windows-10-upgrade-faq)。
     
-- **購買 Office 家用版 &amp; 學生版。** 如果您選擇此選項，便會在您的 Windows 電腦或 Mac 上一次購買 Office。 這不是訂閱，而是提供一部電腦的一次性永久使用授權。 請檢視[需求](http://office.com/systemrequirements)，然後選擇您要使用的版本。
+- **購買 Office 家用版 &amp; 學生版。** 如果您選擇此選項，便會在您的 Windows 電腦或 Mac 上一次購買 Office。 這不是訂閱，而是提供一部電腦的一次性永久使用授權。 請檢視[需求](https://office.com/systemrequirements)，然後選擇您要使用的版本。
 
     - 如果您的 Windows 電腦執行 Windows 10，請考慮取得 [Office 家用及學生版 2019](https://www.microsoft.com/p/office-home-student-2019/cfq7ttc0k7c8)。
 

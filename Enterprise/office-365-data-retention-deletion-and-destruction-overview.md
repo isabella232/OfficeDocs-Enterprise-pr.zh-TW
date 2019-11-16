@@ -13,19 +13,19 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: Office 365 的相關資料保留、 刪除及毀損的 Microsoft 原則概觀。
-ms.openlocfilehash: 08b04e4fec762249208acb626fa20562ffecb82f
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: e4632a3025f1dc0f22338c0a463f054a7b993524
+ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067321"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "37975828"
 ---
 # <a name="data-retention-deletion-and-destruction-in-office-365"></a>Office 365 中的資料保留、刪除及毀損
 
 Microsoft 已指定客戶資料刪除後，要保留多久的 Office 365 的資料處理標準的原則。 通常有兩個客戶資料都會被刪除的案例：
 
-- **作用中刪除：** 租用戶都有作用中的訂閱和使用者刪除資料，或系統管理員刪除使用者所提供的資料。
-- **被動刪除：** 租用戶訂閱結束。
+- **作用中刪除**： 租用戶都有作用中的訂閱與使用者或系統管理員會刪除資料，或系統管理員刪除使用者。
+- **被動刪除**： 租用戶訂閱結束。
 
 ## <a name="data-retention"></a>資料保留
 
@@ -50,6 +50,7 @@ Microsoft 已指定客戶資料刪除後，要保留多久的 Office 365 的資�
 如需有關快速取消佈建的詳細資訊，請參閱[取消 Office 365](https://support.office.com/article/Cancel-Office-365-for-business-b1bc0bef-4608-4601-813a-cdd9f746709a)。
 
 ## <a name="related-links"></a>相關連結
+
 - [資料毀損](office-365-data-destruction.md)
 - [Office 365 中的不變性](office-365-data-immutability.md)
 - [Exchange Online 資料刪除](office-365-exchange-online-data-deletion.md)
