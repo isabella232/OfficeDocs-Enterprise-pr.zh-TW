@@ -71,15 +71,7 @@
 #### [Lync Server 2010](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade)
 #### [Project Server 2010](project-server-2010-end-of-support.md)
 
-# 測試 Office 365
-## [測試 Office 365](cloud-adoption-test-lab-guides-tlgs.md)
-## [基底組態開發/測試環境](base-configuration-dev-test-environment.md)
-## [Office 365 開發/測試環境](office-365-dev-test-environment.md)
-### [目錄同步處理](dirsync-for-your-office-365-dev-test-environment.md)
-### [多重要素驗證](multi-factor-authentication-for-your-office-365-dev-test-environment.md)
-### [同盟身份](federated-identity-for-your-office-365-dev-test-environment.md)
-### [進階威脅防護](advanced-threat-protection-for-your-office-365-dev-test-environment.md)
-## [Azure 中模擬的跨單位部署虛擬網路](simulated-cross-premises-virtual-network-in-azure.md)
+# [測試 Office 365](cloud-adoption-test-lab-guides-tlgs.md)
 
 # [部署 Office 365 企業版](setup-overview-for-enterprises.md)
 
@@ -198,7 +190,7 @@
 ### [關閉目錄同步處理](turn-off-directory-synchronization.md)
 
 ## 使用者
-### [Office 365 系統管理說明中心](https://support.office.com/article/Management-tools-for-Office-365-8e715d2a-c20e-492b-a9cb-60f3708f9241)
+### [Office 365 系統管理說明中心](https://docs.microsoft.com/office365/admin/admin-home)
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
