@@ -15,12 +15,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
 description: 了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。
-ms.openlocfilehash: 846dafb842b87f119670f44848152a99341939e7
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 9d4aee35a1fc78753087b6eb6695e96966794000
+ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069059"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "38707050"
 ---
 # <a name="create-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 建立使用者帳戶
 
@@ -45,7 +45,7 @@ ms.locfileid: "34069059"
 
 連接之後，使用下列語法來建立個別帳戶：
   
-```
+```powershell
 $PasswordProfile=New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
 $PasswordProfile.Password="<user account password>"
 New-AzureADUser -DisplayName "<display name>" -GivenName "<first name>" -SurName "<last name>" -UserPrincipalName <sign-in name> -UsageLocation <ISO 3166-1 alpha-2 country code> -MailNickName <mailbox name> -PasswordProfile $PasswordProfile -AccountEnabled $true
@@ -53,7 +53,7 @@ New-AzureADUser -DisplayName "<display name>" -GivenName "<first name>" -SurName
 
 本範例會為名為 Caleb Sills 的美國使用者建立帳戶：
   
-```
+```powershell
 $PasswordProfile=New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
 $PasswordProfile.Password="3Rv0y1q39/chsy"
 New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -UserPrincipalName calebs@contoso.onmicrosoft.com -UsageLocation US -MailNickName calebs -PasswordProfile $PasswordProfile -AccountEnabled $true
@@ -67,19 +67,19 @@ New-AzureADUser -DisplayName "Caleb Sills" -GivenName "Caleb" -SurName "Sills" -
 
 若要建立個別帳戶，請使用下列語法：
   
-```
+```powershell
 New-MsolUser -DisplayName <display name> -FirstName <first name> -LastName <last name> -UserPrincipalName <sign-in name> -UsageLocation <ISO 3166-1 alpha-2 country code> -LicenseAssignment <licensing plan name> [-Password <Password>]
 ```
 
 若要列出可用的授權方案名稱，請使用此命令：
 
-````
+````powershell
 Get-MsolAccountSku
 ````
 
 本範例會建立一個名為 Caleb Sills 的美國使用者帳戶，並指派 `contoso:ENTERPRISEPACK` (Office 365 企業版 E3) 授權方案的授權。
   
-```
+```powershell
 New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPrincipalName calebs@contoso.onmicrosoft.com -UsageLocation US -LicenseAssignment contoso:ENTERPRISEPACK
 ```
 
@@ -87,7 +87,7 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
 
 1. 建立包含必要使用者帳戶資訊的逗點分隔值 (CSV) 檔案。例如：
     
-  ```
+  ```powershell
   UserPrincipalName,FirstName,LastName,DisplayName,UsageLocation,AccountSkuId
   ClaudeL@contoso.onmicrosoft.com,Claude,Loiselle,Claude Loiselle,US,contoso:ENTERPRISEPACK
   LynneB@contoso.onmicrosoft.com,Lynne,Baxter,Lynne Baxter,US,contoso:ENTERPRISEPACK
@@ -99,13 +99,13 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
     
 2. 使用下列語法：
     
-  ```
+  ```powershell
   Import-Csv -Path <Input CSV File Path and Name> | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId [-Password $_.Password]} | Export-Csv -Path <Output CSV File Path and Name>
   ```
 
 本範例會從名為 C:\My Documents\NewAccounts.csv 的檔案建立使用者帳戶，並將結果記錄在名為 C:\My Documents\NewAccountResults.csv 的檔案中
     
-  ```
+  ```powershell
   Import-Csv -Path "C:\My Documents\NewAccounts.csv" | foreach {New-MsolUser -DisplayName $_.DisplayName -FirstName $_.FirstName -LastName $_.LastName -UserPrincipalName $_.UserPrincipalName -UsageLocation $_.UsageLocation -LicenseAssignment $_.AccountSkuId} | Export-Csv -Path "C:\My Documents\NewAccountResults.csv"
   ```
 

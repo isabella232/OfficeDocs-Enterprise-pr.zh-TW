@@ -14,12 +14,12 @@ ms.custom:
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 來建立新的 SharePoint Online 網站，並再將使用者和群組新增至這些網站。
-ms.openlocfilehash: 17f3a6a6444ced647723f417145c6466dd8d284b
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: abe8f76de07c230c0d1484ccfb57b3b9a7bf8d34
+ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077992"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "38707020"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>建立 SharePoint Online 網站並新增使用者使用 Office 365 PowerShell
 
@@ -41,7 +41,7 @@ Office 365 PowerShell cmdlet 會匯入之.csv 檔案，並將其傳送至大括�
 
 1. 開啟 [記事本]，然後貼上下列的文字區塊：<br/>
 
-```
+```powershell
 Owner,StorageQuota,Url,ResourceQuota,Template,TimeZoneID,Name
 owner@tenant.onmicrosoft.com,100,https://tenant.sharepoint.com/sites/TeamSite01,25,EHS#1,10,Contoso Team Site
 owner@tenant.onmicrosoft.com,100,https://tenant.sharepoint.com/sites/Blog01,25,BLOG#0,10,Contoso Blog
@@ -58,7 +58,7 @@ owner@tenant.onmicrosoft.com,150,https://tenant.sharepoint.com/sites/Community01
 ### <a name="run-the-windows-powershell-command"></a>執行 Windows PowerShell 命令
 
 1. 在 Windows PowerShell 提示字元處，輸入或複製並貼上下列的指令程式，並按 Enter 鍵：<br/>
-```
+```powershell
 Import-Csv C:\users\MyAlias\desktop\SiteCollections.csv | ForEach-Object {New-SPOSite -Owner $_.Owner -StorageQuota $_.StorageQuota -Url $_.Url -NoWait -ResourceQuota $_.ResourceQuota -Template $_.Template -TimeZoneID $_.TimeZoneID -Title $_.Name}
 ```
 <br/>其中*MyAlias*等於您的使用者別名。<br/>
@@ -67,7 +67,7 @@ Import-Csv C:\users\MyAlias\desktop\SiteCollections.csv | ForEach-Object {New-SP
 
 3. 在 Windows PowerShell 提示字元處，輸入或複製並貼上下列的指令程式，並按 Enter 鍵：<br/>
 
-```
+```powershell
 Get-SPOSite -Detailed | Format-Table -AutoSize
 ```
 <br/>
@@ -85,7 +85,7 @@ Get-SPOSite -Detailed | Format-Table -AutoSize
 ### <a name="create-csv-and-ps1-files"></a>建立.csv 和.ps1 檔案
 
 1. 開啟 [記事本]，然後貼上下列的文字區塊：<br/>
-```
+```powershell
 Site,Group,PermissionLevels
 https://tenant.sharepoint.com/sites/contosotest,Contoso Project Leads,Full Control
 https://tenant.sharepoint.com/sites/contosotest,Contoso Auditors,View Only
@@ -102,7 +102,7 @@ https://tenant.sharepoint.com/sites/Project01,Project Alpha Approvers,Full Contr
 
 3. 開啟 [記事本] 的新執行個體，並貼上下列的文字區塊：<br/>
 
-```
+```powershell
 Group,LoginName,Site
 Contoso Project Leads,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/contosotest
 Contoso Auditors,username@tenant.onmicrosoft.com,https://tenant.sharepoint.com/sites/contosotest
@@ -119,7 +119,7 @@ Project Alpha Approvers,username@tenant.onmicrosoft.com,https://tenant.sharepoin
 
 5. 開啟 [記事本] 的新執行個體，並貼上下列的文字區塊：<br/>
 
-```
+```powershell
 Import-Csv C:\users\MyAlias\desktop\GroupsAndPermissions.csv | ForEach-Object {New-SPOSiteGroup -Group $_.Group -PermissionLevels $_.PermissionLevels -Site $_.Site}
 Import-Csv C:\users\MyAlias\desktop\Users.csv | where {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
 ```
@@ -133,7 +133,7 @@ Import-Csv C:\users\MyAlias\desktop\Users.csv | where {Add-SPOUser -Group $_.Gro
 
 1. 會傳回 SharePoint Online 管理命令介面。<br/>
 2. 在 Windows PowerShell 提示字元處，輸入或複製並貼上下行，並按 Enter 鍵：<br/>
-```
+```powershell
 Set-ExecutionPolicy Bypass
 ```
 <br/>
@@ -142,14 +142,14 @@ Set-ExecutionPolicy Bypass
 
 4. 在 Windows PowerShell 命令提示字元、 類型或複製並貼上下列項目，然後按 Enter 鍵：<br/>
 
-```
+```powershell
 c:\users\MyAlias\desktop\UsersAndGroups.ps1
 ```
 <br/>其中*MyAlias*等於您的使用者名稱。<br/>
 
 5. 等待要傳回才可繼續的提示。 首先，您會看到顯示他們所建立的群組。 然後您會看到重複也當簡報加入使用者的 [群組] 清單。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [連線至 SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 

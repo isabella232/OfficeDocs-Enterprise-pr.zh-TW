@@ -18,12 +18,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-ms.openlocfilehash: e963b9a0f24ae5b573dfe9612d9d09419809defe
-ms.sourcegitcommit: 6b4fca7ccdbb7aeadc705d82f1007ac285f27357
+ms.openlocfilehash: 22cc5377557464ac6d67833381b96ac01382bc4b
+ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "37282928"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "38707000"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
@@ -42,7 +42,7 @@ ms.locfileid: "37282928"
 
 接下來，列出您的租用戶使用此命令的授權計劃。
 
-```
+```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
@@ -50,13 +50,13 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 
 接下來，請確定的使用者帳戶擁有指派的使用狀況位置。
 
-```
+```powershell
 Get-AzureADUser -ObjectID <user sign-in name (UPN)> | Select DisplayName, UsageLocation
 ```
 
 如果沒有指派未使用位置，您可以指派一個使用以下命令：
 
-```
+```powershell
 $userUPN="<user sign-in name (UPN)>"
 $userLoc="<ISO 3166-1 alpha-2 country code>"
 Set-AzureADUser -ObjectID $userUPN -UsageLocation $userLoc
@@ -64,7 +64,7 @@ Set-AzureADUser -ObjectID $userUPN -UsageLocation $userLoc
 
 最後，指定使用者登入名稱及授權計劃名稱，並執行下列命令。
 
-```
+```powershell
 $userUPN="<user sign-in name (UPN)>"
 $planName="<license plan name from the list of license plans>"
 $License = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
@@ -82,7 +82,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
     
 若要在組織中尋找未經授權的帳戶，請執行此命令。
 
-```
+```powershell
 Get-MsolUser -All -UnlicensedUsersOnly
 ```
 
@@ -90,19 +90,19 @@ Get-MsolUser -All -UnlicensedUsersOnly
     
 若要找出沒有**UsageLocation**值的帳戶，請執行此命令。
 
-```
+```powershell
 Get-MsolUser -All | where {$_.UsageLocation -eq $null}
 ```
 
 若要設定**UsageLocation**值帳戶，請執行此命令。
 
-```
+```powershell
 Set-MsolUser -UserPrincipalName "<Account>" -UsageLocation <CountryCode>
 ```
 
 例如：
 
-```
+```powershell
 Set-MsolUser -UserPrincipalName "belindan@litwareinc.com" -UsageLocation US
 ```
     
@@ -112,19 +112,19 @@ Set-MsolUser -UserPrincipalName "belindan@litwareinc.com" -UsageLocation US
     
 若要指派授權給使用者，請在 Office 365 PowerShell 中使用下列命令。
   
-```
+```powershell
 Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "<AccountSkuId>"
 ```
 
 本範例會從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃指派授權給未經授權的使用者**belindan\@litwareinc.com**:
   
-```
+```powershell
 Set-MsolUserLicense -UserPrincipalName "belindan@litwareinc.com" -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
 若要將授權指派給多位未經授權的使用者，請執行此命令。
   
-```
+```powershell
 Get-MsolUser -All -UnlicensedUsersOnly [<FilterableAttributes>] | Set-MsolUserLicense -AddLicenses "<AccountSkuId>"
 ```
   
@@ -134,13 +134,13 @@ Get-MsolUser -All -UnlicensedUsersOnly [<FilterableAttributes>] | Set-MsolUserLi
 
 此範例會將授權從**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權計劃指派給所有未經授權的使用者：
   
-```
+```powershell
 Get-MsolUser -All -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
 此範例會將相同的授權指派給在美國境內銷售部門中未經授權的使用者：
   
-```
+```powershell
 Get-MsolUser -All -Department "Sales" -UsageLocation "US" -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
   
@@ -152,13 +152,13 @@ Get-MsolUser -All -Department "Sales" -UsageLocation "US" -UnlicensedUsersOnly |
 
 接下來，列出您的租用戶使用此命令的訂閱 （授權方案）。
 
-```
+```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
 接下來，列出的使用者帳戶目前已使用這些命令的訂閱。
 
-```
+```powershell
 $userUPN="<user account UPN>"
 $licensePlanList = Get-AzureADSubscribedSku
 $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty AssignedLicenses | Select SkuID 
@@ -169,7 +169,7 @@ $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq
 
 最後，指定的 TO 和 FROM 訂閱名稱 （SKU 組件編號），並執行下列命令。
 
-```
+```powershell
 $subscriptionFrom="<SKU part number of the current subscription>"
 $subscriptionTo="<SKU part number of the new subscription>"
 # Unassign
@@ -190,7 +190,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
 
 您可以確認這些命令的使用者帳戶的訂閱中的變更。
 
-```
+```powershell
 $licensePlanList = Get-AzureADSubscribedSku
 $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty AssignedLicenses | Select SkuID 
 $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }

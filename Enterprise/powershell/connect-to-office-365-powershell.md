@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要：使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
-ms.openlocfilehash: 1bcf2438c4a07f3d025ef9cb664875214f1aa289
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: e80af8b4174a4d3ac423e887b7f3c2fd9ee73375
+ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38031748"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "38707040"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -75,7 +75,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
     
 2. 在 [系統管理員：Windows PowerShell] 命令視窗中，執行下列命令：
     
-  ```
+  ```powershell
   Install-Module -Name AzureAD
   ```
 
@@ -155,7 +155,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
   
 - **您的 Windows PowerShell 的 Microsoft Azure Active Directory 模組 版本可能已過期。** 若要檢查，請在 Office 365 PowerShell 或 Windows PowerShell 的 Microsoft Azure Active Directory 模組 中執行下列命令：
     
-  ```
+  ```powershell
   (Get-Item C:\Windows\System32\WindowsPowerShell\v1.0\Modules\MSOnline\Microsoft.Online.Administration.Automation.PSModule.dll).VersionInfo.FileVersion
   ```
 

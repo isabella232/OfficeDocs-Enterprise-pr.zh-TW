@@ -14,12 +14,12 @@ ms.custom:
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
 description: 說明如何使用 Office 365 PowerShell 來封鎖及解除封鎖對 Office 365 帳戶的存取。
-ms.openlocfilehash: a2edecf7bc47d39aa9aeb965c7b2834e37820a36
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 3cc063fac2fa7795ba924b7b937efc9afe6594a1
+ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069209"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "38706980"
 ---
 # <a name="block-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 封鎖使用者帳戶
 
@@ -35,7 +35,7 @@ ms.locfileid: "34069209"
 
 使用下列語法來封鎖個別使用者帳戶：
   
-```
+```powershell
 Set-AzureADUser -ObjectID <sign-in name of the user account> -AccountEnabled $false
 ```
 
@@ -44,19 +44,19 @@ Set-AzureADUser -ObjectID <sign-in name of the user account> -AccountEnabled $fa
   
 此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。
   
-```
+```powershell
 Set-AzureADUser -ObjectID fabricec@litwareinc.com -AccountEnabled $false
 ```
 
 若要將使用者帳戶解除封鎖，請執行下列命令：
   
-```
+```powershell
 Set-AzureADUser -ObjectID fabricec@litwareinc.com -AccountEnabled $true
 ```
 
 若要顯示 UPN 根據使用者的顯示名稱的使用者帳戶，請使用下列命令：
   
-```
+```powershell
 $userName="<display name>"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 
@@ -64,14 +64,14 @@ Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipa
 
 本範例會顯示名為 Caleb Sills 的使用者的使用者帳戶 UPN。
   
-```
+```powershell
 $userName="Caleb Sills"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
 若要封鎖使用者的顯示名稱為基礎的帳戶，請使用下列命令：
   
-```
+```powershell
 $userName="<display name>"
 Set-AzureADUser -ObjectID (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName -AccountEnabled $false
 
@@ -79,7 +79,7 @@ Set-AzureADUser -ObjectID (Get-AzureADUser | where {$_.DisplayName -eq $userName
 
 任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：
   
-```
+```powershell
 Get-AzureADUser -UserPrincipalName <UPN of user account> | Select DisplayName,AccountEnabled
 ```
 
@@ -87,7 +87,7 @@ Get-AzureADUser -UserPrincipalName <UPN of user account> | Select DisplayName,Ac
 
 若要封鎖對多個使用者帳戶的存取，請建立文字檔，其中包含一個帳戶登入名稱每一行上都像這樣：
     
-  ```
+  ```powershell
 akol@contoso.com
 tjohnston@contoso.com
 kakers@contoso.com
@@ -97,13 +97,13 @@ kakers@contoso.com
   
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
-```
+```powershell
 Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $false }
 ```
 
 若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
-```
+```powershell
 Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $true }
 ```
 
@@ -116,25 +116,25 @@ Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID
 
 使用下列語法來封鎖對個別使用者帳戶的存取：
   
-```
+```powershell
 Set-MsolUser -UserPrincipalName <sign-in name of user account>  -BlockCredential $true
 ```
 
 此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。
   
-```
+```powershell
 Set-MsolUser -UserPrincipalName fabricec@litwareinc.com -BlockCredential $true
 ```
 
 若要將使用者帳戶解除封鎖，請執行下列命令：
   
-```
+```powershell
 Set-MsolUser -UserPrincipalName <sign-in name of user account>  -BlockCredential $false
 ```
 
 任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：
   
-```
+```powershell
 Get-MsolUser -UserPrincipalName <sign-in name of user account> | Select DisplayName,BlockCredential
 ```
 
@@ -142,7 +142,7 @@ Get-MsolUser -UserPrincipalName <sign-in name of user account> | Select DisplayN
 
 首先，建立文字檔，其中包含一個帳戶每一行上都像這樣：
     
-  ```
+  ```powershell
 akol@contoso.com
 tjohnston@contoso.com
 kakers@contoso.com
@@ -151,12 +151,12 @@ kakers@contoso.com
     
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
-  ```
+  ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $true }
   ```
 若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
-  ```
+  ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $false }
   ```
 
