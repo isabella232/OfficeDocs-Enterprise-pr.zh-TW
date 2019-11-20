@@ -3,7 +3,7 @@ title: 為 Office 365 設定您的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/01/2018
+ms.date: 11/19/2019
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -17,20 +17,20 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: ''
 description: 摘要：請參閱這些文章以了解 Office 365 的網路功能。
-ms.openlocfilehash: 958841733259bd01cd16a908cfac65998a3f3127
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 725c2470644206045a40816fad3643b83d6c8ea6
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34722682"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747412"
 ---
 # <a name="set-up-your-network-for-office-365"></a>為 Office 365 設定您的網路
 
-**摘要：** 請參閱這些文章以了解 Office 365 的網路功能。
-  
-對 Office 365 上線很重要的一點是，要先確定您的網路和網際網路連線已針對最佳化存取進行設定。設定您的內部部署網路以存取全域分散式的軟體即服務 (SaaS) 雲端，與針對內部部署資料中心的流量進行最佳化的傳統網路不同。 
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-參閱這些文章以了解主要差異，並修改您的邊緣裝置、用戶端電腦與內部部署網路，以取得最佳的使用者效能。
+對 Office 365 上線很重要的一點是，要確定您的網路和網際網路連線已針對最佳化存取進行設定。設定您的內部部署網路以存取全域分散式的軟體即服務 (SaaS) 雲端，與針對內部部署資料中心和中央網路連線之流量進行最佳化的傳統網路不同。 
+
+參閱這些文章以了解主要差異，並修改您的邊緣裝置、用戶端電腦與內部部署網路，以為您的內部使用者取得最佳的效能。
 
 ## <a name="how-office-365-networking-works"></a>Office 365 網路功能的運作方式
 
@@ -50,7 +50,7 @@ ms.locfileid: "34722682"
 
 端點為一組目的地 IP 位址、DNS 網域名稱，以及網際網路上 Office 365 流量的 URL。 
 
-若要最佳化 Office 365 雲端式服務的效能，這些端點需要由用戶端瀏覽器和邊緣網路中的裝置進行特別處理。這些裝置包括防火牆、SSL 中斷和檢查及封包檢查裝置，以及資料外洩防護系統。
+若要最佳化 Office 365 雲端式服務的效能，有些端點需要由用戶端瀏覽器和邊緣網路中的裝置進行特別處理。這些裝置包括防火牆、SSL 中斷和檢查及封包檢查裝置，以及資料外洩防護系統。
 
 請參閱[管理 Office 365 端點](managing-office-365-endpoints.md)以取得詳細資訊。
 
