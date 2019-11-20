@@ -11,14 +11,16 @@ localization_priority: Normal
 ms.collection: Ent_O365
 ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 description: Exchange 2010 即將終止支援。 使用此規劃藍圖做為準備升級到 Exchange Online 或 Exchange Server 內部部署更新版本的指南。
-ms.openlocfilehash: 28dcead19c1af1b5a641cae8f9d649b22fb36c95
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
-ms.translationtype: HT
+ms.openlocfilehash: 464406cd9603a41d10f98374442167160609c060
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38028827"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38745796"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>Exchange 2010 終止支援藍圖
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 Exchange Server 2010 將於 **2020 年 10 月 13 日**終止支援。 如果您尚未開始從 Exchange Server 2010 移轉到 Office 365 或 Exchange 2016，現在就是您著手規劃的時機。
 

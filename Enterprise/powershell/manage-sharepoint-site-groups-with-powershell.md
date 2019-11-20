@@ -15,17 +15,15 @@ ms.custom:
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 來管理 SharePoint Online 網站群組。
-ms.openlocfilehash: eedbfbecea0f488b96cfe7a87a2b4851352f4fac
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: 7eb8a472cb021fb2b78468a9100282b72c1b88cb
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077982"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38748533"
 ---
 # <a name="manage-sharepoint-online-site-groups-with-office-365-powershell"></a>Manage SharePoint Online site groups with Office 365 PowerShell
 
- **摘要：** 使用 Office 365 PowerShell 來管理 SharePoint Online 網站群組。
-  
 雖然您可以使用 Microsoft 365 系統管理中心，您也可以使用 Office 365 PowerShell 來管理 SharePoint Online 網站群組。
 
 ## <a name="before-you-begin"></a>開始之前
@@ -46,7 +44,7 @@ ms.locfileid: "38077982"
 
 若要取得 Office 365 PowerShell 與群組的清單，您可以使用下列命令集：
 
-```
+```powershell
 $siteURL = "https://litwareinc.sharepoint.com/sites/finance"
 $x = Get-SPOSiteGroup -Site $siteURL
 foreach ($y in $x)
@@ -62,7 +60,7 @@ foreach ($y in $x)
 - 將命令複製到 [記事本] （或其他文字編輯器中）、 修改 **$siteURL**變數的值、 選取命令，並再將它們貼到 SharePoint Online 管理命令介面命令提示字元。 當您執行 PowerShell 將會停止在**>>** 提示。 按 Enter 以執行**foreach**命令。<br/>
 - 將命令複製到 [記事本] （或其他文字編輯器中）、 修改 **$siteURL**變數的值，然後儲存此文字檔案名稱與適當的資料夾中的.ps1 副檔名。 下一步]，從 SharePoint Online 管理命令介面命令提示字元中執行指令碼藉由指定其路徑及檔案名稱。 範例命令如下：
 
-```
+```powershell
 C:\Scripts\SiteGroupsAndUsers.ps1
 ```
 
@@ -74,7 +72,7 @@ C:\Scripts\SiteGroupsAndUsers.ps1
 
 另一個範例，以下是一組命令，其中列出群組及所有的群組成員資格，所有的 SharePoint Online 網站。
 
-```
+```powershell
 $x = Get-SPOSite
 foreach ($y in $x)
     {

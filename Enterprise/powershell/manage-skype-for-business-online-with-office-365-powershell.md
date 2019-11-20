@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: 摘要︰使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
-ms.openlocfilehash: 48b10038e396953469f4b0732103671cbc6b0d75
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: ac3933b3a208f41db5c569de3455ce1244133927
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38030938"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747563"
 ---
 # <a name="manage-skype-for-business-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理商務用 Skype Office
 
- **摘要︰** 使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
-  
 任何 商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。 雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。 
 
 ## <a name="before-you-start"></a>開始之前
@@ -34,7 +32,7 @@ ms.locfileid: "38030938"
 
 1. 開啟 Windows PowerShell 命令提示字元並執行下列命令： 
     
-  ```
+  ```powershell
   Import-Module SkypeOnlineConnector
   $userCredential = Get-Credential
   $sfbSession = New-CsOnlineSession -Credential $userCredential
@@ -48,7 +46,7 @@ ms.locfileid: "38030938"
 
 1. 開啟 Windows PowerShell 命令提示字元並執行下列命令：
 
-  ```
+  ```powershell
   Import-Module SkypeOnlineConnector
   $sfbSession = New-CsOnlineSession
   Import-PSSession $sfbSession

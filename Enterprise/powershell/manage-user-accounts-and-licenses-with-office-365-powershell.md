@@ -14,17 +14,15 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 26b9ff81-93b0-4251-beaf-3c9f1d7c80c8
 description: 摘要：了解如何使用 Office 365 PowerShell 來管理使用者帳戶和授權。
-ms.openlocfilehash: b9b59db7ab1108db625aa6188ff12fec5d5814d7
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 333a9501d3dfcd2f9f254a7b58e9f8589b68f9cb
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068749"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38748451"
 ---
 # <a name="manage-user-accounts-and-licenses-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理使用者帳戶
 
- **摘要：** 了解如何使用 Office 365 PowerShell 來管理使用者帳戶和授權。
-  
 任何 Office 365 系統管理員的其中一個主要工作是管理使用者帳戶和授權。 雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。 如需詳細資訊，請參閱下列主題：
   
 - [使用 Office 365 PowerShell 檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)

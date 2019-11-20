@@ -15,16 +15,14 @@ ms.custom:
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要： 使用 Office 365 PowerShell 來管理 SharePoint Online 使用者、 群組及網站。
-ms.openlocfilehash: 4d62f4b6d06609957e1752240470af43b97f74fb
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: e011946fa46455d1c1eba2bdff565bd55ec875bf
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077962"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747618"
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組
-
- **摘要：** 使用 Office 365 PowerShell 來管理 SharePoint Online 使用者、 群組及網站。
 
 如果您是使用大型清單的使用者帳戶或群組的運作，以及想要輕鬆地進行管理 SharePoint Online 系統管理員，您可以使用 Office 365 PowerShell。 
 
@@ -40,7 +38,7 @@ ms.locfileid: "38077962"
 
 取得在您的租用戶使用此命令中的網站清單：
 
-```
+```powershell
 Get-SPOSite
 ```
 
@@ -48,7 +46,7 @@ Get-SPOSite
 
 取得群組的清單中您的租用戶使用此命令：
 
-```
+```powershell
 Get-SPOSite | ForEach {Get-SPOSiteGroup -Site $_.Url} | Format-Table
 ```
 
@@ -56,7 +54,7 @@ Get-SPOSite | ForEach {Get-SPOSiteGroup -Site $_.Url} | Format-Table
 
 取得使用者的清單中您的租用戶使用此命令：
 
-```
+```powershell
 Get-SPOSite | ForEach {Get-SPOUser -Site $_.Url}
 ```
 
@@ -64,7 +62,7 @@ Get-SPOSite | ForEach {Get-SPOUser -Site $_.Url}
 
 您可以用於**設定 SPOUser**命令將使用者新增至網站集合上的網站集合管理員清單。 這是如何的語法看起來：
 
-```
+```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
 $site = "<site name>"
 $user = "<user account name, such as opalc>"
@@ -75,7 +73,7 @@ Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$t
 
 例如，這組命令新增 Opal Castillo (使用者名稱 opalc) 的網站集合管理員清單上 contoso1 租用的 ContosoTest 網站集合：
 
-```
+```powershell
 $tenant = "contoso1"
 $site = "contosotest"
 $user = "opalc"
@@ -88,7 +86,7 @@ Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$t
 
 在這個工作中，我們將使用**Add-spouser**命令，將使用者新增至 SharePoint 群組網站集合上。
 
-```
+```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
 $site = "<site name>"
 $user = "<user account name, such as opalc>"
@@ -99,7 +97,7 @@ Add-SPOUser -Group $group -LoginName $user@$tenant.onmicrosoft.com -Site https:/
 
 例如，讓我們將新增 Glen Rife (使用者名稱 glenr) 至 contoso1 租用的 ContosoTest 網站集合上 「 稽核員 」 群組：
 
-```
+```powershell
 $tenant = "contoso1"
 $site = "contosotest"
 $user = "glenr"
@@ -111,7 +109,7 @@ Add-SPOUser -Group $group -LoginName $user@$tenant.onmicrosoft.com -Site https:/
 
 您可以使用 [**新增 SPOSiteGroup**命令建立新的 SharePoint 群組，並將它新增至的 ContosoTest 網站集合。
 
-```
+```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
 $site = "<site name>"
 $group = "<group name name, such as Auditors>"
@@ -122,7 +120,7 @@ New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sh
 
 例如，讓我們將新增僅供檢視權限與稽核員 」 群組至 contoso1 租用的 Contoso Test 網站集合：
 
-```
+```powershell
 $tenant = "contoso1"
 $site = "Contoso Test"
 $group = "Auditors"
@@ -138,7 +136,7 @@ New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sh
 
 我們將使用**Remove-spouser**命令來移除單一 Office 365 使用者網站集合群組只是因此我們可以看到命令語法。 以下是如何的語法看起來：
 
-```
+```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
 $site = "<site name>"
 $user = "<user account name, such as opalc>"
@@ -147,7 +145,7 @@ Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sh
 ```
 例如，讓我們先移除 Bobby Overby 從 contoso1 租用的 Contoso Test 網站集合的網站集合稽核員 」 群組：
 
-```
+```powershell
 $tenant = "contoso1"
 $site = "contosotest"
 $user = "bobbyo"
@@ -157,7 +155,7 @@ Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site https://$tenant.sh
 
 假設您想要移除 Bobby 他目前是中的所有群組。 以下是如何我們會這麼做：
 
-```
+```powershell
 $tenant = "contoso1"
 $user = "bobbyo"
 Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUser -LoginName $user@$tenant.onmicrosoft.com -Site &_.Url}
@@ -178,19 +176,19 @@ Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUse
 
 ### <a name="header"></a>標頭：
 
-```
+```powershell
 Site,Group,PermissionLevels
 ```
 
 ### <a name="item"></a>項目：
 
-```
+```powershell
 https://tenant.sharepoint.com/sites/site,group,level
 ```
 
 以下是範例檔案：
 
-```
+```powershell
 Site,Group,PermissionLevels
 https://contoso1.sharepoint.com/sites/contosotest,Contoso Project Leads,Full Control
 https://contoso1.sharepoint.com/sites/contosotest,Contoso Auditors,View Only
@@ -206,19 +204,19 @@ https://contoso1.sharepoint.com/sites/Project01,Project Alpha Approvers,Full Con
 
 ### <a name="header"></a>標頭：
 
-```
+```powershell
 Group,LoginName,Site
 ```
 
 ### <a name="item"></a>項目：
 
-```
+```powershell
 group,login,https://tenant.sharepoint.com/sites/site
 ```
 
 以下是範例檔案：
 
-```
+```powershell
 Group,LoginName,Site
 Contoso Project Leads,bobbyo@contoso1.onmicrosoft.com,https://contoso1.sharepoint.com/sites/contosotest
 Contoso Auditors,allieb@contoso1.onmicrosoft.com,https://contoso1.sharepoint.com/sites/contosotest
@@ -232,7 +230,7 @@ Project Alpha Approvers,robinc@contoso1.onmicrosoft.com,https://contoso1.sharepo
 
 下一個步驟中，您必須具有兩個 CSV 檔案儲存至您的磁碟機。 以下是使用這兩個 CSV 檔案的範例命令，以新增權限和群組成員資格：
 
-```
+```powershell
 Import-Csv C:\O365Admin\GroupsAndPermissions.csv | ForEach {New-SPOSiteGroup -Group $_.Group -PermissionLevels $_.PermissionLevels -Site $_.Site}
 Import-Csv C:\O365Admin\Users.csv | ForEach {Add-SPOUser -Group $_.Group –LoginName $_.LoginName -Site $_.Site}
 ```
@@ -241,7 +239,7 @@ Import-Csv C:\O365Admin\Users.csv | ForEach {Add-SPOUser -Group $_.Group –Logi
 
 現在，我們使用相同的 CSV 檔的不同站台中移除一堆數個群組的人員。 範例命令如下：
 
-```
+```powershell
 Import-Csv C:\O365Admin\Users.csv | ForEach {Remove-SPOUser -LoginName $_.LoginName -Site $_.Site -Group $_.Group}
 ```
 
@@ -249,7 +247,7 @@ Import-Csv C:\O365Admin\Users.csv | ForEach {Remove-SPOUser -LoginName $_.LoginN
 
 您可能想要取得的簡單報告的幾個網站，並顯示這些網站、 其權限層級和其他內容的使用者。 這是如何的語法看起來：
 
-```
+```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.onmicrosoft.com>"
 $site = "<site name>"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | select * | Format-table -Wrap -AutoSize | Out-File c\UsersReport.txt -Force -Width 360 -Append
@@ -259,7 +257,7 @@ Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | select * | Format
 
 例如，讓我們執行報告的 ContosoTest、 TeamSite01 和 Project01 網站上 Contoso1 租用戶：
 
-```
+```powershell
 $tenant = "contoso1"
 $site = "contosotest"
 Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
@@ -273,7 +271,7 @@ Get-SPOUser -Site https://$tenant.sharepoint.com/sites/$site | Format-Table -Wra
 
 不過，如果您想要這麼做的每個網站？ 無需鍵入所有這些網站使用下列命令，您可以執行這項操作：
 
-```
+```powershell
 Get-SPOSite | ForEach {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSize | Out-File c:\UsersReport.txt -Force -Width 360 -Append
 ```
 

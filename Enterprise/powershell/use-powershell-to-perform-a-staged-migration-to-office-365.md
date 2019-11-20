@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: 摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
-ms.openlocfilehash: 8bb877cba8bb06762ee56fa8c022be78d1c011c3
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
-ms.translationtype: HT
+ms.openlocfilehash: d60145c7dd25fc7cf6be51a891b8fae8e67ccc2b
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34071169"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747529"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
- **摘要：** 了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
-  
 您可以使用分段移轉，逐漸將使用者信箱的內容從來源電子郵件系統移轉到 Office 365。
   
 本文會引導您使用 Exchange Online PowerShell 來進行分段電子郵件移轉的相關工作。[將電子郵件分段移轉到 Office 365 所需注意的事項](https://go.microsoft.com/fwlink/p/?LinkId=536487)主題可讓您概略了解移轉程序。在熟悉該文章的內容後，請使用此主題來開始在不同電子郵件系統中移轉信箱。
@@ -63,11 +61,11 @@ ms.locfileid: "34071169"
     
 - 在 Exchange Online PowerShell 中執行下列命令：
     
-  ```
+  ```powershell
   $Credentials = Get-Credential
   ```
 
-  ```
+  ```powershell
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
@@ -77,7 +75,7 @@ ms.locfileid: "34071169"
   
 - 屬於內部部署組織中 Active Directory 內的 **Domain Admins** 群組成員。
     
-    或 
+    或
     
 - 獲得每個內部部署信箱的 **FullAccess** 權限，以及用來修改內部部署使用者帳戶的 **TargetAddress** 內容的 **WriteProperty** 權限。
     
@@ -118,7 +116,7 @@ ms.locfileid: "34071169"
   
 CSV 檔案的第一個資料列 (也稱為「標題列」) 會列出在後續幾列上指定的屬性或欄位名稱。每個屬性名稱都會以逗號分隔。
   
-```
+```powershell
 EmailAddress,Password,ForceChangePassword 
 pilarp@contoso.com,Pa$$w0rd,False 
 tobyn@contoso.com,Pa$$w0rd,False 
@@ -141,11 +139,11 @@ briant@contoso.com,Pa$$w0rd,False
   
 若要在 Exchange Online PowerShell 中建立名為 "StagedEndpoint" 的 Outlook 無所不在移轉端點，請執行下列命令：
   
-```
+```powershell
 $Credentials = Get-Credential
 ```
 
-```
+```powershell
 New-MigrationEndpoint -ExchangeOutlookAnywhere -Name StagedEndpoint -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
@@ -158,7 +156,7 @@ New-MigrationEndpoint -ExchangeOutlookAnywhere -Name StagedEndpoint -Autodiscove
 
 在 Exchange Online PowerShell 中執行下列命令來顯示 "StagedEndpoint" 移轉端點的資訊：
   
-```
+```powershell
 Get-MigrationEndpoint StagedEndpoint | Format-List EndpointType,ExchangeServer,UseAutoDiscover,Max*
 ```
 
@@ -167,13 +165,13 @@ Get-MigrationEndpoint StagedEndpoint | Format-List EndpointType,ExchangeServer,U
 
 您可以在 Exchange Online PowerShell 中使用 **New-MigrationBatch** Cmdlet，為完全移轉建立移轉批次。您可以建立移轉批次，並加上 _AutoStart_ 參數來自動啟動它。或者，您也可以先建立移轉批次，以後再手動使用 **Start-MigrationBatch** Cmdlet 啟動它。本範例會建立名為 "StagedBatch1" 的移轉批次，並使用上一個步驟中建立的移轉端點。
   
-```
+```powershell
 New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint -AutoStart
 ```
 
 本範例也會建立名為 "StagedBatch1" 的移轉批次，並使用上一個步驟中建立的移轉端點。因為其中並未加上  _AutoStart_ 參數，所以需要在移轉儀表板上或使用 **Start-MigrationBatch** Cmdlet 來手動啟動此移轉批次。如前所述，一次只能有一個完全移轉批次。
   
-```
+```powershell
 New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint
 ```
 
@@ -181,13 +179,13 @@ New-MigrationBatch -Name StagedBatch1 -SourceEndpoint StagedEndpoint
 
 在 Exchange Online PowerShell 中執行下列命令來顯示 "StagedBatch1" 的資訊：
   
-```
+```powershell
 Get-MigrationBatch -Identity StagedBatch1 | Format-List
 ```
 
 您也可以執行下列命令來確認批次已啟動：
   
-```
+```powershell
 Get-MigrationBatch -Identity StagedBatch1 | Format-List Status
 ```
 
@@ -215,7 +213,7 @@ Get-MigrationBatch -Identity StagedBatch1 | Format-List Status
   
 若要刪除 Exchange Online PowerShell 中的 "StagedBatch1" 移轉批次，請執行下列命令。
   
-```
+```powershell
 Remove-MigrationBatch -Identity StagedBatch1
 ```
 
@@ -225,7 +223,7 @@ Remove-MigrationBatch -Identity StagedBatch1
 
 在 Exchange Online PowerShell 中執行下列命令來顯示 "IMAPBatch1" 的資訊：
   
-```
+```powershell
 Get-MigrationBatch StagedBatch1
 ```
 

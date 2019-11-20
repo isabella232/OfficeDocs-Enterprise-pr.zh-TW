@@ -16,16 +16,14 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 來移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: aebb74404d2f1e40ed65580df2dc114a3645091a
-ms.sourcegitcommit: 9cd3dcf1e90b21c7651d367dcd3306d6fe0bcbcb
+ms.openlocfilehash: bfd333b649df1d346a45abc3e8b9e35666f8f582
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "35834223"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747539"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
-
-**摘要：** 說明如何使用 Office 365 PowerShell 來移除先前指派給使用者的 Office 365 授權。
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
@@ -34,7 +32,7 @@ ms.locfileid: "35834223"
 
 接下來，列出您的租用戶使用此命令的授權計劃。
 
-```
+```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
@@ -42,7 +40,7 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 
 最後，指定使用者登入和授權計劃的名稱、 移除 「 < 」 及 「 > 」 字元，並執行下列命令。
 
-```
+```powershell
 $userUPN="<user sign-in name (UPN)>"
 $planName="<license plan name from the list of license plans>"
 $license = New-Object -TypeName Microsoft.Open.AzureAD.Model.AssignedLicense
@@ -72,13 +70,13 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
 
 若要從現有的使用者帳戶移除授權，請使用下列語法：
   
-```
+```powershell
 Set-MsolUserLicense -UserPrincipalName <Account> -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...
 ```
 
 此範例會移除`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3) 授權使用者帳戶 BelindaN@litwareinc.com。
   
-```
+```powershell
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
@@ -90,14 +88,14 @@ Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "
   
 - **篩選根據現有的帳戶屬性的帳戶**若要這麼做，請使用下列語法：
     
-```
+```powershell
 $x = Get-MsolUser -All <FilterableAttributes> | where {$_.isLicensed -eq $true}
 $x | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...}
 ```
 
 此範例會移除`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3) 授權從所有帳戶在美國境內銷售部門中的使用者。
     
-```
+```powershell
 $USSales = Get-MsolUser -All -Department "Sales" -UsageLocation "US" | where {$_.isLicensed -eq $true}
 $USSales | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK"}
 ```
@@ -106,7 +104,7 @@ $USSales | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
     
 1. 建立並儲存文字檔，其中包含一個帳戶每一行上都像這樣：
     
-  ```
+  ```powershell
 akol@contoso.com
 tjohnston@contoso.com
 kakers@contoso.com
@@ -114,26 +112,26 @@ kakers@contoso.com
 
 2. 請使用下列語法：
     
-  ```
+  ```powershell
   Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }
   ```
 
 此範例會移除`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3) 授權從 C:\My Documents\Accounts.txt 文字檔案中所定義的使用者帳戶。
     
-  ```
+  ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "litwareinc:ENTERPRISEPACK" }
   ```
 
 若要從所有現有的使用者帳戶移除授權，請使用下列語法：
   
-```
+```powershell
 $x = Get-MsolUser -All  | Where {$_.isLicensed -eq $true}
 $x | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...}
 ```
 
 此範例會移除`litwareinc:ENTERPRISEPACK`(Office 365 企業版 E3) 授權從所有現有經授權使用者帳戶。
   
-```
+```powershell
 $x = Get-MsolUser -All  | Where {$_.isLicensed -eq $true}
 $x | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK"}
 ```

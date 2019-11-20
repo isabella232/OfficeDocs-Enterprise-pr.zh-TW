@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: ff93a341-6f0f-4f06-9690-726052e1be64
 description: 摘要： 使用 Office 365 PowerShell 來管理您的 Skype 線上商務原則的使用者帳戶內容。
-ms.openlocfilehash: 4b0d45e89910c7fb1a215f78690cfc2fdb17c472
-ms.sourcegitcommit: d58cdc7b2296df12f7a05d14ba05ab224ffb3e0c
+ms.openlocfilehash: 1d4f6bc52932bb7315fdd769788b5b3108423424
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "36302725"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38748523"
 ---
 # <a name="manage-skype-for-business-online-policies-with-office-365-powershell"></a>線上商務原則與 Office 365 PowerShell 管理 Skype
 
- **摘要：** 使用 Office 365 PowerShell 來管理您的 Skype 線上商務原則的使用者帳戶內容。
-  
 若要管理商務用 Skype 使用者帳戶的許多屬性，您必須將它們指定為屬性的原則與 Office 365 PowerShell。
   
 ## <a name="before-you-begin"></a>開始之前
@@ -33,7 +31,7 @@ ms.locfileid: "36302725"
     
 2. 開啟 Windows PowerShell 命令提示字元並執行下列命令： 
     
-```
+```powershell
 Import-Module SkypeOnlineConnector
 $userCredential = Get-Credential
 $sfbSession = New-CsOnlineSession -Credential $userCredential
@@ -46,13 +44,13 @@ Import-PSSession $sfbSession
 
 許多 Skype for Business Online 的使用者帳戶屬性會設定使用原則。 原則是只可套用至一或多個使用者的設定集合。 若要查看如何原則已設定，您可以執行此範例命令，FederationAndPICDefault 原則：
   
-```
+```powershell
 Get-CsExternalAccessPolicy -Identity "FederationAndPICDefault"
 ```
 
 接著，您應該會得到類似：
   
-```
+```powershell
 Identity                          : Tag:FederationAndPICDefault
 Description                       :
 EnableFederationAccess            : True
@@ -78,7 +76,7 @@ EnableOutsideAccess               : True
     
 例如，您可以這麼做藉由使用此命令：
   
-```
+```powershell
 Get-CsOnlineUser -Identity "Alex Darrow" | ForEach {Get-CsExternalAccessPolicy -Identity $_.ExternalAccessPolicy}
 ```
 
@@ -98,14 +96,14 @@ Get-CsOnlineUser -Identity "Alex Darrow" | ForEach {Get-CsExternalAccessPolicy -
   
 例如，若要查看所有可供您使用的語音原則執行此命令：
   
-```
+```powershell
 Get-CsVoicePolicy
 ```
 
 > [!NOTE]
-> 這會傳回所有可用的語音原則清單。 請記住，不過，並非所有原則可以指派給所有使用者。 這是因為涉及授權和地理位置的各種限制。 （所謂 」 的[使用狀況的位置](https://msdn.microsoft.com/en-us/library/azure/dn194136.aspx)。 」）如果您想要知道的外部存取原則和可指派給特定使用者的會議原則，請使用類似如下的命令： 
+> 這會傳回所有可用的語音原則清單。 請記住，不過，並非所有原則可以指派給所有使用者。 這是因為涉及授權和地理位置的各種限制。 （所謂 」 的[使用狀況的位置](https://msdn.microsoft.com/library/azure/dn194136.aspx)。 」）如果您想要知道的外部存取原則和可指派給特定使用者的會議原則，請使用類似如下的命令： 
 
-```
+```powershell
 Get-CsConferencingPolicy -ApplicableTo "Alex Darrow"
 Get-CsExternalAccessPolicy -ApplicableTo "Alex Darrow"
 ```
@@ -116,13 +114,11 @@ Get-CsExternalAccessPolicy -ApplicableTo "Alex Darrow"
   
 與 Skype for Business Online，使用者必須受管理的某種類型的原則。 如果有效原則相關的屬性是空白的這表示有問題的使用者由全域原則，也就是除非他或她特別指派個別使用者原則會自動套用至使用者的原則。 我們看不到所列出的使用者帳戶的用戶端原則，因為它被管理由全域原則。 您可以決定全域的用戶端原則中使用此命令：
   
-```
+```powershell
 Get-CsClientPolicy -Identity "Global"
 ```
 
-## <a name="see-also"></a>另請參閱
-
-#### 
+## <a name="see-also"></a>請參閱
 
 [使用 Office 365 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
   

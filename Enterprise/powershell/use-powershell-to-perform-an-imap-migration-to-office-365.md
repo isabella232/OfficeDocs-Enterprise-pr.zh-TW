@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: 摘要：了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
-ms.openlocfilehash: c7b80ea444fd9e8f0324cb0bc29edf46cd1219d0
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
-ms.translationtype: HT
+ms.openlocfilehash: b6c68dc611d22579f81db838b2b5d08e99f7519a
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34071159"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38746266"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-office-365"></a>使用 PowerShell 來執行 IMAP 移轉至 Office 365
 
- **摘要：** 了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
-  
 在部署 Office 365 的過程中，您可以選擇將使用者信箱的內容從網際網路訊息存取通訊協定 (IMAP) 電子郵件服務移轉到 Office 365。本文會引導您使用 Exchange Online PowerShell 來進行電子郵件 IMAP 移轉的工作。 
   
 > [!NOTE]
@@ -67,7 +65,7 @@ ms.locfileid: "34071159"
     
 - **確認您可以連線至 IMAP 伺服器**。在 Exchange Online PowerShell 中執行下列命令，測試 IMAP 伺服器的連線設定。
     
-  ```
+  ```powershell
   Test-MigrationServerAvailability -IMAP -RemoteServer <FQDN of IMAP server> -Port <143 or 993> -Security <None, Ssl, or Tls>
   ```
 
@@ -88,7 +86,7 @@ ms.locfileid: "34071159"
     
 以下是 CSV 檔案的格式範例：在此範例中，會移轉三個信箱：
   
-```
+```powershell
 EmailAddress,UserName,Password
 terrya@contoso.edu,terry.adams,1091990
 annb@contoso.edu,ann.beebe,2111991
@@ -101,7 +99,7 @@ paulc@contoso.edu,paul.cannon,3281986
   
 如果您要從 Microsoft Exchange 的 IMAP 實作中移轉電子郵件，請針對 CSV 檔案中的 **UserName** 屬性使用 **Domain/Admin_UserName/User_UserName** 格式。假設您要從 Exchange 中移轉 Terry Adams、Ann Beebe 和 Paul Cannon 的電子郵件。您具有郵件系統管理員帳戶，其使用者名稱為 **mailadmin** ，而密碼為 **P@ssw0rd** 。以下是您 CSV 檔的外觀：
   
-```
+```powershell
 EmailAddress,UserName,Password
 terrya@contoso.edu,contoso-students/mailadmin/terry.adams,P@ssw0rd
 annb@contoso.edu,contoso-students/mailadmin/ann.beebe,P@ssw0rd
@@ -112,7 +110,7 @@ paulc@contoso.edu,contoso-students/mailadmin/paul.cannon,P@ssw0rd
   
 若為支援簡單驗證及安全性階層 (SASL) 的 IMAP 伺服器 (例如 Dovecot IMAP 伺服器)，請使用 **User_UserName*Admin_UserName** 格式，其中星號 (*) 是可設定的分隔字元。假設您要使用系統管理員認證 **mailadmin** 和 **P@ssw0rd** ，從 Dovecot IMAP 伺服器中移轉相同使用者的電子郵件。以下是您 CSV 檔的外觀：
   
-```
+```powershell
 EmailAddress,UserName,Password
 terrya@contoso.edu,terry.adams*mailadmin,P@ssw0rd
 annb@contoso.edu,ann.beebe*mailadmin,P@ssw0rd
@@ -123,7 +121,7 @@ paulc@contoso.edu,paul.cannon*mailadmin,P@ssw0rd
   
 如果您要從 Mirapoint Message Server 中移轉電子郵件，請針對系統管理員認證使用 **#user@domain#Admin_UserName#** 格式。若要使用系統管理員認證 **mailadmin** 和 **P@ssw0rd** ，從 Mirapoint 中移轉電子郵件，您 CSV 檔的外觀如下：
   
-```
+```powershell
 EmailAddress,UserName,Password
 terrya@contoso.edu,#terry.adams@contoso-students.edu#mailadmin#,P@ssw0rd
 annb@contoso.edu,#ann.beebe@contoso-students.edu#mailadmin#,P@ssw0rd
@@ -138,7 +136,7 @@ paulc@contoso.edu,#paul.cannon@contoso-students.edu#mailadmin#,P@ssw0rd
   
 以下是包含 **UserRoot** 屬性之 CSV 檔案的範例：
   
-```
+```powershell
 EmailAddress,UserName,Password,UserRoot
 terrya@contoso.edu,mailadmin,P@ssw0rd,/users/terry.adams
 annb@contoso.edu,mailadmin,P@ssw0rd,/users/ann.beebe
@@ -154,14 +152,14 @@ paulc@contoso.edu,mailadmin,P@ssw0rd,/users/paul.cannon
   
 若要在 Exchange Online PowerShell 中建立名為 "IMAPEndpoint" 的 IMAP 移轉端點，請執行下列命令：
   
-```
+```powershell
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -Port 993 -Security Ssl
 
 ```
 
 您也可以新增參數來指定同時移轉、同時增量移轉和要使用的通訊埠。下列 Exchange Online PowerShell 命令會建立名為 "IMAPEndpoint" 的 IMAP 移轉端點，該端點支援 50 件同時移轉，以及最多 25 件同時增量同步處理。它也會將端點設定為使用通訊埠 143 來進行 TLS 加密。
   
-```
+```powershell
 New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -Port 143 -Security Tls -MaxConcurrentMigrations
 50 -MaxConcurrentIncrementalSyncs 25
 ```
@@ -172,7 +170,7 @@ New-MigrationEndpoint -IMAP -Name IMAPEndpoint -RemoteServer imap.contoso.com -P
 
 在 Exchange Online PowerShell 中執行下列命令來顯示 "IMAPEndpoint" 的資訊：
   
-```
+```powershell
 Get-MigrationEndpoint IMAPEndpoint | Format-List EndpointType,RemoteServer,Port,Security,Max*
 ```
 
@@ -183,7 +181,7 @@ Get-MigrationEndpoint IMAPEndpoint | Format-List EndpointType,RemoteServer,Port,
   
 下列 Exchange Online PowerShell 命令將會使用名為 "IMAPEndpoint" 的 IMAP 端點自動啟動名為 "IMAPBatch1" 的移轉批次：
   
-```
+```powershell
 New-MigrationBatch -Name IMAPBatch1 -SourceEndpoint IMAPEndpoint -CSVData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\IMAPmigration_1.csv")) -AutoStart
 ```
 
@@ -191,13 +189,13 @@ New-MigrationBatch -Name IMAPBatch1 -SourceEndpoint IMAPEndpoint -CSVData ([Syst
 
 執行 [Get-MigrationBatch](https://go.microsoft.com/fwlink/p/?LinkId=536441) Cmdlet 來顯示 "IMAPBatch1" 的資訊：
   
-```
+```powershell
 Get-MigrationBatch -Identity IMAPBatch1 | Format-List
 ```
 
 您也可以執行下列命令來確認批次已啟動：
   
-```
+```powershell
 Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 ```
 
@@ -221,7 +219,7 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
     
 若要在 Exchange Online PowerShell 中刪除 "IMAPBatch1" 移轉批次，請執行下列命令：
   
-```
+```powershell
 Remove-MigrationBatch -Identity IMAPBatch1
 ```
 
@@ -231,7 +229,7 @@ Remove-MigrationBatch -Identity IMAPBatch1
 
 在 Exchange Online PowerShell 中執行下列命令來顯示 "IMAPBatch1" 的資訊：
   
-```
+```powershell
 Get-MigrationBatch IMAPBatch1"
 ```
 
@@ -240,8 +238,6 @@ Get-MigrationBatch IMAPBatch1"
 如需 **Get-MigrationBatch** Cmdlet 的詳細資訊，請參閱[Get-MigrationBatch](https://go.microsoft.com/fwlink/p/?LinkId=536441)。
   
 ## <a name="see-also"></a>另請參閱
-
-#### 
 
 [IMAP 移轉疑難排解員](https://go.microsoft.com/fwlink/p/?LinkId=536482)
 

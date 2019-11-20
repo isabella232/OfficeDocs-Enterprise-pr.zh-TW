@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: be117dd2e4eaa7f3e2e95cd0d2444bd5b813bccb
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 66782a9165c76c7e1d506e40fa1cacd6db0c6724
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34071149"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747442"
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
- **摘要：** 了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-  
 使用 Microsoft 365 系統管理中心，您可以不只管理您的 Office 365 使用者帳戶和授權，但您也可以管理您的 Office 365 伺服器產品： Exchange、 Skype for Business Online 和 SharePoint Online。 不過，您也可以使用 Office 365 PowerShell 命令來管理這些元素 (利用命令列與指令碼語言環境，可獲得速度、自動化和其他功能等優勢)。
   
 在本文中，我們將顯示您可以使用 Office 365 PowerShell 管理 Office 365 的方法。
@@ -41,7 +39,7 @@ ms.locfileid: "34071149"
     
 在您開始之前，請了解 Office 365 PowerShell 是 Windows PowerShell (Windows 服務和平台的命令列環境) 的一組模組。此環境會建立可透過其他模組擴充的命令殼層語言，並提供方法來執行簡單或複雜的命令或指令碼。例如，在您安裝 Office 365 PowerShell 模組並連線至 Office 365 訂閱之後，可以執行此命令來列出 Microsoft Exchange Online 的所有使用者信箱：
   
-```
+```powershell
 Get-Mailbox
 ```
 
@@ -81,7 +79,7 @@ Get-Mailbox
     
 您必須為每位使用者重複此程序。對於許多使用者，這可能是冗長乏味的工作。使用 Office 365 PowerShell，您可以透過下列命令，針對所有使用者顯示這項資訊：
   
-```
+```powershell
 Get-MsolUser | Select DisplayName, UsageLocation
 ```
 
@@ -90,7 +88,7 @@ Get-MsolUser | Select DisplayName, UsageLocation
   
 以下是顯示範例：
   
-```
+```powershell
 DisplayName                               UsageLocation
 -----------                               -------------
 Bonnie Kearney                            GB
@@ -106,13 +104,13 @@ David Longmuir                            BR
   
 因為 Office 365 PowerShell 支援命令殼層語言，所以您可以進一步處理透過 **Get-MSolUser** 命令取得的資訊。例如，您可能會想要按使用者的位置來排序使用者、將所有巴西使用者群組在一起、將所有美國使用者群組在一起等等。命令如下：
   
-```
+```powershell
 Get-MsolUser | Select DisplayName, UsageLocation | Sort UsageLocation, DisplayName
 ```
 
 以下是顯示範例：
   
-```
+```powershell
 DisplayName                                 UsageLocation
 -----------                                 -------------
 David Longmuir                              BR
@@ -128,13 +126,13 @@ Brian Johnson (TAILSPIN)                    US
   
 您也可以使用其他篩選。例如，如果您只想看到巴西使用者的資訊，請使用這個命令：
   
-```
+```powershell
 Get-MsolUser | Where {$_.UsageLocation -eq "BR"} | Select DisplayName, UsageLocation 
 ```
 
 以下是顯示範例：
   
-```
+```powershell
 DisplayName                                           UsageLocation
 -----------                                           -------------
 David Longmuir                                        BR
@@ -148,13 +146,13 @@ Fabrice Canel                                         BR
   
 如果您有超大型的網域 (擁有數萬名的使用者)，嘗試我們在本文中所示範的部分範例可能會走向「節流」。這表示根據如運算能力和可用網路頻寬等項目，您可能一次做太多事情。因此，較大型組織可能會想要將這些 Office 365 PowerShell 命令分割成兩個命令。例如，此命令會傳回所有使用者帳戶，並顯示每位使用者的名稱和位置：
   
-```
+```powershell
 Get-MsolUser | Select DisplayName, UsageLocation
 ```
 
 該命令非常適合較小型的網域。然而，在大型組織中，您可能需要將它分割成兩個命令：一個命令用來將使用者帳戶資訊儲存至變數中，而另一個命令用來顯示所需的資訊。範例如下：
   
-```
+```powershell
 $x = Get-MsolUser
 $x | Select DisplayName, UsageLocation
 ```
@@ -182,7 +180,7 @@ $x | Select DisplayName, UsageLocation
     
 這些設定無法從 商務用 Skype Online 系統管理中心取得。不過，您可以透過 Office 365 PowerShell 控制它們。以下是停用這三項設定的命令：
   
-```
+```powershell
 Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $False -AllowConferenceRecording $False -DesignateAsPresenter "None"
 ```
 
@@ -194,7 +192,7 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $False -AllowConference
   
 如果您改變主意想要還原這些預設設定 (全部都已啟用)，請執行這個命令：
   
-```
+```powershell
 Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $True -AllowConferenceRecording $True -DesignateAsPresenter "Company"
 ```
 
@@ -226,7 +224,7 @@ Set-CsMeetingConfiguration -AdmitAnonymousUsersByDefault $True -AllowConferenceR
   
 另一種方法是使用 Office 365 PowerShell 和下列命令，從所有網站中移除 Ken Myer：
   
-```
+```powershell
 Get-SPOSite | ForEach {Remove-SPOUser -Site $_.Url -LoginName "kenmyer@litwareinc.com"}
 ```
 
@@ -240,7 +238,7 @@ Get-SPOSite | ForEach {Remove-SPOUser -Site $_.Url -LoginName "kenmyer@litwarein
   
 以下是另一個大量作業範例。使用此命令將 Bonnie Kearney (新的 SharePoint 系統管理員) 新增至組織中的所有網站：
   
-```
+```powershell
 Get-SPOSite | ForEach {Add-SPOUser -Site $_.Url -LoginName "bkearney@litwareinc.com" -Group "Members"}
 ```
 
@@ -259,13 +257,13 @@ Exchange 系統管理中心也可讓您合併篩選準則。例如，您可以�
   
 使用 Office 365 PowerShell，您可以透過此命令來取得住在布魯民頓市或聖地牙哥市之所有人員的信箱清單：
   
-```
+```powershell
 Get-User | Where {$_.RecipientTypeDetails -eq "UserMailbox" -and ($_.City -eq "San Diego" -or $_.City -eq "Bloomington")} | Select DisplayName, City
 ```
 
 以下是顯示範例：
   
-```
+```powershell
 DisplayName                              City
 -----------                              ----
 Alex Darrow                              San Diego
@@ -279,13 +277,13 @@ Rob Young                                Bloomington
   
 若要列出不住在布魯民頓市之人員的所有信箱，則命令如下：
   
-```
+```powershell
 Get-User | Where {$_.RecipientTypeDetails -eq "UserMailbox" -and $_.City -ne "Bloomington"} | Select DisplayName, City
 ```
 
 以下是顯示範例：
   
-```
+```powershell
 DisplayName                               City
 -----------                               ----
 MOD Administrator                         Redmond
@@ -317,7 +315,7 @@ Janet Schorr                              Bellevue
     
 因為這三個名稱的結尾都是 "son"，所以您可以告訴 Office 365 PowerShell 顯示名稱結尾為 "son" 的所有使用者。命令如下：
   
-```
+```powershell
 Get-User -Filter '{LastName -like "*son"}'
 ```
 
@@ -334,7 +332,7 @@ Get-User -Filter '{LastName -like "*son"}'
   
 幸運的是，您可以使用 Office 365 PowerShell，這不只會顯示清單，還會將它儲存至可輕鬆地匯入至 Excel 的檔案。以下範例命令可將 商務用 Skype Online 使用者資料儲存為逗點分隔值 (CSV) 檔案，而這是可輕鬆地匯入為 Excel 工作表中的資料表的檔案：
   
-```
+```powershell
 Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Export-Csv -Path "C:\Logs\SfBUsers.csv" -NoTypeInformation
 ```
 
@@ -349,7 +347,7 @@ Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Export
   
 您也可以傳送 Office 365 PowerShell 命令的輸出，而此命令會直接將清單顯示在 Windows 的預設印表機中。範例命令如下：
   
-```
+```powershell
 Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Out-Printer
 ```
 
@@ -384,7 +382,7 @@ Get-CsOnlineUser | Select DisplayName, UserPrincipalName, UsageLocation | Out-Pr
   
 下列範例指令碼會比目前為止在本文中看過的命令還要複雜。但是，它示範可能可以使用 Office 365 PowerShell 建立很難做到的資訊檢視。以下指令碼可以編譯並顯示所需的清單：
   
-```
+```powershell
 $x = Get-MsolUser
 
 foreach ($i in $x)
@@ -401,7 +399,7 @@ $x | Select DisplayName, IsLicensed, IsMailboxEnabled, EnabledforSfB
 
 以下是顯示範例：
   
-```
+```powershell
 DisplayName             IsLicensed   IsMailboxEnabled   EnabledForSfB
 -----------             ----------   ----------------   --------------
 Bonnie Kearney          True         True               True

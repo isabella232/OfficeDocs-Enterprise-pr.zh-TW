@@ -1,5 +1,5 @@
 ---
-title: 評估 Office 365 網路連線
+title: 評估 Office 365 的網路連線能力
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -16,16 +16,16 @@ search.appverid:
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
-ms.openlocfilehash: 2f58bf71c292f57ccef79f7f0f79e1cd474c681d
-ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
+ms.openlocfilehash: 8b784da9dcb8b5e821197e72ccc5ab49b976ba74
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "37428070"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38745716"
 ---
-# <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 網路連線
+# <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 的網路連線能力
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
   
@@ -41,7 +41,7 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
 
 - 如需 Office 365 網路功能概念資訊，請參閱[Office 365 網路連線能力概觀](office-365-networking-overview.md)。
 - 請參閱[Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)來了解安全地管理 Office 365 流量，並取得獲得最佳效能的連線能力原則。
-- 註冊的[Microsoft FastTrack](https://www.microsoft.com/en-us/fasttrack)引導式協助 Office 365 的規劃、 設計及部署。 
+- 註冊的[Microsoft FastTrack](https://www.microsoft.com/fasttrack)引導式協助 Office 365 的規劃、 設計及部署。 
 - 請參閱[Office 365 網路上架工具](assessing-network-connectivity.md#the-office-365-network-onboarding-tool)下一節，以執行基本的連線測試可提供網路連線能力增強功能，可以指定的使用者的位置與 Office 365 之間進行的特定指導。
 
 > [!NOTE]
@@ -53,7 +53,7 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
 
 - 我們會不斷最佳化的核心的 Office 365 的各個層面，例如可用性、 全域達到，與效能的網際網路連線。 例如，有許多 Office 365 服務利用網際網路對向 edge 節點的延伸集。 此 edge 網路提供最佳的近似值和即將透過網際網路連線的效能。
 
-- 客戶時考慮使用 Office 365 任何包含服務例如 Teams 或 Skype 商務 Online voice、 視訊或會議功能，應該完成端對端網路評估，並符合使用[Microsoft 的連線能力需求FastTrack](https://www.microsoft.com/en-us/fasttrack)。
+- 考慮使用 Office 365 任何包含服務例如 Teams 或 Skype 商務 Online voice、 視訊或會議功能，客戶應完成端對端網路評估，並符合使用[Microsoft FastTrack](https://www.microsoft.com/fasttrack)的連線能力需求。
 
 如果您正在評估 Office 365，並不確定要開始使用您的網路評估或已找到網路設計挑戰，您必須取得協助若要克服，請使用您的 Microsoft 客戶團隊。
 
@@ -105,15 +105,15 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
   
 以下是您可以使用返回下列短連結： [ https://aka.ms/o365networkconnectivity。](https://aka.ms/o365networkconnectivity)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[Office 365 網路連線能力概觀](office-365-networking-overview.md)
+[Office 365 網路連線概觀](office-365-networking-overview.md)
 
 [Office 365 網路連線原則](https://aka.ms/o365networkingprinciples)
 
 [管理 Office 365 端點](managing-office-365-endpoints.md)
 
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
 
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 

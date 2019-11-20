@@ -21,14 +21,16 @@ search.appverid:
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 0c2352806d71687287ed885f5c835f61082da64b
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
+ms.openlocfilehash: af31db341aab1c52873613682c03dd54b3b76225
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "36991884"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38748003"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 Office 2010、 Exchange Server 2010、 SharePoint 2010 和 Project Server 2010 會達到**2020 年 10 月 13，** 支援其結束。 
 

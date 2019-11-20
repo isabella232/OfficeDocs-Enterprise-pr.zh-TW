@@ -23,14 +23,16 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明如何將 Office 365 授權指派給使用者帳戶，或是個別或根據群組成員資格。
-ms.openlocfilehash: 0f258ef9240239ebdfa695e8c5b214484cfb4db1
-ms.sourcegitcommit: 36e760407a1f4b18bc108134628ed9a8d3e35a8a
+ms.openlocfilehash: bc736236f9371ee1372fd36af4a707aca2ee1408
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "34164598"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38745706"
 ---
 # <a name="assign-office-365-licenses-to-user-accounts"></a>將 Office 365 授權指派給使用者帳戶
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 僅限雲端身分識別模型的可以將 Office 365 授權指派給使用者帳戶為他們所建立，根據您建立的方式。
 
@@ -42,7 +44,7 @@ ms.locfileid: "34164598"
 
 若要將 Office 365 授權指派給個別使用者帳戶，您可以使用：
 
-- [在 Microsoft 365 系統管理中心](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users)
+- [Microsoft 365 系統管理中心](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/assign-licenses-to-users)
 - [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/assign-licenses-to-user-accounts-with-office-365-powershell)
 
 自動授權指派]，請參閱[在 Azure AD 群組為基礎的授權](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal)。
@@ -51,6 +53,7 @@ ms.locfileid: "34164598"
 
 已指派授權的使用者帳戶的完整設定之後，現在已準備要：
 
+- [實作的安全性](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
 - [部署用戶端軟體，例如 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
 - [設定行動裝置管理](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 - [設定服務及應用程式](configure-services-and-applications.md)

@@ -16,16 +16,16 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 摘要： 說明的網路容量、 WAN 加速器和負載平衡裝置用來連線到 Office 365 的考量。
-ms.openlocfilehash: 066d2b07c10009ced1935086ee8d80720bd397ca
-ms.sourcegitcommit: 2e6fadb5b2b16619ad141b6293d3466460720cb4
+ms.openlocfilehash: 2a38fd7dad23b41aa31dcf9ace7ebee6ed69c0f6
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "37428100"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747066"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>連線到 Office 365 服務的網路裝置的計劃
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
   
 **摘要**： 說明的網路容量、 WAN 加速器和負載平衡裝置用來連線到 Office 365 的考量。
 
@@ -33,7 +33,7 @@ ms.locfileid: "37428100"
 
 ||
 |:-----|
-| 本文是[網路規劃和效能調整的 Office 365](https://aka.ms/tune)的一部分。|
+| 本文是 [Office 365 的網路規劃與效能調整](https://aka.ms/tune)的一部分。|
 
 內部部署的外寄的網際網路 proxy 設定也會影響您的用戶端應用程式的 Office 365 服務的連線。 您也必須設定網路 proxy 裝置以允許 Microsoft 雲端服務 Url 和應用程式的連線。 每個組織是不同。 若要取得了解 Microsoft 如何管理這項程序和頻寬量我們佈建，[讀取案例研究](https://www.microsoft.com/itshowcase/Article/Content/631/Optimizing-network-performance-for-Microsoft-Office-365)。
   
@@ -68,10 +68,10 @@ ms.locfileid: "37428100"
   
 ## <a name="firewalls-and-proxies"></a>防火牆和 proxy
 
-如需詳細資訊設定防火牆和 proxy 連線至 Office 365，請閱讀[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)、[評估 Office 365 網路連線](assessing-network-connectivity.md)性和[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)若要深入了解裝置和電路選取範圍。
+如需設定防火牆和 proxy 連線至 Office 365，請閱讀[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)、[評估 Office 365 網路連線](assessing-network-connectivity.md)性和[Office 365 端點常見問題集](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)若要深入了解裝置和電路選取範圍的詳細資訊。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
+[Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
 
 [Microsoft 365 企業版概觀](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)

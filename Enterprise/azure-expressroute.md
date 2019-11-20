@@ -18,16 +18,16 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: 了解 Azure ExpressRoute 搭配 Office 365 的方式，以及如何規劃將會需要，如果您要為搭配 Office 365 部署 Azure ExpressRoute 的網路實作專案。
-ms.openlocfilehash: 360cae39010f35b5a921ec95f6e8ed1d02afb808
-ms.sourcegitcommit: ecfa362182f906befa885bf5f0094528ff570779
+ms.openlocfilehash: 63ac8c23a6b36ed6ed079a20f05ca5fdfdcfcb83
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "37435407"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38745736"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute for Office 365
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版*
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 了解 Azure ExpressRoute 搭配 Office 365 的方式，以及如何規劃將會需要，如果您要為搭配 Office 365 部署 Azure ExpressRoute 的網路實作專案。 在 Azure 中執行的基礎結構和平台服務通常會受益所定址網路架構與效能考量。 建議 Azure 的 ExpressRoute 在這些情況下。 軟體即 like 已透過網際網路存取安全且可靠地建置 Office 365 和 Dynamics 365 服務方案。 您可以閱讀有關網際網路效能與安全性，以及時，您可能會列入考量 Azure ExpressRoute for Office 365 文章[評估 Office 365 網路連線](assessing-network-connectivity.md)。
 
@@ -70,7 +70,7 @@ ms.locfileid: "37435407"
 
 ## <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
-實作 ExpressRoute 需要網路和應用程式的擁有人的參與程度，而且需要仔細規劃至判斷新的[網路路由架構](https://support.office.com/article/e1da26c6-2d39-4379-af6f-4da213218408)、 頻寬需求，將安全性的實作，高可用性等等。 若要實作 ExpressRoute，您將需要：
+實作 ExpressRoute 需要網路和應用程式的擁有人的參與程度，而且需要仔細規劃以決定新的[網路路由架構](https://support.office.com/article/e1da26c6-2d39-4379-af6f-4da213218408)、 頻寬需求，將會實作的安全性、 高可用性，依此類推。 若要實作 ExpressRoute，您將需要：
 
 1. 完全了解 ExpressRoute 滿足您 Office 365 連線能力規劃中的需求。 了解哪些應用程式會使用 ExpressRoute 的網際網路和完全規劃您的網路容量、 安全性和高可用性需求在內容中使用的網際網路和 ExpressRoute for Office 365 的流量。
 
@@ -100,7 +100,7 @@ ms.locfileid: "37435407"
 
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 網路連線](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 
 [管理 ExpressRoute for Office 365 連線](managing-expressroute-for-connectivity.md)
 
@@ -112,13 +112,13 @@ ms.locfileid: "37435407"
 
 [使用 BGP 社群中 ExpressRoute for Office 365 案例 （預覽）](bgp-communities-in-expressroute.md)
 
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
 
 [使用基準與效能歷程記錄進行 Office 365 效能調整](performance-tuning-using-baselines-and-history.md)
 
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
 
-[Office 365 URL 與 IP 位址範圍](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) (英文)
+[Office 365 URL 與 IP 位址範圍](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
 

@@ -14,19 +14,16 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
 description: 了解如何將授權指派給使用者帳戶，並在同時使用 Office 365 PowerShell 停用特定的服務計劃。
-ms.openlocfilehash: ac356e5cc70ef36ad2e45b84f0dcd9d2252c79a4
-ms.sourcegitcommit: 6b4fca7ccdbb7aeadc705d82f1007ac285f27357
+ms.openlocfilehash: 16e24a61aea1298b2c24a251d61c414c355dead7
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "37282918"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747655"
 ---
 # <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用服務存取權，並指派使用者授權
 
-**摘要：** 了解如何將授權指派給使用者帳戶，並在同時使用 Office 365 PowerShell 停用特定的服務計劃。
-  
 Office 365 訂閱隨附的個別服務的服務計劃。 Office 365 系統管理員通常需要將授權指派給使用者時，停用特定計劃。 透過本文中的指示，您可以同時停用特定的服務計劃使用 PowerShell 個別使用者帳戶或多個使用者帳戶指派 Office 365 授權。
-
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
@@ -35,7 +32,7 @@ Office 365 訂閱隨附的個別服務的服務計劃。 Office 365 系統管理
 
 接下來，列出您的租用戶使用此命令的授權計劃。
 
-```
+```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
@@ -45,7 +42,7 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 
 對於下列的命令區塊，填妥中的使用者帳戶、 SKU 部分數字，以及服務計劃的清單來啟用及移除的說明文字 」 的使用者主體名稱和\<和 > 字元。 然後，在 PowerShell 命令提示字元執行產生的命令。
   
-```
+```powershell
 $userUPN="<user account UPN>"
 $skuPart="<SKU part number>"
 $serviceList=<double-quoted enclosed, comma-separated list of enabled services>
@@ -68,7 +65,7 @@ Set-AzureADUserLicense -ObjectId $user.ObjectId -AssignedLicenses $LicensesToAss
 
 接著，執行此命令，以檢視您目前訂用帳戶：
   
-```
+```powershell
 Get-MsolAccountSku
 ```
 
@@ -86,7 +83,7 @@ Get-MsolAccountSku
   
 接著，執行此命令，以檢視有關您所有的訂閱中可用的 Office 365 服務計劃的詳細資料：
   
-```
+```powershell
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
@@ -104,7 +101,7 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 | `RMS_S_ENTERPRISE` <br/> |Azure 版權管理 (RMS)  <br/> |
 | `OFFICESUBSCRIPTION` <br/> |Office 專業增強版  <br/> |
 | `MCOSTANDARD` <br/> |商務用 Skype Online  <br/> |
-| `SHAREPOINTWAC` <br/> |Office   <br/> |
+| `SHAREPOINTWAC` <br/> |辦公室   <br/> |
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |
 | `EXCHANGE_S_ENTERPRISE` <br/> |Exchange Online Plan 2  <br/> |
    
@@ -116,7 +113,7 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 
 單一使用者，填入使用者主體名稱的使用者帳戶、 AccountSkuId 和服務計劃的清單來停用並移除的說明文字和\<和 > 字元。 然後，在 PowerShell 命令提示字元執行產生的命令。
   
-```
+```powershell
 $userUPN="<the user's account name in email format>"
 $accountSkuId="<the AccountSkuId from the Get-MsolAccountSku command>"
 $planList=@( <comma-separated, double-quote enclosed list of the service plans to disable> )
@@ -131,7 +128,7 @@ Set-MsolUser -UserPrincipalName $userUpn -UsageLocation $usageLocation
 
 以下是範例命令區塊，帳戶 belindan@contoso.com，一個用於名為 contoso: enterprisepack 的授權，而若要停用服務計劃為 RMS_S_ENTERPRISE、 SWAY，INTUNE_O365 和 YAMMER_ENTERPRISE:
   
-```
+```powershell
 $userUPN="belindan@contoso.com"
 $accountSkuId="contoso:ENTERPRISEPACK"
 $planList=@( "RMS_S_ENTERPRISE","SWAY","INTUNE_O365","YAMMER_ENTERPRISE" )
@@ -148,7 +145,7 @@ Set-MsolUser -UserPrincipalName $userUpn -UsageLocation $UsageLocation
 
 若要執行這項管理工作的多個使用者，建立逗點分隔值 (CSV) 文字檔，其中包含 [UserPrincipalName 和 UsageLocation] 欄位。 範例如下：
   
-```
+```powershell
 UserPrincipalName,UsageLocation
 ClaudeL@contoso.onmicrosoft.com,FR
 LynneB@contoso.onmicrosoft.com,US
@@ -157,7 +154,7 @@ ShawnM@contoso.onmicrosoft.com,US
 
 接下來，填寫輸入和輸出 CSV 檔案、 SKU 識別碼的帳戶及服務計劃要停用，清單的位置，然後再執行 PowerShell 命令提示字元處的 [產生的命令。
   
-```
+```powershell
 $inFileName="<path and file name of the input CSV file that contains the users, example: C:\admin\Users2License.CSV>"
 $outFileName="<path and file name of the output CSV file that records the results, example: C:\admin\Users2License-Done.CSV>"
 $accountSkuId="<the AccountSkuId from the Get-MsolAccountSku command>"
