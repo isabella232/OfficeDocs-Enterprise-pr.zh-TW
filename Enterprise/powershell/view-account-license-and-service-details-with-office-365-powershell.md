@@ -15,34 +15,32 @@ ms.custom:
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
 description: 說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。
-ms.openlocfilehash: 608d26dfc4aa1be782f94aa3b1ba5f66a0378f1e
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 53668a69d72cdcbe912d550be2b9e571b7f6c0e0
+ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34071119"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "38747472"
 ---
-# <a name="view-account-license-and-service-details-with-office-365-powershell"></a><span data-ttu-id="3ad93-103">使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料</span><span class="sxs-lookup"><span data-stu-id="3ad93-103">View account license and service details with Office 365 PowerShell</span></span>
+# <a name="view-account-license-and-service-details-with-office-365-powershell"></a><span data-ttu-id="62c30-103">使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料</span><span class="sxs-lookup"><span data-stu-id="62c30-103">View account license and service details with Office 365 PowerShell</span></span>
 
-<span data-ttu-id="3ad93-104">**摘要：** 說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-104">**Summary:** Explains how to use Office 365 PowerShell to determine the Office 365 services that have been assigned to users.</span></span>
+<span data-ttu-id="62c30-104">在 Office 365 授權從授權計劃 （也稱為的 Sku 或 Office 365 計劃） 讓使用者能夠存取 Office 365 服務所定義的那些計劃。</span><span class="sxs-lookup"><span data-stu-id="62c30-104">In Office 365, licenses from licensing plans (also called SKUs or Office 365 plans) give users access to the Office 365 services that are defined for those plans.</span></span> <span data-ttu-id="62c30-105">不過，使用者可能無法存取目前指派給他們的授權中可用的所有服務。</span><span class="sxs-lookup"><span data-stu-id="62c30-105">However, a user might not have access to all the services that are available in a license that's currently assigned to them.</span></span> <span data-ttu-id="62c30-106">您可以使用 Office 365 PowerShell 來檢視使用者帳戶之服務的狀態。</span><span class="sxs-lookup"><span data-stu-id="62c30-106">You can use Office 365 PowerShell to view the status of services on user accounts.</span></span> 
+
+<span data-ttu-id="62c30-107">如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="62c30-107">For more information about licensing plans, license, and services, see [View licenses and services with Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md).</span></span>
+
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="62c30-108">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="62c30-108">Use the Azure Active Directory PowerShell for Graph module</span></span>
+
+<span data-ttu-id="62c30-109">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="62c30-109">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
   
-<span data-ttu-id="3ad93-105">在 Office 365 授權從授權計劃 （也稱為的 Sku 或 Office 365 計劃） 讓使用者能夠存取 Office 365 服務所定義的那些計劃。</span><span class="sxs-lookup"><span data-stu-id="3ad93-105">In Office 365, licenses from licensing plans (also called SKUs or Office 365 plans) give users access to the Office 365 services that are defined for those plans.</span></span> <span data-ttu-id="3ad93-106">不過，使用者可能無法存取目前指派給他們的授權中可用的所有服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-106">However, a user might not have access to all the services that are available in a license that's currently assigned to them.</span></span> <span data-ttu-id="3ad93-107">您可以使用 Office 365 PowerShell 來檢視使用者帳戶之服務的狀態。</span><span class="sxs-lookup"><span data-stu-id="3ad93-107">You can use Office 365 PowerShell to view the status of services on user accounts.</span></span> 
+<span data-ttu-id="62c30-110">接下來，列出您的租用戶使用此命令的授權計劃。</span><span class="sxs-lookup"><span data-stu-id="62c30-110">Next, list the license plans for your tenant with this command.</span></span>
 
-<span data-ttu-id="3ad93-108">如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="3ad93-108">For more information about licensing plans, license, and services, see [View licenses and services with Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md).</span></span>
-
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="3ad93-109">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="3ad93-109">Use the Azure Active Directory PowerShell for Graph module</span></span>
-
-<span data-ttu-id="3ad93-110">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="3ad93-110">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
-  
-<span data-ttu-id="3ad93-111">接下來，列出您的租用戶使用此命令的授權計劃。</span><span class="sxs-lookup"><span data-stu-id="3ad93-111">Next, list the license plans for your tenant with this command.</span></span>
-
-```
+```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-<span data-ttu-id="3ad93-112">使用以下命令以列出每個授權計劃中提供的服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-112">Use these commands to list the services that are available in each licensing plan.</span></span>
+<span data-ttu-id="62c30-111">使用以下命令以列出每個授權計劃中提供的服務。</span><span class="sxs-lookup"><span data-stu-id="62c30-111">Use these commands to list the services that are available in each licensing plan.</span></span>
 
-```
+```powershell
 $allSKUs=Get-AzureADSubscribedSku
 $licArray = @()
 for($i = 0; $i -lt $allSKUs.Count; $i++)
@@ -52,67 +50,67 @@ $licArray +=  Get-AzureADSubscribedSku -ObjectID $allSKUs[$i].ObjectID | Select 
 $licArray +=  ""
 }
 $licArray
-````
+```
 
-<span data-ttu-id="3ad93-113">使用以下命令以列出指派給使用者帳戶的授權。</span><span class="sxs-lookup"><span data-stu-id="3ad93-113">Use these commands to list the licenses that are assigned to a user account.</span></span>
+<span data-ttu-id="62c30-112">使用以下命令以列出指派給使用者帳戶的授權。</span><span class="sxs-lookup"><span data-stu-id="62c30-112">Use these commands to list the licenses that are assigned to a user account.</span></span>
 
-````
+```powershell
 $userUPN="<user account UPN, such as belindan@contoso.com>"
 $licensePlanList = Get-AzureADSubscribedSku
 $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty AssignedLicenses | Select SkuID 
 $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
-````
-
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="3ad93-114">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="3ad93-114">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
-
-<span data-ttu-id="3ad93-115">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="3ad93-115">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
-
-<span data-ttu-id="3ad93-116">接著，執行此命令以列出您的組織中可用的授權計劃。</span><span class="sxs-lookup"><span data-stu-id="3ad93-116">Next, run this command to list the licensing plans that are available in your organization.</span></span> 
-
 ```
+
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="62c30-113">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="62c30-113">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
+
+<span data-ttu-id="62c30-114">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="62c30-114">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
+
+<span data-ttu-id="62c30-115">接著，執行此命令以列出您的組織中可用的授權計劃。</span><span class="sxs-lookup"><span data-stu-id="62c30-115">Next, run this command to list the licensing plans that are available in your organization.</span></span> 
+
+```powershell
 Get-MsolAccountSku
 ```
 
-<span data-ttu-id="3ad93-117">接著，執行此命令以列出每個授權的計劃中提供的服務，而且它們的順序列出 （索引編號）。</span><span class="sxs-lookup"><span data-stu-id="3ad93-117">Next, run this command to list the services that are available in each licensing plan, and the order in which they are listed (the index number).</span></span>
+<span data-ttu-id="62c30-116">接著，執行此命令以列出每個授權的計劃中提供的服務，而且它們的順序列出 （索引編號）。</span><span class="sxs-lookup"><span data-stu-id="62c30-116">Next, run this command to list the services that are available in each licensing plan, and the order in which they are listed (the index number).</span></span>
 
-````
+```powershell
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq '<AccountSkuId>'}).ServiceStatus
-````
+```
   
-<span data-ttu-id="3ad93-118">使用此命令來列出已指派給使用者的授權，而且它們的順序列出 （索引編號）。</span><span class="sxs-lookup"><span data-stu-id="3ad93-118">Use this command to list the licenses that are assigned to a user, and the order in which they are listed (the index number).</span></span>
+<span data-ttu-id="62c30-117">使用此命令來列出已指派給使用者的授權，而且它們的順序列出 （索引編號）。</span><span class="sxs-lookup"><span data-stu-id="62c30-117">Use this command to list the licenses that are assigned to a user, and the order in which they are listed (the index number).</span></span>
 
-````
+```powershell
 Get-MsolUser -UserPrincipalName <user account UPN> | Format-List DisplayName,Licenses
-````
+```
 
 >[!Note]
-><span data-ttu-id="3ad93-119">如果您使用 **Get-MsolUser** Cmdlet，而不使用 _All_ 參數，則只會傳回前 500 個帳戶。</span><span class="sxs-lookup"><span data-stu-id="3ad93-119">If you use the **Get-MsolUser** cmdlet without using the _All_ parameter, only the first 500 accounts are returned.</span></span>
+><span data-ttu-id="62c30-118">如果您使用 **Get-MsolUser** Cmdlet，而不使用 _All_ 參數，則只會傳回前 500 個帳戶。</span><span class="sxs-lookup"><span data-stu-id="62c30-118">If you use the **Get-MsolUser** cmdlet without using the _All_ parameter, only the first 500 accounts are returned.</span></span>
 >
    
 
-### <a name="to-view-services-for-a-user-account"></a><span data-ttu-id="3ad93-120">若要檢視服務的使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="3ad93-120">To view services for a user account</span></span>
+### <a name="to-view-services-for-a-user-account"></a><span data-ttu-id="62c30-119">若要檢視服務的使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="62c30-119">To view services for a user account</span></span>
 
-<span data-ttu-id="3ad93-121">若要檢視使用者有權存取的所有 Office 365 服務，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="3ad93-121">To view all the Office 365 services that a user has access to, use the following syntax:</span></span>
+<span data-ttu-id="62c30-120">若要檢視使用者有權存取的所有 Office 365 服務，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="62c30-120">To view all the Office 365 services that a user has access to, use the following syntax:</span></span>
   
-```
+```powershell
 (Get-MsolUser -UserPrincipalName <user account UPN>).Licenses[<LicenseIndexNumber>].ServiceStatus
 ```
 
-<span data-ttu-id="3ad93-122">本範例會顯示使用者 BelindaN@litwareinc.com 具有存取的服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-122">This example shows the services to which the user BelindaN@litwareinc.com has access.</span></span> <span data-ttu-id="3ad93-123">這會顯示與所有的授權指派給其帳戶相關聯的服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-123">This shows the services that are associated with all licenses that are assigned to her account.</span></span>
+<span data-ttu-id="62c30-121">本範例會顯示使用者 BelindaN@litwareinc.com 具有存取的服務。</span><span class="sxs-lookup"><span data-stu-id="62c30-121">This example shows the services to which the user BelindaN@litwareinc.com has access.</span></span> <span data-ttu-id="62c30-122">這會顯示與所有的授權指派給其帳戶相關聯的服務。</span><span class="sxs-lookup"><span data-stu-id="62c30-122">This shows the services that are associated with all licenses that are assigned to her account.</span></span>
   
-```
+```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses.ServiceStatus
 ```
 
-<span data-ttu-id="3ad93-124">本範例會顯示該使用者 BelindaN@litwareinc.com 有從指派給其帳戶 （索引編號為 0） 的第一個授權存取的服務。</span><span class="sxs-lookup"><span data-stu-id="3ad93-124">This example shows the services that user BelindaN@litwareinc.com has access to from the first license that's assigned to her account (the index number is 0).</span></span>
+<span data-ttu-id="62c30-123">本範例會顯示該使用者 BelindaN@litwareinc.com 有從指派給其帳戶 （索引編號為 0） 的第一個授權存取的服務。</span><span class="sxs-lookup"><span data-stu-id="62c30-123">This example shows the services that user BelindaN@litwareinc.com has access to from the first license that's assigned to her account (the index number is 0).</span></span>
   
-```
+```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses[0].ServiceStatus
 ```
 
-<span data-ttu-id="3ad93-125">若要檢視已被指派*多個授權*的使用者的所有服務，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="3ad93-125">To view all the services for a user who has been assigned *multiple licenses*, use the following syntax:</span></span>
+<span data-ttu-id="62c30-124">若要檢視已被指派*多個授權*的使用者的所有服務，請使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="62c30-124">To view all the services for a user who has been assigned *multiple licenses*, use the following syntax:</span></span>
 
-```
+```powershell
 $userAccountUPN="<user account UPN>"
 $AllLicenses=(Get-MsolUser -UserPrincipalName $userAccountUPN).Licenses
 $licArray = @()
@@ -126,14 +124,14 @@ $licArray
 ```
 
   
-## <a name="new-to-office-365"></a><span data-ttu-id="3ad93-126">第一次使用 Office 365？</span><span class="sxs-lookup"><span data-stu-id="3ad93-126">New to Office 365?</span></span>
+## <a name="new-to-office-365"></a><span data-ttu-id="62c30-125">第一次使用 Office 365？</span><span class="sxs-lookup"><span data-stu-id="62c30-125">New to Office 365?</span></span>
 
 [!INCLUDE [LinkedIn Learning Info](../common/office/linkedin-learning-info.md)]
 
-## <a name="see-also"></a><span data-ttu-id="3ad93-127">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3ad93-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62c30-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62c30-126">See also</span></span>
 
-[<span data-ttu-id="3ad93-128">使用 Office 365 PowerShell 管理使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="3ad93-128">Manage user accounts and licenses with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[<span data-ttu-id="62c30-127">使用 Office 365 PowerShell 管理使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="62c30-127">Manage user accounts and licenses with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[<span data-ttu-id="3ad93-129">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="3ad93-129">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="62c30-128">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="62c30-128">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
   
-[<span data-ttu-id="3ad93-130">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="3ad93-130">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
+[<span data-ttu-id="62c30-129">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="62c30-129">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
