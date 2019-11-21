@@ -64,7 +64,7 @@
 
 ## 1. 設定網路
 ### [設定您的企業網路](set-up-network-for-office-365.md)
-### [網域](https://support.office.com/article/6383f56d-3d09-4dcb-9b41-b5f5a5efd611)
+### [新增網域](https://support.office.com/article/6383f56d-3d09-4dcb-9b41-b5f5a5efd611)
 ### [Office 365 網路連線能力概觀](office-365-networking-overview.md)
 ### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
 ### [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
@@ -103,7 +103,7 @@
 #### [設定目錄同步處理](set-up-directory-synchronization.md)
 ### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts.md)
 
-## [3. 實作安全性功能](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
+## [3. 實作安全性](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
 
 ## 4. 部署用戶端軟體
 ### [部署 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
