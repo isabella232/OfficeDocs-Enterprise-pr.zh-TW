@@ -16,12 +16,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: c8817e0a6f0eda0dafec56475a3fb3e6a5a8627f
-ms.sourcegitcommit: 23c8781d1a2b0472612c3a2cb6e5d13edb03e236
+ms.openlocfilehash: 85031a3062397c63326a3306d9a4a14d77c114f3
+ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "38702254"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38756602"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -106,8 +106,8 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關網路功
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)          ](https://www.microsoft.com/download/details.aspx?id=54425) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842073)  \| [Visio](https://go.microsoft.com/fwlink/p/?linkid=842074)           \| [更多語言](https://www.microsoft.com/download/details.aspx?id=54425) <br/> | 此模型包含： <ul><li> 將您的網路提升為雲端連線網路 </li><li> Microsoft 雲端連線的共同項目 </li><li> Microsoft 雲端連線的 ExpressRoute </li><li> 設計 Microsoft SaaS、Azure PaaS 和 Azure IaaS 的網路 </li></ul><br/>  <br/>|
-   
+|[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)](media/Network-Poster/MSFT_cloud_architecture_networking.pdf) <br/> [PDF](media/Network-Poster/MSFT_cloud_architecture_networking.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Network-Poster/MSFT_cloud_architecture_networking.vsdx) <br/> | 此模型包含： <ul><li> 將您的網路提升為雲端連線網路 </li><li> Microsoft 雲端連線的共同項目 </li><li> Microsoft 雲端連線的 ExpressRoute </li><li> 設計 Microsoft SaaS、Azure PaaS 和 Azure IaaS 的網路 </li></ul><br/>  <br/>|
+
 <a name="hybrid"></a>
 ### <a name="microsoft-hybrid-cloud-for-enterprise-architects"></a>Microsoft hybrid cloud for enterprise architects
 
@@ -115,7 +115,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)          ](https://www.microsoft.com/download/details.aspx?id=54424) <br/> [PDF](https://go.microsoft.com/fwlink/p/?linkid=842082)  \| [Visio](https://go.microsoft.com/fwlink/p/?linkid=842083)           \| [更多語言](https://www.microsoft.com/download/details.aspx?id=54424) <br/> | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS (Office 365)、Azure PaaS 和 Azure IaaS 的混合式雲端案例 </li></ul><br/>|
+|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf) <br/> [PDF](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.vsdx)  | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS (Office 365)、Azure PaaS 和 Azure IaaS 的混合式雲端案例 </li></ul><br/>|
    
 <a name="attacks"></a>
 ### <a name="common-attacks-and-microsoft-capabilities-that-protect-your-organization"></a>常見攻擊和保護您組織的 Microsoft 功能
