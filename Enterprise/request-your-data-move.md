@@ -1,9 +1,9 @@
 ---
 title: 如何要求資料移動
-ms.author: deniseb
-author: denisebmsft
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/25/2019
+ms.date: 11/20/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: 4df9c3481782f6d3f0b8431bd91677fb1262812c
-ms.sourcegitcommit: 842ac51577317dfc8d2adc46d09b4d735f29bc4f
+ms.openlocfilehash: 0d563400fefd0d2b9aabc0d9f3973558d54e60ab
+ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "35907646"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38756592"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -37,7 +37,7 @@ ms.locfileid: "35907646"
 |英國  <br/> |2017 年 3 月 15日日  <br/> |2017 年 9 月 15日日  <br/> |
 |南韓  <br/> |2017 年 5 月 1日日  <br/> |2017 年 10 月 31日日  <br/> |
 |法國  <br/> |2018 年 3 月 14日日  <br/> |2018 年 9 月 15日日  <br/> |
-|阿拉伯聯合大公國  <br/> |2019 年 7 月 15日日  <br/> |2020 年 1 月 31 日  <br/> |
+|阿拉伯聯合大公國  <br/> |2019 年 7 月 15 日  <br/> |2020 年 1 月 31 日  <br/> |
 |南非  <br/> |2019 年 7 月 25日日  <br/> |2020 年 1 月 31 日  <br/> |
    
 ## <a name="how-to-request-a-move"></a>如何要求移動
@@ -72,7 +72,7 @@ ms.locfileid: "35907646"
   
 ## <a name="microsoft-teams"></a>Microsoft Teams
 
-Microsoft Teams 還不支援移轉，從區域中的其餘部分，以提供對於 Microsoft Teams 的資料落地所在的國家/地區資料中心的客戶內容。  因此，只有新的客戶會有所有他們儲存在 Microsoft Teams 其中支援資料落地新區域的國家/地區內的資料。  深入了解您的公司位置的 Office 365 資料落地[其中是位於您資料？](https://products.office.com/where-is-your-data-located)   
+Microsoft 小組聊天和通道訊息資料移轉支援會新增至 Office 365 本機移轉計劃。  我們要開啟程式註冊 2020 年 1 月中的所有合格的客戶，包括客戶先前選擇加入集以進行 Exchange Online 和 SharePoint Online/OneDrive for Business 移轉。  我們將公開在 Microsoft 365 系統管理中心中加入的控制項，並將通知傳送給所有合格客戶訊息中心。   
 
 ## <a name="optional-actions-before-you-request-a-move"></a>選用的動作，您要求移動之前
 
@@ -100,7 +100,7 @@ Microsoft Teams 還不支援移轉，從區域中的其餘部分，以提供對�
     
 ### <a name="notify-users-to-update-out-of-date-exchange-settings-on-mobile-devices"></a>通知使用者更新行動裝置上的過時 Exchange 設定
 
-如果使用者有行動裝置與 Exchange 伺服器設定為**m.outlook.com**或**podxxxxx.outlook.com**，我們建議他們切換至**outlook.office365.com**，[組來同步處理的行動裝置設定中的指示使用您的帳戶](https://support.office.com/article/c9139caf-01ab-41a0-827c-3c06ee569ed3)。
+如果使用者有行動裝置與 Exchange 伺服器設定為**m.outlook.com**或**podxxxxx.outlook.com**，我們建議他們切換至**outlook.office365.com**，[設定與您的帳戶進行同步處理行動裝置](https://support.office.com/article/c9139caf-01ab-41a0-827c-3c06ee569ed3)中的指示。
 
 ## <a name="related-topics"></a>相關主題
 
@@ -110,6 +110,6 @@ Microsoft Teams 還不支援移轉，從區域中的其餘部分，以提供對�
 
 [Microsoft Dynamics CRM online 的新資料中心 geos](https://go.microsoft.com/fwlink/p/?Linkid=615924)
   
-[依地區的 azure 服務](https://azure.microsoft.com/en-us/regions/)
+[依地區的 azure 服務](https://azure.microsoft.com/regions/)
   
 
