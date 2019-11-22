@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: 摘要：在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
-ms.openlocfilehash: 5cb7c75f5d66dc37aa9e4b7fdc682c9508eac40e
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 3e5ede99c114b59f6aafbf37c3aa11e3ebd62cca
+ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38028797"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38793345"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
@@ -69,12 +69,7 @@ ms.locfileid: "38028797"
   
 當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
   
-<!--
-> [!TIP]
-> For a text file that has all of the PowerShell commands in this article and a Microsoft Excel configuration workbook that generates ready-to-run PowerShell command blocks based on your custom settings, see the [Federated Authentication for Office 365 in Azure Deployment Kit](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664). 
--->
-  
-```
+```powershell
 # Set up variables common to both virtual machines
 $locName="<your Azure location>"
 $vnetName="<Table V - Item 1 - Value column>"
@@ -154,7 +149,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 從 Windows PowerShell 命令提示字元**上第一個網域控制站虛擬機器**，接下來，使用此命令的第一個網域控制站新增額外的資料磁碟：
   
-```
+```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
@@ -164,7 +159,7 @@ Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR 
   
 下一步，從第一個網域控制站上的 Windows PowerShell 命令提示字元，執行下列命令：
   
-```
+```powershell
 $domname="<DNS domain name of the domain for which this computer will be a domain controller, such as corp.contoso.com>"
 $cred = Get-Credential -Message "Enter credentials of an account with permission to join a new domain controller to the domain"
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
@@ -179,13 +174,13 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
   
 接下來，您需要將額外的資料磁碟新增至第二個網域控制站，使用此命令中，從 Windows PowerShell 命令提示字元**上第二個網域控制站虛擬機器**：
   
-```
+```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
 ```
 
 接著，執行下列命令：
   
-```
+```powershell
 $domname="<DNS domain name of the domain for which this computer will be a domain controller, such as corp.contoso.com>"
 $cred = Get-Credential -Message "Enter credentials of an account with permission to join a new domain controller to the domain"
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
@@ -197,7 +192,7 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
   
 下一步，您需要更新虛擬網路的 DNS 伺服器，如此一來，此 Azure 會指派兩個新的網域控制站 IP 位址給虛擬機器，以便使用虛擬機器的 DNS 伺服器。 填寫 [變數並再從 Windows PowerShell 命令提示字元執行這些命令在本機電腦上：
   
-```
+```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
 $adrgName="<Table R - Item 1 - Resource group name column>"
 $locName="<your Azure location>"
@@ -223,7 +218,7 @@ Restart-AzVM -ResourceGroupName $adrgName -Name $secondDCName
   
 下一步，我們需要建立一個 Active Directory 複寫站台，以確保 Azure 的虛擬網路中的伺服器會使用本機網域控制站。請使用網域管理員帳戶與其中一個網域控制站連線，並從管理員層級的 Windows PowerShell 提示執行下列命令：
   
-```
+```powershell
 $vnet="<Table V - Item 1 - Value column>"
 $vnetSpace="<Table V - Item 4 - Value column>"
 New-ADReplicationSite -Name $vnet 
@@ -236,7 +231,7 @@ New-ADReplicationSubnet -Name $vnetSpace -Site $vnet
   
 接下來，將其加入適當的 AD DS 網域，在 Windows PowerShell 提示字元使用以下命令。
   
-```
+```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
 $cred=Get-Credential -Message "Type the name and password of a domain acccount."
 Add-Computer -DomainName $domName -Credential $cred

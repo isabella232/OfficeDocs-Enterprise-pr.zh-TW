@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: 摘要：在 Azure 中的虛擬機器上部署 Azure AD Connect，以同步處理內部部署目錄和您 Office 365 訂閱下 Azure AD 租用戶之間的帳戶。
-ms.openlocfilehash: cb908de04aa38972744077bd1359b94babca7290
-ms.sourcegitcommit: b4514cd852093181dd4c27009a78aca3ca50d2e2
+ms.openlocfilehash: 1b03e2a18062523c53b5c2c094e9adf10e2e3358
+ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38038282"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38793325"
 ---
 # <a name="deploy-office-365-directory-synchronization-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Office 365 目錄同步作業
 
@@ -120,11 +120,7 @@ Azure Active Directory (AD) Connect (之前稱為目錄同步處理工具、目�
     
 部署之後，您也必須在 Office 365 中指派位置和新的使用者帳戶的授權。
 
-<!--  
-> [!TIP]
-> The [Directory Synchronization Server in Azure Deployment Kit](https://gallery.technet.microsoft.com/DirSync-Server-in-Azure-32cb2ded) has all of the Azure PowerShell blocks to build out this solution, the diagrams in Microsoft PowerPoint and Visio format, and a Microsoft Excel configuration workbook that generates Azure PowerShell command blocks customized for your settings.
--->
-  
+
 ### <a name="phase-1-create-and-configure-the-azure-virtual-network"></a>階段 1：建立及設定 Azure 虛擬網路
 
 若要建立及設定 Azure 虛擬網路，請完成＜[使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)＞中的＜[階段 1：準備內部部署網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#phase-1-prepare-your-on-premises-network)＞和＜[階段 2：在 Azure 中建立跨單位的虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md#phase-2-create-the-cross-premises-virtual-network-in-azure)＞。
@@ -202,8 +198,3 @@ Azure AD Connect 會從內部部署 AD DS 新增帳戶至您的 Office 365 訂�
   
 [設定 Office 365 的目錄同步處理](set-up-directory-synchronization.md)
   
-<!--
-[Directory Synchronization server in Azure Deployment Kit](https://gallery.technet.microsoft.com/DirSync-Server-in-Azure-32cb2ded)
--->
-
-

@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
 description: 摘要： 建立並在 Microsoft Azure 中設定您的 Office 365 的高可用性同盟驗證的 Active Directory Federation Services (AD FS) 伺服器。
-ms.openlocfilehash: 68410111be6c4d12e27e32e9663592306d733970
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: a69738e5be639341963ac1e90aff08328a83257b
+ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38030737"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38793300"
 ---
 # <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 
@@ -50,12 +50,7 @@ ms.locfileid: "38030737"
   
 首先，您建立 Azure 內部負載平衡器的兩個 AD FS 伺服器。 為指定值的變數，移除\<和 > 字元。 當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
-<!--
-> [!TIP]
-> For a text file that has all of the PowerShell commands in this article and a Microsoft Excel configuration workbook that generates ready-to-run PowerShell command blocks based on your custom settings, see the [Federated Authentication for Office 365 in Azure Deployment Kit](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664). 
--->
-  
-```
+```powershell
 # Set up key variables
 $locName="<your Azure location>"
 $vnetName="<Table V - Item 1 - Value column>"
@@ -78,7 +73,7 @@ New-AzLoadBalancer -ResourceGroupName $rgName -Name "ADFSServers" -Location $loc
   
 當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
-```
+```powershell
 # Set up variables common to both virtual machines
 $locName="<your Azure location>"
 $vnetName="<Table V - Item 1 - Value column>"
@@ -137,7 +132,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 對於每部虛擬機器，請將其加入適當的 Active Directory 網域服務 (AD DS) 網域的 Windows PowerShell 提示字元使用以下命令中。
   
-```
+```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
 $cred=Get-Credential -Message "Type the name and password of a domain acccount."
 Add-Computer -DomainName $domName -Credential $cred

@@ -3,7 +3,7 @@ title: 使內部部署網路與 Microsoft Azure 虛擬網路連線
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/15/2019
+ms.date: 11/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,17 +17,15 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 634016a2102ef602e9963dadc7ddff36b7381661
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 3506b1b4c6a88567bf216957f5e083c9e99156ba
+ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068079"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38793335"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
- **摘要：** 了解如何設定適用於 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-  
 跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。 
 
 例如，在 Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢您的內部部署網域控制站是否有帳戶的變更，以將這些變更與您的 Office 365 訂閱進行同步處理。本文示範如何使用已準備好裝載 Azure 虛擬機器的站對站虛擬私人網路 (VPN) 連線，設定跨單位 Azure 虛擬網路。
@@ -211,46 +209,43 @@ Azure 虛擬網路的私人 IP 位址空間必須可容納 Azure 使用的位址
 
 首先，開啟 Azure PowerShell 提示。如果您尚未安裝 Azure PowerShell，請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。
 
-> [!TIP]
-> 按一下[這裡](https://gallery.technet.microsoft.com/scriptcenter/PowerShell-commands-for-5c5a7c19)以取得包含本文中所有 PowerShell 命令的文字檔案。 
-  
+ 
 接著，使用此命令登入您的 Azure 帳戶。
   
-```
+```powershell
 Connect-AzAccount
 ```
 
 使用下列命令取得訂用帳戶名稱。
   
-```
+```powershell
 Get-AzSubscription | Sort SubscriptionName | Select SubscriptionName
 ```
 
 使用這些命令設定您的 Azure 訂用帳戶。以正確的訂用帳戶名稱取代括號中的所有項目 (包括 < 和 > 字元)。
   
-```
+```powershell
 $subscrName="<subscription name>"
 Select-AzSubscription -SubscriptionName $subscrName
 ```
 
 接著，為您的虛擬網路建立新的資源群組。若要判斷資源群組名稱是否是唯一的，可使用此命令來列出現有的資源群組。
   
-```
+```powershell
 Get-AzResourceGroup | Sort ResourceGroupName | Select ResourceGroupName
 ```
 
 使用這些命令建立新的資源群組。
   
-```
+```powershell
 $rgName="<resource group name>"
 $locName="<Table V - Item 2 - Value column>"
 New-AzResourceGroup -Name $rgName -Location $locName
-
 ```
 
 接下來，建立 Azure 虛擬網路。
   
-```
+```powershell
 # Fill in the variables from previous values and from Tables V, S, and D
 $rgName="<name of your new resource group>"
 $locName="<Azure location of your new resource group>"
@@ -280,7 +275,7 @@ $vnet | Set-AzVirtualNetwork
   
 接著，使用以下命令來建立站台對站台 VPN 連線的閘道。
   
-```
+```powershell
 # Fill in the variables from previous values and from Tables V and L
 $vnetName="<Table V - Item 1 - Value column>"
 $localGatewayIP="<Table V - Item 3 - Value column>"

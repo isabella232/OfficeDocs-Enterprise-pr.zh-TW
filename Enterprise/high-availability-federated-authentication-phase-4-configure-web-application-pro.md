@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
 description: 摘要： 在 Microsoft Azure 中設定 web 應用程式 proxy 伺服器運作的 Office 365 高可用性同盟驗證。
-ms.openlocfilehash: c0a469f8945b9e69415b511c253e72a0118a4cfa
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 276d28835cbedf7d2eb87b80304fbb0e4e9de2c3
+ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38027667"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "38793315"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
@@ -36,12 +36,7 @@ ms.locfileid: "38027667"
   
 當您已提供位置和資源群組的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
-<!--
-> [!TIP]
-> For a text file that has all of the PowerShell commands in this article and a Microsoft Excel configuration workbook that generates ready-to-run PowerShell command blocks based on your custom settings, see the [Federated Authentication for Office 365 in Azure Deployment Kit](https://gallery.technet.microsoft.com/Federated-Authentication-8a9f1664). 
--->
-  
-```
+```powershell
 # Set up key variables
 $locName="<your Azure location>"
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -56,7 +51,7 @@ New-AzLoadBalancer -ResourceGroupName $rgName -Name "WebAppProxyServers" -Locati
 
 若要顯示指派到您網際網路對應負載平衡器的公用 IP 位址，請在本機電腦上的 Azure PowerShell 命令提示字元上執行以下命令：
   
-```
+```powershell
 Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgName).IPAddress
 ```
 
@@ -66,13 +61,13 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**名稱**|**Type**|**TTL**|**Value**|
+|**名稱**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對應負載平衡器的公用 IP 位址 (透過上一節中的 **Write-Host** 命令顯示) <br/> |
    
 範例如下：
   
-|**名稱**|**Type**|**TTL**|**Value**|
+|**名稱**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    
@@ -100,7 +95,7 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
   
 當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
-```
+```powershell
 # Set up variables common to both virtual machines
 $locName="<your Azure location>"
 $vnetName="<Table V - Item 1 - Value column>"
