@@ -3,7 +3,7 @@ title: Azure 中的 Office 365 高可用性同盟驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/06/2018
+ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -17,17 +17,15 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
 description: 摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
-ms.openlocfilehash: ba8049271e4820cca8db2ce5d6cabf76dacfb36a
-ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
+ms.openlocfilehash: 0b622c895bcd6b11ee7e096ac1e39f1b6bd2dae2
+ms.sourcegitcommit: fbd2f3fb297c508212baed3ee9d1ce51765cc8bb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38793285"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39254512"
 ---
 # <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
 
- **摘要：** 在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
-  
 本文包含的逐步指示，說明如何使用這些虛擬機器在 Azure 基礎結構服務中的 Microsoft Office 365 部署高可用性聯盟的驗證：
   
 - 兩個 Web 應用程式 Proxy 伺服器
@@ -36,7 +34,7 @@ ms.locfileid: "38793285"
     
 - 兩個複本網域控制站
     
-- 執行 Azure AD Connect 的同步處理 (DirSync) 伺服器。
+- 一個執行 Azure AD Connect 的目錄同步處理伺服器
     
 組態如下，包含每部伺服器的預留位置名稱。
   
@@ -54,7 +52,7 @@ ms.locfileid: "38793285"
 > [!NOTE]
 > 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱＜[執行 N 層架構的 Windows VM](https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm)＞。 
   
-這項設定的結果是，您所有的 Office 365 使用者都將會有聯盟驗證，他們可以在其中使用其 Active Directory Domain Services 憑證，而不是其 Office 365 帳戶登入。聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
+這項設定的結果是，您所有的 Office 365 使用者都將會有聯盟驗證，他們可以在其中使用其 AD DS 認證，而不是其 Office 365 帳戶登入。 聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
   
 ## <a name="bill-of-materials"></a>物料單
 
@@ -90,7 +88,7 @@ ms.locfileid: "38793285"
   
 - [階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。建立資源群組、儲存體帳戶、可用性設定組和跨單位虛擬網路。
     
-- [階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。建立和設定 Active Directory Domain Services (AD DS) 網域控制站複本和 DirSync 伺服器。
+- [階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。 建立並設定複本 AD DS 網域控制站和目錄同步處理伺服器。
     
 - [階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。建立並設定兩個 AD FS 伺服器。
     
@@ -108,5 +106,5 @@ ms.locfileid: "38793285"
   
 ## <a name="next-step"></a>下一步
 
-使用＜[高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)＞開始設定此工作負載。 
+使用[階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md) 開始設定此工作負載。 
   
