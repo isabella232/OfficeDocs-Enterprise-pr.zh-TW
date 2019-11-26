@@ -15,12 +15,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: 209c9868-448c-49bc-baae-11e28b923a39
 description: 了解如何使用 Office 365 PowerShell 來刪除 Office 365 使用者帳戶。
-ms.openlocfilehash: b7c30ec422475a4cf11b28249e8a20d64a3c90a4
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: e62c06981a861580804dde852ad3da7bd729fdbe
+ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38746426"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39257644"
 ---
 # <a name="delete-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 刪除使用者帳戶
 
@@ -35,6 +35,10 @@ ms.locfileid: "38746426"
 ```powershell
 Remove-AzureADUser -ObjectID <sign-in name>
 ```
+
+>[!Note]
+>PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+>
 
 此範例會移除使用者帳戶 fabricec@litwareinc.com。
   

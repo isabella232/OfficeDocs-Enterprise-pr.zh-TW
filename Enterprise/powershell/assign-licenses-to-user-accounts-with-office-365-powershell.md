@@ -18,12 +18,12 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-ms.openlocfilehash: 22cc5377557464ac6d67833381b96ac01382bc4b
-ms.sourcegitcommit: 21901808f112dd1d8d01617c4be37911efc379f8
+ms.openlocfilehash: 8db03eb919547fd0664f8e71cf5f8eddd0f41e2e
+ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "38707000"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39257452"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
@@ -79,7 +79,11 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 執行**Get-msolaccountsku**命令，以檢視您組織中每個計劃可用的授權計劃與可用授權數量。 在每個方案可用授權數量是**ActiveUnits** - **WarningUnits** - **ConsumedUnits**。 如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。
-    
+
+>[!Note]
+>PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+>
+
 若要在組織中尋找未經授權的帳戶，請執行此命令。
 
 ```powershell

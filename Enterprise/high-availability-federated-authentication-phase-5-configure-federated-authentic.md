@@ -3,7 +3,7 @@ title: 高可用性同盟的驗證階段 5 設定的 Office 365 的同盟驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: Ent_Solutions
 ms.assetid: 0f1dbf52-5bff-44cc-a264-1b48641af98f
 description: 摘要： 在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的 Azure AD Connect。
-ms.openlocfilehash: a4c8a76a322824bfdb4df88600881d76cb3e378c
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: dcd66ee6a650081e4ad27f9023fe98082a7ccd43
+ms.sourcegitcommit: fbd2f3fb297c508212baed3ee9d1ce51765cc8bb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067319"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39254552"
 ---
 # <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-office-365"></a>高可用性同盟驗證階段 5：設定 Office 365 的同盟驗證
 
- **摘要：** 在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的 Azure AD Connect。
- 
 在此部署高可用性同盟的驗證 Office 365 的 Azure 基礎結構服務中的最後一個階段中，您取得並安裝公用憑證授權單位所發出的憑證，確認您的組態，然後安裝和執行 Azure AD連線的目錄同步處理伺服器上。 Azure AD Connect 設定您的 Office 365 訂閱和您的 Active Directory Federation Services (AD FS) 和同盟驗證的 web 應用程式 proxy 伺服器。
   
 所有階段，請參閱[在 Azure 中的 Office 365 部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)。
@@ -87,7 +85,7 @@ Azure AD Connect 工具設定 AD FS 伺服器、 web 應用程式 proxy 伺服�
     
 8. 在 [**連線到 Azure AD** ] 頁面上輸入的名稱與您的 Office 365 訂閱的全域系統管理員帳戶的密碼，然後按一下 [**下一步**。
     
-9. 在 [**連線您的目錄**] 頁面上，確定 [**樹系**中已選取 [您的內部部署 Active Directory 網域服務 (AD DS) 樹系、 輸入的名稱和網域系統管理員帳戶的密碼、 按一下 [**新增目錄**，然後選取按一下 [**下一步**]。
+9. 上**連線目錄**] 頁面上，確定已選取 [您的內部部署 Active Directory 網域服務 (AD DS) 樹系**的樹系**中輸入的名稱和網域系統管理員帳戶的密碼、 按一下 [**新增目錄**]，然後按 [**下一步**。
     
 10. 在**Azure AD 登入設定**] 頁面上，按一下 [**下一步**]。
     

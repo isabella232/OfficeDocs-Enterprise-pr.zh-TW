@@ -13,12 +13,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
-ms.openlocfilehash: 333c29d4087e18b477f124ca406de4936d1bd5e3
-ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
+ms.openlocfilehash: bfc21dccbf63dbf14f2e08d84f4312e6ed3dbcc7
+ms.sourcegitcommit: a73518764b97948219e378d7014ada5654146be4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38756572"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39250499"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -54,14 +54,6 @@ ms.locfileid: "38756572"
 |:-----|:-----|
 |使用者具有另一個信箱的信箱資料夾權限  <br/> |潛在限制。  <br/> 使用者 A 如果使用者的僅有權限至信箱 b 中的特定資料夾，如果使用者和信箱 B 不是在相同的地理位置租用戶移動期間，無法開啟信箱 B 資料夾 in Outlook Web Access  <br/> 若要新增的共用的資料夾，以滑鼠右鍵按一下左的導覽] 面板中的使用者名稱，並選取 [**新增共用的資料夾**。  <br/> |
 |具有完整信箱到另一個信箱的權限的使用者  <br/> |完全支援。  <br/> 如果使用者的信箱 B 的 「 完整存取 」 權限，然後使用者可以按一下 in Outlook Web Access，若要開啟 [顯示信箱 b 的視窗的左側的導覽] 面板中的共用的資料夾 使用者可以開啟共用的信箱不含任何負面影響移動期間使用 Outlook Web Access。 限制僅適用於資料夾層級共用信箱中。           |
-   
-### <a name="public-folders"></a>公用資料夾
-
-如果公用資料夾信箱位於暫時嘗試對其進行存取的使用者從不同的資料中心地理位置，使用者可能無法存取公用資料夾信箱。 
-  
-### <a name="online-archives"></a>線上封存
-
-在進行移動時，使用者透過 Outlook for Mac 連線可能無法連線至線上封存信箱。 支援的使用者使用 Outlook 和 Outlook Web Access 連線至封存信箱存取。
   
 ## <a name="sharepoint-online"></a>SharePoint Online
 

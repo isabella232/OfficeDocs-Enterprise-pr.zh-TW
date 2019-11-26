@@ -13,12 +13,12 @@ ms.collection:
 ms.custom: ''
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
 description: 摘要：使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
-ms.openlocfilehash: 60088a9eafa1f5380eef2cc0240b0f5b5b02fe0f
-ms.sourcegitcommit: 68181eca8e43ea7f5dfd89cbaf587bc0c260ca7e
+ms.openlocfilehash: 5f22e21e1eafc7c2d3fb9bc7286e860ad468445b
+ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "35853226"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "39257462"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
@@ -48,7 +48,7 @@ ms.locfileid: "35853226"
  客戶可能會要求您建立額外的網域來與租用相關聯，因為他們不希望預設的<網域>.onmicrosoft.com網域成為向全世界代表公司身分的主要網域。此程序會引導您完成與客戶租用相關聯之新網域的建立步驟。
   
 > [!NOTE]
-> 若要執行這些作業部分，您登入的協力廠商系統管理員帳戶必須設定為**完整管理****支援指派的管理存取權的公司**設定中的系統管理員帳戶的詳細資料中找到Microsoft 365 系統管理中心。 For more information on managing partner administrator roles, see[Partners: Offer delegated administration](https://go.microsoft.com/fwlink/p/?LinkId=532435). 
+> 若要執行這些作業部分，登入與協力廠商系統管理員帳戶必須設定為**完整管理****支援指派的管理存取權的公司**在 Microsoft 365 系統管理中心中設定的系統管理員帳戶的詳細資料中找到。 For more information on managing partner administrator roles, see[Partners: Offer delegated administration](https://go.microsoft.com/fwlink/p/?LinkId=532435). 
   
 ### <a name="create-the-domain-in-azure-active-directory"></a>在 Azure Active Directory 中建立網域
 
@@ -57,6 +57,10 @@ ms.locfileid: "35853226"
 ```
 New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
 ```
+
+>[!Note]
+>PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+>
 
 ### <a name="get-the-data-for-the-dns-txt-verification-record"></a>取得 TXT DNS 驗證記錄的資料
 
