@@ -158,11 +158,11 @@
 #### [使內部部署網路與 Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 #### [在 Azure IaaS 中部署目錄同步處理伺服器](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
 #### [Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
-##### [高可用性同盟驗證階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)
-##### [高可用性同盟驗證階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)
-##### [高可用性同盟驗證階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)
-##### [高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)
-##### [高可用性同盟驗證階段 5：設定 Office 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)
+##### [階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)
+##### [階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)
+##### [階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)
+##### [階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)
+##### [階段 5：設定同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)
 
 # 管理 Office 365
 
