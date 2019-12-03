@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: bb12f49d-a85d-4f3b-ada2-5c4e33977b10
 description: 摘要： 檢視、 清單，或使用 Office 365 PowerShell 的各種方式顯示您的使用者帳戶。
-ms.openlocfilehash: 0711bf945b863cb89d45a377f61a139b298ca6d7
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 28e6ec6936040c6bb84a49e354ae1ee5e9e9de44
+ms.sourcegitcommit: 460c722d63e7e604ef0a57ec18fa7900fa6a4157
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38748401"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "39655835"
 ---
 # <a name="view-user-accounts-with-office-365-powershell"></a>檢視與 Office 365 PowerShell 的使用者帳戶
 
@@ -134,6 +134,10 @@ Get-AzureADUser | Where-Object {$_.City -eq "London"}
 ```powershell
 Get-MsolUser
 ```
+
+>[!Note]
+>PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
+>
 
 您應該會看到類似的資訊：
   

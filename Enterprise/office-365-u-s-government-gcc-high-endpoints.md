@@ -3,7 +3,7 @@ title: Office 365 美國政府 GCC High 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 10/28/2019
+ms.date: 11/27/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
 description: 如果您的組織使用 Office 365，而且會限制您網路上的電腦連線到網際網路，以下您會發現的端點 （Fqdn、 連接埠、 Url、 IPv4 和 IPv6 位址範圍），您應該在包含連出允許清單，以確保您電腦可以順利使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 8ff4caf4c2fb3e067f3d0d23aed0be16fd099039
-ms.sourcegitcommit: 8d1cc95b3641afe547c6d0e05f2dad5d013a0773
+ms.openlocfilehash: 42e371402665fb4e54d7ccff6c59f0b3cec89342
+ms.sourcegitcommit: 460c722d63e7e604ef0a57ec18fa7900fa6a4157
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "37975852"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "39655748"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府 GCC High 端點
 
@@ -36,7 +36,7 @@ ms.locfileid: "37975852"
   
 |||
 |:-----|:-----|
-|**上次更新日期：** 2019 年 10 月 28 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 以[JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
+|**上次更新：** 11/27/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 以[JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
    
  若要了解我們的建議管理網路連線使用此資料的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。 起點處的新 IP 位址和 Url 發佈最遲作用在 30 天每月更新端點資料。 這可讓客戶不尚未有自動更新至新的連線，則需要先完成其處理程序。 端點只有地址支援擴大、 安全性事件或其他即時的操作需求所需的情況下，也可能與月份期間中更新。 所有產生 rest web 服務下此頁面上所顯示的資料。 如果您使用指令碼或網路裝置來存取此資料，您應該直接移至[Web 服務](office-365-ip-web-service.md)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "37975852"
 
 - **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
-- **增**： 這是 **[是]** 如果透過 Azure ExpressRoute 支援的端點集，則將它與 Office 365 路由前置詞。 包含所顯示的路由首碼 BGP 社群對齊所列的 [服務] 區域。 當增為 [**否**] 時，這表示，ExpressRoute 不支援此端點集。 不過，它不應該假定沒有路由會通告增所在**否**端點集。 如果您打算使用 Azure AD Connect，讀取[特殊考量一節，](https://docs.microsoft.com/azure/active-directory/connect/active-directory-AADconnect-instances#microsoft-azure-government-cloud)以確定您有適當的 Azure AD Connect 組態。
+- **增**： 這是 **[是]** 如果透過 Azure ExpressRoute 支援的端點集，則將它與 Office 365 路由前置詞。 包含所顯示的路由首碼 BGP 社群對齊所列的 [服務] 區域。 當增為 [**否**] 時，這表示，ExpressRoute 不支援此端點集。 不過，它不應該假定沒有路由會通告增所在**否**端點集。 如果您打算使用 Azure AD Connect，讀取[特殊考量一節，](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-instances#microsoft-azure-government)以確定您有適當的 Azure AD Connect 組態。
 
 - **地址**：列出端點設定的 FQDN 或萬用字元網域名稱及 IP 位址範圍。請注意，IP 位址範圍為 CIDR 格式，且在指定的網路中可能包含讓多個個別的 IP 位址。
  

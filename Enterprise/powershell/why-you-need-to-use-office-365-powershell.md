@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Office_Other
 ms.assetid: b3209b1a-40c7-4ede-8e78-8a88bb2adc8a
 description: 摘要：了解為何您必須使用 Office 365 PowerShell 來管理 Office 365，在某些情況下更有效率，在另一些情況則是必然。
-ms.openlocfilehash: 66782a9165c76c7e1d506e40fa1cacd6db0c6724
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 3e2f0d4ee1c86e26ccf728412d419ae6ba3018e7
+ms.sourcegitcommit: 460c722d63e7e604ef0a57ec18fa7900fa6a4157
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38747442"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "39655768"
 ---
 # <a name="why-you-need-to-use-office-365-powershell"></a>為什麼要使用 Office 365 PowerShell
 
@@ -83,9 +83,11 @@ Get-Mailbox
 Get-MsolUser | Select DisplayName, UsageLocation
 ```
 
-> [!NOTE]
-> 此命令需要您安裝 [Windows Azure Active Directory 模組](https://docs.microsoft.com/powershell/module/Azuread/?view=azureadps-2.0)。 
-  
+
+>[!Note]
+>PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
+>
+
 以下是顯示範例：
   
 ```powershell
