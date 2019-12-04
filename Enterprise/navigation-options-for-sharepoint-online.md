@@ -14,12 +14,12 @@ ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: 本文說明導覽選項網站與 SharePoint 發佈 SharePoint Online 中啟用。 選擇及設定導覽會大幅影響的效能和延展性的 SharePoint Online 中的網站。 本文不適用於傳統的小組網站。
-ms.openlocfilehash: d86b0462e8ddb93c39eab0d42a24f3a94f785ecd
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: ce6bde50d35cdddf28fed4ad6c74a9a2da8193af
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38078308"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39814191"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
@@ -35,19 +35,19 @@ ms.locfileid: "38078308"
 
 除了的方塊出導覽提供者，許多客戶已成功實作替代自訂導覽實作。 一種常見的自訂巡覽實作類別樂於儲存瀏覽節點的本機快取的用戶端呈現設計圖樣。 （請參閱**[搜尋導向用戶端指令碼](#using-search-driven-client-side-scripting)** 本文中）。
 
-這些導覽提供者有幾個重要的優點： 
-- 它們通常適用於回應] 頁面上的設計。
-- 它們是極延展性和效能低落因為他們可以呈現與任何資源成本 （和重新整理逾時之後在背景中的）。 
-- 這些導覽提供者可以擷取使用各種不同的策略，範圍從簡單的靜態設定到不同的動態資料提供者的瀏覽資料。 
+這些導覽提供者有幾個重要的優點：
 
-資料提供者的範例為使用**搜尋導向導覽**，可讓列舉瀏覽節點和處理安全性有效率地調整的彈性。 
+- 它們通常適用於回應] 頁面上的設計。
+- 它們是極延展性和效能低落因為他們可以呈現與任何資源成本 （和重新整理逾時之後在背景中的）。
+- 這些導覽提供者可以擷取使用各種不同的策略，範圍從簡單的靜態設定到不同的動態資料提供者的瀏覽資料。
+
+資料提供者的範例為使用**搜尋導向導覽**，可讓列舉瀏覽節點和處理安全性有效率地調整的彈性。
 
 有其他常用的選項來建立**自訂導覽提供者**。 請檢閱[SharePoint Online 入口網站的導覽解決方案](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-navigation)進一步上建置的自訂導覽提供者的指引。
   
 ## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>優點和缺點的 SharePoint Online 的導覽選項
 
-下表摘要說明每個選項的優缺點。 
-
+下表摘要說明每個選項的優缺點。
 
 |受管理導覽  |結構式導覽  |搜尋導向導覽  |自訂導覽提供者  |
 |---------|---------|---------|---------|
@@ -58,8 +58,7 @@ ms.locfileid: "38078308"
 
 受管理導覽選項可以透過維護組態中，沒有牽涉到程式碼的自訂檔案，而且可大幅比結構式導覽。 如果您需要進行安全性調整習慣使用自訂的主版頁面，並維護的 SharePoint Online 中的預設主版頁面可能發生的變更在組織中有某些功能，然後搜尋導向選項可能會產生更好使用者經驗。 如果您有更複雜的需求，自訂的導覽提供者可能會選擇。 不建議使用結構式導覽。
 
-最後，務必注意，SharePoint 會新增額外的導覽提供者和新式的 SharePoint 網站架構，利用多簡維的網站階層和具有 SharePoint 中樞站台的中樞與支點模型的功能。 這可讓許多案例，以達成不需要使用的 SharePoint 發佈功能，以及這些導覽設定已針對延展性和延遲內 SharePoint Online 進行最佳化。 請注意，套用相同的原則-簡化呈現的結構，SharePoint 發佈網站整體結構通常可以幫助的整體效能，以及調整。 這表示是，而不是有數百個站台 （子網站） 的單一網站集合，更好的方法有許多具有極少的子網站 （子網站） 的網站集合。
-
+最後，務必注意，SharePoint 會新增額外的導覽提供者和新式的 SharePoint 網站架構，利用多簡維的網站階層和具有 SharePoint 中樞站台的中樞與支點模型的功能。 這可讓許多案例，以達成不需要使用的 SharePoint 發佈功能，以及這些導覽設定已針對延展性和延遲內 SharePoint Online 進行最佳化。 請注意，套用相同的簡化呈現結構 SharePoint 發佈網站整體結構通常原則有助於整體效能，以及調整。 這表示是，而不是有數百個站台 （子網站） 的單一網站集合，更好的方法有許多具有極少的子網站 （子網站） 的網站集合。
 
 ## <a name="using-managed-navigation-and-metadata-in-sharepoint-online"></a>在 SharePoint Online 中使用受管理的導覽與中繼資料
 
@@ -95,7 +94,7 @@ ms.locfileid: "38078308"
   
 ### <a name="analyzing-structural-navigation-performance-in-sharepoint-online"></a>分析 SharePoint Online 中的結構式導覽效能
 
-若要分析 SharePoint 網頁的效能，請在 Internet Explorer 中使用 F12 開發人員工具的 [**網路**] 索引標籤。 
+若要分析 SharePoint 網頁的效能，請在 Internet Explorer 中使用 F12 開發人員工具的 [**網路**] 索引標籤。
   
 ![顯示 F12 dev 工具網路索引標籤的螢幕擷取畫面](media/SPONavOptionsNetworks.png)
   
@@ -114,13 +113,13 @@ ms.locfileid: "38078308"
 
 ### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>範例： 取代在主版頁面中的全新的瀏覽程式碼
 
-1.  瀏覽至 [網站設定] 頁面上。
-2.  按一下 [**主版頁面**，以開啟主版頁面圖庫。
-3.  您可以從這裡瀏覽文件庫，並下載檔案`seattle.master`。
-4.  編輯程式碼使用文字編輯器，並刪除下列螢幕擷取畫面中的程式碼區塊。<br/>![刪除所示的程式碼區塊](media/SPONavOptionsDeleteCodeBlock.png)<br/>
+1. 瀏覽至 [網站設定] 頁面上。
+2. 按一下 [**主版頁面**，以開啟主版頁面圖庫。
+3. 您可以從這裡瀏覽文件庫，並下載檔案`seattle.master`。
+4. 編輯程式碼使用文字編輯器，並刪除下列螢幕擷取畫面中的程式碼區塊。<br/>![刪除所示的程式碼區塊](media/SPONavOptionsDeleteCodeBlock.png)<br/>
 5. 移除之間的程式碼`<SharePoint:AjaxDelta id=”DeltaTopNavigation”>`和`<\SharePoint:AjaxDelta>`標記，並以下列程式碼片段取代：<br/>
 
-```
+```javascript
 <div id="loading">
   <!--Replace with path to loading image.-->
   <div style="background-image: url(''); height: 22px; width: 22px; ">
@@ -143,15 +142,15 @@ ms.locfileid: "38078308"
                         </span>
                     </span>
                 <!-- /ko -->
-                <!-- ko if: children.length == 0-->   
+                <!-- ko if: children.length == 0-->
                     <span aria-haspopup="true" class="ms-navedit-flyoutArrow dynamic-children">
                         <span class="menu-item-text" data-bind="text: item.Title">
                         </span>
                     </span>
-                <!-- /ko -->   
+                <!-- /ko -->
                 </a>
                
-                <!-- ko if: children.length > 0-->                                                       
+                <!-- ko if: children.length > 0-->
                 <ul id="menu"  data-bind="foreach: children;" class="dynamic  level2" >
                     <li class="dynamic level2">
                         <a class="dynamic menu-item ms-core-listMenu-item ms-displayInline  ms-navedit-linkNode" data-bind="attr: { href: item.Url, title: item.Title }">
@@ -166,8 +165,8 @@ ms.locfileid: "38078308"
           <span aria-haspopup="true" class="ms-navedit-flyoutArrow dynamic-children">
            <span class="menu-item-text" data-bind="text: item.Title">
            </span>
-          </span>                 
-          <!-- /ko -->   
+          </span>
+          <!-- /ko -->
                         </a>
           <!-- ko if: children.length > 0-->
          <ul id="menu" data-bind="foreach: children;" class="dynamic level3" >
@@ -191,13 +190,13 @@ ms.locfileid: "38078308"
 6. 取代中載入的 URL 影像開頭具有網站集合中載入影像連結的錨點標記。 您所做的變更之後，重新命名檔案，然後將其上傳至主版頁面圖庫。 這會產生新的.master 檔案。<br/>
 7. 此 HTML 是從 JavaScript 程式碼傳回的搜尋結果會填入的基本標記。 您想要編輯若要變更的值為 var 根程式碼 = 「 網站集合 URL 」 的下列程式碼片段所示：<br/>
 
-```
+```javascript
 var root = “https://spperformance.sharepoint.com/sites/NavigationBySearch”;
 ```
 <br/>
 8. 結果會指派給 self.nodes 陣列及使用 linq.js 將輸出指派給陣列 self.hierarchy 物件超出內建階層。 此陣列是繫結至 HTML 的物件。 完成此工作的 toggleView() 函式中藉由將自我物件傳遞至 ko.applyBinding() 函式。<br/>然後，這樣會使繫結至下列的 HTML 階層陣列：<br/>
 
-```
+```javascript
 <div data-bind=”foreach: hierarchy” class=”noindex ms-core-listMenu-horizontalBox”>
 ```
 
@@ -209,7 +208,7 @@ var root = “https://spperformance.sharepoint.com/sites/NavigationBySearch”;
 
 整個 JavaScript 檔案如下所示：
 
-```
+```javascript
 //Models and Namespaces
 var SPOCustom = SPOCustom || {};
 SPOCustom.Models = SPOCustom.Models || {}
@@ -393,7 +392,7 @@ function NavigationViewModel() {
         }
     };
 
-    // ByHierarchy method breaks the sorting in chrome and firefix 
+    // ByHierarchy method breaks the sorting in chrome and firefox
     // we need to resort  as ascending
     self.sortObjectsInArray2 = function (a, b) {
         if (a.item.Title() > b.item.Title())
@@ -440,7 +439,7 @@ function addEventsToElements() {
     });
 } _spBodyOnLoadFunctionNames.push("InitCustomNav");
 
-``` 
+```
 
 若要將摘要說明在上述程式碼`jQuery $(document).ready`函數有`viewModel object`建立，然後`loadNavigationNodes()`來呼叫函式，該物件上的。 此函數可以載入儲存在用戶端瀏覽器 HTML5 本機儲存體中先前內建的導覽階層或它會呼叫函式`queryRemoteInterface()`。
 
@@ -464,7 +463,7 @@ function addEventsToElements() {
 
 目前版本的 LinqJS 不包含在上面的程式碼中使用的 ByHierarchy 方法，並將會中斷瀏覽程式碼。 若要修正此問題，請將下列方法新增至一行之前 Linq.js 檔案`Flatten: function ()`。
 
-```
+```javascript
 ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
      ascending = ascending == undefined ? true : ascending;
      var orderMethod = ascending == true ? 'OrderBy' : 'OrderByDescending';
@@ -530,4 +529,3 @@ ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
 ## <a name="related-topics"></a>相關主題
 
 [SharePoint Server 中受管理導覽的概觀](https://docs.microsoft.com/sharepoint/administration/overview-of-managed-navigation)
-

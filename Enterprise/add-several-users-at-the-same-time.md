@@ -23,12 +23,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1f5767ed-e717-4f24-969c-6ea9d412ca88
 description: '了解如何從試算表或其他 CSV 格式檔案中的清單，將多位使用者新增至商務用 Office 365。 觀看 YouTube 上的影片，了解如何將帳戶新增至 Office 365。 程序結束後，每位擁有帳戶的使用者都會擁有 Office 365 信箱。 '
-ms.openlocfilehash: 864bdf788b0beefce49a53382795d522114aad5d
-ms.sourcegitcommit: 23c8781d1a2b0472612c3a2cb6e5d13edb03e236
+ms.openlocfilehash: 16cea3b09da7d6450efd09bad0937bfcef9f70ab
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "38702214"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39813491"
 ---
 # <a name="add-several-users-at-the-same-time-to-office-365---admin-help"></a>在 Office 365 同時新增多位使用者 - 系統管理說明
 
@@ -142,3 +142,10 @@ CSV 檔案是以逗號區分值的檔案。您可以用任何文字編輯器或�
     
 - **若您未在 Office 365 中立即看到新使用者，請稍待幾分鐘。** 可能需花些時間，變更才會套用於 Office 365 中的所有服務。 
     
+## <a name="related-articles"></a>相關文章
+
+[個別或大量新增使用者至 Office 365](https://docs.microsoft.com/office365/admin/add-users/add-users)
+
+
+
+

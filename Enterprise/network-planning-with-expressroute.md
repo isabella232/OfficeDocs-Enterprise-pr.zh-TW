@@ -16,14 +16,16 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: 適用於 Office 365 可提供第 3 層之間的連線能力您的網路與 Microsoft 資料中心。 迴路使用框線閘道通訊協定 (BGP) 路由廣告的 Office 365 的前端伺服器。 從您的內部部署裝置的觀點來看，當他們需要選取正確的 TCP/IP 路徑至 Office 365 Azure ExpressRoute 會視為網際網路的替代方案。
-ms.openlocfilehash: b31d6150ee3eb11a93b485a5eece22eb3a82021e
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 8e8c1e1790e38b4e0e858a4a72266de9fcdc8157
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35782233"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39814631"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行網路規劃
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 適用於 Office 365 可提供第 3 層之間的連線能力您的網路與 Microsoft 資料中心。 迴路使用框線閘道通訊協定 (BGP) 路由廣告的 Office 365 的前端伺服器。 從您的內部部署裝置的觀點來看，當他們需要選取正確的 TCP/IP 路徑至 Office 365 Azure ExpressRoute 會視為網際網路的替代方案。
   
@@ -76,7 +78,7 @@ Azure ExpressRoute 訂閱是客戶中心，意義訂閱會繫結至客戶。 身
 
 保護 Azure ExpressRoute 連線的開頭為保護網際網路連線能力相同的原則。 許多客戶選擇部署網路和周邊網路的控制項，沿著其內部部署網路連線到 Office 365 和其他 Microsoft cloud 的 ExpressRoute 路徑。 這些控制項可能包括防火牆、 應用程式 proxy、 資料外洩防護、 入侵偵測、 入侵防護系統，依此類推。 在許多情況下的客戶，請套用到從內部部署與 Microsoft 移至 [客戶內部部署網路，從內部部署移至 [一般起始的流量與從起始的流量移至 Microsoft，起始的流量的不同層級的控制項網際網路目的地。
   
-以下是您選擇要部署的[ExpressRoute 連接模型](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-connectivity-models)整合安全性的一些範例。
+以下是您選擇要部署的[ExpressRoute 連接模型](https://docs.microsoft.com/azure/expressroute/expressroute-connectivity-models)整合安全性的一些範例。
 
 |**ExpressRoute 整合選項**|**網路安全性周邊模型**|
 |:-----|:-----|
@@ -102,7 +104,7 @@ Azure ExpressRoute 訂閱是客戶中心，意義訂閱會繫結至客戶。 身
   
 ### <a name="example-1-securing-azure-expressroute"></a>範例 1： 保護 Azure ExpressRoute
   
-Woodgrove Bank 考慮實作 Azure ExpressRoute 及之後規劃[路由使用 ExpressRoute for Office 365](routing-with-expressroute.md)的最佳架構，以及使用上述指南以了解頻寬需求之後，他們正在決定保護其周邊的最佳方法。
+Woodgrove Bank 考慮實作 Azure ExpressRoute 和之後規劃[路由使用 ExpressRoute for Office 365](routing-with-expressroute.md)的最佳架構，以及使用上述指南以了解頻寬需求之後，他們正在決定保護其周邊的最佳方法。
   
 Woodgrove，具有多個 continents 中的位置的跨國組織的安全性必須跨越所有周邊。 Woodgrove 的最佳的連線選項是使用多個對等的位置來服務的每個大陸其員工需要遍多點連線。 每個大陸包含大陸備援 Azure ExpressRoute 電路和安全性必須跨越所有這些。
   
@@ -190,7 +192,7 @@ Woodgrove Bank 在網路組態是根據幾個關鍵而建置：
 ## <a name="related-topics"></a>相關主題
 <a name="BKMK_high-availability"> </a>
 
-[評估 Office 365 網路連線](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -202,9 +204,9 @@ Woodgrove Bank 在網路組態是根據幾個關鍵而建置：
   
 [使用 BGP 社群中 ExpressRoute for Office 365 案例 （預覽）](bgp-communities-in-expressroute.md)
   
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
   
 [ExpressRoute 與 QoS skype for Business Online](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
@@ -214,7 +216,7 @@ Woodgrove Bank 在網路組態是根據幾個關鍵而建置：
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
 [Office 365 網路與效能調整](network-planning-and-performance.md)
   

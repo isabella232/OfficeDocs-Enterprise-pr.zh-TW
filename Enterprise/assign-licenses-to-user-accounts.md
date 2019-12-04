@@ -3,6 +3,7 @@ title: 將 Office 365 授權指派給使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
+ms.date: 12/03/2019
 audience: Admin
 ms.topic: article
 f1_keywords:
@@ -23,12 +24,12 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明如何將 Office 365 授權指派給使用者帳戶，或是個別或根據群組成員資格。
-ms.openlocfilehash: bc736236f9371ee1372fd36af4a707aca2ee1408
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 169f5a3c0bf75bf807c40338542e0ba15b79a1bc
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38745706"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39813381"
 ---
 # <a name="assign-office-365-licenses-to-user-accounts"></a>將 Office 365 授權指派給使用者帳戶
 
@@ -55,5 +56,5 @@ ms.locfileid: "38745706"
 
 - [實作的安全性](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
 - [部署用戶端軟體，例如 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
-- [設定行動裝置管理](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
+- [設定 Office 365 中的行動裝置管理](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 - [設定服務及應用程式](configure-services-and-applications.md)

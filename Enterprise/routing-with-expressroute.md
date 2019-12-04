@@ -3,7 +3,7 @@ title: 使用 ExpressRoute for Office 365 進行路由傳送
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 12/14/2017
+ms.date: 12/3/2019
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -18,14 +18,16 @@ search.appverid:
 - BCS160
 ms.assetid: e1da26c6-2d39-4379-af6f-4da213218408
 description: 若要適當地了解路由至 Azure ExpressRoute Office 365 流量，您需要的核心 ExpressRoute 路由需求和 ExpressRoute 電路及路由網域的公司掌握。 使用 ExpressRoute 的 Office 365 客戶將會依賴的基本概念版面配置這些設定。
-ms.openlocfilehash: 01251880eba2051d8839f7c08e244398906c75ed
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 2b3e3af68a538910d03586911674ec731a0a1960
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34722712"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39813893"
 ---
 # <a name="routing-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行路由傳送
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 若要正確地了解路由至 Azure ExpressRoute Office 365 流量，您需要核心[ExpressRoute 路由需求](https://azure.microsoft.com/documentation/articles/expressroute-routing/)和[ExpressRoute 電路及路由網域](https://azure.microsoft.com/documentation/articles/expressroute-circuit-peerings/)公司的掌握。 使用 ExpressRoute 的 Office 365 客戶將會依賴的基本概念版面配置這些設定。
   
@@ -63,7 +65,7 @@ Office 365 前端伺服器都可存取網際網路和 ExpressRoute 上。 這些
 
 - [SharePoint 混合式 BCS](https://technet.microsoft.com/library/dn197239.aspx )。
 
-- [混合式商務用 Skype](https://technet.microsoft.com/en-us/library/jj205403.aspx)和/或[商務用 Skype 商務同盟](https://technet.microsoft.com/library/skype-for-business-online-federation-and-public-im-conectivity.aspx)。
+- [混合式商務用 Skype](https://technet.microsoft.com/library/jj205403.aspx)和/或[商務用 Skype 商務同盟](https://technet.microsoft.com/library/skype-for-business-online-federation-and-public-im-conectivity.aspx)。
 
 - [Skype 商務雲端連接器](https://technet.microsoft.com/library/mt605227.aspx )。
 
@@ -73,15 +75,14 @@ Microsoft 回您的網路以這些雙向流量流量路由傳送，則必須與 
 
 2) 使用個別的 NAT IP 集區，每個 ExpressRoute 線路和個別的設為您的網際網路電路。
 
-3) 請注意任何通知給 Microsoft 的路由會吸引來自 Microsoft 的網路，不僅那些，路由會通知給您的網路透過 ExpressRoute 中任何伺服器的網路流量。 僅通告路由傳送至伺服器的路由案例定義，而充分了解您的小組。 通告個別 IP 位址路由前置詞，在每個多重 ExpressRoute 電路從您的網路。 
+3) 請注意任何通知給 Microsoft 的路由會吸引來自 Microsoft 的網路，不僅那些，路由會通知給您的網路透過 ExpressRoute 中任何伺服器的網路流量。 僅通告路由傳送至伺服器的路由案例定義，而充分了解您的小組。 通告個別 IP 位址路由前置詞，在每個多重 ExpressRoute 電路從您的網路。
   
 ## <a name="deciding-which-applications-and-features-route-over-expressroute"></a>決定哪些應用程式和功能透過 ExpressRoute 路由
 
 當您設定使用 Microsoft 對等路由網域的對等關係，都會被核准適當的存取權時，您將能夠看到可用的所有 PaaS 和 SaaS 服務透過 ExpressRoute。 設計 for ExpressRoute Office 365 服務可以管理與[BGP 社群](https://aka.ms/bgpexpressroute365)或[路由傳送的篩選器](https://docs.microsoft.com/azure/expressroute/how-to-routefilter-portal)。
   
 其他應用程式，例如 Office 365 影片，為 Office 365 應用程式。不過，Office 365 影片被組成三個不同的元件、 入口網站、 資料流的服務，以及內容傳遞網路。 在入口網站都位於內 SharePoint Online 中，資料流服務生活內 Azure 媒體服務，而內容傳遞網路都位於 Azure CDN 內。 下表概述這些元件。
-  
-| |
+
 |**元件**|**基礎應用程式**|**包含 SharePoint Online 的 BGP 社群中？**|**使用**|
 |:-----|:-----|:-----|:-----|
 |Office 365 影片入口網站  <br/> |SharePoint Online  <br/> |是  <br/> |設定、 上傳  <br/> |
@@ -111,7 +112,7 @@ Microsoft 回您的網路以這些雙向流量流量路由傳送，則必須與 
 
 |**萬用字元網域至網際網路迴路僅通告**|**Sub FQDN 通知給 ExpressRoute 和網際網路電路**|
 |:-----|:-----|
-|\*。 office.com  <br/> |\*。 outlook.office.com  <br/> home.office.com  <br/> outlook.office.com  <br/> portal.office.com  <br/> www.office.com  <br/> |
+|\*。 office.com  <br/> |\*。 outlook.office.com  <br/> home.office.com  <br/> outlook.office.com  <br/> portal.office.com  <br/> <div style="display: inline">www.office.com</div>  <br/> |
 |\*。 office.net  <br/> |agent.office.net  <br/> |
 |\*。.office365.com  <br/> |outlook.office365.com  <br/> smtp.office365.com  <br/> |
 |\*。 outlook.com  <br/> |\*。 protection.outlook.com  <br/> \*。 mail.protection.outlook.com  <br/> 自動探索-\<租用戶\>。 outlook.com  <br/> |
@@ -157,7 +158,7 @@ Trey Research 計劃使用 Azure ExpressRoute for Office 365，並會辨識某�
 
 - \*.Lync.com 以及非 TCP 流量 IP 範圍
 
-- \*broadcast.officeapps.live.com， \*excel.officeapps.live.com， \*onenote.officeapps.live.com， \*powerpoint.officeapps.live.com， \*view.officeapps.live.com， \*visio.officeapps.live.com， \*word edit.officeapps.live.com， \*word view.officeapps.live.com、 office.live.com
+- \*broadcast.officeapps.live.com， \*excel.officeapps.live.com， \*onenote.officeapps.live.com， \*powerpoint.officeapps.live.com， \*view.officeapps.live.com， \*visio.officeapps.live.com， \*word-edit.officeapps.live.com \*word view.officeapps.live.com、 office.live.com
 
 深入了解[部署及管理在 Windows 8 的 proxy 設定](https://blogs.technet.com/b/deploymentguys/archive/2013/05/08/windows-8-supporting-proxy-services-with-static-configurations-web-hosted-pac-files-and-domain-policy-configured-proxy.aspx)並[確保 Office 365 不 proxy 進行節流](https://blogs.technet.com/b/onthewire/archive/2014/03/28/ensuring-your-office-365-network-connection-isn-t-throttled-by-your-proxy.aspx)。
   
@@ -177,7 +178,7 @@ Trey Research 計劃使用 Azure ExpressRoute for Office 365，並會辨識某�
 
 每一種呈現唯一的挑戰，需要評估您自己的網路，以及由 Microsoft 提供的選項。
 
-|**考量**|**若要評估的網路元件**|
+|**考量事項**|**若要評估的網路元件**|
 |:-----|:-----|
 |在多個位置的電路  <br/> |我們建議您至少要有兩個主動/主動方式設定的電路。  <br/> 成本、 延遲和頻寬需求必須與相比較。  <br/> 使用 BGP 路由成本、 PAC 檔案和 NAT 來管理使用多個電路路由。  <br/> |
 |從沒有 ExpressRoute 線路位置路由  <br/> |我們建議輸出和 DNS 解析為接近起始的要求，Office 365 的人員。  <br/> DNS 轉寄可以用來允許遠端辦公室，找出適當的端點。  <br/> 遠端 office 的用戶端必須要有路由，以提供存取權 ExpressRoute 線路。  <br/> |
@@ -212,7 +213,7 @@ Microsoft 的資料中心、 網路和應用程式的架構設計全域全數通
   
 如果 Humongous 上有多個 continents 主要辦公室，建議使用最少的每個地區的兩個主動/主動電路以減少延遲機密的應用程式例如 Skype for Business Online。 如果所有辦公室都位於單一的大陸，或不使用即時共同作業，需要指向合併或分散式輸出為客戶特定決策。 當多個電路可用時，BGP 路由可確保容錯移轉任何單一電路變成無法使用。
   
-深入了解範例[路由組態](https://azure.microsoft.com/documentation/articles/expressroute-config-samples-routing/)和[https://azure.microsoft.com/en-us/documentation/articles/expressroute-config-samples-nat/](https://azure.microsoft.com/documentation/articles/expressroute-config-samples-nat/)。
+深入了解範例[路由組態](https://azure.microsoft.com/documentation/articles/expressroute-config-samples-routing/)和[https://azure.microsoft.com/documentation/articles/expressroute-config-samples-nat/](https://azure.microsoft.com/documentation/articles/expressroute-config-samples-nat/)。
   
 ## <a name="selective-routing-with-expressroute"></a>選擇性使用 ExpressRoute 路由
 
@@ -230,7 +231,7 @@ Microsoft 的資料中心、 網路和應用程式的架構設計全域全數通
   
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 網路連線](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -240,9 +241,9 @@ Microsoft 的資料中心、 網路和應用程式的架構設計全域全數通
   
 [實作 ExpressRoute for Office 365](implementing-expressroute.md)
   
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
   
 [ExpressRoute 與 QoS skype for Business Online](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
@@ -254,6 +255,6 @@ Microsoft 的資料中心、 網路和應用程式的架構設計全域全數通
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
 [Office 365 網路與效能調整](network-planning-and-performance.md)

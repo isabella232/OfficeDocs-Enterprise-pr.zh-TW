@@ -16,14 +16,16 @@ search.appverid:
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
 description: 適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
-ms.openlocfilehash: 3e3171c3058b485ef644af3f1d33a9f80c71345c
-ms.sourcegitcommit: 0449c6f854c682719cac1bd0d086f2e3b20078b9
+ms.openlocfilehash: 0b200c3a7a54d28aee20b03c850c908bfd1c868d
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "34722722"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39813481"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
   
@@ -89,7 +91,7 @@ ms.locfileid: "34722722"
 
 - 輸入的網路流量流向是從 Microsoft cloud 初始連線是其中，內部部署主機任何案例。 這些連線通常需要通過防火牆和客戶安全性原則需要外部起始之流向的其他安全性基礎結構。
 
-請閱讀**確保路由對稱性來看**一節的文章[使用 ExpressRoute for Office 365 路由](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408)至判斷哪些服務將會傳送的輸入的流量，並尋找在[Office 365 中標示**ExpressRoute for Office 365**的資料行端點](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)參考文章，以判斷其餘的連線資訊。
+請閱讀**確保路由對稱性來看**一節的文章[使用 ExpressRoute for Office 365 路由](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408)至判斷哪些服務將會傳送的輸入的流量，並尋找在[Office 365 端點](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)參考文章，以判斷其餘的連線資訊中標示**ExpressRoute for Office 365**的資料行。
   
 每個服務所需的輸出連線，您會想要說明計劃的連線能力，包括網路路由、 proxy 組態、 封包檢查服務與頻寬需求。
   
@@ -99,7 +101,7 @@ ms.locfileid: "34722722"
   
 以下是詳細資料所需的層級的範例。 在此情況下 Exchange 混合式會透過 ExpressRoute 路由至內部部署系統。
 
-|**Connection 屬性**|**Value**|
+|**Connection 屬性**|**值**|
 |:-----|:-----|
 |**網路流量方向** <br/> |輸入  <br/> |
 |**服務** <br/> |Exchange 混合式  <br/> |
@@ -116,7 +118,7 @@ ms.locfileid: "34722722"
 
 以下是一種服務，只有輸出範例：
 
-|**Connection 屬性**|**Value**|
+|**Connection 屬性**|**值**|
 |:-----|:-----|
 |**網路流量方向** <br/> |輸出  <br/> |
 |**服務** <br/> |SharePoint Online  <br/> |
@@ -187,7 +189,7 @@ ms.locfileid: "34722722"
 |:-----|:-----|
 |位置  <br/> |人數  <br/> |透過網際網路輸出預期 Microsoft 網路延遲  <br/> |預期的延遲，Microsoft 網路，透過 ExpressRoute  <br/> |
 |Los Angeles  <br/> |10,000  <br/> |~ 15ms  <br/> |~ 10 毫秒 （透過矽谷）  <br/> |
-|華盛頓 DC  <br/> |15000  <br/> |~ 20 毫秒  <br/> |~ 10 毫秒 （透過 New York)  <br/> |
+|華盛頓 DC  <br/> |15,000  <br/> |~ 20 毫秒  <br/> |~ 10 毫秒 （透過 New York)  <br/> |
 |Dallas  <br/> |5,000  <br/> |~ 15ms  <br/> |~ 40ms （透過 New York)  <br/> |
 
 一旦顯示 Office 365 地區的全球網路架構，ExpressRoute 的網路服務提供者符合-我已開發位置，以及由位置的人員數量，它可以用來識別是否可以進行任何最佳化。 它也可以顯示全域髮夾網路連線其中流量路由傳送到遠端位置以取得符合-我的位置。 如果在全球網路髮夾找到它應該進行修復才能繼續執行。 尋找另一個符合-我的位置或使用選擇性網際網路上下文出口點，以避免發生髮夾。
@@ -568,7 +570,7 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 網路連線](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -580,9 +582,9 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 [使用 BGP 社群中 ExpressRoute for Office 365 案例 （預覽）](bgp-communities-in-expressroute.md)
   
-[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917) (英文)
+[商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
-[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43) (英文)
+[針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
   
 [ExpressRoute 與 QoS skype for Business Online](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
@@ -592,6 +594,6 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 [Office 365 的效能疑難排解規劃](performance-troubleshooting-plan.md)
   
-[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2) (英文)
+[Office 365 URL 與 IP 位址範圍](https://support.office.com/article/8548a211-3fe7-47cb-abb1-355ea5aa88a2)
   
 [Office 365 網路與效能調整](network-planning-and-performance.md)

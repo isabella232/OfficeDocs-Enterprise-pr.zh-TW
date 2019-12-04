@@ -16,14 +16,16 @@ search.appverid:
 - MOE150
 ms.assetid: d58b7d45-7947-4193-9456-82ba76f42d89
 description: 提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
-ms.openlocfilehash: 0c6f2dd64cb406681c0a98099b2a42887ee79c25
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 22ea5af87b1bbcaa96f88e3746a50f1411a01b9a
+ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067259"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "39813421"
 ---
 # <a name="office-365-idfix-transaction-log"></a>Office 365 IdFix 交易記錄檔
+
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
 提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
   
