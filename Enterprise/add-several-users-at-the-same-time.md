@@ -23,12 +23,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1f5767ed-e717-4f24-969c-6ea9d412ca88
 description: '了解如何從試算表或其他 CSV 格式檔案中的清單，將多位使用者新增至商務用 Office 365。 觀看 YouTube 上的影片，了解如何將帳戶新增至 Office 365。 程序結束後，每位擁有帳戶的使用者都會擁有 Office 365 信箱。 '
-ms.openlocfilehash: 16cea3b09da7d6450efd09bad0937bfcef9f70ab
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: 283a45750c6b5d51f96dae2cac12acf3f47b98fe
+ms.sourcegitcommit: 19e306dcc32f32387202f799d5f7ef82bae926b0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/04/2019
-ms.locfileid: "39813491"
+ms.locfileid: "39825195"
 ---
 # <a name="add-several-users-at-the-same-time-to-office-365---admin-help"></a>在 Office 365 同時新增多位使用者 - 系統管理說明
 
@@ -68,14 +68,7 @@ ms.locfileid: "39813491"
 5. 在 **[設定使用者選項]** 對話方塊中，您可以設定登入狀態，並選擇要指派給所有使用者的產品授權。 
     
 6. 在 **[檢視結果]** 對話方塊中，您可以選擇將結果傳送給自己或其他使用者 (密碼會以純文字顯示)，並且可以看到已建立多少使用者，以及是否需要購買更多授權以指派給某些新使用者。 
-    
-## <a name="watch-the-video"></a>觀賞影片
-<a name="bk_preview"> </a>
 
- 觀看短片以了解如何大量新增使用者。 
-  
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/f4e7f161-8ae6-4264-a429-9297b539a8de?autoplay=false]
-  
 ## <a name="next-steps"></a>後續步驟
 <a name="bk_preview"> </a>
 
