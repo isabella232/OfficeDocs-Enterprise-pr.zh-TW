@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
 description: 摘要： SharePoint 2013 解決方案可以裝載於 Microsoft Azure 虛擬機器。 了解何種類型的解決方案是很好的調整，以及如何設定 Microsoft Azure，以其中一個主機。
-ms.openlocfilehash: 2059ee68a523641bbfe7389d273c931e44d23bd5
-ms.sourcegitcommit: 16a060c0732c6234bb2ebc037786a7c4872fe686
+ms.openlocfilehash: d2e3302b9ea47b842f870e76f023499a92162eca
+ms.sourcegitcommit: d4c1ed4e4970683851d63ca980dcc5d1dd73fa78
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "38308588"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "39858021"
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure SharePoint 2013 架構
 
@@ -215,14 +215,6 @@ Azure 基礎結構服務是令人讚嘆裝載 SharePoint 解決方案的選項�
   
 此圖顯示實作在 Azure 基礎結構服務中，以提供容錯網域中每一層的伺服器的可用性設定組與 SharePoint 伺服器陣列。
   
-**參與討論**
-
-|**連絡我們**|**描述**|
-|:-----|:-----|
-|**您需要什麼樣的雲端採用內容？** <br/> |我們正在建立涵蓋多個 Microsoft 雲端平台及服務的雲端採用內容。請傳送電子郵件至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?Subject=[Cloud%20Adoption%20Content%20Feedback]:%20)，讓我們知道您對雲端採用內容的看法或對特定內容的要求。<br/> |
-|**加入雲端採用討論** <br/> |如果您熱愛雲端解決方案，請考慮加入雲端採用諮詢委員會 (Cloud Adoption Advisory Board，CAAB) 與更大且活躍的 Microsoft 內容開發人員、產業專業人員及客戶社群接觸。 若要加入，將自己新增為 Microsoft 技術社群的[CAAB （雲端採用諮詢委員會） 空間](https://aka.ms/caab)的成員，並在[CAAB@microsoft.com](mailto:caab@microsoft.com?Subject=I%20just%20joined%20the%20Cloud%20Adoption%20Advisory%20Board!)快速的電子郵件傳送給我們。 任何人都可以讀取[CAAB 部落格](https://blogs.technet.com/b/solutions_advisory_board/)上的社群相關內容。 不過，CAAB 成員可獲得雲端採用資源和解決方案說明的私人網路研討會邀請。  <br/> |
-|**取得您在這裡看到的美工圖案** <br/> |如果您想要此文章中所看到之美工圖案的可編輯複本，我們很樂於將它傳送給您。請以電子郵件將您的要求 (包括美工圖案的 URL 和標題) 傳送至 [cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com?subject=[Art%20Request]:%20)。<br/> |
-   
 ## <a name="see-also"></a>另請參閱
 
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
