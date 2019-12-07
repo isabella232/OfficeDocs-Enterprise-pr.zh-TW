@@ -9,12 +9,12 @@ ms.service: sharepoint-online
 ms.collection: SPO_Content
 localization_priority: Normal
 description: 了解如何在 SharePoint 和 OneDrive 文件上的 guests 與共同作業。
-ms.openlocfilehash: 1f5053a332c80fbb957cfcb3e11f35aa94cfe270
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: 20b97ed6e232385500e74adcaa11378252167c26
+ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076167"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "39886492"
 ---
 # <a name="collaborate-with-guests-on-a-document"></a>在文件上與來賓共同作業
 
@@ -51,7 +51,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 SharePoint 的組織層級設定會決定哪些設定可供個別的 SharePoint 網站。 網站設定不能更寬鬆比組織層級的設定。 OneDrive 的組織層級設定會決定在使用者的 OneDrive 文件庫中時可用的共用層級。
 
-對於 SharePoint 和 OneDrive，如果您想要允許的檔案和資料夾與匿名使用者共用，選擇 [**任何人**。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 *任何人*連結為共用最簡單的方式：來賓可以不經驗證就開啟連結，且可隨意將它傳送給其他人。
+對於 SharePoint 和 OneDrive，如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 *任何人*連結為共用最簡單的方式：來賓可以不經驗證就開啟連結，且可隨意將它傳送給其他人。
 
 For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
 
@@ -73,7 +73,7 @@ For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設�
 
 選擇 [當使用者共用檔案及資料夾，依預設會選取連結的類型：
 
-- **任何人] 連結**-如果您預期在具有匿名使用者共用檔案和資料夾的許多選擇此選項。 如果您想要允許*任何人*的連結，但擔心意外匿名共用，請考慮下列其中一個其他選項為預設值。 如果您已啟用**的任何人**共用，此連結類型只有。
+- **任何人] 連結**-如果您預期進行大量的未驗證的檔案及資料夾共用，請選擇此選項。 如果您想要允許*任何人*的連結，但擔心意外的未驗證共用，請考慮下列其中一個其他選項為預設值。 如果您已啟用**的任何人**共用，此連結類型只有。
 - **只有在您的組織中的人員**-如果您預期大部分的檔案和資料夾共用您的組織內的人員都必須選擇此選項。
 - **特定人員**-如果您預期執行許多檔案和資料夾與來賓共用，請考慮此選項。 這種類型的連結與來賓運作，以及需要進行驗證。
  
@@ -105,6 +105,6 @@ For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設�
 
 ## <a name="see-also"></a>另請參閱
 
-[與匿名使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
+[最佳做法與未驗證的使用者共用檔案和資料夾](best-practices-anonymous-sharing.md)
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)

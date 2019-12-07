@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 25b0aea05c922385828e62512d3724da7324c719
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 746e592a027c05f489e9f5dfe819cfb107c6b1f5
+ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38029157"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "39886482"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -67,7 +67,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 組織層級設定會決定哪些設定可供個別的網站。 網站設定不能更寬鬆比組織層級的設定。
 
-如果您想要允許的檔案和資料夾與匿名使用者共用，選擇 [**任何人**]。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
+如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**]。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
 
 ![SharePoint 組織層級共用設定的螢幕擷取畫面](media/sharepoint-organization-external-sharing-controls.png)
 
@@ -98,7 +98,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 請檢查以確保它們允許您要用於此網站的存取類型的網站層級共用設定。 例如，如果您設定組織層級設定為**任何人**，但您想要驗證這個網站的所有來賓，然後進行確認網站層級共用設定設為 [**新增] 和 [現有的來賓**。
 
-請注意，無法共用網站，在具有匿名使用者 （**任何人都**設定），但是可以個別檔案和資料夾。
+請注意，不能與未驗證的人員 （**任何人都**設定），共用網站，但是可以個別檔案和資料夾。
 
 ![SharePoint 網站外部共用設定的螢幕擷取畫面](media/sharepoint-site-external-sharing-settings.png)
 
@@ -129,7 +129,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 ## <a name="see-also"></a>另請參閱
 
-[與匿名使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
+[最佳做法與未驗證的使用者共用檔案和資料夾](best-practices-anonymous-sharing.md)
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 
