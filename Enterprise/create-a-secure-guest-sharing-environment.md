@@ -9,12 +9,12 @@ ms.service: sharepoint-online
 ms.collection: SPO_Content
 localization_priority: Priority
 description: 瞭解如何在 Microsoft 365 中建立安全的來賓共用環境。
-ms.openlocfilehash: 727b635c0ed13a9dcf85bb93092ab9a002740e99
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: 51e9d8c8d09d5ee687fc47a1c382da383d1cf231
+ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077706"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "39886512"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>建立安全的來賓共用環境
 
@@ -308,7 +308,7 @@ ms.locfileid: "38077706"
 12. 在自訂通知訊息輸入*此檔案高度機密，公司原則禁止與來賓共用此檔案*。
 13. 按一下 **[建立]**。
 
-請注意，此原則會移除使用*特定人員*連結共用的檔案存取權。 而不會移除匿名 (*每個人*) 連結的存取權。 如果來賓是整個網站或小組的成員，也不會移除存取權。 如果您計劃讓具有來賓成員的網站或小組擁有高度機密文件，請考慮[在 Teams 中使用私人頻道](https://support.office.com/article/60ef929a-4d68-418b-bf4f-5784db184ec9)，且只允許貴組織中的成員使用私人頻道。
+請注意，此原則會移除使用*特定人員*連結共用的檔案存取權。 而不會移除未驗證 (*任何人*) 連結的存取權。 如果來賓是整個網站或小組的成員，也不會移除存取權。 如果您計劃讓具有來賓成員的網站或小組擁有高度機密文件，請考慮[在 Teams 中使用私人頻道](https://support.office.com/article/60ef929a-4d68-418b-bf4f-5784db184ec9)，且只允許貴組織中的成員使用私人頻道。
 
 ## <a name="test-the-solution"></a>測試解決方案
 
@@ -322,4 +322,4 @@ ms.locfileid: "38077706"
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 
-[與匿名使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
+[與未驗證使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)

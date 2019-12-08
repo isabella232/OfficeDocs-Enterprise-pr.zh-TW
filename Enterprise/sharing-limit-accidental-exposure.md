@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
 description: 深入了解如何在與來賓共用檔案時，限制資訊意外暴露。
-ms.openlocfilehash: d1a12579bdcce03ad74dbf753ddb1a8a6368c88c
-ms.sourcegitcommit: c16ab90d0b9902228ce4337f1c64900592936cce
+ms.openlocfilehash: 3a5a99e96207e407f15abb17d9e1903c8ba52339
+ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "37108279"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "39886472"
 ---
 # <a name="limit-accidental-exposure-to-files-when-sharing-with-guests"></a>與來賓共用時限制意外暴露檔案
 
@@ -21,13 +21,13 @@ ms.locfileid: "37108279"
 
 ## <a name="use-best-practices-for-anyone-links"></a>使用適用於 [任何人] 連結的最佳做法
 
-如果貴組織的人員需要進行匿名共用，但是您擔心未經驗證的來賓修改內容，請參閱[匿名共用的最佳做法](best-practices-anonymous-sharing.md)，以取得如何在貴組織中使用匿名共用的指導方針。
+如果組織的人員需要進行未驗證共用，但是您擔心未驗證的來賓修改內容，請參閱[未驗證共用的最佳做法](best-practices-anonymous-sharing.md)，以取得如何在組織中使用未驗證共用的指導方針。
 
 ## <a name="turn-off-anyone-links"></a>關閉 [任何人] 連結
 
 我們建議針對適當的內容讓 [任何人]** 連結啟用，因為這是最簡單的共用方式，而且可以協助減少使用者尋求您的 IT 部門掌握外其他解決方案的風險。 [任何人]** 連結可以轉寄給其他人，但是檔案存取權僅限擁有連結的人員使用。
 
-如果您要來賓一律在存取 SharePoint、群組或 Teams 中的內容時經過驗證，您可以關閉 [任何人]** 共用。 這樣可防止使用者以匿名方式共用內容。
+如果您要來賓一律在存取 SharePoint、群組或 Teams 中的內容時經過驗證，您可以關閉 [任何人]** 共用。 這會防止使用者未經驗證而共用內容。
 
 如果您停用 [任何人]** 連結，使用者仍然可以使用 [特定人員]** 連結，輕易地與來賓共用。 在此情況下，所有來賓都必須先經過驗證，才能存取共用的內容。
 
