@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 746e592a027c05f489e9f5dfe819cfb107c6b1f5
-ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
+ms.openlocfilehash: 21717ce0c8e9e51eaf090a449d35a281722f9600
+ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "39886482"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39919256"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -67,7 +67,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 組織層級設定會決定哪些設定可供個別的網站。 網站設定不能更寬鬆比組織層級的設定。
 
-如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**]。 如果您想要確定所有來賓都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
+如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**]。 如果您想要確定您組織以外的所有人員都需要驗證，請選擇 [**新增] 和 [現有的來賓**。 選擇 [將您的組織中任何網站所需的最寬鬆] 設定。
 
 ![SharePoint 組織層級共用設定的螢幕擷取畫面](media/sharepoint-organization-external-sharing-controls.png)
 
@@ -129,7 +129,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 ## <a name="see-also"></a>另請參閱
 
-[最佳做法與未驗證的使用者共用檔案和資料夾](best-practices-anonymous-sharing.md)
+[與未驗證使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 

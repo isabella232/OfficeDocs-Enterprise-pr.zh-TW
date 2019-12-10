@@ -13,15 +13,15 @@ ms.collection:
 ms.custom: Adm_O365
 search.appverid: SPO160
 description: 本文說明如何規劃對入口網站啟動的 SharePoint Online 中，才會成功啟動步驟
-ms.openlocfilehash: bba38bb188235ed38f3719cb4472ef156a4d76b3
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: c66754cdcd682cb39c0ff235a07a464613d1d3e7
+ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077566"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39919125"
 ---
 # <a name="planning-your-portal-launch-roll-out-plan-in-sharepoint-online"></a>規劃在 SharePoint Online 入口網站啟動推行計劃
-入口網站是貴公司中; 的預設 SharePoint 網站在大型組織中可能有好幾種。 如果您預期組織中 20% 以上的使用者會存取頁面，您應考慮使用入口網站頁面。 不應將入口網站與部門用來在團隊中共同作業和共用文件的小組網站混淆。
+入口網站是在您有大量使用者耗用網站上的內容網站檢視者的內部網路上的 SharePoint 網站。 在大型組織中可能有好幾種;例如，公司入口網站及人力資源入口網站。 通常入口網站會有相對很少人員建立與製作的網站和其內容。 大部分的訪客入口網站只能讀取，並使用內容。
 
 本文說明如何規劃您的部署和 SharePoint online 推行計劃。 它也會提供要遵循的傳統負載測試不允許在 SharePoint Online 上的方式。 SharePoint Online 為雲端服務和 Microsoft 所管理的負載能力、 健康狀況和整體的服務中的負載平衡。
 
@@ -46,7 +46,7 @@ SharePoint Online 是共用其平衡跨伺服器陣列的多 tenanted 環境和�
 - 內部部署可以利用傳統伺服器端物件快取、 輸出快取和 blob 快取等快取。 與雲端中的拓撲差異，這些選項不一定會提供為真正的小數位數差異使其不可行方法。
 - 任何頁面 / 功能 / 用於雲端耗用的自訂項目應針對較高的延遲，以及使用者分配的位置進行最佳化，，讓使用者在不同區域或區域中的有更一致的體驗。 雲端提供最佳化 like 最佳化和新式 SharePoint，最後一個已知良好 (LKG) 以及分散式的使用者群的內容傳遞網路 (CDN) 利用由我們郵件答錄機的方塊 (OOTB) 網頁組件。
 
-### <a name="what-to-do"></a>處理方式：
+### <a name="what-to-do"></a>要執行的動作：
  - 在 SharePoint Online 中的所有網站頁面都使用[] 頁面上診斷工具](https://aka.ms/perftool)，也就是 Chromium 分機號碼可以幫助分析與提供的指導。 這可以使用由網站擁有者、 編輯器、 管理員及開發人員，因為它為了進行分析來最佳化的起始點。
  - 開發人員也應該在新版頁面上使用 F12 瀏覽器開發人員工具，以及 CTRL F12 像在瀏覽器的開發工具。 [Fiddler](https://www.telerik.com/download/fiddler)也可用來檢閱大小權數 （大頁面是以 mb 為單位） 的頁面和通話和影響整體載入頁面的元素數目。 
 
@@ -63,7 +63,7 @@ SharePoint Online 是共用其平衡跨伺服器陣列的多 tenanted 環境和�
   
 每個階段經，收集使用者意見反應周圍功能，以及在部署的每一波期間的效能。 這有緩慢簡介系統，以及當系統變得更多使用進行改良功能的優點。 這也讓我們來導入越來越多的使用者，加上下列指導方針，如頁面最佳化可確保使用者正體驗網站反應增加的負載。
 
-### <a name="what-to-do"></a>處理方式：
+### <a name="what-to-do"></a>要執行的動作：
 - 決定每個階段的時間，並確定您有應變計劃 / 暫停機會，應該要再繼續進行調整
 - 規劃您第一組您想要啟用的使用者，您需要以確保您收到的意見反應向前移動。 這表示，有可能，請選取 [作用中的一群使用者提供意見反應及時
 - 當您規劃每個波浪時，嘗試開頭少量使用者基底 （小於 5000 使用者），並再增加的群組大小，當您繼續使用每個波浪。 這可協助建立彼此錯開的方法，並允許更容易，可能需要暫停機會。
