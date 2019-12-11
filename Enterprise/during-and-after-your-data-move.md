@@ -3,7 +3,7 @@ title: 資料移動期間和之後
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/20/2019
+ms.date: 12/10/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -13,12 +13,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
-ms.openlocfilehash: bfc21dccbf63dbf14f2e08d84f4312e6ed3dbcc7
-ms.sourcegitcommit: a73518764b97948219e378d7014ada5654146be4
+ms.openlocfilehash: b445397f6ce5b3c5178093ed971230e2a8640d1d
+ms.sourcegitcommit: 09b3a302c0c9a0370dd86d111c7d5e63cc39a9a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39250499"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39959278"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -30,7 +30,7 @@ ms.locfileid: "39250499"
 每個 Exchange Online、 SharePoint Online 和商務用 Skype 移動完成後，請觀看確認 Office 365 訊息中心。 下表所示，可能會花費最多 24 個月的時間，註冊期間結束後，若要完成所有要求的資料移動特定的地理位置中的所有客戶。 如果您與您的租用戶中看到任何問題，移動完成後，請連絡[Office 365 支援人員](https://go.microsoft.com/fwlink/p/?LinkID=522459)，以取得協助。 
   
 
-|**客戶帳單地址**|**完成的所有移動**|
+|**註冊國家/地區的客戶**|**完成的所有移動**|
 |:-----|:-----|
 |澳洲請紐西蘭斐濟群島  <br/> |2017 年 10 月 31日日  <br/> |
 |日本  <br/> |2018 年 10 月 31日日  <br/> |
@@ -41,6 +41,8 @@ ms.locfileid: "39250499"
 |法國  <br/> |2020 年 9 月 15 日  <br/> |
 |阿拉伯聯合大公國  <br/> |2022 年 2 月 1 日  <br/> |
 |南非  <br/> |2022 年 2 月 1 日  <br/> |
+|瑞士，列支敦斯登  <br/> |2022 年 7 月 1 日  <br/> |
+|德國  <br/> |計劃  <br/> |
    
 ## <a name="exchange-online"></a>Exchange Online
 
@@ -61,7 +63,7 @@ SharePoint Online 移動時，也被移動下列服務的資料：
   
 - 商務用 OneDrive
     
-- Microsoft Project Online
+- Project Online
     
 - Project for Office 365
     

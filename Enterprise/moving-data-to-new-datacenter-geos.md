@@ -3,7 +3,7 @@ title: 將核心資料移至新的 Office 365 資料中心 geos
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/25/2019
+ms.date: 12/10/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 description: 新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 核心客戶資料 」 一詞指的是 Microsoft 線上服務條款中所定義的客戶資料的子集： Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容） 和 SharePoint Online 站台內容和檔案儲存在該站台內，而且檔案上傳至商務用 OneDrive。
-ms.openlocfilehash: 3cccd9d5cb3f961a3621bf6f54104c2e1e3b8ece
-ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
+ms.openlocfilehash: 8dcbcd6bbbe1761c9d57c953ad176c87b5b3f221
+ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38756542"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39962450"
 ---
 # <a name="moving-core-data-to-new-office-365-datacenter-geos"></a>將核心資料移至新的 Office 365 資料中心 geos
 
@@ -30,7 +30,7 @@ ms.locfileid: "38756542"
   
 現有的客戶已儲存在現有的資料中心地理位置中其核心客戶資料不會受到新的資料中心地理位置中啟動。 我們介紹沒有唯一的功能、 功能或法規遵循認證與新的資料中心地理位置。 身為任何這些兩個 geos 客戶，您會遇到服務、 效能及安全性控制的相同品質之前所顯示的一樣。 我們提供下列選項，以要求早期移轉至其新的資料中心地理位置的靜態其組織的核心客戶資料的表格中所列的現有客戶。
   
-|客戶帳單地址中 * * *|前一個資料中心地理 * * *|新資料中心地理 * * *|地理可用自 * * *|
+|與租用戶中的註冊國家/地區的客戶 * * *|前一個資料中心地理 * * *|新資料中心地理 * * *|地理可用自 * * *|
 |:-----|:-----|:-----|:-----|
 |日本 * * *| 亞太地區 / | 日本 | 2014 年 12 月 |
 |澳洲請紐西蘭斐濟 * * *| 亞太地區 / | 澳大利亞 | 2015 年 3 月 |
@@ -41,8 +41,15 @@ ms.locfileid: "38756542"
 |法國 * * *| 歐洲 | 法國 | 2018 年 3 月 |
 |阿拉伯聯合大公國 * * *| 歐洲 | 阿拉伯聯合大公國 | 2019 年 6 月 |
 |南非 * * *| 歐洲 | 南非 | 2019 年 7 月 |
+|瑞士，列支敦斯登 * * *| 歐洲 | 瑞士 | 2019 年 12 月 |
+|德國 * * *| 歐洲 | 德國 | 2019 年 12 月 |
   
 新的客戶或 Office 365 租用戶後所建立的新資料中心地理位置的可用性會有自動儲存新的資料中心地理位置中的靜態其核心客戶資料。
+
+
+>[!Note]
+>我們在年 12 月 2019年中啟動的德國資料中心區域。 新的 Office 365 客戶，其租用戶相關聯德文註冊地址必須儲存在德國的靜態其核心客戶資料。 我們規劃提供從移轉歐洲至德國的德文的客戶在未來。 現在，Microsoft Cloud 德國/系統客戶可以請求移轉至 Office 365 服務中新的德國資料中心區域。 請如需詳細資訊，參閱[如何來選擇從 Microsoft Cloud 德國 （Microsoft 雲端系統） 移轉至 Office 365 服務中新的德國資料中心區域](https://aka.ms/office365germanymoveoptin)。
+>
   
 所有的資料中心 geos、 資料中心，以及靜態客戶資料的位置的完整清單是可用的[互動式資料中心對應](https://office.com/datamaps)的一部分。 
   

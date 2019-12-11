@@ -13,14 +13,15 @@ ms.collection:
 ms.custom: Adm_O365
 search.appverid: SPO160
 description: 本文說明如何規劃對入口網站啟動的 SharePoint Online 中，才會成功啟動步驟
-ms.openlocfilehash: c66754cdcd682cb39c0ff235a07a464613d1d3e7
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 8c7f427d0f8f89b11b144d045a03fa3138b8f019
+ms.sourcegitcommit: 09b3a302c0c9a0370dd86d111c7d5e63cc39a9a0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2019
-ms.locfileid: "39919125"
+ms.locfileid: "39959117"
 ---
 # <a name="planning-your-portal-launch-roll-out-plan-in-sharepoint-online"></a>規劃在 SharePoint Online 入口網站啟動推行計劃
+
 入口網站是在您有大量使用者耗用網站上的內容網站檢視者的內部網路上的 SharePoint 網站。 在大型組織中可能有好幾種;例如，公司入口網站及人力資源入口網站。 通常入口網站會有相對很少人員建立與製作的網站和其內容。 大部分的訪客入口網站只能讀取，並使用內容。
 
 本文說明如何規劃您的部署和 SharePoint online 推行計劃。 它也會提供要遵循的傳統負載測試不允許在 SharePoint Online 上的方式。 SharePoint Online 為雲端服務和 Microsoft 所管理的負載能力、 健康狀況和整體的服務中的負載平衡。

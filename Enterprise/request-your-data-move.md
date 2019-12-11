@@ -3,7 +3,7 @@ title: 如何要求資料移動
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/20/2019
+ms.date: 12/10/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: 0d563400fefd0d2b9aabc0d9f3973558d54e60ab
-ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
+ms.openlocfilehash: 97fc83db3ceac1a5c3aca65f8b780a3f7841528c
+ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38756592"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39962460"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -28,7 +28,7 @@ ms.locfileid: "38756592"
   
 ## <a name="when-can-i-request-a-move"></a>何時要求移動？
 
-|**客戶帳單地址**|**要求期間開始**|**要求期限**|
+|**註冊國家/地區的客戶**|**要求期間開始**|**要求期限**|
 |:-----|:-----|:-----|
 |日本  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
 |澳洲請紐西蘭斐濟群島  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
@@ -38,11 +38,13 @@ ms.locfileid: "38756592"
 |南韓  <br/> |2017 年 5 月 1日日  <br/> |2017 年 10 月 31日日  <br/> |
 |法國  <br/> |2018 年 3 月 14日日  <br/> |2018 年 9 月 15日日  <br/> |
 |阿拉伯聯合大公國  <br/> |2019 年 7 月 15 日  <br/> |2020 年 1 月 31 日  <br/> |
-|南非  <br/> |2019 年 7 月 25日日  <br/> |2020 年 1 月 31 日  <br/> |
+|南非  <br/> |2019 年 7 月 25 日  <br/> |2020 年 1 月 31 日  <br/> |
+|瑞士，列支敦斯登  <br/> |2019 年 12 月 10日日  <br/> |2020 年 6 月 30 日  <br/> |
+|德國  <br/> |計劃  <br/> |計劃  <br/> |
    
 ## <a name="how-to-request-a-move"></a>如何要求移動
 
-合格客戶會看到其[系統管理中心](https://aka.ms/365admin)，這樣能讓他們要求將他們移至其新的資料中心區域的核心客戶資料中的頁面。  
+合格客戶會看到在[Microsoft 365 系統管理中心](https://aka.ms/365admin)，將會使其可將其移至其新的資料中心區域的核心客戶資料要求的頁面。  
   
 若要存取] 頁面的 Microsoft 365 系統管理中心中，在左邊的功能窗格中展開 [**設定**]，然後按一下 [**組織設定檔**。
   
