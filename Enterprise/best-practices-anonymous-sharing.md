@@ -8,16 +8,16 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Priority
 description: 了解與未驗證使用者共用檔案和資料夾的最佳做法。
-ms.openlocfilehash: bf2ef1e7013f97739c72f125ea4c81e17beb161c
-ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
+ms.openlocfilehash: decdc068f238329516ae0ce3594e68a753780216
+ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "39886502"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39919135"
 ---
 # <a name="best-practices-for-sharing-files-and-folders-with-unauthenticated-users"></a>與未驗證使用者共用檔案和資料夾的最佳做法
 
-未驗證共用 (*任何人*連結) 在許多案例下都相當方便。 *任何人*連結為共用最簡單的方式：來賓可以不經驗證就開啟連結，且可隨意將它傳送給其他人。
+未驗證共用 (*任何人*連結) 在許多案例下都相當方便。 *任何人*連結為共用最簡單的方式：人員可以不經驗證就開啟連結，且可隨意將它傳送給其他人。
 
 一般來說，並非組織中的所有內容都適合進行未驗證共用。 本文涵蓋可協助您建立一個環境的選項，您的使用者能夠在該環境中未驗證共用檔案和資料夾，但在其中有一些既有措施可協助保護組織內容的安全。
 
@@ -51,7 +51,7 @@ ms.locfileid: "39886502"
 3. 在 [「任何人」連結的進階設定]**** 底下，選取您要使用的檔案和資料夾權限。</br>
    ![SharePoint 組織層級任何人連結權限設定的螢幕擷取畫面](media/sharepoint-organization-anyone-link-permissions.png)
 
-將*任何人*連結設為 [檢視]**** 時，使用者仍然可以與來賓共用檔案和資料夾，並使用*特定人員*連結提供編輯權限。 這些連結要求來賓進行驗證，而您可以追蹤和稽核使用這些連結共用的檔案和資料夾上的來賓活動。
+將*任何人*連結設為 [檢視]**** 時，使用者仍然可以與來賓共用檔案和資料夾，並使用*特定人員*連結提供編輯權限。 這些連結要求組織外的人員驗證為來賓身分，而您可以追蹤和稽核使用這些連結共用的檔案和資料夾上的來賓活動。
 
 ## <a name="set-default-link-type-to-only-work-for-people-in-your-organization"></a>將預設連結類型設定為僅適用組織中的人員
 

@@ -10,16 +10,16 @@ ms.collection: SPO_Content
 ms.custom: ''
 localization_priority: Priority
 description: 深入了解 Microsoft 365 中提供的來賓共用設定。
-ms.openlocfilehash: 739a14460d4039281bde11eb1bec60bb3a5b8886
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: 3181e1abc44ff62bf3973a87a626291b9e946c51
+ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076397"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "39919377"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 來賓共用設定參考
 
-本文提供可能影響 Microsoft 365 工作負載 (Teams、Office 365 群組、SharePoint 和 OneDrive) 來賓共用各種設定的參考。 這些設定位於 Azure Active Directory、Microsoft 365、Teams 和 SharePoint 系統管理中心。
+本文提供了可能影響與組織外的部人員共用 Microsoft 365 工作負載的各種設定參考：Teams、Office 365 Groups、SharePoint 和 OneDrive。 這些設定位於 Azure Active Directory、Microsoft 365、Teams 和 SharePoint 系統管理中心。
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 
