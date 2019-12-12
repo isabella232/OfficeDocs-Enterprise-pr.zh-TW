@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: '摘要： '
-ms.openlocfilehash: 6105b9a386a64c2f855433fcc60ebb41149afdab
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 97075a861a86f8285837b8528f8c387d45dbafab
+ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2019
-ms.locfileid: "39920241"
+ms.locfileid: "39962430"
 ---
 # <a name="how-to-opt-in-for-migration-from-microsoft-cloud-germany-microsoft-cloud-deutschland-to-office-365-services-in-the-new-german-datacenter-regions"></a>如何選擇加入從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 到新德國資料中心區域中的 Office 365 服務的移轉。
 
@@ -46,7 +46,7 @@ ms.locfileid: "39920241"
  
 ![選擇加入接受](./media/ms-cloud-germany-migration-opt-in/tenant-migration-new-regions.png)
 
-系統管理員代表您的租用戶選擇加入後，所有系統管理員將在 [從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務]**** 區段中看到確認，包含選擇加入的日期。。 系統管理員也會在 Microsoft 365 系統管理中心的訊息中心收到確認。 
+系統管理員代表您的租用戶選擇加入後，所有系統管理員將在 **[從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務]** 區段中看到確認，包含選擇加入的日期。。 系統管理員也會在 Microsoft 365 系統管理中心的訊息中心收到確認。 
  
 ![選擇加入確認](./media/ms-cloud-germany-migration-opt-in/tenant-migration2.png)
 
@@ -56,8 +56,8 @@ ms.locfileid: "39920241"
 
 ## <a name="more-information"></a>詳細資訊
 
-- Microsoft Cloud Deutschland 移轉協助，網址為 [https://aka.ms/germanymigrateassist](https://aka.ms/germanymigrateassist)
-- Office 365 移轉，網址為 [https://aka.ms/office365germanymove](https://aka.ms/office365germanymove)
-- Dynamics 365 移轉，網址為 [https://aka.ms/d365ceoptin](https://aka.ms/d365ceoptin)
-- Power BI 移轉，網址為 [https://aka.ms/pbioptin](https://aka.ms/pbioptin)
+- [Microsoft Cloud Deutschland 移轉協助](https://aka.ms/germanymigrateassist)
+- [適用於 Microsoft Cloud Deutschland 客戶的 Office 365 移轉程式](https://aka.ms/office365germanymove)
+- [適用於 Microsoft Cloud Deutschland 客戶的 Dynamics 365 移轉程式](https://aka.ms/d365ceoptin)
+- [適用於 Microsoft Cloud Deutschland 客戶的 Power BI 移轉程式](https://aka.ms/pbioptin)
 - 使用「需要協助嗎？」連結來提交問題 (在 [Microsoft 365 系統管理中心](https://portal.office.de/)中)。

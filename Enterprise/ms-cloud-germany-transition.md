@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：了解如何從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務。
-ms.openlocfilehash: 5b339ab36ad613078bbfcd705f42ceb3703585e9
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 95edbeeb79549957ff49afa8b8a96160945b0f20
+ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/10/2019
-ms.locfileid: "39920243"
+ms.locfileid: "39962440"
 ---
 # <a name="migration-from-microsoft-cloud-germany-microsoft-cloud-deutschland-to-office-365-services-in-the-new-german-datacenter-regions"></a>從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務
 
@@ -43,7 +43,7 @@ ms.locfileid: "39920243"
 
 如果組織選擇加入由 Microsoft 主導的方式，預期會在 2020 年進行移轉。 移轉之後，核心客戶資料和訂閱都會移至新的德國區域。 
 
-請注意，訂閱移轉完成之後，價格將會降低，以反映公用雲端的價格。 直接客戶將會看見新的訂閱延長至新的 12 個月期限，而移轉完成日期會是您的新年度續約日期。 下列服務將以 Microsoft 主導的方法移轉：
+下列服務將以 Microsoft 主導的方法移轉：
 
 - Azure Active Directory
 - Exchange Online
@@ -52,12 +52,12 @@ ms.locfileid: "39920243"
 - 商務用 OneDrive
 - 商務用 Skype Online
 
-  從 Microsoft Cloud Germany 移轉到德國地區的過程中，現有的商務用 Skype Online客戶將過渡為使用 Microsoft Teams。 如需詳細資訊，請參閱 [https://aka.ms/SkypeToTeams-Home](https://aka.ms/SkypeToTeams-Home)。
+從 Microsoft Cloud Germany 移轉到德國資料中心區域期間，現有的商務用 Skype Online客戶將過渡為使用 Microsoft Teams。 如需詳細資訊，請參閱[開始進行您的 Microsoft Teams 升級](https://aka.ms/SkypeToTeams-Home)。
 
 - Office 365 群組
 - Dynamics 365 / Power Platform
 
-  將在 [Dynamics 365 Customer engagement](https://aka.ms/D365ceOptIn) 文章中說明這些服務的移轉先決條件與影響。
+將在 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 文章中說明這些服務的移轉先決條件與影響。
 
 ## <a name="how-to-prepare-for-migration-to-office-365-services-in-the-new-german-datacenter-regions"></a>如何準備移轉至新的德國資料中心區域中的 Office 365 服務
 
@@ -65,13 +65,13 @@ ms.locfileid: "39920243"
 
 - 所有移轉的客戶都需要驗證與全球 [Office 365 URL 和 IP 位址](urls-and-ip-address-ranges.md)的連線能力，其中包含新的德國資料中心區域。
 - 查看 Office 365 平台服務描述，了解您的組織在德國區域完成之後將可使用哪些功能和服務。 
-- 移轉將會轉換付費訂閱。
+- 移轉將會轉換付費訂閱。  我們無法移轉試用版訂閱。
 
 租用戶的移轉是以後端服務作業的方式執行，不太需要客戶互動。  任何其他的客戶主導的工作和整體移轉狀態都會透過訊息中心，在移轉過程中告知。  工作範例可能包括客戶管理的 DNS 更新，或 Exchange 混合式客戶的混合式設定重新設定。
 
 ## <a name="customer-experience-during-the-migration-to-office-365-services-in-the-new-german-datacenter-regions"></a>在移轉至新的德國資料中心區域中的 Office 365 服務期間的客戶經驗
 
-租用戶的移轉是以後端服務作業的方式執行，不太需要客戶互動或系統管理員採取動作。  不過，每個工作負載都有需要考慮的事項。  
+租用戶的移轉設計為將客戶和系統管理員的影響降至最低。  不過，每個工作負載都有需要考慮的事項。  
 
 ### <a name="azure-active-directory"></a>Azure Active Directory
 
@@ -130,11 +130,9 @@ Microsoft 提供 Office 365 租用戶從 Microsoft Cloud Germany 移轉到新德
 - 提供完整的功能、企業級的安全性及全面的功能，協助客戶符合合規性和法規需求。 
 - 可透過現有的線上服務合約取得。
 
-#### <a name="what-is-the-service-availability"></a>什麼是服務可用性？
+#### <a name="what-is-the-service-availability-between-the-different-office-365-cloud-service-offerings"></a>不同的 Office 365 雲端服務選項之間的服務可用性為何？
 
-Microsoft 365 服務可供訂閱，且只有一個 Office 365 租用戶。
-
-針對r Microsoft Cloud Germany (Microsoft Cloud Deutschland)，我們提供以下服務。 我們不會新增服務至這個雲端方案。
+Microsoft Cloud Germany (Microsoft Cloud Deutschland) 雲端服務選項提供下列 15 個服務。  我們不會新增服務至 Microsoft Cloud Germany。
 
 1. Exchange Online
 2. Customer Lockbox (Exchange Online)
@@ -152,7 +150,7 @@ Microsoft 365 服務可供訂閱，且只有一個 Office 365 租用戶。
 14. Office 365 專業增強版
 15. Outlook Mobile
 
-針對新德國資料中心區域中的 Office 365 服務，我們提供以下服務。 我們會繼續新增服務至這個雲端方案。
+目前新德國資料中心區域提供 29 個服務做為 Office 365 服務的一部分。  將持續與全球 Office 365 服務一起提供新功能和服務。
 
 1. Exchange Online
 2. Customer Lockbox (Exchange Online)
@@ -170,14 +168,14 @@ Microsoft 365 服務可供訂閱，且只有一個 Office 365 租用戶。
 14. Customer Lockbox (SharePoint Online)
 15. 商務用 OneDrive
 16. Microsoft Stream
-17. 商務用 Skype (將移轉至 Microsoft Teams)
+17. 商務用 Skype (移轉期間將移轉至 Microsoft Teams)
 18. Cloud PBX
 19. PSTN 會議
 20. PSTN 電話
 21. Microsoft Teams
 22. 系統管理報告/使用狀況報告
-23. Word Online、Excel Online、PowerPoint、OneNote、Visio Online
-24. 24. Planner
+23. Word Online、Excel Online、PowerPoint、OneNote 和 Visio Online
+24. Planner
 25. Sway
 26. Office 365 專業增強版
 27. Outlook Mobile
@@ -186,17 +184,17 @@ Microsoft 365 服務可供訂閱，且只有一個 Office 365 租用戶。
 
 ### <a name="when-will-migration-happen"></a>何時會進行移轉？
 
-- Azure 
+#### <a name="azure"></a>Azure 
 
- 您可以立即將 Azure 資源[移轉](https://docs.microsoft.com/azure/germany/germany-migration-main)到另一個區域。 如果您使用的是 Office 365、Dynamics 365 和/或 Power BI 的 Azure，請按照下列步驟操作。
+您可以立即將 Azure 資源[移轉](https://docs.microsoft.com/azure/germany/germany-migration-main)到另一個區域。 如果您使用的是 Office 365、Dynamics 365 和/或 Power BI 的 Azure，請按照下列步驟操作。
 
-- Office 365
+#### <a name="office-365"></a>Office 365
 
-  立即[選擇加入](https://aka.ms/office365germanymoveoptin) Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
+立即[選擇加入](https://aka.ms/office365germanymoveoptin) Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
 
-- Dynamics 365 和 Power BI
+#### <a name="dynamics-365-and-power-bi"></a>Dynamics 365 和 Power BI
 
-  立即為 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 和 [Power BI](https://aka.ms/pbioptin) 選擇加入 Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
+立即為 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 和 [Power BI](https://aka.ms/pbioptin) 選擇加入 Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
 
 ### <a name="will-the-price-change-for-the-office-services-that-i-use"></a>我使用的 Office 服務價格會有變化嗎？
 
@@ -212,9 +210,10 @@ Microsoft 365 服務可供訂閱，且只有一個 Office 365 租用戶。
 
 ## <a name="more-information"></a>詳細資訊
 
-- Microsoft Cloud Deutschland 移轉協助，網址為 [https://aka.ms/germanymigrateassist](https://aka.ms/germanymigrateassist)
-- 如何選擇加入移轉，網址為 [https://aka.ms/office365germanymoveoptin](https://aka.ms/office365germanymoveoptin)
-- Dynamics 365 移轉，網址為 [https://aka.ms/D365ceOptIn](https://aka.ms/D365ceOptIn)
-- Power BI 移轉，網址為 [https://aka.ms/pbioptin](https://aka.ms/pbioptin)
-- Office 365 URL 與 IP 位址範圍，網址為 [https://aka.ms/o365endpoints](https://aka.ms/o365endpoints)
-- Office 365 混合組態精靈，網址為 [https://aka.ms/HybridWizard](https://aka.ms/HybridWizard)
+- [Microsoft Cloud Deutschland 移轉協助](https://aka.ms/germanymigrateassist)
+- [如何選擇加入移轉](https://aka.ms/office365germanymoveoptin)
+- [Dynamics 365 的移轉程式資訊](https://aka.ms/D365ceOptIn)
+- [Power BI 移轉程式資訊](https://aka.ms/pbioptin)
+- [Office 365 URL 與 IP 位址範圍](https://aka.ms/o365endpoints)
+- [Office 365 混合組態精靈](https://aka.ms/HybridWizard)
+- [開始升級您的 Microsoft Teams](https://aka.ms/SkypeToTeams-Home)
