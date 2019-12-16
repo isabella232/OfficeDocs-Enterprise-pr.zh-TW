@@ -152,6 +152,8 @@
 #### [如何要求資料移動](request-your-data-move.md)
 #### [資料移動期間和之後](during-and-after-your-data-move.md)
 #### [資料移動一般常見問題集](data-move-faq.md)
+#### [Microsoft Cloud Deutschland：Office 365 移轉計劃](ms-cloud-germany-transition.md)
+#### [Microsoft Cloud Deutschland：選擇加入移轉](ms-cloud-germany-migration-opt-in.md)
 
 ### 混合式解決方案
 #### [使用適用於 SharePoint Server 2016 驗證的 Azure Active Directory](using-azure-ad-for-sharepoint-server-authentication.md)
@@ -189,7 +191,7 @@
 ##### [在網站中共同作業](collaborate-in-a-site.md)
 ##### [以小組的形式共同作業](collaborate-as-a-team.md)
 #### 來賓共用安全性
-##### [匿名共用](best-practices-anonymous-sharing.md)
+##### [未經驗證的共用](best-practices-anonymous-sharing.md)
 ##### [限制意外暴露](sharing-limit-accidental-exposure.md)
 ##### [安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)
 

@@ -7,22 +7,31 @@
 ### [使用 Windows PowerShell 在 Office 365 中建立報告](use-windows-powershell-to-create-reports-in-office-365.md)
 ### [Office 365 服務的 Cmdlet 參考資料](cmdlet-references-for-office-365-services.md)
 ### [Office 365 PowerShell 社群資源](office-365-powershell-community-resources.md)
-## [管理使用者帳戶和授權](manage-user-accounts-and-licenses-with-office-365-powershell.md)
-### [檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)
-### [檢視授權和未授權使用者](view-licensed-and-unlicensed-users-with-office-365-powershell.md)
-### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts-with-office-365-powershell.md)
-### [檢視帳戶授權與服務詳細資料](view-account-license-and-service-details-with-office-365-powershell.md)
-### [指派角色給使用者帳戶](assign-roles-to-user-accounts-with-office-365-powershell.md)
-### [停用服務存取權](disable-access-to-services-with-office-365-powershell.md)
-#### [停用 Sway 存取權](disable-access-to-sway-with-office-365-powershell.md)
-#### [停用服務存取權，並指派使用者授權](disable-access-to-services-while-assigning-user-licenses.md)
-### [從使用者帳戶移除授權](remove-licenses-from-user-accounts-with-office-365-powershell.md)
-### [封鎖使用者帳戶](block-user-accounts-with-office-365-powershell.md)
-### [刪除和還原使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)
-### [建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)
-### [檢視使用者帳戶](view-user-accounts-with-office-365-powershell.md)
-### [設定使用者帳戶設定](configure-user-account-properties-with-office-365-powershell.md)
-## [管理群組](manage-office-365-groups-with-powershell.md)
+
+## [管理使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+
+### 使用者帳戶
+#### [建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)
+#### [檢視使用者帳戶](view-user-accounts-with-office-365-powershell.md)
+#### [設定使用者帳戶設定](configure-user-account-properties-with-office-365-powershell.md)
+#### [指派角色給使用者帳戶](assign-roles-to-user-accounts-with-office-365-powershell.md)
+#### [刪除和還原使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)
+#### [封鎖使用者帳戶](block-user-accounts-with-office-365-powershell.md)
+
+### 授權與服務
+#### [檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)
+#### [檢視授權和未授權使用者](view-licensed-and-unlicensed-users-with-office-365-powershell.md)
+#### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts-with-office-365-powershell.md)
+#### [檢視帳戶授權與服務詳細資料](view-account-license-and-service-details-with-office-365-powershell.md)
+#### [停用服務存取權](disable-access-to-services-with-office-365-powershell.md)
+##### [停用 Sway 存取權](disable-access-to-sway-with-office-365-powershell.md)
+##### [停用服務存取權，並指派使用者授權](disable-access-to-services-while-assigning-user-licenses.md)
+#### [從使用者帳戶移除授權](remove-licenses-from-user-accounts-with-office-365-powershell.md)
+
+### 群組
+#### [維護群組成員資格](maintain-group-membership-with-office-365-powershell.md)
+#### [管理 Office 365 群組](manage-office-365-groups-with-powershell.md)
+
 ## [SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
 ### [建立 SharePoint Online 網站並新增使用者](create-sharepoint-sites-and-add-users-with-powershell.md)
 ### [管理 SharePoint Online 使用者和群組](manage-sharepoint-users-and-groups-with-powershell.md)
