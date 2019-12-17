@@ -16,30 +16,30 @@ search.appverid:
 - MOE150
 ms.assetid: d58b7d45-7947-4193-9456-82ba76f42d89
 description: 提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
-ms.openlocfilehash: 22ea5af87b1bbcaa96f88e3746a50f1411a01b9a
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: af1ce72760d9a94438eeead50474094ca0e3a2bd
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39813421"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072165"
 ---
-# <a name="office-365-idfix-transaction-log"></a><span data-ttu-id="18c9e-103">Office 365 IdFix 交易記錄檔</span><span class="sxs-lookup"><span data-stu-id="18c9e-103">Office 365 IdFix transaction log</span></span>
+# <a name="office-365-idfix-transaction-log"></a><span data-ttu-id="ad929-103">Office 365 IdFix 交易記錄檔</span><span class="sxs-lookup"><span data-stu-id="ad929-103">Office 365 IdFix transaction log</span></span>
 
-<span data-ttu-id="18c9e-104">*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="18c9e-104">*This article applies to both Office 365 Enterprise and Microsoft 365 Enterprise.*</span></span>
+<span data-ttu-id="ad929-104">*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="ad929-104">*This article applies to both Office 365 Enterprise and Microsoft 365 Enterprise.*</span></span>
 
-<span data-ttu-id="18c9e-105">提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。</span><span class="sxs-lookup"><span data-stu-id="18c9e-105">Provides an example and describes the naming convention and default log level of the Office 365 IdFix transaction log.</span></span>
+<span data-ttu-id="ad929-105">提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。</span><span class="sxs-lookup"><span data-stu-id="ad929-105">Provides an example and describes the naming convention and default log level of the Office 365 IdFix transaction log.</span></span>
   
-## <a name="idfix-transaction-log-location"></a><span data-ttu-id="18c9e-106">IdFix 交易記錄檔的位置</span><span class="sxs-lookup"><span data-stu-id="18c9e-106">IdFix transaction log location</span></span>
+## <a name="idfix-transaction-log-location"></a><span data-ttu-id="ad929-106">IdFix 交易記錄檔的位置</span><span class="sxs-lookup"><span data-stu-id="ad929-106">IdFix transaction log location</span></span>
 
-<span data-ttu-id="18c9e-107">Office 365 IdFix 工具在每次您按一下 [**套用**在 IdFix 中，將變更套用至 Active Directory 樹系時，都會建立新的交易記錄檔。</span><span class="sxs-lookup"><span data-stu-id="18c9e-107">The Office 365 IdFix tool creates a new transaction log each time you click **Apply** in IdFix and apply changes to the Active Directory forest.</span></span> <span data-ttu-id="18c9e-108">交易記錄檔會儲存在您安裝 IdFix 的相同資料夾中。</span><span class="sxs-lookup"><span data-stu-id="18c9e-108">The transaction log is saved in the same folder where you installed IdFix.</span></span> <span data-ttu-id="18c9e-109">根據預設，這個資料夾是 C:\Deployment Tools\IDFix。</span><span class="sxs-lookup"><span data-stu-id="18c9e-109">By default, this folder is C:\Deployment Tools\IDFix.</span></span> <span data-ttu-id="18c9e-110">交易記錄檔名稱使用日期和時間戳記格式，例如 Verbose 6-1-2018年 6-17-22 PM 指示在 2018 年 6 月 1 日下午 6:17:22 產生的檔案。</span><span class="sxs-lookup"><span data-stu-id="18c9e-110">The transaction log file name uses a date and time stamp format, for example, Verbose 6-1-2018 6-17-22 PM indicates a file that was generated at June 1, 2018 at 6:17:22 PM.</span></span> <span data-ttu-id="18c9e-111">Verbose 指出的記錄等級。</span><span class="sxs-lookup"><span data-stu-id="18c9e-111">Verbose indicates the logging level.</span></span> 
+<span data-ttu-id="ad929-107">Office 365 IdFix 工具在每次您按一下 [**套用**在 IdFix 中，將變更套用至 Active Directory 樹系時，都會建立新的交易記錄檔。</span><span class="sxs-lookup"><span data-stu-id="ad929-107">The Office 365 IdFix tool creates a new transaction log each time you click **Apply** in IdFix and apply changes to the Active Directory forest.</span></span> <span data-ttu-id="ad929-108">交易記錄檔會儲存在您安裝 IdFix 的相同資料夾中。</span><span class="sxs-lookup"><span data-stu-id="ad929-108">The transaction log is saved in the same folder where you installed IdFix.</span></span> <span data-ttu-id="ad929-109">根據預設，這個資料夾是 C:\Deployment Tools\IDFix。</span><span class="sxs-lookup"><span data-stu-id="ad929-109">By default, this folder is C:\Deployment Tools\IDFix.</span></span> <span data-ttu-id="ad929-110">交易記錄檔名稱使用日期和時間戳記格式，例如 Verbose 6-1-2018年 6-17-22 PM 指示在 2018 年 6 月 1 日下午 6:17:22 產生的檔案。</span><span class="sxs-lookup"><span data-stu-id="ad929-110">The transaction log file name uses a date and time stamp format, for example, Verbose 6-1-2018 6-17-22 PM indicates a file that was generated at June 1, 2018 at 6:17:22 PM.</span></span> <span data-ttu-id="ad929-111">Verbose 指出的記錄等級。</span><span class="sxs-lookup"><span data-stu-id="ad929-111">Verbose indicates the logging level.</span></span> 
   
-## <a name="idfix-transaction-log-logging-level"></a><span data-ttu-id="18c9e-112">IdFix 交易記錄檔記錄層級</span><span class="sxs-lookup"><span data-stu-id="18c9e-112">IdFix transaction log logging level</span></span>
+## <a name="idfix-transaction-log-logging-level"></a><span data-ttu-id="ad929-112">IdFix 交易記錄檔記錄層級</span><span class="sxs-lookup"><span data-stu-id="ad929-112">IdFix transaction log logging level</span></span>
 
-<span data-ttu-id="18c9e-113">Verbose 在交易記錄檔名稱的字會指出記錄檔中的層的級。</span><span class="sxs-lookup"><span data-stu-id="18c9e-113">The word verbose in the transaction log file name indicates the level of logging in the file.</span></span> <span data-ttu-id="18c9e-114">Verbose 表示最高資訊量會擷取在記錄檔。</span><span class="sxs-lookup"><span data-stu-id="18c9e-114">Verbose means that the maximum amount of information is captured in the log.</span></span> <span data-ttu-id="18c9e-115">這是預設記錄等級。</span><span class="sxs-lookup"><span data-stu-id="18c9e-115">This is the default logging level.</span></span> <span data-ttu-id="18c9e-116">在這個階段中，您無法變更的記錄等級。</span><span class="sxs-lookup"><span data-stu-id="18c9e-116">At this time, you cannot change the logging level.</span></span>
+<span data-ttu-id="ad929-113">Verbose 在交易記錄檔名稱的字會指出記錄檔中的層的級。</span><span class="sxs-lookup"><span data-stu-id="ad929-113">The word verbose in the transaction log file name indicates the level of logging in the file.</span></span> <span data-ttu-id="ad929-114">Verbose 表示最高資訊量會擷取在記錄檔。</span><span class="sxs-lookup"><span data-stu-id="ad929-114">Verbose means that the maximum amount of information is captured in the log.</span></span> <span data-ttu-id="ad929-115">這是預設記錄等級。</span><span class="sxs-lookup"><span data-stu-id="ad929-115">This is the default logging level.</span></span> <span data-ttu-id="ad929-116">在這個階段中，您無法變更的記錄等級。</span><span class="sxs-lookup"><span data-stu-id="ad929-116">At this time, you cannot change the logging level.</span></span>
   
-## <a name="idfix-transaction-log-format"></a><span data-ttu-id="18c9e-117">IdFix 交易記錄格式</span><span class="sxs-lookup"><span data-stu-id="18c9e-117">IdFix transaction log format</span></span>
+## <a name="idfix-transaction-log-format"></a><span data-ttu-id="ad929-117">IdFix 交易記錄格式</span><span class="sxs-lookup"><span data-stu-id="ad929-117">IdFix transaction log format</span></span>
 
-<span data-ttu-id="18c9e-118">IdFix 會將每個 [ **UPDATE** ] 動作的結果寫入至交易記錄檔在下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="18c9e-118">IdFix writes the results of each **UPDATE** action to a transaction log as shown in the following example:</span></span>
+<span data-ttu-id="ad929-118">IdFix 會將每個 [ **UPDATE** ] 動作的結果寫入至交易記錄檔在下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="ad929-118">IdFix writes the results of each **UPDATE** action to a transaction log as shown in the following example:</span></span>
   
 ```
 5/22/2018 6:36:44 AM Initialized - IdFix version 1.07 - Multi-Tenant
@@ -68,5 +68,4 @@ ms.locfileid: "39813421"
 5/22/2018 6:37:57 AM Update: [CN=user000001,OU=e2k10OU1,DC=e2k10,DC=com][user][mailnickname][character][user?^|000001][user000001][UNDO]
 5/22/2018 6:37:57 AM Update: [CN=user000008,OU=e2k10OU1,DC=e2k10,DC=com][user][targetAddress][duplicate][smtp:user000008@customer.com][][UNDO]
 5/22/2018 6:37:57 AM COMPLETE
-
 ```
