@@ -10,22 +10,35 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何使用指定的慣用資料位置在多地理位置環境中建立 Office 365 群組。
-ms.openlocfilehash: fb512478d69502eafd633b552d1db2acbec43ef4
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 96870923c00cebc247609b67378fd39011077d45
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069999"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072375"
 ---
-# <a name="create-an-office-365-group-with-a-specific-pdl"></a><span data-ttu-id="c0635-103">使用特定 PDL 建立 Office 365 群組</span><span class="sxs-lookup"><span data-stu-id="c0635-103">Create an Office 365 Group with a specific PDL</span></span>
+# <a name="create-an-office-365-group-with-a-specific-pdl"></a><span data-ttu-id="85601-103">使用特定 PDL 建立 Office 365 群組</span><span class="sxs-lookup"><span data-stu-id="85601-103">Create an Office 365 Group with a specific PDL</span></span>
 
-<span data-ttu-id="c0635-104">在位於多地理位置環境中的使用者建立 Office 365 群組時，群組慣用資料位置將自動設定為使用者的位置。</span><span class="sxs-lookup"><span data-stu-id="c0635-104">When users in a multi-geo environment create an Office 365 Group, the group preferred data location is automatically set to that of the user.</span></span> <span data-ttu-id="c0635-105">如果需要建立具有特定 PDL 的群組，則可以使用 Exchange Online New-UnifiedGroup Microsoft PowerShell cmdlet 來建立。</span><span class="sxs-lookup"><span data-stu-id="c0635-105">If you need to create a group with a specific PDL, you can do that using the Exchange Online New-UnifiedGroup Microsoft PowerShell cmdlet.</span></span> <span data-ttu-id="c0635-106">如此一來，將在指定的 PDL 中佈建與該群組關聯的群組信箱和 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="c0635-106">When you do this, both the group mailbox and SharePoint site associated with the group will be provisioned in the specified PDL.</span></span>
+<span data-ttu-id="85601-104">在位於多地理位置環境中的使用者建立 Office 365 群組時，群組慣用資料位置將自動設定為使用者的位置。</span><span class="sxs-lookup"><span data-stu-id="85601-104">When users in a multi-geo environment create an Office 365 Group, the group preferred data location is automatically set to that of the user.</span></span> <span data-ttu-id="85601-105">全域、SharePoint 和 Exchange 系統管理員可以在他們所選的任何區域中建立群組。</span><span class="sxs-lookup"><span data-stu-id="85601-105">Global, SharePoint, and Exchange Administrators can create groups in any region they select.</span></span> 
 
-<span data-ttu-id="c0635-107">您必須是全域系統管理員或 SharePoint Online 或 Exchange Online 系統管理員才能進行此操作。</span><span class="sxs-lookup"><span data-stu-id="c0635-107">You must be a global administrator or a SharePoint Online or Exchange Online administrator to do this.</span></span>
+<span data-ttu-id="85601-106">如果需要建立具有特定 PDL 的群組，則可以使用 SharePoint 系統管理中心或透過 Exchange Online New-UnifiedGroup Microsoft PowerShell Cmdlet 來執行此動作。</span><span class="sxs-lookup"><span data-stu-id="85601-106">If you need to create a group with a specific PDL, you can do that using the Exchange Online New-UnifiedGroup Microsoft PowerShell cmdlet.</span></span> <span data-ttu-id="85601-107">如此一來，將在指定的 PDL 中佈建與該群組關聯的群組信箱和 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="85601-107">When you do this, both the group mailbox and SharePoint site associated with the group will be provisioned in the specified PDL.</span></span>
 
-<span data-ttu-id="c0635-108">若要使用您指定的 PDL 建立 Office 365 群組，請連線至 Exchange Online PowerShell，並傳遞參數 *-MailBoxRegion* 與地理位置代碼。</span><span class="sxs-lookup"><span data-stu-id="c0635-108">To create an Office 365 Group with the PDL that you specify, connect to Exchange Online PowerShell and pass the parameter *-MailBoxRegion* with the geo location code.</span></span>
+<span data-ttu-id="85601-108">若要建立具有您指定的 PDL 的 Office 365 群組，請移至您要建立群組網站的地理位置中的 SharePoint 系統管理中心。</span><span class="sxs-lookup"><span data-stu-id="85601-108">To create an Office 365 Group with the PDL that you specify, go to the SharePoint admin center in the geo location where you want to create the group site.</span></span>
 
-<span data-ttu-id="c0635-109">例如：</span><span class="sxs-lookup"><span data-stu-id="c0635-109">For example:</span></span> 
+<span data-ttu-id="85601-109">例如：</span><span class="sxs-lookup"><span data-stu-id="85601-109">For example:</span></span>
+
+<span data-ttu-id="85601-110">如果您要在澳洲位置建立群組網站，您可以移至 https://ContosoAUS-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/siteManagement</span><span class="sxs-lookup"><span data-stu-id="85601-110">If you wan to create a group site in your Australtia location, you can go to https://ContosoAUS-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/siteManagement</span></span>
+
+1. <span data-ttu-id="85601-111">選取 [+ 建立]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="85601-111">Select **+ Create**.</span></span>
+2. <span data-ttu-id="85601-112">遵循程序來建立群組網站。</span><span class="sxs-lookup"><span data-stu-id="85601-112">Follow the process to create a group site.</span></span>
+
+<span data-ttu-id="85601-113">您的群組網站將在與您從中啟動網站建立要求的 SharePoint 系統管理中心對應的地理位置中佈建。</span><span class="sxs-lookup"><span data-stu-id="85601-113">Your group site will be provisioned in the geo location corresponding to the SharePoint admin center from which you initiated the site creation request.</span></span> 
+
+<span data-ttu-id="85601-114">使用 Exchange PowerShell</span><span class="sxs-lookup"><span data-stu-id="85601-114">Using Exchange PowerShell</span></span> 
+
+<span data-ttu-id="85601-115">連線至 Exchange Online PowerShell，並傳遞參數 *-MailBoxRegion* 與地理位置代碼。</span><span class="sxs-lookup"><span data-stu-id="85601-115">To create an Office 365 Group with the PDL that you specify, connect to Exchange Online PowerShell and pass the parameter *-MailBoxRegion* with the geo location code.</span></span>
+
+<span data-ttu-id="85601-116">例如：</span><span class="sxs-lookup"><span data-stu-id="85601-116">For example:</span></span> 
 
 ```PowerShell
 New-UnifiedGroup -DisplayName MultiGeoEUR -Alias "MultiGeoEUR" -AccessType Public -MailboxRegion EUR 
@@ -33,12 +46,12 @@ New-UnifiedGroup -DisplayName MultiGeoEUR -Alias "MultiGeoEUR" -AccessType Publi
 
 ![New-UnifiedGroup PowerShell cmdlet 以及語法的螢幕擷取畫面](media/multi-geo-new-group-with-pdl-powershell.png)
 
-<span data-ttu-id="c0635-111">請注意，SharePoint 群組網站佈建將依照需求。</span><span class="sxs-lookup"><span data-stu-id="c0635-111">Note that SharePoint group site provisioning is on-demand.</span></span> <span data-ttu-id="c0635-112">在群組擁有者或成員首次嘗試存取網站時，會對該網站進行佈建。</span><span class="sxs-lookup"><span data-stu-id="c0635-112">The site will be provisioned the first time a group owner or member attempts to access it.</span></span>
+<span data-ttu-id="85601-118">請注意，SharePoint 群組網站佈建將依照需求。</span><span class="sxs-lookup"><span data-stu-id="85601-118">Note that SharePoint group site provisioning is on-demand.</span></span> <span data-ttu-id="85601-119">在群組擁有者或成員首次嘗試存取網站時，會對該網站進行佈建。</span><span class="sxs-lookup"><span data-stu-id="85601-119">The site will be provisioned the first time a group owner or member attempts to access it.</span></span>
 
-## <a name="geo-location-codes"></a><span data-ttu-id="c0635-113">地理位置代碼</span><span class="sxs-lookup"><span data-stu-id="c0635-113">Geo location codes</span></span>
+## <a name="geo-location-codes"></a><span data-ttu-id="85601-120">地理位置代碼</span><span class="sxs-lookup"><span data-stu-id="85601-120">Geo location codes</span></span>
 
 [!INCLUDE [Office 365 Multi-Geo locations](includes/office-365-multi-geo-locations.md)]
 
-## <a name="see-also"></a><span data-ttu-id="c0635-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0635-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85601-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85601-121">See also</span></span>
 
-[<span data-ttu-id="c0635-115">連線到 Exchange Online PowerShell</span><span class="sxs-lookup"><span data-stu-id="c0635-115">Connect to Exchange Online PowerShell</span></span>](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
+[<span data-ttu-id="85601-122">連線到 Exchange Online PowerShell</span><span class="sxs-lookup"><span data-stu-id="85601-122">Connect to Exchange Online PowerShell</span></span>](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)
