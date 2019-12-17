@@ -3,7 +3,7 @@ title: 連線至 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/25/2019
+ms.date: 12/13/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 摘要：使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
-ms.openlocfilehash: 3e31bfb68614ceb7c10f4b45e141928169121006
-ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
+ms.openlocfilehash: 42f092acb3074a449986e366fc6dfc0088ef9eef
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39257402"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072265"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -28,19 +28,14 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 
 您用來連線至 Office 365 及管理使用者帳戶、群組和授權的 PowerShell 模組有兩個版本：
 
-- Azure Active Directory PowerShell for Graph (名稱中包含 **AzureAD** 的 Cmdlet) 
+- Azure Active Directory PowerShell for Graph (名稱中包含 **AzureAD** 的 Cmdlet)
 - 適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組 (名稱中包含 **MSol** 的 Cmdlet) 
 
 自本文發行日期起，Azure Active Directory PowerShell for Graph 模組無法完全取代適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組中針對使用者、群組和授權管理的 Cmdlet 功能。 在許多情況下，您需要同時使用這兩個版本。 您可以在同一部電腦上安全地安裝這兩個版本。
 
-> [!TIP]
-> **第一次使用 PowerShell？** 請參閱 LinkedIn Learning 為您提供的 [PowerShell 概觀影片](https://support.office.com/article/7d0107d4-f672-4d0f-ad7d-417844b926c7.aspx)。 
-  
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
-- 預估完成時間：5 分鐘
-    
-- 您可以使用下列 Windows 版本：
+您可以使用下列 Windows 版本：
     
   - Windows 10、Windows 8.1、Windows 8 或 Windows 7 Service Pack 1 (SP1) 
     
@@ -52,7 +47,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
     > [!NOTE]
     >請使用 64 位元的 Windows 版本。對 Windows PowerShell 的 Microsoft Azure Active Directory 模組 32 位元版本的支援已在 2014 年 10 月終止。
     
--  這些程序適用於屬於 Office 365 系統管理員角色成員的使用者。 如需詳細資訊，請參閱[關於 Office 365 系統管理員角色](https://go.microsoft.com/fwlink/p/?LinkId=532367)。
+這些程序適用於屬於 Office 365 系統管理員角色成員的使用者。 如需詳細資訊，請參閱[關於 Office 365 系統管理員角色](https://go.microsoft.com/fwlink/p/?LinkId=532367)。
 
 
 ## <a name="connect-with-the-azure-active-directory-powershell-for-graph-module"></a>與 Azure Active Directory PowerShell for Graph 模組連線
@@ -81,7 +76,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 
 ### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2：連接到您的 Office 365 訂閱的 Azure AD
 
-若要使用帳戶名稱和密碼或使用*多重要素驗證 (MFA)* 連接到您的 Office 365 訂閱的 Azure AD，請從 Windows PowerShell 命令提示字元(不需提升權限) 執行下列其中一個命令。
+若要使用帳戶名稱和密碼或使用多重要素驗證 (MFA) 連接到您的 Office 365 訂閱的 Azure AD，請從 Windows PowerShell 命令提示字元(不需提升權限) 執行下列其中一個命令。
 
 |||
 |:-------|:-----|
@@ -96,8 +91,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 
 如果您使用 MFA，請遵循其他對話方塊中的指示，提供更多的驗證資訊，例如驗證碼。
 
-
-連線之後，您可以對 [Azure Active Directory PowerShell for Graph 模組](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)使用新的 Cmdlet。
+連線之後，您可以對 [Azure Active Directory PowerShell for Graph 模組](https://docs.microsoft.com/powershell/azuread/v2/azureactivedirectory)使用這些 Cmdlet。
   
 
 ## <a name="connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>與適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組連線
@@ -123,7 +117,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
     
 ### <a name="step-2-connect-to-azure-ad-for-your-office-365-subscription"></a>步驟 2：連接到您的 Office 365 訂閱的 Azure AD
 
-若要使用帳戶名稱和密碼或使用*多重要素驗證 (MFA)* 連接到您的 Office 365 訂閱的 Azure AD，請從 Windows PowerShell 命令提示字元(不需提升權限) 執行下列其中一個命令。
+若要使用帳戶名稱和密碼或使用多重要素驗證 (MFA) 連接到您的 Office 365 訂閱的 Azure AD，請從 Windows PowerShell 命令提示字元(不需提升權限) 執行下列其中一個命令。
 
 |||
 |:-------|:-----|
@@ -171,6 +165,3 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 - [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
 - [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
 - [在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務](connect-to-all-office-365-services-in-a-single-windows-powershell-window.md)
-- [Get-Credential](https://go.microsoft.com/fwlink/p/?LinkId=389618)
-- [Connect-MsolService](https://go.microsoft.com/fwlink/p/?LinkId=532375)
-
