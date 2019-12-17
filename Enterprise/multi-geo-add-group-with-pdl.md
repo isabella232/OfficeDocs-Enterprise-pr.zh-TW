@@ -10,20 +10,33 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 了解如何使用指定的慣用資料位置在多地理位置環境中建立 Office 365 群組。
-ms.openlocfilehash: fb512478d69502eafd633b552d1db2acbec43ef4
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 96870923c00cebc247609b67378fd39011077d45
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069999"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072375"
 ---
 # <a name="create-an-office-365-group-with-a-specific-pdl"></a>使用特定 PDL 建立 Office 365 群組
 
-在位於多地理位置環境中的使用者建立 Office 365 群組時，群組慣用資料位置將自動設定為使用者的位置。 如果需要建立具有特定 PDL 的群組，則可以使用 Exchange Online New-UnifiedGroup Microsoft PowerShell cmdlet 來建立。 如此一來，將在指定的 PDL 中佈建與該群組關聯的群組信箱和 SharePoint 網站。
+在位於多地理位置環境中的使用者建立 Office 365 群組時，群組慣用資料位置將自動設定為使用者的位置。 全域、SharePoint 和 Exchange 系統管理員可以在他們所選的任何區域中建立群組。 
 
-您必須是全域系統管理員或 SharePoint Online 或 Exchange Online 系統管理員才能進行此操作。
+如果需要建立具有特定 PDL 的群組，則可以使用 SharePoint 系統管理中心或透過 Exchange Online New-UnifiedGroup Microsoft PowerShell Cmdlet 來執行此動作。 如此一來，將在指定的 PDL 中佈建與該群組關聯的群組信箱和 SharePoint 網站。
 
-若要使用您指定的 PDL 建立 Office 365 群組，請連線至 Exchange Online PowerShell，並傳遞參數 *-MailBoxRegion* 與地理位置代碼。
+若要建立具有您指定的 PDL 的 Office 365 群組，請移至您要建立群組網站的地理位置中的 SharePoint 系統管理中心。
+
+例如：
+
+如果您要在澳洲位置建立群組網站，您可以移至 https://ContosoAUS-admin.sharepoint.com/_layouts/15/online/AdminHome.aspx#/siteManagement
+
+1. 選取 [+ 建立]****。
+2. 遵循程序來建立群組網站。
+
+您的群組網站將在與您從中啟動網站建立要求的 SharePoint 系統管理中心對應的地理位置中佈建。 
+
+使用 Exchange PowerShell 
+
+連線至 Exchange Online PowerShell，並傳遞參數 *-MailBoxRegion* 與地理位置代碼。
 
 例如： 
 
