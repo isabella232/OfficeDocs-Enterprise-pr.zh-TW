@@ -3,7 +3,7 @@ title: 將角色指派給 Office 365 powershell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/30/2019
+ms.date: 12/16/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
 description: 摘要： 使用 Office 365 PowerShell 來指派角色給使用者帳戶。
-ms.openlocfilehash: 5af8c514cbe8d102716d2d6b45e8ebdbdb5b1507
-ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
+ms.openlocfilehash: 999b44f56e2652c0d6d2d746a3ed204be9d1f69c
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39257442"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072525"
 ---
 # <a name="assign-roles-to-user-accounts-with-office-365-powershell"></a>將角色指派給 Office 365 powershell 的使用者帳戶
 
@@ -52,7 +52,7 @@ $role = Get-AzureADDirectoryRole | Where {$_.displayName -eq $roleName}
 Add-AzureADDirectoryRoleMember -ObjectId $role.ObjectId -RefObjectId (Get-AzureADUser | Where {$_.UserPrincipalName -eq $userName}).ObjectID
 ```
 
-以下是一組完整的命令的範例：
+以下是一組完整的命令將 SharePoint 服務系統管理員角色指派給 belindan@contoso.com 帳戶的範例：
   
 ```powershell
 $userName="belindan@contoso.com"
@@ -79,7 +79,7 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
   
 ### <a name="for-a-single-role-change"></a>單一角色變更
 
-特定使用者帳戶的常用方法是使用其顯示名稱或其電子郵件名稱，也就是其登入使用者主體名稱 (UPN)。
+特定使用者帳戶的常用方法是使用其顯示名稱或其電子郵件名稱，也就是其登入名稱或使用者主要名稱 (UPN)。
 
 #### <a name="display-names-of-user-accounts"></a>顯示的使用者帳戶的名稱
 
@@ -96,7 +96,7 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
     此命令會列出您的使用者帳戶，以顯示名稱，一次一個畫面排序顯示名稱。 您可以使用**其中**指令程式來篩選清單，以較小的設定。 範例如下：
 
    >[!Note]
-   >PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+   >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
    >
     
   ```powershell
@@ -177,9 +177,9 @@ $roleName="SharePoint Service Administrator"
 Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
 ```
 
-### <a name="for-multiple-role-changes"></a>多個角色變更
+### <a name="multiple-role-changes"></a>多個角色變更
 
-決定下列項目：
+針對多個角色變更，決定下列項目：
   
 - 哪一個使用者帳戶，您想要設定。 您可以使用在前一節中的方法，來蒐集的顯示名稱或 Upn。
     
@@ -225,9 +225,8 @@ $roleChanges=Import-Csv $fileName | ForEach { Add-MsolRoleMember -RoleMemberEmai
 
 ```
 
-
 ## <a name="see-also"></a>另請參閱
 
-- [使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+- [管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
 - [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)

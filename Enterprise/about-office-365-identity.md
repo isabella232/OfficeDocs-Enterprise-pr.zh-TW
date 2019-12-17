@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: f6e871f03fb99feea05293c425406b6be7dfedd5
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 0cc40323d978fe9ab13e3326dac183143a014406
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38745666"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40071875"
 ---
 # <a name="office-365-identity-models-and-azure-active-directory"></a>Office 365 身分識別模型和 Azure Active Directory
 
@@ -59,7 +59,7 @@ Office 365 身分識別模型是您第一個的規劃選擇。
 
 以下是僅限雲端身分識別的基本元件。
  
-![](./media/about-office-365-identity/cloud-only-identity.png)
+![僅限雲端身分識別的基本元件](./media/about-office-365-identity/cloud-only-identity.png)
 
 在內部和遠端 （線上） 的使用者使用其 Azure AD 使用者帳戶和密碼來存取 Office 365 雲端服務。 Azure AD 驗證根據其儲存的使用者帳戶和密碼的使用者認證。
 
@@ -76,7 +76,7 @@ Azure AD Connect 提供持續的帳戶同步處理。 它會在內部部署伺�
 
 以下是混合式身分識別的元件。
 
-![](./media/about-office-365-identity/hybrid-identity.png)
+![混合式身分識別的元件](./media/about-office-365-identity/hybrid-identity.png)
 
 Azure AD 租用戶都有一份 AD DS 帳戶。 在此組態中，在內部和遠端使用者存取 Microsoft 365 雲端服務驗證 Azure AD rms。
 

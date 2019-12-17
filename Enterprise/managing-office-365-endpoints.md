@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: 1a694d516a81fec7d6c619c17414e2245dd6b0ef
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
+ms.openlocfilehash: 99445e6feac84a6091888422039e8ba655d246c9
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38030607"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072485"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -75,7 +75,7 @@ Get-PacFile -ClientRequestId b10c5ed1-bad1-445f-b386-b919946339a7
 |**ClientRequestId** <br/> |這是必要的會傳遞至代表在用戶端電腦進行呼叫 web 服務的 GUID。 <br/> |
 |**Instance** <br/> |預設值為全球網站 Office 365 服務執行個體。 也會傳遞至 web 服務。 <br/> |
 |**TenantName** <br/> |您的 Office 365 租用戶名稱。 傳遞至 web 服務，並做為某些 Office 365 url 可取代的參數。 <br/> |
-|**Type** <br/> |您想要產生 proxy PAC 檔案的類型。 <br/> |
+|**類型** <br/> |您想要產生 proxy PAC 檔案的類型。 <br/> |
 
 以下是呼叫與其他參數的 PowerShell 指令碼的另一個範例：
 
@@ -140,7 +140,7 @@ Office 365 連線的相關的常見問題集的系統管理員問題：
   
 請參閱 < IP 相關聯 Office 365 上您想要的詳細資訊嗎？
   
-1. 請檢查是否 IP 位址會包含在較大的發佈範圍使用[CIDR [小算盤]](https://jodies.de/ipcalc)。
+1. 請檢查是否 IP 位址會包含在較大的發佈範圍使用[CIDR [小算盤]](https://www.ipaddressguide.com/cidr)。
 2. 請參閱協力廠商是否擁有 IP 與[whois 查詢](https://dnsquery.org/)。 如果是 Microsoft 所擁有，可能是內部的協力廠商。
 3. 檢查憑證，在瀏覽器中連線至 IP 位址使用*HTTPS://\<IP_ADDRESS\> * ，檢查憑證，以了解哪些網域相關聯的 IP 位址上列出的網域。 如果它是 Microsoft 所擁有的 IP 位址，而且不在清單上的 Office 365 IP 位址，很可能的 IP 位址是與 Microsoft CDN 例如*MSOCDN.NET*或不含已發佈的 IP 資訊的另一個 Microsoft 網域相關聯。 如果您發現在憑證上的網域是其中一個我們宣告清單的 IP 位址，請讓我們知道。
 

@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: 摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
-ms.openlocfilehash: d60145c7dd25fc7cf6be51a891b8fae8e67ccc2b
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 598824933af54d79030465c825186f89b193666c
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38747529"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072305"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
@@ -57,7 +57,7 @@ ms.locfileid: "38747529"
   
 - 從公司網路之外使用 Outlook 連線至您的內部部署 Exchange 信箱。
     
-- 使用 [Microsoft Exchange Remote Connectivity Analyzer](https://www.testexchangeconnectivity.com/) 來測試連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
+- 使用[Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/)來測試連線設定。 使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
     
 - 在 Exchange Online PowerShell 中執行下列命令：
     
@@ -199,12 +199,6 @@ Get-MigrationBatch -Identity StagedBatch1 | Format-List Status
 因為移轉作業尚未完成，所以您還沒有準備好將所有使用者導向 Office 365 來存取他們的電子郵件。所以該如何處理同時擁有兩個信箱的使用者？您可以變更已移轉至「啟用郵件功能的使用者」的內部部署信箱。當您將信箱變更為擁有郵件功能的使用者時，您可以將使用者導向 Office 365 來存取其電子郵件，而不是從他們的內部部署信箱存取。 
   
 將內部部署信箱轉換成擁有郵件功能的使用者的另一個重要原因，是要藉由將 Proxy 位址複製到擁有郵件功能的使用者，以從 Office 365 信箱保留 Proxy 位址。如此可讓您使用 Active Directory 從內部部署組織管理雲端使用者。如果您決定在所有信箱移轉至 Office 365 後解除委任內部部署 Exchange Server 組織，則複製到擁有郵件功能的使用者的 Proxy 位址，將會保留在您的內部部署 Active Directory 中。
-  
-如需詳細資訊以及下載將信箱轉換至擁有郵件功能的使用者時須執行的指令碼，請參閱下列網頁：
-  
-- [將 Exchange 2007 信箱轉換成擁有郵件功能的使用者](https://go.microsoft.com/fwlink/p/?LinkId=233648)
-    
-- [將 Exchange 2003 信箱轉換成擁有郵件功能的使用者](https://go.microsoft.com/fwlink/p/?LinkId=233647)
     
 ### <a name="step-6-delete-a-staged-migration-batch"></a>步驟 6：刪除分段移轉批次
 <a name="BK_Endpoint"> </a>

@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: 您規劃及設定部署建議與 Office 365 或 Microsoft 365 加速。
-ms.openlocfilehash: a698ea4cf4eec5640d836986ce45f71bf7dba0a8
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: c931da3d64aea976af99ca2b2220d4bd931344a9
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076147"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072365"
 ---
 # <a name="deployment-advisors-for-office-365-or-microsoft-365-services"></a>Office 365 或 Microsoft 365 服務的部署建議
 
@@ -37,13 +37,13 @@ Office 365 或 Microsoft 365 的部署建議提供自我引導式的支援您的
 
 每個顧問是精靈，引導您完成所選擇的功能和您想要部署的選項。 在某些情況下，您可以使用精靈來設定某個項目，或啟動設定。 範例如下。
 
-![](./media/deployment-advisors-for-office-365/m365-deploy-advisor1.png)
+![部署建議程式的範例](./media/deployment-advisors-for-office-365/m365-deploy-advisor1.png)
 
 顧問引導您完成決定自訂您的需求。 一路，您會收到指示、 指令碼，以及其他資源，以進行組態變更。
 
 在結束時，您會收到影片和參考文章的連結。 範例如下。
 
-![](./media/deployment-advisors-for-office-365/m365-deploy-advisor2.png)
+![本範例的連結影片和參考文章](./media/deployment-advisors-for-office-365/m365-deploy-advisor2.png)
 
 您可以隨時使用這些建議，若要深入了解 Office 365 的功能和選項。 這包括在規劃期間或之後您已經設定的服務。
   

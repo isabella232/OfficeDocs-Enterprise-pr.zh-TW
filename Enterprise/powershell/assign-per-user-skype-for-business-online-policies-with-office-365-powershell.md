@@ -12,17 +12,15 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
 description: 摘要： 使用 Office 365 PowerShell 來指派個別使用者 Skype 線上商務原則通訊設定。
-ms.openlocfilehash: 2252a6df4298bb36a669404aefac3b14eaa23b7f
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: e425c3f0bc6253550b1be2081df89e535da811f4
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38031038"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072255"
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 
- **摘要：** 使用 Office 365 PowerShell 來指派個別使用者 Skype 線上商務原則通訊設定。
-  
 使用 Office 365 PowerShell 是要指派個別使用者 Skype 線上商務原則通訊設定的有效方法。
   
 ## <a name="before-you-begin"></a>開始之前
@@ -33,12 +31,13 @@ ms.locfileid: "38031038"
     
 2. 開啟 Windows PowerShell 命令提示字元並執行下列命令： 
     
-  ```
-  Import-Module LyncOnlineConnector
+```powershell
+Import-Module LyncOnlineConnector
 $userCredential = Get-Credential
 $sfbSession = New-CsOnlineSession -Credential $userCredential
 Import-PSSession $sfbSession
-  ```
+```
+
 出現提示時，輸入您 Skype 商務 Online 系統管理員帳戶名稱和密碼。
     
 ## <a name="updating-external-communication-settings-for-a-user-account"></a>更新的使用者帳戶的外部通訊設定
@@ -54,13 +53,13 @@ Import-PSSession $sfbSession
   
 您要如何判斷哪個外部存取原則指派 Alex？ 下列命令會傳回 EnableFederationAccess 設定為 True 且 EnablePublicCloudAccess 設定為 False 的所有外部存取原則：
   
-```
+```powershell
 Get-CsExternalAccessPolicy | Where-Object {$_.EnableFederationAccess -eq $True -and $_.EnablePublicCloudAccess -eq $False}
 ```
 
 此命令的作用是傳回所有符合這兩項條件的原則： EnableFederationAccess 屬性設為 True，且 EnablePublicCloudAccess 原則設為 False。 接著，該命令會傳回一個符合我們準則 (FederationOnly) 的原則。 範例如下：
   
-```
+```powershell
 Identity                          : Tag:FederationOnly
 Description                       :
 EnableFederationAccess            : True
@@ -75,7 +74,7 @@ EnableOutsideAccess               : True
   
 既然您知道哪個原則將指派給 alex 之後，我們可以使用[Grant-csexternalaccesspolicy](https://go.microsoft.com/fwlink/?LinkId=523974) cmdlet 指派該原則。 範例如下：
   
-```
+```powershell
 Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName "FederationOnly"
 ```
 
@@ -83,7 +82,7 @@ Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName "FederationOnly
   
 及過濾原則和原則工作分派的範例，您不限於運用使用者帳戶一次。 例如，假設您需要可與同盟夥伴和 Windows Live 使用者進行通訊的所有使用者清單。 我們已經知道這些使用者均被指派外部使用者存取原則 FederationAndPICDefault。 由於我們知道，，您可以執行一個簡單的命令來顯示所有這些使用者的清單。 命令如下：
   
-```
+```powershell
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -eq "FederationAndPICDefault"} | Select-Object DisplayName
 ```
 
@@ -91,7 +90,7 @@ Get-CsOnlineUser -Filter {ExternalAccessPolicy -eq "FederationAndPICDefault"} | 
   
 若要設定所有使用者帳戶使用相同的原則，請使用此命令：
   
-```
+```powershell
 Get-CsOnlineUser | Grant-CsExternalAccessPolicy "FederationAndPICDefault"
 ```
 
@@ -99,7 +98,7 @@ Get-CsOnlineUser | Grant-CsExternalAccessPolicy "FederationAndPICDefault"
   
 做為其他範例，假設您已先前指派給 Alex FederationAndPICDefault 原則，現在您改變心意，但想他由全域外部存取原則來管理。 您明確不能將全域原則指派給任何人。 只有在不指派任何其他的個別使用者原則時，它才會使用。 因此，如果我們想要由全域原則來管理 alex 之後，您必須*取消指派*先前已指派給他任何個別使用者原則。 範例命令如下：
   
-```
+```powershell
 Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
 ```
 
@@ -108,8 +107,6 @@ Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
 若要停用使用 Windows PowerShell 的使用者帳戶，請使用 Azure Active Directory 指令程式來移除 Alex Skype for Business Online 授權。 如需詳細資訊，請參閱[停用 Office 365 PowerShell 與服務存取權](assign-licenses-to-user-accounts-with-office-365-powershell.md)。
   
 ## <a name="see-also"></a>另請參閱
-
-#### 
 
 [使用 Office 365 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
   

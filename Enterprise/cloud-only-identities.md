@@ -24,12 +24,12 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明如何建立使用者和群組，您的 Office 365 訂閱使用僅限雲端身分識別時。
-ms.openlocfilehash: 6815c89821216416379a27eb525e66b90b828ea8
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: 5991ec838321187b58f913e1707efb2ede9912fb
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39813411"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072275"
 ---
 # <a name="office-365-cloud-only-identities"></a>Office 365 僅限雲端身分識別
 
@@ -37,7 +37,7 @@ ms.locfileid: "39813411"
 
 僅限雲端身分識別，所有您的使用者、 群組和連絡人會儲存在您的 Office 365 訂閱的 Azure Active Directory (Azure AD) 租用戶。 以下是僅限雲端身分識別的基本元件。
  
-![](./media/about-office-365-identity/cloud-only-identity.png)
+![僅限雲端身分識別的基本元件](./media/about-office-365-identity/cloud-only-identity.png)
 
 使用者和其組織中的使用者帳戶可以數種方式進行分類。 例如，有些是員工，而且已永久的狀態。 有些是廠商、 承包商或協力廠商的暫時狀態。 有些是不有任何使用者帳戶，但必須仍可存取權授與特定的服務和資源，以支援互動與共同作業的外部使用者。 例如：
 

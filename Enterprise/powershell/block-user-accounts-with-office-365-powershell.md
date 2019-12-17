@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 封鎖使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 01/03/2019
+ms.date: 12/16/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -14,17 +14,15 @@ ms.custom:
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
 description: 說明如何使用 Office 365 PowerShell 來封鎖及解除封鎖對 Office 365 帳戶的存取。
-ms.openlocfilehash: 09cfdaf1485837713d03949cca456b9d07b66b00
-ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
+ms.openlocfilehash: 2ebed63de7cddd536b42000028cabd3c71cec31b
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39257664"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072245"
 ---
 # <a name="block-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 封鎖使用者帳戶
 
-**摘要：** 說明如何使用 Office 365 PowerShell 來封鎖及解除封鎖對 Office 365 帳戶的存取。
-  
 封鎖 Office 365 帳戶的存取權防止其他人使用的帳戶登入並存取服務，以及 Office 365 組織中的資料。 您可以使用 Office 365 PowerShell 來封鎖存取個別和多個使用者帳戶。
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
@@ -110,7 +108,6 @@ Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
-
     
 ### <a name="block-access-to-individual-user-accounts"></a>封鎖對個別使用者帳戶的存取
 
@@ -121,7 +118,7 @@ Set-MsolUser -UserPrincipalName <sign-in name of user account>  -BlockCredential
 ```
 
 >[!Note]
->PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+>PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
 此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。
@@ -146,11 +143,12 @@ Get-MsolUser -UserPrincipalName <sign-in name of user account> | Select DisplayN
 
 首先，建立文字檔，其中包含一個帳戶每一行上都像這樣：
     
-  ```powershell
+```powershell
 akol@contoso.com
 tjohnston@contoso.com
 kakers@contoso.com
-  ```
+```
+
 在下列命令，範例會將文字檔為 C:\My Documents\Accounts.txt。 取代的文字檔案的路徑和檔案名稱。
     
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
@@ -166,7 +164,7 @@ kakers@contoso.com
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 中設定使用者帳戶屬性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 10/07/2019
+ms.date: 12/16/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,17 +15,15 @@ ms.custom:
 - PowerShell
 ms.assetid: 30813f8d-b08d-444b-98c1-53df7c29b4d7
 description: 摘要： 使用 Office 365 PowerShell 來設定 Office 365 租用戶中的個別或多個使用者帳戶的內容。
-ms.openlocfilehash: 67ce7d3c57f286f0b2365aa2503fdf1c8bc13429
-ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
+ms.openlocfilehash: b9cd529cd5881d522285ff43a60e954bc9ebd193
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39257654"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072235"
 ---
 # <a name="configure-user-account-properties-with-office-365-powershell"></a>使用 Office 365 PowerShell 中設定使用者帳戶屬性
 
- **摘要：** 使用 Office 365 PowerShell 來設定 Office 365 租用戶中的個別或多個使用者帳戶的內容。
-  
 雖然您可以使用 Microsoft 365 系統管理中心來設定您的 Office 365 租用戶的使用者帳戶的內容，也可以使用 Office 365 PowerShell 並執行動作無法在系統管理中心的一些事項。
   
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
@@ -76,16 +74,17 @@ ms.locfileid: "39257654"
 若要顯示您的使用者帳戶的使用者主體名稱，請執行下列命令。
   
 ```powershell
-Get-AzureADUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalName | More
+Get-AzureADUser | Sort UserPrincipalName | Select UserPrincipalName | More
 ```
 
 此命令會指示 Office 365 PowerShell 來：
   
 - 取得所有使用者帳戶 ( **Get AzureADUser** ) 上的資訊，並將它傳送給下一個命令 ( **|** )。
     
-- 依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將它傳送給下一個命令 ( **|** )。
+- 依字母順序排序清單中的使用者主體名稱 (**排序 UserPrincipalName** ) 並將它傳送給下一個命令 ( **|** )。
     
-- 顯示 User Principal Name 屬性的每個帳戶 ( **Select-object UserPrincipalName** )。
+- 顯示 User Principal Name 屬性的每個帳戶 (**選取 UserPrincipalName** )。
+
 - 一次 （**更多**），顯示其一個畫面。
     
 此命令會列出您的所有帳戶。 如果您想要顯示使用者主體名稱根據其顯示帳戶名稱 （第一個及最後一個名稱）、 填滿下 **$userName**變數中 (移除\<和 > 字元)，然後執行下列命令：
@@ -129,7 +128,7 @@ Get-AzureADUser | Set-AzureADUser -UsageLocation "FR"
 若要變更的一組特定的使用者帳戶屬性，您可以使用**Get-AzureADUser**、**位置**及**組 AzureADUser**指令程式的組合。 下列範例會變更為法國會計部門中的所有使用者的使用狀況位置：
   
 ```powershell
-Get-AzureADUser | Where-Object {$_.Department -eq "Accounting"} | Set-AzureADUser -UsageLocation "FR"
+Get-AzureADUser | Where {$_.Department -eq "Accounting"} | Set-AzureADUser -UsageLocation "FR"
 ```
 
 此命令會指示 Office 365 PowerShell 來：
@@ -142,17 +141,17 @@ Get-AzureADUser | Where-Object {$_.Department -eq "Accounting"} | Set-AzureADUse
     
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-若要設定使用者帳戶的屬性與 Microsoft Azure Active Directory 模組的 Windows PowerShell，您可以使用 Set-msoluser cmdlet，並指定要設定或變更的內容。 
+若要設定使用者帳戶的屬性與 Microsoft Azure Active Directory 模組的 Windows PowerShell，您可以使用**Set-msoluser** cmdlet，並指定要設定或變更的內容。 
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
   
 >[!Note]
->PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
+>PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
 ### <a name="change-properties-for-a-specific-user-account"></a>變更特定使用者帳戶內容
 
-若要設定特定的使用者帳戶的內容，您可以使用[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx) cmdlet，並指定要設定或變更的內容。 
+若要設定特定的使用者帳戶的內容，您可以使用[Set-msoluser](https://docs.microsoft.com/previous-versions/azure/dn194136(v=azure.100)) cmdlet，並指定要設定或變更的內容。 
 
 使用 **-UserPrincipalName**參數識別的帳戶，並設定或變更與其他參數的特定屬性。 以下是最常見的參數清單。
   
@@ -190,21 +189,21 @@ Get-AzureADUser | Where-Object {$_.Department -eq "Accounting"} | Set-AzureADUse
     
     這是 ISO 3166-1 alpha-2http (A2) 兩個字母國家或地區碼。
     
-如需其他參數，請參閱[Set-msoluser](https://msdn.microsoft.com/library/azure/dn194136.aspx) 。
+如需其他參數，請參閱[Set-msoluser](https://docs.microsoft.com/previous-versions/azure/dn194136(v=azure.100)) 。
 
 若要查看您的所有使用者的使用者主體名稱，請執行下列命令。
   
 ```powershell
-Get-MSolUser | Sort-Object UserPrincipalName | Select-Object UserPrincipalName | More
+Get-MSolUser | Sort UserPrincipalName | Select UserPrincipalName | More
 ```
 
 此命令會指示 Office 365 PowerShell 來：
   
 - 取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊，並將它傳送給下一個命令 ( **|** )。
     
-- 依字母順序排序清單中的使用者主體名稱 ( **Sort 物件 UserPrincipalName** ) 並將它傳送給下一個命令 ( **|** )。
+- 依字母順序排序清單中的使用者主體名稱 (**排序 UserPrincipalName** ) 並將它傳送給下一個命令 ( **|** )。
     
-- 顯示 User Principal Name 屬性的每個帳戶 ( **Select-object UserPrincipalName** )。
+- 顯示 User Principal Name 屬性的每個帳戶 (**選取 UserPrincipalName** )。
     
 - 一次 （**更多**），顯示其一個畫面。
     
@@ -246,24 +245,24 @@ Get-MsolUser | Set-MsolUser -UsageLocation "FR"
     
 ### <a name="change-properties-for-a-specific-set-of-user-accounts"></a>變更一組特定的使用者帳戶的內容
 
-若要變更的一組特定的使用者帳戶屬性，您可以使用**Get-msoluser**、 **Where-object cmdlet**，以及**Set-msoluser** cmdlet 的組合。 下列範例會變更為法國會計部門中的所有使用者的使用狀況位置：
+若要變更的一組特定的使用者帳戶屬性，您可以使用**Get-msoluser**、**位置**及**Set-msoluser** cmdlet 的組合。 下列範例會變更為法國會計部門中的所有使用者的使用狀況位置：
   
 ```powershell
-Get-MsolUser | Where-Object {$_.Department -eq "Accounting"} | Set-MsolUser -UsageLocation "FR"
+Get-MsolUser | Where {$_.Department -eq "Accounting"} | Set-MsolUser -UsageLocation "FR"
 ```
 
 此命令會指示 Office 365 PowerShell 來：
   
 - 取得所有使用者帳戶 ( **Get-msoluser** ) 上的資訊，並將它傳送給下一個命令 ( **|** )。
     
-- 尋找所有的使用者帳戶具有其 Department 屬性設為 「 會計 」 ( **Where-object {$_。Department-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。
+- 尋找所有使用者帳戶具有 Department 屬性設為"Accounting"(**其中 {$_。Department-eq"Accounting"}** ) 並將產生的資訊傳送給下一個命令 ( **|** )。
     
 - 將使用者位置設定為法國 ( **Set-msoluser-UsageLocation"FR"** )。
     
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

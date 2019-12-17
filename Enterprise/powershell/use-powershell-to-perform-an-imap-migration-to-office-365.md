@@ -12,12 +12,12 @@ ms.collection: Ent_O365
 ms.custom: ''
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
 description: 摘要：了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
-ms.openlocfilehash: b6c68dc611d22579f81db838b2b5d08e99f7519a
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 411c60f78284c4d7405cd0a1b1d737f99155c1d3
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38746266"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072465"
 ---
 # <a name="use-powershell-to-perform-an-imap-migration-to-office-365"></a>使用 PowerShell 來執行 IMAP 移轉至 Office 365
 
@@ -204,7 +204,7 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 
 電子郵件系統使用稱為 MX 記錄的 DNS 記錄來找出要將電子郵件傳遞到哪裡。在電子郵件移轉過程中，您的 MX 記錄指向來源電子郵件系統。既然電子郵件已移轉至 Office 365，現在該將 MX 記錄指向 Office 365。這有助於確保電子郵件會傳遞至您的 Office 365 信箱。藉由移動 MX 記錄，您也可以在準備好時關閉舊的電子郵件系統。 
   
-我們針對許多 DNS 提供者提供[變更 MX 記錄](https://go.microsoft.com/fwlink/p/?LinkId=279163)的特定指示。如果您的 DNS 提供者不在其中，或如果您想要了解一般指示，我們也提供[在任一 DNS 主機服務提供者建立 Office 365 的 DNS 記錄](https://go.microsoft.com/fwlink/?LinkId=397449)。
+我們針對許多 DNS 提供者提供變更 MX 記錄的特定指示。 如果您的 DNS 提供者不在其中，或如果您想要了解一般指示，我們也提供[在任一 DNS 主機服務提供者建立 Office 365 的 DNS 記錄](https://go.microsoft.com/fwlink/?LinkId=397449)。
   
 您的客戶與合作夥伴的電子郵件系統最多可能需要 72 小時才能辨識已變更的 MX 記錄。請至少等待 72 小時，再繼續進行下一個工作：步驟 6：刪除 IMAP 移轉批次。 
   

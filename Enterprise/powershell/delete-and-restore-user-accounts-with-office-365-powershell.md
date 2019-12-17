@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 刪除使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 01/03/2019
+ms.date: 12/16/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: 209c9868-448c-49bc-baae-11e28b923a39
 description: 了解如何使用 Office 365 PowerShell 來刪除 Office 365 使用者帳戶。
-ms.openlocfilehash: e62c06981a861580804dde852ad3da7bd729fdbe
-ms.sourcegitcommit: 4b057db053e93b0165f1ec6c4799cff4c2852566
+ms.openlocfilehash: 0cdc48f9570c994ec0a55d37d013a084b495f259
+ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "39257644"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40072515"
 ---
 # <a name="delete-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 刪除使用者帳戶
 
@@ -35,10 +35,6 @@ ms.locfileid: "39257644"
 ```powershell
 Remove-AzureADUser -ObjectID <sign-in name>
 ```
-
->[!Note]
->PowerShell 核心不支援的 Microsoft Azure Active Directory 模組的 Windows PowerShell 模組和具有**Msol** cmdlet 在其名稱。 若要繼續使用這些 cmdlet，您必須從 Windows PowerShell 執行它們。
->
 
 此範例會移除使用者帳戶 fabricec@litwareinc.com。
   
@@ -76,12 +72,15 @@ Remove-AzureADUser -ObjectID (Get-AzureADUser | where {$_.DisplayName -eq $userN
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
-
 若要刪除使用者帳戶，請使用下列語法：
   
 ```powershell
 Remove-MsolUser -UserPrincipalName <sign-in name>
 ```
+
+>[!Note]
+>PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
+>
 
 此範例會刪除使用者帳戶 BelindaN@litwareinc.com。
   
@@ -114,9 +113,8 @@ Restore-MsolUser -UserPrincipalName BelindaN@litwareinc.com
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 Office 365 PowerShell 管理使用者帳戶](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   
 [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
-
