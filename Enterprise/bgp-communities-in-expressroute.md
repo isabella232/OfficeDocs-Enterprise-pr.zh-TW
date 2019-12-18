@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
 description: 連線至 Office 365 使用 Azure ExpressRoute 根據特定代表其中部署 Office 365 端點的網路的 IP 子網路的 BGP 廣告。 由於 Office 365 和構成 Office 365 服務數目的全域性質，客戶通常需要來管理他們接受其網路的廣告。 減少的 IP 子網路。稱為 IP 首碼整個本文，以配合 BGP 網路管理術語的其餘部分客戶做結尾下列目標：
-ms.openlocfilehash: e9b9d78df4898c1bb212b62444e5a9911a0e548c
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: 57e8e7a2fa3eb5ecd3268219e6f4a6bc00a08cb0
+ms.sourcegitcommit: f18f75dba4cbec557fa094bd1cebd8c5cc4752c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38077932"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40085178"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>使用 BGP 社群中 ExpressRoute for Office 365 案例
 
@@ -40,9 +40,9 @@ ms.locfileid: "38077932"
 
 |**服務**|**BGP 社群值**|**附註**|
 |:-----|:-----|:-----|
-|exchange\*  <br/> |12076:5010  <br/> |包含 Exchange 和 EOP 服務\*  <br/> |
-|sharepoint\*  <br/> |12076:5020  <br/> |SharePoint Online  <br/> |
-|商務用 skype\*  <br/> |12076:5030  <br/> |商務用 Skype Online  <br/> |
+|Exchange Online\*  <br/> |12076:5010  <br/> |包含 Exchange 和 EOP 服務\*  <br/> |
+|SharePoint Online\*  <br/> |12076:5020  <br/> |SharePoint Online  <br/> |
+|商務用 Skype\*  <br/> |12076:5030  <br/> |Skype 商務線上 & 是 Micorosoft Teams 服務  <br/> |
 |其他 Office 365 服務\*  <br/> |12076:5100  <br/> |Read Office 365 入口網站服務包含 Azure Active Directory （驗證和目錄同步處理案例）  <br/> |
 |\*[Office 365 端點](https://aka.ms/o365endpoints)文章會詳細說明包含在 ExpressRoute 服務案例的範圍。  <br/> \*\*其他服務和 BGP 社群值可能在未來新增。 [請參閱 BGP 社群的目前的清單](https://azure.microsoft.com/documentation/articles/expressroute-routing/)。  <br/> |
 
@@ -79,7 +79,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
 
 |**使用 BGP 社群標記**|**透過 Azure ExpressRoute 路由傳送的功能**|**所需的網際網路路由**|
 |:-----|:-----|:-----|
-|Exchange、 SharePoint、 商務用 Skype&amp;其他服務  <br/> （12076:5010、 12076:5020、 12076:5030、 12076:5100）  <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint Online&amp;商務用 OneDrive  <br/> Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> Office 365 入口網站、 Office 365 驗證、&amp;在瀏覽器中的 Office  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/> |
+|Exchange、 Skype for Business & Microsoft Teams、 SharePoint、&amp;其他服務  <br/> （12076:5010、 12076:5020、 12076:5030、 12076:5100）  <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint Online&amp;商務用 OneDrive  <br/> Skype SIP 信號，下載項目，voice、 視訊及桌面共用  <br/> Office 365 入口網站、 Office 365 驗證、&amp;在瀏覽器中的 Office  <br/> | DNS、 CRL， &amp; CDN 要求  <br/>  其他所有未特別透過 Azure ExpressRoute 支援的 Office 365 服務  <br/>  所有其他 Microsoft 雲端服務  <br/> |
 
 ## <a name="key-planning-considerations-to-using-bgp-communities"></a>主要的規劃考量，以使用 BGP 社群
 
@@ -91,7 +91,7 @@ Woodgrove Bank 是數個 Microsoft 雲端服務，包括 Office 365 的客戶。
 
 - Azure ExpressRoute 不支援根據指派給 BGP 社群的客戶的 Microsoft 的網路上的任何動作。
 
-- Office 365are 所使用的 IP 前置詞只標示服務特定 BGP 社群的值，不支援特定的 BGP 社群的位置。 Office 365 服務都通用的性質，篩選依據租用戶的位置的前置詞或不支援在 Office 365 雲端內的資料。 建議的方法是設定您的網路，以協調最短或最慣用的網路路徑，從使用者的網路位置，成 Microsoft 全球網路，不論的實體位置的 Office 365 服務的 IP 位址他們正在要求。
+- Office 365 所使用的 IP 前置詞只標示出使用服務特定的 BGP 社群值，不支援位置特定 BGP 社群。 Office 365 服務都通用的性質，篩選依據租用戶的位置的前置詞或不支援在 Office 365 雲端內的資料。 建議的方法是設定您的網路，以協調最短或最慣用的網路路徑，從使用者的網路位置，成 Microsoft 全球網路，不論的實體位置的 Office 365 服務的 IP 位址他們正在要求。
 
 - 包含在每個 BGP 社群值中的 IP 前置詞代表包含值相關聯的 Office 365 應用程式的 IP 位址的子網路。 在某些情況下，多個 Office 365 應用程式都有內產生的 IP 子網路的 IP 位址的前置詞存在於一個以上的社群值中。 這是預期，但是很少，因為配置分散情形的行為，並不會影響前置詞計數或頻寬管理目標。 客戶可以鼓勵使用 「 允許所需 」 方法而不是 「 拒絕什麼，就不需要 「 時善用 BGP 社群的 Office 365 的影響降到最低。
 

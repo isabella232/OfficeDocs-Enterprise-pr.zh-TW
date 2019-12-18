@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 21717ce0c8e9e51eaf090a449d35a281722f9600
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 31e1365467729753cec358b4fb33462894cdcbb8
+ms.sourcegitcommit: 9dfaeff7a1625a7325bb94f3eb322fc161ce066b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39919256"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "40261356"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -121,7 +121,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 來賓使用者無法新增從站台。 您必須將它們新增使用網頁型 Outlook。
 
-若要邀請來賓至網站
+若要邀請給群組的來賓
 1. 在 Outlook 網頁版、 在 [**群組**] 中按一下您要新增成員的群組。
 2. 開啟群組連絡人卡片、，然後按一下 [**更多選項]** （...）] 下的 [**新增成員**。
 3. 輸入您想要邀請，來賓電子郵件地址，然後按一下 [**新增]**。
@@ -133,5 +133,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 
-[建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)）
+[建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)
+
+[使用受管理的來賓建立 B2B 外部網路](b2b-extranet.md)
 

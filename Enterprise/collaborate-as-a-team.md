@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
 description: 了解如何在小組中的來賓與共同作業。
-ms.openlocfilehash: 9920bb57f31a36dcc4f903e2f26eccbf41a522db
-ms.sourcegitcommit: 7e65640fb1a86858a95c9ef0edbb58d0f171c5ee
+ms.openlocfilehash: 2743b1062aebf5e8fbc1db191fcf36f4091bc1f3
+ms.sourcegitcommit: f18f75dba4cbec557fa094bd1cebd8c5cc4752c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "39886522"
+ms.lasthandoff: 12/17/2019
+ms.locfileid: "40085198"
 ---
 # <a name="collaborate-with-guests-in-a-team"></a>在小組中與來賓共同作業
 
@@ -108,7 +108,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 選擇 [當使用者共用檔案及資料夾，依預設會選取連結的類型：
 
-- **任何人] 連結**-如果您預期與未驗證的人共用大量檔案和資料夾選擇此選項。 如果您想要允許*任何人*的連結，但擔心意外的未驗證共用，請考慮下列其中一個其他選項為預設值。 如果您已啟用**的任何人**共用，此連結類型只有。
+- **任何人] 連結**-如果您預期進行大量的未驗證的共用的檔案及資料夾選擇此選項。 如果您想要允許*任何人*的連結，但擔心意外的未驗證共用，請考慮下列其中一個其他選項為預設值。 如果您已啟用**的任何人**共用，此連結類型只有。
 - **只有在您的組織中的人員**-如果您預期大部分的檔案和資料夾共用您的組織內的人員都必須選擇此選項。
 - **特定人員**-如果您預期執行許多檔案和資料夾與來賓共用，請考慮此選項。 這種類型的連結與來賓運作，以及需要進行驗證。
  
@@ -167,10 +167,10 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 ## <a name="see-also"></a>另請參閱
 
-[最佳做法與未驗證的使用者共用檔案和資料夾](best-practices-anonymous-sharing.md)
+[與未驗證使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
 
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 
 [建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)）
 
-
+[使用受管理的來賓建立 B2B 外部網路](b2b-extranet.md)

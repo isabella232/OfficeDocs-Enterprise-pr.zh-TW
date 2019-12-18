@@ -3,7 +3,7 @@ title: 將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 09/26/2019
+ms.date: 12/17/2019
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,17 +18,15 @@ ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
 description: 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-ms.openlocfilehash: d78bd36807a87cced3fdc8ac8bc06e6886970861
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: ea2c889834c70095474fbc2957768746d92fe8cc
+ms.sourcegitcommit: 9dfaeff7a1625a7325bb94f3eb322fc161ce066b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072545"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "40261336"
 ---
 # <a name="assign-licenses-to-user-accounts-with-office-365-powershell"></a>將授權指派給使用 Office 365 PowerShell 的使用者帳戶
 
-**摘要：** 如何使用 Office 365 PowerShell 來將 Office 365 授權指派給未經授權的使用者。
-  
 使用者無法使用任何 Office 365 服務，直到其帳戶具有已指派授權給授權計劃。 您可以使用 Office 365 PowerShell 來快速將授權指派給未經授權的帳戶。 
 
 >[!Note]
@@ -78,7 +76,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $LicensesToAssign
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
-執行**Get-msolaccountsku**命令，以檢視您組織中每個計劃可用的授權計劃與可用授權數量。 在每個方案可用授權數量是**ActiveUnits** - **WarningUnits** - **ConsumedUnits**。 如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。
+執行`Get-MsolAccountSku`命令，以檢視您組織中每個計劃可用的授權計劃與可用授權數量。 在每個方案可用授權數量是**ActiveUnits** - **WarningUnits** - **ConsumedUnits**。 如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。
 
 >[!Note]
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
@@ -126,7 +124,7 @@ Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "<AccountSkuId>"
 Set-MsolUserLicense -UserPrincipalName "belindan@litwareinc.com" -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
-若要將授權指派給多位未經授權的使用者，請執行此命令。
+若要將授權指派給所有未經授權的使用者，執行此命令。
   
 ```powershell
 Get-MsolUser -All -UnlicensedUsersOnly [<FilterableAttributes>] | Set-MsolUserLicense -AddLicenses "<AccountSkuId>"
