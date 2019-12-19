@@ -1,7 +1,7 @@
 ---
 title: Office 365 URL 和 IP 位址範圍
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: laurawi
+author: LauraWi
 manager: laurawi
 ms.date: 11/27/2019
 audience: Admin
@@ -22,12 +22,12 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 摘要：Office 365 需要連線到網際網路。客戶必須可使用 Office 365 方案取得下列端點，包括 Government Community Cloud (GCC)。
 hideEdit: true
-ms.openlocfilehash: fe88ef5a7613c385363136dbdb5ac51855ab4c5e
-ms.sourcegitcommit: 460c722d63e7e604ef0a57ec18fa7900fa6a4157
+ms.openlocfilehash: eecd07a471c1ca07387e89d7c3b4dbca4277e14d
+ms.sourcegitcommit: e70808dccc1622d18b1cc5e1e4babd4238112838
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "39655817"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40744487"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL 和 IP 位址範圍
 
