@@ -194,6 +194,7 @@
 ##### [未經驗證的共用](best-practices-anonymous-sharing.md)
 ##### [限制意外暴露](sharing-limit-accidental-exposure.md)
 ##### [安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)
+#### [建立 B2B 外部網路](b2b-extranet.md)
 
 ## 裝置
 ### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
