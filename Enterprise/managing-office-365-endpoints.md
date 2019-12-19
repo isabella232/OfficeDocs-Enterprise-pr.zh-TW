@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: 99445e6feac84a6091888422039e8ba655d246c9
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: fb0f6640ee9de07bb92b9093a94bb7e4fd111a54
+ms.sourcegitcommit: e70808dccc1622d18b1cc5e1e4babd4238112838
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072485"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "40744507"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -133,14 +133,14 @@ Office 365 連線的相關的常見問題集的系統管理員問題：
   
 與超過 2500 ISP 對等關係全域和 70 點的目前狀態，我們取得從您的網路應該一致。 無法傷害花幾分鐘的時間，並確定您的 ISP 對等關係是最最佳的作法[以下是一些範例](https://blogs.technet.microsoft.com/onthewire/2017/03/22/__guidance/)的良好且不會所以良好對等手有其專屬到我們的網路。
   
-### <a name="i-see-network-requests-to-ip-addresses-not-on-the-published-list-do-i-need-to-provide-access-to-them"></a>我不是在 [發佈] 清單上看到的 IP 位址的網路要求，我需要提供給他們的存取權？
 <a name="bkmk_MissingIP"> </a>
+### <a name="i-see-network-requests-to-ip-addresses-not-on-the-published-list-do-i-need-to-provide-access-to-them"></a>我不是在 [發佈] 清單上看到的 IP 位址的網路要求，我需要提供給他們的存取權？
 
 我們只會提供您應該將直接路由至 Office 365 伺服器的 IP 位址。 這不是所有您會看到的網路要求的 IP 位址的完整清單。 您會看到 Microsoft 和協力廠商擁有、 發佈、 IP 位址的網路要求。 這些 IP 位址會以動態方式產生或受管理的方式，可防止及時通知他們變更時。 如果您的防火牆不允許存取這些網路要求的 fqdn 均為基礎，可用於 PAC 或 WPAD 檔案管理要求。
   
 請參閱 < IP 相關聯 Office 365 上您想要的詳細資訊嗎？
   
-1. 請檢查是否 IP 位址會包含在較大的發佈範圍使用[CIDR [小算盤]](https://www.ipaddressguide.com/cidr)。
+1. 檢查是否 IP 位址會包含在較大的發佈範圍使用 CIDR 小算盤，此類的[IPv4](https://www.ipaddressguide.com/cidr)或 [IPv6]https://www.ipaddressguide.com/ipv6-cidr)。
 2. 請參閱協力廠商是否擁有 IP 與[whois 查詢](https://dnsquery.org/)。 如果是 Microsoft 所擁有，可能是內部的協力廠商。
 3. 檢查憑證，在瀏覽器中連線至 IP 位址使用*HTTPS://\<IP_ADDRESS\> * ，檢查憑證，以了解哪些網域相關聯的 IP 位址上列出的網域。 如果它是 Microsoft 所擁有的 IP 位址，而且不在清單上的 Office 365 IP 位址，很可能的 IP 位址是與 Microsoft CDN 例如*MSOCDN.NET*或不含已發佈的 IP 資訊的另一個 Microsoft 網域相關聯。 如果您發現在憑證上的網域是其中一個我們宣告清單的 IP 位址，請讓我們知道。
 
@@ -159,8 +159,8 @@ Proxy 伺服器會驗證這在上述範例中是 serviceA.office.com 初始 URL�
 
 硬式編碼設定或間接的 Office 365 Fqdn 為基礎的核准清單不建議使用，不受支援的 Microsoft，和已知會造成客戶連線問題。 封鎖 CNAME 重新導向，或，否則不正確的 DNS 解決方案解決 Office 365 DNS 項目，就可以解決透過 DNS 條件轉寄 （範圍限定為直接使用 Office 365 Fqdn） 與 DNS 遞迴啟用。 許多協力廠商周邊網路產品原生整合建議他們使用[Office 365 IP 位址和 URL Web 服務](https://docs.microsoft.com/office365/enterprise/office-365-ip-web-service)的設定中的 Office 365 端點核准清單。
 
-### <a name="why-do-i-see-names-such-as-nsatcnet-or-akadnsnet-in-the-microsoft-domain-names"></a>為什麼看名稱，例如 nsatc.net 或 akadns.net Microsoft 網域名稱？
 <a name="bkmk_akamai"> </a>
+### <a name="why-do-i-see-names-such-as-nsatcnet-or-akadnsnet-in-the-microsoft-domain-names"></a>為什麼看名稱，例如 nsatc.net 或 akadns.net Microsoft 網域名稱？
 
 Office 365 和其他 Microsoft 服務使用幾個協力廠商服務，例如 Akamai 和 MarkMonitor 改善您的 Office 365 使用經驗。 保留給予您的最佳經驗，我們可能會變更這些服務在未來。 協力廠商網域可能裝載內容，例如 CDN，或他們可能會主控服務，例如地理位置的流量管理服務。 目前所使用的服務包括：
   
@@ -182,8 +182,8 @@ Office 365 和其他 Microsoft 服務使用幾個協力廠商服務，例如 Aka
 *.edgesuite.net
 ```
 
-### <a name="i-have-to-have-the-minimum-connectivity-possible-for-office-365"></a>我必須要有可能的最小連線的 Office 365
 <a name="bkmk_thirdparty"> </a>
+### <a name="i-have-to-have-the-minimum-connectivity-possible-for-office-365"></a>我必須要有可能的最小連線的 Office 365
 
 此為 Office 365 內建函式，在網際網路上的服務套件，可靠性與可用性 promise 取決於許多標準的網際網路服務不會出現。 例如，DNS、 CRL，等 Cdn 的標準網際網路服務必須能夠使用 Office 365，就像它們必須能夠使用大部分現代的網際網路服務。
 
@@ -200,8 +200,8 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
   
 如果您嘗試使用 Office 365，並會尋找第三方服務無法存取您會想要[確保標示為必要或選用本文中的所有 Fqdn 則都允許通過 proxy 和防火牆](urls-and-ip-address-ranges.md)。
   
-### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>如何封鎖對 Microsoft 的消費者服務存取權？
 <a name="bkmk_consumer"> </a>
+### <a name="how-do-i-block-access-to-microsofts-consumer-services"></a>如何封鎖對 Microsoft 的消費者服務存取權？
 
 限制存取我們的消費者服務應自行承擔風險。 限制存取權*login.live.com* FQDN 為封鎖消費者服務僅可靠的方法。 廣泛的服務，包括非消費者服務，例如 MSDN、 TechNet，與其他人使用此 FQDN。 此 FQDN 也由 Microsoft 支援服務的安全檔案 Exchange 程式，需要傳輸檔案，以利 Microsoft 產品的疑難排解。  限制存取此 FQDN，可能會導致需要也包含這些服務相關聯的網路要求規則的例外狀況。
   
