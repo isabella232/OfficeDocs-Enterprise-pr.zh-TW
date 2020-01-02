@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: 97fc83db3ceac1a5c3aca65f8b780a3f7841528c
-ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
+ms.openlocfilehash: 6c5b576b0d099f4a46aca63a72390d27ae39984b
+ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962460"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "40923875"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -30,16 +30,16 @@ ms.locfileid: "39962460"
 
 |**註冊國家/地區的客戶**|**要求期間開始**|**要求期限**|
 |:-----|:-----|:-----|
-|日本  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
-|澳洲請紐西蘭斐濟群島  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
-|印度  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
-|加拿大  <br/> |2016 年 8 月 1日日  <br/> |2016 年 10 月 31日日  <br/> |
-|英國  <br/> |2017 年 3 月 15日日  <br/> |2017 年 9 月 15日日  <br/> |
-|南韓  <br/> |2017 年 5 月 1日日  <br/> |2017 年 10 月 31日日  <br/> |
-|法國  <br/> |2018 年 3 月 14日日  <br/> |2018 年 9 月 15日日  <br/> |
-|阿拉伯聯合大公國  <br/> |2019 年 7 月 15 日  <br/> |2020 年 1 月 31 日  <br/> |
-|南非  <br/> |2019 年 7 月 25 日  <br/> |2020 年 1 月 31 日  <br/> |
-|瑞士，列支敦斯登  <br/> |2019 年 12 月 10日日  <br/> |2020 年 6 月 30 日  <br/> |
+|日本  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|澳洲請紐西蘭斐濟群島  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|印度  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|加拿大  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|英國  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|南韓  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|法國  <br/> |2020 年 1 月 1 日  <br/> |2020 年 6 月 30 日  <br/> |
+|阿拉伯聯合大公國  <br/> |2019 年 7 月 15 日  <br/> |2020 年 6 月 30 日  <br/> |
+|南非  <br/> |2019 年 7 月 25 日  <br/> |2020 年 6 月 30 日  <br/> |
+|瑞士，列支敦斯登  <br/> |2019 年 12 月 10 日  <br/> |2020 年 6 月 30 日  <br/> |
 |德國  <br/> |計劃  <br/> |計劃  <br/> |
    
 ## <a name="how-to-request-a-move"></a>如何要求移動
@@ -74,7 +74,7 @@ ms.locfileid: "39962460"
   
 ## <a name="microsoft-teams"></a>Microsoft Teams
 
-Microsoft 小組聊天和通道訊息資料移轉支援會新增至 Office 365 本機移轉計劃。  我們要開啟程式註冊 2020 年 1 月中的所有合格的客戶，包括客戶先前選擇加入集以進行 Exchange Online 和 SharePoint Online/OneDrive for Business 移轉。  我們將公開在 Microsoft 365 系統管理中心中加入的控制項，並將通知傳送給所有合格客戶訊息中心。   
+截至年 1 月 2020年在適用的 Office 365 國家/地區的客戶可以選擇集以進行移轉的 Microsoft Teams 聊天服務資料。  已重新開啟後或延伸所有合格的國家/地區提供客戶機會，請考慮使用範圍中的 Microsoft Teams 的早期移轉程式選擇加入時間表。   
 
 ## <a name="optional-actions-before-you-request-a-move"></a>選用的動作，您要求移動之前
 

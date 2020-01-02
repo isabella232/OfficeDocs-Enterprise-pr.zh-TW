@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 description: 以下是對一般問題的回答關於將核心資料移至新的資料中心地理位置。
-ms.openlocfilehash: fd133dfb28ae99115198977e2e6d637a872078d8
-ms.sourcegitcommit: 6639b0f0171f7552111267a64d6b199755bf34fc
+ms.openlocfilehash: cea25e2e3a400c2bcf76c2dbe13c4f7ba1a7b884
+ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38756582"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "40923845"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -50,6 +50,14 @@ ms.locfileid: "38756582"
 資料移動是使用者的影響降至最低的後端服務作業。 可能會受到影響的功能會列在[期間和之後資料移動](during-and-after-your-data-move.md)。 我們將遵守[Microsoft Online Services 服務層級協議 (SLA)](https://go.microsoft.com/fwlink/p/?LinkId=523897)可用性讓沒有任何客戶需要準備，或在移動期間監視的項目。 
   
 所有 Office 365 服務中的資料中心，都執行相同的版本，因此您可以確定的一致的功能。 整個程序完全支援您的服務。
+
+## <a name="what-is-in-scope-for-teams-migration"></a>什麼是在範圍內的 Teams 移轉？
+
+除了 Exchange Online、 SharePoint Online 和商務用 OneDrive;Microsoft 會將 Teams 資料移轉至本機資料中心。  
+- 小組聊天訊息，包括私人郵件和通道訊息。 
+- 小組聊天中所用的圖像。 
+
+Teams 檔案會儲存在 SharePoint Online 與小組聊天檔案會儲存在商務用 OneDrive。  語音信箱、 行事曆、 聊天歷程記錄，以及連絡人會儲存在 Exchange Online。  在許多情況下，Exchange Online、 SharePoint Online 和商務用 OneDrive 已由在本機的資料中心地理位置中客戶和也是 Office 365 移轉程式合格客戶的國家/地區的一部分。
   
 ## <a name="what-is-the-impact-of-having-different-services-located-in-different-geos"></a>具有不同服務位於不同 geos 的影響為何？
 
@@ -135,7 +143,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
 ## <a name="will-office-365-tenants-hosted-in-the-new-datacenters-be-available-to-users-outside-of-the-country"></a>Office 365 租用戶中新的資料中心主控可以外的國家/地區的使用者？
   
-答：是。 可以。 Microsoft 的維護大型的全球網路與在具有多個 2700 網際網路服務提供者 (Isp) 的對等協議與世界各地 35 國家/地區的多個 130 位置中的公用網際網路連線。 使用者無法從任何地方網際網路上存取的資料中心。
+答： 是的。 Microsoft 的維護大型的全球網路與在具有多個 2700 網際網路服務提供者 (Isp) 的對等協議與世界各地 35 國家/地區的多個 130 位置中的公用網際網路連線。 使用者無法從任何地方網際網路上存取的資料中心。
 
 ## <a name="my-tenant-is-configured-for-office-365-multi-geohttpsakamsmulti-geo--can-i-still-enroll-in-my-tenant-in-the-office-365-move-program-to-change-my-default-geo-and-move-any-user-not-in-a-satellite-region-to-the-new-default-geo"></a>我的租用戶已針對[Office 365 多地理位置](https://aka.ms/multi-geo)。  我還是註冊 Office 365 移動在程式中變更我的預設地理位置，並將任何使用者，而不是以衛星區域移至新的預設地理我租用戶中可以嗎？
 

@@ -13,12 +13,12 @@ search.appverid:
 localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 description: 資料移動是使用者的影響降至最低的後端作業。 Microsoft 會移每個服務和相關聯的資料租用戶至新的資料中心地理位置時，不不需要任何動作。 資料傳輸和驗證發生在背景事先與最不會影響使用者。
-ms.openlocfilehash: b445397f6ce5b3c5178093ed971230e2a8640d1d
-ms.sourcegitcommit: 09b3a302c0c9a0370dd86d111c7d5e63cc39a9a0
+ms.openlocfilehash: f98d3a9aaef1197b1f424ce8cbd23b3d18b7ef2b
+ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39959278"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "40923855"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -32,18 +32,21 @@ ms.locfileid: "39959278"
 
 |**註冊國家/地區的客戶**|**完成的所有移動**|
 |:-----|:-----|
-|澳洲請紐西蘭斐濟群島  <br/> |2017 年 10 月 31日日  <br/> |
-|日本  <br/> |2018 年 10 月 31日日  <br/> |
-|印度  <br/> |2018 年 10 月 31日日  <br/> |
-|加拿大  <br/> |2019 年 6 月 30日日  <br/> |
-|南韓  <br/> |2018 年 10 月 31日日  <br/> |
-|英國  <br/> |2019 年 9 月 15日日  <br/> |
-|法國  <br/> |2020 年 9 月 15 日  <br/> |
-|阿拉伯聯合大公國  <br/> |2022 年 2 月 1 日  <br/> |
-|南非  <br/> |2022 年 2 月 1 日  <br/> |
+|澳洲請紐西蘭斐濟群島  <br/> |2022 年 7 月 1 日  <br/> |
+|日本  <br/> |2022 年 7 月 1 日  <br/> |
+|印度  <br/> |2022 年 7 月 1 日  <br/> |
+|加拿大  <br/> |2022 年 7 月 1 日  <br/> |
+|南韓  <br/> |2022 年 7 月 1 日  <br/> |
+|英國  <br/> |2022 年 7 月 1 日  <br/> |
+|法國  <br/> |2022 年 7 月 1 日  <br/> |
+|阿拉伯聯合大公國  <br/> |2022 年 7 月 1 日  <br/> |
+|南非  <br/> |2022 年 7 月 1 日  <br/> |
 |瑞士，列支敦斯登  <br/> |2022 年 7 月 1 日  <br/> |
 |德國  <br/> |計劃  <br/> |
-   
+
+> [!NOTE]
+> 在適用的 Office 365 國家/地區的客戶可能會選擇加入的 Microsoft Teams 聊天服務資料從移轉 2020 年 1 月 1，透過 2020 年 6 月 30，這也會訊號適用於任何其他合格的工作負載的移轉。  Exchange Online 和 SharePoint Online/OneDrive for Business 會移到原始的期限，雖然小組會針對所有客戶完成 2022 年 7 月 1，以完成，可以預期的客戶會選擇加入集以進行移轉前 2020年。 
+
 ## <a name="exchange-online"></a>Exchange Online
 
 因為所花的時間將每個使用者移至新的資料中心地理位置，針對單一租用戶，部分使用者仍然可以在舊的資料中心地理位置中移動期間時其他人會在新的資料中心地理位置中。 這表示牽涉到存取多個信箱的某些功能可能不完全運作移動程序期間其可以最後一週。 下列各節將說明這些功能。
@@ -102,7 +105,11 @@ SharePoint Online 移動時，也被移動下列服務的資料：
 - eDiscovery： 直到編目挑選所做的變更不會顯示在移轉期間進行變更的項目。
     
 - 資料外洩防護 (DLP): 未強制執行原則所做的變更可以編目挑選前發生變更的項目。
-    
+
+## <a name="microsoft-teams"></a>Microsoft Teams
+
+在適用的 Office 365 國家/地區的客戶可能會選擇加入集截至 2020 年 1 月 1、 Microsoft Teams 聊天服務資料移轉。  
+
 ## <a name="skype-for-business"></a>商務用 Skype
 
 所有使用者將會被登出從商務用戶端軟體商務用 Skype 在剪下移轉過程中。 自動登入將會重新連接使用者兩分鐘內。

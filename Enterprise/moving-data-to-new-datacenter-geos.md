@@ -12,12 +12,12 @@ search.appverid:
 - MET150
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 description: 新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 核心客戶資料 」 一詞指的是 Microsoft 線上服務條款中所定義的客戶資料的子集： Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容） 和 SharePoint Online 站台內容和檔案儲存在該站台內，而且檔案上傳至商務用 OneDrive。
-ms.openlocfilehash: 8dcbcd6bbbe1761c9d57c953ad176c87b5b3f221
-ms.sourcegitcommit: 77b8fd702d3a1010d3906d4024d272ad2097f54f
+ms.openlocfilehash: dd8cb060980db16672225fa7543958441a5bebc9
+ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39962450"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "40923865"
 ---
 # <a name="moving-core-data-to-new-office-365-datacenter-geos"></a>將核心資料移至新的 Office 365 資料中心 geos
 
@@ -26,7 +26,8 @@ ms.locfileid: "39962450"
 核心客戶資料 」 一詞指的是子集客戶資料，包括： 
 - Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容）
 - SharePoint Online 站台內容和儲存在該站台內的檔案
-- 上傳到商務用 OneDrive 檔案 
+- 上傳到商務用 OneDrive 檔案
+- 小組聊天訊息，包括私人郵件、 通道訊息，以及在聊天中所用的圖像
   
 現有的客戶已儲存在現有的資料中心地理位置中其核心客戶資料不會受到新的資料中心地理位置中啟動。 我們介紹沒有唯一的功能、 功能或法規遵循認證與新的資料中心地理位置。 身為任何這些兩個 geos 客戶，您會遇到服務、 效能及安全性控制的相同品質之前所顯示的一樣。 我們提供下列選項，以要求早期移轉至其新的資料中心地理位置的靜態其組織的核心客戶資料的表格中所列的現有客戶。
   
