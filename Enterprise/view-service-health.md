@@ -23,12 +23,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 連絡支援服務以查看是否解決的服務中斷之前，請檢視 Office 365 服務的健康狀態。
-ms.openlocfilehash: 5d9b4c65932f65b878518bd5e0f33a1c5336aaf9
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
+ms.openlocfilehash: 20584f2cb0ecc32da9f5403c36c6af3f0287bea9
+ms.sourcegitcommit: ef5447665d6ebbc79399b560c9725d74e1479f7d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "37931717"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "41122582"
 ---
 # <a name="how-to-check-office-365-service-health"></a>如何檢查 Office 365 服務健康情況
 
@@ -55,7 +55,7 @@ ms.locfileid: "37931717"
 
 **所有服務**] 索引標籤 （預設檢視） 顯示所有服務和及其目前健全狀況狀態。 圖示，[**狀態**] 欄表示每個服務的狀態。 若要篩選檢視以顯示目前發生事件的服務，請選取頁面頂端的 [**事件**] 索引標籤。 選取 [**建議**] 索引標籤會顯示目前已張貼建議的服務。 [**歷程記錄**] 索引標籤顯示事件和已解決的摘要報告歷程的記錄。
 
-如果您遇到此問題： 不會出現在清單上，選取 [**報告此問題:**、 完成相關問題，告訴我們短格式，然後選取 [**送出**。
+如果您遇到此問題： Office 365 服務，且您沒有看到它列在 [**服務健康情況**] 頁面上，告訴我們藉由選取**報告此問題**，並完成短格式。 我們將查看相關資料，且來自其他組織若要查看如何時遇到的普遍問題報告，而且如果它源自與我們的服務。 如果有，我們會將它新增為新的事件或建議在**服務健康情況**] 頁面上，您可以在其中追蹤及其解決方法。 如果您沒有看到它出現在清單中，大約 30 分鐘內，請考慮連絡支援，以解決問題。
 
 > [!TIP]
 > 您也可以在行動裝置上使用 [Office 365 Admin App](https://go.microsoft.com/fwlink/p/?linkid=627216) 來檢視服務健康情況，這是藉由推播通知掌握即時資訊的絕佳方式。 
