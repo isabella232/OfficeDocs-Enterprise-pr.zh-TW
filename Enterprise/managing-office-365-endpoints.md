@@ -3,7 +3,7 @@ title: 管理 Office 365 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 02/21/2019
+ms.date: 1/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -15,12 +15,12 @@ ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: fb0f6640ee9de07bb92b9093a94bb7e4fd111a54
-ms.sourcegitcommit: e70808dccc1622d18b1cc5e1e4babd4238112838
+ms.openlocfilehash: 189a21c310b7fd2e62817504b8d6910a2b3e66ca
+ms.sourcegitcommit: 3ed7b1eacf009581a9897524c181afa3e555ad3f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "40744507"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "41570880"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -140,9 +140,10 @@ Office 365 連線的相關的常見問題集的系統管理員問題：
   
 請參閱 < IP 相關聯 Office 365 上您想要的詳細資訊嗎？
   
-1. 檢查是否 IP 位址會包含在較大的發佈範圍使用 CIDR 小算盤，此類的[IPv4](https://www.ipaddressguide.com/cidr)或 [IPv6]https://www.ipaddressguide.com/ipv6-cidr)。
-2. 請參閱協力廠商是否擁有 IP 與[whois 查詢](https://dnsquery.org/)。 如果是 Microsoft 所擁有，可能是內部的協力廠商。
-3. 檢查憑證，在瀏覽器中連線至 IP 位址使用*HTTPS://\<IP_ADDRESS\> * ，檢查憑證，以了解哪些網域相關聯的 IP 位址上列出的網域。 如果它是 Microsoft 所擁有的 IP 位址，而且不在清單上的 Office 365 IP 位址，很可能的 IP 位址是與 Microsoft CDN 例如*MSOCDN.NET*或不含已發佈的 IP 資訊的另一個 Microsoft 網域相關聯。 如果您發現在憑證上的網域是其中一個我們宣告清單的 IP 位址，請讓我們知道。
+1. 請檢查是否隨附於較大的發佈範圍使用 CIDR 小算盤，此類的[IPv4](https://www.ipaddressguide.com/cidr)或[IPv6](https://www.ipaddressguide.com/ipv6-cidr)的 IP 位址。 例如，40.96.0.0/13 包含 40.103.0.1 儘管 40.96 不比對 40.103 的 IP 位址。
+2. 請參閱協力廠商是否擁有 IP 與[whois 查詢](https://dnsquery.org/)。 如果是 Microsoft 所擁有，可能是內部的協力廠商。 許多協力廠商網路端點列為屬於 [_預設_] 類別，哪一個 ip 位址不會發行。
+3. IP 位址可能不是 Office 365 或相依性的一部分。 Office 365 網路端點發佈不包含所有的 Microsoft 網路端點。
+4. 檢查憑證，在瀏覽器中連線至 IP 位址使用*HTTPS://\<IP_ADDRESS\> * ，檢查憑證，以了解哪些網域相關聯的 IP 位址上列出的網域。 如果它是 Microsoft 所擁有的 IP 位址，而且不在清單上的 Office 365 IP 位址，很可能的 IP 位址是與 Microsoft CDN 例如*MSOCDN.NET*或不含已發佈的 IP 資訊的另一個 Microsoft 網域相關聯。 如果您發現在憑證上的網域是其中一個我們宣告清單的 IP 位址，請讓我們知道。
 
 <a name="bkmk_cname"> </a>
 ### <a name="some-office-365-urls-point-to-cname-records-instead-of-a-records-in-the-dns-what-do-i-have-to-do-with-the-cname-records"></a>某些 Office 365 Url 指向筆 CNAME 記錄，而不是在 「 DNS A 記錄。 我有的 CNAME 記錄？
@@ -206,7 +207,12 @@ Office 365 套件細分主要服務區域。 這些可以選擇性地啟用的�
 限制存取我們的消費者服務應自行承擔風險。 限制存取權*login.live.com* FQDN 為封鎖消費者服務僅可靠的方法。 廣泛的服務，包括非消費者服務，例如 MSDN、 TechNet，與其他人使用此 FQDN。 此 FQDN 也由 Microsoft 支援服務的安全檔案 Exchange 程式，需要傳輸檔案，以利 Microsoft 產品的疑難排解。  限制存取此 FQDN，可能會導致需要也包含這些服務相關聯的網路要求規則的例外狀況。
   
 請記住封鎖存取單獨的 Microsoft 消費者服務不會防止您網路上的使用者功能使用 Office 365 租用戶或其他服務的 exfiltrate 資訊。
-  
+
+<a name="bkmk_IPOnlyFirewall"> </a>
+### <a name="my-firewall-requires-ip-addresses-and-cannot-process-urls-how-do-i-configure-it-for-office-365"></a>我的防火牆必須 IP 位址，且無法處理的 Url。 如何設定其 Office 365？
+
+Office 365 不提供所有必要的網路端點的 IP 位址。 某些只提供 Url，且可分類為 「 預設。 預設類別中，也就是必要的 Url 應允許透過 proxy 伺服器。 如果您不具備 proxy 伺服器，然後查看您的使用者在網頁瀏覽器中; 的網址列中輸入的 Url 設定 web 要求的方式使用者不可以提供 IP 位址。 Office 365 預設類別的 Url 不提供 IP 位址應設定相同的方式。
+
 ## <a name="related-topics"></a>相關主題
 
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)

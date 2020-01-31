@@ -10,12 +10,12 @@ ms.service: o365-solutions
 localization_priority: Normal
 ms.assetid: 2ab00633-0f6e-4e4f-b706-2342eb77e539
 description: 本文是圖表的名為 Microsoft Exchange 2013 平台選項，這是圖表的可在技術圖表易於存取的文字版本。
-ms.openlocfilehash: b7ee083be0d38770ebe6d79b31f8f34f87fc2905
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 1440558a3c462ae71189fb42d492e0292c256c19
+ms.sourcegitcommit: cc84565301f5c5afc8b767f637135de96115fd6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38030577"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "41627849"
 ---
 # <a name="accessible-diagram---sharepoint-server-exchange-lync-office-web-apps---the-mobile-landscape"></a>易於存取的圖表-SharePoint Server、 Exchange、 Lync、 Office Web Apps 行動橫向
 
@@ -154,7 +154,7 @@ ms.locfileid: "38030577"
     
 ### <a name="device-management-and-software-distribution"></a>裝置管理與軟體發佈
 
-Microsoft 有新方案裝置管理跨多個裝置品牌。 Windows Intune 是行動裝置的雲端式管理平台。 它可以是用於自行管理您的裝置，或搭配 System Center 2012 R2 Configuration Manager 和管理該主控台內。 聯合操作的一些優點包括：
+Microsoft 有新方案裝置管理跨多個裝置品牌。 Windows Intune 是行動裝置的雲端式管理平台。 它可以是用於自行管理您的裝置，或結合使用 Microsoft 端點 Configuration Manager 和管理該主控台內。 聯合操作的一些優點包括：
   
 - 強制執行原則和跨多個裝置，包括 Windows RT、 Windows 8.1、 Windows Phone 8、 iOS 和 Android 的管理
     
@@ -168,15 +168,15 @@ Microsoft 有新方案裝置管理跨多個裝置品牌。 Windows Intune 是行
     
 - 從熟悉的 Configuration Manager 主控台的管理
     
-隨附的圖顯示如何使用 System Center 2012 R2 Configuration Manager 和 Windows Intune 裝置管理。
+隨附的圖顯示如何使用 Configuration Manager 和 Windows Intune 裝置管理。
   
- **使用 System Center 2012 R2 Configuration Manager 和 Windows Intune 考量：**
+ **使用 Configuration Manager 和 Windows Intune 考量：**
   
-- 使用 System Center 2012 R2 Configuration Manager 和 Windows Intune 時，您可以管理，並在下一個主控台貴組織中管理所有的裝置。
+- 使用 Configuration Manager 和 Windows Intune 時，您可以管理，並在下一個主控台貴組織中管理所有的裝置。
     
 - 若要連接至 Windows Intune 的 Configuration Manager，您需要 Windows Intune 訂用帳戶，以及 Windows Intune 連接器站台伺服器角色必須部署在 Configuration Manager 環境中的伺服器上。
     
-- System Center 2012 R2 Configuration Manager 提供管理和適用於您的內部電腦的軟體發佈。
+- Microsoft 端點 Configuration Manager 提供管理和適用於您的內部電腦的軟體發佈。
     
 - 受管理的新型裝置會從 Windows Intune 收到原則強制執行軟通訊。 支援的裝置類型包括： Windows RT、 Windows 8.1、 Windows Phone 8、 iOS、 Android。
     

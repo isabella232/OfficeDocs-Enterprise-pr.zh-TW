@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: 您規劃及設定部署建議與 Office 365 或 Microsoft 365 加速。
-ms.openlocfilehash: c931da3d64aea976af99ca2b2220d4bd931344a9
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: ac892a7d0551ede4d7bb4df7081ee0ae8dd5d618
+ms.sourcegitcommit: cc84565301f5c5afc8b767f637135de96115fd6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072365"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "41627859"
 ---
 # <a name="deployment-advisors-for-office-365-or-microsoft-365-services"></a>Office 365 或 Microsoft 365 服務的部署建議
 
@@ -168,7 +168,7 @@ Office 365 專業增強版上最新版的 Office 啟動並執行取得您的使�
 | **執行：** |  [Office 365 專業增強版快速開始指南](https://aka.ms/OPPquickstartguide) <BR> |
 |||
 
-Office 365 專業增強版的部署建議程式逐步幫助使用者直接從 online 在 Office 365 入口網站安裝 Office 365 專業增強版或部署 Office 365 ProPlus 到您的使用者從內部部署位置的步驟。 包含會指示使用 System Center Configuration Manager、 群組原則啟動指令碼、 作業系統磁碟映像，或遠端桌面服務 (RDS) 共用啟用。
+Office 365 專業增強版的部署建議程式逐步幫助使用者直接從 online 在 Office 365 入口網站安裝 Office 365 專業增強版或部署 Office 365 ProPlus 到您的使用者從內部部署位置的步驟。 包含使用 Microsoft 端點 Configuration Manager，「 群組原則啟動指令碼，作業系統磁碟映像，指示或遠端桌面服務 (RDS) 共用啟用。
 
 |||
 |:-------|:-----|
