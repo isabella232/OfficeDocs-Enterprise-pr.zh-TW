@@ -10,12 +10,12 @@ ms.collection: SPO_Content
 ms.custom: ''
 localization_priority: Priority
 description: 深入了解 Microsoft 365 中提供的來賓共用設定。
-ms.openlocfilehash: 3181e1abc44ff62bf3973a87a626291b9e946c51
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 6fba4a8107962ef7ac7da5f83dd2d7f1d75dccb2
+ms.sourcegitcommit: cc84565301f5c5afc8b767f637135de96115fd6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39919377"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "41627875"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 來賓共用設定參考
 
@@ -55,7 +55,7 @@ Microsoft 365 系統管理中心有用於共用和用於 Office 365 群組的組
 
 ### <a name="sharing"></a>共用
 
-**瀏覽：**[Microsoft 365 系統管理中心](https://admin.microsoft.com) > [設定] > [安全性與隱私權] > [共用]
+**瀏覽：**[Microsoft 365 系統管理中心](https://admin.microsoft.com) > [設定] > [設定] > [安全性與隱私權] 索引標籤 > [共用]
 
 ![Microsoft 365 系統管理中心的安全性與隱私權來賓共用設定的螢幕擷取畫面](media/sharepoint-security-privacy-sharing-setting.png)
 
@@ -65,7 +65,7 @@ Microsoft 365 系統管理中心有用於共用和用於 Office 365 群組的組
 
 ### <a name="office-365-groups"></a>Office 365 群組
 
-**瀏覽：**[Microsoft 365 系統管理中心](https://admin.microsoft.com) > [設定] > [服務與增益集] > [Office 365 群組]
+**瀏覽：**[Microsoft 365 系統管理中心](https://admin.microsoft.com) > [設定] > [設定] > [Office 365 群組]
 
 ![Microsoft 365 系統管理中心中 Office 365 群組來賓設定的螢幕擷取畫面](media/office-365-groups-guest-settings.png)
 
@@ -196,11 +196,13 @@ Teams 的主要來賓存取切換 [在 Teams 中允許來賓存取]****，必須
 
 **系統管理員角色：** SharePoint 系統管理員
 
+因為這些設定取決於 SharePoint 的全組織設定，如果您的組織層級設定變更，網站生效的共用設定可能會變更。 如果您在這裡選擇某個設定，並且組織層級之後設為較具限制性的值，則此網站會以該較具限制性的值運作。 比方說，如果您選擇 [任何人]****，並且之後組織層級設定設為 [新的及現有的來賓]****，則此網站將只會允許新的及現有的來賓。 如果之後將組織層級設定設回 [任何人]****，此網站將再次允許 [任何人]** 連結。
+
 ### <a name="site-sharing"></a>網站共用
 
 您可以在 SharePoint 中設定每個網站的來賓共用權限。 此設定同時適用網站共用和檔案與資料夾共用。 ([任何人]** 共用不適用網站共用。 如果您選擇 [任何人]****，使用者將可以使用 [任何人]** 連結來與新的及現有的來賓共用檔案與資料夾及網站本身。)
 
-**瀏覽：** SharePoint 系統管理中心 > [使用中網站] > 選取網站 > [共用]
+**瀏覽：** SharePoint 系統管理中心 > [使用中網站] > 選取網站 > [原則] 索引標籤 > [編輯外部共用]
 
 ![SharePoint 網站外部共用設定的螢幕擷取畫面](media/sharepoint-site-external-sharing-settings.png)
 
@@ -208,7 +210,22 @@ Teams 的主要來賓存取切換 [在 Teams 中允許來賓存取]****，必須
 |:-----|:-----|:-----|
 |網站內容可以與誰共用|因網站類型而異 (請參閱下表)|表示對此網站允許的外部共用類型。 此處可用的選項取決於 SharePoint 的組織層級共用設定。|
 
-因為這些設定取決於 SharePoint 的全組織設定，如果您的組織層級設定變更，網站生效的共用設定可能會變更。 如果您在這裡選擇某個設定，並且組織層級之後設為較具限制性的值，則此網站會以該較具限制性的值運作。 比方說，如果您選擇 [任何人]****，並且之後組織層級設定設為 [新的及現有的來賓]****，則此網站將只會允許新的及現有的來賓。 如果之後將組織層級設定設回 [任何人]****，此網站將再次允許 [任何人]** 連結。
+### <a name="site-file-and-folder-link-settings"></a>網站檔案和資料夾連結設定
+
+您可以設定連結類型和權限的預設值，以及每個網站 [任何人]** 連結的到期設定。 在網站層級設定時，這些設定會覆寫組織層級設定。 請注意，如果在組織層級停用 [任何人]** 連結，則 [任何人]** 不會是網站層級的可用連結類型。
+
+**瀏覽：** SharePoint 系統管理中心 > [使用中網站] > 選取網站 > [原則] 索引標籤 > [編輯外部共用]
+
+![SharePoint 網站層級共用設定的螢幕擷取畫面](media/sharepoint-site-link-sharing-settings.png)
+
+|**設定**|**預設值**|**描述**|
+|:-----|:-----|:-----|
+|依網域限制共用|關閉|此設定可讓您針對共用指定允許或封鎖的網域清單。 指定允許的網域時，則只可以將共用邀請傳送至這些網域。 指定拒絕的網域時，則無法將共用邀請傳送至這些網域。<br><br> 此設定不能用來覆寫在組織或 Azure AD 層級設定的網域限制。|
+|預設的共用連結類型|與組織層級設定相同|此設定可讓您指定要向此網站中使用者顯示的預設共用連結。 [與組織層級設定相同]** 選項，是透過組織和網站共用設定的組合定義。|
+|任何人連結的進階設定|與組織層級設定相同|指定為網站中的檔案建立 [任何人]** 連結後，其到期的天數。 無法更新到期的連結。 若要在超過到期日時繼續共用，請建立新連結。|
+|預設連結權限|與組織層級設定相同|此設定可讓您針對為此網站中的檔案建立的共用連結指定預設權限 (檢視或編輯)。|
+
+### <a name="default-site-sharing-settings"></a>預設網站共用設定
 
 下表顯示每個網站類型的預設共用設定的。
 
