@@ -13,12 +13,12 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: Office 365 的相關資料保留、 刪除及毀損的 Microsoft 原則概觀。
-ms.openlocfilehash: e4632a3025f1dc0f22338c0a463f054a7b993524
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
+ms.openlocfilehash: 93093e3688d0f8ae399a4e021deaaf4b7ed5cecf
+ms.sourcegitcommit: 4f465f690c6563cfa9f6029d3e7e9e3cace96671
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "37975828"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "41658330"
 ---
 # <a name="data-retention-deletion-and-destruction-in-office-365"></a>Office 365 中的資料保留、刪除及毀損
 
@@ -47,7 +47,7 @@ Microsoft 已指定客戶資料刪除後，要保留多久的 Office 365 的資�
 
 任何訂閱，訂閱者可以連絡 Microsoft 支援服務和要求快速訂閱不支援。 在此程序，刪除三天後系統管理員進入 Microsoft 所提供的鎖定程式碼所有使用者資料。 這包含 SharePoint Online 和 Exchange Online 中的資料，在 [保留] 下，或儲存在非使用中信箱。
 
-如需有關快速取消佈建的詳細資訊，請參閱[取消 Office 365](https://support.office.com/article/Cancel-Office-365-for-business-b1bc0bef-4608-4601-813a-cdd9f746709a)。
+如需有關快速取消佈建的詳細資訊，請參閱[取消 Office 365](https://docs.microsoft.com/office365/admin/subscriptions-and-billing/cancel-your-subscription)。
 
 ## <a name="related-links"></a>相關連結
 
