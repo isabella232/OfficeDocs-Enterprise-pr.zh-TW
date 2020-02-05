@@ -18,12 +18,12 @@ search.appverid:
 - MOE150
 - BCS160
 description: Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 365 網路流量，讓您更容易評估、設定及掌握變更。
-ms.openlocfilehash: 2dd725c39446d7e9cdad6b7e870bf7353ff1f8e3
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 0a12b4dda9e4c931a34797aa2fc59803b97ddd36
+ms.sourcegitcommit: 226989f5a6a252e67debf7613bf13aa679a43f92
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38031208"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "41721924"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務
 
@@ -527,7 +527,8 @@ else {
 
 ```python
 import json
-import os
+import tempfile
+from pathlib import Path
 import urllib.request
 import uuid
 # helper to call the webservice and parse the response
@@ -538,9 +539,9 @@ def webApiGet(methodName, instanceName, clientRequestId):
     with urllib.request.urlopen(request) as response:
         return json.loads(response.read().decode())
 # path where client ID and latest version number will be stored
-datapath = os.environ['TEMP'] + '\endpoints_clientid_latestversion.txt'
+datapath = Path(tempfile.gettempdir() + '/endpoints_clientid_latestversion.txt')
 # fetch client ID and version if data exists; otherwise create new file
-if os.path.exists(datapath):
+if datapath.exists():
     with open(datapath, 'r') as fin:
         clientRequestId = fin.readline().strip()
         latestVersion = fin.readline().strip()
