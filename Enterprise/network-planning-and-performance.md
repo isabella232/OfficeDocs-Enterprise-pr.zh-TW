@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 ms.assetid: e5f1228c-da3c-4654-bf16-d163daee8848
 description: 可協助您規劃 Microsoft Office 365 的網路頻寬需求。 一旦您部署後，請回到這裡來微調，並疑難排解 Office 365 的效能。
-ms.openlocfilehash: bedddefe893781fc2c51d0e282dc603e30c90b06
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
-ms.translationtype: HT
+ms.openlocfilehash: 0f60c925d01b4a4471d475b923389e3b59e5526c
+ms.sourcegitcommit: 226989f5a6a252e67debf7613bf13aa679a43f92
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38032138"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "41721944"
 ---
 # <a name="network-planning-and-performance-tuning-for-office-365"></a>Office 365 的網路規劃和效能調整
 在首次部署或移轉至 Office 365 前，您可使用這些主題中的資訊來預估所需頻寬，然後測試並確認您有足夠的頻寬以部署或移轉至 Office 365。 如需概觀，請參閱 [Office 365 的網路和移轉規劃](network-and-migration-planning.md)。
@@ -35,7 +35,7 @@ ms.locfileid: "38032138"
 
 一旦部署了 Office 365，您就可以使用本節中的主題將效能最佳化。 若遇到效能降低情形，您也可以使用這些主題來疑難排解問題。
   
- **[調整 Office 365 效能](tune-office-365-performance.md)**：如需有關搭配 Office 365 使用網路位址轉譯的資訊，請參閱 [Office 365 的 NAT 支援](nat-support-with-office-365.md) (部分機器翻譯)。 也請參閱 Paul Collinge 的 [最佳化及疑難排解 Office 365 網路連線的十大祕訣](https://blogs.technet.com/b/onthewire/archive/2014/06/18/top-10-tips-for-optimising-amp-troubleshooting-your-office-365-network-connectivity.aspx)。 
+ **[調整 Office 365 效能](tune-office-365-performance.md)**：如需有關搭配 Office 365 使用網路位址轉譯的資訊，請參閱 [Office 365 的 NAT 支援](nat-support-with-office-365.md) (部分機器翻譯)。 此外，看看[最佳化及疑難排解您的 Office 365 網路連線的 top 10 秘訣](https://docs.microsoft.com/archive/blogs/onthewire/top-10-tips-for-optimising-troubleshooting-your-office-365-network-connectivity)。 
   
  **[調整 Exchange Online 的效能](tune-exchange-online-performance.md)**：使用這些文章的資訊，微調 Exchange Online 的效能。 
   

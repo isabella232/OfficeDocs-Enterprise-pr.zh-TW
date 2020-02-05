@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
 description: 包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
-ms.openlocfilehash: b40b940c99b7f0cf752dae069ca7eae7ac5516d0
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 6091f5c222b523781c8af30200f96febb2baf7e4
+ms.sourcegitcommit: 226989f5a6a252e67debf7613bf13aa679a43f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38747783"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "41721954"
 ---
 # <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
@@ -59,8 +59,6 @@ ms.locfileid: "38747783"
 <a name="calculators"> </a>
 
  **網路工具：** 測試及驗證您的網際網路頻寬，以判斷下載、上傳和延遲限制。 這些工具會協助您確定用於移轉及完整部署後的網路能力。 
-  
-- [Microsoft Message Analyzer](https://technet.microsoft.com/library/jj649776.aspx)：Message Analyzer 是有效的網路問題疑難排解工具。 Message Analyzer 擷取、顯示並分析以通訊協定為基礎的郵件流量和系統郵件。 Message Analyzer 也可讓您匯入、彙總並分析記錄檔和追蹤檔案的資料。
     
 - [Microsoft 遠端連線能力分析器](https://go.microsoft.com/fwlink/p/?LinkId=517243)：測試您 Exchange Online 環境的連線能力。
     

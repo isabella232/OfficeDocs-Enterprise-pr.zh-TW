@@ -23,12 +23,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 連絡支援服務以查看是否解決的服務中斷之前，請檢視 Office 365 服務的健康狀態。
-ms.openlocfilehash: 20584f2cb0ecc32da9f5403c36c6af3f0287bea9
-ms.sourcegitcommit: ef5447665d6ebbc79399b560c9725d74e1479f7d
+ms.openlocfilehash: 4dace633b4f68f3f9361096a4bd99296b8b807b2
+ms.sourcegitcommit: 226989f5a6a252e67debf7613bf13aa679a43f92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "41122582"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "41721974"
 ---
 # <a name="how-to-check-office-365-service-health"></a>如何檢查 Office 365 服務健康情況
 
@@ -114,6 +114,7 @@ ms.locfileid: "41122582"
 |**擴充的復原** | 此狀態表示我們正在進行矯正措施，以便為大多數使用者恢復服務，但需要一些時間才能讓所有受影響的系統恢復正常運作。如果我們在尚未進行永久修復期間先採用暫時修正方法以降低影響，您也可能會看到此狀態。 |
 |**調查暫停** | 在我們詳細調查潛在問題後，如果需要客戶提供額外資訊以進行更深入的調查，您就會看到此狀態。如果我們需要您採取行動，我們會告知您我們所需的資料或記錄。 |
 |**服務已恢復** | 我們確認矯正措施已解決根本問題，且服務也已恢復為健康情況良好的狀態。如需了解何處發生錯誤，請檢視問題詳細資料。 |
+|**誤判** | 在詳細調查之後, 我們已確認服務狀況良好且為作業系統依設計。 觀察到不會影響服務或事件的原因來自外部服務。 |
 |**發佈後附隨報告** | 我們已發佈之特定問題，其中包含根原因資訊與下一個步驟，以確保不再發生類似的問題張貼附隨報告。 |
 
 ### <a name="history"></a>歷程記錄
