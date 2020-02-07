@@ -8,103 +8,105 @@ ms.topic: article
 ms.service: sharepoint-online
 ms.collection: SPO_Content
 localization_priority: Normal
+f1.keywords:
+- NOCSH
 description: 了解如何在 SharePoint 和 OneDrive 文件上的 guests 與共同作業。
-ms.openlocfilehash: f2cecb086116e5ea3322a0fd87e5f07f5c30443c
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: d4c7a62fbf4ca94e0f6dd61018f723801a3966a7
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39919347"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41845084"
 ---
-# <a name="collaborate-with-guests-on-a-document"></a><span data-ttu-id="129bd-103">在文件上與來賓共同作業</span><span class="sxs-lookup"><span data-stu-id="129bd-103">Collaborate with guests on a document</span></span>
+# <a name="collaborate-with-guests-on-a-document"></a><span data-ttu-id="cf01b-103">在文件上與來賓共同作業</span><span class="sxs-lookup"><span data-stu-id="cf01b-103">Collaborate with guests on a document</span></span>
 
-<span data-ttu-id="129bd-104">如果您需要在 SharePoint 或 OneDrive 中的文件上組織外部的人員協同合作，您可以傳送這些共用連結至文件。</span><span class="sxs-lookup"><span data-stu-id="129bd-104">If you need to collaborate with people outside your organization on documents in SharePoint or OneDrive, you can send them a sharing link to the document.</span></span> <span data-ttu-id="129bd-105">在本文中，我們會逐步設定您的組織需求的共用連結 SharePoint 和 OneDrive 所需的 Microsoft 365 組態步驟。</span><span class="sxs-lookup"><span data-stu-id="129bd-105">In this article, we'll walk through the Microsoft 365 configuration steps necessary to set up sharing links for SharePoint and OneDrive for the needs of your organization.</span></span>
+<span data-ttu-id="cf01b-104">如果您需要在 SharePoint 或 OneDrive 中的文件上組織外部的人員協同合作，您可以傳送這些共用連結至文件。</span><span class="sxs-lookup"><span data-stu-id="cf01b-104">If you need to collaborate with people outside your organization on documents in SharePoint or OneDrive, you can send them a sharing link to the document.</span></span> <span data-ttu-id="cf01b-105">在本文中，我們會逐步設定您的組織需求的共用連結 SharePoint 和 OneDrive 所需的 Microsoft 365 組態步驟。</span><span class="sxs-lookup"><span data-stu-id="cf01b-105">In this article, we'll walk through the Microsoft 365 configuration steps necessary to set up sharing links for SharePoint and OneDrive for the needs of your organization.</span></span>
 
-## <a name="video-demonstration"></a><span data-ttu-id="129bd-106">影片示範</span><span class="sxs-lookup"><span data-stu-id="129bd-106">Video demonstration</span></span>
+## <a name="video-demonstration"></a><span data-ttu-id="cf01b-106">影片示範</span><span class="sxs-lookup"><span data-stu-id="cf01b-106">Video demonstration</span></span>
 
-<span data-ttu-id="129bd-107">這段影片顯示本文所述的設定步驟。</span><span class="sxs-lookup"><span data-stu-id="129bd-107">This video shows the configuration steps described in this document.</span></span></br>
+<span data-ttu-id="cf01b-107">這段影片顯示本文所述的設定步驟。</span><span class="sxs-lookup"><span data-stu-id="cf01b-107">This video shows the configuration steps described in this document.</span></span></br>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE450Vt?autoplay=false]
 
-## <a name="azure-organizational-relationships-settings"></a><span data-ttu-id="129bd-108">Azure 的組織關聯性設定</span><span class="sxs-lookup"><span data-stu-id="129bd-108">Azure Organizational relationships settings</span></span>
+## <a name="azure-organizational-relationships-settings"></a><span data-ttu-id="cf01b-108">Azure 的組織關聯性設定</span><span class="sxs-lookup"><span data-stu-id="cf01b-108">Azure Organizational relationships settings</span></span>
 
-<span data-ttu-id="129bd-109">Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組織關聯性設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-109">Sharing in Microsoft 365 is governed at its highest level by the organizational relationships settings in Azure Active Directory.</span></span> <span data-ttu-id="129bd-110">如果共用的來賓已停用，或限制在 Azure AD 中，這會覆寫任何您在 Microsoft 365 中設定的共用設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-110">If guest sharing is disabled or restricted in Azure AD, this will override any sharing settings that you configure in Microsoft 365.</span></span>
+<span data-ttu-id="cf01b-109">Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組織關聯性設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-109">Sharing in Microsoft 365 is governed at its highest level by the organizational relationships settings in Azure Active Directory.</span></span> <span data-ttu-id="cf01b-110">如果共用的來賓已停用，或限制在 Azure AD 中，這會覆寫任何您在 Microsoft 365 中設定的共用設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-110">If guest sharing is disabled or restricted in Azure AD, this will override any sharing settings that you configure in Microsoft 365.</span></span>
 
-<span data-ttu-id="129bd-111">檢查以確保未封鎖來賓與共用的組織關聯性設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-111">Check the organizational relationships settings to ensure that sharing with guests is not blocked.</span></span>
+<span data-ttu-id="cf01b-111">檢查以確保未封鎖來賓與共用的組織關聯性設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-111">Check the organizational relationships settings to ensure that sharing with guests is not blocked.</span></span>
 
 ![Azure Active Directory 組織關聯性設定頁面的螢幕擷取畫面](media/azure-ad-organizational-relationships-settings.png)
 
-<span data-ttu-id="129bd-113">若要設定組織關聯性設定</span><span class="sxs-lookup"><span data-stu-id="129bd-113">To set organizational relationship settings</span></span>
+<span data-ttu-id="cf01b-113">若要設定組織關聯性設定</span><span class="sxs-lookup"><span data-stu-id="cf01b-113">To set organizational relationship settings</span></span>
 
-1. <span data-ttu-id="129bd-114">登入 Microsoft Azure 在[https://portal.azure.com](https://portal.azure.com)。</span><span class="sxs-lookup"><span data-stu-id="129bd-114">Log in to Microsoft Azure at [https://portal.azure.com](https://portal.azure.com).</span></span>
-2. <span data-ttu-id="129bd-115">在左導覽中，按一下 [ **Azure Active Directory**]。</span><span class="sxs-lookup"><span data-stu-id="129bd-115">In the left navigation, click **Azure Active Directory**.</span></span>
-3. <span data-ttu-id="129bd-116">在 [**概觀**] 窗格中，按一下 [**組織關聯性**。</span><span class="sxs-lookup"><span data-stu-id="129bd-116">In the **Overview** pane, click **Organizational relationships**.</span></span>
-4. <span data-ttu-id="129bd-117">在**組織關聯性**] 窗格中，按一下 [**設定**]。</span><span class="sxs-lookup"><span data-stu-id="129bd-117">In the **Organizational relationships** pane, click **Settings**.</span></span>
-5. <span data-ttu-id="129bd-118">確保**系統管理員和來賓邀請者角色中的使用者可以邀請**和**成員可以邀請**都會設**為 [是]**。</span><span class="sxs-lookup"><span data-stu-id="129bd-118">Ensure that **Admins and users in the guest inviter role can invite** and **Members can invite** are both set to **Yes**.</span></span>
-6. <span data-ttu-id="129bd-119">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-119">If you made changes, click **Save**.</span></span>
+1. <span data-ttu-id="cf01b-114">登入 Microsoft Azure 在[https://portal.azure.com](https://portal.azure.com)。</span><span class="sxs-lookup"><span data-stu-id="cf01b-114">Log in to Microsoft Azure at [https://portal.azure.com](https://portal.azure.com).</span></span>
+2. <span data-ttu-id="cf01b-115">在左導覽中，按一下 [ **Azure Active Directory**]。</span><span class="sxs-lookup"><span data-stu-id="cf01b-115">In the left navigation, click **Azure Active Directory**.</span></span>
+3. <span data-ttu-id="cf01b-116">在 [**概觀**] 窗格中，按一下 [**組織關聯性**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-116">In the **Overview** pane, click **Organizational relationships**.</span></span>
+4. <span data-ttu-id="cf01b-117">在**組織關聯性**] 窗格中，按一下 [**設定**]。</span><span class="sxs-lookup"><span data-stu-id="cf01b-117">In the **Organizational relationships** pane, click **Settings**.</span></span>
+5. <span data-ttu-id="cf01b-118">確保**系統管理員和來賓邀請者角色中的使用者可以邀請**和**成員可以邀請**都會設**為 [是]**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-118">Ensure that **Admins and users in the guest inviter role can invite** and **Members can invite** are both set to **Yes**.</span></span>
+6. <span data-ttu-id="cf01b-119">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-119">If you made changes, click **Save**.</span></span>
 
-<span data-ttu-id="129bd-120">請注意 [**共同作業限制**] 區段中的設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-120">Note the settings in the **Collaboration restrictions** section.</span></span> <span data-ttu-id="129bd-121">請確定不封鎖的網域的來賓，您想要與共同作業。</span><span class="sxs-lookup"><span data-stu-id="129bd-121">Make sure that the domains of the guests that you want to collaborate with aren't blocked.</span></span>
+<span data-ttu-id="cf01b-120">請注意 [**共同作業限制**] 區段中的設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-120">Note the settings in the **Collaboration restrictions** section.</span></span> <span data-ttu-id="cf01b-121">請確定不封鎖的網域的來賓，您想要與共同作業。</span><span class="sxs-lookup"><span data-stu-id="cf01b-121">Make sure that the domains of the guests that you want to collaborate with aren't blocked.</span></span>
 
-## <a name="sharepoint-organization-level-sharing-settings"></a><span data-ttu-id="129bd-122">共用設定的 SharePoint 組織層級</span><span class="sxs-lookup"><span data-stu-id="129bd-122">SharePoint organization level sharing settings</span></span>
+## <a name="sharepoint-organization-level-sharing-settings"></a><span data-ttu-id="cf01b-122">共用設定的 SharePoint 組織層級</span><span class="sxs-lookup"><span data-stu-id="cf01b-122">SharePoint organization level sharing settings</span></span>
 
-<span data-ttu-id="129bd-123">為了讓組織外部人員，能夠存取 SharePoint 或 OneDrive 中的文件，SharePoint 和 OneDrive 組織層級共用設定必須允許與組織外部人員共用。</span><span class="sxs-lookup"><span data-stu-id="129bd-123">In order for people outside your organization to have access to a document in SharePoint or OneDrive, the SharePoint and OneDrive organization-level sharing settings must allow for sharing with people outside your organization.</span></span>
+<span data-ttu-id="cf01b-123">為了讓組織外部人員，能夠存取 SharePoint 或 OneDrive 中的文件，SharePoint 和 OneDrive 組織層級共用設定必須允許與組織外部人員共用。</span><span class="sxs-lookup"><span data-stu-id="cf01b-123">In order for people outside your organization to have access to a document in SharePoint or OneDrive, the SharePoint and OneDrive organization-level sharing settings must allow for sharing with people outside your organization.</span></span>
 
-<span data-ttu-id="129bd-124">SharePoint 的組織層級設定會決定哪些設定可供個別的 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="129bd-124">The organization-level settings for SharePoint determine what settings are available for individual SharePoint sites.</span></span> <span data-ttu-id="129bd-125">網站設定不能更寬鬆比組織層級的設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-125">Site settings cannot be more permissive than the organization-level settings.</span></span> <span data-ttu-id="129bd-126">OneDrive 的組織層級設定會決定在使用者的 OneDrive 文件庫中時可用的共用層級。</span><span class="sxs-lookup"><span data-stu-id="129bd-126">The organization-level setting for OneDrive determines what level of sharing is available in users' OneDrive libraries.</span></span>
+<span data-ttu-id="cf01b-124">SharePoint 的組織層級設定會決定哪些設定可供個別的 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="cf01b-124">The organization-level settings for SharePoint determine what settings are available for individual SharePoint sites.</span></span> <span data-ttu-id="cf01b-125">網站設定不能更寬鬆比組織層級的設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-125">Site settings cannot be more permissive than the organization-level settings.</span></span> <span data-ttu-id="cf01b-126">OneDrive 的組織層級設定會決定在使用者的 OneDrive 文件庫中時可用的共用層級。</span><span class="sxs-lookup"><span data-stu-id="cf01b-126">The organization-level setting for OneDrive determines what level of sharing is available in users' OneDrive libraries.</span></span>
 
-<span data-ttu-id="129bd-127">對於 SharePoint 和 OneDrive，如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**。</span><span class="sxs-lookup"><span data-stu-id="129bd-127">For SharePoint and OneDrive, if you want to allow unauthenticated file and folder sharing, choose **Anyone**.</span></span> <span data-ttu-id="129bd-128">如果您想要確保您的組織外部人員需要驗證，選擇 [**新增] 和 [現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="129bd-128">If you want to ensure that people outside your organization have to authenticate, choose **New and existing guests**.</span></span> <span data-ttu-id="129bd-129">*任何人*連結是最簡單的共用： 組織外部人員可開啟 [沒有驗證和為免費傳遞給其他人] 連結。</span><span class="sxs-lookup"><span data-stu-id="129bd-129">*Anyone* links are the easiest way to share: people outside your organization can open the link without authentication and are free to pass it on to others.</span></span>
+<span data-ttu-id="cf01b-127">對於 SharePoint 和 OneDrive，如果您想要允許未經驗證的檔案及資料夾共用，選擇 [**任何人**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-127">For SharePoint and OneDrive, if you want to allow unauthenticated file and folder sharing, choose **Anyone**.</span></span> <span data-ttu-id="cf01b-128">如果您想要確保您的組織外部人員需要驗證，選擇 [**新增] 和 [現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-128">If you want to ensure that people outside your organization have to authenticate, choose **New and existing guests**.</span></span> <span data-ttu-id="cf01b-129">*任何人*連結是最簡單的共用： 組織外部人員可開啟 [沒有驗證和為免費傳遞給其他人] 連結。</span><span class="sxs-lookup"><span data-stu-id="cf01b-129">*Anyone* links are the easiest way to share: people outside your organization can open the link without authentication and are free to pass it on to others.</span></span>
 
-<span data-ttu-id="129bd-130">For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-130">For SharePoint, choose the most permissive setting that will be needed by any site in your organization.</span></span>
+<span data-ttu-id="cf01b-130">For SharePoint，選擇 [將您的組織中任何網站所需的最寬鬆] 設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-130">For SharePoint, choose the most permissive setting that will be needed by any site in your organization.</span></span>
 
 ![SharePoint 組織層級共用設定的螢幕擷取畫面](media/sharepoint-organization-external-sharing-controls.png)
 
 
-<span data-ttu-id="129bd-132">若要設定共用設定的 SharePoint 組織層級</span><span class="sxs-lookup"><span data-stu-id="129bd-132">To set SharePoint organization level sharing settings</span></span>
+<span data-ttu-id="cf01b-132">若要設定共用設定的 SharePoint 組織層級</span><span class="sxs-lookup"><span data-stu-id="cf01b-132">To set SharePoint organization level sharing settings</span></span>
 
-1. <span data-ttu-id="129bd-133">在 Microsoft 365 系統管理中心，在左側導覽中，[**系統管理中心**中，按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="129bd-133">In the Microsoft 365 admin center, in the left navigation, under **Admin centers**, click **SharePoint**.</span></span>
-2. <span data-ttu-id="129bd-134">在 SharePoint 管理中心中，按一下左側導覽窗格中的 [共用]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-134">In the SharePoint admin center, in the left navigation, click **Sharing**.</span></span>
-3. <span data-ttu-id="129bd-135">確定 SharePoint 或 OneDrive 外部共用設定為**任何人**或**新增和現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="129bd-135">Ensure that external sharing for SharePoint or OneDrive is set to **Anyone** or **New and existing guests**.</span></span> <span data-ttu-id="129bd-136">（請注意 [OneDrive] 設定不能更寬鬆比 SharePoint 設定）。</span><span class="sxs-lookup"><span data-stu-id="129bd-136">(Note that the OneDrive setting cannot be more permissive than the SharePoint setting.)</span></span>
-4. <span data-ttu-id="129bd-137">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-137">If you made changes, click **Save**.</span></span>
+1. <span data-ttu-id="cf01b-133">在 Microsoft 365 系統管理中心，在左側導覽中，[**系統管理中心**中，按一下 [ **SharePoint**]。</span><span class="sxs-lookup"><span data-stu-id="cf01b-133">In the Microsoft 365 admin center, in the left navigation, under **Admin centers**, click **SharePoint**.</span></span>
+2. <span data-ttu-id="cf01b-134">在 SharePoint 管理中心中，按一下左側導覽窗格中的 [共用]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-134">In the SharePoint admin center, in the left navigation, click **Sharing**.</span></span>
+3. <span data-ttu-id="cf01b-135">確定 SharePoint 或 OneDrive 外部共用設定為**任何人**或**新增和現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-135">Ensure that external sharing for SharePoint or OneDrive is set to **Anyone** or **New and existing guests**.</span></span> <span data-ttu-id="cf01b-136">（請注意 [OneDrive] 設定不能更寬鬆比 SharePoint 設定）。</span><span class="sxs-lookup"><span data-stu-id="cf01b-136">(Note that the OneDrive setting cannot be more permissive than the SharePoint setting.)</span></span>
+4. <span data-ttu-id="cf01b-137">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-137">If you made changes, click **Save**.</span></span>
 
-## <a name="sharepoint-organization-level-default-link-settings"></a><span data-ttu-id="129bd-138">SharePoint 組織層級預設連結設定</span><span class="sxs-lookup"><span data-stu-id="129bd-138">SharePoint organization level default link settings</span></span>
+## <a name="sharepoint-organization-level-default-link-settings"></a><span data-ttu-id="cf01b-138">SharePoint 組織層級預設連結設定</span><span class="sxs-lookup"><span data-stu-id="cf01b-138">SharePoint organization level default link settings</span></span>
 
-<span data-ttu-id="129bd-139">預設檔案和資料夾連結設定會決定哪一個連結選項向使用者顯示預設情況下使用者共用的檔案或資料夾時。</span><span class="sxs-lookup"><span data-stu-id="129bd-139">The default file and folder link settings determine which link option is shown to the user by default when they share a file or folder.</span></span> <span data-ttu-id="129bd-140">使用者可以將連結類型變更為下列其中一個其他選項共用視之前。</span><span class="sxs-lookup"><span data-stu-id="129bd-140">Users can change the link type to one of the other options before sharing if desired.</span></span>
+<span data-ttu-id="cf01b-139">預設檔案和資料夾連結設定會決定哪一個連結選項向使用者顯示預設情況下使用者共用的檔案或資料夾時。</span><span class="sxs-lookup"><span data-stu-id="cf01b-139">The default file and folder link settings determine which link option is shown to the user by default when they share a file or folder.</span></span> <span data-ttu-id="cf01b-140">使用者可以將連結類型變更為下列其中一個其他選項共用視之前。</span><span class="sxs-lookup"><span data-stu-id="cf01b-140">Users can change the link type to one of the other options before sharing if desired.</span></span>
 
-<span data-ttu-id="129bd-141">請記住，此設定會影響您的組織，以及 OneDrive 中的 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="129bd-141">Keep in mind that this setting affects SharePoint sites in your organization, as well as OneDrive.</span></span>
+<span data-ttu-id="cf01b-141">請記住，此設定會影響您的組織，以及 OneDrive 中的 SharePoint 網站。</span><span class="sxs-lookup"><span data-stu-id="cf01b-141">Keep in mind that this setting affects SharePoint sites in your organization, as well as OneDrive.</span></span>
 
-<span data-ttu-id="129bd-142">選擇 [當使用者共用檔案及資料夾，依預設會選取連結的類型：</span><span class="sxs-lookup"><span data-stu-id="129bd-142">Choose the type of link that's selected by default when users share files and folders:</span></span>
+<span data-ttu-id="cf01b-142">選擇 [當使用者共用檔案及資料夾，依預設會選取連結的類型：</span><span class="sxs-lookup"><span data-stu-id="cf01b-142">Choose the type of link that's selected by default when users share files and folders:</span></span>
 
-- <span data-ttu-id="129bd-143">**任何人] 連結**-如果您預期進行大量的未驗證的檔案及資料夾共用，請選擇此選項。</span><span class="sxs-lookup"><span data-stu-id="129bd-143">**Anyone with the link** - Choose this option if you expect to do a lot of unauthenticated file and folder sharing.</span></span> <span data-ttu-id="129bd-144">如果您想要允許*任何人*的連結，但擔心意外的未驗證共用，請考慮下列其中一個其他選項為預設值。</span><span class="sxs-lookup"><span data-stu-id="129bd-144">If you want to allow *Anyone* links but are concerned about accidental unauthenticated sharing, consider one of the other options as the default.</span></span> <span data-ttu-id="129bd-145">如果您已啟用**的任何人**共用，此連結類型只有。</span><span class="sxs-lookup"><span data-stu-id="129bd-145">This link type is only available if you've enabled **Anyone** sharing.</span></span>
-- <span data-ttu-id="129bd-146">**只有在您的組織中的人員**-如果您預期大部分的檔案和資料夾共用您的組織內的人員都必須選擇此選項。</span><span class="sxs-lookup"><span data-stu-id="129bd-146">**Only people in your organization** - Choose this option if you expect most file and folder sharing to be with people inside your organization.</span></span>
-- <span data-ttu-id="129bd-147">**特定人員**-如果您預期執行許多檔案和資料夾與來賓共用，請考慮此選項。</span><span class="sxs-lookup"><span data-stu-id="129bd-147">**Specific people** - Consider this option if you expect to do a lot of file and folder sharing with guests.</span></span> <span data-ttu-id="129bd-148">這種類型的連結與來賓運作，以及需要進行驗證。</span><span class="sxs-lookup"><span data-stu-id="129bd-148">This type of link works with guests and requires them to authenticate.</span></span>
+- <span data-ttu-id="cf01b-143">**任何人] 連結**-如果您預期進行大量的未驗證的檔案及資料夾共用，請選擇此選項。</span><span class="sxs-lookup"><span data-stu-id="cf01b-143">**Anyone with the link** - Choose this option if you expect to do a lot of unauthenticated file and folder sharing.</span></span> <span data-ttu-id="cf01b-144">如果您想要允許*任何人*的連結，但擔心意外的未驗證共用，請考慮下列其中一個其他選項為預設值。</span><span class="sxs-lookup"><span data-stu-id="cf01b-144">If you want to allow *Anyone* links but are concerned about accidental unauthenticated sharing, consider one of the other options as the default.</span></span> <span data-ttu-id="cf01b-145">如果您已啟用**的任何人**共用，此連結類型只有。</span><span class="sxs-lookup"><span data-stu-id="cf01b-145">This link type is only available if you've enabled **Anyone** sharing.</span></span>
+- <span data-ttu-id="cf01b-146">**只有在您的組織中的人員**-如果您預期大部分的檔案和資料夾共用您的組織內的人員都必須選擇此選項。</span><span class="sxs-lookup"><span data-stu-id="cf01b-146">**Only people in your organization** - Choose this option if you expect most file and folder sharing to be with people inside your organization.</span></span>
+- <span data-ttu-id="cf01b-147">**特定人員**-如果您預期執行許多檔案和資料夾與來賓共用，請考慮此選項。</span><span class="sxs-lookup"><span data-stu-id="cf01b-147">**Specific people** - Consider this option if you expect to do a lot of file and folder sharing with guests.</span></span> <span data-ttu-id="cf01b-148">這種類型的連結與來賓運作，以及需要進行驗證。</span><span class="sxs-lookup"><span data-stu-id="cf01b-148">This type of link works with guests and requires them to authenticate.</span></span>
  
 ![SharePoint 組織層級檔案和資料夾共用設定的螢幕擷取畫面](media/sharepoint-organization-files-folders-sharing-settings.png)
 
 
-<span data-ttu-id="129bd-150">若要設定 SharePoint 和 OneDrive 組織層級預設值] 連結</span><span class="sxs-lookup"><span data-stu-id="129bd-150">To set the SharePoint and OneDrive organization level default link settings</span></span>
+<span data-ttu-id="cf01b-150">若要設定 SharePoint 和 OneDrive 組織層級預設值] 連結</span><span class="sxs-lookup"><span data-stu-id="cf01b-150">To set the SharePoint and OneDrive organization level default link settings</span></span>
 
-1. <span data-ttu-id="129bd-151">瀏覽至 SharePoint 系統管理中心的 [共用] 頁面上。</span><span class="sxs-lookup"><span data-stu-id="129bd-151">Navigate to the Sharing page in the SharePoint admin center.</span></span>
-2. <span data-ttu-id="129bd-152">[**檔案] 和 [資料夾] 連結**，選取預設共用您想要使用的連結。</span><span class="sxs-lookup"><span data-stu-id="129bd-152">Under **File and folder links**, select the default sharing link that you want to use.</span></span>
-3. <span data-ttu-id="129bd-153">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-153">If you made changes, click **Save**.</span></span>
+1. <span data-ttu-id="cf01b-151">瀏覽至 SharePoint 系統管理中心的 [共用] 頁面上。</span><span class="sxs-lookup"><span data-stu-id="cf01b-151">Navigate to the Sharing page in the SharePoint admin center.</span></span>
+2. <span data-ttu-id="cf01b-152">[**檔案] 和 [資料夾] 連結**，選取預設共用您想要使用的連結。</span><span class="sxs-lookup"><span data-stu-id="cf01b-152">Under **File and folder links**, select the default sharing link that you want to use.</span></span>
+3. <span data-ttu-id="cf01b-153">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-153">If you made changes, click **Save**.</span></span>
 
-## <a name="sharepoint-site-level-sharing-settings"></a><span data-ttu-id="129bd-154">SharePoint 網站層級共用設定</span><span class="sxs-lookup"><span data-stu-id="129bd-154">SharePoint site level sharing settings</span></span>
+## <a name="sharepoint-site-level-sharing-settings"></a><span data-ttu-id="cf01b-154">SharePoint 網站層級共用設定</span><span class="sxs-lookup"><span data-stu-id="cf01b-154">SharePoint site level sharing settings</span></span>
 
-<span data-ttu-id="129bd-155">如果您要共用檔案和 fodlers SharePoint 網站中，您也需要檢查該網站的網站層級共用設定。</span><span class="sxs-lookup"><span data-stu-id="129bd-155">If you're sharing files and fodlers that are in a SharePoint site, you also need to check the site-level sharing settings for that site.</span></span>
+<span data-ttu-id="cf01b-155">如果您要共用檔案和 fodlers SharePoint 網站中，您也需要檢查該網站的網站層級共用設定。</span><span class="sxs-lookup"><span data-stu-id="cf01b-155">If you're sharing files and fodlers that are in a SharePoint site, you also need to check the site-level sharing settings for that site.</span></span>
 
 ![SharePoint 網站外部共用設定的螢幕擷取畫面](media/sharepoint-site-external-sharing-settings.png)
 
-<span data-ttu-id="129bd-157">若要設定網站層級共用設定</span><span class="sxs-lookup"><span data-stu-id="129bd-157">To set site-level sharing settings</span></span>
-1. <span data-ttu-id="129bd-158">在 SharePoint 管理中心中，在左側導覽窗格中展開 [網站]\*\*\*\*，然後按一下 [使用中網站]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-158">In the SharePoint admin center, in the left navigation, expand **Sites** and click **Active sites**.</span></span>
-2. <span data-ttu-id="129bd-159">選取您剛建立的網站。</span><span class="sxs-lookup"><span data-stu-id="129bd-159">Select the site that you just created.</span></span>
-3. <span data-ttu-id="129bd-160">在功能區中，按一下 [共用]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-160">In the ribbon, click **Sharing**.</span></span>
-4. <span data-ttu-id="129bd-161">請確定該共用設為**任何人**或**新增和現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="129bd-161">Ensure that sharing is set to **Anyone** or **New and existing guests**.</span></span>
-5. <span data-ttu-id="129bd-162">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="129bd-162">If you made changes, click **Save**.</span></span>
+<span data-ttu-id="cf01b-157">若要設定網站層級共用設定</span><span class="sxs-lookup"><span data-stu-id="cf01b-157">To set site-level sharing settings</span></span>
+1. <span data-ttu-id="cf01b-158">在 SharePoint 管理中心中，在左側導覽窗格中展開 [網站]\*\*\*\*，然後按一下 [使用中網站]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-158">In the SharePoint admin center, in the left navigation, expand **Sites** and click **Active sites**.</span></span>
+2. <span data-ttu-id="cf01b-159">選取您剛建立的網站。</span><span class="sxs-lookup"><span data-stu-id="cf01b-159">Select the site that you just created.</span></span>
+3. <span data-ttu-id="cf01b-160">在功能區中，按一下 [共用]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-160">In the ribbon, click **Sharing**.</span></span>
+4. <span data-ttu-id="cf01b-161">請確定該共用設為**任何人**或**新增和現有的來賓**。</span><span class="sxs-lookup"><span data-stu-id="cf01b-161">Ensure that sharing is set to **Anyone** or **New and existing guests**.</span></span>
+5. <span data-ttu-id="cf01b-162">如果您做了任何變更，請按一下 [儲存]\*\*\*\*。</span><span class="sxs-lookup"><span data-stu-id="cf01b-162">If you made changes, click **Save**.</span></span>
 
-## <a name="invite-users"></a><span data-ttu-id="129bd-163">邀請使用者</span><span class="sxs-lookup"><span data-stu-id="129bd-163">Invite users</span></span>
+## <a name="invite-users"></a><span data-ttu-id="cf01b-163">邀請使用者</span><span class="sxs-lookup"><span data-stu-id="cf01b-163">Invite users</span></span>
 
-<span data-ttu-id="129bd-164">來賓共用設定現在會進行設定，讓使用者現在可以共用的檔案和資料夾與組織外部的人員。</span><span class="sxs-lookup"><span data-stu-id="129bd-164">Guest sharing settings are now configured, so users can now share files and folders with people outside your organization.</span></span> <span data-ttu-id="129bd-165">如需詳細資訊，請參閱[共用 OneDrive 檔案及資料夾](https://support.office.com/article/9fcc2f7d-de0c-4cec-93b0-a82024800c07)和[共用 SharePoint 檔案或資料夾](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c)。</span><span class="sxs-lookup"><span data-stu-id="129bd-165">See [Share OneDrive files and folders](https://support.office.com/article/9fcc2f7d-de0c-4cec-93b0-a82024800c07) and [Share SharePoint files or folders](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) for more information.</span></span>
+<span data-ttu-id="cf01b-164">來賓共用設定現在會進行設定，讓使用者現在可以共用的檔案和資料夾與組織外部的人員。</span><span class="sxs-lookup"><span data-stu-id="cf01b-164">Guest sharing settings are now configured, so users can now share files and folders with people outside your organization.</span></span> <span data-ttu-id="cf01b-165">如需詳細資訊，請參閱[共用 OneDrive 檔案及資料夾](https://support.office.com/article/9fcc2f7d-de0c-4cec-93b0-a82024800c07)和[共用 SharePoint 檔案或資料夾](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c)。</span><span class="sxs-lookup"><span data-stu-id="cf01b-165">See [Share OneDrive files and folders](https://support.office.com/article/9fcc2f7d-de0c-4cec-93b0-a82024800c07) and [Share SharePoint files or folders](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) for more information.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="129bd-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="129bd-166">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cf01b-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf01b-166">See Also</span></span>
 
-[<span data-ttu-id="129bd-167">與未驗證使用者共用檔案和資料夾的最佳做法</span><span class="sxs-lookup"><span data-stu-id="129bd-167">Best practices for sharing files and folders with unauthenticated users</span></span>](best-practices-anonymous-sharing.md)
+[<span data-ttu-id="cf01b-167">與未驗證使用者共用檔案和資料夾的最佳做法</span><span class="sxs-lookup"><span data-stu-id="cf01b-167">Best practices for sharing files and folders with unauthenticated users</span></span>](best-practices-anonymous-sharing.md)
 
-[<span data-ttu-id="129bd-168">與來賓共用時限制意外暴露檔案</span><span class="sxs-lookup"><span data-stu-id="129bd-168">Limit accidental exposure to files when sharing with guests</span></span>](sharing-limit-accidental-exposure.md)
+[<span data-ttu-id="cf01b-168">與來賓共用時限制意外暴露檔案</span><span class="sxs-lookup"><span data-stu-id="cf01b-168">Limit accidental exposure to files when sharing with guests</span></span>](sharing-limit-accidental-exposure.md)

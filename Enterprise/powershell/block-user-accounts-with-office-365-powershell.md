@@ -9,50 +9,52 @@ ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
 description: 說明如何使用 Office 365 PowerShell 來封鎖及解除封鎖對 Office 365 帳戶的存取。
-ms.openlocfilehash: 2ebed63de7cddd536b42000028cabd3c71cec31b
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: 18c7cea2df2514d7402dfcfd894acc03ed69b1c9
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072245"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41841690"
 ---
-# <a name="block-user-accounts-with-office-365-powershell"></a><span data-ttu-id="c31fd-103">使用 Office 365 PowerShell 封鎖使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="c31fd-103">Block user accounts with Office 365 PowerShell</span></span>
+# <a name="block-user-accounts-with-office-365-powershell"></a><span data-ttu-id="55606-103">使用 Office 365 PowerShell 封鎖使用者帳戶</span><span class="sxs-lookup"><span data-stu-id="55606-103">Block user accounts with Office 365 PowerShell</span></span>
 
-<span data-ttu-id="c31fd-104">封鎖 Office 365 帳戶的存取權防止其他人使用的帳戶登入並存取服務，以及 Office 365 組織中的資料。</span><span class="sxs-lookup"><span data-stu-id="c31fd-104">Blocking access to an Office 365 account prevents anyone from using the account to sign in and access the services and data in your Office 365 organization.</span></span> <span data-ttu-id="c31fd-105">您可以使用 Office 365 PowerShell 來封鎖存取個別和多個使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="c31fd-105">You can use Office 365 PowerShell to block access to individual and multiple user accounts.</span></span>
+<span data-ttu-id="55606-104">封鎖 Office 365 帳戶的存取權防止其他人使用的帳戶登入並存取服務，以及 Office 365 組織中的資料。</span><span class="sxs-lookup"><span data-stu-id="55606-104">Blocking access to an Office 365 account prevents anyone from using the account to sign in and access the services and data in your Office 365 organization.</span></span> <span data-ttu-id="55606-105">您可以使用 Office 365 PowerShell 來封鎖存取個別和多個使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="55606-105">You can use Office 365 PowerShell to block access to individual and multiple user accounts.</span></span>
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="c31fd-106">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="c31fd-106">Use the Azure Active Directory PowerShell for Graph module</span></span>
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="55606-106">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="55606-106">Use the Azure Active Directory PowerShell for Graph module</span></span>
 
-<span data-ttu-id="c31fd-107">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="c31fd-107">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
+<span data-ttu-id="55606-107">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="55606-107">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
  
-### <a name="block-access-to-individual-user-accounts"></a><span data-ttu-id="c31fd-108">封鎖對個別使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="c31fd-108">Block access to individual user accounts</span></span>
+### <a name="block-access-to-individual-user-accounts"></a><span data-ttu-id="55606-108">封鎖對個別使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="55606-108">Block access to individual user accounts</span></span>
 
-<span data-ttu-id="c31fd-109">使用下列語法來封鎖個別使用者帳戶：</span><span class="sxs-lookup"><span data-stu-id="c31fd-109">Use the following syntax to block an individual user account:</span></span>
+<span data-ttu-id="55606-109">使用下列語法來封鎖個別使用者帳戶：</span><span class="sxs-lookup"><span data-stu-id="55606-109">Use the following syntax to block an individual user account:</span></span>
   
 ```powershell
 Set-AzureADUser -ObjectID <sign-in name of the user account> -AccountEnabled $false
 ```
 
 > [!NOTE]
-> <span data-ttu-id="c31fd-110">Set-azuread cmdlet 中的-ObjectID 參數接受帳戶登入名稱，也稱為使用者主體名稱或帳戶的物件 id。</span><span class="sxs-lookup"><span data-stu-id="c31fd-110">The -ObjectID parameter in the Set-AzureAD cmdlet accepts either the account sign-in name, also known as the User Principal Name, or the account's object ID.</span></span> 
+> <span data-ttu-id="55606-110">Set-azuread cmdlet 中的-ObjectID 參數接受帳戶登入名稱，也稱為使用者主體名稱或帳戶的物件 id。</span><span class="sxs-lookup"><span data-stu-id="55606-110">The -ObjectID parameter in the Set-AzureAD cmdlet accepts either the account sign-in name, also known as the User Principal Name, or the account's object ID.</span></span> 
   
-<span data-ttu-id="c31fd-111">此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。</span><span class="sxs-lookup"><span data-stu-id="c31fd-111">This example blocks access to the user account fabricec@litwareinc.com.</span></span>
+<span data-ttu-id="55606-111">此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。</span><span class="sxs-lookup"><span data-stu-id="55606-111">This example blocks access to the user account fabricec@litwareinc.com.</span></span>
   
 ```powershell
 Set-AzureADUser -ObjectID fabricec@litwareinc.com -AccountEnabled $false
 ```
 
-<span data-ttu-id="c31fd-112">若要將使用者帳戶解除封鎖，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-112">To unblock this user account, run the following command:</span></span>
+<span data-ttu-id="55606-112">若要將使用者帳戶解除封鎖，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-112">To unblock this user account, run the following command:</span></span>
   
 ```powershell
 Set-AzureADUser -ObjectID fabricec@litwareinc.com -AccountEnabled $true
 ```
 
-<span data-ttu-id="c31fd-113">若要顯示 UPN 根據使用者的顯示名稱的使用者帳戶，請使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-113">To display the user account UPN based on the user's display name, use the following commands:</span></span>
+<span data-ttu-id="55606-113">若要顯示 UPN 根據使用者的顯示名稱的使用者帳戶，請使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-113">To display the user account UPN based on the user's display name, use the following commands:</span></span>
   
 ```powershell
 $userName="<display name>"
@@ -60,14 +62,14 @@ Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipa
 
 ```
 
-<span data-ttu-id="c31fd-114">本範例會顯示名為 Caleb Sills 的使用者的使用者帳戶 UPN。</span><span class="sxs-lookup"><span data-stu-id="c31fd-114">This example displays the user account UPN for the user named Caleb Sills.</span></span>
+<span data-ttu-id="55606-114">本範例會顯示名為 Caleb Sills 的使用者的使用者帳戶 UPN。</span><span class="sxs-lookup"><span data-stu-id="55606-114">This example displays the user account UPN for the user named Caleb Sills.</span></span>
   
 ```powershell
 $userName="Caleb Sills"
 Write-Host (Get-AzureADUser | where {$_.DisplayName -eq $userName}).UserPrincipalName
 ```
 
-<span data-ttu-id="c31fd-115">若要封鎖使用者的顯示名稱為基礎的帳戶，請使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-115">To block an account based on the user's display name, use the following commands:</span></span>
+<span data-ttu-id="55606-115">若要封鎖使用者的顯示名稱為基礎的帳戶，請使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-115">To block an account based on the user's display name, use the following commands:</span></span>
   
 ```powershell
 $userName="<display name>"
@@ -75,15 +77,15 @@ Set-AzureADUser -ObjectID (Get-AzureADUser | where {$_.DisplayName -eq $userName
 
 ```
 
-<span data-ttu-id="c31fd-116">任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-116">At any time, you can check the blocked status of a user account with the following command:</span></span>
+<span data-ttu-id="55606-116">任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-116">At any time, you can check the blocked status of a user account with the following command:</span></span>
   
 ```powershell
 Get-AzureADUser -UserPrincipalName <UPN of user account> | Select DisplayName,AccountEnabled
 ```
 
-### <a name="block-access-to-multiple-user-accounts"></a><span data-ttu-id="c31fd-117">封鎖對多個使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="c31fd-117">Block access to multiple user accounts</span></span>
+### <a name="block-access-to-multiple-user-accounts"></a><span data-ttu-id="55606-117">封鎖對多個使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="55606-117">Block access to multiple user accounts</span></span>
 
-<span data-ttu-id="c31fd-118">若要封鎖對多個使用者帳戶的存取，請建立文字檔，其中包含一個帳戶登入名稱每一行上都像這樣：</span><span class="sxs-lookup"><span data-stu-id="c31fd-118">To block access to multiple user accounts, create a text file that contains one account sign-in name on each line like this:</span></span>
+<span data-ttu-id="55606-118">若要封鎖對多個使用者帳戶的存取，請建立文字檔，其中包含一個帳戶登入名稱每一行上都像這樣：</span><span class="sxs-lookup"><span data-stu-id="55606-118">To block access to multiple user accounts, create a text file that contains one account sign-in name on each line like this:</span></span>
     
   ```powershell
 akol@contoso.com
@@ -91,57 +93,57 @@ tjohnston@contoso.com
 kakers@contoso.com
   ```
 
-<span data-ttu-id="c31fd-119">在下列命令，範例會將文字檔為 C:\My Documents\Accounts.txt。</span><span class="sxs-lookup"><span data-stu-id="c31fd-119">In the following commands, the example text file is C:\My Documents\Accounts.txt.</span></span> <span data-ttu-id="c31fd-120">取代的文字檔案的路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="c31fd-120">Replace this with the path and file name of your text file.</span></span>
+<span data-ttu-id="55606-119">在下列命令，範例會將文字檔為 C:\My Documents\Accounts.txt。</span><span class="sxs-lookup"><span data-stu-id="55606-119">In the following commands, the example text file is C:\My Documents\Accounts.txt.</span></span> <span data-ttu-id="55606-120">取代的文字檔案的路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="55606-120">Replace this with the path and file name of your text file.</span></span>
   
-<span data-ttu-id="c31fd-121">若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-121">To block access to the accounts listed in the text file, run the following command:</span></span>
+<span data-ttu-id="55606-121">若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-121">To block access to the accounts listed in the text file, run the following command:</span></span>
     
 ```powershell
 Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $false }
 ```
 
-<span data-ttu-id="c31fd-122">若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-122">To unblock the accounts listed in the text file, run the following command:</span></span>
+<span data-ttu-id="55606-122">若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-122">To unblock the accounts listed in the text file, run the following command:</span></span>
     
 ```powershell
 Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID $_ -AccountEnabled $true }
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="c31fd-123">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="c31fd-123">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="55606-123">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="55606-123">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
 
-<span data-ttu-id="c31fd-124">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="c31fd-124">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
+<span data-ttu-id="55606-124">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="55606-124">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
     
-### <a name="block-access-to-individual-user-accounts"></a><span data-ttu-id="c31fd-125">封鎖對個別使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="c31fd-125">Block access to individual user accounts</span></span>
+### <a name="block-access-to-individual-user-accounts"></a><span data-ttu-id="55606-125">封鎖對個別使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="55606-125">Block access to individual user accounts</span></span>
 
-<span data-ttu-id="c31fd-126">使用下列語法來封鎖對個別使用者帳戶的存取：</span><span class="sxs-lookup"><span data-stu-id="c31fd-126">Use the following syntax to block access to an individual user account:</span></span>
+<span data-ttu-id="55606-126">使用下列語法來封鎖對個別使用者帳戶的存取：</span><span class="sxs-lookup"><span data-stu-id="55606-126">Use the following syntax to block access to an individual user account:</span></span>
   
 ```powershell
 Set-MsolUser -UserPrincipalName <sign-in name of user account>  -BlockCredential $true
 ```
 
 >[!Note]
-><span data-ttu-id="c31fd-127">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="c31fd-127">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="c31fd-128">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="c31fd-128">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
+><span data-ttu-id="55606-127">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="55606-127">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="55606-128">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="55606-128">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
 >
 
-<span data-ttu-id="c31fd-129">此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。</span><span class="sxs-lookup"><span data-stu-id="c31fd-129">This example blocks access to the user account fabricec@litwareinc.com.</span></span>
+<span data-ttu-id="55606-129">此範例會封鎖對使用者帳戶 fabricec@litwareinc.com 的存取。</span><span class="sxs-lookup"><span data-stu-id="55606-129">This example blocks access to the user account fabricec@litwareinc.com.</span></span>
   
 ```powershell
 Set-MsolUser -UserPrincipalName fabricec@litwareinc.com -BlockCredential $true
 ```
 
-<span data-ttu-id="c31fd-130">若要將使用者帳戶解除封鎖，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-130">To unblock the user account, run the following command:</span></span>
+<span data-ttu-id="55606-130">若要將使用者帳戶解除封鎖，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-130">To unblock the user account, run the following command:</span></span>
   
 ```powershell
 Set-MsolUser -UserPrincipalName <sign-in name of user account>  -BlockCredential $false
 ```
 
-<span data-ttu-id="c31fd-131">任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-131">At any time, you can check the blocked status of a user account with the following command:</span></span>
+<span data-ttu-id="55606-131">任何時候，您可以檢查封鎖的狀態的使用者帳戶使用下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-131">At any time, you can check the blocked status of a user account with the following command:</span></span>
   
 ```powershell
 Get-MsolUser -UserPrincipalName <sign-in name of user account> | Select DisplayName,BlockCredential
 ```
 
-### <a name="block-access-to-multiple-user-accounts"></a><span data-ttu-id="c31fd-132">封鎖對多個使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="c31fd-132">Block access to multiple user accounts</span></span>
+### <a name="block-access-to-multiple-user-accounts"></a><span data-ttu-id="55606-132">封鎖對多個使用者帳戶的存取</span><span class="sxs-lookup"><span data-stu-id="55606-132">Block access to multiple user accounts</span></span>
 
-<span data-ttu-id="c31fd-133">首先，建立文字檔，其中包含一個帳戶每一行上都像這樣：</span><span class="sxs-lookup"><span data-stu-id="c31fd-133">First, create a text file that contains one account on each line like this:</span></span>
+<span data-ttu-id="55606-133">首先，建立文字檔，其中包含一個帳戶每一行上都像這樣：</span><span class="sxs-lookup"><span data-stu-id="55606-133">First, create a text file that contains one account on each line like this:</span></span>
     
 ```powershell
 akol@contoso.com
@@ -149,23 +151,23 @@ tjohnston@contoso.com
 kakers@contoso.com
 ```
 
-<span data-ttu-id="c31fd-134">在下列命令，範例會將文字檔為 C:\My Documents\Accounts.txt。</span><span class="sxs-lookup"><span data-stu-id="c31fd-134">In the following commands, the example text file is C:\My Documents\Accounts.txt.</span></span> <span data-ttu-id="c31fd-135">取代的文字檔案的路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="c31fd-135">Replace this with the path and file name of your text file.</span></span>
+<span data-ttu-id="55606-134">在下列命令，範例會將文字檔為 C:\My Documents\Accounts.txt。</span><span class="sxs-lookup"><span data-stu-id="55606-134">In the following commands, the example text file is C:\My Documents\Accounts.txt.</span></span> <span data-ttu-id="55606-135">取代的文字檔案的路徑和檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="55606-135">Replace this with the path and file name of your text file.</span></span>
     
-<span data-ttu-id="c31fd-136">若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-136">To block access to the accounts listed in the text file, run the following command:</span></span>
+<span data-ttu-id="55606-136">若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-136">To block access to the accounts listed in the text file, run the following command:</span></span>
     
   ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $true }
   ```
-<span data-ttu-id="c31fd-137">若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="c31fd-137">To unblock the accounts listed in the text file, run the following command:</span></span>
+<span data-ttu-id="55606-137">若要解除封鎖對文字檔中所列帳戶的存取，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="55606-137">To unblock the accounts listed in the text file, run the following command:</span></span>
     
   ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUser -UserPrincipalName $_ -BlockCredential $false }
   ```
 
-## <a name="see-also"></a><span data-ttu-id="c31fd-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c31fd-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="55606-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55606-138">See also</span></span>
 
-[<span data-ttu-id="c31fd-139">管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組</span><span class="sxs-lookup"><span data-stu-id="c31fd-139">Manage user accounts, licenses, and groups with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[<span data-ttu-id="55606-139">管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組</span><span class="sxs-lookup"><span data-stu-id="55606-139">Manage user accounts, licenses, and groups with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[<span data-ttu-id="c31fd-140">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="c31fd-140">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="55606-140">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="55606-140">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
   
-[<span data-ttu-id="c31fd-141">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="c31fd-141">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
+[<span data-ttu-id="55606-141">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="55606-141">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
