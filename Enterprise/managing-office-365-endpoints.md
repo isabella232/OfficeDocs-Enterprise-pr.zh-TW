@@ -11,16 +11,18 @@ localization_priority: Normal
 ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
+f1.keywords:
+- CSH
 ms.custom: Adm_O365_Setup
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: 有些企業網路一般網際網路位置限制存取，或包含大量 backhaul 或處理的網路流量。 若要確保像這些可以存取 Office 365、 網路和 proxy 的系統管理員需要管理的 Fqdn，Url、 清單及 IP 位址的網路上的電腦構成的 Office 365 端點清單。 若要新增至直接路由傳送，proxy 略過及/或防火牆規則以確保能夠連線到 Office 365 的網路要求的 PAC 檔案這些需求。
-ms.openlocfilehash: 189a21c310b7fd2e62817504b8d6910a2b3e66ca
-ms.sourcegitcommit: 3ed7b1eacf009581a9897524c181afa3e555ad3f
+ms.openlocfilehash: f1e614412c1ef789ba5f0b81e124fdfebf361f94
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "41570880"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41845034"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 
@@ -75,7 +77,7 @@ Get-PacFile -ClientRequestId b10c5ed1-bad1-445f-b386-b919946339a7
 |**ClientRequestId** <br/> |這是必要的會傳遞至代表在用戶端電腦進行呼叫 web 服務的 GUID。 <br/> |
 |**Instance** <br/> |預設值為全球網站 Office 365 服務執行個體。 也會傳遞至 web 服務。 <br/> |
 |**TenantName** <br/> |您的 Office 365 租用戶名稱。 傳遞至 web 服務，並做為某些 Office 365 url 可取代的參數。 <br/> |
-|**類型** <br/> |您想要產生 proxy PAC 檔案的類型。 <br/> |
+|**Type** <br/> |您想要產生 proxy PAC 檔案的類型。 <br/> |
 
 以下是呼叫與其他參數的 PowerShell 指令碼的另一個範例：
 

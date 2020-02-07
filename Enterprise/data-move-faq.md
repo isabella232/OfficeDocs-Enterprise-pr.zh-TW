@@ -11,13 +11,15 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
+f1.keywords:
+- NOCSH
 description: 以下是對一般問題的回答關於將核心資料移至新的資料中心地理位置。
-ms.openlocfilehash: cea25e2e3a400c2bcf76c2dbe13c4f7ba1a7b884
-ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
+ms.openlocfilehash: 3dcdb17bff899caa8d72799c9b3c4bb7d74c9e96
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "40923845"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41840600"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -65,7 +67,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
 ## <a name="will-new-office-365-customers-be-automatically-provisioned-in-the-new-datacenter-geos"></a>將新的 Office 365 客戶可自動佈建中新的資料中心 geos 嗎？
   
-可以。 提供新的資料中心地理位置之後，新的 Office 365 的商務客戶選取作為其國家/地區的合格的新的地理位置的國家/地區註冊期間會有存放在新的資料中心地理位置中其核心客戶資料。
+是。 提供新的資料中心地理位置之後，新的 Office 365 的商務客戶選取作為其國家/地區的合格的新的地理位置的國家/地區註冊期間會有存放在新的資料中心地理位置中其核心客戶資料。
   
  ## <a name="where-is-my-core-customer-data-is-located"></a>其中是我核心客戶資料所在？
 
@@ -139,7 +141,7 @@ Office 365 服務的一些可能位於不同 geos 一些現有的客戶和正在
   
  ## <a name="do-the-new-datacenter-geos-use-the-same-versions-of-office-365-services-as-the-current-datacenter-geos"></a>新的資料中心 geos 是否為目前的資料中心 geos 使用相同版本的 Office 365 服務？
 
-可以。
+是。
   
 ## <a name="will-office-365-tenants-hosted-in-the-new-datacenters-be-available-to-users-outside-of-the-country"></a>Office 365 租用戶中新的資料中心主控可以外的國家/地區的使用者？
   

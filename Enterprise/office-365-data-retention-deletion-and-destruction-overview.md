@@ -12,13 +12,15 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: Office 365 的相關資料保留、 刪除及毀損的 Microsoft 原則概觀。
-ms.openlocfilehash: 93093e3688d0f8ae399a4e021deaaf4b7ed5cecf
-ms.sourcegitcommit: 4f465f690c6563cfa9f6029d3e7e9e3cace96671
+ms.openlocfilehash: a1f799be5582a112808d8efed65f1a3d420546c5
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "41658330"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844504"
 ---
 # <a name="data-retention-deletion-and-destruction-in-office-365"></a>Office 365 中的資料保留、刪除及毀損
 

@@ -11,13 +11,15 @@ localization_priority: Normal
 search.appverid:
 - MET150
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
+f1.keywords:
+- NOCSH
 description: 新的資料中心 geos 新增容量，並計算資源以支援我們的客戶的需求與使用狀況成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置中的資料落地。 核心客戶資料 」 一詞指的是 Microsoft 線上服務條款中所定義的客戶資料的子集： Exchange Online 信箱內容 （電子郵件內文、 行事曆項目和電子郵件附件的內容） 和 SharePoint Online 站台內容和檔案儲存在該站台內，而且檔案上傳至商務用 OneDrive。
-ms.openlocfilehash: dd8cb060980db16672225fa7543958441a5bebc9
-ms.sourcegitcommit: 761dd21a6b7a2650ef26fd8d6b303c04fa2546f2
+ms.openlocfilehash: f2f6706d69d79681833ebca70cbe32964b7f3b77
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "40923865"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844764"
 ---
 # <a name="moving-core-data-to-new-office-365-datacenter-geos"></a>將核心資料移至新的 Office 365 資料中心 geos
 

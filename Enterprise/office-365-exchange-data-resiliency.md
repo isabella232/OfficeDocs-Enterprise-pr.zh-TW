@@ -12,13 +12,15 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: Exchange Online 和 Office 365 內的資料復原的各個方面的說明。
-ms.openlocfilehash: ad10e70ab6d03e2bbc37f6cc7885406c33df2239
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 73b217f7b85722bca10cdf1abbe10c3a32922e9f
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067337"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844474"
 ---
 # <a name="exchange-online-data-resiliency-in-office-365"></a>Office 365 中的 Exchange Online 資料恢復
 
@@ -42,7 +44,7 @@ Exchange Online 中的信箱資料損毀防範達成，使用 Exchange 的原生
 
 如需有關上述的原生功能的詳細資訊，在上述的超連結，按一下 [，如需詳細資訊以及沒有超連結的項目上的詳細資訊，請參閱下面的。 除了這些原生功能，Exchange Online 也包含資料恢復客戶可以管理功能，例如： 
 - [（預設為啟用） 的單一項目復原](https://docs.microsoft.com/exchange/recipients-in-exchange-online/manage-user-mailboxes/recover-deleted-messages) 
-- [就地保留和訴訟資料暫留](https://docs.microsoft.com/exchange/security-and-compliance/in-place-and-litigation-holds) 
+- [就地保留與訴訟暫止](https://docs.microsoft.com/exchange/security-and-compliance/in-place-and-litigation-holds) 
 - [已刪除的項目保留和 Soft-Deleted 信箱 （兩者皆適用預設為啟用）](https://docs.microsoft.com/exchange/recipients-in-exchange-online/delete-or-restore-mailboxes) 
 
 ## <a name="database-availability-groups"></a>資料庫可用性群組 

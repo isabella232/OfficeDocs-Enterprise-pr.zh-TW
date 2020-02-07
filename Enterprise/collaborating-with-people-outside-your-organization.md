@@ -8,13 +8,15 @@ ms.topic: article
 ms.service: sharepoint-online
 ms.collection: SPO_Content
 localization_priority: Normal
+f1.keywords:
+- NOCSH
 description: 了解如何設定 Office 365 的共同作業與組織外部的人員。
-ms.openlocfilehash: d343594319f40a3fa3ab2bb619c91f9a3a03ca62
-ms.sourcegitcommit: b5992f367ccae97a8ea538738fe36d3d703cd6e7
+ms.openlocfilehash: 747f2d40ade4396979450c3e2d27f387c7bd8aca
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "39919317"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41840770"
 ---
 # <a name="collaborating-with-people-outside-your-organization"></a>與組織外部人員共同作業
 
@@ -28,6 +30,6 @@ ms.locfileid: "39919317"
 
 [與未驗證使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
 
-[與組織外部人員共用時，限制意外曝露檔案](sharing-limit-accidental-exposure.md)
+[在與組織外的人員共用檔案時，限制資訊意外暴露。](sharing-limit-accidental-exposure.md)
 
 [建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)）

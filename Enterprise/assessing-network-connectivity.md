@@ -1,5 +1,5 @@
 ---
-title: 評估 Office 365 的網路連線能力
+title: 評估 Office 365 網路連線能力
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -9,6 +9,8 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,14 +18,14 @@ search.appverid:
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連線。 隨著服務發展，安全性、 效能和可靠性的 Office 365 已獲得改善根據上使用網際網路來建立連線至服務的客戶。
-ms.openlocfilehash: 8b784da9dcb8b5e821197e72ccc5ab49b976ba74
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: c96cb8aa7341c0749d198e1fa5459433c40e1062
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38745716"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844694"
 ---
-# <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 的網路連線能力
+# <a name="assessing-office-365-network-connectivity"></a>評估 Office 365 網路連線能力
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
@@ -105,7 +107,7 @@ Office 365 被為了讓使得全球客戶服務使用的網際網路連線的連
   
 以下是您可以使用返回下列短連結： [ https://aka.ms/o365networkconnectivity。](https://aka.ms/o365networkconnectivity)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Office 365 網路連線概觀](office-365-networking-overview.md)
 

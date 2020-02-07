@@ -9,16 +9,18 @@ ms.service: O365-seccomp
 localization_priority: Normal
 search.appverid:
 - MET150
+f1.keywords:
+- NOCSH
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 description: 摘要： Office 365 系統管理存取控制及資料分類的概觀。
-ms.openlocfilehash: e8cc470c617deea7435841f276b772b0a8ef17a3
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: f902b123b26f2c71cb6597f66fc47142e2f2b44c
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067334"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844534"
 ---
 # <a name="administrative-access-controls-in-office-365"></a>Office 365 中的系統管理存取控制 
 
@@ -29,7 +31,7 @@ Microsoft 已頻繁投資系統和自動化 Office 365 的大部分作業時刻�
 Microsoft 提供使用的雲端傳遞多份表單的線上服務：
 
 - **公用定域機組：** 包含多租用戶版本的 Office 365、 Azure 及裝載於 「 北美地區 」、 南美洲、 歐洲、 亞洲、 澳洲等其他服務。
-- **國家雲中：** 包含所有統領和協力廠商運作定域機組外美國 （除了和先前所述），例如 （由 21Vianet 運作的），由中國的 Office 365 和 Office 365 Germany 中 (由 Microsoft 中，但在其中模式下運作德國資料受託人Deutsche Telekom 控制及監視 Microsoft 客戶資料與存取權包含客戶資料的系統）。
+- **國家雲中：** 包含所有統領和協力廠商運作定域機組外美國 （除了和先前所述），例如 （由 21Vianet 運作的），由中國的 Office 365 和 Office 365 Germany （21vianet 運作的 microsoft，但在德國資料受託人，Deutsche Telekom 控制及監視 Microsoft 客戶資料與存取權的系統，包含客戶資料模型下） 中。
 - **政府定域機組：** 包含可用於美國政府版客戶的 Office 365 與 Azure 服務。
 
 基於本文的詳細資訊，包括 Office 365 服務：

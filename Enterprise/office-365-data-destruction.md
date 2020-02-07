@@ -12,13 +12,15 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: 回收、 處置或損毀的 Office 365 資料中心的磁碟機和伺服器相關的 Microsoft 原則的概觀。
-ms.openlocfilehash: 1fca278dd23e84db2c6591eefc45d0b75265cf17
-ms.sourcegitcommit: 35c04a3d76cbe851110553e5930557248e8d4d89
+ms.openlocfilehash: 2ad73206309751729f776081d66d6c6d5daf1308
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38032088"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843684"
 ---
 # <a name="office-365-data-destruction"></a>Office 365 資料毀損
 
@@ -36,4 +38,4 @@ Microsoft 會使用資料清除單位，從[極端的通訊協定解決方案](h
 
 ## <a name="virtual-data-destruction"></a>虛擬資料毀損
 
-Microsoft 有資料處理原則和程序，能解決有效的虛擬損毀的資料進行保護，以在服務中實刪除之後不當共用服務租用戶或之間正在存取資料的可能性。 即使任何基礎的實體儲存裝置已重新指派，也無法存取另一個服務租用戶，從一個租用戶中的服務中刪除的資料。 這是用來擴充虛擬環境的多個虛擬化及分散情形技術的效果，計算結果、 作用中刪除內每個服務租用戶 （例如[分頁清空](https://docs.microsoft.com/office365/securitycompliance/office-365-exchange-online-data-deletion#page-zeroing)），和必要的應用程式的行為媒體和應用程式的內容加密程序。
+Microsoft 有資料處理原則和程序，能解決有效的虛擬損毀的資料進行保護，以在服務中實刪除之後不當共用服務租用戶或之間正在存取資料的可能性。 即使任何基礎的實體儲存裝置已重新指派，也無法存取另一個服務租用戶，從一個租用戶中的服務中刪除的資料。 這是用來擴充虛擬環境的多個虛擬化及分散情形技術的效果，計算結果、 作用中刪除 （例如[分頁清空](https://docs.microsoft.com/office365/securitycompliance/office-365-exchange-online-data-deletion#page-zeroing)），每個服務租用戶的所需的媒體和應用程式內容加密程序內的應用程式的行為。

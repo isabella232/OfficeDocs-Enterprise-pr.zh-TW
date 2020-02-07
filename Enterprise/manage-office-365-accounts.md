@@ -7,6 +7,8 @@ audience: Admin
 ms.topic: overview
 ms.prod: office-online-server
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.collection:
 - Ent_O365
@@ -18,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '了解哪些工具用來管理您的 Office 365 使用者，以及如何您可以使用取決於您要如何管理使用者身分識別。 '
-ms.openlocfilehash: 3e29af9e3d01184f9edc386148de60897fb03e27
-ms.sourcegitcommit: 10ae1163f8443c53f19dfad6b7c2b2bb952bf759
+ms.openlocfilehash: 0cfb1496dd97eb932afc4e90a6d9469289332c2d
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "34490736"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843714"
 ---
 # <a name="tools-to-manage-office-365-accounts"></a>管理 Office 365 帳戶的工具
 
@@ -41,7 +43,7 @@ ms.locfileid: "34490736"
     
 - 使用無縫單一登入-通過驗證提供用來驗證直接與您的內部作用中使用者的一或多個內部部署伺服器上執行的軟體代理程式的 Azure AD 驗證服務的簡單密碼驗證目錄。 
     
-### <a name="federated-authentication"></a>同盟的驗證
+### <a name="federated-authentication"></a>同盟驗證
 
 - 同盟的驗證選項-主要使用於具有較複雜的驗證需求，物件會與 Office 365 和使用者帳戶同步處理的內部部署目錄的大型企業組織為受管理的內部部署。 
     

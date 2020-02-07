@@ -8,6 +8,8 @@ audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -19,12 +21,12 @@ ms.collection:
 - Ent_O365
 - SPO_Content
 description: 有一些簡單的方法若要檢查 Office 365 和您將可讓您建立您的連線能力的粗略基準的業務之間連線的效能。 了解您的用戶端的效能歷程記錄的電腦連線，可協助您早期偵測新興問題、 識別及預測的問題。
-ms.openlocfilehash: 03aa4f9092154e00201ca0a58f335b70d26f3b11
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: 2eed0b20886552c207399ab4144b63364132f98c
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38078132"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844334"
 ---
 # <a name="office-365-performance-tuning-using-baselines-and-performance-history"></a>使用基準與效能歷程記錄調整 Office 365 效能
 
@@ -323,7 +325,7 @@ Office 365 居住持續監視不只是由 「 自動化，但實際人員高容�
   
 若要解決效能問題，*現在*，您需要在您所遇到的效能問題的時間似乎追蹤。 您必須要有適當工具，可收集記錄檔，而且您需要的行動計劃，也就是疑難排解要收集的最佳的資訊，您可以採取的動作清單。 第一件事是測試的記錄的日期和時間，以便反映計時資料夾中會儲存檔案。 接下來，縮小自己的問題步驟。 這些是您要用於測試的確切步驟。 別忘了基本概念： 如果問題是只使用 Outlook，請確定問題行為會發生只有一個 Office 365 服務中的記錄。 向下此問題的範圍縮小，可協助您專注於您可以解決的某個項目。 
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
 

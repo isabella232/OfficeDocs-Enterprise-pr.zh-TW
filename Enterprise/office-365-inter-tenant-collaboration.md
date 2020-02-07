@@ -16,13 +16,15 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: eb45fd8b-1d5d-4b0c-9c5a-479dbb176e7d
+f1.keywords:
+- NOCSH
 description: 了解 Office 365 共同作業跨租用戶和組織的運作方式。
-ms.openlocfilehash: b232cd2202f1b4e13102fd33ba545cfdcbb2edfe
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: e7823927b6e1987c27924bdae34cf439a50db296
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38078172"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843624"
 ---
 # <a name="office-365-inter-tenant-collaboration"></a>Office 365 租用戶間共同作業
 
@@ -38,14 +40,13 @@ Office 365 租用戶間共同作業選項包括使用中央位置的檔案和交
 |:-----|:-----|:-----|
 |與另一個 Office 365 組織共用行事曆  <br/> |系統管理員可以設定不同層級的行事曆存取在 Exchange Online，讓企業與其他人共同作業與其他企業，並且讓使用者共用的排程 （空閒/忙碌資訊）  <br/> |[Exchange Online 中共用](https://technet.microsoft.com/library/jj916670%28v=exchg.150%29.aspx) <br/> [Exchange Online 中的組織關聯性](https://technet.microsoft.com/library/jj916658%28v=exchg.150%29.aspx) <br/> [在 Exchange Online 中建立組織關聯性](https://technet.microsoft.com/library/jj916671%28v=exchg.150%29.aspx) <br/> [修改與 Exchange Online 中的組織關聯性](https://technet.microsoft.com/library/jj916659%28v=exchg.150%29.aspx) <br/> [Exchange Online 中移除組織關聯性](https://technet.microsoft.com/library/jj916657%28v=exchg.150%29.aspx) <br/> [與外部使用者共用行事曆](https://support.office.com/article/fb00dd4e-2d5f-4e8d-8ff4-94b2cf002bdd) <br/> |
 |控制使用者如何與組織外部人員共用行事曆  <br/> |系統管理員將共用原則套用到使用者信箱，以控制誰能與共用及授與的存取層級  <br/> |[共用 Exchange Online 中的原則](https://technet.microsoft.com/library/jj916673%28v=exchg.150%29.aspx) <br/> [在 Exchange Online 中建立共用原則](https://technet.microsoft.com/library/jj916676%28v=exchg.150%29.aspx) <br/> [將共用原則套用至 Exchange Online 中的信箱](https://technet.microsoft.com/library/jj916672%28v=exchg.150%29.aspx) <br/> [修改、 停用或移除 Exchange Online 中的共用原則](https://technet.microsoft.com/library/jj916674%28v=exchg.150%29.aspx) <br/> |
-|設定安全的電子郵件通道及控制與夥伴組織的郵件流程  <br/> |系統管理員建立連接器，將安全性套用至與夥伴組織或服務提供者的郵件交換。 連接器以及允許的網域名稱限制強制加密透過傳輸層安全性 (TLS) 或 IP 位址範圍從協力廠商傳送電子郵件。  <br/> |[Exchange Online 如何使用 TLS 來保護 Office 365 中的電子郵件連線](https://technet.microsoft.com/library/mt163898.aspx) <br/> [Configure mail flow using connectors in Office 365](https://technet.microsoft.com/library/ms.exch.eac.connectorselection%28v=exchg.150%29.aspx) <br/> [Exchange Online 中的遠端網域](https://technet.microsoft.com/library/jj966211%28v=exchg.150%29.aspx) <br/> [設定與夥伴組織的安全郵件流程的連接器](https://technet.microsoft.com/library/dn751021%28v=exchg.150%29.aspx) <br/> [Exchange Online 和 Office 365 的郵件流程最佳做法 (概觀)](https://technet.microsoft.com/library/0e6cd9d5-ad3e-418a-8ea9-3bf33332c491%28v=exchg.150%29) <br/> |
+|設定安全的電子郵件通道及控制與夥伴組織的郵件流程  <br/> |系統管理員建立連接器，將安全性套用至與夥伴組織或服務提供者的郵件交換。 連接器以及允許的網域名稱限制強制加密透過傳輸層安全性 (TLS) 或 IP 位址範圍從協力廠商傳送電子郵件。  <br/> |[Exchange Online 如何使用 TLS 來保護 Office 365 中的電子郵件連線](https://technet.microsoft.com/library/mt163898.aspx) <br/> [使用 Office 365 中的連接器設定郵件流程](https://technet.microsoft.com/library/ms.exch.eac.connectorselection%28v=exchg.150%29.aspx) <br/> [Exchange Online 中的遠端網域](https://technet.microsoft.com/library/jj966211%28v=exchg.150%29.aspx) <br/> [設定與夥伴組織的安全郵件流程的連接器](https://technet.microsoft.com/library/dn751021%28v=exchg.150%29.aspx) <br/> [Exchange Online 和 Office 365 的郵件流程最佳做法 (概觀)](https://technet.microsoft.com/library/0e6cd9d5-ad3e-418a-8ea9-3bf33332c491%28v=exchg.150%29) <br/> |
    
 ## <a name="sharepoint-online-and-onedrive-for-business-collaboration-options"></a>SharePoint Online 和 OneDrive for Business 共同作業選項
 
 |**共用目標**|**系統管理動作**|**How to 資訊**|
 |:-----|:-----|:-----|
-|與外部使用者共用網站和文件  <br/> |系統管理員設定共用，租用戶或網站集合層級的通過驗證的 Microsoft 帳戶、 公司或學校帳戶已驗證或來賓帳戶  <br/> |
-  [管理您的 SharePoint Online 環境外部共用](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&amp;rs=en-US&amp;ad=US) <br/> [受限的網域共用 Office 365 中 SharePoint Online 和 OneDrive for Business](https://support.office.com/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9) <br/> [使用 SharePoint Online 做為企業對企業 (B2B) 的外部網路解決方案](https://support.office.com/article/7b087413-165a-4e94-8871-4393e0b9c037) <br/> |
+|與外部使用者共用網站和文件  <br/> |系統管理員設定共用，租用戶或網站集合層級的通過驗證的 Microsoft 帳戶、 公司或學校帳戶已驗證或來賓帳戶  <br/> |[管理您的 SharePoint Online 環境外部共用](https://support.office.com/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85?ui=en-US&amp;rs=en-US&amp;ad=US) <br/> [受限的網域共用 Office 365 中 SharePoint Online 和 OneDrive for Business](https://support.office.com/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9) <br/> [使用 SharePoint Online 做為企業對企業 (B2B) 的外部網路解決方案](https://support.office.com/article/7b087413-165a-4e94-8871-4393e0b9c037) <br/> |
 |追蹤及控制使用者的外部共用  <br/> |OneDrive for Business 檔案擁有者和 SharePoint Online 使用者設定的網站和文件共用，並建立追蹤共用通知  <br/> |[設定商務用 OneDrive 外部共用通知](https://support.office.com/article/Configure-notifications-for-external-sharing-for-OneDrive-for-Business-b640c693-f170-4227-b8c1-b0a7e0fa876b) <br/> [在 Office 365 中共用 SharePoint 檔案或資料夾](https://support.office.com/article/1fe37332-0f9a-4719-970e-d2578da4941c) (機器翻譯) <br/> |
    
 ## <a name="skype-for-business-collaboration-options"></a>Skype 商務共同作業選項
@@ -101,7 +102,7 @@ Office 365 租用戶間共同作業選項包括使用中央位置的檔案和交
     
 ### <a name="can-we-share-domain-namespaces-across-office-365-tenants"></a>我們可以跨 Office 365 租用戶共用網域命名空間嗎？
 
-不會。 虛名網域，例如 fabrikam.com 或 tailspintoys.com，只可關聯及次搭配一個租用戶。 每個租用戶必須有它自己的命名空間。無法跨租用戶共用 UPN、 SMTP 和 SIP 命名空間。
+否。 虛名網域，例如 fabrikam.com 或 tailspintoys.com，只可關聯及次搭配一個租用戶。 每個租用戶必須有它自己的命名空間。無法跨租用戶共用 UPN、 SMTP 和 SIP 命名空間。
   
 ### <a name="what-about-hybrid-components-and-office-365-inter-tenant-collaboration"></a>關於混合式元件和 Office 365 租用戶間共同作業功能？
 

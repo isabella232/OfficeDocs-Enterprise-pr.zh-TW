@@ -20,13 +20,15 @@ search.appverid:
 - PJU120
 - PSV120
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
+f1.keywords:
+- NOCSH
 description: 支援結束推出的 Office 2010 伺服器和用戶端應用程式，並不提供自訂的支援協議。 使用本文來啟動現在規劃您的升級。
-ms.openlocfilehash: 9df09e0f31358c9dd1bfe4a4adde99d41070060f
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: a71ac61b69d72f6386c3b9063ec0c1946a5b57ca
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072405"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41841030"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
 

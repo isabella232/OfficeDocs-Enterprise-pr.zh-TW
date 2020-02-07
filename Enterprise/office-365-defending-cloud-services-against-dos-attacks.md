@@ -12,13 +12,15 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: 如何 Microsoft 進行防禦拒絕服務 (DoS) 攻擊對其雲端服務。
-ms.openlocfilehash: ba4688d965d6cce232f771507df941540acc8e4e
-ms.sourcegitcommit: 9eb68633728cc78e9906dab222edbf9977b17e21
+ms.openlocfilehash: 042748927ddfa4d81fa3c62b98ab8f1114a8ada0
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "38035770"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843614"
 ---
 # <a name="defending-microsoft-cloud-services-against-denial-of-service-attacks"></a>防禦拒絕服務攻擊的 Microsoft 雲端服務
 
@@ -49,6 +51,6 @@ SharePoint Online 中節流的最常見觸發程序是用戶端物件模型 (CSO
 如果違規的程序持續超過使用狀況的限制，SharePoint Online 可能完全封鎖程序，並傳回 HTTP 狀態碼 503 （「 服務無法使用 」）。
 
 ## <a name="vulnerability-and-penetration-testing"></a>弱點和滲透測試
-Microsoft 會使用許多[安全性技術與作法](https://www.microsoft.com/trustcenter/security/threatmanagement)對新式、 複雜的威脅，包括使用反惡意程式碼的元件和服務的雲端服務時，虛擬[保護其雲端基礎結構](https://blogs.technet.microsoft.com/hybridcloud/2015/05/05/protecting-your-datacenter-and-cloud-from-emerging-threats/)，並在內部網路機器 (Vm)，與其他系統。 進階的威脅分析，以監視正常流量模式網路、 系統及使用者，以及採用機器學習超出正常，和一般滲透測試任何行為的旗標。
+Microsoft 會使用許多[安全性技術與作法](https://www.microsoft.com/trustcenter/security/threatmanagement)來[保護其雲端基礎結構](https://blogs.technet.microsoft.com/hybridcloud/2015/05/05/protecting-your-datacenter-and-cloud-from-emerging-threats/)，並在內部網路對新式、 複雜的威脅，包括使用反惡意程式碼元件和服務的雲端服務、 虛擬機器 (Vm)，與其他系統。 進階的威脅分析，以監視正常流量模式網路、 系統及使用者，以及採用機器學習超出正常，和一般滲透測試任何行為的旗標。
 
-除了執行自己滲透測試和[Microsoft 雲端整合滲透測試程式](https://technet.microsoft.com/mt784683)提供給我們的客戶，我們也邀請與協力廠商安全性專業人員執行一般弱點評估和滲透測試對我們雲端服務。 我們從這些協力廠商弱點評估報告可供下載從進行[服務信任](https://aka.ms/STP)及[服務保證](https://aka.ms/ServiceAssurance)入口網站。
+除了執行自己滲透測試和[Microsoft 雲端整合滲透測試程式](https://technet.microsoft.com/mt784683)提供給我們的客戶，我們也洽詢協力廠商安全性專業人員執行一般弱點評估與滲透測試對我們雲端服務。 我們從這些協力廠商弱點評估報告可供下載從進行[服務信任](https://aka.ms/STP)及[服務保證](https://aka.ms/ServiceAssurance)入口網站。

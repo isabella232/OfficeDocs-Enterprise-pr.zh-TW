@@ -11,16 +11,18 @@ localization_priority: Normal
 ms.collection:
 - Ent_O365
 - SPO_Content
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: 87a52468-994e-43a2-b155-7229ed659291
 description: 本文說明如何使用縮製及統合技術搭配 Web Essentials 來減少 HTTP 要求數目，並降低 SharePoint Online 中載入頁面所花費的時間。
-ms.openlocfilehash: 22114d8ab3b33c9a39b4d9291b4099501fcfb93f
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: ca0ad53f2c854226b729a94e345a553850517eaf
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38078442"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844894"
 ---
 # <a name="minification-and-bundling-in-sharepoint-online"></a>SharePoint Online 中的縮製和統合
 

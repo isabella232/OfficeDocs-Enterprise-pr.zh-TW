@@ -22,13 +22,15 @@ search.appverid:
 - BSA160
 - OSU160
 ms.assetid: 66325a43-5816-4f8e-81ba-c11b71345b7c
+f1.keywords:
+- NOCSH
 description: SharePoint Server 2007 已達到終止支援，及該是時候來升級。 使用這篇文章可協助您建立您的計劃。
-ms.openlocfilehash: 6315c06f034464cf12224582c9dcd0257bf43961
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 607dfeaedb1a63634e08e28f8aef2c6fcce6ce9c
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38748030"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41841150"
 ---
 # <a name="sharepoint-2007-migration-options-to-consider"></a>若要考慮 SharePoint 2007 遷移選項
 

@@ -5,11 +5,13 @@ author: JoeDavies-MSFT
 manager: laurawi
 audience: Admin
 ms.topic: article
-f1_keywords:
-- O365E_SetupDirSyncLocalDir
 ms.service: o365-administration
 localization_priority: Normal
-ms.custom: Adm_O365
+f1.keywords:
+- CSH
+ms.custom:
+- Adm_O365
+- O365E_SetupDirSyncLocalDir
 ms.collection:
 - Ent_O365
 - M365-identity-device-management
@@ -20,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
 description: 了解要執行如果您有非 routale 網域，再進行同步處理與 Office 365 與內部部署使用者相關聯的動作。
-ms.openlocfilehash: 013d29acdd3761793a93dab1eb8583324ba08591
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: 10ec92ff19bd5e74363bced9a2f29c356c7fa4e8
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072415"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41841220"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>準備目錄同步處理的非路由傳送的網域
 當您同步處理您的內部部署目錄與 Office 365，您必須要有 Azure Active Directory 中的已驗證的網域。 僅限使用者主要名稱 (UPN) 相關聯的內部部署網域同步處理。 不過，任何 UPN 包含非路由傳送的網域，例如.local （例如 billa@contoso.local)，將會同步處理到。 onmicrosoft.com 網域 （例如 billa@contoso.onmicrosoft.com)。 

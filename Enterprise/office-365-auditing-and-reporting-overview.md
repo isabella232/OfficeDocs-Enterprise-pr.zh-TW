@@ -14,13 +14,15 @@ ms.collection:
 - M365-security-compliance
 - M365-analytics
 - SPO_Content
+f1.keywords:
+- NOCSH
 description: 稽核和報告內 Office 365、 Microsoft 365，以及服務保證功能的概觀。
-ms.openlocfilehash: 991eb807ee297ea9dc912be53d99c80247220c1b
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: 05c16b201cecb742ab2c74e8938893222d04d59f
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076227"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843694"
 ---
 # <a name="auditing-and-reporting-in-microsoft-cloud-services"></a>稽核和報告在 Microsoft 雲端服務
 

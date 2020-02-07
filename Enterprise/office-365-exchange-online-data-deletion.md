@@ -12,13 +12,15 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: 如何虛硬式資料刪除處理及 Exchange Online 內。
-ms.openlocfilehash: f25f2416778f19f8b2e464e31e6116a81eb872cc
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 72db9dbc0559c165296433fca244d660c1a0f692
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067338"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843634"
 ---
 # <a name="exchange-online-data-deletion-in-office-365"></a>Office 365 中的 Exchange Online 資料刪除
 在 Exchange Online 中，有兩種類型的刪除： 虛刪除和實刪除。 這適用於信箱和信箱內的項目。
@@ -31,7 +33,7 @@ ms.locfileid: "37067338"
 
 實刪除使用者信箱位於信箱已刪除下列方法之一：
 - 使用者信箱已虛刪除超過 30 天，以及相關聯的 Azure Active Directory 使用者已實刪除。 永久刪除所有的信箱內容，例如電子郵件、 連絡人及檔案。
-- 實刪除從 Azure Active Directory 已與使用者信箱相關聯的使用者帳戶。 使用者信箱現在是虛刪除 Exchange Online 中，而且會停留在虛刪除 」 狀態，30 天。 如果在 30 天內新的 Azure Active Directory 使用者從同步處理具有相同的**ExchangeGuid**或**ArchiveGuid**，原始的收件者帳戶及新的帳戶是 Exchange online 授權，這樣會導致實刪除原始的使用者信箱。 永久刪除所有的信箱內容，例如電子郵件、 連絡人及檔案。
+- 實刪除從 Azure Active Directory 已與使用者信箱相關聯的使用者帳戶。 使用者信箱現在是虛刪除 Exchange Online 中，而且會停留在虛刪除 」 狀態，30 天。 如果在 30 天內新的 Azure Active Directory 使用者從同步處理具有相同的**ExchangeGuid**或**ArchiveGuid**，原始的收件者帳戶及新的帳戶是 Exchange online 授權，這會導致實刪除的原始的使用者信箱。 永久刪除所有的信箱內容，例如電子郵件、 連絡人及檔案。
 - 使用**Remove-mailbox PermanentlyDelete**刪除虛刪除的信箱。
 
 上述的刪除案例假設使用者信箱不在任何的保留狀態，例如訴訟資料暫留或 eDiscovery 保留。 如果沒有任何類型的保留在信箱上，不能刪除信箱。 對於所有郵件使用者收件者類型，任何[保留](https://support.office.com/article/manage-legal-investigations-in-office-365-2e5fbe9f-ee4d-4178-8ff8-4356bc1b168e?ui=en-US&rs=en-US&ad=US)設定和會忽略實刪除或虛刪除上沒有作用。

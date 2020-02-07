@@ -9,6 +9,8 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
 description: 適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
-ms.openlocfilehash: 0b200c3a7a54d28aee20b03c850c908bfd1c868d
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: 63d7c887f9900250a81fe1428d8b5b5cd3df9b81
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39813481"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41840180"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
@@ -101,7 +103,7 @@ ms.locfileid: "39813481"
   
 以下是詳細資料所需的層級的範例。 在此情況下 Exchange 混合式會透過 ExpressRoute 路由至內部部署系統。
 
-|**Connection 屬性**|**值**|
+|**Connection 屬性**|**Value**|
 |:-----|:-----|
 |**網路流量方向** <br/> |輸入  <br/> |
 |**服務** <br/> |Exchange 混合式  <br/> |
@@ -118,7 +120,7 @@ ms.locfileid: "39813481"
 
 以下是一種服務，只有輸出範例：
 
-|**Connection 屬性**|**值**|
+|**Connection 屬性**|**Value**|
 |:-----|:-----|
 |**網路流量方向** <br/> |輸出  <br/> |
 |**服務** <br/> |SharePoint Online  <br/> |
@@ -570,7 +572,7 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
+[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   

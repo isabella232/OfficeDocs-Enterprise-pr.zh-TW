@@ -1,5 +1,5 @@
 ---
-title: Office 365 企業版
+title: Office 365 Enterprise
 description: Microsoft Office 365 提供功能強大的線上雲端服務，可以啟用共同作業、安全性與合規性、行動及智慧和分析。 此頁面提供系統管理員和 IT 專業人員在企業組織中部署、設定及管理 Office 365 服務的指導方針。
 services: o365-solutions
 author: robmazz
@@ -13,13 +13,15 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: landing-page
 ms.date: 8/21/2018
+f1.keywords:
+- NOCSH
 ms.author: robmazz
-ms.openlocfilehash: f655daf2887fd5bf8cc82065dc0cc53282b13146
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
-ms.translationtype: HT
+ms.openlocfilehash: f4dd985efa512de8300acc7a02c9c505acb47c38
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38030657"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41845054"
 ---
 <h1>Office 365 企業版</h1>
 <p>Microsoft Office&nbsp;365 提供功能強大的線上雲端服務，可以啟用共同作業、安全性與合規性、行動及智慧和分析。 此頁面提供系統管理員和 IT 專業人員在企業組織中部署、設定及管理 Office&nbsp;365 服務的指導方針的連結。</p>

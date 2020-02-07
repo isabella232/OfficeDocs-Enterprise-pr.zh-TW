@@ -9,17 +9,19 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Strat_O365_Enterprise
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
 ms.assetid: e5f1228c-da3c-4654-bf16-d163daee8848
 description: 可協助您規劃 Microsoft Office 365 的網路頻寬需求。 一旦您部署後，請回到這裡來微調，並疑難排解 Office 365 的效能。
-ms.openlocfilehash: 0f60c925d01b4a4471d475b923389e3b59e5526c
-ms.sourcegitcommit: 226989f5a6a252e67debf7613bf13aa679a43f92
+ms.openlocfilehash: 91e8938d4a1b40d67d62635c545f2e0d8cb8c641
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "41721944"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844744"
 ---
 # <a name="network-planning-and-performance-tuning-for-office-365"></a>Office 365 的網路規劃和效能調整
 在首次部署或移轉至 Office 365 前，您可使用這些主題中的資訊來預估所需頻寬，然後測試並確認您有足夠的頻寬以部署或移轉至 Office 365。 如需概觀，請參閱 [Office 365 的網路和移轉規劃](network-and-migration-planning.md)。

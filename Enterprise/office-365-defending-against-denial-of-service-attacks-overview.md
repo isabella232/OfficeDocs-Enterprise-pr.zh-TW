@@ -12,19 +12,21 @@ search.appverid:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
+f1.keywords:
+- NOCSH
 description: 拒絕服務 (DoS) 攻擊的概觀。
-ms.openlocfilehash: 55fffccfc59f13d32cdd19930320c1df1cf58461
-ms.sourcegitcommit: 55a046bdf49bf7c62ab74da73be1fd1cf6f0ad86
+ms.openlocfilehash: 16378800fc7bb61b8f78e2c4c51eb7940cb45d17
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "37067313"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843586"
 ---
 # <a name="defend-against-denial-of-service-attacks-in-office-365"></a>防禦 Office 365 中的拒絕服務攻擊
 
 ## <a name="introduction"></a>簡介
 
-Microsoft 會傳遞 200 位以上的雲端服務中的全域雲端基礎結構的 100 個以上的資料中心主控高可信度電腦基礎結構。 這些包括：
+Microsoft 會傳遞 200 位以上的雲端服務中的全域雲端基礎結構的 100 個以上的資料中心主控高可信度電腦基礎結構。 包括：
 
 - Microsoft Azure
 - Microsoft Bing

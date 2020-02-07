@@ -7,13 +7,15 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
+f1.keywords:
+- NOCSH
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 31e1365467729753cec358b4fb33462894cdcbb8
-ms.sourcegitcommit: 9dfaeff7a1625a7325bb94f3eb322fc161ce066b
+ms.openlocfilehash: 39a9ee0925a384a80e8eae3a73336eb69950a554
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "40261356"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41845064"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -84,7 +86,7 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 下一步是建立您計劃要用於來賓與共同作業網站。
 
 若要建立網站
-1. 在 SharePoint 系統管理中心中，[**網站**]，按一下 [**作用中網站**。
+1. 在 SharePoint 系統管理中心的 **[網站]** 底下，按一下 **[使用中網站]**。
 2. 按一下 **[建立]**。
 3. 按一下 [**小組網站**。
 4. 輸入網站名稱，然後輸入群組擁有者 （網站擁有者） 的名稱。

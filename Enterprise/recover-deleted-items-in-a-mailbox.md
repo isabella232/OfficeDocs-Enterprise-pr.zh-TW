@@ -15,13 +15,15 @@ search.appverid:
 - MBS150
 - BCS160
 ms.assetid: eb15194b-63ec-41b0-8d90-1823d3f558e4
+f1.keywords:
+- NOCSH
 description: '本文適用於系統管理員。 沒有使用者永久刪除項目從其 Outlook 信箱嗎？ 使用者想要他們回，但無法加以復原。 您可能無法復原的已清除的項目，如果它們尚未從使用者的信箱永久移除。 '
-ms.openlocfilehash: 85086288d6bb153f584aa0a527100eb2d7b7de96
-ms.sourcegitcommit: 8027254ab4b9ed44a5b0c336f714049859f93f3d
+ms.openlocfilehash: 869bef4b801b92d0e48daaec266cb3a705cb577f
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "38308598"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41845124"
 ---
 # <a name="recover-deleted-items-in-a-user-mailbox---admin-help"></a>復原使用者信箱中刪除的郵件 - 系統管理說明
 
@@ -41,7 +43,7 @@ ms.locfileid: "38308598"
 ## <a name="step-1-assign-yourself-ediscovery-permissions"></a>步驟 1： 將自己指派 eDiscovery 權限
 <a name="step1"> </a>
 
-第一個步驟是您自己的必要權限 Exchange Online 中指派，您可以使用就地電子文件探索工具來搜尋使用者的信箱。 您只需要執行這項操作一次。 如果您有在未來搜尋另一個信箱，您可以略過此步驟。
+第一個步驟是您自己的必要權限 Exchange Online 中指派，您可以使用就地電子文件探索工具來搜尋使用者的信箱。 此操作只需執行一次。 如果您有在未來搜尋另一個信箱，您可以略過此步驟。
   
 1. 找不到您要的 App 嗎？請從應用程式啟動器選取 [所有 App] 以查看依字母順序排序的可用 Office 365 App 清單。您可從該處搜尋特定的 App。 
     
@@ -98,7 +100,7 @@ ms.locfileid: "38308598"
   
 7. 尋找和選取您要復原已刪除的電子郵件的使用者名稱按一下 [**新增**]，然後按一下 [**確定]**。
     
-8. 按一下 **[下一步]**。
+8. 按 **[下一步]**。
     
     **搜尋查詢**頁面隨即顯示。 這是用來定義可協助您在使用者的信箱中尋找遺失的項目搜尋準則。 
     

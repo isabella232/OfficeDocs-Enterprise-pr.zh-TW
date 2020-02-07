@@ -12,6 +12,8 @@ ms.collection:
 - Ent_O365
 - M365-identity-device-management
 - M365-security-compliance
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -19,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 了解如何在 Office 365 中管理使用者身分識別。
-ms.openlocfilehash: 0cc40323d978fe9ab13e3326dac183143a014406
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+ms.openlocfilehash: a44f3073895ef1c8172a6ab5637f50cd9c6ac186
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40071875"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843804"
 ---
 # <a name="office-365-identity-models-and-azure-active-directory"></a>Office 365 身分識別模型和 Azure Active Directory
 

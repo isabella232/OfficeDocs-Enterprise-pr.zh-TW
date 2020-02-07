@@ -9,6 +9,8 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 2bed67a1-4052-49ff-a4ce-b7e6530eb98e
 description: Office 365 影片存放庫與資料流的服務，讓儲存及資料流組織內的影片簡單。 有很棒的資訊有關 Office 365 影片;此網路的常見問題集被設計來回答周圍頻寬規劃、 加密，以及服務如何運用內容傳遞網路 (Cdn) 最常見的問題。
-ms.openlocfilehash: 93f55e0c1e4d065e02a9cc41e5aaaab89b459a0d
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 21c7327878bc76bc3bbe92d004a26a4704ef8c3d
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34069469"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41841970"
 ---
 # <a name="office-365-video-networking-frequently-asked-questions"></a>網路常見問題集的 office 365 影片
 

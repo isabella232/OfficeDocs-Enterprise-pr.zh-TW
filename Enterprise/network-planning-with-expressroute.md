@@ -9,6 +9,8 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 103208f1-e788-4601-aa45-504f896511cd
 description: 適用於 Office 365 可提供第 3 層之間的連線能力您的網路與 Microsoft 資料中心。 迴路使用框線閘道通訊協定 (BGP) 路由廣告的 Office 365 的前端伺服器。 從您的內部部署裝置的觀點來看，當他們需要選取正確的 TCP/IP 路徑至 Office 365 Azure ExpressRoute 會視為網際網路的替代方案。
-ms.openlocfilehash: 8e8c1e1790e38b4e0e858a4a72266de9fcdc8157
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: 2f38b88b5d940d1a8aa171c777e82a4a308be0cf
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39814631"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844554"
 ---
 # <a name="network-planning-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行網路規劃
 
@@ -192,7 +194,7 @@ Woodgrove Bank 在網路組態是根據幾個關鍵而建置：
 ## <a name="related-topics"></a>相關主題
 <a name="BKMK_high-availability"> </a>
 
-[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
+[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   

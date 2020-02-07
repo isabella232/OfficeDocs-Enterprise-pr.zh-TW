@@ -13,17 +13,19 @@ ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
 - SPO_Content
+f1.keywords:
+- NOCSH
 description: EDiscovery 功能，以及其他搜尋功能在 Office 365 稽核使用和透明度的概觀。
-ms.openlocfilehash: 9c0c9b7c054a59ed87ce65432c73df563594b2a2
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: 16cb8ac4703142b73d4f56bce9390743495d3fc2
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076207"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41843644"
 ---
 # <a name="ediscovery-and-search-features"></a>電子文件探索與搜尋功能 
 
-## <a name="ediscovery"></a>電子文件探索
+## <a name="ediscovery"></a>eDiscovery
 
 「 EDiscovery 」 功能讓系統管理員、 法務人員，提供單一位置和授權的其他使用者進行完整調查 Office 365 使用者活動。 具有適當權限的安全性人員執行搜尋和就地保留的內容。 搜尋的結果是您要取得從內容搜尋中，除了 eDiscovery 案例所建立的任何套用的保留相同的結果。 EDiscovery 搜尋的結果加密的安全性，，您可以分析使用[進階電子文件探索](https://support.office.com/article/office-365-advanced-ediscovery-fd53438a-a760-45f6-9df4-861b50161ae4)匯出的資料。
 

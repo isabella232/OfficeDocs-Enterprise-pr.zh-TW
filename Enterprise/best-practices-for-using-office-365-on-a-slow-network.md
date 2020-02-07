@@ -16,13 +16,15 @@ search.appverid:
 - MEW150
 - BCS160
 ms.assetid: fd16c8d2-4799-4c39-8fd7-045f06640166
+f1.keywords:
+- NOCSH
 description: 如果您的網際網路連線一直都很快且未曾中斷，不是很好嗎？ 或許那一天會到來。 但在此同時，有一些實務做法可暫時解決不聽使喚的網路，讓您仍可完成日常工作。
-ms.openlocfilehash: 69fde7ab60fecba4cc43d555d2988f75b7148dba
-ms.sourcegitcommit: 6b4c3a11ef7000480463d43a7a4bc2ced063efce
-ms.translationtype: HT
+ms.openlocfilehash: 3e9a3e91c5e1cc775d28742b39ea9c0ed507d2c9
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "35616756"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844954"
 ---
 # <a name="best-practices-for-using-office-365-on-a-slow-network"></a>在網路緩慢的情況下使用 Office 365 的最佳做法
 

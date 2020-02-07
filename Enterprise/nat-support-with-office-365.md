@@ -9,18 +9,20 @@ ms.topic: overview
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
 - BCS160
 ms.assetid: 170e96ea-d65d-4e51-acac-1de56abe39b9
 description: 摘要： 提供如何約略算出正確的您可以使用每個 IP 位址使用網路位址轉譯 (NAT) 組織內的用戶端數目的相關詳細資料。
-ms.openlocfilehash: 5d252b059661fdd3bad1f86bf552f44b8a747d24
-ms.sourcegitcommit: f316aef1c122f8eb25c43a56bc894c4aa61c8e0c
+ms.openlocfilehash: 6140cf664a08701e9491c241d5754d51196e3922
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "38747897"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844564"
 ---
 # <a name="nat-support-with-office-365"></a>Office 365 的 NAT 支援
 
@@ -74,7 +76,7 @@ Outlook 可能會開啟八個以上的連線 (的情況下有增益集、 共用
   
 有各種方法供用戶端負載分散其他公用 IP 位址。 可用的策略取決於公司閘道方案的功能。 最簡單的解決方案是分割您的使用者位址空間及靜態 「 」 號碼指派的 IP 位址給每個閘道。 多閘道裝置提供的另一個替代方法為使用的 IP 位址的集區的能力。 地址集區的好處是它是很多動態和較不可能需要調整為您的使用者群規模日益成長。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
   

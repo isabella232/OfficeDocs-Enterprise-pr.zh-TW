@@ -8,6 +8,8 @@ audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -16,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 6e18d402-f35e-415a-83b1-56620d4074ff
 description: 規劃及管理 Office 365 為您的企業組織的資源。
-ms.openlocfilehash: 0754213aef2acaa935cf59a317b93188b5002d33
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+ms.openlocfilehash: 97ffc7aee647918750a04b2b4761b189e2cebeb1
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067689"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41840400"
 ---
 # <a name="enterprise-organizations-and-office-365"></a>企業組織和 Office 365
 
@@ -106,9 +108,9 @@ Office 365 訓練和適用於 IT 專業人員的憑證。
   
 [將多個電子郵件帳戶移轉到 Office 365 的方法](https://support.office.com/article/0a4913fe-60fb-498f-9155-a86516418842)
   
-[從 Office 2010 伺服器和用戶端升級](upgrade-from-office-2010-servers-and-products.md)
+[從 Office 2010 伺服器與用戶端升級](upgrade-from-office-2010-servers-and-products.md)
   
-[Office 365 服務的部署建議](deployment-advisors-for-office-365.md)
+[Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
   
  **訓練使用者**
   

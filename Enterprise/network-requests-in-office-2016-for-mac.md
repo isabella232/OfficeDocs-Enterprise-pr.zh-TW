@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.service: o365-administration
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Adm_O365_Setup
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
 description: Office for Mac 的應用程式提供原生應用程式體驗 macOS 平台上。 每個應用程式被專為各種案例，包括沒有網路存取可用時的狀態。 當機器連線至網路時，應用程式自動連線至一系列的 web 服務來提供增強的功能。 本白皮書說明哪個端點和 Url 應用程式嘗試聯繫，以及所提供的服務。 疑難排解網路組態問題，以及設定網路 proxy 伺服器原則時，這項資訊非常有用。 指定與 Office 365 URL 和地址範圍文章旨在本文中的詳細資料。
-ms.openlocfilehash: 44acbc83b2bb32e60a470dc5d3ba27f13cbd033c
-ms.sourcegitcommit: 1c97471f47e1869f6db684f280f9085b7c2ff59f
+ms.openlocfilehash: 09795ab15ba4a387dc53afea60c2d048d6ca9022
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "35781953"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844544"
 ---
 # <a name="network-requests-in-office-for-mac"></a>Mac 版 Office 中的網路要求
 
@@ -322,5 +324,5 @@ Microsoft 發行 Office for Mac 更新固定時間間隔 （通常是一次一�
   
 ## <a name="see-also"></a>另請參閱
 
-[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md) (英文)
+[Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
 
