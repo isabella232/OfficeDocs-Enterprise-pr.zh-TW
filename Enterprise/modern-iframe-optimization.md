@@ -12,17 +12,19 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 - SPO_Content
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何在 SharePoint Online 新式與傳統發佈網站頁面中最佳化 iFrame 的效能。
-ms.openlocfilehash: f4b28ad9e59e41ddb8a4b96b532a49811e722874
-ms.sourcegitcommit: a9804062071939b7b7e60da5b69f484ce1d34ff8
+ms.openlocfilehash: e7a66492e18272525d854e376db49f20233d6820
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "39814231"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844864"
 ---
 # <a name="optimize-iframes-in-sharepoint-online-modern-and-classic-publishing-site-pages"></a>在 SharePoint Online 新式與傳統發佈網站頁面中最佳化 iFrame
 

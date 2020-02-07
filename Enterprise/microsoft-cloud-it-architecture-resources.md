@@ -10,18 +10,20 @@ localization_priority: Priority
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
+f1.keywords:
+- CSH
 ms.custom:
 - Ent_Architecture
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: 30f3cb17f59c3a2352b4f0be9fec92d53126e63b
-ms.sourcegitcommit: cc84565301f5c5afc8b767f637135de96115fd6d
+ms.openlocfilehash: f2f466ff0f5f13e2b7e3bfb85f77a7e7961fcde2
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "41627899"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844934"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 

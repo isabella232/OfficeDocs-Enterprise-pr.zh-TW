@@ -12,17 +12,19 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 - SPO_Content
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何藉由限制對於 SharePoint Online 服務端點的呼叫數目，針對 SharePoint Online 中的新式與傳統發佈網站頁面進行最佳化。
-ms.openlocfilehash: 608e1e102ae3425fdf24d99b5932f2c616290913
-ms.sourcegitcommit: 89ecf793443963b4c87cf1033bf0284cbfb83d9a
+ms.openlocfilehash: 13c403e03c0d2aa2cb73d626c92596d12a8b1ee4
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "38078422"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844826"
 ---
 # <a name="optimize-page-calls-in-sharepoint-online-modern-and-classic-publishing-site-pages"></a>在 SharePoint Online 新式與傳統發佈網站頁面中最佳化頁面呼叫
 

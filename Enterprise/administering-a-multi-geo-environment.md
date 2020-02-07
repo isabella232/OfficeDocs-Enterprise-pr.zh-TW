@@ -6,18 +6,20 @@ manager: pamgreen
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
+f1.keywords:
+- NOCSH
 ms.custom: ''
 ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 9d4d35505dc5b0d24dd5b2ada8ff1028b1d0d61b
-ms.sourcegitcommit: 5fe1c9be652222d6956c7dad5949ddcf0bd27041
+ms.openlocfilehash: cb6c61f0531b92a4ce568072519ec74dda44afa2
+ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "38076137"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "41844674"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
