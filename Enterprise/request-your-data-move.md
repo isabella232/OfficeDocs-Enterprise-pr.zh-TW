@@ -14,12 +14,12 @@ ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 f1.keywords:
 - NOCSH
 description: 現有的 Office 365 客戶將需要再其國家/地區的期限提交要求，以便讓他們參與的 Office 365 服務，移至其新的地理位置的客戶資料。
-ms.openlocfilehash: 886b852608b29f42aaa6f8051fd60b467830842a
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 506943ce802adbd8d443cfb69212834b9c552f61
+ms.sourcegitcommit: e2f7bb4ccd4c74902235f680104ca6b56c051587
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844104"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "42106224"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -48,13 +48,8 @@ ms.locfileid: "41844104"
 
 合格客戶會看到在[Microsoft 365 系統管理中心](https://aka.ms/365admin)，將會使其可將其移至其新的資料中心區域的核心客戶資料要求的頁面。  
   
-若要存取] 頁面的 Microsoft 365 系統管理中心中，在左邊的功能窗格中展開 [**設定**]，然後按一下 [**組織設定檔**。
-  
-![具有反白顯示的組織設定檔設定] 功能表](media/22799fac-32b4-4f79-ae60-3f6ffb7cfbd7.png)
-  
-在 **[組織設定檔**頁面上，向下**資料落地選項**] 區段中捲動。 
-  
-![資料常駐卡](media/dataresidencyae.jpg)
+若要存取] 頁面的 Microsoft 365 系統管理中心中，在左邊的功能窗格中展開 [**設定**]，然後按一下 [**設定**]。
+選取 [**組織設定檔**，] 索引標籤，然後選取 [**資料落地**] 選項。
   
 **您可能不會看到此區段如果下列其中之一適用於**：
 - 您的租用戶不合格的 Office 365 移動程式。  資格取決於租用戶註冊國家/地區。
