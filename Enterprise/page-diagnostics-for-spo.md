@@ -3,7 +3,7 @@ title: 使用 Sharepoint Online 網頁診斷工具
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 9/19/2019
+ms.date: 2/18/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,21 +19,21 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: 使用頁面診斷 SharePoint 工具來分析 SharePoint Online 的新式入口網站及傳統的發佈頁面，對一組預先定義的效能的準則。
-ms.openlocfilehash: 57f8aa86b049701c152e8110f64b418d64250981
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 191db3db459f12a922c47844af72511cc9bf2544
+ms.sourcegitcommit: 27172140051c31f5cd3f28ffb4282669d561549a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841780"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "42155587"
 ---
 # <a name="use-the-page-diagnostics-for-sharepoint-tool"></a>使用頁面診斷 SharePoint 工具
 
 本文說明如何使用 **] 頁面上診斷 SharePoint 工具**來分析 SharePoint Online 的新式和傳統網站頁面，對一組預先定義的效能的準則。  
 
 >[!TIP]
->**已發行版本 2.0.1 的工具**。 版本**2.0.0**和更新版本包含支援傳統網站頁面除了新式頁面。 如果您不確定您使用哪個版本的工具，您可以選取 [**關於**] 連結或若要確認您的版本的省略符號 （...）。
+>**已發行版本 2.0.2 的工具**。 版本**2.0.0**和更新版本包含支援傳統網站頁面除了新式頁面。 如果您不確定您使用哪個版本的工具，您可以選取 [**關於**] 連結或若要確認您的版本的省略符號 （...）。 使用此工具時，一律更新至最新版本。
 
-SharePoint 工具] 頁面上診斷是 Chrome 和[Microsoft Edge 版本 77 和更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)，用來分析 SharePoint Online 的新式入口網站及發佈網站頁面的傳統瀏覽器延伸模組。 這項工具僅適用於 SharePoint Online 中，並使用 SharePoint Server 網站頁面上，將會失敗並產生錯誤。
+SharePoint 工具] 頁面上診斷是新的 Microsoft edge 瀏覽器延伸模組 (https://www.microsoft.com/edge)及分析 SharePoint Online 的新式入口網站及傳統的 Chrome 瀏覽器發佈網站頁面。 這項工具僅適用於 SharePoint Online 中，並不能在 SharePoint 系統] 頁面上。
 
 此工具會產生報表的每個分析頁面顯示] 頁面上的執行對一組預先定義的規則和測試的結果落之外的基準值時，會顯示的詳細的資訊。 SharePoint Online 系統管理員和設計者可以使用工具來疑難排解效能問題，並確定新頁面已發佈前進行最佳化。
 
@@ -52,9 +52,9 @@ SharePoint 工具] 頁面上診斷是 Chrome 和[Microsoft Edge 版本 77 和更
 本節中的安裝程序適用於 Chrome 和 Microsoft Edge 瀏覽器。
 
 > [!IMPORTANT]
-> Microsoft 卻無法讀取由 SharePoint 工具] 頁面上診斷分析的資料或頁面內容，我們無法擷取任何個人資訊、 網站或下載的資訊。 僅工具所記錄的資訊是租用戶的名稱，規則計數，以及是否支援記錄選項已啟用時執行此工具。 這項資訊使用 Microsoft 來了解新式的入口網站及發佈網站使用狀況趨勢以及告知產品的改良效能常見問題。
+> Microsoft 卻無法讀取由 SharePoint 工具] 頁面上診斷分析的資料或頁面內容，我們無法擷取任何個人資訊、 網站或下載的資訊。 記錄給 Microsoft 的工具只識別資訊是租用戶名稱、 計數的失敗的規則及日期和時間已執行此工具。 這項資訊是由 Microsoft 用來進一步了解新式的入口網站及發佈網站使用狀況趨勢以及一般的效能問題。
 
-1. 使用_Chrome_或_77 或更新版本的 Microsoft Edge 版本_瀏覽器，請直接開啟[連結至工具](https://chrome.google.com/webstore/detail/inahogkhlkbkjkkaleonemeijihmfagi)或[Chrome 瀏覽器網站儲存](https://chrome.google.com/webstore/search/page%20diagnostics%20for%20sharepoint)中開啟搜尋並安裝瀏覽器延伸模組。 請檢閱中提供的存放區中的 [描述] 頁面上的使用者隱私權原則。 當將工具新增至您的瀏覽器中，您會看到下列權限會注意到。
+1. 安裝 SharePoint 工具] 頁面上診斷[（Edge 副檔名）](https://microsoftedge.microsoft.com/addons/detail/ocemkolpnamjcacndljdfmhlpcaoipji)的**Microsoft Edge**或**Chrome** [（Chrome 延伸模組）](https://chrome.google.com/webstore/detail/inahogkhlkbkjkkaleonemeijihmfagi)。 請檢閱中提供的存放區中的 [描述] 頁面上的使用者隱私權原則。 當將工具新增至您的瀏覽器中，您會看到下列權限會注意到。
 
     ![延伸權限](media/page-diagnostics-for-spo/pagediag-add-to-edge.png)
 
@@ -73,7 +73,10 @@ SharePoint 工具] 頁面上診斷是 Chrome 和[Microsoft Edge 版本 77 和更
 
 ## <a name="what-youll-see-in-the-page-diagnostics-for-sharepoint-tool"></a>您會看到 SharePoint 工具] 頁面上診斷中
 
-1. **相關**連結，這類似於右上角會提供一般指引，包括連結工具的詳細資料重新對本文的省略符號 （...）。 它還包含 SharePoint 效能建議、 協力廠商通知並提供意見反應工具的相關選項的直接連結。  
+1. 按一下省略符號 （...） 中右上角的工具來尋找下列連結：
+   1. **額外的資源**連結提供一般指引，包括連結工具的詳細資料回到本文章。
+   1. **提供意見反應**] 連結提供的_SharePoint 網站及共同作業使用者語音_網站的連結。
+   1. [**關於**] 連結包含目前已安裝的新版的工具和工具的協力廠商的直接連結會注意到。  
 1. **相互關聯識別碼、 SPRequestDuration、 SPIISLatency**、**頁面載入時間**，以及**URL**詳細資料會提供資訊，並可用於幾個用途。
 
     ![頁面診斷詳細資料](media/page-diagnostics-for-spo/pagediag-details.PNG)
@@ -116,12 +119,12 @@ SharePoint 工具] 頁面上診斷是 Chrome 和[Microsoft Edge 版本 77 和更
 
 [**網路追蹤**] 索引標籤提供建立] 頁面上，從 SharePoint 所收到的回應這兩個要求的詳細的資訊。
 
-1. **尋找項目載入時間標示為紅色**。 每個要求和回應的效能會以色彩標示，根據其對整體網頁效能的影響，如下所示：
+1. **尋找項目載入時間標示為紅色**。 每個要求和回應是色彩編碼來表示其對使用延遲計量的整體頁面效能的影響：
     - 綠色： \< 500 毫秒
     - 黃色： 500 1000ms
     - 紅色： \> 1000ms
 
-    ![網路追蹤](media/page-diagnostics-for-spo/pagediag-networktrace.png)
+    ![網路追蹤](media/page-diagnostics-for-spo/pagediag-networktrace-red.png)
 
     在上面顯示的圖像，紅色的項目相關的預設頁面。 它將一律顯示紅色除非中載入頁面\<1000ms （少於 1 秒）。
 
