@@ -81,6 +81,7 @@
 #### [Mac 版 Office 中的網路要求](network-requests-in-office-2016-for-mac.md)
 #### [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 #### [未包含在 Web 服務中的其他端點](additional-office365-ip-addresses-and-urls.md)
+### [Office 365 針對中國使用者的效能最佳化](office-365-networking-china.md)
 ### [內容傳遞網路](content-delivery-networks.md)
 ### [Office 365 服務中的 IPv6 支援](ipv6-support.md)
 ### [Office 365 的 NAT 支援](nat-support-with-office-365.md)
@@ -154,6 +155,7 @@
 #### [資料移動一般常見問題集](data-move-faq.md)
 #### [Microsoft Cloud Deutschland：Office 365 移轉計劃](ms-cloud-germany-transition.md)
 #### [Microsoft Cloud Deutschland：選擇加入移轉](ms-cloud-germany-migration-opt-in.md)
+#### [Office 365 資料中心中的客戶資料](o365-data-locations.md)
 
 ### 混合式解決方案
 #### [使用適用於 SharePoint Server 2016 驗證的 Azure Active Directory](using-azure-ad-for-sharepoint-server-authentication.md)
