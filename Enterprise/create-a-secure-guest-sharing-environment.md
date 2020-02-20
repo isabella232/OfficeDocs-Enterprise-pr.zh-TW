@@ -8,15 +8,14 @@ ms.topic: article
 ms.service: sharepoint-online
 ms.collection: SPO_Content
 localization_priority: Priority
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 description: 瞭解如何在 Microsoft 365 中建立安全的來賓共用環境。
-ms.openlocfilehash: 9df369457770315d5d77894432761385edf3dbc4
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 4c77ae6905341ba7cde974b2fc3966009a38d512
+ms.sourcegitcommit: 27172140051c31f5cd3f28ffb4282669d561549a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840620"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "42155572"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>建立安全的來賓共用環境
 
@@ -319,6 +318,14 @@ ms.locfileid: "41840620"
 一旦來賓取得文件的存取權，請在文件中輸入 *Saturn 專案*並儲存文件。 Cloud App Security 掃描文件時，系統應套用*高度機密*標籤，來賓使用者便無法再存取該文件。
 
 您可以以各種組合來使用本文所述的工具，為貴組織建立具生產力且安全的來賓共用環境。
+
+## <a name="additional-options"></a>其他選項
+
+Microsoft 365 和 Azure Active Directory 中有一些其他選項可以協助保護您的來賓共用環境。
+
+- 您可以建立允許或拒絕共用網域的清單，以限制要共用的使用者。 如需詳細資訊，請參閱[依網域限制 SharePoint 和 OneDrive 內容的共用](https://docs.microsoft.com/sharepoint/restricted-domains-sharing)和[允許或封鎖對特定組織的 B2B 使用者的邀請](https://docs.microsoft.com/azure/active-directory/b2b/allow-deny-list)。
+- 您可以限制使用者可以連線到哪些其他 Azure Active Directory 租用戶。 如需詳細資訊，請參閱[使用租用戶限制管理 SaaS 雲端應用程式的存取](https://docs.microsoft.com/azure/active-directory/manage-apps/tenant-restrictions)。
+- 您可以建立受管理環境，讓合作夥伴能夠協助管理來賓帳戶。 如需詳細資訊，請參閱[建立 B2B 外部網路](https://docs.microsoft.com/Office365/Enterprise/b2b-extranet)。
 
 ## <a name="see-also"></a>另請參閱
 
