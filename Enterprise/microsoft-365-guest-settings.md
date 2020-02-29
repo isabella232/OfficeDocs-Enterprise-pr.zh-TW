@@ -7,17 +7,16 @@ audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 ms.collection: SPO_Content
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 ms.custom: ''
 localization_priority: Priority
 description: 深入了解 Microsoft 365 中提供的來賓共用設定。
-ms.openlocfilehash: 52f597357aed510e3bd3ff71e87e1056e19a3bad
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: ed9165d4589dbdaa18c3b3a3c21aab7bce01ad8c
+ms.sourcegitcommit: 6ad59ab24a5dc8d27f448ca7fe4f6bdf7ab28066
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844964"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42316042"
 ---
 # <a name="microsoft-365-guest-sharing-settings-reference"></a>Microsoft 365 來賓共用設定參考
 
@@ -237,9 +236,12 @@ Teams 的主要來賓存取切換 [在 Teams 中允許來賓存取]****，必須
 |OneDrive|**任何人**|
 |群組連線的網站 (包括 Teams)|如果 Office 365 群組設定 [讓群組擁有者將組織外部的人員新增到群組]**** 為 [開啟]****，則為 [新的及現有的來賓]****；否則為 [僅現有的來賓]****|
 |通訊|**只有貴組織中的人員**|
-|沒有群組的新式網站 (#STS3 TeamSite)|**只有貴組織中的人員**|
+|沒有群組的新式網站 (#STS3 TeamSite)|**僅限您組織中的人員**|
 
-## <a name="see-also"></a>另請參閱
+> [!NOTE]
+> 根通訊網站 (tenant-name.sharepoint.com) 的預設共用設定為 [任何人]****。
+
+## <a name="see-also"></a>也請參閱
 
 [SharePoint 和 OneDrive 外部共用概觀](https://docs.microsoft.com/sharepoint/external-sharing-overview)
 

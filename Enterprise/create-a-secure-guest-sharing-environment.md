@@ -10,12 +10,12 @@ ms.collection: SPO_Content
 localization_priority: Priority
 f1.keywords: NOCSH
 description: 瞭解如何在 Microsoft 365 中建立安全的來賓共用環境。
-ms.openlocfilehash: 4c77ae6905341ba7cde974b2fc3966009a38d512
-ms.sourcegitcommit: 27172140051c31f5cd3f28ffb4282669d561549a
+ms.openlocfilehash: 978e7f0e2f81f8e7f97ee73b8e490922afcf1c0a
+ms.sourcegitcommit: 6ad59ab24a5dc8d27f448ca7fe4f6bdf7ab28066
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "42155572"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42316032"
 ---
 # <a name="create-a-secure-guest-sharing-environment"></a>建立安全的來賓共用環境
 
@@ -332,3 +332,5 @@ Microsoft 365 和 Azure Active Directory 中有一些其他選項可以協助保
 [與來賓共用時限制意外暴露檔案](sharing-limit-accidental-exposure.md)
 
 [與未驗證使用者共用檔案和資料夾的最佳做法](best-practices-anonymous-sharing.md)
+
+[使用受管理來賓建立 B2B 外部網路](b2b-extranet.md)

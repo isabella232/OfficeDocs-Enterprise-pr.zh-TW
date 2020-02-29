@@ -3,7 +3,7 @@ title: Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/18/2019
+ms.date: 2/27/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: ''
 description: 摘要：新端點 Web 服務不包含特定案例的少量端點。
 hideEdit: true
-ms.openlocfilehash: 150e57c569a5305251d1bed2989bc4c87af988d0
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 5e763b00f8b43b652809df994e933228dd7e1dfb
+ms.sourcegitcommit: 6ad59ab24a5dc8d27f448ca7fe4f6bdf7ab28066
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844684"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "42315962"
 ---
 # <a name="additional-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 
@@ -66,6 +66,7 @@ ms.locfileid: "41844684"
 | 18  | 使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 將內部部署使用者帳戶同步處理到 Azure AD。 | 請參閱[混合式身分識別所需的連接埠和通訊協定](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-ports)、[疑難排解 Azure AD 連線](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-connectivity) 和 [Azure AD Connect Health 代理程式安裝](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#outbound-connectivity-to-the-azure-service-endpoints)。 | 僅限外寄伺服器的流量 |
 | 19  | Microsoft Stream (需要 Azure AD 使用者權杖)。 <BR> Office 365 全球 (包括 GCC) | *.cloudapp.net <BR> *.api.microsoftstream.com <BR> *.notification.api.microsoftstream.com <BR> amp.azure.net <BR> api.microsoftstream.com <BR> az416426.vo.msecnd.net <BR> s0.assets-yammer.com <BR> vortex.data.microsoft.com <BR> web.microsoftstream.com <BR> TCP 通訊埠 443  | 內送伺服器流量 |
 | 20  | 在伺服器的新安裝以及使用Active Directory 網域服務 (AD DS) 進行設定時，將 MFA 伺服器用於多重要素驗證要求。 | 請參閱[開始使用 Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#plan-your-deployment)。  | 僅限外寄伺服器的流量 |
+| 21  | Microsoft Graph 變更通知 | 開發人員可以利用[變更通知](https://docs.microsoft.com/graph/webhooks?context=graph%2Fapi%2F1.0&view=graph-rest-1.0)來訂閱 Microsoft Graph 中的事件。 | *.cloudapp.net<BR> 104.43.130.21、137.116.169.230、13.79.38.63、104.214.39.228、公用雲端：168.63.250.205、52.161.9.202、40.68.103.62、13.89.60.223、23.100.95.104、40.113.95.219、104.214.32.10、168.63.237.145、52.161.110.176、52.174.177.183 <BR> 適用於美國政府的 Microsoft 雲端：52.244.231.173、52.238.76.151、52.244.250.211、52.238.78.108 <BR> Microsoft Cloud Germany：51.4.231.136、51.5.243.223、51.4.226.154、51.5.244.215 <BR> 由 21Vianet 營運的 Microsoft Cloud China：139.219.15.33、42.159.154.223、42.159.88.79、42.159.155.77<BR> TCP 通訊埠 443 <BR> 附註：開發人員可以在建立訂閱時指定不同的通訊埠。  | 內送伺服器流量 |
 |||||
 
 ## <a name="related-topics"></a>相關主題
@@ -81,4 +82,3 @@ ms.locfileid: "41844684"
 [Microsoft Azure Datacenter IP 範圍](https://www.microsoft.com/download/details.aspx?id=41653)
   
 [Microsoft 公用 IP 空間](https://www.microsoft.com/download/details.aspx?id=53602)
-
