@@ -17,12 +17,12 @@ search.appverid:
 - BCS160
 ms.assetid: cb2250e3-451e-416f-bf4e-363549652c2a
 description: 了解如何 O365 整合式應用程式註冊和 Azure AD 中管理
-ms.openlocfilehash: fdeb3e3f35a795851b253f9b68d755404851ba07
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 6846b57256bd81ae8d2054d69bd8f980d91d6ce9
+ms.sourcegitcommit: 160a2564c90a4d64d19f072e0de9fe1b3cd0c917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41845074"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42417058"
 ---
 # <a name="integrated-apps-and-azure-ad-for-office-365-administrators"></a>適用於 Office 365 系統管理員的整合式應用程式和 Azure AD
 
@@ -32,19 +32,19 @@ ms.locfileid: "41845074"
 
 您必須執行下列兩個程序，您可以在 Azure AD 中管理您的 Office 365 應用程式之前。
   
-|**必要條件**|**Comments**|
+|**先決條件**|**註解**|
 |:-----|:-----|
 |[使用 Office 365 中免費的 Azure Active Directory 訂閱](https://docs.microsoft.com/microsoft-365/compliance/use-your-free-azure-ad-subscription-in-office-365) <br/> |每個 Office 365 的付費的訂閱隨附 Azure Active directory 的免費的訂閱。 您可以使用 Azure AD 來管理您的應用程式，來建立及管理使用者和群組帳戶。 若要使用 Azure AD，只要移至 Azure 入口網站，並使用您的 Office 365 帳戶登入。  <br/> |
 |[開啟或關閉整合式應用程式](https://support.office.com/article/7e453a40-66df-44ab-92a1-96786cb7fb34#__toc379982114) <br/> |為您的使用者，以允許協力廠商應用程式，來存取其 Office 365 的資訊，以及您在 Azure AD 中註冊應用程式，您必須先開啟整合式應用程式。 例如，當有人使用協力廠商應用程式時，該應用程式可能會要求權限來存取其行事曆，以及編輯商務用 OneDrive 資料夾中的檔案。  <br/> |
    
 管理 Office 365 應用程式需要您在 Azure AD 中的應用程式的知識。 這些文章可協助提供您需要的背景。
   
-|**背景文章**|**Comments**|
+|**背景文章**|**註解**|
 |:-----|:-----|
 |[符合 Office 365 app 啟動器](https://support.office.com/article/79f12104-6fed-442f-96a0-eb089a3f476a) <br/> |如果您是初次使用應用程式啟動器，您可能會想要知道它是什麼以及如何使用它。 應用程式啟動器設計來協助您從任何地方存取您的應用程式在 Office 365 中。  <br/> |
 |[Office 365 Management API 概觀](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview) (英文) <br/> |Office 365 Api 可讓您提供存取客戶的 Office 365 資料，包括最關心的事項 — 其郵件、 行事曆、 連絡人、 使用者和群組、 檔案及資料夾。 本文說明在 Office 365 應用程式，Azure AD 之間的關聯性沒有良好的圖表和應用程式存取資料。  <br/> |
 |[整合 Azure Active Directory 中的應用程式](https://docs.microsoft.com/azure/active-directory/develop/quickstart-v1-add-azure-ad-app) <br/> | 了解整合與 Azure Active Directory，以及如何註冊您的應用程式、 了解概念註冊的應用程式，取得並了解品牌的指導方針多租用戶的應用程式的應用程式。  <br/> |
-|[新增自訂磚至 app 啟動器](https://docs.microsoft.com/office365/admin/manage/customize-the-app-launcher)。  <br/> |Office 365 中的應用程式啟動器有助於使用者尋找和存取他們的應用程式。 本文將告訴您身為開發人員可以取得您的應用程式出現在一個使用者的應用程式啟動器，並提供使用 Office 365 認證的單一登入 (SSO) 體驗的方式。  <br/> |
+|[新增自訂磚至 app 啟動器](https://docs.microsoft.com/office365/admin/manage/customize-the-app-launcher)  <br/> |Office 365 中的應用程式啟動器有助於使用者尋找和存取他們的應用程式。 本文將告訴您身為開發人員可以取得您的應用程式出現在一個使用者的應用程式啟動器，並提供使用 Office 365 認證的單一登入 (SSO) 體驗的方式。  <br/> |
 |[Azure Active Directory 整合教學課程](https://docs.microsoft.com/azure/active-directory/saas-apps/tutorial-list) <br/> |這些教學課程的目標是要告訴您如何設定 Azure AD SSO 的協力廠商的 SaaS 應用程式。  <br/> |
 |[Azure AD 的驗證案例](https://go.microsoft.com/fwlink/?LinkId=617145) <br/> |Azure AD 做為服務，提供身分識別與支援的業界標準通訊協定，例如 OAuth 2.0 和 OpenID Connect，簡化適用於開發人員的驗證，以及開啟來源文件庫，可協助您迅速開始撰寫程式碼的不同平台。 本文件可協助您了解 Azure AD 支援並為您示範如何開始在各種案例。  <br/> |
 |[應用程式的存取](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-access-management) <br/> |Azure AD 會啟用對多今天的常用軟體做為服務 (SaaS) 應用程式中; 的簡易整合它提供身分識別與存取管理]，它會傳遞使用者存取面板，他們可以探索他們有哪些應用程式的存取，而且他們可以使用 SSO 來存取他們的應用程式。 本文提供可讓您深入了解 Azure AD 的應用程式存取增強功能與如何可以參與給他們的相關資源的連結。  <br/> |
