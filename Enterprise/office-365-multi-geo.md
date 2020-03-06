@@ -13,12 +13,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 使用 Office 365 多地理位置，將 Office 365 的存在狀態拓展至多個地理區域。
-ms.openlocfilehash: 62aa890bb3bb8bfcabd13285814b72c7000047dc
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+ms.openlocfilehash: ca0fac66549b91fe25cc5d86f9dd0be310fb38b5
+ms.sourcegitcommit: 160a2564c90a4d64d19f072e0de9fe1b3cd0c917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974055"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "42416998"
 ---
 # <a name="office-365-multi-geo"></a>Office 365 多地理位置
 
@@ -34,7 +34,7 @@ ms.locfileid: "41974055"
 
 ![SharePoint 系統管理中心內多地理位置地圖的螢幕擷取畫面](media/multi-geo-world-map.png)
 
-請注意，Office 365 多地理位置主要不是為效能最佳化優化而設計，其主要設計目的在滿足資料落地要求。 如需 Office 365 的效能最佳化的詳細資訊，請參閱 [ Office 365 的網路規劃與效能調整](https://support.office.com/article/e5f1228c-da3c-4654-bf16-d163daee8848)或連絡客戶支援小組。
+請注意，Office 365 多地理位置不是為效能最佳化優化而設計，其主要設計目的在滿足資料落地要求。 如需 Office 365 效能最佳化的詳細資訊，請參閱 [Office 365 的網路規劃與效能調整](https://support.office.com/article/e5f1228c-da3c-4654-bf16-d163daee8848)或連絡客戶支援小組。
 
 ## <a name="terminology"></a>詞彙
 
@@ -58,7 +58,7 @@ ms.locfileid: "41974055"
 
 按照這些步驟來開始使用多地理位置：
 
-1. 與您的帳戶團隊合作來新增 _Office 365 多地理位置功能_服務方案。 他們會引導您新增所需數量的授權。 多地理位置功能可供至少具有 500 個 Office 365 訂閱的客戶使用。
+1. 與您的帳戶團隊合作來新增 _Office 365 多地理位置功能_服務方案。 他們會引導您新增所需數量的授權。 多地理位置功能可供至少具有 500 個 Office 365 訂閱的 EA 客戶使用。
 
    開始使用 Office 365 多地理位置之前，Microsoft 必須先設定您的 Exchange Online 租用戶，以支援多地理位置。 當您訂購 *Office 365 中的多地理位置功能*服務方案，並於租用戶中顯示授權之後，將觸發此一次性設定程序。 套用多地理位置授權之後，您會在 [Office 365 訊息中心](https://support.office.com/article/38FB3333-BFCC-4340-A37B-DEDA509C2093)收到通知，然後就可以開始進行設定並使用 Office 365 多地理位置功能。
 
