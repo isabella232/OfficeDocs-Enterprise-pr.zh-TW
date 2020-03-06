@@ -7,15 +7,14 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 description: 了解如何在 SharePoint 網站中的來賓與共同作業。
-ms.openlocfilehash: 39a9ee0925a384a80e8eae3a73336eb69950a554
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 8c1c34fded910701275a80aa0740a746a2458156
+ms.sourcegitcommit: 4e50f43857f93f42b71650354d1aec9ed4cc7fe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41845064"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "42549112"
 ---
 # <a name="collaborate-with-guests-in-a-site"></a>在網站中與來賓共同作業
 
@@ -137,5 +136,5 @@ Microsoft 365 中共用是由控管最高層級 Azure Active Directory 中的組
 
 [建立安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)
 
-[使用受管理的來賓建立 B2B 外部網路](b2b-extranet.md)
+[使用受管理來賓建立 B2B 外部網路](b2b-extranet.md)
 

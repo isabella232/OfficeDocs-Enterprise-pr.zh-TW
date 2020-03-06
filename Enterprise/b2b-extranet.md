@@ -1,5 +1,5 @@
 ---
-title: 使用受管理的來賓建立 B2B 外部網路
+title: 使用受管理來賓建立 B2B 外部網路
 ms.author: mikeplum
 author: MikePlumleyMSFT
 manager: pamgreen
@@ -7,17 +7,16 @@ audience: ITPro
 ms.topic: article
 ms.service: sharepoint-online
 localization_priority: Normal
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 description: 了解如何建立 B2B 外部網路網站或小組，並提出從夥伴組織的受管理的來賓使用者。
-ms.openlocfilehash: 930c11489921fa5c32d1ba1ab16161f201006c91
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: cdf4470920a307d569fcfd650f40c77f4a5423a4
+ms.sourcegitcommit: 4e50f43857f93f42b71650354d1aec9ed4cc7fe2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844994"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "42549062"
 ---
-# <a name="create-a-b2b-extranet-with-managed-guests"></a>使用受管理的來賓建立 B2B 外部網路
+# <a name="create-a-b2b-extranet-with-managed-guests"></a>使用受管理來賓建立 B2B 外部網路
 
 若要建立外部網路 B2B 共同作業與夥伴組織使用 Azure Active Directory，您可以使用[Azure Active Directory 權益 Management](https://docs.microsoft.com/azure/active-directory/governance/entitlement-management-overview) 。 這可讓使用者自行註冊在外部網路網站或小組及接收存取方式核准工作流程。
 
