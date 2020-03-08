@@ -187,7 +187,7 @@
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
 ### 與來賓共同作業
 #### [來賓共用參考](microsoft-365-guest-settings.md)
-#### 來賓共用解決方案
+#### 來賓共用案例
 ##### [來賓共同作業概觀](collaborating-with-people-outside-your-organization.md)
 ##### [在文件上共同作業](collaborate-on-documents.md)
 ##### [在網站中共同作業](collaborate-in-a-site.md)
