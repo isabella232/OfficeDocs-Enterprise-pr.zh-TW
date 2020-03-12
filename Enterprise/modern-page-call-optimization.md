@@ -3,7 +3,7 @@ title: 在 SharePoint Online 新式與傳統發佈網站頁面中最佳化頁面
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 9/18/2019
+ms.date: 03/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -19,12 +19,12 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何藉由限制對於 SharePoint Online 服務端點的呼叫數目，針對 SharePoint Online 中的新式與傳統發佈網站頁面進行最佳化。
-ms.openlocfilehash: 13c403e03c0d2aa2cb73d626c92596d12a8b1ee4
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: b339e6888e9434b6df26b0a29450bfcbbce84e66
+ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844826"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42603722"
 ---
 # <a name="optimize-page-calls-in-sharepoint-online-modern-and-classic-publishing-site-pages"></a>在 SharePoint Online 新式與傳統發佈網站頁面中最佳化頁面呼叫
 
@@ -37,7 +37,10 @@ SharePoint Online 新式與傳統發佈網站都包含連結，會從 SharePoint
 
 ## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-calls"></a>使用「適用於 SharePoint 的頁面診斷」工具來分析頁面呼叫
 
-**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+適用於 SharePoint 的頁面診斷工具是全新 Microsoft Edge (https://www.microsoft.com/edge) 和 Chrome 瀏覽器的擴充功能，可以用來分析 SharePoint Online 新式入口網站與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+
+>[!NOTE]
+>網頁診斷工具只能用於 SharePoint Online，且無法在 SharePoint 系統頁面使用。
 
 當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [對 SharePoint 的要求]**** 結果中看到關於外部呼叫的資訊。 如果網站頁面包含的呼叫數目少於呼叫的基準數，則此行會顯示為綠色，如果頁面超過基準數，則會顯示為紅色。 因為傳統網站頁面使用 HTTP1.1，而新式頁面使用 HTTP2.0，所以新式頁面與傳統頁面的基準數不同：
 

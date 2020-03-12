@@ -3,7 +3,7 @@ title: 在 SharePoint Online 新式網站頁面中最佳化網頁組件效能
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/6/2019
+ms.date: 03/11/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -19,12 +19,12 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何在 SharePoint Online 新式網站頁面中最佳化 網頁組件效能。
-ms.openlocfilehash: 8ee8e932913ad8b75d6e68cecbd5d5da08bce76b
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 48eba5f638d75cb12b7b4dcf516a9c3833cf8f4d
+ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844827"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42603742"
 ---
 # <a name="optimize-web-part-performance-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化網頁組件效能
 
@@ -35,14 +35,17 @@ SharePoint Online 新式網站頁面包含網頁組件，對整體頁面載入�
 
 ## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-web-parts"></a>使用「適用於 SharePoint 的頁面診斷」工具來分析網頁組件
 
-**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+適用於 SharePoint 的頁面診斷工具是全新 Microsoft Edge (https://www.microsoft.com/edge) 和 Chrome 瀏覽器的擴充功能，可以用來分析 SharePoint Online 新式入口網站與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+
+>[!NOTE]
+>網頁診斷工具只能用於 SharePoint Online，且無法在 SharePoint 系統頁面使用。
 
 當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [網頁組件影響頁面載入時間]**** 結果中，看到超過基準計量的網頁組件相關資訊。
 
 可能的結果包括：
 
-- **需要注意** (紅色)：載入耗時比**兩**秒還要久的任何_自訂_網頁組件。 測試結果中顯示的載入時間總計會依據模組載入、消極式載入、初始、轉譯來細分。
-- **改善機會** (黃色)：可能會影響頁面載入時間的項目會顯示在此區段，應該加以檢閱及監控。 包含「現成 (OOTB)」Microsoft 網頁組件。 此區段中顯示的任何 Microsoft 網頁組件結果，會自動向 Microsoft 報告，因此**不需要任何動作**。 如果您遇到頁面效能緩慢的情形，且頁面上**所有 Microsoft 網頁組件**顯示在**改善機會**區段的結果中，您應該只記錄支援票證以進行調查。 請注意，未來「頁面診斷」工具更新會根據 Microsoft 網頁組件的特定組態，進一步細分結果。
+- **需要注意** (紅色)：任何在檢視區 (頁面首先載入的畫面可見部分) 顯示的_自訂_網頁組件，載入會耗時超過**兩**秒。 任何檢視區之外的_自訂_網路組建，載入會耗時超過**四**秒。 總計載入時間會顯示在測試結果中，且會依據模組載入、消極式載入、初始、轉譯來細分。
+- **改善機會** (黃色)：可能會影響頁面載入時間的項目會顯示在此區段，應該加以檢閱及監控。 包含「現成 (OOTB)」Microsoft 網頁組件。 此區段中顯示的任何 Microsoft 網頁組件結果，會自動向 Microsoft 報告，因此**不需要任何動作**。 如果您遇到頁面效能緩慢的情形，且頁面上**所有 Microsoft 網頁組件**顯示在**改善機會**區段的結果中，您應該只記錄支援票證以進行調查。 請注意，未來適用於 SharePoint 的「頁面診斷」工具更新會根據 Microsoft 網頁組件的特定組態，進一步細分結果。
 - **不需要任何動作** (綠色)：沒有任何網頁組件傳回資料耗時超過**兩**秒。
 
 如果 [網頁組件影響頁面載入時間]**** 結果顯示在結果的 [需要注意]**** 或 [改善機會]**** 區段中，請按一下結果以查看哪些網頁組件導致載入緩慢的詳細資訊。 未來「適用於 SharePoint 的頁面診斷」工具的更新可能會包含分析規則的更新，因此請確保永遠擁有最新版本的工具。

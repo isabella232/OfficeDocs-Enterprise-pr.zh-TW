@@ -3,7 +3,7 @@ title: 在 SharePoint Online 新式網站頁面中最佳化頁面權數
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 9/18/2019
+ms.date: 03/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -19,12 +19,12 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何在 SharePoint Online 新式網站頁面中最佳化頁面權數。
-ms.openlocfilehash: 15266a15752a9cf55a842f5209894d945f595e64
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: c694e7ed2524e6e8e161a3ad844dd3d1cfc3a116
+ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844804"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42603783"
 ---
 # <a name="optimize-page-weight-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化頁面權數
 
@@ -37,7 +37,10 @@ SharePoint Online 新式網站頁面包含轉譯頁面的頁面內容所需的�
 
 ## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-page-weight"></a>使用「適用於 SharePoint 的頁面診斷」工具來分析頁面權數
 
-**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+適用於 SharePoint 的頁面診斷工具是全新 Microsoft Edge (https://www.microsoft.com/edge) 和 Chrome 瀏覽器的擴充功能，可以用來分析 SharePoint Online 新式入口網站與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+
+>[!NOTE]
+>網頁診斷工具只能用於 SharePoint Online，且無法在 SharePoint 系統頁面使用。
 
 當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [頁面權數低於 500KB]**** 結果中看到關於頁面的資訊。 如果頁面權數低於基準值，則結果會顯示為綠色，如果頁面權數超過基準值，則會顯示為紅色。
 

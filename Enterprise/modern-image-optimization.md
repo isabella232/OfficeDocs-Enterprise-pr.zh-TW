@@ -3,7 +3,7 @@ title: 在 SharePoint Online 新式網站頁面中最佳化影像
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 9/18/2019
+ms.date: 03/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -19,12 +19,12 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 了解如何在 SharePoint Online 新式網站頁面中最佳化影像。
-ms.openlocfilehash: b1bb8bab7ee9d5f0972a476e37c35e8c14748bfb
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 592839c68f790ffa35887cd1ff95e5354218d9e8
+ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843744"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "42603752"
 ---
 # <a name="optimize-images-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化影像
 
@@ -37,7 +37,10 @@ ms.locfileid: "41843744"
 
 ## <a name="use-the-page-diagnostics-for-sharepoint-tool-to-analyze-image-optimization"></a>使用「適用於 SharePoint 的頁面診斷」工具來分析影像最佳化
 
-**適用於 SharePoint 的頁面診斷工具**是 Chrome 和 [Microsoft Edge 77 版或更新版本](https://www.microsoftedgeinsider.com/download?form=MI13E8&OCID=MI13E8)的瀏覽器擴充功能，您可以用來分析 SharePoint 新式與傳統發布網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用 SharePoint Online 頁面診斷工具](page-diagnostics-for-spo.md)
+適用於 SharePoint 的頁面診斷工具是全新 Microsoft Edge (https://www.microsoft.com/edge) 和 Chrome 瀏覽器的擴充功能，可以用來分析 SharePoint Online 新式入口網站與傳統發佈網站頁面。 該工具會針對每個分析頁面提供一份報告，顯示頁面如何針對定義的效能準則組執行。 若要安裝及了解「適用於 SharePoint 的頁面診斷」工具，請造訪[使用適用於 SharePoint Online 的頁面診斷工具](page-diagnostics-for-spo.md)。
+
+>[!NOTE]
+>網頁診斷工具只能用於 SharePoint Online，且無法在 SharePoint 系統頁面使用。
 
 當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 新式網站時，您可以在 [診斷測試]__ 窗格中看到大型影像的資訊。
 
