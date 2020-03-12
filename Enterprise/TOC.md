@@ -185,19 +185,20 @@
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
+
 ### 與來賓共同作業
-#### [來賓共用參考](microsoft-365-guest-settings.md)
+#### [來賓共用參考](/microsoft-365/solutions/microsoft-365-guest-settings?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
 #### 來賓共用案例
-##### [來賓共同作業概觀](collaborating-with-people-outside-your-organization.md)
-##### [在文件上共同作業](collaborate-on-documents.md)
-##### [在網站中共同作業](collaborate-in-a-site.md)
-##### [以小組的形式共同作業](collaborate-as-a-team.md)
+##### [來賓共同作業概觀](/microsoft-365/solutions/collaborate-with-people-outside-your-organization?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+##### [在文件上共同作業](/microsoft-365/solutions/collaborate-on-documents?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+##### [在網站中共同作業](/microsoft-365/solutions/collaborate-in-site?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+##### [以小組的形式共同作業](/microsoft-365/solutions/collaborate-as-team?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
 #### 來賓共用安全性
-##### [未經驗證的共用](best-practices-anonymous-sharing.md)
-##### [限制意外暴露](sharing-limit-accidental-exposure.md)
-##### [安全的來賓共用環境](create-a-secure-guest-sharing-environment.md)
-#### [建立 B2B 外部網路](b2b-extranet.md)
-### [限制共用](microsoft-365-limit-sharing.md)
+##### [未經驗證的共用](/microsoft-365/solutions/best-practices-anonymous-sharing?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+##### [限制意外暴露](/microsoft-365/solutions/share-limit-accidental-exposure?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+##### [安全的來賓共用環境](/microsoft-365/solutions/create-secure-guest-sharing-environment?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+#### [建立 B2B 外部網路](/microsoft-365/solutions/b2b-extranet?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
+### [限制共用](/microsoft-365/solutions/microsoft-365-limit-sharing?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
 
 ## 裝置
 ### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
