@@ -15,12 +15,12 @@ ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
 description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
-ms.openlocfilehash: b654dcd7b8f923f952a6e2fbefe37a5e523e1cd4
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: e970546790f290cd2d075adba7628188d60ef19a
+ms.sourcegitcommit: 1c646afb10db9d3d1e6a346089b7845268b0c9d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841710"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "42605611"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
@@ -110,9 +110,3 @@ Microsoft 365 是一種由 Microsoft 雲端提供及保護，且具備不斷改�
 ## <a name="related-topics"></a>相關主題
   
 [Microsoft 週期原則](https://go.microsoft.com/fwlink/?linkid=865200)
-
-[Office Retirement Group (Microsoft 技術社群)](https://go.microsoft.com/fwlink/?linkid=842065)
-
-
-
-

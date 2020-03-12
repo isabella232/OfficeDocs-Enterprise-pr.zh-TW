@@ -13,12 +13,12 @@ ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 f1.keywords:
 - NOCSH
 description: Exchange 2010 即將終止支援。 使用此規劃藍圖做為準備升級到 Exchange Online 或 Exchange Server 內部部署更新版本的指南。
-ms.openlocfilehash: b8e9e1b94c08ec58294f88a7b5607b18c9f44a99
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: d5118d0abf02464b47bfb4a368d42b0921c19ec5
+ms.sourcegitcommit: 1c646afb10db9d3d1e6a346089b7845268b0c9d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840380"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "42605568"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>Exchange 2010 終止支援藍圖
 
@@ -48,10 +48,10 @@ Exchange 2010 即將終止支援，這是探索選項及準備移轉規劃的絕
 - 將 Exchange 2010 伺服器移轉到內部部署伺服器上的 Exchange 2016。
 
 > [!IMPORTANT]
-> 如果您的組織選擇將信箱移轉到 Office 365，但想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署的 Active Directory 管理使用者帳戶，您必須在內部部署至少保留一部 Exchange 伺服器。 如果移除了最後一部 Exchange 伺服器，您將無法在 Exchange Online 中變更 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。 在這個案例中，您有下列選項：
+> 如果您的組織選擇將信箱移轉到 Office 365，但想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署的 Active Directory 管理使用者帳戶，您必須在內部部署至少保留一部 Exchange 伺服器。 如果移除最後一部 Exchange 伺服器，您將無法變更 Exchange Online 中的 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。 在這個案例中，您有下列選項：
 
 - (**建議**) 如果您能在 2020 年 10 月 13 日前將信箱移轉至 Office 365 並升級伺服器，請使用 Exchange 2010 連線至 Office 365 並移轉信箱。 之後，將 Exchange 2010 移轉到 Exchange 2016，並解除委任所有剩下的 Exchange 2010 伺服器。
-- 如果您無法在 2020 年 10 月 13 日之前完成信箱移轉和內部部署伺服器升級，請先將您的內部部署 Exchange 2010 伺服器升級到 Exchange 2016，然後再使用 Exchange 2016 連線至 Office 365 並移轉信箱。
+- 如果您無法在10月13日（2020）完成信箱遷移和內部部署伺服器升級，請先將您的內部部署 Exchange 2010 伺服器升級至 Exchange 2016，然後再使用 Exchange 2016 連線到 Office 365 和遷移信箱。
 
 > [!NOTE]
 > 雖然有些複雜，但您也可以在將內部部署 Exchange 2010 伺服器移轉到 Exchange 2016 的同時將信箱移轉至 Office 365。
@@ -152,7 +152,7 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 - 使用者在大部分的裝置上不需要設定新 Outlook 設定檔 (某些舊款 Android 手機可能需要新設定檔)，而且不需要重新下載電子郵件。
 
 > [!IMPORTANT]
-> 如果您的組織選擇將信箱移轉到 Office 365，但想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署的 Active Directory 管理使用者帳戶，您必須在內部部署至少保留一部 Exchange 伺服器。 如果移除了最後一部 Exchange 伺服器，您將無法在 Exchange Online 中變更 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。
+> 如果您的組織選擇將信箱移轉到 Office 365，但想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署的 Active Directory 管理使用者帳戶，您必須在內部部署至少保留一部 Exchange 伺服器。 如果移除最後一部 Exchange 伺服器，您將無法變更 Exchange Online 中的 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。
 
 如果您適合使用完整混合式移轉，請參閱下列可協助您進行移轉的相關資源：
 
@@ -164,9 +164,9 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 
 ## <a name="upgrade-to-a-newer-version-of-exchange-server-on-premises"></a>升級到新版 Exchange Server 內部部署
 
-雖然我們深信完整移轉到 Office 365 能達到最佳的價值及使用者體驗，我們也了解某些組織需要保留部分 Exchange Server 內部部署。 有可能是因為法規需求，以確保不將資料儲存在其他國家/地區的資料中心，或者可能是因為您有無法在雲端中使用的特殊設定或需求，或者可能只是因為您仍然使用 Active Directory 內部部署，所以需要 Exchange 來管理雲端信箱。 不管是您選擇或必須保留 Exchange 內部部署，都應確定將 Exchange 2010 環境升級到至少 Exchange 2013 或 Exchange 2016，並在終止支援日之前刪除 Exchange 2010。
+雖然我們深信完整移轉到 Office 365 能達到最佳的價值及使用者體驗，我們也了解某些組織需要保留部分 Exchange Server 內部部署。 這可能是因為法規需求，保證資料不會儲存在另一個國家/地區的資料中心，或是因為您有無法在雲端中滿足的獨特設定或需求，也可能只是您需要 Exchange 才能管理雲端信箱，因為您仍然使用 Active Directory 內部部署。 不管是您選擇或必須保留 Exchange 內部部署，都應確定將 Exchange 2010 環境升級到至少 Exchange 2013 或 Exchange 2016，並在終止支援日之前刪除 Exchange 2010。
 
-為了獲得最佳的體驗，我們建議您將剩餘的內部部署環境升級為 Exchange 2016。 如果您想直接從 Exchange Server 2010 升級至 Exchange Server 2016，不需要安裝 Exchange Server 2013。
+為了獲得最佳的體驗，我們建議您將剩餘的內部部署環境升級為 Exchange 2016。 如果您想要直接從 Exchange Server 2010 移至 Exchange Server 2016，您不需要安裝 Exchange Server 2013。
 
 Exchange 2016 包含 Exchange 的先前發行版本隨附的所有功能和改善功能，而且最符合 Office 365 提供的體驗 (雖然某些功能只能在 Office 365 中使用)。 看看其中一些您錯過的事項：
 
@@ -236,5 +236,3 @@ Exchange 2016 包含 Exchange 的先前發行版本隨附的所有功能和改�
 ## <a name="related-topics"></a>相關主題
 
 [可幫助您從 Office 2010 伺服器和用戶端升級的資源](https://docs.microsoft.com/office365/enterprise/upgrade-from-office-2010-servers-and-products)
-
-[Office Retirement Group (Microsoft 技術社群)](https://go.microsoft.com/fwlink/?linkid=842065) (英文)
