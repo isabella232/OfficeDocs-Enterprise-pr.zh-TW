@@ -1,7 +1,7 @@
 ---
 title: 21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍
-ms.author: laurawi
-author: LauraWi
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 03/04/2020
 audience: ITPro
@@ -20,12 +20,12 @@ f1.keywords:
 - NOCSH
 description: 本文適用於由中國 21Vianet 運作的 Office 365。本文章會列出 21Vianet 運作的 Office 365 所使用的 URL 和 IP 位址範圍。
 hideEdit: true
-ms.openlocfilehash: c317d303ef9b096bc82c4b22dadc019c8e785589
-ms.sourcegitcommit: 160a2564c90a4d64d19f072e0de9fe1b3cd0c917
+ms.openlocfilehash: 5c1ae01ef2bb0151721ab20cdd13826fc029f0c1
+ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42417011"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42979407"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍
 

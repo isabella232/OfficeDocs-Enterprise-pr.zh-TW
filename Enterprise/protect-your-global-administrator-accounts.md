@@ -18,64 +18,67 @@ search.appverid:
 f1.keywords:
 - NOCSH
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
-description: 保護您的 Office 365 訂閱的全域系統管理員存取。
-ms.openlocfilehash: ee5acefbd5eab287a78b55f5d4ddfc525432b403
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 保護您的 Office 365 訂閱的全域系統管理員存取權。
+ms.openlocfilehash: fcd4d69df967ad592af52a36a55008463b6f30e2
+ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841190"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42979365"
 ---
 # <a name="protect-your-office-365-global-administrator-accounts"></a>保護您的 Office 365 全域系統管理員帳戶
 
+> [!NOTE]
+> 您可以建立全域管理員帳戶，而不需要新增任何授權。
+
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-Office 365 訂閱，包括資訊蒐集和網路釣魚攻擊的安全性破壞通常即可危害 Office 365 全域系統管理員帳戶的認證。 在雲端中的安全性是您與 Microsoft 之間的合作關係：
+Office 365 訂閱的安全性違規（包括資訊竊取和網路釣魚攻擊）通常會危及 Office 365 全域管理員帳戶的認證。 雲端的安全性是您和 Microsoft 之間的合作關係：
   
-- Microsoft 雲端服務會信任] 與 [安全性 foundation 上建置。 Microsoft 提供安全性控制和功能，協助您保護您的資料和應用程式。
+- Microsoft 雲端服務是以信任和安全性的基礎來建立的。 Microsoft 提供的安全性控制和功能可協助您保護您的資料和應用程式。
     
-- 您擁有您的資料和身分識別和保護它們，您的內部部署資源的安全性和您控制的雲端元件的安全性的責任。
+- 您擁有資料和身分識別，以及保護它們的責任、內部部署資源的安全性，以及您所控制之雲端元件的安全性。
     
-Microsoft 提供功能來協助保護您的組織，但它們有效只有當您使用它們。 如果您不使用它們，您可能容易受到攻擊。 若要保護您的全域系統管理員帳戶，Microsoft 是以下詳細指示，以協助您：
+Microsoft 提供的功能可協助保護您的組織，但只有在您使用這些功能時，才會有效。 如果您不使用它們，可能會受到攻擊。 為了保護您的全域系統管理員帳戶，Microsoft 可在這裡協助您瞭解下列各專案的詳細指示：
   
-1. 建立專用的 Office 365 全域系統管理員帳戶，並使用它們只在需要時。
+1. 建立專用的 Office 365 全域管理員帳戶，並只在必要時使用。
     
-2. 設定專用的 Office 365 全域系統管理員帳戶的多重要素驗證，並使用最強的次要驗證。
+2. 設定專用 Office 365 全域管理員帳戶的多重要素驗證，並使用最強形式的次要驗證。
     
 > [!NOTE]
-> 雖然本文著重於全域系統管理員帳戶，您應該考慮是否其他帳戶具有廣泛的權限來存取您的訂閱，例如 eDiscovery 管理員 」 或 「 安全性 」 或 「 合規性管理員中的資料帳戶，都必須保護相同的方式。 
+> 雖然本文的重點是全域管理員帳戶，您還是應該考慮是否有其他帳戶具備廣泛的許可權來存取訂閱中的資料，例如 eDiscovery 系統管理員或安全性或合規性管理員帳戶應該以相同的方式加以保護。 
   
-## <a name="step-1-create-dedicated-office-365-global-administrator-accounts-and-use-them-only-when-necessary"></a>步驟 1。 建立專用的 Office 365 全域系統管理員帳戶和使用它們只在需要時
+## <a name="step-1-create-dedicated-office-365-global-administrator-accounts-and-use-them-only-when-necessary"></a>步驟 1。 建立專用的 Office 365 全域管理員帳戶，且只有在必要時才加以使用
 
-有相對很少的管理工作，例如將角色指派給需要全域系統管理員權限的使用者帳戶。 因此，而不是使用已指派全域系統管理員角色的日常使用者帳戶，請執行下列步驟：
+需要全域管理員許可權的系統管理工作相對較少，例如指派角色給使用者帳戶。 因此，請執行下列步驟，而不是使用已獲指派全域系統管理員角色的日常使用者帳戶：
   
-1. 判斷已指派全域系統管理員角色的使用者帳戶的集合。 您可以利用 Graph 命令 PowerShell 的 Azure Active (Azure AD) Directory 來進行此作業：
+1. 決定已指派全域系統管理員角色的使用者帳戶集。 您可以使用 Azure Active （Azure AD）目錄 PowerShell for Graph 命令來執行這項作業：
   
   ```powershell
   Get-AzureADDirectoryRole | where { $_.DisplayName -eq "Company Administrator" } | Get-AzureADDirectoryRoleMember | Ft DisplayName
   ```
 
-2. 登入 Office 365 訂閱已被指派全域系統管理員角色的使用者帳戶。
+2. 使用已獲指派全域系統管理員角色的使用者帳戶，登入您的 Office 365 訂閱。
     
-3. 建立至少一個與最多五個最多的專用全域系統管理員使用者帳戶。 **使用強式密碼，至少有 12 個字元。** 如需詳細資訊，請參閱[建立強式密碼](https://support.microsoft.com/help/4026406/microsoft-account-create-a-strong-password)。 將新帳戶的密碼儲存在安全的位置。 
+3. 建立至少一個，最多可以有五個專用全域系統管理員使用者帳戶。 **使用強式密碼的長度至少12個字元。** 請參閱[建立強式密碼](https://support.microsoft.com/help/4026406/microsoft-account-create-a-strong-password)以取得詳細資訊。 將新帳戶的密碼儲存在安全的位置。 
     
-4. 將全域系統管理員角色指派給每個新增專用的全域系統管理員使用者帳戶。
+4. 將全域管理員角色指派給每個新的專屬全域系統管理員使用者帳戶。
     
 5. 登出 Office 365。
     
-6. 使用下列其中一個新的專用全域系統管理員使用者帳戶登入。
+6. 使用其中一個新的專屬全域系統管理員使用者帳戶登入。
     
-7. 針對每個現有使用者帳戶具有已被指派全域系統管理員角色從步驟 1:
+7. 針對每個已指派步驟1之全域系統管理員角色的現有使用者帳戶：
     
   - 移除全域系統管理員角色。
     
-  - 適用於該使用者的工作的功能和責任的帳戶指派系統管理員角色。 如需各種 Office 365 中的系統管理員角色的詳細資訊，請參閱[關於系統管理員角色](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles)。
+  - 將系統管理員角色指派給適當于該使用者工作職能和責任的帳戶。 如需 Office 365 中各種系統管理員角色的詳細資訊，請參閱[關於系統管理員角色](https://docs.microsoft.com/office365/admin/add-users/about-admin-roles)。
     
 8. 登出 Office 365。
     
-應該結果：
+結果應該是：
   
-- 您的訂閱中唯一擁有全域系統管理員角色的使用者帳戶，就是新建立的一組專用全域系統管理員帳戶。 確認這搭配下列 PowerShell 命令：
+- 您的訂閱中唯一擁有全域系統管理員角色的使用者帳戶，就是新建立的一組專用全域系統管理員帳戶。 使用下列 PowerShell 命令進行驗證：
     
   ```powershell
   Get-AzureADDirectoryRole | where { $_.DisplayName -eq "Company Administrator" } | Get-AzureADDirectoryRoleMember | Ft DisplayName
@@ -83,14 +86,14 @@ Microsoft 提供功能來協助保護您的組織，但它們有效只有當您�
 
 - 管理您訂閱的所有其他日常使用者帳戶擁有指派的系統管理員角色，這些角色會與他們的工作職責相關聯。
     
-從 + 這一點時間，您使用登入專用的全域系統管理員帳戶僅適用於需要全域系統管理員權限的工作。 所有其他 Office 365 系統管理工作必須執行其他系統管理角色指派給使用者帳戶。
+自現在起，您只需在需要全域系統管理員許可權的工作中登入專用全域管理員帳戶。 所有其他 Office 365 管理都必須透過指派其他系統管理角色給使用者帳戶來執行。
   
 > [!NOTE]
-> 這需要額外的步驟，為您的日常使用者帳戶登出並使用專用的全域系統管理員帳戶登入。 但這只需要完成的有時會針對全域系統管理員的作業。 請考慮的全域系統管理員帳戶外洩，需要更多的步驟之後，可用來復原您的 Office 365 訂閱。
+> 這需要其他步驟以您的日常使用者帳戶登出，並以專用全域管理員帳戶登入。 但是這只需要偶爾進行全域管理員作業。 請考慮在全域管理員帳戶遭到破壞之後復原 Office 365 訂閱需要進行許多步驟。
   
-## <a name="step-2-configure-multi-factor-authentication-for-your-dedicated-office-365-global-administrator-accounts-and-use-the-strongest-form-of-secondary-authentication"></a>步驟 2。 設定專用的 Office 365 全域系統管理員帳戶的多重要素驗證，並使用最強的次要驗證
+## <a name="step-2-configure-multi-factor-authentication-for-your-dedicated-office-365-global-administrator-accounts-and-use-the-strongest-form-of-secondary-authentication"></a>步驟 2。 設定專用 Office 365 全域管理員帳戶的多重要素驗證，並使用最強形式的次要驗證
 
-多重要素驗證 (MFA) 需要以外的帳戶名稱和密碼的其他資訊。 Office 365 支援下列驗證方法：
+多重要素驗證（MFA）需要帳戶名稱和密碼以外的其他資訊。 Office 365 支援下列驗證方法：
   
 - 電話
     
@@ -100,64 +103,64 @@ Microsoft 提供功能來協助保護您的組織，但它們有效只有當您�
     
 - 生物特徵辨識裝置
     
-如果您使用只能在雲端 （僅限雲端身分識別模型） 中儲存的使用者帳戶的小型企業版，請，使用下列步驟來設定 MFA 使用電話撥號或傳送到智慧電話的文字郵件驗證碼：
+如果您是一部小型企業，其使用的使用者帳戶只會儲存在雲端中（僅限雲端身分識別模型），請使用下列步驟，使用傳送至 smart phone 的來電或短信驗證碼，設定 MFA：
   
 1. [設定 MFA](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication)。
     
-2. 若要設定每個[設定的 Office 365 2 雙步驟驗證](https://support.office.com/article/Set-up-2-step-verification-for-Office-365-ace1d096-61e5-449b-a875-58eb3d74de14)專用電話或文字訊息的全域系統管理員帳戶的驗證方法。 
+2. [設定 Office 365 的2步驟驗證](https://support.office.com/article/Set-up-2-step-verification-for-Office-365-ace1d096-61e5-449b-a875-58eb3d74de14)，將電話通話或短消息的每一個專用全域管理員帳戶設定為驗證方法。 
     
-如果您使用 Office 365 混合式身分識別模型較大型組織，您會有更多的驗證選項。 如果您已經就緒更強的次要驗證方法有安全性基礎結構，請使用下列步驟：
+如果您是較大的組織，且使用的是 Office 365 混合式身分識別模型，您會有更多驗證選項。 如果您已將安全性基礎結構放在適當的次要驗證方法中，請使用下列步驟：
   
 1. [設定 MFA](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication)。
     
-2. 若要設定每個[設定 2 雙步驟驗證 Office 365](https://support.office.com/article/Set-up-2-step-verification-for-Office-365-ace1d096-61e5-449b-a875-58eb3d74de14)專用全域系統管理員帳戶適當的驗證方法。 
+2. [設定 Office 365 的2步驟驗證](https://support.office.com/article/Set-up-2-step-verification-for-Office-365-ace1d096-61e5-449b-a875-58eb3d74de14)，以設定每一個專用全域管理員帳戶的適當驗證方法。 
     
-如果想要更強的驗證方法的安全性基礎結構不是在位置及運作的 Office 365 MFA，我們強烈建議您在使用 MFA 設定專用的全域系統管理員帳戶使用電話或文字訊息作為過渡期的安全性考量，傳送給智慧型手機的全域管理員帳戶的驗證碼。 不要讓您專用的全域系統管理員帳戶沒有 MFA 所提供的額外保護。
+如果所需強驗證方法的安全性基礎結構不存在，且無法用於 Office 365 MFA，強烈建議您使用電話撥入或短信設定具有 MFA 的專屬全域管理員帳戶。為全域系統管理員帳戶傳送給智慧型電話的驗證碼做為暫時的安全性措施。 請勿留下專屬全域管理員帳戶，除非 MFA 提供額外的保護。
   
 如需更多資訊，請參閱 [Office 365 部署的多重要素驗證方案](https://docs.microsoft.com/office365/admin/security-and-compliance/multi-factor-authentication-plan)。
   
-若要連線至 Office 365 服務具有 MFA 和 PowerShell，請參閱下列文章：
+若要使用 MFA 和 PowerShell 連接至 Office 365 服務，請參閱下列文章：
 
-- [Office 365 PowerShell 的使用者帳戶、 群組和授權](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)
+- [使用者帳戶、群組和授權的 Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)
 - [Exchange Online](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/mfa-connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-by-using-mfa)
 - [SharePoint Online](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online#to-connect-with-multifactor-authentication-mfa)
 - [商務用 Skype Online](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell#connect-using-a-skype-for-business-online-administrator-account-with-multifactor-authentication)
 
-## <a name="additional-protections-for-enterprise-organizations"></a>對於企業組織的額外保護
+## <a name="additional-protections-for-enterprise-organizations"></a>企業組織的其他保護
 
-步驟 1 和 2 中，使用這些額外的方法，以確保您的全域系統管理員帳戶，並使用它執行的設定之後，會盡可能的安全。
+步驟1和2之後，請使用這些額外的方法，以確保您的全域系統管理員帳戶和您使用它執行的設定盡可能安全。
   
-### <a name="privileged-access-workstation"></a>特殊權限的存取工作站
+### <a name="privileged-access-workstation"></a>許可權存取工作站
 
-若要確保高權工作的執行會儘可能安全，使用的特殊權限的存取工作站 （爪）。 不是爪只適用於機密組態工作，例如需要全域系統管理員帳戶的 Office 365 設定專用的電腦。 這部電腦不是每日的網際網路瀏覽或電子郵件，因為它更妥善地保護從網際網路攻擊與潛在威脅。
+為了確保高特權工作的執行盡可能安全，請使用一種特殊許可權的存取工作站（PAW）。 PAW 是一種專用的電腦，只用于機密設定工作，例如需要全域管理員帳戶的 Office 365 設定。 由於這部電腦不會在每日使用網際網路流覽或傳送電子郵件，因此可從網際網路攻擊和威脅中獲得更好的保護。
   
-如需如何設定爪指示，請參閱[https://aka.ms/cyberpaw](https://aka.ms/cyberpaw)。
+如需如何設定 PAW 的指示，請參閱[https://aka.ms/cyberpaw](https://aka.ms/cyberpaw)。
   
 ### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
-而不是您要永久地指派全域系統管理員角色的全域系統管理員帳戶，您可以使用 Azure AD Privileged Identity Management (PIM) 時，它會啟用全域系統管理員角色的隨選、 剛時間指派所需。
+您可以使用 Azure AD 特權身分識別管理（PIM）來永久指派全域系統管理員角色，以啟用全域系統管理員角色的即時指派，而不是讓全域管理員帳戶需要。
   
-而不是您要永久的系統管理員的全域系統管理員帳戶，他們會成為合格的系統管理員。 需要有人之後，才不在作用中的全域系統管理員角色。 然後，您完成新增至全域系統管理員帳戶的全域系統管理員角色，在預定時間的啟用程序。 當到期時間時，PIM 會移除全域系統管理員帳戶的全域系統管理員角色。
+而非全域系統管理員帳戶是永久管理員，他們會變成合格的系統管理員。 全域系統管理員角色會停用，直到某人需要為止。 然後，您會完成啟用程式，將全域系統管理員角色新增到全域管理員帳戶中的預先決定的時間長度。 當時間到期時，PIM 會從全域管理員帳戶移除全域系統管理員角色。
   
-使用 PIM，此程序會大幅降低您的全域系統管理員帳戶容易受到攻擊和惡意使用者所使用的時間量。
+使用 PIM 和此程式可大幅減少全域管理員帳戶受到惡意使用者攻擊和使用的時間量。
   
-如需詳細資訊，請參閱[Azure AD Privileged Identity Management](https://docs.microsoft.com/azure/active-directory/active-directory-privileged-identity-management-configure)。
+如需詳細資訊，請參閱[AZURE AD 特權身分識別管理](https://docs.microsoft.com/azure/active-directory/active-directory-privileged-identity-management-configure)。
   
 > [!NOTE]
-> PIM 是隨附於 Azure AD Premium P2，隨附於 Microsoft 365 企業版 E5 或 Enterprise Mobility + Security (EMS) E5，或者您可以購買個別授權您的全域系統管理員帳戶。 
+> PIM 可用於 Azure AD Premium P2，其隨附于 Microsoft 365 企業版 E5 或 Enterprise 可移動性 + Security （EMS） E5，您也可以為全域系統管理員帳戶購買個別的授權。 
   
-### <a name="security-information-and-event-management-siem-software-for-office-365-logging"></a>Office 365 記錄的安全性資訊和事件管理 (SIEM) 軟體
+### <a name="security-information-and-event-management-siem-software-for-office-365-logging"></a>Office 365 記錄的安全性資訊和事件管理（SIEM）軟體
 
-在伺服器上執行的 SIEM 軟體執行即時分析安全性提醒及建立的應用程式和網路硬體的事件。 若要允許 SIEM 伺服器加入 Office 365 安全性提醒及事件在其分析和報告功能，將 Azure AD 整合到您 SEIM。 請參閱[Azure 記錄整合的簡介](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)。
+在伺服器上執行的 SIEM 軟體會即時分析應用程式和網路硬體所建立的安全性警示和事件。 若要讓您的 SIEM 伺服器在其分析和報告功能中包含 Office 365 的安全性警示和事件，請整合 Azure AD 至您的 SEIM。 請參閱[Azure 記錄整合簡介](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)。
 
 ## <a name="next-step"></a>下一步
 
-如果您要設定 Office 365 訂用帳戶的身分識別，請參閱：
+如果您正在設定 Office 365 訂閱的身分識別，請參閱：
 
-- [僅限雲端身分識別](cloud-only-identities.md)如果您正在使用的僅限雲端身分識別
-- [準備目錄同步處理](prepare-for-directory-synchronization.md)如果您使用混合式身分識別
+- [僅限雲端](cloud-only-identities.md)身分識別（如果您使用僅限雲端身分識別）
+- 如果您使用的是混合身分識別，[準備目錄同步](prepare-for-directory-synchronization.md)處理
 
   
 ## <a name="see-also"></a>另請參閱
 
-[Office 365 安全性藍圖](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。
+[Office 365 的安全性藍圖](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。

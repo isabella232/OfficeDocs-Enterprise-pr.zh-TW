@@ -18,12 +18,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: f2f466ff0f5f13e2b7e3bfb85f77a7e7961fcde2
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 5cfed9ba3fd3dcc2c92d0226398cdf7658ee6cab
+ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844934"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42979475"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -134,7 +134,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
   
 |**Item**|**描述**|
 |:-----|:-----|
-|[![Microsoft 365 企業版底層基礎結構海報的縮圖影像](media/Microsoft365EnterpriseFoundInfra-thumb.png)](https://aka.ms/m365efoundinfraposter) <br/> [線上檢視](https://aka.ms/m365efoundinfraposter) \| [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/enterprise/media/deploy-foundation-infrastructure/Microsoft365EnterpriseFoundInfra.pdf) <br/> | 此海報針對目標、功能和工具、設計決策、設定結果、上架，以及持續監視和更新，摘要說明底層基礎結構的每個階段。 <br/>| 
+|[![Microsoft 365 企業版底層基礎結構海報的縮圖影像](media/Microsoft365EnterpriseFoundInfra-thumb.png)](https://aka.ms/m365efoundinfraposter) <br/> [線上檢視](https://aka.ms/m365efoundinfraposter) \| [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/deploy-foundation-infrastructure/Microsoft365EnterpriseFoundInfra.pdf) <br/> | 此海報針對目標、功能和工具、設計決策、設定結果、上架，以及持續監視和更新，摘要說明底層基礎結構的每個階段。 <br/>| 
 
 ### <a name="architecture-approaches-for-microsoft-cloud-tenant-to-tenant-migrations"></a>Microsoft Cloud 租用戶對租用戶移轉的架構方法 
 此系列的主題說明針對合併、併購、分割和其他案例下，可能會導致您移轉到新雲端租用戶的數個架構方法。 這些主題提供進行規劃的起點指導。

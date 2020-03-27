@@ -1,7 +1,7 @@
 ---
 title: 企業組織和 Office 365
-ms.author: deniseb
-author: denisebmsft
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 ms.date: 11/8/2017
 audience: ITPro
@@ -17,94 +17,94 @@ search.appverid:
 - MED150
 - BCS160
 ms.assetid: 6e18d402-f35e-415a-83b1-56620d4074ff
-description: 規劃及管理 Office 365 為您的企業組織的資源。
-ms.openlocfilehash: 97ffc7aee647918750a04b2b4761b189e2cebeb1
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 規劃及管理企業組織的 Office 365 的資源。
+ms.openlocfilehash: 714308f597b3338abb167f765cc4d1f9b08b582b
+ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840400"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42979545"
 ---
 # <a name="enterprise-organizations-and-office-365"></a>企業組織和 Office 365
 
-為 IT 專業人員在使用較大的組織，您有特定需求和維護您的環境的標準。 以下是您需要規劃和管理您的企業 Office 365 的資訊。
+在員工的 IT 專業人員規模較大的組織中，您有維護環境的特定需求和標準。 以下是規劃和管理適用于企業之 Office 365 所需的資訊。
   
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/d08b637c-66dc-4f0e-afc2-56da92e99589?autoplay=false]
   
-## <a name="key-resources"></a>重要資源
+## <a name="key-resources"></a>主要資源
 
-![FastTrack-眼符號構想](media/263443cf-d8bd-460b-ac46-a08323551f3f.png)
+![構思的 FastTrack 眼睛符號](media/263443cf-d8bd-460b-ac46-a08323551f3f.png)
   
  **從 FastTrack 取得協助**
   
-規劃時，安裝程式，並將資料移轉至 Office 365 的協助從 FastTrack。
+使用來自 FastTrack 的說明，規劃、安裝及遷移資料至 Office 365。
   
-[FastTrack 上取得](https://go.microsoft.com/fwlink/?linkid=238431)
+[取得 FastTrack](https://go.microsoft.com/fwlink/?linkid=238431)
   
-![安全性與合規性符號](media/f96c2cdf-d151-4f44-bb11-20bb7f366a21.png)
+![安全性和合規性符號](media/f96c2cdf-d151-4f44-bb11-20bb7f366a21.png)
   
  **安全性&amp;合規性**
   
-保護您的資料，並遵守法律或法規的標準。
+保護您的資料，並遵守法律或法規標準。
   
-[安全性概觀&amp;Office 365 的合規性](https://support.office.com/article/dcb83b2c-ac66-4ced-925d-50eb9698a0b2)
+[Office 365 中&amp;的安全性合規性概述](https://support.office.com/article/dcb83b2c-ac66-4ced-925d-50eb9698a0b2)
   
-![雲端和架構的符號](media/2850ac8d-4c99-4825-869e-83724c4ef54e.png)
+![雲端和架構符號](media/2850ac8d-4c99-4825-869e-83724c4ef54e.png)
   
- **了解雲端架構**
+ **瞭解雲端架構**
   
-瀏覽有關企業雲端架構海報。
+探索有關 Enterprise 雲端的架構海報。
   
 [取得海報](https://aka.ms/cloudarch)
   
-[![魚攔截 snagging 畫面 （網路釣魚攻擊） 上的文件](media/dc32a996-623a-400c-9b7a-ed1b89a56948.png)](https://aka.ms/commonattacks)
+[![在螢幕上 snagging 檔的魚掛鉤（網路釣魚攻擊）](media/dc32a996-623a-400c-9b7a-ed1b89a56948.png)](https://aka.ms/commonattacks)
   
- **了解常見的攻擊**
+ **深入瞭解常見的攻擊**
   
-了解 Microsoft 如何協助保護您的組織。
+深入瞭解 Microsoft 可如何協助您保護您的組織。
   
 [下載海報](https://aka.ms/commonattacks)
   
-## <a name="training-for-it-pros"></a>適用於 IT 專業人員訓練
+## <a name="training-for-it-pros"></a>IT 專業人員的訓練
 
-![IT Pro 訓練 LinkedIn learning](media/b951eac7-9d99-42b5-86a3-3058a6445077.png)
+![LinkedIn 教育版的 IT 專業人員訓練](media/b951eac7-9d99-42b5-86a3-3058a6445077.png)
   
- **IT Pro 訓練**
+ **IT 專業人員訓練**
   
-探索 LinkedIn learning 帶您的免費影片課程。
+LinkedIn 教學，探索可讓您進入的免費影片課程。
   
 [進階訓練](https://support.office.com/article/68cc9b95-0bdc-491e-a81f-ee70b3ec63c5.aspx) (英文)
   
-![Microsoft Learning 認證： MTA，MCSE，MCSA](media/8eab3b6a-5aff-423c-9c57-fd078fdebca8.png)
+![Microsoft 學習認證： MTA、MCSE、MCSA](media/8eab3b6a-5aff-423c-9c57-fd078fdebca8.png)
   
- **Microsoft Learning**
+ **Microsoft 學習**
   
-Office 365 訓練和適用於 IT 專業人員的憑證。
+適用于 IT 專業人員的 Office 365 訓練和認證。
   
-[常用的訓練](https://go.microsoft.com/fwlink/?linkid=826247)
+[常見訓練](https://go.microsoft.com/fwlink/?linkid=826247)
   
-![Microsoft Virtual Academy](media/1bced083-acd6-4705-9f22-22009166a5d7.png)
+![Microsoft Virtual 院校](media/1bced083-acd6-4705-9f22-22009166a5d7.png)
   
- **Virtual Academy**
+ **虛擬學院**
   
-了解從 Microsoft Virtual Academy 專家。
+從 Microsoft Virtual 院校的專家中學。
   
-[瀏覽課程](https://go.microsoft.com/fwlink/?linkid=826248)
+[流覽課程](https://go.microsoft.com/fwlink/?linkid=826248)
   
-![與大專院校版的憑證](media/c52ff863-94fa-4d6e-b91f-f9057956a7b0.png)
+![edX 大學憑證](media/c52ff863-94fa-4d6e-b91f-f9057956a7b0.png)
   
- **與大專院校版**
+ **edX 大學**
   
-自訂進度的線上學習體驗適用於 Office 365 IT 專業人員。
+適用于 Office 365 IT 專業人員的自我進度線上學習體驗。
   
-[現在註冊](https://go.microsoft.com/fwlink/?linkid=852994)
+[立即註冊](https://go.microsoft.com/fwlink/?linkid=852994)
   
 ## <a name="featured-articles"></a>精選文章
 
 [連絡商務產品的客戶支援 - 系統管理說明](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
   
-[部署 Windows 的新版 OneDrive 同步處理用戶端](https://support.office.com/article/3f3a511c-30c6-404a-98bf-76f95c519668)
+[部署 Windows 的新 OneDrive 同步處理用戶端](https://support.office.com/article/3f3a511c-30c6-404a-98bf-76f95c519668)
   
 [將多個電子郵件帳戶移轉到 Office 365 的方法](https://support.office.com/article/0a4913fe-60fb-498f-9155-a86516418842)
   
@@ -112,11 +112,11 @@ Office 365 訓練和適用於 IT 專業人員的憑證。
   
 [Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
   
- **訓練使用者**
+ **適用於終端使用者的訓練**
   
 [Office 365 生產力訓練](https://support.office.com/article/af07cb6b-980d-4f33-8599-322582767408)
   
-[影片： 什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b)
+[影片：什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b)
   
  **開發資源**
   

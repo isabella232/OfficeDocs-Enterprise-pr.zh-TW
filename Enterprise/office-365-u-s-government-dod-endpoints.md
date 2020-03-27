@@ -3,7 +3,7 @@ title: Office 365 美國政府 DoD 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 08/28/2019
+ms.date: 03/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,20 +17,22 @@ search.appverid:
 - OGD150
 - MOE150
 ms.assetid: 5d7dce60-4892-4b58-b45e-ee42fe8a907f
-description: 摘要： Office 365 需要連線至網際網路。 下面的端點應該是客戶使用 Office 365 美國政府 DoD 計劃僅連至。
+f1.keywords:
+- NOCSH
+description: 摘要： Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
 hideEdit: true
-ms.openlocfilehash: 6b0ad897378c92d581c200ed85c31b227d60dca0
-ms.sourcegitcommit: 0d21bd4edac07db94269e2a176c92469c02b2e26
+ms.openlocfilehash: 41a6cd8044e3e8a415242832aed671a178789fa1
+ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "36656033"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42979495"
 ---
 # <a name="office-365-us-government-dod-endpoints"></a>Office 365 美國政府 DoD 端點
 
-*適用於： Office 365 系統管理*
+*適用版本： Office 365 系統管理員*
 
- **摘要：** Office 365 需要連線至網際網路。 下面的端點應該是客戶使用 Office 365 美國政府 DoD 計劃僅連至。
+ **摘要：** Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
   
 > [!NOTE]
 > Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
@@ -39,21 +41,21 @@ ms.locfileid: "36656033"
   
 |||
 |:-----|:-----|
-|**上次更新：** 08/28/2019- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 以[JSON 格式](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
+|**上次更新日期：** 2020 年 1 月 28 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
    
- 若要了解我們的建議管理網路連線使用此資料的開頭[管理 Office 365 端點](managing-office-365-endpoints.md)。 起點處的新 IP 位址和 Url 發佈最遲作用在 30 天每月更新端點資料。 這可讓客戶不尚未有自動更新至新的連線，則需要先完成其處理程序。 端點只有地址支援擴大、 安全性事件或其他即時的操作需求所需的情況下，也可能與月份期間中更新。 所有產生 rest web 服務下此頁面上所顯示的資料。 如果您使用指令碼或網路裝置來存取此資料，您應該直接移至[Web 服務](office-365-ip-web-service.md)。
+ 請從[管理 Office 365 端點](managing-office-365-endpoints.md)開始，以瞭解如何使用此資料來管理網路連線的建議。 端點資料會在每月開始時更新，並以新的 IP 位址和 URLs 在使用中之前發佈30天。 這樣一來，客戶就可以在需要新的連線之前，尚未有自動更新，就能完成他們的處理常式。 如果需要解決支援上報、安全性事件或其他立即運作需求，也可以在當月期間更新端點。 以下顯示在此頁面上的資料都是由 REST web 服務所產生。 如果您使用腳本或網路裝置來存取此資料，您應該直接前往[Web 服務](office-365-ip-web-service.md)。
 
-下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
+以下的端點資料會列出從使用者電腦到 Office 365 的連線需求。 不包括從 Microsoft 到客戶網路的網路連線，有時也稱為混合式或輸入的網路連線。 如需詳細資訊，請參閱[未包含在 web 服務中的其他端點](additional-office365-ip-addresses-and-urls.md)。 
 
-端點會分成四個服務區域。 第三個服務區域可個別選取的連線。 第四個服務區域是常見的相依性 （稱為 Microsoft 365 一般及 Office），且必須一律有網路連線。
+端點則被歸類成四個服務區域。前三個服務區域可以個別選取進行連線。第四個服務區域 (稱為 Microsoft 365 Common 與 Office) 的常見相依性，且必須一律具有網路連線能力。
 
 所顯示的資料行為︰
 
 - **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[http://aka.ms/pnc](http://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
+- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
-- **增**： 這是 **[是]** 如果透過 Azure ExpressRoute 支援的端點集，則將它與 Office 365 路由前置詞。 包含所顯示的路由首碼 BGP 社群對齊所列的 [服務] 區域。 當增為 [**否**] 時，這表示，ExpressRoute 不支援此端點集。 不過，它不應該假定沒有路由會通告增所在**否**端點集。 如果您打算使用 Azure AD Connect，讀取[特殊考量一節，](https://docs.microsoft.com/azure/active-directory/connect/active-directory-AADconnect-instances#microsoft-azure-government-cloud)以確定您有適當的 Azure AD Connect 組態。
+- **ER**：如果端點集是透過 Azure ExpressRoute 與 Office 365 路由首碼一起支援，則為 **[是]** 。 包含路由首碼的 BGP 群組，會與所列的服務區域對齊。 當 ER 為**No**時，這表示此端點組不支援 ExpressRoute。 不過，不應假設在 ER 為**no**的端點集未宣告任何路由。 如果您打算使用 Azure AD Connect，請閱讀[特殊考慮區段](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-instances#microsoft-azure-government)，以確保您具有適當的 Azure ad connect 設定。
 
 - **地址**：列出端點設定的 FQDN 或萬用字元網域名稱及 IP 位址範圍。請注意，IP 位址範圍為 CIDR 格式，且在指定的網路中可能包含讓多個個別的 IP 位址。
  
@@ -63,6 +65,6 @@ ms.locfileid: "36656033"
   
 本表附註：
 
-- 安全性與合規性中心 (SCC) 提供 Azure ExpressRoute 支援的 Office 365。 相同適用於透過例如報告、 稽核、 進階電子文件、 整合 DLP 時，以及資料控管 SCC 公開的許多功能。 兩個特定的功能，PST 匯入和 eDiscovery 匯出目前不支援 Azure ExpressRoute 只有 Office 365 路由篩選器，因為其相依性 Azure Blob 儲存體。 若要使用這些功能，您需要使用任何可支援 Azure 的連線選項，其中包含 Azure 公用路由篩選器的網際網路連線能力或 Azure ExpressRoute 的 Azure Blob 儲存體的不同連線。 您必須評估為這兩個這些功能建立這類連線。 Office 365 資訊保護小組所知的這項限制，以及目前正在運作，以兩個這些功能將 Azure ExpressRoute 支援的 Office 365 為有限帶到 Office 365 路由篩選器。
+- 安全性與合規性中心（SCC）為 Office 365 提供 Azure ExpressRoute 支援。 這同樣適用于透過 SCC 公開的許多功能，例如報告、審核、高級 eDiscovery、整合 DLP 和資料管理。 兩個特定功能（PST 匯入和 eDiscovery 匯出）目前不支援只有 Office 365 路由篩選器的 Azure ExpressRoute，因為它們對 Azure Blob 儲存區有相依的依賴性。 若要使用這些功能，您需要使用任何可支援的 Azure 連線選項（包括網際網路連線或 azure 公用路由篩選器的 Azure ExpressRoute），以個別的方式連接至 Azure Blob 儲存。 您必須評估這兩種功能的建立這類連線能力。 Office 365 資訊保護小組已注意到這項限制，而且目前正致力於為 Office 365 提供 Azure ExpressRoute 的支援，這些功能限制于 Office 365 的路由篩選器。
 
-- 有其他選用的端點 Office 365 專業增強版未列出，且不需要使用者啟動 Office 365 專業增強版的應用程式和編輯文件。 選用的端點裝載於 Microsoft 資料中心和不要處理、 傳輸，或儲存客戶資料。 建議的預設網際網路輸出周邊導向使用者連線至這些端點。
+- Office 365 ProPlus 還有其他選用的端點未列出，而且使用者不需要啟動 Office 365 ProPlus 應用程式和編輯檔。 選用端點主控于 Microsoft 資料中心，不會處理、傳送或儲存客戶資料。 建議您將這些端點的使用者連線導向預設的網際網路出局周邊。
