@@ -18,12 +18,12 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: 5cfed9ba3fd3dcc2c92d0226398cdf7658ee6cab
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+ms.openlocfilehash: ebbf2f2eb15523b455c7fab1c306eea6e0d192b1
+ms.sourcegitcommit: 9416fbf8f136baeaf7d45eb243921c70ae67438d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979475"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "43037800"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
@@ -46,6 +46,7 @@ ms.locfileid: "42979475"
 - **[Microsoft 365 企業解決方案系列](microsoft-cloud-it-architecture-resources.md#BKMK_o365solutions)**：
     - [適用於 IT 結構設計師的 Microsoft 365 中的Microsoft Teams 和相關生產力服務](#microsoft-teams-and-related-productivity-services-in-microsoft-365-for-it-architects)
     - [適用於 IT 結構設計師的 Microsoft 365 中的群組](#groups-in-microsoft-365-for-it-architects)
+    - [適用於多區域組織的安全性與資訊保護](#security-and-information-protection-for-multi-region-organizations)
     - [Office 365 的身分識別與裝置保護](microsoft-cloud-it-architecture-resources.md#BKMK_O365IDP)
     - [Office 365 的檔案保護解決方案](microsoft-cloud-it-architecture-resources.md#BKMK_O365fileprotect)
     - [GDPR 的 Office 365 資訊保護](#office-365-information-protection-for-gdpr)
@@ -90,7 +91,7 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台設計組織的身分
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 雲端身分識別模型的縮圖影像](media/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png)          ](https://www.microsoft.com/download/details.aspx?id=54431) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586)  \| [Visio](https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd)           \| [更多語言](https://www.microsoft.com/download/details.aspx?id=54431) <br/> | 此模型包含： <ul><li>使用 Microsoft 雲端識別簡介 </li><li>Azure AD 的 IDaaS 功能 </li><li>將內部部署的 Active Directory 網域服務帳戶，與 Microsoft Azure Active Directory 整合 </li><li>將目錄元件置入 Azure 中 </li><li>Azure IaaS 中工作負載的網域服務選項 </li></ul><br/>|
+|[![Microsoft 雲端身分識別模型的縮圖影像](media/ffa145a1-97e6-4c36-b08b-01c4a4ae8b9b.png)          ](https://www.microsoft.com/download/details.aspx?id=54431) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=524586)  \| [Visio](https://download.microsoft.com/download/2/3/8/238228E6-9017-4F6C-BD3C-5559E6708F82/MSFT_cloud_architecture_identity.vsd)           \| [更多語言](https://www.microsoft.com/download/details.aspx?id=54431) <br/> | 此模型包含： <ul><li>使用 Microsoft 雲端識別的簡介 </li><li>Azure AD 的 IDaaS 功能 </li><li>將內部部署的 Active Directory 網域服務帳戶，與 Microsoft Azure Active Directory 整合 </li><li>將目錄元件置入 Azure 中 </li><li>Azure IaaS 中工作負載的網域服務選項 </li></ul><br/>|
    
 <a name="security"></a>
 ### <a name="microsoft-cloud-security-for-enterprise-architects"></a>Microsoft cloud security for enterprise architects
@@ -162,6 +163,14 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 |**項目**|**描述**|
 |:-----|:-----|
 |[![群組資訊圖的縮圖影像](downloads/msft-m365-groups-architecture-thumb.png)](downloads/msft-m365-groups.pdf) <br/> [PDF](downloads/msft-m365-groups.pdf) \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/msft-m365-groups.vsdx) |這些圖例會詳細說明不同類型的群組、如何建立及管理群組，以及一些控管建議。|
+
+### <a name="security-and-information-protection-for-multi-region-organizations"></a>適用於多區域組織的安全性與資訊保護
+適用於多區域組織，且具有單一 Microsoft 365 租用戶的安全性與資訊保護
+
+|**項目**|**描述**|
+|:-----|:-----|
+|[![多區域資訊圖表的縮圖](media/multi-region-single-tenant-security-thumb.png)](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.pdf) \| [Visio](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/downloads/msft-security-info-protect-multi-region.vsdx) |基於多種原因，為您的全球組織使用單一 Microsoft 365 租用戶是最佳選擇和最佳體驗。 不過，許多架構設計人員為達到不同地區的安全性與資訊保護目標，面臨許多掙扎。 本主題提供許多建議。 |
+
 
    
 <a name="BKMK_O365IDP"></a>
