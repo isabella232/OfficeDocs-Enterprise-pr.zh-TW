@@ -1,15 +1,17 @@
 ---
-title: 安裝和執行 Office 365 IdFix 工具
+title: 下載並執行 Office 365 IdFix 工具
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 audience: Admin
 ms.topic: get-started-article
-f1_keywords:
-- O365E_HRCSetupAADConnectIDFixLM617036
 ms.service: o365-administration
 localization_priority: Normal
-ms.custom: Adm_O365
+f1.keywords:
+- CSH
+ms.custom:
+- Adm_O365
+- O365E_HRCSetupAADConnectIDFixLM617036
 ms.collection:
 - Ent_O365
 - M365-identity-device-management
@@ -17,114 +19,114 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: f4bd2439-3e41-4169-99f6-3fabdfa326ac
-description: 如何安裝和執行 Office 365 IdFix 工具，您將它同步處理至 Office 365 之前清除您的 active directory 幫助。
-ms.openlocfilehash: 4197694ce90ab600652aa729809ef0ddb0647e03
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: 如何在將 Active Directory 網域服務（AD DS）同步處理至 Office 365 之前，下載並執行 Office 365 IdFix 工具，以協助清理您的 Active Directory 網域服務（AD DS）。
+ms.openlocfilehash: d816abe8e93830832077c614e496576d42890d50
+ms.sourcegitcommit: 7f025939c9dad676602bcd7693a8e356821fd456
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34067289"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "43068775"
 ---
-# <a name="install-and-run-the-office-365-idfix-tool"></a>安裝和執行 Office 365 IdFix 工具
+# <a name="download-and-run-the-office-365-idfix-tool"></a>下載並執行 Office 365 IdFix 工具
 
-IdFix 識別錯誤，例如重複項目及格式化您的目錄中的問題，再進行同步處理至 Office 365。 
+*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+
+IdFix 會在您同步處理至 Office 365 之前，識別您的 Active Directory 網域服務（AD DS）網域中的重複和格式化問題等錯誤。 
   
-若要順利完成此工作，您應該滿意與使用者、 群組及 Active Directory 中的連絡人物件。
+若要順利完成這項工作，您應該舒適使用 AD DS 中的使用者、群組和連絡人物件。
   
-如果您無法完成此工作，有幾個可以執行其他作業。 這些方法可能比較方便，但他們也可能需要花費更多或有其他缺點。 其為：
+如果您無法完成這項工作，還有其他幾項您可以執行的動作。 這些方法可能較為簡單，但也可能需要較長的時間，否則會有其他缺點。 其中包括：
   
-- **未執行 IdFix 執行目錄同步處理。** 您可以將您的目錄同步處理未執行 IdFix 工具，但我們不建議此做法。 修正錯誤再進行同步處理會採用較少的時間，並通常提供更順暢地轉換至雲端。 
-- **雇用顧問。** 取得專家說明可以開始您的使用者，並快速地執行與您的目錄同步處理。 
+- **執行目錄同步處理但不執行 IdFix** 
+
+  您可以同步處理您的目錄，而不需要使用 IdFix 工具，但我們不建議您這樣做。 在同步處理之前修正錯誤所需的時間較少，且通常會提供更順暢的轉換至雲端。 
+
+- **雇用顧問** 
+
+  取得專家協助可讓您的使用者快速啟動並執行，並同步處理您的目錄。 
     
-## <a name="what-you-need-to-run-idfix"></a>您必須執行 IdFix
+## <a name="what-you-need-to-run-idfix"></a>您需要執行的 IdFix
 
-最簡單方式以取得 IdFix 和執行是安裝在已加入網域的電腦上。 您可以執行它在網域控制站如果您想，但這不是必要。
+若要執行 IdFix，最簡單的方法是將它下載到已加入 AD DS 網域的電腦上。 您可以視需要在網域控制站上執行它，但這不是必要的。
   
 ### <a name="idfix-hardware-requirements"></a>IdFix 硬體需求
 
-安裝 IdFix 的電腦必須符合下列基本硬體需求：
+您下載 IdFix 需要符合這些最低硬體需求的電腦：
   
 - 4 GB RAM
 - 2 GB 的硬碟空間
-    
+   
 ### <a name="idfix-software-requirements"></a>IdFix 軟體需求
 
-安裝 IdFix 的電腦必須加入至您要使用者同步處理至 Office 365 的同一個 Active Directory 網域。 電腦也必須已安裝的.NET Framework 4.0。 
-  
-如果您執行 Windows Server 2008 或 Windows Server 2012，是可能已經安裝.NET Framework。 如果不是，您可以[下載從下載中心.NET 4.0](https://go.microsoft.com/fwlink/p/?LinkId=400475)或透過 Windows Update。 
-  
-### <a name="idfix-permissions-requirements"></a>IdFix 權限需求
+您要在其中下載 IdFix 的電腦必須加入您要將使用者同步處理至 Office 365 的相同 AD DS 網域。 
 
-執行 IdFix 所使用的使用者帳戶必須具有讀取/寫入存取的目錄。
+電腦也需要安裝 .NET Framework 4.0。 如果您執行的是 Windows Server 2008 或更新版本，.NET Framework 可能已經安裝。 如果不是，您可以從下載中心或使用 Windows Update[下載 .net 4.0](https://go.microsoft.com/fwlink/p/?LinkId=400475) 。 
   
-如果您不確定您的使用者帳戶符合這些需求，而且您不確定如何檢查，但您仍會安裝，並執行 IdFix。 如果您的使用者帳戶沒有適當的權限，IdFix 只會顯示錯誤時您嘗試執行它。
-  
-## <a name="install-idfix"></a>安裝 IdFix
+### <a name="idfix-permissions-requirements"></a>IdFix 許可權需求
 
-若要安裝 IdFix，下載並解壓縮**IdFix.exe**: 
+您用來執行 IdFix 的使用者帳戶必須具有 AD DS 網域的讀取和寫入權限。
   
-1. 登入您要安裝 IdFix 工具的電腦。
+如果您不確定您的使用者帳戶是否符合這些需求，而且不確定如何檢查，您仍然可以下載並執行 IdFix。 如果您的使用者帳戶沒有正確的許可權，IdFix 會在您嘗試執行它時，只會顯示錯誤。
+  
+## <a name="download-and-extract-idfix"></a>下載和解壓縮 IdFix
+
+請遵循這些指示。 
+  
+1. 登入您要執行 IdFix 工具的電腦。
     
-2. 請移至 Microsoft 下載網站[IdFix DirSync 錯誤補救工具](https://go.microsoft.com/fwlink/?linkid=867219)。
+2. 移至[IdFix DirSync 錯誤修正工具](https://github.com/microsoft/idfix)網站。
     
-3. 選擇 [**下載**]。
+3. 按一下 [ **ClickOnce 啟動**] 區段中的 [**啟動**]，下載 zip 檔案。 開啟 zip 檔案。
     
-4. 出現提示時，選擇 [**執行**]。
+4. 在 [ **IdFix** ] 視窗中，選擇 [**解壓縮**]，然後**全部解壓縮**。 依預設，IdFix 會解壓縮至`C:\Users\<your user name>\Documents\IdFix`。 
     
-5. 在 [ **WinZip Self-extractor** ] 對話方塊中 [**解壓縮到資料夾**] 文字方塊中，輸入或瀏覽至您要安裝 IdFix 工具的位置。 根據預設，安裝 IdFix `C:\Deployment Tools\`。 
-    
-6. 選擇 [**解壓縮**]。
+5. 選擇 [解壓縮]****。
+
+您的步驟可能會根據您的 Windows 和網際網路瀏覽器的版本而有所不同。
     
 ## <a name="run-the-idfix-tool"></a>執行 IdFix 工具
 
-安裝 IdFix 之後，請執行工具來搜尋您目錄中的問題：
+下載並解壓縮 IdFix 之後，請執行此程式，以搜尋 AD DS 網域中的問題。
   
-1. 使用具有目錄讀/寫存取權的帳戶，登入安裝 IdFix 的電腦。
+1. 使用具有您 AD DS 網域之讀取/寫入權限的帳戶，登入您已下載 IdFix 的電腦。
     
-2. 在檔案總管] 中，移至您安裝 IdFix 的位置。 如果您在安裝期間選擇的預設資料夾，請移至`C:\Deployment Tools\IdFix`。
+2. 在檔案瀏覽器中，移至您解壓縮 IdFix 的位置。 如果您在解壓縮期間選擇預設資料夾，請移`C:\Users\<your user name>\Documents\IdFix`至。 
     
 3. 按兩下 [ **IdFix.exe**]。 
-    
-    ![選擇 [IdFix.exe 檔案。](media/a9387bbc-991f-41c2-a500-45e3ce574285.JPG)
   
-4. 依預設，IdFix 會使用多重租用戶規則設定為在您的目錄中測試項目。 這是正確的規則集對於大多數的 Office 365 客戶。 不過，如果您是 Office 365 專用或 ITAR （國際流量武器法規） 客戶，您可以設定要使用的專用的規則集改為 IdFix。 如果您不確定哪種您的客戶，您可以放心地略過此步驟。 若要設定設定為專用的規則，按一下功能表列中的齒輪圖示，然後選擇 [**專用**。
+4. 根據預設，IdFix 會使用多租使用者規則集來測試目錄中的專案。 這是大多數 Office 365 客戶的正確規則集。 不過，如果您是「Arm 規章」（ITAR）客戶的 Office 365 專屬或國際流量，您可以設定 IdFix 改為使用專用規則集。 如果您不確定您是哪種類型的客戶，可以放心地略過此步驟。 若要將規則集設定為專屬，請按一下功能表列中的齒輪圖示，然後選擇 [**專屬**]。
     
 5. 選擇 [**查詢**]。
     
-    ![在 IdFix 中，選擇 [查詢。](media/a07a7aa7-d0ac-4817-8757-946019813a57.JPG)
+    ![在 IdFix 中選擇 [查詢]。](media/a07a7aa7-d0ac-4817-8757-946019813a57.JPG)
   
-6. 根據預設，IdFix 會搜尋整個目錄中的錯誤。
+6. 根據預設，IdFix 會搜尋整個目錄中是否有錯誤。
     
-    根據您目錄的大小，執行查詢可能需要一段時間。 您可以查看在工具主視窗底部的進度。 如果您按一下 [**取消**]，您需要重新啟動從頭開始。
-    
-    ![IdFix 查詢與錯誤計數。](media/da0198a0-7d4d-4afe-a256-e82f1330ada5.JPG)
+    執行查詢時，可能需要一段時間，視目錄的大小而定。 您可以在工具的主視窗底部觀賞進度。 如果您按一下 [**取消**]，則需要從頭開始重新開始。
   
-7. IdFix 完成查詢之後，您可以繼續並同步處理您的目錄，如果沒有任何錯誤。 如果您的目錄中有錯誤，則建議，您修正它們，再進行同步處理。 如果您想要更具體資訊類型的錯誤和修正這些項目的的最佳方式的相關建議，請參閱本主題結尾處的連結。 
+7. IdFix 完成查詢之後，如果沒有任何錯誤，您可以同步處理您的目錄。 如果您的目錄中有錯誤，建議您在同步處理之前先加以修正。 如需詳細資訊，請參閱[準備目錄屬性以與 Office 365 同步處理](prepare-directory-attributes-for-synch-with-idfix.md)。
     
-    雖然並非必要修正錯誤再進行同步處理，我們強烈建議您至少檢閱 IdFix 所傳回的所有錯誤。
+    雖然不需要在同步處理之前修正錯誤，但強烈建議您至少檢查 IdFix 所傳回的所有錯誤。
     
-    每個錯誤都會顯示在工具主視窗中的個別資料列。 
+    每個錯誤都顯示在工具主視窗中的個別列。 
     
-8. 如果您同意 [**更新**] 欄中所建議的變更，請在 [**動作**] 欄中選取您要如何實作變更 IdFix，然後按一下 [**套用]**。 當您按一下 [**套用]** 時，此工具會在目錄中進行的變更。
+8. 如果您同意 [**更新**] 欄中的 [建議變更]，請在 [**動作**] 欄中，選取您要 IdFix 執行變更的專案，**然後按一下 [** 套用]。 當您按一下**Apply**時，工具會在目錄中進行變更。
     
-    您不需要在每個更新之後，按一下 [**套用]** 。 相反地，您可以修正幾個錯誤，再按一下 [**套用]** ，並 IdFix 會將它們變更所有在同一時間。 您可以藉由按一下**錯誤**頂端列出的錯誤類型的資料行的排序依錯誤類型的錯誤。 
+    在每次更新後，您不必按**Apply** 。 相反地，您可以在按一下**Apply**之前修正數個錯誤，IdFix 會同時變更所有錯誤。 您可以在列出錯誤類型的欄位頂端按一下 [**錯誤**]，依錯誤類型排序錯誤。 
     
-    其中一個策略是類型的修正的相同; 所有錯誤例如，第一次，修正所有重複項目，並將它們套用。 接下來，修正字元格式錯誤，依此類推。 每次您套用變更，IdFix 工具建立不同的記錄檔可用來復原您的變更，以防發生錯誤。 [交易記錄檔](idfix-transaction-log.md)會儲存在您安裝 IdFix 中的資料夾。  根據預設_C:\Deployment Tools\IdFix_ 。 
+    一個策略是修正所有相同類型的錯誤;例如，先修正所有重複專案，然後加以套用。 接下來，修正字元格式錯誤等等。 每次套用變更時，IdFix 工具都會建立個別的記錄檔，您可以用來復原您的變更，以防您犯錯誤。 [交易記錄](idfix-transaction-log.md)會儲存在您解壓縮 IdFix 的資料夾中，該資料夾預設會_C:\Users\<您的使用者名稱> \documents\idfix_ 。 
     
-    ![在 IdFix 中補救錯誤。](media/5f051070-652c-4be7-98bf-312295e32371.png)
+    ![在 IdFix 修正錯誤。](media/5f051070-652c-4be7-98bf-312295e32371.png)
   
-9. 完成所有的變更都會套用至執行一次，以確保您所做的修正程式並未引進新的錯誤 IdFix 的目錄。 您可以重複這些步驟，為您需要的次數。 它是不錯的選項以通過程序多次再進行同步處理。
+9. 對目錄進行所有變更之後，請再次執行 IdFix，以確保您所進行的修復程式未引入新的錯誤。 您可以視需要重複執行這些步驟。 建議您在同步處理之前，先完成此程式。
     
-## <a name="i-want-to-refine-my-search-or-dig-deeper-into-the-errors-what-else-can-i-do-with-idfix"></a>我想要精簡搜尋或深入探討錯誤，我可以使用 IdFix 來做什麼？
+## <a name="additional-resources-on-idfix"></a>IdFix 的其他資源 
 
-更深入的資訊會提供從下列主題：
-  
-- [同步處理與 Office 365 使用 IdFix 工具準備目錄屬性](prepare-directory-attributes-for-synch-with-idfix.md)。 您已安裝的工具，跳至本主題的詳細說明執行工具之後, 會遇到的常見錯誤的建議修正程式、 範例，以及當您有大量錯誤時，該怎麼辦的最佳做法。 
-- [參照：IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)  
-- [參照：Office 365 IdFix 交易記錄](idfix-transaction-log.md)
+- [IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)  
+- [Office 365 IdFix 交易記錄檔](idfix-transaction-log.md)
     
 ## <a name="video-training"></a>影片訓練課程
 
-如需詳細資訊，請參閱 < 課程中<b0>安裝及使用 IDFix 工具</b0>，由 LinkedIn Learning 帶您。
+如需詳細資訊，請參閱課程[安裝和使用 IdFix 工具](https://support.office.com/article/install-and-use-the-idfix-tool-4d81d73c-f172-4fd5-8542-f601c0c96aa9?ui=en-US&rs=en-US&ad=US)，讓您 LinkedIn 學習。
   
 

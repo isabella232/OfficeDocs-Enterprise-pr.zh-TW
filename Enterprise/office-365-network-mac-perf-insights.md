@@ -3,7 +3,7 @@ title: Office 365 網路洞察力（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/20/2020
+ms.date: 03/31/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Office 365 網路洞察力（預覽）
-ms.openlocfilehash: 9b9ef28fa22b68f7860864aa6ce706531c0d8e00
-ms.sourcegitcommit: 1c3aa0654336acec14098241f785ea1d8c6caf50
+ms.openlocfilehash: 5064c45ffa552381ccdb6042d5e9d6f072f564aa
+ms.sourcegitcommit: 44a0e9a134373eb0d1292761089a6557b01ac327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890601"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "43081705"
 ---
 # <a name="office-365-network-insights-preview"></a>Office 365 網路洞察力（預覽）
 
@@ -40,7 +40,7 @@ ms.locfileid: "42890601"
 
 ## <a name="backhauled-network-egress"></a>Backhauled 網路出局
 
-如果網路洞察力服務偵測到網路出局的指定使用者位置的距離大於500英里（800公里），表示 Office 365 流量正 backhauled 至一般網際網路 edge，就會顯示這種洞察力。device 或 proxy。
+如果網路洞察力服務偵測到網路出局的指定使用者位置的距離大於500英里（800公里），表示 Office 365 流量正 backhauled 至一般 Internet edge 裝置或 proxy，就會顯示這種洞察力。
 
 在某些摘要視圖中，此深入瞭解是所謂的「出局」。
 
@@ -50,7 +50,7 @@ ms.locfileid: "42890601"
 
 這表示辦公室地點和網路出局之間的距離超過500英里（800公里）。 Office 位置是由經過模糊處理的用戶端機器位置所識別，網路出局位置是透過對位置資料庫使用反向 IP 位址識別。 如果電腦上的 Windows 位置服務停用，則 office 位置可能不准確。 如果反向 IP 位址資料庫資訊不正確，網路出局位置可能不准確。
 
-此深入瞭解的詳細資料包括辦公室位置、預估的租使用者使用者總數、目前的網路出局位置、出局位置的相關性、位置與目前的出局點之間的距離，以及該日期第一次偵測到條件，以及解決條件的日期。
+此深入瞭解的詳細資料包括辦公室位置、預估的承租人使用者總數、目前的網路出局位置、出局位置的相關性、位置與目前的出局點之間的距離、第一次偵測條件的日期，以及解決條件的日期。
 
 ### <a name="what-should-i-do"></a>我該怎麼做？
 
@@ -148,3 +148,5 @@ ms.locfileid: "42890601"
 [Office 365 網路評估（預覽）](office-365-network-mac-perf-score.md)
 
 [M365 系統管理中心的 Office 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
+
+[Office 365 網路連接位置服務（預覽）](office-365-network-mac-location-services.md)

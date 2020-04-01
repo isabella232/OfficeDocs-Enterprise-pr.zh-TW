@@ -3,7 +3,7 @@ title: Office 365 網路評估（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/04/2020
+ms.date: 03/31/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,22 +14,22 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Office 365 網路評估（預覽）
-ms.openlocfilehash: 24ecea73d9ecb6ae73b26e42a25749c846e3a281
-ms.sourcegitcommit: 1c3aa0654336acec14098241f785ea1d8c6caf50
+ms.openlocfilehash: 280046487b116172430df1d15d4bc671fa708e68
+ms.sourcegitcommit: 44a0e9a134373eb0d1292761089a6557b01ac327
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890356"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "43081685"
 ---
 # <a name="office-365-network-assessment-preview"></a>Office 365 網路評估（預覽）
 
-在 Microsoft 365 系統管理中心連線至 Microsoft 365 頁面時，**網路評估**會將許多網路效能度量的匯總，提煉成商業網路健康情況的快照，以點值從 1-100 來表示。 網路評估同時適用于整個承租人和每個地理位置，使用者會從該位置連線到您的租使用者，並提供 Office 365 系統管理員輕鬆地抓住商業網路健康情況的 gestalt，並快速進行鑽取的方式向內移動至任何全球辦公室位置的詳細報告。
+在 Microsoft 365 系統管理中心連線至 Microsoft 365 頁面時，**網路評估**會將許多網路效能度量的匯總，提煉成商業網路健康情況的快照，以點值從 1-100 來表示。 網路評估同時適用于整個承租人和每個地理位置，供使用者從該位置連線到您的租使用者時，提供 Office 365 系統管理員一種簡單的方式來立即抓住商業網路健康情況的 gestalt，並快速深入查看任何全球辦公室位置的詳細報告。
 
 網路評估點值是在查看時所整理的延遲、頻寬、下載速度及連線品質度量平均測量值。 Microsoft 所擁有網路的效能度量會從這些測量值中排除，以確保評估結果對於公司網路明確且特定。
 
 ![網路評估價值](Media/m365-mac-perf/m365-mac-perf-overview-score-top.png)
 
-「非常低的網路評估」價值會建議 Office 365 用戶端在連線至租使用者時發生重大問題，或維持回應的使用者體驗，而高值則表示設定正確的網路，且持續效能很低問題。 80% 的值代表正常的基準，您不應預期會因網路效能而收到有關 Office 365 連線或回應回應的一般使用者意見。 隨著重複網路連線能力的增強，此值會隨著使用者經驗而增加。
+「非常低的網路評估」價值表示，Office 365 用戶端會在連線到租使用者時發生重大問題，或維持回應的使用者體驗，而高值則表示設定正確的網路，而不會發生持續的效能問題。 80% 的值代表正常的基準，您不應預期會因網路效能而收到有關 Office 365 連線或回應回應的一般使用者意見。 隨著重複網路連線能力的增強，此值會隨著使用者經驗而增加。
 
 >[!IMPORTANT]
 >Microsoft 365 系統管理中心的網路洞察力、效能建議和評估目前處於預覽狀態，只適用于已在功能預覽計畫中註冊的 Office 365 承租人。
@@ -70,4 +70,4 @@ ms.locfileid: "42890356"
 
 [M365 系統管理中心的 Office 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
 
-[Office 365 網路洞察力隱私權和使用條款（預覽）](office-365-network-mac-perf-privacy.md)
+[Office 365 網路連接位置服務（預覽）](office-365-network-mac-location-services.md)
