@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：Office 365 資料位置
-ms.openlocfilehash: 004d055c08769524907651a56b1a885d44a111d0
-ms.sourcegitcommit: a59b35b0b2667738998333d25e2a61cd8d7a3e26
+ms.openlocfilehash: ae11127cfaa592ae4a3db0a342e6d68c85fe7774
+ms.sourcegitcommit: 9483bc02cf410e80b56fe898298bd26eef486e17
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42581602"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "43076126"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
@@ -39,6 +39,12 @@ Note to new owner: Links in the Notes and FAQ sections need to be added from the
 在 [Microsoft Online Services 條款 (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) 中尋找有關客戶待用資料儲存位置契約承諾的相關資訊。
 
 針對相關的 Azure Active Directory 資料位置，請瀏覽 [AAD 資料地圖](https://go.microsoft.com/fwlink/p/?linkid=2092972)。
+
+
+由於 COVID-19 所造成的空前情況，以及需要管理歐洲內線上服務的需求，如果您的組織是教育機構，我們將可佈建您位於歐盟 (EU)、歐洲自由貿易聯盟 (EFTA)、英國 (UK)、美國 (US) 或加拿大 (CA) 的 Ofiice 365 租戶，或將您的資料移轉至任何位於 EU、EFTA、UK、US 或 CA 的資料中心。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
+
+
+
 
 ## <a name="faq"></a>常見問題集
 
