@@ -3,7 +3,7 @@ title: 連線至 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/26/2020
+ms.date: 03/31/2020
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,13 +16,13 @@ ms.custom:
 - O365ITProTrain
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
-description: 摘要：使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
-ms.openlocfilehash: a1031250919dfa7724bf44ac752684060422d85e
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+description: 使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
+ms.openlocfilehash: 642016f734a2a9d7e490d5905a3ed93d7f330ca9
+ms.sourcegitcommit: 7f025939c9dad676602bcd7693a8e356821fd456
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979435"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "43068755"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -158,11 +158,17 @@ PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active
   ```
 
     如果傳回的版本號碼低於 1.0.8070.2 值，請將 Windows PowerShell 的 Microsoft Azure Active Directory 模組 解除安裝，然後從步驟 1 中的連結安裝最新版本。
-    
+
 - **如果您收到連線錯誤，請參閱本主題：** [「Connect-MsolService：擲回類型例外狀況」錯誤](https://go.microsoft.com/fwlink/p/?LinkId=532377)。
     
+- **如果您收到「Get-Item：找不到路徑」錯誤，請使用以下命令：** 
 
-## <a name="see-also"></a>另請參閱
+  ```powershell
+  (dir "C:\Program Files\WindowsPowerShell\Modules\MSOnline").Name
+ 
+```
+
+## <a name="see-also"></a>請參閱
 
 - [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
 - [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
