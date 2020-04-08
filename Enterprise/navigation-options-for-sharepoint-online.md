@@ -3,6 +3,7 @@ title: SharePoint Online 的導覽選項
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
+ms.date: 4/7/2020
 audience: Admin
 ms.topic: overview
 ms.service: o365-administration
@@ -15,111 +16,116 @@ f1.keywords:
 ms.custom: Adm_O365
 search.appverid: SPO160
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
-description: 本文說明導覽選項網站與 SharePoint 發佈 SharePoint Online 中啟用。 選擇及設定導覽會大幅影響的效能和延展性的 SharePoint Online 中的網站。 本文不適用於傳統的小組網站。
-ms.openlocfilehash: e18d6cb3147ada9d8a0bb1127aa9dda395b097df
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 本文說明 SharePoint 線上中啟用 SharePoint 發佈功能的導覽選項網站。 導覽的選擇和設定會大幅影響 SharePoint Online 中網站的效能與擴充性。 本文不適用於傳統小組網站。
+ms.openlocfilehash: 410be307fca62c987baed39601e122717a6bebcc
+ms.sourcegitcommit: b1042fa2d02f1bc74586751c542776325d3a170f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844844"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43170651"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
-本文說明導覽選項網站與 SharePoint 發佈 SharePoint Online 中啟用。 選擇及設定導覽會大幅影響的效能和延展性的 SharePoint Online 中的網站。
+本文說明 SharePoint 線上中啟用 SharePoint 發佈功能的導覽選項網站。 導覽的選擇和設定會大幅影響 SharePoint Online 中網站的效能與擴充性。 只有在集中式入口網站需要時才會使用 SharePoint 發佈網站範本，而且發佈功能應該只在特定網站上啟用，而且只有在絕對需要時才會在使用不當時影響效能。
+
+>[!NOTE]
+>如果您使用的是新式 SharePoint 導覽選項（例如，您的百萬位元功能表、級聯導覽或 hub 導覽），本文不會套用到您的網站。 新式 SharePoint 網站架構利用更平展的網站階層和中樞輻射模型。 這可讓許多案例達到，而不需要使用 SharePoint 發佈功能。
 
 ## <a name="overview"></a>概觀
 
-導覽提供者設定可能大幅影響效能的整個網站，並仔細考量必須採取挑選導覽提供者和組態有效率地調整 SharePoint 網站的需求。 有兩個的方塊出導覽提供者，以及自訂導覽實作。
+導覽提供者設定會大幅影響整個網站的效能，而且必須慎重考慮，以挑選流覽提供者和設定，以有效地伸縮 SharePoint 網站的需求。 有兩個現成的導覽提供者和自訂導覽實現。
 
-第一個選項[**（中繼資料） 的受管理導覽**](#using-managed-navigation-and-metadata-in-sharepoint-online)，建議使用，且 SharePoint Online; 中的預設選項的其中一個不過，我們建議，除非有必要，停用安全性調整。 安全性調整啟用安全--預設設定為此導覽提供者;不過，許多網站不需要安全性調整由於導覽元素通常是一致的網站的所有使用者的額外的負荷。 若要停用安全性修剪的建議組態，此導覽提供者不需要列舉網站結構與延展性極高與可接受的效能影響。
+**如果您開啟網站的結構式流覽**快取，則第一個選項（[**結構導覽**](#using-structural-navigation-in-sharepoint-online)）是 Sharepoint Online for 傳統 SharePoint 網站中的建議流覽選項。 此導覽提供者會顯示目前網站底下的流覽專案，並選擇性地顯示目前網站及其同輩。 它提供額外的功能，例如安全性修整和網站結構列舉。 如果停用快取，這會對效能及擴充性產生負面影響，而且可能會受到節流。
 
-第二個選項，[**結構式導覽**](#using-structural-navigation-in-sharepoint-online)，**不在 SharePoint Online 中的建議瀏覽選項**。 這個導覽提供者所設計的內部拓撲有受限於 SharePoint Online 中的支援。 雖然它會提供一些額外組的功能與其他導覽選項，這些功能，包括安全性修剪和網站結構列舉型別，有其代價過多的伺服器的呼叫並影響延展性和效能時使用它。 網站使用結構化的導覽耗用過多的資源，可能會受到節流。
+第二個選項（ [**Managed （中繼資料）導覽）**](#using-managed-navigation-and-metadata-in-sharepoint-online)代表使用受管理的中繼資料字片語流覽專案。 建議您先停用安全修整，除非需要。 啟用此導覽提供者的安全性調整為安全的預設設定;不過，許多網站不需要安全性調整的額外負荷，因為導覽元素通常對網站的所有使用者都是一致的。 使用建議的設定來停用安全修整時，此導覽提供者不需要列舉網站結構，高擴充性會影響到可接受的效能。
 
-除了的方塊出導覽提供者，許多客戶已成功實作替代自訂導覽實作。 一種常見的自訂巡覽實作類別樂於儲存瀏覽節點的本機快取的用戶端呈現設計圖樣。 （請參閱**[搜尋導向用戶端指令碼](#using-search-driven-client-side-scripting)** 本文中）。
-
-這些導覽提供者有幾個重要的優點：
-
-- 它們通常適用於回應] 頁面上的設計。
-- 它們是極延展性和效能低落因為他們可以呈現與任何資源成本 （和重新整理逾時之後在背景中的）。
-- 這些導覽提供者可以擷取使用各種不同的策略，範圍從簡單的靜態設定到不同的動態資料提供者的瀏覽資料。
-
-資料提供者的範例為使用**搜尋導向導覽**，可讓列舉瀏覽節點和處理安全性有效率地調整的彈性。
-
-有其他常用的選項來建立**自訂導覽提供者**。 請檢閱[SharePoint Online 入口網站的導覽解決方案](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-navigation)進一步上建置的自訂導覽提供者的指引。
+除了現成的導覽提供者以外，許多客戶都已成功實施替代的自訂導覽實現。 請參閱本文中[的搜尋導向用戶端腳本](#using-search-driven-client-side-scripting)。
   
-## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>優點和缺點的 SharePoint Online 的導覽選項
+## <a name="pros-and-cons-of-sharepoint-online-navigation-options"></a>SharePoint 線上導覽選項的優點和缺點
 
 下表摘要說明每個選項的優缺點。
 
-|受管理導覽  |結構式導覽  |搜尋導向導覽  |自訂導覽提供者  |
+|結構導覽  |受管理導覽  |搜尋導向導覽  |自訂導覽提供者  |
 |---------|---------|---------|---------|
-|Pros:<br/><br/>易於維護<br/>建議的選項<br/>     |Pros:<br/><br/>容易設定<br/>安全性調整<br/>當內容會新增自動更新<br/>|Pros:<br/><br/>安全性調整<br/>當新增網站時會自動更新<br/>快速載入時間，並在本機上快取的導覽結構<br/>|Pros:<br/><br/>寬的選擇，可用的選項<br/>快速載入時快取正確使用<br/>有許多選項適用於回應頁面設計<br/>|
-|缺點：<br/><br/>不會自動更新以反映網站結構<br/>如果已啟用安全性調整的影響效能<br/>|缺點：<br/><br/>**不建議使用**<br/>**影響效能和延展性**<br/>**受到節流限制**<br/>|缺點：<br/><br/>沒有輕鬆排序網站的能力<br/>需要自訂主版頁面 （必須具備技能）<br/>|缺點：<br/><br/>自訂開發，則需要<br/>外部資料來源需要儲存的快取 / 例如 Azure<br/>|
+|優<br/><br/>易於維護<br/>已修整安全性<br/>在內容變更時于24小時內自動更新<br/>     |優<br/><br/>易於維護<br/>|優<br/><br/>已修整安全性<br/>新增網站時自動更新<br/>快速載入時間和本機快取導覽結構<br/>|優<br/><br/>可用選項的更寬選擇<br/>正確使用快取時的快速載入<br/>許多選項適用于快速回應頁面設計<br/>|
+|缺點：<br/><br/>**停用緩衝時影響效能**<br/>受制于節流<br/>|缺點：<br/><br/>不會自動更新以反映網站結構<br/>在**啟用安全修整**或流覽流覽結構複雜時影響效能<br/>|缺點：<br/><br/>不能輕鬆地訂購網站<br/>需要自訂主版頁面（必要的技術技能）<br/>|缺點：<br/><br/>需要自訂開發<br/>需要儲存外部資料源/快取（例如 Azure）<br/>|
 
-網站需求及您技術的功能取決於您網站的最適當的選項。 如果您想可擴充的方塊出導覽提供者，受管理導覽與停用安全性修剪是很好的選項。
+網站最適合的選項取決於您的網站需求和您的技術能力。 如果您想要在內容變更時自動更新的易於設定導覽提供者，則[啟用](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)快取的結構導覽是一個不錯的選擇。
 
-受管理導覽選項可以透過維護組態中，沒有牽涉到程式碼的自訂檔案，而且可大幅比結構式導覽。 如果您需要進行安全性調整習慣使用自訂的主版頁面，並維護的 SharePoint Online 中的預設主版頁面可能發生的變更在組織中有某些功能，然後搜尋導向選項可能會產生更好使用者經驗。 如果您有更複雜的需求，自訂的導覽提供者可能會選擇。 不建議使用結構式導覽。
+>[!NOTE]
+>將整體網站結構簡化為新式的 SharePoint 網站，以套用相同的原則，可提高效能，並簡化移至現代 SharePoint 網站的效能。 這表示的含義是，不需要有數百個網站（子網站）的單一網站集合，更好的方法是有許多網站集合，具有極少數子網站（子網站）。
 
-最後，務必注意，SharePoint 會新增額外的導覽提供者和新式的 SharePoint 網站架構，利用多簡維的網站階層和具有 SharePoint 中樞站台的中樞與支點模型的功能。 這可讓許多案例，以達成不需要使用的 SharePoint 發佈功能，以及這些導覽設定已針對延展性和延遲內 SharePoint Online 進行最佳化。 請注意，套用相同的簡化呈現結構 SharePoint 發佈網站整體結構通常原則有助於整體效能，以及調整。 這表示是，而不是有數百個站台 （子網站） 的單一網站集合，更好的方法有許多具有極少的子網站 （子網站） 的網站集合。
+## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>在 SharePoint Online 中分析導覽效能
 
-## <a name="using-managed-navigation-and-metadata-in-sharepoint-online"></a>在 SharePoint Online 中使用受管理的導覽與中繼資料
+[SharePoint 工具的頁面診斷](https://aka.ms/perftool)功能是 Microsoft Edge 和 Chrome 瀏覽器的瀏覽器擴充，可分析線上新式入口網站與傳統發佈網站頁面的 SharePoint。 此工具僅適用于線上 SharePoint，無法在 SharePoint 系統] 頁面上使用。
 
-受管理的導覽是功能的另一個的方塊擴充選項您可以用來重新建立大部分的結構式導覽相同。 受管理的中繼資料可以設定為已啟用或停用安全性修剪。 設定停用的安全性調整，受管理的導覽時很有效率載入常數多個伺服器的呼叫的導覽連結時。 啟用安全性調整，不過，否定受管理導覽的優點，客戶可以選擇瀏覽其中一個自訂導覽解決方案的最佳效能及延展性。
+工具會針對每個已分析的頁面產生報表，顯示頁面如何針對預先定義的規則集執行，並在測試結果超出基線值時顯示詳細資訊。 SharePoint 線上管理員和設計者可以使用工具來疑難排解效能問題，以確保新頁面在發佈之前已經過優化。
 
-許多網站不需要進行安全性調整，瀏覽結構通常都是一致的網站的所有使用者。 如果已停用安全性修剪和連結新增至導覽並非所有使用者都擁有存取權，連結仍然會顯示，但會導致拒絕存取訊息。 沒有任何不慎內容的存取權的風險。
+**SPRequestDuration**特別是 SharePoint 處理頁面所需的時間。 粗導覽（如導覽中包含頁面）、複雜的網站階層，以及其他設定和拓撲選項，都可能會大幅增加時間長度。
 
-### <a name="how-to-implement-managed-navigation-and-the-results"></a>如何實作受管理的導覽和結果
+## <a name="using-structural-navigation-in-sharepoint-online"></a>在 SharePoint Online 中使用結構導覽
 
-有幾篇文章 Docs.Microsoft.com 上受管理導覽的詳細資訊，例如，請參閱[在 SharePoint Server 中受管理導覽的概觀](https://docs.microsoft.com/sharepoint/administration/overview-of-managed-navigation)。
+這是預設使用的預置導覽，而且是最直接的解決方案。 不需要任何自訂，非技術使用者也可以輕鬆地新增專案、隱藏專案，以及從 [設定] 頁面中管理導覽。 建議您[啟用](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)快取，否則會有昂貴的性能權衡。
 
-為了實作受管理的導覽，您設定條款與 Url 對應至網站的導覽結構。 若要取代在許多情況下的結構式導覽可以甚至是手動 curated 受管理的導覽。 例如：
+### <a name="how-to-implement-structural-navigation-caching"></a>如何實施結構性導覽快取
 
-![SharePoint Online 網站結構](media/SPONavOptionsListOfSites.png)
+在 [**網站設定** > **外觀與風格** > **導覽**] 底下，您可以驗證是否已選取全域導覽或目前導覽的結構導覽。 選取 [**顯示頁面**會對效能產生負面影響。
 
-下列範例會顯示使用受管理的導覽的複雜導覽效能。
+![選取 [顯示子網站] 的結構導覽](media/SPONavOptionsStructuredShowSubsites.png)
 
-![使用受管理的導覽的複雜導覽的效能](media/SPONavOptionsComplexNavPerf.png)
+您可以在網站集合層級或網站層級啟用或停用快取，且預設為啟用。 若要在網站集合層級啟用，請在 [**網站設定** > **網站集合管理** > **網站集合導覽**] 底下，選取 [**啟用**快取] 方塊。
 
-一致地使用受管理的導覽改善效能要優於結構式導覽方法雷同。
-  
-## <a name="using-structural-navigation-in-sharepoint-online"></a>在 SharePoint Online 中使用結構式導覽
+![在網站層級啟用快取](media/structural-nav/structural-nav-caching-site-coll.png)
 
-這是使用預設的全新的瀏覽和是最簡單的解決方案，但如此有昂貴的效能的代價。 它不需要任何自訂非技術使用者也可以和也輕鬆新增項目、 隱藏項目，從 [設定] 頁面管理導覽。 這是針對受管理導覽，所以建議使用受管理導覽為 true 也可輕鬆地管理及控制也與不過也改善效能。
+若要在網站層級啟用，請在 [**網站設定** > **導覽**] 底下，選取 [**啟用**快取] 方塊。
 
-![具有顯示選取的子網站的結構式導覽](media/SPONavOptionsStructuredShowSubsites.png)
-  
-### <a name="turning-on-structural-navigation-in-sharepoint-online"></a>開啟 SharePoint Online 中的結構式導覽
+![在網站層級啟用快取](media/structural-nav/structural-nav-caching-site.png)
 
-若要說明如何使用結構式導覽和顯示標準 SharePoint Online 方案中的效能子選項開啟。 以下是設定在 [**網站設定**] 頁面上找到的螢幕擷取畫面\>**導覽**。
-  
-![顯示子網站的螢幕擷取畫面](media/5b6a8841-34ed-4f61-b6d3-9d3e78d393e7.png)
-  
-### <a name="analyzing-structural-navigation-performance-in-sharepoint-online"></a>分析 SharePoint Online 中的結構式導覽效能
+## <a name="using-managed-navigation-and-metadata-in-sharepoint-online"></a>在 SharePoint Online 中使用受管理導覽和中繼資料
 
-若要分析 SharePoint 網頁的效能，請在 Internet Explorer 中使用 F12 開發人員工具的 [**網路**] 索引標籤。
-  
-![顯示 F12 dev 工具網路索引標籤的螢幕擷取畫面](media/SPONavOptionsNetworks.png)
-  
-1. [**網路**] 索引標籤中，按一下正在載入的.aspx 頁面，然後按一下 [**詳細資料**] 索引標籤。<br/> ![顯示詳細資料索引標籤的螢幕擷取畫面](media/ad85cefb-7bc5-4932-b29c-25f61b4ceeb2.png)<br/>
-2. 按一下 [**回應標頭**]。 <br/>![[詳細資料] 索引標籤的螢幕擷取畫面](media/c47770ac-5b2b-4941-9830-c57565dec4cc.png)<br/>SharePoint 會在其回應標頭中傳回一些有用的診斷資訊。 
-3. 下列其中一項最有用是資訊的**SPRequestDuration**這是資訊的值，以毫秒為單位的時間長度要求所需的伺服器上的程序。 下列螢幕擷取畫面**顯示子網站**未選取的結構式導覽。 這表示在全域導覽是僅限網站集合] 連結：<br/>![將載入時間顯示為要求持續時間的螢幕擷取畫面](media/3422b2e8-15ec-4bb9-ba86-0965b6b49b01.png)<br/>
-4. **SPRequestDuration**機碼具有值為 245 （毫秒）。 這表示它可傳回要求所花費的時間。 由於在網站上只有一個導覽項目，這會是如何 SharePoint Online 會執行而不頻繁的瀏覽的良好基準。 下一個螢幕擷取畫面顯示如何在子網站中新增影響此機碼。<br/>![顯示 2502 毫秒要求持續時間的螢幕擷取畫面](media/618ee4e9-2ffa-4a22-b638-fa77b72292b8.png)<br/>
-  
-新增子網站大幅增加傳回此相當簡單的範例網站頁面要求所花費的時間。 複雜的網站階層，其中包括頁面導覽中，以及其他組態和拓撲選項能夠大幅增加此影響更進一步。
+受管理導覽是另一個現成的現成選項，可讓您用來重新建立大部分與結構導覽相同的功能。 受管理的中繼資料可以設定為啟用或停用安全修整。 當設定安全性調整為停用時，受管理的導覽會非常有效率，因為它會載入具有大量伺服器呼叫的所有導覽連結。 不過，啟用安全修整會否定受管理導覽的一些效能優點。
 
-## <a name="using-search-driven-client-side-scripting"></a>使用搜尋導向用戶端指令碼
+如果您需要啟用安全修整，建議您執行下列動作：
 
-您可以使用搜尋利用背景使用連續編目會內建的索引。 在搜尋結果提取自搜尋索引和結果是經過安全性調整。 需要進行安全性調整時，這是通常較快的方塊出導覽提供者。 使用結構式導覽的搜尋，尤其是如果您的複雜網站結構，會加速的頁面載入時間很。 這段受管理導覽的主要優點是享有安全性調整。
+- 將所有易記 URL 連結更新為簡單連結
+- 將必要的安全性調整節點新增為易記 URLs
+- 將導覽專案數目限制為不超過100，且不超過3層級深度
 
-此方法涉及建立自訂的主版頁面及使用自訂的 HTML 取代的全新的瀏覽程式碼。 遵循此程序所述在下列範例中要取代的瀏覽程式碼檔案中`seattle.html`。 在這個範例中，您將會開啟`seattle.html`檔案，並取代整個元素`id=”DeltaTopNavigation”`具有自訂的 HTML 程式碼。
+許多網站不需要安全性調整，因為導覽結構通常會一致網站的所有使用者。 如果停用安全性調整，而且在不是所有使用者都可以存取的情況下新增連結，則該連結仍會顯示，但會導致「拒絕存取」訊息。 沒有意外存取內容的風險。
 
-### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>範例： 取代在主版頁面中的全新的瀏覽程式碼
+### <a name="how-to-implement-managed-navigation-and-the-results"></a>如何執行受管理導覽和結果
 
-1. 瀏覽至 [網站設定] 頁面上。
-2. 按一下 [**主版頁面**，以開啟主版頁面圖庫。
-3. 您可以從這裡瀏覽文件庫，並下載檔案`seattle.master`。
-4. 編輯程式碼使用文字編輯器，並刪除下列螢幕擷取畫面中的程式碼區塊。<br/>![刪除所示的程式碼區塊](media/SPONavOptionsDeleteCodeBlock.png)<br/>
-5. 移除之間的程式碼`<SharePoint:AjaxDelta id=”DeltaTopNavigation”>`和`<\SharePoint:AjaxDelta>`標記，並以下列程式碼片段取代：<br/>
+關於受管理導覽的詳細資料，有數個 docs.microsoft.com 文章。 例如，請參閱[SharePoint Server 中受管理導覽的概述](https://docs.microsoft.com/sharepoint/administration/overview-of-managed-navigation)。
+
+為了實施受管理導覽，您可以使用與網站導覽結構相對應的 URLs 來設定字詞。 管理的導覽甚至可以手動策劃，以在許多情況下取代結構性導覽。 例如：
+
+![SharePoint 線上網站結構](media/SPONavOptionsListOfSites.png))
+
+## <a name="using-search-driven-client-side-scripting"></a>使用搜尋導向的用戶端腳本
+
+自訂導覽實現的一個共同類別包含用戶端轉譯的設計模式，以儲存流覽節點的本機快取。
+
+這些導覽提供者具有以下幾個主要優點：
+
+- 它們通常適用于回應頁面設計。
+- 它們是極具伸縮性和高能力的，因為它們可以呈現沒有資源成本（而且在超時後會在背景中重新整理）。
+- 這些導覽提供者可以使用各種策略（從簡單靜態設定到不同動態資料提供者）來取得導覽資料。
+
+資料提供者的範例是使用**搜尋導向導覽**，這可讓您靈活地列舉流覽節點及有效處理安全性調整。
+
+另外還有其他常見的選項可建立**自訂導覽提供者**。 如需建立自訂導覽提供者的進一步指導，請參閱[SharePoint Online 入口網站的導覽解決方案](https://docs.microsoft.com/sharepoint/dev/solution-guidance/portal-navigation)。
+
+使用搜尋您可以使用連續編目，利用背景中所建立的索引。 搜尋結果會從搜尋索引中提取，而結果會進行安全修整。 在需要安全性調整時，這通常會比預置的流覽提供者更快速。 使用搜尋結構導覽，尤其是當您有複雜的網站結構時，會大幅加快頁面載入時間。 這透過受管理導覽的主要優點是您可以從安全性調整中受益。
+
+這種方法包含建立自訂主版頁面，並以自訂 HTML 取代現成的導覽程式碼。 請遵循下列範例中所述的程式碼來取代檔案中的導覽`seattle.html`程式碼。 在此範例中，您將會`seattle.html`開啟檔案，並以自`id="DeltaTopNavigation"`定義的 HTML 程式碼取代整個元素。
+
+### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>範例：取代主版頁面中的現成導覽代碼
+
+1. 流覽至 [網站設定] 頁面。
+2. 按一下 [**主版頁面**] 以開啟主版頁面圖庫。
+3. 您可以從這裡流覽文檔`seattle.master`庫，並下載檔案。
+4. 使用文字編輯器編輯程式碼，並刪除下列螢幕擷取畫面中的程式碼區塊。<br/>![刪除顯示的程式碼區塊](media/SPONavOptionsDeleteCodeBlock.png)<br/>
+5. 移除`<SharePoint:AjaxDelta id="DeltaTopNavigation">` and `<\SharePoint:AjaxDelta>`標記之間的程式碼，並以下列程式碼片段取代它：<br/>
 
 ```javascript
 <div id="loading">
@@ -137,7 +143,7 @@ ms.locfileid: "41844844"
         <ul id="menu" data-bind="foreach: $data.children" style="padding-left:20px">
             <li class="static dynamic-children level1">
                 <a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" data-bind="attr: { href: item.Url, title: item.Title }">
-               
+
                  <!-- ko if: children.length > 0-->
                     <span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children">
                         <span class="menu-item-text" data-bind="text: item.Title">
@@ -151,12 +157,12 @@ ms.locfileid: "41844844"
                     </span>
                 <!-- /ko -->
                 </a>
-               
+
                 <!-- ko if: children.length > 0-->
                 <ul id="menu"  data-bind="foreach: children;" class="dynamic  level2" >
                     <li class="dynamic level2">
                         <a class="dynamic menu-item ms-core-listMenu-item ms-displayInline  ms-navedit-linkNode" data-bind="attr: { href: item.Url, title: item.Title }">
-         
+
           <!-- ko if: children.length > 0-->
           <span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children">
            <span class="menu-item-text" data-bind="text: item.Title">
@@ -188,27 +194,32 @@ ms.locfileid: "41844844"
     </div>
 </div>
 ```
+
 <br/>
-6. 取代中載入的 URL 影像開頭具有網站集合中載入影像連結的錨點標記。 您所做的變更之後，重新命名檔案，然後將其上傳至主版頁面圖庫。 這會產生新的.master 檔案。<br/>
-7. 此 HTML 是從 JavaScript 程式碼傳回的搜尋結果會填入的基本標記。 您想要編輯若要變更的值為 var 根程式碼 = 「 網站集合 URL 」 的下列程式碼片段所示：<br/>
+6. 取代您網站集合中載入影像錨點標籤的 URL 中的 URL。 進行變更之後，請重新命名檔案，然後將其上傳至主版頁面圖庫。 這會產生新的 .master 檔案。<br/>
+7. 此 HTML 是基本標記，會由 JavaScript 程式碼所傳回的搜尋結果填入。 您必須編輯程式碼，以變更 var root = "site 集合 URL" 的值，如下列程式碼片段所示：<br/>
 
 ```javascript
-var root = “https://spperformance.sharepoint.com/sites/NavigationBySearch”;
+var root = "https://spperformance.sharepoint.com/sites/NavigationBySearch";
 ```
+
 <br/>
-8. 結果會指派給 self.nodes 陣列及使用 linq.js 將輸出指派給陣列 self.hierarchy 物件超出內建階層。 此陣列是繫結至 HTML 的物件。 完成此工作的 toggleView() 函式中藉由將自我物件傳遞至 ko.applyBinding() 函式。<br/>然後，這樣會使繫結至下列的 HTML 階層陣列：<br/>
+8. 結果會指派給自身的節點陣列，並使用 linq .js 將輸出指派給陣列自身的物件。 此陣列是系結至 HTML 的物件。 這是在 toggleView （）函數中完成的，其方式是將 self 物件傳遞至 applyBinding （）函數。<br/>這會使階層陣列系結至下列 HTML：<br/>
 
 ```javascript
-<div data-bind=”foreach: hierarchy” class=”noindex ms-core-listMenu-horizontalBox”>
+<div data-bind="foreach: hierarchy" class="noindex ms-core-listMenu-horizontalBox">
 ```
 
-事件處理常式`mouseenter`和`mouseexit`新增至最上層的導覽，以處理子網站下拉式功能表中完成`addEventsToElements()`函式。
+及的事件處理常式會新增至最上層的導覽，以處理在該`addEventsToElements()`函數中所完成的子網站下拉式功能表。 `mouseexit` `mouseenter`
 
-在我們複雜的導覽的範例，而不從基準的結構式導覽若要取得的受管理的導覽方法類似結果在伺服器上所花費的時間剪本機快取顯示載入新鮮的頁面。
+在我們的複雜導覽範例中，沒有本機快取的全新頁面載入顯示伺服器上所花費的時間已從基準結構導覽中削減，以取得與受管理導覽方法類似的結果。
 
-### <a name="about-the-javascript-file"></a>關於 JavaScript 檔案...]
+### <a name="about-the-javascript-file"></a>關於 JavaScript 檔案 .。。
 
-整個 JavaScript 檔案如下所示：
+>[!NOTE]
+>若使用自訂 JavaScript，請確定已啟用 public CDN，且檔案位於 CDN 位置。
+
+整個 JavaScript 檔如下：
 
 ```javascript
 //Models and Namespaces
@@ -443,27 +454,27 @@ function addEventsToElements() {
 
 ```
 
-若要將摘要說明在上述程式碼`jQuery $(document).ready`函數有`viewModel object`建立，然後`loadNavigationNodes()`來呼叫函式，該物件上的。 此函數可以載入儲存在用戶端瀏覽器 HTML5 本機儲存體中先前內建的導覽階層或它會呼叫函式`queryRemoteInterface()`。
+若要匯總上述`jQuery $(document).ready`函數中所示的程式碼已`viewModel object`建立，然後呼叫`loadNavigationNodes()`該物件上的函數。 此函數會載入先前在用戶端瀏覽器的 HTML5 本機儲存區中所建立的導覽階層，或其`queryRemoteInterface()`呼叫此函數。
 
-`QueryRemoteInterface()`建置要求使用`getRequest()`函式查詢參數稍早在指令碼中定義並再從伺服器傳回資料。 此資料是基本上是陣列的資料傳輸物件具有各種屬性，以表示網站集合中的所有網站。 
+`QueryRemoteInterface()`以腳本中所定義`getRequest()`的查詢參數來建立要求，然後傳回伺服器的資料。 此資料基本上是網站集合中所有網站的陣列，都是以具有各種屬性的資料傳輸物件來表示。
 
-然後剖析此資料到先前定義`SPO.Models.NavigationNode`物件使用這個`Knockout.js`資料值繫結到我們先前定義的 HTML 建立用於觀察到的屬性。 
+然後，此資料會剖析成先前定義`SPO.Models.NavigationNode`的物件， `Knockout.js`用來建立可透過資料系結至我們先前所定義之 HTML 的可觀測的屬性。
 
-物件是然後放入結果陣列。 此陣列是剖析成 JSON 使用油墨廓清且儲存在本機瀏覽器儲存在未來的頁面載入改善效能。
+然後將物件放入結果陣列中。 此陣列會使用挖空來剖析為 JSON，並儲存在本機瀏覽器儲存體中，以在今後的頁面載入時改善效能。
 
-### <a name="benefits-of-this-approach"></a>這個方法的優點
+### <a name="benefits-of-this-approach"></a>這種方法的優點
 
-[此方法](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page)的主要好處之一是，藉由使用 HTML5 本機存放區，導覽會儲存在本機使用者下次載入頁面的下一個時間。 我們會從使用結構式導覽; 搜尋 API 取得主要的效能改進不過，它會採用一些技術的功能，以執行及自訂這項功能。 
+[這種方法](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page)的一個主要好處是，您可以使用 HTML5 本機儲存區，在下次載入此頁面時，系統會為使用者在本機上儲存導覽。 使用 search API for 結構性導覽，我們取得了重大效能的增強功能;不過，它需要一些技術功能才能執行及自訂此功能。
 
-在[範例實作](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page)，網站會排序的方塊出結構式導覽; 為相同的方式依字母順序排列順序。 如果您想要從這個順序以外，它就會以開發和維護更複雜。 此外，此方法需要您支援的主版頁面以外。 如果自訂主版頁面並不會維護，您的網站會錯過更新和 Microsoft 對主版頁面的增強功能。
+在[範例的實施](#example-replace-the-out-of-the-box-navigation-code-in-a-master-page)中，網站的排序方式與現成的結構流覽的方式相同;字母順序。 如果您想要從這種順序中偏離，開發及維護的方式會比較複雜。 此外，此方法也需要您與支援的主版頁面的偏離。 如果未維護自訂主版頁面，您的網站將會錯過 Microsoft 對主版頁面所做的更新和改進功能。
 
-[上述程式碼](#about-the-javascript-file)具有下列相依性：
+上面的程式[代碼](#about-the-javascript-file)具有下列相依性：
 
-- jQuery-https://jquery.com/
-- KnockoutJS-https://knockoutjs.com/
-- Linq.js- https://linqjs.codeplex.com/，或 github.com/neuecc/linq.js
+- mobilehttps://jquery.com/
+- KnockoutJS -https://knockoutjs.com/
+- Linq .js- https://linqjs.codeplex.com/或 github.com/neuecc/linq.js
 
-目前版本的 LinqJS 不包含在上面的程式碼中使用的 ByHierarchy 方法，並將會中斷瀏覽程式碼。 若要修正此問題，請將下列方法新增至一行之前 Linq.js 檔案`Flatten: function ()`。
+目前的 LinqJS 版本不包含以上程式碼中使用的 ByHierarchy 方法，會中斷導覽程式碼。 若要修正此問題，請將下列方法新增至 Linq .js 檔案中的`Flatten: function ()`該行之前。
 
 ```javascript
 ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
@@ -473,7 +484,7 @@ ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
      firstLevel = Utils.CreateLambda(firstLevel);
      connectBy = Utils.CreateLambda(connectBy);
      orderBy = Utils.CreateLambda(orderBy);
-    
+
      //Initiate or increase level
      var level = parent === undefined ? 1 : parent.level + 1;
 
@@ -531,3 +542,5 @@ ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {
 ## <a name="related-topics"></a>相關主題
 
 [SharePoint Server 中受管理導覽的概觀](https://docs.microsoft.com/sharepoint/administration/overview-of-managed-navigation)
+
+[結構導覽快取和效能](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)
