@@ -13,12 +13,12 @@ ms.collection:
 localization_priority: Priority
 f1.keywords: NOCSH
 description: 了解如何將 SharePoint 網站移至不同的地理位置。
-ms.openlocfilehash: cf7d0bb73013c776b8cd67579aca334114820743
-ms.sourcegitcommit: 8578eb35b83a38fbf8ae7344e2128ddb6458fe16
+ms.openlocfilehash: 8a842f32091f84d64522526ad5407af8cfd780a9
+ms.sourcegitcommit: 6508db0a839427e1a21b1cde883d828e3c8886c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43175041"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185714"
 ---
 # <a name="move-a-sharepoint-site-to-a-different-geo-location"></a>將 SharePoint 網站移至不同的地理位置
 
@@ -189,18 +189,7 @@ Start-SPOUnifiedGroupMove -GroupAlias <GroupAlias> -DestinationDataLocation <Des
 
 ### <a name="teams-applicable-to-office-365-group-connected-sites"></a>Teams (適用 Office 365 群組連線網站)
 
-SharePoint 網站地理移動完成後，使用者將能在 Teams App 上存取其 Office 365 群組網站的檔案。 此外，於地理移動之前從其網站透過 Teams 聊天共用的檔案，在移動完成後，將繼續運作。
-
-已知問題：
-
-|問題|因應措施|
-|:----|:---------|
-|在地理移動之前，無法從 Teams 內開啟 [檔案] 索引標籤中的檔案。|從 SharePoint 開啟檔案。|
-|在地理移動之前，無法在 Teams 桌面開啟已經在交談中共用的檔案。|從 [檔案] 索引標籤開啟檔案。|
-|在地理移動之後，初次造訪時，可能無法開啟 [頻道檔案] 索引標籤。|再次造訪 [檔案] 索引標籤。|
-|在網站移動之後，頻道交談中的檔案上傳可能無法運作。|透過 [檔案] 索引標籤上傳檔案。|
-|在地理移動之後，Teams 中的檔案搜尋不會顯示結果。|透過 [檔案] 索引標籤瀏覽檔案。|
-|在重新整理地理移動網站的 [檔案] 索引標籤之前，[檔案] 應用程式中的 Microsoft Teams 檢視 (左側瀏覽) 可能不會顯示檔案。|造訪移動的網站的 [檔案] 索引標籤。|
+SharePoint 網站地理移動完成後，使用者將能在 Teams App 上存取其 Office 365 群組網站的檔案。 此外，於地理位置移動之前從其網站透過 Teams 聊天共用的檔案，在移動完成後，將繼續運作。
 
 ### <a name="sharepoint-mobile-app-iosandroid"></a>SharePoint 行動裝置 App (iOS/Android)
 
