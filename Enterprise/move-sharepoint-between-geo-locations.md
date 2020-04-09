@@ -11,19 +11,18 @@ ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 localization_priority: Priority
-f1.keywords:
-- NOCSH
+f1.keywords: NOCSH
 description: 了解如何將 SharePoint 網站移至不同的地理位置。
-ms.openlocfilehash: 8bcd76959cdddd5bb6fadf390e5b71df8decf0a0
-ms.sourcegitcommit: 160a2564c90a4d64d19f072e0de9fe1b3cd0c917
+ms.openlocfilehash: cf7d0bb73013c776b8cd67579aca334114820743
+ms.sourcegitcommit: 8578eb35b83a38fbf8ae7344e2128ddb6458fe16
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "42417038"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "43175041"
 ---
 # <a name="move-a-sharepoint-site-to-a-different-geo-location"></a>將 SharePoint 網站移至不同的地理位置
 
-利用 Sharepoint 網站地理位置移動，您可以將 SharePoint 網站移至您多地理環境內的其他地理位置。
+利用 Sharepoint 網站地理移動，您可以將 SharePoint 網站移至您多地理環境內的其他地理位置。
 
 您可以在地理位置之間移動下列類型的網站：
 
@@ -34,7 +33,7 @@ ms.locfileid: "42417038"
 
 您必須是全域系統管理員或 SharePoint 系統管理員，才能在地理位置之間移動網站。
 
-SharePoint 網站地理位置移動時會有大約 4 到 6 小時的唯讀時段，視網站內容而定。
+SharePoint 網站地理移動會有大約 4 到 6 小時的唯讀時段，視網站內容而定。
  
 ## <a name="best-practices"></a>最佳做法
 
@@ -62,7 +61,7 @@ SharePoint 網站地理位置移動時會有大約 4 到 6 小時的唯讀時段
 - 您一次最多可以排定 4,000 個移動。
 - 您可以在移動開始時排定更多移動，並將最多 4,000 個擱置移動排入佇列和任何指定的時間。
  
-若要排程在稍後的時間進行 SharePoint 網站地理位置移動，當您開始移動時請包含下列其中一個參數：
+若要排程在稍後的時間進行 SharePoint 網站地理移動，當您開始移動時請包含下列其中一個參數：
 - `PreferredMoveBeginDate`：移動將可能在這個指定的時間開始。
 - `PreferredMoveEndDate`：移動將可能在指定的時間、基於最大努力原則來完成。 
 
@@ -70,7 +69,7 @@ SharePoint 網站地理位置移動時會有大約 4 到 6 小時的唯讀時段
 
 ## <a name="moving-the-site"></a>移動網站
 
-SharePoint 網站地理位置移動要求您從網站所在地理位置中的 SharePoint 系統管理員 URL 連線並執行移動。
+SharePoint 網站地理移動要求您從網站所在地理位置中的 SharePoint 系統管理員 URL 連線並執行移動。
 
 例如，如果網站 URL 是 https://contosohealthcare.sharepoint.com/sites/Turbines，請連線到位於 https://contosohealthcare-admin.sharepoint.com: 的 SharePoint 系統管理員 URL
 
@@ -97,7 +96,7 @@ Start-SPOSiteContentMove -SourceSiteUrl <SourceSiteUrl> -ValidationOnly -Destina
 
 如果可以移動網站，則傳回 *Success*，或如果有任何會封鎖的情況，則傳回 *Fail*。
 
-### <a name="start-a-sharepoint-site-geo-move-for-a-site-with-no-associated-office-365-group"></a>為沒有任何相關聯 Office 365 群組的網站開始 SharePoint 網站地理位置移動
+### <a name="start-a-sharepoint-site-geo-move-for-a-site-with-no-associated-office-365-group"></a>為沒有任何相關聯 Office 365 群組的網站開始 SharePoint 網站地理移動
 
 根據預設，網站的初始 URL 會變更為目的地地理位置的 URL。 例如：
 
@@ -113,7 +112,7 @@ https://Contoso.sharepoint.com/sites/projectx 到 https://ContosoEUR.sharepoint.
 
 ![顯示 Start-SPOSiteContentMove Cmdlet 的 PowerShell 視窗螢幕擷取畫面](media/multi-geo-sharepoint-site-move-powershell.png)
 
-### <a name="start-a-sharepoint-site-geo-move-for-an-office-365-group-connected-site"></a>為 Office 365 群組連線網站開始 SharePoint 網站地理位置移動
+### <a name="start-a-sharepoint-site-geo-move-for-an-office-365-group-connected-site"></a>為 Office 365 群組連線網站開始 SharePoint 網站地理移動
 
 若要移動 Office 365 群組連線網站，全域系統管理員必須先變更 Office 365 群組的慣用資料位置 (PDL) 屬性。
 
@@ -129,11 +128,11 @@ Get-SPOUnifiedGroup -GroupAlias <GroupAlias>
 Start-SPOUnifiedGroupMove -GroupAlias <GroupAlias> -DestinationDataLocation <DestinationDataLocation>
 ```
 
-## <a name="cancel-a-sharepoint-site-geo-move"></a>取消 SharePoint 網站地理位置移動
+## <a name="cancel-a-sharepoint-site-geo-move"></a>取消 SharePoint 網站地理移動
 
-只要移動非正在進行或已完成，您即可使用 `Stop-SPOSiteContentMove` Cmdlet 來停止 SharePoint 網站地理位置移動。
+只要移動非正在進行或已完成，您即可使用 `Stop-SPOSiteContentMove` Cmdlet 來停止 SharePoint 網站地理移動。
 
-## <a name="determining-the-status-of-a-sharepoint-site-geo-move"></a>判斷 SharePoint 網站地理位置移動的狀態
+## <a name="determining-the-status-of-a-sharepoint-site-geo-move"></a>判斷 SharePoint 網站地理移動的狀態
 
 您可以使用下列 Cmdlet 來判斷您所連線的地理位置中網站移動的狀態：
 
@@ -174,7 +173,7 @@ Start-SPOUnifiedGroupMove -GroupAlias <GroupAlias> -DestinationDataLocation <Des
 
 ### <a name="sharing-links"></a>共用連結
 
-當 SharePoint 網站地理位置移動完成後，移動的檔案之現有共用連結將會自動重新導向至新的地理位置。
+當 SharePoint 網站地理移動完成後，移動的檔案之現有共用連結將會自動重新導向至新的地理位置。
 
 ### <a name="most-recently-used-files-in-office-mru"></a>Office 中最近用過的檔案 (MRU)
 
@@ -190,7 +189,18 @@ Start-SPOUnifiedGroupMove -GroupAlias <GroupAlias> -DestinationDataLocation <Des
 
 ### <a name="teams-applicable-to-office-365-group-connected-sites"></a>Teams (適用 Office 365 群組連線網站)
 
-SharePoint 網站地理位置移動完成後，使用者將能在 Teams App 上存取其 Office 365 群組網站的檔案。 此外，於地理位置移動之前從其網站透過 Teams 聊天共用的檔案，在移動完成後，將繼續運作。
+SharePoint 網站地理移動完成後，使用者將能在 Teams App 上存取其 Office 365 群組網站的檔案。 此外，於地理移動之前從其網站透過 Teams 聊天共用的檔案，在移動完成後，將繼續運作。
+
+已知問題：
+
+|問題|因應措施|
+|:----|:---------|
+|在地理移動之前，無法從 Teams 內開啟 [檔案] 索引標籤中的檔案。|從 SharePoint 開啟檔案。|
+|在地理移動之前，無法在 Teams 桌面開啟已經在交談中共用的檔案。|從 [檔案] 索引標籤開啟檔案。|
+|在地理移動之後，初次造訪時，可能無法開啟 [頻道檔案] 索引標籤。|再次造訪 [檔案] 索引標籤。|
+|在網站移動之後，頻道交談中的檔案上傳可能無法運作。|透過 [檔案] 索引標籤上傳檔案。|
+|在地理移動之後，Teams 中的檔案搜尋不會顯示結果。|透過 [檔案] 索引標籤瀏覽檔案。|
+|在重新整理地理移動網站的 [檔案] 索引標籤之前，[檔案] 應用程式中的 Microsoft Teams 檢視 (左側瀏覽) 可能不會顯示檔案。|造訪移動的網站的 [檔案] 索引標籤。|
 
 ### <a name="sharepoint-mobile-app-iosandroid"></a>SharePoint 行動裝置 App (iOS/Android)
 
@@ -206,7 +216,7 @@ SharePoint 行動裝置 App 可跨地理位置相容，且能偵測網站的新�
 
 ### <a name="flow"></a>流程
 
-在多數情況下，在 SharePoint 網站地理位置移動後，流程將繼續運作。 建議您在移動完成後先測試這些流程。
+在多數情況下，在 SharePoint 網站地理移動後，流程將繼續運作。 建議您在移動完成後先測試這些流程。
 
 ### <a name="powerapps"></a>PowerApps
 
