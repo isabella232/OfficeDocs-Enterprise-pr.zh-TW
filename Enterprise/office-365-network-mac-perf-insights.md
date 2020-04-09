@@ -1,5 +1,5 @@
 ---
-title: Office 365 網路洞察力（預覽）
+title: Microsoft 365 網路洞察力（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -13,17 +13,17 @@ search.appverid:
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
-description: Office 365 網路洞察力（預覽）
-ms.openlocfilehash: 5064c45ffa552381ccdb6042d5e9d6f072f564aa
-ms.sourcegitcommit: 44a0e9a134373eb0d1292761089a6557b01ac327
+description: Microsoft 365 網路洞察力（預覽）
+ms.openlocfilehash: baab4716ace0b15df5878d21987c037372a2754e
+ms.sourcegitcommit: 6508db0a839427e1a21b1cde883d828e3c8886c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "43081705"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43185754"
 ---
-# <a name="office-365-network-insights-preview"></a>Office 365 網路洞察力（預覽）
+# <a name="microsoft-365-network-insights-preview"></a>Microsoft 365 網路洞察力（預覽）
 
-**網路洞察力**是從您的 Office 365 租使用者收集到的實際效能計量，而且只能在您的租使用者中查看其管理使用者。 Insights 會顯示在 Microsoft 365 系統管理中心中<https://portal.microsoft.com/adminportal/home#/networkperformance>。
+**網路洞察力**是從您的 Microsoft 365 租使用者收集到的即時效能計量，而且只能在您的租使用者中查看其管理使用者。 Insights 會顯示在 Microsoft 365 系統管理中心中<https://portal.microsoft.com/adminportal/home#/networkperformance>。
 
 深入瞭解有助於為您的辦公室位置設計網路週邊。 每個真知灼見都會針對使用者存取租使用者時，針對每個地理位置的特定一般問題，提供有關效能特性的實際詳細資料。
 
@@ -36,11 +36,11 @@ ms.locfileid: "43081705"
 - [從 SharePoint 前門開始的低下載速度](#low-download-speed-from-sharepoint-front-door)
 
 >[!IMPORTANT]
->Microsoft 365 系統管理中心的網路洞察力、效能建議和評估目前處於預覽狀態，只適用于已在功能預覽計畫中註冊的 Office 365 承租人。
+>Microsoft 365 系統管理中心的網路洞察力、效能建議和評估目前處於預覽狀態，只適用于已在功能預覽計畫中註冊的 Microsoft 365 承租人。
 
 ## <a name="backhauled-network-egress"></a>Backhauled 網路出局
 
-如果網路洞察力服務偵測到網路出局的指定使用者位置的距離大於500英里（800公里），表示 Office 365 流量正 backhauled 至一般 Internet edge 裝置或 proxy，就會顯示這種洞察力。
+如果網路洞察力服務偵測到網路出局的指定使用者位置的距離大於500英里（800公里），表示 Microsoft 365 流量正 backhauled 至一般 Internet edge 裝置或 proxy，就會顯示這種洞察力。
 
 在某些摘要視圖中，此深入瞭解是所謂的「出局」。
 
@@ -54,7 +54,7 @@ ms.locfileid: "43081705"
 
 ### <a name="what-should-i-do"></a>我該怎麼做？
 
-針對這種觀點，我們建議網路出口離辦公室位置更近，讓連線可以最佳路由傳送至 Microsoft 的全域網路和最接近的 Office 365 服務前端門。 將網路出口關閉至使用者的 office 位置也可讓您日後提高效能，因為 Microsoft 會在未來的網路點擴充目前狀態和 Office 365 服務前門。
+針對這種觀點，我們建議網路出口離辦公室位置更近，讓連線可以最佳路由傳送至 Microsoft 的全域網路和最接近的 Microsoft 365 服務前端門。 將網路出口關閉至使用者的 office 位置也可讓您日後提高效能，因為 Microsoft 會在未來的網路點擴充目前狀態和 Microsoft 365 服務前門。
 
 如需如何解決此問題的詳細資訊，請參閱[Office 365 網路連線原則](office-365-network-connectivity-principles.md)中[本機的出局網路](office-365-network-connectivity-principles.md#egress-network-connections-locally)連線。
 
@@ -68,11 +68,11 @@ ms.locfileid: "43081705"
 
 ### <a name="what-does-this-mean"></a>案例
 
-這項洞察力會檢查與此辦公室位置在相同城市的 Office 365 客戶的匯總效能。 如果使用者的平均延遲比鄰近承租人的平均延遲高出10%，就會顯示這種洞察力。
+這項洞察力會檢查與此辦公室位置在相同城市的 Microsoft 365 客戶的匯總效能。 如果使用者的平均延遲比鄰近承租人的平均延遲高出10%，就會顯示這種洞察力。
 
 ### <a name="what-should-i-do"></a>我該怎麼做？
 
-這種情況可能有許多原因，包括公司網路或 ISP、瓶頸或架構設計問題中的延遲。 檢查您的 office 網路和目前 Office 365 前端的路由之間，每個躍點之間的延遲。 如需詳細資訊，請參閱[Office 365 Network Connectivity 原則](office-365-network-connectivity-principles.md)。
+這種情況可能有許多原因，包括公司網路或 ISP、瓶頸或架構設計問題中的延遲。 檢查您的 office 網路和目前的 Microsoft 365 前端的路由之間，每個躍點之間的延遲。 如需詳細資訊，請參閱[Office 365 Network Connectivity 原則](office-365-network-connectivity-principles.md)。
 
 ## <a name="use-of-a-non-optimal-exchange-online-service-front-door"></a>使用非最優 Exchange Online 服務前門
 
@@ -122,7 +122,7 @@ ms.locfileid: "43081705"
 
 ## <a name="china-user-optimal-network-egress"></a>中國使用者最佳網路出口
 
-如果貴組織的使用者在中國連接至您的 Office 365 租使用者至其他地理位置，就會顯示這項洞察力。 
+如果貴組織的使用者在中國連接至您的 Microsoft 365 租使用者至其他地理位置，就會顯示這項洞察力。 
 
 ### <a name="what-does-this-mean"></a>案例
 
@@ -145,8 +145,8 @@ ms.locfileid: "43081705"
 
 [Microsoft 365 系統管理中心的網路效能建議（預覽）](office-365-network-mac-perf-overview.md)
 
-[Office 365 網路評估（預覽）](office-365-network-mac-perf-score.md)
+[Microsoft 365 網路評估（預覽）](office-365-network-mac-perf-score.md)
 
-[M365 系統管理中心的 Office 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
+[M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
 
-[Office 365 網路連接位置服務（預覽）](office-365-network-mac-location-services.md)
+[Microsoft 365 Network Connectivity Location 服務（預覽）](office-365-network-mac-location-services.md)
