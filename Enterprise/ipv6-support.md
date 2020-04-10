@@ -17,69 +17,69 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: c08786fb-298e-437c-8222-dab7625fc815
-description: 摘要： 說明 Office 365 政府版方案和 Microsoft Office 365 元件中的 IPv6 支援。
-ms.openlocfilehash: 32e90f0dda9b06d06b6e289b26f640c4ddc79cf3
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 摘要：說明 Microsoft Office 365 元件和 Office 365 政府產品方案中的 IPv6 支援。
+ms.openlocfilehash: 13fd1cfef26f5e69c87f650c46f71071b72f2d15
+ms.sourcegitcommit: 3aa6c61242c5691e3180a474ad059bd84c86dc9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41845114"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "43206540"
 ---
 # <a name="ipv6-support-in-office-365-services"></a>Office 365 服務中的 IPv6 支援
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-Office 365 支援 IPv6 和 IPv4;不過，並非所有 Office 365 功能都可以完整都啟用使用 IPv6。 這表示您必須連線至 Office 365 使用 IPv4 和 IPv6。 如果您正在篩選您 Office 365 的輸出流量，Office 365 所支援的 IPv6 位址的完整清單可以找到[Office 365 Url 和 IP 位址範圍](urls-and-ip-address-ranges.md)」 文件中。 設定您的網路，並允許適當的 IPv6 位址之後，您可以下載[Office 365 IPv6 測試計劃](https://go.microsoft.com/fwlink/?LinkId=293447)從 Microsoft 下載中心找到。
+Office 365 同時支援 IPv6 和 IPv4;不過，並非所有的 Office 365 功能都會充分啟用 IPv6。 這表示您必須同時使用 IPv4 和 IPv6 以連接至 Office 365。 如果您要將輸出流量篩選到 Office 365，則可以在[office 365 URLs 和 IP 位址範圍](urls-and-ip-address-ranges.md)一文中找到 office 365 支援的 IPv6 位址完整清單。 在設定網路並允許適當的 IPv6 位址之後，您可以從 Microsoft 下載中心下載[Office 365 IPv6 測試方案](https://go.microsoft.com/fwlink/?LinkId=293447)。
   
 ## <a name="ipv6-support-in-office-365-subscription-service"></a>Office 365 訂閱服務中的 IPv6 支援
 
 ### <a name="exchange-online-and-ipv6"></a>Exchange Online 和 IPv6
 
-如果您用來連線至 Exchange Online 的程式支援 IPv6，則會在有線和無線網路上的預設使用 IPv6。 如果您想要控制 Exchange Online 的通訊，請在[Office 365 Url 和 IP 位址範圍](urls-and-ip-address-ranges.md)中使用的 IP 位址範圍。
+如果您用來連線至 Exchange Online 的程式支援 IPv6，則在有線網路和無線網路上預設會使用 IPv6。 如果您想要控制與 Exchange Online 之間的通訊，請使用[Office 365 URLs 和 ip 位址範圍](urls-and-ip-address-ranges.md)中的 ip 位址範圍。
   
-### <a name="sharepoint-online-and-ipv6"></a>SharePoint Online 和 IPv6
+### <a name="sharepoint-online-and-ipv6"></a>線上 SharePoint 和 IPv6
 
- **Office 365 政府版 G1/G3/G4/K1**如果您用來連線到 SharePoint Online 的程式支援 IPv6，它會嘗試使用預設的 IPv6。
+ **Office 365 政府 G1/G3/G4/K1**如果您用來連線至 SharePoint Online 的程式支援 IPv6，則預設會嘗試使用 IPv6。
   
- **公用的多重租用戶雲端**Microsoft 可讓 SharePoint Online IPv6，在您的要求。 您需要提供 CIDR 表示貴組織的 DNS 基礎結構的 IP 位址。 請記住，為您的租用戶啟用 IPv6 的其他組織無法共用此 DNS 基礎結構。 啟用 IPv6 時，如果您用來連線到 SharePoint Online 的程式支援 IPv6 之後，它會使用預設的 IPv6。
+ **公用多租使用者雲端**Microsoft 可在您的要求 IPv6 線上 SharePoint。 您需要為組織的 DNS 基礎結構提供 CIDR 表示的 IP 位址。 請記住，其他組織無法共用此 DNS 基礎結構，因此無法為您的租使用者啟用 IPv6。 啟用 IPv6 之後，如果您用來連線到 SharePoint Online 的程式支援 IPv6，則預設會使用 IPv6。
   
-如果您用來連線到 SharePoint Online 的程式支援 IPv6，則會在有線和無線網路上的預設使用 IPv6。 如果您想要控制 SharePoint Online 的通訊，請在[Office 365 Url 和 IP 位址範圍](urls-and-ip-address-ranges.md)中使用的 IP 位址範圍。
+如果您用來連線至 SharePoint Online 的程式支援 IPv6，則在有線網路和無線網路上的預設 IPv6 都會使用。 如果您想要控制 SharePoint 線上的通訊，請使用[Office 365 URLs 和 IP 位址範圍](urls-and-ip-address-ranges.md)中的 ip 位址範圍。
   
- **Office 365 政府版 G1/G3/G4/K1**如果您用來連線到 SharePoint Online 的程式支援 IPv6，它會嘗試使用預設的 IPv6。
+ **Office 365 政府 G1/G3/G4/K1**如果您用來連線至 SharePoint Online 的程式支援 IPv6，則預設會嘗試使用 IPv6。
   
-### <a name="skype-for-business-and-ipv6"></a>Skype for Business 和 IPv6
+### <a name="skype-for-business-and-ipv6"></a>商務用 Skype 和 IPv6
 
-請注意 IPv6 不支援在商務用 Skype 和不再已啟用。
+請注意，商務用 Skype 不支援 IPv6，也無法再啟用。
   
 ### <a name="exchange-online-protection-and-ipv6"></a>Exchange Online Protection 和 IPv6
 
-Exchange Online Protection (EOP) 會支援 IPv6，如果傳輸發生透過傳輸層安全性通訊協定。 EOP 的範圍，請使用[Office 365 Url 和 IP 位址範圍](urls-and-ip-address-ranges.md)。
+Exchange Online Protection （EOP）可在傳輸層安全性通訊協定進行傳輸時，支援 IPv6。 針對 EOP 範圍，使用[Office 365 URLs 和 IP 位址範圍](urls-and-ip-address-ranges.md)。
   
-### <a name="ipv6-support-for-office-365-government-offerings"></a>Office 365 政府版方案的 IPv6 支援
+### <a name="ipv6-support-for-office-365-government-offerings"></a>Office 365 政府產品服務的 IPv6 支援
 
-Office 365 政府版方案的 IPv6 支援的資訊長 Executive 部門和行政機關，以及聯邦政府採用的網際網路通訊協定第 6 版 (IPv6 符合 Office 的管理和預算 (OMB) 備忘錄) 備忘錄。 [政府適用於 Microsoft Office 365](https://go.microsoft.com/fwlink/p/?LinkId=325414)是一種多承租人服務，我們政府資料儲存在單獨分開的社群雲端。 像其他 Office 365 供應項目，它提供生產力和共同作業服務，包括 Exchange Online、 Skype for Business、 SharePoint Online 和 Office 專業增強版。 
+Office 365 IPv6 對政府產品的支援，遵循管理人員和代理商的首席資訊監察官，以及聯邦政府採用網際網路通訊協定第6版（IPv6）備忘錄的 OMB）備忘錄。 [適用于政府的 Microsoft Office 365](https://go.microsoft.com/fwlink/p/?LinkId=325414)是一項多承租人服務，可將政府資料儲存在隔離的社區雲端中。 與其他 Office 365 產品類似，它提供生產力和共同作業服務，包括 Exchange Online、商務用 Skype、SharePoint 線上和 Office 365 ProPlus。 
 
-僅適用於 2013年和更新版本，適用於 Microsoft Office 365 政府版方案。 如需有關 Office 365 政府版方案的詳細資訊，請參閱[宣佈政府用 Office 365: 美國政府社群雲端](https://go.microsoft.com/fwlink/p/?LinkId=325414)。 國際流量中武器法規 (ITAR) 是一組的美國政府法規，以控制匯出和匯入防禦相關文章和[美國武器清單 (USML)](https://go.microsoft.com/fwlink/p/?LinkId=325415)上的服務。 
+Microsoft Office 365 政府版產品只適用于2013和更新版本。 如需有關 Office 365 政府方案的詳細資訊，請參閱[宣佈 office 365 For 政府： A US 政府社區雲端](https://go.microsoft.com/fwlink/p/?LinkId=325414)。 Arm 規章中的國際流量（ITAR）是一組美國政府規定，可控制如何匯出及匯入[美國 Munitions 清單（USML）](https://go.microsoft.com/fwlink/p/?LinkId=325415)上的國防相關文章和服務。 
 
-適用於企業的 Microsoft Office 365 提供的 Microsoft 產能支援解決方案安全性、 隱私權和法規遵循需求為我們需要聯邦資訊安全的聯邦機構專用主控的服務管理 (FISMA) 憑證和 ITAR 受到商業實體。
+適用于企業的 microsoft Office 365 為 Microsoft 生產力解決方案提供專屬主控服務，以支援美國聯邦機關的安全性、隱私權和法規遵從性需求，而要求的聯邦資訊安全性管理（FISMA）憑證和商業實體受制于 ITAR。
   
-## <a name="things-to-consider-when-using-ipv6-and-office-365"></a>使用 IPv6 和 Office 365 時的考量事項
+## <a name="things-to-consider-when-using-ipv6-and-office-365"></a>使用 IPv6 和 Office 365 時的考慮事項
 
-我們建議您不要停用 IPv6。 如需詳細資訊，請參閱本[指南的文章](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users)。 若要判斷您網路上正在使用何種 IP 版本，請考慮下列各項：
+建議您不要停用 IPv6。 如需詳細資訊，請參閱本[指南文章](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users)。 若要決定網路上使用的 IP 版本，請考慮下列各項：
   
-- 如果顯示的**IPConfig**命令，在命令提示字元中包含名為"IPv6 Address"Temporary IPv6 Address"列，您已在您的環境中有 IPv6。
+- 如果在命令提示字元處顯示的**IPConfig**命令包含名為「IPv6 Address "或" 暫時性 IPv6 address "的列，表示您在環境中已 IPv6。
 
-- 如果所有 IPv6 位址開頭都是"fe80"並且對應到名為"Link-local IPv6 Address"列，您不需要在您的環境中的 IPv6。
+- 如果所有的 IPv6 位址開頭都是 "fe80"，且對應至名稱為「Link-Local IPv6 Address "的列，則您的環境中不會有 IPv6。
 
-這些考慮事項可能適用於您的網路：
+這些考慮可能適用于您的網路：
   
-- 在公用訂閱服務不支援購買以信用卡透過 IPv6。 因為政府有 Enterprise Agreement (EA) 授權，這不適用政府社群雲端 (GCC)。
+- 公用訂閱服務不支援透過信用卡以信用卡進行購買 IPv6。 這不適用於政府社區雲端（GCC），因為政府具有企業合約（EA）授權。
 
-- IPv6 不支援某些 Rights Management Services (RMS) 案例。
+- IPv6 不支援某些 Rights Management Services （RMS）案例。
 
-- IPv6 不支援 BlackBerry® Enterprise Server (BES)，因為 BlackBerry 不支援 IPv6。
+- 因為 BlackBerry 不支援 IPv6，所以 IPv6 不支援 BlackBerry® Enterprise Server （BE）。
 
-- 如果您使用 Active Directory Federation Services (AD FS) 與 Office 365 時，通知您 Office 365 的 AD FS 網路端點 IPv6 不支援使用。 您不應該包含 AAAA 記錄中的 AD FS DNS 項目時使用 Exchange Online。 
+- 如果您使用 Active Directory Federation Services （AD FS）搭配 Office 365，則不支援使用 IPv6 來公佈您的 AD FS 網路端點至 Office 365。 使用 Exchange Online 時，請勿在 AD FS DNS 專案中包含 AAAA 記錄。 
 
 您可以使用下列短連結返回這裡：[https://aka.ms/o365ip6](https://aka.ms/o365ip6)
   
