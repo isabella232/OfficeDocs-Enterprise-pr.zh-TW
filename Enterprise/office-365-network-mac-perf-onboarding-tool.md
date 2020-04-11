@@ -3,7 +3,7 @@ title: M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 04/08/2020
+ms.date: 04/10/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,16 +14,19 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
-ms.openlocfilehash: 502ee24c458d4681b555f65f28d4928cae2c9498
-ms.sourcegitcommit: 6508db0a839427e1a21b1cde883d828e3c8886c6
+ms.openlocfilehash: f59158f2c4365aa1d2a8bd34c0d465f1c5460449
+ms.sourcegitcommit: 6bcd8731f089feb91a58a946e89dbdc7f5e7d17b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185734"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43225696"
 ---
 # <a name="microsoft-365-network-onboarding-tool-in-the-m365-admin-center-preview"></a>M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
 
 Microsoft 365 網路上<https://connectivity.office.com>架工具位於。 其為輔助工具，可在 Microsoft 365 系統管理中心的 [**健康情況 |] 底下使用網路洞察力和網路總分資訊。網路效能**功能表。
+
+>[!NOTE]
+>上架工具支援 WW 商業銀行和 GCC 中的承租人，但不支援 GCC 高、DoD、德國或中國的承租人。
 
 Microsoft 365 系統管理中心的網路洞察力是以 Microsoft 365 租使用者的產品度量為基礎。 相比之下，來自 Microsoft 365 網路上架工具的網路洞察力是在本機的工具中執行。 您可以在產品中執行的測試是有限的，而且在使用者可以收集更多資料的地方執行測試時，可能會產生更深入的洞察力。 請考慮，Microsoft 365 系統管理中心的網路洞察力會顯示在特定辦公室位置使用 Microsoft 365 的網路問題。 Microsoft 365 網路上架工具可協助找出該問題的根本原因，以導致建議的網路效能改進動作。
 
