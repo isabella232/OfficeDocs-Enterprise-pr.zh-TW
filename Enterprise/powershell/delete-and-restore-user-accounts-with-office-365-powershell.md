@@ -17,12 +17,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: 209c9868-448c-49bc-baae-11e28b923a39
 description: 了解如何使用 Office 365 PowerShell 來刪除 Office 365 使用者帳戶。
-ms.openlocfilehash: 5c69d69a61b3d3299f34a46c32d5575eae7b908a
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: ea803d82bb54e5430ceb9a59e8c04a0f72b200fc
+ms.sourcegitcommit: 069f56455252d6f4001ec0ecee792b83b585e692
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841542"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "43237804"
 ---
 # <a name="delete-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 刪除使用者帳戶
 
@@ -45,7 +45,7 @@ Remove-AzureADUser -ObjectID fabricec@litwareinc.com
 ```
 
 > [!NOTE]
-> **Remove-AzureAD** Cmdlet 中的 **-ObjectID** 參數接受帳戶登入名稱 (也稱為使用者主體名稱) 或帳戶的物件 ID。
+> **AzureADUser 指令程式**中的 **-ObjectID**參數會接受帳戶的登入名稱，也稱為使用者主要名稱，或帳戶的物件識別碼。
   
 若要根據使用者的名稱顯示帳戶名稱，請使用下列命令︰
   
@@ -115,7 +115,7 @@ Restore-MsolUser -UserPrincipalName BelindaN@litwareinc.com
 
 ## <a name="see-also"></a>另請參閱
 
-[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   
