@@ -3,7 +3,7 @@ title: 可幫助您從 Office 2010 伺服器和用戶端升級的資源
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 09/16/2019
+ms.date: 04/14/2020
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
@@ -23,18 +23,20 @@ ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
 description: Office 2010 伺服器和用戶端應用程式的支援即將結束，且無法使用自訂支援協定。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 8f5ba4ced815cddf3fbbb357b71157c3ad54347e
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+ms.openlocfilehash: 3504f7d7042616f94cc359ef849ca3afd86ebc04
+ms.sourcegitcommit: 37674c1414175b49d59000b56fa685c05faabf35
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979445"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "43503819"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-Office 2010、Exchange Server 2010、SharePoint 2010 和 Project Server 2010 會在**年10月 13 2020 日**到達支援終止。 
+Office 2010 和 Exchange 2010 會在**年10月 13 2020 日**到達支援終止。 
+
+SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支援終止。
 
 當您規劃升級時，這是一個考慮移至 Office 365 或 Microsoft 365 的最佳時間。 
 
@@ -56,8 +58,8 @@ Office 2010、Exchange Server 2010、SharePoint 2010 和 Project Server 2010 會
 |:-----|:-----|:-----|
 |Office 2010 （包括 Word 2010、Excel 2010、PowerPoint 2010 和 Outlook 2010）  <br/> | 2020年10月13日 |[Office 2010 終止支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
 |Exchange Server 2010  <br/> | 2020年10月13日  |[Exchange 2010 終止支援藍圖](exchange-2010-end-of-support.md) <br/> |
-|SharePoint 2010 或 SharePoint Server 2010  <br/> | 2020年10月13日 |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
-|Project Server 2010 <br/> | 2020年10月13日 | [Project Server 2010 終止支援藍圖](project-server-2010-end-of-support.md) <br/> |
+|SharePoint 2010 或 SharePoint Server 2010  <br/> | 2021年4月13日 |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
+|Project Server 2010 <br/> | 2021年4月13日 | [Project Server 2010 終止支援藍圖](project-server-2010-end-of-support.md) <br/> |
 |Lync Server 2010 <br/> | 2021年4月13日 | [規劃升級至商務用 Skype Server](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade) <br/> |
     
 ## <a name="im-a-home-user-what-do-i-do"></a>我是家用版的使用者。 我該怎麼辦？

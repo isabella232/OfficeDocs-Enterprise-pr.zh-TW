@@ -3,7 +3,7 @@ title: 從 SharePoint 2010 升級
 ms.author: tracyp
 author: MSFTTracyP
 manager: laurawi
-ms.date: 08/21/2019
+ms.date: 04/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: office-online-server
@@ -18,23 +18,23 @@ search.appverid:
 ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 f1.keywords:
 - NOCSH
-description: SharePoint 2010 和 SharePoint Server 2010 的支援結束于10月13日（2020）。 使用本文做為升級至 SharePoint 線上或更新版本 SharePoint 伺服器內部部署的指南。
-ms.openlocfilehash: 81aeebc584f1ba9d6e0bd22a1a83362db4dc669a
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+description: 支援在2010年4月13日在 2021 SharePoint 和 SharePoint Server 2010 結束。 使用本文做為升級至 SharePoint 線上或更新版本 SharePoint 伺服器內部部署的指南。
+ms.openlocfilehash: e4e4b874d5ea73fa37c3d1e338890a1391516273
+ms.sourcegitcommit: 37674c1414175b49d59000b56fa685c05faabf35
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979485"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "43503841"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-Microsoft SharePoint 2010 和 SharePoint Server 2010 將在**年10月 13 2020 日**對支援服務達成支援。 本文詳述可協助您將現有的 SharePoint Server 2010 資料移轉至 Office 365 中 SharePoint 線上的資源，或升級內部部署 SharePoint Server 2010 環境。
+Microsoft SharePoint 2010 和 SharePoint Server 2010 會在**年4月 13 2021 日**到達支援的支援。 本文詳述可協助您將現有的 SharePoint Server 2010 資料移轉至 Office 365 中 SharePoint 線上的資源，或升級內部部署 SharePoint Server 2010 環境。
   
 ## <a name="what-is-end-of-support"></a>什麼是支援終止？
 
-當您的 SharePoint Server 2010 和 SharePoint Foundation 2010 軟體達到其支援週期的結尾（Microsoft 提供新功能、bug 修正、安全性修正等）時，這稱為軟體的「支援終止」，或有時候，它是「退休」。 在產品的支援（或 EOS）結束時，實際上沒有任何實際關機或停止運作;不過，軟體支援結束時，Microsoft 不再提供：
+當您的 SharePoint Server 2010 和 SharePoint Foundation 2010 軟體達到其支援週期的結尾（Microsoft 提供新功能、bug 修正、安全性修正等）時，這稱為軟體的「支援終止」，或有時候是「退休」。 在產品的支援（或 EOS）結束時，實際上沒有任何實際關機或停止運作;不過，軟體支援結束時，Microsoft 不再提供：
   
 - 可能發生之任何問題的技術支援；
     
@@ -109,7 +109,7 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺�
 |**SharePoint 線上優勢**|**SharePoint 線上缺點**|
 |:-----|:-----|
 |Microsoft 提供 SPO 硬體和所有硬體管理。  <br/> |SharePoint Server 內部部署和 SPO 之間可用的功能可能會有所不同。  <br/> |
-|您是訂閱的全域系統管理員，而且可能會指派管理員來 SPO 網站。  <br/> |在 Office 365 的「SharePoint 系統管理員」角色中，不存在（或不需要）在 Office 的「系統管理員」角色中使用的部分動作（或不需要），但是 SharePoint 管理、網站集合管理和網站擁有權是本機的 SharePoint您的組織。  <br/> |
+|您是訂閱的全域系統管理員，而且可能會指派管理員來 SPO 網站。  <br/> |在 Office 365 的「SharePoint 系統管理員」角色中，不會存在（或不需要）在 Office 的「系統管理員」角色中使用的部分動作（或不需要），但是 SharePoint 管理、網站集合管理及網站擁有權是您的組織當地的 SharePoint。  <br/> |
 |Microsoft 會套用修補程式、修復和更新底層的硬體和軟體（包括 SharePoint 線上執行的 SQL server）。  <br/> |由於服務沒有存取基礎檔案系統，因此某些自訂專案有限。  <br/> |
 |Microsoft 發佈[服務等級協定](https://go.microsoft.com/fwlink/?linkid=843153)，並快速移動以解決服務等級事件。  <br/> |備份與還原和其他修復選項會透過服務自動覆寫 SharePoint 線上備份會覆寫（如果不使用）。  <br/> |
 |安全性測試和伺服器效能調整是由 Microsoft 在服務中持續執行。  <br/> |變更使用者介面及其他 SharePoint 功能會由服務安裝，而且可能需要切換開啟或關閉。  <br/> |
@@ -133,7 +133,7 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺�
 如果您選擇追蹤從 SharePoint 2010 到 SharePoint 伺服器2016的整個路徑，這將需要一些時間與進行規劃。 升級包含升級的硬體方面的成本（請注意，也就是必須升級的 SQL server）、軟體和管理。 此外，可能需要升級自訂專案，或甚至放棄自訂專案。 請務必先收集所有重要自訂專案的附注，再升級 SharePoint 伺服器陣列。
   
 > [!NOTE]
-> 您可以維持 SharePoint 2010 伺服器陣列的支援，並在新的硬體上安裝 SharePoint 伺服器2016伺服器陣列（如此個別的伺服器陣列會並列執行），然後規劃並執行手動的內容遷移（如下載及重新載入內容）。範例）。 這些手動移動會有可能的陷阱（例如，來自2010的檔具有使用執行手動移動之帳號別名的目前最後一個修改的帳戶），且某些工作必須在時間之前完成（重新建立網站、子網站、許可權和清單結構）。 最好是考慮哪些資料可以移至儲存區，或不再需要。 這可減少遷移的影響。 無論是哪種方式，在升級之前先清理您的環境。 請務必確定您的現有伺服器陣列在您升級之前是正常運作的，在解除委任之前（確定）！ 
+> 您可以維持 SharePoint 2010 伺服器陣列的支援，在新的硬體上安裝 SharePoint 伺服器2016伺服器陣列（如此個別的伺服器陣列會並列執行），然後規劃並執行手動的內容遷移（例如，下載及重新上載內容）。 這些手動移動的潛在缺陷包括：來自2010的檔具有目前最後一個修改過的帳戶，且具有執行手動移動的帳號別名，而且某些工作必須提前完成（重新建立網站、子網站、許可權和清單結構）。 最好是考慮哪些資料可以移至儲存區，或不再需要。 這可減少遷移的影響。 無論是哪種方式，在升級之前先清理您的環境。 請務必確定您的現有伺服器陣列在您升級之前是正常運作的，在解除委任之前（確定）！ 
   
 請記得查看**支援和不支援的升級路徑**： 
   
@@ -180,7 +180,7 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺�
   
 請務必熟悉現有的混合式類型，以及如何設定內部部署 SharePoint 伺服器陣列與 Office 365 訂閱之間的連線。
   
-若要查看混合式 SharePoint 伺服器陣列如何運作，一種很好的方式是建立[Office 365 開發/測試環境](https://go.microsoft.com/fwlink/?linkid=843152)。 當您擁有試用版或購買的 Office 365 訂閱後，您就可以在 SharePoint Online 中建立網站集合、網站及文件庫，以供您遷移資料（透過使用遷移 API 手動進行）或-如果您想要遷移我的用於 Business 的 OneDrive 網站內容-透過混合式的嚮導）。
+若要查看混合式 SharePoint 伺服器陣列如何運作，一種很好的方式是建立[Office 365 開發/測試環境](https://go.microsoft.com/fwlink/?linkid=843152)。 當您有試用版或已購買的 Office 365 訂閱後，您就可以在 SharePoint Online 中建立網站集合、網站及文件庫，以供您遷移資料（手動、利用遷移 API）或-如果您想要透過混合式嚮導將「我的網站」內容遷移至 OneDrive。
   
 > [!NOTE]
 > 請記住，您的 SharePoint 伺服器2010伺服器陣列即將第一次升級、內部部署，以 SharePoint 伺服器2013或 SharePoint Server 2016，以使用 [混合] 選項。 SharePoint Foundation 2010 和 SharePoint Foundation 2013 無法建立與 SharePoint 線上的混合連接。 
