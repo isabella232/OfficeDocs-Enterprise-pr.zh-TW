@@ -18,12 +18,12 @@ search.appverid:
 - PJU120
 - PJW120
 description: Project Server 2010 的支援結束于4月13日（2021）。 使用本文做為升級至 Project Online 或更新版本 Project Server 內部部署的指南。
-ms.openlocfilehash: 3c60763576d75e62c39fe202523d22550acd2f3c
-ms.sourcegitcommit: 37674c1414175b49d59000b56fa685c05faabf35
+ms.openlocfilehash: 069675eef7190cf815147bc74dcced2943d2c956
+ms.sourcegitcommit: 27a04304475f9c33accd4c0498726f074eef7c48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43503831"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43532269"
 ---
 # <a name="project-server-2010-end-of-support-roadmap"></a>Project Server 2010 終止支援藍圖
 
@@ -41,7 +41,7 @@ Project Server 2010 將于**年4月 13 2021 日**到達支援終止。 此日期
   
 ## <a name="what-does-end-of-support-mean"></a>終止支援是什麼意思？
 
-Project Server 與幾乎所有的 Microsoft 產品一樣，都有一個支援週期，我們提供了新功能、錯誤修正及安全性更新。 產品的生命週期從首次發行日期算起，通常會持續 10 年，而這個生命週期的結束就稱為產品支援結束。 當 Project Server 2010 達到其在10月 13 2020 日的支援結束時，Microsoft 將不再提供：
+Project Server 與幾乎所有的 Microsoft 產品一樣，都有一個支援週期，我們提供了新功能、錯誤修正及安全性更新。 產品的生命週期從首次發行日期算起，通常會持續 10 年，而這個生命週期的結束就稱為產品支援結束。 當 Project Server 2010 達到其在2021年4月13日的支援時，Microsoft 將無法再提供：
   
 - 可能發生問題的技術支援。
     

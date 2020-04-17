@@ -19,12 +19,12 @@ ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 f1.keywords:
 - NOCSH
 description: 支援在2010年4月13日在 2021 SharePoint 和 SharePoint Server 2010 結束。 使用本文做為升級至 SharePoint 線上或更新版本 SharePoint 伺服器內部部署的指南。
-ms.openlocfilehash: e4e4b874d5ea73fa37c3d1e338890a1391516273
-ms.sourcegitcommit: 37674c1414175b49d59000b56fa685c05faabf35
+ms.openlocfilehash: 8f55b55b84b2bd4d967822dea137a8cea4f40906
+ms.sourcegitcommit: 27a04304475f9c33accd4c0498726f074eef7c48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43503841"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "43532289"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 
@@ -68,7 +68,7 @@ Microsoft SharePoint 2010 和 SharePoint Server 2010 會在**年4月 13 2021 日
 ![SharePoint Server 2010 升級路徑](./media/upgrade-from-sharepoint-2010/upgrade-from-sharepoint-2010-paths.png)
 
 >[!Note]
->SharePoint Server 2010 和 SharePoint Foundation 2010 的支援終止計畫于 Oct 13，2020，但*請注意*，您應該時刻檢查[產品生命週期網站](https://support.microsoft.com/lifecycle)的最新日期。
+>SharePoint Server 2010 和 SharePoint Foundation 2010 的支援終止于4月13日的2021，但*請注意*，您應該時刻檢查[產品生命週期網站](https://support.microsoft.com/lifecycle)的最新日期。
 >
 
   
