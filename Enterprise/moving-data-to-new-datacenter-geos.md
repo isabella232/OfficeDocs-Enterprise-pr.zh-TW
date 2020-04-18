@@ -1,7 +1,7 @@
 ---
 title: 將核心資料移至新的 Microsoft 365 datacenter geos
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: andyber
+author: andybergen
 manager: laurawi
 ms.date: 12/10/2019
 audience: ITPro
@@ -14,12 +14,12 @@ ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 f1.keywords:
 - NOCSH
 description: 新的資料中心 geos 增加容量及計算資源，以支援我們持續的客戶需求和使用量成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置資料派駐服務。 核心客戶資料是指在 Microsoft Online Services 條款中所定義之客戶資料子集的字詞： Exchange Online 信箱內容（電子郵件內文、行事曆專案和電子郵件附件的內容），以及 SharePoint 線上網站內容和該網站中儲存的檔案，以及上傳至商務 OneDrive 的檔案。
-ms.openlocfilehash: 3559fb78310667243160b000d4b4098eba6fdbcc
-ms.sourcegitcommit: d4814245d57313f2e94cd819b85ac1550fdeaf3a
+ms.openlocfilehash: 3cd30e46f9339fafb3a14f26d6995cd4cb953871
+ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43516544"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547721"
 ---
 # <a name="moving-core-data-to-new-microsoft-365-datacenter-geos"></a>將核心資料移至新的 Microsoft 365 datacenter geos
 

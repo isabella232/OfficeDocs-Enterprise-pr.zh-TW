@@ -1,7 +1,7 @@
 ---
 title: 如何要求資料移動
-ms.author: josephd
-author: JoeDavies-MSFT
+ms.author: andyber
+author: andybergen
 manager: laurawi
 ms.date: 12/10/2019
 audience: ITPro
@@ -14,12 +14,12 @@ ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 f1.keywords:
 - NOCSH
 description: 現有的 Office 365 客戶將需要提交其國家/地區期限之前的要求，以便將參與 Microsoft 365 服務的客戶資料移至新的地理位置。
-ms.openlocfilehash: 2b91f471fb6a1c82f37cf89aaec29de040a73fcf
-ms.sourcegitcommit: d4814245d57313f2e94cd819b85ac1550fdeaf3a
+ms.openlocfilehash: 9c78492584f49cf263916726b2272d3b9405446e
+ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43516564"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547741"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
