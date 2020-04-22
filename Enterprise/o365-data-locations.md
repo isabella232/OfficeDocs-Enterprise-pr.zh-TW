@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：Office 365 資料位置
-ms.openlocfilehash: 5db3c97914f9c5bdcf4389637494a421ad57de64
-ms.sourcegitcommit: 3aa6c61242c5691e3180a474ad059bd84c86dc9e
+ms.openlocfilehash: 71c286b3dc7fbbaa842183dcaa23c863e46f809a
+ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "43206595"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547731"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
@@ -41,7 +41,7 @@ Note to new owner: Links in the Notes and FAQ sections need to be added from the
 針對相關的 Azure Active Directory 資料位置，請瀏覽 [AAD 資料地圖](https://go.microsoft.com/fwlink/p/?linkid=2092972)。
 
 
-由於 COVID-19 所造成的空前情況，以及需要管理歐洲內線上服務的需求，如果您的組織是教育機構，我們將可佈建您位於歐盟 (EU)、歐洲自由貿易聯盟 (EFTA)、英國 (UK)、美國 (US) 或加拿大 (CA) 的 Ofiice 365 租戶，或將您的資料移轉至任何位於 EU、EFTA、UK、US 或 CA 的資料中心。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
+由於 COVID-19 危機所造成的空前情況，以及需要管理歐洲內線上服務的需求，如果您的組織是教育機構，我們將可佈建您位於歐盟 (EU)、歐洲自由貿易聯盟 (EFTA)、英國 (UK)、美國 (US) 或加拿大 (CA) 的 Ofiice 365 租戶，或將您的資料移轉至任何位於 EU、EFTA、UK、US 或 CA 的資料中心。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
 
 
 
@@ -120,6 +120,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 印度 | 辰內、孟買、鵬尼 |
 | 日本 | 大阪、東京、埼玉 |
 | 韓國 | 釜山、首爾 |
+| 挪威 | 奧斯陸、斯塔萬格 |
 | 南非 | 開普敦、約翰尼斯堡 |
 | 瑞士 | 日內瓦、蘇黎世 |
 | 阿拉伯聯合大公國 | 杜拜、阿布達比 |
@@ -3928,18 +3929,18 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 
 | 服務 | 位置 |
 | --- | --- |
-| Exchange Online | 全球地理位置 1 - EMEA |
-| 商務用 OneDrive | 全球地理位置 1 - EMEA |
-| SharePoint Online | 全球地理位置 1 - EMEA |
+| Exchange Online | 挪威 |
+| 商務用 OneDrive | 挪威 |
+| SharePoint Online | 挪威 |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
-| Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
-| EOP | 全球地理位置 1 - EMEA |
-| MyAnalytics | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 挪威 |
+| Office Online &amp; Mobile | 挪威 |
+| EOP | 挪威 |
+| MyAnalytics | 挪威 |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
 | Yammer | 全球地理位置 1 - EMEA |
-| OneNote 服務 | 全球地理位置 1 - EMEA |
+| OneNote 服務 | 挪威 |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
 | Forms | 全球地理位置 1 - EMEA |

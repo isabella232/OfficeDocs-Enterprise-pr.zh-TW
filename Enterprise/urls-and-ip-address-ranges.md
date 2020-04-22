@@ -3,7 +3,7 @@ title: Office 365 URL 和 IP 位址範圍
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/30/2020
+ms.date: 04/14/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,19 +24,19 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 摘要：Office 365 需要連線到網際網路。客戶必須可使用 Office 365 方案取得下列端點，包括 Government Community Cloud (GCC)。
 hideEdit: true
-ms.openlocfilehash: 48f838a54a5239c43c1001d92588a931ab20fac2
-ms.sourcegitcommit: cb942f32da99eda6455756ce0fd409cf8ee9de3e
+ms.openlocfilehash: acccd4dbb1d9d7107542b711c5a7dd34d2f33c71
+ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "43058976"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "43547761"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL 和 IP 位址範圍
 
  **摘要：** Office 365 需要連線到網際網路。客戶必須可使用 Office 365 方案取得下列端點，包括 Government Community Cloud (GCC)。
   
 > [!NOTE]
-> 做為 Microsoft 因應 COVID-19 情況的一部分，Microsoft 已聲明暫時暫停一些計劃的 URL 和 IP 位址變更。 此中止的目的是為了讓客戶的 IT 團隊針對在家工作 Office 365 案例實作建議的網路最佳化方面具備信心且簡單化。 從 2020 年 3 月 24 日到 2020 年 6 月 30 日，此暫停會將對重要 Office 365 服務 (Exchange Online、SharePoint Online 及 Microsoft Teams) 有關最佳化類別中所包含的 IP 範圍和 URL 的變更中止。 其他端點類別內的變更將照常進行。 在此期間，客戶可以以靜態方式使用 Office 365 最佳化類別服務定義，以執行目標網路最佳化 (例如頻寬保留或分割通道 VPN 組態)，並由於雲端網路變更而對 Office 365 連線的帶來低度風險。 若要確保在暫停期間結束時，服務不會中斷，Microsoft 強烈建議客戶使用 [管理 Office 365 端點](managing-office-365-endpoints.md)提供的指導方針來實作 Office 365 服務端點的變更管理和/或自動化程序。
+> 做為 Microsoft 因應 COVID-19 危機的一部分，Microsoft 已聲明暫時暫停一些計劃的 URL 和 IP 位址變更。 此中止的目的是為了讓客戶的 IT 團隊針對在家工作 Office 365 案例實作建議的網路最佳化方面具備信心且簡單化。 從 2020 年 3 月 24 日到 2020 年 6 月 30 日，此暫停會將對重要 Office 365 服務 (Exchange Online、SharePoint Online 及 Microsoft Teams) 有關最佳化類別中所包含的 IP 範圍和 URL 的變更中止。 其他端點類別內的變更將照常進行。 在此期間，客戶可以以靜態方式使用 Office 365 最佳化類別服務定義，以執行目標網路最佳化 (例如頻寬保留或分割通道 VPN 組態)，並由於雲端網路變更而對 Office 365 連線的帶來低度風險。 若要確保在暫停期間結束時，服務不會中斷，Microsoft 強烈建議客戶使用 [管理 Office 365 端點](managing-office-365-endpoints.md)提供的指導方針來實作 Office 365 服務端點的變更管理和/或自動化程序。
 
 > [!NOTE]
 > Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
@@ -45,8 +45,8 @@ ms.locfileid: "43058976"
   
 ||||
 |:-----|:-----|:-----|
-|**上次更新日期：** 2020 年 03 月 25 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> | **使用：** 我們的 proxy [PAC 檔案](managing-office-365-endpoints.md#pacfiles) <br/> |
-   
+|**上次更新日期：** 2020 年 4 月 14 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> | **使用：** 我們的 proxy [PAC 檔案](managing-office-365-endpoints.md#pacfiles) <br/> |
+
  開始使用[管理 Office 365 端點](managing-office-365-endpoints.md)了解我們的建議，可使用這項資料來管理網路連線。每個月初都會使用在使用中的 30 天前發行的新 IP 位址和 URL 更新端點資料。這項功能可讓尚未自動化更新的使用者在需要新的連線之前完成其程序。如果提出支援向上呈報、安全性事件或其他立即操作需求需要端點，可能也會在當月期間更新端點。下面這個頁面上所顯示的資料會從 REST 為基礎的 web 服務產生。如果您使用指令碼或網路裝置來存取這些資料，就應該直接前往 [Web 服務](office-365-ip-web-service.md)。
 
 下列端點資料列出了從使用者機器到連線至 Office 365 的要求。它不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。如需詳細資訊，請參閱[其他端點](additional-office365-ip-addresses-and-urls.md)。
@@ -70,7 +70,6 @@ ms.locfileid: "43058976"
 >[!Note]
 >如需 Yammer 的 IP 位址和 URL 的建議，請參閱[此部落格文章](https://techcommunity.microsoft.com/t5/Yammer-Blog/Using-hard-coded-IP-addresses-for-Yammer-is-not-recommended/ba-p/276592) (英文)。
 >
-
 
 ## <a name="related-topics"></a>相關主題
 
