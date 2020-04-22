@@ -1,12 +1,15 @@
 ---
-title: Office 365 的混合式身分識別與目錄同步處理
+title: Office 365 的混合式身分識別及目錄同步處理
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
 audience: Admin
 ms.topic: conceptual
+ms.date: 04/20/2010
 ms.service: o365-administration
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.collection:
 - Ent_O365
@@ -15,132 +18,136 @@ search.appverid:
 - MOE150
 - MET150
 ms.assetid: d3577c90-dda5-45ca-afb0-370d2889b10f
-description: 說明 Office 365、 Active Directory 網域服務清除與 Azure Active Directory Connect 工具的目錄同步處理。
-ms.openlocfilehash: 31fcd8baaccabf5d3f4f0cf47c7573c43f7cd40b
-ms.sourcegitcommit: 47c6156c0038745103b71f44b2a3b103c62e5d6e
+description: 說明與 Office 365、Active Directory 網域服務清理和 Azure Active Directory Connect 工具的目錄同步處理。
+ms.openlocfilehash: 44894cdbc65c243ce0c4a66ceba1d123ece49c62
+ms.sourcegitcommit: f2e640ffdbef95c6d98845f85fd9bea21a7388aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "34102486"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43580930"
 ---
-# <a name="hybrid-identity-and-directory-synchronization-for-office-365"></a><span data-ttu-id="32c48-103">Office 365 的混合式身分識別與目錄同步處理</span><span class="sxs-lookup"><span data-stu-id="32c48-103">Hybrid identity and directory synchronization for Office 365</span></span>
+# <a name="hybrid-identity-and-directory-synchronization-for-office-365"></a><span data-ttu-id="be9a1-103">Office 365 的混合式身分識別及目錄同步處理</span><span class="sxs-lookup"><span data-stu-id="be9a1-103">Hybrid identity and directory synchronization for Office 365</span></span>
 
-<span data-ttu-id="32c48-104">根據業務需求與技術需求，混合式身分識別模型與目錄同步處理之後會採用 Office 365 的企業客戶的常見選擇。</span><span class="sxs-lookup"><span data-stu-id="32c48-104">Depending on business needs and technical requirements, the hybrid identity model and directory synchronization is the most common choice for enterprise customers who are adopting Office 365.</span></span> <span data-ttu-id="32c48-105">目錄同步處理可讓您管理您 Active Directory 網域服務 (AD DS) 中的身分識別和所有更新將使用者帳戶、 群組及連絡人同步都處理至 Office 365 訂閱的 Azure Active Directory (Azure AD) 租用戶。</span><span class="sxs-lookup"><span data-stu-id="32c48-105">Directory synchronization allows you to manage identities in your Active Directory Domain Services (AD DS) and all updates to user accounts, groups, and contacts are synchronized to the Azure Active Directory (Azure AD) tenant of your Office 365 subscription.</span></span>
+<span data-ttu-id="be9a1-104">*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="be9a1-104">*This article applies to both Office 365 Enterprise and Microsoft 365 Enterprise.*</span></span>
 
+<span data-ttu-id="be9a1-105">根據業務需求和技術需求，混合式身分識別模型及目錄同步處理對於採用 Office 365 的企業客戶而言是最常見的選擇。</span><span class="sxs-lookup"><span data-stu-id="be9a1-105">Depending on business needs and technical requirements, the hybrid identity model and directory synchronization is the most common choice for enterprise customers who are adopting Office 365.</span></span> <span data-ttu-id="be9a1-106">目錄同步處理可讓您在 Active Directory 網域服務（AD DS）中管理身分識別，而且所有的使用者帳戶、群組和連絡人的更新都會同步到 Office 365 訂閱的 Azure Active Directory （Azure AD）租使用者。</span><span class="sxs-lookup"><span data-stu-id="be9a1-106">Directory synchronization allows you to manage identities in your Active Directory Domain Services (AD DS) and all updates to user accounts, groups, and contacts are synchronized to the Azure Active Directory (Azure AD) tenant of your Office 365 subscription.</span></span>
 
 >[!Note]
-><span data-ttu-id="32c48-106">第一次同步處理 AD DS 使用者帳戶，它們都不會自動指派 Office 365 授權，而無法存取 Office 365 服務，例如電子郵件。</span><span class="sxs-lookup"><span data-stu-id="32c48-106">When AD DS user accounts are synchronized for the first time, they are not automatically assigned an Office 365 license and cannot access Office 365 services, such as email.</span></span> <span data-ttu-id="32c48-107">您必須透過群組成員資格，個別或動態指派授權給這些使用者帳戶。</span><span class="sxs-lookup"><span data-stu-id="32c48-107">You must assign a license to these user accounts, either individually or dynamically through group membership.</span></span>
+><span data-ttu-id="be9a1-107">當 AD DS 使用者帳戶第一次同步處理時，不會自動指派 Office 365 許可證，也無法存取 Office 365 服務，例如電子郵件。</span><span class="sxs-lookup"><span data-stu-id="be9a1-107">When AD DS user accounts are synchronized for the first time, they are not automatically assigned an Office 365 license and cannot access Office 365 services, such as email.</span></span> <span data-ttu-id="be9a1-108">您必須將授權指派給這些使用者帳戶，以個別或動態方式透過群組成員資格。</span><span class="sxs-lookup"><span data-stu-id="be9a1-108">You must assign a license to these user accounts, either individually or dynamically through group membership.</span></span>
 >
 
-## <a name="authentication-for-hybrid-identity"></a><span data-ttu-id="32c48-108">驗證混合式身分識別</span><span class="sxs-lookup"><span data-stu-id="32c48-108">Authentication for hybrid identity</span></span>
+## <a name="authentication-for-hybrid-identity"></a><span data-ttu-id="be9a1-109">混合式識別的驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-109">Authentication for hybrid identity</span></span>
 
-<span data-ttu-id="32c48-109">使用混合式身分識別模型時，有兩種驗證類型：</span><span class="sxs-lookup"><span data-stu-id="32c48-109">There are two types of authentication when using the hybrid identity model:</span></span>
+<span data-ttu-id="be9a1-110">使用混合式識別模型時，有兩種驗證類型：</span><span class="sxs-lookup"><span data-stu-id="be9a1-110">There are two types of authentication when using the hybrid identity model:</span></span>
 
-- <span data-ttu-id="32c48-110">管理的驗證</span><span class="sxs-lookup"><span data-stu-id="32c48-110">Managed authentication</span></span>
+- <span data-ttu-id="be9a1-111">管理的驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-111">Managed authentication</span></span>
 
-  <span data-ttu-id="32c48-111">Azure AD 處理的驗證程序，使用本機儲存的密碼雜湊的版本，或將認證傳送至內部軟體代理程式來驗證內部部署的 AD DS。</span><span class="sxs-lookup"><span data-stu-id="32c48-111">Azure AD handles the authentication process by using a locally stored hashed version of the password or sends the credentials to an on-premises software agent to be authenticated by the on-premises AD DS.</span></span>
+  <span data-ttu-id="be9a1-112">Azure AD 會使用本機儲存的密碼處理版本來處理驗證程式，或將認證傳送至內部部署 AD DS 來驗證內部部署軟體代理程式。</span><span class="sxs-lookup"><span data-stu-id="be9a1-112">Azure AD handles the authentication process by using a locally stored hashed version of the password or sends the credentials to an on-premises software agent to be authenticated by the on-premises AD DS.</span></span>
 
-- <span data-ttu-id="32c48-112">同盟的驗證</span><span class="sxs-lookup"><span data-stu-id="32c48-112">Federated authentication</span></span>
+- <span data-ttu-id="be9a1-113">同盟驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-113">Federated authentication</span></span>
 
-  <span data-ttu-id="32c48-113">Azure AD 會重新導向的用戶端電腦要求驗證連絡另一個身分識別提供者。</span><span class="sxs-lookup"><span data-stu-id="32c48-113">Azure AD redirects the client computer requesting authentication to contact another identity provider.</span></span>
+  <span data-ttu-id="be9a1-114">Azure AD 重新導向要求驗證的用戶端電腦，以與另一個身分識別提供者聯繫。</span><span class="sxs-lookup"><span data-stu-id="be9a1-114">Azure AD redirects the client computer requesting authentication to contact another identity provider.</span></span>
 
-### <a name="managed-authentication"></a><span data-ttu-id="32c48-114">管理的驗證</span><span class="sxs-lookup"><span data-stu-id="32c48-114">Managed authentication</span></span>
+### <a name="managed-authentication"></a><span data-ttu-id="be9a1-115">管理的驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-115">Managed authentication</span></span>
 
-<span data-ttu-id="32c48-115">有兩種類型的受管理的驗證：</span><span class="sxs-lookup"><span data-stu-id="32c48-115">There are two types of managed authentication:</span></span>
+<span data-ttu-id="be9a1-116">受管理的驗證類型有兩種：</span><span class="sxs-lookup"><span data-stu-id="be9a1-116">There are two types of managed authentication:</span></span>
 
-- <span data-ttu-id="32c48-116">密碼雜湊同步處理 (PHS)</span><span class="sxs-lookup"><span data-stu-id="32c48-116">Password hash synchronization (PHS)</span></span>
+- <span data-ttu-id="be9a1-117">密碼雜湊同步處理（PHS）</span><span class="sxs-lookup"><span data-stu-id="be9a1-117">Password hash synchronization (PHS)</span></span>
 
-  <span data-ttu-id="32c48-117">Azure AD 會執行本身的驗證。</span><span class="sxs-lookup"><span data-stu-id="32c48-117">Azure AD performs the authentication itself.</span></span>
+  <span data-ttu-id="be9a1-118">Azure AD 會自行執行驗證。</span><span class="sxs-lookup"><span data-stu-id="be9a1-118">Azure AD performs the authentication itself.</span></span>
 
-- <span data-ttu-id="32c48-118">傳遞驗證 (PTA)</span><span class="sxs-lookup"><span data-stu-id="32c48-118">Pass-through authentication (PTA)</span></span>
+- <span data-ttu-id="be9a1-119">傳遞驗證 (PTA)</span><span class="sxs-lookup"><span data-stu-id="be9a1-119">Pass-through authentication (PTA)</span></span>
 
-  <span data-ttu-id="32c48-119">Azure AD 具有 AD DS 執行驗證。</span><span class="sxs-lookup"><span data-stu-id="32c48-119">Azure AD has AD DS perform the authentication.</span></span>
+  <span data-ttu-id="be9a1-120">Azure AD 具有 AD DS 執行驗證。</span><span class="sxs-lookup"><span data-stu-id="be9a1-120">Azure AD has AD DS perform the authentication.</span></span>
 
 
-#### <a name="password-hash-synchronization"></a><span data-ttu-id="32c48-120">密碼雜湊同步處理</span><span class="sxs-lookup"><span data-stu-id="32c48-120">Password hash synchronization</span></span>
+#### <a name="password-hash-synchronization"></a><span data-ttu-id="be9a1-121">密碼雜湊同步處理</span><span class="sxs-lookup"><span data-stu-id="be9a1-121">Password hash synchronization</span></span>
 
-<span data-ttu-id="32c48-121">使用密碼雜湊同步處理 (PHS)，您可以與 Office 365 同步處理 AD DS 使用者帳戶及管理您內部使用者。</span><span class="sxs-lookup"><span data-stu-id="32c48-121">With password hash synchronization (PHS), you synchronize your AD DS user accounts with Office 365 and manage your users on-premises.</span></span> <span data-ttu-id="32c48-122">使用者密碼雜湊同步處理從 AD DS 到 Azure AD 如此，使用者擁有相同的密碼與內部及雲端中。</span><span class="sxs-lookup"><span data-stu-id="32c48-122">Hashes of user passwords are synchronized from your AD DS to Azure AD so that the users have the same password on-premises and in the cloud.</span></span> <span data-ttu-id="32c48-123">這是最簡單的方式，以啟用 Azure AD 中的 AD DS 身分識別驗證。</span><span class="sxs-lookup"><span data-stu-id="32c48-123">This is the simplest way to enable authentication for AD DS identities in Azure AD.</span></span> 
+<span data-ttu-id="be9a1-122">透過密碼雜湊同步處理（PHS），您可以將 AD DS 使用者帳戶與 Office 365 同步處理，並管理內部部署的使用者。</span><span class="sxs-lookup"><span data-stu-id="be9a1-122">With password hash synchronization (PHS), you synchronize your AD DS user accounts with Office 365 and manage your users on-premises.</span></span> <span data-ttu-id="be9a1-123">使用者密碼的雜湊會從您的 AD DS 同步處理到 Azure AD，讓使用者在內部部署和雲端都有相同的密碼。</span><span class="sxs-lookup"><span data-stu-id="be9a1-123">Hashes of user passwords are synchronized from your AD DS to Azure AD so that the users have the same password on-premises and in the cloud.</span></span> <span data-ttu-id="be9a1-124">這是在 Azure AD 中啟用 AD DS 身分識別驗證的最簡單方式。</span><span class="sxs-lookup"><span data-stu-id="be9a1-124">This is the simplest way to enable authentication for AD DS identities in Azure AD.</span></span> 
 
-![](./media/plan-for-directory-synchronization/phs-authentication.png)
+![密碼雜湊同步處理（PHS）](./media/plan-for-directory-synchronization/phs-authentication.png)
 
-<span data-ttu-id="32c48-124">當密碼已變更，或重設為內部時，新的密碼雜湊同步處理到 Azure AD，讓您的使用者一定可以使用相同的密碼雲端資源和內部部署資源。</span><span class="sxs-lookup"><span data-stu-id="32c48-124">When passwords are changed or reset on-premises, the new password hashes are synchronized to Azure AD so that your users can always use the same password for cloud resources and on-premises resources.</span></span> <span data-ttu-id="32c48-125">使用者密碼永遠不會傳送到 Azure AD 或儲存在 Azure AD 以純文字。</span><span class="sxs-lookup"><span data-stu-id="32c48-125">The user passwords are never sent to Azure AD or stored in Azure AD in clear text.</span></span> <span data-ttu-id="32c48-126">Azure AD，例如 Identity Protection 的部分進階功能需要的 PHS 不論其選取驗證方法。</span><span class="sxs-lookup"><span data-stu-id="32c48-126">Some premium features of Azure AD, such as Identity Protection, require PHS regardless of which authentication method is selected.</span></span>
+<span data-ttu-id="be9a1-126">當密碼變更或重設為內部部署時，新的密碼雜湊會同步處理至 Azure AD，這樣您的使用者就可以在雲端資源和內部部署資源中永遠使用相同的密碼。</span><span class="sxs-lookup"><span data-stu-id="be9a1-126">When passwords are changed or reset on-premises, the new password hashes are synchronized to Azure AD so that your users can always use the same password for cloud resources and on-premises resources.</span></span> <span data-ttu-id="be9a1-127">使用者密碼永遠不會以明文形式傳送至 Azure AD 或儲存在 Azure AD 中。</span><span class="sxs-lookup"><span data-stu-id="be9a1-127">The user passwords are never sent to Azure AD or stored in Azure AD in clear text.</span></span> <span data-ttu-id="be9a1-128">不論選取哪一種驗證方法，Azure AD 的某些精品功能（例如身分識別保護）都需要 PHS。</span><span class="sxs-lookup"><span data-stu-id="be9a1-128">Some premium features of Azure AD, such as Identity Protection, require PHS regardless of which authentication method is selected.</span></span>
   
-<span data-ttu-id="32c48-127">請參閱 <<c0>選擇 PHS了解更多。</span><span class="sxs-lookup"><span data-stu-id="32c48-127">See [choosing PHS](https://docs.microsoft.com/azure/security/azure-ad-choose-authn) to learn more.</span></span>
+<span data-ttu-id="be9a1-129">請參閱[選擇 PHS](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn)以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="be9a1-129">See [choosing PHS](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn) to learn more.</span></span>
   
-#### <a name="pass-through-authentication"></a><span data-ttu-id="32c48-128">傳遞驗證</span><span class="sxs-lookup"><span data-stu-id="32c48-128">Pass-through authentication</span></span>
+#### <a name="pass-through-authentication"></a><span data-ttu-id="be9a1-130">傳遞驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-130">Pass-through authentication</span></span>
 
-<span data-ttu-id="32c48-129">通過驗證 (PTA) 提供用來驗證使用者直接與您的 AD DS 的一或多個內部部署伺服器上執行的軟體代理程式的 Azure AD 驗證服務的簡單密碼驗證。</span><span class="sxs-lookup"><span data-stu-id="32c48-129">Pass-through authentication (PTA) provides a simple password validation for Azure AD authentication services using a software agent running on one or more on-premises servers to validate the users directly with your AD DS.</span></span> <span data-ttu-id="32c48-130">使用傳遞驗證 (PTA)，您可以與 Office 365 同步處理 AD DS 使用者帳戶及管理您內部使用者。</span><span class="sxs-lookup"><span data-stu-id="32c48-130">With pass-through authentication (PTA), you synchronize AD DS user accounts with Office 365 and manage your users on-premises.</span></span> 
+<span data-ttu-id="be9a1-131">傳遞驗證（PTA）會使用一或多個內部部署伺服器上執行的軟體代理程式，為 Azure AD 驗證服務提供簡單的密碼驗證，以直接使用您的 AD DS 驗證使用者。</span><span class="sxs-lookup"><span data-stu-id="be9a1-131">Pass-through authentication (PTA) provides a simple password validation for Azure AD authentication services using a software agent running on one or more on-premises servers to validate the users directly with your AD DS.</span></span> <span data-ttu-id="be9a1-132">透過傳遞驗證（PTA），您可以同步處理 AD DS 使用者帳戶與 Office 365，並管理內部部署使用者。</span><span class="sxs-lookup"><span data-stu-id="be9a1-132">With pass-through authentication (PTA), you synchronize AD DS user accounts with Office 365 and manage your users on-premises.</span></span> 
 
-![](./media/plan-for-directory-synchronization/pta-authentication.png)
+![傳遞驗證 (PTA)](./media/plan-for-directory-synchronization/pta-authentication.png)
 
-<span data-ttu-id="32c48-131">PTA 可讓您的使用者登入內部部署和 Office 365 資源並使用其內部部署帳戶和密碼的應用程式。</span><span class="sxs-lookup"><span data-stu-id="32c48-131">PTA allows your users to sign in to both on-premises and Office 365 resources and applications using their on-premises account and password.</span></span> <span data-ttu-id="32c48-132">此組態會驗證使用者密碼，直接對您內部部署 AD DS，而不儲存在 Azure AD 中的密碼雜湊。</span><span class="sxs-lookup"><span data-stu-id="32c48-132">This configuration validates users passwords directly against your on-premises AD DS without storing password hashes in Azure AD.</span></span> 
+<span data-ttu-id="be9a1-134">PTA 可讓您的使用者使用內部部署帳戶和密碼，登入內部部署和 Office 365 資源和應用程式。</span><span class="sxs-lookup"><span data-stu-id="be9a1-134">PTA allows your users to sign in to both on-premises and Office 365 resources and applications using their on-premises account and password.</span></span> <span data-ttu-id="be9a1-135">此設定會直接驗證使用者密碼與您的內部部署 AD DS，而不會在 Azure AD 中儲存密碼雜湊。</span><span class="sxs-lookup"><span data-stu-id="be9a1-135">This configuration validates users passwords directly against your on-premises AD DS without storing password hashes in Azure AD.</span></span> 
 
-<span data-ttu-id="32c48-133">PTA 也適用於組織的安全性需求來立即強制執行內部部署使用者帳戶狀態、 密碼原則和登入時間。</span><span class="sxs-lookup"><span data-stu-id="32c48-133">PTA is also for organizations with a security requirement to immediately enforce on-premises user account states, password policies, and logon hours.</span></span> 
+<span data-ttu-id="be9a1-136">PTA 也適用于具有安全性需求的組織，以立即強制執行內部部署使用者帳戶狀態、密碼原則和登入時間。</span><span class="sxs-lookup"><span data-stu-id="be9a1-136">PTA is also for organizations with a security requirement to immediately enforce on-premises user account states, password policies, and logon hours.</span></span> 
   
-<span data-ttu-id="32c48-134">請參閱 <<c0>選擇 PTA了解更多。</span><span class="sxs-lookup"><span data-stu-id="32c48-134">See [choosing PTA](https://docs.microsoft.com/azure/security/azure-ad-choose-authn) to learn more.</span></span>
+<span data-ttu-id="be9a1-137">請參閱[選擇 PTA](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn)以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="be9a1-137">See [choosing PTA](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn) to learn more.</span></span>
   
-### <a name="federated-authentication"></a><span data-ttu-id="32c48-135">同盟的驗證</span><span class="sxs-lookup"><span data-stu-id="32c48-135">Federated authentication</span></span>
+### <a name="federated-authentication"></a><span data-ttu-id="be9a1-138">同盟驗證</span><span class="sxs-lookup"><span data-stu-id="be9a1-138">Federated authentication</span></span>
 
-<span data-ttu-id="32c48-136">同盟的驗證是主要使用於大型企業組織更複雜的驗證需求。</span><span class="sxs-lookup"><span data-stu-id="32c48-136">Federated authentication is primarily for large enterprise organizations with more complex authentication requirements.</span></span> <span data-ttu-id="32c48-137">使用 Office 365 同步處理 AD DS 身分識別和使用者帳戶為受管理的內部部署。</span><span class="sxs-lookup"><span data-stu-id="32c48-137">AD DS identities are synchronized with Office 365 and users accounts are managed on-premises.</span></span> <span data-ttu-id="32c48-138">利用同盟驗證，使用者有相同的密碼與內部及雲端中並不需要再次登入才能使用 Office 365。</span><span class="sxs-lookup"><span data-stu-id="32c48-138">With federated authentication, users have the same password on-premises and in the cloud and they do not have to sign in again to use Office 365.</span></span> 
+<span data-ttu-id="be9a1-139">同盟驗證主要針對大型企業組織，其驗證需求較複雜。</span><span class="sxs-lookup"><span data-stu-id="be9a1-139">Federated authentication is primarily for large enterprise organizations with more complex authentication requirements.</span></span> <span data-ttu-id="be9a1-140">AD DS 身分識別與 Office 365 同步處理，而且使用者帳戶是在內部部署管理。</span><span class="sxs-lookup"><span data-stu-id="be9a1-140">AD DS identities are synchronized with Office 365 and users accounts are managed on-premises.</span></span> <span data-ttu-id="be9a1-141">透過同盟驗證，使用者在內部部署和雲端都有相同的密碼，而且不需要再次登入即可使用 Office 365。</span><span class="sxs-lookup"><span data-stu-id="be9a1-141">With federated authentication, users have the same password on-premises and in the cloud and they do not have to sign in again to use Office 365.</span></span> 
 
-<span data-ttu-id="32c48-139">同盟的驗證可支援其他驗證需求，例如智慧卡型驗證或協力廠商的多重要素驗證時，則通常需要組織尚未驗證需求原生支援 Azure AD。</span><span class="sxs-lookup"><span data-stu-id="32c48-139">Federated authentication can support additional authentication requirements, such as smartcard-based authentication or a third-party multi-factor authentication and is typically required when organizations have an authentication requirement not natively supported by Azure AD.</span></span>
+<span data-ttu-id="be9a1-142">同盟驗證可支援其他驗證需求，例如智慧卡型驗證或協力廠商的多重要素驗證，而且在組織具備 Azure AD 本身不支援的驗證需求時，通常需要使用。</span><span class="sxs-lookup"><span data-stu-id="be9a1-142">Federated authentication can support additional authentication requirements, such as smartcard-based authentication or a third-party multi-factor authentication and is typically required when organizations have an authentication requirement not natively supported by Azure AD.</span></span>
  
-<span data-ttu-id="32c48-140">請參閱 < 若要了解更多的 [<b0>選擇同盟的驗證</b0>。</span><span class="sxs-lookup"><span data-stu-id="32c48-140">See [choosing federated authentication](https://docs.microsoft.com/azure/security/azure-ad-choose-authn) to learn more.</span></span>
+<span data-ttu-id="be9a1-143">請參閱[選擇同盟驗證](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn)以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="be9a1-143">See [choosing federated authentication](https://docs.microsoft.com/azure/active-directory/hybrid/choose-ad-authn) to learn more.</span></span>
   
-#### <a name="third-party-authentication-and-identity-providers"></a><span data-ttu-id="32c48-141">協力廠商驗證與身分識別提供者</span><span class="sxs-lookup"><span data-stu-id="32c48-141">Third-party authentication and identity providers</span></span>
+#### <a name="third-party-authentication-and-identity-providers"></a><span data-ttu-id="be9a1-144">協力廠商驗證和身分識別提供者</span><span class="sxs-lookup"><span data-stu-id="be9a1-144">Third-party authentication and identity providers</span></span>
 
-<span data-ttu-id="32c48-142">內部部署目錄物件可能會同步至 Office 365 和雲端資源存取主要是由協力廠商身分識別提供者 (Isp)。</span><span class="sxs-lookup"><span data-stu-id="32c48-142">On-premises directory objects may be synchronized to Office 365 and cloud resource access is primarily managed by a third-party identity provider (IdP).</span></span> <span data-ttu-id="32c48-143">如果您的組織使用同盟協力廠商解決方案，您可以設定登入與該解決方案搭配運作的 Office 365 提供協力廠商同盟解決方案會與 Azure AD 相容。</span><span class="sxs-lookup"><span data-stu-id="32c48-143">If your organization uses a third-party federation solution, you can configure sign-on with that solution for Office 365 provided that the third-party federation solution is compatible with Azure AD.</span></span>
+<span data-ttu-id="be9a1-145">內部部署目錄物件可能會同步處理至 Office 365，而雲端資源存取主要是由協力廠商身分識別提供者（IdP）來管理。</span><span class="sxs-lookup"><span data-stu-id="be9a1-145">On-premises directory objects may be synchronized to Office 365 and cloud resource access is primarily managed by a third-party identity provider (IdP).</span></span> <span data-ttu-id="be9a1-146">如果您的組織使用協力廠商同盟解決方案，只要協力廠商同盟解決方案與 Azure AD 相容，您就可以使用 Office 365 的解決方案來設定登錄。</span><span class="sxs-lookup"><span data-stu-id="be9a1-146">If your organization uses a third-party federation solution, you can configure sign-on with that solution for Office 365 provided that the third-party federation solution is compatible with Azure AD.</span></span>
   
-<span data-ttu-id="32c48-144">若要了解更多的[Azure AD 同盟相容性](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility)，請參閱。</span><span class="sxs-lookup"><span data-stu-id="32c48-144">See [Azure AD federation compatibility](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility) to learn more.</span></span>
+<span data-ttu-id="be9a1-147">請參閱[AZURE AD federation 相容性](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility)以深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="be9a1-147">See [Azure AD federation compatibility](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility) to learn more.</span></span>
   
-## <a name="ad-ds-cleanup"></a><span data-ttu-id="32c48-145">AD DS 清理</span><span class="sxs-lookup"><span data-stu-id="32c48-145">AD DS Cleanup</span></span>
+## <a name="ad-ds-cleanup"></a><span data-ttu-id="be9a1-148">AD DS 清理</span><span class="sxs-lookup"><span data-stu-id="be9a1-148">AD DS Cleanup</span></span>
 
-<span data-ttu-id="32c48-146">為了協助確保順暢地轉換到 Office 365 使用同步處理，您必須在 Office 365 目錄同步處理部署之前準備您的 AD DS 樹系。</span><span class="sxs-lookup"><span data-stu-id="32c48-146">To help ensure a seamless transition to Office 365 by using synchronization, you must prepare your AD DS forest before you begin your Office 365 directory synchronization deployment.</span></span>
+<span data-ttu-id="be9a1-149">為了協助確保使用同步處理順利轉換至 Office 365，您必須先準備您的 AD DS 樹系，再開始 Office 365 目錄同步部署。</span><span class="sxs-lookup"><span data-stu-id="be9a1-149">To help ensure a seamless transition to Office 365 by using synchronization, you must prepare your AD DS forest before you begin your Office 365 directory synchronization deployment.</span></span>
   
-<span data-ttu-id="32c48-147">當您[設定 Office 365 中的目錄同步處理](set-up-directory-synchronization.md)，其中一個步驟是[下載並執行 IdFix 工具](install-and-run-idfix.md)。</span><span class="sxs-lookup"><span data-stu-id="32c48-147">When you [set up directory synchronization in Office 365](set-up-directory-synchronization.md), one of the steps is to [download and run the IdFix tool](install-and-run-idfix.md).</span></span> <span data-ttu-id="32c48-148">您可以使用 IdFix 工具以協助進行[目錄清理](prepare-directory-attributes-for-synch-with-idfix.md)。</span><span class="sxs-lookup"><span data-stu-id="32c48-148">You can use the IdFix tool to help with [directory cleanup](prepare-directory-attributes-for-synch-with-idfix.md).</span></span>
+<span data-ttu-id="be9a1-150">當您[在 Office 365 中設定目錄同步](set-up-directory-synchronization.md)處理時，其中一個步驟就是[下載並執行 IdFix 工具](install-and-run-idfix.md)。</span><span class="sxs-lookup"><span data-stu-id="be9a1-150">When you [set up directory synchronization in Office 365](set-up-directory-synchronization.md), one of the steps is to [download and run the IdFix tool](install-and-run-idfix.md).</span></span> <span data-ttu-id="be9a1-151">您可以使用 IdFix 工具來協助[清理目錄](prepare-directory-attributes-for-synch-with-idfix.md)。</span><span class="sxs-lookup"><span data-stu-id="be9a1-151">You can use the IdFix tool to help with [directory cleanup](prepare-directory-attributes-for-synch-with-idfix.md).</span></span>
   
-<span data-ttu-id="32c48-149">目錄清理應該要著重於下列工作：</span><span class="sxs-lookup"><span data-stu-id="32c48-149">Your directory cleanup should focus on the following tasks:</span></span>
+<span data-ttu-id="be9a1-152">您的目錄清理應著重于下列任務：</span><span class="sxs-lookup"><span data-stu-id="be9a1-152">Your directory cleanup should focus on the following tasks:</span></span>
 
-- <span data-ttu-id="32c48-150">移除重複的**proxyAddress**和**userPrincipalName**屬性。</span><span class="sxs-lookup"><span data-stu-id="32c48-150">Remove duplicate **proxyAddress** and **userPrincipalName** attributes.</span></span>
-- <span data-ttu-id="32c48-151">使用有效的**userPrincipalName**屬性更新空白及無效的**userPrincipalName**屬性。</span><span class="sxs-lookup"><span data-stu-id="32c48-151">Update blank and invalid **userPrincipalName** attributes with valid **userPrincipalName** attributes.</span></span>
-- <span data-ttu-id="32c48-152">**GivenName**、 姓氏 ( **sn** )、 **sAMAccountName**、 **displayName**、**郵件**、 **proxyAddresses**、 **mailNickname**和**userPrincipalName**中移除無效，且有疑問的字元屬性。</span><span class="sxs-lookup"><span data-stu-id="32c48-152">Remove invalid and questionable characters in the **givenName**, surname ( **sn** ), **sAMAccountName**, **displayName**, **mail**, **proxyAddresses**, **mailNickname**, and **userPrincipalName** attributes.</span></span> <span data-ttu-id="32c48-153">如需準備屬性的詳細資訊，請參閱 <<c0>清單的屬性，會同步處理的 Azure Active Directory 同步作業工具。</span><span class="sxs-lookup"><span data-stu-id="32c48-153">For details about preparing attributes, see [List of attributes that are synced by the Azure Active Directory Sync Tool](https://go.microsoft.com/fwlink/p/?LinkId=396719).</span></span>
+- <span data-ttu-id="be9a1-153">移除重複的**proxyAddress**和**userPrincipalName**屬性。</span><span class="sxs-lookup"><span data-stu-id="be9a1-153">Remove duplicate **proxyAddress** and **userPrincipalName** attributes.</span></span>
+- <span data-ttu-id="be9a1-154">使用有效的**userPrincipalName**屬性，更新空白及不正確**userPrincipalName**屬性。</span><span class="sxs-lookup"><span data-stu-id="be9a1-154">Update blank and invalid **userPrincipalName** attributes with valid **userPrincipalName** attributes.</span></span>
+- <span data-ttu-id="be9a1-155">移除**givenName**、姓（ **sn** ）、 **sAMAccountName**、 **displayName**、 **mail**、 **proxyAddresses**、 **mailNickname**及**userPrincipalName**屬性中的無效且可疑的字元。</span><span class="sxs-lookup"><span data-stu-id="be9a1-155">Remove invalid and questionable characters in the **givenName**, surname ( **sn** ), **sAMAccountName**, **displayName**, **mail**, **proxyAddresses**, **mailNickname**, and **userPrincipalName** attributes.</span></span> <span data-ttu-id="be9a1-156">如需準備屬性的詳細資訊，請參閱[由 Azure Active Directory 同步處理工具同步處理的屬性清單](https://go.microsoft.com/fwlink/p/?LinkId=396719)。</span><span class="sxs-lookup"><span data-stu-id="be9a1-156">For details about preparing attributes, see [List of attributes that are synced by the Azure Active Directory Sync Tool](https://go.microsoft.com/fwlink/p/?LinkId=396719).</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="32c48-154">這些都是相同 Azure AD Connect 同步處理的屬性。</span><span class="sxs-lookup"><span data-stu-id="32c48-154">These are the same attributes that Azure AD Connect synchronizes.</span></span> 
+    > <span data-ttu-id="be9a1-157">這些是 Azure AD Connect 同步處理的相同屬性。</span><span class="sxs-lookup"><span data-stu-id="be9a1-157">These are the same attributes that Azure AD Connect synchronizes.</span></span> 
   
-## <a name="multi-forest-deployment-considerations"></a><span data-ttu-id="32c48-155">多樹系部署考量</span><span class="sxs-lookup"><span data-stu-id="32c48-155">Multi-forest deployment considerations</span></span>
+## <a name="multi-forest-deployment-considerations"></a><span data-ttu-id="be9a1-158">多樹系部署的考慮</span><span class="sxs-lookup"><span data-stu-id="be9a1-158">Multi-forest deployment considerations</span></span>
 
-<span data-ttu-id="32c48-156">針對多個樹系與 SSO 選項，使用[自訂安裝的 Azure AD Connect](https://go.microsoft.com/fwlink/p/?LinkId=698430)。</span><span class="sxs-lookup"><span data-stu-id="32c48-156">For multiple forests and SSO options, use [Custom Installation of Azure AD Connect](https://go.microsoft.com/fwlink/p/?LinkId=698430).</span></span>
+<span data-ttu-id="be9a1-159">若為多個樹系和 SSO 選項，請使用[自訂的 AZURE AD Connect 安裝](https://go.microsoft.com/fwlink/p/?LinkId=698430)。</span><span class="sxs-lookup"><span data-stu-id="be9a1-159">For multiple forests and SSO options, use [Custom Installation of Azure AD Connect](https://go.microsoft.com/fwlink/p/?LinkId=698430).</span></span>
   
-<span data-ttu-id="32c48-157">如果您的組織有多個樹系進行驗證 （登入樹系），我們強烈建議如下：</span><span class="sxs-lookup"><span data-stu-id="32c48-157">If your organization has multiple forests for authentication (logon forests), we highly recommend the following:</span></span>
+<span data-ttu-id="be9a1-160">如果您的組織有多個樹系用於驗證（登入樹系），我們強烈建議下列事項：</span><span class="sxs-lookup"><span data-stu-id="be9a1-160">If your organization has multiple forests for authentication (logon forests), we highly recommend the following:</span></span>
   
-- <span data-ttu-id="32c48-158">**請考慮將合併在樹系。**</span><span class="sxs-lookup"><span data-stu-id="32c48-158">**Consider consolidating your forests.**</span></span> <span data-ttu-id="32c48-159">一般而言，沒有更多維護多個樹系所需的額外負荷。</span><span class="sxs-lookup"><span data-stu-id="32c48-159">In general, there's more overhead required to maintain multiple forests.</span></span> <span data-ttu-id="32c48-160">除非您的組織有安全性限制，指示不同樹系的需求，否則請簡化您的內部部署環境。</span><span class="sxs-lookup"><span data-stu-id="32c48-160">Unless your organization has security constraints that dictate the need for separate forests, consider simplifying your on-premises environment.</span></span>
-- <span data-ttu-id="32c48-161">**只有在您的主要登入樹系中使用。**</span><span class="sxs-lookup"><span data-stu-id="32c48-161">**Use only in your primary logon forest.**</span></span> <span data-ttu-id="32c48-162">請考慮部署只能在您的 Office 365 在首度發行的主要登入樹系中的 Office 365。</span><span class="sxs-lookup"><span data-stu-id="32c48-162">Consider deploying Office 365 only in your primary logon forest for your initial rollout of Office 365.</span></span> 
+- <span data-ttu-id="be9a1-161">**請考慮合併您的樹系。**</span><span class="sxs-lookup"><span data-stu-id="be9a1-161">**Consider consolidating your forests.**</span></span> <span data-ttu-id="be9a1-162">一般說來，維護多個樹系需要額外的額外負荷。</span><span class="sxs-lookup"><span data-stu-id="be9a1-162">In general, there's more overhead required to maintain multiple forests.</span></span> <span data-ttu-id="be9a1-163">除非您的組織有規定個別樹系需求的安全性限制，否則請考慮簡化您的內部部署環境。</span><span class="sxs-lookup"><span data-stu-id="be9a1-163">Unless your organization has security constraints that dictate the need for separate forests, consider simplifying your on-premises environment.</span></span>
+- <span data-ttu-id="be9a1-164">**僅在您的主要登入樹系中使用。**</span><span class="sxs-lookup"><span data-stu-id="be9a1-164">**Use only in your primary logon forest.**</span></span> <span data-ttu-id="be9a1-165">請考慮在您的主要登入樹系中部署 Office 365，以進行 Office 365 的初始部署。</span><span class="sxs-lookup"><span data-stu-id="be9a1-165">Consider deploying Office 365 only in your primary logon forest for your initial rollout of Office 365.</span></span> 
 
-<span data-ttu-id="32c48-163">如果您無法合併您多樹系的 AD DS 部署，或使用其他目錄服務管理身分識別，您可能無法同步處理這些 Microsoft 或合作夥伴的協助。</span><span class="sxs-lookup"><span data-stu-id="32c48-163">If you can't consolidate your multi-forest AD DS deployment or are using other directory services to manage identities, you may be able to synchronize these with the help of Microsoft or a partner.</span></span>
+<span data-ttu-id="be9a1-166">如果您無法合併多樹系 AD DS 部署，或正在使用其他目錄服務來管理身分識別，您可以使用 Microsoft 或協力廠商的說明同步處理這些身分識別。</span><span class="sxs-lookup"><span data-stu-id="be9a1-166">If you can't consolidate your multi-forest AD DS deployment or are using other directory services to manage identities, you may be able to synchronize these with the help of Microsoft or a partner.</span></span>
   
-<span data-ttu-id="32c48-164">如需詳細資訊，請參閱[使用單一登入案例的多樹系目錄同步](https://go.microsoft.com/fwlink/p/?LinkId=525321)。</span><span class="sxs-lookup"><span data-stu-id="32c48-164">See [Multi-forest Directory Sync with Single Sign-On Scenario](https://go.microsoft.com/fwlink/p/?LinkId=525321) for more information.</span></span>
+<span data-ttu-id="be9a1-167">如需詳細資訊，請參閱[多樹系目錄同步處理單一 Sign-On 案例](https://go.microsoft.com/fwlink/p/?LinkId=525321)。</span><span class="sxs-lookup"><span data-stu-id="be9a1-167">See [Multi-forest Directory Sync with Single Sign-On Scenario](https://go.microsoft.com/fwlink/p/?LinkId=525321) for more information.</span></span>
   
-## <a name="features-that-are-dependent-on-directory-synchronization"></a><span data-ttu-id="32c48-165">取決於目錄同步作業的功能</span><span class="sxs-lookup"><span data-stu-id="32c48-165">Features that are dependent on directory synchronization</span></span>
+## <a name="features-that-are-dependent-on-directory-synchronization"></a><span data-ttu-id="be9a1-168">依存于目錄同步處理的功能</span><span class="sxs-lookup"><span data-stu-id="be9a1-168">Features that are dependent on directory synchronization</span></span>
   
-<span data-ttu-id="32c48-166">目錄同步作業所需的下列特性與功能：</span><span class="sxs-lookup"><span data-stu-id="32c48-166">Directory synchronization is required for the following features and functionality:</span></span>
+<span data-ttu-id="be9a1-169">下列功能需要目錄同步處理：</span><span class="sxs-lookup"><span data-stu-id="be9a1-169">Directory synchronization is required for the following features and functionality:</span></span>
   
-- <span data-ttu-id="32c48-167">Azure AD 無縫單一登入 (SSO)</span><span class="sxs-lookup"><span data-stu-id="32c48-167">Azure AD Seamless Single Sign-On (SSO)</span></span>
-- <span data-ttu-id="32c48-168">Skype 共存</span><span class="sxs-lookup"><span data-stu-id="32c48-168">Skype coexistence</span></span>
-- <span data-ttu-id="32c48-169">Exchange 混合式部署，包括：</span><span class="sxs-lookup"><span data-stu-id="32c48-169">Exchange hybrid deployment, including:</span></span>
-  - <span data-ttu-id="32c48-170">您在內部部署 Exchange 環境與 Office 365 之間的完全共用全域通訊清單 (GAL)。</span><span class="sxs-lookup"><span data-stu-id="32c48-170">Fully shared global address list (GAL) between your on-premises Exchange environment and Office 365.</span></span>
-  - <span data-ttu-id="32c48-171">從不同的郵件系統的同步處理 GAL 資訊。</span><span class="sxs-lookup"><span data-stu-id="32c48-171">Synchronizing GAL information from different mail systems.</span></span>
-  - <span data-ttu-id="32c48-172">將使用者加入及移除使用者從 Office 365 服務方案的能力。</span><span class="sxs-lookup"><span data-stu-id="32c48-172">The ability to add users to and remove users from Office 365 service offerings.</span></span> <span data-ttu-id="32c48-173">這需要下列項目：</span><span class="sxs-lookup"><span data-stu-id="32c48-173">This requires the following:</span></span>
-  - <span data-ttu-id="32c48-174">目錄同步處理安裝期間，必須設定雙向同步處理。</span><span class="sxs-lookup"><span data-stu-id="32c48-174">Two-way synchronization must be configured during directory synchronization setup.</span></span> <span data-ttu-id="32c48-175">根據預設，目錄同步處理工具的目錄資訊寫入僅雲端。</span><span class="sxs-lookup"><span data-stu-id="32c48-175">By default, directory synchronization tools write directory information only to the cloud.</span></span> <span data-ttu-id="32c48-176">當您設定雙向同步處理時，以便有限的數量的物件的屬性會複製從雲端，並覆寫這些回本機的 AD DS 啟用回寫功能。</span><span class="sxs-lookup"><span data-stu-id="32c48-176">When you configure two-way synchronization, you enable write-back functionality so that a limited number of object attributes are copied from the cloud, and then written them back to your local AD DS.</span></span> <span data-ttu-id="32c48-177">回寫也稱為 Exchange 混合式模式。</span><span class="sxs-lookup"><span data-stu-id="32c48-177">Write-back is also referred to as Exchange hybrid mode.</span></span> 
-  - <span data-ttu-id="32c48-178">內部部署 Exchange 混合式部署</span><span class="sxs-lookup"><span data-stu-id="32c48-178">An on-premises Exchange hybrid deployment</span></span>
-  - <span data-ttu-id="32c48-179">在保留其他使用者信箱在內部將部分使用者信箱移至 Office 365 功能。</span><span class="sxs-lookup"><span data-stu-id="32c48-179">The ability to move some user mailboxes to Office 365 while keeping other user mailboxes on-premises.</span></span>
-  - <span data-ttu-id="32c48-180">安全的寄件者和封鎖寄件者的內部會複寫至 Office 365。</span><span class="sxs-lookup"><span data-stu-id="32c48-180">Safe senders and blocked senders on-premises are replicated to Office 365.</span></span>
-  - <span data-ttu-id="32c48-181">基本委派及代理傳送的電子郵件功能。</span><span class="sxs-lookup"><span data-stu-id="32c48-181">Basic delegation and send-on-behalf-of email functionality.</span></span>
-  - <span data-ttu-id="32c48-182">您有內部整合式的智慧卡或多重要素驗證方案。</span><span class="sxs-lookup"><span data-stu-id="32c48-182">You have an integrated on-premises smart card or multi-factor authentication solution.</span></span>
-- <span data-ttu-id="32c48-183">相片、 縮圖、 會議室及安全性群組同步處理</span><span class="sxs-lookup"><span data-stu-id="32c48-183">Synchronization of photos, thumbnails, conference rooms, and security groups</span></span>
+- <span data-ttu-id="be9a1-170">Azure AD 無縫單一 Sign-On （SSO）</span><span class="sxs-lookup"><span data-stu-id="be9a1-170">Azure AD Seamless Single Sign-On (SSO)</span></span>
+- <span data-ttu-id="be9a1-171">Skype 共存</span><span class="sxs-lookup"><span data-stu-id="be9a1-171">Skype coexistence</span></span>
+- <span data-ttu-id="be9a1-172">Exchange 混合式部署，包括：</span><span class="sxs-lookup"><span data-stu-id="be9a1-172">Exchange hybrid deployment, including:</span></span>
+  - <span data-ttu-id="be9a1-173">您的內部部署 Exchange 環境與 Office 365 之間的完全共用全域通訊清單（GAL）。</span><span class="sxs-lookup"><span data-stu-id="be9a1-173">Fully shared global address list (GAL) between your on-premises Exchange environment and Office 365.</span></span>
+  - <span data-ttu-id="be9a1-174">同步處理來自不同郵件系統的 GAL 資訊。</span><span class="sxs-lookup"><span data-stu-id="be9a1-174">Synchronizing GAL information from different mail systems.</span></span>
+  - <span data-ttu-id="be9a1-175">在 Office 365 服務產品中新增及移除使用者的功能。</span><span class="sxs-lookup"><span data-stu-id="be9a1-175">The ability to add users to and remove users from Office 365 service offerings.</span></span> <span data-ttu-id="be9a1-176">這需要下列各項：</span><span class="sxs-lookup"><span data-stu-id="be9a1-176">This requires the following:</span></span>
+  - <span data-ttu-id="be9a1-177">在目錄同步處理設定期間，必須設定雙向同步處理。</span><span class="sxs-lookup"><span data-stu-id="be9a1-177">Two-way synchronization must be configured during directory synchronization setup.</span></span> <span data-ttu-id="be9a1-178">根據預設，目錄同步處理工具只會將目錄資訊寫入雲端。</span><span class="sxs-lookup"><span data-stu-id="be9a1-178">By default, directory synchronization tools write directory information only to the cloud.</span></span> <span data-ttu-id="be9a1-179">當您設定雙向同步處理時，您可以啟用寫回功能，使有限數目的物件屬性從雲端複製，然後再將其寫入您的本機 AD DS。</span><span class="sxs-lookup"><span data-stu-id="be9a1-179">When you configure two-way synchronization, you enable write-back functionality so that a limited number of object attributes are copied from the cloud, and then written them back to your local AD DS.</span></span> <span data-ttu-id="be9a1-180">回寫也稱為 Exchange 混合模式。</span><span class="sxs-lookup"><span data-stu-id="be9a1-180">Write-back is also referred to as Exchange hybrid mode.</span></span> 
+  - <span data-ttu-id="be9a1-181">內部部署 Exchange 混合式部署</span><span class="sxs-lookup"><span data-stu-id="be9a1-181">An on-premises Exchange hybrid deployment</span></span>
+  - <span data-ttu-id="be9a1-182">能夠將部分使用者信箱移至 Office 365，同時保留其他使用者信箱的內部部署。</span><span class="sxs-lookup"><span data-stu-id="be9a1-182">The ability to move some user mailboxes to Office 365 while keeping other user mailboxes on-premises.</span></span>
+  - <span data-ttu-id="be9a1-183">安全寄件者和封鎖的寄件者內部部署會複製到 Office 365。</span><span class="sxs-lookup"><span data-stu-id="be9a1-183">Safe senders and blocked senders on-premises are replicated to Office 365.</span></span>
+  - <span data-ttu-id="be9a1-184">基本委派和代理傳送電子郵件功能。</span><span class="sxs-lookup"><span data-stu-id="be9a1-184">Basic delegation and send-on-behalf-of email functionality.</span></span>
+  - <span data-ttu-id="be9a1-185">您有整合式內部部署智慧卡或多重要素驗證解決方案。</span><span class="sxs-lookup"><span data-stu-id="be9a1-185">You have an integrated on-premises smart card or multi-factor authentication solution.</span></span>
+- <span data-ttu-id="be9a1-186">同步處理相片、縮圖、會議室及安全性群組</span><span class="sxs-lookup"><span data-stu-id="be9a1-186">Synchronization of photos, thumbnails, conference rooms, and security groups</span></span>
 
-## <a name="next-step"></a><span data-ttu-id="32c48-184">下一步</span><span class="sxs-lookup"><span data-stu-id="32c48-184">Next step</span></span>
+## <a name="next-step"></a><span data-ttu-id="be9a1-187">下一步</span><span class="sxs-lookup"><span data-stu-id="be9a1-187">Next step</span></span>
 
-<span data-ttu-id="32c48-185">當您準備好要部署混合式身分識別時，請參閱 <<c0>準備佈建使用者。</span><span class="sxs-lookup"><span data-stu-id="32c48-185">When you are ready to deploy hybrid identity, see [prepare to provision users](prepare-for-directory-synchronization.md).</span></span>
+<span data-ttu-id="be9a1-188">當您準備好部署混合式身分識別時，請參閱[prepare to](prepare-for-directory-synchronization.md)布建使用者。</span><span class="sxs-lookup"><span data-stu-id="be9a1-188">When you are ready to deploy hybrid identity, see [prepare to provision users](prepare-for-directory-synchronization.md).</span></span>
   
+## <a name="see-also"></a><span data-ttu-id="be9a1-189">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be9a1-189">See also</span></span>
+
+[<span data-ttu-id="be9a1-190">Microsoft 365 企業版概觀</span><span class="sxs-lookup"><span data-stu-id="be9a1-190">Microsoft 365 Enterprise overview</span></span>](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)
 
