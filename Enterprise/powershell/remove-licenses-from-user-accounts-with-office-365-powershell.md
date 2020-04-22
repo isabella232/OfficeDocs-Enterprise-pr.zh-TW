@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 移除使用者帳戶中的授權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/17/2019
+ms.date: 04/20/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,13 +17,13 @@ ms.custom:
 - LIL_Placement
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
-description: 說明如何使用 Office 365 PowerShell 來移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: ce529221c18e5f094b9d45037e95b859eeaea5a0
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 說明如何使用 Office 365 PowerShell 移除先前指派給使用者的 Office 365 授權。
+ms.openlocfilehash: ea762e992056ac3265336055eabb860f67482093
+ms.sourcegitcommit: f2e640ffdbef95c6d98845f85fd9bea21a7388aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844184"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43580920"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -31,15 +31,15 @@ ms.locfileid: "41844184"
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
 
-接下來，列出您的租用戶使用此命令的授權計劃。
+接下來，使用此命令列出租使用者的授權計畫。
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-接下來，取得您想移除授權，也稱為使用者主體名稱 (UPN) 的帳戶登入名稱。
+接下來，取得您要移除授權的帳戶登入名稱，也稱為使用者主要名稱（UPN）。
 
-最後，指定使用者登入和授權計劃的名稱、 移除 「 < 」 及 「 > 」 字元，並執行下列命令。
+最後，指定使用者登入和授權方案名稱、移除「<」和「>」字元，然後執行這些命令。
 
 ```powershell
 $userUPN="<user sign-in name (UPN)>"
@@ -58,7 +58,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
    
-若要檢視您組織的授權方案 (**AccountSkuID** ) 資訊，請參閱下列主題：
+若要在您的組織中查看授權計畫（**AccountSkuID** ）資訊，請參閱下列主題：
     
   - [使用 Office 365 PowerShell 檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)
     
@@ -66,9 +66,9 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
     
 如果您使用 **Get-MsolUser** Cmdlet，而不使用 _-All_參數，則只會傳回前 500 個帳戶。
     
-### <a name="removing-licenses-from-user-accounts"></a>從使用者帳戶移除授權
+### <a name="removing-licenses-from-user-accounts"></a>移除使用者帳戶中的授權
 
-若要從現有的使用者帳戶移除授權，請使用下列語法：
+若要從現有的使用者帳戶中移除授權，請使用下列語法：
   
 ```powershell
 Set-MsolUserLicense -UserPrincipalName <Account> -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...
@@ -78,35 +78,35 @@ Set-MsolUserLicense -UserPrincipalName <Account> -RemoveLicenses "<AccountSkuId1
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
-此範例會移除使用者帳戶 BelindaN@litwareinc.com 的**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權。
+此範例會從使用者帳戶 BelindaN@litwareinc.com 中移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
   
 ```powershell
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "litwareinc:ENTERPRISEPACK"
 ```
 
 >[!Note]
->您無法使用`Set-MsolUserLicense`若要取消指派使用者*已取消*授權的指令程式。 您必須執行這項操作個別的 Microsoft 365 系統管理中心中每個使用者帳戶。
+>您無法使用`Set-MsolUserLicense` Cmdlet 將使用者取消指派為*取消*的授權。 您必須為 Microsoft 365 系統管理中心中的每個使用者帳戶個別執行此動作。
 >
 
-若要從現有的授權使用者的群組中移除授權，請使用下列方法之一：
+若要從現有的授權使用者群組中移除授權，請使用下列其中一種方法：
   
-- **篩選根據現有的帳戶屬性的帳戶**若要這麼做，請使用下列語法：
+- 根據**現有的帳戶屬性來篩選帳戶**若要這麼做，請使用下列語法：
     
 ```powershell
 $x = Get-MsolUser -All <FilterableAttributes> | where {$_.isLicensed -eq $true}
 $x | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...}
 ```
 
-此範例會在美國境內銷售部門中移除使用者從所有帳戶的**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權。
+本範例會從美國的銷售部門中的使用者所有帳戶中，移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
     
 ```powershell
 $USSales = Get-MsolUser -All -Department "Sales" -UsageLocation "US" | where {$_.isLicensed -eq $true}
 $USSales | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK"}
 ```
 
-- **使用特定帳戶清單**若要這麼做，請執行下列步驟：
+- **使用特定帳戶的清單**若要這麼做，請執行下列步驟：
     
-1. 建立並儲存文字檔，其中包含一個帳戶每一行上都像這樣：
+1. 在每一行上建立及儲存包含一個帳戶的文字檔，如下所示：
     
   ```powershell
 akol@contoso.com
@@ -120,31 +120,29 @@ kakers@contoso.com
   Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }
   ```
 
-此範例會移除 C:\My Documents\Accounts.txt 文字檔案中所定義的使用者帳戶的**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權。
+本範例會從 C:\My Documents\Accounts.txt. 的文字檔中所定義的使用者帳戶移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
     
   ```powershell
   Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "litwareinc:ENTERPRISEPACK" }
   ```
 
-若要從所有現有的使用者帳戶移除授權，請使用下列語法：
+若要從所有現有的使用者帳戶中移除所有授權，請使用下列語法：
   
 ```powershell
-$x = Get-MsolUser -All  | Where {$_.isLicensed -eq $true}
-$x | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...}
+$users = Get-MsolUser -All | where {$_.isLicensed -eq $true}
+ForEach($user in $users)
+{
+$licenses = $user.Licenses.AccountSkuId
+ForEach ($lic in $licenses)
+{ Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -RemoveLicenses $lic }
+}
 ```
 
-此範例會移除所有現有經授權的使用者帳戶的**litwareinc: enterprisepack** (Office 365 企業版 E3) 授權。
+若要釋放授權，另一種方法是刪除使用者帳戶。 如需詳細資訊，請參閱[使用 Office 365 PowerShell 刪除及還原使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)。
   
-```powershell
-$x = Get-MsolUser -All  | Where {$_.isLicensed -eq $true}
-$x | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK"}
-```
+## <a name="see-also"></a>請參閱
 
-釋出授權的另一個方法是藉由刪除的使用者帳戶。 如需詳細資訊，請參閱[刪除並還原與 Office 365 PowerShell 的使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)。
-  
-## <a name="see-also"></a>另請參閱
-
-[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

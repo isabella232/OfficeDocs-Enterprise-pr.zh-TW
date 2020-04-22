@@ -3,7 +3,7 @@ title: Microsoft 365 網路評估（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/31/2020
+ms.date: 04/21/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 網路評估（預覽）
-ms.openlocfilehash: 2ee18f50e841982e8f677964d2e7e57d95a209d8
-ms.sourcegitcommit: 6508db0a839427e1a21b1cde883d828e3c8886c6
+ms.openlocfilehash: 3554c86b94e6b24cf82231da640b7e010fe07c11
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185744"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612893"
 ---
 # <a name="microsoft-365-network-assessment-preview"></a>Microsoft 365 網路評估（預覽）
 
@@ -68,6 +68,6 @@ ms.locfileid: "43185744"
 
 [Microsoft 365 網路效能深入瞭解（預覽）](office-365-network-mac-perf-insights.md)
 
-[M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
+[Microsoft 365 M365 系統管理中心的連線測試（預覽）](office-365-network-mac-perf-onboarding-tool.md)
 
 [Microsoft 365 Network Connectivity Location 服務（預覽）](office-365-network-mac-location-services.md)

@@ -3,7 +3,7 @@ title: Microsoft 365 系統管理中心的網路效能建議（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/31/2020
+ms.date: 04/21/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -14,12 +14,12 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 系統管理中心的網路效能建議概述（預覽）
-ms.openlocfilehash: 9bd1470b80d0c65c11748bee3e8a6a73a218f55f
-ms.sourcegitcommit: 6508db0a839427e1a21b1cde883d828e3c8886c6
+ms.openlocfilehash: 077202f5ba1ffa95324131e6c283f2c3845aa07f
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43185774"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612933"
 ---
 # <a name="network-performance-recommendations-in-the-microsoft-365-admin-center-preview"></a>Microsoft 365 系統管理中心的網路效能建議（預覽）
 
@@ -131,7 +131,7 @@ Microsoft 365 服務前端是 Microsoft 全球網路的進入點，Office 用戶
 
 ### <a name="what-is-an-optimal-microsoft-365-service-front-door"></a>何謂最優的 Microsoft 365 服務前門？
 
-最佳的 Microsoft 365 服務前端是最接近您的網路出局，通常是在您的城市或大都市區域中。 使用[microsoft 365 網路上架工具](office-365-network-mac-perf-onboarding-tool.md)來判斷您使用中的 microsoft 365 服務前門和最優服務前門的位置。 如果工具判斷您的使用中的前門是最優的，您就會以最優化方式連線至 Microsoft 的全球網路。
+最佳的 Microsoft 365 服務前端是最接近您的網路出局，通常是在您的城市或大都市區域中。 使用[microsoft 365](office-365-network-mac-perf-onboarding-tool.md)的連線測試來判斷您使用中的 microsoft 365 服務前門和最優服務前門的位置。 如果工具判斷您的使用中的前門是最優的，您就會以最優化方式連線至 Microsoft 的全球網路。
 
 ### <a name="what-is-an-internet-egress-location"></a>何謂網際網路出口的位置？
 
@@ -143,6 +143,6 @@ Microsoft 365 服務前端是 Microsoft 全球網路的進入點，Office 用戶
 
 [Microsoft 365 網路評估（預覽）](office-365-network-mac-perf-score.md)
 
-[M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）](office-365-network-mac-perf-onboarding-tool.md)
+[Microsoft 365 M365 系統管理中心的連線測試（預覽）](office-365-network-mac-perf-onboarding-tool.md)
 
 [Microsoft 365 Network Connectivity Location 服務（預覽）](office-365-network-mac-location-services.md)

@@ -16,12 +16,12 @@ ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 f1.keywords:
 - NOCSH
 description: 在您開始為 Office 365 網路連線規劃網路之前，務必了解安全管理 Office 365 流量以及可能獲取最佳效能的連線原則。 本文將會協助您了解關於安全最佳化 Office 365 網路連線的最新指引。
-ms.openlocfilehash: 63ae147174cd40ae86a060832468097e5533b837
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 7abfc401531799cb9ff890261c89c6104a0c356a
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41842640"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612913"
 ---
 # <a name="office-365-network-connectivity-principles"></a>Office 365 網路連線原則
 
@@ -41,7 +41,7 @@ ms.locfileid: "41842640"
 - [新的 Office 365 端點類別](office-365-network-connectivity-principles.md#BKMK_Categories)以及最佳化指引
 - [比較網路周邊網路安全性與端點安全性](office-365-network-connectivity-principles.md#BKMK_SecurityComparison)
 - 針對 Office 365 流量的[增量最佳化](office-365-network-connectivity-principles.md#BKMK_IncOpt)選項
-- [Office 365 網路上線工具](https://aka.ms/netonboard)，這是用來測試與 Office 365 基本連線能力的新工具
+- [Microsoft 365 連線測試](https://aka.ms/netonboard)，用來測試基本連線到 Office 365 的新工具
 
 ## <a name="office-365-architecture"></a>Office 365 架構
 <a name="BKMK_Architecture"> </a>
@@ -256,7 +256,7 @@ Microsoft 提供大範圍的 Office 365 安全性功能，並且提供採用安�
 
 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 
-[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 
 [Office 365 網路與效能調整](network-planning-and-performance.md)
 
@@ -268,7 +268,7 @@ Microsoft 提供大範圍的 Office 365 安全性功能，並且提供採用安�
 
 [內容傳遞網路](content-delivery-networks.md)
 
-[Office 365 網路上線工具](https://aka.ms/netonboard)
+[Microsoft 365 connectivity test](https://aka.ms/netonboard)
 
 [Microsoft 如何建置其快速且可靠的全域網路](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
 

@@ -1,9 +1,9 @@
 ---
-title: M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
+title: Microsoft 365 M365 系統管理中心的連線測試（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 04/10/2020
+ms.date: 04/21/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -13,31 +13,31 @@ search.appverid:
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
-description: M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
-ms.openlocfilehash: f59158f2c4365aa1d2a8bd34c0d465f1c5460449
-ms.sourcegitcommit: 6bcd8731f089feb91a58a946e89dbdc7f5e7d17b
+description: Microsoft 365 M365 系統管理中心的連線測試（預覽）
+ms.openlocfilehash: 265d90cf412da7e45afcbb962018f7e4311e7edc
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43225696"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612873"
 ---
-# <a name="microsoft-365-network-onboarding-tool-in-the-m365-admin-center-preview"></a>M365 系統管理中心的 Microsoft 365 網路上架工具（預覽）
+# <a name="microsoft-365-connectivity-test-in-the-m365-admin-center-preview"></a>Microsoft 365 M365 系統管理中心的連線測試（預覽）
 
-Microsoft 365 網路上<https://connectivity.office.com>架工具位於。 其為輔助工具，可在 Microsoft 365 系統管理中心的 [**健康情況 |] 底下使用網路洞察力和網路總分資訊。網路效能**功能表。
+Microsoft 365 connectivity test 位於<https://connectivity.office.com>。 其為輔助工具，可在 Microsoft 365 系統管理中心的 [**健康情況 |] 底下使用網路洞察力和網路總分資訊。網路效能**功能表。
 
 >[!NOTE]
 >上架工具支援 WW 商業銀行和 GCC 中的承租人，但不支援 GCC 高、DoD、德國或中國的承租人。
 
-Microsoft 365 系統管理中心的網路洞察力是以 Microsoft 365 租使用者的產品度量為基礎。 相比之下，來自 Microsoft 365 網路上架工具的網路洞察力是在本機的工具中執行。 您可以在產品中執行的測試是有限的，而且在使用者可以收集更多資料的地方執行測試時，可能會產生更深入的洞察力。 請考慮，Microsoft 365 系統管理中心的網路洞察力會顯示在特定辦公室位置使用 Microsoft 365 的網路問題。 Microsoft 365 網路上架工具可協助找出該問題的根本原因，以導致建議的網路效能改進動作。
+Microsoft 365 系統管理中心的網路洞察力是以 Microsoft 365 租使用者的產品度量為基礎。 相比之下，來自 Microsoft 365 連線測試的網路洞察力是在本機的工具中執行。 您可以在產品中執行的測試是有限的，而且在使用者可以收集更多資料的地方執行測試時，可能會產生更深入的洞察力。 請考慮，Microsoft 365 系統管理中心的網路洞察力會顯示在特定辦公室位置使用 Microsoft 365 的網路問題。 Microsoft 365 連線測試可協助識別導致網路效能改進動作的問題根源。
 
-建議您將這些功能搭配使用，讓您可以在 Microsoft 365 系統管理中心中評估每個辦公室位置的網路品質狀態，並且在部署根據 Microsoft 365 網路上架工具進行的測試之後，可以找到更多詳細資料。
+建議您將這些功能搭配使用，讓您可以在 Microsoft 365 系統管理中心中評估每個辦公室位置的網路品質狀態，並且在部署以 Microsoft 365 連線測試為基礎的測試之後找到更多細節。
 
 >[!IMPORTANT]
 >Microsoft 365 系統管理中心的網路洞察力、效能建議和評估目前處於預覽狀態，只適用于已在功能預覽計畫中註冊的 Microsoft 365 承租人。
 
 ## <a name="the-advanced-tests-client-application"></a>高級測試用戶端應用程式
 
-Microsoft 365 網路上架工具有兩個部分。 網站<https://connectivity.office.com>有可供下載的 Windows 用戶端應用程式。 可供下載的用戶端執行高級網路連線測試，大部分的測試都需要執行。
+Microsoft 365 connectivity test 有兩個部分。 網站<https://connectivity.office.com>有可供下載的 Windows 用戶端應用程式。 可供下載的用戶端執行高級網路連線測試，大部分的測試都需要執行。
 
 您可以從網站執行高級用戶端測試，它會在執行時，將結果填入回網頁。
 
