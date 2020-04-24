@@ -17,12 +17,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 使用 VPN 分割通道搭配 Office 365 將遠端使用者的 Office 365 連線能力最佳化的指引。
-ms.openlocfilehash: dc30f20b59321eeaf726485dbe39fef3ac4bba54
-ms.sourcegitcommit: 7c2c8e2e1303fc81362a4447b0a7be8609766a7b
+ms.openlocfilehash: ac3964146b23ac03bc5bd104c7cd359e94a1a06b
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "43131432"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612853"
 ---
 # <a name="optimize-office-365-connectivity-for-remote-users-using-vpn-split-tunnelling"></a>使用 VPN 分割通道將遠端使用者的 Office 365 連線能力最佳化
 <!---
@@ -32,7 +32,7 @@ ms.locfileid: "43131432"
 >- For information about optimizing Office 365 worldwide tenant performance for users in China, see [Office 365 performance optimization for China users](office-365-networking-china.md).
 -->
 
-對於透過 VPN 將遠端工作者裝置連線至公司網路或雲端基礎結構的客戶，Microsoft 建議透過「VPN 分割通道」__ 設定來路由傳送主要的 Office 365 案例 **Microsoft Teams**、**SharePoint Online** 和 **Exchange Online**。 這點特別重要，因為在大規模在家工作事件 (例如 COVID-19 疫情) 期間，第一線策略可促進持續不斷的員工生產力。
+對於透過 VPN 將遠端工作者裝置連線至公司網路或雲端基礎結構的客戶，Microsoft 建議透過「VPN 分割通道」__ 設定來路由傳送主要的 Office 365 案例 **Microsoft Teams**、**SharePoint Online** 和 **Exchange Online**。 這點特別重要，因為在大規模在家工作事件 (例如 COVID-19 危機) 期間，第一線策略可促進持續不斷的員工生產力。
 
 ![分割通道 VPN 設定](media/vpn-split-tunnelling/vpn-model-2.png)
 
@@ -115,4 +115,4 @@ _圖 3：VPN 分割通道解決方案，具有直接傳送到服務的明確 Off
 
 [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
 
-[Office 365 網路上線工具](https://aka.ms/netonboard)
+[Microsoft 365 連線測試](https://aka.ms/netonboard)

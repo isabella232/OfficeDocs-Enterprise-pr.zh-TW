@@ -3,7 +3,7 @@ title: 實作 Office 365 的 VPN 分割通道
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/9/2020
+ms.date: 4/14/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,12 +17,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 如何實作 Office 365 的 VPN 分割通道
-ms.openlocfilehash: 3ac4d1243e28e8081439c98baf181ba9fb5fb2b3
-ms.sourcegitcommit: f12f95866df3a7bbf866e1d21a839be7fbdf9470
+ms.openlocfilehash: edc19af175aaa3d0366a8ec1c3af55a0aeb041fd
+ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "43203847"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612923"
 ---
 # <a name="implementing-vpn-split-tunnelling-for-office-365"></a>實作 Office 365 的 VPN 分割通道
 
@@ -41,7 +41,7 @@ ms.locfileid: "43203847"
 
 此問題已在數年內持續成長，許多客戶都回報網路流量模式重大轉變。 用來保持內部部署的流量現在會連線到外部雲端端點。 許多 Microsoft 客戶回報其先前大約有 80% 的網路流量送至某個內部來源 (在上圖中以虛線表示)。 在 2020 年，該數字現在大約為 20% 或更低，因為他們已將主要工作負載移轉到雲端，這些趨勢在其他企業並不常見。 經過一段時間，隨著雲端旅程進展，上述模型會變得益加麻煩且不永續，並使組織在移至雲端優先的世界時不太靈活。
 
-全球的 COVID-19 疫情已使此問題提升，而需要立即補救。 為了確保員工安全的需求已經對企業 IT 支援大規模在家工作的生產力，產生了空前的需求。 Microsoft Office 365 非常適合協助客戶滿足該項需求，但是使用者高度同時在家工作會產生大量的 Office 365 流量，如果透過強制通道 VPN 和內部部署網路周邊來路由傳送這些流量，就會導致迅速飽和並且容量不足的情形下執行 VPN 基礎結構。 在此種新現狀之下，使用 VPN 存取 Office 365 不再只是效能阻礙，而是一道硬牆，不僅會影響 Office 365，還會影響仍依賴 VPN 運作的商務關鍵性作業。
+全球的 COVID-19 危機已使此問題提升，而需要立即補救。 為了確保員工安全的需求已經對企業 IT 支援大規模在家工作的生產力，產生了空前的需求。 Microsoft Office 365 非常適合協助客戶滿足該項需求，但是使用者高度同時在家工作會產生大量的 Office 365 流量，如果透過強制通道 VPN 和內部部署網路周邊來路由傳送這些流量，就會導致迅速飽和並且容量不足的情形下執行 VPN 基礎結構。 在此種新現狀之下，使用 VPN 存取 Office 365 不再只是效能阻礙，而是一道硬牆，不僅會影響 Office 365，還會影響仍依賴 VPN 運作的商務關鍵性作業。
 
 多年以來，Microsoft 一直與客戶和更廣的產業密切合作，以提供自有服務內這些問題的有效、新式解決方案，並且符合業界最佳做法。 Office 365 服務的[連線原則](https://aka.ms/pnc)，旨在能針對遠端使用有效地運作，同時仍然允許組織維持安全性及控制其連線能力。 透過有限的工作也可非常迅速地實作這些解決方案，而對上述問題造成明顯的正面影響。
 
@@ -248,7 +248,7 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 準備好原則之後，您應確認其如預期般運作。 有多種方法可測試路徑是否正確設定為使用區域網際網路連線：
 
-- 執行 [Office 365 網路上線工具](https://aka.ms/netonboard)，該工具會執行連線測試，包括如上所述的追蹤路由。 我們也會在此工具中新增 VPN 測試，這些測試應該也會提供一些額外的見解。
+- 執行 [Microsoft 365 連線測試](https://aka.ms/netonboard)，該工具會執行連線測試，包括如上所述的追蹤路由。 我們也會在此工具中新增 VPN 測試，這些測試應該也會提供一些額外的見解。
 
 - 分割通道範圍內端點的簡單追蹤應顯示所採用的路徑，例如：
 
@@ -273,6 +273,7 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 - **Palo Alto GlobalProtect**：[透過 VPN 分割通道排除存取路由最佳化 Office 365 流量](https://live.paloaltonetworks.com/t5/Prisma-Access-Articles/GlobalProtect-Optimizing-Office-365-Traffic/ta-p/319669)
 - **F5 Networks BIG-IP APM**：[使用 BIG-IP APM 時透過 VPN 最佳化遠端存取上的 Office 365 流量](https://devcentral.f5.com/s/articles/SSL-VPN-Split-Tunneling-and-Office-365)
 - **Citrix 閘道**：[針對 Office365 最佳化 Citrix 閘道的 VPN 分割通道](https://docs.citrix.com/zh-TW/citrix-gateway/13/optimizing-citrix-gateway-vpn-split-tunnel-for-office365.html)
+- **Pulse Secure**：[VPN 通道：如何設定分割通道以排除 Office365 應用程式](https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44417)
 
 ## <a name="faq"></a>常見問題集
 
