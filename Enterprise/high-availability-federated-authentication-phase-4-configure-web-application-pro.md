@@ -1,41 +1,44 @@
 ---
-title: 高可用性同盟驗證階段 4 設定 web 應用程式 proxy
+title: 高可用性同盟驗證階段4設定 web 應用程式 proxy
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/15/2019
+ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
-description: 摘要： 在 Microsoft Azure 中設定 web 應用程式 proxy 伺服器運作的 Office 365 高可用性同盟驗證。
-ms.openlocfilehash: 276d28835cbedf7d2eb87b80304fbb0e4e9de2c3
-ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
+description: 摘要：在 Microsoft Azure 中設定 Office 365 的高可用性同盟驗證的 web 應用程式 proxy 伺服器。
+ms.openlocfilehash: ac7b43daea832d4283404605fbb8ccb46e6cc76c
+ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38793315"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "43793806"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
- **摘要：** 在 Microsoft Azure 中設定 web 應用程式 proxy 伺服器運作的 Office 365 高可用性同盟驗證。
-  
 在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。
   
-您必須先完成此階段，才可繼續 [High availability federated authentication Phase 5: Configure federated authentication for Office 365](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。 所有階段，請參閱[在 Azure 中的 Office 365 部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)。
+您必須先完成此階段，再移至[階段5：設定 Office 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。 請參閱[在 Azure 中部署 Office 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
 ## <a name="create-the-internet-facing-load-balancer-in-azure"></a>在 Azure 中建立網際網路對應負載平衡器
 
 您必須先建立網際網路對應負載平衡器，讓 Azure 將從網際網路傳入的用戶端驗證流量分散到兩個 Web 應用程式 Proxy 伺服器。
   
 > [!NOTE]
-> [!附註] 下列命令集會使用最新版的 Azure PowerShell。 請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。 
+> [!附註] 下列命令集會使用最新版的 Azure PowerShell。 請參閱[Azure PowerShell 入門](https://docs.microsoft.com/powershell/azure/get-started-azureps)。 
   
 當您已提供位置和資源群組的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
+> [!TIP]
+> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/deploy-high-availability-federated-authentication-for-office-365-in-azure/O365FedAuthInAzure_Config.xlsx)。 
+
 ```powershell
 # Set up key variables
 $locName="<your Azure location>"
@@ -61,13 +64,13 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**名稱**|**Type**|**TTL**|**值**|
+|**名稱**|**Type**|**TTL**|**Value** (值)|
 |:-----|:-----|:-----|:-----|
 |同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對應負載平衡器的公用 IP 位址 (透過上一節中的 **Write-Host** 命令顯示) <br/> |
    
 範例如下：
   
-|**名稱**|**Type**|**TTL**|**值**|
+|**名稱**|**Type**|**TTL**|**Value** (值)|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    
@@ -91,7 +94,7 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
     
 - 表格 A，適用於可用性設定組
     
-還記得您定義中的表格 M[高可用性同盟驗證階段 2： 設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)和表格 R、 V、 S、 I 和 A 中的[高可用性同盟驗證階段 1: Configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
+請記得您在[階段2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)和表格 R、V、S、I 及 A[階段1： configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md)中定義的表 M。
   
 當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
@@ -153,11 +156,11 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 **階段 4：Azure 中高可用性同盟驗證基礎結構的網際網路對應負載平衡器和 Web 應用程式 Proxy 伺服器**
 
-![階段 4 的高可用性 Office 365 同盟驗證基礎結構在 Azure 中的具有 web 應用程式 proxy 伺服器](media/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
+![Azure 中具有 web 應用程式 proxy 伺服器之高可用性 Office 365 同盟驗證基礎結構的階段4](media/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[High availability federated authentication Phase 5: Configure federated authentication for Office 365](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)以繼續設定此工作負載。
+使用[階段5：設定 Office 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)，以繼續設定此工作負載。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -165,5 +168,5 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
 

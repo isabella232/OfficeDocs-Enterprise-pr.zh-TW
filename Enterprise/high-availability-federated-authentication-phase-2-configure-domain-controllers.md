@@ -1,34 +1,34 @@
 ---
-title: 高可用性同盟驗證階段 2 設定網域控制站
+title: 高可用性同盟驗證階段2設定網域控制站
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/15/2019
+ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
 ms.collection: Ent_O365
+f1.keywords:
+- CSH
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
-description: 摘要：在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
-ms.openlocfilehash: 3e5ede99c114b59f6aafbf37c3aa11e3ebd62cca
-ms.sourcegitcommit: 9c9982badeb95b8ecc083609a1a922cbfdfc9609
+description: 摘要：在 Microsoft Azure 中設定 Office 365 的高可用性同盟驗證的網域控制站與目錄同步處理伺服器。
+ms.openlocfilehash: 80b413f8a6d415378e384b1625fc756f96dd00db
+ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "38793345"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "43793816"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
- **摘要：** 在 Microsoft Azure 中設定 Office 365 高可用性同盟驗證的網域控制站和 DirSync 伺服器。
-  
-在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會在 Azure 虛擬網路中設定兩個網域控制站和 DirSync 伺服器。然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。
+在此階段中，在 Azure 基礎結構服務中部署 Office 365 同盟驗證的高可用性，您可以在 Azure 虛擬網路中設定兩個網域控制站與目錄同步處理伺服器。 然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。
   
 > [!NOTE]
-> Active Directory Federation Services (AD FS) 無法使用 Azure Active Directory Domain Services 代替 Active Directory 網域服務的網域控制站。 
+> Active Directory Federation Services （AD FS）無法使用 Azure Active Directory 網域服務取代 Active Directory 網域服務網域控制站。 
   
-您必須先完成此階段，才可繼續 [High availability federated authentication Phase 3: Configure AD FS servers](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。 所有階段，請參閱[在 Azure 中的 Office 365 部署高可用性同盟的驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)。
+您必須先完成此階段，再移至[階段3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。 請參閱[在 Azure 中部署 Office 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
 ## <a name="create-the-domain-controller-virtual-machines-in-azure"></a>在 Azure 中建立網域控制站虛擬機器
 
@@ -36,19 +36,19 @@ ms.locfileid: "38793345"
   
 |**項目**|**虛擬機器名稱**|**圖庫影像**|**儲存類型**|**大小下限**|
 |:-----|:-----|:-----|:-----|:-----|
-|1.  <br/> |![](./media/Common-Images/TableLine.png) (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|2.  <br/> |![](./media/Common-Images/TableLine.png) (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|3.  <br/> |![](./media/Common-Images/TableLine.png)（DirSync 伺服器，範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|4.  <br/> |![](./media/Common-Images/TableLine.png)（第一部 AD FS 伺服器，範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|5.  <br/> |![](./media/Common-Images/TableLine.png)（第二個 AD FS 伺服器，範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|6.  <br/> |![](./media/Common-Images/TableLine.png)（第一個 web 應用程式 proxy 伺服器，範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|7.  <br/> |![](./media/Common-Images/TableLine.png)（第二個 web 應用程式 proxy 伺服器，範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|1.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|2.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|3.  <br/> |![線條](./media/Common-Images/TableLine.png) （目錄同步處理伺服器，範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|4.  <br/> |![線條](./media/Common-Images/TableLine.png) （第一個 AD FS 伺服器，範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|5.  <br/> |![線條](./media/Common-Images/TableLine.png) （第二個 AD FS 伺服器，範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|6.  <br/> |![線條](./media/Common-Images/TableLine.png) （第一個 web 應用程式 proxy 伺服器，範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|7.  <br/> |![線條](./media/Common-Images/TableLine.png) （第二個 web 應用程式 proxy 伺服器，範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
    
- **表格 M-Azure 中 Office 365 的高可用性同盟驗證的虛擬機器**
+ **表格 M-Azure 中適用于 Office 365 的高可用性同盟驗證虛擬機器**
   
 如需虛擬機器大小的完整清單，請參閱[虛擬機器大小](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)。
   
-下列 Azure PowerShell 命令區塊可建立兩個網域控制站的虛擬機器。 為指定值的變數，移除\<和 > 字元。 請注意，此 Azure PowerShell 命令區塊會使用下表中的值︰
+下列 Azure PowerShell 命令區塊可建立兩個網域控制站的虛擬機器。 指定變數的值， \<並移除和 > 字元。 請注意，此 Azure PowerShell 命令區塊會使用下表中的值︰
   
 - 表格 M，適用於虛擬機器
     
@@ -62,13 +62,16 @@ ms.locfileid: "38793345"
     
 - 表格 A，適用於可用性設定組
     
-還記得您定義表格 R、 V、 S、 I 和 A 在[高可用性同盟驗證階段 1: Configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md)。
+請記得您在[階段1： Configure Azure](high-availability-federated-authentication-phase-1-configure-azure.md)中定義的表格 R、V、S、I 和 A。
   
 > [!NOTE]
-> 下列命令集會使用最新版的 Azure PowerShell。請參閱[開始使用 Azure PowerShell Cmdlet](https://docs.microsoft.com/powershell/azureps-cmdlets-docs/)。 
+> [!附註] 下列命令集會使用最新版的 Azure PowerShell。 請參閱[Azure PowerShell 入門](https://docs.microsoft.com/powershell/azure/get-started-azureps)。 
   
 當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
   
+> [!TIP]
+> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/deploy-high-availability-federated-authentication-for-office-365-in-azure/O365FedAuthInAzure_Config.xlsx)。 
+
 ```powershell
 # Set up variables common to both virtual machines
 $locName="<your Azure location>"
@@ -123,7 +126,7 @@ $vm=Set-AzVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer Win
 $vm=Add-AzVMNetworkInterface -VM $vm -Id $nic.Id
 New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 
-# Create the DirSync server
+# Create the directory synchronization server
 $vmName="<Table M - Item 3 - Virtual machine name column>"
 $vmSize="<Table M - Item 3 - Minimum size column>"
 $staticIP="<Table I - Item 3 - Value column>"
@@ -132,7 +135,7 @@ $diskStorageType="<Table M - Item 3 - Storage type column>"
 $nic=New-AzNetworkInterface -Name ($vmName +"-NIC") -ResourceGroupName $rgName -Location $locName -Subnet $subnet -PrivateIpAddress $staticIP
 $vm=New-AzVMConfig -VMName $vmName -VMSize $vmSize
 
-$cred=Get-Credential -Message "Type the name and password of the local administrator account for the DirSync server." 
+$cred=Get-Credential -Message "Type the name and password of the local administrator account for the directory synchronization server." 
 $vm=Set-AzVMOperatingSystem -VM $vm -Windows -ComputerName $vmName -Credential $cred -ProvisionVMAgent -EnableAutoUpdate
 $vm=Set-AzVMSourceImage -VM $vm -PublisherName MicrosoftWindowsServer -Offer WindowsServer -Skus 2016-Datacenter -Version "latest"
 $vm=Add-AzVMNetworkInterface -VM $vm -Id $nic.Id
@@ -147,7 +150,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 
 使用您所選的遠端桌面用戶端，建立第一個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
-從 Windows PowerShell 命令提示字元**上第一個網域控制站虛擬機器**，接下來，使用此命令的第一個網域控制站新增額外的資料磁碟：
+接下來，**在第一個網域控制站虛擬機器**的 Windows PowerShell 命令提示字元中，使用此命令將額外的資料磁片新增至第一個網域控制站：
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
@@ -172,7 +175,7 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
 
 使用您所選的遠端桌面用戶端，建立第二個網域控制站虛擬機器的遠端桌面連線。請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
-接下來，您需要將額外的資料磁碟新增至第二個網域控制站，使用此命令中，從 Windows PowerShell 命令提示字元**上第二個網域控制站虛擬機器**：
+接下來，您必須使用**第二個網域控制站虛擬機器上**的 Windows PowerShell 命令提示字元，將額外的資料磁片新增至第二個網域控制站。
   
 ```powershell
 Get-Disk | Where PartitionStyle -eq "RAW" | Initialize-Disk -PartitionStyle MBR -PassThru | New-Partition -AssignDriveLetter -UseMaximumSize | Format-Volume -FileSystem NTFS -NewFileSystemLabel "WSAD Data"
@@ -190,7 +193,7 @@ Install-ADDSDomainController -InstallDns -DomainName $domname  -DatabasePath "F:
 
 系統會提示您提供網域管理員帳戶的認證。電腦將會重新啟動。
   
-下一步，您需要更新虛擬網路的 DNS 伺服器，如此一來，此 Azure 會指派兩個新的網域控制站 IP 位址給虛擬機器，以便使用虛擬機器的 DNS 伺服器。 填寫 [變數並再從 Windows PowerShell 命令提示字元執行這些命令在本機電腦上：
+下一步，您需要更新虛擬網路的 DNS 伺服器，如此一來，此 Azure 會指派兩個新的網域控制站 IP 位址給虛擬機器，以便使用虛擬機器的 DNS 伺服器。 填寫變數，然後在本機電腦上的 Windows PowerShell 命令提示字元中執行下列命令：
   
 ```powershell
 $rgName="<Table R - Item 4 - Resource group name column>"
@@ -225,11 +228,11 @@ New-ADReplicationSite -Name $vnet
 New-ADReplicationSubnet -Name $vnetSpace -Site $vnet
 ```
 
-## <a name="configure-the-dirsync-server"></a>設定 DirSync 伺服器
+## <a name="configure-the-directory-synchronization-server"></a>設定目錄同步處理伺服器
 
-使用您所選的遠端桌面用戶端，建立 DirSync 伺服器虛擬機器的遠端桌面連線。 請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
+使用您選擇的遠端桌面用戶端，建立與目錄同步處理伺服器虛擬機器的遠端桌面連線。 請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
-接下來，將其加入適當的 AD DS 網域，在 Windows PowerShell 提示字元使用以下命令。
+接下來，在 Windows PowerShell 提示字元，使用下列命令將其加入適當的 AD DS 網域。
   
 ```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
@@ -240,13 +243,13 @@ Restart-Computer
 
 以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
   
-**階段 2：Azure 中的高可用性同盟驗證基礎結構的網域控制站和 DirSync 伺服器。**
+**階段2： Azure 中高可用性同盟驗證基礎結構的網域控制站及目錄同步處理伺服器**
 
-![階段 2 的高可用性 Office 365 同盟驗證基礎結構在 Azure 中的具有網域控制站](media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
+![Azure 中具有網域控制站之高可用性 Office 365 同盟驗證基礎結構的階段2](media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[High availability federated authentication Phase 3: Configure AD FS servers](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)以繼續設定此工作負載。
+使用[階段3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)以繼續設定此工作負載。
   
 ## <a name="see-also"></a>另請參閱
 
@@ -254,6 +257,6 @@ Restart-Computer
   
 [Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
   
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
 
 
