@@ -20,12 +20,12 @@ ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 search.appverid:
 - MET150
 description: 摘要：取得描述 SharePoint、Exchange、商務用 Skype 和 Lync 結構模型、部署、平台選項的 IT 海報。
-ms.openlocfilehash: eb5aefb46fa46eda1be71db76b533743a4b73669
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 3b0eb977754b86d626153d38d0d79e718dedfcdc
+ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844724"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "43793696"
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型
 
@@ -196,7 +196,7 @@ ms.locfileid: "41844724"
 <a name="Lync2013_Options"> </a>
 ## <a name="see-also"></a>另請參閱
 
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
   

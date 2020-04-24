@@ -19,12 +19,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：使用這些測試實驗室指南 (TLG) 以設定 Office 365 的展示版本、概念證明或開發/測試環境。
-ms.openlocfilehash: 133f31dd46555ac7d80c2fcc5f3756da967cb331
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 6a4b6087a66607906e2de7407fd23e4d2f7aba3d
+ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41845024"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "43793686"
 ---
 # <a name="test-office-365-with-test-lab-guides-tlgs"></a>使用測試實驗室指南 (TLG) 測試 Office 365
 
@@ -52,6 +52,6 @@ TLG 也會針對應用程式開發和測試建立具有代表性的環境，亦�
     
 ## <a name="see-also"></a>另請參閱
 
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
   
 [混合式解決方案](hybrid-solutions.md)

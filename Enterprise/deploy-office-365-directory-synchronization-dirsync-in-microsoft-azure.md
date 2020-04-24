@@ -19,12 +19,12 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: 摘要：在 Azure 中的虛擬機器上部署 Azure AD Connect，以同步處理內部部署目錄和您 Office 365 訂閱下 Azure AD 租用戶之間的帳戶。
-ms.openlocfilehash: 0c92771788d932127c0afaf5724e89ce11298a32
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 05e0071ce9ffb172fc1399f4038c603ef0d335c5
+ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840540"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "43793656"
 ---
 # <a name="deploy-office-365-directory-synchronization-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Office 365 目錄同步作業
 
@@ -192,7 +192,7 @@ Azure AD Connect 會從內部部署 AD DS 新增帳戶至您的 Office 365 訂�
     
 ## <a name="see-also"></a>另請參閱
 
-[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.md)
+[雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
   
 [使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 
