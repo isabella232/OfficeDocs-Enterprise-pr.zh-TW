@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：Office 365 資料位置
-ms.openlocfilehash: 7f7804c74eaf6122b59385abd79934157ae47062
-ms.sourcegitcommit: b2d1dbc42ceafad1b583df59c1b4be55e35beb44
+ms.openlocfilehash: 6b7647456415df6a2ac8d1f22bb697164e756207
+ms.sourcegitcommit: 88a110ede50e210aaff3469307d85d354fdaef49
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43772474"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "43798814"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
@@ -32,7 +32,7 @@ Note to new owner: Links in the Notes and FAQ sections need to be added from the
 
 下表顯示針對所有 Microsoft 的全球雲端位置的 Office 365 服務，客戶資料待用儲存的所在位置。 展開您的帳單地址所在國家/地區的位置，以找出每個服務的客戶資料將儲存的位置。
 
-客戶可以在您的 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡****。
+客戶應該在您的 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡****。
 
 新 Office 365 租用戶會預設為根據與該租用戶的第一個訂閱相關聯之交易上的國家/地區的地區。
 
@@ -230,7 +230,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 2 - 亞太地區 |
 | SharePoint Online | 全球地理位置 2 - 亞太地區 |
 | 商務用 Skype | 全球地理位置 2 - 亞太地區 |
-| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
+| Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
@@ -391,7 +391,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -874,7 +874,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 2 - 亞太地區 |
 | SharePoint Online | 全球地理位置 2 - 亞太地區 |
 | 商務用 Skype | 全球地理位置 2 - 亞太地區 |
-| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
@@ -1771,7 +1771,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 3 - 美洲地區 |
 | SharePoint Online | 全球地理位置 3 - 美洲地區 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
@@ -1828,29 +1828,6 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
 | Forms | 美國 |
-| 工作場所分析 | 美國 |
-</p></details>
-
-## <a name="federated-states-of-micronesia"></a>密克羅尼西亞聯邦
-<details><summary>按一下以展開</summary><p>
-
-| 服務 | 位置 |
-| --- | --- |
-| Exchange Online | 全球地理位置 1 - EMEA |
-| 商務用 OneDrive | 全球地理位置 1 - EMEA |
-| SharePoint Online | 全球地理位置 1 - EMEA |
-| 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
-| Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
-| EOP | 全球地理位置 1 - EMEA |
-| MyAnalytics | 全球地理位置 1 - EMEA |
-| Planner | 全球地理位置 1 - EMEA |
-| Sway | 美國 |
-| Yammer | 全球地理位置 1 - EMEA |
-| OneNote 服務 | 全球地理位置 1 - EMEA |
-| Stream | 全球地理位置 1 - EMEA |
-| Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2047,7 +2024,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -2162,7 +2139,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 美國 |
 | SharePoint Online | 美國 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
 | MyAnalytics | 美國 |
@@ -2806,7 +2783,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -2944,7 +2921,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -3979,7 +3956,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -4025,7 +4002,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 2 - 亞太地區 |
 | SharePoint Online | 全球地理位置 2 - 亞太地區 |
 | 商務用 Skype | 全球地理位置 2 - 亞太地區 |
-| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
@@ -4278,7 +4255,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -4462,7 +4439,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 美國 |
 | SharePoint Online | 美國 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
 | MyAnalytics | 美國 |
@@ -4485,7 +4462,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 美國 |
 | SharePoint Online | 美國 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
 | MyAnalytics | 美國 |
@@ -4761,7 +4738,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 美國 |
 | SharePoint Online | 美國 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
 | MyAnalytics | 美國 |
@@ -4899,7 +4876,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 美國 |
 | SharePoint Online | 美國 |
 | 商務用 Skype | 美國 |
-| Microsoft Teams | 美國 |
+| Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
 | MyAnalytics | 美國 |
@@ -5106,7 +5083,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -5336,7 +5313,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
@@ -5589,7 +5566,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 商務用 OneDrive | 全球地理位置 1 - EMEA |
 | SharePoint Online | 全球地理位置 1 - EMEA |
 | 商務用 Skype | 全球地理位置 1 - EMEA |
-| Microsoft Teams | 全球地理位置 1 - EMEA |
+| Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
