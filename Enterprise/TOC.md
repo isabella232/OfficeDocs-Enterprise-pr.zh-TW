@@ -1,4 +1,5 @@
 # [雲端架構模型](microsoft-cloud-it-architecture-resources.md)
+# [企業雲端解決方案](cloud-adoption-and-hybrid-solutions.yml)
 ## [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
 
 # [規劃 Office 365](get-your-organization-ready-for-office-365.md)
