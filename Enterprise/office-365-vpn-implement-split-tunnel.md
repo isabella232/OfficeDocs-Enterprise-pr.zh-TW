@@ -3,7 +3,7 @@ title: 實作 Office 365 的 VPN 分割通道
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/14/2020
+ms.date: 4/24/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,14 +17,14 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 如何實作 Office 365 的 VPN 分割通道
-ms.openlocfilehash: edc19af175aaa3d0366a8ec1c3af55a0aeb041fd
-ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
+ms.openlocfilehash: 0594be194bda222fafa0d00a93e0ee43814cd334
+ms.sourcegitcommit: 2c4092128fb12bda0c98b0c5e380d2cd920e7c9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "43612923"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "43804026"
 ---
-# <a name="implementing-vpn-split-tunnelling-for-office-365"></a>實作 Office 365 的 VPN 分割通道
+# <a name="implementing-vpn-split-tunneling-for-office-365"></a>實作 Office 365 的 VPN 分割通道
 
 >[!NOTE]
 >本主題是一組針對遠端使用者處理 Office 365 最佳化的主題之一。
@@ -37,7 +37,7 @@ ms.locfileid: "43612923"
 
 使用強制通道 VPN 來連線到分散式和效能敏感型雲端應用程式並不太好，但是從安全性的觀點來看，有些企業可能為了維持現狀而接受了其負面影響。 以下是這種情況的範例圖表：
 
-![分割通道 VPN 設定](media/vpn-split-tunnelling/vpn-ent-challenge.png)
+![分割通道 VPN 設定](media/vpn-split-tunneling/vpn-ent-challenge.png)
 
 此問題已在數年內持續成長，許多客戶都回報網路流量模式重大轉變。 用來保持內部部署的流量現在會連線到外部雲端端點。 許多 Microsoft 客戶回報其先前大約有 80% 的網路流量送至某個內部來源 (在上圖中以虛線表示)。 在 2020 年，該數字現在大約為 20% 或更低，因為他們已將主要工作負載移轉到雲端，這些趨勢在其他企業並不常見。 經過一段時間，隨著雲端旅程進展，上述模型會變得益加麻煩且不永續，並使組織在移至雲端優先的世界時不太靈活。
 
@@ -63,39 +63,39 @@ Microsoft 建議用於最佳化遠端工作者連線的建議策略，著重於�
 
 這是大部分企業客戶最常見的起始案例。 使用強制 VPN，即表示不管端點是否位於公司網路的這個事實，100% 的流量都會導向公司網路。 任何要送至外部 (網際網路) 的流量 (例如 Office 365 或網際網路流覽) 都會接著從內部部署安全性設備 (例如 Proxy) 反向送回。 在目前的氛圍中，有將近 100% 的使用者進行遠距工作，因此這個模型對 VPN 基礎結構帶來極高的負載，且可能會顯著阻礙所有公司流量的效能，因而讓企業在危機時刻以更有效率的方式運作。
 
-![ VPN 強制通道模型 1](media/vpn-split-tunnelling/vpn-model-1.png)
+![ VPN 強制通道模型 1](media/vpn-split-tunneling/vpn-model-1.png)
 
 ### <a name="2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions"></a>2. 具有少量信任例外狀況的 VPN 強制通道
 
 企業在此模型下運作明顯更加有效，因為其允許少數對負載和延遲極度敏感的受控制和明確端點繞過 VPN 通道，而直接移至此範例中的 Office 365 服務。 此模型可顯著改善已卸載服務的效能，也減輕了 VPN 基礎結構的負載，因而允許仍有需求的元素在資源競爭較低的情況下運作。 本文會著重於協助轉換至這個模型，因為其允許快速採取簡單明確的動作，並可達成許多正面結果。
 
-![分割通道 VPN 模型 2](media/vpn-split-tunnelling/vpn-model-2.png)
+![分割通道 VPN 模型 2](media/vpn-split-tunneling/vpn-model-2.png)
 
 ### <a name="3-vpn-forced-tunnel-with-broad-exceptions"></a>3. 有廣泛例外狀況的 VPN 強制通道
 
 第三個模型放寬了模型 2 的範圍，不只是直接傳送一小組明確的端點，而是將所有流量直接傳送至受信任的服務，例如 Office 365、SalesForce 等。 這會進一步減輕公司 VPN 基礎結構的負載，並改善所定義服務的效能。 由於此模型可能需要更多時間來評估可行性及實作，因此這可能是在模型 2 適度成功之後可反覆採取的步驟。
 
-![分割通道 VPN 模型 3](media/vpn-split-tunnelling/vpn-model-3.png)
+![分割通道 VPN 模型 3](media/vpn-split-tunneling/vpn-model-3.png)
 
 ### <a name="4-vpn-selective-tunnel"></a>4. VPN 選擇性通道
 
 此模型會顛覆第三個模型，在其中只會將識別為具有公司 IP 位址的流量傳送到 VPN 通道，因此網際網路路徑是其他流量的預設路由。 此模型要求組織能順利達到[零信任](https://www.microsoft.com/security/zero-trust?rtc=1)，才能安全地實作這個模型。 請注意，此模型或某些變化形式因此可能隨著時間而成為必要的預設值，而且有更多服務從公司網路移到雲端。 Microsoft 在內部使用此模型；如需有關 Microsoft 實作 VPN 分割通道的詳細資訊，請參閱[在 VPN 上執行：Microsoft 如何使遠端員工保持聯繫](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv) (英文)。
 
-![分割通道 VPN 模型 4](media/vpn-split-tunnelling/vpn-model-4.png)
+![分割通道 VPN 模型 4](media/vpn-split-tunneling/vpn-model-4.png)
 
 ### <a name="5-no-vpn"></a>5. 無 VPN
 
 模型 2 的更進階版本，從而透過新式安全性方法或 SDWAN 解決方案 (例如 Azure AD Proxy、MCAS、Zscaler ZPA 等) 發佈任何內部服務。
 
-![分割通道 VPN 模型 5](media/vpn-split-tunnelling/vpn-model-5.png)
+![分割通道 VPN 模型 5](media/vpn-split-tunneling/vpn-model-5.png)
 
-## <a name="implement-vpn-split-tunnelling"></a>實作 VPN 分割通道
+## <a name="implement-vpn-split-tunneling"></a>實作 VPN 分割通道
 
 在本節中，您會找到將 VPN 用戶端架構從 _「VPN 強制通道」_ 遷移到 _「具有少量信任例外狀況的 VPN 強制通道」_ ([常見 VPN 案例](#common-vpn-scenarios)一節中的[VPN 分割通道模型 2](#2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions)) 所需的簡單步驟。
 
 下圖說明建議 VPN 分割通道解決方案的運作方式：
 
-![分割通道 VPN 解決方案詳細資料](media/vpn-split-tunnelling/vpn-split-detail.png)
+![分割通道 VPN 解決方案詳細資料](media/vpn-split-tunneling/vpn-split-detail.png)
 
 ### <a name="1-identify-the-endpoints-to-optimize"></a>1. 找出要最佳化的端點
 
@@ -176,7 +176,7 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 新增路由之後，您可以在命令提示字元或 PowerShell 中執行 **route print**，以確認路由表正確無誤。 輸出應包含您所新增的路由，並顯示介面索引 (在此範例中為 _22_) 和該介面的閘道 (在此範例中為 _192.168.1.1_)：
 
-![Route print 輸出](media/vpn-split-tunnelling/vpn-route-print.png)
+![Route print 輸出](media/vpn-split-tunneling/vpn-route-print.png)
 
 若要在 [最佳化] 類別中新增**所有**目前 IP 位址範圍的路由，您可使用下列指令碼變化形式來查詢 [Office 365 IP 和 URL Web 服務](https://docs.microsoft.com/office365/enterprise/office-365-ip-web-service)，以取得目前的這組最佳化 IP 子網路並將其新增到路由表中。
 
@@ -218,7 +218,7 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 某些系統管理員可能需要更詳細的資訊，以了解通話流程如何使用分割通道模型在 Teams 中運作，以及如何保護連線的安全。
 
-### <a name="configuration"></a>設定
+### <a name="configuration"></a>組態
 
 在通話和會議中，只要 Teams 媒體所需的最佳化 IP 子網路正確地放在路由表中，當 Teams 呼叫 _GetBestRoute_ 方法來判斷其應該針對特定目的地所使用的介面時，系統就會針對以上所列的 Microsoft IP 區塊中的 Microsoft 目的地傳回本機介面。
 
@@ -226,7 +226,8 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 在某些情況下 (通常與 Teams 用戶端設定無關)，即使備妥正確的路由，媒體流量仍會通過 VPN 通道。 如果遇到這種情況，則使用防火牆規則來封鎖 Teams IP 子網路或連接埠，使其無法使用 VPN 應該就夠了。
 
-目前要讓此做法在 100% 的情況下可行的需求，就是同時新增 IP 範圍 **13.107.60.1/32**。 不一定要馬上這麼做，因為最新的 Teams 用戶端更新會在 **2020 年 4 月**發行。 若有相關的組建詳細資料，我們將更新本文章的內容。
+>[!IMPORTANT]
+>為了確保 Teams 媒體流量會透過所有 VPN 案例中的預期方式路由，請確定您執行的至少是下列用戶端版本號碼或更高的版本，因為這些版本在用戶端偵測可用網路路徑方面已進行改善。<br>Windows 版本號碼：**1.3.00.9267**<br>Mac 版本號碼：**1.3.00.9221**
 
 訊號流量會透過 HTTPS 執行且不像媒體流量對延遲那麼敏感，其在 URL/IP 資料中標示為 **[允許]**，因此可視需要透過 VPN 用戶端安全地路由傳送。
 
