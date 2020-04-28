@@ -17,12 +17,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 使用 VPN 分割通道搭配 Office 365 將遠端使用者的 Office 365 連線能力最佳化的指引。
-ms.openlocfilehash: 38eda4fb34ddd907e43a3a82976ffe64aa1f8c34
-ms.sourcegitcommit: 2c4092128fb12bda0c98b0c5e380d2cd920e7c9b
+ms.openlocfilehash: d40a5c3f81baae24253bc8a24d5916c6729e393b
+ms.sourcegitcommit: c2f90c022ca323736d9c43929b5681c3f8db0e6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "43803983"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "43901216"
 ---
 # <a name="optimize-office-365-connectivity-for-remote-users-using-vpn-split-tunneling"></a>使用 VPN 分割通道將遠端使用者的 Office 365 連線能力最佳化
 <!---
@@ -78,6 +78,7 @@ COVID-19 危機已使此問題惡化，大多數組織都需要有立即的解�
 Office 365 將 Office 365 所需的端點分為三個類別：**最佳化**、**允許**和**預設**。 [最佳化]**** 端點是我們的討論重點，其具有下列特性：
 
 - 是 Microsoft 所擁有和管理的端點，並且在 Microsoft 基礎結構上託管
+- 專用於核心 Office 365 工作負載，例如 Exchange Online、SharePoint Online、商務用 Skype Online 及 Microsoft Teams
 - 已提供 IP
 - 變動率很低，且應保持少量 (目前為 20 個 IP 子網路)
 - 屬於大量和/或延遲敏感型
