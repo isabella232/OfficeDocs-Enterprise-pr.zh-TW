@@ -3,7 +3,7 @@ title: Office 365 美國政府版高端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/04/2020
+ms.date: 04/28/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
@@ -16,14 +16,14 @@ f1.keywords:
 ms.custom: Adm_O365
 search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
-description: 如果您的組織使用 Office 365 並限制網路上的電腦連線至網際網路，您會發現您應該在輸出允許清單中包含的端點（Fqdn、埠、URLs、IPv4 和 IPv6 位址範圍），以確保您的電腦可以成功使用 Office 365。
+description: 如果您的組織使用 Office 365 並限制網路上的電腦連線至網際網路，則在下列情況下，您將會發現應該包含在輸出允許清單中的端點（Fqdn、埠、URLs、IPv4 和 IPv6 位址範圍），以確保您的電腦可以成功使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 1612ddda0dc264d893d54314ed2c6416d9c17ca3
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+ms.openlocfilehash: 2bae9db94baf517eb6d7551beb06a343804319ff
+ms.sourcegitcommit: 5fb126747182108e31594b22e4677f05b1fb9313
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979465"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "43928177"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府版高端點
 
@@ -38,8 +38,8 @@ ms.locfileid: "42979465"
   
 |||
 |:-----|:-----|
-|**上次更新日期：** 2020 年 1 月 28 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
-   
+|**上次更新：** 04/28/2020- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
+
  請從[管理 Office 365 端點](managing-office-365-endpoints.md)開始，以瞭解如何使用此資料來管理網路連線的建議。 端點資料會在每月開始時更新，並以新的 IP 位址和 URLs 在使用中之前發佈30天。 這樣一來，客戶就可以在需要新的連線之前，尚未有自動更新，就能完成他們的處理常式。 如果需要解決支援上報、安全性事件或其他立即運作需求，也可以在當月期間更新端點。 以下顯示在此頁面上的資料都是由 REST web 服務所產生。 如果您使用腳本或網路裝置來存取此資料，您應該直接前往[Web 服務](office-365-ip-web-service.md)。
 
 下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
