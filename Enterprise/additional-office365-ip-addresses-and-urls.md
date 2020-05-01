@@ -3,7 +3,7 @@ title: Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/28/2020
+ms.date: 04/29/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: ''
 description: 摘要：新端點 Web 服務不包含特定案例的少量端點。
 hideEdit: true
-ms.openlocfilehash: 303b3bb57ab3b29a9ad825a525793af6f476e784
-ms.sourcegitcommit: eca49563fd99f08b7ee0bba01d122b0b96de07cb
+ms.openlocfilehash: 4d67d67c3f1c0eb6aa8079dbbdc0d964274af48b
+ms.sourcegitcommit: 93d0cc401c9d910e115072c0229232765fbad75e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43930214"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "43939598"
 ---
 # <a name="additional-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 
@@ -64,7 +64,7 @@ ms.locfileid: "43930214"
 | 16  |  **SharePoint Online 和商務用 OneDrive FQDN** <br> 所有 FQDN 中含有 '\<租用戶>' 的 '.sharepoint.com' FQDN 都必須在您用戶端的 IE 或 Microsoft Edge 信任的網站區域中才能正常運作。除了列 14 列出的跨套件 FQDN、CDN 和遙測，您也必須新增這些端點。 |  | 信任的網站 |
 | 17  | **Yammer**  <br> Yammer 僅可於瀏覽器中使用，且必須透過 Proxy 傳遞已驗證的使用者。所有 Yammer FQDN 都必須在用戶端的 IE 或 Microsoft Edge 的信任的網站區域中才能正常運作。 |  | 信任的網站 |
 | 18  | 使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 將內部部署使用者帳戶同步處理到 Azure AD。 | 請參閱[混合式身分識別所需的連接埠和通訊協定](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-ports)、[疑難排解 Azure AD 連線](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-connectivity) 和 [Azure AD Connect Health 代理程式安裝](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#outbound-connectivity-to-the-azure-service-endpoints)。 | 僅限外寄伺服器的流量 |
-| 19  | [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 與中國的 21 ViaNet 將內部部署使用者帳戶同步處理到 Azure AD。 | \*.digicert.com:80 <BR> \*.verisign.com:80 <BR> \*.entrust.net:80 <BR> \*.chinacloudapi.cn:443 <BR> secure.aadcdn.partner.microsoftonline-p.cn:443 <BR>*.partner.microsoftonline.cn:443 <BR> <BR>另請參閱[針對 Azure AD Connect 的連線問題進行疑難排解](https://docs.azure.cn/zh-cn/active-directory/hybrid/tshoot-connect-connectivity)。 | 僅限外寄伺服器的流量 |
+| 19  | [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 與中國的 21 ViaNet 將內部部署使用者帳戶同步處理到 Azure AD。 | \*.digicert.com:80 <BR> \*.entrust.net:80 <BR> \*.chinacloudapi.cn:443 <BR> secure.aadcdn.partner.microsoftonline-p.cn:443 <BR>*.partner.microsoftonline.cn:443 <BR> <BR>另請參閱[針對 Azure AD Connect 的連線問題進行疑難排解](https://docs.azure.cn/zh-cn/active-directory/hybrid/tshoot-connect-connectivity)。 | 僅限外寄伺服器的流量 |
 | 20  | Microsoft Stream (需要 Azure AD 使用者權杖)。 <BR> Office 365 全球 (包括 GCC) | \*.cloudapp.net <BR> \*.api.microsoftstream.com <BR> \*.notification.api.microsoftstream.com <BR> amp.azure.net <BR> api.microsoftstream.com <BR> az416426.vo.msecnd.net <BR> s0.assets-yammer.com <BR> vortex.data.microsoft.com <BR> web.microsoftstream.com <BR> TCP 通訊埠 443  | 內送伺服器流量 |
 | 21  | 在伺服器的新安裝以及使用Active Directory 網域服務 (AD DS) 進行設定時，將 MFA 伺服器用於多重要素驗證要求。 | 請參閱[開始使用 Azure Multi-Factor Authentication Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-deploy#plan-your-deployment)。  | 僅限外寄伺服器的流量 |
 | 22  | Microsoft Graph 變更通知 | 開發人員可以利用[變更通知](https://docs.microsoft.com/graph/webhooks?context=graph%2Fapi%2F1.0&view=graph-rest-1.0)來訂閱 Microsoft Graph 中的事件。 | *.cloudapp.net<BR> 104.43.130.21、137.116.169.230、13.79.38.63、104.214.39.228、公用雲端：168.63.250.205、52.161.9.202、40.68.103.62、13.89.60.223、23.100.95.104、40.113.95.219、104.214.32.10、168.63.237.145、52.161.110.176、52.174.177.183 <BR> 適用於美國政府的 Microsoft 雲端：52.244.231.173、52.238.76.151、52.244.250.211、52.238.78.108 <BR> Microsoft Cloud Germany：51.4.231.136、51.5.243.223、51.4.226.154、51.5.244.215 <BR> 由 21Vianet 營運的 Microsoft Cloud China：139.219.15.33、42.159.154.223、42.159.88.79、42.159.155.77<BR> TCP 通訊埠 443 <BR> 附註：開發人員可以在建立訂閱時指定不同的通訊埠。  | 內送伺服器流量 |
