@@ -8,6 +8,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
@@ -17,12 +19,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
 description: 了解如何使用 Office 365 PowerShell 在 Office 365 中建立使用者帳戶。
-ms.openlocfilehash: 3247f9d047ca7e7e99c3c0b0900c356854ce3d75
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 95cbefc2caeb61376ed77fe5023cb1c050a8fa07
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844244"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004686"
 ---
 # <a name="create-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 建立使用者帳戶
 
@@ -117,7 +119,7 @@ New-MsolUser -DisplayName "Caleb Sills" -FirstName Caleb -LastName Sills -UserPr
     
 ## <a name="see-also"></a>另請參閱
 
-[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

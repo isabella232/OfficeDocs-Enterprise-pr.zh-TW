@@ -14,15 +14,17 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom: Adm_O365
-search.appverid: SPO160
+search.appverid:
+- SPO160
+- MET150
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
 description: 本文說明 SharePoint 線上中啟用 SharePoint 發佈功能的導覽選項網站。 導覽的選擇和設定會大幅影響 SharePoint Online 中網站的效能與擴充性。 本文不適用於傳統小組網站。
-ms.openlocfilehash: 410be307fca62c987baed39601e122717a6bebcc
-ms.sourcegitcommit: b1042fa2d02f1bc74586751c542776325d3a170f
+ms.openlocfilehash: c651530284889d2808c8fa415b72836eb6d14aea
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43170651"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004758"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
