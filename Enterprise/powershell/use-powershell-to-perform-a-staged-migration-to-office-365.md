@@ -8,18 +8,20 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
 description: 摘要：了解如何使用 Windows PowerShell 來分段移轉至 Office 365。
-ms.openlocfilehash: 21642f146bac29ca10ef234bafee170339ce6cce
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 846704ff32a8f6e4012e93b67ec2a921d4c9ac51
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841290"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004516"
 ---
 # <a name="use-powershell-to-perform-a-staged-migration-to-office-365"></a>使用 PowerShell 來執行分段移轉至 Office 365
 
@@ -59,7 +61,7 @@ ms.locfileid: "41841290"
   
 - 從公司網路之外使用 Outlook 連線至您的內部部署 Exchange 信箱。
     
-- 使用[Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/)來測試連線設定。 使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
+- 使用[Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/)來測試您的連線設定。 使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探索測試。
     
 - 在 Exchange Online PowerShell 中執行下列命令：
     

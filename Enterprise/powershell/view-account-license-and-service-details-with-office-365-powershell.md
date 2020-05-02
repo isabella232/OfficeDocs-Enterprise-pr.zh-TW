@@ -8,6 +8,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
@@ -16,31 +18,31 @@ ms.custom:
 - Ent_Office_Other
 - LIL_Placement
 ms.assetid: ace07d8a-15ca-4b89-87f0-abbce809b519
-description: 說明如何使用 Office 365 PowerShell 來判斷已指派給使用者的 Office 365 服務。
-ms.openlocfilehash: a21b64ac3bbccd88a87f3498153c1efd5054c82a
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 說明如何使用 Office 365 PowerShell 判斷已指派給使用者的 Office 365 服務。
+ms.openlocfilehash: 603470be87aea2d58f343511026fb2860e58b688
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844164"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004486"
 ---
 # <a name="view-account-license-and-service-details-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視帳戶授權與服務詳細資料
 
-在 Office 365 授權從授權計劃 （也稱為的 Sku 或 Office 365 計劃） 讓使用者能夠存取 Office 365 服務所定義的那些計劃。 不過，使用者可能無法存取目前指派給他們的授權中可用的所有服務。 您可以使用 Office 365 PowerShell 來檢視使用者帳戶之服務的狀態。 
+在 Office 365 中，授權方案的授權（也稱為 SKUs 或 Office 365 方案）可讓使用者存取為這些計畫定義的 Office 365 服務。 不過，使用者可能無法存取目前指派給他們的授權中可用的所有服務。 您可以使用 Office 365 PowerShell 來查看使用者帳戶上之服務的狀態。 
 
-如需有關授權方案、 授權及服務的詳細資訊，請參閱[檢視授權與服務的 Office 365 PowerShell](view-licenses-and-services-with-office-365-powershell.md)。
+如需授權方案、授權及服務的詳細資訊，請參閱[使用 Office 365 PowerShell 查看授權和服務](view-licenses-and-services-with-office-365-powershell.md)。
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
-接下來，列出您的租用戶使用此命令的授權計劃。
+接下來，使用此命令列出租使用者的授權計畫。
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-使用以下命令以列出每個授權計劃中提供的服務。
+使用這些命令，列出每個授權方案中可用的服務。
 
 ```powershell
 $allSKUs=Get-AzureADSubscribedSku
@@ -54,7 +56,7 @@ $licArray +=  ""
 $licArray
 ```
 
-使用以下命令以列出指派給使用者帳戶的授權。
+使用這些命令列出指派給使用者帳戶的授權。
 
 ```powershell
 $userUPN="<user account UPN, such as belindan@contoso.com>"
@@ -67,7 +69,7 @@ $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
-接著，執行此命令以列出您的組織中可用的授權計劃。 
+接下來，執行此命令，列出您組織中可用的授權計畫。 
 
 ```powershell
 Get-MsolAccountSku
@@ -76,39 +78,39 @@ Get-MsolAccountSku
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
-接著，執行此命令以列出每個授權的計劃中提供的服務，而且它們的順序列出 （索引編號）。
+接下來，執行此命令以列出每個授權方案中可用的服務，以及這些服務的列出順序（索引編號）。
 
 ```powershell
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "<AccountSkuId>"}).ServiceStatus
 ```
   
-使用此命令來列出已指派給使用者的授權，而且它們的順序列出 （索引編號）。
+使用此命令來列出指派給使用者的授權，以及其列出的順序（索引編號）。
 
 ```powershell
 Get-MsolUser -UserPrincipalName <user account UPN> | Format-List DisplayName,Licenses
 ```
 
-### <a name="to-view-services-for-a-user-account"></a>若要檢視服務的使用者帳戶
+### <a name="to-view-services-for-a-user-account"></a>若要為使用者帳戶查看服務
 
-若要檢視使用者有權存取的所有 Office 365 服務，請使用下列語法：
+若要查看使用者有權存取的所有 Office 365 服務，請使用下列語法：
   
 ```powershell
 (Get-MsolUser -UserPrincipalName <user account UPN>).Licenses[<LicenseIndexNumber>].ServiceStatus
 ```
 
-本範例會顯示使用者 BelindaN@litwareinc.com 具有存取的服務。 這會顯示與所有的授權指派給其帳戶相關聯的服務。
+此範例會顯示使用者 BelindaN@litwareinc.com 可以存取的服務。 這會顯示與指派給其帳戶之所有授權相關聯的服務。
   
 ```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses.ServiceStatus
 ```
 
-本範例會顯示該使用者 BelindaN@litwareinc.com 有從指派給其帳戶 （索引編號為 0） 的第一個授權存取的服務。
+此範例會顯示使用者 BelindaN@litwareinc.com 可以從指派給其帳戶的第一個授權存取的服務（索引編號為0）。
   
 ```powershell
 (Get-MsolUser -UserPrincipalName belindan@litwareinc.com).Licenses[0].ServiceStatus
 ```
 
-若要檢視已被指派*多個授權*的使用者的所有服務，請使用下列語法：
+若要查看已指派*多個授權*之使用者的所有服務，請使用下列語法：
 
 ```powershell
 $userUPN="<user account UPN>"
@@ -125,7 +127,7 @@ $licArray
  
 ## <a name="see-also"></a>另請參閱
 
-[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

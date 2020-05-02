@@ -14,33 +14,35 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom: Adm_O365
-search.appverid: SPO160
+search.appverid:
+- SPO160
+- MET150
 ms.assetid: c932bd9b-fb9a-47ab-a330-6979d03688c0
-description: 本文說明如何部署至 SharePoint Online 不執行傳統負載測試，因為不允許使用。
-ms.openlocfilehash: ca0ae008778cfd5d347d8b4f78b7db927b4e8f82
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 本文說明如何在不允許傳統負載測試的情況下，在不執行傳統負載測試的情況下，部署至 SharePoint Online。
+ms.openlocfilehash: d082dbd93f9724080118f5e387713dc374e50643
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844704"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004606"
 ---
 # <a name="capacity-planning-and-load-testing-sharepoint-online"></a>SharePoint Online 容量規劃和負載測試
-本文說明如何部署至 SharePoint Online 沒有傳統負載測試，因為 SharePoint Online 上不允許負載測試。 SharePoint Online 的雲端服務和負載功能，狀況且整體的服務中的負載平衡由 Microsoft 所管理。
+本文說明如何在未使用傳統負載測試的情況下，部署至 SharePoint Online，因為 SharePoint 線上上不允許進行負載測試。 SharePoint 線上是雲端服務，且服務的負載、健康情況和整體平衡是由 Microsoft 所管理。
   
-若要確保成功啟動您的網站的最佳方法是遵循基本原則、 實務和建議的方式反白顯示在[規劃您入口網站啟動推行](https://docs.microsoft.com/office365/enterprise/planportallaunchroll-out)。
+確保啟動網站成功的最佳方法，就是遵循[您的入口網站啟動向外設計](https://docs.microsoft.com/office365/enterprise/planportallaunchroll-out)中所述的基本原則、作法和建議。
 
-## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>如何 SharePoint Online 執行容量規劃的概觀 
-透過內部部署的 SharePoint Online 的主要優點是雲端以及最佳化分散式區域中的使用者的彈性。 我們的大型環境設為服務百萬的使用者每日，所以很重要，我們處理容量有效率地平衡，並展開 [伺服器陣列。
+## <a name="overview-of-how-sharepoint-online-performs-capacity-planning"></a>SharePoint 線上如何執行容量規劃的概述 
+在內部部署環境中 SharePoint 線上的主要好處之一是雲端的彈性，以及針對分散式區域中的使用者進行優化。 我們將大規模的環境設定為每天為數百萬的使用者提供服務，因此我們必須透過平衡和展開伺服器陣列，有效地處理容量。
   
-雖然成長通常是不可預期的任何一個伺服器陣列中任何一個租用戶，要求的彙的總和經過一段時間是可預測。 藉由識別 SharePoint Online 中的成長趨勢，我們可以規劃未來的擴充。
+在任何一個伺服器陣列中的任何一個租使用者的成長都不可預測的情況下，累積的要求總數可在一段時間後預測。 透過找出 SharePoint 線上中的成長趨勢，我們可以規劃未來的擴充。
   
-才能有效率地使用容量及處理未預期的成長，任何伺服器陣列中，我們有自動化來追蹤及監視服務的各種元素。 利用多個評量，以其中一個主要和正在 CPU 負載，這做為擴充最上層的訊號端伺服器。 此外此建議[分階段 / 揮動方法](https://docs.microsoft.com/office365/enterprise/planportallaunchroll-out)，根據負載及成長經過一段時間，將會縮放 SQL 環境及下列階段與經允許該負載和成長的正確的通訊群組時。 
+為了有效地使用容量並處理未預期的成長，在任何伺服器陣列中，我們都有可讓您追蹤和監視服務各專案的自動化。 使用多個計量，其中一個主要是 CPU 負載，它是用來向上擴充前端伺服器的信號。 此外，我們也建議使用[分階段/wave 的方法](https://docs.microsoft.com/office365/enterprise/planportallaunchroll-out)，因為 SQL 環境會隨著時間的負載和成長而縮放，而且遵循階段和波形可讓該負載和成長正確地散佈。 
 
-容量為多個幾乎新增更多的硬體連續為基礎，但它也適用於管理和控制的容量，以確定它會要求提供服務有效的負載。 我們建議客戶遵循建議的指導方針，以確保它們有最佳的體驗。 這也表示我們有節流模式和控制項，以確保我們的服務中不允許 「 粗俗 」 的行為。 而不是所有 「 錯誤 」 的行為是故意的我們沒有以確保我們限制該行為的效果。 如需節流及如何避免在它的進一步資訊，檢閱[如何避免在被節流指南](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)> 一文。
+容量不僅僅是在連續新增更多硬體，也適用于管理和控制該容量，以確保其可提供有效的負載要求。 我們建議客戶遵循建議的指導方針，以確保獲得最佳的體驗。 這也表示我們有節流模式和控制措施，以確保我們不允許在服務中執行「濫用」行為。 雖然並非所有「不良」行為是特意的，但我們卻必須確定會限制該行為的影響。 如需節流的進一步資訊和避免，請參閱 how [to to the to to to to](https://docs.microsoft.com/sharepoint/dev/general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online)
 
-## <a name="why-you-cannot-load-test-sharepoint-online"></a>為什麼無法載入測試 SharePoint Online
-與內部部署環境，負載測試用來驗證規模假設和最終尋找伺服器陣列; 分行點藉由飽和它具有負載。 
+## <a name="why-you-cannot-load-test-sharepoint-online"></a>為何無法將測試 SharePoint 線上載入
+使用內部部署環境時，負載測試是用來驗證規模的設想，並最終找到伺服器陣列的中中斷點;透過負載飽和。 
 
-使用 SharePoint Online，我們需要以不同的方式執行動作，因為縮放比例是相當流暢和調整、 節流處理及控制負載，根據特定啟發學習法。 正在這類大型多承租人環境，我們必須保護所有租用戶中相同的伺服器陣列，因此我們將會自動節流的任何負載測試。 如果您不過嘗試負載測試，除了被節流，您會收到令人失望和因為您今天測試伺服器陣列將可能有鎖縮放變更在測試期間或之後進行測試，小時內可能誤導結果為刻度和平衡動作的伺服器陣列上持續執行。
+隨著 SharePoint 線上，我們需要以不同的方式執行，因為比例相對於特定的試探法而相對流動和調整、節流和控制負載。 如此大規模的多租使用者環境，我們必須保護相同伺服器陣列中的所有承租人，因此我們會自動節流任何負載測試。 不過，如果您在嘗試載入測試時，除了受到限制以外，您將會收到 disappointing 及可能誤導的結果，因為您現在所測試的伺服器陣列可能會在測試時段或在測試之後的時段內，隨著規模和伺服器陣列的平衡動作不斷執行。
 
-而不是嘗試載入測試 SharePoint 作為服務，而是著重於下列建議的作法，然後遵循[建立、 啟動和維護狀況良好的入口網站](https://go.microsoft.com/fwlink/?linkid=2105838)指引。
+不是嘗試將測試 SharePoint 當做服務，而是著重于遵循建議的做法，並遵循[建立、啟動及維護健康的入口網站](https://go.microsoft.com/fwlink/?linkid=2105838)指導方針。

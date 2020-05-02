@@ -8,6 +8,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
@@ -18,12 +20,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: ea762e992056ac3265336055eabb860f67482093
-ms.sourcegitcommit: f2e640ffdbef95c6d98845f85fd9bea21a7388aa
+ms.openlocfilehash: fe25f07d222f05b938a980781a86ab16bf8dd03b
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "43580920"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004656"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -140,7 +142,7 @@ ForEach ($lic in $licenses)
 
 若要釋放授權，另一種方法是刪除使用者帳戶。 如需詳細資訊，請參閱[使用 Office 365 PowerShell 刪除及還原使用者帳戶](delete-and-restore-user-accounts-with-office-365-powershell.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   

@@ -7,18 +7,20 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
 description: 摘要：了解如何使用 Windows PowerShell 來完全移轉至 Office 365。
-ms.openlocfilehash: 6f82dc8501d5dfbca7c980b025e6da7a4deb00d5
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 159ebe7d279713168993c51529b9935c6e5d681a
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844714"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004526"
 ---
 # <a name="use-powershell-to-perform-a-cutover-migration-to-office-365"></a>使用 PowerShell 來執行完全移轉至 Office 365
 
@@ -77,7 +79,7 @@ ms.locfileid: "41844714"
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
-- **指派必要權限給內部部署使用者帳戶來存取 Exchange 組織中的信箱。** 您用來連線至內部部署 Exchange 組織 （也稱為遷移系統管理員） 的內部部署使用者帳戶必須具有存取您要移轉到 Office 365 的內部部署信箱的必要權限。 此使用者帳戶可用來建立內部部署組織的移轉端點。
+- **指派必要權限給內部部署使用者帳戶來存取 Exchange 組織中的信箱。** 您用來連線至內部部署 Exchange 組織的內部部署使用者帳戶（也稱為「遷移系統管理員」）必須具備必要的許可權，才能存取您要遷移至 Office 365 的內部部署信箱。 此使用者帳戶可用來建立內部部署組織的移轉端點。
     
     下列清單顯示使用完全移轉來移轉信箱時所需的系統管理權限。有三個可能的選項。
     
@@ -197,7 +199,7 @@ Remove-MigrationBatch -Identity CutoverBatch
 ### <a name="section-7-assign-user-licenses"></a>第 7 節：指派使用者授權
 <a name="BK_Step7"> </a>
 
- **藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。** 如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。 若要在 Microsoft 365 系統管理中心將授權指派，請參閱[指派或取消指派商務用 Office 365 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
+ **藉由指派授權，為移轉的帳戶啟動 Office 365 使用者帳戶。** 如果您未指派授權，則當寬限期 (30 天) 結束時就會停用信箱。 若要在 Microsoft 365 系統管理中心中指派授權，請參閱[指派或取消指派 Office 365 for business 的授權](https://go.microsoft.com/fwlink/?LinkId=536681)。
   
 ### <a name="step-8-complete-post-migration-tasks"></a>步驟 8：完成移轉後工作
 <a name="BK_Step8"> </a>

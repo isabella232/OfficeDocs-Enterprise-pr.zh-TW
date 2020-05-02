@@ -8,6 +8,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+search.appverid:
+- MET150
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
@@ -17,12 +19,12 @@ ms.custom:
 - PowerShell
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
 description: 說明如何使用 Office 365 PowerShell 檢視經授權與未經授權的使用者帳戶。
-ms.openlocfilehash: 4b2f2b5b3898b9f800cc3fb9416c5b666472d907
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: f8a00ad11ba7bbd93c809dc130cf588420c2d81c
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844144"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004176"
 ---
 # <a name="view-licensed-and-unlicensed-users-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視經授權與未經授權的使用者
 
@@ -32,20 +34,20 @@ ms.locfileid: "41844144"
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
  
-若要檢視的所有使用者帳戶清單未指派授權計劃 （未授權的使用者） 的任何您組織中，執行下列命令：
+若要查看您的組織中所有尚未指派任何授權方案（未授權使用者）的使用者帳戶清單，請執行下列命令：
   
 ```powershell
 Get-AzureAdUser | ForEach{ $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].SkuId ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $false) { Write-Host $_.UserPrincipalName} }
 ```
 
-若要檢視的所有使用者帳戶清單中您的組織已指派任何授權計劃 （授權的使用者），執行下列命令：
+若要查看組織中已指派任何授權方案（授權使用者）的所有使用者帳戶清單，請執行下列命令：
   
 ```powershell
 Get-AzureAdUser | ForEach { $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].SkuId ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $true) { Write-Host $_.UserPrincipalName} }
 ```
 
 >[!Note]
->若要列出所有在您的訂閱中的使用者，請使用`Get-AzureAdUser -All $true`命令。
+>若要列出您訂閱中的所有使用者，請使用`Get-AzureAdUser -All $true`命令。
 >
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
@@ -76,7 +78,7 @@ Get-MsolUser -All | where {$_.isLicensed -eq $true}
 
 ## <a name="see-also"></a>另請參閱
 
-[管理使用者帳戶、 授權及使用 Office 365 PowerShell 的群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
   

@@ -14,35 +14,37 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom: Adm_O365
-search.appverid: SPO160
+search.appverid:
+- SPO160
+- MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
-description: 本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。
-ms.openlocfilehash: 86efb767e80927f7d3f5d8055676e6d99da4d667
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 本文說明如何使用 JavaScript 延後載入影像，以及等候載入非必要的 JavaScript，直到載入頁面後，才能縮短 SharePoint 線上頁面的載入時間。
+ms.openlocfilehash: 14220839c196ea3dd987be5dc924c2f41965fc0a
+ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840560"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "44004596"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>延遲載入 SharePoint Online 中的影像和 JavaScript
 
-本文說明如何降低 SharePoint Online 頁面載入時間，透過使用 JavaScript 延遲載入影像以及頁面載入後再載入非必要 JavaScript，直到。
+本文說明如何使用 JavaScript 延後載入影像，以及等候載入非必要的 JavaScript，直到載入頁面後，才能縮短 SharePoint 線上頁面的載入時間。
   
-影像可以造成負面的影響 SharePoint Online 上的頁面載入速度。 根據預設，大部分現代的網際網路瀏覽器預先擷取影像載入的 HTML 網頁時。 這可能會導致是不必要地載入速度緩慢，如果影像不顯示在螢幕上，直到使用者會向下捲動頁面。 影像可以封鎖瀏覽器中載入網頁的可見的一部分。 若要解決此問題，您可以使用 JavaScript 以略過第一次載入影像。 此外，載入非必要 JavaScript 可以減慢 SharePoint 頁面上的載入時間太。 本主題說明您可以用來改善頁面載入時間與 SharePoint Online 中的 JavaScript 一些方法。
+影像會對 SharePoint 線上的頁面載入速度產生負面影響。 根據預設，在載入 HTML 頁面時，大多數新式的 Internet 瀏覽器都會預先取得映射。 這可能會導致頁面在螢幕上看不到，直到使用者向裡滾時，才會在螢幕上顯示。 影像可以封鎖瀏覽器載入頁面的可見部分。 若要解決此問題，您可以使用 JavaScript 先略過載入影像。 此外，載入非必要的 JavaScript 也會同時減慢 SharePoint 頁面上的載入時間。 本主題說明一些方法，可讓您在線上 SharePoint 中使用 JavaScript 來改善頁面載入時間。
   
-## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint Online 頁面載入透過使用 JavaScript 延遲映像來改善頁面載入時間
+## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint 線上頁面上使用 JavaScript 延遲圖像載入，以提升頁面載入時間
 
-您可以使用 JavaScript 來防止從預先擷取映像在網頁瀏覽器。 這會加快整體的文件呈現。 若要執行這項操作您移除從 src 屬性的值\<img\>標記並取代為資料屬性中的檔案路徑如下： 資料來源。 例如：
+您可以使用 JavaScript 以避免網頁瀏覽器預先提取圖像。 這會加快整體檔渲染的速度。 若要這麼做，您可以從\<img\>標記中移除 src 屬性的值，並將它取代為數據屬性中的檔案路徑，例如： data-src。 例如：
   
 ```html
 <img src="" data-src="/sites/NavigationBySearch/_catalogs/masterpage/media/microsoft-white-8.jpg" />
 ```
 
-使用此方法，在瀏覽器不會立即下載影像。 如果影像位於帶正負號，JavaScript 會告訴瀏覽器並前往從資料屬性擷取 URL，並將它插入為 src 屬性的值。 影像只會載入為使用者捲動和提到到檢視。
+使用此方法時，瀏覽器不會立即下載圖像。 如果此圖像已存在於視區中，JavaScript 會告訴瀏覽器從資料屬性中取得 URL，並將其插入 src 屬性值。 影像只會在使用者滾動時載入，而且會進入 view。
   
-若要讓這一切發生，您需要使用 JavaScript。
+若要進行上述所有動作，您必須使用 JavaScript。
   
-在文字檔案中，定義**Iselementinviewport** （） 函數來檢查元素是在組件中的使用者可以看見的瀏覽器。
+在文字檔中，定義**isElementInViewport （）** 函數，以檢查元素是否位於使用者可以看見的瀏覽器部分。
   
 ```javascript
 function isElementInViewport(el) {
@@ -58,7 +60,7 @@ function isElementInViewport(el) {
 }
 ```
 
-接下來，使用**Iselementinviewport** **loadItemsInView()** 函式中。 **LoadItemsInView()** 函式會載入具有資料 src 屬性的值，如果他們是在組件中的使用者可以看見的瀏覽器的所有影像。 文字檔案中加入下列函式：
+接下來，在**loadItemsInView （）** 函數中使用**isElementInViewport （）** 。 **LoadItemsInView （）** 函數會載入具有資料 src 屬性值的所有影像（如果它們位於使用者可以看見的瀏覽器部分中）。 將下列函數新增至文字檔：
   
 ```javascript
 function loadItemsInView() {
@@ -74,7 +76,7 @@ function loadItemsInView() {
 }
 ```
 
-最後，呼叫**loadItemsInView()** 從**window.onscroll()** 內，如下列範例所示。 這可確保當使用者需要它們，但是不之前，就會載入任何處於帶正負號的影像。 文字檔案中加入下列：
+最後，從**loadItemsInView （** ）中呼叫**onscroll （）** ，如下列範例所示。 這可確保視區中的任何影像都會在使用者需要時載入，但不會在之前載入。 將下列專案新增至文字檔：
   
 ```javascript
 //Example of calling loadItemsInView() from within window.onscroll()
@@ -84,7 +86,7 @@ $(window).on("scroll", function () {
 
 ```
 
-若是 SharePoint Online，您需要將下列函式附加至捲軸事件上 #s4-workspace \<div\>標記。 這是因為視窗事件會被覆寫，才能確保在功能區會維持附加至頁面頂端。
+針對 SharePoint 線上，您必須將下列函數附加到 #s4 工作區\<div\>標籤上的 scroll 事件。 這是因為會覆寫視窗事件，以確保功能區保持附加在頁面頂端。
   
 ```javascript
 //Keep the ribbon at the top of the page
@@ -93,34 +95,34 @@ $('#s4-workspace').on("scroll", function () {
 });
 ```
 
-將文字檔儲存為副檔名是.js，例如 delayLoadImages.js JavaScript 檔案。
+將文字檔儲存為副檔名為 .js 的 JavaScript 檔，例如 delayLoadImages.js。
   
-一旦您已完成的撰寫 delayLoadImages.js 後，您可以將檔案的內容新增至 SharePoint Online 中的主版頁面。 要這麼做，藉由將指令碼連結新增至主版頁面中的標頭。 一旦主版頁面中的範例，JavaScript 將套用到您的 SharePoint Online 網站中使用該主版頁面版面配置的所有頁面。 或者，如果您想要只使用此網站的一個頁面上，請將 JavaScript 嵌入] 頁面上使用指令碼編輯器網頁組件。 這些主題以取得詳細資訊，請參閱：
+DelayLoadImages.js 寫入完畢後，您可以在 SharePoint 線上中將檔案的內容新增至主版頁面。 若要這麼做，您可以將腳本連結新增至主版頁面的頁首。 在主版頁面中，JavaScript 會套用至所有使用該主版頁面版面配置的 SharePoint Online 網站中的所有頁面。 或者，如果您只想在網站的一個頁面上使用此程式，請使用 [腳本編輯器網頁元件] 將 JavaScript 嵌入頁面中。 如需詳細資訊，請參閱以下主題：
   
-- [如何： 將主版頁面套用至 SharePoint 2013 中的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
+- [操作方法：將主版頁面套用至 SharePoint 2013 的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
 
-- [如何： 在 SharePoint 2013 中建立網頁版面配置](https://go.microsoft.com/fwlink/p/?LinkId=525628)
+- [操作方法：在 SharePoint 2013 中建立頁面配置](https://go.microsoft.com/fwlink/p/?LinkId=525628)
 
-### <a name="example-referencing-the-javascript-delayloadimagesjs-file-from-a-master-page-in-sharepoint-online"></a>範例： 從 SharePoint Online 中的主版頁面參照 JavaScript delayLoadImages.js 檔案
+### <a name="example-referencing-the-javascript-delayloadimagesjs-file-from-a-master-page-in-sharepoint-online"></a>範例：從 SharePoint Online 中的主版頁面參考 JavaScript delayLoadImages.js 檔案
   
-為了讓此功能才能運作，您也需要參照 jQuery 主版頁面中。 在下列範例中，您可以看到的初始頁面載入沒有只有一個影像載入，但有好幾種多個頁面上。
+為了讓這種方式運作，您也需要在主版頁面中參照 jQuery。 在下列範例中，您可以在初始頁面載入時看到只載入一個影像，但是頁面上有其他數個。
   
 ![顯示頁面上載入一個影像的螢幕擷取畫面](media/3d177ddb-67e5-43a7-b327-c9f9566ca937.png)
   
-下列螢幕擷取畫面顯示的其餘部分，之後在捲動至檢視下載的影像。
+下列螢幕擷取畫面顯示在滾到 view 之後所下載的其餘影像。
   
 ![顯示頁面上載入數個影像的螢幕擷取畫面](media/95eb2b14-f6a1-4eac-a5cb-96097e49514c.png)
   
-透過使用 JavaScript 延遲載入影像可以是有效的技術，以提升效能;不過，如果技術會套用至公用網站然後搜尋引擎不能夠以相同方式編目影像它們會編目定期組成的影像。 這會影響在搜尋引擎排名，因為本身的映像上的中繼資料不是真的有等到頁面載入。 搜尋引擎編目程式只能讀取 HTML，因此將不會看到圖像為頁面上的內容。 影像是用來在搜尋結果的排名頁面的因素之一。 若要解決此問題的一種方式是使用為您的影像的簡介文字。
+延遲使用 JavaScript 的圖像載入可能是提升效能的有效技巧;不過，如果此技術是在公用網站上套用，則搜尋引擎無法編目影像，其方式與編目定期格式的圖像的方式相同。 這可能會影響搜尋引擎上的排名，因為頁面上的中繼資料在載入時並未真正存在。 搜尋引擎編目唯讀取 HTML，因此不會在頁面上看到影像做為內容。 圖像是用來在搜尋結果中排名頁面的因素之一。 若要解決此問題，一種方法是使用圖像的簡介文字。
   
-## <a name="github-code-sample-injecting-javascript-to-improve-performance"></a>GitHub 程式碼範例： 插入 JavaScript 以改善效能
+## <a name="github-code-sample-injecting-javascript-to-improve-performance"></a>GitHub 程式碼範例：注入 JavaScript 以提升效能
 
-請不要遺漏有關 GitHub 所提供[JavaScript 插入](https://go.microsoft.com/fwlink/p/?LinkId=524759)上的文章和程式碼範例。
+在 GitHub 上所提供的[JavaScript 注入](https://go.microsoft.com/fwlink/p/?LinkId=524759)上，請勿錯過文章和程式碼範例。
   
 ## <a name="see-also"></a>另請參閱
 
-[在 Office 2013 和 Office 365 專業增強版支援的瀏覽器](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
+[支援的瀏覽器，Office 2013 和 Office 365 ProPlus](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
   
-[如何： 將主版頁面套用至 SharePoint 2013 中的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
+[操作方法：將主版頁面套用至 SharePoint 2013 的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
   
-[如何： 在 SharePoint 2013 中建立網頁版面配置](https://go.microsoft.com/fwlink/p/?LinkId=525628)
+[操作方法：在 SharePoint 2013 中建立頁面配置](https://go.microsoft.com/fwlink/p/?LinkId=525628)
