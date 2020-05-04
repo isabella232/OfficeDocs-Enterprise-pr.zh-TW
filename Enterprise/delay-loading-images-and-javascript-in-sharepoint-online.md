@@ -19,18 +19,18 @@ search.appverid:
 - MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
 description: 本文說明如何使用 JavaScript 延後載入影像，以及等候載入非必要的 JavaScript，直到載入頁面後，才能縮短 SharePoint 線上頁面的載入時間。
-ms.openlocfilehash: 14220839c196ea3dd987be5dc924c2f41965fc0a
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 09feb74b92d6fec99ba28f432ea19858cb3e094b
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004596"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009348"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>延遲載入 SharePoint Online 中的影像和 JavaScript
 
 本文說明如何使用 JavaScript 延後載入影像，以及等候載入非必要的 JavaScript，直到載入頁面後，才能縮短 SharePoint 線上頁面的載入時間。
   
-影像會對 SharePoint 線上的頁面載入速度產生負面影響。 根據預設，在載入 HTML 頁面時，大多數新式的 Internet 瀏覽器都會預先取得映射。 這可能會導致頁面在螢幕上看不到，直到使用者向裡滾時，才會在螢幕上顯示。 影像可以封鎖瀏覽器載入頁面的可見部分。 若要解決此問題，您可以使用 JavaScript 先略過載入影像。 此外，載入非必要的 JavaScript 也會同時減慢 SharePoint 頁面上的載入時間。 本主題說明一些方法，可讓您在線上 SharePoint 中使用 JavaScript 來改善頁面載入時間。
+影像會對 SharePoint 線上的頁面載入速度產生負面影響。 根據預設，在載入 HTML 頁面時，大多數新式的 Internet 瀏覽器都會預先取得映射。 這可能會導致頁面在螢幕上看不到，直到使用者向裡滾時，才會在螢幕上顯示。 影像可以封鎖瀏覽器載入頁面的可見部分。 若要解決此問題，您可以使用 JavaScript 先略過載入影像。 此外，載入非必要的 JavaScript 也可以減慢 SharePoint 頁面上的下載時間。 本主題說明一些方法，可讓您在線上 SharePoint 中使用 JavaScript 來改善頁面載入時間。
   
 ## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint 線上頁面上使用 JavaScript 延遲圖像載入，以提升頁面載入時間
 
@@ -109,7 +109,7 @@ DelayLoadImages.js 寫入完畢後，您可以在 SharePoint 線上中將檔案�
   
 ![顯示頁面上載入一個影像的螢幕擷取畫面](media/3d177ddb-67e5-43a7-b327-c9f9566ca937.png)
   
-下列螢幕擷取畫面顯示在滾到 view 之後所下載的其餘影像。
+下列螢幕擷取畫面顯示在其滾到 view 之後所下載的其餘影像。
   
 ![顯示頁面上載入數個影像的螢幕擷取畫面](media/95eb2b14-f6a1-4eac-a5cb-96097e49514c.png)
   
@@ -121,7 +121,7 @@ DelayLoadImages.js 寫入完畢後，您可以在 SharePoint 線上中將檔案�
   
 ## <a name="see-also"></a>另請參閱
 
-[支援的瀏覽器，Office 2013 和 Office 365 ProPlus](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
+[Office 2013 和 Microsoft 365 應用程式中支援的瀏覽器](https://support.office.com/article/57342811-0dc4-4316-b773-20082ced8a82)
   
 [操作方法：將主版頁面套用至 SharePoint 2013 的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
   

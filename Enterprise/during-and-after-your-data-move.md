@@ -15,12 +15,12 @@ ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 f1.keywords:
 - NOCSH
 description: 資料移動是後端作業，對使用者的影響最小。 Microsoft 將租使用者的每一個服務和相關資料移至新的資料中心地理位置時，不需要執行任何動作。 資料傳輸和驗證會在背景中預先進行，並將對使用者的影響降至最低。
-ms.openlocfilehash: ee2a63ed11e83a16ec6c894a3eaf34cf36ebbc4f
-ms.sourcegitcommit: cf92870078d971ae8e36b75bd35f4b8f36ec7a50
+ms.openlocfilehash: 24239f4e6cb8207fe53043dce80ae77035d8e834
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43772104"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009298"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -66,7 +66,7 @@ ms.locfileid: "43772104"
   
 - 商務用 OneDrive
     
-- Project Online
+- Microsoft Project Online
     
 - Project for Office 365
     
@@ -74,7 +74,7 @@ ms.locfileid: "43772104"
     
 - 瀏覽器中的 Office
     
-- Office 365 專業增強版
+- Microsoft 365 Apps 企業版
     
 - Visio Pro for Office 365
     

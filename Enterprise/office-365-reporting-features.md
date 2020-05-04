@@ -15,12 +15,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: Office 365 中報告功能的說明。
-ms.openlocfilehash: 7816ed231a3e38f618fb3f63f77dc24c9eed37c3
-ms.sourcegitcommit: 3aa6c61242c5691e3180a474ad059bd84c86dc9e
+ms.openlocfilehash: 19ffd501627426b08599b29c3125a52c839df5e2
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "43206550"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009508"
 ---
 # <a name="office-365-reporting-features"></a>Office 365 報告功能 
 
@@ -30,7 +30,7 @@ Office 365 中的 [報告] 功能可提供各種針對 Azure Active Directory �
 
 ## <a name="office-365-reports-dashboard"></a>Office 365 報告儀表板
 
-Microsoft 365 系統管理中心預覽中的 [報告] 儀表板會顯示跨 Office 365 的使用方式活動。 Office 365 全域管理員或 Exchange Online、SharePoint 線上或商務用 Skype 系統管理員，可以深入瞭解服務的使用狀況。 例如，特定 Office 365 服務中的使用者人數、已啟用 Office 365 ProPlus 的使用者數目，以及透過組織流動的郵件數量。 報告可用於過去7、30、90和180天。
+Microsoft 365 系統管理中心預覽中的 [報告] 儀表板會顯示跨 Office 365 的使用方式活動。 Office 365 全域管理員或 Exchange Online、SharePoint 線上或商務用 Skype 系統管理員，可以深入瞭解服務的使用狀況。 例如，特定 Office 365 服務中的使用者人數、已啟動 Microsoft 365 Apps for enterprise （先前稱為 Office 365 ProPlus）的使用者數目，以及郵件流經組織的程度。 報告可用於過去7、30、90和180天。
 
 您可以使用下列報告：
 

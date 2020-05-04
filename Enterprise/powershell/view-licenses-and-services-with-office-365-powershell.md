@@ -20,12 +20,12 @@ ms.custom:
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
 description: 說明如何使用 Office 365 PowerShell 來查看您的 Office 365 組織中提供的授權方案、服務和授權的相關資訊。
-ms.openlocfilehash: a130faef640e875bde864ff26e46863e82f6df7a
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: e76a11d0ac174ef2de05c7e670537304dad9462f
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004136"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009528"
 ---
 # <a name="view-licenses-and-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 檢視授權與服務
 
@@ -33,7 +33,7 @@ ms.locfileid: "44004136"
 
 - **授權方案**這些也稱為授權計畫或 Office 365 方案。 授權計畫定義使用者可以使用的 Office 365 服務。 您的 Office 365 訂閱可能包含多個授權計畫。 授權方案範例是 Office 365 Enterprise E3。
     
-- **服務**這些也稱為服務方案。 服務是每個授權計畫中可用的 Office 365 產品、功能和功能，例如 Exchange Online 和 Office 365 ProPlus。 使用者可以將多個授權指派給他們，以不同授權方案授與不同服務的存取權。
+- **服務**這些也稱為服務方案。 服務是每個授權計畫中可用的 Office 365 產品、功能和功能，例如，Exchange Online 和 Microsoft 365 應用程式的企業版（先前稱為 Office 365 ProPlus）。 使用者可以將多個授權指派給他們，以不同授權方案授與不同服務的存取權。
     
 - **授權**每個授權方案都包含您購買的授權數目。 您可以將授權指派給使用者，讓他們可以使用授權方案所定義的 Office 365 服務。 每個使用者帳戶至少需要一個授權方案的授權，這樣他們才能登入 Office 365 並使用服務。
     
@@ -141,7 +141,7 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 | `TEAMS1` <br/> |Microsoft Teams  <br/> |
 | `YAMMER_ENTERPRISE` <br/> |Yammer  <br/> |
 | `RMS_S_ENTERPRISE` <br/> |Azure 版權管理 (RMS)  <br/> |
-| `OFFICESUBSCRIPTION` <br/> |Office 365 專業增強版  <br/> |
+| `OFFICESUBSCRIPTION` <br/> |適用于企業的 Microsoft 365 應用程式 *（先前命名的 Office 365 ProPlus）*  <br/> |
 | `MCOSTANDARD` <br/> |商務用 Skype Online  <br/> |
 | `SHAREPOINTWAC` <br/> |辦公室  <br/> |
 | `SHAREPOINTENTERPRISE` <br/> |SharePoint Online  <br/> |

@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: c08786fb-298e-437c-8222-dab7625fc815
 description: 摘要：說明 Microsoft Office 365 元件和 Office 365 政府產品方案中的 IPv6 支援。
-ms.openlocfilehash: 13fd1cfef26f5e69c87f650c46f71071b72f2d15
-ms.sourcegitcommit: 3aa6c61242c5691e3180a474ad059bd84c86dc9e
+ms.openlocfilehash: 939b5653981cb78dfa316e0baf1c498a3db97904
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "43206540"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009308"
 ---
 # <a name="ipv6-support-in-office-365-services"></a>Office 365 服務中的 IPv6 支援
 
@@ -57,7 +57,7 @@ Exchange Online Protection （EOP）可在傳輸層安全性通訊協定進行�
   
 ### <a name="ipv6-support-for-office-365-government-offerings"></a>Office 365 政府產品服務的 IPv6 支援
 
-Office 365 IPv6 對政府產品的支援，遵循管理人員和代理商的首席資訊監察官，以及聯邦政府採用網際網路通訊協定第6版（IPv6）備忘錄的 OMB）備忘錄。 [適用于政府的 Microsoft Office 365](https://go.microsoft.com/fwlink/p/?LinkId=325414)是一項多承租人服務，可將政府資料儲存在隔離的社區雲端中。 與其他 Office 365 產品類似，它提供生產力和共同作業服務，包括 Exchange Online、商務用 Skype、SharePoint 線上和 Office 365 ProPlus。 
+Office 365 IPv6 對政府產品的支援，遵循管理人員和代理商的首席資訊監察官，以及聯邦政府採用網際網路通訊協定第6版（IPv6）備忘錄的 OMB）備忘錄。 [適用于政府的 Microsoft Office 365](https://go.microsoft.com/fwlink/p/?LinkId=325414)是一項多承租人服務，可將政府資料儲存在隔離的社區雲端中。 與其他 Office 365 產品類似，它提供生產力和共同作業服務，包括 Exchange Online、商務用 Skype、SharePoint Online 和 Microsoft 365 應用程式的企業版。 
 
 Microsoft Office 365 政府版產品只適用于2013和更新版本。 如需有關 Office 365 政府方案的詳細資訊，請參閱[宣佈 office 365 For 政府： A US 政府社區雲端](https://go.microsoft.com/fwlink/p/?LinkId=325414)。 Arm 規章中的國際流量（ITAR）是一組美國政府規定，可控制如何匯出及匯入[美國 Munitions 清單（USML）](https://go.microsoft.com/fwlink/p/?LinkId=325415)上的國防相關文章和服務。 
 

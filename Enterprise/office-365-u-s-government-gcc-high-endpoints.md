@@ -18,12 +18,12 @@ search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
 description: 如果您的組織使用 Office 365 並限制網路上的電腦連線至網際網路，則在下列情況下，您將會發現應該包含在輸出允許清單中的端點（Fqdn、埠、URLs、IPv4 和 IPv6 位址範圍），以確保您的電腦可以成功使用 Office 365。
 hideEdit: true
-ms.openlocfilehash: 2bae9db94baf517eb6d7551beb06a343804319ff
-ms.sourcegitcommit: 5fb126747182108e31594b22e4677f05b1fb9313
+ms.openlocfilehash: 4372770ebc0e1005d460aa2fe802f9968ff5c7cb
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43928177"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009488"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府版高端點
 
@@ -38,7 +38,7 @@ ms.locfileid: "43928177"
   
 |||
 |:-----|:-----|
-|**上次更新：** 04/28/2020- ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
+|**上次更新日期：** 2020 年 4 月 28 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVGCCHigh?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVGCCHigh?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
 
  請從[管理 Office 365 端點](managing-office-365-endpoints.md)開始，以瞭解如何使用此資料來管理網路連線的建議。 端點資料會在每月開始時更新，並以新的 IP 位址和 URLs 在使用中之前發佈30天。 這樣一來，客戶就可以在需要新的連線之前，尚未有自動更新，就能完成他們的處理常式。 如果需要解決支援上報、安全性事件或其他立即運作需求，也可以在當月期間更新端點。 以下顯示在此頁面上的資料都是由 REST web 服務所產生。 如果您使用腳本或網路裝置來存取此資料，您應該直接前往[Web 服務](office-365-ip-web-service.md)。
 
@@ -64,5 +64,5 @@ ms.locfileid: "43928177"
 
 - 安全性與合規性中心（SCC）為 Office 365 提供 Azure ExpressRoute 支援。 這同樣適用于透過 SCC 公開的許多功能，例如報告、審核、高級 eDiscovery、整合 DLP 和資料管理。 兩個特定功能（PST 匯入和 eDiscovery 匯出）目前不支援只有 Office 365 路由篩選器的 Azure ExpressRoute，因為它們對 Azure Blob 儲存區有相依的依賴性。 若要使用這些功能，您需要使用任何可支援的 Azure 連線選項（包括網際網路連線或 azure 公用路由篩選器的 Azure ExpressRoute），以個別的方式連接至 Azure Blob 儲存。 您必須評估這兩種功能的建立這類連線能力。 Office 365 資訊保護小組已注意到這項限制，而且目前正致力於為 Office 365 提供 Azure ExpressRoute 的支援，這些功能限制于 Office 365 的路由篩選器。
 
-- Office 365 ProPlus 還有其他選用的端點未列出，而且使用者不需要啟動 Office 365 ProPlus 應用程式和編輯檔。 選用端點主控于 Microsoft 資料中心，不會處理、傳送或儲存客戶資料。 建議您將這些端點的使用者連線導向預設的網際網路出局周邊。
+- Microsoft 365 應用程式的其他選用端點未列出，而且不需要讓使用者啟動 Microsoft 365 應用程式以供企業應用程式和編輯檔。 選用端點主控于 Microsoft 資料中心，不會處理、傳送或儲存客戶資料。 建議您將這些端點的使用者連線導向預設的網際網路出局周邊。
 

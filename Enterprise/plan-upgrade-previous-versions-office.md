@@ -15,12 +15,12 @@ ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
 description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
-ms.openlocfilehash: 1b32af6e09b3a8a5830fa59dc6ec6de1060297e0
-ms.sourcegitcommit: 37674c1414175b49d59000b56fa685c05faabf35
+ms.openlocfilehash: 407f3d9570916ab4373dbb4e34f4cb6e57ebc7f7
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "43503801"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009478"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
@@ -88,7 +88,7 @@ ms.locfileid: "43503801"
 
 [Microsoft 365](https://www.microsoft.com/microsoft-365) 是完整的智慧解決方案，包括 Office 365、Windows 10 和 Enterprise Mobility + Security (EMS)，可讓所有人發揮創意及安全地合作。 
   
-雖然您可以將 Office 2007 或 Office 2010 伺服器和用戶端移轉到 Office 365，但 Microsoft 365 包括授權和功能，可協助確保貴組織使用最新的 Windows 作業系統，並確保您的裝置 (包括 Windows、iOS 和 Android) 使用需要驗證和資料保護的原則進行註冊及維護安全。 此外，Windows 10 和您的 Office 365 專業增強版用戶端軟體會持續更新，以包含最新的功能和安全性更新。
+雖然您可以將 Office 2007 或 Office 2010 伺服器和用戶端移轉到 Office 365，但 Microsoft 365 包括授權和功能，可協助確保貴組織使用最新的 Windows 作業系統，並確保您的裝置 (包括 Windows、iOS 和 Android) 使用需要驗證和資料保護的原則進行註冊及維護安全。 此外，Windows 10 和您的 Microsoft 365 應用程式 enterprise （先前稱為 Office 365 ProPlus）用戶端軟體會繼續更新，以包含最新的功能和安全性更新。
   
 Microsoft 365 是一種由 Microsoft 雲端提供及保護，且具備不斷改善的裝置和生產力體驗的數位商務轉換方式。
   
