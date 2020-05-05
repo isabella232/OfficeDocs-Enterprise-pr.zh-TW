@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 摘要：Office 365 需要連線到網際網路。客戶必須可使用 Office 365 方案取得下列端點，包括 Government Community Cloud (GCC)。
 hideEdit: true
-ms.openlocfilehash: 76e5b8a9b4a9f41289c8f304cbe013b3f83d962f
-ms.sourcegitcommit: 5fb126747182108e31594b22e4677f05b1fb9313
+ms.openlocfilehash: 6d0719de89e36caf648ff76904fc1fa4fc892e7a
+ms.sourcegitcommit: 7ed2eceb61615b4703ea817331e3ac6c64b27fc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43928137"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "44013416"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL 和 IP 位址範圍
 
@@ -57,7 +57,7 @@ ms.locfileid: "43928137"
 
 - **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**：顯示端點設定是否分類為「最佳化​​」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
+- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[新 Office 365 端點類別](https://docs.microsoft.com/office365/enterprise/office-365-network-connectivity-principles#new-office-365-endpoint-categories)中讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
 - **ER**：如果端點設定透過 Azure ExpressRoute 使用 Office 365 路由首碼支援，則這是 [是]****。包含所顯示路由首碼的 BGP 社群會對齊所列的服務區域。當 ER 為 [否]**** 時，表示 ExpressRoute 不支援此端點集合。不過，不應假設 ER 為 [否]**** 的端點設定不會通告任何路由。
 
