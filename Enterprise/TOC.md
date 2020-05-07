@@ -132,7 +132,7 @@
 
 ## 進階部署
 
-### [Office 365 多地理位置](office-365-multi-geo.md)
+### [Microsoft 365 多地理位置](office-365-multi-geo.md)
 #### [OneDrive 和 SharePoint 多地理位置](multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365.md)
 #### [Exchange 多地理位置](multi-geo-capabilities-in-exchange-online.md)
 #### [規劃多地理位置](plan-for-multi-geo.md)
@@ -147,7 +147,7 @@
 ##### [移動 SharePoint 網站](move-sharepoint-between-geo-locations.md)
 ##### [新增或移除地理位置系統管理員](add-a-sharepoint-geo-admin.md)
 ##### [將內容限制在地理位置](restrict-content-to-geo-location.md)
-##### [設定 Office 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)
+##### [設定 Microsoft 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)
 ##### [使用特定 PDL 建立群組](multi-geo-add-group-with-pdl.md)
 ##### [刪除地理位置](delete-a-geo-location.md)
 ##### [在您的衛星地理位置啟用 SharePoint 多地理位置](enabling-SP-multigeo-satellite-geolocation.md)
@@ -189,20 +189,6 @@
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
-
-### 與來賓共同作業
-#### [來賓共用參考](/microsoft-365/solutions/microsoft-365-guest-settings?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-#### 來賓共用案例
-##### [來賓共同作業概觀](/microsoft-365/solutions/collaborate-with-people-outside-your-organization?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-##### [在文件上共同作業](/microsoft-365/solutions/collaborate-on-documents?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-##### [在網站中共同作業](/microsoft-365/solutions/collaborate-in-site?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-##### [以小組的形式共同作業](/microsoft-365/solutions/collaborate-as-team?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-#### 來賓共用安全性
-##### [未經驗證的共用](/microsoft-365/solutions/best-practices-anonymous-sharing?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-##### [限制意外暴露](/microsoft-365/solutions/share-limit-accidental-exposure?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-##### [安全的來賓共用環境](/microsoft-365/solutions/create-secure-guest-sharing-environment?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-#### [建立 B2B 外部網路](/microsoft-365/solutions/b2b-extranet?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
-### [限制共用](/microsoft-365/solutions/microsoft-365-limit-sharing?toc=/Office365/Enterprise/toc.json&bc=/office365/enterprise/breadcrumb/toc.json)
 
 ## 裝置
 ### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
