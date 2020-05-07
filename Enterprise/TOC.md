@@ -111,7 +111,7 @@
 ## [3. 實作安全性](https://docs.microsoft.com/microsoft-365/security/office-365-security/security-roadmap)
 
 ## 4. 部署用戶端軟體
-### [部署 Office 365 專業增強版](https://docs.microsoft.com/DeployOffice/deployment-guide-for-office-365-proplus)
+### [部署 Microsoft 365 Apps 企業版](https://docs.microsoft.com/DeployOffice/deployment-guide-microsoft-365-apps)
 ### [部署商務用 Skype 用戶端](https://docs.microsoft.com/skypeforbusiness/set-up-skype-for-business-online/deploy-the-skype-for-business-client-in-office-365)
 ### [部署及管理行動裝置應用程式](https://support.office.com/article/d35db652-629d-4087-8dc0-1e0ed922307c)
 

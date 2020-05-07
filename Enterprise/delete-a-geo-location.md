@@ -12,20 +12,20 @@ f1.keywords:
 ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
-description: 了解如何在 Office 365 多地理位置中刪除衛星位置。
-ms.openlocfilehash: 702f42eb9211d6c3c4f59812c6894855b169f587
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+description: 了解如何在 Microsoft 365 多地理位置中刪除衛星位置。
+ms.openlocfilehash: 840c1bf494ddcd7e6558b134655b5cb708bf6e7b
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974862"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057639"
 ---
-# <a name="delete-a-satellite-location-in-office-365-multi-geo"></a>在 Office 365 多地理位置中刪除衛星位置
+# <a name="delete-a-satellite-location-in-microsoft-365-multi-geo"></a>在 Microsoft 365 多地理位置中刪除衛星位置
 
 如果您不再需要衛星位置，您可以從 SharePoint 系統管理中心的租用戶中將其刪除。
 
 > [!WARNING]
-> 將永久刪除衛星位置中的所有使用者資料。 這包括所有商務用 OneDrive 內容、SharePoint 網站及 Exchange 信箱，包括 Office 365 群組信箱。 刪除衛星位置之前，您必須先將資料移轉到其他位置或中央位置。 這個動作無法復原。
+> 將永久刪除衛星位置中的所有使用者資料。 這包括所有商務用 OneDrive 內容、SharePoint 網站及 Exchange 信箱，包括 Microsoft 365 群組信箱。 刪除衛星位置之前，您必須先將資料移轉到其他位置或中央位置。 這個動作無法復原。
 
 只有全域系統管理員才能刪除衛星位置。
 

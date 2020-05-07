@@ -17,12 +17,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：Office 365 資料位置
-ms.openlocfilehash: 6b7647456415df6a2ac8d1f22bb697164e756207
-ms.sourcegitcommit: 88a110ede50e210aaff3469307d85d354fdaef49
+ms.openlocfilehash: 8fd863034439f22c1c030ff8af6dba97f678f537
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "43798814"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44058013"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
@@ -84,7 +84,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 
 請檢閱[依地區的產品](https://go.microsoft.com/fwlink/p/?linkid=2093451)頁面，尋找 Microsoft Azure 的資料落地資訊。
 
-### <a name="what-are-multi-geo-capabilities-in-office-365"></a>何謂 Office 365 中的多地理位置功能？
+### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>何謂 Microsoft 365 中的多地理位置功能？
 
 [多地理位置功能](https://go.microsoft.com/fwlink/p/?linkid=872033)可讓單一 Office 365 租用戶跨越多個 Office 365 資料中心區域，並讓客戶能夠在所選地區中，以每位使用者為基礎儲存其 Office 365 核心客戶資料。
 
@@ -727,7 +727,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 工作場所分析 | 美國 |
 </p></details>
 
-## <a name="boliva"></a>玻利瓦
+## <a name="bolivia"></a>玻利維亞
 <details><summary>按一下以展開</summary><p>
 
 | 服務 | 位置 |
@@ -4039,7 +4039,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 工作場所分析 | 美國 |
 </p></details>
 
-## <a name="papaua-new-guinea"></a>巴布亞新幾內亞
+## <a name="papua-new-guinea"></a>巴布亞紐幾內亞
 <details><summary>按一下以展開</summary><p>
 
 | 服務 | 位置 |

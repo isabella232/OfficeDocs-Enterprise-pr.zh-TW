@@ -17,17 +17,17 @@ ms.custom:
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
-description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
-ms.openlocfilehash: ebbf2f2eb15523b455c7fab1c306eea6e0d192b1
-ms.sourcegitcommit: 9416fbf8f136baeaf7d45eb243921c70ae67438d
+description: 摘要：了解有關 Microsoft 身分識別、安全性、網路和混合式的核心雲端結構概念。檢閱有關使用 Microsoft 雲端時保護檔案、身分識別和裝置的慣常建議。了解如何使用 Windows 10 和 Microsoft 365 Apps 企業版部署現代安全的電腦。
+ms.openlocfilehash: 065776de182ab960f6f9ccf5cfbc58449954e220
+ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "43037800"
+ms.lasthandoff: 05/03/2020
+ms.locfileid: "44009368"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
- **摘要：** 了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。了解如何使用 Windows 10 和 Office 專業增強版部署現代和安全的桌面。
+ **摘要：** 了解有關 Microsoft 身分識別、安全性、網路和混合式的核心雲端結構概念。檢閱有關使用 Microsoft 雲端時保護檔案、身分識別和裝置的慣常建議。了解如何使用 Windows 10 和 Microsoft 365 Apps 企業版部署現代安全的電腦。
   
 這些架構工具和海報可提供關於 Microsoft 雲端服務的資訊，包括 Office 365、Windows 10、Azure Active Directory、Microsoft Intune、Microsoft Dynamics 365、混合式內部部署與雲端解決方案。IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。 
   
@@ -208,7 +208,7 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 |**項目**|**描述**|
 |:-----|:-----|
 |**適用於政治活動的 Microsoft 安全性指南** <br/> [![迷你海報集的縮略圖。](media/d370ce28-ca40-4930-9a2c-907312aa06c8.png)](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf) <br/> [PDF](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.pdf)  \| [Visio](https://download.microsoft.com/download/B/4/D/B4D520C3-4D0C-4B4D-BFB9-09F0651C2775/MSFT_Cloud_architecture_security%20for%20political%20campaigns.vsdx) <br/> |此指南以政治活動組織為例。您可以針對任何環境使用此指南作為起點。  <br/> |
-|**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載的檔案的縮略圖](media/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br/> [PDF](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf)  \| [Visio](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
+|**適用於非營利組織的 Microsoft 安全性指南** <br/> [![可下載檔案的縮圖](media/e4784889-1c69-4067-9a8f-31d31d1eceea.png)          ](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf) <br/> [PDF](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.pdf)  \| [Visio](https://download.microsoft.com/download/9/4/3/94389612-C679-4061-8DF2-D9A15D72B65F/Microsoft_Cloud%20Architecture_Security%20for%20Nonprofits.vsdx) <br/> |此指南已針對非營利組織稍做修改。 例如，它會參考 Office 365 非營利組織版方案。 其技術指導與政治活動解決方案指南相同。  <br/> |
 
 此指南包含有測試實驗室指南。如需詳細資訊，請參閱[適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](https://docs.microsoft.com/Office365/SecurityCompliance/microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-o)。
 
@@ -224,11 +224,11 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 <a name="msd"></a>
 ### <a name="deploy-a-modern-and-secure-desktop-with-microsoft"></a>使用 Microsoft 部署現代和安全的桌面
 
-IT 結構設計師需要了解的關於在 Windows 10 上部署和管理 Office 365 專業增強版的更新。
+IT 結構設計師需要了解有關在 Windows 10 上為 Microsoft 365 Apps 企業版 (以前稱為 Office 365 專業增強版) 部署和管理更新的知識。
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![使用 Microsoft 模型部署現代和安全的桌面縮圖](media/321dd59c-d992-4c7a-a7b6-c23a783858bd.png)          ](https://www.microsoft.com/download/details.aspx?id=55987) <br/> [PDF](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.pdf)  \| [Visio](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.vsdx) <br/> | 此模型包含： <ul><li>  從 Microsoft Cloud 部署 Windows 10 和 Office ProPlus </li><li>  使用 Microsoft Endpoint Configuration Manager 部署 Windows 10 和 Office ProPlus 專業增強版 </li><li>  從 Microsoft Cloud 管理 Windows 10 和 Office ProPlus 的更新 </li><li>  使用 Microsoft Endpoint Configuration Manager 管理 Windows 10 和 Office 專業增強版的更新 </li><li>  Windows 10 立即可用和額外的保護功能 </li></ul><br/> |
+|[![使用 Microsoft 模型部署現代和安全的桌面縮圖](media/321dd59c-d992-4c7a-a7b6-c23a783858bd.png)          ](https://www.microsoft.com/download/details.aspx?id=55987) <br/> [PDF](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.pdf)  \| [Visio](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.vsdx) <br/> | 此模型包含： <ul><li>  從 Microsoft 雲端部署 Windows 10 和 Microsoft 365 Apps 企業版 </li><li>  使用 Microsoft Endpoint Configuration Manager 部署 Windows 10 和 Microsoft 365 Apps 企業版 </li><li>  從 Microsoft 雲端管理 Windows 10 和 Microsoft 365 Apps 企業版的更新 </li><li>  使用 Microsoft Endpoint Configuration Manager 管理 Windows 10 和 Microsoft 365 Apps 企業版的更新 </li><li>  Windows 10 立即可用和額外的保護功能 </li></ul><br/> |
    
 ## <a name="see-also"></a>另請參閱
 

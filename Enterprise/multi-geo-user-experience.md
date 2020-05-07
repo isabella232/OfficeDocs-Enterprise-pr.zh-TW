@@ -13,12 +13,12 @@ f1.keywords:
 ms.custom: ''
 localization_priority: Priority
 description: 深入了解多地理位置環境中的 SharePoint、OneDrive 和 Exchange 使用者體驗。
-ms.openlocfilehash: 75d24ac7a89ff2dfe66af713fdae7ece21ebda3c
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+ms.openlocfilehash: 21858989f853b2a8c87808e38763068631173f7f
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974215"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057749"
 ---
 # <a name="user-experience-in-a-multi-geo-environment"></a>在多地理位置環境中的使用者體驗
 
@@ -32,7 +32,7 @@ ms.locfileid: "41974215"
 
 SharePoint 中樞網站改善了員工對內容的探索和參與，同時建立了完整且一致的專案、部門或區域的表示方式。 在多地理環境中，無論中樞網站的地理位置在哪裡，衛星位置中的網站都能輕鬆與中樞網站建立關聯。 無論網站的地理位置在哪裡，使用者都可以透過單一搜尋，在中樞搜尋並獲得結果。
 
-## <a name="office-365-app-launcher"></a>Office 365 應用程式啟動器
+## <a name="microsoft-365-app-launcher"></a>Microsoft 365 應用程式啟動器
 
 應用程式啟動器具有多地理位置感知功能，可將每個磚定導向工作負載的相應地理位置。 SharePoint 和 OneDrive 磚會將使用者指向對應到使用者佈建之地理位置的位置。 這表示使用者在中央位置有OneDrive，他們的 SharePoint 磚會將他們導向中央位置的 SP 首頁，但他們的群組網站將會佈建到對應其 PDL 的位置。 
 
