@@ -17,17 +17,17 @@ ms.custom:
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
-description: 摘要：了解有關 Microsoft 身分識別、安全性、網路和混合式的核心雲端結構概念。檢閱有關使用 Microsoft 雲端時保護檔案、身分識別和裝置的慣常建議。了解如何使用 Windows 10 和 Microsoft 365 Apps 企業版部署現代安全的電腦。
-ms.openlocfilehash: 065776de182ab960f6f9ccf5cfbc58449954e220
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。
+ms.openlocfilehash: e5d1ba6b69dc092df72ead30da620f6007843f5c
+ms.sourcegitcommit: 7ed2eceb61615b4703ea817331e3ac6c64b27fc0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009368"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "44013426"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
- **摘要：** 了解有關 Microsoft 身分識別、安全性、網路和混合式的核心雲端結構概念。檢閱有關使用 Microsoft 雲端時保護檔案、身分識別和裝置的慣常建議。了解如何使用 Windows 10 和 Microsoft 365 Apps 企業版部署現代安全的電腦。
+ **摘要：** 了解 Microsoft 身分識別、安全性、網路及混合式的核心雲端架構概念。 查看有關使用 Microsoft 雲端時，用於保護文件、身分和裝置的規定建議。
   
 這些架構工具和海報可提供關於 Microsoft 雲端服務的資訊，包括 Office 365、Windows 10、Azure Active Directory、Microsoft Intune、Microsoft Dynamics 365、混合式內部部署與雲端解決方案。IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。 
   
@@ -52,7 +52,6 @@ ms.locfileid: "44009368"
     - [GDPR 的 Office 365 資訊保護](#office-365-information-protection-for-gdpr)
     - [適用於政治活動、非營利組織和其他彈性組織的 Microsoft 安全性指南](#microsoft-security-guidance-for-political-campaigns-nonprofits-and-other-agile-organizations)
     - [Microsoft 電話語音解決方案](#microsoft-telephony-solutions) 
-    - [使用 Microsoft 部署現代和安全的桌面](microsoft-cloud-it-architecture-resources.md#msd)
     
 讓我們知道您的心得！請傳送電子郵件給我們：[cloudadopt@microsoft.com](mailto:cloudadopt@microsoft.com)。 
 
@@ -221,15 +220,6 @@ Microsoft 365 企業解決方案系列提供實作 Microsoft 365 功能的指引
 
 如需詳細資訊，請參閱此海報的文章：[Microsoft 電話語音解決方案](https://docs.microsoft.com/SkypeForBusiness/hybrid/msft-telephony-solutions)。
   
-<a name="msd"></a>
-### <a name="deploy-a-modern-and-secure-desktop-with-microsoft"></a>使用 Microsoft 部署現代和安全的桌面
-
-IT 結構設計師需要了解有關在 Windows 10 上為 Microsoft 365 Apps 企業版 (以前稱為 Office 365 專業增強版) 部署和管理更新的知識。
-  
-|**項目**|**描述**|
-|:-----|:-----|
-|[![使用 Microsoft 模型部署現代和安全的桌面縮圖](media/321dd59c-d992-4c7a-a7b6-c23a783858bd.png)          ](https://www.microsoft.com/download/details.aspx?id=55987) <br/> [PDF](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.pdf)  \| [Visio](https://download.microsoft.com/download/4/E/9/4E90E227-770A-41D1-99FE-925A64D81A55/MSFT_modern_secure_desktop.vsdx) <br/> | 此模型包含： <ul><li>  從 Microsoft 雲端部署 Windows 10 和 Microsoft 365 Apps 企業版 </li><li>  使用 Microsoft Endpoint Configuration Manager 部署 Windows 10 和 Microsoft 365 Apps 企業版 </li><li>  從 Microsoft 雲端管理 Windows 10 和 Microsoft 365 Apps 企業版的更新 </li><li>  使用 Microsoft Endpoint Configuration Manager 管理 Windows 10 和 Microsoft 365 Apps 企業版的更新 </li><li>  Windows 10 立即可用和額外的保護功能 </li></ul><br/> |
-   
 ## <a name="see-also"></a>另請參閱
 
 [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
