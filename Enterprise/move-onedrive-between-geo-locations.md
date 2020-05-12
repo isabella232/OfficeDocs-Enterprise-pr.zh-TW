@@ -15,20 +15,20 @@ ms.collection:
 - SPO_Content
 localization_priority: Priority
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: e093eab04a5ef19fcd6759d66cb65e9ee264c388
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+ms.openlocfilehash: ce631cc8f922fd9f64586bb41e6dd1ec64ac1141
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974015"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44058003"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
-使用 OneDrive 異地移動時，您可以將使用者的 OneDrive 移到不同的地理位置。OneDrive 異地移動是由 SharePoint Online 系統管理員或 Office 365 全域系統管理員所執行。在啟動 OneDrive 異地移動前，請務必告知使用者 OneDrive 即將移動，並建議使用者在移動期間關閉所有檔案。(如果在移動期間使用者使用 Office 用戶端開啟文件，則在移動完成後，文件必須儲存到新位置。) 如有需要，移動可排程至日後的時間。
+使用 OneDrive 異地移動時，您可以將使用者的 OneDrive 移到不同的地理位置。OneDrive 異地移動是由 SharePoint Online 系統管理員或 Microsoft 365 全域系統管理員所執行。在啟動 OneDrive 異地移動前，請務必告知使用者 OneDrive 即將移動，並建議使用者在移動期間關閉所有檔案。(如果在移動期間使用者使用 Office 用戶端開啟文件，則在移動完成後，文件必須儲存到新位置。) 如有需要，移動可排程至日後的時間。
 
 OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDrive 相關聯的儲存體 blob 會在使用者能夠使用目的地 OneDrive 的 40 天內，從來源移動到目的地理位置。在目的地 OneDrive 可以使用後，將會還原使用者 OneDrive 的存取。
 
-在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Office 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。
+在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Microsoft 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。
 
 本文所述的程序需要 [Microsoft SharePoint Online PowerShell 模組](https://www.microsoft.com/download/details.aspx?id=35588)。
 
@@ -163,7 +163,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ### <a name="onedrive-for-business"></a>商務用 OneDrive
 
-移動正在進行時，使用者的 OneDrive 會設為唯讀狀態。完成移動後，若使用者瀏覽至 Office 365 應用程式啟動器或網頁瀏覽器中的 OneDrive，使用者會導向至新地理位置中的 OneDrive。
+移動正在進行時，使用者的 OneDrive 會設為唯讀狀態。完成移動後，若使用者瀏覽至 Microsoft 365 應用程式啟動器或網頁瀏覽器中的 OneDrive，使用者會導向至新地理位置中的 OneDrive。
 
 ### <a name="permissions-on-onedrive-content"></a>OneDrive 內容的權限
 

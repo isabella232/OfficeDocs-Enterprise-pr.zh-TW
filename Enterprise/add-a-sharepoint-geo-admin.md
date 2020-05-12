@@ -11,15 +11,15 @@ ms.collection: SPO_Content
 localization_priority: Priority
 f1.keywords:
 - NOCSH
-description: 了解如何在 Office 365 多地理位置中新增或移除地理位置系統管理員。
-ms.openlocfilehash: 4225cd73aa243fadde21e5bd2d248fe54f738e33
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+description: 了解如何在 Microsoft 365 多地理位置中新增或移除地理位置系統管理員。
+ms.openlocfilehash: f2cb71f26216d859c00cefb10661608178e19315
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974195"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057699"
 ---
-# <a name="add-or-remove-a-geo-administrator-in-office-365-multi-geo"></a>在 Office 365 多地理位置中新增或移除地理位置系統管理員
+# <a name="add-or-remove-a-geo-administrator-in-microsoft-365-multi-geo"></a>在 Microsoft 365 多地理位置中新增或移除地理位置系統管理員
 
 您可以為租用戶中的每個地理位置設定個別的系統管理員。 這些系統管理員將能存取專為其地理位置設定的 Sharepoint 和 OneDrive 設定。
 
@@ -43,7 +43,7 @@ ms.locfileid: "41974195"
 
 ### <a name="adding-a-group-as-a-geo-admin"></a>將群組新增為地理位置系統管理員
 
-您可以新增安全性群組或擁有郵件功能的安全性群組作為地理位置系統管理員。(不支援通訊群組與 Office 365 群組。)
+您可以新增安全性群組或擁有郵件功能的安全性群組作為地理位置系統管理員。(不支援通訊群組與 Microsoft 365 群組。)
 
 若要新增群組為地理位置系統管理員，請執行 `Add-SPOGeoAdministrator -GroupAlias <alias>`
 

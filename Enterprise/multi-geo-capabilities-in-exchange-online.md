@@ -12,12 +12,12 @@ f1.keywords:
 ms.custom: ''
 localization_priority: Priority
 description: 了解 Exchange Online 中的多地理位置功能。
-ms.openlocfilehash: 27b636e1fb7f209a425a070f8024a1cdd461f59b
-ms.sourcegitcommit: 1c3aa0654336acec14098241f785ea1d8c6caf50
+ms.openlocfilehash: e6273c49e185c59cad6b56cf7d8399cdd6f25d22
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "42890545"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057973"
 ---
 # <a name="multi-geo-capabilities-in-exchange-online"></a>Exchange Online 中的多地理位置功能
 
@@ -45,11 +45,11 @@ Exchange Online 會從 Azure AD 將 **PreferredDataLocation** 屬性同步處理
 
 - 如果 **PreferredDataLocation** 代碼不正確 (例如 NAN 類型而非 NAM)，則會在中心地理位置佈建信箱。
 
-**注意**：多地理位置功能和商務用 Skype Online 區域裝載的會議都使用使用者物件上的 **PreferredDataLocation** 屬性來尋找服務。 如果您在使用者物件上為區域裝載的會議設定 **PreferredDataLocation** 值，這些使用者的信箱將會於 Office 365 租用戶上啟用多地理位置後，自動移到指定的地理位置。
+**注意**：多地理位置功能和商務用 Skype Online 區域裝載的會議都使用使用者物件上的 **PreferredDataLocation** 屬性來尋找服務。 如果您在使用者物件上為區域裝載的會議設定 **PreferredDataLocation** 值，這些使用者的信箱將會於 Microsoft 365 租用戶上啟用多地理位置後，自動移到指定的地理位置。
 
 ## <a name="feature-limitations-for-multi-geo-in-exchange-online"></a>Exchange Online 中的多地理位置功能限制
 
-- Exchange 系統管理中心 (EAC) 中提供的安全性與合規性功能 (例如，稽核與電子文件探索)，在多地理位置組織中無法使用。 相反地，您必須使用 [Office 365 安全性與合規性中心](https://support.office.com/article/7e696a40-b86b-4a20-afcc-559218b7b1b8)來設定安全性與合規性功能。
+- Exchange 系統管理中心 (EAC) 中提供的安全性與合規性功能 (例如，稽核與電子文件探索)，在多地理位置組織中無法使用。 相反地，您必須使用 [Microsoft 365 安全性與合規性中心](https://support.office.com/article/7e696a40-b86b-4a20-afcc-559218b7b1b8)來設定安全性與合規性功能。
 
 - Mac 版 Outlook 使用者在您將他們的信箱移動到新地理位置時，可能會暫時無法存取其線上封存資料夾。 當使用者的主要信箱和封存信箱位於不同地理位置時，會發生此情況，因為跨地理位置信箱移動可能在不同的時間完成。
 

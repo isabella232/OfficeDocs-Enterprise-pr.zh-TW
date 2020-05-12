@@ -15,20 +15,20 @@ ms.collection:
 - SPO_Content
 localization_priority: Priority
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: 483250f8956ba1220c29bb769abef187ac9ec53d
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+ms.openlocfilehash: 979ca202ac4d21dc3eff5a933538eee5af050167
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41974025"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057659"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
-查看 Office 365 服務在多地理位置環境中的運作方式。
+查看 Microsoft 365 服務在多地理位置環境中的運作方式。
 
 ## <a name="audit-log-search"></a>稽核記錄檔搜尋
 
-可以從 Office 365 稽核記錄搜索頁面取得所有衛星位置的統一[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)。 您可以看到跨地理位置的所有稽核記錄項目，例如，北美洲與歐洲使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選器，以查看特定使用者的活動。
+可以從 Microsoft 365 稽核記錄搜索頁面取得所有衛星位置的統一[稽核記錄](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c)。 您可以看到跨地理位置的所有稽核記錄項目，例如，北美洲與歐洲使用者的活動會在一個組織視圖中顯示，然後您可以套用現有的篩選器，以查看特定使用者的活動。
 
 ## <a name="bcs-secure-store-apps"></a>BCS、Secure Store、應用程式
 
@@ -36,7 +36,7 @@ BCS、Secure Store 及應用程式在每個衛星位置中都有個別的執行�
 
 ## <a name="ediscovery"></a>eDiscovery 
 
-根據預設，多地理位置租用戶的電子文件探索管理員或系統管理員只能在該租用戶的中央位置進行電子文件探索。 Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行 eDiscovery，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行 eDiscovery 的區域指定為衛星位置，否則將不會為該衛星位置執行任何 eDiscovery。 若要設定地區的法規遵循安全性篩選器，請參閱[設定 Office 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)。
+根據預設，多地理位置租用戶的電子文件探索管理員或系統管理員只能在該租用戶的中央位置進行電子文件探索。 Microsoft 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行電子文件探索，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行電子文件探索的區域指定為衛星位置，否則將不會為該衛星位置執行任何電子文件探索。 若要設定地區的法規遵循安全性篩選器，請參閱[設定 Microsoft 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)。
 
 ## <a name="exchange-mailboxes"></a>Exchange 信箱
 
@@ -64,7 +64,7 @@ BCS、Secure Store 及應用程式在每個衛星位置中都有個別的執行�
 
 ## <a name="security-and-compliance-admin-center"></a>安全性與合規性管理中心
 
-有一個適用於多地理位置租用戶的中央合規性中心：[Office 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。
+有一個適用於多地理位置租用戶的中央合規性中心：[Microsoft 365 安全性與合規性中心](https://protection.office.com/?rfr=AdminCenter\#/homepage)。
 
 ## <a name="sharepoint-storage-quota"></a>SharePoint 儲存空間配額
 
@@ -98,9 +98,9 @@ Stream 目前提供下列語言：
 - 歐洲
 - 亞太地區
 
-不過，目前支援 Office 365 影片的下列地區尚無法使用 Stream ，因此在這些地區，我們將使用位於最接近支援地區的 RMS。
+不過，目前支援 Microsoft 365 影片的下列地區尚無法使用 Stream，因此在這些地區，我們將使用位於最接近支援地區的 RMS。
 
-- 澳大利亞
+- 澳洲
 - 加拿大
 - 印度
 - 英國

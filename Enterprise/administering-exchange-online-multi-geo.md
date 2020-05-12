@@ -12,18 +12,18 @@ f1.keywords:
 ms.custom: ''
 localization_priority: Priority
 description: 了解如何使用 Microsoft PowerShell 來管理 Exchange Online 多地理位置設定。
-ms.openlocfilehash: 4074748a9fdd567e37159198524acb3979291ef5
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
+ms.openlocfilehash: 5dac890d2b0d5a797f8c2507c115c14147add7ff
+ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41973995"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "44057649"
 ---
 # <a name="administering-exchange-online-mailboxes-in-a-multi-geo-environment"></a>管理多地理位置環境中的 Exchange Online 信箱
 
-需要遠端 PowerShell 才能檢視及設定 Office 365 環境中的多地理位置屬性。 若要連線至 Exchange Online PowerShell，請參閱[連線至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)。
+需要遠端 PowerShell 才能檢視及設定 Microsoft 365 環境中的多地理位置屬性。 若要連線至 Exchange Online PowerShell，請參閱[連線至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)。
 
-您需要 [Microsoft Azure Active Directory PowerShell 模組](https://social.technet.microsoft.com/wiki/contents/articles/28552.microsoft-azure-active-directory-powershell-module-version-release-history.aspx) 1.1.166.0 版或使用 1.x 版的更新版本，才能查看使用者物件上的 **PreferredDataLocation** 屬性。 透過 AAD Connect 同步處理至 AAD 的使用者物件，您無法經由 AAD PowerShell 直接修改其 **PreferredDataLocation** 值。 您可以透過 AAD PowerShell 修改僅雲端的使用者物件。 若要連線到 Azure AD PowerShell，請參閱[連線至 Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)。
+您需要 [Microsoft Azure Active Directory PowerShell 模組](https://social.technet.microsoft.com/wiki/contents/articles/28552.microsoft-azure-active-directory-powershell-module-version-release-history.aspx) 1.1.166.0 版或使用 1.x 版的更新版本，才能查看使用者物件上的 **PreferredDataLocation** 屬性。 透過 AAD Connect 同步處理至 AAD 的使用者物件，您無法經由 AAD PowerShell 直接修改其 **PreferredDataLocation** 值。 您可以透過 AAD PowerShell 修改僅雲端的使用者物件。 若要連線到 Azure AD PowerShell，請參閱[連線至 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)。
 
 ## <a name="connect-directly-to-a-geo-location-using-exchange-online-powershell"></a>使用 Exchange Online PowerShell 直接連線到地理位置
 
@@ -59,7 +59,7 @@ ms.locfileid: "41973995"
 
 ## <a name="view-the-available-geo-locations-that-are-configured-in-your-exchange-online-organization"></a>檢視您的 Exchange Online 組織中設定的可用地理位置
 
-若要查看 Office 365 多地理位置中設定的地理位置清單，請在 Exchange Online PowerShell 中執行下列命令：
+若要查看 Microsoft 365 多地理位置中設定的地理位置清單，請在 Exchange Online PowerShell 中執行下列命令：
 
 ```powershell
 Get-OrganizationConfig | Select -ExpandProperty AllowedMailboxRegions | Format-Table
@@ -135,7 +135,7 @@ Set-MsolUser -UserPrincipalName michelle@contoso.onmicrosoft.com -PreferredDataL
 
 **附註**：
 
-- 如先前所述，您無法對從內部部署 Active Directory 同步處理的使用者物件使用此程序。 您必須變更 Active Directory 中的 **PreferredDataLocation** 值，並使用 AAD Connect 將它同步處理。 如需詳細資訊，請參閱 [Azure Active Directory Connect 同步處理：設定 Office 365 資源的慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)。
+- 如先前所述，您無法對從內部部署 Active Directory 同步處理的使用者物件使用此程序。 您必須變更 Active Directory 中的 **PreferredDataLocation** 值，並使用 AAD Connect 將它同步處理。 如需詳細資訊，請參閱 [Azure Active Directory Connect 同步處理：設定 Microsoft 365 資源的慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)。
 
 - 將信箱重新定位到新的地理位置所需的時間取決於數個因素：
 
@@ -189,7 +189,7 @@ New-MsolUser -UserPrincipalName <UserPrincipalName> -DisplayName "<Display Name>
 New-MsolUser -UserPrincipalName ebrunner@contoso.onmicrosoft.com -DisplayName "Elizabeth Brunner" -FirstName Elizabeth -LastName Brunner -LicenseAssignment contoso:ENTERPRISEPREMIUM -PreferredDataLocation AUS
 ```
 
-如需建立新的使用者帳戶和在 Azure AD PowerShell 中尋找 LicenseAssignment 值的詳細資訊，請參閱[使用 Office 365 PowerShell 建立使用者帳戶](https://docs.microsoft.com/office365/enterprise/powershell/create-user-accounts-with-office-365-powershell)和[使用 Office 365 PowerShell 檢視授權與服務](https://docs.microsoft.com/office365/enterprise/powershell/view-licenses-and-services-with-office-365-powershell)。
+如需建立新的使用者帳戶和在 Azure AD PowerShell 中尋找 LicenseAssignment 值的詳細資訊，請參閱[使用 PowerShell 建立使用者帳戶](https://docs.microsoft.com/office365/enterprise/powershell/create-user-accounts-with-office-365-powershell)和[使用 PowerShell 檢視授權與服務](https://docs.microsoft.com/office365/enterprise/powershell/view-licenses-and-services-with-office-365-powershell)。
 
 > [!NOTE]
 > 如果您使用 Exchange Online PowerShell 來啟用信箱，並且需要直接在 **PreferredDataLocation** 中指定的地理位置建立信箱，則必須直接對雲端服務使用 Exchange Online Cmdlet，例如 **Enable-Mailbox** 或 **New-Mailbox**。 如果您使用內部部署 Exchange PowerShell 中的 **Enable-RemoteMailbox** Cmdlet，則會在中央地理位置建立信箱。
@@ -226,6 +226,6 @@ New-MsolUser -UserPrincipalName ebrunner@contoso.onmicrosoft.com -DisplayName "E
 
 Microsoft 365 系統管理中心的**多地理位置使用報告**會依地理位置顯示使用者計數。 該報告會顯示目前月份的使用者分佈，並提供過去 6 個月的歷史資料。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[使用 Windows PowerShell 管理 Office 365 和 Exchange Online](https://support.office.com//article/06a743bb-ceb6-49a9-a61d-db4ffdf54fa6)
+[使用 Windows PowerShell 管理 Microsoft 365 和 Exchange Online](https://support.office.com//article/06a743bb-ceb6-49a9-a61d-db4ffdf54fa6)
