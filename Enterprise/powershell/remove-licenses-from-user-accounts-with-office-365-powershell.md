@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 移除使用者帳戶中的授權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 04/20/2020
+ms.date: 05/12/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,12 +20,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: fe25f07d222f05b938a980781a86ab16bf8dd03b
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 4a99fb115b7c3241beb2cb3b0dd83666622747d5
+ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004656"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44208754"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -60,7 +60,7 @@ Set-AzureADUserLicense -ObjectId $userUPN -AssignedLicenses $licenses
 
 首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
    
-若要在您的組織中查看授權計畫（**AccountSkuID** ）資訊，請參閱下列主題：
+若要在您的組織中查看授權計畫（**AccountSkuID**）資訊，請參閱下列主題：
     
   - [使用 Office 365 PowerShell 檢視授權與服務](view-licenses-and-services-with-office-365-powershell.md)
     
@@ -87,26 +87,32 @@ Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -RemoveLicenses "
 ```
 
 >[!Note]
->您無法使用`Set-MsolUserLicense` Cmdlet 將使用者取消指派為*取消*的授權。 您必須為 Microsoft 365 系統管理中心中的每個使用者帳戶個別執行此動作。
+>您無法使用 `Set-MsolUserLicense` Cmdlet 將使用者取消指派為*取消*的授權。 您必須為 Microsoft 365 系統管理中心中的每個使用者帳戶個別執行此動作。
 >
 
-若要從現有的授權使用者群組中移除授權，請使用下列其中一種方法：
+若要從現有授權使用者的群組中移除所有授權，請使用下列其中一種方法：
   
 - 根據**現有的帳戶屬性來篩選帳戶**若要這麼做，請使用下列語法：
     
 ```powershell
-$x = Get-MsolUser -All <FilterableAttributes> | where {$_.isLicensed -eq $true}
-$x | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"...}
+$userArray = Get-MsolUser -All <FilterableAttributes> | where {$_.isLicensed -eq $true}
+for ($i=0; $i -lt $userArray.Count; $i++)
+{
+Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveLicenses $userArray[$i].licenses.accountskuid
+}
 ```
 
-本範例會從美國的銷售部門中的使用者所有帳戶中，移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
+這則範例會移除美國的銷售部門中所有使用者帳戶的所有授權。
     
 ```powershell
-$USSales = Get-MsolUser -All -Department "Sales" -UsageLocation "US" | where {$_.isLicensed -eq $true}
-$USSales | foreach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName -RemoveLicenses "litwareinc:ENTERPRISEPACK"}
+$userArray = Get-MsolUser -All -Department "Sales" -UsageLocation "US" | where {$_.isLicensed -eq $true}
+for ($i=0; $i -lt $userArray.Count; $i++)
+{
+Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveLicenses $userArray[$i].licenses.accountskuid
+}
 ```
 
-- **使用特定帳戶的清單**若要這麼做，請執行下列步驟：
+- **針對特定授權使用特定帳戶的清單**若要這麼做，請執行下列步驟：
     
 1. 在每一行上建立及儲存包含一個帳戶的文字檔，如下所示：
     
@@ -119,7 +125,7 @@ kakers@contoso.com
 2. 請使用下列語法：
     
   ```powershell
-  Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId1>", "<AccountSkuId2>"... }
+  Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId>" }
   ```
 
 本範例會從 C:\My Documents\Accounts.txt. 的文字檔中所定義的使用者帳戶移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
@@ -131,12 +137,10 @@ kakers@contoso.com
 若要從所有現有的使用者帳戶中移除所有授權，請使用下列語法：
   
 ```powershell
-$users = Get-MsolUser -All | where {$_.isLicensed -eq $true}
-ForEach($user in $users)
+$userArray = Get-MsolUser -All | where {$_.isLicensed -eq $true}
+for ($i=0; $i -lt $userArray.Count; $i++)
 {
-$licenses = $user.Licenses.AccountSkuId
-ForEach ($lic in $licenses)
-{ Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -RemoveLicenses $lic }
+Set-MsolUserLicense -UserPrincipalName $userArray[$i].UserPrincipalName -RemoveLicenses $userArray[$i].licenses.accountskuid
 }
 ```
 

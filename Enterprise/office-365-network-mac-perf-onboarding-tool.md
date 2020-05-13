@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 M365 系統管理中心的連線測試（預覽）
+title: Microsoft 365 admin center 中的 microsoft 365 連線測試（預覽）
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -14,16 +14,16 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 description: Microsoft 365 M365 系統管理中心的連線測試（預覽）
-ms.openlocfilehash: 265d90cf412da7e45afcbb962018f7e4311e7edc
-ms.sourcegitcommit: 07ab7d300c8df8b1665cfe569efc506b00915d23
+ms.openlocfilehash: 0c6f16c39c5a2db99ed636cb3a1b52818383ea5a
+ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "43612873"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44208794"
 ---
-# <a name="microsoft-365-connectivity-test-in-the-m365-admin-center-preview"></a>Microsoft 365 M365 系統管理中心的連線測試（預覽）
+# <a name="microsoft-365-connectivity-test-in-the-microsoft-365-admin-center-preview"></a>Microsoft 365 系統管理中心的 microsoft 365 connectivity test （預覽）
 
-Microsoft 365 connectivity test 位於<https://connectivity.office.com>。 其為輔助工具，可在 Microsoft 365 系統管理中心的 [**健康情況 |] 底下使用網路洞察力和網路總分資訊。網路效能**功能表。
+Microsoft 365 connectivity test 位於 <https://connectivity.office.com> 。 其為輔助工具，可在 Microsoft 365 系統管理中心的 [**健康情況 |] 底下使用網路洞察力和網路總分資訊。網路效能**功能表。
 
 >[!NOTE]
 >上架工具支援 WW 商業銀行和 GCC 中的承租人，但不支援 GCC 高、DoD、德國或中國的承租人。
@@ -37,7 +37,7 @@ Microsoft 365 系統管理中心的網路洞察力是以 Microsoft 365 租使用
 
 ## <a name="the-advanced-tests-client-application"></a>高級測試用戶端應用程式
 
-Microsoft 365 connectivity test 有兩個部分。 網站<https://connectivity.office.com>有可供下載的 Windows 用戶端應用程式。 可供下載的用戶端執行高級網路連線測試，大部分的測試都需要執行。
+Microsoft 365 connectivity test 有兩個部分。 網站有可供 <https://connectivity.office.com> 下載的 Windows 用戶端應用程式。 可供下載的用戶端執行高級網路連線測試，大部分的測試都需要執行。
 
 您可以從網站執行高級用戶端測試，它會在執行時，將結果填入回網頁。
 
@@ -103,19 +103,19 @@ Exchange Online 服務前端的使用者辦公室位置的網路 TCP 延遲會�
 
 ## <a name="media-quality-checks"></a>媒體質量檢查
 
-此測試會安裝並執行商務用 Skype 網路評估工具，並解釋結果。 可在上[https://www.microsoft.com/download/details.aspx?id=53885](https://www.microsoft.com/download/details.aspx?id=53885)找到工具。
+此測試會安裝並執行商務用 Skype 網路評估工具，並解釋結果。 可在上找到工具 [https://www.microsoft.com/download/details.aspx?id=53885](https://www.microsoft.com/download/details.aspx?id=53885) 。
 
 這些是 Microsoft 小組音訊和視頻通話及會議功能所使用的 UDP 通訊協定測試。 我們測試 UDP 封包遺失、UDP 網路延遲、UDP 抖動及 UDP 封包重新排序。 如果有任何一種情況超出允許的範圍，就會顯示網路洞察力。
 
 ## <a name="tcp-connectivity-tests"></a>TCP 連線測試
 
-我們會將使用者辦公室位置的 HTTP 連線測試至所有必要的 Microsoft 365 網路端點。 這些是發佈于[https://aka.ms/o365ip](https://aka.ms/o365ip)。 對於任何無法連線的必要網路端點，都會顯示網路洞察力。
+我們會將使用者辦公室位置的 HTTP 連線測試至所有必要的 Microsoft 365 網路端點。 這些是發佈于 [https://aka.ms/o365ip](https://aka.ms/o365ip) 。 對於任何無法連線的必要網路端點，都會顯示網路洞察力。
 
 在商業網路周邊或使用做為雲端 proxy 的 proxy 伺服器、防火牆或其他網路安全裝置封鎖連線能力 ay。
 
 ## <a name="ssl-interception-tests"></a>SSL 截取測試
 
-我們會在每個必要的 Microsoft 365 網路端點（已于所定義的 [優化] 或 [允許[https://aka.ms/o365ip](https://aka.ms/o365ip)] 類別中）測試 SSL 憑證。 如果任何測試未找到 Microsoft SSL 憑證，則所連接的加密網路必須已被仲介網路裝置截獲。 網路洞察力會顯示在任何截獲的加密網路端點上。
+我們會在每個必要的 Microsoft 365 網路端點（已于所定義的 [優化] 或 [允許] 類別中）測試 SSL 憑證 [https://aka.ms/o365ip](https://aka.ms/o365ip) 。 如果任何測試未找到 Microsoft SSL 憑證，則所連接的加密網路必須已被仲介網路裝置截獲。 網路洞察力會顯示在任何截獲的加密網路端點上。
 
 如果 Microsoft 未提供 SSL 憑證，我們會顯示測試的 FQDN 和使用中的 SSL 憑證擁有者。 這個 SSL 憑證擁有者可能是 proxy 伺服器廠商，也可能是企業自我簽署憑證。
 

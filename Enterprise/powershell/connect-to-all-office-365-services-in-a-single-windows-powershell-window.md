@@ -18,20 +18,20 @@ ms.custom:
 - httpsfix
 ms.assetid: 53d3eef6-4a16-4fb9-903c-816d5d98d7e8
 description: 摘要：將 Windows PowerShell 連線到單一 Windows PowerShell 視窗中的所有 Office 365 服務。
-ms.openlocfilehash: d47f4dab4938bd02be25525d2912604f676079db
-ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
+ms.openlocfilehash: 47fd2be814b446cf12b136e359cdadc9374a7ab6
+ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43547751"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44208804"
 ---
 # <a name="connect-to-all-office-365-services-in-a-single-windows-powershell-window"></a>在單一 Windows PowerShell 視窗中連線至所有 Office 365 服務
 
-當您使用 PowerShell 來管理 Office 365 時，最多可以同時開啟五個不同的 Windows PowerShell 會話，其對應于 Microsoft 365 系統管理中心、SharePoint 線上、Exchange Online、商務用 Skype Online、Microsoft 團隊及安全性&amp;與合規性中心。 您的桌面可以在不同的 Windows PowerShell 會話中使用五種不同的連接方法，如下所示：
+當您使用 PowerShell 來管理 Office 365 時，最多可以同時開啟五個不同的 Windows PowerShell 會話，其對應于 Microsoft 365 系統管理中心、SharePoint 線上、Exchange Online、商務用 Skype Online、Microsoft 團隊及安全性與 &amp; 合規性中心。 您的桌面可以在不同的 Windows PowerShell 會話中使用五種不同的連接方法，如下所示：
   
 ![一次執行五個 Windows PowerShell 主控台](media/a1a852c2-89ea-4e8e-8d8b-dcdf596763d1.png)
   
-這在管理 Office 365 時並不是最佳的，因為您無法在這五個 windows 間交換資料，以進行跨服務管理。 本主題說明如何使用單一 Windows PowerShell 實例，從中管理 Office 365、商務用 Skype Online、Exchange Online、SharePoint 線上、Microsoft 團隊及安全性&amp;與合規性中心。
+這在管理 Office 365 時並不是最佳的，因為您無法在這五個 windows 間交換資料，以進行跨服務管理。 本主題說明如何使用單一 Windows PowerShell 實例，從中管理 Office 365、商務用 Skype Online、Exchange Online、SharePoint 線上、Microsoft 團隊及安全性與 &amp; 合規性中心。
 
 >[!Note]
 >本文目前只包含連接到 Office 365 全球（+ GCC）雲端的命令。 其他附注提供與其他 Office 365 雲端相關之相關資訊的文章連結。
@@ -63,7 +63,7 @@ ms.locfileid: "43547751"
     
     您必須使用64位版本的 Windows，因為商務用 Skype Online 模組和其中一個 Office 365 模組的需求。
     
-- 您需要安裝 Azure AD、Exchange Online、SharePoint Online、商務用 Skype Online 及小組所需的模組：
+- 您需要安裝 Azure Active Directory （Azure AD）、Exchange Online、SharePoint 線上、商務用 Skype Online 及小組所需的模組：
     
    - [Azure Active Directory V2](connect-to-office-365-powershell.md##connect-with-the-azure-active-directory-powershell-for-graph-module)
    - [SharePoint 線上管理命令介面](https://go.microsoft.com/fwlink/p/?LinkId=255251)
@@ -71,7 +71,7 @@ ms.locfileid: "43547751"
    - [Exchange Online PowerShell V2](https://docs.microsoft.com/powershell/exchange/exchange-online/exchange-online-powershell-v2/exchange-online-powershell-v2?view=exchange-ps#install-and-maintain-the-exchange-online-powershell-v2-module)
    - [小組 PowerShell 概述](https://docs.microsoft.com/microsoftteams/teams-powershell-overview)
     
--  Windows PowerShell 必須設定為為商務用 Skype Online 和安全性&amp;與合規性中心執行已簽署的腳本。 若要這麼做，請在已提升許可權的 Windows PowerShell 會話中執行下列命令（您可以選取 [以**系統管理員身分執行**] 視窗 PowerShell 視窗）。
+-  Windows PowerShell 必須設定為為商務用 Skype Online 和安全性與合規性中心執行已簽署的腳本 &amp; 。 若要這麼做，請在已提升許可權的 Windows PowerShell 會話中執行下列命令（您可以選取 [以**系統管理員身分執行**] 視窗 PowerShell 視窗）。
     
   ```powershell
   Set-ExecutionPolicy RemoteSigned
@@ -89,7 +89,7 @@ ms.locfileid: "43547751"
   $credential = Get-Credential
   ```
 
-3. 使用此命令，使用適用于 Graph 模組的 Azure Active Directory PowerShell，連線到 Azure Active Directory （AD）。
+3. 使用此命令，使用適用于 Graph 模組的 Azure Active Directory PowerShell，連接至 Azure AD。
     
   ```powershell
   Connect-AzureAD -Credential $credential
@@ -105,14 +105,14 @@ ms.locfileid: "43547751"
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
-4. 執行這些命令，以連線至 SharePoint 線上。 以您的網域的實際值取代_ \<domainhost>_ 。 例如，若為 "litwareinc.onmicrosoft.com"，則_ \<domainhost>_ 值為 "litwareinc"。
+4. 執行這些命令，以連線至 SharePoint 線上。 以您的網域的實際值取代_ \< domainhost>_ 。 例如，若為 "litwareinc.onmicrosoft.com"，則_ \< domainhost>_ 值為 "litwareinc"。
     
   ```powershell
   Import-Module Microsoft.Online.SharePoint.PowerShell -DisableNameChecking
   Connect-SPOService -Url https://<domainhost>-admin.sharepoint.com -credential $credential
   ```
 
-5. 執行這些命令，以連線至商務用 Skype Online。 您第一次連線`WSMan NetworkDelayms`時預計會增加值，而且應該忽略此警告。
+5. 執行這些命令，以連線至商務用 Skype Online。 `WSMan NetworkDelayms`您第一次連線時預計會增加值，而且應該忽略此警告。
     
   ```powershell
   Import-Module SkypeOnlineConnector
@@ -141,7 +141,7 @@ ms.locfileid: "43547751"
 >若要連線至全球以外的 Microsoft 團隊雲彩，請參閱[MicrosoftTeams](https://docs.microsoft.com/powershell/module/teams/connect-microsoftteams?view=teams-ps)。
 >
 
-8. 執行這些命令，以連線至安全性&amp;與合規性中心。
+8. 執行這些命令，以連線至安全性與 &amp; 合規性中心。
     
   ```powershell
   $SccSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.compliance.protection.outlook.com/powershell-liveid/ -Credential $credential -Authentication "Basic" -AllowRedirection
@@ -149,7 +149,7 @@ ms.locfileid: "43547751"
   ```
 
 >[!Note]
->若要連接至全球&amp;以外的 Office 365 雲端的安全性與合規性中心，請參閱[connect To Office 365 Security & 合規性中心 PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)。
+>若要連接至全球以外的 Office 365 雲端的安全性與 &amp; 合規性中心，請參閱[Connect to Office 365 Security & 合規性中心 PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell)。
 >
 
 以下是使用適用于 Graph 模組的 Azure Active Directory PowerShell 時，單一區塊中的所有命令。 指定您的功能變數名稱主機名稱稱，然後一次執行一次。
@@ -188,7 +188,7 @@ Import-Module MicrosoftTeams
 Connect-MicrosoftTeams -Credential $credential
 ```
 
-當您準備好關閉 [Windows PowerShell] 視窗時，請執行下列命令，以移除使用中的商務用 Skype Online、SharePoint 線上、安全性&amp;與合規性中心及小組的會話：
+當您準備好關閉 [Windows PowerShell] 視窗時，請執行下列命令，以移除使用中的商務用 Skype Online、SharePoint 線上、安全性與 &amp; 合規性中心及小組的會話：
   
 ```powershell
 Remove-PSSession $sfboSession ; Remove-PSSession $SccSession ; Disconnect-SPOService ; Disconnect-MicrosoftTeams 
@@ -234,9 +234,9 @@ Import-Module MicrosoftTeams
 Connect-MicrosoftTeams
 ```
 
-如需安全&amp;規範中心，請參閱[connect To Office 365 Security & 合規性中心 PowerShell 使用多重要素驗證](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell?view=exchange-ps)連線以使用多重要素驗證：
+如需安全 &amp; 規範中心，請參閱[Connect to Office 365 Security & 合規性中心 PowerShell 使用多重要素驗證](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/mfa-connect-to-scc-powershell?view=exchange-ps)連線以使用多重要素驗證：
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)
 - [使用 Office 365 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
