@@ -3,7 +3,7 @@ title: 實作 Office 365 的 VPN 分割通道
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 4/24/2020
+ms.date: 5/11/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,12 +17,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 如何實作 Office 365 的 VPN 分割通道
-ms.openlocfilehash: 0594be194bda222fafa0d00a93e0ee43814cd334
-ms.sourcegitcommit: 2c4092128fb12bda0c98b0c5e380d2cd920e7c9b
+ms.openlocfilehash: 87d7e86f59a97bf11c053a57aa9acc6d33c03e63
+ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "43804026"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "44208774"
 ---
 # <a name="implementing-vpn-split-tunneling-for-office-365"></a>實作 Office 365 的 VPN 分割通道
 
@@ -226,8 +226,13 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 在某些情況下 (通常與 Teams 用戶端設定無關)，即使備妥正確的路由，媒體流量仍會通過 VPN 通道。 如果遇到這種情況，則使用防火牆規則來封鎖 Teams IP 子網路或連接埠，使其無法使用 VPN 應該就夠了。
 
+>[!NOTE]
+>目前要讓此做法在 100% 的情況下可行的需求，就是同時新增 IP 範圍 **13.107.60.1/32**。 不一定要馬上這麼做，因為 Teams 用戶端更新會在 **2020 年 6 月**發行。 若有相關的組建詳細資料，我們將更新本文章的內容。
+
+<!--
 >[!IMPORTANT]
->為了確保 Teams 媒體流量會透過所有 VPN 案例中的預期方式路由，請確定您執行的至少是下列用戶端版本號碼或更高的版本，因為這些版本在用戶端偵測可用網路路徑方面已進行改善。<br>Windows 版本號碼：**1.3.00.9267**<br>Mac 版本號碼：**1.3.00.9221**
+>To ensure Teams media traffic is routed via the desired method in all VPN scenarios please ensure you are running at least the following client version number or greater, as these versions have improvements in how the client detects available network paths.<br>Windows version number:  **1.3.00.9267**<br>Mac version number: **1.3.00.9221**
+-->
 
 訊號流量會透過 HTTPS 執行且不像媒體流量對延遲那麼敏感，其在 URL/IP 資料中標示為 **[允許]**，因此可視需要透過 VPN 用戶端安全地路由傳送。
 
