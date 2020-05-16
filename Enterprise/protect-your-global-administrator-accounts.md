@@ -3,7 +3,7 @@ title: 保護您的 Office 365 全域系統管理員帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/04/2020
+ms.date: 05/15/2020
 audience: Admin
 ms.topic: get-started-article
 ms.service: o365-administration
@@ -19,12 +19,12 @@ f1.keywords:
 - NOCSH
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: 保護您的 Office 365 訂閱的全域系統管理員存取權。
-ms.openlocfilehash: 1ddd910a1515e11b6f57ac7581682d15eed31e5e
-ms.sourcegitcommit: 7ed2eceb61615b4703ea817331e3ac6c64b27fc0
+ms.openlocfilehash: 4f3e7dcb23f467768d647b7a5e8db9c41af2d076
+ms.sourcegitcommit: fa25333a28ad300a7be990c1491d95f09a214a12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "44013406"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "44253290"
 ---
 # <a name="protect-your-office-365-global-administrator-accounts"></a>保護您的 Office 365 全域系統管理員帳戶
 
@@ -44,7 +44,7 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
     
 > [!附注] 雖然此篇文章著重于全域管理員帳戶，但您應該考慮是否有其他具有廣域許可權的帳戶，以存取您訂閱中的資料（例如 eDiscovery 管理員或安全性或合規性管理員帳戶），應以相同的方式加以保護。 <br > 您可以建立全域管理員帳戶，而不需要新增任何授權。
   
-## <a name="step-1-create-dedicated-office-365-global-administrator-accounts-and-use-them-only-when-necessary"></a>步驟 1。 建立專用的 Office 365 全域管理員帳戶，且只有在必要時才加以使用
+## <a name="step-1-create-dedicated-office-365-global-administrator-accounts-and-use-them-only-when-necessary"></a>步驟 1： 建立專用的 Office 365 全域管理員帳戶，且只有在必要時才加以使用
 
 需要全域管理員許可權的系統管理工作相對較少，例如指派角色給使用者帳戶。 因此，請執行下列步驟，而不是使用已獲指派全域系統管理員角色的日常使用者帳戶：
   
@@ -87,7 +87,7 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
 > [!NOTE]
 > 這需要其他步驟以您的日常使用者帳戶登出，並以專用全域管理員帳戶登入。 但是這只需要偶爾進行全域管理員作業。 請考慮在全域管理員帳戶遭到破壞之後復原 Office 365 訂閱需要進行許多步驟。
   
-## <a name="step-2-configure-multi-factor-authentication-for-your-dedicated-office-365-global-administrator-accounts-and-use-the-strongest-form-of-additional-verification"></a>步驟 2。 設定專用 Office 365 全域管理員帳戶的多重要素驗證，並使用最強形式的額外驗證
+## <a name="step-2-configure-multi-factor-authentication-for-your-dedicated-office-365-global-administrator-accounts-and-use-the-strongest-form-of-additional-verification"></a>步驟 2： 設定專用 Office 365 全域管理員帳戶的多重要素驗證，並使用最強形式的額外驗證
 
 多重要素驗證（MFA）需要帳戶名稱和密碼以外的其他資訊。 Office 365 支援下列其他驗證方法：
   
@@ -101,6 +101,10 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
     
 - 生物特徵辨識裝置
     
+>[!Note]
+>針對必須遵守國家標準及技術研究院（NIST）標準的組織，使用電話通話或以短信為基礎的其他驗證方法會受到限制。 如需詳細資訊，請按一下[這裡](https://pages.nist.gov/800-63-FAQ/#q-b01)。
+>
+
 如果您是一部小型企業，其使用的使用者帳戶只會儲存在雲端中（僅限雲端身分識別模型），請使用下列步驟，使用傳送至 smart phone 的來電或短信驗證碼，設定 MFA：
   
 1. [設定 MFA](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication)。
@@ -132,7 +136,7 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
 
 為了確保高特權工作的執行盡可能安全，請使用一種特殊許可權的存取工作站（PAW）。 PAW 是一種專用的電腦，只用于機密設定工作，例如需要全域管理員帳戶的 Office 365 設定。 由於這部電腦不會在每日使用網際網路流覽或傳送電子郵件，因此可從網際網路攻擊和威脅中獲得更好的保護。
   
-如需如何設定 PAW 的指示，請參閱[https://aka.ms/cyberpaw](https://aka.ms/cyberpaw)。
+如需如何設定 PAW 的指示，請參閱 [https://aka.ms/cyberpaw](https://aka.ms/cyberpaw) 。
   
 ### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
@@ -150,7 +154,7 @@ PIM 可用於 Azure AD Premium P2，其隨附于 Microsoft 365 企業版 E5 或 
 
 在伺服器上執行的 SIEM 軟體會即時分析應用程式和網路硬體所建立的安全性警示和事件。 若要讓您的 SIEM 伺服器在其分析和報告功能中包含 Office 365 的安全性警示和事件，請整合 Azure AD 至您的 SEIM。 請參閱[Azure 記錄整合簡介](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 如果您正在設定 Office 365 訂閱的身分識別，請參閱：
 
@@ -158,6 +162,6 @@ PIM 可用於 Azure AD Premium P2，其隨附于 Microsoft 365 企業版 E5 或 
 - 如果您使用的是混合身分識別，[準備目錄同步](prepare-for-directory-synchronization.md)處理
 
   
-## <a name="see-also"></a>也請參閱
+## <a name="see-also"></a>另請參閱
 
 [Office 365 的安全性藍圖](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。
