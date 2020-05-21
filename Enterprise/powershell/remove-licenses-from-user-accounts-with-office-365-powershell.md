@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 移除使用者帳戶中的授權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/12/2020
+ms.date: 05/20/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -20,12 +20,12 @@ ms.custom:
 - O365ITProTrain
 ms.assetid: e7e4dc5e-e299-482c-9414-c265e145134f
 description: 說明如何使用 Office 365 PowerShell 移除先前指派給使用者的 Office 365 授權。
-ms.openlocfilehash: 4a99fb115b7c3241beb2cb3b0dd83666622747d5
-ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
+ms.openlocfilehash: a8ec35f4f82f9c01a784301099383a6b9a049547
+ms.sourcegitcommit: d1863fada327df5c8a4c04f07d68ac7e3dbcfaa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44208754"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "44330527"
 ---
 # <a name="remove-licenses-from-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 移除使用者帳戶中的授權
 
@@ -125,13 +125,20 @@ kakers@contoso.com
 2. 請使用下列語法：
     
   ```powershell
-  Get-Content "<FileNameAndPath>" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "<AccountSkuId>" }
+  $x=Get-Content "<FileNameAndPath>"
+  for ($i=0; $i -lt $x.Count; $i++)
+  {
+  Set-MsolUserLicense -UserPrincipalName $x[$i] -RemoveLicenses "<AccountSkuId1>","<AccountSkuId2>"...
+  }
   ```
-
 本範例會從 C:\My Documents\Accounts.txt. 的文字檔中所定義的使用者帳戶移除**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權。
     
   ```powershell
-  Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-MsolUserLicense -UserPrincipalName $_ -RemoveLicenses "litwareinc:ENTERPRISEPACK" }
+  $x=Get-Content "C:\My Documents\Accounts.txt"
+  for ($i=0; $i -lt $x.Count; $i++)
+  {
+  Set-MsolUserLicense -UserPrincipalName $x[$i] -RemoveLicenses "litwareinc:ENTERPRISEPACK"
+  }
   ```
 
 若要從所有現有的使用者帳戶中移除所有授權，請使用下列語法：
