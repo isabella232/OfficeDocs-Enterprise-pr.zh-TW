@@ -12,12 +12,12 @@ f1.keywords:
 ms.custom: ''
 localization_priority: Priority
 description: 了解如何使用 Microsoft PowerShell 來管理 Exchange Online 多地理位置設定。
-ms.openlocfilehash: 5dac890d2b0d5a797f8c2507c115c14147add7ff
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
+ms.openlocfilehash: d2498178193f71c1ffaea6141a09cc76e826e99e
+ms.sourcegitcommit: ee6fcb8c78de748fa203deacf799f66ad99f18e1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44057649"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "44352943"
 ---
 # <a name="administering-exchange-online-mailboxes-in-a-multi-geo-environment"></a>管理多地理位置環境中的 Exchange Online 信箱
 
@@ -196,11 +196,11 @@ New-MsolUser -UserPrincipalName ebrunner@contoso.onmicrosoft.com -DisplayName "E
 
 ## <a name="onboard-existing-on-premises-mailboxes-in-a-specific-geo-location"></a>將特定地理位置中的現有內部部署信箱上線
 
-您可以使用標準的上線工具和程序，將信箱從內部部署 Exchange 組織移轉至 Exchange Online，包括 [EAC 中的移轉儀表板](https://support.office.com/article/d164b35c-f624-4f83-ac58-b7cae96ab331)，以及 Exchange Online PowerShell 中的 [New-MigrationBatch](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-migrationbatch) Cmdlet。
+您可以使用標準的上線工具和程序，將信箱從內部部署 Exchange 組織移轉至 Exchange Online，包括 [EAC 中的移轉儀表板](https://support.office.com/article/d164b35c-f624-4f83-ac58-b7cae96ab331)，以及 Exchange Online PowerShell 中的 [New-MigrationBatch](https://docs.microsoft.com/powershell/module/exchange/new-migrationbatch) Cmdlet。
 
 第一個步驟是驗證要上線的每個信箱均存在使用者物件，並驗證已在 Azure AD 中設定正確的 **PreferredDataLocation** 值。 上線工具會使用 **PreferredDataLocation** 值，並將信箱直接移轉至指定的地理位置。
 
-或者，您可以使用下列步驟，在特定地理位置直接將信箱上線，方法是在 Exchange Online PowerShell 中使用 [New-MoveRequest](https://docs.microsoft.com/powershell/module/exchange/move-and-migration/new-moverequest) Cmdlet。
+或者，您可以使用下列步驟，在特定地理位置直接將信箱上線，方法是在 Exchange Online PowerShell 中使用 [New-MoveRequest](https://docs.microsoft.com/powershell/module/exchange/new-moverequest) Cmdlet。
 
 1. 驗證要上線的每個信箱均存在使用者物件，並且 Azure AD 中的 **PreferredDataLocation** 已設定為需要的值。 **PreferredDataLocation** 的值會同步處理至 Exchange Online 中對應郵件使用者物件的 **MailboxRegion** 屬性。
 
