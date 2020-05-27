@@ -30,7 +30,6 @@
 ## Office 365 用戶端支援
 ### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
-### [在 MDM 與 Intune 之間選擇](https://docs.microsoft.com/office365/securitycompliance/choose-between-mdm-and-intune)
 ### [行動應用程式管理](office-365-client-support-mobile-application-management.md)
 ### [新式驗證](office-365-client-support-modern-authentication.md)
 ### [單一登入](office-365-client-support-single-sign-on.md)
@@ -198,7 +197,6 @@
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
 
 ## 裝置
-### [在 MDM 與 Intune 之間選擇](https://support.office.com/article/c93d9ab9-efb2-4349-9b93-30c30562ee22)
 ### [管理裝置存取設定](https://support.office.com/article/28dd276b-beeb-4c5b-8b22-7551186127fe)
 
 ## 工作負載
