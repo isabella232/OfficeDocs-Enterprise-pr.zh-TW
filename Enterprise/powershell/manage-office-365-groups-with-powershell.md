@@ -7,8 +7,7 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
-f1.keywords:
-- CSH
+f1.keywords: CSH
 ms.custom: Adm_O365
 search.appverid:
 - MET150
@@ -19,17 +18,15 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 瞭解如何在 Microsoft PowerShell 中執行 Office 365 群組的常見管理工作。
-ms.openlocfilehash: a9b481d7448c65a8860ef44d6d7f8980c3dd91d8
-ms.sourcegitcommit: ee6fcb8c78de748fa203deacf799f66ad99f18e1
+ms.openlocfilehash: 7ebb3cfdfc6375cbc340c1fc3be37d59bcd9d4c8
+ms.sourcegitcommit: c758588cf2b68de9291a362fd73ec9dc721d04d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "44352953"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "44411060"
 ---
 # <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
-
- *上次更新，2018年4月* 
-  
+ 
 本文提供執行 Microsoft PowerShell 中群組一般管理工作的步驟。 此外，它也會列出群組的 PowerShell Cmdlet。 如需管理 SharePoint 網站的相關資訊，請參閱[Manage SharePoint Online sites using PowerShell](https://docs.microsoft.com/sharepoint/manage-team-and-communication-sites-in-powershell)。
 
 ## <a name="link-to-your-office-365-groups-usage-guidelines"></a>Office 365 群組使用指導方針連結
@@ -50,7 +47,7 @@ ms.locfileid: "44352953"
 
 （[您也可以在 Exchange 系統管理中心中執行此](https://docs.microsoft.com/office365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group)動作。）
   
-使用下列腳本，以您要更新之群組的別名取代* \< GroupAlias \> * ，並* \< UserAlias \> *您要授與 permssions 之使用者的別名。 [連接至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)以執行此腳本。
+使用下列腳本，並以 *\<GroupAlias\>* 您要更新之群組的別名取代，並 *\<UserAlias\>* 使用您要授與許可權的使用者別名進行取代。 [連接至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)以執行此腳本。
 
 ```PowerShell
 $groupAlias = "<GroupAlias>"
@@ -67,7 +64,12 @@ Add-RecipientPermission -Identity $groupsRecipientDetails.Name -Trustee $userAli
 
 ## <a name="create-classifications-for-office-groups-in-your-organization"></a>為您組織中的 Office 群組建立分類
 
-您可以建立組織中的使用者在建立 Office 365 群組時所能設定的分類。 例如，您可以允許使用者設定其所建立之群組上的「標準」、「機密」和「主要密碼」。 預設不會設定群組分類，您必須建立群組分類，使用者才能設定群組分類。 使用 Azure Active Directory PowerShell，將您的使用者指向您組織的 Office 365 群組使用指導方針。
+您可以建立您組織中的使用者在建立 Microsoft 365 群組時所能設定的靈敏度標籤。 如果您想要分類群組，我們建議使用敏感度標籤，而不是「先前的群組分類」功能。 如需使用敏感度標籤的詳細資訊，請參閱[使用敏感度標籤來保護 Microsoft 團隊、microsoft 365 群組和 SharePoint 網站中的內容](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites)。
+
+> [!IMPORTANT]
+> 如果您目前使用的是分類標籤，當啟用敏感度標籤之後，建立群組的使用者將無法再使用這些標籤。
+
+您仍然可以使用「先前的群組分類」功能。 您可以建立組織中的使用者在建立 Office 365 群組時所能設定的分類。 例如，您可以允許使用者設定其所建立之群組上的「標準」、「機密」和「主要密碼」。 預設不會設定群組分類，您必須建立群組分類，使用者才能設定群組分類。 使用 Azure Active Directory PowerShell，將您的使用者指向您組織的 Office 365 群組使用指導方針。
   
 請參閱[Azure Active Directory Cmdlet 以設定群組設定](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-cmdlets)，並遵循在**目錄層級的 [建立設定**] 中的步驟，定義 Office 365 群組的分類。 
   
