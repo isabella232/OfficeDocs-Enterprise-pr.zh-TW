@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 管理商務用 Skype Office
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 09/13/2018
+ms.date: 05/28/2018
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
@@ -14,25 +14,25 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: 摘要︰使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
-ms.openlocfilehash: 4444483776141a3aa1f6e53b2f9bdcd7a5d28e1d
-ms.sourcegitcommit: e2f7bb4ccd4c74902235f680104ca6b56c051587
+ms.openlocfilehash: f1a5df3802d43755e81465743b81c5fbb9fff7e0
+ms.sourcegitcommit: 6c7cc6aca8713e280ae6ff51226dde9db4497401
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "42106204"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44415935"
 ---
-# <a name="manage-skype-for-business-online-with-office-365-powershell"></a><span data-ttu-id="529b5-103">使用 Office 365 PowerShell 管理商務用 Skype Office</span><span class="sxs-lookup"><span data-stu-id="529b5-103">Manage Skype for Business Online with Office 365 PowerShell</span></span>
+# <a name="manage-skype-for-business-online-with-office-365-powershell"></a><span data-ttu-id="6cb0d-103">使用 Office 365 PowerShell 管理商務用 Skype Office</span><span class="sxs-lookup"><span data-stu-id="6cb0d-103">Manage Skype for Business Online with Office 365 PowerShell</span></span>
 
-<span data-ttu-id="529b5-104">任何 商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。</span><span class="sxs-lookup"><span data-stu-id="529b5-104">One of the primary tasks of any Skype for Business Online administrator is managing policies.</span></span> <span data-ttu-id="529b5-105">雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。</span><span class="sxs-lookup"><span data-stu-id="529b5-105">Although you can accomplish some of these tasks in the Microsoft 365 admin center, other tasks are much quicker and easier in Office 365 PowerShell.</span></span> 
+<span data-ttu-id="6cb0d-104">任何 商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-104">One of the primary tasks of any Skype for Business Online administrator is managing policies.</span></span> <span data-ttu-id="6cb0d-105">雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-105">Although you can accomplish some of these tasks in the Microsoft 365 admin center, other tasks are much quicker and easier in Office 365 PowerShell.</span></span> 
 
-## <a name="before-you-start"></a><span data-ttu-id="529b5-106">開始之前</span><span class="sxs-lookup"><span data-stu-id="529b5-106">Before you start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="6cb0d-106">開始之前</span><span class="sxs-lookup"><span data-stu-id="6cb0d-106">Before you start</span></span>
 
-<span data-ttu-id="529b5-107">下載並安裝[商務用 Skype 商務 Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)中，，然後重新啟動電腦，如果系統提示。</span><span class="sxs-lookup"><span data-stu-id="529b5-107">Download and install the [Skype for Business Online Connector module](https://www.microsoft.com/download/details.aspx?id=39366), and then restart your computer if prompted.</span></span>
+<span data-ttu-id="6cb0d-107">下載並安裝[商務用 Skype Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)，然後重新開機您的電腦。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-107">Download and install the [Skype for Business Online Connector module](https://www.microsoft.com/download/details.aspx?id=39366), and then restart your computer.</span></span>
 
 
-## <a name="connect-using-a-skype-for-business-online-administrator-account-name-and-password"></a><span data-ttu-id="529b5-108">使用 Skype 商務 Online 系統管理員帳戶名稱和密碼連線</span><span class="sxs-lookup"><span data-stu-id="529b5-108">Connect using a Skype for Business Online administrator account name and password</span></span>
+## <a name="connect-using-a-skype-for-business-online-administrator-account-name-and-password"></a><span data-ttu-id="6cb0d-108">使用商務用 Skype Online 系統管理員帳戶名稱和密碼進行連接</span><span class="sxs-lookup"><span data-stu-id="6cb0d-108">Connect using a Skype for Business Online administrator account name and password</span></span>
 
-1. <span data-ttu-id="529b5-109">開啟 Windows PowerShell 命令提示字元並執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="529b5-109">Open a Windows PowerShell command prompt and run the following commands:</span></span> 
+1. <span data-ttu-id="6cb0d-109">開啟 Windows PowerShell 命令提示字元，並執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="6cb0d-109">Open a Windows PowerShell command prompt and run the following commands:</span></span> 
     
   ```powershell
   Import-Module SkypeOnlineConnector
@@ -41,12 +41,12 @@ ms.locfileid: "42106204"
   Import-PSSession $sfbSession
   ```
 
-2. <span data-ttu-id="529b5-110">在 [ **Windows PowerShell 認證要求**] 對話方塊中，輸入您商務用 Skype 商務 Online 系統管理員帳戶名稱和密碼，，然後按一下 [**確定]**。</span><span class="sxs-lookup"><span data-stu-id="529b5-110">In the **Windows PowerShell Credential Request** dialog box, type your Skype for Business Online administrator account name and password, and then click **OK**.</span></span>
+2. <span data-ttu-id="6cb0d-110">在 [ **Windows PowerShell 憑證要求**] 對話方塊中，輸入您的商務用 Skype Online 系統管理員帳戶名稱和密碼，然後按一下 **[確定]**。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-110">In the **Windows PowerShell Credential Request** dialog box, type your Skype for Business Online administrator account name and password, and then click **OK**.</span></span>
 
 
-## <a name="connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication"></a><span data-ttu-id="529b5-111">使用 Skype 商務 Online 系統管理員帳戶，以多重要素驗證連線</span><span class="sxs-lookup"><span data-stu-id="529b5-111">Connect using a Skype for Business Online administrator account with multi-factor authentication</span></span>
+## <a name="connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication"></a><span data-ttu-id="6cb0d-111">使用含多重要素驗證的商務用 Skype Online 系統管理員帳戶進行連線</span><span class="sxs-lookup"><span data-stu-id="6cb0d-111">Connect using a Skype for Business Online administrator account with multi-factor authentication</span></span>
 
-1. <span data-ttu-id="529b5-112">開啟 Windows PowerShell 命令提示字元並執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="529b5-112">Open a Windows PowerShell command prompt and run the following commands:</span></span>
+1. <span data-ttu-id="6cb0d-112">開啟 Windows PowerShell 命令提示字元，並執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="6cb0d-112">Open a Windows PowerShell command prompt and run the following commands:</span></span>
 
   ```powershell
   Import-Module SkypeOnlineConnector
@@ -54,23 +54,23 @@ ms.locfileid: "42106204"
   Import-PSSession $sfbSession
   ```
 
-2. <span data-ttu-id="529b5-113">出現提示時**新增 CsOnlineSession**命令，輸入您 Skype 商務 Online 系統管理員帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="529b5-113">When prompted by the **New-CsOnlineSession** command, enter your Skype for Business Online administrator account name.</span></span>
+2. <span data-ttu-id="6cb0d-113">當**CsOnlineSession**命令提示時，請輸入您的商務用 Skype Online 系統管理員帳戶名稱。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-113">When prompted by the **New-CsOnlineSession** command, enter your Skype for Business Online administrator account name.</span></span>
 
-3. <span data-ttu-id="529b5-114">在**您的帳戶登入**] 對話方塊中，輸入您的 Skype 商務 Online 系統管理員密碼，，然後按一下 [**登入**。</span><span class="sxs-lookup"><span data-stu-id="529b5-114">In the **Sign in to your account** dialog box, type your Skype for Business Online administrator password, and then click **Sign in**.</span></span>
+3. <span data-ttu-id="6cb0d-114">在 [登**入您的帳戶**] 對話方塊中，輸入您的商務用 Skype Online 系統管理員密碼，然後按一下 [登**入**]。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-114">In the **Sign in to your account** dialog box, type your Skype for Business Online administrator password, and then click **Sign in**.</span></span>
 
-4. <span data-ttu-id="529b5-115">請遵循**您的帳戶登入**] 對話方塊中的指示，提供其他驗證資訊，例如驗證碼，，然後按一下 [**驗證**。</span><span class="sxs-lookup"><span data-stu-id="529b5-115">Follow the instructions in the **Sign in to your account** dialog box to provide additional authentication information, such as a verification code, and then click **Verify**.</span></span>
+4. <span data-ttu-id="6cb0d-115">依照 [登**入您的帳戶**] 對話方塊中的指示，提供其他驗證資訊（例如驗證碼），然後按一下 [**驗證**]。</span><span class="sxs-lookup"><span data-stu-id="6cb0d-115">Follow the instructions in the **Sign in to your account** dialog box to provide additional authentication information, such as a verification code, and then click **Verify**.</span></span>
 
-<span data-ttu-id="529b5-116">如需詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="529b5-116">For more information, see the following topics:</span></span>
+<span data-ttu-id="6cb0d-116">如需詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="6cb0d-116">For more information, see the following topics:</span></span>
   
-- [<span data-ttu-id="529b5-117">線上商務原則與 Office 365 PowerShell 管理 Skype</span><span class="sxs-lookup"><span data-stu-id="529b5-117">Manage Skype for Business Online policies with Office 365 PowerShell</span></span>](manage-skype-for-business-online-policies-with-office-365-powershell.md)
+- [<span data-ttu-id="6cb0d-117">線上商務原則與 Office 365 PowerShell 管理 Skype</span><span class="sxs-lookup"><span data-stu-id="6cb0d-117">Manage Skype for Business Online policies with Office 365 PowerShell</span></span>](manage-skype-for-business-online-policies-with-office-365-powershell.md)
     
-- [<span data-ttu-id="529b5-118">指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="529b5-118">Assign per-user Skype for Business Online policies with Office 365 PowerShell</span></span>](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
+- [<span data-ttu-id="6cb0d-118">指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="6cb0d-118">Assign per-user Skype for Business Online policies with Office 365 PowerShell</span></span>](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
     
-## <a name="see-also"></a><span data-ttu-id="529b5-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="529b5-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6cb0d-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6cb0d-119">See also</span></span>
 
-[<span data-ttu-id="529b5-120">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="529b5-120">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="6cb0d-120">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="6cb0d-120">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
   
-[<span data-ttu-id="529b5-121">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="529b5-121">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
+[<span data-ttu-id="6cb0d-121">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="6cb0d-121">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
 
-[<span data-ttu-id="529b5-122">Skype 商務 PowerShell cmdlet 參考資料</span><span class="sxs-lookup"><span data-stu-id="529b5-122">Skype for Business PowerShell cmdlet references</span></span>](https://docs.microsoft.com/powershell/module/skype/?view=skype-ps)
+[<span data-ttu-id="6cb0d-122">商務用 Skype PowerShell Cmdlet 參考</span><span class="sxs-lookup"><span data-stu-id="6cb0d-122">Skype for Business PowerShell cmdlet references</span></span>](https://docs.microsoft.com/powershell/module/skype/?view=skype-ps)
 

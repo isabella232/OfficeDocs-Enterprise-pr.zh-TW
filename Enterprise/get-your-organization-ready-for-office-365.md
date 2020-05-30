@@ -20,50 +20,50 @@ search.appverid:
 - BCS160
 ms.assetid: 712fced7-f9d0-4fde-8b79-286262a5d0bc
 description: 存取資源以規劃 Office 365 企業版部署。
-ms.openlocfilehash: 845c0ad4990261da0cf71fb420f7715a7892e6d3
-ms.sourcegitcommit: 3aa6c61242c5691e3180a474ad059bd84c86dc9e
+ms.openlocfilehash: d35bba7940f549d7b39e3cf75c3e659daa4e1d33
+ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "43206530"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44419351"
 ---
-# <a name="plan-for-office-365-enterprise"></a><span data-ttu-id="6d164-103">規劃 Office 365 Enterprise</span><span class="sxs-lookup"><span data-stu-id="6d164-103">Plan for Office 365 Enterprise</span></span>
+# <a name="plan-for-office-365-enterprise"></a><span data-ttu-id="975db-103">規劃 Office 365 Enterprise</span><span class="sxs-lookup"><span data-stu-id="975db-103">Plan for Office 365 Enterprise</span></span>
 
-<span data-ttu-id="6d164-104">當您將企業組織移至 Office 365 時，請務必預先規劃並進行重要設計決策，以簡化 IT 部署和使用者採用。</span><span class="sxs-lookup"><span data-stu-id="6d164-104">When you move an enterprise organization to Office 365, it's important to plan ahead and make the key design decisions that will streamline IT deployment and user adoption.</span></span> 
+<span data-ttu-id="975db-104">當您將企業組織移至 Office 365 時，請務必預先規劃並進行重要設計決策，以簡化 IT 部署和使用者採用。</span><span class="sxs-lookup"><span data-stu-id="975db-104">When you move an enterprise organization to Office 365, it's important to plan ahead and make the key design decisions that will streamline IT deployment and user adoption.</span></span> 
 
-## <a name="planning-with-office-365-fasttrack"></a><span data-ttu-id="6d164-105">使用 Office 365 FastTrack 規劃</span><span class="sxs-lookup"><span data-stu-id="6d164-105">Planning with Office 365 FastTrack</span></span>
+## <a name="planning-with-office-365-fasttrack"></a><span data-ttu-id="975db-105">使用 Office 365 FastTrack 規劃</span><span class="sxs-lookup"><span data-stu-id="975db-105">Planning with Office 365 FastTrack</span></span>
 
-<span data-ttu-id="6d164-106">[FastTrack For office 365](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365)是取得 Microsoft 的協助，以規劃 office 365 部署的最佳方法。</span><span class="sxs-lookup"><span data-stu-id="6d164-106">[FastTrack for Office 365](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365) is the best method for getting help from Microsoft for planning your Office 365 deployment.</span></span> <span data-ttu-id="6d164-107">FastTrack 可協助您完成最常見的設計考慮，也可以在方法中解答問題。</span><span class="sxs-lookup"><span data-stu-id="6d164-107">FastTrack can help you through the most common design considerations and can answer questions along the way.</span></span> 
-
->[!Note]
-><span data-ttu-id="6d164-108">您也可以從[Microsoft 合作夥伴](https://www.microsoft.com/solution-providers/home)取得協助。</span><span class="sxs-lookup"><span data-stu-id="6d164-108">You can also get help from a [Microsoft partner](https://www.microsoft.com/solution-providers/home).</span></span>
->
-
-## <a name="do-it-yourself-planning-for-office-365"></a><span data-ttu-id="6d164-109">自行規劃 Office 365</span><span class="sxs-lookup"><span data-stu-id="6d164-109">Do-it-yourself planning for Office 365</span></span>
-
-<span data-ttu-id="6d164-110">若要自行規劃 Office 365，請逐步完成下列方面的規劃與設計決策：</span><span class="sxs-lookup"><span data-stu-id="6d164-110">To plan for Office 365 on your own, step through the planning and design decisions for these areas:</span></span>
-
-- <span data-ttu-id="6d164-111">您的 Office 365 租用戶</span><span class="sxs-lookup"><span data-stu-id="6d164-111">Your Office 365 tenant</span></span>
-
-  <span data-ttu-id="6d164-112">包括對網際網路的網路連線、Office 365 身分識別的規劃，以及與應用程式、內部部署、Azure 及其他元素的整合。</span><span class="sxs-lookup"><span data-stu-id="6d164-112">Includes planning for your network connections to the Internet, your Office 365 identities, and integration with apps, on-premises, Azure, and other elements.</span></span> <span data-ttu-id="6d164-113">從[這裡](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)開始。</span><span class="sxs-lookup"><span data-stu-id="6d164-113">Start [here](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md).</span></span>
-
-- <span data-ttu-id="6d164-114">用戶端支援</span><span class="sxs-lookup"><span data-stu-id="6d164-114">Support for your clients</span></span>
-
-  <span data-ttu-id="6d164-115">包括憑證型驗證、行動裝置管理、驗證選項及承租人間共同作業。</span><span class="sxs-lookup"><span data-stu-id="6d164-115">Includes certificate-based authentication, mobile device management, authentication options, and inter-tenant collaboration.</span></span> <span data-ttu-id="6d164-116">從[這裡](office-365-client-support-certificate-based-authentication.md)開始。</span><span class="sxs-lookup"><span data-stu-id="6d164-116">Start [here](office-365-client-support-certificate-based-authentication.md).</span></span>
-
-- <span data-ttu-id="6d164-117">支援混合式新式驗證</span><span class="sxs-lookup"><span data-stu-id="6d164-117">Support for hybrid modern authentication</span></span>
-
-  <span data-ttu-id="6d164-118">包括使用主要 Office 365 工作負載的混合式設定時，規劃新式驗證。</span><span class="sxs-lookup"><span data-stu-id="6d164-118">Includes planning for modern authentication when using hybrid configurations of key Office 365 workloads.</span></span> <span data-ttu-id="6d164-119">從[這裡](hybrid-modern-auth-overview.md)開始。</span><span class="sxs-lookup"><span data-stu-id="6d164-119">Start [here](hybrid-modern-auth-overview.md).</span></span>
-
-- <span data-ttu-id="6d164-120">舊版 Office 用戶端和伺服器</span><span class="sxs-lookup"><span data-stu-id="6d164-120">Older Office clients and servers</span></span>
-
-  <span data-ttu-id="6d164-121">包括 Office 2007 和 Office 2010 用戶端和伺服器產品的遷移資訊。</span><span class="sxs-lookup"><span data-stu-id="6d164-121">Includes migration information for Office 2007 and Office 2010 client and server products.</span></span> <span data-ttu-id="6d164-122">從[這裡](plan-upgrade-previous-versions-office.md)開始。</span><span class="sxs-lookup"><span data-stu-id="6d164-122">Start [here](plan-upgrade-previous-versions-office.md).</span></span>
+<span data-ttu-id="975db-106">[FastTrack For office 365](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365)是取得 Microsoft 的協助，以規劃 office 365 部署的最佳方法。</span><span class="sxs-lookup"><span data-stu-id="975db-106">[FastTrack for Office 365](https://docs.microsoft.com/fasttrack/O365-fasttrack-benefit-for-office-365) is the best method for getting help from Microsoft for planning your Office 365 deployment.</span></span> <span data-ttu-id="975db-107">FastTrack 可協助您完成最常見的設計考慮，也可以在方法中解答問題。</span><span class="sxs-lookup"><span data-stu-id="975db-107">FastTrack can help you through the most common design considerations and can answer questions along the way.</span></span> 
 
 >[!Note]
-><span data-ttu-id="6d164-123">您也可以針對[Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)訂閱使用此程式。</span><span class="sxs-lookup"><span data-stu-id="6d164-123">You can use this process for your [Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview) subscription as well.</span></span>
+><span data-ttu-id="975db-108">您也可以從[Microsoft 合作夥伴](https://www.microsoft.com/solution-providers/home)取得協助。</span><span class="sxs-lookup"><span data-stu-id="975db-108">You can also get help from a [Microsoft partner](https://www.microsoft.com/solution-providers/home).</span></span>
 >
 
-<span data-ttu-id="6d164-124">您也可以登入 Office 365 訂閱，並使用[office 365 服務的部署顧問](deployment-advisors-for-office-365.md)。</span><span class="sxs-lookup"><span data-stu-id="6d164-124">You can also sign in to your Office 365 subscription and use the [Deployment advisors for Office 365 services](deployment-advisors-for-office-365.md).</span></span>
+## <a name="do-it-yourself-planning-for-office-365"></a><span data-ttu-id="975db-109">自行規劃 Office 365</span><span class="sxs-lookup"><span data-stu-id="975db-109">Do-it-yourself planning for Office 365</span></span>
+
+<span data-ttu-id="975db-110">若要自行規劃 Office 365，請逐步完成下列方面的規劃與設計決策：</span><span class="sxs-lookup"><span data-stu-id="975db-110">To plan for Office 365 on your own, step through the planning and design decisions for these areas:</span></span>
+
+- <span data-ttu-id="975db-111">您的 Office 365 租用戶</span><span class="sxs-lookup"><span data-stu-id="975db-111">Your Office 365 tenant</span></span>
+
+  <span data-ttu-id="975db-112">包括對網際網路的網路連線、Office 365 身分識別的規劃，以及與應用程式、內部部署、Azure 及其他元素的整合。</span><span class="sxs-lookup"><span data-stu-id="975db-112">Includes planning for your network connections to the Internet, your Office 365 identities, and integration with apps, on-premises, Azure, and other elements.</span></span> <span data-ttu-id="975db-113">從[這裡](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)開始。</span><span class="sxs-lookup"><span data-stu-id="975db-113">Start [here](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md).</span></span>
+
+- <span data-ttu-id="975db-114">用戶端支援</span><span class="sxs-lookup"><span data-stu-id="975db-114">Support for your clients</span></span>
+
+  <span data-ttu-id="975db-115">包括憑證型驗證、行動裝置管理、驗證選項及承租人間共同作業。</span><span class="sxs-lookup"><span data-stu-id="975db-115">Includes certificate-based authentication, mobile device management, authentication options, and inter-tenant collaboration.</span></span> <span data-ttu-id="975db-116">從[這裡](office-365-client-support-certificate-based-authentication.md)開始。</span><span class="sxs-lookup"><span data-stu-id="975db-116">Start [here](office-365-client-support-certificate-based-authentication.md).</span></span>
+
+- <span data-ttu-id="975db-117">支援混合式新式驗證</span><span class="sxs-lookup"><span data-stu-id="975db-117">Support for hybrid modern authentication</span></span>
+
+  <span data-ttu-id="975db-118">包括使用主要 Office 365 工作負載的混合式設定時，規劃新式驗證。</span><span class="sxs-lookup"><span data-stu-id="975db-118">Includes planning for modern authentication when using hybrid configurations of key Office 365 workloads.</span></span> <span data-ttu-id="975db-119">從[這裡](hybrid-modern-auth-overview.md)開始。</span><span class="sxs-lookup"><span data-stu-id="975db-119">Start [here](hybrid-modern-auth-overview.md).</span></span>
+
+- <span data-ttu-id="975db-120">舊版 Office 用戶端和伺服器</span><span class="sxs-lookup"><span data-stu-id="975db-120">Older Office clients and servers</span></span>
+
+  <span data-ttu-id="975db-121">包括 Office 2007 和 Office 2010 用戶端和伺服器產品的遷移資訊。</span><span class="sxs-lookup"><span data-stu-id="975db-121">Includes migration information for Office 2007 and Office 2010 client and server products.</span></span> <span data-ttu-id="975db-122">從[這裡](plan-upgrade-previous-versions-office.md)開始。</span><span class="sxs-lookup"><span data-stu-id="975db-122">Start [here](plan-upgrade-previous-versions-office.md).</span></span>
+
+>[!Note]
+><span data-ttu-id="975db-123">您也可以針對[Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview)訂閱使用此程式。</span><span class="sxs-lookup"><span data-stu-id="975db-123">You can use this process for your [Microsoft 365 Enterprise](https://docs.microsoft.com/microsoft-365/enterprise/microsoft-365-overview) subscription as well.</span></span>
+>
+
+<span data-ttu-id="975db-124">您也可以登入 Office 365 訂閱，並使用[office 365 服務的設定指南](setup-guides-for-office-365.md)。</span><span class="sxs-lookup"><span data-stu-id="975db-124">You can also sign in to your Office 365 subscription and use the [Setup guides for Office 365 services](setup-guides-for-office-365.md).</span></span>
 
 
 
@@ -73,7 +73,7 @@ This checklist will help your organization as you plan and prepare for a migrati
 
 Most organizations don't need to do anything to prepare for Office 365. It's an application on the web and people are able to use it as soon as they have an account. Other organizations have more locations, security practices, or other requirements that create the need for more planning. For enterprise-level organizations, follow the checklist items below to get started with Office 365.
   
-If you want help getting Office 365 set up, [FastTrack](https://fasttrack.microsoft.com/office) is the easiest way to deploy Office 365, you can also sign in and use the [Deployment advisors for Office 365 services](deployment-advisors-for-office-365.md).
+If you want help getting Office 365 set up, [FastTrack](https://fasttrack.microsoft.com/office) is the easiest way to deploy Office 365, you can also sign in and use the [Setup guides for Office 365 services](setup-guides-for-office-365.md).
   
 |**Choose one or more to get started:**||
 |:-----|:-----|
