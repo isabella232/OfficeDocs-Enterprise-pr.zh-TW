@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 6e18d402-f35e-415a-83b1-56620d4074ff
 description: 規劃及管理企業組織的 Office 365 的資源。
-ms.openlocfilehash: 714308f597b3338abb167f765cc4d1f9b08b582b
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+ms.openlocfilehash: 51687e07abfafa7959166cfcd1a59b3a1af7bc20
+ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979545"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44419391"
 ---
 # <a name="enterprise-organizations-and-office-365"></a>企業組織和 Office 365
 
@@ -44,11 +44,11 @@ ms.locfileid: "42979545"
   
 ![安全性和合規性符號](media/f96c2cdf-d151-4f44-bb11-20bb7f366a21.png)
   
- **安全性&amp;合規性**
+ **安全性 &amp; 合規性**
   
 保護您的資料，並遵守法律或法規標準。
   
-[Office 365 中&amp;的安全性合規性概述](https://support.office.com/article/dcb83b2c-ac66-4ced-925d-50eb9698a0b2)
+[&amp;Office 365 中的安全性合規性概述](https://support.office.com/article/dcb83b2c-ac66-4ced-925d-50eb9698a0b2)
   
 ![雲端和架構符號](media/2850ac8d-4c99-4825-869e-83724c4ef54e.png)
   
@@ -110,7 +110,7 @@ LinkedIn 教學，探索可讓您進入的免費影片課程。
   
 [從 Office 2010 伺服器與用戶端升級](upgrade-from-office-2010-servers-and-products.md)
   
-[Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
+[Office 365 服務的安裝指南](setup-guides-for-office-365.md)
   
  **適用於終端使用者的訓練**
   

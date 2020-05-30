@@ -3,7 +3,7 @@ title: 使用 Office 365 PowerShell 管理商務用 Skype Office
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 09/13/2018
+ms.date: 05/28/2018
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
 description: 摘要︰使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
-ms.openlocfilehash: 4444483776141a3aa1f6e53b2f9bdcd7a5d28e1d
-ms.sourcegitcommit: e2f7bb4ccd4c74902235f680104ca6b56c051587
+ms.openlocfilehash: f1a5df3802d43755e81465743b81c5fbb9fff7e0
+ms.sourcegitcommit: 6c7cc6aca8713e280ae6ff51226dde9db4497401
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "42106204"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44415935"
 ---
 # <a name="manage-skype-for-business-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理商務用 Skype Office
 
@@ -27,12 +27,12 @@ ms.locfileid: "42106204"
 
 ## <a name="before-you-start"></a>開始之前
 
-下載並安裝[商務用 Skype 商務 Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)中，，然後重新啟動電腦，如果系統提示。
+下載並安裝[商務用 Skype Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)，然後重新開機您的電腦。
 
 
-## <a name="connect-using-a-skype-for-business-online-administrator-account-name-and-password"></a>使用 Skype 商務 Online 系統管理員帳戶名稱和密碼連線
+## <a name="connect-using-a-skype-for-business-online-administrator-account-name-and-password"></a>使用商務用 Skype Online 系統管理員帳戶名稱和密碼進行連接
 
-1. 開啟 Windows PowerShell 命令提示字元並執行下列命令： 
+1. 開啟 Windows PowerShell 命令提示字元，並執行下列命令： 
     
   ```powershell
   Import-Module SkypeOnlineConnector
@@ -41,12 +41,12 @@ ms.locfileid: "42106204"
   Import-PSSession $sfbSession
   ```
 
-2. 在 [ **Windows PowerShell 認證要求**] 對話方塊中，輸入您商務用 Skype 商務 Online 系統管理員帳戶名稱和密碼，，然後按一下 [**確定]**。
+2. 在 [ **Windows PowerShell 憑證要求**] 對話方塊中，輸入您的商務用 Skype Online 系統管理員帳戶名稱和密碼，然後按一下 **[確定]**。
 
 
-## <a name="connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication"></a>使用 Skype 商務 Online 系統管理員帳戶，以多重要素驗證連線
+## <a name="connect-using-a-skype-for-business-online-administrator-account-with-multi-factor-authentication"></a>使用含多重要素驗證的商務用 Skype Online 系統管理員帳戶進行連線
 
-1. 開啟 Windows PowerShell 命令提示字元並執行下列命令：
+1. 開啟 Windows PowerShell 命令提示字元，並執行下列命令：
 
   ```powershell
   Import-Module SkypeOnlineConnector
@@ -54,11 +54,11 @@ ms.locfileid: "42106204"
   Import-PSSession $sfbSession
   ```
 
-2. 出現提示時**新增 CsOnlineSession**命令，輸入您 Skype 商務 Online 系統管理員帳戶名稱。
+2. 當**CsOnlineSession**命令提示時，請輸入您的商務用 Skype Online 系統管理員帳戶名稱。
 
-3. 在**您的帳戶登入**] 對話方塊中，輸入您的 Skype 商務 Online 系統管理員密碼，，然後按一下 [**登入**。
+3. 在 [登**入您的帳戶**] 對話方塊中，輸入您的商務用 Skype Online 系統管理員密碼，然後按一下 [登**入**]。
 
-4. 請遵循**您的帳戶登入**] 對話方塊中的指示，提供其他驗證資訊，例如驗證碼，，然後按一下 [**驗證**。
+4. 依照 [登**入您的帳戶**] 對話方塊中的指示，提供其他驗證資訊（例如驗證碼），然後按一下 [**驗證**]。
 
 如需詳細資訊，請參閱下列主題：
   
@@ -72,5 +72,5 @@ ms.locfileid: "42106204"
   
 [開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
 
-[Skype 商務 PowerShell cmdlet 參考資料](https://docs.microsoft.com/powershell/module/skype/?view=skype-ps)
+[商務用 Skype PowerShell Cmdlet 參考](https://docs.microsoft.com/powershell/module/skype/?view=skype-ps)
 

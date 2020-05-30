@@ -16,12 +16,12 @@ ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 f1.keywords:
 - NOCSH
 description: 如果您已選擇退出 FastTrack 部署，且您準備好將資料移轉到 Office 365，這就是開始的位置。
-ms.openlocfilehash: 4389d5531b21b892408ba7941900ee7aceb55474
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 44038429ecf3b927db408679f8651d4055113a48
+ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844884"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44419341"
 ---
 # <a name="migrate-your-organization-data-to-office-365-enterprise"></a>將貴組織資料移轉到 Office 365 企業版
 
@@ -29,7 +29,7 @@ ms.locfileid: "41844884"
 
 我們的[基本設定指示](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)協助您在最短時間內讓所有人都使用您的 Office 365 服務與應用程式。這會略過混合狀況以及移轉至 Office 365 的更進階方法。 
   
-若您需要取得 Office 365 設定的協助，[FastTrack](https://fasttrack.microsoft.com/office) 是部署 Office 365 的最簡單方法，您也可以登入並使用 [Office 365 服務的部署建議](deployment-advisors-for-office-365.md)。
+如果您想要瞭解如何設定 Office 365， [FastTrack](https://fasttrack.microsoft.com/office)是部署 office 365 的最簡單方法，您也可以登入並使用[Office 365 服務的設定指南](setup-guides-for-office-365.md)。
 
 ## <a name="migrate-email-to-office-365"></a>將電子郵件移轉至 Office 365
 - 使用 [Exchange 部署助理](https://technet.microsoft.com/exdeploy2013)透過 Exchange 混合式移轉。(系統管理員)
@@ -37,8 +37,8 @@ ms.locfileid: "41844884"
 - 尋找[組織中人員可以移轉電子郵件、連絡人和行事曆](https://support.office.com/article/Migrate-email-and-contacts-to-Office-365-for-business-a3e3bddb-582e-4133-8670-e61b9f58627e)的其他方式。
 
 ## <a name="migrate-files-and-folders"></a>移轉檔案和資料夾
-- [移轉至 SharePoint Online 和 OneDrive](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。 （系統管理員）
-- [SharePoint Server 混合式組態藍圖 ](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)。 （系統管理員）
+- [線上及 OneDrive 遷移至 SharePoint](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。 身份
+- [SharePoint 伺服器的混合](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)式設定藍圖。 身份
 
 ## <a name="migrate-skype-for-business-users"></a>移轉商務用 Skype 使用者
 - [移轉至商務用 Skype Online](https://technet.microsoft.com/library/jj204969.aspx) (英文)。(系統管理員)

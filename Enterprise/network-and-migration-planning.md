@@ -19,12 +19,12 @@ search.appverid:
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
 description: 包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
-ms.openlocfilehash: 0601775beb3f7e42d3e18de7b85406c02df2f4e8
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.openlocfilehash: 88dd3e4fca66855e8204b452aea6cfb4c659d201
+ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844574"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "44419381"
 ---
 # <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
@@ -98,8 +98,6 @@ ms.locfileid: "41844574"
   
 - [管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
     
-- [用戶端連線](client-connectivity.md)
-    
 - [內容傳遞網路](content-delivery-networks.md)
     
 - [Office 365 的外部網域名稱系統記錄](external-domain-name-system-records.md)
@@ -112,7 +110,7 @@ ms.locfileid: "41844574"
     
 - [規劃連線到 Office 365 服務的網路裝置](plan-for-network-devices.md)
     
-- [Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
+- [Office 365 服務的安裝指南](setup-guides-for-office-365.md)
  
 ## <a name="see-also"></a>另請參閱
 
