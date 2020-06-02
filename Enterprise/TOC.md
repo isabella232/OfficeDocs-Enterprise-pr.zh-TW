@@ -17,7 +17,7 @@
 #### [混合式身分識別](plan-for-directory-synchronization.md)
 
 ### [規劃 Office 365 的第三方 SSL 憑證](plan-for-third-party-ssl-certificates.md)
-### [Office 365 服務的部署建議程式](deployment-advisors-for-office-365.md)
+### [Office 365 和 Microsoft 365 服務的設定指南](setup-guides-for-office-365.md)
 ### [整合的應用程式和 Azure AD](integrated-apps-and-azure-ads.md)
 
 ### Office 365 整合
@@ -181,7 +181,6 @@
 # 管理 Office 365
 
 ## 網路
-### [用戶端連線](client-connectivity.md)
 ### [監視連線](monitor-connectivity.md)
 
 ## 目錄同步處理
