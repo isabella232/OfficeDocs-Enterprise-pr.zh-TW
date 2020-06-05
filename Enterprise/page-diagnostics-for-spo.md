@@ -3,7 +3,7 @@ title: 使用 Sharepoint Online 網頁診斷工具
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 03/11/2020
+ms.date: 06/03/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,21 +19,26 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: 使用頁面診斷功能 SharePoint 工具，對照一組預先定義的效能準則來 SharePoint 分析線上新式入口網站和傳統發佈頁面。
-ms.openlocfilehash: 8295a39429ffc57cef6f9ca05c72704388b39c12
-ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
+ms.openlocfilehash: 08bfa6abf0aab4abafaf5fad3a0e43afb9000370
+ms.sourcegitcommit: ea2f92f147dbf8183124476302ca33c4cf4265a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42603732"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "44561801"
 ---
 # <a name="use-the-page-diagnostics-for-sharepoint-tool"></a>針對 SharePoint 工具使用頁面診斷程式
 
-本文說明如何使用**SharePoint 工具的頁面診斷**，對照一組預先定義的效能準則來 SharePoint 分析線上現代化和傳統的網站頁面。  
+本文說明如何使用**SharePoint 工具的頁面診斷**，對照一組預先定義的效能準則來 SharePoint 分析線上現代化和傳統的網站頁面。
+
+您可以為下列專案安裝 SharePoint 工具的頁面診斷程式：
+
+- **Microsoft Edge** [（Edge extension）](https://microsoftedge.microsoft.com/addons/detail/ocemkolpnamjcacndljdfmhlpcaoipji)
+- **Chrome** [（鑲邊副檔名）](https://chrome.google.com/webstore/detail/inahogkhlkbkjkkaleonemeijihmfagi)
 
 >[!TIP]
 >版本**2.0.0**及更新版本包含對現代頁面的支援，除了傳統的網站頁面。 如果您不確定所使用的工具版本，可以選取 [**關於**] 連結或省略號（...）以驗證您的版本。 使用工具時 **，永遠更新為最新的版本**。
 
-SharePoint 工具的頁面診斷功能是新 Microsoft Edge 的瀏覽器擴充（https://www.microsoft.com/edge)以及分析 SharePoint 線上新式入口網站和傳統發佈網站頁面的 Chrome 瀏覽器）。 此工具僅適用于線上 SharePoint，無法在 SharePoint 系統] 頁面上使用。
+適用於 SharePoint 的頁面診斷工具是全新 Microsoft Edge (https://www.microsoft.com/edge) 和 Chrome 瀏覽器的擴充功能，可以用來分析 SharePoint Online 新式入口網站與傳統發佈網站頁面。 此工具僅適用于線上 SharePoint，無法在 SharePoint 系統] 頁面上使用。
 
 工具會針對每個已分析的頁面產生報表，顯示頁面如何針對預先定義的規則集執行，並在測試結果超出基線值時顯示詳細資訊。 SharePoint Online 管理員和設計者可以使用工具來疑難排解效能問題，並確保新頁面在發佈之前已經過優化。
 
@@ -89,7 +94,7 @@ SharePoint 工具的頁面診斷功能是新 Microsoft Edge 的瀏覽器擴充�
 
 1. [[**診斷測試**](#how-to-use-the-diagnostic-tests-tab)] 索引標籤會以三個類別顯示分析結果。**不需要任何動作**、**改進機遇**及**必要的注意事項**。 每個測試結果都是以下列其中一個類別中的專案表示，如下表所述：
 
-    |類別  |色彩  |描述  |
+    |類別  |色彩  |說明  |
     |---------|---------|---------|
     |**需要注意** |紅色 |測試結果會超出比較基準值，而且會影響頁面效能。 遵循修復指導方針。|
     |**改進機會** |黃色 |測試結果會超出基準值，而且可能會影響效能問題。 可能會套用特定測試準則。|
@@ -126,7 +131,7 @@ SharePoint 工具的頁面診斷功能是新 Microsoft Edge 的瀏覽器擴充�
 
     ![網路追蹤](media/page-diagnostics-for-spo/pagediag-networktrace-red.png)
 
-    在上面顯示的圖像中，紅色專案與預設頁面有關。 除非在1000ms 中\<載入頁面，否則它永遠會顯示紅色（少於1秒）。
+    在上面顯示的圖像中，紅色專案與預設頁面有關。 除非在1000ms 中載入頁面，否則它永遠會顯示紅色 \< （少於1秒）。
 
 2. **測試專案載入時間**。 在某些情況下，由於瀏覽器已經快取這些專案，因此不會有任何時間或色彩指示器。 若要正確地進行此項測試，請開啟頁面，清除瀏覽器快取，然後按一下 [**啟動**]，將會強制 "冷" 頁面載入，並成為初始頁面載入的實際反映。 這樣一來，就應該將它與「暖色」頁面負載進行比較，以協助判斷頁面上快取哪些專案。
 
