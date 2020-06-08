@@ -81,6 +81,11 @@
 #### [Mac 版 Office 中的網路要求](network-requests-in-office-2016-for-mac.md)
 #### [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)
 #### [未包含在 Web 服務中的其他端點](additional-office365-ip-addresses-and-urls.md)
+### [Office 365 針對中國使用者的效能最佳化](office-365-networking-china.md)
+### 內容傳遞網路（CDNs）
+#### [Office 365 CDN 快速入門](office-365-cdn-quickstart.md)
+#### [在 SharePoint Online 中使用 Office 365 CDN](use-office-365-cdn-with-spo.md)
+#### [ 內容傳遞網路](content-delivery-networks.md)
 ### 將遠端使用者的 Office 365 連線能力最佳化
 #### [概觀：VPN 分割通道](office-365-vpn-split-tunnel.md)
 #### [實作 VPN 分割通道](office-365-vpn-implement-split-tunnel.md)
@@ -92,7 +97,6 @@
 #### [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md)
 #### [美國政府 GCC High 端點](office-365-u-s-government-gcc-high-endpoints.md)
 #### [Office 365 加密鏈 - DOD 和 GCC High](https://docs.microsoft.com/microsoft-365/compliance/encryption-office-365-certificate-chains-itar)
-### [內容傳遞網路](content-delivery-networks.md)
 ### [Office 365 服務中的 IPv6 支援](ipv6-support.md)
 ### [Office 365 的 NAT 支援](nat-support-with-office-365.md)
 ### 搭配使用 ExpressRoute for Office 365
