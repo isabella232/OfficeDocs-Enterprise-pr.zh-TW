@@ -1,5 +1,5 @@
 ---
-title: Azure 與 Office 365 的整合
+title: Azure 與 Microsoft 365 的整合
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -20,48 +20,48 @@ search.appverid:
 - MED150
 - BCS160
 ms.assetid: a5efce5d-9c9c-4190-b61b-fd273c1d425f
-description: Office 365 訂閱包含到 Azure AD 訂閱。 如果您想與您的內部部署環境的密碼同步處理或單一登入，Office 365 與 Azure AD 中整合。
-ms.openlocfilehash: b8b828033b6abc3481170a821fd32e7cf1f02e16
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 您的 Microsoft 365 訂閱包含 Azure AD 的訂閱。 如果您想要使用您的內部部署環境進行密碼同步處理或單一登入，請整合 Microsoft 365 與 Azure AD。
+ms.openlocfilehash: ca38a7a8d5878c6efad228595cf2929650a5c869
+ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843774"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44698890"
 ---
-# <a name="azure-integration-with-office-365"></a>Azure 與 Office 365 的整合
+# <a name="azure-integration-with-microsoft-365"></a>Azure 與 Microsoft 365 的整合
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-Office 365 管理使用者身分識別，幕後使用 Azure Active Directory (Azure AD)。 Office 365 訂閱包含免費的 Azure AD 訂閱，因此如果您想要同步處理密碼，或設定單一登入與您的內部部署環境，您可以與 Azure AD 整合 Office 365。 您也可以購買進階的功能，可以更妥善地管理您的帳戶。
+Microsoft 365 使用 Azure Active Directory （Azure AD）來管理幕後的使用者身分識別。 您的 Microsoft 365 訂閱包含 Azure AD 的免費訂閱，如果您想要同步處理密碼或設定與您的內部部署環境的單一登入，則可以整合 Microsoft 365 與 Azure AD。 您也可以購買高級功能，以更好地管理帳戶。
   
-Azure 也提供其他功能，例如管理整合式應用程式，您可以用來擴充並自訂您的 Office 365 訂閱。
+Azure 也提供其他功能（如管理整合型應用程式），您可以用來擴充和自訂您的 Microsoft 365 訂閱。
   
-您可以使用 （您必須登入到 Office 365） 的引導式安裝與設定體驗的 Azure AD 部署建議：
+您可以使用 Azure AD 部署顧問進行引導安裝和設定體驗（您必須登入 Microsoft 365）：
 
- - [Azure AD Connect 顧問](https://aka.ms/aadconnectpwsync)
- - [AD FS 部署建議程式](https://aka.ms/adfsguidance)
+ - [Azure AD Connect advisor](https://aka.ms/aadconnectpwsync)
+ - [AD FS 部署顧問](https://aka.ms/adfsguidance)
  - [Azure AD Premium 安裝指南](https://aka.ms/aadpguidance)
   
-## <a name="azure-ad-editions-and-office-365-identity-management"></a>Azure AD 版本和 Office 365 身分識別管理
+## <a name="azure-ad-editions-and-microsoft-365-identity-management"></a>Azure AD 版本和 Microsoft 365 身分識別管理
 
-如果您有 Office 365 的付費的訂閱，您也必須免費的 Azure AD 訂閱。 您可以使用 Azure AD 來建立及管理使用者和群組帳戶。 若要啟用此訂閱，您必須完成一次性的註冊。 之後，您可以從您的 Office 365 系統管理入口網站存取 Azure AD。 
+如果您已付費訂閱 Microsoft 365，您也可以免費訂閱 Azure AD。 您可以使用 Azure AD 建立及管理使用者和群群組帳戶。 若要啟動此訂閱，您必須完成一次性註冊。 此後，您可以從您的 Microsoft 365 系統管理中心存取 Azure AD。 
 
-如需相關指示，請參閱[使用您免費 Azure AD 訂閱](https://go.microsoft.com/fwlink/p/?LinkId=617127)。 Office 365 訂閱隨附的註冊免費的 Azure AD 訂閱，請遵循指示。 不要直接前往 azure.microsoft.com 登入，或您最後會有與您的 Office 365 的免費一台不同的 Microsoft Azure 試用版或付費訂閱。 
+如需相關指示，請參閱[使用免費 AZURE AD 訂閱](https://go.microsoft.com/fwlink/p/?LinkId=617127)。 依照指示，將您訂閱隨附的免費 Azure AD 訂閱註冊至 Microsoft 365。 請勿直接前往 azure.microsoft.com 進行註冊，否則您將會使用 Microsoft Azure 的試用版或付費訂閱，以與 Microsoft 365 的免費訂閱分開。 
   
-免費的訂閱，您可以與內部部署目錄同步處理，設定 [單一登入功能，與許多軟體與服務應用程式，例如 Salesforce、 投寄箱和其他更多選項進行同步處理。
+使用免費訂閱，您可以同步處理內部部署目錄、設定單一登入，並與許多軟體（例如 Salesforce、DropBox 及其他許多軟體）同步處理。
   
-如果您想增強的 Active Directory 網域服務 (AD DS) 功能、 雙向同步，以及其他管理功能，您可以升級免費的訂閱付費進階版訂閱。 如需詳細資訊，請參閱[Azure Active Directory 的版本](https://azure.microsoft.com/pricing/details/active-directory/)。
+如果您想要增強的 Active Directory 網域服務（AD DS）功能、雙向同步處理及其他管理功能，您可以將免費訂閱升級為付費的特優訂閱。 如需詳細資訊，請參閱[Azure Active Directory 版本](https://azure.microsoft.com/pricing/details/active-directory/)。
   
-如需有關 Office 365 和 Azure AD 的詳細資訊，請參閱[了解 Office 365 身分識別與 Azure Active Directory](https://docs.microsoft.com/office365/enterprise/about-office-365-identity)。
+如需 Microsoft 365 和 Azure AD 的詳細資訊，請參閱[瞭解 microsoft 365 身分識別和 Azure Active Directory](about-office-365-identity.md)。
   
-## <a name="extend-the-capabilities-of-your-office-365-tenant"></a>擴充您的 Office 365 租用戶的功能
+## <a name="extend-the-capabilities-of-your-microsoft-365-tenant"></a>擴充 Microsoft 365 租使用者的功能
 
 |**功能**|**描述**|
 |:-----|:-----|
-|整合式應用程式  <br/> |您可以個別應用程式存取授與您的 Office 365 資料，例如郵件、 行事曆、 連絡人、 使用者、 群組、 檔案及資料夾。 您也可以授權全域系統管理員層級這些應用程式，並讓他們可供整個公司使用 Azure AD 中登錄應用程式。 如需詳細資訊，請參閱[整合式應用程式和 Office 365 系統管理員的 Azure AD](https://support.office.com/article/cb2250e3-451e-416f-bf4e-363549652c2a)。  <br/> 也請參閱[單一登入應用程式](https://go.microsoft.com/fwlink/p/?LinkId=698604)。  <br/> |
-|PowerApps  <br/> | 電源應用程式是可以連線至您現有的資料來源像 SharePoint 清單的行動裝置具有焦點的應用程式及其他資料應用程式。 如需詳細資訊，請參閱[建立 PowerApp SharePoint Online 中的清單](https://support.office.com/article/9338b2d2-67ac-4b81-8e67-97da27e5e9ab)和[PowerApps] 頁面](https://powerapps.microsoft.com/)。  <br/> |
+|整合式應用程式  <br/> |您可以將個別應用程式的存取權授與您的 Microsoft 365 資料，例如郵件、行事曆、連絡人、使用者、群組、檔案及資料夾。 您也可以在全域系統管理員層級授權這些應用程式，並在 Azure AD 中註冊應用程式，以將其提供給整個公司。 如需詳細資訊，請參閱[Microsoft 365 系統管理員的整合式應用程式和 AZURE AD](https://support.office.com/article/cb2250e3-451e-416f-bf4e-363549652c2a)。  <br/> 另請參閱[單一登入至應用程式](https://go.microsoft.com/fwlink/p/?LinkId=698604)。  <br/> |
+|PowerApps  <br/> | Power app 是可連接到現有資料來源（如 SharePoint 清單）和其他資料應用程式的行動裝置應用程式。 如需詳細資訊，請參閱在 SharePoint Online 和[PowerApps 頁面](https://powerapps.microsoft.com/)[中建立清單的 PowerApp](https://support.office.com/article/9338b2d2-67ac-4b81-8e67-97da27e5e9ab) 。  <br/> |
    
-深入[整合式應用程式和 Office 365 系統管理員的 Azure AD](integrated-apps-and-azure-ads.md)和[Azure AD 應用程式庫和單一登入](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on)。
+若要深入瞭解，請參閱 Microsoft 365 系統管理員和[AZURE ad 應用程式庫及單一登入](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on)[的整合式應用程式和 azure ad](integrated-apps-and-azure-ads.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -3,7 +3,7 @@ title: 將角色指派給 Office 365 powershell 的使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/16/2019
+ms.date: 06/09/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,16 +19,20 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
 description: 摘要：使用 Office 365 PowerShell 將角色指派給使用者帳戶。
-ms.openlocfilehash: 8cd3bd27f95c9d4191c24c7febc85c8fb2fb0118
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 9a28ff27138b689ed0325580af956a90d7eb7982
+ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004736"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "44698910"
 ---
 # <a name="assign-roles-to-user-accounts-with-office-365-powershell"></a>將角色指派給 Office 365 powershell 的使用者帳戶
 
 您可以使用 Office 365 PowerShell，快速且輕鬆地將角色指派給使用者帳戶。
+
+>[!Note]
+>若要使用 Microsoft 365 系統管理中心指派角色給使用者帳戶，請參閱[這些指示](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles)。
+>
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
@@ -125,7 +129,7 @@ $roleName="<The role name you want to assign to the account>"
 Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
 ```
 
-複製命令，並將其貼到 [記事本]。 針對 **$dispName**和 **$roleName**變數，以其值取代描述文字、移除\<和 > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell 的整合式腳本環境（ISE）。
+複製命令，並將其貼到 [記事本]。 針對 **$dispName**和 **$roleName**變數，以其值取代描述文字、移除 \< and > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell 的整合式腳本環境（ISE）。
   
 以下是已完成命令集的範例：
   
@@ -171,7 +175,7 @@ $roleName="<The role name you want to assign to the account>"
 Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
 ```
 
-複製命令，並將其貼到 [記事本]。 針對 **$upnName**和 **$roleName**變數，以其值取代描述文字、移除\<和 > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell ISE。
+複製命令，並將其貼到 [記事本]。 針對 **$upnName**和 **$roleName**變數，以其值取代描述文字、移除 \< and > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell ISE。
   
 以下是已完成命令集的範例：
   
