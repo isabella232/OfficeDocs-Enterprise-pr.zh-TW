@@ -25,12 +25,12 @@ search.appverid:
 - BCS160
 ms.assetid: 1f5767ed-e717-4f24-969c-6ea9d412ca88
 description: '瞭解如何從試算表或其他 CSV 格式的檔案中的清單，將多個使用者新增至 Microsoft 365 for business。 在說明如何將帳戶新增至 Microsoft 365 的 YouTube 觀看影片。 在此程式結束時，具有帳戶的每位使用者都會有 Microsoft 365 信箱。 '
-ms.openlocfilehash: 88c83b7163bfa6d389995704595d80458ddc8198
-ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
+ms.openlocfilehash: 5f328185b56d1c5436f763d811d85dd55f912919
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44699240"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711806"
 ---
 # <a name="add-several-users-at-the-same-time-to-microsoft-365---admin-help"></a>同時將多個使用者新增至 Microsoft 365-系統管理說明
 

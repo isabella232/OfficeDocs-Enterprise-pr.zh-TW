@@ -1,5 +1,5 @@
 ---
-title: 高可用性同盟驗證階段5設定 Office 365 的同盟驗證
+title: 高可用性同盟驗證階段5設定 Microsoft 365 的同盟驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,19 +13,19 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 0f1dbf52-5bff-44cc-a264-1b48641af98f
-description: 摘要：在 Microsoft Azure 中針對 Office 365 的高可用性同盟驗證設定 Azure AD Connect。
-ms.openlocfilehash: ac5536ac66412825b245851a7f225acad5e9895a
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+description: 摘要：在 Microsoft Azure 中針對 Microsoft 365 的高可用性同盟驗證設定 Azure AD Connect。
+ms.openlocfilehash: 6cf88c3a933eba7cdbec2964cbf0ef24ee9a9b57
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793796"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711583"
 ---
-# <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-office-365"></a>高可用性同盟驗證階段 5：設定 Office 365 的同盟驗證
+# <a name="high-availability-federated-authentication-phase-5-configure-federated-authentication-for-microsoft-365"></a>高可用性同盟驗證階段5：設定 Microsoft 365 的同盟驗證
 
-在此最後一個在 Azure 基礎結構服務中部署 Office 365 高可用性同盟驗證的最後階段，您可以取得及安裝公用憑證授權單位單位所發出的憑證、驗證您的設定，然後在目錄同步處理伺服器上安裝並執行 Azure AD Connect。 Azure AD Connect 會為同盟驗證設定 Office 365 訂閱和 Active Directory Federation Services （AD FS）和 web 應用程式 proxy 伺服器。
+在此最後一個在 Azure 基礎結構服務中為 Microsoft 365 部署高可用性同盟驗證的最後階段，您可以取得及安裝公用憑證授權單位單位所發出的憑證、驗證您的設定，然後在目錄同步處理伺服器上安裝並執行 Azure AD Connect。 Azure AD Connect 針對同盟驗證設定您的 Microsoft 365 訂閱和 Active Directory Federation Services （AD FS）和 web 應用程式 proxy 伺服器。
   
-請參閱[在 Azure 中部署 Office 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
+請參閱[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
 ## <a name="get-a-public-certificate-and-copy-it-to-the-directory-synchronization-server"></a>取得公用憑證並將其複製到目錄同步處理伺服器
 
@@ -41,15 +41,15 @@ ms.locfileid: "43793796"
   
 如需有關同盟驗證之憑證需求的詳細資訊，請參閱[同盟安裝和設定的必要條件](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-prerequisites#prerequisites-for-federation-installation-and-configuration)。
   
-當您收到憑證時，請將它複製到目錄同步處理伺服器 C：磁片磁碟機上的資料夾。 例如，將檔案命名為 SSL，並將其儲存在目錄同步處理\\伺服器上的 [C：證書] 資料夾中。
+當您收到憑證時，請將它複製到目錄同步處理伺服器 C：磁片磁碟機上的資料夾。 例如，將檔案命名為 SSL，並將其儲存在目錄同步處理伺服器上的 [C： \\ 證書] 資料夾中。
   
 ## <a name="verify-your-configuration"></a>驗證您的設定
 
-您現在應該可以為 Office 365 設定 Azure AD Connect 及同盟驗證。 若要確定您是，以下是檢查清單：
+您現在應該可以為 Microsoft 365 設定 Azure AD Connect 及同盟驗證。 若要確定您是，以下是檢查清單：
   
-- 您的組織的公用網域會新增至您的 Office 365 訂閱。
+- 您的組織的公用網域已新增至您的 Microsoft 365 訂閱。
     
-- 您組織的 Office 365 使用者帳戶已設定為您組織的公用功能變數名稱，而且可成功登入。
+- 您組織的 Microsoft 365 使用者帳戶已設定為您組織的公用功能變數名稱，而且可成功登入。
     
 - 您已根據您的公用功能變數名稱判斷同盟服務 FQDN。
     
@@ -65,15 +65,15 @@ ms.locfileid: "43793796"
   
 **Azure 中高可用性同盟驗證基礎結構的範例設定**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的設定範例](media/ac1a6a0d-0156-4407-9336-6e4cd6db8633.png)
+![Azure 中高可用性 Microsoft 365 同盟驗證基礎結構的設定範例](media/ac1a6a0d-0156-4407-9336-6e4cd6db8633.png)
   
 ## <a name="run-azure-ad-connect-to-configure-federated-authentication"></a>執行 Azure AD Connect 以設定同盟驗證
 
-Azure AD Connect 工具使用下列步驟來設定 AD FS 伺服器、web 應用程式 proxy 伺服器及 Office 365 以進行同盟驗證：
+Azure AD Connect 工具使用下列步驟來設定 AD FS 伺服器、web 應用程式 proxy 伺服器及 Microsoft 365 進行同盟驗證：
   
 1. 使用具有本機系統管理員許可權的網域帳戶，建立目錄同步處理伺服器的遠端桌面連線。
     
-2. 從目錄同步處理伺服器的桌面，開啟 Internet Explorer，然後移至[https://aka.ms/aadconnect](https://aka.ms/aadconnect)。
+2. 從目錄同步處理伺服器的桌面，開啟 Internet Explorer，然後移至 [https://aka.ms/aadconnect](https://aka.ms/aadconnect) 。
     
 3. 在 [ **Microsoft Azure Active Directory 連線]** 頁面上，按一下 [**下載**]，然後按一下 [**執行**]。
     
@@ -85,7 +85,7 @@ Azure AD Connect 工具使用下列步驟來設定 AD FS 伺服器、web 應用�
     
 7. 在 [使用者登入]**** 頁面上，按一下 [和 AD FS 的同盟]****，然後按 [下一步]****。
     
-8. 在 [連線**到 AZURE AD]** 頁面上，輸入 Office 365 訂閱的全域系統管理員帳戶名稱和密碼，然後按 **[下一步]**。
+8. 在 [連線**到 AZURE AD]** 頁面上，輸入您的 Microsoft 365 訂閱全域管理員帳戶的名稱和密碼，然後按 **[下一步]**。
     
 9. 在 [**連接您的目錄]** 頁面上，確定已選取**樹**系中的內部部署 Active DIRECTORY 網域服務（AD DS）樹系，輸入網域管理員帳戶的名稱和密碼，按一下 [**新增目錄**]，然後按 **[下一步]**。
     
@@ -135,18 +135,18 @@ Azure AD Connect 工具使用下列步驟來設定 AD FS 伺服器、web 應用�
   
 **第5階段： Azure 中高可用性同盟驗證基礎結構的最終設定**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
+![Azure 中高可用性 Microsoft 365 同盟驗證基礎結構的最終設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
   
-Azure 中 Office 365 的高可用性同盟驗證基礎結構已完成。
+Azure 中 Microsoft 365 的高可用性同盟驗證基礎結構已完成。
   
 ## <a name="see-also"></a>另請參閱
 
-[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+[Microsoft 365 開發/測試環境的同盟身分識別](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
 
-[Office 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
+[Microsoft 365 的同盟身分識別](https://support.office.com/article/Understanding-Office-365-identity-and-Azure-Active-Directory-06a189e7-5ec6-4af2-94bf-a22ea225a7a9#bk_federated)
 
 

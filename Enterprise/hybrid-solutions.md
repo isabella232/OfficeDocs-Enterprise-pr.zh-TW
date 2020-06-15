@@ -16,12 +16,12 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: e9b8e065-2750-4534-9d39-aafd51a2a4e2
 description: 摘要：使用這些文章在 Microsoft Azure 中部署 Office Server 工作負載。
-ms.openlocfilehash: 5106a509cd5be05b9988f6d4b27c1947deede588
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+ms.openlocfilehash: 558b3eb612d67b3135a762326382218ae4f286c1
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793786"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711563"
 ---
 # <a name="hybrid-solutions"></a>混合式解決方案
 
@@ -29,15 +29,15 @@ ms.locfileid: "43793786"
   
 使用了 Microsoft Azure，您現在可以部署一些通常是在 Azure 基礎結構服務中內部部署上面部署的 Office Server 工作負載。
   
-針對 Azure 中的 Office 365 身分識別基礎結構：
+Azure 中的 Microsoft 365 身分識別基礎結構：
 
 - [針對 SharePoint Server 驗證使用 Azure AD](using-azure-ad-for-sharepoint-server-authentication.md)
 
-- [在 Microsoft Azure 中部署 Office 365 目錄同步作業](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
+- [在 Microsoft Azure 中部署 Microsoft 365 目錄同步處理](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
   
 - [使內部部署網路與 Microsoft Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
     
-- [Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+- [在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
     
 針對 Azure 中的 SharePoint Server 2013 工作負載：
   
@@ -54,8 +54,6 @@ ms.locfileid: "43793786"
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
   
-[雲端採用測試實驗室指南 (TLG)](cloud-adoption-test-lab-guides-tlgs.md)
+[適用于企業測試實驗室指南（Tlg）的 Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)
   
 [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
-
-

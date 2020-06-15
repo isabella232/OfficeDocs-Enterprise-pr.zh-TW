@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 瞭解如何在 Microsoft PowerShell 中執行 Office 365 群組的常見管理工作。
-ms.openlocfilehash: 7ebb3cfdfc6375cbc340c1fc3be37d59bcd9d4c8
-ms.sourcegitcommit: c758588cf2b68de9291a362fd73ec9dc721d04d3
+ms.openlocfilehash: 5868c875645685b10197ab05fd233940b73b0e88
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "44411060"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711836"
 ---
 # <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
  

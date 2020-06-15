@@ -13,19 +13,19 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
-description: 摘要：在 Microsoft Azure 中設定 Office 365 的高可用性同盟驗證的 web 應用程式 proxy 伺服器。
-ms.openlocfilehash: ac7b43daea832d4283404605fbb8ccb46e6cc76c
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+description: 摘要：在 Microsoft Azure 中為 Microsoft 365 的高可用性同盟驗證設定 web 應用程式 proxy 伺服器。
+ms.openlocfilehash: 4d6e2991c3293952c38e994728e6eca7ea5f5b35
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793806"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711886"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
-在 Azure 基礎結構服務中部署 Office 365 同盟驗證高可用性的此階段，您會建立內部負載平衡器和兩部 AD FS 伺服器。
+在此階段中，在 Azure 基礎結構服務中部署 Microsoft 365 同盟驗證的高可用性時，您會建立內部負載平衡器和兩部 AD FS 伺服器。
   
-您必須先完成此階段，再移至[階段5：設定 Office 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。 請參閱[在 Azure 中部署 Office 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
+您必須先完成此階段，再移至[階段5：設定 Microsoft 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。 請參閱[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
 ## <a name="create-the-internet-facing-load-balancer-in-azure"></a>在 Azure 中建立網際網路對應負載平衡器
 
@@ -60,17 +60,17 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
 
 ## <a name="determine-your-federation-service-fqdn-and-create-dns-records"></a>決定您的同盟服務 FQDN 並建立 DNS 記錄
 
-您需要決定 DNS 名稱以在網際網路上識別您的同盟伺服器名稱。Azure AD Connect 會以階段 5 中的此名稱設定 Office 365，這將會包含在 Office 365 用來與用戶端連線以取得安全性權杖所傳送的 URL 內。例如 fs.contoso.com (fs 表示同盟服務)。
+您需要決定 DNS 名稱以在網際網路上識別您的同盟伺服器名稱。 Azure AD Connect 會以此名稱在階段5中設定 Microsoft 365，這會成為 Microsoft 365 傳送至連線用戶端以取得安全性權杖之 URL 的一部分。 例如 fs.contoso.com (fs 表示同盟服務)。
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**名稱**|**Type**|**TTL**|**Value** (值)|
+|**Name**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對應負載平衡器的公用 IP 位址 (透過上一節中的 **Write-Host** 命令顯示) <br/> |
    
 範例如下：
   
-|**名稱**|**Type**|**TTL**|**Value** (值)|
+|**Name**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    
@@ -156,17 +156,17 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 **階段 4：Azure 中高可用性同盟驗證基礎結構的網際網路對應負載平衡器和 Web 應用程式 Proxy 伺服器**
 
-![Azure 中具有 web 應用程式 proxy 伺服器之高可用性 Office 365 同盟驗證基礎結構的階段4](media/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
+![Azure 中具有 web 應用程式 proxy 伺服器之高可用性 Microsoft 365 同盟驗證基礎結構的階段4](media/7e03183f-3b3b-4cbe-9028-89cc3f195a63.png)
   
 ## <a name="next-step"></a>下一步
 
-使用[階段5：設定 Office 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)，以繼續設定此工作負載。
+使用[階段5：設定 Microsoft 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)，以繼續設定此工作負載。
   
 ## <a name="see-also"></a>另請參閱
 
-[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+[Microsoft 365 開發/測試環境的同盟身分識別](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
 

@@ -13,17 +13,17 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 91266aac-4d00-4b5f-b424-86a1a837792c
-description: 摘要：設定 Microsoft Azure 基礎結構，以裝載 Office 365 的高可用性同盟驗證。
-ms.openlocfilehash: 9f2991ef495093f2aed01e57f47dab3371b97de3
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+description: 摘要：設定 Microsoft Azure 基礎結構，以裝載 Microsoft 365 的高可用性同盟驗證。
+ms.openlocfilehash: 10bf8165b36571b5cd68107fa32e26db970d1d58
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793826"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711946"
 ---
 # <a name="high-availability-federated-authentication-phase-1-configure-azure"></a>高可用性同盟驗證階段 1：設定 Azure
 
-在此階段中，您會在 Azure 中建立資源群組、虛擬網路（VNet）和可用性集，以在階段2、3和4中主控虛擬機器。 您必須先完成此階段，再移至[階段2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。 請參閱[在 Azure 中部署 Office 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
+在此階段中，您會在 Azure 中建立資源群組、虛擬網路（VNet）和可用性集，以在階段2、3和4中主控虛擬機器。 您必須先完成此階段，再移至[階段2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)。 請參閱[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
 Azure 必須布建下列基本元件：
   
@@ -106,7 +106,7 @@ Azure 必須布建下列基本元件：
    
  **表格 L：區域網路的網址前置詞**
   
-現在，讓我們開始組建 Azure 基礎結構，以裝載 Office 365 的同盟驗證。
+現在，讓我們開始組建 Azure 基礎結構，以裝載 Microsoft 365 的同盟驗證。
   
 > [!NOTE]
 > [!附註] 下列命令集會使用最新版的 Azure PowerShell。 請參閱[Azure PowerShell 入門](https://docs.microsoft.com/powershell/azure/get-started-azureps)。 
@@ -132,7 +132,7 @@ Get-AzSubscription | Sort Name | Select Name
 Get-AzSubscription | Sort Name | Select SubscriptionName
 ```
 
-設定 Azure 訂用帳戶。 以正確的名稱取代引號內的\<所有專案（包括和 > 字元）。
+設定 Azure 訂用帳戶。 以正確的名稱取代引號內的所有專案（包括 \< and > 字元）。
   
 ```powershell
 $subscrName="<subscription name>"
@@ -300,9 +300,9 @@ New-AzAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locNam
 
 以下是成功完成此階段的設定結果。
   
-**階段1：適用于 Office 365 的高可用性同盟驗證的 Azure 基礎結構**
+**階段1：適用于 Microsoft 365 的高可用性同盟驗證的 Azure 基礎結構**
 
-![Azure 中使用 Azure 基礎結構的高可用性 Office 365 同盟驗證階段1](media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
+![Azure 中使用 Azure 基礎結構之高可用性 Microsoft 365 同盟驗證的階段1](media/4e7ba678-07df-40ce-b372-021bf7fc91fa.png)
   
 ## <a name="next-step"></a>下一步
 
@@ -310,12 +310,12 @@ New-AzAvailabilitySet -ResourceGroupName $rgName -Name $avName -Location $locNam
   
 ## <a name="see-also"></a>另請參閱
 
-[Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
-[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)
+[Microsoft 365 開發/測試環境的同盟身分識別](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)
   
 [雲端採用和混合式解決方案](cloud-adoption-and-hybrid-solutions.yml)
 
-[了解 Office 365 身分識別和 Azure Active Directory](about-office-365-identity.md)
+[瞭解 Microsoft 365 身分識別和 Azure Active Directory](about-office-365-identity.md)
 
 

@@ -15,12 +15,12 @@ ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 f1.keywords:
 - NOCSH
 description: 資料移動是後端作業，對使用者的影響最小。 Microsoft 將租使用者的每一個服務和相關資料移至新的資料中心地理位置時，不需要執行任何動作。 資料傳輸和驗證會在背景中預先進行，並將對使用者的影響降至最低。
-ms.openlocfilehash: 24239f4e6cb8207fe53043dce80ae77035d8e834
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+ms.openlocfilehash: dc028cb34bca73a08e8c62668c22edfacc7829f6
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009298"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711916"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -29,7 +29,7 @@ ms.locfileid: "44009298"
 > [!NOTE]
 > 每個服務的移動發生在不同的時間。 因此，您會在不同的時間看到每個服務所述的簡化功能。 
   
-觀賞 Microsoft 365 訊息中心，以在每個 Exchange Online 移動時進行確認（SharePoint 線上、小組和商務用 Skype 皆已完成）。 如下表所示，在註冊期間結束後，最多可能需要24個月才能完成所有要求的資料移動，以供特定地理位置的所有客戶使用。 如果您在移動之後看到您的租使用者有任何問題，請聯繫我們的[Office 365 支援人員](https://go.microsoft.com/fwlink/p/?LinkID=522459)取得協助。 
+觀賞 Microsoft 365 訊息中心，以在每個 Exchange Online 移動時進行確認（SharePoint 線上、小組和商務用 Skype 皆已完成）。 如下表所示，在註冊期間結束後，最多可能需要24個月才能完成所有要求的資料移動，以供特定地理位置的所有客戶使用。 如果您在移動之後看到您的承租人發生任何問題，請聯繫我們[技術支援](https://go.microsoft.com/fwlink/p/?LinkID=522459)以取得協助。 
   
 
 |**在中使用註冊國家/地區的客戶**|**所有移動完成者**|
@@ -66,7 +66,7 @@ ms.locfileid: "44009298"
   
 - 商務用 OneDrive
     
-- Microsoft Project Online
+- Project Online
     
 - Project for Office 365
     

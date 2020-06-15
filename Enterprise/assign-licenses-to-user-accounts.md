@@ -26,12 +26,12 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明如何將 Microsoft 365 授權指派給使用者帳戶（個別或根據群組成員資格）。
-ms.openlocfilehash: bd9587f81d2267e1d6fd28f60e8ac2e85171457b
-ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
+ms.openlocfilehash: 105bc2772867e244b5012789593498a672abf807
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44699220"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711796"
 ---
 # <a name="assign-microsoft-365-licenses-to-user-accounts"></a>將 Microsoft 365 授權指派給使用者帳戶
 
@@ -39,7 +39,7 @@ ms.locfileid: "44699220"
 
 針對僅限雲端的身分識別模型，您可以根據建立的方式，將 Microsoft 365 授權指派給使用者帳戶。
 
-針對混合式識別模型，當您第一次同步處理 Active Directory 網域服務（AD DS）使用者帳戶時，系統不會自動將其指派給 Microsoft 365 授權。 您必須先設定使用者位置的每個使用者帳戶。
+針對混合式識別模型，當您第一次同步處理 Active Directory 網域服務（AD DS）使用者帳戶時，系統不會自動將它們指派給 Microsoft 365 授權。 您必須先設定使用者位置的每個使用者帳戶。
 
 在這兩種情況下，您必須指派授權給使用者帳戶，讓您的使用者能夠存取 Microsoft 365 服務，例如電子郵件和 Microsoft 團隊。
 

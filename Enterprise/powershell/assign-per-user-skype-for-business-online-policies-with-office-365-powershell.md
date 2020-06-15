@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
 description: 摘要：使用 Office 365 PowerShell，將每一使用者的通訊設定指派給商務用 Skype Online 原則。
-ms.openlocfilehash: 89b3ab5ce571c9812e2b4f3d3aef7066a7babb08
-ms.sourcegitcommit: 0c2d4cfb4d1b21ea93bcc6eb52421548db34b1e6
+ms.openlocfilehash: 0b95c993c3795bdbe9a68e23e107ea745c15f71b
+ms.sourcegitcommit: 88ede20888e2db0bb904133c0bd97726d6d65ee2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "44374442"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44719964"
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
 
@@ -50,16 +50,13 @@ Import-PSSession $sfbSession
     
 2. 將該外部存取原則指派給 Alex。
     
-> [!NOTE]
->  您無法自行建立自訂原則。 這是因為商務用 Skype Online 不允許您建立自訂原則。 相反地，您必須指派其中一個專為 Office 365 建立的原則。 這些預先建立的原則包括：4種不同的用戶端原則、224不同的會議原則、5種不同的撥號對應表、5種不同的外部存取原則、1主控的語音信箱原則，以及4種不同的語音原則。
-  
-那麼，如何判斷哪個外部存取原則要指派 Alex？ 下列命令會傳回 EnableFederationAccess 設定為 True 且 EnablePublicCloudAccess 設定為 False 的所有外部存取原則：
+如何判斷哪個外部存取原則要指派 Alex？ 下列命令會傳回 EnableFederationAccess 設定為 True 且 EnablePublicCloudAccess 設定為 False 的所有外部存取原則：
   
 ```powershell
-Get-CsExternalAccessPolicy | Where-Object {$_.EnableFederationAccess -eq $True -and $_.EnablePublicCloudAccess -eq $False}
+Get-CsExternalAccessPolicy -Include All| Where-Object {$_.EnableFederationAccess -eq $True -and $_.EnablePublicCloudAccess -eq $False}
 ```
 
-命令的功能會傳回符合兩個準則的所有原則： EnableFederationAccess 屬性設定為 True，而 EnablePublicCloudAccess 原則會設定為 False。 接著，該命令會傳回符合我們準則的一個原則（FederationOnly）。 範例如下：
+除非您已建立 Microsoft.rtc.management.writableconfig.policy.externalaccess.externalaccesspolicy 的任何自訂實例，否則該命令會傳回符合我們準則的一個原則（FederationOnly）。 範例如下：
   
 ```powershell
 Identity                          : Tag:FederationOnly
@@ -71,9 +68,6 @@ EnablePublicCloudAudioVideoAccess : False
 EnableOutsideAccess               : True
 ```
 
-> [!NOTE]
-> 原則識別為 [標記： FederationOnly]。 的確，Tag:前置詞沿襲自 Microsoft Lync 2013 已完成的發行前版本。 要將原則指派給使用者時，您應該刪除 Tag:前置詞，且直接使用原則名稱：FederationOnly。 
-  
 現在，您知道要將哪一個原則指派給 Alex，我們可以使用[授與 get-csexternalaccesspolicy](https://go.microsoft.com/fwlink/?LinkId=523974) Cmdlet 指派該原則。 範例如下：
   
 ```powershell
@@ -98,7 +92,7 @@ Get-CsOnlineUser | Grant-CsExternalAccessPolicy "FederationAndPICDefault"
 
 這個命令會使用 Get-CsOnlineUser 傳回已啟用 Lync 的所有使用者的集合，然後將所有該資訊傳送至授與 Get-csexternalaccesspolicy，這會將 FederationAndPICDefault 原則指派給集合中的每個使用者和每個使用者。
   
-另一個範例是，假設您先前已指派 Alex FederationAndPICDefault 原則，而現在您已變更了您的想法，而且想要由全域外部存取原則來管理。 您無法將全域原則明確指派給任何人。 只有在指派其他每一使用者原則時才會使用此功能。 因此，如果我們想要透過全域原則來管理 Alex，您必須*取消*指派先前指派給他的任何個別使用者原則。 範例命令如下：
+另一個範例是，假設您先前已指派 Alex FederationAndPICDefault 原則，而現在您已變更了您的想法，而且想要由全域外部存取原則來管理。 您無法將全域原則明確指派給任何人。 相反地，如果沒有任何個別使用者原則指派給該使用者，就會將全域原則用於指定的使用者。 因此，如果我們想要透過全域原則來管理 Alex，您必須*取消*指派先前指派給他的任何個別使用者原則。 範例命令如下：
   
 ```powershell
 Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
@@ -106,7 +100,6 @@ Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
 
 這個命令會將指派給 Alex 的外部存取原則名稱設為 null 值（$Null）。 Null 表示 "nothing"。 換句話說，也就是沒有任何外部存取原則指派給 Alex。 當沒有任何外部存取原則指派給使用者時，該使用者就會受到全域原則的管理。
   
-若要使用 Windows PowerShell 停用使用者帳戶，請使用 Azure Active Directory Cmdlet 來移除 Alex 的商務用 Skype Online 授權。 如需詳細資訊，請參閱[使用 Office 365 PowerShell 停用服務的存取權](assign-licenses-to-user-accounts-with-office-365-powershell.md)。
 
 ## <a name="managing-large-numbers-of-users"></a>管理大量使用者
 
@@ -141,7 +134,7 @@ $count = 0
 
 這會在不具備用戶端原則的時刻找到500使用者。 它會授與他們用戶端原則 "ClientPolicyNoIMURL" 和外部存取原則 "FederationAndPicDefault"。 結果會批分為50群組，而每批次50都會傳送至遠端電腦。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>也請參閱
 
 [使用 Office 365 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
   

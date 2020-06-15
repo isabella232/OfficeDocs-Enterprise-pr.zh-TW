@@ -1,5 +1,5 @@
 ---
-title: Office 365 IdFix 交易記錄檔
+title: Microsoft 365 IdFix 交易記錄檔
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,31 +17,31 @@ search.appverid:
 - MET150
 - MOE150
 ms.assetid: d58b7d45-7947-4193-9456-82ba76f42d89
-description: 提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
-ms.openlocfilehash: fb294095dc5b163965660546f5033a845d6cb0b4
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 提供範例，並說明 Microsoft 365 IdFix 交易記錄檔的命名慣例和預設記錄層級。
+ms.openlocfilehash: a2b887907dd1ad622a9d237cf7200aa6db8a2a8e
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840110"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711553"
 ---
-# <a name="office-365-idfix-transaction-log"></a>Office 365 IdFix 交易記錄檔
+# <a name="microsoft-365-idfix-transaction-log"></a>Microsoft 365 IdFix 交易記錄檔
 
 *本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
 
-提供範例，並描述的命名慣例和預設記錄層級的 Office 365 IdFix 交易記錄檔。
+提供範例，並說明 Microsoft 365 IdFix 交易記錄檔的命名慣例和預設記錄層級。
   
-## <a name="idfix-transaction-log-location"></a>IdFix 交易記錄檔的位置
+## <a name="idfix-transaction-log-location"></a>IdFix 交易記錄位置
 
-Office 365 IdFix 工具在每次您按一下 [**套用**在 IdFix 中，將變更套用至 Active Directory 樹系時，都會建立新的交易記錄檔。 交易記錄檔會儲存在您安裝 IdFix 的相同資料夾中。 根據預設，這個資料夾是 C:\Deployment Tools\IDFix。 交易記錄檔名稱使用日期和時間戳記格式，例如 Verbose 6-1-2018年 6-17-22 PM 指示在 2018 年 6 月 1 日下午 6:17:22 產生的檔案。 Verbose 指出的記錄等級。 
+當您在 IdFix 中按一下 [套用]**並將變更**套用至 Active Directory 樹系時，Microsoft 365 IdFix 工具會建立新的交易記錄檔。 交易記錄會儲存在您安裝 IdFix 所在的相同資料夾中。 根據預設，此資料夾為 C:\Deployment Tools\IDFix。 交易記錄檔名稱使用日期和時間戳記格式，例如，Verbose 6-1-2018 6-17-22 PM 表示在 6:17:22 2018 的晚上6月1日產生的檔案。 詳細指出記錄等級。 
   
 ## <a name="idfix-transaction-log-logging-level"></a>IdFix 交易記錄檔記錄層級
 
-Verbose 在交易記錄檔名稱的字會指出記錄檔中的層的級。 Verbose 表示最高資訊量會擷取在記錄檔。 這是預設記錄等級。 在這個階段中，您無法變更的記錄等級。
+交易記錄檔名稱中的 [文字詳細資訊] 表示檔中的記錄層級。 詳細表示記錄中所捕獲的資訊數目上限。 這是預設的記錄等級。 此時，您無法變更記錄等級。
   
-## <a name="idfix-transaction-log-format"></a>IdFix 交易記錄格式
+## <a name="idfix-transaction-log-format"></a>IdFix 事務歷史記錄格式
 
-IdFix 會將每個 [ **UPDATE** ] 動作的結果寫入至交易記錄檔在下列範例所示：
+IdFix 會將每個**更新**動作的結果寫入交易記錄檔，如下列範例所示：
   
 ```
 5/22/2018 6:36:44 AM Initialized - IdFix version 1.07 - Multi-Tenant

@@ -1,5 +1,5 @@
 ---
-title: 將貴組織資料移轉到 Office 365 企業版
+title: 將組織資料移轉至 Microsoft 365 企業版
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -15,25 +15,25 @@ search.appverid:
 ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 f1.keywords:
 - NOCSH
-description: 如果您已選擇退出 FastTrack 部署，且您準備好將資料移轉到 Office 365，這就是開始的位置。
-ms.openlocfilehash: 44038429ecf3b927db408679f8651d4055113a48
-ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
+description: 如果您已選擇 FastTrack 部署，且準備好將資料移轉至 Microsoft 365，這是開始的位置。
+ms.openlocfilehash: a04c4df37d5f8c72330907752247d7bea48fb72d
+ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44419341"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "44711846"
 ---
-# <a name="migrate-your-organization-data-to-office-365-enterprise"></a>將貴組織資料移轉到 Office 365 企業版
+# <a name="migrate-your-organization-data-to-microsoft-365-enterprise"></a>將組織資料移轉至 Microsoft 365 企業版
 
-## <a name="ready-to-migrate-your-data-to-office-365"></a>準備好將資料移轉到 Office 365 嗎？
+## <a name="ready-to-migrate-your-data-to-microsoft-365"></a>準備好將資料移轉至 Microsoft 365？
 
-我們的[基本設定指示](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)協助您在最短時間內讓所有人都使用您的 Office 365 服務與應用程式。這會略過混合狀況以及移轉至 Office 365 的更進階方法。 
+我們的[基本設定指示](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)可協助您在盡可能短的時間內，使用 Microsoft 365 服務和應用程式。這會跳過混合式案例和更高級的方法，以遷移至 Microsoft 365。 
   
-如果您想要瞭解如何設定 Office 365， [FastTrack](https://fasttrack.microsoft.com/office)是部署 office 365 的最簡單方法，您也可以登入並使用[Office 365 服務的設定指南](setup-guides-for-office-365.md)。
+如果您想要協助您設定 Microsoft 365， [FastTrack](https://fasttrack.microsoft.com/office)是部署 microsoft 365 的最簡單方法，您也可以登入並使用[Microsoft 365 服務的設定指南](setup-guides-for-office-365.md)。
 
-## <a name="migrate-email-to-office-365"></a>將電子郵件移轉至 Office 365
+## <a name="migrate-email-to-microsoft-365"></a>將電子郵件遷移至 Microsoft 365
 - 使用 [Exchange 部署助理](https://technet.microsoft.com/exdeploy2013)透過 Exchange 混合式移轉。(系統管理員)
-- 深入了解各種[將多個電子郵件帳戶移轉至 Office 365 的方法](https://support.office.com/article/Ways-to-migrate-multiple-email-accounts-to-Office-365-0a4913fe-60fb-498f-9155-a86516418842)。
+- 深入瞭解將[電子郵件遷移至 Microsoft 365](https://support.office.com/article/Ways-to-migrate-multiple-email-accounts-to-Office-365-0a4913fe-60fb-498f-9155-a86516418842)的不同方式。
 - 尋找[組織中人員可以移轉電子郵件、連絡人和行事曆](https://support.office.com/article/Migrate-email-and-contacts-to-Office-365-for-business-a3e3bddb-582e-4133-8670-e61b9f58627e)的其他方式。
 
 ## <a name="migrate-files-and-folders"></a>移轉檔案和資料夾
