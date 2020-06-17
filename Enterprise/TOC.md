@@ -2,32 +2,32 @@
 # [企業雲端解決方案](cloud-adoption-and-hybrid-solutions.yml)
 ## [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
 
-# [規劃 Office 365](get-your-organization-ready-for-office-365.md)
+# [規劃 Microsoft 365](get-your-organization-ready-for-office-365.md)
 
-## 您的 Office 365 租用戶
+## 您的 Microsoft 365 租用戶
 ### [訂閱、授權與租用戶](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)
 
 ### 規劃您的網路
-#### [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
-#### [規劃連線到 Office 365 服務的網路裝置](plan-for-network-devices.md)
-#### [Office 365 的網路和移轉規劃](network-and-migration-planning.md)
+#### [評估 Microsoft 365 網路連線能力](assessing-network-connectivity.md)
+#### [規劃連線到 Microsoft 365 服務的網路裝置](plan-for-network-devices.md)
+#### [Microsoft 365 的網路和移轉規劃](network-and-migration-planning.md)
 
 ### 規劃您的身分識別
 #### [身分識別模式](about-office-365-identity.md)
 #### [混合式身分識別](plan-for-directory-synchronization.md)
 
-### [規劃 Office 365 的第三方 SSL 憑證](plan-for-third-party-ssl-certificates.md)
-### [Office 365 和 Microsoft 365 服務的設定指南](setup-guides-for-office-365.md)
+### [規劃 Microsoft 365 的第三方 SSL 憑證](plan-for-third-party-ssl-certificates.md)
+### [Microsoft 365 和 Office 365 服務的設定指南](setup-guides-for-office-365.md)
 ### [整合的應用程式和 Azure AD](integrated-apps-and-azure-ads.md)
 
-### Office 365 整合
+### Microsoft 365 整合
 #### [與內部部署整合](office-365-integration.md)
 #### [Azure 整合](azure-integration.md)
 #### [Azure ExpressRoute](azure-expressroute.md)
 #### [新式驗證對於 Office 2013 和 Office 2016 用戶端應用程式的運作方式](modern-auth-for-office-2013-and-2016.md)
 #### [租用戶間共同作業](office-365-inter-tenant-collaboration.md)
 
-## Office 365 用戶端支援
+## Microsoft 365 用戶端支援
 ### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
 ### [行動應用程式管理](https://support.microsoft.com/en-us/office/overview-of-mobile-device-management-mdm-for-microsoft-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a?ui=en-US&rs=en-US&ad=US)
@@ -58,17 +58,17 @@
 #### [Lync Server 2010](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/upgrade)
 #### [Project Server 2010](project-server-2010-end-of-support.md)
 
-# [測試 Office 365](cloud-adoption-test-lab-guides-tlgs.md)
+# [Test Microsoft 365](cloud-adoption-test-lab-guides-tlgs.md)
 
-# [部署 Office 365 企業版](setup-overview-for-enterprises.md)
+# [部署 Microsoft 365 企業版](setup-overview-for-enterprises.md)
 
 ## 1. 設定網路
 ### [設定您的企業網路](set-up-network-for-office-365.md)
 ### [新增網域](https://support.office.com/article/6383f56d-3d09-4dcb-9b41-b5f5a5efd611)
-### [Office 365 網路連線能力概觀](office-365-networking-overview.md)
-### [Office 365 網路連線原則](office-365-network-connectivity-principles.md)
-### [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
-### [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
+### [Microsoft 365 網路連線能力概觀](office-365-networking-overview.md)
+### [Microsoft 365 網路連線原則](office-365-network-connectivity-principles.md)
+### [Microsoft 365 的網路規劃和效能調整](network-planning-and-performance.md)
+### [評估 Microsoft 365 網路連線能力](assessing-network-connectivity.md)
 ### [Office 365 網路合作夥伴計劃](office-365-networking-partner-program.md)
 ### Office 365 IP 位址和 URL
 #### [Office 365 端點](office-365-endpoints.md)
@@ -86,10 +86,10 @@
 #### [Office 365 CDN 快速入門](office-365-cdn-quickstart.md)
 #### [在 SharePoint Online 中使用 Office 365 CDN](use-office-365-cdn-with-spo.md)
 #### [ 內容傳遞網路](content-delivery-networks.md)
-### 將遠端使用者的 Office 365 連線能力最佳化
+### 最佳化遠端使用者的 Microsoft 365 連線能力
 #### [概觀：VPN 分割通道](office-365-vpn-split-tunnel.md)
 #### [實作 VPN 分割通道](office-365-vpn-implement-split-tunnel.md)
-#### [中國使用者適用的 Office 365 最佳化](office-365-networking-china.md)
+#### [中國使用者適用的 Microsoft 365 最佳化](office-365-networking-china.md)
 ### 適用於 GCC High 和 DOD 的網路
 #### [GCC High 和 DoD 的額外網路安全性需求](additional-network-security-requirements-for-office-365-gcchigh-and-dod.md)
 #### [Office 365 DoD 的 DNS 記錄](dns-records-for-office-365-dod.md)
@@ -97,13 +97,13 @@
 #### [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md)
 #### [美國政府 GCC High 端點](office-365-u-s-government-gcc-high-endpoints.md)
 #### [Office 365 加密鏈 - DOD 和 GCC High](https://docs.microsoft.com/microsoft-365/compliance/encryption-office-365-certificate-chains-itar)
-### [Office 365 服務中的 IPv6 支援](ipv6-support.md)
-### [Office 365 的 NAT 支援](nat-support-with-office-365.md)
-### 搭配使用 ExpressRoute for Office 365
-#### [ExpressRoute for Office 365](azure-expressroute.md)
-#### [實作 ExpressRoute for Office 365](implementing-expressroute.md)
-#### [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
-#### [使用 ExpressRoute for Office 365 進行路由傳送](routing-with-expressroute.md)
+### [Microsoft 365 服務中的 IPv6 支援](ipv6-support.md)
+### [Microsoft 365 的 NAT 支援](nat-support-with-office-365.md)
+### 搭配使用適用於 Microsoft 365 的 ExpressRoute
+#### [適用於 Microsoft 365 的 ExpressRoute](azure-expressroute.md)
+#### [實作適用於 Microsoft 365 的 ExpressRoute](implementing-expressroute.md)
+#### [使用適用於 Microsoft 365 的 ExpressRoute 進行網路規劃](network-planning-with-expressroute.md)
+#### [使用適用於 Microsoft 365 的 ExpressRoute 進行路由傳送](routing-with-expressroute.md)
 
 ## 2. 設定您的身分識別
 ### [保護您的全域系統管理員帳戶](protect-your-global-administrator-accounts.md)
@@ -129,7 +129,7 @@
 
 ## 6. 設定服務及應用程式
 ### [準備好](configure-services-and-applications.md)
-### [將資料移轉至 Office 365](migrate-data-to-office-365.md)
+### [將資料移轉至 Microsoft 365](migrate-data-to-office-365.md)
 ### [Exchange Online](https://docs.microsoft.com/Exchange/exchange-online)
 ### [SharePoint Online](https://docs.microsoft.com/sharepoint/sharepoint-online)
 ### [商務用 Skype](https://docs.microsoft.com/SkypeForBusiness/skype-for-business-online)
@@ -163,7 +163,7 @@
 ##### [在您的衛星地理位置啟用 SharePoint 多地理位置](enabling-SP-multigeo-satellite-geolocation.md)
 ##### [管理 Exchange 多地理位置](administering-exchange-online-multi-geo.md)
 
-### [移至新的 Office 365 資料中心地理位置](moving-data-to-new-datacenter-geos.md)
+### [移至新的 Microsoft 365 資料中心地理](moving-data-to-new-datacenter-geos.md)
 #### [如何要求資料移動](request-your-data-move.md)
 #### [資料移動期間和之後](during-and-after-your-data-move.md)
 #### [資料移動一般常見問題集](data-move-faq.md)
@@ -175,14 +175,14 @@
 #### [使用適用於 SharePoint Server 2016 驗證的 Azure Active Directory](using-azure-ad-for-sharepoint-server-authentication.md)
 #### [使內部部署網路與 Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 #### [在 Azure IaaS 中部署目錄同步處理伺服器](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
-#### [Azure 中的 Office 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+#### [Azure 中的 Microsoft 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
 ##### [階段 1：設定 Azure](high-availability-federated-authentication-phase-1-configure-azure.md)
 ##### [階段 2：設定網域控制站](high-availability-federated-authentication-phase-2-configure-domain-controllers.md)
 ##### [階段 3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)
 ##### [階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)
 ##### [階段 5：設定同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)
 
-# 管理 Office 365
+# 管理 Microsoft 365
 
 ## 網路
 ### [監視連線](monitor-connectivity.md)
@@ -194,7 +194,7 @@
 ### [關閉目錄同步處理](turn-off-directory-synchronization.md)
 
 ## 使用者
-### [Office 365 系統管理說明中心](https://docs.microsoft.com/office365/admin/admin-home)
+### [Microsoft 365 系統管理中心說明](https://docs.microsoft.com/office365/admin/admin-home)
 ### [管理使用者帳戶的工具](manage-office-365-accounts.md)
 ### [同時新增多個使用者](add-several-users-at-the-same-time.md)
 ### [復原使用者信箱中刪除的郵件](recover-deleted-items-in-a-mailbox.md)
@@ -214,7 +214,7 @@
 ### [支援選項](https://support.office.com/article/Contact-support-for-business-products-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 
 ## 效能
-### [調整 Office 365 效能](tune-office-365-performance.md)
+### [調整 Microsoft 365 效能](tune-office-365-performance.md)
 ### [使用基準與效能歷程記錄進行效能調整](performance-tuning-using-baselines-and-history.md)
 ### [調整 Exchange Online 效能](tune-exchange-online-performance.md)
 ### [調整 SharePoint Online 效能](tune-sharepoint-online-performance.md)
@@ -226,8 +226,8 @@
 ### [管理 ExpressRoute](managing-expressroute-for-connectivity.md)
 
 # 服務保證
-## [Office 365 安全性與合規性中心中的服務保證](https://docs.microsoft.com/microsoft-365/compliance/service-assurance)
-## [Office 365 中的系統管理存取控制](office-365-administrative-access-controls-overview.md)
+## [Microsoft 365 安全性與合規性中心中的服務保證](https://docs.microsoft.com/microsoft-365/compliance/service-assurance)
+## [Microsoft 365 中的系統管理存取控制](office-365-administrative-access-controls-overview.md)
 ### [監視及稽核的存取控制](office-365-monitoring-and-auditing-access-controls.md)
 ### [Office 365 隔離控制措施](office-365-isolation-controls.md)
 ### [Office 365 人員控制措施](office-365-personnel-controls.md)
@@ -254,7 +254,7 @@
 ### [Microsoft 的阻斷服務攻擊防禦策略](office-365-microsoft-dos-defense-strategy.md)
 ### [防禦阻斷服務攻擊的核心原則](office-365-core-principles-of-defense-against-dos-attacks.md)
 ## [Microsoft Cloud 中的加密](https://docs.microsoft.com/microsoft-365/compliance/office-365-encryption-in-the-microsoft-cloud-overview)
-### [Office 365 服務加密](https://docs.microsoft.com/microsoft-365/compliance/office-365-service-encryption)
+### [Microsoft 365 服務加密](https://docs.microsoft.com/microsoft-365/compliance/office-365-service-encryption)
 ### [傳輸中資料的加密](https://docs.microsoft.com/microsoft-365/compliance/office-365-encryption-for-data-in-transit)
 ### [客戶管理加密功能](https://docs.microsoft.com/microsoft-365/compliance/office-365-customer-managed-encryption-features)
 ### [加密風險與防護](https://docs.microsoft.com/microsoft-365/compliance/office-365-encryption-risks-and-protections)
@@ -273,5 +273,5 @@
 # [Office 365 PowerShell](powershell/manage-office-365-with-office-365-powershell.md)
 # [Microsoft 365 合規性](https://docs.microsoft.com/microsoft-365/compliance/)
 # [Microsoft 365 安全性](https://docs.microsoft.com/microsoft-365/security/)
-# [商務用 Office 365](https://docs.microsoft.com/office365/admin/admin-home)
+# [商務用 Microsoft 365](https://www.microsoft.com/microsoft-365/business)
 # [Microsoft 365](https://docs.microsoft.com/microsoft-365)
