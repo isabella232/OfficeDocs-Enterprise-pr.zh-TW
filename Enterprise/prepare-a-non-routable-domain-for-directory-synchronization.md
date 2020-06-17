@@ -21,34 +21,34 @@ search.appverid:
 - MED150
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
-description: 如果您有與您的內部部署使用者相關聯的非 routale 網域，請瞭解如何進行與 Office 365 的同步處理。
-ms.openlocfilehash: 056ff528e0ba03795fecb76543db021f9a89b87e
-ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
+description: 如果您有與內部部署使用者相關聯的非 routale 網域，365您必須先將其與您的內部部署使用者相關聯，再瞭解如何進行。
+ms.openlocfilehash: 148d7e1abdeeeea11c838697bbc957e2937ea7f8
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44208764"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44736011"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>為目錄同步處理準備不可路由的網域
-當您同步處理內部部署目錄與 Office 365 時，您必須在 Azure Active Directory （Azure AD）中擁有已驗證的網域。 只會同步處理與內部部署網域相關聯的使用者主要名稱（UPN）。 不過，任何包含無法路由之網域的 UPN （如 local （billa@contoso local））都會同步處理至 onmicrosoft.com 網域（例如 billa@contoso.onmicrosoft.com）。 
+當您同步處理內部部署目錄與 Microsoft 365 時，您必須在 Azure Active Directory （Azure AD）中擁有已驗證的網域。 只會同步處理與內部部署網域相關聯的使用者主要名稱（UPN）。 不過，任何包含無法路由之網域的 UPN （如 local （billa@contoso local））都會同步處理至 onmicrosoft.com 網域（例如 billa@contoso.onmicrosoft.com）。 
 
-如果您目前使用的是 Active Directory 網域服務（AD DS）中使用者帳戶的 local 網域，建議您將其變更為使用已驗證的網域（例如 billa@contoso.com），才能正確地與 Office 365 網域同步。
+如果您目前使用的是 Active Directory 網域服務（AD DS）中使用者帳戶的 local 網域，建議您將其變更為使用已驗證的網域（例如 billa@contoso.com），以便與您的 Microsoft 365 網域正確同步。
   
 ## <a name="what-if-i-only-have-a-local-on-premises-domain"></a>如果我只有本機內部部署網域，該怎麼辦？
 
 您可以用來將 AD DS 同步處理到 Azure AD 的最近工具稱為 Azure AD Connect。 如需詳細資訊，請參閱[將內部部署身分識別與 AZURE AD 整合](https://docs.microsoft.com/azure/architecture/reference-architectures/identity/azure-ad)。
   
-Azure AD Connect 會同步處理您的使用者的 UPN 和密碼，讓使用者可以使用內部部署所使用的相同認證來登入。 不過，Azure AD Connect 只會同步處理使用者至 Office 365 所驗證的網域。 這表示網域也會由 Azure AD 驗證，因為 Office 365 identity 是由 Azure AD 所管理。 換句話說，網域必須是有效的網際網路網域（例如，.com、org、.net、us 等等）。 如果您的內部 AD DS 只使用不可路由的網域（例如，local），這可能會符合您在 Office 365 上已驗證的網域。 您可以在內部部署 AD DS 中變更您的主要網域，或是新增一或多個 UPN 尾碼，以修正此問題。
+Azure AD Connect 會同步處理您的使用者的 UPN 和密碼，讓使用者可以使用內部部署所使用的相同認證來登入。 不過，Azure AD Connect 只會同步處理使用者至 Microsoft 365 所驗證的網域。 這表示網域也會由 Azure AD 驗證，因為 Microsoft 365 identity 是由 Azure AD 所管理。 換句話說，網域必須是有效的網際網路網域（例如，.com、org、.net、us 等等）。 如果您的內部 AD DS 只使用不可路由的網域（例如，local），這可能會與您在 Microsoft 365 上的驗證網域不符。 您可以在內部部署 AD DS 中變更您的主要網域，或是新增一或多個 UPN 尾碼，以修正此問題。
   
 ### <a name="change-your-primary-domain"></a>**變更您的主要網域**
 
-將您的主要網域變更為您已在 Office 365 中驗證的網域，例如，contoso.com。 每個具有網域 contoso 的使用者都會更新為 contoso.com。 如需相關指示，請參閱[網域重新命名的運作方式](https://go.microsoft.com/fwlink/p/?LinkId=624174)。 不過，這是非常相關的程式，但下一節將說明更簡單的解決方案。
+將您的主要網域變更為您已在 Microsoft 365 中驗證的網域，例如，contoso.com。 每個具有網域 contoso 的使用者都會更新為 contoso.com。 如需相關指示，請參閱[網域重新命名的運作方式](https://go.microsoft.com/fwlink/p/?LinkId=624174)。 不過，這是非常相關的程式，但下一節將說明更簡單的解決方案。
   
 ### <a name="add-upn-suffixes-and-update-your-users-to-them"></a>**新增 UPN 尾碼並更新您的使用者**
 
-您可以在 AD DS 中註冊新的 UPN 尾碼或尾碼，以符合您在 Office 365 中驗證的網域（或網域），以解決本機問題。 在您註冊新的尾碼後，您可以使用新的功能變數名稱更新使用者 Upn 以取代該名稱。例如，使用者帳戶看起來像是 billa@contoso.com。
+您可以在 AD DS 中註冊新的 UPN 尾碼或尾碼，以符合您在 Microsoft 365 中驗證的網域（或網域），以解決本機問題。 在您註冊新的尾碼後，您可以使用新的功能變數名稱更新使用者 Upn 以取代該名稱。例如，使用者帳戶看起來像是 billa@contoso.com。
   
-將 Upn 更新為使用已驗證的網域之後，即可將您的內部部署 AD DS 與 Office 365 同步處理。
+在您更新 Upn 以使用已驗證的網域之後，即可將您的內部部署 AD DS 與 Microsoft 365 進行同步處理。
   
  **步驟1：新增 UPN 尾碼**
   

@@ -1,5 +1,5 @@
 ---
-title: 設定 Office 365 企業版服務和應用程式
+title: 設定 Microsoft 365 企業版服務和應用程式
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,32 +17,26 @@ search.appverid:
 ms.assetid: 7cec08a5-97fd-4761-b23b-ef3d66519e30
 f1.keywords:
 - NOCSH
-description: 設定 Office 365 企業版服務和應用程式
-ms.openlocfilehash: e0b0be9b4b99f5a652145e9f2991181769a9df19
-ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
+description: 設定 Microsoft 365 企業版服務和應用程式
+ms.openlocfilehash: 915d4baa18705e813f6d11a35dff6208c26ab0d3
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44419321"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44735951"
 ---
-# <a name="configure-office-365-enterprise-services-and-applications"></a>設定 Office 365 企業版服務和應用程式
+# <a name="configure-microsoft-365-enterprise-services-and-applications"></a>設定 Microsoft 365 企業版服務和應用程式
 
-## <a name="ready-to-configure-your-office-365-services-and-applications"></a>準備好設定 Office 365 服務和應用程式了嗎？
-
-我們的[基本設定指示](https://support.office.com/article/Set-up-Office-365-for-business-6a3a29a0-e616-4713-99d1-15eda62d04fa)可協助您盡可能在最短時間內讓所有人都能使用 Office 365 服務和應用程式。有時候在所有人開始使用前先完成設定是比較建議的做法。例如，像是設定郵件路由、檔案儲存或共用原則的時候。 
+我們的[基本設定指示](https://docs.microsoft.com/microsoft-365/admin/setup/setup)可協助您在盡可能短的時間內，使用 Microsoft 365 服務和應用程式。 在每個人開始使用之前所設定的工作也是可取的習慣。 例如，如果您想要設定郵件路由、檔儲存或共用原則。 
   
-如果您想要瞭解如何設定 Office 365，請使用**[FastTrack](https://fasttrack.microsoft.com/office)** 或[office 365 服務的設定指南](setup-guides-for-office-365.md)。
+如果您想要瞭解如何設定 Microsoft 365，請使用**[FastTrack](https://www.microsoft.com/fasttrack/microsoft-365)** 或[Microsoft 365 和 Office 365 服務的設定指南](setup-guides-for-office-365.md)。
   
 |**服務與應用程式**|**資源**|
 |:-----|:-----|
-|**Office 365 套件** |- [將公司商標新增到 Office 365 登入頁面](https://support.office.com/article/Add-your-company-branding-to-Office-365-Sign-In-Page-a1229cdb-ce19-4da5-90c7-2b9b146aef0a) <br> - [將自訂技術支援中心資訊新增到 Office 365 說明窗格](https://support.office.com/article/Add-customized-help-desk-info-to-the-Office-365-help-pane-9dd9b104-68f7-4d49-9a30-82561c7d79a3) <br> - [新增與 Azure AD 和其他應用程式的整合](https://support.office.com/article/Integrated-Apps-and-Azure-AD-for-Office-365-administrators-cb2250e3-451e-416f-bf4e-363549652c2a)。  <br> - [深入了解如何使用群組](https://support.office.com/Article/Learn-more-about-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)來進行電子郵件、行事曆、文件和交談的共同作業 <br> - [設定 Office 365 中的資訊保護](https://technet.microsoft.com/library/dn532171.aspx) <br> - [在 Office 365 中啟用和使用行動裝置管理](https://support.office.microsoft.com/article/Manage-mobile-devices-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) <br> - [監控 Office 365 連線能力](monitor-connectivity.md) |
+|**Microsoft 365 套件** |- [將公司署名新增至 Microsoft 365 登入頁面](https://support.office.com/article/Add-your-company-branding-to-Office-365-Sign-In-Page-a1229cdb-ce19-4da5-90c7-2b9b146aef0a) <br> - [將自訂的服務台資訊新增至 Microsoft 365 説明窗格](https://support.office.com/article/Add-customized-help-desk-info-to-the-Office-365-help-pane-9dd9b104-68f7-4d49-9a30-82561c7d79a3) <br> - [新增與 Azure AD 和其他應用程式的整合](https://support.office.com/article/Integrated-Apps-and-Azure-AD-for-Office-365-administrators-cb2250e3-451e-416f-bf4e-363549652c2a)。  <br> - [深入了解如何使用群組](https://support.office.com/Article/Learn-more-about-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2)來進行電子郵件、行事曆、文件和交談的共同作業 <br> - [啟動和使用 Microsoft 365 中的行動裝置管理](https://support.office.microsoft.com/article/Manage-mobile-devices-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd) <br> - [監視 Microsoft 365 連線能力](monitor-connectivity.md) |
 |**電子郵件** <br> (Exchange Online) | - 準備好[使用 Exchange 部署助理進行 Exchange 混合式](https://technet.microsoft.com/exdeploy2013)移轉  <br> - 使用 [Exchange 移轉建議程式](https://aka.ms/office365setup)來取得自訂設定指導方針  <br> - [設定 Exchange Online Protection](https://technet.microsoft.com/library/jj723153%28v=exchg.150%29.aspx) |
-|**網站** <br> (SharePoint Online) | - 設定 [SharePoint Server 2013](https://technet.microsoft.com/library/jj838715) 與 Office 365 之間的混合式功能 <br> - [建立並使用網站範本](https://support.office.com/article/Create-and-use-site-templates-60371B0F-00E0-4C49-A844-34759EBDD989)來自訂 SharePoint Online 的外觀與風格 <br> - 使用 [SharePoint Online 規劃指南](https://support.office.com/article/SharePoint-Online-Planning-Guide-for-Office-365-for-business-d5089cdf-3fd2-4230-acbd-20ecda2f9bb8)或 [SharePoint Online 部署建議程式](https://aka.ms/spoguidance)來規劃和設定其他功能 <br> - 管理 [Office 365 影片入口網站](https://support.office.com/article/Manage-your-Office-365-Video-portal-c059465b-eba9-44e1-b8c7-8ff7793ff5da) |
-|**IM 和線上會議** <br> (商務用 Skype Online) | - 設定您現有 [Lync Server 2013](https://technet.microsoft.com/library/jj204805) 或[商務用 Skype 2015](https://technet.microsoft.com/library/jj205403) 環境與 Office 365 之間的混合式功能  <br> - [設定商務用 Skype Online](https://support.office.com/article/Set-up-Skype-for-Business-Online-40296968-e779-4259-980b-c2de1c044c6e)並設定通話路由、會議通話和共用等常用功能  <br> - 使用[商務用 Skype 部署建議程式](https://aka.ms/skypeguidance)來取得自訂設定指導方針 |
-| **檔案儲存與共用** <br> (商務用 OneDrive 和 SharePoint Online) | - [設定 Office 365 檔案儲存與共用](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_WhatDif)：了解何時應使用商務用 OneDrive 來儲存檔案，以及何時應使用 Office 365 小組網站 <br> - [設定 Office 365 檔案儲存與共用](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_MoveDocsVideo)：看看在商務用 OneDrive 和 Office 365 小組網站中上傳檔案有多簡單 <br> - [設定 Office 365 檔案儲存與共用](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_Store)：取得將檔案上傳到商務用 OneDrive 和 Office 365 小組網站的所有步驟。了解檔案共用的祕訣。<br> - 使用[商務用 OneDrive 設定指南](https://aka.ms/OD4Bguidance)來取得自訂設定指導方針 |
-|**Office 365 應用程式** | -Office 365 系統管理員應使用[Office 部署指南](https://docs.microsoft.com/deployoffice)，以取得 Microsoft 365 應用程式的規劃，以進行企業部署或升級。  <br> - [Microsoft 365 Admin Center 的 Power BI](https://support.office.com/article/Power-BI-for-Office-365-Admin-Center-Help-5e391ecb-500c-47a3-bd0f-a6173b541044) <br> - [適用於Office 365 系統管理員的 Office Delve](https://support.office.com/article/Office-Delve-for-Office-365-admins-54f87a42-15a4-44b4-9df0-d36287d9531b) <br> - [關於 Sway 的常見問題集](https://support.office.com/article/446380fa-25bf-47b2-996c-e12cb2f9d075) <br> - [Project Online 快速入門](https://support.office.com/article/Get-started-with-Project-Online-e3e5f64f-ada5-4f9d-a578-130b2d4e5f11)。  <br> - [Microsoft Intune 部署建議程式](https://aka.ms/intuneguidance) |
-|**企業社交** <br> (Yammer) | - [使用 Yammer 搭配 Office 365](https://support.office.com/article/Plan-for-Yammer-integration-with-Office-365-4086681f-6de1-4d39-aa72-752b2af1cbd7)  <br> - 使用 [Yammer 企業版設定指南](https://aka.ms/yammerdeploy)來取得自訂設定指導方針 |
-   
-## <a name="were-here-to-help"></a>我們隨時為您效勞！
-
-在商務用 Office 365 中，您的身分可[指派商務用 Office 365 中的系統管理員角色](https://support.office.com/article/eac4d046-1afd-4f1a-85fc-8219c79e1504)，因此您可以與我們經驗豐富的支援專員免費聯繫。如果您在本網站上找不到所需的資訊，[請連絡商務產品的客戶支援](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)。
+|**網站** <br> (SharePoint Online) | -設定[SharePoint Server 2013](https://technet.microsoft.com/library/jj838715)的混合式功能<br> - [建立並使用網站範本](https://support.office.com/article/Create-and-use-site-templates-60371B0F-00E0-4C49-A844-34759EBDD989)來自訂 SharePoint Online 的外觀與風格 <br> - 使用 [SharePoint Online 規劃指南](https://support.office.com/article/SharePoint-Online-Planning-Guide-for-Office-365-for-business-d5089cdf-3fd2-4230-acbd-20ecda2f9bb8)或 [SharePoint Online 部署建議程式](https://aka.ms/spoguidance)來規劃和設定其他功能 <br> -管理您的[影片入口網站](https://support.office.com/article/Manage-your-Office-365-Video-portal-c059465b-eba9-44e1-b8c7-8ff7793ff5da) |
+|**IM 和線上會議** <br> (商務用 Skype Online) | -設定[Lync Server 2013](https://technet.microsoft.com/library/jj204805)或[商務用 Skype 2015](https://technet.microsoft.com/library/jj205403)的混合式功能<br> - [設定商務用 Skype Online](https://support.office.com/article/Set-up-Skype-for-Business-Online-40296968-e779-4259-980b-c2de1c044c6e)並設定通話路由、會議通話和共用等常用功能  <br> - 使用[商務用 Skype 部署建議程式](https://aka.ms/skypeguidance)來取得自訂設定指導方針 |
+| **檔案儲存與共用** <br> (商務用 OneDrive 和 SharePoint Online) | - [設定 Microsoft 365 檔案儲存與共享](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_WhatDif)：瞭解何時應使用 OneDrive 商務用來儲存檔案，以及何時應使用 ShharePoint Online 小組網站 <br> - [設定檔案儲存與共享](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_MoveDocsVideo)：請參閱在商務和 SharePoint 小組網站的 OneDrive 上傳檔案的難易程度 <br> - [設定檔案儲存與共享](https://support.office.com/article/7aa9cdc8-2245-4218-81ee-86fa7c35f1de#BKMK_Store)：取得將檔案上傳至商務及小組網站 OneDrive 的所有步驟。 瞭解檔共用的秘訣 <br> - 使用[商務用 OneDrive 設定指南](https://aka.ms/OD4Bguidance)來取得自訂設定指導方針 |
+|**Microsoft 365 應用程式** | -Microsoft 365 系統管理員應使用[Office 部署指南](https://docs.microsoft.com/deployoffice)來取得 Microsoft 365 應用程式的規劃，以進行企業部署或升級。  <br> - [Microsoft 365 admin center 的 Power BI](https://support.office.com/article/Power-BI-for-Office-365-Admin-Center-Help-5e391ecb-500c-47a3-bd0f-a6173b541044) <br> - [Microsoft 365 系統管理員的 Office Delve](https://support.office.com/article/Office-Delve-for-Office-365-admins-54f87a42-15a4-44b4-9df0-d36287d9531b) <br> - [關於 Sway 的常見問題集](https://support.office.com/article/446380fa-25bf-47b2-996c-e12cb2f9d075) <br> - [Project Online 快速入門](https://support.office.com/article/Get-started-with-Project-Online-e3e5f64f-ada5-4f9d-a578-130b2d4e5f11)。  <br> - [Microsoft Intune 部署建議程式](https://aka.ms/intuneguidance) |
+|**企業社交** <br> (Yammer) | - [搭配使用 Yammer 與 Microsoft 365](https://support.office.com/article/Plan-for-Yammer-integration-with-Office-365-4086681f-6de1-4d39-aa72-752b2af1cbd7)  <br> - 使用 [Yammer 企業版設定指南](https://aka.ms/yammerdeploy)來取得自訂設定指導方針 |

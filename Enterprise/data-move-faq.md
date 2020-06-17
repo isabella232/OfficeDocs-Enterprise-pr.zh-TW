@@ -14,12 +14,12 @@ ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 f1.keywords:
 - NOCSH
 description: 以下是有關將核心資料移至新資料中心地理位置的一般問題的解答。
-ms.openlocfilehash: 09c2e9acd482f10c6883ce0134793a9656675631
-ms.sourcegitcommit: d4814245d57313f2e94cd819b85ac1550fdeaf3a
+ms.openlocfilehash: 291f5068cc66ae761571992b462995fb6437b872
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43516554"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44735841"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -64,7 +64,7 @@ ms.locfileid: "43516554"
   
  ## <a name="where-is-my-core-customer-data-located"></a>我的核心客戶資料位於何處？
 
-租使用者系統管理員可以隨時查看系統管理中心內的資料位置卡，以確認每個服務（特別是針對其租使用者）的核心客戶資料。我們也會將 office [ 365 互動式資料中心](https://office.com/datamaps)的資料中心 geos、資料中心和365位置的位置發佈，做為參考，以供新承租人的靜止位置的目前預設核心客戶資料參考。  您可以透過 Microsoft 365 系統管理中心中組織設定檔底下的 [資料位置] 區段，確認您的客戶資料在 rest 上的位置。  
+租使用者系統管理員可以隨時查看系統管理中心內的資料位置卡，以確認每個服務（特別是針對其租使用者）的核心客戶資料。我們也會將 office [365 互動式資料中心](https://office.com/datamaps)的資料中心 geos、資料中心和365位置的位置發佈，做為參考，以供新承租人的靜止位置的目前預設核心客戶資料參考。  您可以透過 Microsoft 365 系統管理中心中組織設定檔底下的 [資料位置] 區段，確認您的客戶資料在 rest 上的位置。  
  
 ## <a name="when-will-i-be-able-to-request-a-move"></a>何時可以要求移動？
   
@@ -72,7 +72,7 @@ ms.locfileid: "43516554"
   
 ## <a name="how-can-i-request-to-be-moved"></a>我可以要求移動的要求為何？
   
-合格的客戶將會在其[Office 365 系統管理入口網站](https://portal.office.com/)看到一頁。 請參閱 how [to 要求資料移動](request-your-data-move.md)以取得如何要求移動的指示。 
+合格的客戶將會在其[Microsoft 365 系統管理中心](https://admin.microsoft.com/)看到一頁。 請參閱 how [to 要求資料移動](request-your-data-move.md)以取得如何要求移動的指示。 
   
 ## <a name="can-i-change-my-selection-after-requesting-a-move"></a>在要求移動之後，是否可以變更我的選取專案？
   
@@ -80,7 +80,7 @@ ms.locfileid: "43516554"
   
 ## <a name="what-happens-if-i-do-not-request-a-move-before-the-deadline"></a>如果我不要求在期限之前移動，會發生什麼事？
   
-我們可能會根據例外情況接受要求，以授與您的租使用者完成移動的承諾期限。 請 與[Office 365 支援](https://go.microsoft.com/fwlink/p/?LinkID=522459)人員聯繫，以提出要求。
+我們可能會根據例外情況接受要求，以授與您的租使用者完成移動的承諾期限。 請   與[Office 365 支援](https://go.microsoft.com/fwlink/p/?LinkID=522459)人員聯繫，以提出要求。
 
 ## <a name="what-if-i-want-to-move-my-data-in-order-to-get-better-network-performance"></a>如果我想要移動資料以取得更好的網路效能，該怎麼辦？
   

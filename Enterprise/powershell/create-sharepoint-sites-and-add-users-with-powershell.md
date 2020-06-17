@@ -18,16 +18,16 @@ ms.custom:
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要：使用 Office 365 PowerShell 建立新的 SharePoint Online 網站，然後將使用者和群組新增至這些網站。
-ms.openlocfilehash: 1fc9192ed27bfd097ac770b53837fb8ba2eb062d
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 8011a7e3f61e6b26d4606bfdae67152a1d894840
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004696"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44735701"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>使用 Office 365 建立 SharePoint Online 網站及新增使用者 PowerShell
 
-當您使用 Office 365 PowerShell 建立 SharePoint 的線上網站和新增使用者時，您可以快速且重複執行工作，其速度會比您在 Microsoft 356 系統管理中心中更快。 您也可以執行不可能在 Office 356 系統管理中心中執行的工作。 
+當您使用 Office 365 PowerShell 建立 SharePoint 的線上網站和新增使用者時，您可以快速且重複執行工作，其速度會比您在 Microsoft 365 系統管理中心中更快。 您也可以執行不可能在 Office 365 系統管理中心中執行的工作。 
 
 ## <a name="before-you-begin"></a>開始之前
 
@@ -118,7 +118,7 @@ Project Alpha Approvers,username@tenant.onmicrosoft.com,https://tenant.sharepoin
 ```
 <br/>*租*使用者等於您租使用者名稱，而使用者*名稱等於現有*使用者的使用者名稱。<br/>
 
-4. 將檔案儲存至您的桌上型電腦（如**使用者 .csv**）。<br/>
+4. 將檔案儲存至您的桌面**Users.csv**。<br/>
 
 5. 開啟 [記事本] 的新實例，並將下列文字區塊貼到其中：<br/>
 
@@ -152,7 +152,7 @@ c:\users\MyAlias\desktop\UsersAndGroups.ps1
 
 5. 等待提示傳回後，再繼續進行。 您會先看到群組出現在建立時。 接著，當使用者新增時，您會看到 [群組] 清單重複。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
