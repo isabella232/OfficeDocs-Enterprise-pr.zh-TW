@@ -30,7 +30,7 @@
 ## Microsoft 365 用戶端支援
 ### [憑證式驗證](office-365-client-support-certificate-based-authentication.md)
 ### [條件式存取](office-365-client-support-conditional-access.md)
-### [行動應用程式管理](https://support.microsoft.com/en-us/office/overview-of-mobile-device-management-mdm-for-microsoft-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a?ui=en-US&rs=en-US&ad=US)
+### [行動應用程式管理](https://support.microsoft.com/office/overview-of-mobile-device-management-mdm-for-microsoft-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a)
 ### [新式驗證](office-365-client-support-modern-authentication.md)
 ### [單一登入](office-365-client-support-single-sign-on.md)
 
