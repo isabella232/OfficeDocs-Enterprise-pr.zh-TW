@@ -20,12 +20,12 @@ ms.custom:
 - Ent_Architecture
 ms.assetid: c720cffc-f9b5-4f43-9100-422f86a1027c
 description: 摘要：了解所有 Microsoft 雲端供應項目上的組織、訂用帳戶、授權、使用者帳戶、租用戶之間的關係。
-ms.openlocfilehash: 65922f3ab8a88056ebc63d12cc0dcad37d6c49c8
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+ms.openlocfilehash: ad4307b2725fa37f6b28540b92895fc78f097c6c
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843974"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44735961"
 ---
 # <a name="subscriptions-licenses-accounts-and-tenants-for-microsofts-cloud-offerings"></a>Microsoft 雲端供應項目的訂用帳戶、授權、帳戶及租用戶
 
@@ -37,7 +37,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 - Microsoft Office 365
 - Microsoft Azure
-- Microsoft Intune 與 Enterprise Mobility + Security (EMS)
+- Microsoft Intune 和 Enterprise 可移動性 + Security （EMS）
 - Microsoft Dynamics 365
 
 [Microsoft 365](https://docs.microsoft.com/microsoft-365/) 將 Office 365、EMS 和 Windows 10 企業版整合到單一訂閱和整合式服務集合中。
@@ -48,7 +48,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 ### <a name="organization"></a>組織
 
-組織代表正在使用 Microsoft 雲端供應項目的商業實體，通常是用一個或多個公用網域名稱 (DNS)，例如 contoso.com 加以識別。組織是訂用帳戶的容器。
+An organization represents a business entity that is using Microsoft cloud offerings, typically identified by one or more public Domain Name System (DNS) domain names, such as contoso.com. The organization is a container for subscriptions.
   
 ### <a name="subscriptions"></a>訂閱
 
@@ -57,7 +57,7 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
 - Microsoft 的軟體即服務 (SaaS) 型雲端供應項目 (Office 365、Intune/EMS 和 Dynamics 365) 是依每位使用者授權費用來收費。 
 - Microsoft 的平台即服務 (PaaS) 和基礎結構即服務 (IaaS) 雲端供應項目 (Azure) 是根據雲端資源的使用量來收費。
  
-您也可以使用試用版的訂用帳戶，但在使用特定一段時間或耗用量之後，訂用帳戶便到期。您可以將試用版訂用帳戶轉換為付費訂用帳戶。
+You can also use a trial subscription, but the subscription expires after a specific amount of time or consumption charges. You can convert a trial subscription to a paid subscription.
   
 組織可有多個訂用帳戶，用於 Microsoft 的多個雲端供應項目。 圖 1 顯示單一組織有多個 Office 365 訂用帳戶、一個 Intune 訂用帳戶、一個 Dynamics 365 訂用帳戶、多個 Azure 訂用帳戶。
 
@@ -76,9 +76,9 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 使用 Azure PaaS 型雲端服務時，服務費用已包含軟體授權。
   
-使用 Azure IaaS  型虛擬機器時，可能會需要額外的授權來使用安裝在虛擬機器映像上的軟體或應用程式。部分虛擬機器映像已安裝軟體的授權版本，費用是由伺服器的每一分鐘費率涵蓋。例如 SQL Server 2014 和 SQL Server 2016 的虛擬機器映像。 
+For Azure IaaS-based virtual machines, additional licenses to use the software or application installed on a virtual machine image might be required. Some virtual machine images have licensed versions of software installed and the cost is included in the per-minute rate for the server. Examples are the virtual machine images for SQL Server 2014 and SQL Server 2016. 
   
-部分虛擬機器映像已安裝試用版應用程式，在試用期間過後需要額外的軟體應用程式授權。例如，SharePoint Server 2016 試用版的虛擬機器映像包含預先安裝的 SharePoint Server 2016 試用版。若要在試用到期日之後繼續使用 SharePoint Server 2016，您必須向 Microsoft 購買 SharePoint Server 2016 授權和用戶端授權。這些費用和 Azure 訂用帳戶是分開的，且仍需支付執行虛擬機器的每一分鐘費率。
+Some virtual machine images have trial versions of applications installed and need additional software application licenses for use beyond the trial period. For example, the SharePoint Server 2016 Trial virtual machine image includes a trial version of SharePoint Server 2016 pre-installed. To continue using SharePoint Server 2016 after the trial expiration date, you must purchase a SharePoint Server 2016 license and client licenses from Microsoft. These charges are separate from the Azure subscription and the per-minute rate to run the virtual machine still applies.
   
 ### <a name="user-accounts"></a>使用者帳戶
 
@@ -92,11 +92,11 @@ Microsoft 提供了組織、訂用帳戶、授權、使用者帳戶的階層，�
   
 ### <a name="tenants"></a>租用戶
 
-使用 SaaS 雲端供應項目時，租用戶是指存放提供雲端服務的伺服器的區域位置。例如，Contoso 公司選擇以歐洲區域來裝載它的 Office 365、EMS、Dynamics 365 租用戶，供其巴黎總公司的 15,000 名員工使用。
+For SaaS cloud offerings, the tenant is the regional location that houses the servers providing cloud services. For example, the Contoso Corporation chose the European region to host its Office 365, EMS, and Dynamics 365 tenants for the 15,000 workers in their Paris headquarters.
   
-Azure PaaS 服務和虛擬機器的工作負載裝載於 Azure IaaS 中，可以將租用戶放在世界各地的 Azure 資料中心內。當您建立 Azure PaaS 應用程式或服務或 IaaS 工作負載的元素時，由您指定 Azure 資料中心 (稱為「位置」)。
+Azure PaaS services and virtual machine-based workloads hosted in Azure IaaS can have tenancy in any Azure datacenter across the world. You specify the Azure datacenter, known as the location, when you create the Azure PaaS app or service or element of an IaaS workload.
   
-Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。付費版或試用版的 Office 365、Dynamics 365 或 Intune/EMS 訂用帳戶包含一個免費 Azure AD 租用戶。這個 Azure AD 租用戶不包含其他 Azure 服務，和 Azure 試用版或付費版訂用帳戶不同。
+An Azure AD tenant is a specific instance of Azure AD containing accounts and groups. Paid or trial subscriptions of Office 365, Dynamics 365, or Intune/EMS include a free Azure AD tenant. This Azure AD tenant does not include other Azure services and is not the same as an Azure trial or paid subscription.
   
 ### <a name="summary-of-the-hierarchy"></a>階層摘要
 
@@ -134,7 +134,7 @@ Azure AD 租用戶是包含帳戶和群組的 Azure AD 的特定執行個體。�
 
 ![組織的身分識別即服務 (IaaS) IDaaS。](media/Subscriptions/Subscriptions-Fig4.png)
   
-在圖 4 中，Microsoft 的 SaaS 雲端供應項目、Azure PaaS 應用程式、使用 Azure AD 網域服務的 Azure IaaS 中的虛擬機器，三者使用同一個 Azure AD 租用戶。Azure AD Connect 將內部部署的 AD DS 樹系和 Azure AD 租用戶同步。
+Figure 4 shows how a common Azure AD tenant is used by Microsoft's SaaS cloud offerings, Azure PaaS apps, and virtual machines in Azure IaaS that use Azure AD Domain Services. Azure AD Connect synchronizes the on-premises AD DS forest with the Azure AD tenant.
   
 ## <a name="combining-subscriptions-for-multiple-microsoft-cloud-offerings"></a>合併多個 Microsoft 雲端供應項目的訂用帳戶
 

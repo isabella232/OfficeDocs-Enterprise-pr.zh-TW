@@ -20,16 +20,16 @@ search.appverid:
 - MOE150
 ms.assetid: f4bd2439-3e41-4169-99f6-3fabdfa326ac
 description: 如何在將 Active Directory 網域服務（AD DS）同步處理至 Microsoft 365 之前，下載並執行 Microsoft 365 IdFix 工具，以協助清理您的 Active Directory 網域服務（AD DS）。
-ms.openlocfilehash: dde12d7e16aad8488fe067888eacdf1c80e1a037
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.openlocfilehash: c4df63e6162b1d53cb7a45f046542443177b25ff
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774858"
 ---
 # <a name="download-and-run-the-microsoft-365-idfix-tool"></a>下載並執行 Microsoft 365 IdFix 工具
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 IdFix 會在您同步處理至 Microsoft 365 之前，識別您的 Active Directory 網域服務（AD DS）網域中的重複和格式化問題等錯誤。 
   
@@ -125,8 +125,3 @@ IdFix 會在您同步處理至 Microsoft 365 之前，識別您的 Active Direct
 - [IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)  
 - [Microsoft 365 IdFix 交易記錄檔](idfix-transaction-log.md)
     
-## <a name="video-training"></a>影片訓練
-
-如需詳細資訊，請參閱課程[安裝和使用 IdFix 工具](https://support.office.com/article/install-and-use-the-idfix-tool-4d81d73c-f172-4fd5-8542-f601c0c96aa9?ui=en-US&rs=en-US&ad=US)，讓您 LinkedIn 學習。
-  
-

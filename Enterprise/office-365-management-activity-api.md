@@ -14,20 +14,20 @@ ms.collection:
 - M365-analytics
 f1.keywords:
 - NOCSH
-description: 關於 Office 365 管理活動 API 簡短摘要。
-ms.openlocfilehash: 97f582aa19a523a8b94a17b13efd6a518b067036
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 有關 Office 365 管理活動 API 的簡短摘要。
+ms.openlocfilehash: 3997ed70cba38d3151971120bb7c7589654013b6
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41842620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774878"
 ---
 # <a name="office-365-management-activity-api"></a>Office 365 管理活動 API
 
-Microsoft 提供可用來取得關於您的 Office 365 租用戶的彙總交易資訊的報告服務。 [Office 365 管理活動 API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview)會使用業界標準 RESTful 設計和 OAuth v2 進行驗證。 這方便您將開始體驗擷取資料，以及 ingesting 到視覺效果工具和應用程式。 API 提供資料摘要與使用者、 系統管理員、 作業及 Office 365 中的安全性活動的相關資訊。 資料可以基於法規，保留或結合採購從內部部署基礎結構或其他來源的記錄資料。 這可協助建立整個企業的作業、 安全性和規範監視解決方案。
+Microsoft 提供報表服務，您可以用來取得 Office 365 租使用者的匯總交易資訊。 [Office 365 管理活動 API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview#office-365-management-activity-api)使用業界標準 RESTful 設計和 OAuth v2 進行驗證。 這可讓您輕鬆開始試驗資料的檢索及 ingesting 至視覺化檢視和應用程式。 API 提供 Office 365 中使用者、系統管理員、作業及安全性活動相關資訊的資料摘要。 資料可保留法規用途，或結合內部部署基礎結構或其他來源中的記錄資料。 這有助於針對整個企業的作業、安全性和合規性建立監控解決方案。
 
-Office 365 管理活動 API 提供 Office 365 和 Azure Active Directory 活動記錄中各種使用者、系統管理員、系統和原則動作及事件的相關資訊。 API 提供一致的稽核結構描述與一般超過 10 個欄位的所有服務。 API 可讓組織進行輕鬆事件，之間的連線，並透過資料啟用原因的新方法。
+Office 365 管理活動 API 提供 Office 365 和 Azure Active Directory 活動記錄中各種使用者、系統管理員、系統和原則動作及事件的相關資訊。 API 提供一致的審核架構，所有服務都有超過10個欄位。 API 可讓組織在事件之間進行簡易的連線，並可讓您在資料的情況下提供新的方式。
 
-數十個獨立軟體廠商 (Isv) 建立與 Microsoft 合作關係，以及具有內建 API 為基礎的解決方案。 某些解決方案專心察覺 Office 365 的資料與其他人從多個雲端提供者和內部部署系統來建立作業、 安全性及規範相關活動的整合的檢視的來源資料。 
+許多獨立軟體廠商（Isv）會與 Microsoft 合作，並已建立以 API 為基礎的解決方案。 有些解決方案只會專注于 Office 365 資料和其他雲端供應商和內部部署系統的來來源資料，以建立作業、安全性及規範相關活動的統一視圖。 
 
-如需詳細資訊，請參閱[Office 365 管理活動 API 參考資料](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference)。
+如需詳細資訊，請參閱[Office 365 管理活動 API 參考](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference)。

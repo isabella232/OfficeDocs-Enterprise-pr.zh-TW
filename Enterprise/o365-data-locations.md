@@ -1,9 +1,9 @@
 ---
-title: Office 365 資料位置
+title: Microsoft 365 資料位置
 ms.author: deanw
 author: dmwmsft
 manager: laurawi
-ms.date: 03/09/2020
+ms.date: 06/17/2020
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -16,32 +16,32 @@ ms.collection:
 ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
-description: 摘要：Office 365 資料位置
-ms.openlocfilehash: 7d66669ddab78a6f84703fb350d0a5cd2707b8af
-ms.sourcegitcommit: 4643a0eb2c65f5e9aba0477e948120ea91bf74d6
+description: 摘要： Microsoft 365 資料位置
+ms.openlocfilehash: a0f62fa7955224c07c8e5af35fb53229e3aeb6c4
+ms.sourcegitcommit: e0603d9259e9be1aeb110fc3dd8b9abc6138c55d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "44507241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44781058"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
 -->
 
-# <a name="where-your-office-365-customer-data-is-stored"></a>Office 365 客戶資料的儲存位置
+# <a name="where-your-microsoft-365-customer-data-is-stored"></a>Microsoft 365 客戶資料的儲存位置
 
-下表顯示針對所有 Microsoft 的全球雲端位置的 Office 365 服務，客戶資料待用儲存的所在位置。 展開您的帳單地址所在國家/地區的位置，以找出每個服務的客戶資料將儲存的位置。
+下表顯示在所有 Microsoft 的全球雲端位置，客戶資料在 Microsoft 365 服務中的存放位置。 展開您的帳單地址所在國家/地區的位置，以找出每個服務的客戶資料將儲存的位置。
 
 客戶應該在您的 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡****。
 
-新 Office 365 租用戶會預設為根據與該租用戶的第一個訂閱相關聯之交易上的國家/地區的地區。
+根據與該租使用者之第一個訂閱相關聯之交易的國家/地區，新的 Microsoft 365 承租人會預設為 Geo。
 
 在 [Microsoft Online Services 條款 (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) 中尋找有關客戶待用資料儲存位置契約承諾的相關資訊。
 
 針對相關的 Azure Active Directory 資料位置，請瀏覽 [AAD 資料地圖](https://go.microsoft.com/fwlink/p/?linkid=2092972)。
 
 
-由於 COVID-19 危機所造成的空前情況，以及需要管理歐洲內線上服務的需求，如果您的組織是教育機構，我們將可佈建您位於歐盟 (EU)、歐洲自由貿易聯盟 (EFTA)、英國 (UK)、美國 (US) 或加拿大 (CA) 的 Ofiice 365 租戶，或將您的資料移轉至任何位於 EU、EFTA、UK、US 或 CA 的資料中心。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
+由於 COVID-19 危機的情形是空前的，而且需要在歐洲管理線上服務需求時，如果您的組織是教育機構，我們可以在歐盟（EU）、歐盟自由貿易協會（EFTA）、英國（英國）、美國（美國）或加拿大（CA）中布建您的 Microsoft 365 租使用者，或將您的資料轉接至歐盟的任何資料中心。、EFTA、UK、US 或 CA。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
 
 
 
@@ -58,11 +58,11 @@ Microsoft 不會揭露其資料中心的確切地址。 我們建立此原則來
 
 ### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>客戶資料的位置是否會直接影響使用者的使用體驗？
 
-Office 365 的效能並不只是與使用者距離資料中心位置成比例。 Microsoft 在其全球雲端網路、全球雲端基礎結構和 Office 365 服務架構中的持續投資，可協助為使用者提供單一且一致的體驗，而不受待用客戶資料儲存的位置限制。 如果您的使用者遇到效能問題，您應深入疑難排解這些問題。 Microsoft 已在 [Office 支援網站](https://go.microsoft.com/fwlink/p/?linkid=862645)上發佈指導方針，供 Office 365 客戶規劃並最佳化使用者效能。
+Microsoft 365 的效能不只是與使用者與資料中心位置的距離成正比。 Microsoft 在其全域雲端網路、全域雲端基礎結構和 Microsoft 365 服務架構中的持續投資，可協助使用者在實際存放客戶資料的位置，提供單一且一致的經驗。 如果您的使用者遇到效能問題，您應深入疑難排解這些問題。 Microsoft 已發佈指導，以供 Microsoft 365 客戶在[Office 支援網站](https://go.microsoft.com/fwlink/p/?linkid=862645)上規劃及優化使用者效能。
 
 ### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Microsoft 如何協助我遵守國家、地區和產業特定法規？
 
-為了協助您遵守管理個人資料收集和使用的國家、地區和產業特定需求，Office 365 提供適用於任何全球雲端生產力服務提供者的最全面合規性服務集合。 請檢閱[我們的合規性服務](https://go.microsoft.com/fwlink/p/?linkid=864391)和 Microsoft 信任中心上的 [Office 365 合規性](https://go.microsoft.com/fwlink/p/?linkid=862317)一節中的更多詳細資料。 此外，某些 Office 365 方案可提供更進一步的合規性解決方案，協助您管理資料、遵守法律和法規需求，並監控對資料所採取的動作。
+為了協助您遵守跨國、地區和行業特有的需求，以管理個人資料的集合和使用，Microsoft 365 提供任何全域雲端生產力提供者的最完整一組相容性選項。 請參閱 Microsoft 信任中心的[microsoft 365 規範](https://go.microsoft.com/fwlink/p/?linkid=862317)區段中的[規範服務](https://go.microsoft.com/fwlink/p/?linkid=864391)和詳細資料。 此外，某些 Microsoft 365 方案提供進一步的規範解決方案，可協助您管理資料、遵從法律和法規需求，以及監視對資料採取的動作。
 
 ### <a name="who-can-access-your-data-and-according-to-what-rules"></a>誰可以存取您的資料，以及根據什麼規則？
 
@@ -70,15 +70,15 @@ Office 365 的效能並不只是與使用者距離資料中心位置成比例。
 
 ### <a name="does-microsoft-access-your-data"></a>Microsoft 是否會存取您的資料？
 
-Microsoft 會將多數的 Office 365 作業自動化，同時特意限制其本身對客戶資料的存取。 這可協助我們以大規模管理 Office 365，並解決對客戶資料造成內部威脅的風險。 根據預設，Microsoft 工程師具有零常設系統管理權限，且對 Office 365 中的客戶資料具有零常設存取權。 Microsoft 工程師可能會對客戶資料具有有限和登入的存取權且達有限的一段時間，但只有在一般服務作業必要的情況，且僅限由 Microsoft 資深管理成員的核准下 (且針對獲客戶授權使用客戶加密箱功能的客戶)。
+Microsoft 可自動化大多數的 Microsoft 365 作業，但會特意限制其對客戶資料的存取。 這可協助我們以規模管理 Microsoft 365，並解決對客戶資料的內部威脅風險。 根據預設，Microsoft 工程師沒有任何系統管理許可權，也沒有在 Microsoft 365 中存取客戶資料。 Microsoft 工程師可能會對客戶資料具有有限和登入的存取權且達有限的一段時間，但只有在一般服務作業必要的情況，且僅限由 Microsoft 資深管理成員的核准下 (且針對獲客戶授權使用客戶加密箱功能的客戶)。
 
 ### <a name="how-does-microsoft-secure-your-data"></a>Microsoft 如何保護您的資料？
 
-Microsoft 的 Office 365 內建了穩健的原則、控制和系統，可協助確保資訊安全。 若要深入了解，請檢閱 Microsoft 信任中心上的 [Office 365 安全性區段](https://go.microsoft.com/fwlink/p/?linkid=864393)。
+Microsoft 已在 Microsoft 365 中引入了穩健的原則、控制措施和系統，以協助保護您的資訊安全。 請參閱 Microsoft 信任中心的[microsoft 365 security 區段](https://go.microsoft.com/fwlink/p/?linkid=864393)以深入瞭解。
 
-### <a name="does-office-365-encrypt-your-data"></a>Office 365 是否會加密您的資料？
+### <a name="does-microsoft-365-encrypt-your-data"></a>Microsoft 365 是否要加密您的資料？
 
-Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客戶資料。 針對待用客戶資料，Office 365 使用了磁碟區層級和檔案層級加密。 針對傳輸中的客戶資料，Office 365 針對資料中心之間和用戶端與伺服器之間的通訊使用多種加密技術，例如傳輸層安全性 (TLS) 和網際網路通訊協定安全性 (IPsec)。 Office 365 也包含客戶管理的加密功能。
+Microsoft 365 使用服務端技術，在靜止和傳輸過程中加密客戶資料。 針對靜態客戶資料，Microsoft 365 會使用磁片層級和檔級加密。 針對傳輸中的客戶資料，Microsoft 365 會針對資料中心之間及用戶端與伺服器之間的通訊使用多種加密技術，例如傳輸層安全性（TLS）及網際網路通訊協定安全性（IPsec）。 Microsoft 365 也包含客戶管理的加密功能。
 
 ### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>哪裡可以找到 Microsoft Azure 的資料落地資訊？
 
@@ -86,11 +86,26 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 
 ### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>何謂 Microsoft 365 中的多地理位置功能？
 
-[多地理位置功能](https://go.microsoft.com/fwlink/p/?linkid=872033)可讓單一 Office 365 租用戶跨越多個 Office 365 資料中心區域，並讓客戶能夠在所選地區中，以每位使用者為基礎儲存其 Office 365 核心客戶資料。
+[多地理](https://go.microsoft.com/fwlink/p/?linkid=872033)位置可讓客戶將靜態的核心客戶資料指派至 Microsoft 365 雲端中的可用位置。   
 
 ### <a name="what-services-support-multi-geo"></a>哪些服務支援多地理位置？
 
-[多地理位置](https://go.microsoft.com/fwlink/p/?linkid=872033)可供 Exchange Online、OneDrive 和 SharePoint Online 使用。 Microsoft 正在針對其他 Office 365 服務探討多地理位置。
+[多地理位置](https://go.microsoft.com/fwlink/p/?linkid=872033)可供 Exchange Online、OneDrive 和 SharePoint Online 使用。 Microsoft 正在調查其他 Microsoft 365 服務的多地理位置。
+
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune 資料位置的例外狀況為何？
+
+Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外的位置。 除非：
+
+- Microsoft 必須提供客戶支援、疑難排解服務或符合法律要求。
+- 客戶會設定帳戶，以啟用客戶資料的儲存，包括透過使用下列各項：
+
+  - 設計用來全域運作的功能，例如內容傳遞網路（CDN），可提供全域快取服務，並將客戶資料儲存在世界各地的 edge 位置。
+
+  - Azure Active Directory （Azure AD），可全域存放目錄資料。 這不適用於美國的 Azure AD 部署（Azure AD 資料只儲存于美國）或歐洲（Azure AD 資料儲存在歐洲或美國的地方）。
+   
+  - 預覽、Beta 或其他的預先發行服務，通常會將客戶資料儲存在美國，但可將其儲存在全域狀態。
+
+無論如何，Microsoft 不會控制或限制客戶或其使用者可以存取客戶資料的地理位置。 
 
 ## <a name="data-center-locations"></a>資料中心位置
 
@@ -112,14 +127,14 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 
 | 國家/地區 | 城市 |
 | --- | --- |
-| 澳洲 | 新南威爾斯、維多利亞 |
+| 澳洲 | 悉尼，墨爾本 |
 | 加拿大 | 魁北克市、多倫多 |
-| 歐盟 | 奧地利、芬蘭、法國、愛爾蘭、荷蘭 |
+| 歐盟 | 奧地利（維也納）、芬蘭（赫爾辛基）、法國（巴黎，Marseille）、愛爾蘭（都柏林）、荷蘭（阿姆斯特丹） |
 | 法國 | 巴黎、馬賽 |
 | 德國 | 法蘭克福、柏林 |
 | 印度 | 辰內、孟買、鵬尼 |
 | 日本 | 大阪、東京、埼玉 |
-| 韓國 | 釜山、首爾 |
+| 南韓 | 釜山、首爾 |
 | 挪威 | 奧斯陸、斯塔萬格 |
 | 南非 | 開普敦、約翰尼斯堡 |
 | 瑞士 | 日內瓦、蘇黎世 |
@@ -127,7 +142,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 英國 | 杜倫、倫敦、卡地夫 |
 | 美國 |  博伊頓、夏安、芝加哥、德梅因、昆西、聖安東尼奧、聖塔克拉拉、聖荷西 |
 
-新 Office 365 租用戶會預設為根據與該租用戶的第一個訂閱相關聯之帳單地址上的國家/地區的地區。 若要確認現有 Office 365 服務客戶資料的儲存位置，請在 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡。 或者，您可以從下列清單展開公司所在的國家/地區，以找出若您今天開始使用 Office 365 服務，將會儲存客戶資料的位置。
+新的 Microsoft 365 承租人會根據與該租使用者之第一個訂閱相關之帳單位址的國家/地區，以預設為 Geo。 若要確認現有 Office 365 服務客戶資料的儲存位置，請在 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡。 或者，展開貴公司所用的國家/地區，從下列清單中找出客戶資料的儲存位置（如果您目前使用的是 Microsoft 365 服務）。
 
 ## <a name="afghanistan"></a>阿富汗
 <details><summary>按一下以展開</summary><p>
@@ -141,6 +156,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -164,6 +180,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -187,6 +204,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -210,6 +228,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -233,6 +252,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -256,6 +276,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -279,6 +300,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -302,6 +324,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -325,6 +348,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -348,6 +372,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -371,6 +396,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -394,6 +420,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -417,6 +444,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -440,6 +468,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 澳洲 |
 | Office Online &amp; Mobile | 澳洲 |
 | EOP | 澳洲 |
+| Intune | 澳洲 |
 | MyAnalytics | 澳洲 |
 | Planner | 澳洲 |
 | Sway | 美國 |
@@ -447,7 +476,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 澳洲 |
 | Stream | 澳洲 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -463,6 +492,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -486,6 +516,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner |  全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -493,7 +524,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -509,6 +540,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -532,6 +564,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -555,6 +588,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -578,6 +612,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -601,6 +636,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -624,6 +660,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -647,6 +684,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -654,7 +692,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -670,6 +708,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -677,7 +716,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -693,6 +732,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -716,6 +756,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -739,6 +780,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -762,6 +804,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -785,6 +828,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner |  全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -808,6 +852,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -831,6 +876,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -854,6 +900,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -877,6 +924,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -900,6 +948,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -923,6 +972,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -930,7 +980,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -946,6 +996,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -969,6 +1020,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -976,7 +1028,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -992,6 +1044,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1015,6 +1068,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1038,6 +1092,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1061,6 +1116,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 加拿大 |
 | Office Online &amp; Mobile | 加拿大 |
 | EOP | 加拿大 |
+| Intune | 美國 |
 | MyAnalytics | 加拿大 |
 | Planner | 加拿大 |
 | Sway | 美國 |
@@ -1084,6 +1140,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1107,6 +1164,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1130,6 +1188,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1153,6 +1212,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1176,6 +1236,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1199,6 +1260,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1222,6 +1284,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1245,6 +1308,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1268,6 +1332,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1291,6 +1356,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1314,6 +1380,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1337,6 +1404,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1360,6 +1428,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1383,6 +1452,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1406,6 +1476,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1413,7 +1484,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1429,6 +1500,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1452,6 +1524,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1459,7 +1532,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 3 - 美洲地區 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1475,6 +1548,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1498,6 +1572,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1521,6 +1596,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1544,6 +1620,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1567,6 +1644,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1590,6 +1668,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1613,6 +1692,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1636,6 +1716,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1659,6 +1740,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1682,6 +1764,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1705,6 +1788,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1712,7 +1796,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1728,6 +1812,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1751,6 +1836,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner |  美國 |
 | Sway | 美國 |
@@ -1758,7 +1844,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1774,6 +1860,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1797,6 +1884,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -1820,6 +1908,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1843,6 +1932,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 澳洲 |
 | Office Online &amp; Mobile | 澳洲 |
 | EOP | 澳洲 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 澳洲 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1850,7 +1940,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 澳洲 |
 | Stream | 澳洲 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1866,6 +1956,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1889,6 +1980,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 法國 |
 | Office Online &amp; Mobile | 法國 |
 | EOP | 法國 |
+| Intune | 歐盟 |
 | MyAnalytics | 法國 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -1912,6 +2004,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1919,7 +2012,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 3 - 美洲地區 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1935,6 +2028,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -1942,7 +2036,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1958,6 +2052,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -1981,6 +2076,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2004,6 +2100,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2027,6 +2124,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2034,7 +2132,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2050,6 +2148,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 德國 |
 | Office Online &amp; Mobile | 德國 |
 | EOP | 德國 |
+| Intune | 歐盟 |
 | MyAnalytics | 德國 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2073,6 +2172,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2080,7 +2180,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2096,6 +2196,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2103,7 +2204,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2119,6 +2220,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2142,6 +2244,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2165,6 +2268,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2188,6 +2292,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2211,6 +2316,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2234,6 +2340,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2257,6 +2364,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2280,6 +2388,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2303,6 +2412,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2326,6 +2436,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2349,6 +2460,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2372,6 +2484,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2395,6 +2508,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2418,6 +2532,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2441,6 +2556,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2448,7 +2564,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2464,6 +2580,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2471,7 +2588,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2487,6 +2604,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2510,6 +2628,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2533,6 +2652,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 印度 |
 | Office Online &amp; Mobile | 印度 |
 | EOP | 印度 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 印度 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2556,6 +2676,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2563,7 +2684,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2579,6 +2700,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2586,7 +2708,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2602,6 +2724,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2625,6 +2748,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2632,7 +2756,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2648,6 +2772,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2655,7 +2780,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2671,6 +2796,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2694,6 +2820,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2717,6 +2844,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 日本 |
 | Office Online &amp; Mobile | 日本 |
 | EOP | 日本 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 日本 |
 | Planner | 日本 |
 | Sway | 美國 |
@@ -2740,6 +2868,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2763,6 +2892,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2786,6 +2916,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2809,6 +2940,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -2832,6 +2964,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2843,23 +2976,24 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | 工作場所分析 | 美國 |
 </p></details>
 
-## <a name="korea"></a>韓國
+## <a name="south-korea"></a>南韓
 <details><summary>按一下以展開</summary><p>
 
 | 服務 | 位置 |
 | --- | --- |
-| Exchange Online | 韓國 |
-| 商務用 OneDrive | 韓國 |
-| SharePoint Online | 韓國 |
-| 商務用 Skype | 韓國 |
-| Microsoft Teams | 韓國 |
-| Office Online &amp; Mobile | 韓國 |
-| EOP | 韓國 |
-| MyAnalytics | 韓國 |
+| Exchange Online | 南韓 |
+| 商務用 OneDrive | 南韓 |
+| SharePoint Online | 南韓 |
+| 商務用 Skype | 南韓 |
+| Microsoft Teams | 南韓 |
+| Office Online &amp; Mobile | 南韓 |
+| EOP | 南韓 |
+| Intune | 全球地理位置 2 - 亞太地區 |
+| MyAnalytics | 南韓 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
 | Yammer | 美國 |
-| OneNote 服務 | 韓國 |
+| OneNote 服務 | 南韓 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
 | Forms | 美國 |
@@ -2878,6 +3012,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2901,6 +3036,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2924,6 +3060,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -2931,7 +3068,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2947,6 +3084,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -2954,7 +3092,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2970,6 +3108,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -2993,6 +3132,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3016,6 +3156,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3039,6 +3180,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3062,6 +3204,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3085,6 +3228,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 瑞士 |
 | Office Online &amp; Mobile | 瑞士 |
 | EOP | 瑞士 |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 瑞士 |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3108,6 +3252,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -3131,6 +3276,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -3154,6 +3300,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3161,7 +3308,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3177,6 +3324,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3200,6 +3348,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3223,6 +3372,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3230,7 +3380,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3246,6 +3396,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3253,7 +3404,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3269,6 +3420,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -3292,6 +3444,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3315,6 +3468,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3338,6 +3492,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3361,6 +3516,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3384,6 +3540,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3407,6 +3564,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3430,6 +3588,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3453,6 +3612,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3476,6 +3636,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3499,6 +3660,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3522,6 +3684,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3545,6 +3708,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3568,6 +3732,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3591,6 +3756,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3614,6 +3780,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3637,6 +3804,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3660,6 +3828,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3667,7 +3836,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3683,6 +3852,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -3706,6 +3876,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3729,6 +3900,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3752,6 +3924,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 澳洲 |
 | Office Online &amp; Mobile | 澳洲 |
 | EOP | 澳洲 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 澳洲 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3775,6 +3948,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3798,6 +3972,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3821,6 +3996,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -3844,6 +4020,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3867,6 +4044,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3890,6 +4068,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -3913,6 +4092,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 挪威 |
 | Office Online &amp; Mobile | 挪威 |
 | EOP | 挪威 |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 挪威 |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3936,6 +4116,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3959,6 +4140,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -3982,6 +4164,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4005,6 +4188,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4028,6 +4212,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4051,6 +4236,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4074,6 +4260,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4097,6 +4284,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4120,6 +4308,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4143,6 +4332,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4150,7 +4340,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4166,6 +4356,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4189,6 +4380,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4212,6 +4404,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4219,7 +4412,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4235,6 +4428,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4242,7 +4436,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4258,6 +4452,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4265,7 +4460,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 全球地理位置 1 - EMEA |
+| 表單 | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4281,6 +4476,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4288,7 +4484,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4304,6 +4500,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4327,6 +4524,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4350,6 +4548,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4373,6 +4572,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4396,6 +4596,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4419,6 +4620,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4442,6 +4644,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4465,6 +4668,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4488,6 +4692,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4511,6 +4716,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4534,6 +4740,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4557,6 +4764,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4580,6 +4788,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4603,6 +4812,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4626,6 +4836,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4649,6 +4860,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4672,6 +4884,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4695,6 +4908,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4718,6 +4932,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4741,6 +4956,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4748,7 +4964,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4764,6 +4980,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4787,6 +5004,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4810,6 +5028,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4833,6 +5052,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4856,6 +5076,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 南非 |
 | Office Online &amp; Mobile | 南非 |
 | EOP | 南非 |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 南非 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4863,7 +5084,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 南非 |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4879,6 +5100,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4886,7 +5108,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4902,6 +5124,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -4925,6 +5148,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -4948,6 +5172,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -4971,6 +5196,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -4994,6 +5220,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5001,7 +5228,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5017,6 +5244,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 歐盟 |
 | Office Online &amp; Mobile | 歐盟 |
 | EOP | 歐盟 |
+| Intune | 歐盟 |
 | MyAnalytics | 歐盟 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -5040,6 +5268,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 瑞士 |
 | Office Online &amp; Mobile | 瑞士 |
 | EOP | 瑞士 |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 瑞士 |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5063,6 +5292,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5086,6 +5316,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5109,6 +5340,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5132,6 +5364,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5155,6 +5388,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5178,6 +5412,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5201,6 +5436,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5224,6 +5460,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5247,6 +5484,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5270,6 +5508,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5293,6 +5532,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5316,6 +5556,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5339,6 +5580,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5362,6 +5604,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5385,6 +5628,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5408,6 +5652,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5431,6 +5676,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5454,6 +5700,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 阿拉伯聯合大公國 |
 | Office Online &amp; Mobile | 阿拉伯聯合大公國 |
 | EOP | 阿拉伯聯合大公國 |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 阿拉伯聯合大公國 |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5477,6 +5724,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 英國 |
 | Office Online &amp; Mobile | 英國 |
 | EOP | 英國 |
+| Intune | 歐盟 |
 | MyAnalytics | 英國 |
 | Planner | 歐盟 |
 | Sway | 美國 |
@@ -5500,6 +5748,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5507,7 +5756,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| Forms | 美國 |
+| 表單 | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5523,6 +5772,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 全球地理位置 3 - 美洲地區 |
 | EOP | 全球地理位置 3 - 美洲地區 |
+| Intune | 美國 |
 | MyAnalytics | 全球地理位置 3 - 美洲地區 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5546,6 +5796,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5569,6 +5820,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5592,6 +5844,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5615,6 +5868,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 美國 |
 | Office Online &amp; Mobile | 美國 |
 | EOP | 美國 |
+| Intune | 美國 |
 | MyAnalytics | 美國 |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5638,6 +5892,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5661,6 +5916,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 2 - 亞太地區 |
 | Office Online &amp; Mobile | 全球地理位置 2 - 亞太地區 |
 | EOP | 全球地理位置 2 - 亞太地區 |
+| Intune | 全球地理位置 2 - 亞太地區 |
 | MyAnalytics | 全球地理位置 2 - 亞太地區 |
 | Planner | 全球地理位置 2 - 亞太地區 |
 | Sway | 美國 |
@@ -5684,6 +5940,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5707,6 +5964,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 全球地理位置 1 - EMEA |
 | Sway | 美國 |
@@ -5730,6 +5988,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |
@@ -5753,6 +6012,7 @@ Office 365 使用服務端技術，可加密待用客戶資料和傳輸中的客
 | Microsoft Teams | 全球地理位置 1 - EMEA |
 | Office Online &amp; Mobile | 全球地理位置 1 - EMEA |
 | EOP | 全球地理位置 1 - EMEA |
+| Intune | 全球地理位置 1 - EMEA |
 | MyAnalytics | 全球地理位置 1 - EMEA |
 | Planner | 美國 |
 | Sway | 美國 |

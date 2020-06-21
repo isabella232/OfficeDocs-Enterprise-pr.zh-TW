@@ -26,16 +26,16 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明當您的 Microsoft 365 訂閱使用僅限雲端身分識別時，如何建立使用者和群組。
-ms.openlocfilehash: 257634db4ba8cd001ea52004be05f8a8a7d35e87
-ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
+ms.openlocfilehash: f510d82186e9a44c20bd20f1c7b5a7a44c8b765b
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44698920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774828"
 ---
 # <a name="microsoft-365-cloud-only-identity"></a>僅限 Microsoft 365 雲端身分識別
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 使用僅限雲端的身分識別，所有的使用者、群組和連絡人都儲存在 Microsoft 365 訂閱的 Azure Active Directory （Azure AD）租使用者中。 以下是僅限雲端身分識別的基本元件。
  
@@ -49,7 +49,7 @@ ms.locfileid: "44698920"
 
 在您的組織中製作使用者類型的股份。 分組的群組為何？ 例如，您可以將高層次的功能或目的群組的使用者群組為您的組織。
 
-此外，某些雲端服務可以與組織外的使用者共用，而不需使用任何使用者帳戶。您也必須識別使用者的這些群組。
+Additionally, some cloud services can be shared with users outside your organization without any user accounts. You'll need to identify these groups of users as well.
 
 您可以針對多種目的使用 Azure AD 中的群組，以簡化雲端環境的管理。 例如，使用 Azure AD 群組時，您可以：
 

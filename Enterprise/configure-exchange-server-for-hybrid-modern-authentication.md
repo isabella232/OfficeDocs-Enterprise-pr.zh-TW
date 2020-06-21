@@ -3,7 +3,7 @@ title: 如何設定 Exchange Server 內部部署以使用混合式新式驗證
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 11/16/2018
+ms.date: 06/16/2020
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -16,12 +16,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 混合式新式驗證（HMA）是一種身分識別管理的方法，可提供更安全的使用者驗證和授權，而且可用於 Exchange server 內部部署混合式部署。
-ms.openlocfilehash: c52eecbe57567276de94aac913b7b82db8c5e404
-ms.sourcegitcommit: 72a4938f1372e7f3693b53bcabac0c5d18305a1d
+ms.openlocfilehash: d73b7c28ea5b64be46a3e3a40d8160ccdfcea18c
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "44326440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774518"
 ---
 # <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>如何設定 Exchange Server 內部部署以使用混合式新式驗證
 
@@ -34,34 +34,34 @@ ms.locfileid: "44326440"
 開始之前，我會致電：
   
 - 混合式新式驗證 \> HMA
-    
+
 - Exchange 內部部署 \> nm-exch-um-2nd
-    
+
 - Exchange Online \> EXO
-    
-此外，*如果本文中的圖形具有 ' 變暗」或「暗灰色」的物件，表示以灰色顯示的元素不會包含在 HMA 特定*的設定中。 
+
+此外，*如果本文中的圖形具有 ' 變暗」或「暗灰色」的物件，表示以灰色顯示的元素不會包含在 HMA 特定*的設定中。
   
 ## <a name="enabling-hybrid-modern-authentication"></a>啟用混合式新式驗證
 
 開啟 HMA 的方式：
   
 1. 在您開始之前，請確定您已符合必要條件。
-    
+
 1. 由於商務用 Skype 和 Exchange 皆是許多**必要條件**，所以[混合新式驗證概述和必要條件搭配內部部署商務用 Skype 和 Exchange 伺服器使用它](hybrid-modern-auth-overview.md)。 在您開始進行本文中的任何步驟之前，請先執行此動作。
-    
-2. 在 Azure AD 中將內部部署 web 服務 URLs 新增為服務主體名稱（Spn）。
-    
-3. 確保所有虛擬目錄都已啟用 HMA
-    
-4. 檢查 EvoSTS 驗證服務器物件
-    
-5. 啟用 NM-EXCH-UM-2ND 中的 HMA。
-    
+
+1. 在 Azure AD 中將內部部署 web 服務 URLs 新增為**服務主體名稱（spn）** 。
+
+1. 確保所有虛擬目錄都已啟用 HMA
+
+1. 檢查 EvoSTS 驗證服務器物件
+
+1. 啟用 NM-EXCH-UM-2ND 中的 HMA。
+
  **記事**您的 Office 版本是否支援 MA？ 請參閱[如何在 office 2013 和 office 2016 用戶端應用程式中運作新式驗證](modern-auth-for-office-2013-and-2016.md)。
   
-## <a name="make-sure-you-meet-all-the-pre-reqs"></a>請確認您符合所有預先 reqs
+## <a name="make-sure-you-meet-all-the-prerequisites"></a>請確認您符合所有必要條件
 
-由於商務用 Skype 和 Exchange 一般都有許多必要條件，所以請參閱[混合式新式驗證概述和使用內部部署商務用 skype 和 Exchange 伺服器的必要條件](hybrid-modern-auth-overview.md)。 在您開始進行本文中的任何步驟之前，請*先*執行此動作。 
+由於商務用 Skype 和 Exchange 一般都有許多必要條件，所以請參閱[混合式新式驗證概述和使用內部部署商務用 skype 和 Exchange 伺服器的必要條件](hybrid-modern-auth-overview.md)。 在您開始進行本文中的任何步驟之前，請*先*執行此動作。
   
 ## <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>在 Azure AD 中將內部部署 web 服務 URLs 當做 Spn 新增
 
@@ -78,26 +78,26 @@ Get-OABVirtualDirectory | FL server,*url*
     
 確定用戶端可以連線的 URLs 已列為 AAD 中的 HTTPS 服務主體名稱。
   
-1. 首先，使用[這些指示](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)連接至 AAD。 
+1. 首先，使用[這些指示](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell)連接至 AAD。
 
- **記事**您必須使用此頁面上的 Connect-MsolService 選項，才能使用下列命令。 
-    
+ **記事**您必須使用此頁面上的_Connect-MsolService_選項，才能使用下列命令。
+
 2. 針對您的 Exchange 相關 URLs，請輸入下列命令：
-    
+
 ```powershell
 Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames
 ```
 
-記下（和螢幕擷取畫面以供稍後比較）此命令的輸出應包含 HTTPs:// *autodiscover.yourdomain.com*和 Https:// *mail.yourdomain.com* URL，但通常是由以 00000002-0000-0Ff1-ce00-000000000000/開頭的 spn 所組成。 如果從您的內部部署 HTTPs://URLs，將需要將這些特定記錄新增至此清單。 
+記下（和螢幕擷取畫面以供稍後比較）此命令的輸出應包含 HTTPs:// *autodiscover.yourdomain.com*和 Https:// *mail.yourdomain.com* URL，但通常是由以 00000002-0000-0Ff1-ce00-000000000000/開頭的 spn 所組成。 如果從您的內部部署 HTTPs://URLs，將需要將這些特定記錄新增至此清單。
   
 3. 如果您沒有看到您的內部及外部 MAPI/HTTP、EWS、ActiveSync、OAB 及自動探索記錄，您必須使用下列命令進行新增（此範例 URLs 為 ' `mail.corp.contoso.com` ' 和 ' ' `owa.contoso.com` ，但您會**以您自己的範例取代該範例 URLs** ）： <br/>
 ```powershell
-$x= Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000   
+$x= Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000
 $x.ServicePrincipalnames.Add("https://mail.corp.contoso.com/")
 $x.ServicePrincipalnames.Add("https://owa.contoso.com/")
 Set-MSOLServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
 ```
- 
+
 4. 再次執行步驟2上的 New-msolserviceprincipal 命令，然後查看輸出，以確認新增的記錄已新增。 將清單/螢幕擷取畫面與新的 Spn 清單進行比較（您也可能會向新的記錄加入新的清單）。 如果您成功，您會在清單中看到兩個新的 URLs。 接下來的範例，Spn 清單現在會包含特定的 URLs `https://mail.corp.contoso.com` 和 `https://owa.contoso.com` 。 
   
 ## <a name="verify-virtual-directories-are-properly-configured"></a>確認已正確設定虛擬目錄
@@ -111,13 +111,11 @@ Get-OABVirtualDirectory | FL server,*url*,*oauth*
 Get-AutoDiscoverVirtualDirectory | FL server,*oauth*
 ```
 
-檢查輸出，確定每個 VDirs 都已啟用**OAuth** ，它看起來像這樣（而且看起來應該是「OAuth ' 的重要事項）; 
+檢查輸出，確定每個 VDirs 都已啟用**OAuth** ，它看起來像這樣（但要尋找的關鍵一點是「OAuth '）：
 
 ```powershell
 Get-MapiVirtualDirectory | fl server,*url*,*auth*
-```
 
-```
 Server                        : EX1
 InternalUrl                   : https://mail.contoso.com/mapi
 ExternalUrl                   : https://mail.contoso.com/mapi
@@ -148,7 +146,7 @@ Get-AuthServer | where {$_.Name -eq "EvoSts"}
 Set-AuthServer -Identity EvoSTS -IsDefaultAuthorizationEndpoint $true  
 Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
 ```
-    
+
 ## <a name="verify"></a>驗證
 
 一旦您啟用 HMA，用戶端的下一個登入將會使用新的驗證流程。 請注意，只要開啟 HMA，就不會觸發任何用戶端的重新驗證。 用戶端會根據驗證權杖和/或憑證的存留時間，重新進行驗證。
@@ -159,12 +157,8 @@ Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
  
 ## <a name="using-hybrid-modern-authentication-with-outlook-for-ios-and-android"></a>對 Outlook for iOS 和 Android 使用混合新式驗證
 
-如果您是使用 TCP 443 上 Exchange server 的內部部署客戶，請將下列 IP 範圍列入白名單： <BR> ```52.125.128.0/20``` <BR> ```52.127.96.0/23``` <BR> 
-  
+如果您是使用 TCP 443 上 Exchange server 的內部部署客戶，請將下列 IP 範圍列入白名單： <BR> ```52.125.128.0/20``` <BR> ```52.127.96.0/23``` <BR>
 
 ## <a name="related-topics"></a>相關主題
 
-[混合新式驗證概述和使用內部部署商務用 Skype 和 Exchange 伺服器的必要條件](hybrid-modern-auth-overview.md) 
-  
-強制 Outlook 使用者進行新式驗證  
-[從 Office 365 專屬/ITAR 轉換為 vNext 的新式驗證設定需求](modern-authentication-configuration.md)
+[從 Office 365 專屬/ITAR 轉換為 vNext 的新式驗證設定需求](https://docs.microsoft.com/exchange/troubleshoot/modern-authentication/modern-authentication-configuration)

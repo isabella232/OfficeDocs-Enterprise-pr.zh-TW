@@ -1,7 +1,7 @@
 ---
-title: Office 365 中的系統管理存取控制
-ms.author: robmazz
-author: robmazz
+title: Microsoft 365 中的管理存取控制
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,27 +14,27 @@ f1.keywords:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: 摘要： Office 365 系統管理存取控制及資料分類的概觀。
-ms.openlocfilehash: f902b123b26f2c71cb6597f66fc47142e2f2b44c
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 摘要： Microsoft 365 的系統管理存取控制及資料分類的概述。
+ms.openlocfilehash: 93b62acbda2508d5b41578eb807293c34fdda4dd
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774968"
 ---
-# <a name="administrative-access-controls-in-office-365"></a>Office 365 中的系統管理存取控制 
+# <a name="administrative-access-controls-in-microsoft-365"></a>Microsoft 365 中的管理存取控制 
 
-Microsoft 已頻繁投資系統和自動化 Office 365 的大部分作業時刻意限制存取 microsoft 的客戶內容的控制項。 人類，進而管理服務，及軟體的運作該服務。 這可讓 Microsoft，以管理 Office 365 規模和管理的客戶內容的內部威脅風險。
+Microsoft 投入大量的系統和控制，可自動化大多數的 Microsoft 365 作業，並在 Microsoft 中故意限制存取客戶內容。 人工管理服務，軟體會運作服務。 這可讓 Microsoft 以比例管理 Microsoft 365，以管理對客戶內容的內部威脅風險。
 
-根據預設，Microsoft 工程師會有零常設系統管理權限和客戶內容零常設存取 Office 365 中。 Microsoft 工程師可以有限制、 稽核、 及安全的客戶內容存取權的有限的時間。 只在需要的服務作業時，並核准由 Microsoft 資深管理的成員時，才存取。 授權的客戶加密箱客戶，客戶可以提供對裝載於 Office 365 其內容的存取權核准。
+根據預設，Microsoft 工程師在使用 Microsoft 365 的系統管理許可權中有零的管理許可權，且可以存取客戶內容。 Microsoft 工程師在有限的時間內，可對客戶的內容進行有限、經過審核和安全的存取。 只有在服務作業必要時才能存取，而且只有在 Microsoft 高層管理成員核准時，才可存取。 針對客戶密碼箱授權的客戶，客戶可對其主控于 Microsoft 365 的內容提供存取核准。
 
-Microsoft 提供使用的雲端傳遞多份表單的線上服務：
+Microsoft 提供使用多種形式的雲端傳遞的線上服務：
 
-- **公用定域機組：** 包含多租用戶版本的 Office 365、 Azure 及裝載於 「 北美地區 」、 南美洲、 歐洲、 亞洲、 澳洲等其他服務。
-- **國家雲中：** 包含所有統領和協力廠商運作定域機組外美國 （除了和先前所述），例如 （由 21Vianet 運作的），由中國的 Office 365 和 Office 365 Germany （21vianet 運作的 microsoft，但在德國資料受託人，Deutsche Telekom 控制及監視 Microsoft 客戶資料與存取權的系統，包含客戶資料模型下） 中。
-- **政府定域機組：** 包含可用於美國政府版客戶的 Office 365 與 Azure 服務。
+- **公用雲彩：** 包含多承租人版本的 Microsoft 365、Azure 及其他主控于北美、南美洲、歐洲、亞洲、澳大利亞等的服務。
+- **國家雲彩：** 包括美國以外的所有以及主權和協力廠商運作的雲彩（除非先前所述），例如 microsoft 365 在中國（由世紀運作）365和德國（由 Microsoft 運作），但在該模型下，當德文資料受信者、德國 Telekom、控制及監視 Microsoft 對客戶資料和系統（包含客戶資料）的存取。
+- **政府雲彩：** 包含適用于美國政府客戶的 Microsoft 365 和 Azure 服務。
 
-基於本文的詳細資訊，包括 Office 365 服務：
+基於本文的目的，Microsoft 365 服務包括：
 
 - [Exchange Online](https://docs.microsoft.com/Exchange/exchange-online)
 - [Exchange Online Protection](https://docs.microsoft.com/Office365/SecurityCompliance/eop/exchange-online-protection-overview)
@@ -44,57 +44,57 @@ Microsoft 提供使用的雲端傳遞多份表單的線上服務：
 - [Microsoft Teams](https://docs.microsoft.com/MicrosoftTeams/Teams-overview)
 - [Yammer](https://docs.microsoft.com/yammer/yammer-landing-page)
 
-## <a name="office-365-access-controls"></a>Office 365 的存取控制
+## <a name="microsoft-365-access-controls"></a>Microsoft 365 存取控制
 
-以存取控制項來說，Microsoft 將分類為 「 客戶資料或其他類型的資料的 Office 365 資料。
+針對存取控制目的，Microsoft 會將 Microsoft 365 資料分類為客戶資料或其他類型的資料。
 
 ### <a name="customer-data"></a>客戶資料
 
-客戶資料是由或提供代表客戶使用 Office 365 服務時的所有資料。 這是客戶內容直接建立或上傳的 Office 365 使用者使用，包括：
+「客戶資料」是使用 Microsoft 365 服務時，代表客戶提供的所有資料。 這是 Microsoft 365 使用者直接建立或上傳的客戶內容，包括：
 
 - 電子郵件
-- SharePoint Online 內容
+- SharePoint 線上內容
 - 立即訊息
-- 行事曆項目
+- 行事曆專案
 - 文件
 - Contacts
-- 使用者識別資訊 (EUII) （這是唯一的使用者，或資料，是連結至個別使用者，但不包含客戶內容）。
+- 使用者可辨識的資訊（EUII）（是使用者特有或 linkable 給個別使用者的資料，但不包括客戶內容）
 
 ### <a name="other-types-of-data"></a>其他類型的資料
 
-其他的資料類型包括：
+其他類型的資料包括：
 
-- **帳戶資料：** 包含管理資料 (由系統管理員所提供的資訊時他們註冊或購買服務)，以及付款資料 （付款儀器，例如信用卡的詳細資訊的相關資訊）。
-- **家識別資訊：** 包含用來識別租用戶、 使用狀況資料，以及未連結至個別使用者或客戶內容中包含的資料。
-- **系統中繼資料：** 包括含有組態設定、 系統狀態、 Microsoft IP 位址和訂用帳戶及租用戶的技術資訊的服務記錄檔。
+- **帳戶資料：** 包含管理資料（系統管理員在註冊或購買服務時所提供的資訊）和付款資料（有關付款儀器的資訊，例如信用卡詳細資料）。
+- **組織識別資訊：** 包含用來識別租使用者、使用狀況資料，而不是 linkable 給個別使用者或包含在客戶內容中的資料。
+- **系統中繼資料：** 包含服務記錄，包含有關訂閱及承租人的設定設定、系統狀態、Microsoft IP 位址和技術資訊。
 
-Microsoft 已經建立存取控制機制，以確保沒有其他有未核准的存取客戶資料或存取控制資料。 存取控制資料管理其他類型的資料或在函數中的環境，包括存取客戶內容或 EUII、 Microsoft 密碼、 安全性憑證，以及其他驗證相關的資料存取。 存取控制機制也會防止未核准實體、 邏輯、 或遠端存取 Office 365 實際執行環境。
+Microsoft 已建立存取控制機制，以確保沒有人撤銷對客戶資料或存取控制資料的存取。 存取控制資料可管理環境中其他類型的資料或功能，包括存取客戶內容或 EUII、Microsoft 密碼、安全性憑證及其他驗證相關資料。 存取控制機制也會防止對 Microsoft 365 生產環境進行未核准的實體、邏輯或遠端存取。
 
-有三種類別的存取控制 Microsoft 用於操作 Office 365:
+Microsoft 使用 Microsoft 365 的存取控制類別有三種：
 
-- 隔離控制措施
-- 人員控制措施
-- 技術控制措施
+- 隔離控制項
+- 人員控制
+- 技術控制項
 
-當組合時，這些控制項協助防止，並在 Office 365 中偵測惡意的動作。 除了隔離、 人員及使用 Microsoft 技術控制措施，沒有控制項的第四個類別： 所實作的客戶。
+結合時，這些控制項可協助防止及偵測 Microsoft 365 中的惡意動作。 除了 Microsoft 所用的隔離、人員和技術控制項之外，還有第四個控制項類別：由客戶實施。
 
-Office 365 可讓您管理資料的相同的方式受管理的內部部署環境中的資料。 註冊組織 Office 365 自動的人員會成為全域系統管理員。 全域系統管理員有權存取管理入口網站和可以中的所有功能：
+Microsoft 365 可讓您在內部部署環境中管理資料的方式相同。 註冊 Microsoft 365 組織的人員，會自動成為全域管理員。 全域管理員可以存取管理入口網站中的所有功能，而且可以：
 
 - 建立或編輯使用者
 - 指派系統管理員角色給其他人
 - 重設使用者密碼
 - 管理使用者授權
-- 管理的網域
+- 管理網域
 - 核准客戶加密箱要求
 
-我們建議每個組織設定至少兩個系統管理員帳戶。 對於大型企業組織中，我們建議提供不同功能的特定的系統管理員帳戶。
+建議每個組織至少要設定兩個系統管理員帳戶。 對於大型企業組織，我們建議針對不同功能的特殊系統管理員帳戶。
 
-如需指派系統管理員角色和權限的資訊，請參閱[指派 Office 365 中的系統管理員角色](https://support.office.com/article/Assigning-admin-roles-in-Office-365-eac4d046-1afd-4f1a-85fc-8219c79e1504)和[關於 Office 365 系統管理員角色](https://support.office.com/article/Permissions-in-Office-365-DA585EEA-F576-4F55-A1E0-87090B6AAA9D)。
+如需指派系統管理員角色和許可權的相關資訊，請參閱[指派系統管理員角色](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles)及[關於系統管理員角色](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles)。
 
 ## <a name="related-links"></a>相關連結
 
-- [隔離控制措施](office-365-isolation-controls.md)
-- [人員控制措施](office-365-personnel-controls.md)
-- [技術控制措施](office-365-technology-controls.md)
+- [隔離控制項](office-365-isolation-controls.md)
+- [人員控制](office-365-personnel-controls.md)
+- [技術控制項](office-365-technology-controls.md)
 - [監視及稽核的存取控制](office-365-monitoring-and-auditing-access-controls.md)
 - [Yammer 企業存取控制](office-365-yammer-enterprise-access-controls.md)

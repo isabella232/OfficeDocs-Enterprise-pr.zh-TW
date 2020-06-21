@@ -3,7 +3,7 @@ title: 實作 Office 365 的 VPN 分割通道
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 5/11/2020
+ms.date: 6/15/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -17,12 +17,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 如何實作 Office 365 的 VPN 分割通道
-ms.openlocfilehash: 87d7e86f59a97bf11c053a57aa9acc6d33c03e63
-ms.sourcegitcommit: dce58576a61f2c8efba98657b3f6e277a12a3a7a
-ms.translationtype: HT
+ms.openlocfilehash: c2b0b94a80cadc47f5236cc38e29c12d2a152062
+ms.sourcegitcommit: 5345785dd0c85b28b68752faa7e37a71c270b9b0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "44208774"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "44742235"
 ---
 # <a name="implementing-vpn-split-tunneling-for-office-365"></a>實作 Office 365 的 VPN 分割通道
 
@@ -123,8 +123,8 @@ Microsoft 建議用於最佳化遠端工作者連線的建議策略，著重於�
 | --- | --- | --- |
 | <https://outlook.office365.com> | TCP 443 | 這是 Outlook 用來連線到 Exchange Online 伺服器的主要 URL 之一，而且有大量的頻寬使用量和連線計數。 線上功能需要低網路延遲，包括：立即搜尋、其他信箱行事曆、空閒/忙碌查閱、管理規則和警示、Exchange Online 封存、傳出寄件匣的電子郵件。 |
 | <https://outlook.office.com> | TCP 443 | 此 URL 可供 Outlook Online Web Access 用來連線到 Exchange Online 伺服器，而且對於網路延遲很敏感。 透過 SharePoint Online 上傳和下載大型檔案時，尤其需要連線能力。 |
-| https://\<tenant\>.sharepoint.com | TCP 443 | 這是 SharePoint Online 的主要 URL，具有高頻寬使用量。 |
-| https://\<tenant\>-my.sharepoint.com | TCP 443 | 這是商務用 OneDrive 的主要 URL，具有高頻寬使用量且可能有來自商務用 OneDrive 同步工具的高連線計數。 |
+| HTTPs:// \<tenant\> 。 sharepoint.com | TCP 443 | 這是 SharePoint Online 的主要 URL，具有高頻寬使用量。 |
+| HTTPs:// \<tenant\> -my.sharepoint.com | TCP 443 | 這是商務用 OneDrive 的主要 URL，具有高頻寬使用量且可能有來自商務用 OneDrive 同步工具的高連線計數。 |
 | Teams 媒體 IP (無 URL) | UDP 3478、3479、3480 和 3481 | Relay Discovery 配置和即時流量 (3478)、音訊 (3479)、影片 (3480) 和影片螢幕畫面分享 (3481)。 這些是用於商務用 Skype 和 Microsoft Teams 媒體流量 (通話、會議等等) 的端點。 當 Microsoft Teams 用戶端建立通話 (且包含在針對服務所列的必要 IP 內) 時，就會提供大部分的端點。 使用 UDP 通訊協定才能達到最佳媒體品質。   |
 
 在上述範例中，應使用您的 Office 365 租用戶名稱取代 **tenant**。 例如，**contoso.onmicrosoft.com** 會使用 _contoso.sharepoint.com_ 和 _constoso-my.sharepoint.com_。
@@ -226,13 +226,8 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 
 在某些情況下 (通常與 Teams 用戶端設定無關)，即使備妥正確的路由，媒體流量仍會通過 VPN 通道。 如果遇到這種情況，則使用防火牆規則來封鎖 Teams IP 子網路或連接埠，使其無法使用 VPN 應該就夠了。
 
->[!NOTE]
->目前要讓此做法在 100% 的情況下可行的需求，就是同時新增 IP 範圍 **13.107.60.1/32**。 不一定要馬上這麼做，因為 Teams 用戶端更新會在 **2020 年 6 月**發行。 若有相關的組建詳細資料，我們將更新本文章的內容。
-
-<!--
 >[!IMPORTANT]
->To ensure Teams media traffic is routed via the desired method in all VPN scenarios please ensure you are running at least the following client version number or greater, as these versions have improvements in how the client detects available network paths.<br>Windows version number:  **1.3.00.9267**<br>Mac version number: **1.3.00.9221**
--->
+>為了確保小組媒體流量透過所有 VPN 案例中所需的方法來路由傳送，請確定使用者執行的是 Microsoft 團隊用戶端版本**1.3.00.13565**或更高版本。 此版本包含用戶端偵測到可用網路路徑的方式的增強功能。
 
 訊號流量會透過 HTTPS 執行且不像媒體流量對延遲那麼敏感，其在 URL/IP 資料中標示為 **[允許]**，因此可視需要透過 VPN 用戶端安全地路由傳送。
 
@@ -278,8 +273,9 @@ foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -Inter
 - **Cisco Anyconnect**：[針對 Office365 最佳化 Anyconnect 分割通道](https://www.cisco.com/c/en/us/support/docs/security/anyconnect-secure-mobility-client/215343-optimize-anyconnect-split-tunnel-for-off.html)
 - **Palo Alto GlobalProtect**：[透過 VPN 分割通道排除存取路由最佳化 Office 365 流量](https://live.paloaltonetworks.com/t5/Prisma-Access-Articles/GlobalProtect-Optimizing-Office-365-Traffic/ta-p/319669)
 - **F5 Networks BIG-IP APM**：[使用 BIG-IP APM 時透過 VPN 最佳化遠端存取上的 Office 365 流量](https://devcentral.f5.com/s/articles/SSL-VPN-Split-Tunneling-and-Office-365)
-- **Citrix 閘道**：[針對 Office365 最佳化 Citrix 閘道的 VPN 分割通道](https://docs.citrix.com/zh-TW/citrix-gateway/13/optimizing-citrix-gateway-vpn-split-tunnel-for-office365.html)
+- **Citrix 閘道**：[針對 Office365 最佳化 Citrix 閘道的 VPN 分割通道](https://docs.citrix.com/en-us/citrix-gateway/13/optimizing-citrix-gateway-vpn-split-tunnel-for-office365.html)
 - **Pulse Secure**：[VPN 通道：如何設定分割通道以排除 Office365 應用程式](https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44417)
+- **檢查點 VPN**：[如何設定 Office 365 和其他 SaaS 應用程式的分割隧道](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk167000)
 
 ## <a name="faq"></a>常見問題集
 

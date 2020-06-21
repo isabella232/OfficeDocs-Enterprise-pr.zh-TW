@@ -19,16 +19,16 @@ ms.assetid: 985a357f-6db7-401f-bf7a-1bafdf1f312c
 f1.keywords:
 - NOCSH
 description: 支援在2010年4月13日在 2021 SharePoint 和 SharePoint Server 2010 結束。 使用本文做為升級至 SharePoint 線上或更新版本 SharePoint 伺服器內部部署的指南。
-ms.openlocfilehash: 8f55b55b84b2bd4d967822dea137a8cea4f40906
-ms.sourcegitcommit: 27a04304475f9c33accd4c0498726f074eef7c48
+ms.openlocfilehash: 906fd4a5189bba29e90f342c1c9199c927210bb2
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "43532289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774448"
 ---
 # <a name="upgrading-from-sharepoint-2010"></a>從 SharePoint 2010 升級
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 Microsoft SharePoint 2010 和 SharePoint Server 2010 會在**年4月 13 2021 日**到達支援的支援。 本文詳述可協助您將現有的 SharePoint Server 2010 資料移轉至 Office 365 中 SharePoint 線上的資源，或升級內部部署 SharePoint Server 2010 環境。
   
@@ -76,7 +76,7 @@ Microsoft SharePoint 2010 和 SharePoint Server 2010 會在**年4月 13 2021 日
 
 SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺服器上安裝內部部署。 否則，您可以使用 SharePoint 線上，也就是 Microsoft Office 365 的一部分線上服務。 您可以選擇：
   
-- 線上遷移至 SharePoint
+- 移轉至 SharePoint Online
     
 - 升級 SharePoint Server 或 SharePoint Foundation 內部部署
     
@@ -98,7 +98,7 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺�
    
 當您遷移至 Office 365 時，一次的移動會有較高的成本的時間花在規劃中（當您在組織資料時進行組織，並決定要對雲端採取的功能和留下的功能）。 不過，當您的資料移轉後，就會從該點自動進行升級，因為您不再需要管理軟硬體更新，所以您的伺服器陣列時間將會受到 Microsoft 服務等級協定（[SLA](https://go.microsoft.com/fwlink/?linkid=843153)）的支援。
   
-### <a name="migrate-to-sharepoint-online"></a>線上遷移至 SharePoint
+### <a name="migrate-to-sharepoint-online"></a>移轉至 SharePoint Online
 
 請確定 SharePoint 線上提供您所需的所有功能，方法是檢查其[服務描述](https://docs.microsoft.com/office365/servicedescriptions/sharepoint-online-service-description/sharepoint-online-service-description)。
   
@@ -162,15 +162,15 @@ SharePoint Server 2013 和 SharePoint Foundation 2013 可以在您自己的伺�
   
 - **硬體/軟體需求**： 
     
-    [SharePoint server 2010](https://go.microsoft.com/fwlink/?linkid=843204) | [SharePoint server 2013](https://go.microsoft.com/fwlink/?linkid=843206) | [SharePoint server 2016](https://go.microsoft.com/fwlink/?linkid=843207)
+    [SharePoint Server 2010](https://go.microsoft.com/fwlink/?linkid=843204)  | [SharePoint Server 2013](https://go.microsoft.com/fwlink/?linkid=843206)  | [SharePoint Server 2016](https://go.microsoft.com/fwlink/?linkid=843207)
     
 - **軟體界限和限制**： 
     
-    [SharePoint server 2010](https://go.microsoft.com/fwlink/?linkid=843247) | [SharePoint server 2013](https://go.microsoft.com/fwlink/?linkid=843248) | [SharePoint server 2016](https://go.microsoft.com/fwlink/?linkid=843249)
+    [SharePoint Server 2010](https://go.microsoft.com/fwlink/?linkid=843247)  | [SharePoint Server 2013](https://go.microsoft.com/fwlink/?linkid=843248)  | [SharePoint Server 2016](https://go.microsoft.com/fwlink/?linkid=843249)
     
 - 下列專案**的升級程式概述**： 
     
-    [SharePoint server 2010](https://go.microsoft.com/fwlink/?linkid=843251) | [SharePoint server 2013](https://go.microsoft.com/fwlink/?linkid=843252) | [SharePoint server 2016](https://go.microsoft.com/fwlink/?linkid=843359)
+    [SharePoint Server 2010](https://go.microsoft.com/fwlink/?linkid=843251)  | [SharePoint Server 2013](https://go.microsoft.com/fwlink/?linkid=843252)  | [SharePoint Server 2016](https://go.microsoft.com/fwlink/?linkid=843359)
     
 ### <a name="create-a-sharepoint-hybrid-solution-between-sharepoint-online-and-sharepoint-server-on-premises"></a>在 SharePoint 線上和 SharePoint 伺服器內部部署之間建立 SharePoint 的混合式解決方案
 

@@ -3,7 +3,7 @@ title: 資料移動一般常見問題集
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 11/20/2019
+ms.date: 06/17/2020
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -14,12 +14,12 @@ ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 f1.keywords:
 - NOCSH
 description: 以下是有關將核心資料移至新資料中心地理位置的一般問題的解答。
-ms.openlocfilehash: 291f5068cc66ae761571992b462995fb6437b872
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: 2954d85b0094a8d0f74980fa4e0ee9cac504abbe
+ms.sourcegitcommit: e0603d9259e9be1aeb110fc3dd8b9abc6138c55d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44781038"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -52,7 +52,7 @@ ms.locfileid: "44735841"
 - 小組會聊天訊息，包括私人郵件和通道訊息。 
 - 在聊天中使用的小組圖像。 
 
-小組檔案會儲存在 SharePoint 線上中，小組聊天檔會儲存在商務 OneDrive 中。  語音信箱、行事曆、聊天記錄和連絡人會儲存在 Exchange Online 中。  在許多情況下，使用者已在本機資料中心地理位置中使用 Exchange Online、SharePoint 線上和商務 OneDrive，而且也是適用于合格客戶國家/地區之 Office 365 遷移計畫的一部分。
+小組檔案會儲存在 SharePoint 線上中，小組聊天檔會儲存在商務 OneDrive 中。  語音信箱、行事曆、聊天記錄和連絡人會儲存在 Exchange Online 中。  在許多情況下，使用者已在本機資料中心地理位置中使用 Exchange Online、SharePoint 線上和商務 OneDrive，而且也是適用于合格客戶國家/地區的 Microsoft 365 遷移計畫的一部分。
   
 ## <a name="what-is-the-impact-of-having-different-services-located-in-different-geos"></a>不同的服務位於不同的 geos 會有什麼影響？
 
@@ -80,11 +80,11 @@ ms.locfileid: "44735841"
   
 ## <a name="what-happens-if-i-do-not-request-a-move-before-the-deadline"></a>如果我不要求在期限之前移動，會發生什麼事？
   
-我們可能會根據例外情況接受要求，以授與您的租使用者完成移動的承諾期限。 請   與[Office 365 支援](https://go.microsoft.com/fwlink/p/?LinkID=522459)人員聯繫，以提出要求。
+我們可能會根據例外情況接受要求，以授與您的租使用者完成移動的承諾期限。 請   與[Microsoft 365 支援](https://go.microsoft.com/fwlink/p/?LinkID=522459)人員聯繫，以提出要求。
 
 ## <a name="what-if-i-want-to-move-my-data-in-order-to-get-better-network-performance"></a>如果我想要移動資料以取得更好的網路效能，該怎麼辦？
   
-與 Microsoft 365 資料中心的實體接近，不會保證更好的網路效能。 有許多因素和元件會影響使用者與 Microsoft 365 服務之間的網路效能。 如需此和效能調整的詳細資訊，請參閱[Office 365 的網路規劃和效能調整](network-planning-and-performance.md)。
+與 Microsoft 365 資料中心的實體接近，不會保證更好的網路效能。 有許多因素和元件會影響使用者與 Microsoft 365 服務之間的網路效能。 如需此和效能調整的詳細資訊，請參閱[Microsoft 365 的網路規劃和效能調整](network-planning-and-performance.md)。
   
  ## <a name="do-all-the-services-move-their-data-on-the-same-day"></a>所有服務是否會將其資料在同一天內移動？
  
@@ -104,11 +104,11 @@ ms.locfileid: "44735841"
   
  ## <a name="how-do-i-know-the-move-is-complete"></a>如何知道移動已完成？
   
-觀賞 Office 365 訊息中心，確認每個服務資料的移動是否已完成。 當每個服務的資料移動時，我們會發佈一個完成通知，讓您可以取得三個完成通知：一個適用于 Exchange Online、SharePoint 線上和商務用 Skype Online。  您也可以透過 Microsoft 365 系統管理中心中組織設定檔底下的 [資料位置] 區段，確認 rest 上的客戶資料的位置。  
+觀賞 Microsoft 365 訊息中心，以確認每個服務資料的移動是否已完成。 當每個服務的資料移動時，我們會發佈一個完成通知，讓您可以取得三個完成通知：一個適用于 Exchange Online、SharePoint 線上和商務用 Skype Online。  您也可以透過 Microsoft 365 系統管理中心中組織設定檔底下的 [資料位置] 區段，確認 rest 上的客戶資料的位置。  
   
 ## <a name="i-am-a-microsoft-365-customer-in-one-of-the-new-datacenter-geos-but-when-i-signed-up-i-selected-a-different-country-how-can-i-be-moved-to-the-new-datacenter-geo"></a>我是在其中一個新的資料中心 geos 中的 Microsoft 365 客戶，但是當我註冊時，我選取不同的國家/地區。 我可以如何移至新的資料中心地理位置？
 
-您不可能變更與租使用者相關聯的註冊國家/地區。 相反地，您必須使用新的訂閱建立新的 Office 365 租使用者，並將使用者和資料手動移至新的租使用者。
+您不可能變更與租使用者相關聯的註冊國家/地區。 相反地，您必須使用新的訂閱建立新的 Microsoft 365 租使用者，並將使用者和資料手動移至新的租使用者。
   
 ## <a name="what-happens-if-we-are-in-process-of-email-data-migration-to-microsoft-365-during-the-exchange-online-move"></a>在 Exchange Online 移動期間，如果我們正在將電子郵件資料移轉至 Microsoft 365，會發生什麼情況？
 
@@ -126,7 +126,7 @@ ms.locfileid: "44735841"
   
 ## <a name="my-customer-data-has-already-been-moved-to-a-new-datacenter-geo-can-i-move-back"></a>我的客戶資料已經移至新的資料中心地理位置。 我可以再移回來嗎？
  
-否，這是不可能的。 移至新 geo 資料中心的客戶無法移回。 身為任何地理位置的客戶，您會體驗到相同品質的服務、效能及安全性控制。  [Office 365 多地理](https://aka.ms/multi-geo)位置可供部分客戶做為附加元件，並可讓單一租使用者建立多個衛星 geos，並將使用者資料移至具有資料派駐承諾的 geos。
+否，這是不可能的。 移至新 geo 資料中心的客戶無法移回。 身為任何地理位置的客戶，您會體驗到相同品質的服務、效能及安全性控制。  [Microsoft 365 多地理](https://aka.ms/multi-geo)位置可供部分客戶做為附加元件，並可讓單一租使用者建立多個衛星 geos，並將使用者資料移至具有資料派駐承諾的 geos。
   
 ## <a name="will-microsoft-365-tenants-hosted-in-the-new-datacenters-be-available-to-users-outside-of-the-country"></a>位於新資料中心的 Microsoft 365 租使用者是否可供全國以外的使用者使用？
   
@@ -137,14 +137,14 @@ ms.locfileid: "44735841"
 是的，您的租使用者可供註冊。 我們會將所有 EXO 信箱從您目前的預設地理位置移至新的本機資料中心地理位置。  我們不會移動在多地理位置衛星區域中設定的任何 EXO 信箱，繼續依照預定的方式，繼續遵循衛星區域資料派駐服務。  
 
 SharePoint Online 和商務 OneDrive 若要在移動程式中將其遷移至新的資料中心地理位置，雖然您可以設定商務股 OneDrive，以移至您想透過多地理位置計畫的任何區域。
-  
+
 ## <a name="related-topics"></a>相關主題
 
 [將核心資料移至新的 Microsoft 365 datacenter geos](moving-data-to-new-datacenter-geos.md)
 
 [如何要求資料移動](request-your-data-move.md)
 
-[Office 365 多地理位置](https://aka.ms/multi-geo)
+[Microsoft 365 多地理位置](https://aka.ms/multi-geo)
 
 [Microsoft 365 互動式 datacenter 地圖](https://office.com/datamaps)
 

@@ -1,5 +1,5 @@
 ---
-title: Office 365 報告功能
+title: Microsoft 365 報告功能
 ms.author: robmazz
 author: robmazz
 manager: laurawi
@@ -14,23 +14,21 @@ ms.collection:
 - M365-analytics
 f1.keywords:
 - NOCSH
-description: Office 365 中報告功能的說明。
-ms.openlocfilehash: 19ffd501627426b08599b29c3125a52c839df5e2
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: Microsoft 365 中報告功能的說明。
+ms.openlocfilehash: 1b8a75504712a46faa8b6fff8dfe20f3f3c6cf79
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774458"
 ---
-# <a name="office-365-reporting-features"></a>Office 365 報告功能 
+# <a name="microsoft-365-reporting-features"></a>Microsoft 365 報告功能 
 
-## <a name="introduction"></a>簡介
+Microsoft 365 中的報表功能提供各種針對 Azure Active Directory （Azure AD）、Exchange Online、裝置管理、監察檢查及資料遺失防護（DLP）的審計報告。 這些報告與 Microsoft 365 活動報告不同，彼此分開。
 
-Office 365 中的 [報告] 功能可提供各種針對 Azure Active Directory （AD）、Exchange Online、裝置管理、監察檢查及資料遺失防護（DLP）的審計報告。 這些報告與 Office 365 活動報告不同，彼此分開。
+## <a name="microsoft-365-reports-dashboard"></a>Microsoft 365 報告儀表板
 
-## <a name="office-365-reports-dashboard"></a>Office 365 報告儀表板
-
-Microsoft 365 系統管理中心預覽中的 [報告] 儀表板會顯示跨 Office 365 的使用方式活動。 Office 365 全域管理員或 Exchange Online、SharePoint 線上或商務用 Skype 系統管理員，可以深入瞭解服務的使用狀況。 例如，特定 Office 365 服務中的使用者人數、已啟動 Microsoft 365 Apps for enterprise （先前稱為 Office 365 ProPlus）的使用者數目，以及郵件流經組織的程度。 報告可用於過去7、30、90和180天。
+Microsoft 365 系統管理中心預覽中的 [報告] 儀表板會顯示跨 Microsoft 365 的使用狀況活動。 Microsoft 365 全域管理員或 Exchange Online、SharePoint 線上或商務用 Skype 系統管理員，可以深入瞭解服務的使用狀況。 例如，特定 Microsoft 365 服務中的使用者人數、已啟動 Microsoft 365 應用程式的企業版（先前稱為 Office 365 ProPlus），以及郵件流過組織的使用者人數。 報告可用於過去7、30、90和180天。
 
 您可以使用下列報告：
 
@@ -46,11 +44,11 @@ Microsoft 365 系統管理中心預覽中的 [報告] 儀表板會顯示跨 Offi
 
 如需詳細資訊，請參閱[Microsoft 365 系統管理中心的活動報告](https://support.office.com/article/activity-reports-in-the-office-365-admin-center-0d6dfb17-8582-4172-a9a9-aed798150263)。
 
-## <a name="azure-active-directory-reports"></a>Azure Active Directory 報告
+## <a name="azure-ad-reports"></a>Azure AD 報告
 
-Office 365 使用 Azure AD 進行驗證和身分識別管理。 Office 365 系統管理員會使用 Azure 所產生的報告，識別非使用中的活動，並以未授權方式存取其資料。 您可以在 Azure AD 中使用 access 和使用方式報告，以深入瞭解您組織的目錄完整性及安全性。 使用此資訊，您可以找出並緩解可能的安全性風險。
+Microsoft 365 使用 Azure AD 進行驗證和身分識別管理。 Microsoft 365 系統管理員會使用 Azure 所產生的報告，識別不尋常的活動，並對其資料進行未經授權的存取。 您可以在 Azure AD 中使用 access 和使用方式報告，以深入瞭解您組織的目錄完整性及安全性。 使用此資訊，您可以找出並緩解可能的安全性風險。
 
-Azure AD 報告可以匯出至 Microsoft Excel，並與 Office 365 中的其他資料相關聯。 例如，審核記錄搜尋的結果可讓您瞭解存取、驗證及應用層級的活動。 您可以使用 Azure AD Premium 的高級反常和資源使用狀況報告。 這些高級報告可協助您改善安全性狀況，並透過應用裝置存取和應用程式使用方式的分析來協助您回應潛在威脅。 如需詳細資訊，請參閱[Azure Active Directory 報告](https://docs.microsoft.com/azure/active-directory/reports-monitoring/overview-reports/)。
+Azure AD 報告可以匯出至 Microsoft Excel，並與 Microsoft 365 中的其他資料相關聯。 例如，審核記錄搜尋的結果可讓您瞭解存取、驗證及應用層級的活動。 您可以使用 Azure AD Premium 的高級反常和資源使用狀況報告。 這些高級報告可協助您改善安全性狀況，並透過應用裝置存取和應用程式使用方式的分析來協助您回應潛在威脅。 如需詳細資訊，請參閱[Azure Active Directory 報告](https://docs.microsoft.com/azure/active-directory/reports-monitoring/overview-reports/)。
 
 ## <a name="exchange-online-audit-reports"></a>Exchange Online 審核報告
 
@@ -72,19 +70,19 @@ Exchange Online 審核報告包含信箱存取的詳細資料，以及系統管�
 
 ## <a name="device-compliance-reports"></a>裝置合規性報告
 
-您可以使用 Office 365 行動裝置管理（MDM）來管理連線到 Office 365 組織的行動裝置，並加以保護。 用來存取工作電子郵件、行事曆、連絡人及檔的行動裝置，可確保員工可以隨時隨地運作，並在任何地方運作。 保護貴組織的資訊非常重要。 您可以使用 Office 365 MDM 設定裝置安全性原則和存取規則。 如果遺失或遭盜，您也可以使用 Office 365 MDM 來清除行動裝置。
+您可以使用 Microsoft 365 行動裝置管理（MDM）來管理連線到您訂閱的行動裝置及保護其安全。 用來存取工作電子郵件、行事曆、連絡人及檔的行動裝置，可確保員工可以隨時隨地運作，並在任何地方運作。 保護貴組織的資訊非常重要。 您可以使用 Microsoft 365 MDM 設定裝置安全性原則和存取規則。 如果遺失或遭盜，您也可以使用 Microsoft 365 MDM 來清除行動裝置。
 
-MDM 相容性報告可提供組織設定之原則的概覽，以保護存取 Office 365 資料的行動裝置。 報告允許依照相容性狀態、報告的違規、封鎖的裝置，以及由於安全性原則所擦除的裝置，來篩選裝置。 如需詳細資訊，請參閱[Office 365 行動裝置管理的概述](https://support.office.com/article/Overview-of-Mobile-Device-Management-for-Office-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a)。
+MDM 相容性報告可提供組織設定的原則，以保護存取 Microsoft 365 資料的行動裝置。 報告允許依照相容性狀態、報告的違規、封鎖的裝置，以及由於安全性原則所擦除的裝置，來篩選裝置。 如需詳細資訊，請參閱[Microsoft 365 行動裝置管理的概述](https://support.microsoft.com/office/overview-of-mobile-device-management-mdm-for-microsoft-365-faa7d8e5-645d-4d59-839c-c8d4c1869e4a)。
 
 ## <a name="data-loss-prevention"></a>資料外洩防護
 
 DLP 原則可協助管理組織中資訊的安全性和流程。 您可以設定原則，以封鎖存取內容、加密資料，或使用隨應用程式中的 DLP 原則提示來通知使用者原則及原則違規。 DLP 報告可提供原則和規則相符專案、覆寫和誤報的洞察力。
 
-您可以使用 Microsoft 365 系統管理中心，查看 DLP 原則所偵測到的郵件數目資訊。 DLP 報告可提供傳送和接收郵件的原則和規則相符專案的見解。 您也可以使用 Exchange 系統管理中心，查看過去24小時內每個原則的相符、覆寫和誤報數目。 如果您下載 Excel 報告，您可以查看更多詳細資料，例如誰傳送哪一封郵件、哪一天，以及哪些原則相符已觸發。 如需詳細資訊，請參閱[查看有關 DLP 原則](https://technet.microsoft.com/library/jj889415(v=exchg.150).aspx)偵測的報告。
+您可以使用 Microsoft 365 系統管理中心，查看 DLP 原則所偵測到的郵件數目資訊。 DLP 報告可提供傳送和接收郵件的原則和規則相符專案的見解。 您也可以使用 Exchange 系統管理中心，查看過去24小時內每個原則的相符、覆寫和誤報數目。 如果您下載 Excel 報告，您可以查看更多詳細資料，例如誰傳送哪一封郵件、哪一天，以及哪些原則相符已觸發。 如需詳細資訊，請參閱[查看有關 DLP 原則](https://docs.microsoft.com/previous-versions/exchange-server/exchange-150/jj889415(v=exchg.150))偵測的報告。
 
 ## <a name="auditing-in-yammer-enterprise"></a>Yammer Enterprise 中的審計
 
-Yammer Enterprise 可讓系統管理員透過[Yammer 資料匯出 API](https://support.office.com/article/export-data-from-yammer-enterprise-b303d8f3-007d-4ad4-81f8-54fb1ecfb3f2)從其 Yammer 網路匯出使用者活動資料，或透過 yammer 網路管理頁面手動進行。 將記錄匯出的功能限制為 Yammer 中的網路系統管理員。 （所有 Office 365 全域系統管理員皆為 Yammer 網路系統管理員。）
+Yammer Enterprise 可讓系統管理員透過[yammer 資料匯出 API](https://support.office.com/article/export-data-from-yammer-enterprise-b303d8f3-007d-4ad4-81f8-54fb1ecfb3f2)從其 Yammer 網路匯出使用者活動資料，或透過 yammer 網路管理頁面手動進行。 將記錄匯出的功能限制為 Yammer 中的網路系統管理員。 （所有 Microsoft 365 全域系統管理員皆為 Yammer 網路系統管理員。）
 
 可匯出的資料如下：
 
@@ -92,11 +90,11 @@ Yammer Enterprise 可讓系統管理員透過[Yammer 資料匯出 API](https://s
 |----------------------------|-------------------------------------------------------------------------|
 | Users.csv | 網路中所有的新、擱置和擱置的使用者 |
 | Messages.csv | 網路中的所有郵件 |
-| Files .csv （中繼資料） | 中繼資料，例如 filename、檔案 API URL、上載載入識別碼、上傳的位置等等。 |
-| Files .csv （原始檔案） | 使用者在 Yammer 中上傳原始檔案的 Zip 檔案 |
+| Files.csv （中繼資料） | 中繼資料，例如 filename、檔案 API URL、上載載入識別碼、上傳的位置等等。 |
+| Files.csv （原始檔案） | 使用者在 Yammer 中上傳原始檔案的 Zip 檔案 |
 | Topics.csv | 在網路上建立的主題 |
 | Pages.csv | 網路中使用者所建立的頁面（附注） |
 | Admins.csv | 網路上所有已驗證的系統管理員 |
 | Networks.csv | 所有 Yammer 外部網路 |
 
-Yammer Enterprise 資料也可透過 Office 365 活動報告取得。 此外，Yammer 正積極運作透過 Office 365 管理活動 API 公開其他記錄，以及透過使用 Power BI 的資料進行原因。 如需這些功能的詳細資訊，請參閱[Office 藍圖](https://fasttrack.microsoft.com/roadmap?filters=yammer)。
+Yammer Enterprise 資料也可透過 Microsoft 365 活動報告取得。 此外，Yammer 正積極運作透過 Microsoft 365 管理活動 API 公開其他記錄，以及透過使用 Power BI 的資料進行原因。 如需這些功能的詳細資訊，請參閱[Office 藍圖](https://fasttrack.microsoft.com/roadmap?filters=yammer)。

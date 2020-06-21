@@ -15,12 +15,12 @@ ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 f1.keywords:
 - NOCSH
 description: 資料移動是後端作業，對使用者的影響最小。 Microsoft 將租使用者的每一個服務和相關資料移至新的資料中心地理位置時，不需要執行任何動作。 資料傳輸和驗證會在背景中預先進行，並將對使用者的影響降至最低。
-ms.openlocfilehash: dc028cb34bca73a08e8c62668c22edfacc7829f6
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.openlocfilehash: d07c9c62a778ce23d2e088ddeb8b34346911a19a
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774488"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -68,19 +68,19 @@ ms.locfileid: "44711916"
     
 - Project Online
     
-- Project for Office 365
+- Microsoft 365 的專案
     
-- Office 365 影片服務
+- Microsoft 365 影片服務
     
 - 瀏覽器中的 Office
     
 - Microsoft 365 Apps 企業版
     
-- Visio Pro for Office 365
+- Visio Pro for Microsoft 365
     
 完成移動 SharePoint 線上資料之後，您可能會看到下列部分效果。
   
-### <a name="office-365-video-services"></a>Office 365 影片服務
+### <a name="microsoft-365-video-services"></a>Microsoft 365 影片服務
 
 - 影片的資料移動所用的時間會比在 SharePoint Online 中，移動其他內容的時間長。
     

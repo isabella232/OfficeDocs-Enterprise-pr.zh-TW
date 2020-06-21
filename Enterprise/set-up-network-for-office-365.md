@@ -1,5 +1,5 @@
 ---
-title: 為 Office 365 設定您的網路
+title: 設定 Microsoft 365 的網路
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -18,45 +18,45 @@ f1.keywords:
 ms.custom:
 - Ent_TLGs
 ms.assetid: ''
-description: 摘要：請參閱這些文章以了解 Office 365 的網路功能。
-ms.openlocfilehash: c1976a6b1ae5bff0b5f6f909ee9ab8495f371653
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+description: 摘要：請參閱下列文章，以瞭解 Microsoft 365 的網路。
+ms.openlocfilehash: 4c414d8cbf597af9165e991a71e5d6a6a330e33a
+ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844024"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "44735653"
 ---
-# <a name="set-up-your-network-for-office-365"></a>為 Office 365 設定您的網路
+# <a name="set-up-your-network-for-microsoft-365"></a>設定 Microsoft 365 的網路
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
-對 Office 365 上線很重要的一點是，要確定您的網路和網際網路連線已針對最佳化存取進行設定。設定您的內部部署網路以存取全域分散式的軟體即服務 (SaaS) 雲端，與針對內部部署資料中心和中央網際網路連線之流量進行最佳化的傳統網路不同。 
+An important part of your Microsoft 365 onboarding is to ensure that your network and Internet connections are set up for optimized access. Configuring your on-premises network to access a globally distributed Software-as-a-Service (SaaS) cloud is different from a traditional network that is optimized for traffic to on-premises datacenters and a central Internet connection. 
 
 參閱這些文章以了解主要差異，並修改您的邊緣裝置、用戶端電腦與內部部署網路，以為您的內部使用者取得最佳的效能。
 
-## <a name="how-office-365-networking-works"></a>Office 365 網路功能的運作方式
+## <a name="how-microsoft-365-networking-works"></a>Microsoft 365 網路的運作方式
 
-請參閱下列文章，以取得 Office 365 連線能力概觀：
+請參閱下列文章，以瞭解 Microsoft 365 的連線能力：
 
-- [Office 365 網路連線能力概觀](office-365-networking-overview.md)
-- [Office 365 網路連線能力原則](office-365-network-connectivity-principles.md)
-- [評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
+- [Microsoft 365 網路連線能力概觀](office-365-networking-overview.md)
+- [Microsoft 365 網路連接原則](office-365-network-connectivity-principles.md)
+- [評估 Microsoft 365 網路連線能力](assessing-network-connectivity.md)
 
-如需提升效能的建議，請參閱 [Office 365 的網路規劃和效能調整](network-planning-and-performance.md)。
+如需增強效能的建議，請參閱[Microsoft 365 的網路規劃和效能調整](network-planning-and-performance.md)。
 
-## <a name="support-office-365-networking-as-a-network-equipment-vendor"></a>支援 Office 365 網路為網路設備廠商
+## <a name="support-microsoft-365-networking-as-a-network-equipment-vendor"></a>支援 Microsoft 365 網路作為網路設備廠商
 
-如果您是網路設備廠商，請加入 [Office 365 網路合作夥伴計畫](office-365-networking-partner-program.md)。註冊此計畫，將 Office 365 網路連線原則建置到您的產品與解決方案中。 
+If you are a network equipment vendor, join the [Office 365 Networking Partner Program](office-365-networking-partner-program.md). Enroll in the program to build Office 365 network connectivity principles into your products and solutions. 
 
 ## <a name="office-365-endpoints"></a>Office 365 端點
 
 端點為一組目的地 IP 位址、DNS 網域名稱，以及網際網路上 Office 365 流量的 URL。 
 
-若要最佳化 Office 365 雲端式服務的效能，有些端點需要由用戶端瀏覽器和邊緣網路中的裝置進行特別處理。這些裝置包括防火牆、SSL 中斷和檢查及封包檢查裝置，以及資料外洩防護系統。
+To optimize performance to Office 365 cloud-based services, some endpoints need special handling by your client browsers and the devices in your edge network. These devices include firewalls, SSL Break and Inspect and packet inspection devices, and data loss prevention systems.
 
 請參閱[管理 Office 365 端點](managing-office-365-endpoints.md)以取得詳細資訊。
 
-目前有五種不同的 Office 365 雲端。下表顯示每種雲端的端點清單。
+There are currently five different Office 365 clouds. This table takes you to the list of endpoints for each one.
 
 |||
 |:-------|:-----|
@@ -75,15 +75,15 @@ ms.locfileid: "41844024"
 - [Mac 版 Office 2016 中的網路要求](network-requests-in-office-2016-for-mac.md)
 
 
-## <a name="additional-topics-for-office-365-networking"></a>Office 365 網路功能的其他主題
+## <a name="additional-topics-for-microsoft-365-networking"></a>Microsoft 365 網路的其他主題
 
-請參閱下列文章，了解 Office 365 網路功能中的特定主題：
+請參閱下列文章，瞭解 Microsoft 365 網路中的特殊主題：
 
 - [內容傳遞網路](content-delivery-networks.md)
 - [Office 365 服務中的 IPv6 支援](ipv6-support.md)
 - [Office 365 的 NAT 支援](nat-support-with-office-365.md)
 
-## <a name="expressroute-for-office-365"></a>ExpressRoute for Office 365
+## <a name="expressroute-for-microsoft-365"></a>適用於 Microsoft 365 的 ExpressRoute
 
 請參閱下列文章，了解針對 Office 365 流量使用 ExpressRoute 的相關資訊：
 

@@ -21,16 +21,16 @@ search.appverid:
 - BCS160
 ms.assetid: a5efce5d-9c9c-4190-b61b-fd273c1d425f
 description: 您的 Microsoft 365 訂閱包含 Azure AD 的訂閱。 如果您想要使用您的內部部署環境進行密碼同步處理或單一登入，請整合 Microsoft 365 與 Azure AD。
-ms.openlocfilehash: ca38a7a8d5878c6efad228595cf2929650a5c869
-ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
+ms.openlocfilehash: 40426c20f12cf17955457c38d809926550efa188
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44698890"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774838"
 ---
 # <a name="azure-integration-with-microsoft-365"></a>Azure 與 Microsoft 365 的整合
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 Microsoft 365 使用 Azure Active Directory （Azure AD）來管理幕後的使用者身分識別。 您的 Microsoft 365 訂閱包含 Azure AD 的免費訂閱，如果您想要同步處理密碼或設定與您的內部部署環境的單一登入，則可以整合 Microsoft 365 與 Azure AD。 您也可以購買高級功能，以更好地管理帳戶。
   

@@ -1,7 +1,7 @@
 ---
-title: Office 365 人員控制
-ms.author: robmazz
-author: robmazz
+title: Microsoft 365 人員控制項
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,76 +14,76 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： Microsoft 人員檢測作法運作的 Office 365 的概觀。
-ms.openlocfilehash: 747d9bcc59841453e3a8233a8f1359e08f80da81
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 摘要： microsoft 365 的 Microsoft 人員濾出實踐的概述。
+ms.openlocfilehash: 337e9c1d92310d430c273683570a622a9fc3c9a5
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44775092"
 ---
-# <a name="office-365-personnel-controls"></a>Office 365 人員控制
+# <a name="microsoft-365-personnel-controls"></a>Microsoft 365 人員控制項
 
-Microsoft 的運作方式維護安全且安全的環境會正確地保護我們的員工、 客戶、 屬性、 個人資料，以及專屬資訊。 完整背景檢測程式是不可或缺的要達到此目的。 工作經驗及 internship 的所有對象所 critical 完成之前開始在 Microsoft 工作經驗背景檢測。 特定角色中的目前員工也可能需支付定期重新檢測。
+Microsoft 致力於維護安全且安全的環境，以適當保護員工、客戶、財產、個人資料及專有資訊。 全面的後臺篩選程式是實現此目標的必要條件。 所有適用于雇用和 internship 的候選人都是必要的，可在 Microsoft 開始雇用之前，先完成背景濾即用。 在特定角色中的目前員工可能也會受到定期重新篩選的制約。
 
-## <a name="the-microsoft-personnel-screening-standard"></a>Microsoft 人員檢測標準
+## <a name="the-microsoft-personnel-screening-standard"></a>Microsoft 人員篩選標準
 
-Microsoft 人員檢測標準適用於所有 Microsoft 員工、 實習人員和臨時員工參與開發、 作業或傳遞至政府或商業雲端客戶線上服務的。
+Microsoft 人員篩選標準適用于開發、操作或將線上服務傳遞給政府或商業雲端客戶的所有 Microsoft 員工、實習人員和臨時員工。
 
-過濾的人員，與 Microsoft 的企業標準和 National Institute of Standards 和技術 (NIST) 控制項對齊檢測作法運作的 Office 365 的人員。 Microsoft 人員若想要求到下列的存取會受到 Microsoft 人員檢測標準：
+Microsoft 365 的人員篩選做法，會與 Microsoft 的公司標準和跨國的標準及技術研究院（NIST）控制，以供人員篩選使用。 需要存取下列專案的 microsoft 員工會受到 Microsoft 人員篩選標準的制約：
 
-- 實體存取資料中心、 colocations、 安全的會議室、 欄、 伺服器機架或提供支援的政府或商業雲端客戶的線上服務的基礎結構的 edge 網站。
-- 政府或透過特定受管理的環境所提供的商業雲端客戶資料的邏輯存取。
-- 網路管理裝置與服務存取權，傳輸或儲存政府或商業雲端客戶資料。
+- 實體存取資料中心、colocations、安全的會議室、cages、伺服器機架或 edge 網站，可為政府或商業雲端客戶提供支援線上服務的基礎結構。
+- 透過特定受管理環境提供給政府或商業雲端客戶資料的邏輯存取。
+- 網路管理存取，可傳輸或儲存政府或商業雲端客戶資料的裝置和服務。
 
-在限制存取個人資訊的強大的隱私權法律與國家/地區，參與開發、 作業或線上服務傳遞至政府或商業雲端客戶的的人員可能需支付額外檢查。 特定人員相關的事件觸發檢測需求包括：
+在具有可限制存取個人資訊的強健隱私權法律的國家/地區中，參與向政府或商業雲端客戶進行的線上服務的開發、運作或交付人員可能會受到其他檢查。 觸發遮罩需求的特定人員相關事件包括：
 
-- 新的 Microsoft 人員處於角色檢測所在已定義的需求。
-- 內部的 Microsoft 人員傳輸或移至現有的角色，目前已包含檢測為已定義的需求。
-- 現有的角色，變更範圍以納入檢測為已定義的需求。
+- 新的 Microsoft 人員放在篩選準則為已定義需求的角色中。
+- 將內部的 Microsoft 員工轉移或移至現有的角色，目前包括篩選為已定義的需求。
+- 變更範圍以包含篩選為已定義需求的現有角色。
 
-## <a name="microsoft-pre-employment-screening"></a>Microsoft 預先聘雇檢測
+## <a name="microsoft-pre-employment-screening"></a>Microsoft 雇用預先篩選
 
-Microsoft 全域安全性部門負責確保候選項目是遮蔽開始與 Microsoft 聘雇之前的背景。
-當地法律所允許之範圍內檢查，包括下列：
+Microsoft 的全域安全性部門負責確保候選人在開始雇用 Microsoft 的工作之前，進行背景的篩選。
+在當地法律允許的範圍內，檢查包含下列專案：
 
-- 美國或確認在歐洲、 中東與亞洲政府發出文件中的身分識別中的 SSN 追蹤。
-- 刑事案件記錄檢查多達七年的層級州、 郡及本機，和聯邦層級之重刑和民事案件適用於美國境內。 國際刑事案件記錄檢查 （取決於當地法律） 是適用於美國以外的區域。
-- 確認的最高層級的 academic 成就
-- 5 年工作經驗
-- 全域禁運和強制執行檢查，其中包含 Office 的外部資產控制項 (OFAC) 清單、 部門的產業和安全性 (BIS)] 清單中，與 Office 的防禦貿易控制項辦公室排除人員 (DDTC) 清單檢查。
+- 在美國或在歐洲、中東和亞洲的政府簽發檔中確認身分識別的 SSN 追蹤。
+- 刑事病史會檢查 felony 和民事案件在州、縣和當地層級，以及在美國適當的聯邦層級檢查的七年。 國際刑事病史檢查（取決於當地法律）適用于美國境外的地區。
+- 獲得最高教育程度的確認
+- 5年入職記錄
+- 全球性制裁及強制執行檢查（包括國外資產控制（辦公室 OFAC）清單、工業和 Security （BIS）清單，以及國防商貿控制排除人員（DDTC）清單檢查的 Office。
 
-## <a name="periodic-re-screening"></a>定期重新檢測
+## <a name="periodic-re-screening"></a>定期重新篩選
 
-定期重新檢測和/或其他背景檢查可能需要針對特定管理、 安全性或其他角色，包括員工需要存取客戶資料 （請參閱雲端背景檢查） 的角色。
+您可能需要定期重新篩選和/或其他背景檢查，以進行特定管理、安全性或其他角色（包括需要存取客戶資料的角色中的員工）（請參閱雲端背景檢查）。
 
-## <a name="supplier-screening"></a>供應商檢測
+## <a name="supplier-screening"></a>供應商篩選
 
-Microsoft 會要求供應商 （臨時員工） 進行所有服務] 或 [需要擁有任何存取權限給 Microsoft，或租用設施或例如存取 Microsoft 資源的專案會執行其人員前放置背景檢查電子郵件、 網路存取、 安全或其他 access 徽章。
+Microsoft 要求供應商（臨時人員）進行預先放置背景檢查，以執行必須存取 Microsoft 擁有或租用之設施的服務或專案，或存取 Microsoft 資源，例如電子郵件、網路存取、cardkey 或其他存取徽章。
 
-供應商過濾的當地法律所允許之範圍內檢查包含下列：
+在本機法律提供者遮罩檢查所允許的範圍內包含下列專案：
 
-- 美國或確認在歐洲、 中東與亞洲政府發出文件中的身分識別中的 SSN 追蹤。
-- 刑事案件記錄檢查多達七年的層級州、 郡及本機，和聯邦層級之重刑和民事案件適用於美國境內。 國際刑事案件記錄檢查 （取決於當地法律） 是適用於美國以外的區域。
-- 確認的最高層級的 academic 成就
-- 全域禁運並強制執行檢查
+- 在美國或在歐洲、中東和亞洲的政府簽發檔中確認身分識別的 SSN 追蹤。
+- 刑事病史會檢查 felony 和民事案件在州、縣和當地層級，以及在美國適當的聯邦層級檢查的七年。 國際刑事病史檢查（取決於當地法律）適用于美國境外的地區。
+- 獲得最高教育程度的確認
+- 全球制裁並強制執行檢查
 
-美國前當地法律所允許之範圍內執行的 Microsoft，每一個供應商人員成員的每個位置中的供應商會進行前的位置，並針對特定二元，定期，背景檢查運用 Microsoft慣用的背景檢查過濾服務提供者將會確認給 Microsoft 檢測符合 Microsoft 的標準。 
+在美國每個供應商員工每個位置的每一個位置之前，若要在當地法律所允許的程度範圍內，供應商將會進行預先安置，而且在某些位置、定期、背景檢查會針對 microsoft 的慣用背景檢查服務提供者確認該篩選符合 Microsoft standard。 
 
-具有國別設定，在所有國家/地區中由年 9 月 2020年實作前述的需求和目前尚未實作，位置與第三方合約指定必須進行的檢測 Microsoft 的需求，而且供應商負責中寫入已成功完成背景檢查負責確認給 Microsoft。
+在國際上，上述需求將會在2020年9月後於所有國家/地區實施，而且目前未實施，協力廠商的合約會指定 Microsoft 在進行篩選時必須執行的要求，而提供者會在撰寫已成功完成背景檢查的情況下，負責 attesting 至 Microsoft。
 
-## <a name="microsoft-cloud-background-check"></a>Microsoft 雲端背景檢查
+## <a name="microsoft-cloud-background-check"></a>Microsoft cloud 背景檢查
 
-Microsoft 雲端背景檢查有僱用為員工提供 Office 365 相關的服務，在美國境內的對象。 在美國境內的客戶資料的存取權的 Microsoft 員工所必須遵守所有 Office 365 服務所需的 Microsoft 雲端背景檢查程序。 美國的外部程序而異。 例如，Microsoft Cloud 德國的使用資料信任者核准模型，為了確保資料信任者 （德國公司），並不是 Microsoft，是在控制項的客戶資料的存取權。 Microsoft Cloud 德國傳遞來自德國資料中心，並包含資料信任者技術人員作業中心 (OC) 也是在德國。 在資料中心和 OC 設施運作、 維護和由資料信任者所控制。
+若員工聘用的候選人是美國的 Microsoft 365 相關服務，則必須使用 Microsoft 雲端背景檢查。 在美國，具有客戶資料存取權的 microsoft 員工，必須遵循所有 Microsoft 365 服務所需的 Microsoft 雲端背景檢查程式。 在美國境外，程式會有所不同。 例如，德國的 Microsoft 雲端使用資料受信者核准模型，其設計目的是為了確保資料受信者（德國公司），而不是 Microsoft，可控制對客戶資料的存取。 德國的 Microsoft 雲端是從德國送出的資料中心，而包含資料受託者的技術人員的操作中心（OC）也是德國。 資料受信者都可以運作、維護和控制資料中心與 OC 功能。
 
-當地法律所允許的範圍內，下列檢查被執行 Microsoft 雲端背景檢查的一部分。
+若要使用本機法律所允許的程度，請執行下列檢查，做為 Microsoft Cloud 背景檢查的一部分。
 
-- 美國： 社會安全號碼追蹤
-- 刑事案件記錄檢查多達七年的層級州、 郡及本機，和聯邦層級之重刑和民事案件適用於美國境內。 國際刑事案件記錄檢查 （取決於當地法律） 是適用於美國以外的區域。
-- 全域禁運和強制執行檢查，其中包含 Office 的外部資產控制項 (OFAC) 清單、 部門的產業和安全性 (BIS)] 清單中，與 Office 的防禦貿易控制項辦公室排除人員 (DDTC) 清單檢查。
+- 美國：社交安全性號碼追蹤
+- 刑事病史會檢查 felony 和民事案件在州、縣和當地層級，以及在美國適當的聯邦層級檢查的七年。 國際刑事病史檢查（取決於當地法律）適用于美國境外的地區。
+- 全球性制裁及強制執行檢查（包括國外資產控制（辦公室 OFAC）清單、工業和 Security （BIS）清單，以及國防商貿控制排除人員（DDTC）清單檢查的 Office。
 
-從 「 Microsoft 雲端背景檢查結果會儲存在我們的員工資料庫，並連接到我們的資料中心訪問控制系統。 Microsoft 雲端背景檢查過期取決於該員工並不會更新它，存取 Office 365 服務已撤銷且不再提供 Microsoft 雲端背景檢查完成之前。 與 Microsoft 的工作經驗關係結束時，資料中心的所有存取是立即都撤銷。
+Microsoft Cloud 背景檢查的結果會儲存在我們的員工資料庫中，並聯機至我們的資料中心存取控制系統。 如果 Microsoft Cloud 背景檢查到期，且員工未加以更新，將會取消對 Microsoft 365 服務的存取，且無法再使用，直到 Microsoft Cloud 背景檢查完成為止。 當與 Microsoft 的雇用關聯結束時，會立即撤銷所有資料中心存取。
 
-美國公民已驗證的實體或邏輯存取 Office 365 美國政府服務的所有員工。 若要確認公民，員工及/或新聘人員應徵者符合人員訓練，檢閱確認美國公民的文件的美國公民委派。 員工或新聘人員應徵者必須將必要的文件，並登入會議，其區域公民代理人證明表單。 會議工作必須執行的人員。 一旦個別具有符合與公民委派，並提供所需的文件和簽章，公民委派轉送給 Microsoft 專業人員的作業提交複製到的記錄保留一份文件。
+以實體或邏輯方式存取 Microsoft 365 美國政府服務的所有員工驗證美國公民。 若要確認公民，員工和（或）新雇用候選人符合美國公民代理人，其訓練有素的人員可驗證美國公民的檔。 員工或新的雇用候選人必須採用必要的檔，並以其所在地區的公民代理人簽署證明表單的會議。 會議必須以人員進行。 當個人符合公民代理人並提供必要的檔及簽章後，公民代理人會將檔副本轉寄給提交副本以保留記錄的 Microsoft 人員人員作業。
 
-為遵守聯邦政府包括過濾的人員 FBI[司法正義 Information Services](https://www.fbi.gov/services/cjis) (CJIS) 的需求所需人員與邏輯存取 Office 365 美國政府社群雲端或邏輯或實體的存取權的 Azure 美國政府版供應項目。 支援的 Office 365 US Government 服務 CJIS 檢測包含所指定的[狀態，已註冊](https://blogs.office.com/2013/10/23/california-and-microsoft-sign-cjis-security-policy-agreement/)的 Microsoft Online Services CJIS 支援程式中的 adjudicator CJIS 系統機構 adjudicated 指紋式刑事案件背景檢查。
+在遵守 FBI[刑事審判資訊服務](https://www.fbi.gov/services/cjis)（CJIS）的聯邦政府需求（包括人員篩選）時，，具有對 Microsoft 365 美國政府社區雲端的邏輯存取，或邏輯或實體存取 Azure 美國政府版服務的人員，都有必要使用。 CJIS 濾入對 Microsoft 365 美國政府服務的支援包含以指紋為基礎的刑事背景檢查州裁定，由 CJIS 系統代理商在 Microsoft Online Services CJIS 支援計畫中[註冊的狀態](https://blogs.office.com/2013/10/23/california-and-microsoft-sign-cjis-security-policy-agreement/)中指定 adjudicator。

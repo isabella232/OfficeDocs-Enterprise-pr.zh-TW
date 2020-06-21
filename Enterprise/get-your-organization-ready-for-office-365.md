@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 712fced7-f9d0-4fde-8b79-286262a5d0bc
 description: 取得資源的存取權，以規劃 Microsoft 365 企業版部署。
-ms.openlocfilehash: 106ee743f6f1ddd49d2d81d653f97bfa40566649
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: 4b779365fc1dbad05e1eacbba1e346530952d372
+ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "44774468"
 ---
 # <a name="plan-for-microsoft-365-enterprise"></a>Microsoft 365 Enterprise 的計畫
 
@@ -33,7 +33,7 @@ ms.locfileid: "44735791"
 
 ## <a name="planning-with-microsoft-365-fasttrack"></a>使用 Microsoft 365 FastTrack 進行規劃
 
-[FastTrack microsoft 365](https://www.microsoft.com/en-us/fasttrack/microsoft-365)是取得 microsoft 365 部署計畫的最佳方法。 FastTrack 可協助您完成最常見的設計考慮，也可以在方法中解答問題。 
+[FastTrack microsoft 365](https://www.microsoft.com/fasttrack/microsoft-365)是取得 microsoft 365 部署計畫的最佳方法。 FastTrack 可協助您完成最常見的設計考慮，也可以在方法中解答問題。 
 
 >[!Note]
 >您也可以從[Microsoft 合作夥伴](https://www.microsoft.com/solution-providers/home)取得協助。
