@@ -1,9 +1,9 @@
 ---
-title: 使用集中式部署 PowerShell cmdlet 來管理增益集
-ms.author: twerner
-author: twernermsft
-manager: scotv
-ms.date: 5/31/2017
+title: 使用集中式部署 PowerShell Cmdlet 來管理增益集
+ms.author: kvice
+author: kelleyvice-msft
+manager: laurawi
+ms.date: 1/24/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,158 +15,264 @@ search.appverid:
 - MBS150
 - BCS160
 ms.assetid: 94f4e86d-b8e5-42dd-b558-e6092f830ec9
-description: 使用集中式部署 PowerShell cmdlet 來協助您部署及管理 Office 增益集的 Office 365 組織。
-ms.openlocfilehash: 34040d11a1ef4d5da2d7a0e980b28e7ef0eba7fb
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+f1.keywords:
+- NOCSH
+description: 使用集中式部署 PowerShell Cmdlet，協助您部署及管理 Office 365 組織的 Office 增益集。
+ms.openlocfilehash: 52445b2f2ff6d9fdf3f5997e1c76adbd1808e56f
+ms.sourcegitcommit: 12a22fa9224ab2a29330ee0aabecff28d577d7e6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070499"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "44861120"
 ---
-# <a name="use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins"></a><span data-ttu-id="95e99-103">使用集中式部署 PowerShell cmdlet 來管理增益集</span><span class="sxs-lookup"><span data-stu-id="95e99-103">Use the Centralized Deployment PowerShell cmdlets to manage add-ins</span></span>
+# <a name="use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins"></a><span data-ttu-id="29f46-103">使用集中式部署 PowerShell Cmdlet 來管理增益集</span><span class="sxs-lookup"><span data-stu-id="29f46-103">Use the Centralized Deployment PowerShell cmdlets to manage add-ins</span></span>
 
-<span data-ttu-id="95e99-104">身為 Office 365 系統管理員，您可以對透過集中式部署的使用者部署 Office 增益集的功能 （請參閱[部署 Office 增益集在 Office 365 系統管理中心中](https://support.office.com/article/737e8c86-be63-44d7-bf02-492fa7cd9c3f.aspx)）。</span><span class="sxs-lookup"><span data-stu-id="95e99-104">As an Office 365 admin, you can deploy Office add-ins to users via the Centralized Deployment feature (see [Deploy Office Add-ins in the Office 365 Admin Center](https://support.office.com/article/737e8c86-be63-44d7-bf02-492fa7cd9c3f.aspx)).</span></span> <span data-ttu-id="95e99-105">除了部署 Office 增益集透過 Office 365 系統管理中心，您也可以使用 Microsoft PowerShell。</span><span class="sxs-lookup"><span data-stu-id="95e99-105">In addition to deploying Office add-ins via the Office 365 admin center, you can also use Microsoft PowerShell.</span></span> <span data-ttu-id="95e99-106">安裝的[O365 集中式的 Windows PowerShell 的增益集部署模組](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment)。</span><span class="sxs-lookup"><span data-stu-id="95e99-106">Install the [O365 Centralized Add-In Deployment Module for Windows PowerShell](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment).</span></span> 
+<span data-ttu-id="29f46-104">做為 Microsoft 365 全域管理員，您可以透過集中式部署功能，將 Office 增益集部署給使用者（請參閱[在系統管理中心部署 Office 增益集](https://support.office.com/article/737e8c86-be63-44d7-bf02-492fa7cd9c3f.aspx)）。</span><span class="sxs-lookup"><span data-stu-id="29f46-104">As a Microsoft 365 global admin, you can deploy Office add-ins to users via the Centralized Deployment feature (see [Deploy Office Add-ins in the admin center](https://support.office.com/article/737e8c86-be63-44d7-bf02-492fa7cd9c3f.aspx)).</span></span> <span data-ttu-id="29f46-105">除了透過 Microsoft 365 系統管理中心部署 Office 增益集之外，您也可以使用 Microsoft PowerShell。</span><span class="sxs-lookup"><span data-stu-id="29f46-105">In addition to deploying Office add-ins via the Microsoft 365 admin center, you can also use Microsoft PowerShell.</span></span> <span data-ttu-id="29f46-106">安裝[適用于 Windows PowerShell 的 O365 集中式 Add-In 部署模組](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment)。</span><span class="sxs-lookup"><span data-stu-id="29f46-106">Install the [O365 Centralized Add-In Deployment Module for Windows PowerShell](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment).</span></span> 
+
+<span data-ttu-id="29f46-107">下載該模組之後，請開啟一般 Windows PowerShell 視窗，並執行下列 Cmdlet：</span><span class="sxs-lookup"><span data-stu-id="29f46-107">After you download the module, open a regular Windows PowerShell window and run the following cmdlet:</span></span>
+
+```powershell
+ Import-Module -Name O365CentralizedAddInDeployment
+```
     
-## <a name="connect-using-your-admin-credentials"></a><span data-ttu-id="95e99-107">使用您的系統管理員認證來連線</span><span class="sxs-lookup"><span data-stu-id="95e99-107">Connect using your admin credentials</span></span>
+## <a name="connect-using-your-admin-credentials"></a><span data-ttu-id="29f46-108">使用您的系統管理員認證進行連線</span><span class="sxs-lookup"><span data-stu-id="29f46-108">Connect using your admin credentials</span></span>
 
-<span data-ttu-id="95e99-108">您可以使用集中式部署 cmdlet 之前，您需要登入。</span><span class="sxs-lookup"><span data-stu-id="95e99-108">Before you can use the Centralized Deployment cmdlets, you need to sign in.</span></span>
+<span data-ttu-id="29f46-109">在您可以使用集中式部署 Cmdlet 之前，您必須先登入。</span><span class="sxs-lookup"><span data-stu-id="29f46-109">Before you can use the Centralized Deployment cmdlets, you need to sign in.</span></span>
   
-1. <span data-ttu-id="95e99-109">啟動 PowerShell。</span><span class="sxs-lookup"><span data-stu-id="95e99-109">Start PowerShell.</span></span>
+1. <span data-ttu-id="29f46-110">開始 PowerShell。</span><span class="sxs-lookup"><span data-stu-id="29f46-110">Start PowerShell.</span></span>
     
-2. <span data-ttu-id="95e99-110">使用您的公司系統管理員認證連線到 PowerShell。</span><span class="sxs-lookup"><span data-stu-id="95e99-110">Connect to PowerShell by using your company admin credentials.</span></span> <span data-ttu-id="95e99-111">執行下列 cmdlet。</span><span class="sxs-lookup"><span data-stu-id="95e99-111">Run the following cmdlet.</span></span>
+2. <span data-ttu-id="29f46-111">使用您公司的系統管理員認證來連線至 PowerShell。</span><span class="sxs-lookup"><span data-stu-id="29f46-111">Connect to PowerShell by using your company admin credentials.</span></span> <span data-ttu-id="29f46-112">執行下列 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="29f46-112">Run the following cmdlet.</span></span>
     
-  ```
+  ```powershell
   Connect-OrganizationAddInService
   ```
 
-3. <span data-ttu-id="95e99-112">在 [**輸入認證**] 頁面上，輸入您的 Office 365 全域系統管理員認證。</span><span class="sxs-lookup"><span data-stu-id="95e99-112">In the **Enter Credentials** page, enter your Office 365 global admin credentials.</span></span> <span data-ttu-id="95e99-113">或者，您可以直接在指令程式輸入您的認證。</span><span class="sxs-lookup"><span data-stu-id="95e99-113">Alternately, you can enter your credentials directly into the cmdlet.</span></span> 
+3. <span data-ttu-id="29f46-113">在 [**輸入認證**] 頁面中，輸入您的 Office 365 全域系統管理員認證。</span><span class="sxs-lookup"><span data-stu-id="29f46-113">In the **Enter Credentials** page, enter your Office 365 global admin credentials.</span></span> <span data-ttu-id="29f46-114">或者，您也可以直接在 Cmdlet 中輸入認證。</span><span class="sxs-lookup"><span data-stu-id="29f46-114">Alternately, you can enter your credentials directly into the cmdlet.</span></span> 
     
-    <span data-ttu-id="95e99-114">請執行下列 cmdlet 指定您的公司系統管理員認證的 PSCredential 物件。</span><span class="sxs-lookup"><span data-stu-id="95e99-114">Run the following cmdlet specifying your company admin credentials as a PSCredential object.</span></span>
+    <span data-ttu-id="29f46-115">執行下列 Cmdlet，將您的公司系統管理員認證指定為 PSCredential 物件。</span><span class="sxs-lookup"><span data-stu-id="29f46-115">Run the following cmdlet specifying your company admin credentials as a PSCredential object.</span></span>
     
-  ```
+  ```powershell
   $secpasswd = ConvertTo-SecureString "MyPassword" -AsPlainText -Force
   $mycredentials = New-Object System.Management.Automation.PSCredential ("serviceaccount@contoso.com", $secpasswd)
   Connect-OrganizationAddInService -Credential $mycredentials
   ```
 
 > [!NOTE]
-> <span data-ttu-id="95e99-115">如需使用 PowerShell 的詳細資訊，請參閱 < <b0>Connect to Office 365 PowerShell</b0>。</span><span class="sxs-lookup"><span data-stu-id="95e99-115">For more information about using PowerShell, see [Connect to Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?linkid=848585).</span></span> 
+> <span data-ttu-id="29f46-116">如需使用 PowerShell 的詳細資訊，請參閱[Connect To Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?linkid=848585)。</span><span class="sxs-lookup"><span data-stu-id="29f46-116">For more information about using PowerShell, see [Connect to Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?linkid=848585).</span></span> 
   
-## <a name="upload-an-add-in-manifest"></a><span data-ttu-id="95e99-116">上傳增益集資訊清單</span><span class="sxs-lookup"><span data-stu-id="95e99-116">Upload an add-in manifest</span></span>
+## <a name="upload-an-add-in-manifest"></a><span data-ttu-id="29f46-117">上傳增益集資訊清單</span><span class="sxs-lookup"><span data-stu-id="29f46-117">Upload an add-in manifest</span></span>
 
-<span data-ttu-id="95e99-117">執行新增 OrganizationAdd 中指令程式上傳增益集資訊清單從可以是檔案的位置或 URL 的路徑。</span><span class="sxs-lookup"><span data-stu-id="95e99-117">Run the New-OrganizationAdd-In cmdlet to upload an add-in manifest from a path, which can be either a file location or URL.</span></span> <span data-ttu-id="95e99-118">下列範例會顯示_ManifestPath_參數的值的檔案位置。</span><span class="sxs-lookup"><span data-stu-id="95e99-118">The following example shows a file location for the value of the  _ManifestPath_ parameter.</span></span> 
+<span data-ttu-id="29f46-118">執行**新的 OrganizationAdd** Cmdlet，從路徑（可以是檔案位置或 URL）上傳增益集資訊清單。</span><span class="sxs-lookup"><span data-stu-id="29f46-118">Run the **New-OrganizationAdd-In** cmdlet to upload an add-in manifest from a path, which can be either a file location or URL.</span></span> <span data-ttu-id="29f46-119">下列範例會顯示_ManifestPath_參數值的檔案位置。</span><span class="sxs-lookup"><span data-stu-id="29f46-119">The following example shows a file location for the value of the  _ManifestPath_ parameter.</span></span> 
   
-```
+```powershell
 New-OrganizationAddIn -ManifestPath 'C:\Users\Me\Desktop\taskpane.xml' -Locale 'en-US'
 ```
 
-<span data-ttu-id="95e99-119">您也可以執行新增 OrganizationAdd 中指令程式上傳增益集，並將其指派給使用者或群組直接使用_Members_參數，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="95e99-119">You can also run the New-OrganizationAdd-In cmdlet to upload an add-in and assign it to users or groups directly by using the  _Members_ parameter, as shown in the following example.</span></span> <span data-ttu-id="95e99-120">請使用逗號分隔成員的電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="95e99-120">Separate the email addresses of members with a comma.</span></span> 
+<span data-ttu-id="29f46-120">您也可以執行**新的 OrganizationAdd** Cmdlet，以上傳增益集，並使用_Members_參數直接將其指派給使用者或群組，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="29f46-120">You can also run the **New-OrganizationAdd-In** cmdlet to upload an add-in and assign it to users or groups directly by using the  _Members_ parameter, as shown in the following example.</span></span> <span data-ttu-id="29f46-121">以逗號分隔成員的電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="29f46-121">Separate the email addresses of members with a comma.</span></span> 
   
-```
+```powershell
 New-OrganizationAddIn -ManifestPath 'C:\Users\Me\Desktop\taskpane.xml' -Locale 'en-US' -Members  'KathyBonner@contoso.com', 'MaxHargrave@contoso.com'
 ```
 
-## <a name="upload-an-add-in-from-the-office-store"></a><span data-ttu-id="95e99-121">上傳增益集從 Office 市集</span><span class="sxs-lookup"><span data-stu-id="95e99-121">Upload an add-in from the Office Store</span></span>
+## <a name="upload-an-add-in-from-the-office-store"></a><span data-ttu-id="29f46-122">從 Office Store 上載增益集</span><span class="sxs-lookup"><span data-stu-id="29f46-122">Upload an add-in from the Office Store</span></span>
 
-<span data-ttu-id="95e99-122">執行新增 OrganizationAddIn cmdlet，從 Office 市集的資訊清單上載。</span><span class="sxs-lookup"><span data-stu-id="95e99-122">Run the New-OrganizationAddIn cmdlet to upload a manifest from the Office Store.</span></span>
+<span data-ttu-id="29f46-123">執行**OrganizationAddIn 指令程式**，以從 Office 存放區上傳資訊清單。</span><span class="sxs-lookup"><span data-stu-id="29f46-123">Run the **New-OrganizationAddIn** cmdlet to upload a manifest from the Office Store.</span></span>
   
-<span data-ttu-id="95e99-123">在下列範例中，新增 OrganizationAddIn 指令程式會指定增益集的美國位置和內容市場 AssetId。</span><span class="sxs-lookup"><span data-stu-id="95e99-123">In the following example, the New-OrganizationAddIn cmdlet specifies the AssetId for an add-in for a United States location and content market.</span></span>
+<span data-ttu-id="29f46-124">在下列範例中， **OrganizationAddIn** Cmdlet 會為美國位置和內容市場的增益集指定 AssetId。</span><span class="sxs-lookup"><span data-stu-id="29f46-124">In the following example, the **New-OrganizationAddIn** cmdlet specifies the AssetId for an add-in for a United States location and content market.</span></span>
   
-```
+```powershell
 New-OrganizationAddIn -AssetId 'WA104099688' -Locale 'en-US' -ContentMarket 'en-US'
 ```
 
-<span data-ttu-id="95e99-124">若要判斷_AssetId_參數的值，您可以將它複製從增益集之 Office 市集網頁的 URL。</span><span class="sxs-lookup"><span data-stu-id="95e99-124">To determine the value for the  _AssetId_ parameter, you can copy it from the URL of the Office Store webpage for the add-in.</span></span> <span data-ttu-id="95e99-125">AssetIds 一律的開頭"WA"後面接著一個數字。</span><span class="sxs-lookup"><span data-stu-id="95e99-125">AssetIds always begin with "WA" followed by a number.</span></span> <span data-ttu-id="95e99-126">例如，在前一個範例中，WA104099688 AssetId 值的來源是增益集的 Office 市集網頁 URL: [https://store.office.com/en-001/app.aspx?assetid=WA104099688](https://store.office.com/en-001/app.aspx?assetid=WA104099688)。</span><span class="sxs-lookup"><span data-stu-id="95e99-126">For example, in the previous example, the source for the AssetId value of WA104099688 is the Office Store webpage URL for the add-in: [https://store.office.com/en-001/app.aspx?assetid=WA104099688](https://store.office.com/en-001/app.aspx?assetid=WA104099688).</span></span>
+<span data-ttu-id="29f46-125">若要決定_AssetId_參數的值，您可以從增益集的 Office STORE 網頁 URL 進行複製。</span><span class="sxs-lookup"><span data-stu-id="29f46-125">To determine the value for the  _AssetId_ parameter, you can copy it from the URL of the Office Store webpage for the add-in.</span></span> <span data-ttu-id="29f46-126">AssetIds 永遠以 "WA" 開頭，後面接數位。</span><span class="sxs-lookup"><span data-stu-id="29f46-126">AssetIds always begin with "WA" followed by a number.</span></span> <span data-ttu-id="29f46-127">例如，在上一個範例中，WA104099688 的 AssetId 值來源為增益集的 Office Store 網頁 URL： [https://store.office.com/en-001/app.aspx?assetid=WA104099688](https://store.office.com/en-001/app.aspx?assetid=WA104099688) 。</span><span class="sxs-lookup"><span data-stu-id="29f46-127">For example, in the previous example, the source for the AssetId value of WA104099688 is the Office Store webpage URL for the add-in: [https://store.office.com/en-001/app.aspx?assetid=WA104099688](https://store.office.com/en-001/app.aspx?assetid=WA104099688).</span></span>
   
-<span data-ttu-id="95e99-127">_Locale_參數和_ContentMarket_參數的值相同，並指出您嘗試安裝增益集從國家/地區。</span><span class="sxs-lookup"><span data-stu-id="95e99-127">The values for the  _Locale_ parameter and the  _ContentMarket_ parameter are identical and indicate the country/region you're trying to install the add-in from.</span></span> <span data-ttu-id="95e99-128">格式是 EN-US，FR-FR。</span><span class="sxs-lookup"><span data-stu-id="95e99-128">The format is en-US, fr-FR.</span></span> <span data-ttu-id="95e99-129">依此類推。</span><span class="sxs-lookup"><span data-stu-id="95e99-129">and so forth.</span></span> 
+<span data-ttu-id="29f46-128">_Locale_參數和_ContentMarket_參數的值相同，並指出您嘗試安裝增益集的國家/地區。</span><span class="sxs-lookup"><span data-stu-id="29f46-128">The values for the  _Locale_ parameter and the  _ContentMarket_ parameter are identical and indicate the country/region you're trying to install the add-in from.</span></span> <span data-ttu-id="29f46-129">格式為 en-US，fr-FR。</span><span class="sxs-lookup"><span data-stu-id="29f46-129">The format is en-US, fr-FR.</span></span> <span data-ttu-id="29f46-130">等等。</span><span class="sxs-lookup"><span data-stu-id="29f46-130">and so forth.</span></span> 
   
 > [!NOTE]
-> <span data-ttu-id="95e99-130">增益集從 Office 市集上傳將會自動更新的最新可用更新的 Office 存放區上的幾天內。</span><span class="sxs-lookup"><span data-stu-id="95e99-130">Add-ins uploaded from the Office Store will update automatically within a few days of the latest update being available on the Office Store.</span></span> 
+> <span data-ttu-id="29f46-131">從 Office Store 上傳的增益集會在 Office 市集中的最新更新可用幾天內自動更新。</span><span class="sxs-lookup"><span data-stu-id="29f46-131">Add-ins uploaded from the Office Store will update automatically within a few days of the latest update being available on the Office Store.</span></span> 
   
-## <a name="get-details-of-an-add-in"></a><span data-ttu-id="95e99-131">取得增益集的詳細資料</span><span class="sxs-lookup"><span data-stu-id="95e99-131">Get details of an add-in</span></span>
+## <a name="get-details-of-an-add-in"></a><span data-ttu-id="29f46-132">取得增益集的詳細資料</span><span class="sxs-lookup"><span data-stu-id="29f46-132">Get details of an add-in</span></span>
 
-<span data-ttu-id="95e99-132">執行 Get OrganizationAddIn 指令程式，如下所示要上傳至租用戶，所有增益集的詳細資料包含增益集的產品識別碼。</span><span class="sxs-lookup"><span data-stu-id="95e99-132">Run the Get-OrganizationAddIn cmdlet as shown below to get details of all add-ins uploaded to the tenant, included an add-in's product ID.</span></span>
+<span data-ttu-id="29f46-133">執行**OrganizationAddIn 指令程式**（如下所示），以取得上傳至租使用者的所有增益集的詳細資料，包括增益集的產品識別碼。</span><span class="sxs-lookup"><span data-stu-id="29f46-133">Run the **Get-OrganizationAddIn** cmdlet as shown below to get details of all add-ins uploaded to the tenant, included an add-in's product ID.</span></span>
   
-```
+```powershell
 Get-OrganizationAddIn
 ```
 
-<span data-ttu-id="95e99-133">執行 Get OrganizationAddIn 指令程式搭配_ProductId_參數，以指定的增益集您想要擷取的詳細資料的值。</span><span class="sxs-lookup"><span data-stu-id="95e99-133">Run the Get-OrganizationAddIn cmdlet with a value for the  _ProductId_ parameter to specify which add-in you want to retrieve details for.</span></span> 
+<span data-ttu-id="29f46-134">使用_ProductId_參數的值來執行**OrganizationAddIn 指令程式**，以指定您要從中取得詳細資料的增益集。</span><span class="sxs-lookup"><span data-stu-id="29f46-134">Run the **Get-OrganizationAddIn** cmdlet with a value for the  _ProductId_ parameter to specify which add-in you want to retrieve details for.</span></span> 
   
-```
+```powershell
 Get-OrganizationAddIn -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122
 ```
 
-<span data-ttu-id="95e99-134">若要取得的所有增益集加上指定的使用者和群組的完整詳細資料，將輸出內容輸送到 Format-list 指令程式，取得 OrganizationAddIn 指令程式在下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="95e99-134">To get full details of all the add-ins plus the assigned users and groups, pipe the output of the Get-OrganizationAddIn cmdlet to the Format-List cmdlet, as shown in the following example.</span></span>
+<span data-ttu-id="29f46-135">若要取得所有增益集的完整詳細資料以及所指派的使用者和群組，請將**OrganizationAddIn**指令程式的輸出輸送至 Format-List Cmdlet，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="29f46-135">To get full details of all the add-ins plus the assigned users and groups, pipe the output of the **Get-OrganizationAddIn** cmdlet to the Format-List cmdlet, as shown in the following example.</span></span>
   
-```
-Get-OrganizationAddIn |Format-List
+```powershell
+foreach($G in (Get-organizationAddIn)){Get-OrganizationAddIn -ProductId $G.ProductId | Format-List}
 ```
 
-## <a name="turn-on-or-turn-off-an-add-in"></a><span data-ttu-id="95e99-135">開啟或關閉 [增益集</span><span class="sxs-lookup"><span data-stu-id="95e99-135">Turn on or turn off an add-in</span></span>
+## <a name="turn-on-or-turn-off-an-add-in"></a><span data-ttu-id="29f46-136">開啟或關閉增益集</span><span class="sxs-lookup"><span data-stu-id="29f46-136">Turn on or turn off an add-in</span></span>
 
-<span data-ttu-id="95e99-136">若要讓使用者和群組指派給它，將不再有存取，請開啟關閉增益集，請執行組 OrganizationAddIn 指令程式搭配_ProductId_參數和將_Enabled_參數設為`$false`，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="95e99-136">To turn off an add-in so users and groups that are assigned to it will no longer have access, run the Set-OrganizationAddIn cmdlet with the  _ProductId_ parameter and the  _Enabled_ parameter set to  `$false`, as shown in the following example.</span></span>
+<span data-ttu-id="29f46-137">若要關閉增益集，讓指派給它的使用者和群組不再具有存取權，請使用_ProductId_參數和_Enabled_參數設定為，以執行**OrganizationAddIn 指令程式**， `$false` 如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="29f46-137">To turn off an add-in so users and groups that are assigned to it will no longer have access, run the **Set-OrganizationAddIn** cmdlet with the  _ProductId_ parameter and the  _Enabled_ parameter set to  `$false`, as shown in the following example.</span></span>
   
-```
+```powershell
 Set-OrganizationAddIn -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -Enabled $false
 ```
 
-<span data-ttu-id="95e99-137">若要開啟的增益集後，請執行相同的指令程式搭配將_Enabled_參數設為`$true`。</span><span class="sxs-lookup"><span data-stu-id="95e99-137">To turn an add-in back on, run the same cmdlet with the  _Enabled_ parameter set to  `$true`.</span></span>
+<span data-ttu-id="29f46-138">若要將增益集重新開啟，請執行與_Enabled_參數設定為相同的 Cmdlet `$true` 。</span><span class="sxs-lookup"><span data-stu-id="29f46-138">To turn an add-in back on, run the same cmdlet with the  _Enabled_ parameter set to  `$true`.</span></span>
   
-```
+```powershell
 Set-OrganizationAddIn -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -Enabled $true
 ```
 
-## <a name="add-or-remove-users-from-an-add-in"></a><span data-ttu-id="95e99-138">新增或移除使用者的增益集</span><span class="sxs-lookup"><span data-stu-id="95e99-138">Add or remove users from an add-in</span></span>
+## <a name="add-or-remove-users-from-an-add-in"></a><span data-ttu-id="29f46-139">新增或移除增益集中的使用者</span><span class="sxs-lookup"><span data-stu-id="29f46-139">Add or remove users from an add-in</span></span>
 
-<span data-ttu-id="95e99-139">若要將使用者和群組新增至特定的增益集，請使用_ProductId_、_新增_、 和_成員_的參數執行組 OrganizationAddInAssignments 指令程式。</span><span class="sxs-lookup"><span data-stu-id="95e99-139">To add users and groups to a specific add-in, run the Set-OrganizationAddInAssignments cmdlet with the  _ProductId_,  _Add_, and  _Members_ parameters.</span></span> <span data-ttu-id="95e99-140">請使用逗號分隔成員的電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="95e99-140">Separate the email addresses of members with a comma.</span></span> 
+<span data-ttu-id="29f46-140">若要將使用者和群組新增至特定增益集，請使用_ProductId_、 _add_和_Members_參數執行**OrganizationAddInAssignments** Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="29f46-140">To add users and groups to a specific add-in, run the **Set-OrganizationAddInAssignments** cmdlet with the  _ProductId_,  _Add_, and  _Members_ parameters.</span></span> <span data-ttu-id="29f46-141">以逗號分隔成員的電子郵件地址。</span><span class="sxs-lookup"><span data-stu-id="29f46-141">Separate the email addresses of members with a comma.</span></span> 
   
-```
+```powershell
 Set-OrganizationAddInAssignments -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -Add -Members 'KathyBonner@contoso.com','sales@contoso.com'
 ```
 
-<span data-ttu-id="95e99-141">若要移除使用者和群組，執行相同的指令程式使用_移除_參數。</span><span class="sxs-lookup"><span data-stu-id="95e99-141">To remove users and groups, run the same cmdlet using the  _Remove_ parameter.</span></span> 
+<span data-ttu-id="29f46-142">若要移除使用者和群組，請使用_移除_參數來執行相同的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="29f46-142">To remove users and groups, run the same cmdlet using the  _Remove_ parameter.</span></span> 
   
-```
+```powershell
 Set-OrganizationAddInAssignments -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -Remove -Members 'KathyBonner@contoso.com','sales@contoso.com'
 ```
 
-<span data-ttu-id="95e99-142">若要將增益集指派給租用戶上的所有使用者，執行相同的指令程式使用_AssignToEveryone_參數具有值設定為`$true`。</span><span class="sxs-lookup"><span data-stu-id="95e99-142">To assign an add-in to all users on the tenant, run the same cmdlet using the  _AssignToEveryone_ parameter with the value set to  `$true`.</span></span>
+<span data-ttu-id="29f46-143">若要將增益集指派給租使用者上的所有使用者，請使用_AssignToEveryone_參數設定為，以執行相同的 Cmdlet `$true` 。</span><span class="sxs-lookup"><span data-stu-id="29f46-143">To assign an add-in to all users on the tenant, run the same cmdlet using the  _AssignToEveryone_ parameter with the value set to  `$true`.</span></span>
   
-```
+```powershell
 Set-OrganizationAddInAssignments -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -AssignToEveryone $true
 ```
 
-<span data-ttu-id="95e99-143">不將增益集指派給所有人，並還原先前指派的使用者和群組，您可以執行相同的指令程式，並關閉_AssignToEveryone_參數，其值設定為`$false`。</span><span class="sxs-lookup"><span data-stu-id="95e99-143">To not assign an add-in to everyone and revert to the previously assigned users and groups, you can run the same cmdlet and turn off the  _AssignToEveryone_ parameter by setting its value to  `$false`.</span></span>
+<span data-ttu-id="29f46-144">若要將增益集指派給所有人，並回復至先前指派的使用者和群組，您可以執行相同的指令程式，並將 AssignToEveryone 參數的值設為，以關閉_AssignToEveryone_參數 `$false` 。</span><span class="sxs-lookup"><span data-stu-id="29f46-144">To not assign an add-in to everyone and revert to the previously assigned users and groups, you can run the same cmdlet and turn off the  _AssignToEveryone_ parameter by setting its value to  `$false`.</span></span>
   
-```
+```powershell
 Set-OrganizationAddInAssignments -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -AssignToEveryone $false
 ```
 
-## <a name="update-an-add-in"></a><span data-ttu-id="95e99-144">更新增益集</span><span class="sxs-lookup"><span data-stu-id="95e99-144">Update an add-in</span></span>
+## <a name="update-an-add-in"></a><span data-ttu-id="29f46-145">更新增益集</span><span class="sxs-lookup"><span data-stu-id="29f46-145">Update an add-in</span></span>
 
-<span data-ttu-id="95e99-145">若要更新的增益集資訊清單中，執行組 OrganizationAddIn cmdlet _ProductId_、 與_ManifestPath_，_地區設定_的參數，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="95e99-145">To update an add-in from a manifest, run the Set-OrganizationAddIn cmdlet with the  _ProductId_,  _ManifestPath_, and  _Locale_ parameters, as shown in the following example.</span></span> 
+<span data-ttu-id="29f46-146">若要從資訊清單更新增益集，請使用_ProductId_、 _ManifestPath_及_Locale_參數執行**OrganizationAddIn 指令程式**，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="29f46-146">To update an add-in from a manifest, run the **Set-OrganizationAddIn** cmdlet with the  _ProductId_,  _ManifestPath_, and  _Locale_ parameters, as shown in the following example.</span></span> 
   
-```
+```powershell
 Set-OrganizationAddIn -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122 -ManifestPath 'C:\Users\Me\Desktop\taskpane.xml' -Locale 'en-US'
 ```
 
 > [!NOTE]
-> <span data-ttu-id="95e99-146">增益集從 Office 市集上傳將會自動更新的最新可用更新的 Office 存放區上的幾天內。</span><span class="sxs-lookup"><span data-stu-id="95e99-146">Add-ins uploaded from the Office Store will update automatically within a few days of the latest update being available on the Office Store.</span></span> 
+> <span data-ttu-id="29f46-147">從 Office Store 上傳的增益集會在 Office 市集中的最新更新可用幾天內自動更新。</span><span class="sxs-lookup"><span data-stu-id="29f46-147">Add-ins uploaded from the Office Store will update automatically within a few days of the latest update being available on the Office Store.</span></span> 
   
-## <a name="delete-an-add-in"></a><span data-ttu-id="95e99-147">刪除增益集</span><span class="sxs-lookup"><span data-stu-id="95e99-147">Delete an add-in</span></span>
+## <a name="delete-an-add-in"></a><span data-ttu-id="29f46-148">刪除增益集</span><span class="sxs-lookup"><span data-stu-id="29f46-148">Delete an add-in</span></span>
 
-<span data-ttu-id="95e99-148">若要刪除增益集，如下列範例所示，[ _ProductId_ ] 參數，以執行移除 OrganizationAddIn 指令程式。</span><span class="sxs-lookup"><span data-stu-id="95e99-148">To delete an add-in, run the Remove-OrganizationAddIn cmdlet with the  _ProductId_ parameter, as shown in the following example.</span></span> 
+<span data-ttu-id="29f46-149">若要刪除增益集，請使用_ProductId_參數執行**Remove-OrganizationAddIn** Cmdlet，如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="29f46-149">To delete an add-in, run the **Remove-OrganizationAddIn** cmdlet with the  _ProductId_ parameter, as shown in the following example.</span></span> 
   
-```
+```powershell
 Remove-OrganizationAddIn -ProductId 6a75788e-1c6b-4e9b-b5db-5975a2072122
 ```
 
-## <a name="get-detailed-help-for-each-cmdlet"></a><span data-ttu-id="95e99-149">取得每個 cmdlet 的詳細的說明</span><span class="sxs-lookup"><span data-stu-id="95e99-149">Get detailed help for each cmdlet</span></span>
+<!--
+## Customize Microsoft Store add-ins for your organization
 
-<span data-ttu-id="95e99-150">您可以使用 get-help 指令程式來查看每個 cmdlet 的詳細說明。</span><span class="sxs-lookup"><span data-stu-id="95e99-150">You can look at detailed help for each cmdlet by using the Get-help cmdlet.</span></span> <span data-ttu-id="95e99-151">例如，下列指令程式提供移除 OrganizationAddIn cmdlet 的詳細的資訊。</span><span class="sxs-lookup"><span data-stu-id="95e99-151">For example, the following cmdlet provides detailed information about the Remove-OrganizationAddIn cmdlet.</span></span>
-  
+You must customize the add-in before you deploy it to your organization. Add-ins older than version 1.1 are not supported by this feature. 
+
+We recommend that you deploy a customized add-in  to yourself first to make sure it works as expected before you deploy it to your entire organization.
+
+Note also the following restrictions:
+- All URLs must be absolute (include http or https) and valid.
+- *DisplayName* must not exceed 125 characters 
+- *DisplayName*, *Resources* and *AppDomains* must not include the following characters: 
+ 
+    - \<
+    -  \>
+    -  ;
+    -  =   
+
+If you want to customize an add-in that has been deployed, you have to uninstall it in the admin center, and see [remove an add-in from local cache](#remove-an-add-in-from-local-cache) for steps to remove it from each computer it has been deployed to.
+
+To customize an add-in, run the **Set –OrganizationAddInOverrides** cmdlet with the *ProductId* as a parameter, followed by the tag you want to overwrite and the new value. To find out how to get the *ProductId* see [get details of an add-in](#get-details-of-an-add-in) in this article. For example:
+
+```powershell
+ Set-OrganizationAddInOverrides -ProductId 5b31b349-2c41-4f94-b720-6ee40349d391 -IconUrl "https://site.com/img.jpg" 
 ```
+To customize multiple tags for an add-in, add those tags to the commandline:
+
+```powershell
+Set-OrganizationAddInOverrides -ProductId 5b31b349-2c41-4f94-b720-6ee40349d391 -Hosts h1, 2 -DisplayName "New DocuSign W" -IconUrl "https://site.com/img.jpg" 
+```
+
+> [!IMPORTANT]
+> You must apply multiple customized tags to one add-in as one command. If you customize tags one by one, only the last customization will be applied. Additionally, if you customize a tag by mistake, you must remove all customizations and start over.
+
+### Tags you can customize
+
+| Tag                  | Description          |
+| :------------------- | :------------------- |
+| \<IconURL>   </br>| The URL of the image used as the add-in’s icon (in admin center). </br> |
+| \<DisplayName>| The title of the add-in  (in admin center).|
+| \<Hosts>| List of apps that will support the add-in.|
+| \<SourceLocation> | The source URL that the add-in will connect to.| 
+| \<AppDomains> | A list of domains that the add-in can connect with. | 
+| \<SupportURL>| The URL users can use to access help and support. | 
+| \<Resources>  | This tag contains a number of elements including titles, tooltips, and icons of different sizes.| 
+|
+### Customize Resources tag
+
+Any element in the <Resources> tag of the manifest can be customized dynamically. You first need to check the manifest to find the element id to which you want to assign a new value. The <Resources> tag looks like this:
+
+```
+<Resources>  
+    <bt:Images> 
+          <bt:Image id=”img16icon” DefaultValue=”https://site.com/img.jpg” 
+    </bt:Images> 
+</Resources> 
+``` 
+In this case, the element id for the image is “img16icon” and the value associated with it is “http:<i></i>//site.<i></i>com/img.jpg.”
+
+Once you have identified the elements you want to customize, use the following command in Powershell to assign new values to the elements:
+
+```powershell
+Set-OrganizationAddInOverrides -Resources @{“ElementID” = “New Value”; “NextElementID” = “Next New Value”} 
+```
+
+You can customize as many elements with the command as you need to.
+
+### Remove customization from an add-in
+
+The only option currently available for deleting customizations is to delete all of them at once:
+
+```powershell
+Remove-OrganizationAddInOverrides -ProductId 5b31b349-2c41-4f94-b720-6ee40349d391 
+```
+
+### View add-in customizations
+
+To view a list of applied customizations, run the **Get-OrganizationAddInOverrides** cmdlet. If **Get-OrganizationAddInOverrides** is run without a *ProductId* then a list of all add-ins with applied overrides are returned.  
+
+```powershell
+Get-OrganizationAddInOverrides 
+```
+If ProductId is specified, then a list of overrides applied to that add-in is returned. 
+
+```powershell
+Get-OrganizationAddInOverrides -ProductId 5b31b349-2c41-4f94-b720-6ee40349d391 
+```
+
+### Remove an add-in from local cache
+
+If an add-in has been deployed, it has to be removed from the cache in each computer before it can be customized. To remive an add-in from cache:
+
+1. Navigate to the “Users” folder in C:\ 
+1. Go to your user folder
+1. Navigate to AppData\Local\Microsoft\Office and select the folder associated with your version of Office
+1. In the *Wef* folder delete the *Manifests* folder.
+
+-->
+
+## <a name="get-detailed-help-for-each-cmdlet"></a><span data-ttu-id="29f46-150">取得每個 Cmdlet 的詳細資訊</span><span class="sxs-lookup"><span data-stu-id="29f46-150">Get detailed help for each cmdlet</span></span>
+
+<span data-ttu-id="29f46-151">您可以使用 Get-help 指令程式，查看每個 Cmdlet 的詳細說明。</span><span class="sxs-lookup"><span data-stu-id="29f46-151">You can look at detailed help for each cmdlet by using the Get-help cmdlet.</span></span> <span data-ttu-id="29f46-152">例如，下列 Cmdlet 提供有關 OrganizationAddIn Cmdlet 的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="29f46-152">For example, the following cmdlet provides detailed information about the Remove-OrganizationAddIn cmdlet.</span></span>
+  
+```powershell
 Get-help Remove-OrganizationAddIn -Full
 ```
 
