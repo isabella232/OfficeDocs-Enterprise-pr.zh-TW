@@ -23,12 +23,12 @@ ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
 description: Office 2010 伺服器和用戶端應用程式的支援即將結束，且無法使用自訂支援協定。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 0bfb3f60583f944971823f4653255cd2531e703a
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.openlocfilehash: 570386c2f12a098ee2ccb355b5d0fa20bc32aaee
+ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44775102"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "44906236"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
 
@@ -38,11 +38,11 @@ Office 2010 和 Exchange 2010 會在**年10月 13 2020 日**到達支援終止�
 
 SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支援終止。
 
-當您規劃升級時，這是一個考慮移至 Office 365 或 Microsoft 365 的最佳時間。 
+當您規劃升級時，這是一個很好的時間，可以考慮移至 Microsoft 365。 
 
-- Office 365 針對 Office 2010 伺服器產品（如 Exchange Server 和 SharePoint Server）和服務（例如，小組和商務 OneDrive）提供雲端架構服務。 
+- Microsoft 365 具有雲端式服務，適用于 Office 2010 伺服器產品（例如 Exchange Server 和 SharePoint 伺服器）及服務（如公司的團隊和 OneDrive）。 
 
-- Microsoft 365 Apps for enterprise （先前稱為 Office 365 ProPlus），隨附于 Office 365 E3 和 E5 和 Microsoft 365 Enterprise，是您在本機裝置上安裝的 Office 用戶端應用程式集。 他們會以新的生產力和安全性功能更新，以從 Microsoft 雲端不斷更新。
+- Microsoft 365 應用程式（先前稱為 Office 365 ProPlus）（隨附于 Microsoft 365 E3 和 E5）是您在本機裝置上安裝的 Office 用戶端應用程式集。 他們會以新的生產力和安全性功能更新，以從 Microsoft 雲端不斷更新。
 
 如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
 
@@ -68,7 +68,7 @@ SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支�
 
 ## <a name="related-topics"></a>相關主題
 
-[影片：什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
+[影片：何謂 Microsoft 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
   
 [Microsoft 週期原則](https://go.microsoft.com/fwlink/?linkid=865200)
 

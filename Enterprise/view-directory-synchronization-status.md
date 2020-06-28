@@ -1,5 +1,5 @@
 ---
-title: 檢視 Office 365 中的目錄同步處理狀態
+title: 在 Microsoft 365 中查看目錄同步處理狀態
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,6 +7,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.collection:
 - Ent_O365
@@ -16,37 +18,37 @@ search.appverid:
 - MOE150
 - MED150
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
-description: 了解如何停用目錄同步作業。 您也可以檢視其狀態。
-ms.openlocfilehash: 4204d72719e928982b2b6222fb971d62c0f1f8d6
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: 瞭解如何停用目錄同步作業。 您也可以查看其狀態。
+ms.openlocfilehash: d6f3a9f1f4e069716501f58e188daedacbf7e597
+ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34070409"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "44906196"
 ---
-# <a name="view-directory-synchronization-status-in-office-365"></a>檢視 Office 365 中的目錄同步處理狀態
+# <a name="view-directory-synchronization-status-in-microsoft-365"></a>在 Microsoft 365 中查看目錄同步處理狀態
 
-如果您已經與 Office 365 同步內部部署環境，與 Azure AD 整合您的內部部署 Active Directory，您也可以檢查您同步處理的狀態。
+如果您已整合內部部署 Active Directory 與 Azure AD，請同步處理內部部署環境與 Microsoft 365，您也可以檢查同步處理的狀態。
   
-## <a name="view-directory-synchronization-status"></a>檢視目錄同步處理狀態
+## <a name="view-directory-synchronization-status"></a>視目錄同步處理狀態
 
-- 登入[Microsoft 365 系統管理中心](https://admin.microsoft.com)，選擇 [**目錄同步狀態**]，請在 [首頁] 頁面上。
-- 或者，您可以移至 [**使用者** \> **作用中的使用者**，並在 [**作用中使用者**] 頁面上，選擇 [**更多** \> **目錄同步處理**。 在 [**目錄同步處理**] 窗格中，選擇 [**移至 [目錄同步管理**。
+- 登入[Microsoft 365 系統管理中心](https://admin.microsoft.com)，然後選擇首頁上的**DirSync 狀態**。
+- 或者，您可以移至 [**使用者**作用中使用者]， \> **Active users**然後在 [作用中**使用者**] 頁面上，選擇 [**更多** \> **目錄同步**處理]。 在 [**目錄同步**處理] 窗格中，選擇 [**移至 DirSync 管理**]。
 
-## <a name="information-on-the-manage-directory-synchronization-page"></a>在 [管理目錄同步處理] 頁面上的資訊
+## <a name="information-on-the-manage-directory-synchronization-page"></a>「管理目錄同步處理」頁面上的資訊
 
-下表列出您可以取得資訊] 頁面的功能。
+下表列出您可以在頁面上取得相關資訊的功能。
   
-如果沒有您的目錄同步處理的問題，錯誤會列在此頁面上。 如需不同，可能會遇到的錯誤的詳細資訊，請參閱 <<c0>在 Office 365 中的身分識別目錄同步處理錯誤。
+如果您的目錄同步處理有問題，錯誤也會列在此頁面上。 如需您可能會遇到之不同錯誤的詳細資訊，請參閱[識別 Microsoft 365 中的目錄同步處理錯誤](identify-directory-synchronization-errors.md)。
   
-|**Item**|**功能**|
+|**項目**|**功能**|
 |:-----|:-----|
-|**驗證的網域** | 您已經驗證您的 Office 365 租用戶中的網域數目的擁有人。 |
-|**未驗證的網域** | 您可以新增，但卻未驗證的網域。 |
-|**啟用目錄同步處理** |則為 true 或 False。 會指定是否已啟用目錄同步處理。 |
-|**最新的目錄同步處理** | 目錄同步處理執行的時間。 如果會顯示一則警告，並連結至疑難排解工具上次同步處理已三天以上。 |
-|**啟用密碼同步處理** | 則為 true 或 False。 會指定是否必須讓我們內部部署與您的 Office 365 租用戶之間的密碼雜湊同步處理。 |
-|**最後一個密碼同步處理** | 密碼雜湊同步處理執行的時間。 如果會顯示一則警告，並連結至疑難排解工具上次同步處理已三天以上。 |
-|**目錄同步處理用戶端版本** | 如果已釋放 Azure AD Connect 的新版本會包含的下載連結。 |
-|**IDFix 工具** | [IDFix](install-and-run-idfix.md)，您可以使用來檢查本機 Active Directory 工具來下載連結。 |
-|**目錄同步處理服務帳戶** | 會顯示您 Office 365 目錄同步處理服務帳戶的名稱。 |
+|**已驗證網域** | 您已驗證您的 Microsoft 365 租使用者中的網域數目。 |
+|**未驗證的網域** | 您已新增但未驗證的網域。 |
+|**已啟用目錄同步處理** |True 或 False。 指定是否已啟用目錄同步處理。 |
+|**最新目錄同步處理** | 上次執行目錄同步處理的時間。 若上次同步處理超過三天以上，將會顯示警告及疑難排解工具的連結。 |
+|**已啟用密碼同步處理** | True 或 False。 指定您的內部部署與 Microsoft 365 租使用者之間是否有密碼雜湊同步處理。 |
+|**上次密碼同步處理** | 上次執行密碼雜湊同步處理的時間。 若上次同步處理超過三天以上，將會顯示警告及疑難排解工具的連結。 |
+|**目錄同步處理用戶端版本** | 會包含下載連結，如果已發行新版本的 Azure AD Connect。 |
+|**IDFix 工具** | 下載[IDFix](install-and-run-idfix.md)的連結，您可以用來檢查本機 Active Directory 的工具。 |
+|**目錄同步處理服務帳戶** | 顯示 Microsoft 365 目錄同步服務帳戶的名稱。 |

@@ -16,12 +16,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: Microsoft 365 中的 eDiscovery 功能及其他搜尋功能的概覽，以供審計使用和透明性。
-ms.openlocfilehash: d628bc9aa3964ffed671035a1f78f61d9632b87e
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.openlocfilehash: f4c401bf81767eb9111e6e8ca508cc3ee87152db
+ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774938"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "44906186"
 ---
 # <a name="microsoft-365-ediscovery-and-search-features-overview"></a>Microsoft 365 eDiscovery 和搜尋功能概述 
 
@@ -35,7 +35,7 @@ EDiscovery 功能為系統管理員、合規性監察官及其他經授權的使
 
 ## <a name="audit-log-search"></a>審核記錄搜尋
 
-除了在 Microsoft 365 組織中追蹤變更之外，您還可以查看審核報告和匯出審計記錄檔。 一旦對 Microsoft 365 租使用者啟用審核，使用者和系統管理活動就會記錄在事件記錄檔中，並使其可供搜尋。 例如，您可以使用信箱審核記錄，追蹤信箱擁有者以外的使用者對信箱執行的動作。 合規性監察官可以針對特定使用者活動使用搜尋和篩選功能。 例如，若要識別已查看或下載特定檔的使用者，如果系統管理員已執行使用者管理活動，或在過去的90天內，查看租使用者設定中的變更。 搜尋結果包含使用者或系統管理員所執行之特定活動的重要鑒證資訊。 請參閱[搜尋審核記錄](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance)檔，以取得 Microsoft 365 中所記錄之使用者和管理活動的描述。
+除了在 Microsoft 365 組織中追蹤變更之外，您還可以查看審核報告和匯出審計記錄檔。 一旦為 Microsoft 365 租使用者啟用審核，使用者和管理活動就會記錄在事件記錄檔中，並可供搜尋。 例如，您可以使用信箱審核記錄，追蹤信箱擁有者以外的使用者對信箱執行的動作。 合規性監察官可以針對特定使用者活動使用搜尋和篩選功能。 例如，若要識別已查看或下載特定檔的使用者，如果系統管理員已執行使用者管理活動，或在過去的90天內，查看租使用者設定中的變更。 搜尋結果包含使用者或系統管理員所執行之特定活動的重要鑒證資訊。 請參閱[搜尋審核記錄](https://docs.microsoft.com/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance)檔，以取得 Microsoft 365 中所記錄之使用者和管理活動的描述。
 
 在發生30分鐘內，會在記錄中顯示 SharePoint 線上和商務 OneDrive 相關的事件。 Exchange Online 中的事件會出現在發生24小時內的審計記錄檔中。 在發生分鐘內可提供來自 Azure AD 的登入事件，而且來自 Azure AD 的其他目錄事件會在發生24小時內提供。 您可以在審計記錄搜尋結果中出口通風口，以進行進一步的分析。 匯出單一審核記錄搜尋中的最多50000個專案。 若要匯出此限制的更多專案，請縮短日期範圍或執行多個審核記錄搜尋。
 
@@ -44,7 +44,7 @@ EDiscovery 功能為系統管理員、合規性監察官及其他經授權的使
 | 屬性	 | 描述 |
 |----------------|----------------------------------------------------------------------------------------------------------------------|
 | 日期 | 事件的日期和時間 |
-| User | 執行動作的使用者 |
+| 使用者 | 執行動作的使用者 |
 | ClientIP | 記錄活動時所使用之裝置的 IPv4 或 IPv6 位址。 |
 | CreationTime | 使用者執行活動時的日期和時間（標準時間（UTC））。 |
 | EventSource | 識別發生的事件。 可能的值為 SharePoint 和 ObjectModel。 |

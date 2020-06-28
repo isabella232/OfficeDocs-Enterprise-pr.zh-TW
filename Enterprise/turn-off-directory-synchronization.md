@@ -1,5 +1,5 @@
 ---
-title: 關閉 Office 365 的目錄同步處理
+title: 關閉 Microsoft 365 的目錄同步處理
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,6 +7,8 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
+f1.keywords:
+- CSH
 ms.custom: Adm_O365
 ms.collection:
 - Ent_O365
@@ -16,25 +18,25 @@ search.appverid:
 - MOE150
 - MED150
 ms.assetid: ee5f861e-bd48-4267-83d1-a4ead4b4a00d
-description: 了解如何使用 PowerShell 來關閉 Office 365 的目錄同步處理
-ms.openlocfilehash: de7cfcbc11ed281e412c68674b808613b3421041
-ms.sourcegitcommit: 3539ec707f984de6f3b874744ff8b6832fbd665e
+description: 瞭解如何使用 PowerShell 關閉 Microsoft 365 的目錄同步處理
+ms.openlocfilehash: 935d7e26c7b99aba876500e6b9d428557aed5b9c
+ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/17/2019
-ms.locfileid: "40072395"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "44906206"
 ---
-# <a name="turn-off-directory-synchronization-for-office-365"></a>關閉 Office 365 的目錄同步處理
-您可以使用 PowerShell 來關閉目錄同步處理。 不過，不建議您關閉目錄同步作業和疑難排解步驟。 如果您需要協助疑難排解目錄同步處理，請參閱[Office 365 的目錄同步處理的修正問題](fix-problems-with-directory-synchronization.md)> 一文。 
+# <a name="turn-off-directory-synchronization-for-microsoft-365"></a>關閉 Microsoft 365 的目錄同步處理
+您可以使用 PowerShell 關閉目錄同步處理。 不過，不建議您關閉目錄同步處理做為疑難排解步驟。 如果您需要協助進行目錄同步處理，請參閱[修正 Microsoft 365 文章的目錄同步處理問題](fix-problems-with-directory-synchronization.md)。 
   
-[連絡支援](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)視商務版產品。
+如有需要，[請聯絡](https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)商務產品的支援人員。
   
 ## <a name="turn-off-directory-synchronization"></a>關閉目錄同步處理  
-若要關閉目錄同步作業：
+若要關閉目錄同步處理：
   
-1. 首先，安裝必要的軟體，並連線至您的 Office 365 訂閱。 兩者皆適用的指示，請參閱[連線至 Office 365 PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=821938)。
+1. 首先，安裝必要的軟體，並聯機至您的 Microsoft 365 訂閱。 如需相關指示，請參閱[Connect The Microsoft Azure Active Directory Module For Windows PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/connect-to-office-365-powershell#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
     
-2. 使用[Set-msoldirsyncenabled](https://go.microsoft.com/fwlink/p/?LinkId=821939)停用目錄同步作業： 
+2. 使用[Set-MsolDirSyncEnabled](https://go.microsoft.com/fwlink/p/?LinkId=821939)停用目錄同步處理： 
     
   ```powershell
   Set-MsolDirSyncEnabled -EnableDirSync $false

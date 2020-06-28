@@ -22,19 +22,19 @@ search.appverid:
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: Office 2007 伺服器和用戶端應用程式的支援即將結束，且無法使用自訂支援協定。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 8da5cd95b683be40c4efa3137ecfca4d31e11aae
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+description: Office 2007 server 的支援已結束，用戶端應用程式和自訂支援協定無法使用。 請使用本文立即開始規劃升級。
+ms.openlocfilehash: 79d017c92461b6c53e8d014ba9071957d70157fd
+ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774558"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "44906226"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a>協助您從 Office 2007 伺服器及用戶端升級的資源
 
 *本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
-如果您使用的是 Office 2007 產品和服務，這些應用程式的支援已結束。 當您規劃升級時，要考慮移至 Microsoft 雲端（從 Office 365 開始），這是一個很好的時間。 請使用本文做為開始查看選項及規劃升級的起點。
+如果您使用的是 Office 2007 產品和服務，這些應用程式的支援已結束。 當您規劃升級時，這是一個考慮移至 Microsoft 雲端（從 Microsoft 365 開始）的最佳時間。 請使用本文做為開始查看選項及規劃升級的起點。
       
 ## <a name="office-2007-planning-roadmaps"></a>Office 2007 規劃藍圖
   
@@ -57,7 +57,7 @@ Office 2007 產品和服務的支援已結束。 下列藍圖可協助您立即�
      
 ## <a name="related-topics"></a>相關主題
 
-[影片：什麼是 Office 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
+[影片：何謂 Microsoft 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
   
 [Microsoft 週期原則](https://go.microsoft.com/fwlink/?linkid=865200)
 
