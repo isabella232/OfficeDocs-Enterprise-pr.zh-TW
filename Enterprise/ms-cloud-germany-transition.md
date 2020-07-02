@@ -19,12 +19,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：了解如何從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務。
-ms.openlocfilehash: 7e9ba9135d024be5c12d6ca19b55ec68588d9ab4
-ms.sourcegitcommit: cf92870078d971ae8e36b75bd35f4b8f36ec7a50
+ms.openlocfilehash: 0a90c1b7f74ce9bc14ccae9965c4ce07f74e1b73
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "43772144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998558"
 ---
 # <a name="migration-from-microsoft-cloud-germany-microsoft-cloud-deutschland-to-office-365-services-in-the-new-german-datacenter-regions"></a>從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務
 
@@ -128,7 +128,7 @@ Microsoft 提供 Office 365 租用戶從 Microsoft Cloud Germany 移轉到新德
 - 為 [Azure](https://azure.microsoft.com/pricing/calculator/)、[Office 365](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans)、[Dynamics 365 Customer Engagement](https://dynamics.microsoft.com/pricing/)，以及 [Power BI](https://powerbi.microsoft.com/pricing/) 提供具有市場競爭力的價格。 
 - 已連線至 Microsoft 全球網路、提供數百個網路邊緣網站、對等位置，以及出口點，以在世界各地為您提供健全的使用者體驗。 
 - 協助您在德國符合本地客戶資料的存留需求。 
-- 提供功能完整的全球雲端服務，包括最新版本的服務和新功能，包括 Office 365 中的 Microsoft Teasms 和多地理位置。 依地區比較 [Azure](https://azure.microsoft.com/global-infrastructure/services/?products=all&regions=germany-non-regional,germany-central,germany-north,germany-northeast,germany-west-central)、[Office 365](https://products.office.com/zh-TW/where-is-your-data-located) 和 [Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/availability) 產品。
+- 提供功能完整的全球雲端服務，包括最新版本的服務和新功能，包括 Office 365 中的 Microsoft Teasms 和多地理位置。 依地區比較 [Azure](https://azure.microsoft.com/global-infrastructure/services/?products=all&regions=germany-non-regional,germany-central,germany-north,germany-northeast,germany-west-central)、[Office 365](https://docs.microsoft.com/office365/enterprise/o365-data-locations) 和 [Dynamics 365](https://docs.microsoft.com/dynamics365/get-started/availability) 產品。
 - 提供完整的功能、企業級的安全性及全面的功能，協助客戶符合合規性和法規需求。 
 - 可透過現有的線上服務合約取得。
 
