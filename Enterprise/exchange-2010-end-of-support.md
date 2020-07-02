@@ -13,16 +13,16 @@ ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 f1.keywords:
 - NOCSH
 description: Exchange 2010 即將終止支援。 使用此規劃藍圖做為準備升級到 Exchange Online 或 Exchange Server 內部部署更新版本的指南。
-ms.openlocfilehash: ddf2a099688e55e5e0650a030eb2a33293b21eb2
-ms.sourcegitcommit: cc05697650e0a49d7901d6c9a14753e2f8e79362
+ms.openlocfilehash: 84adfa0216f3e4e8157dfe0717c178a0ece3cc4f
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42979338"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998041"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>Exchange 2010 終止支援藍圖
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 Exchange Server 2010 將於 **2020 年 10 月 13 日**終止支援。 如果您尚未開始從 Exchange Server 2010 移轉到 Office 365 或 Exchange 2016，現在就是您著手規劃的時機。
 
@@ -146,8 +146,8 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 如果您考慮要執行完整混合式移轉，以下是一些該考量的事項：
 
 - 完整混合式移轉並不適合所有組織類型。 由於完整混合式移轉十分複雜，即使它具有多項優點，但這種設定所需付出的心力和成本往往令擁有少於數百個信箱的組織望之卻步。 如果這聽起來像是貴組織的情況，強烈建議您考慮改用完全移轉或基本混合式移轉；
-- 您必須使用 Azure Active Directory Connect (AADConnect) 在內部部署 Active Directory 伺服器與 Office 365 之間設定目錄同步處理；
-- 使用者將能使用與用於登入本機網路時相同的使用者名稱和密碼，來登入 Office 365 信箱 (需要 Azure Active Directory Connect 以及密碼同步處理和/或 Active Directory 同盟服務)；
+- 您必須在內部部署 Active Directory 伺服器與 Office 365 之間，使用 Azure Active Directory （Azure AD） Connect 來設定目錄同步處理;
+- 使用者將能夠使用使用者登入本機網路時所使用的相同使用者名稱和密碼登入其 Office 365 信箱（需要使用密碼同步處理和/或 Active Directory Federation Services 的 Azure AD Connect）。
 - 針對您移轉的每個使用者信箱，您的 Office 365 授權必須包含 Exchange Online；
 - 使用者在大部分的裝置上不需要設定新 Outlook 設定檔 (某些舊款 Android 手機可能需要新設定檔)，而且不需要重新下載電子郵件。
 
@@ -164,7 +164,7 @@ Office 365 也會先取得新功能和體驗，您和您的使用者通常可以
 
 ## <a name="upgrade-to-a-newer-version-of-exchange-server-on-premises"></a>升級到新版 Exchange Server 內部部署
 
-雖然我們深信完整移轉到 Office 365 能達到最佳的價值及使用者體驗，我們也了解某些組織需要保留部分 Exchange Server 內部部署。 這可能是因為法規需求，保證資料不會儲存在另一個國家/地區的資料中心，或是因為您有無法在雲端中滿足的獨特設定或需求，也可能只是您需要 Exchange 才能管理雲端信箱，因為您仍然使用 Active Directory 內部部署。 不管是您選擇或必須保留 Exchange 內部部署，都應確定將 Exchange 2010 環境升級到至少 Exchange 2013 或 Exchange 2016，並在終止支援日之前刪除 Exchange 2010。
+雖然我們深信完整移轉到 Office 365 能達到最佳的價值及使用者體驗，我們也了解某些組織需要保留部分 Exchange Server 內部部署。 這可能是因為法規需求，保證資料不會儲存在另一個國家/地區的資料中心，或是因為您有無法在雲端中滿足的獨特設定或需求，也可能只是因為您仍然使用 Active Directory 內部部署，所以您需要 Exchange 來管理雲端信箱。 不管是您選擇或必須保留 Exchange 內部部署，都應確定將 Exchange 2010 環境升級到至少 Exchange 2013 或 Exchange 2016，並在終止支援日之前刪除 Exchange 2010。
 
 為了獲得最佳的體驗，我們建議您將剩餘的內部部署環境升級為 Exchange 2016。 如果您想要直接從 Exchange Server 2010 移至 Exchange Server 2016，您不需要安裝 Exchange Server 2013。
 

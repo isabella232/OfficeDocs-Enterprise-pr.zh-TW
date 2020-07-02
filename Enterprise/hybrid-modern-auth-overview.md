@@ -15,16 +15,16 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 新式驗證是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 可用於在內部部署商務用 Skype server 的混合式部署和 Exchange server 內部部署，以及分割網域 Skype for business 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端（ex）的相關檔。 Outlook 和 Skype 用戶端）資訊。
-ms.openlocfilehash: 325c34ec636ce9661b25f7b8be83ce8cbf61a291
-ms.sourcegitcommit: d4814245d57313f2e94cd819b85ac1550fdeaf3a
+ms.openlocfilehash: 6b535133af7a1a6666a6a06e2c86aa675f95e042
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "43516454"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998021"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合新式驗證概述和使用內部部署商務用 Skype 和 Exchange 伺服器的必要條件
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 _新式驗證_是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 它適用于 Office 365 的商務用 Skype server 內部部署和 Exchange server 內部部署，以及分割網域商務用 Skype 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端（ex）的相關檔。 Outlook 和 Skype 用戶端）資訊。
   
@@ -41,7 +41,7 @@ _新式驗證_是一種身分識別管理的方法，可提供更安全的使用
   
 - **驗證方法**：多重要素驗證（MFA）;智慧卡驗證;以用戶端憑證為基礎的驗證
 - **授權方法**： Microsoft 的開放式授權實施（OAuth）
-- **條件式存取原則**：行動應用程式管理（MAM）和 Azure Active Directory 條件式存取
+- **條件式存取原則**：行動應用程式管理（MAM）和 Azure Active Directory （azure AD）條件式存取
 
 使用新式驗證來管理使用者身分識別，可讓系統管理員在保護資源時使用許多不同的工具，並提供更安全的身分識別管理方法給內部部署（Exchange 和商務用 Skype）、Exchange 混合式和商務用 Skype 混合式/分割網域案例。
   
@@ -59,9 +59,9 @@ _新式驗證_是一種身分識別管理的方法，可提供更安全的使用
   
 對 evoSTS 所做的變更可讓您的內部部署伺服器利用 OAuth （權杖發佈）來授權您的用戶端，也可讓您的內部部署使用雲端中常見的安全性方法（如多重要素驗證）。 此外，evoSTS 會發出標記，允許使用者要求存取資源，而不提供密碼做為要求的一部分。 不管使用者的所在位置（線上或內部部署），不論是哪一個位置主控必要的資源，EvoSTS 將成為在設定新式驗證之後，授權使用者和用戶端的核心。
   
-例如，如果商務用 Skype 用戶端需要存取 Exchange 伺服器以代表使用者取得行事曆資訊，它會使用 Active Directory 驗證程式庫（ADAL）來執行這項作業。 ADAL 是一個程式碼庫，其設計目的是讓您的目錄中的安全資源可供使用 OAuth 安全性權杖的用戶端應用程式使用。 ADAL 可與 OAuth 搭配驗證宣告和交換權杖（而非密碼），以授與使用者對資源的存取權。 過去，在交易中（如下列所示）中的授權機構（即知道如何驗證使用者宣告及發出必要標記的伺服器），可能是內部部署的安全性權杖服務，甚至是 Active Directory Federation Services。 不過，新式驗證使用 Azure Active Directory （AAD）來集中該授權。
+例如，如果商務用 Skype 用戶端需要存取 Exchange 伺服器以代表使用者取得行事曆資訊，它會使用 Active Directory 驗證程式庫（ADAL）來執行這項作業。 ADAL 是一個程式碼庫，其設計目的是讓您的目錄中的安全資源可供使用 OAuth 安全性權杖的用戶端應用程式使用。 ADAL 可與 OAuth 搭配驗證宣告和交換權杖（而非密碼），以授與使用者對資源的存取權。 過去，在交易中（如下列所示）中的授權機構（即知道如何驗證使用者宣告及發出必要標記的伺服器），可能是內部部署的安全性權杖服務，甚至是 Active Directory Federation Services。 不過，新式驗證使用 Azure AD 來集中該授權。
   
-這也表示，即使您的 Exchange 伺服器和商務用 Skype 環境可能完全在內部部署中，授權伺服器也是線上的，而您的內部部署環境必須能夠建立及維護雲端（和您的訂閱用來做為其目錄的 Azure Active Directory 實例）中的 Office 365 訂閱連接。
+這也表示，即使您的 Exchange 伺服器和商務用 Skype 環境可能完全在內部部署中，授權伺服器也是線上的，而且您的內部部署環境必須能夠建立及維護雲端（和您的訂閱用來做為其目錄的 Azure AD 實例）中的 Office 365 訂閱連線。
   
 什麼不會變更？ 不論您是在分割網域混合式，還是使用商務用 Skype 和 Exchange server 內部部署，所有使用者都必須先驗證*內部部署*。 在新式驗證的混合式實施中， _Lyncdiscovery_和_自動_探索都指向您的內部部署伺服器。
   
@@ -111,7 +111,7 @@ Get-CSOAuthConfiguration
   - 混合式環境中沒有 Lync Server 2010 或2013。
 
 >[!NOTE]
->如果您的商務用 Skype 前端伺服器使用 proxy 伺服器進行網際網路存取，則必須在每個前端的 web.config 檔案的 [設定] 區段中輸入所使用的 proxy 伺服器 IP 及埠號碼。
+>若您的商務用 Skype 前端伺服器使用 proxy 伺服器進行網際網路存取，則必須在每個前端的 web.config 檔的 [設定] 區段中輸入 proxy 伺服器的 IP 和埠號碼。
   
 - C:\Program Files\Skype for Business Server 2015 \ Web Components\Web ticket\int\web.config
 - C:\Program Files\Skype for Business Server 2015 \ Web Components\Web ticket\ext\web.config
@@ -168,7 +168,7 @@ Get-CSOAuthConfiguration
 ## <a name="what-else-do-i-need-to-know-before-i-begin"></a>開始之前，我還需要知道什麼？
 <a name="BKMK_Whatelse"> </a>
 
-- 內部部署伺服器的所有案例都包括設定新式驗證內部部署（事實上，針對商務用 Skype，有支援的拓撲清單，所以負責驗證和授權的伺服器是在 Microsoft 雲端（AAD 的安全性權杖服務，稱為 ' evoSTS '）中，並更新 Azure Active Directory （AAD）有關您的內部部署安裝的商務用 Skype 或 Exchange 所使用的命名 URLs 空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
+- 內部部署伺服器的所有案例都包括設定新式驗證內部部署（事實上，對於商務用 Skype，有支援的拓撲清單，所以負責驗證和授權的伺服器是在 Microsoft 雲端（AAD 的安全性權杖服務，稱為 ' evoSTS '）中，並更新 Azure AD 有關您的內部部署安裝的商務用 Skype 或 Exchange 所使用的 URLs 或命名空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
 - 本文與其他專案連結，可協助您選擇支援的新式驗證拓撲（僅適用于商務用 Skype）和操作方法文章，概述設定步驟，也就是針對 Exchange 內部部署和商務用 Skype 內部部署，提供如何停用新式驗證的步驟。 如果您想要在您的伺服器環境中使用新式驗證，請在瀏覽器中，將此頁面最愛。
 
 ## <a name="related-topics"></a>相關主題

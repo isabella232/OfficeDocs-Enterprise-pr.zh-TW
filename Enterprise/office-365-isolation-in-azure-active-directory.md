@@ -1,7 +1,7 @@
 ---
-title: Office 365 隔離和 Azure Active Directory 中的存取控制
-ms.author: robmazz
-author: robmazz
+title: Azure Active Directory 中的 Microsoft 365 隔離與存取控制
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,38 +14,38 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： 如何在 Azure Active Directory 中工作的隔離與存取控制。
-ms.openlocfilehash: ac8ea9cf0550517f4d4d8c6eac10812700bb668b
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 摘要：隔離和存取控制如何在 Azure Active Directory 中運作。
+ms.openlocfilehash: fe242acb5d14f5c90d6e646140b50f5f96c7a331
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998713"
 ---
-# <a name="isolation-and-access-control-in-azure-active-directory"></a>Azure Active Directory 中的隔離與存取控制
+# <a name="microsoft-365-isolation-and-access-control-in-azure-active-directory"></a>Azure Active Directory 中的 Microsoft 365 隔離與存取控制
 
-Azure Active Directory 的設計目的在於多個承租人裝載高度安全的方式透過邏輯資料隔離。 Azure Active Directory 存取控制出入授權層。 Azure Active Directory 隔離客戶與安全性界限以內使用租用戶容器，以保護客戶內容，以便無法存取或洩漏共同的租用戶內容。 由 Azure Active Directory 的授權層執行三個檢查：
+Azure Active Directory （Azure AD）是設計為透過邏輯資料隔離以高安全性的方式裝載多個承租人。 存取 Azure AD 的方式是透過授權層來封閉。 Azure AD 隔離以租使用者容器為安全性界限的客戶，以保護客戶的內容，使其內容無法透過共同承租人進行存取或破壞。 Azure AD 的授權層會執行三項檢查：
 
-- 存取 Azure Active Directory 租用戶啟用主體嗎？
-- 主體已啟用此租用戶中資料的存取權嗎？
-- 授權類型的資料存取要求此租用戶中是主體角色？
+- 是否啟用主體以存取 Azure AD 租使用者？
+- 是否已啟用主體來存取此承租人中的資料？
+- 此租使用者中的主體角色是否獲得要求的資料存取類型？
 
-無應用程式、 使用者、 伺服器或服務可以存取 Azure Active Directory，而不正確的驗證與 token 或憑證。 如果未伴隨適當的認證，會拒絕要求。
+沒有任何應用程式、使用者、伺服器或服務可以存取未適當驗證與 token 或憑證的 Azure AD。 若未附帶適當的認證，便會拒絕要求。
 
-實際上，Azure Active Directory 裝載在自己受保護的容器，與原則和權限至及察覺擁有和管理租用戶容器內的每個租用戶。
+實際上，Azure AD 會將每個租使用者放在其本身受保護的容器中，並在容器內和容器內，以完全擁有和管理的原則和許可權為主機。
  
 ![Azure 容器](media/office-365-isolation-azure-container.png)
 
-租用戶容器的概念是深 ingrained 所有層級，一直到持續性儲存體的入口網站從目錄服務中。 多個 Azure Active Directory 租用戶中繼資料儲存在同一個實體磁碟上，即使沒有之間關係以外的項目由目錄服務，這依照租用戶系統管理員所定義的容器。 可以有無直接連線至 Azure Active Directory 存放區從任何要求的應用程式或服務，未經第一個經由授權層。
+租使用者容器的概念在所有層級的目錄服務中，從入口網站一直到持續儲存的方式，都很深層 ingrained。 即使多個 Azure AD 租使用者中繼資料儲存在同一個實體磁片上，除了目錄服務所定義的容器以外，其他容器之間並沒有任何關係，也是由租使用者管理員所決定。 任何要求的應用程式或服務，都不能直接連線至 Azure AD 儲存體，您必須先進行授權層級的連接。
 
-在下列範例中，Contoso 和 Fabrikam 都有個別的專用的容器，且即使這些容器可能會共用相同的基礎結構，例如伺服器和儲存體，部分他們保持分開及彼此隔離，然後閘藉由層級的授權和存取控制。
+在下列範例中，Contoso 和 Fabrikam 都有個別、專用的容器，即使這些容器共用某些相同的基礎結構（例如伺服器和儲存區），它們仍然彼此分開且彼此隔離，並依授權和存取控制層來封閉。
  
-![Azure 的專用的容器](media/office-365-isolation-azure-dedicated-containers.png)
+![Azure 專用容器](media/office-365-isolation-azure-dedicated-containers.png)
 
-此外，有可以內執行，從 Azure Active Directory，沒有應用程式元件，而且您不能強制破壞另一個租用戶的完整性、 存取加密金鑰的另一個租用戶，或從伺服器讀取未經處理資料的一個租用戶。
+此外，Azure AD 內沒有任何可執行檔應用程式元件，一個承租人不可能強制破壞其他租使用者的完整性、存取另一個租使用者的加密金鑰，或從伺服器讀取原始資料。
 
-根據預設，Azure Active Directory 不允許在其他租用戶中的身分識別所發出的所有作業。 每個承租人都是以邏輯方式隔離的 Azure Active Directory 內透過宣告型存取控制。 讀取和寫入的範圍限定為租用戶容器] 中，資料且閘由內部抽象層和角色型存取控制 (RBAC) 層，一起強制執行安全性界限為租用戶的目錄。 每個目錄資料存取要求會處理這些層級，並在 Office 365 中的每個存取要求 policed 依上述的邏輯。
+根據預設，Azure AD 不允許其他承租人中的身分識別所發出的所有作業。 每個租使用者會透過宣告式的存取控制，在 Azure AD 中以邏輯方式隔離。 目錄資料的讀取和寫入會限定在租使用者容器中，並透過內部抽象層和角色型存取控制（RBAC）層（共同執行租使用者為安全性界限）進行封閉。 所有的目錄資料存取要求都是由這些層處理，而 Microsoft 365 中的每個存取要求都是透過以上邏輯 policed。
 
-Azure Active Directory 發生 「 北美地區 」、 US Government、 歐盟 （德國），及全球資訊網的分割區。 租用戶存在於單一磁碟分割，並分割區可以包含多個承租人。 磁碟分割的資訊是開使用者區隔。 指定的分割 （包括內的所有承租人） 會複寫到多個資料中心。 租用戶的磁碟分割會選擇根據租用戶 （例如，國家/地區碼） 的屬性。 使用專用的金鑰加密機密資料和其他每個分割區中的敏感資訊。 當您建立新的分割區時，會自動產生金鑰。
+Azure AD 具有北美、美國政府、歐盟、德國及全球通用磁碟分割。 租使用者存在於單一分割區中，而分割區可包含多個承租人。 磁碟分割資訊會從使用者中抽象出來。 指定的磁碟分割（包括其中的所有承租人）會複寫到多個資料中心。 根據租使用者的屬性（例如，國家/地區代碼），選擇租使用者的分割區。 每個分割區中的機密和其他敏感資訊都會以專用金鑰加密。 建立新的分割區時，會自動產生機碼。
 
-Azure Active Directory 系統功能是以每個使用者工作階段的唯一執行個體。 此外，Azure Active Directory 會使用加密技術來提供的共用的系統資源，以防止未經授權和非預期的資訊傳輸網路層級的隔離。
+Azure AD 系統功能是每個使用者會話的唯一實例。 此外，Azure AD 使用加密技術，在網路層級提供共用系統資源的隔離，以防止未經授權和非預期的資訊傳輸。

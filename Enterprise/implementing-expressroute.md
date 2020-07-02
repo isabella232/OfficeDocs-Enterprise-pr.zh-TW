@@ -17,562 +17,562 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
-description: 適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
-ms.openlocfilehash: 63d7c887f9900250a81fe1428d8b5b5cd3df9b81
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務的備用路由路徑。 Office 365 ExpressRoute 的架構是以 Office 365 服務（已透過網際網路存取） ExpressRoute 中的廣告公用 IP 首碼為基礎，以在您的網路中接下來再發佈這些 IP 首碼。 透過 ExpressRoute，您可以有效地為許多 Office 365 服務啟用多個不同的路由路徑（透過網際網路及透過 ExpressRoute）。 網路上路由的狀態可能代表如何設計內部網路拓撲的重大變更。
+ms.openlocfilehash: ab40a346ca1b19fcd100f17b934b766b21741010
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840180"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998125"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
-適用於 Office 365 提供替代的路由路徑許多網際網路對向 Office 365 服務。 ExpressRoute for Office 365 的架構根據公告已可存取網際網路上插入到這些 IP 前置詞的後續重新發佈您佈建 ExpressRoute 電路的 Office 365 服務的公用 IP 電話首碼您的網路。 使用 ExpressRoute 有效率地啟用數個不同路由路徑，透過網際網路，以及透過 ExpressRoute，許多 Office 365 服務。 在您的網路路由此狀態可能代表了重大改變您的內部網路拓撲設計的方式。
+ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務的備用路由路徑。 Office 365 ExpressRoute 的架構是以 Office 365 服務（已透過網際網路存取） ExpressRoute 中的廣告公用 IP 首碼為基礎，以在您的網路中接下來再發佈這些 IP 首碼。 透過 ExpressRoute，您可以有效地為許多 Office 365 服務啟用多個不同的路由路徑（透過網際網路及透過 ExpressRoute）。 網路上路由的狀態可能代表如何設計內部網路拓撲的重大變更。
   
- **狀態：** 完整指南 v2
+ **狀態：** 完成指南 v2
   
-您必須謹慎規劃您 ExpressRoute for Office 365 實作以容納的需要使用路由插入核心網路和網際網路路由可透過這兩個專用的電路網路複雜性的。 如果您和您的小組成員不執行詳細的規劃並測試本指南中，有高風險，您將遇到間歇性或總遺失連線至 Office 365 服務時啟用 ExpressRoute 線路。
+您必須仔細規劃 Office 365 執行的 ExpressRoute，以容納透過透過插入核心網路和網際網路之路由的專用電路，取得可供使用的網路複雜性。 如果您和您的小組沒有在本指南中執行詳細的規劃與測試，當啟用 ExpressRoute 電路時，您會遇到間歇性或總失去與 Office 365 服務的連線能力。
   
-若要讓成功實作，您必須分析您的基礎結構需求、 通過詳細的網路評估和設計、 仔細規劃導入分段且受控制的方式，及建立詳細的驗證和測試計劃。 在大型、 分散的環境不常見看見 span 幾個月的實作。 本指南旨在協助您規劃。
+若要取得成功的實施，您需要分析基礎結構需求、深入瞭解網路評估與設計，以分段且可控的方式仔細規劃推廣，並建立詳細的驗證和測試計劃。 對於大型的分散式環境而言，每個月的實施範圍都很少見。 本指南旨在協助您預先規劃。
   
-大型成功部署可能需要規劃的六個月及通常包括網路、 防火牆和 Proxy 伺服器系統管理員、 Office 365 系統管理員、 安全性、 使用者支援、 專案在組織中包含的許多層面的小組成員管理和主管贊助。 您在規劃程序的投資會降低您將遇到停機時間或複雜且最耗費成本疑難排解中所產生的部署失敗的可能性。
+大量成功的部署可能需要六個月的計畫，而且常常包括來自組織之許多方面的小組成員，包括網路、防火牆和 Proxy 伺服器管理員、Office 365 管理員、安全性、使用者支援、專案管理，以及執行的資助。 您在規劃程式中的投資，可減少因停機或複雜且昂貴的疑難排解而導致部署失敗的可能性。
   
-我們預期會啟動此實作指南之前完成下列先決條件。
+在此實施指南開始之前，我們預期會完成下列先決條件。
   
-1. 您已完成網路評估，以判斷 ExpressRoute 是否是建議，並核准。
+1. 您已完成網路評估，以判斷是否建議和核准 ExpressRoute。
 
-2. 您已選取的 ExpressRoute 網路服務提供者。 尋找關於[ExpressRoute 合作夥伴和對等位置](https://azure.microsoft.com/documentation/articles/expressroute-locations/)的詳細資訊。
+2. 您已選取 ExpressRoute 網路服務提供者。 尋找[ExpressRoute 合作夥伴和對等位置](https://azure.microsoft.com/documentation/articles/expressroute-locations/)的詳細資料。
 
-3. 您已閱讀並瞭解[ExpressRoute 文件](https://azure.microsoft.com/documentation/services/expressroute/)和您的內部網路是能夠符合 ExpressRoute 先決條件端對端。
+3. 您已閱讀並瞭解[ExpressRoute 檔](https://azure.microsoft.com/documentation/services/expressroute/)，且您的內部網路可滿足 ExpressRoute 先決條件端對端。
 
-4. 您的小組具備讀取的所有公用的指導方針和文件[https://aka.ms/expressrouteoffice365](https://aka.ms/expressrouteoffice365)、 [https://aka.ms/ert](https://aka.ms/ert)，和保存的[Azure ExpressRoute for Office 365 訓練](https://channel9.msdn.com/series/aer)數列上 Channel 9，要如何因應了解的重要技術的詳細資訊，包括：
+4. 您的小組已閱讀頻道9上的所有公開指導方針和檔， [https://aka.ms/expressrouteoffice365](https://aka.ms/expressrouteoffice365) [https://aka.ms/ert](https://aka.ms/ert) 並在頻道9上查看[Office 365 訓練系列的 Azure ExpressRoute](https://channel9.msdn.com/series/aer) ，以深入瞭解重要的技術詳細資料，包括：
 
-      - SaaS 服務網際網路相依性。
+      - SaaS 服務的網際網路相依性。
 
-      - 如何避免非對稱式路由及處理複雜路由。
+      - 如何避免對稱路由並處理複雜路由。
 
-      - 如何納入周邊安全性、 可用性及應用程式層級的控制項。
+      - 如何結合周邊安全性、可用性和應用層級控制項。
 
-## <a name="begin-by-gathering-requirements"></a>首先請收集需求
+## <a name="begin-by-gathering-requirements"></a>請先收集需求
 <a name="requirements"> </a>
 
-首先，決定哪些功能和您打算採用您組織內的服務。 您必須決定將使用不同的 Office 365 服務的功能和您網路上的位置將裝載人員使用這些功能。 您需要將網路屬性 (attribute) 與目錄的案例中，每個這些案例需要;等輸入和輸出的網路流量流向 Office 365 端點是否可透過 ExpressRoute 與否。
+首先，決定您規劃要在組織中採用的功能和服務。 您必須決定要使用的不同 Office 365 服務功能，以及網路上的哪些位置將使用這些功能主控人員。 在案例目錄中，您需要新增每個案例所需的網路屬性。例如輸入和輸出網路流量流量，以及 Office 365 端點是否可用於 ExpressRoute。
   
-收集貴組織的需求：
+若要收集組織的需求：
   
-- 型錄，您的組織使用 Office 365 服務的輸入和輸出網路流量。 如需不同 Office 365 案例需要的流量的說明，請參閱 Office 365 Url 和 IP 位址範圍] 頁面。
+- 編目組織所使用之 Office 365 服務的輸入和輸出網路流量。 請參閱 Office 365 URLs 和 IP 位址範圍頁面，瞭解不同 Office 365 案例所需流程的描述。
 
-- 收集現有顯示您的內部 WAN 骨幹和拓撲的詳細資料、 衛星站台，最後一個哩的使用者連線能力，路由傳送至網路周邊出口點和 proxy 服務連線的網路拓撲的文件。
+- 收集現有網路拓撲的檔，顯示內部 WAN 主幹和拓撲的詳細資料、衛星網站的連線、最後的使用者連線能力、路由傳送至網路周邊出局點，以及 proxy 服務。
 
-  - 找出在 Office 365 和其他 Microsoft 服務會連線到，顯示網際網路和建議的 ExpressRoute 連線路徑的網路圖表上的輸入的服務端點。
+  - 識別網狀圖上的輸入服務端點，Office 365 和其他 Microsoft 服務將會連線至，同時顯示網際網路和擬議中的 ExpressRoute 連接路徑。
 
-  - 找出所有地理使用者位置，以及哪些位置目前沒有通往網際網路和建議讓輸出至 ExpressRoute 對等位置的哪個位置的位置之間的 WAN 連線。
+  - 識別各位置之間的所有地理位置使用者位置和 WAN 連線，以及哪些位置目前擁有網際網路的出入，以及哪些位置已建議將出口到 ExpressRoute 對等位置。
 
-  - 找出所有的邊緣裝置，例如 proxy、 防火牆、 等等並型錄，其關係給分批 ExpressRoute 與網際網路的流量。
+  - 識別所有 edge 裝置，例如 proxy、防火牆等等，以及將其關聯編目為透過網際網路和 ExpressRoute 的流量。
 
-  - 文件是否使用者會存取 Office 365 服務透過直接路由或間接的應用程式 proxy 的網際網路和 ExpressRoute 流程。
+  - 檔使用者是否會透過直接路由或間接應用程式 proxy，針對網際網路和 ExpressRoute 流量，存取 Office 365 服務。
 
-- 新增您的租用戶的位置，且符合-我網狀圖的位置。
+- 將您的租使用者位置和符合-me 位置新增至您的網狀圖。
 
-- 估計預期及觀察到的網路效能和延遲特性從主要使用者位置，複製到 Office 365。 請記住，Office 365 是一組通用且分散式的服務，使用者將連線到可能和其租用戶的位置不同的位置。 基於這個理由，建議測量和透過 ExpressRoute 和網際網路連線最佳化使用者與最接近的 Microsoft 全球網路邊緣之間的延遲。 您可以使用從網路評估所發現的錯誤來完成這項作業幫助。
+- 從主要使用者位置到 Office 365，估計預期和觀測的網路效能和延遲特性。 請記住，Office 365 是一組全域和分散式服務，而且使用者將會連線至可能與租使用者位置不同的位置。 因此，建議您衡量及優化使用者與最接近的 Microsoft 全球網路 edge 與 ExpressRoute 和網際網路連線之間的延遲。 您可以從網路評估中使用您的結果，以協助您進行這種工作。
 
-- 列出公司網路安全性及必須符合新的 ExpressRoute 連線的高可用性需求。 例如，如何使用者繼續以取得網際網路輸出或 ExpressRoute 線路失敗發生存取 Office 365。
+- 列出公司網路安全性和高可用性需求，必須符合新的 ExpressRoute 連線。 例如，當網際網路出口或 ExpressRoute 電路失敗時，使用者如何繼續存取 Office 365。
 
-- 文件的輸入和輸出的 Office 365 網路流向會使用網際網路路徑，然後使用 ExpressRoute 的哪。 地理位置的使用者與您的內部網路拓撲的詳細資料的詳細規可能需要從一位使用者的位置到另一個不同的計劃。
+- 記錄傳入和傳出 Office 365 網路流量將使用網際網路路徑，以及使用 ExpressRoute。 您的使用者地理位置和內部部署網路拓朴詳細資料的詳細資訊可能要求計畫與另一個使用者位置不同。
 
-### <a name="catalog-your-outbound-and-inbound-network-traffic"></a>型錄，輸出和輸入網路流量
+### <a name="catalog-your-outbound-and-inbound-network-traffic"></a>編目輸出和輸入的網路流量
 <a name="trafficCatalog"> </a>
 
-路由和其他網路複雜度降至最低，我們建議您只使用 ExpressRoute for Office 365 的網路流量流程前往透過專用連線由於法規需求或網路評估的結果所需。 此外，我們建議您為不同且不同階段實作專案的階段 ExpressRoute 路由和方法輸出和輸入網路流量的範圍。 部署 ExpressRoute for Office 365，只是使用者起始輸出的網路流量流向與跨網際網路的輸入的網路流量可協助控制增加拓撲複雜性和其他的 [的簡介風險中保留的非對稱路由的可能性。
+若要將路由和其他網路複雜性降至最低，我們建議您只針對因法規需求或網路評估的結果而必須透過專用連線進行的網路流量流量，使用 ExpressRoute for Office 365。 此外，我們建議您分段 ExpressRoute 路由的範圍，並將輸出和輸入網路流量資料流程當做實施專案的不同和不同階段。 僅針對使用者啟動的輸出網路流量流量，部署 Office 365 的 ExpressRoute，並使跨 Internet 的輸入網路流量流動，可協助控制拓撲複雜性的增加，以及引入其他非對稱路由可能性的風險。
   
-您的網路流量目錄應該包含您必須在內部網路與 Microsoft 之間的所有輸入和輸出網路連線的清單。
+您的網路流量目錄應包含您的內部部署網路與 Microsoft 之間的所有輸入和輸出網路連線清單。
   
-- 輸出的網路流量是任何位置連線從您的內部部署環境，例如從起始內部用戶端或伺服器，與 Microsoft 服務的目的地的案例。 這些連線可能是 Office 365 直接或間接，例如當連線會通過 proxy 伺服器、 防火牆或其他網路裝置的路徑上至 Office 365。
+- 輸出網路流量流程是指從您的內部部署環境（例如從內部用戶端或伺服器）啟動連接的任何案例，其目的地為 Microsoft 服務。 這些連線可能會直接傳送到 Office 365 或間接，例如當連線經由 proxy 伺服器、防火牆或其他網路裝置的路徑上的 Office 365。
 
-- 輸入的網路流量流向是從 Microsoft cloud 初始連線是其中，內部部署主機任何案例。 這些連線通常需要通過防火牆和客戶安全性原則需要外部起始之流向的其他安全性基礎結構。
+- 輸入網路流量流程是從 Microsoft 雲端啟動至內部部署主機的任何案例。 這些連線通常需要透過防火牆和其他安全性基礎結構，客戶安全性原則需要對外發起流程。
 
-請閱讀**確保路由對稱性來看**一節的文章[使用 ExpressRoute for Office 365 路由](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408)至判斷哪些服務將會傳送的輸入的流量，並尋找在[Office 365 端點](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)參考文章，以判斷其餘的連線資訊中標示**ExpressRoute for Office 365**的資料行。
+閱讀 office [365 ExpressRoute](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408)的 [**確保**路由對應] 區段，以判斷哪些服務會傳送輸入流量，並在[office 365 端點](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)參考文章中尋找標示**為 ExpressRoute for office 365**的欄，以判斷其他的連線資訊。
   
-每個服務所需的輸出連線，您會想要說明計劃的連線能力，包括網路路由、 proxy 組態、 封包檢查服務與頻寬需求。
+針對每個需要輸出連線的服務，您會想要描述服務的已規劃連線，包括網路路由、proxy 設定、封包檢查和頻寬需求。
   
-每個服務所需的輸入的連線，您需要一些額外的資訊。 Microsoft cloud 中的伺服器將會建立連線至您的內部部署網路。 若要確保正確地進行連線，您會想要說明此連線，包括; 的所有層面會接受這些輸入的連線服務的公用 DNS 項目，CIDR 格式化 IPv4 IP 位址，涉及哪些 ISP 設備，以及如何輸入的 NAT 或來源 NAT 處理這些連線。
+針對每個需要輸入連線的服務，您需要一些額外的資訊。 Microsoft 雲端中的伺服器將會建立與您的內部部署網路的連線。 為了確保能夠正確地進行連線，您會想要說明此連線的所有方面，包括;可接受這些輸入連線的服務的公用 DNS 專案、CIDR 格式的 IPv4 IP 位址、所涉及的 ISP 裝置，以及如何處理這些連線的輸入 NAT 或來源 NAT。
   
-輸入的連線應該檢閱不論是否他們透過網際網路連線，或以確保非對稱式路由的 ExpressRoute 尚未已引進。 在某些情況下，內部部署端點 Office 365 服務啟動的傳入的連線可以可能也需要由其他 Microsoft 與非 Microsoft 服務。 很重要，啟用 ExpressRoute 路由傳送至 Office 365 進行這些服務不會中斷其他案例。 在許多情況下，客戶可能需要實作特定變更他們的內部網路，例如來源基礎 NAT，以確保來自 Microsoft 的輸入的流量保持對稱，啟用 ExpressRoute 之後。
+不論是透過網際網路或 ExpressRoute 進行連線以確保未引進非對稱路由，都應複查輸入連線。 在某些情況下，Office 365 服務初始化輸入連線的內部部署端點可能也需要由其他 Microsoft 和非 Microsoft 服務存取。 使 ExpressRoute 路由傳送至這些服務以進行 Office 365 的目的，不會中斷其他案例。 在許多情況下，客戶可能需要對內部網路執行特定變更（例如來源為 NAT），以確保在 ExpressRoute 啟用之後，來自 Microsoft 的輸入資料流程仍保持對稱。
   
-以下是詳細資料所需的層級的範例。 在此情況下 Exchange 混合式會透過 ExpressRoute 路由至內部部署系統。
+以下是所需詳細資料層級的範例。 在此情況下，Exchange 混合式會透過 ExpressRoute 路由傳送至內部部署系統。
 
-|**Connection 屬性**|**Value**|
+|**Connection 屬性**|**值**|
 |:-----|:-----|
-|**網路流量方向** <br/> |輸入  <br/> |
+|**網路流量方向** <br/> |入境  <br/> |
 |**服務** <br/> |Exchange 混合式  <br/> |
-|**公用 Office 365 端點 （來源）** <br/> |Exchange Online （IP 位址）  <br/> |
-|**公用內部端點 （目的地）** <br/> |5.5.5.5  <br/> |
-|**公用 （網際網路） DNS 項目** <br/> |Autodiscover.contoso.com  <br/> |
-|**將此內部部署端點用於其他 (非 Office 365) 的 Microsoft 服務** <br/> |否  <br/> |
-|**將此內部部署端點可供網際網路上的使用者/系統** <br/> |是  <br/> |
-|**透過公用的端點發佈的內部系統** <br/> |Exchange Server 用戶端存取角色 （內部） 192.168.101、 192.168.102、 192.168.103  <br/> |
-|**IP 通告的公開端點** <br/> |**網際網路**： 5.5.0.0/16  <br/> **以 ExpressRoute**: 5.5.5.0/24  <br/> |
-|**安全性/周邊控制項** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
-|**高可用性** <br/> |主動/主動跨 2 異地備援  <br/> ExpressRoute 電路-芝加哥與 Dallas  <br/> |
-|**路徑對稱性來看控制項** <br/> |**方法**： 來源 NAT  <br/> **網際網路路徑**： 來源 NAT 輸入 192.168.5.5 的連線  <br/> |**ExpressRoute 路徑**： 192.168.1.0 （芝加哥） 與 192.168.2.0 (Dallas) 的來源 NAT 連線  <br/> |
+|**公用 Office 365 端點（來源）** <br/> |Exchange Online （IP 位址）  <br/> |
+|**公用 On-Premises 端點（目的地）** <br/> |5.5.5.5  <br/> |
+|**公用（網際網路） DNS 專案** <br/> |Autodiscover.contoso.com  <br/> |
+|**其他（非 Office 365） Microsoft 服務是否使用此內部部署端點** <br/> |否  <br/> |
+|**Internet 上的使用者或系統是否會使用此內部部署端點** <br/> |是  <br/> |
+|**透過公用端點發佈的內部系統** <br/> |Exchange Server 用戶端存取角色（內部部署）192.168.101、192.168.102、192.168.103  <br/> |
+|**公用端點的 IP 廣告** <br/> |**至網際網路**： 5.5.0.0/16  <br/> **若要 ExpressRoute**： 5.5.5.0/24  <br/> |
+|**安全性/周邊控制** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
+|**高可用性** <br/> |跨2地理冗余的主動/主動  <br/> ExpressRoute 電路-芝加哥和達拉斯  <br/> |
+|**路徑對稱控制** <br/> |**方法**：來源 NAT  <br/> **網際網路路徑**：來源 NAT 輸入連線至192.168.5。5  <br/> |**ExpressRoute 路徑**：來源 NAT 連線到192.168.1.0 （芝加哥）和192.168.2.0 （達拉斯）  <br/> |
 
-以下是一種服務，只有輸出範例：
+以下是僅限輸出之服務的範例：
 
-|**Connection 屬性**|**Value**|
+|**Connection 屬性**|**值**|
 |:-----|:-----|
-|**網路流量方向** <br/> |輸出  <br/> |
+|**網路流量方向** <br/> |出境  <br/> |
 |**服務** <br/> |SharePoint Online  <br/> |
-|**內部部署端點 （來源）** <br/> |使用者工作站  <br/> |
-|**公用 Office 365 端點 （目的地）** <br/> |SharePoint Online （IP 位址）  <br/> |
-|**公用 （網際網路） DNS 項目** <br/> |\*。 sharepoint.com （和其他 Fqdn）  <br/> |
-|**CDN 轉介** <br/> |cdn.sharepointonline.com （和其他 Fqdn）-CDN 提供者所維護的 IP 位址)  <br/> |
-|**IP 廣告和使用中的 NAT** <br/> |**網際網路路徑/來源 NAT**: 1.1.1.0/24  <br/> **ExpressRoute 路徑/來源 NAT**: 1.1.2.0/24 （芝加哥） 和 1.1.3.0/24 (Dallas)  <br/> |
-|**連線方法** <br/> |**網際網路**： 透過第 7 層 proxy （.pac 檔案）  <br/> **ExpressRoute**： 直接路由 (沒有 proxy)  <br/> |
-|**安全性/周邊控制項** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
-|**高可用性** <br/> |**網際網路路徑**： 備援網際網路輸出  <br/> **ExpressRoute 路徑**： 主動/主動 '作用馬鈴薯' 路由跨 2 異地備援的 ExpressRoute 電路-芝加哥與 Dallas  <br/> |
-|**路徑對稱性來看控制項** <br/> |**方法**： 來源的所有連線的 NAT  <br/> |
+|**內部部署端點（來源）** <br/> |使用者工作站  <br/> |
+|**公用 Office 365 端點（目的地）** <br/> |線上 SharePoint （IP 位址）  <br/> |
+|**公用（網際網路） DNS 專案** <br/> |\*sharepoint.com （及其他 Fqdn）  <br/> |
+|**CDN 參照** <br/> |cdn.sharepointonline.com （及其他 Fqdn）-由 CDN 提供者維護的 IP 位址  <br/> |
+|**IP 播發和 NAT 正在使用中** <br/> |**網際網路路徑/來源 NAT**： 1.1.1.0/24  <br/> **ExpressRoute 路徑/來源 NAT**： 1.1.2.0/24 （芝加哥）和 1.1.3.0/24 （達拉斯）  <br/> |
+|**Connectivity 方法** <br/> |**Internet**： via layer 7 proxy （pac 檔案）  <br/> **ExpressRoute**：直接路由（無 proxy）  <br/> |
+|**安全性/周邊控制** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
+|**高可用性** <br/> |**網際網路路徑**：重複的網際網路出局  <br/> **ExpressRoute 路徑**：跨2地理位置冗余 ExpressRoute 電路-芝加哥和達拉斯的主動/主動 ' 熱刷」路由  <br/> |
+|**路徑對稱控制** <br/> |**方法**：所有連接的來源 NAT  <br/> |
 
-### <a name="your-network-topology-design-with-regional-connectivity"></a>您的網路拓撲設計，區域的連線
+### <a name="your-network-topology-design-with-regional-connectivity"></a>您的網路拓撲設計與區域連通性
 <a name="topology"> </a>
 
-一旦您了解 services 和其相關聯的網路流量流程，您可以建立網狀圖，各有這些新的連線能力需求，並且說明您要使用 ExpressRoute for Office 365 進行的變更。 您的圖表應包含：
+在您瞭解服務及其相關的網路流量流程之後，您可以建立一個網狀圖，以包含這些新的連線需求，並說明您將使用 ExpressRoute Office 365 的變更。 您的圖表應包含：
   
-1. 其中從存取 Office 365 和其他服務的所有使用者位置。
+1. 將從其存取 Office 365 和其他服務的所有使用者位置。
 
-2. 所有的網際網路和 ExpressRoute 出口點。
+2. 所有網際網路和 ExpressRoute 出局點數。
 
-3. 所有輸出和輸入裝置管理內部和外部網路，包括路由器、 防火牆、 應用程式 proxy 伺服器，以及入侵偵測/防護的連線。
+3. 所有用來管理網路連線的輸出和輸入裝置（包括路由器、防火牆、應用程式 proxy 伺服器及入侵偵測/防護）。
 
-4. 所有的輸入流量，例如接受來自 ADFS 連線的內部 ADFS 伺服器的內部目的地 web 應用程式 proxy 伺服器。
+4. 所有輸入流量的內部目的地，例如接受來自 ADFS web 應用程式 proxy 伺服器之連線的內部 ADFS 伺服器。
 
-5. 會通告的所有 IP 子網路的型錄
+5. 將要宣告之所有 IP 子網的目錄
 
-6. 識別人員會存取來自 Office 365 和列出符合每個位置-我將使用 ExpressRoute 的位置。
+6. 識別每個人員存取 Office 365 的位置，並列出將用於 ExpressRoute 的「搜尋」位置。
 
-7. 位置和您的內部網路拓撲，其中會接受來自 ExpressRoute 學到 Microsoft IP 前置詞，部分的過濾並傳播至。
+7. 內部網路拓撲的位置和部分，在此拓撲中，會接受、篩選和傳播從 ExpressRoute 獲知的 Microsoft IP 首碼。
 
-8. 網路拓撲應說明每個網路區段的地理位置，以及如何連線至 Microsoft network 透過 ExpressRoute 及/或網際網路。
+8. 網路拓撲應該會說明每個網路部分的地理位置，以及它如何透過 ExpressRoute 和/或網際網路連線至 Microsoft 網路。
 
-下方圖表顯示每個位置其中人員將會使用從 Office 365 與 Office 365 的輸入和輸出路由廣告。
+下圖顯示每個使用者使用 Office 365 的位置，以及輸入和輸出路由播發至 Office 365。
   
-![ExpressRoute 區域地理符合-我](media/d866b36b-49bf-416b-af1b-d054e24989d2.png)
+![ExpressRoute 地區地理位置](media/d866b36b-49bf-416b-af1b-d054e24989d2.png)
   
-輸出的流量，人員存取 Office 365 中有三種：
+對於輸出流量，使用者會以下列三種方式之一存取 Office 365：
   
-1. 透過 meet-我中 「 北美地區 」 中的人員加州的位置。
+1. 透過北美地區的 [會見-me] 位置來為加州人員提供人員。
 
-2. 透過 meet-我香港] 中的位置中的人員香港。
+2. 透過香港中的「會見-我」地區的位置，為香港使用者。
 
-3. 透過孟加拉其中有較少的人員，且沒有 ExpressRoute 線路佈建在網際網路。
+3. 透過來自孟加拉的人員，而不會有較少的人員，也沒有布建 ExpressRoute 電路。
 
-![輸出連線的區域圖](media/8319943d-08f0-4781-9ef3-d23de2ad4671.png)
+![區域圖表的輸出連線](media/8319943d-08f0-4781-9ef3-d23de2ad4671.png)
   
-同樣地，從 Office 365 的輸入的網路流量會傳回下列三種方式之一：
+同樣地，來自 Office 365 的輸入網路流量會以下列其中一種方式傳回：
   
-1. 透過 meet-我中 「 北美地區 」 中的人員加州的位置。
+1. 透過北美地區的 [會見-me] 位置來為加州人員提供人員。
 
-2. 透過 meet-我香港] 中的位置中的人員香港。
+2. 透過香港中的「會見-我」地區的位置，為香港使用者。
 
-3. 透過孟加拉其中有較少的人員，且沒有 ExpressRoute 線路佈建在網際網路。
+3. 透過來自孟加拉的人員，而不會有較少的人員，也沒有布建 ExpressRoute 電路。
 
-![輸入的連線的區域圖](media/d6d6160d-bf28-4de3-a787-186c7432b306.png)
+![區域圖表的輸入連接](media/d6d6160d-bf28-4de3-a787-186c7432b306.png)
   
-### <a name="determine-the-appropriate-meet-me-location"></a>決定適當的符合-我的位置
+### <a name="determine-the-appropriate-meet-me-location"></a>決定適當的 [符合我的位置] 位置
 
-符合選取範圍-我的位置，也就是其中 ExpressRoute 線路連接至 Microsoft 網路的網路的實體位置，會受到其中人員會存取來自 Office 365 的位置。 為提供 SaaS，Office 365 不會運作 IaaS 或 PaaS 地區模型下 Azure 沒有相同的方式。 相反地，Office 365 是分散式的一組共同作業服務，使用者可能需要跨多個資料中心和區域，這可能不一定是相同的位置或主控使用者的租用戶的區域中連接至端點。
+您可以選擇 [符合我的位置] （即您的 ExpressRoute 電路將您的網路連線至 Microsoft 網路的實體位置），受到人員存取 Office 365 的位置影響。 SaaS 方案中，Office 365 不會在 IaaS 或 PaaS 區域模式下運作，其方式與 Azure 相同。 相反地，Office 365 是一組分散式服務，其中的使用者可能需要跨多個資料中心及地區連接端點，而且不一定位於使用者租使用者所在的相同位置或地區。
   
-這表示您必須先選取符合時的最重要考量-我的 ExpressRoute for Office 365 的位置是在您的組織中的人員從的連接位置。 一般建議的最佳的 Office 365 連線是實作路由，使 Office 365 服務的使用者要求會交由關閉成 Microsoft 網路的最短的網路路徑，這通常也會被稱為 '作用馬鈴薯' 路由。 例如，如果大部分的 Office 365 使用者在一或兩個位置中，選取 [符合-我最接近的鄰近，以這些使用者的位置中的位置會建立最佳的設計。 如果貴公司有大量的使用者人數許多不同的區域中，您可能要考慮建立多個 ExpressRoute 電路符合-我的位置。 針對某些您使用者的位置，到 Microsoft 網路和 Office 365 的最短/最最佳路徑可能無法透過您內部的 WAN 和 ExpressRoute 符合-我點，但是透過網際網路。
+這表示當您為 Office 365 選取 [符合我的位置] 時，您需要進行的最重要考慮，您的組織中的人員將從該 ExpressRoute 位置進行連接。 最佳的 Office 365 連線功能的一般建議是實施路由傳送，這樣一來，Office 365 服務的使用者要求會透過最短的網路路徑傳送至 Microsoft 網路，也通常稱為「熱刷」路由。 例如，如果大部分的 Office 365 使用者位於一或兩個位置，選取 [符合我的位置] 最接近于這些使用者位置最接近的位置，將會建立最佳設計。 如果您的公司在許多不同的地區都有大量使用者人口，您可能想要考慮有多個 ExpressRoute 電路，並符合我的場所。 針對您的某些使用者位置，Microsoft 網路和 Office 365 中最短/最適合的路徑，可能不會透過您的內部 WAN 和 ExpressRoute 符合您的內部網路點，但透過網際網路獲得。
   
-通常時間有多個符合-我無法選取與您的使用者的相對近似值區域內的位置。 填寫下列表格來引導您決策。
+這通常會有多個可在與您的使用者相對應的區域內選取的 [符合 me] 位置。 填寫下表以引導您的決策。
 
-|**計劃的 ExpressRoute 符合-我加州和 New York 中的位置**||
+|**在加州和紐約的計畫 ExpressRoute 符合我的場所**||
 |:-----|:-----|
-|位置  <br/> |人數  <br/> |透過網際網路輸出預期 Microsoft 網路延遲  <br/> |預期的延遲，Microsoft 網路，透過 ExpressRoute  <br/> |
-|Los Angeles  <br/> |10,000  <br/> |~ 15ms  <br/> |~ 10 毫秒 （透過矽谷）  <br/> |
-|華盛頓 DC  <br/> |15,000  <br/> |~ 20 毫秒  <br/> |~ 10 毫秒 （透過 New York)  <br/> |
-|Dallas  <br/> |5,000  <br/> |~ 15ms  <br/> |~ 40ms （透過 New York)  <br/> |
+|位置  <br/> |人員人數  <br/> |透過網際網路出局對 Microsoft 網路的預期延遲  <br/> |對 ExpressRoute 的 Microsoft 網路的預期延遲  <br/> |
+|Los Angeles  <br/> |10,000  <br/> |~ 15ms  <br/> |~ 10ms （透過矽低谷）  <br/> |
+|華盛頓  <br/> |15,000  <br/> |~ 20 毫秒  <br/> |~ 10ms （透過紐約）  <br/> |
+|達拉斯  <br/> |5,000  <br/> |~ 15ms  <br/> |~ 40ms （透過紐約）  <br/> |
 
-一旦顯示 Office 365 地區的全球網路架構，ExpressRoute 的網路服務提供者符合-我已開發位置，以及由位置的人員數量，它可以用來識別是否可以進行任何最佳化。 它也可以顯示全域髮夾網路連線其中流量路由傳送到遠端位置以取得符合-我的位置。 如果在全球網路髮夾找到它應該進行修復才能繼續執行。 尋找另一個符合-我的位置或使用選擇性網際網路上下文出口點，以避免發生髮夾。
+在顯示 Office 365 地區的全域網路架構之後，ExpressRoute 網路服務提供者的 [符合我的位置]，以及 [依位置排列的人員數量]，可以用來識別是否可以進行任何優化。 它也可能會顯示全域髮夾網路連線，其中的流量會路由傳送到遠處的位置，以便取得「我的位置」的位置。 如果已探索全域網路上的髮夾，則應該先修正此，然後再繼續進行。 請找到另一個 [符合我的位置] 位置，或使用選擇性的網際網路專題討論顯示點，以避免髮夾。
   
-第一個圖表中，「 北美地區 」 中顯示兩個實體位置與客戶的範例。 您可以看到的資訊辦公室的位置，Office 365 租用戶的位置，以及 ExpressRoute 的幾種選擇符合-我的位置。 在這個範例中，客戶已選取符合-我位置根據兩個原則，順序：
+第一個圖表顯示一份客戶的範例，其中包含北美地區的兩個實體位置。 您可以查看 office 位置、Office 365 租使用者位置的相關資訊，以及數個 ExpressRoute 的符合 me 位置的選項。 在此範例中，客戶根據兩項原則選取 [符合我的位置]，順序如下：
   
-1. 最接近接近其組織中的人員。
+1. 最接近組織中的人員。
 
-2. 最接近中 Microsoft 資料中心主控 Office 365 的近似值。
+2. 最接近于主控 Office 365 的 Microsoft 資料中心的鄰近性。
 
-![ExpressRoute 美國地理符合-我](media/5ec38274-b317-4ec1-91c8-90c2a7fd32ca.png)
+![ExpressRoute US 地理位置會見-me](media/5ec38274-b317-4ec1-91c8-90c2a7fd32ca.png)
   
-稍微擴充此概念進一步範例跨國客戶面臨類似的資訊和決策第二個圖顯示。 此客戶有中孟加拉十個人員著重於得其使用量的區域中的小型小組使用小型的 office。 沒有符合-我辰內和 Microsoft 資料中心與 Office 365 中的位置中裝載辰內因此符合-我的位置就能明白;不過，十個人員，是各家其他電路費用。 為您查看您的網路時，您需要決定是否比消費以取得其他 ExpressRoute 線路首都更有效參與您網路上傳送您的網路流量的延遲。
+進一步擴充此概念，第二個圖表會顯示一個包含類似資訊和決策過程的多國客戶的範例。 此客戶在孟加拉的小型辦公室中，只有十個人的小小組，專注于在地區內成長其足跡。 Chennai 中有一個 [符合我的位置] 和 Chennai 中主控 Office 365 的 Microsoft 資料中心，因此符合 me 的位置很有意義;不過，如果是10位人員，額外電路的費用會非常繁重。 當您查看網路時，您需要判斷在網路中傳送網路流量所涉及的延遲，是否比花資本以取得另一部 ExpressRoute 電路更有效。
   
-或者，在孟加拉十個人員可能會遇到更好的效能其比會在他們的內部網路上中路由，我們示範簡介圖表及重現時，透過網際網路傳送至 Microsoft 網路的網路流量下面。
+或者，在透過網際網路傳送至 Microsoft 網路的網路流量透過網際網路傳送至其內部網路的網路流量，在下列情況下所述，其他孟加拉的使用者可能會體驗更好的效能。
   
-![輸出連線的區域圖](media/8319943d-08f0-4781-9ef3-d23de2ad4671.png)
+![區域圖表的輸出連線](media/8319943d-08f0-4781-9ef3-d23de2ad4671.png)
   
-## <a name="create-your-expressroute-for-office-365-implementation-plan"></a>建立您 ExpressRoute for Office 365 實作計劃
+## <a name="create-your-expressroute-for-office-365-implementation-plan"></a>建立 Office 365 實施方案的 ExpressRoute
 <a name="implementation"> </a>
 
-您實作計劃應該包含這兩種技術的詳細資訊設定 ExpressRoute，以及設定所有其他基礎結構上您的網路，如下所示的詳細資料。
+您的實施計畫應該同時包含設定 ExpressRoute 的技術詳細資料，以及在網路上設定其他所有基礎結構的詳細資料，如下所示。
   
-- 規劃 ExpressRoute 與網際網路之間分割的服務。
+- 規劃在 ExpressRoute 和網際網路之間分割的服務。
 
-- 規劃頻寬、 安全性、 高可用性和容錯移轉。
+- 規劃頻寬、安全性、高可用性和容錯移轉。
 
-- 設計輸入和輸出路由，包括適當的不同位置的路由路徑最佳化
+- 設計輸入和輸出路由，包含不同位置的適當路由路徑優化
 
-- 決定 ExpressRoute 路由傳送到您網路的通告花費多少時間以及 「 什麼是以選取 [網際網路] 或 [ExpressRoute 路徑; 用戶端的機制例如，直接路由或應用程式 proxy。
+- 決定要將哪些 ExpressRoute 路由宣告到您的網路中，以及用戶端選擇網際網路或 ExpressRoute 路徑的機制為何;例如，direct routing 或 application proxy。
 
-- 規劃 DNS 記錄的變更，包括[寄件者原則架構](https://technet.microsoft.com/library/dn789058%28v=exchg.150%29.aspx)項目。
+- 規劃 DNS 記錄變更，包括[寄件者原則架構](https://technet.microsoft.com/library/dn789058%28v=exchg.150%29.aspx)專案。
 
-- 規劃 NAT 策略包括輸出和輸入來源 nat。
+- 規劃 NAT 策略（包括輸出和輸入來源 NAT）。
 
-### <a name="plan-your-routing-with-both-internet-and-expressroute-network-paths"></a>規劃您的路由與網際網路和 ExpressRoute 的網路路徑
+### <a name="plan-your-routing-with-both-internet-and-expressroute-network-paths"></a>規劃使用網際網路和 ExpressRoute 網路路徑的路由
 <a name="paths"> </a>
 
-- 初始部署，所有輸入的服務，例如內送電子郵件或混合式連線，建議使用網際網路。
+- 針對您的初始部署，建議使用網際網路的所有輸入服務（例如輸入電子郵件或混合式連線）。
 
-- 規劃使用者用戶端 LAN 路由，例如[設定 PAC/WPAD 檔案](https://aka.ms/manageo365endpoints)、 預設路由，proxy 伺服器及 BGP 路由廣告。
+- 規劃使用者用戶端 LAN 路由，例如設定[PAC/WPAD](https://aka.ms/manageo365endpoints)檔案、預設路由、proxy 伺服器和 BGP 路由播發。
 
-- 規劃外圍路由，包括 proxy 伺服器、 防火牆和雲端 proxy。
+- 規劃周邊路由，包括 proxy 伺服器、防火牆和雲端 proxy。
 
-### <a name="plan-your-bandwidth-security-high-availability-and-failover"></a>規劃您的頻寬、 安全性、 高可用性和容錯移轉
+### <a name="plan-your-bandwidth-security-high-availability-and-failover"></a>規劃頻寬、安全性、高可用性和容錯移轉
 <a name="availability"> </a>
 
-建立計劃每個主要的 Office 365 工作負載所需的頻寬。 分開估計 Exchange Online、 SharePoint Online，與 Skype for Business Online 頻寬需求。 您可以使用我們提供 Exchange Online 和作為起點; 商務用 Skype 估計計算器不過，試驗測試與使用者設定檔及位置的代表性樣本才充分了解您組織的頻寬需求。
+針對每個主要 Office 365 工作負載，建立所需頻寬的計畫。 分別評估 Exchange Online、SharePoint 線上和商務用 Skype Online 頻寬需求。 您可以使用我們為 Exchange Online 和商務用 Skype 所提供的評估計算機做為開始地點;不過，使用使用者設定檔和位置的具有代表性範例的試驗測試，必須充分瞭解貴組織的頻寬需求。
   
-新增安全性，在每個網際網路和您的計劃的 ExpressRoute 輸出位置的處理方式，請記住所有 ExpressRoute 連線到 Office 365 使用公用對等，而且必須仍受到保護，根據連接至外部的您公司的安全性原則網路。
+新增如何處理每個網際網路的安全性和 ExpressRoute 外接位置，請記住 Office 365 的所有 ExpressRoute 連線都使用 public 對等方式，而且仍然必須根據公司的安全性原則（連接至外部網路）加以保護。
   
-新增至相關的人員將會受到何種類型的中斷，這些人員如何將能夠最簡單的方式執行容量滿載其工作您計劃的詳細資訊。
+針對您的計畫新增詳細資料，以瞭解哪些人員將會受到哪種類型的中斷影響，以及哪些人員能夠以最簡單的方式執行其工作。
   
-#### <a name="plan-bandwidth-requirements-including-skype-for-business-requirements-on-jitter-latency-congestion-and-headroom"></a>規劃包括 Skype 抖動、 延遲、 擁塞、 和發揮空間的商務需求的頻寬需求
+#### <a name="plan-bandwidth-requirements-including-skype-for-business-requirements-on-jitter-latency-congestion-and-headroom"></a>規劃頻寬需求，包括抖動、延遲、擁塞和餘地上的商務用 Skype 需求
   
-Skype 商務 Online 也有特定的其他網路需求[媒體品質和網路連線效能 Skype for Business Online 中](https://support.office.com/article/Media-Quality-and-Network-Connectivity-Performance-in-Skype-for-Business-Online-5fe3e01b-34cf-44e0-b897-b0b2a83f0917)的文章會詳細說明。
+商務用 skype Online 也有特定額外的網路需求，這些需求會在文章[媒體質量與商務用 Skype Online 的網路連線效能](https://support.office.com/article/Media-Quality-and-Network-Connectivity-Performance-in-Skype-for-Business-Online-5fe3e01b-34cf-44e0-b897-b0b2a83f0917)中詳細說明。
   
-請閱讀**頻寬規劃 Azure ExpressRoute 的**[網路規劃使用 ExpressRoute for Office 365](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)一節。
+請參閱[使用 Office 365 ExpressRoute 的網路規劃](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)中的**Azure ExpressRoute Azure 規劃的章節頻寬規劃**。
   
-執行時的頻寬評定，與您的試驗使用者，您可以使用我們的指南。[Office 365 效能調整使用基準與效能歷程記錄](https://support.office.com/article/Office-365-performance-tuning-using-baselines-and-performance-history-1492cb94-bd62-43e6-b8d0-2a61ed88ebae)。
+當您的試驗使用者執行頻寬評估時，您可以使用我們的指南。[使用基準和效能歷程記錄的 Office 365 效能調整](https://support.office.com/article/Office-365-performance-tuning-using-baselines-and-performance-history-1492cb94-bd62-43e6-b8d0-2a61ed88ebae)。
   
 #### <a name="plan-for-high-availability-requirements"></a>規劃高可用性需求
   
-建立計畫，以符合您的需求與這併入更新的網路拓撲圖表的高可用性。 閱讀 [] 區段中**的高可用性和容錯移轉進行 Azure ExpressRoute**的[網路規劃使用 ExpressRoute for Office 365](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)。
+建立高可用性的計畫，以符合您的需求，並將此方案併入更新的網路拓撲圖表。 [使用 Office 365 ExpressRoute 的網路規劃](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)中的 Azure ExpressRoute，閱讀本節**高可用性和容錯移轉**。
   
-#### <a name="plan-for-network-security-requirements"></a>如需網路安全性需求的計劃
+#### <a name="plan-for-network-security-requirements"></a>規劃網路安全性需求
   
-建立計畫，以符合您的網路安全性需求與這併入更新的網路拓撲圖表。 閱讀 [] 區段中**套用安全性控制，以便 Azure ExpressRoute for Office 365 案例**中[使用 ExpressRoute for Office 365 的網路規劃](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)。
+建立符合網路安全性需求的計畫，並將此方案併入更新的網路拓撲圖表。 閱讀[使用 office 365 ExpressRoute 的網路規劃](https://support.office.com/article/Network-planning-with-ExpressRoute-for-Office-365-103208f1-e788-4601-aa45-504f896511cd)中，將**安全性控制套用至 Azure ExpressRoute for office 365 案例**的章節。
   
 ### <a name="design-outbound-service-connectivity"></a>設計輸出服務連線
 <a name="outbound"> </a>
 
-ExpressRoute for Office 365 有可能不太熟悉的*輸出*網路需求。 具體而言，IP 位址，代表您的使用者與網路到 Office 365，且作為給 Microsoft 的輸出網路連線的來源端點必須遵循以下所述的特定需求。
+ExpressRoute Office 365 具有可能不熟悉的*輸出*網路需求。 尤其是，將使用者和網路對應至 Office 365 的 IP 位址，並做為到 Microsoft 的輸出網路連線的來源端點，必須遵循下列所述的特定需求。
   
-1. 端點必須是公用 IP 位址，已註冊您的公司或電訊廠商提供給您的 ExpressRoute 連線。
+1. 端點必須是公用 IP 位址，已註冊至您的公司或電信公司，可提供給您的 ExpressRoute 連線能力。
 
-2. 由 ExpressRoute 必須通告給 Microsoft 及驗證/接受端點。
+2. 端點必須透過 ExpressRoute 播發及驗證/認可。
 
-3. 端點必須不會通告到具有相同或更多的慣用路由公制網際網路。
+3. 端點不能透過相同或更喜歡的路由躍點數宣告至網際網路。
 
-4. 端點必須不用於未設定透過 ExpressRoute 的 Microsoft 服務的連線。
+4. 端點不得用於連線至未透過 ExpressRoute 設定的 Microsoft 服務。
 
-如果您的網路設計不符合這些需求，則您的使用者會體驗到 Office 365 和其他 Microsoft 服務，因為路由黑色 holing 或非對稱式路由的連線失敗高風險。 會發生這種情況時要求送至 Microsoft 服務透過 ExpressRoute，路由傳送，但回應會路由傳送回跨網際網路，或反之，以及回應會捨棄封狀態的網路裝置，例如防火牆。
+如果您的網路設計不符合這些需求，則由於路由黑色 holing 或非對稱路由，您的使用者可能會在 Office 365 和其他 Microsoft 服務上遇到連線失敗的危險。 當對 Microsoft 服務的要求透過 ExpressRoute 路由傳送時，會發生此情況，但回應會透過網際網路路由傳送回來，反之亦然，回應會被狀態網路裝置（例如防火牆）中斷。
   
-您可以使用符合上述需求的常見方法是網路的使用來源實作為您的一部分，或您 ExpressRoute 電訊廠商所提供的 NAT。 來源 NAT 可讓您擷取的詳細資訊與私人 IP 位址設定網際網路網路的 ExpressRoute 從和;搭配適當 IP 路由廣告，提供簡單的機制，以確保路徑對稱性。 如果您正在使用 ExpressRoute 對等位置特有的設定狀態的網路裝置，您必須實作不同的 NAT 集區的每個對等以確定路徑對稱性來看的 ExpressRoute。
+您可以用來符合上述需求的最常見方法，就是使用來源 NAT，以作為網路的一部分，或由您的 ExpressRoute 載體所提供。 來源 NAT 可讓您從 ExpressRoute 摘要網際網路網路的詳細資料和私人 IP 位址，以及結合適當的 IP 路由通告，提供一種簡易的機制，以確保路徑對稱。 如果您使用 ExpressRoute 對等位置特有的狀態網路裝置，則必須針對每個 ExpressRoute 對等位置執行個別的 NAT 集區，以確保路徑對稱。
   
-閱讀的有關[ExpressRoute NAT 需求](https://azure.microsoft.com/documentation/articles/expressroute-nat/)的詳細資訊。
+如需詳細資訊，請參閱[EXPRESSROUTE NAT 需求](https://azure.microsoft.com/documentation/articles/expressroute-nat/)。
   
-網路拓撲圖表中新增的輸出連線的變更。
+將輸出連線的變更新增至網路拓撲圖表。
   
-### <a name="design-inbound-service-connectivity"></a>設計輸入的服務連線
+### <a name="design-inbound-service-connectivity"></a>設計輸入服務連線
 <a name="inbound"> </a>
 
-大部分的 Office 365 企業版部署假設在某種形式的輸入連線從 Office 365 的內部服務，例如 Exchange、 SharePoint 和 Skype for Business 的混合式案例、 信箱移轉和使用 ADFS 的驗證基礎結構。 當啟用您的內部網路與 Microsoft 之間的輸出連線其他路由路徑的 ExpressRoute，這些輸入的連線可能會不小心受到非對稱式路由，即使您想要有這些流程繼續使用網際網路。 若要確保有不會影響到網際網路型從 Office 365 與內部部署系統的輸入的流量建議如下所述的一些預防措施。
+大部分的 enterprise Office 365 部署會假設某些形式的來自 Office 365 的輸入連線至內部部署服務，例如用於 Exchange、SharePoint 和商務用 Skype 混合式案例、信箱遷移，以及使用 ADFS 基礎結構進行驗證。 當您在內部部署網路與 Microsoft 之間啟用額外的路由路徑，以進行輸出連線 ExpressRoute 時，即使您想要讓這些流程繼續使用網際網路，這些輸入連線可能會不慎受到非對稱路由的影響。 建議如下所述的防範措施，以確保從 Office 365 至內部部署系統的網際網路輸入流量沒有任何影響。
   
-最小化的非對稱式路由內送的網路流量的風險，所有的輸入連線應該使用來源 NAT 之前他們正在路由傳送到您的網路區段有 ExpressRoute 路由的可視性。 如果傳入的連線至網路區段中所允許的沒有來源 NAT ExpressRoute 路由查看，來自 Office 365 的要求會進入從網際網路，但回到 Office 365 的回應會偏好 ExpressRoute回到 Microsoft 網路，而造成非對稱式路由的網路路徑。
+若要降低輸入網路流量流程的非對稱路由風險，所有的輸入連線都應該先使用來源 NAT，然後才會將其路由傳送至您的網路網段，使其可在 ExpressRoute 中進行路由查看。 如果允許傳入連線到具有路由 ExpressRoute 可視性的網段，但沒有來源 NAT，來自 Office 365 的要求會進入網際網路，但是回到 Office 365 的回應將優先于 ExpressRoute 網路路徑回到 Microsoft 網路，造成不對稱的路由。
   
-您可能會考慮下列其中一個下列實作模式以滿足此需求：
+您可以考慮下列其中一個執行模式，以滿足這項需求：
   
-1. 要求路由傳送到您的內部網路使用網路設備，例如防火牆之前執行來源 NAT 或負載平衡器的路徑上從網際網路至您的內部部署系統。
+1. 在要求使用網路設備（例如防火牆或從網際網路到您的內部部署系統的負載平衡器）上的網路設備（例如防火牆或負載平衡器）路由進入內部網路之前，請先執行來源 NAT。
 
-2. 請確定 ExpressRoute 路由不會傳播到其中輸入的服務，例如前方端伺服器或反向 proxy 系統，處理的網際網路連線位於網路區段。
+2. 確定 ExpressRoute 路由不會傳播到輸入服務（例如前端伺服器或反向 proxy 系統）的網段，處理網際網路連線。
 
-明確 accounting 對這些案例中您的網路，並保留所有內送的網路流量會透過網際網路協助部署和操作的非對稱式路由的風險降至最低。
+針對您的網路中的這些案例明確會計，並保留透過網際網路的所有輸入網路流量，有助於將非對稱路由的部署和操作風險降至最低。
   
-可能會有您可以選擇將某些輸入的流量導向透過 ExpressRoute 連線的情況。 這些情況下，需要考慮下列額外考量。
+在某些情況下，您可能會選擇透過 ExpressRoute 連線來引導某些輸入流量。 在這些案例中，請採取下列其他考慮。
   
-1. Office 365 可以只目標內部部署端點，使用公用 Ip。 這表示即使內部輸入的端點只會公開給 Office 365 透過 ExpressRoute，仍然需要有與它相關聯的公用 IP。
+1. Office 365 只能針對使用公用 Ip 的內部部署端點。 這表示即使內部部署輸入端點只會透過 ExpressRoute 公開給 Office 365，仍然必須具有與其相關聯的公用 IP。
 
-2. 若要解決內部部署端點，執行 Office 365 服務的所有 DNS 名稱解析都發生使用公用 DNS。 這表示您必須註冊輸入的服務端點的 FQDN，以在網際網路上的 IP 對應。
+2. Office 365 服務執行以解析內部部署端點的所有 DNS 名稱解析都是使用公用 DNS。 這表示您必須將輸入服務端點的 FQDN 註冊至網際網路上的 IP 對應。
 
-3. 若要透過 ExpressRoute 接收內送的網路連線，這些端點的公用 IP 子網路必須透過 ExpressRoute 通告給 Microsoft。
+3. 為了透過 ExpressRoute 接收輸入的網路連線，必須透過 ExpressRoute 將這些端點的公用 IP 子網宣告給 Microsoft。
 
-4. 仔細評估，以確保該適當的安全性這些輸入的網路流量流量和網路控制項時，會套用至其上，根據您的公司安全性和網路原則。
+4. 請仔細評估這些輸入網路流量流量，以確保依照公司的安全性和網路原則套用適當的安全性和網路控制項。
 
-5. 一次您在內部部署輸入的端點會通告給 Microsoft，透過 ExpressRoute、 ExpressRoute 將有效成為那些端點的所有 Microsoft 服務，包括 Office 365 的慣用路由路徑。 這表示，這些端點子網路必須僅可用於與 Office 365 服務和 Microsoft 網路上的任何其他服務的通訊。 否則，您的設計會導致其中來自其他 Microsoft 服務偏好路由傳送的輸入的連線輸入透過 ExpressRoute，雖然傳回路徑將會使用網際網路的非對稱式路由。
+5. 當您的內部部署輸入端點透過 ExpressRoute 播發至 Microsoft 時，ExpressRoute 會有效成為所有 Microsoft 服務之端點的首選路由路徑，包括 Office 365。 這表示這些端點子網必須只用于與 Office 365 服務的通訊，而不是 Microsoft 網路上的其他服務。 否則，您的設計將會造成非對稱路由，來自其他 Microsoft 服務的輸入連線傾向于路由傳送輸入的 ExpressRoute，而傳回路徑會使用網際網路。
 
-6. 在事件 ExpressRoute 電路或符合-我位置已關閉，您需要確定內部輸入的端點是仍可接受要求透過不同的網路路徑。 這可能表示廣告子網路，透過多重 ExpressRoute 電路這些端點。
+6. 當 ExpressRoute 的電路或符合我的位置已停機時，您必須確定內部部署輸入端點仍可透過個別網路路徑接受要求。 這可能表示透過多個 ExpressRoute 電路公佈這些端點的子網。
 
-7. 我們建議您套用來源 NAT 輸入您的網路，透過 ExpressRoute，尤其是當這些流量跨設定狀態的網路裝置，例如防火牆的所有內送的網路流量流程。
+7. 建議您透過 ExpressRoute 為進入網路的所有輸入網路流量資料流程套用來源 NAT，尤其是當這些資料流程跨狀態網路裝置（例如防火牆）。
 
-8. 某些內部服務，例如 ADFS proxy 或 Exchange 自動探索，可能會收到輸入的要求從 Office 365 服務，以及來自網際網路的使用者。 這些要求的 Office 365 會透過網際網路目標相同的 FQDN，因為使用者要求。 時強制使用 ExpressRoute，Office 365 連線到這些內部部署端點，允許輸入的使用者的連線從網際網路代表重大路由的複雜性。 對於大多數的客戶透過 ExpressRoute 實作這類複雜的案例建議您不要由於操作考量。 此額外的負荷量包含，管理風險的非對稱式路由，並且需要您仔細跨多個維度中管理路由廣告和原則。
+8. 有些內部部署服務（例如 ADFS proxy 或 Exchange 自動探索）可能會收到來自 Office 365 服務和使用者的來自網際網路的輸入要求。 針對這些要求，Office 365 會將相同的 FQDN 與網際網路上的使用者要求進行目標。 允許從網際網路至內部部署端點的輸入使用者連線，同時強制使用 ExpressRoute 的 Office 365 連線，表示大量路由複雜性。 對於絕大多數使用 ExpressRoute 執行這類複雜案例的客戶，由於運作考慮，所以不建議使用。 這項額外的額外負荷包括管理非對稱路由的風險，而且會要求您認真管理跨多個維度的路由通告和原則。
 
-### <a name="update-your-network-topology-plan-to-show-how-you-would-avoid-asymmetric-routes"></a>更新您的網路拓撲計劃，以顯示您想要如何避免非對稱式路由
+### <a name="update-your-network-topology-plan-to-show-how-you-would-avoid-asymmetric-routes"></a>更新您的網路拓撲計畫，以顯示避免對稱路由的方式
 <a name="asymmetric"> </a>
 
-您想要避免以確保您組織中的人員可以順暢地使用 Office 365，以及其他重要服務在網際網路上的非對稱式路由。 有兩種常見設定客戶可有非對稱式路由會造成。 現在是很好的時間才能檢閱您計劃要使用並檢查其中一個這些非對稱的路由案例可能存在於網路組態。
+您想要避免使用不對稱的路由，以確保您組織中的人員能夠順利使用 Office 365 以及網際網路上的其他重要服務。 客戶有兩個常見設定可導致非對稱路由。 現在，請查看您計畫要使用的網路設定，並檢查是否有其中一個不對稱的路由案例可以存在。
   
-若要開始，我們將檢查幾個不同的情況下的網狀圖相關聯。 在此圖表中，所有伺服器接收傳入的要求，例如 ADFS 或內部部署混合伺服器皆紐澤西資料中心，並通知給網際網路。
+為了開始，我們會檢查與下列網狀圖表相關的幾個不同情況。 在此圖中，所有接收輸入要求的伺服器（例如，ADFS 或內部部署混合伺服器）皆位於新的 Jersey 資料中心，且會通告至網際網路。
   
-1. 周邊網路安全時，沒有任何來源 NAT 可用的傳入要求。
+1. 當周邊網路安全時，傳入要求沒有來源 NAT 可用。
 
-2. 紐澤西資料中心中的伺服器都能看到網際網路和 ExpressRoute 路由。
+2. 新 Jersey 資料中心的伺服器能夠同時查看網際網路和 ExpressRoute 路由。
 
-![ExpressRoute 連線概觀](media/8f074af6-ef38-44e8-bc5a-8b4d981fbb20.png)
+![ExpressRoute 連線能力概述](media/8f074af6-ef38-44e8-bc5a-8b4d981fbb20.png)
   
-我們也會有如何修正它們的建議。
+我們也會針對如何修正這些問題提出建議。
   
-#### <a name="problem-1-cloud-to-on-premises-connection-over-the-internet"></a>問題 1： 雲端與在網際網路上的內部部署連線
+#### <a name="problem-1-cloud-to-on-premises-connection-over-the-internet"></a>問題1： Cloud to Internet over Internet 上的內部部署連接
   
-下圖說明當您的網路組態不會透過網際網路的輸入要求從 Microsoft cloud 中提供 NAT 時採取的非對稱的網路路徑。
+下圖說明當您的網路設定沒有透過網際網路提供來自 Microsoft 雲端之輸入要求的 NAT 時，所採用的非對稱網路路徑。
   
-1. 從 Office 365 的輸入的要求從公用 DNS 擷取內部部署端點的 IP 位址，並將要求傳送至您的周邊網路。
+1. 來自 Office 365 的輸入要求會從公用 DNS 中檢索內部部署端點的 IP 位址，並將要求傳送至您的周邊網路。
 
-2. 在此無效的組態中，沒有設定任何來源 NAT 或可在周邊網路流量所在傳送產生的實際的來源 IP 位址被用來作為傳回目的地。
+2. 在此錯誤的設定中，未在傳送流量的周邊網路上設定或提供來源 NAT，進而產生實際來源 IP 位址，以當作傳回目的地使用。
 
-  - 您網路上的伺服器會透過任何可用的 ExpressRoute 網路連線，將傳回流量路由到 Office 365。
+  - 網路上的伺服器透過任何可用的 ExpressRoute 網路連線，將傳回流量路由傳送至 Office 365。
 
-  - 結果是該流向 Office 365，導致中斷連線的非對稱路徑。
+  - 結果是該流程到 Office 365 的非對稱路徑，導致連線中斷。
 
-![ExpressRoute Asymetric 路由問題 1](media/9c210c2a-e0ea-4180-8ede-1bf41746ce7a.png)
+![ExpressRoute Asymetric 路由問題1](media/9c210c2a-e0ea-4180-8ede-1bf41746ce7a.png)
   
-##### <a name="solution-1a-source-nat"></a>解決方案 1a： 來源 NAT
+##### <a name="solution-1a-source-nat"></a>解決方案1a：來源 NAT
   
-只要將 NAT 的來源加入到的傳入要求解析此設定錯誤的網路。 在此圖表中：
+只要將來源 NAT 新增至輸入的要求，即可解析這種已設定錯誤的網路。 在此圖表中：
   
-1. 傳入的要求會繼續輸入透過紐澤西資料中心的周邊網路。 這段時間來源 NAT 使用。
+1. 傳入要求會繼續透過新的 Jersey 資料中心周邊網路進入。 此時間源 NAT 可供使用。
 
-2. 從回聚集 nat 來源而不是原始的 IP 位址，傳回相同的網路路徑在回應中產生關聯的 IP 伺服器路由傳送回應。
+2. 伺服器的回應會傳回與來源 NAT 相關聯的 IP 位址，而不是原始 IP 位址，進而導致回應沿著相同的網路路徑傳回。
 
-![ExpressRoute Asymetric 路由方案 1](media/0e87a155-f8de-48ed-92ac-27367b727a82.png)
+![ExpressRoute Asymetric 路由解決方案1](media/0e87a155-f8de-48ed-92ac-27367b727a82.png)
   
-##### <a name="solution-1b-route-scoping"></a>解決方案 1b： 路由範圍設定
+##### <a name="solution-1b-route-scoping"></a>解決方案1b：路由範圍
   
-或者，您可以選擇不允許前置詞才能被公告 ExpressRoute BGP 移除這些電腦的替代的網路路徑。 在此圖表中：
+或者，您也可以選擇不允許公佈 ExpressRoute BGP 首碼，移除這些電腦的備用網路路徑。 在此圖表中：
   
-1. 傳入的要求會繼續輸入透過紐澤西資料中心的周邊網路。 這一次透過 ExpressRoute 線路通告來自 Microsoft 的前置詞不到紐澤西資料中心。
+1. 傳入要求會繼續透過新的 Jersey 資料中心周邊網路進入。 這段時間，新的 Jersey 資料中心無法使用透過 ExpressRoute 電路宣告給 Microsoft 的首碼。
 
-2. 從伺服器路由傳送的回應備份聚集傳回相同的網路路徑在回應中所產生的 IP 上可用的唯一路由相關聯的原始 IP 位址。
+2. 伺服器發回的 IP 位址會傳回與原始 IP 位址相關聯的 IP 位址，而這會導致回應是沿著相同的網路路徑傳回。
 
-![ExpressRoute Asymetric 路由方案 2](media/9cb4b2bf-7aa6-487a-bc02-e02af8a979f6.png)
+![ExpressRoute Asymetric 路由解決方案2](media/9cb4b2bf-7aa6-487a-bc02-e02af8a979f6.png)
   
-#### <a name="problem-2-cloud-to-on-premises-connection-over-expressroute"></a>問題 2： 雲端與內部連線透過 ExpressRoute
+#### <a name="problem-2-cloud-to-on-premises-connection-over-expressroute"></a>問題2： Cloud over ExpressRoute 上的內部部署連接
   
-下圖說明當您的網路組態不會提供從 Microsoft cloud 的輸入要求的 NAT 透過 ExpressRoute 時採取的非對稱的網路路徑。
+下圖說明當您的網路設定不會提供來自 Microsoft cloud over ExpressRoute 之輸入要求的 NAT 時，所採用的非對稱網路路徑。
   
-1. 從 Office 365 的輸入的要求從 DNS 擷取的 IP 位址，並將要求傳送至您的周邊網路。
+1. 來自 Office 365 的輸入要求會從 DNS 中檢索 IP 位址，並將要求傳送至您的周邊網路。
 
-2. 在此無效的組態中，沒有設定任何來源 NAT 或可在周邊網路流量所在傳送產生的實際的來源 IP 位址被用來作為傳回目的地。
+2. 在此錯誤的設定中，未在傳送流量的周邊網路上設定或提供來源 NAT，進而產生實際來源 IP 位址，以當作傳回目的地使用。
 
-  - 在您的網路上的電腦將傳回流量路由到 Office 365 透過任何可用的 ExpressRoute 網路連線。
+  - 網路上的電腦會透過任何可用的 ExpressRoute 網路連線，將傳回流量路由傳送至 Office 365。
 
-  - 結果是 Office 365 的非對稱式連線。
+  - 其結果是與 Office 365 的非對稱連接。
 
-![ExpressRoute Asymetric 路由問題 2](media/f6fd155b-bbb7-472a-846e-039a99f09913.png)
+![ExpressRoute Asymetric 路由問題2](media/f6fd155b-bbb7-472a-846e-039a99f09913.png)
   
-##### <a name="solution-2-source-nat"></a>解決方案 2： 來源 NAT
+##### <a name="solution-2-source-nat"></a>解決方案2：來源 NAT
   
-只要將 NAT 的來源加入到的傳入要求解析此設定錯誤的網路。 在此圖表中：
+只要將來源 NAT 新增至輸入的要求，即可解析這種已設定錯誤的網路。 在此圖表中：
   
-1. 傳入的要求會繼續輸入透過紐約資料中心的周邊網路。 這段時間來源 NAT 使用。
+1. 傳入的要求會繼續透過紐約資料中心的周邊網路進入。 此時間源 NAT 可供使用。
 
-2. 從回聚集 nat 來源而不是原始的 IP 位址，傳回相同的網路路徑在回應中產生關聯的 IP 伺服器路由傳送回應。
+2. 伺服器的回應會傳回與來源 NAT 相關聯的 IP 位址，而不是原始 IP 位址，進而導致回應沿著相同的網路路徑傳回。
 
-![ExpressRoute Asymetric 路由方案 3](media/a5d2b90d-a3ec-4047-afbf-6e6e99f376a7.png)
+![ExpressRoute Asymetric 路由解決方案3](media/a5d2b90d-a3ec-4047-afbf-6e6e99f376a7.png)
   
-### <a name="paper-verify-that-the-network-design-has-path-symmetry"></a>紙張確認網路設計具有路徑對稱性來看
+### <a name="paper-verify-that-the-network-design-has-path-symmetry"></a>紙張驗證網路設計是否有對稱路徑
 
-此時，您必須確認在紙張上實作計劃提供路由對稱性來看，不同案例中您要使用 Office 365。 您將識別預期會在使用服務的不同功能時所要採取的特定網路路由。 從內部網路和 WAN 路由至周邊裝置，來連線的路徑。ExpressRoute 或網際網路，並登入 online 端點的連線。
+此時，您必須驗證您的執行計畫是否為您將使用 Office 365 的不同案例提供路由對稱的功能。 當人員使用服務的不同功能時，您會識別預計會採取的特定網路路由。 從內部部署網路和 WAN 路由傳送至周邊裝置，到連接路徑;ExpressRoute 或網際網路，以及連線到線上端點的連線。
   
-您需要這麼做的所有 Office 365 網路服務先前已識別為您的組織將採用的服務。
+您必須針對先前識別為組織所採用之服務的所有 Office 365 網路服務執行這項作業。
   
-很有幫助不要使用另一位使用者路由此白皮書逐一檢查。 說明這些其中每個網路躍點預計需要取得從其下一個路由，並確定您熟悉的路由路徑。 請記住 ExpressRoute 一律會提供更多範圍的路由，以提供比網際網路預設路由的路由成本較低的 Microsoft 伺服器 IP 位址。
+這可協助您逐步完成與第二個人的路由。 向使用者說明，每個網路躍點預期會從何處取得下一個路由，並確保您熟悉路由路徑。 請記住，ExpressRoute 一定會提供更具範圍的路由給 Microsoft server IP 位址，使其具有低於網際網路預設路由的路由成本。
   
-### <a name="design-client-connectivity-configuration"></a>設計用戶端連線設定
+### <a name="design-client-connectivity-configuration"></a>設計 Client Connectivity Configuration
 <a name="asymmetric"> </a>
 
-![使用 ExpressRoute 的 PAC 檔案](media/7cfa6482-dbae-416a-ae6f-a45e5f4de23b.png)
+![使用具有 ExpressRoute 的 PAC 檔案](media/7cfa6482-dbae-416a-ae6f-a45e5f4de23b.png)
   
-如果您正在使用網際網路 proxy 伺服器繫結的流量，然後您要調整任何 PAC 或用戶端設定檔，以確保您網路上的用戶端電腦已正確設定為您想要的 ExpressRoute 流量傳送至 Office 365，而不 transiting您的 proxy 伺服器，以及剩餘的流量，包括一些 Office 365 流量，會傳送至相關的 proxy。 閱讀我們的指南，在[管理 Office 365 端點](https://aka.ms/manageo365endpoints)，例如 PAC 檔案。
+如果您使用 proxy 伺服器進行網際網路系結流量，則需要調整任何 PAC 或用戶端設定檔，以確保網路上的用戶端電腦已正確設定為將您想要的 ExpressRoute 流量傳送至 Office 365，而不需要 transiting proxy 伺服器，而其餘的流量（包括部分 Office 365 流量）會傳送至相關的 proxy。 如需[管理 Office 365 端點](https://aka.ms/manageo365endpoints)（例如 PAC 檔案）的指南，請參閱本指南。
   
 > [!NOTE]
-> 端點變更經常、 每週的頻率。 您只應該進行變更為基礎的服務和功能貴組織已採用以減少您需要對保持最新變更的數目。 關閉必須注意宣佈所做的變更，並記錄會保留的所有變更，IP 過去宣佈的地址的 RSS 摘要中的**有效日期**可能未通告，或移除通告，直到達到有效的日期。
+> 端點經常變更，只要每週。 您應根據貴組織已採用的服務和功能，只進行變更，以減少所需的變更數目，以減少保持最新的變更數目。 請密切注意 RSS 摘要中的 [**有效日期**]：在此 rss 摘要中已宣告變更，且記錄保留所有過去的變更為止，已宣告的 IP 位址可能不會宣告或從通告中移除，直到達到有效日期為止。
   
-## <a name="build-your-deployment-and-testing-procedures"></a>建立您的部署和測試程序
+## <a name="build-your-deployment-and-testing-procedures"></a>建立部署及測試程式
 <a name="testing"> </a>
 
-您實作計劃應該包含測試及復原計劃。 如果您實作未如預期般運作中，為了影響最少計劃的人員之前探索到的問題。 以下是您的計劃應該考慮一些高階原則。
+您的實施計畫應同時包含測試和回滾規劃。 如果您的實施未如期運作，方案應設計為在探索問題之前，影響最少人數。 以下是您的方案應考慮的一些高層次原則。
   
-1. 階段網路區段和使用者服務上架干擾降至最低。
+1. 階段網路段和使用者服務上架，以將中斷降至最低。
 
-2. 規劃測試使用 traceroute 路由和 TCP 連線從不同的網際網路連線的主機。
+2. 規劃使用 traceroute 與 TCP 連線的測試路由，並從不同的網際網路連線主機進行連接。
 
-3. 最好的輸入和輸出服務測試應與測試 Office 365 租用戶隔離的測試網路上。
+3. 在具有測試 Office 365 租使用者的隔離測試網路上，您最好會進行輸入和輸出服務的測試。
 
-      - 或者，測試可執行生產網路若還不使用 Office 365 客戶，或位於試驗。
+      - 或者，如果客戶尚未使用 Office 365 或進行試驗，也可以在生產網路上執行測試。
 
-      - 或者，測試可以執行測試放在一旁設定實際執行中斷期間和監控僅。
+      - 或者，您也可以在實際執行中斷期間進行測試，而不是僅供測試及監視之用。
 
-      - 或者，測試可透過檢查每個第 3 層路由器節點上每個服務的路由。 此改回應該只用於如果沒有其他測試可能是因為缺少的實體測試介紹風險。
+      - 或者，您可以在每個第三層路由器節點上檢查每個服務的路由，以進行測試。 只有在缺乏實體測試帶來風險的情況時，才可使用此回退功能。
 
-### <a name="build-your-deployment-procedures"></a>建立您的部署程序
+### <a name="build-your-deployment-procedures"></a>建立部署程式
 
-您的部署程序應該推行至小群人分階段以供測試，再部署至較大群人。 以下是幾種方式可以階段 ExpressRoute 的部署。
+您的部署程式應該向幾個階段中的小小組人員進行測試，然後再部署至較大的人員群組。 以下是幾種方法來分段 ExpressRoute 的部署。
   
-1. 設定與 Microsoft 對等的 ExpressRoute 和已轉寄給僅適用於單一主機的路由通告分段測試之用。
+1. 使用 Microsoft 對等設定 ExpressRoute，並將路由播發轉送到單一主機，只用于分段測試目的。
 
-2. 通告路由到單一網路區段第一次 ExpressRoute 網路，並展開路由廣告網路區段或區域。
+2. 將路由傳送至 ExpressRoute 網路的單一網段，一開始，並依網路段或地區展開路由廣告。
 
-3. 如果第一次部署 Office 365，請使用 ExpressRoute 網路部署試驗為數目更少的人員。
+3. 如果是第一次部署 Office 365，請使用 ExpressRoute 網路部署做為少數人員的示範。
 
-4. 如果使用 proxy 伺服器，您可以另外設定測試 PAC 檔案之前新增更多導向少數幾個受損人士 ExpressRoute 來測試和意見反應。
+4. 如果使用 proxy 伺服器，您也可以設定測試 PAC 檔案，以引導少量的人員在進行測試與意見 ExpressRoute 之前新增其他。
 
-您實作計劃應列出每個必須採取的部署程序或要用來部署的網路組態的命令。 當網路中斷時間會進入的所有變更，這是 arbutus solutions 事先撰寫的部署計劃和對等應該進行都檢閱。 ExpressRoute 技術組態，請參閱指導方針。
+您的實施計畫應該列出必須採取的每個部署程式，或需要用來部署網路設定的命令。 當網路停機時間到達所做的所有變更時，應從已預先撰寫的書面部署計畫和對等方檢查。 請參閱我們 ExpressRoute 之技術設定的指導方針。
   
-- 如果您已經變更的任何仍會繼續傳送電子郵件的內部部署伺服器的 IP 位址，請更新您的 SPF TXT 記錄。
+- 如果您已變更任何內部部署伺服器的 IP 位址以繼續傳送電子郵件，請更新您的 SPF TXT 記錄。
 
-- 如果您已經變更以容納新的 NAT 設定的 IP 位址，請更新內部部署伺服器的任何 DNS 項目。
+- 如果您已變更 IP 位址以容納新的 NAT 設定，則為內部部署伺服器更新任何 DNS 專案。
 
-- 請確定您已訂閱 rss 摘要，以維持任何路由或 proxy 設定的 Office 365 端點通知。
+- 確定您已訂閱 Office 365 端點通知的 RSS 摘要，以維護任何路由或 proxy 設定。
 
-ExpressRoute 部署完成之後，應該要執行的測試計劃中的程序。 每個程序的結果應該會記錄。 您必須包含復原到原始的實際執行環境事件中的測試計劃結果指出實作未成功的程序。
+完成 ExpressRoute 部署後，應執行測試計劃中的程式。 應該記錄每個程式的結果。 您必須在此事件中包含復原原始實際執行環境的程式，測試計劃結果表示執行失敗。
   
-### <a name="build-your-test-procedures"></a>建立測試程序
+### <a name="build-your-test-procedures"></a>建立測試程式
 
-您測試的程序應該包含對於 Office 365 每個輸出和輸入網路服務將會使用 ExpressRoute 和則不會測試。 這些程序應該包括測試從每個唯一的網路位置，包括不是在內部公司的 LAN 中的使用者。
+您的測試程式應該包含每個用於 Office 365 的輸出和輸入網路服務的測試，將使用 ExpressRoute，而不是會使用。 程式應包括從每個唯一的網路位置進行測試，包括在公司局域網中非內部部署的使用者。
   
-測試活動的一些範例包括：
+測試活動的一些範例包含下列各項。
   
-1. 從您的內部路由器 ping 到您網路的運算子路由器。
+1. 從您的內部部署路由器 Ping 至您的網路操作員路由器。
 
-2. 驗證 500 + Office 365 和 CRM Online IP 位址廣告會接收到您的內部路由器。
+2. 驗證您的內部部署路由器是否已接收 500 + Office 365 和 CRM Online IP 位址廣告。
 
-3. 驗證您輸入和輸出的 NAT ExpressRoute 和內部部署網路間運作。
+3. 驗證您的輸入和輸出 NAT 是在 ExpressRoute 和內部網路之間運作。
 
-4. 驗證您的 nat 路由會被通告從您的路由器。
+4. 驗證從您的路由器宣告到您的 NAT 的路由。
 
-5. 驗證 ExpressRoute 已接受您公告的前置詞。
+5. 驗證 ExpressRoute 已接受您宣告的首碼。
 
-      - 若要確認對等的廣告使用下列 cmdlet:
+      - 使用下列 Cmdlet 來確認對等通告：
 
       ```PowerShell
       Get-AzureRmExpressRouteCircuitRouteTable -DevicePath Primary -ExpressRouteCircuitName TestER -ResourceGroupName RG -PeeringType MicrosoftPeering
       ```
 
-6. 驗證公用 NAT IP 範圍未通知伺服器向 Microsoft 透過 ExpressRoute 或公用的網際網路網路電路除非它是較大的範圍，如上述範例所示的特定子集合。
+6. 驗證您的公用 NAT IP 範圍不會透過任何其他 ExpressRoute 或公用網際網路網路電路宣告給 Microsoft，除非它是先前範例中的較大範圍的特定子集。
 
-7. ExpressRoute 電路成對出現，驗證執行這兩個 BGP 工作階段。
+7. ExpressRoute 電路成對，請驗證兩個 BGP 會話是否都在執行中。
 
-8. 設定您的 NAT 的內部單一主機，使用 ping、 tracert 及 tcpping 跨至主機 outlook.office365.com 的新電路測試連線。 或者，您可以使用 Wireshark 之類的工具，或若要驗證您 MSEE 鏡像連接埠上的 Microsoft Network Monitor 3.4 是能夠連線至 outlook.office365.com 相關聯的 IP 位址。
+8. 在 NAT 內設定單一主機，並使用 ping、tracert 和 tcpping 來測試跨新電路與主機 outlook.office365.com 的連線能力。 或者，您也可以在鏡像的埠上使用 Wireshark 或 Microsoft 網路監視器3.4 之類的工具，以驗證您能夠連線至與 outlook.office365.com 相關聯的 IP 位址。
 
-9. Exchange Online 的測試應用程式層級的功能。
+9. 測試適用于 Exchange Online 的應用層級功能。
 
-  - 測試 Outlook 是能夠連線到 Exchange Online，並傳送/接收電子郵件。
+  - 測試 Outlook 可連線至 Exchange Online 及傳送/接收電子郵件。
 
-  - 測試 Outlook 是能夠使用線上模式。
+  - 測試 Outlook 可使用線上模式。
 
-  - 測試智慧型手機連線和收發能力。
+  - 測試 smartphone 連線能力及傳送/接收能力。
 
-10. SharePoint Online 的測試應用程式層級功能
+10. 測試 SharePoint 線上的應用層級功能
 
-  - 測試 OneDrive for Business 同步處理用戶端。
+  - 測試 Business sync 用戶端的 OneDrive。
 
-  - 測試 SharePoint Online web access。
+  - 測試 SharePoint 線上 web 存取。
 
-11. 測試應用程式層級的功能，skype 商務呼叫案例：
+11. 測試商務用 Skype 通話案例的應用層級功能：
 
-  - 加入電話會議，以驗證的使用者 [由使用者起始的邀請]。
+  - 加入電話會議做為已驗證的使用者 [由使用者初始化的邀請]。
 
-  - 邀請使用者電話會議 [寄件者 MCU 邀請]。
+  - 邀請使用者撥打電話會議 [從 MCU 傳送邀請]。
 
-  - 使用 Skype for Business web 應用程式的匿名使用者加入會議。
+  - 使用商務用 Skype web 應用程式以匿名使用者的身分加入會議。
 
-  - 加入從有線的電腦連線、 IP 電話和行動裝置的通話。
+  - 從您的有線電腦連線、IP 電話及行動裝置加入通話。
 
-  - 呼叫以同盟的使用者 o PSTN 驗證的呼叫： 呼叫完成，是可接受的通話品質，是可接受的連線時間。
+  - 呼叫同盟使用者 o 呼叫至 PSTN 驗證：通話已完成，通話品質可接受，連線時間是可接受的。
 
-  - 確認連絡人的目前狀態更新這兩個成員的租用戶和同盟使用者。
+  - 確認已針對承租人和同盟使用者的兩個成員更新連絡人的狀態。
 
-### <a name="common-problems"></a>常見的問題
+### <a name="common-problems"></a>常見問題
 
-非對稱式路由是最常見的實作問題。 以下是一些常見的來源，以尋找：
+非對稱路由是最常見的實施問題。 以下是一些要尋找的常見來源：
   
-- 使用 open 或平面網路路由拓撲不來源就地 NAT。
+- 就地使用開放或單層網路路由拓撲，但沒有源 NAT。
 
-- 不使用 SNAT 來路由傳送至輸入服務透過網際網路與 ExpressRoute 連線。
+- 不使用 SNAT 透過網際網路和 ExpressRoute 連接來路由傳送至輸入服務。
 
-- 不測試上 ExpressRoute 廣泛部署之前先測試網路上的內送的服務。
+- 在部署廣泛之前，請勿在測試網路上測試 ExpressRoute 上的輸入服務。
 
-## <a name="deploying-expressroute-connectivity-through-your-network"></a>部署 ExpressRoute 連線到您的網路
+## <a name="deploying-expressroute-connectivity-through-your-network"></a>透過您的網路部署 ExpressRoute 連通性
 <a name="testing"> </a>
 
-階段您一次，逐漸推出至不同的組件的計劃將回復為每個新的網路區段的網路連線網路的一條線段的部署。 如果您的部署與 Office 365 部署對齊，第一次部署至您的 Office 365 試驗使用者，並從該處擴充。
+將您的部署逐步劃分到網路的一個網段，以逐步向網路的不同部分推出，並以每個新的網路區段復原的計畫。 如果您的部署與 Office 365 部署一致，請先部署 Office 365 試驗使用者，然後再從那裡進行擴充。
   
-第一個測試然後為了建立生產環境：
+先進行測試，然後再進行實際執行：
   
-- 執行啟用 ExpressRoute 的部署步驟。
+- 執行部署步驟以啟用 ExpressRoute。
 
-- 測試您的網路路由已如預期般地看到。
+- 測試您的查看網路路由是否如預期。
 
-- 執行測試每個輸入和輸出的服務。
+- 在每個輸入和輸出服務上執行測試。
 
-- 如果您發現任何問題，復原。
+- 如果您探索任何問題，就會復原。
 
-### <a name="set-up-a-test-connection-to-expressroute-with-a-test-network-segment"></a>測試網路區段，使用 ExpressRoute 的測試連線設定
+### <a name="set-up-a-test-connection-to-expressroute-with-a-test-network-segment"></a>使用測試網路段設定 ExpressRoute 的測試連接
 
-現在，您必須在紙張上的已完成計劃該是時候來在小規模地測試。 此測試中您將內部部署網路上建立測試子網路與 Microsoft Peering 單一 ExpressRoute 連線。 您可以連線到及傳送自測試子網路設定[試用版的 Office 365 租用戶](https://go.microsoft.com/fwlink/p/?LinkID=403802)，並在生產環境中測試子網路中包含您要使用的所有輸出和輸入服務。 設定 DNS 進行測試網路區段，並建立輸入和輸出的所有服務。 執行測試計劃，請確定您已熟悉針對每個服務和路由傳播路由傳送。
+現在，您已完成的計畫是在一小段時間進行測試。 在此測試中，您將建立單一 ExpressRoute 連線與 Microsoft 對等網路對內部部署網路上的測試子網的關聯。 您可以設定[試用版 Office 365 租](https://go.microsoft.com/fwlink/p/?LinkID=403802)使用者與 test 子網間的連線，並在測試子網中包含您將在生產環境中使用的所有輸出和輸入服務。 設定測試網路段的 DNS，並建立所有輸入和輸出服務。 執行測試計劃，並確定您熟悉每個服務和路由傳播的路由。
   
 ### <a name="execute-the-deployment-and-test-plans"></a>執行部署和測試計劃
 
-完成上述的項目之後，請關閉區域您已完成，並確定您和您的小組檢閱它們之前執行您的部署和測試計劃。
+當您完成上述專案時，請核對您已完成的區域，並確定您和您的小組已在執行部署和測試計劃之前，先查看這些專案。
   
-- 輸出和輸入網路變更相關的服務清單。
+- 網路變更所涉及的輸出和輸入服務清單。
 
-- 全球網路架構圖中顯示網際網路輸出及 ExpressRoute 符合-我的位置。
+- 全域網路架構圖表顯示網際網路出口和 ExpressRoute 的 [符合我的位置] 位置。
 
-- 路由網狀示範部署每個服務使用不同的網路路徑。
+- 示範用於每個已部署服務之不同網路路徑的網路路由圖表。
 
-- 部署計劃與實作的變更和復原，如有需要的步驟。
+- 部署計畫，包含必要時執行變更和回滾的步驟。
 
-- 測試每個 Office 365 和網路服務測試計劃。
+- 測試每個 Office 365 和網路服務的測試計劃。
 
-- 完成輸入和輸出服務的實際執行路由紙張驗證。
+- 已完成輸入和輸出服務之實際執行路由的紙張驗證。
 
-- 跨測試網路區段，包括可用性測試完成的測試。
+- 測試網段上的完整測試，包括可用性測試。
 
-選擇 [中斷時間長度可透過在整個部署規劃和測試計劃執行，有一些疑難排解可用的時間和復原回如有需要的時間。
+選擇一個長時間足以透過整個部署計畫及測試計劃執行的中斷時段，並有一些時間可供進行疑難排解，以及在必要時回復的時間。
   
 > [!CAUTION]
-> 由於透過網際網路與 ExpressRoute 路由複雜的性質，最好是其他緩衝區時間會新增此視窗以處理疑難排解複雜路由。
+> 由於透過網際網路和 ExpressRoute 進行路由的複雜性質，建議您在此視窗中新增額外的緩衝時間，以處理複雜路由疑難排解。
   
-### <a name="configure-qos-for-skype-for-business-online"></a>QoS skype for Business Online 設定
+### <a name="configure-qos-for-skype-for-business-online"></a>為商務用 Skype Online 設定 QoS
 
-QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定滿足 ExpressRoute 的網路連線不會封鎖任何您其他 Office 365 服務存取權之後，您可以設定 QoS。 設定 QoS 所述[的 ExpressRoute 與 QoS Skype for Business Online 中](https://support.office.com/article/ExpressRoute-and-QoS-in-Skype-for-Business-Online-20c654da-30ee-4e4f-a764-8b7d8844431d)的文章。
+QoS 是取得商務用 Skype Online 之語音和會議效益的必要。 您可以在確保 ExpressRoute 網路連接不會封鎖任何其他 Office 365 服務存取之後，設定 QoS。 QoS 的設定會在[ExpressRoute 和 QoS 的商務用 Skype Online](https://support.office.com/article/ExpressRoute-and-QoS-in-Skype-for-Business-Online-20c654da-30ee-4e4f-a764-8b7d8844431d)中說明。
   
-## <a name="troubleshooting-your-implementation"></a>疑難排解您實作
+## <a name="troubleshooting-your-implementation"></a>您的實施疑難排解
 <a name="troubleshooting"> </a>
 
-若要尋找的第一個位置位於此實作指南 》 中的步驟是任何未接在您實作計劃嗎？ 請返回並執行進一步小型網路複寫錯誤和偵錯它那里盡可能測試。
+第一個要注意的地方是在實施方案中未錯過任何專案，在此實施方案中的步驟。 若有可能複製錯誤並加以調試，請傳回並執行進一步的小型網路測試。
   
-識別可輸入或輸出 services 無法在測試期間。 每個失敗之服務取得特別的 IP 位址和子網路。 得出引導紙張上的網路拓撲圖表並驗證的路由。 驗證特別其中 ExpressRoute 路由會通知給、 測試該路由中斷期間盡可能與追蹤項目。
+識別測試期間哪些輸入或輸出服務失敗。 針對每個失敗的服務，明確取得 IP 位址與子網。 繼續進行並流覽紙張上的網路拓撲圖表，並驗證路由。 特別驗證通告 ExpressRoute 路由的位置，在中斷期間（如果可能有追蹤）進行路由測試。
   
-使用網路追蹤執行 PSPing，為每個客戶端點，並評估來源及目的地 IP 位址，以驗證其如預期般。 執行您在通訊埠 25 上公開，並確認 SNAT 隱藏的原始來源 IP 位址，是否這可預期的任何郵件主機 telnet。
+以網路追蹤方式執行 PSPing 每個用戶端點，並評估來源和目的地 IP 位址，以驗證其是否如預期。 對您在埠25公開的任何郵件主機執行 telnet，確認在預期的情況中，SNAT 會隱藏原始來源 IP 位址。
   
-請記住，同時部署 Office 365 具有您需要確保這兩個網路組態的 ExpressRoute ExpressRoute 連線的最佳方式設計，而且您也已最佳化其他元件您的網路，例如用戶端電腦上。 除了使用這個規劃指南來疑難排解您可能會有未接的步驟，我們也已寫入[效能疑難排解規劃 Office 365](https://support.office.com/article/Performance-troubleshooting-plan-for-Office-365-e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c) 。
+請記住，當您使用 ExpressRoute 連線部署 Office 365 時，您必須確定 ExpressRoute 的網路設定為最優化設計，而且您也對網路上的其他元件（例如用戶端電腦）進行優化。 除了使用此規劃指南來疑難排解可能錯過的步驟之外，我們也撰寫了[Office 365 的性能疑難排解計畫](https://support.office.com/article/Performance-troubleshooting-plan-for-Office-365-e241e5d9-b1d8-4f1d-a5c8-4106b7325f8c)。
   
 您可以使用下列短連結返回這裡：[https://aka.ms/implementexpressroute365](https://aka.ms/implementexpressroute365)
   
 ## <a name="related-topics"></a>相關主題
 
-[評估 Office 365 網路連線能力](assessing-network-connectivity.md)
+[評估 Office 365 的網路連線能力](assessing-network-connectivity.md)
   
 [Azure ExpressRoute for Office 365](azure-expressroute.md)
   
@@ -582,13 +582,13 @@ QoS 是必要商務用 Skype 取得語音和會議的優點。 您必須確定�
   
 [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
   
-[使用 BGP 社群中 ExpressRoute for Office 365 案例 （預覽）](bgp-communities-in-expressroute.md)
+[在適用于 Office 365 案例的 ExpressRoute 中使用 BGP 社區（預覽）](bgp-communities-in-expressroute.md)
   
 [商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   
 [針對商務用 Skype Online 最佳化您的網路](https://support.office.com/article/b363bdca-b00d-4150-96c3-ec7eab5a8a43)
   
-[ExpressRoute 與 QoS skype for Business Online](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
+[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://support.office.com/article/20c654da-30ee-4e4f-a764-8b7d8844431d)
   
 [使用 ExpressRoute 的通話流程](https://support.office.com/article/413acb29-ad83-4393-9402-51d88e7561ab)
   

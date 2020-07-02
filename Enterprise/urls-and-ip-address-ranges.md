@@ -3,7 +3,7 @@ title: Office 365 URL 和 IP 位址範圍
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 06/16/2020
+ms.date: 06/29/2020
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
@@ -24,16 +24,16 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 'Summary: Office 365 requires connectivity to the Internet. The endpoints below should be reachable for customers using Office 365 plans, including Government Community Cloud (GCC).'
 hideEdit: true
-ms.openlocfilehash: 58453be147fec41bb35b7d6d758ce3d5df5a4148
-ms.sourcegitcommit: f2a4b77c8c3932beb1a78bf2f5bf793fefb3fa49
+ms.openlocfilehash: d75fa6d88255ff5df785fa335a9976c4bcca309d
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "44747369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997441"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL 和 IP 位址範圍
 
- **Summary:** Office 365 requires connectivity to the Internet. The endpoints below should be reachable for customers using Office 365 plans, including Government Community Cloud (GCC).
+Office 365 requires connectivity to the Internet. The endpoints below should be reachable for customers using Office 365 plans, including Government Community Cloud (GCC).
   
 > [!NOTE]
 > 做為 Microsoft 因應 COVID-19 危機的一部分，Microsoft 已聲明暫時暫停一些計劃的 URL 和 IP 位址變更。 此中止的目的是為了讓客戶的 IT 團隊針對在家工作 Office 365 案例實作建議的網路最佳化方面具備信心且簡單化。 從 2020 年 3 月 24 日到 2020 年 6 月 30 日，此暫停會將對重要 Office 365 服務 (Exchange Online、SharePoint Online 及 Microsoft Teams) 有關最佳化類別中所包含的 IP 範圍和 URL 的變更中止。 其他端點類別內的變更將照常進行。 在此期間，客戶可以以靜態方式使用 Office 365 最佳化類別服務定義，以執行目標網路最佳化 (例如頻寬保留或分割通道 VPN 組態)，並由於雲端網路變更而對 Office 365 連線的帶來低度風險。 若要確保在暫停期間結束時，服務不會中斷，Microsoft 強烈建議客戶使用 [管理 Office 365 端點](managing-office-365-endpoints.md)提供的指導方針來實作 Office 365 服務端點的變更管理和/或自動化程序。
@@ -45,7 +45,7 @@ ms.locfileid: "44747369"
   
 ||||
 |:-----|:-----|:-----|
-|**上次更新：** 06/16/2020- ![ RSS ](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> | **使用：** 我們的 proxy [PAC 檔案](managing-office-365-endpoints.md#pacfiles) <br/> |
+|**上次更新：** 06/29/2020- ![ RSS ](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> | **使用：** 我們的 proxy [PAC 檔案](managing-office-365-endpoints.md#pacfiles) <br/> |
 
  Start with [Managing Office 365 endpoints](managing-office-365-endpoints.md) to understand our recommendations for managing network connectivity using this data. Endpoints data is updated at the beginning of each month with new IP Addresses and URLs published 30 days in advance of being active. This allows for customers who do not yet have automated updates to complete their processes before new connectivity is required. Endpoints may also be updated during the month if needed to address support escalations, security incidents, or other immediate operational requirements. The data shown on this page below is all generated from the REST-based web services. If you are using a script or a network device to access this data, you should go to the [Web service](office-365-ip-web-service.md) directly.
 

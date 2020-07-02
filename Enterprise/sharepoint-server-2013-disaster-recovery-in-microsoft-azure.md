@@ -16,16 +16,16 @@ f1.keywords:
 ms.custom: Ent_Deployment
 ms.assetid: e9d14cb2-ff28-4a18-a444-cebf891880ea
 description: 摘要：使用 Azure，您可以為內部部署 SharePoint 伺服器陣列建立災害復原環境。 本文說明如何設計和實作本解決方案。
-ms.openlocfilehash: d448ae31c31238f1cf5ef97ff79e6ec97fda60a1
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+ms.openlocfilehash: 101d87b1a25d2b3ac8a7ae29832e52c805ecdc4c
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998165"
 ---
 # <a name="sharepoint-server-2013-disaster-recovery-in-microsoft-azure"></a>Microsoft Azure 中的 SharePoint Server 2013 災害復原
 
- **摘要：** 使用 Azure，您可以為內部部署 SharePoint 伺服器陣列建立災害復原環境。 本文說明如何設計和實作本解決方案。
+ 使用 Azure，您可以為內部部署 SharePoint 伺服器陣列建立災害復原環境。 本文說明如何設計和實作本解決方案。
 
  **觀賞 SharePoint Server 2013 嚴重損壞恢復概述影片**
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/1b73ec8f-29bd-44eb-aa3a-f7932784bfd9?autoplay=false]
@@ -385,7 +385,7 @@ where prm.primary_database in ( ' + @PriDB + ' )')
 
 ### <a name="restore-the-backups"></a>還原備份
 
-備份必須以建立的順序還原。 在還原特定的交易記錄檔備份之前，必須先還原下列先前的備份，而不會回退未提交的交易（也`WITH NORECOVERY`就是使用）：
+備份必須以建立的順序還原。 在還原特定的交易記錄檔備份之前，必須先還原下列先前的備份，而不會回退未提交的交易（也就是使用 `WITH NORECOVERY` ）：
   
 - 完整資料庫備份及最後一個差異備份-還原這些備份（若有的話），在特定交易記錄備份之前進行。 在建立最近的完整資料庫備份或差異資料庫備份之前，資料庫使用的是完整復原模式或大容量記錄復原模式。
     
@@ -401,15 +401,15 @@ restore database WSS_Content with recovery
 > [!IMPORTANT]
 > 當您明確使用 T-SQL 時，請在每個 RESTORE 語句中指定**WITH NORECOVERY** OR **with RECOVERY** ，以消除多義性，這在撰寫腳本時非常重要。 還原完整和差異備份後，可在 SQL Server Management Studio 中還原交易記錄。 此外，因為已停止記錄傳送，所以內容資料庫處於待機狀態，所以您必須將狀態變更為 [完整存取]。
   
-在 SQL Server Management Studio 中，以滑鼠右鍵**按一下 WSS_Content**資料庫，指向 [**任務** > **還原**]，然後按一下 [**交易記錄**] （如果尚未還原完整備份，這是無法使用）。 如需詳細資訊，請參閱[還原交易記錄備份（SQL Server）](https://go.microsoft.com/fwlink/p/?LinkId=392778)。
+在 SQL Server Management Studio 中，以滑鼠右鍵按一下**WSS_Content**資料庫，指向 [**任務**  >  **還原**]，然後按一下 [**交易記錄**] （如果尚未還原完整備份，這是無法使用）。 如需詳細資訊，請參閱[還原交易記錄備份（SQL Server）](https://go.microsoft.com/fwlink/p/?LinkId=392778)。
   
 ### <a name="crawl-the-content-source"></a>編目內容來源
 
-您必須啟動每個內容來源的完整編目，才可還原搜尋服務。 請注意，您會失去來自內部部署伺服器陣列的某些分析資訊，例如搜尋建議。 在您開始完整編目之前，請使用 Windows PowerShell Cmdlet **Restore-SPEnterpriseSearchServiceApplication** ，並指定記錄傳送及複寫的搜尋管理資料庫， **Search_Service__DB_<GUID>**。 此 Cmdlet 會提供搜尋設定、架構、managed 屬性、規則和來源，並建立其他元件的預設集合。
+您必須啟動每個內容來源的完整編目，才可還原搜尋服務。 請注意，您會失去來自內部部署伺服器陣列的某些分析資訊，例如搜尋建議。 在您開始完整編目之前，請使用 Windows PowerShell Cmdlet **Restore-SPEnterpriseSearchServiceApplication** ，並指定記錄傳送及複寫的搜尋管理資料庫， **Search_Service__DB_ <GUID> **。 此 Cmdlet 會提供搜尋設定、架構、managed 屬性、規則和來源，並建立其他元件的預設集合。
   
 若要開始完整編目，請完成下列步驟：
   
-1. 在 SharePoint 2013 管理中心中，移至**應用程式管理** > **服務應用程式** > **管理服務應用**程式，然後按一下您要編目的 Search Service 應用程式。
+1. 在 SharePoint 2013 管理中心中，移至**應用程式管理**  >  **服務應用程式**  >  **管理服務應用**程式，然後按一下您要編目的 Search Service 應用程式。
     
 2. 在 [**搜尋管理**] 頁面上，按一下 [**內容來源**]，指向您想要的內容來源，按一下箭號，然後按一下 [**啟動完整**編目]。
     
@@ -430,7 +430,7 @@ restore database WSS_Content with recovery
   
 這會使用現有的 Managed_Metadata_DB 資料庫。 此資料庫為記錄傳送，但是在次要伺服器陣列上沒有任何使用中的服務應用程式，因此在服務應用程式就緒後，必須進行連線。
   
-首先，使用`New-SPMetadataServiceApplication`，並指定具有`DatabaseName`還原資料庫名稱的參數。
+首先，使用 `New-SPMetadataServiceApplication` ，並指定 `DatabaseName` 具有還原資料庫名稱的參數。
   
 接下來，在次要伺服器上設定新的 Managed Metadata Service 應用程式，如下所示：
   
@@ -448,9 +448,9 @@ restore database WSS_Content with recovery
   
 在您有多部前端網頁伺服器的情況下，使用 Windows Server 2012 或硬體負載平衡器的網路負載平衡功能，可在伺服器陣列中的 web 前端伺服器間散佈要求。 網路負載平衡也可以將要求散佈至其他伺服器，以協助降低風險，如果其中一部 web 前端伺服器失敗。 
   
-一般來說，當您設定網路負載平衡時，您的叢集會被指派單一 IP 位址。 接著，您可以在網路的 DNS 提供者中建立指向該叢集的 DNS 主機記錄。 （針對此專案，我們會在 Azure 中放置 DNS 伺服器以進行復原，以防內部部署資料中心失敗。）例如，您可以在 Active Directory 的 DNS 管理員（稱為`https://sharepoint.contoso.com`）中建立 dns 記錄，以指向負載平衡叢集的 IP 位址。
+一般來說，當您設定網路負載平衡時，您的叢集會被指派單一 IP 位址。 接著，您可以在網路的 DNS 提供者中建立指向該叢集的 DNS 主機記錄。 （針對此專案，我們會在 Azure 中放置 DNS 伺服器以進行復原，以防內部部署資料中心失敗。）例如，您可以在 Active Directory 的 DNS 管理員（稱為）中建立 DNS 記錄，以 `https://sharepoint.contoso.com` 指向負載平衡叢集的 IP 位址。
   
-針對您的 SharePoint 伺服器陣列，您可以在外部 DNS 伺服器上，使用用戶端使用的相同 URL （例如`https://sharepoint.contoso.com`），在防火牆中的外部 IP 位址，來建立主機記錄。 （使用此範例的最佳作法是設定分割 DNS，讓內部 DNS 伺服器對 SharePoint 的伺服器陣列叢集具有權威性`contoso.com`和路由要求，而不是將 DNS 要求路由傳送至外部 DNS 伺服器。）然後，您可以將外部 IP 位址對應至內部部署叢集的內部 IP 位址，讓用戶端找到其所要尋找的資源。
+針對您的 SharePoint 伺服器陣列，您可以在外部 DNS 伺服器上，使用用戶端使用的相同 URL （例如 `https://sharepoint.contoso.com` ），在防火牆中的外部 IP 位址，來建立主機記錄。 （使用此範例的最佳作法是設定分割 DNS，讓內部 DNS 伺服器對 SharePoint 的伺服器陣列叢集具有權威性 `contoso.com` 和路由要求，而不是將 DNS 要求路由傳送至外部 DNS 伺服器。）然後，您可以將外部 IP 位址對應至內部部署叢集的內部 IP 位址，讓用戶端找到其所要尋找的資源。
   
 從這裡，您可能會遇到幾個不同的災害復原案例：
   
@@ -458,7 +458,7 @@ restore database WSS_Content with recovery
   
  **範例案例：內部部署資料中心完全遺失。** 這種情況可能是由於自然災害，例如火災或洪水引起。 在此情況下，針對企業，您可能會在另一個區域中裝載次要資料中心，以及您的 Azure 子網具有自己的目錄服務和 DNS。 如先前的嚴重情況，您可以重新導向您的內部和外部 DNS 記錄，以指向 Azure SharePoint 伺服器陣列。 另外請注意，DNS 記錄傳播可能需要一些時間。
   
-如果您使用主機命名型網站集合（如[主機命名型網站集合架構與部署（SharePoint 2013）](https://docs.microsoft.com/SharePoint/administration/host-named-site-collection-architecture-and-deployment)中的建議，您的 SharePoint 伺服器陣列中的 web 應用程式可能會有多個網站集合， `https://sales.contoso.com`且具有唯一的 DNS 名稱（例如`https://marketing.contoso.com`和）。 在此情況下，您可以針對每個指向您的叢集 IP 位址的網站集合建立 DNS 記錄。 要求到達您 SharePoint 的 web 前端伺服器後，它們會處理每個要求的路由傳送至適當的網站集合。
+如果您使用主機命名型網站集合（如[主機命名型網站集合架構與部署（SharePoint 2013）](https://docs.microsoft.com/SharePoint/administration/host-named-site-collection-architecture-and-deployment)中的建議，您的 SharePoint 伺服器陣列中的 web 應用程式可能會有多個網站集合，且具有唯一的 DNS 名稱（例如 `https://sales.contoso.com` 和 `https://marketing.contoso.com` ）。 在此情況下，您可以針對每個指向您的叢集 IP 位址的網站集合建立 DNS 記錄。 要求到達您 SharePoint 的 web 前端伺服器後，它們會處理每個要求的路由傳送至適當的網站集合。
   
 ## <a name="microsoft-proof-of-concept-environment"></a>Microsoft 概念證明環境
 
@@ -468,7 +468,7 @@ restore database WSS_Content with recovery
   
 **表：內部部署測試的虛擬機器**
 
-|**伺服器名稱**|**Role**|**設定**|
+|**伺服器名稱**|**角色**|**設定**|
 |:-----|:-----|:-----|
 |DC1  <br/> |使用 Active Directory 的網域控制站。  <br/> |兩個處理器  <br/> 從 512 MB 到 4 GB 的 RAM  <br/> 1 x 127 GB 的硬碟  <br/> |
 |RRAS  <br/> |使用路由和遠端存取服務（RRAS）角色設定的伺服器。  <br/> |兩個處理器  <br/> 2-8 GB 的 RAM  <br/> 1 x 127 GB 的硬碟  <br/> |
@@ -483,9 +483,9 @@ restore database WSS_Content with recovery
 
 |**磁碟機號**|**大小**|**目錄名稱**|**Path**|
 |:-----|:-----|:-----|:-----|
-|C  <br/> |80  <br/> |系統磁片磁碟機  <br/> |<DriveLetter>：\\程式檔\\Microsoft SQL Server\\  <br/> |
-|E  <br/> |80  <br/> |記錄檔磁片（40 GB）  <br/> |<DriveLetter>：\\Program FILES\\Microsoft SQL Server\\MSSQL10_50。 MSSQLSERVER\\MSSQL\\資料  <br/> |
-|F  <br/> |80  <br/> |頁面（36 GB）  <br/> |<DriveLetter>：\\程式檔\\Microsoft SQL Server\\MSSQL\\資料  <br/> |
+|C  <br/> |80  <br/> |系統磁片磁碟機  <br/> |<DriveLetter>： \\ 程式檔 \\ Microsoft SQL Server\\  <br/> |
+|E  <br/> |80  <br/> |記錄檔磁片（40 GB）  <br/> |<DriveLetter>： \\ Program Files \\ Microsoft SQL Server \\ MSSQL10_50。 MSSQLSERVER \\ MSSQL \\ 資料  <br/> |
+|F  <br/> |80  <br/> |頁面（36 GB）  <br/> |<DriveLetter>： \\ 程式檔 \\ Microsoft SQL Server \\ MSSQL \\ 資料  <br/> |
    
 下表說明建立並設定為內部部署資料庫伺服器的 Hyper-V 虛擬機器的磁片磁碟機設定。 在 [**資料庫引擎**設定] 頁面上，存取 [**資料目錄**] 索引標籤，以設定及確認下表所示的設定。
   
@@ -493,11 +493,11 @@ restore database WSS_Content with recovery
 
 |**磁碟機號**|**大小**|**目錄名稱**|**Path**|
 |:-----|:-----|:-----|:-----|
-|C  <br/> |80  <br/> |資料根目錄  <br/> |<DriveLetter>：\\程式檔\\Microsoft SQL Server\\  <br/> |
-|E  <br/> |500  <br/> |使用者資料庫目錄  <br/> |<DriveLetter>：\\Program FILES\\Microsoft SQL Server\\MSSQL10_50。 MSSQLSERVER\\MSSQL\\資料  <br/> |
-|F  <br/> |500  <br/> |使用者資料庫記錄目錄  <br/> |<DriveLetter>：\\Program FILES\\Microsoft SQL Server\\MSSQL10_50。 MSSQLSERVER\\MSSQL\\資料  <br/> |
-|G  <br/> |500  <br/> |Temp DB 目錄  <br/> |<DriveLetter>：\\Program FILES\\Microsoft SQL Server\\MSSQL10_50。 MSSQLSERVER\\MSSQL\\資料  <br/> |
-|H  <br/> |500  <br/> |Temp DB 記錄目錄  <br/> |<DriveLetter>：\\Program FILES\\Microsoft SQL Server\\MSSQL10_50。 MSSQLSERVER\\MSSQL\\資料  <br/> |
+|C  <br/> |80  <br/> |資料根目錄  <br/> |<DriveLetter>： \\ 程式檔 \\ Microsoft SQL Server\\  <br/> |
+|E  <br/> |500  <br/> |使用者資料庫目錄  <br/> |<DriveLetter>： \\ Program Files \\ Microsoft SQL Server \\ MSSQL10_50。 MSSQLSERVER \\ MSSQL \\ 資料  <br/> |
+|F  <br/> |500  <br/> |使用者資料庫記錄目錄  <br/> |<DriveLetter>： \\ Program Files \\ Microsoft SQL Server \\ MSSQL10_50。 MSSQLSERVER \\ MSSQL \\ 資料  <br/> |
+|G  <br/> |500  <br/> |Temp DB 目錄  <br/> |<DriveLetter>： \\ Program Files \\ Microsoft SQL Server \\ MSSQL10_50。 MSSQLSERVER \\ MSSQL \\ 資料  <br/> |
+|H  <br/> |500  <br/> |Temp DB 記錄目錄  <br/> |<DriveLetter>： \\ Program Files \\ Microsoft SQL Server \\ MSSQL10_50。 MSSQLSERVER \\ MSSQL \\ 資料  <br/> |
    
 ### <a name="setting-up-the-test-environment"></a>設定測試環境
 
@@ -538,7 +538,7 @@ SharePoint 伺服器陣列是以兩個階段進行部署，以簡化環境穩定
     
 - 布建 SP-WFE1 和 SP-WFE2 以主控分散式快取。 
     
-我們在命令列中執行**psconfig**時使用_skipRegisterAsDistributedCachehost_參數。 如需詳細資訊，請參閱[Plan for feed And 分散式快取服務 in SharePoint Server 2013](https://docs.microsoft.com/sharepoint/administration/plan-for-feeds-and-the-distributed-cache-service)。 
+我們在命令列上執行**psconfig.exe**時使用_skipRegisterAsDistributedCachehost_參數。 如需詳細資訊，請參閱[Plan for feed And 分散式快取服務 in SharePoint Server 2013](https://docs.microsoft.com/sharepoint/administration/plan-for-feeds-and-the-distributed-cache-service)。 
   
 我們在復原環境中重複下列步驟：
   
@@ -556,7 +556,7 @@ SharePoint 伺服器陣列是以兩個階段進行部署，以簡化環境穩定
   
 **表：復原伺服器陣列基礎結構**
 
-|**伺服器名稱**|**Role**|**設定**|**子**|**可用性設定組**|
+|**伺服器名稱**|**角色**|**設定**|**子網路**|**可用性設定組**|
 |:-----|:-----|:-----|:-----|:-----|
 |spDRAD  <br/> |使用 Active Directory 的網域控制站  <br/> |兩個處理器  <br/> 從 512 MB 到 4 GB 的 RAM  <br/> 1 x 127 GB 的硬碟  <br/> |sp-ADservers  <br/> ||
 |AZ-SP-FS  <br/> |含備份共用及 DFSR 端點的檔案伺服器  <br/> | A5 設定： <br/>  兩個處理器 <br/>  14 GB 的 RAM <br/>  1 x 127 GB 的硬碟 <br/>  1 x 135 GB 的硬碟 <br/>  1 x 127 GB 的硬碟 <br/>  1 x 150 GB 的硬碟 <br/> |sp-databaseservers  <br/> |DATA_SET  <br/> |
@@ -602,7 +602,7 @@ SharePoint 伺服器陣列是以兩個階段進行部署，以簡化環境穩定
   
 ### <a name="custom-term-sets-are-not-available-in-the-site-collection"></a>無法在網站集合中使用自訂字詞集
 
-檢查您的內容網站集合與內容類型中樞之間是否有遺失的服務應用程式關聯。 此外，在 [**受管理的元<site collection name>資料-** 線上內容] 畫面底下，確定已啟用此選項：**此服務應用程式是欄特定字詞集的預設儲存位置。**
+檢查您的內容網站集合與內容類型中樞之間是否有遺失的服務應用程式關聯。 此外，在 [**受管理的元 <site collection name> 資料-** 線上內容] 畫面底下，確定已啟用此選項：**此服務應用程式是欄特定字詞集的預設儲存位置。**
   
 ### <a name="the-get-adforest-windows-powershell-command-generates-the-error-the-term-get-adforest-is-not-recognized-as-the-name-of-a-cmdlet-function-script-file-or-operable-program"></a>ADForest Windows PowerShell 命令會產生錯誤，「字詞 ' ADForest ' 不會被辨識為 Cmdlet、function、script file 或可恢復程式的名稱。
 
@@ -614,7 +614,7 @@ Import-module activedirectory
 
 ```
 
-### <a name="availability-group-creation-fails-at-starting-the-alwayson_health-xevent-session-on-server-name"></a>在 '<server name>' 上開始 ' AlwaysOn_health ' XEvent 會話」時，可用性群組建立失敗
+### <a name="availability-group-creation-fails-at-starting-the-alwayson_health-xevent-session-on-server-name"></a>在 ' ' 上開始 ' AlwaysOn_health ' XEvent 會話」時，可用性群組建立失敗 <server name>
 
 確定容錯移轉叢集的兩個節點都處於「Up」狀態，而不是「已暫停」或「已停止」。 
   

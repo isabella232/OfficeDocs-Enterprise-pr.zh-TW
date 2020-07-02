@@ -1,7 +1,7 @@
 ---
-title: Office 365 處理資料損毀
-ms.author: robmazz
-author: robmazz
+title: Microsoft 365 處理資料損毀
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,30 +14,30 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 在 Office 365 和 Microsoft 的努力防護和復原的資料損毀的說明。
-ms.openlocfilehash: 1477ab4dca0f9126eb04b76b9f8f65ff0b5eefc8
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: Microsoft 365 中資料損毀的說明，以及 Microsoft 的預防和修復工作。
+ms.openlocfilehash: 674f2a3a026c5706f5c3a23db6e2d968ed815656
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998447"
 ---
-# <a name="dealing-with-data-corruption-in-office-365"></a>處理 Office 365 中的資料損毀
+# <a name="dealing-with-data-corruption-in-microsoft-365"></a>處理 Microsoft 365 中的資料損毀
 
-下列其中一個執行大規模的雲端服務的一項挑戰層面是如何處理資料損毀，提供大量資料且獨立的系統。 可能會因資料損毀：
+執行大規模雲端服務的一個富有挑戰性的層面是如何處理資料損毀，並提供大量的資料和獨立的系統。 資料損毀可能是由下列原因所造成：
 
-- 應用程式或基礎結構的錯誤，損毀部分或全部的應用程式的狀態
-- 硬體問題，導致資料遺失或無法讀取資料
-- 人類的作業錯誤
-- 惡意的駭客和挾的員工
-- 在 [外部服務導致部分資料遺失的事件
+- 應用程式或基礎結構錯誤，破壞部分或所有應用程式狀態
+- 導致資料遺失或無法讀取資料的硬體問題
+- 人力運作錯誤
+- 惡意駭客和不滿的員工
+- 外部服務中導致資料遺失的事件
 
-更高的恢復功能資料完整性表示較少的資料損毀事件，因為 Microsoft 已內建 Office 365 保護機制，以避免發生，以及系統及程序，讓我們如果是的話，復原資料損毀。 檢查和處理程序存在於內工程發行程序增加對資料損毀的恢復能力的各種階段包括：
+因為資料完整性的彈性程度較高，所以 Microsoft 已內置 Microsoft 365 保護機制，以避免發生損毀，以及可讓我們恢復資料的系統和流程。 在工程發佈過程的各個階段內，都存在檢查和處理常式，以提升資料損毀的復原能力，包括：
 
 - 系統設計
-- 程式碼部署組織與結構
-- 程式碼檢閱
-- 單元測試、 整合測試，以及系統測試
-- 行程線路測試/門
+- 程式碼組織和結構
+- 程式碼檢查
+- 單元測試、整合測試及系統測試
+- 行程電線測試/關口
 
-在 Office 365 實際執行環境中，資料中心之間的對等網路複寫可確保有多份 live 的任何資料。 標準影像和指令碼可用來復原遺失的伺服器，並用來還原客戶資料複寫的資料。 內建資料恢復檢查及處理程序，因為 Microsoft 的維護備份僅限 Office 365 資訊系統文件 （包括安全性相關的文件），使用 SharePoint Online 和內部程式碼中的內建複寫來源軍火庫存放庫工具。 系統文件儲存在 SharePoint Online 中，而且來源軍火庫包含系統和應用程式的影像。 SharePoint Online 與來源軍火庫使用版本設定，並且會複寫幾近即時。
+在 Microsoft 365 的實際執行環境中，資料中心之間的對等複寫可確保任何資料都有多個即時複本。 標準映射和腳本用於復原遺失的伺服器，而複寫的資料則用於還原客戶資料。 由於內建的資料恢復檢查和程式，Microsoft 只會維護 Microsoft 365 資訊系統檔的備份（包括安全性相關檔），在 SharePoint Online 和我們的內部程式碼存放庫工具，來源集內使用內建複寫。 系統檔儲存在 SharePoint 線上，來源返廠包含系統和應用程式影像。 線上和來源返廠 SharePoint 都使用版本設定，而且會以接近即時的時間進行複製。

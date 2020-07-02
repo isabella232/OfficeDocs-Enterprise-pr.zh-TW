@@ -19,16 +19,16 @@ search.appverid:
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
 description: 包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
-ms.openlocfilehash: 88dd3e4fca66855e8204b452aea6cfb4c659d201
-ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
+ms.openlocfilehash: fbf8046fb5f386dfceb3a59dbc384e578fe3a519
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44419381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998548"
 ---
 # <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 本文包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
   

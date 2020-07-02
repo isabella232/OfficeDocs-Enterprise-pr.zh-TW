@@ -15,56 +15,56 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 如果您已啟用混合式新式驗證 (HMA)，找出它並不適合您目前的環境，您可以停用 HMA。 本文說明如何。
-ms.openlocfilehash: 27d6616d1323c310129010a782b30da020258f1b
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 如果您已啟用混合式新式驗證（HMA），而只是找出它不適用於您目前的環境，您可以停用 HMA。 本文說明如何進行。
+ms.openlocfilehash: ad9db5894670b49d2d9a1f385cd9f6acd43ea00f
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844064"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998202"
 ---
 # <a name="removing-or-disabling-hybrid-modern-authentication-from-skype-for-business-and-exchange"></a>從商務用 Skype 與 Exchange 移除或停用混合式新式驗證
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
-如果您已啟用混合式新式驗證 (HMA)，找出它並不適合您目前的環境，您可以停用 HMA。 本文說明如何。
+如果您已啟用混合式新式驗證（HMA），而只是找出它不適用於您目前的環境，您可以停用 HMA。 本文說明如何進行。
   
-## <a name="who-is-this-article-for"></a>本文是誰？
+## <a name="who-is-this-article-for"></a>本文的人選是誰？
 
-如果您已針對商務 Online 或內部及/或 Exchange Online 或內部部署啟用 Skype 中的新式驗證，並找到您要停用 HMA，這些步驟適用於您。
+如果您已在商務用 Skype Online 或內部部署和/或 Exchange Online 或內部部署中啟用新式驗證，且找到您需要停用 HMA，這些步驟適用于您。
 
 > [!IMPORTANT]
-> 如果您是商務用 Skype 商務 Online 或內部部署中，請參閱 '[Skype for Business 拓撲支援新式驗證](https://technet.microsoft.com/library/mt803262.aspx)' 文章、 有混合拓撲 HMA，而且需要查看支援的拓撲，在您開始之前。
+> 若您是在商務用 Skype Online 或內部部署中，請參閱「[新式驗證支援的商務用 skype 拓撲](https://technet.microsoft.com/library/mt803262.aspx)」文章，其具有混合拓撲 HMA，您必須先查看支援的拓撲，再開始。
   
-## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>如何停用混合式新式驗證 (Exchange)
+## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>如何停用混合式新式驗證（Exchange）
 
-1. **Exchange 內部部署**： 開啟 Exchange 管理命令介面，並執行下列命令： 
+1. **Exchange 內部部署**：開啟 Exchange 管理命令介面，並執行下列命令： 
 
 ```powershell
 Set-OrganizationConfig -OAuth2ClientProfileEnabled $false
 Set-AuthServer -Identity evoSTS -IsDefaultAuthorizationEndpoint $false
 ```
 
-2. **Exchange Online**： 使用遠端 PowerShell[連線到 Exchange Online](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell) 。 執行下列命令，以開啟為 'false' 您*OAuth2ClientProfileEnabled*標幟：
+2. **Exchange online**：以遠端 PowerShell[連接至 Exchange Online](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell) 。 執行下列命令，將您的*OAuth2ClientProfileEnabled*旗標轉換為 "false"：
 
 ```powershell    
 Set-OrganizationConfig -OAuth2ClientProfileEnabled:$false
 ```
     
-## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>如何停用混合式新式驗證 (商務用 Skype)
+## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>如何停用混合式新式驗證（商務用 Skype）
 
-1. **企業內部部署商務用 Skype**： 執行下列命令在 Skype for Business 管理命令介面：
+1. **商務用 skype 內部部署**：在商務用 Skype 管理命令介面中執行下列命令：
 
 ```powershell
 Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity ""
 ```
 
-2. **線上商務用 Skype**： 使用遠端 PowerShell[連線到商務用 Skype](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell) 。 執行下列命令，以停用新式驗證：
+2. **商務用 Skype online**：使用遠端 PowerShell[連接至商務用 skype online](https://docs.microsoft.com/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell) 。 執行下列命令以停用新式驗證：
 
 ```powershell    
 Set-CsOAuthConfiguration -ClientAdalAuthOverride Disallowed
 ```
 
-[新式驗證概觀連結](hybrid-modern-auth-overview.md)。 
+[連結回新式驗證概述](hybrid-modern-auth-overview.md)。 
   
 

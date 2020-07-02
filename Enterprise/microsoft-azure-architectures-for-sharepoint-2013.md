@@ -14,18 +14,16 @@ f1.keywords:
 ms.custom: Ent_Architecture
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
 description: 摘要：您可以在 Microsoft Azure 虛擬機器中主控 SharePoint 2013 解決方案。 瞭解哪種類型的解決方案正確，以及如何將 Microsoft Azure 設定為裝載1。
-ms.openlocfilehash: 62a3668fe231e8cb5d60964a3325cc200126df12
-ms.sourcegitcommit: a578baeb0d8b85941c13afa268447d2592f89fae
+ms.openlocfilehash: fee388f56faf2b30534d9a56926d9d62a176df19
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "43793736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997890"
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure SharePoint 2013 架構
 
- **摘要：** 您可以在 Microsoft Azure 虛擬機器中主控 SharePoint 2013 解決方案。 瞭解哪種類型的解決方案正確，以及如何將 Microsoft Azure 設定為裝載1。
-  
-Azure 是一種主控 SharePoint Server 2013 解決方案的良好環境。 在大多數情況下，建議使用 Office 365，但裝載于 Azure 的 SharePoint 伺服器陣列可以是特定解決方案的一個不錯選項。 本文說明如何設計 SharePoint 方案，使其符合 Azure 平臺的完美程度。 下列兩個特定解決方案用作範例：
+Azure 是一種主控 SharePoint Server 2013 解決方案的良好環境。 在大多數情況下，建議使用 Microsoft 365，但是在 Azure 主控的 SharePoint 伺服器陣列可以是特定解決方案的一個不錯選項。 本文說明如何設計 SharePoint 方案，使其符合 Azure 平臺的完美程度。 下列兩個特定解決方案用作範例：
   
 - [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)
     
@@ -39,14 +37,14 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
 |:-----|:-----|
 |開發和測試環境  <br/> |這很容易建立及管理這些環境。  <br/> |
 |內部部署 SharePoint 伺服器陣列至 Azure 的災難修復  <br/> |**主控次要資料中心**使用 Azure，而不是在不同地區的次要資料中心中投資。 <br/> **低成本的災害復原環境**維護和支付的資源少於內部部署的嚴重損壞修復環境。 資源數目取決於您所選擇的嚴重損壞復原環境：冷待命、溫待命或熱待機。 <br/> **更多彈性平臺**萬一發生嚴重損壞，請輕鬆向外延展您的修復 SharePoint 伺服器陣列，以滿足負載需求。 當您不再需要資源時放大。 <br/> 請參閱[在 Microsoft Azure 中 SharePoint Server 2013 災難修復](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)。  <br/> |
-|使用 Office 365 無法使用之功能及縮放功能的網際網路對向網站  <br/> |**致力於您的努力**專注于建立卓越的網站，而不是建立基礎結構。 <br/> **在 Azure 中利用彈性**新增新的伺服器，並只支付您需要的資源，以調整需求的伺服器陣列大小。 不支援動態電腦分攤（自動縮放）。 <br/> **使用 Azure Active Directory （AD）** 請利用 Azure AD 取得客戶帳戶。 <br/> **新增 Office 365 中無法使用的 SharePoint 功能**新增深入報告和 web analytics。 <br/> 請參閱[使用 SharePoint Server 2013 的 Microsoft Azure 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
-|支援 Office 365 或內部部署環境的應用程式伺服器陣列  <br/> |在 Azure 中**建立、測試和主控應用程式**，以同時支援內部部署和雲端環境。 <br/> 在 Azure 中**主控此角色**，而不是購買內部部署環境的新硬體。 <br/> |
+|使用 Microsoft 365 無法使用之功能和縮放功能的網際網路對向網站  <br/> |**致力於您的努力**專注于建立卓越的網站，而不是建立基礎結構。 <br/> **在 Azure 中利用彈性**新增新的伺服器，並只支付您需要的資源，以調整需求的伺服器陣列大小。 不支援動態電腦分攤（自動縮放）。 <br/> **使用 Azure Active Directory （AD）** 請利用 Azure AD 取得客戶帳戶。 <br/> **新增 Microsoft 365 中無法使用的 SharePoint 功能**新增深入報告和 web analytics。 <br/> 請參閱[使用 SharePoint Server 2013 的 Microsoft Azure 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
+|支援 Microsoft 365 或內部部署環境的應用程式伺服器陣列  <br/> |在 Azure 中**建立、測試和主控應用程式**，以同時支援內部部署和雲端環境。 <br/> 在 Azure 中**主控此角色**，而不是購買內部部署環境的新硬體。 <br/> |
    
 針對內部網路和共同作業解決方案及工作量，請考慮下列選項：
   
-- 判斷 Office 365 是否符合您的業務需求，或是否可以成為解決方案的一部分。 Office 365 提供一個功能齊全的功能集，永遠都是最新的。
+- 判斷 Microsoft 365 是否符合您的業務需求，或是否可以成為解決方案的一部分。 Microsoft 365 提供一個功能齊全的功能集，永遠都是最新的。
     
-- 如果 Office 365 不符合您的所有業務需求，請考慮從 Microsoft 諮詢服務（MCS）內部部署 SharePoint 2013 的標準實施。 標準架構可以是比自訂更快速、成本低且更容易的解決方案。 
+- 如果 Microsoft 365 不符合您的所有業務需求，請考慮從 Microsoft 諮詢服務（MCS）內部部署 SharePoint 2013 的標準實施。 標準架構可以是比自訂更快速、成本低且更容易的解決方案。 
     
 - 如果標準執行不符合您的業務需求，請考慮使用自訂的內部部署解決方案。
     

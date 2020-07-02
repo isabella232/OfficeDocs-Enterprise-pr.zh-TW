@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 瞭解如何在 Microsoft 365 中管理使用者身分識別。
-ms.openlocfilehash: 44777f206b61b01dc8a66817f549120af827bbc3
-ms.sourcegitcommit: ff1d21fe5eb8eba7a65d250aa37aadc8f503a10a
+ms.openlocfilehash: ba4638fa4d02900e3e85ef1c4cb7719baf12d1f6
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "44698950"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998071"
 ---
 # <a name="microsoft-365-identity-models-and-azure-active-directory"></a>Microsoft 365 身分識別模型和 Azure Active Directory
 
@@ -48,14 +48,14 @@ Microsoft 365 使用 Azure Active Directory （Azure AD），這是 Microsoft 36
 
 |||
 |:-------|:-----|:-----|
-|  | **僅限雲端身分識別** | **混合式身分識別** |
-| **定義** | 使用者帳戶只存在於 Microsoft 365 訂閱的 Azure Active Directory （Azure AD）租使用者中。 | 使用者帳戶存在於 AD DS 中，而且副本也位於您的 Microsoft 365 訂閱的 Azure AD 租使用者中。 Azure AD 中的使用者帳戶可能也包含已雜湊的 AD DS 使用者帳戶密碼的雜湊版本。 |
+|  | **僅雲端身分識別** | **混合式身分識別** |
+| **定義** | 使用者帳戶只存在於 Microsoft 365 訂閱的 Azure AD 租使用者中。 | 使用者帳戶存在於 AD DS 中，而且副本也位於您的 Microsoft 365 訂閱的 Azure AD 租使用者中。 Azure AD 中的使用者帳戶可能也包含已雜湊的 AD DS 使用者帳戶密碼的雜湊版本。 |
 | **Microsoft 365 如何驗證使用者認證** | Microsoft 365 訂閱的 Azure AD 租使用者使用雲端身分識別帳戶來執行驗證。 | Microsoft 365 訂閱的 Azure AD 租使用者可以處理驗證程式，也可以將使用者重新導向至另一個身分識別提供者。 |
 | **適用** | 不需要內部部署 AD DS 的組織。 | 使用 AD DS 或其他身分識別提供者的組織。 |
 | **最大好處** | 便於使用。 不需要額外的目錄工具或伺服器。 | 當存取內部部署或雲端式資源時，使用者可以使用相同的認證。 |
 ||||
 
-## <a name="cloud-only-identity"></a>僅限雲端身分識別
+## <a name="cloud-only-identity"></a>僅雲端身分識別
 
 僅限雲端的身分識別只會使用存在於 Azure AD 中的使用者帳戶。 雲端身分識別通常是由沒有內部部署伺服器的小型組織使用，或是不使用 AD DS 來管理本機身分識別。 
 
@@ -92,7 +92,7 @@ Azure AD 租使用者具有 AD DS 帳戶的副本。 在此設定中，內部部
 
 您不會使用 Microsoft 365 系統管理中心或 Office 365 PowerShell 管理 Azure AD 中已同步處理的使用者帳戶。
 
-## <a name="next-step"></a>下一步
+## <a name="next-step"></a>後續步驟
 
 如果您需要僅限雲端的身分識別模型，請參閱[僅限雲端身分識別](cloud-only-identities.md)。
 

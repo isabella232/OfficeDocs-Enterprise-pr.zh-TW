@@ -18,19 +18,17 @@ search.appverid:
 - BCS160
 ms.assetid: 073433ca-3511-4db9-b173-7a2edca57691
 description: 摘要：說明用來連線至 Office 365 之網路容量、WAN 加速器及負載平衡裝置的考慮。
-ms.openlocfilehash: 9776611aa64f8783a22252a2c4182e63bda1093a
-ms.sourcegitcommit: bb5b7bd241f58491198de2d74dbdce76f7bb8f62
+ms.openlocfilehash: 5015a146f92a32bd0200088517b6673ae00f8f64
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44419371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998632"
 ---
 # <a name="plan-for-network-devices-that-connect-to-office-365-services"></a>連線到 Office 365 服務的網路裝置的計劃
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
   
-**摘要**：說明用來連線至 Office 365 之網路容量、WAN 加速器及負載平衡裝置的考慮。
-
 有些網路硬體可能會限制支援的並行會話數目。 對於擁有超過2000使用者的組織，建議他們監視其網路裝置，以確保它們能夠處理其他 Office 365 服務流量。 簡易網路管理通訊協定（SNMP）監視軟體可協助您執行這項作業。
 
 ||
@@ -72,7 +70,7 @@ ms.locfileid: "44419371"
 
 如需設定防火牆和代理伺服器以連線至 Office 365 的詳細資訊，請參閱[管理 office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)、[評估 Office 365 網路](assessing-network-connectivity.md)連線，以及[office 365 端點常見問題](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)以深入瞭解裝置和電路選項。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Office 365 服務的安裝指南](setup-guides-for-office-365.md)
 

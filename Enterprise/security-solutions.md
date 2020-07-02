@@ -16,17 +16,15 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: 75fa293a-b51c-42d0-ad90-5b3d9c9b0cd4
 description: 摘要：使用這些文章以使用 Microsoft 的雲端供應項目來部署安全性解決方案。
-ms.openlocfilehash: aecb9f8d23b04cbc5c4d8065708ba8171f1ea555
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.openlocfilehash: cc32383a2a8e9d0849e68bf7305b19edb067cb11
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998175"
 ---
 # <a name="security-solutions"></a>安全性解決方案
 
- **摘要：** 使用這些文章以使用 Microsoft 的雲端供應項目來部署安全性解決方案。
-  
 以下是保護 Microsoft Office 365、Microsoft Azure、Microsoft Dynamics 365 及 Microsoft Enterprise Mobility + Security (EMS) 套件之存取權、共同作業和資料的解決方案：
 
 - [GDPR 的 Office 365 資訊保護](office-365-information-protection-for-gdpr.md)

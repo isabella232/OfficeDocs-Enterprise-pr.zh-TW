@@ -18,18 +18,16 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: "Summary: Learn core cloud architecture concepts for Microsoft identity, security, networking, and hybrid. Review prescriptive recommendations for protecting files, identities, and devices when using Microsoft's cloud."
-ms.openlocfilehash: b868394d12f65d9169203da275cef5fbb2f619e4
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: c1d41fa4ca098a913c7fea039765f916614c7f9c
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44736041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997895"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
- **摘要：** 了解 Microsoft 身分識別、安全性、網路及混合式的核心雲端架構概念。 查看有關使用 Microsoft 雲端時，用於保護文件、身分和裝置的規定建議。
-  
-These architecture tools and posters give you information about Microsoft cloud services, including Office 365, Windows 10, Azure Active Directory, Microsoft Intune, Microsoft Dynamics 365, and hybrid on-premises and cloud solutions. IT decision makers and architects can use these resources to determine the ideal solutions for their workloads and to make decisions about core infrastructure components such as identity and security. 
+這些架構工具和海報提供 Microsoft 雲端服務的相關資訊，包括 Microsoft 365、Windows 10、Azure Active Directory、Microsoft Intune、Microsoft Dynamics 365，以及混合式內部部署和雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。 
   
 <!--**[Microsoft's Enterprise Cloud Roadmap](microsoft-cloud-it-architecture-resources.md#roadmap)** (Sway) -->
     
@@ -69,7 +67,7 @@ See the posters, icon sets, community venues, and other resources that describe 
 <a name="cloudarch"></a>
 ##Microsoft Cloud for Enterprise Architects s系列
 
-These cloud architecture posters give you information about Microsoft cloud services, including Office 365, Azure Active Directory, Microsoft Intune, Microsoft Dynamics CRM Online, and hybrid on-premises and cloud solutions. IT decision makers and architects can use these resources to determine the ideal solutions for their workloads and to make decisions about core infrastructure components such as identity and security.
+這些雲端架構海報提供 Microsoft 雲端服務的相關資訊，包括 Microsoft 365、Azure Active Directory、Microsoft Intune、Microsoft Dynamics CRM Online 和混合式內部部署和雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。
 
 <!--  
 <a name="platformoptions"></a>
@@ -79,7 +77,7 @@ Learn key differences between Microsoft cloud services and platform offerings. F
   
 |**Item**|**Description**|
 |:-----|:-----|
-|[![Thumb image of cloud architecture model with service options](media/ff5c74e2-afc6-40c1-9292-cc4cb128cdd1.png)          ](https://www.microsoft.com/download/details.aspx?id=54432) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=524731)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=524732)  \| [More languages](https://www.microsoft.com/download/details.aspx?id=54432) <br/> | This model describes: <ul><li>  Software as a Service (SaaS) offerings, including Office 365 </li><li>  Platform as a Service (PaaS) features in Microsoft Azure </li><li>  Infrastructure as a Service (IaaS) features in Microsoft Azure </li><li>  Private cloud datacenter capabilities using Windows Server and System Center </li><li>  Learn how Microsoft's own IT department is migrating to these cloud services and building its hybrid cloud. </li></ul><br/>|
+|[![Thumb image of cloud architecture model with service options](media/ff5c74e2-afc6-40c1-9292-cc4cb128cdd1.png)          ](https://www.microsoft.com/download/details.aspx?id=54432) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=524731)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=524732)  \| [More languages](https://www.microsoft.com/download/details.aspx?id=54432) <br/> | This model describes: <ul><li>  Software as a Service (SaaS) offerings, including Microsoft 365 </li><li>  Platform as a Service (PaaS) features in Microsoft Azure </li><li>  Infrastructure as a Service (IaaS) features in Microsoft Azure </li><li>  Private cloud datacenter capabilities using Windows Server and System Center </li><li>  Learn how Microsoft's own IT department is migrating to these cloud services and building its hybrid cloud. </li></ul><br/>|
 -->
 
    
@@ -117,7 +115,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf) <br/> [PDF](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.vsdx)  | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS (Office 365)、Azure PaaS 和 Azure IaaS 的混合式雲端案例 </li></ul><br/>|
+|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf) <br/> [PDF](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.vsdx)  | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS （Microsoft 365）、Azure PaaS 和 Azure 的混合式雲端案例 IaaS </li></ul><br/>|
    
 <a name="attacks"></a>
 ### <a name="common-attacks-and-microsoft-capabilities-that-protect-your-organization"></a>常見攻擊和保護您組織的 Microsoft 功能
@@ -132,7 +130,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
 
 快速檢視 Microsoft 365 企業版的[底層基礎結構](https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure)以開始部署。
   
-|**Item**|**描述**|
+|**項目**|**描述**|
 |:-----|:-----|
 |[![Microsoft 365 企業版底層基礎結構海報的縮圖影像](media/Microsoft365EnterpriseFoundInfra-thumb.png)](https://aka.ms/m365efoundinfraposter) <br/> [線上檢視](https://aka.ms/m365efoundinfraposter) \| [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/deploy-foundation-infrastructure/Microsoft365EnterpriseFoundInfra.pdf) <br/> | 此海報針對目標、功能和工具、設計決策、設定結果、上架，以及持續監視和更新，摘要說明底層基礎結構的每個階段。 <br/>| 
 

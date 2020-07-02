@@ -20,16 +20,16 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: 瞭解 Azure ExpressRoute 與 Office 365 搭配使用的方式，以及如何規劃在部署 Azure ExpressRoute 以與 Office 365 搭配使用時所需的網路實施專案。
-ms.openlocfilehash: cf280ff386893f98844e5653ceed180339f701a6
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+ms.openlocfilehash: 80b42fc43f395d9dd94384d456d40eb536541746
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997947"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute for Office 365
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 瞭解 Azure ExpressRoute 與 Office 365 搭配使用的方式，以及如何規劃在部署 Azure ExpressRoute 以與 Office 365 搭配使用時所需的網路實施專案。 在 Azure 中執行的基礎結構和平臺服務常常會以網路架構和效能考慮的方式來受益。 在這兩種情況下，我們建議 ExpressRoute Azure。 軟體即服務產品（如 Office 365 和 Dynamics 365）是透過網際網路安全且可靠地存取而建立的。 您可以閱讀 Internet 效能及安全性，以及在[評估 office 365 網路](assessing-network-connectivity.md)連線的文章中，您可能會考慮 office 365 的 Azure ExpressRoute。
 

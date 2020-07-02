@@ -1,7 +1,7 @@
 ---
 title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
-ms.author: chrfox
-author: chrfox
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: Admin
 ms.topic: article
@@ -16,24 +16,22 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
-description: 摘要：使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
-ms.openlocfilehash: 693dbc22fea27c24fb6b578e22d0d2b150a8dfd5
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 摘要：使用 Microsoft 365 的 Windows PowerShell，將替代功能變數名稱新增至現有的客戶租使用者。
+ms.openlocfilehash: 6ba706c1fc0b2e2b43687ac582a40f36a2a3387c
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997359"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
- **摘要：** 使用 Windows PowerShell for Office 365 將替代網域名稱新增至現有的客戶租用戶。
+您可以使用 microsoft 365 的 Windows PowerShell，以更快的速度，建立新網域與客戶的租用，而不是使用 Microsoft 365 系統管理中心。
   
-您可以使用 Windows PowerShell for Office 365 來建立新網域，並與客戶的租用建立關聯，速度勝於使用 Windows 365 系統管理中心。
-  
-委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 Office 365 訂閱。 當他們銷售 Office 365 訂閱時，會自動將管理代表 (AOBO) 權限授與「客戶租用」，讓他們能夠管理和報告客戶租用。
+委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會將 Microsoft 365 訂閱捆綁到其客戶的服務產品中。 當他們銷售 Microsoft 365 訂閱時，系統會自動授與客戶租用的「管理」（AOBO）許可權，讓他們能管理及報告客戶租用。
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
-本主題中的程序需要您連線到 Office 365 的 Windows PowerShell。如需詳細指示，請參閱[連線至 Office 365 PowerShell](connect-to-office-365-powershell.md)。
+The procedures in this topic require you to connect to Windows PowerShell for Office 365. For instructions, see [Connect to Office 365 PowerShell](connect-to-office-365-powershell.md).
   
 您也需要合作夥伴租用戶系統管理員認證。
   
@@ -43,20 +41,20 @@ ms.locfileid: "44004746"
     
 - 您需要客戶的 **TenantId** 。
     
-- FQDN 必須是已向網際網路網域名稱服務 (DNS) 註冊機構註冊的名稱 (如 GoDaddy)。如需公開註冊網域名稱的詳細資訊，請參閱[如何購買網域名稱](https://go.microsoft.com/fwlink/p/?LinkId=532541)。
+- The FQDN must be registered with an Internet domain name service (DNS) registrar, such as GoDaddy. For more information on how to publically register a domain name, see [How to buy a domain name](https://go.microsoft.com/fwlink/p/?LinkId=532541).
     
-- 您需要知道如何為 DNS 註冊機構將 TXT 記錄新增至已註冊的 DNS 區域。如需新增 TXT 記錄的詳細資訊，請參閱[在任一 DNS 主機服務提供者建立 Office 365 的 DNS 記錄](https://go.microsoft.com/fwlink/p/?LinkId=532542)。如果這些程序不適用，您將需要尋找適合 DNS 註冊機構的程序。
+- 您需要知道如何為 DNS 註冊機構將 TXT 記錄新增至已註冊的 DNS 區域。 如需如何新增 TXT 記錄的詳細資訊，請參閱[ADD DNS record to connect domain](https://go.microsoft.com/fwlink/p/?LinkId=532542)。 如果這些程序不適用，您將需要尋找適合 DNS 註冊機構的程序。
     
 ## <a name="create-domains"></a>建立網域
 
- 客戶可能會要求您建立額外的網域來與租用相關聯，因為他們不希望預設的<網域>.onmicrosoft.com網域成為向全世界代表公司身分的主要網域。此程序會引導您完成與客戶租用相關聯之新網域的建立步驟。
+ Your customers will likely ask you to create additional domains to associate with their tenancy because they don't want the default <domain>.onmicrosoft.com domain to be the primary one that represents their corporate identities to the world. This procedure walks you through creating a new domain associated with your customer's tenancy.
   
 > [!NOTE]
-> 若要執行這些作業，您必須在 Microsoft 365 系統管理中心的系統管理員帳戶詳細資料中，將您登入的夥伴管理員帳戶設為「**完全管理**」，以取得**您支援之公司的系統管理許可權**。 For more information on managing partner administrator roles, see[Partners: Offer delegated administration](https://go.microsoft.com/fwlink/p/?LinkId=532435). 
+> 若要執行這些作業，您必須在 Microsoft 365 系統管理中心的系統管理員帳戶詳細資料中，將您登入的夥伴管理員帳戶設為「**完全管理**」，以取得**您支援之公司的系統管理許可權**。 如需管理夥伴系統管理員角色的詳細資訊，請參閱[合作夥伴：提供委派的管理](https://go.microsoft.com/fwlink/p/?LinkId=532435)。 
   
 ### <a name="create-the-domain-in-azure-active-directory"></a>在 Azure Active Directory 中建立網域
 
-此命令會在 Azure Active Directory 中建立網域，但不會將新網域與公開註冊的網域建立關聯。 當您向適用於企業的 Microsoft Office 365 證明擁有公開註冊的網域時才能建立關聯。
+此命令會在 Azure Active Directory 中建立網域，但不會將新網域與公開註冊的網域建立關聯。 當您證明您擁有已公開註冊的網域給 Microsoft Microsoft 365 的企業時，就會發生這種情況。
   
 ```
 New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
@@ -68,7 +66,7 @@ New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
 
 ### <a name="get-the-data-for-the-dns-txt-verification-record"></a>取得 TXT DNS 驗證記錄的資料
 
- Office 365 會產生需要置入 DNS TXT 驗證記錄中的特定資料。若要取得資料，請執行此命令。
+ Microsoft 365 會產生您需要放入 DNS TXT 驗證記錄的特定資料。 若要取得資料，請執行此命令。
   
 ```
 Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of new domain> -Mode DnsTxtRecord
@@ -87,9 +85,9 @@ Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of
   
 ### <a name="add-a-txt-record-to-the-publically-registered-dns-zone"></a>將 TXT 記錄新增至公開註冊的 DNS 區域
 
-在 Office 365 開始接受導向公開註冊網域名稱的流量之前，您必須證明擁有及具備網域的管理員權限。 您可以在網域中建立 TXT 記錄，藉此證明擁有該網域。 TXT 記錄在網域中不具任何效果，因此當您建立網域擁有權之後即可予以刪除。 若要建立 TXT 記錄，請遵循[在任一 DNS 主機服務提供者建立 Office 365 的 DNS 記錄](https://go.microsoft.com/fwlink/p/?LinkId=532542)中的程序。 如果這些程序不適用，您將需要尋找適合 DNS 註冊機構的程序。
+在 Microsoft 365 開始接受導向至已公開登錄功能變數名稱的流量之前，您必須證明您擁有該網域的系統管理員許可權。 您可以在網域中建立 TXT 記錄，藉此證明擁有該網域。 TXT 記錄在網域中不具任何效果，因此當您建立網域擁有權之後即可予以刪除。 若要建立 TXT 記錄，請遵循 [[新增 DNS 記錄] 中的程式來連接您的網域](https://go.microsoft.com/fwlink/p/?LinkId=532542)。 如果這些程序不適用，您將需要尋找適合 DNS 註冊機構的程序。
   
-透過 nslookup 確認成功建立 TXT 記錄。請遵循此語法。
+Confirm the successful creation of the TXT record via nslookup. Follow this syntax.
   
 ```
 nslookup -type=TXT <FQDN of registered domain>
@@ -103,9 +101,9 @@ nslookup -type=TXT <FQDN of registered domain>
   
  `text=MS=ms########`
   
-### <a name="validate-domain-ownership-in-office-365"></a>在 Office 365 中驗證網域擁有權
+### <a name="validate-domain-ownership-in-microsoft-365"></a>在 Microsoft 365 中驗證網域擁有權
 
-在最後一個步驟中，您向 Office 365 證明擁有公開註冊的網域。此步驟之後，Office 365 會開始接受路由傳送到新網域名稱的流量。若要完成網域建立和註冊程序，請執行此命令。 
+在此最後一個步驟中，您會驗證您擁有公開註冊網域的 Microsoft 365。 在此步驟之後，Microsoft 365 會開始接受路由傳送至新功能變數名稱的流量。 若要完成網域建立和註冊程序，請執行此命令。 
   
 ```
 Confirm-MsolDomain -TenantId <customer TenantId> -DomainName <FQDN of new domain>

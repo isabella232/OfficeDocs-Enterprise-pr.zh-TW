@@ -16,16 +16,16 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 混合式新式驗證（HMA）是一種身分識別管理的方法，可提供更安全的使用者驗證和授權，而且可用於 Exchange server 內部部署混合式部署。
-ms.openlocfilehash: d73b7c28ea5b64be46a3e3a40d8160ccdfcea18c
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.openlocfilehash: 74c7ba7f050c4ac6f6c9b0e6eee7a399a15b196a
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997379"
 ---
 # <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>如何設定 Exchange Server 內部部署以使用混合式新式驗證
 
-*本文適用於 Office 365 企業版和 Microsoft 365 企業版。*
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
 混合式新式驗證（HMA）是一種身分識別管理的方法，可提供更安全的使用者驗證和授權，而且可用於 Exchange server 內部部署混合式部署。
   
@@ -65,7 +65,7 @@ ms.locfileid: "44774518"
   
 ## <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>在 Azure AD 中將內部部署 web 服務 URLs 當做 Spn 新增
 
-執行將您的內部部署 web 服務 URLs 指派為 Azure AD Spn 的命令。 在驗證和授權期間，用戶端機器和裝置會使用 Spn。 所有可能用來從內部部署至 Azure Active Directory （AAD）的 URLs 都必須在 AAD 中註冊（這包括內部及外部命名空間）。
+執行將您的內部部署 web 服務 URLs 指派為 Azure AD Spn 的命令。 在驗證和授權期間，用戶端機器和裝置會使用 Spn。 所有可能用來從內部部署至 Azure Active Directory （Azure AD）的 URLs 都必須在 Azure AD 中註冊（這包括內部及外部命名空間）。
   
 首先，請收集您需要在 AAD 中新增的所有 URLs。 在內部部署執行下列命令：
   

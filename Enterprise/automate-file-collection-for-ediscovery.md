@@ -1,128 +1,130 @@
 ---
-title: EDiscovery 的自動化檔案收集
-ms.author: chrfox
-author: chrfox
+title: 自動化 eDiscovery 的檔收集
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
 localization_priority: Normal
-ms.collection: Ent_O365
+ms.collection:
+- Ent_O365
+- SPO_Content
+f1.keywords:
+- CSH
 ms.custom: ''
 ms.assetid: 8d751419-d81b-4eb7-a2e5-8b03ccbf670c
 search.appverid:
 - MET150
-description: 摘要： 了解如何自動化檔案收集從使用者電腦 ediscovery （英文）。
-ms.openlocfilehash: b54e54e2905407b81d95238afe97c1a542238e06
-ms.sourcegitcommit: 08e1e1c09f64926394043291a77856620d6f72b5
+description: 摘要：瞭解如何從使用者電腦自動化檔收集以進行 eDiscovery。
+ms.openlocfilehash: 83bd55ff786803cfcb3eec9430d72de30179d000
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "34068419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997974"
 ---
-# <a name="automate-file-collection-for-ediscovery"></a>EDiscovery 的自動化檔案收集
+# <a name="automate-file-collection-for-ediscovery"></a>自動化 eDiscovery 的檔收集
 
- **摘要：** 了解如何自動化檔案收集從使用者電腦 ediscovery （英文）。
+所有公司都面臨訴訟或其他類型法律行動的潛力。 雖然法律部門可用於減少這種風險，但訴訟是指的是生命週期的事實。 當公司面臨法律行動時，必須透過法律查詢的程式，向法院和相反的法律顧問提供所有相關的單印刷材料。 
   
-所有公司都面臨潛在訴訟或其他類型的法律巨集指令。 雖然法務部門可以使用，以減少的曝光度，訴訟資料暫留是商務生命週期的事實。 當公司朝法律行動時，它們是必要的透過法律探索，以提供巷以及對手顧問所有相關的記錄資料的程序。 
+eDiscovery 是指公司清查、搜尋、識別、保留、篩選，並提供電子形式的相關單印刷材料的程式。 SharePoint 2013、Exchange Server 2013、Lync Server 2013、SharePoint 線上和 Exchange Online 都可以保留大量的帶序內容。 視版本而定，這些產品可能支援 eDiscovery 和就地保留（Lync 透過 Exchange Server），讓法律團隊可更輕鬆地編制索引、識別、保留及篩選特定案例中最相關的內容。
   
-eDiscovery 是依據公司清查、 搜尋、 識別、 保留、 篩選和提供相關的記錄資料存在的電子表單中的程序。 SharePoint 2013、 Exchange Server 2013、 Lync Server 2013、 SharePoint Online 和 Exchange Online 可以保留大量記錄的內容。 根據版本，這些產品可能支援 eDiscovery 及就地保留概觀 (Lync 透過 Exchange 伺服器)，以便輕鬆編製索引，法律 teams 識別、 按住並篩選的特定案例的最相關內容。
-  
-許多文件會儲存在使用者 (Custodians) 上本機電腦，而不是以在集中式位置。 這使得基本上是針對 SharePoint 2013 搜尋，並無法搜尋，如果它不能包含 eDiscovery。 這個解決方案示範如何使用登入指令檔，System Center 協調 2012 R2 和 Exchange Server 的 Windows PowerShell 自動化的識別資料及記錄資料從使用者電腦的集合。
+許多檔都是儲存在使用者（保管人）本機電腦上，而不是集中位置。 這使 SharePoint 2013 無法進行搜尋，而且如果無法搜尋，便無法包含在 eDiscovery 中。 此解決方案顯示如何使用登入腳本（System Center Orchestrator 2012 R2 和 Windows PowerShell for Exchange Server），以自動化使用者電腦上的序材料識別及集合。
   
 ## <a name="what-this-solution-does"></a>此解決方案的用途
 
-此解決方案會使用通用的安全性，群組原則] 和 Windows PowerShell 指令碼來尋找、 清查，並從使用者本機電腦收集內容和 Outlook 個人存放區 (PST) 檔案，隱藏的檔案共用。 從該處的 PST 檔案可以匯入 Exchange Server 2013 或 Exchange Online。 所有檔案會接著都移在 Microsoft Azure 中使用 System Center 協調 2012 R2 runbook 到另一個檔案共用長期儲存與 SharePoint 2013 所編製索引。 然後您使用 eDiscovery center 在內部部署 SharePoint 2013 部署或 SharePoint Online 中一樣定期執行 eDiscovery。 
+此解決方案使用通用安全性群組、群組原則和 Windows PowerShell 腳本，以在使用者本機電腦上尋找、清查及收集內容和 Outlook 個人存放區（PST）檔案至隱藏的檔案共用。 在此，PST 檔案可匯入至 Exchange Server 2013 或 Exchange Online。 然後，使用 System Center Orchestrator 2012 R2 runbook 將所有檔案移至 Microsoft Azure 中的另一個檔案共用，以進行長期儲存，並 SharePoint 2013 來編制索引。 然後，您可以使用內部部署 SharePoint 2013 部署中的 eDiscovery 中心，或是您定期執行 eDiscovery 的 SharePoint 線上。 
   
 > [!IMPORTANT]
-> 此解決方案使用 robocopy 檔案複製到集中式的檔案共用的 custodian 的電腦。 因為 robocopy 不會複製檔案開啟或鎖定，任何檔案，包括 custodian 已開啟的 PST 檔案將不會收集。 您必須以手動方式收集它們。 此解決方案並提供您明確地識別它不能複製檔案的清單與每個檔案的完整路徑。 
+> 此解決方案使用 robocopy，將檔案從保管人的電腦複製到集中的檔案共用。 因為 robocopy 不會複製開啟或鎖定的檔案，所以不會收集保管人已開啟的任何檔案（包括 PST 檔案）。 您必須手動收集這些檔案。 此方案為您提供清單，明確識別出它無法複製的檔案，以及每個檔案的完整路徑。 
   
-下圖引導您逐步完成所有步驟和解決方案的元素。
+下列圖表會逐步引導您完成解決方案的所有步驟和元素。
   
 ![自動化檔案收集解決方案的概觀](media/dbb447b5-c74c-4956-986c-10a1d047ac99.png)
   
-|圖例 * * *||
+|圖例 * * * *||
 |:-----|:-----|
-|![洋紅色圖說文字 1](media/000026a3-2bf0-4678-b468-ccb5f81da6f1.png)|建立群組原則物件 (GPO)，並將它與集合登入指令檔。  <br/> |
-|![洋紅色圖說文字 2](media/a31b11e2-3597-42a4-933e-b6af11ed6ef1.png)| 設定只對 Custodians 群組套用到 GPO 的 GPO 安全性篩選。 <br/> |
-|![洋紅色圖說文字 3](media/3ced060c-daec-460d-a9b5-260a3dfcae36.png)|Custodian 登入並 GPO 執行時，呼叫集合登入指令檔。  <br/> |
-|![洋紅色圖說文字 4](media/6f269d84-2559-49e3-b18e-af6ac94d0419.png)|集合登入指令檔清查 Custodians 電腦，搜尋想要的檔案並錄製其位置上的所有本機連接磁碟機。  <br/> |
-|![洋紅色圖說文字 5](media/4bf8898c-44ad-4524-b983-70175804eb85.png)|集合登入指令碼會複製清查的檔案預備伺服器上的隱藏的檔案共用。  <br/> |
-|![洋紅色圖說文字 6](media/99589726-0c7e-406b-a276-44301a135768.png)| （選項的）以手動方式執行 PST 匯入指令碼，以收集的 PST 檔案匯入 Exchange Server 2013。 <br/> |
-|![洋紅色圖說文字 7](media/ff15e89c-d2fd-4614-9838-5e18287d578b.png)|（選項 B）使用 Office 365 匯入工具及程序，匯入的收集的 PST 檔案 Exchange Online。  <br/> |
-|![洋紅色圖說文字 8](media/aaf3bd3d-9508-4aaf-a3af-44ba501da63a.png)|將所有收集到的檔案移至長期儲存與 MoveToColdStorage System Center 協調 2012 R2 runbook Azure 檔案共用。 <br/> |
-|![洋紅色圖說文字 9](media/b354642e-445e-4723-a84a-b41f7ac6e774.png)|索引中與 SharePoint 2013 的冷儲存檔案共用的檔案。  <br/> |
-|![洋紅色圖說文字 10](media/cebf7de5-7525-413b-9e52-638a4f8b2f74.png)|執行 eDiscovery 在冷儲存區和內部部署 Exchange Server 2013 中的內容。  <br/> |
-|![洋紅色圖說文字 11](media/e59ab403-2f19-497a-92a5-549846dded66.png)|在 Office 365 中的內容上執行 eDiscovery。  <br/> |
+|![洋紅色圖說文字 1](media/000026a3-2bf0-4678-b468-ccb5f81da6f1.png)|建立群組原則物件（GPO），並將它與集合登入腳本建立關聯。  <br/> |
+|![洋紅色圖說文字 2](media/a31b11e2-3597-42a4-933e-b6af11ed6ef1.png)| 設定 GPO 安全性篩選器，只將 GPO 套用至保管人群組。 <br/> |
+|![洋紅色圖說文字 3](media/3ced060c-daec-460d-a9b5-260a3dfcae36.png)|保管人會登入，然後 GPO 即會執行，呼叫集合登入腳本。  <br/> |
+|![洋紅色圖說文字 4](media/6f269d84-2559-49e3-b18e-af6ac94d0419.png)|集合登入腳本會清查保管人電腦上所有在本機上附加的磁片磁碟機、搜尋您想要的檔案，並記錄其位置。  <br/> |
+|![洋紅色圖說文字 5](media/4bf8898c-44ad-4524-b983-70175804eb85.png)|集合登入腳本會將清查過的檔案複製到暫存伺服器上的隱藏檔案共用。  <br/> |
+|![洋紅色圖說文字 6](media/99589726-0c7e-406b-a276-44301a135768.png)| （選項 A）手動執行 PST 匯入腳本，將收集的 PST 檔案匯入 Exchange Server 2013。 <br/> |
+|![洋紅色圖說文字 7](media/ff15e89c-d2fd-4614-9838-5e18287d578b.png)|（選項 B）使用 Microsoft 365 Import 工具和進程，將收集的 PST 檔案匯入 Exchange Online。  <br/> |
+|![洋紅色圖說文字 8](media/aaf3bd3d-9508-4aaf-a3af-44ba501da63a.png)|使用 MoveToColdStorage System Center Orchestrator 2012 R2 runbook，將所有收集的檔案移至 Azure 檔案共用，以進行長期儲存體存放。 <br/> |
+|![洋紅色圖說文字 9](media/b354642e-445e-4723-a84a-b41f7ac6e774.png)|使用 SharePoint 2013，為 cold 儲存檔共用中的檔案編制索引。  <br/> |
+|![洋紅色圖說文字 10](media/cebf7de5-7525-413b-9e52-638a4f8b2f74.png)|對冷存放區中的內容及內部部署 Exchange Server 2013 執行 eDiscovery。  <br/> |
+|![洋紅色圖說文字 11](media/e59ab403-2f19-497a-92a5-549846dded66.png)|在 Microsoft 365 的內容中執行 eDiscovery。  <br/> |
    
 ## <a name="prerequisites"></a>必要條件
 
-此解決方案的組態最需要許多項目，，其中您可能有，並設定如果您的想法有關 eDiscovery。 針對您不一定或該地需要特定設定，我們將提供您具有連結的項目中，您需要組建出您的基底組態。 設定本身的解決方案之前，您必須具有就地基底組態。
+設定此解決方案時，需要許多元素，多數是您在考慮 eDiscovery 時可能已就緒並加以設定。 針對您可能不需要特定設定的元素，我們會為您提供您要組建基本設定的連結。 您必須先就地設定基本設定，才能設定解決方案本身。
   
 ### <a name="base-configuration"></a>基本設定
 
 |**元素**|**連結**|
 |:-----|:-----|
-|Active Directory 網域服務 (AD DS) 網域  <br/> ||
-|從您的內部網路的網際網路連線能力  <br/> ||
-|若要支援 SharePoint 2013 和 System Center 協調 2012 R2 的 SQL Server 2012  <br/> |[部署 System Center 協調-2012](https://go.microsoft.com/fwlink/p/?LinkId=613503) <br/> |
-| 內部部署或 Azure 根據 SharePoint 2013 ediscovery （英文） （所需的選項 A） <br/> ||
-|內部檔案共用伺服器上的臨時  <br/> ||
-|內部部署 Exchange Server 2013 的選項 PST 匯入  <br/> |CU5 (15.913.22) 位於[CU5](https://go.microsoft.com/fwlink/p/?LinkId=613426)。  <br/> |
-|System Center Orchestrator 2012 R2  <br/> |[部署 System Center 協調-2012](https://go.microsoft.com/fwlink/p/?LinkId=613503) <br/> |
-|Office 365 （方案 E3） 與 Exchange Online 和 SharePoint Online （所需的選項 B）  <br/> |若要註冊 Office 365 E3 訂用帳戶，請參閱 < <b0>Office 365 E3 訂閱</b0>。  <br/> |
-|使用虛擬機器的 azure 訂用帳戶  <br/> |若要註冊 Azure，請參閱[Windows Azure 訂閱](https://go.microsoft.com/fwlink/p/?LinkId=512010) <br/> |
-|您的內部網路與您 Azure 訂用帳戶之間的 VPN 連線  <br/> |若要設定您 Azure 訂用帳戶和內部部署網路間的 VPN 通道，請參閱[連線到 Microsoft Azure 虛擬網路的內部網路](https://go.microsoft.com/fwlink/p/?LinkId=613507)。  <br/> |
-|若要搜尋 SharePoint 和 Exchange Server 2013 和 Lync Server 2013 （選用） 設定 SharePoint 2013 的 eDiscovery  <br/> |若要以這種方式設定電子文件探索，請參閱 <<c0>在 SharePoint Server 2013 中的設定 eDiscovery和<b1>測試實驗室指南： Exchange、 Lync、 SharePoint 及 Windows 檔案共用測試實驗室中設定 eDiscovery</b1>。  <br/> |
-|在 SharePoint Online 和 Exchange Online 的 Office 365 中的 eDiscovery  <br/> |若要在 Office 365 中設定電子文件探索，請參閱 <<c0>設定 SharePoint Online 中的 eDiscovery 中心。  <br/> |
+|Active Directory 網域服務（AD DS）網域  <br/> ||
+|從您的內部部署網路的網際網路連線能力  <br/> ||
+|SQL Server 2012 可支援 SharePoint 2013 和 System Center Orchestrator 2012 R2  <br/> |[部署 System Center Orchestrator-2012](https://go.microsoft.com/fwlink/p/?LinkId=613503) <br/> |
+| 電子檔探索的內部部署或 Azure SharePoint 2013 （選項 A 所需） <br/> ||
+|用於暫存的內部部署檔案共用伺服器  <br/> ||
+|內部部署 Exchange Server 2013 用於選項 PST 匯入  <br/> |CU5 （15.913.22）可從[CU5](https://go.microsoft.com/fwlink/p/?LinkId=613426)取得。  <br/> |
+|System Center Orchestrator 2012 R2  <br/> |[部署 System Center Orchestrator-2012](https://go.microsoft.com/fwlink/p/?LinkId=613503) <br/> |
+|Microsoft 365 E3 搭配 Exchange Online 和 SharePoint 線上（選項 B 所需）  <br/> |若要註冊 Microsoft 365 E3 訂閱，請參閱[microsoft 365 e3 訂閱](https://www.microsoft.com/microsoft-365/enterprise-e3-business-software?activetab=pivot%3aoverviewtab)。  <br/> |
+|使用虛擬機器的 Azure 訂閱  <br/> |若要註冊 Azure，請參閱[訂閱 Windows Azure](https://go.microsoft.com/fwlink/p/?LinkId=512010) <br/> |
+|您的內部部署網路與您的 Azure 訂閱之間的 VPN 連線  <br/> |若要在您的 Azure 訂閱和內部部署網路之間設定 VPN 隧道，請參閱[Connect a 內部部署網路與 Microsoft Azure 虛擬網路](https://go.microsoft.com/fwlink/p/?LinkId=613507)。  <br/> |
+|SharePoint 2013 eDiscovery 設定為跨 SharePoint 和 Exchange Server 2013 和選擇性的 Lync Server 2013 進行搜尋  <br/> |若要以這種方式設定 eDiscovery，請參閱[Configure ediscovery in SharePoint Server 2013](https://go.microsoft.com/fwlink/p/?LinkId=613508)及[Test Lab Guide： configure Ediscovery for a Exchange，Lync，SharePoint 與 Windows 檔案共用測試實驗室](https://go.microsoft.com/fwlink/p/?LinkId=393130)。  <br/> |
+|Microsoft 365 中的 eDiscovery，供 SharePoint 線上和 Exchange Online  <br/> |若要在 Microsoft 365 中設定 eDiscovery，請參閱[在 SharePoint Online 中設定 Ediscovery 中心](https://go.microsoft.com/fwlink/p/?LinkId=613628)。  <br/> |
    
 ## <a name="configure-the-environment"></a>設定環境
 
-現在，您有基底組態中的位置，您可以設定解決方案本身向前移動。 
+現在，您已準備好基本設定，您可以向前移動以設定解決方案本身。 
   
-### <a name="staging-file-share"></a>臨時檔案共用
+### <a name="staging-file-share"></a>暫存檔共用
 
-1. 在內部部署網域中，建立名為 Custodians 通用安全性群組。
+1. 在內部部署網域中，建立名為保管人的全域安全性群組。
     
-2. 建立的檔案，從 Custodians 電腦收集的隱藏的檔案共用。 這應該是在內部部署伺服器上。 比方說，在名為臨時伺服器上，建立名為的情況下 $ 檔案共用。 **$** ，才能將此位址設隱藏的共用。
+2. 為從保管人電腦收集的檔案建立隱藏的檔案共用。 這應該是在內部部署伺服器上。 例如，在名為「暫存」的伺服器上，建立名為案例 $ 的檔案共用。 **$** 需要將此共用設為隱藏共用。
     
-3. 設定下列共用權限：
+3. 設定下列共用許可權：
     
-  - Custodians： 變更，請閱讀
+  - 保管人：變更、讀取
     
   - 系統管理員：完全控制
     
-  - Exchange 受信任的子系統： 變更，請閱讀
+  - Exchange 受信任子系統：變更、讀取
     
-4. 開啟 [**安全性**] 索引標籤，新增 [Custodians] 群組中，按一下 [**進階**]。 設定 Custodians 群組的下列權限：
+4. 開啟 [**安全性**] 索引標籤，新增保管人群組，然後按一下 [**高級**]。 為保管人群組設定下列許可權：
     
-  - **類型： 拒絕**
+  - **類型：拒絕**
     
-  - **適用於： 這個資料夾、 子資料夾及檔案**
+  - **適用于：此資料夾、子資料夾及檔案**
     
-5. 按一下 [**進階權限**，然後選取下列項目：
+5. 按一下 [**高級許可權**]，然後選取下列各項：
     
   - **讀取屬性**
     
-  - **閱讀延伸的屬性**
+  - **讀取擴充屬性**
     
   - **讀取權限**
     
-6. 測試存取的情況下 $ 檔案共用，執行下列動作：
+6. 執行下列動作，以測試對事例 $ file 共用的存取：
     
-1. 將使用者新增至 Custodians 群組。
+1. 將使用者新增至保管人群組。
     
-2. 位置的情況下 $ 資料夾中的檔案。
+2. 將檔案放在案例 $ 資料夾中。
     
-3. 為使用者、 瀏覽至預備伺服器，例如瀏覽至\\\\分段執行若要查看哪些共用可用的共用。 您不應該會看到所列的**情況下 $** 共用。
+3. 以使用者的身分流覽至暫存伺服器，例如流覽至「暫存」 \\ \\ 共用，以查看有哪些共用可供使用。 您不應該看到列出的**案例 $** [共用]。
     
-4. 手動輸入瀏覽器的情況下 $ 共用的完整路徑。 這應該會開啟的情況下 $ 共用。
+4. 手動輸入案例 $ 共用到瀏覽器的完整路徑。 這應該會開啟案例 $ 共用。
     
-5. 嘗試開啟先前放在共用的檔案。 這應該會失敗。
+5. 嘗試開啟您先前放入共用中的檔案。 這應該會失敗。
     
-### <a name="logon-script"></a>登入指令檔
+### <a name="logon-script"></a>登入腳本
 
-1. 複製並貼入 [記事本] 中的這個 Windows PowerShell 指令碼：
+1. 在 [記事本] 中複製並貼上此 Windows PowerShell 腳本：
     
   ```
   # Automated file collection script
@@ -264,27 +266,27 @@ Write-Host -ForegroundColor Cyan "Finished."
 
   ```
 
-2. 將上面的指令碼儲存為 CollectionScript.ps1 中的位置並讓您輕鬆地尋找，例如 c:\\AFCScripts。
+2. 在便於您尋找的位置（例如，C： AFCScripts）中，將上述腳本儲存為 CollectionScript.ps1 \\ 。
     
-3. 在 [記事本] 使用 [移至] 功能。 視需要請進行下列變更:
+3. 使用 [記事本] 中的 [移至] 功能。 請視需要進行下列變更：
     
-|**行號**|**您需要變更**|**所需/選用**|
+|**行號**|**您需要變更的專案**|**必要/選用**|
 |:-----|:-----|:-----|
-|71  <br/> |**$FileTypes**變數。 包含您想要的指令碼來清查並收集陣列變數中的所有檔案類型副檔名。 <br/> |選用  <br/> |
-|76 及 77  <br/> |變更的方式 **$CaseNo**變數是內建符合您的需求。 指令碼會擷取目前的日期和時間，並附加至它的使用者名稱。 <br/> |選用  <br/> |
-|80  <br/> |**$CaseRootLocation**變數必須設定為臨時伺服器集合檔案共用，例如**\\\\臨時\\情況下 $**。 <br/> |必要  <br/> |
+|71  <br/> |**$FileTypes**變數。 在陣列變數中包含您想要腳本清查及收集的所有檔案類型副檔名。 <br/> |選用  <br/> |
+|76和77  <br/> |變更建立 **$CaseNo**變數以符合您的需求的方式。 腳本會捕獲目前的日期和時間，並附加使用者名稱給它。 <br/> |選用  <br/> |
+|80  <br/> |**$CaseRootLocation**變數必須設定為您的暫存伺服器集合檔案共用，例如， ** \\ \\ 暫存 \\ 案例 $**。 <br/> |必要  <br/> |
    
-4. 將 CollectionScript.ps1 檔案放置在網域控制站的 Netlogon 檔案共用。 
+4. 將 CollectionScript.ps1 檔案放在網域控制站上的 Netlogon 檔案共用中。 
     
-### <a name="configure-gpo-for-the-logon-script-and-custodians-group"></a>設定 GPO 的登入指令碼和 Custodians 群組
+### <a name="configure-gpo-for-the-logon-script-and-custodians-group"></a>為登入腳本和保管人群組設定 GPO
 
-1. 下列主題，<b0>使用啟動、 關閉、 登入和登出指令碼在群組原則中</b0>的 < 如何指派使用者登入指令檔 > 一節，以設定 Custodians 群組的登入指令碼。
+1. 遵循主題中的「如何指派使用者登入腳本」一節，[使用群組原則中](https://go.microsoft.com/fwlink/p/?LinkId=614844)的「啟動」、「關機」、「登入」和「登出」腳本，設定保管人群組的登入腳本。
     
-2. 移除已驗證的使用者**安全性篩選**，並新增 Custodians 群組。
+2. 從**安全性篩選**移除已驗證的使用者，並新增保管人群組。
     
-### <a name="pst-import-option-a-script-for-exchange-server-2013"></a>PST 匯入選項 A、 Exchange Server 2013 的指令碼
+### <a name="pst-import-option-a-script-for-exchange-server-2013"></a>適用于 Exchange Server 2013 的 PST 匯入選項 A、腳本
 
-1.  複製並貼入 [記事本] 中的下列 Windows PowerShell 指令碼：
+1.  將下列 Windows PowerShell 腳本複製並貼到 [記事本] 中：
     
   ```
   # Script to import all PSTs in a given folder to a target mailbox
@@ -301,9 +303,9 @@ param ([String]$SourcePath,[String]$MailboxAlias)
 $FolderIdentifier = "zzImportedPSTs_"
 
 # Connect to Exchange remote powershell using the connection Uri below
-# This would be the format http://<exchange server FQDN>/Powershell
+# This would be the format https://<exchange server FQDN>/Powershell
 
-$ConnectionUri = 'http://h10-exch/PowerShell'
+$ConnectionUri = 'https://h10-exch/PowerShell'
 $RemoteEx2013Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri $ConnectionUri -Authentication Kerberos
 Import-PSSession $RemoteEx2013Session
 
@@ -322,132 +324,132 @@ $AllFiles | ForEach-Object {
 }
   ```
 
-2. 將指令碼儲存為 PSTImportScript.ps1 是讓您輕鬆地找到的位置。 範例和使用者更方便使用，請在您呼叫的臨時伺服器中建立資料夾\\\\臨時\\AFCScripts，並將其儲存到那里。
+2. 在便於您尋找的位置中，將腳本儲存為 PSTImportScript.ps1。 例如，便於使用，請在暫存的伺服器上建立一個名為「暫存 AFCScripts」的資料夾 \\ \\ \\ ，並將它儲存到該資料夾。
     
-3. 在 [記事本]，使用 [移至] 功能，並視需要進行下列變更:
+3. 使用 [記事本] 中的 [移至] 功能，並視需要進行下列變更：
     
-|**行號**|**您需要變更**|**所需/選用**|
+|**行號**|**您需要變更的專案**|**必要/選用**|
 |:-----|:-----|:-----|
-|12  <br/> |**$FolderIdentifier**標記 Pst 匯入至信箱資料夾。 如有必要，請變更此選項。 <br/> |選用  <br/> |
-|17   <br/> |**$ConnectionUri**必須設為您自己的伺服器。 <br/> > [!IMPORTANT]> 請確定您 **$ConnectionUri**點至 http 位置，而不是 https。 它不適用於 https:。          |必要  <br/> |
+|12   <br/> |**$FolderIdentifier**標記 pst 所匯入的信箱資料夾。 視需要變更此。 <br/> |選用  <br/> |
+|17   <br/> |**$ConnectionUri**必須設定為您自己的伺服器。 <br/> > [!IMPORTANT]> 請確定 **$ConnectionUri**指向 HTTP 位置，而不是 HTTPs。 它不會搭配使用 HTTPs：。          |必要  <br/> |
    
-4. 確認 Exchange 受信任子系統帳戶具有讀取、 寫入和 Execute 權限\\\\臨時\\的情況下 $ 共用。
+4. 確認 Exchange 受信任子系統帳戶具有「暫存案例」的「讀取」、「寫入」和「執行」許可權 \\ \\ \\ 。
     
-5. PST 匯入指令碼需要下列兩個輸入的參數：
+5. PST 匯入腳本需要下列兩個輸入參數：
     
-  - **$SourcePath**要匯入，例如 PST 檔案的位置\\\\臨時\\情況下 $。
+  - **$SourcePath**要匯入之 PST 檔案的位置，例如「 \\ \\ 暫存 \\ 案例」。
     
-  - **$MailboxAlias**將會收到的匯入電子郵件項目目標信箱的別名。
+  - **$MailboxAlias**將接收匯入電子郵件專案之目標信箱的別名。
     
-6. 例如，如果您想要所有 PST 檔案匯都入從路徑\\Staging\Cases$ 到別名 eDiscoveryMailbox 信箱，您可執行類似的指令碼`\\staging\AFCscripts\PSTImportScript.ps1 \\Staging\cases$ eDiscoveryMailbox`。
+6. 例如，如果您想要將路徑 Staging\Cases $ 中的所有 PST 檔案匯入 \\ 至具有別名 eDiscoveryMailbox 的信箱中，您可以執行腳本，如下所示 `\\staging\AFCscripts\PSTImportScript.ps1 \\Staging\cases$ eDiscoveryMailbox` 。
     
-### <a name="pst-import-option-b-for-exchange-online"></a>Exchange Online 的 PST 匯入選項 B
+### <a name="pst-import-option-b-for-exchange-online"></a>適用于 Exchange Online 的 PST 匯入選項 B
 
--  建立要放入的匯入的 PST 檔案的信箱結構。 如需有關如何在 Exchange Online 中建立使用者信箱的詳細資訊，請參閱 <<c0>Exchange Online 中建立使用者信箱。
+-  建立要將匯入 PST 檔案放入的信箱結構。 如需如何在 Exchange Online 中建立使用者信箱的詳細資訊，請參閱[在 Exchange online 中建立使用者](https://go.microsoft.com/fwlink/p/?LinkId=615118)信箱。
     
-### <a name="cold-storage"></a>冷儲存體
+### <a name="cold-storage"></a>冷藏
 
-1. 建立檔案共用上 Azure 虛擬機器，其中所有收集到的檔案放置位置，例如， \\ \\AZFile1\\ContentColdStorage。
+1. 在 Azure 虛擬機器上建立檔案共用，將在其中放置所有收集的檔案，例如 \\ \\ AZFile1 \\ ContentColdStorage。
     
-2. 至少授與預設內容存取帳戶的讀取權限的共用和所有子資料夾及檔案。 如需設定 SharePoint 2013 搜尋的詳細資訊，請參閱[建立及設定 SharePoint Server 2013 中的 Search service 應用程式](https://go.microsoft.com/fwlink/p/?LinkId=614940)。
+2. 授與預設的內容存取帳戶，至少要有共用及所有子資料夾及檔案的讀取權限。 如需設定 SharePoint 2013 搜尋的詳細資訊，請參閱[在 SharePoint Server 2013 中建立及設定 Search service 應用程式](https://go.microsoft.com/fwlink/p/?LinkId=614940)。
     
-3. 如果您預期匯入 PST 檔案從\\ \\AZFile1\\ContentColdStorage，授與 Exchange 受信任的子系統讀取、 寫入及執行共用的權限。
+3. 如果您想要從 AZFile1 ContentColdStorage 匯入 PST 檔案 \\ \\ \\ ，請將 Exchange 受信任的子系統授與共享的「讀取」、「寫入」和「執行」許可權。
     
 ### <a name="orchestrator"></a>協調
 
 1. 從 Microsoft 下載中心下載[MoveToColdStorage runbook](https://go.microsoft.com/fwlink/?LinkId=616095) 。
     
-2. 開啟**Runbook 設計工具**，在 [**連線**] 窗格中，按一下您要匯入到 runbook 的資料夾。 按一下 [**動作**] 功能表，然後按一下 [**匯入**]。 **匯入**] 對話方塊隨即出現。
+2. 開啟**Runbook Designer**，**在 [連線**] 窗格中，按一下您要匯入 Runbook 的資料夾。 按一下 [**動作**] 功能表，然後按一下 [匯**入**]。 [匯**入**] 對話方塊隨即顯示。
     
-3. 在 [**檔案位置**] 方塊中，輸入您要匯入、 runbook 路徑和檔案名稱，或按一下以瀏覽至您要匯入檔案的省略符號 （ **...**）。 
+3. 在 [檔案**位置**] 方塊中，輸入您要匯入之 runbook 的路徑和檔案名，或按一下省略號（ **...**）流覽至您要匯入的檔案。 
     
-4. 選取 [**匯入 runbook**和**匯入協調加密的資料**。 清除**計數器**、**排程**、**變數**、**電腦群組**、**匯入全域設定**，並**覆寫現有的全域設定**。
+4. 選取 [匯**入 runbook** ] 和 [匯**入 Orchestrator 加密資料**]。 清除**計數器**、**時程表**、**變數**、**電腦群組**、匯**入全域**設定，以及**覆寫現有的全域**設定。
     
 5. 按一下 [完成]****。
     
 6. 編輯**MoveFilesToColdStorage** runbook，如下所示：
     
-1. **移動檔案**活動的**來源檔案**將路徑設定為集合檔案共用，例如\\\\臨時\\情況下 $。 設定要冷儲存檔案的**目的資料夾**，例如共用 azure \\ \\AZFile1\\ContentColdStorage。 選取 [**建立具有唯一名稱的檔案**。
+1. **移動**檔案活動-將**來原始檔案**路徑設定為集合檔案共用，例如「 \\ \\ 暫存 \\ 案例」。 將**目的地資料夾**設定為 Azure 中的 cold 儲存檔共用，例如 \\ \\ AZFile1 \\ ContentColdStorage。 選取 [**建立具有唯一名稱**的檔案]。
     
-2. **刪除資料夾**活動-設定**路徑：** 集合檔案共用，例如\\\\臨時\\情況下 $\\*，然後選取 [**刪除所有檔案及子資料夾**。 
+2. **刪除資料夾**活動-將**路徑：** 設定為集合檔案共用（例如， \\ \\ 暫存 \\ 案例 $ \\ *），然後選取 [**刪除所有檔案與子資料夾**]。 
     
-7. 部署使用的程序中[部署 Runbook](https://go.microsoft.com/fwlink/p/?LinkId=615120) **MoveToColdStorage** runbook。
+7. 使用[部署 runbook](https://go.microsoft.com/fwlink/p/?LinkId=615120)中的程式部署**MoveToColdStorage** runbook。
     
-### <a name="sharepoint-on-premises-search-for-cold-storage"></a>SharePoint 內部部署搜尋冷儲存體
+### <a name="sharepoint-on-premises-search-for-cold-storage"></a>SharePoint 冷儲存體的內部部署搜尋
 
-1. 在 Azure 中冷儲存共用的 SharePoint 2013 伺服器陣列中建立新的內容來源，例如\\ \\AZFile1\\ContentColdStorage。 如需管理內容來源的詳細資訊，請參閱[新增、 編輯或刪除 SharePoint Server 2013 中的內容來源](https://go.microsoft.com/fwlink/p/?LinkId=615004)
+1. 在您的 SharePoint 2013 伺服器陣列中建立新的內容來源，以用於 Azure 中的冷存放區共用，例如 \\ \\ AZFile1 \\ ContentColdStorage。 如需管理內容來源的詳細資訊，請參閱[在 SharePoint Server 2013 中新增、編輯或刪除內容來源](https://go.microsoft.com/fwlink/p/?LinkId=615004)
     
-2. 開始完整編目。 如需詳細資訊，請參閱[啟動、 暫停、 繼續或停止在 SharePoint Server 2013 中的編目](https://go.microsoft.com/fwlink/p/?LinkId=615005)。
+2. 開始完整編目。 如需詳細資訊，請參閱[SharePoint Server 2013 中的編目、啟動、暫停、繼續或停止](https://go.microsoft.com/fwlink/p/?LinkId=615005)編目。
     
-## <a name="using-the-solution"></a>使用解決方案
+## <a name="using-the-solution"></a>使用方案
 
-使用此解決方案中，假設您不想要將 PST 檔案匯入 Exchange Server 2013 和 Exchange Online 中有五個主要步驟。 本章節提供您的程序的全部。 您與解決方案的主要互動會處於執行下列動作：
+使用此解決方案有五個主要步驟，假設您不想要將 PST 檔案匯入 Exchange Server 2013 和 Exchange Online。 本節為您提供所有這些程式的程式。 您與解決方案的主要互動將會執行下列作業：
   
-1. 管理使用者 Custodians 群組的成員資格。
+1. 管理保管人群組中的使用者成員資格。
     
-2. 檢閱登入指令碼所產生的記錄檔。 FileCopyErrors.log 列出所有未成功複製的檔案。 您必須先決定您想要與其做什麼
+2. 檢查登入腳本所產生的記錄檔。 FileCopyErrors 會列出所有未順利複製的檔案。 您必須決定要使用的方式
     
-3. 管理 PST 匯入程序。
+3. 管理 PST 匯入程式。
     
-4. 將集合檔案移至冷儲存空間。
+4. 將集合檔案移至冷存放區。
     
-所有其他的步驟沒有特定此解決方案。 它們是您執行 SharePoint 2013 和 Office 365 和 Azure 中的標準系統管理工作。 有此解決方案不會提供您想要計算出根據貴公司的需求，例如任何指引的項目：
+其他所有步驟並非此解決方案特有的步驟。 它們是您在 SharePoint 2013、Microsoft 365 和 Azure 中執行的標準管理工作。 此解決方案中的專案不會提供任何指引，您必須根據公司的需求來完成工作，例如：
   
-1. 追蹤您的 eDiscovery 案例，以及哪些 Custodians 相關聯這種情況。
+1. 追蹤您的 eDiscovery 案例，以及哪些保管人與哪一種情況相關聯。
     
-2. 追蹤的一組檔案集合所使用的 eDiscovery 案例的關聯。
+2. 追蹤哪組檔集合會與 eDiscovery 案例產生關聯。
     
-3. 協調匯入及移至冷儲存步驟的時間。
+3. 協調匯入和移至冷儲存步驟的時間。
     
-4. 管理 Azure 中使用的檔案空間。
+4. 管理 Azure 中使用的檔空間。
     
-5. 管理 Pst 匯入至信箱。
+5. 管理 Pst 所匯入的信箱。
     
-6. 備份與還原作業的內部部署的所有資料。
+6. 所有內部部署資料的備份及還原。
     
-### <a name="custodian-management"></a>Custodian 管理
+### <a name="custodian-management"></a>保管人管理
 
-- 若要啟動的個別使用者是自動化的檔案收集程序，請將其新增至 Custodians 群組。 下次登入時，會執行指派給透過群組原則 Custodians 群組的登入指令碼。 
+- 若要為個別使用者啟動自動化檔收集程式，請將其新增至保管人群組。 使用者下一次登入時，系統會執行透過「群組原則」指派給保管人群組的登入腳本。 
     
-### <a name="monitor-collected-files-and-review-log-files"></a>監視收集到的檔案，然後檢閱記錄檔
+### <a name="monitor-collected-files-and-review-log-files"></a>監視收集的檔案並複查記錄檔
 
-1. 觀賞集合檔案共用，例如\\\\臨時\\情況下 $\\*，從使用者的 [集合] 資料夾。 資料夾的名稱會格式化像這樣： *yyyyMMddHHmm_UserName* 。
+1. 針對使用者的集合資料夾，觀賞集合檔案共用（例如， \\ \\ 暫存 \\ 案例 $ \\ *）。 資料夾的名稱會以如下格式格式化： *yyyyMMddHHmm_UserName* 。
     
-2. 集合完成時，開啟集合資料夾，並瀏覽至 [_Log] 資料夾。 在 [_Log] 資料夾中，您會看到下列訊息：
+2. 完成集合後，請開啟集合資料夾，然後流覽至 [_Log] 資料夾。 在 [_Log] 資料夾中，您將會看到下列專案：
     
-  - 每個使用者的電腦，例如**A.xml**， **C.xml**上的本機磁碟機的一個 XML 檔案。 這些檔案包含的庫存磁碟機之後，名為，它們會用於 robocopy 作業。
+  - 使用者電腦上的每個本機磁片磁碟機都有一個 XML 檔案，例如**A.xml**， **C.xml**。 這些檔案包含的清查磁片磁碟機會在其後命名，並用於 robocopy 作業。
     
     > [!NOTE]
-    > 集合指令碼只會在本身的指令碼中所定義的檔案類型的庫存檔案中建立項目。 它不會建立使用者的電腦上的每個檔案的詳細目錄項目。 
+    > 集合腳本只會在清單檔中為您在腳本中定義的檔案類型建立專案。 它不會為使用者電腦上的每個檔案建立庫存專案。 
   
-  - 一個記錄檔名為 FileCopyErrors.log 執行每個集合。 此檔案包含的檔案清單該 robocopy 找不到檔案集合的複本共用，例如， \\\\臨時\\情況下 $\\*。 您必須檢閱這，並決定這些未接的檔案需要採取的動作。 通常，其中必須以手動方式收集它們，如果您希望他們，或您可能會決定他們不需要，因此可以省略從集合。
+  - 每個集合執行的一個名為 FileCopyErrors 的記錄檔。 此檔案包含 robocopy 無法複製至檔案集合共用的檔案清單，例如， \\ \\ 暫存 \\ 案例 $ \\ *。 您必須複查此專案，並決定要對這些未錯過的檔案採取的動作。 通常，您必須以手動方式收集這些檔案，否則您可能會決定不需要該集合，也可以忽略集合中的物件。
     
 ### <a name="pst-import-option-a-for-exchange-server-2013"></a>Exchange Server 2013 的 PST 匯入選項 A
 
-1. 登入伺服器主控集合檔案共用，例如**臨時**，並開啟 Windows PowerShell。 如需有關啟動 Windows PowerShell 的詳細資訊，請參閱 <<c0>Windows 伺服器上啟動 Windows PowerShell。
+1. 登入裝載集合檔案共用的伺服器，例如，**暫存**及開啟的 Windows PowerShell。 如需啟動 Windows PowerShell 的詳細資訊，請參閱[Windows Server 上的啟動 windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=615115)。
     
-2. 執行原則設為 Unrestricted。 型別`Set-ExecutionPolicy Unrestricted -Scope Process`到 Windows PowerShell]，然後按 Enter。
+2. 設定執行原則為無限制。 輸入 `Set-ExecutionPolicy Unrestricted -Scope Process` Windows PowerShell，然後按 enter 鍵。
     
-3. 執行 PSTImportScript.ps1 檔案，並提供的 **$SourcePath**和 **$MailboxAlias**參數。 如需有關執行 Windows PowerShell 指令碼的詳細資訊，請參閱 <<c0>執行指令碼。
+3. 執行 PSTImportScript.ps1 檔，並提供 **$SourcePath**和 **$MailboxAlias**參數。 如需執行 Windows PowerShell 腳本的詳細資訊，請參閱執行[腳本](https://go.microsoft.com/fwlink/p/?LinkID=615117)。
     
-4. 檢閱錯誤的輸出。
+4. 檢查輸出中是否有錯誤。
     
-5. 您嘗試同名的 PST 檔案匯入至同一個信箱之前，您必須先移除信箱匯入要求。 執行下列命令，以執行這項作業： `Get-MailboxImportRequest | Remove-MailboxImportRequest`。 系統會提示您從佇列中移除每個個別的要求。 視回應。
+5. 嘗試將同名的 PST 檔案匯入相同的信箱之前，您必須移除信箱匯入要求。 執行下列命令以執行： `Get-MailboxImportRequest | Remove-MailboxImportRequest` 。 系統會提示您從佇列中移除每個個別要求。 視需要回應。
     
-### <a name="pst-import-option-b-for-exchange-online"></a>PST 匯入選項 B，Exchange Online
+### <a name="pst-import-option-b-for-exchange-online"></a>適用于 Exchange Online 的 PST 匯入選項 B
 
-- 若要將收集的 PST 檔案放到 Exchange Online，請遵循到 Office 365 匯入檔案中的程序透過網路上傳] 區段中的[Office 365 匯入服務](https://go.microsoft.com/fwlink/p/?LinkId=614938)。
+- 若要將收集的 PST 檔案放入 Exchange Online，請遵循透過[網路上傳](https://docs.microsoft.com/microsoft-365/compliance/use-network-upload-to-import-pst-files)將檔案匯入 Microsoft 365 中的程式。
     
-### <a name="move-to-cold-storage"></a>移至冷儲存體
+### <a name="move-to-cold-storage"></a>移至冷存放區
 
-1. 執行使用的程序中[執行 Runbook](https://go.microsoft.com/fwlink/p/?LinkId=615123) **MoveToColdStorage** runbook。
+1. 使用執行[runbook](https://go.microsoft.com/fwlink/p/?LinkId=615123)中的程式執行**MoveToColdStorage** runbook。
     
-2. 監看式 Azure 檔案共用您用於長期存放區，例如\\ \\AZFile1\\ContentColdStorage 和內部集合檔案共用，例如\\\\臨時\\情況下 $。 您應該會看到檔案和資料夾會出現在冷儲存檔案共用，而且會從集合檔案共用中消失。
+2. 觀賞用於長期儲存體的 Azure 檔案共用，例如 \\ \\ AZFile1 \\ ContentColdStorage 和內部部署集合檔案共用（例如， \\ \\ 暫存 \\ 案例 $）。 您應該會看到檔案和資料夾出現在 cold 儲存檔共用中，並從集合檔案共用中消失。
     
-### <a name="ediscovery"></a>eDiscovery
+### <a name="ediscovery"></a>電子文件探索
 
-1. 允許完整編目排程，以執行的冷儲存檔案共用，或啟動編目。 如需有關啟動完整或累加編目的詳細資訊，請參閱 <<c0>啟動、 暫停、 繼續或停止在 SharePoint Server 2013 中的編目。
+1. 允許完整編目冷儲存體檔案共用以排程的方式執行，或啟動編目。 如需啟動完整或累加編目的詳細資訊，請參閱[SharePoint Server 2013 中的開始、暫停、繼續或停止](https://go.microsoft.com/fwlink/p/?LinkId=615005)編目。
     
-2. 在 SharePoint 2013 中建立的 eDiscovery 案例，如果您使用選項的 PST 檔案匯入或 SharePoint Online 中建立 eDiscovery 案例，如果您使用選項 b。
+2. 如果您在使用選項 B 的情況下，在 SharePoint Online 中使用選項 A 來進行 PST 檔案匯入或建立 eDiscovery 案例，請在 SharePoint 2013 中建立電子檔探索案例。
     
 

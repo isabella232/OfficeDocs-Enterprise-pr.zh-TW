@@ -16,18 +16,16 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 795158e1-7dfc-4d9e-b805-373dd576c4e7
 description: 摘要：了解如何使用 Windows PowerShell 將電子郵件移轉至 Office 365。
-ms.openlocfilehash: df8c6715f47de4a7edce091c69c1b8218cbdcd54
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 340a8fd9ae40b64445a1b6dc25b16cf302ac377b
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998605"
 ---
 # <a name="use-powershell-for-email-migration-to-office-365"></a>使用 PowerShell 將電子郵件移轉至 Office 365
 
- **摘要：** 了解如何使用 Windows PowerShell 將電子郵件移轉至 Office 365。
-  
-許多系統管理員會在第一次設定 Office 365 時，從現有系統移轉電子郵件。您也可以使用 Office 365 管理使用者介面來執行相同的操作。您也可以使用 Windows PowerShell 來移轉電子郵件。
+When administrators first set up Office 365, many of them migrate email from existing systems. You can also do this by using the Office 365 administration user interface. You can also use Windows PowerShell to migrate email.
   
 ## <a name="office-365-licensing-and-windows-powershell"></a>Office 365 授權和 Windows PowerShell
 

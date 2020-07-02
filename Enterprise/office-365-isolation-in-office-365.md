@@ -1,7 +1,7 @@
 ---
-title: Office 365 中的 office 365 隔離與存取控制
-ms.author: robmazz
-author: robmazz
+title: Microsoft 365 中的隔離與存取控制
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -15,23 +15,23 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - NOCSH
-description: 摘要： Office 365 的各個應用程式內隔離和存取控制的說明。
-ms.openlocfilehash: bdb06db7cae81e4f7356c6be01fee994b60fea75
-ms.sourcegitcommit: 1697b188c050559eba9dade75630bd189f5247a9
+description: 摘要： Microsoft 365 的各個應用程式內隔離和存取控制的說明。
+ms.openlocfilehash: 9c1043305f00a7009a89072036bb6bcc54e6119c
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "44892122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998787"
 ---
-# <a name="isolation-and-access-control-in-office-365"></a>Office 365 中的隔離與存取控制
+# <a name="isolation-and-access-control-in-microsoft-365"></a>Microsoft 365 中的隔離與存取控制
 
-Azure Active Directory 和 Office 365 使用高度複雜的資料模型，其中包含數十項服務、成百上千實體、數千項關係及數十個屬性。 在較高的層次，Azure Active Directory 和服務目錄是承租人和收件者的容器，並使用以狀態為基礎的複寫通訊協定來保持同步。 除了在 Azure Active Directory 中持有的目錄資訊之外，每個服務工作負載都有自己的目錄服務基礎結構。
+Azure Active Directo ry （Azure AD）和 Microsoft 365 使用高度複雜的資料模型，其中包含數十項服務、成百上千實體、數千項關係及數十個屬性。 在高層級，Azure AD 和服務目錄是承租人和收件者的容器，並使用以狀態型複寫通訊協定保持同步。 除了 Azure AD 中持有的目錄資訊之外，每個服務工作負載都有自己的目錄服務基礎結構。
  
-![Office 365 租使用者資料同步處理](media/office-365-isolation-tenant-data-sync.png)
+![Microsoft 365 租使用者資料同步處理](media/office-365-isolation-tenant-data-sync.png)
 
-在此模型中，不會有單一的目錄資料來源。 特定系統擁有個別的資料，但沒有任何單一系統可容納所有的資料。 在此資料模型中，Office 365 服務與 Azure Active Directory 共同合作。 Azure Active Directory 是共用資料的「實際系統」，這通常是每項服務所使用的小型和靜態資料。 Office 365 和 Azure Active Directory 中使用的同盟模型會提供資料的共用檢視。
+在此模型中，不會有單一的目錄資料來源。 特定系統擁有個別的資料，但沒有任何單一系統可容納所有的資料。 在此資料模型中，Microsoft 365 服務與 Azure AD 共同合作。 Azure AD 是共用資料的「實際系統」，這通常是每項服務所使用的小型和靜態資料。 Microsoft 365 和 Azure AD 內使用的同盟模型會提供資料的共用檢視。
 
-Office 365 同時使用實體儲存區和 Azure 雲端儲存空間。 Exchange Online （包括 Exchange Online Protection）和商務用 Skype 為客戶資料使用自己的存放區。 SharePoint 線上同時使用 SQL Server 儲存區和 Azure 存放區，因此需要在儲存層級額外隔離客戶資料。
+Microsoft 365 同時使用實體儲存區和 Azure 雲端儲存空間。 Exchange Online （包括 Exchange Online Protection）和商務用 Skype 為客戶資料使用自己的存放區。 SharePoint 線上同時使用 SQL Server 儲存區和 Azure 存放區，因此需要在儲存層級額外隔離客戶資料。
 
 ## <a name="exchange-online"></a>Exchange Online
 
@@ -47,7 +47,7 @@ Exchange Online 會將客戶資料儲存在信箱中。 信箱主控于可擴展
 - 群組
 - 推斷資料
 
-Exchange Online 中的每個信箱資料庫包含多個承租人的信箱。 授權碼可保護每個信箱，包括租用內。 根據預設，只有指派的使用者可以存取信箱。 保護信箱的存取控制清單（ACL）包含在租使用者層級由 Azure Active Directory 驗證的身分識別。 每個租使用者的信箱，只限于針對租使用者驗證提供者（僅包括來自該租使用者的使用者）驗證的身分識別。 承租人 A 中的內容無法以任何方式透過租使用者 B 中的使用者取得，除非租使用者 A 明確認可。
+Exchange Online 中的每個信箱資料庫包含多個承租人的信箱。 授權碼可保護每個信箱，包括租用內。 根據預設，只有指派的使用者可以存取信箱。 保護信箱的存取控制清單（ACL）包含在租使用者層級由 Azure AD 驗證的身分識別。 每個租使用者的信箱，只限于針對租使用者驗證提供者（僅包括來自該租使用者的使用者）驗證的身分識別。 承租人 A 中的內容無法以任何方式透過租使用者 B 中的使用者取得，除非租使用者 A 明確認可。
 
 ## <a name="skype-for-business"></a>商務用 Skype
 
@@ -63,7 +63,7 @@ Exchange Online 中的每個信箱資料庫包含多個承租人的信箱。 授
 
 如果使用者可以直接存取包含資料的儲存區，則內容不會 interpretable 至 SharePoint Online 以外的人或任何系統。 這些機制包括安全存取控制和屬性。 所有 SharePoint 線上資源都是由授權碼和 RBAC 原則所保護，包含在租用內。 保護資源的存取控制清單（ACL）包含在租使用者層級驗證的身分識別。 針對承租人的 SharePoint 線上資料，僅限受租使用者驗證提供者驗證的身分識別。
 
-除了 ACLs 之外，指定驗證提供者（即租使用者特有的 Azure Active Directory）的租使用者層級屬性，只會寫入一次，而且一旦設定後便無法變更。 針對租使用者設定驗證提供者租使用者屬性後，就無法使用任何公開給租使用者的 APIs 變更。
+除了 ACLs 之外，指定驗證提供者（即租使用者專用 Azure AD）的租使用者層級屬性，只會寫入一次，而且一旦設定便無法變更。 針對租使用者設定驗證提供者租使用者屬性後，就無法使用任何公開給租使用者的 APIs 變更。
 
 每個租使用者都使用唯一的*SubscriptionId* 。 所有客戶網站均歸租使用者所有，並指派給租使用者特有的*SubscriptionId* 。 網站上的*SubscriptionId*屬性會寫入一次，而且是永久的。 一旦指派給租使用者，便無法將網站移至不同的承租人。 *SubscriptionId*是用來建立驗證提供者的安全性範圍，並受限於租使用者的金鑰。
 

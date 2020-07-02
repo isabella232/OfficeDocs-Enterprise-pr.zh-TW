@@ -1,5 +1,5 @@
 ---
-title: 測試實驗室指南設定整合式的 Exchange、 Lync 與 SharePoint 測試實驗室
+title: 測試實驗室指南設定整合的 Exchange、Lync 和 SharePoint 測試實驗室
 ms.author: jhendr
 author: JoanneHendrickson
 manager: laurawi
@@ -14,49 +14,49 @@ search.appverid:
 ms.assetid: 48e16935-3429-456a-8fe6-50afa257924c
 f1.keywords:
 - NOCSH
-description: 摘要： 了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器和執行 SharePoint Server 2013 的伺服器整合式的測試實驗室。
-ms.openlocfilehash: 6041f47520f7a02efe08d05835ca0f15dfd6633a
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 摘要：瞭解如何建立整合測試實驗室，其中包含執行 Exchange Server 2013 的伺服器、執行 Lync Server 2013 的伺服器，以及執行 SharePoint Server 2013 的伺服器。
+ms.openlocfilehash: bfb2e1be3b9bb401514e736d38a6f1a2944940f0
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41841100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44996517"
 ---
-# <a name="test-lab-guide-configure-an-integrated-exchange-lync-and-sharepoint-test-lab"></a>測試實驗室指南： 設定整合式 Exchange、 Lync 與 SharePoint 之測試實驗室
+# <a name="test-lab-guide-configure-an-integrated-exchange-lync-and-sharepoint-test-lab"></a>測試實驗室指南：設定整合的 Exchange、Lync 和 SharePoint 測試實驗室
 
- **摘要：** 了解如何建立包含執行 Exchange Server 2013 的伺服器、 執行 Lync Server 2013 的伺服器和執行 SharePoint Server 2013 的伺服器整合式的測試實驗室。
+ 瞭解如何建立整合測試實驗室，其中包含執行 Exchange Server 2013 的伺服器、執行 Lync Server 2013 的伺服器，以及執行 SharePoint Server 2013 的伺服器。
  
-**觀賞整合的 Exchange、 Lync 與 SharePoint 測試實驗室指南概觀影片**
+**觀賞整合 Exchange、Lync 及 SharePoint 測試實驗室指南概述影片**
 
 > [!VIDEO https://videoplayercdn.osi.office.net/hub/?csid=ux-cms-en-us-msoffice&uuid=8d1f00cc-b8b1-4394-9367-0cc9765e380a&AutoPlayVideo=false]
  
-測試實驗室後所產生此組態中，其中包含所有的三種類型的伺服器之間的伺服器對伺服器驗證，可用來建置並示範多產品案例與解決方案使用執行 Exchange Server 2013 的伺服器執行 Lync Server 2013 伺服器與執行 SharePoint Server 2013 的伺服器。
+此設定所產生的測試實驗室（包括所有三種伺服器類型之間的伺服器對伺服器驗證）可以用來建立及示範多種產品案例和解決方案，使用執行 Exchange Server 2013 的伺服器、執行 Lync Server 2013 的伺服器，以及執行 SharePoint Server 2013 的伺服器。
   
-本文件包含的指示：
+此檔包含下列各專案的指示：
   
-1. 設定 Windows Server 2012 基底組態測試實驗室。
+1. 設定 Windows Server 2012 基本設定測試實驗室。
     
 2. 安裝及設定名為 SQL1 的新伺服器。
     
 3. 在 SQL1 伺服器上安裝 SQL Server 2012。
     
-4. 安裝及設定新的用戶端電腦名為 CLIENT2。
+4. 安裝及設定名為 CLIENT2 的新用戶端電腦。
     
-5. 安裝和設定在 EX1 上的 Exchange Server 2013。
+5. 在 EX1 上安裝及設定 Exchange Server 2013。
     
-6. 安裝及設定新的伺服器名為 LYNC1。
+6. 安裝及設定名為 LYNC1 的新伺服器。
     
-7. LYNC1 上安裝 Lync Server 2013 Standard Edition。
+7. 在 LYNC1 上安裝 Lync Server 2013 Standard Edition。
     
 8. 在 SP1 上安裝 SharePoint Server 2013。
     
-9. 設定 EX1、 LYNC1 及 SP1 之間的整合。
+9. 設定 EX1、LYNC1 及 SP1 之間的整合。
     
-如需如何在 HYPER-V 中設定此測試實驗室中的資訊，請參閱[主控整合的 Exchange、 Lync 與 SharePoint 測試實驗室與 Windows Server 2012 HYPER-V](https://social.technet.microsoft.com/wiki/contents/articles/18483.hosting-the-integrated-exchange-lync-and-sharepoint-test-lab-with-windows-server-2012-hyper-v.aspx)。
+如需如何在 Hyper-V 中設定此測試實驗室的相關資訊，請參閱[使用 Windows Server 2012 Hyper-V 裝載整合 Exchange、Lync 和 SharePoint 測試實驗室](https://social.technet.microsoft.com/wiki/contents/articles/18483.hosting-the-integrated-exchange-lync-and-sharepoint-test-lab-with-windows-server-2012-hyper-v.aspx)。
   
 ## <a name="download-the-test-lab-guide"></a>下載測試實驗室指南
 
-[測試實驗室指南： 設定整合式的 Exchange、 Lync 與 SharePoint 測試實驗室](https://go.microsoft.com/fwlink/p/?LinkId=313670)(https://go.microsoft.com/fwlink/p/?LinkId=313670)
+[測試實驗室指南：設定整合的 Exchange、Lync 和 SharePoint 測試實驗室](https://go.microsoft.com/fwlink/p/?LinkId=313670)（https://go.microsoft.com/fwlink/p/?LinkId=313670)
   
 ## <a name="see-also"></a>另請參閱
 

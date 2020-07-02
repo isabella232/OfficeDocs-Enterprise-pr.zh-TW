@@ -1,7 +1,7 @@
 ---
-title: 防禦 Office 365 中的拒絕服務攻擊
-ms.author: robmazz
-author: robmazz
+title: 防禦 Microsoft 365 中的拒絕服務攻擊
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,45 +14,45 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 拒絕服務 (DoS) 攻擊的概觀。
-ms.openlocfilehash: 16378800fc7bb61b8f78e2c4c51eb7940cb45d17
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 拒絕服務（DoS）攻擊的概覽。
+ms.openlocfilehash: 2cbe5eb86402fd7b7888f39440a58935604c90eb
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998417"
 ---
-# <a name="defend-against-denial-of-service-attacks-in-office-365"></a>防禦 Office 365 中的拒絕服務攻擊
+# <a name="defend-against-denial-of-service-attacks-in-microsoft-365"></a>防禦 Microsoft 365 中的拒絕服務攻擊
 
 ## <a name="introduction"></a>簡介
 
-Microsoft 會傳遞 200 位以上的雲端服務中的全域雲端基礎結構的 100 個以上的資料中心主控高可信度電腦基礎結構。 包括：
+Microsoft 為超過100個資料中心的全球雲端基礎結構中所主控的超過200雲端服務提供信賴的基礎結構。 包括：
 
 - Microsoft Azure
 - Microsoft Bing
 - Microsoft Dynamics 365
-- Microsoft Office 365
+- Microsoft 365 和 Office 365
 - Microsoft OneDrive
 - Skype
 - Xbox Live
 
-重大的網際網路平台服務與許多顯著的網際網路內容提供雲端服務的全球組織，Microsoft 是駭客及其他惡意個人的大型、 常見目標。 用戶端與 Microsoft 雲端之間的網路通訊層是下列其中一個惡意攻擊的最大目標。 事實上，Microsoft 會持續和持續在某種形式的網路型 cyberattack 下。 內嵌，Microsoft 會使用深度防禦安全性原則來保護其雲端服務及網路。 防禦這些攻擊的可靠和持續性降低系統，而 Microsoft 雲端服務就是離線，讓客戶無法使用。
+作為具有大量 Internet 平臺的全球性組織，以及提供雲端服務的許多醒目 Internet 屬性，Microsoft 是駭客和其他惡意人員的大型常見目標。 用戶端與 Microsoft 雲端之間的網路通訊層是最大的惡意攻擊目標之一。 實際上，Microsoft 會持續而且持久地以某種形式的網路 cyberattack 為基礎。 根據此，Microsoft 會使用深層防禦安全性原則來保護其雲端服務和網路。 若沒有防禦這些攻擊的可靠且持久的緩解系統，則 Microsoft 的雲端服務會離線且無法供客戶使用。
 
-## <a name="definition-and-symptoms-of-denial-of-service-attacks"></a>定義和拒絕服務攻擊的徵狀
+## <a name="definition-and-symptoms-of-denial-of-service-attacks"></a>拒絕服務攻擊的定義和徵兆
 
-網路服務來進行攻擊的一種方式是建立許多要求對服務主機壓制網路和拒絕合法的使用者提供服務的伺服器。 這稱為拒絕服務 (DoS) 攻擊。 藉由多個動作項目、 端點] 及/或向量執行攻擊時，它被稱為分散式的拒絕服務 (DDoS) 攻擊。 雖然表示、 動機和目標而有所不同，DoS 和 DDoS 攻擊通常包含以防止網際網路網站或服務無法正確運作，或在所有，暫時或無限期的努力。
+攻擊網路服務的其中一種方法，就是針對服務主機建立許多要求，讓網路和伺服器不堪重負，以拒絕對合法使用者的服務。 這稱為「拒絕服務」（DoS）攻擊。 當多個主角、端點和/或向量執行攻擊時，會將其稱為「分散式阻斷服務」（DDoS）攻擊。 雖然這種方式不同，但 DoS 和 DDoS 攻擊通常是為了避免網際網路網站或服務無法正常運作，或暫時或無限的努力所組成。
 
-[美國電腦緊急整備小組](https://www.us-cert.gov/)(US CERT) 會定義要包含的 DoS 攻擊的徵狀：
+[美國電腦緊急就緒小組](https://www.us-cert.gov/)（US CERT）定義要包含的 DoS 攻擊的徵兆：
 
-- 特別慢速網路效能 (時開啟的檔案或存取的網際網路網站)
-- 二者皆無法使用的網站
-- 無法存取的網站
-- 大幅增加接收到的垃圾郵件
-- 中斷連線的無線或有線的網際網路連線
-- 長期遺失的網頁或任何網際網路服務的存取權
+- 網路效能緩慢（開啟檔案或存取網際網路網站時）
+- 網站不可用
+- 無法存取網站
+- 收到的垃圾郵件大幅增加
+- 斷開無線或有線網際網路連線
+- 長期失去存取網頁或任何網際網路服務的許可權
 
 ## <a name="related-topics"></a>相關主題
 
 - [防禦阻斷服務攻擊的核心原則](office-365-core-principles-of-defense-against-dos-attacks.md)
-- [Microsoft 的拒絕服務攻擊防禦策略](office-365-microsoft-dos-defense-strategy.md)
+- [Microsoft 的拒絕服務防禦策略](office-365-microsoft-dos-defense-strategy.md)
 - [防禦拒絕服務攻擊的 Microsoft 雲端服務](office-365-defending-cloud-services-against-dos-attacks.md)

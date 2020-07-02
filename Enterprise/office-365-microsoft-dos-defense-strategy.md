@@ -1,7 +1,7 @@
 ---
-title: Office 365 DoS 攻擊防禦策略
-ms.author: robmazz
-author: robmazz
+title: Microsoft 365 DoS 防衛策略
+ms.author: josephd
+author: JoeDavies-MSFT
 manager: laurawi
 audience: ITPro
 ms.topic: article
@@ -14,22 +14,22 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Microsoft 的拒絕服務 (DoS) 攻擊防禦策略的概觀。
-ms.openlocfilehash: c30e8e5c91ead81ceda9cfaeb4ef6b17c9addc9f
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 有關拒絕服務（DoS）攻擊的 Microsoft 防護策略的概述。
+ms.openlocfilehash: f3359bb39e01c6b090c30e9f7ce88d69dc3be17e
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44998750"
 ---
-# <a name="office-365-denial-of-service-defense-strategy"></a>Office 365 拒絕服務攻擊防禦策略
+# <a name="microsoft-365-denial-of-service-defense-strategy"></a>Microsoft 365 拒絕服務防護策略
 
-Microsoft 的策略，以防範網路為基礎的拒絕服務 (DoS) 攻擊而言是唯一因為我們的規模和全域磁碟使用量。 此擴充允許 Microsoft，以利用策略和技術少數的組織，提供者，或客戶組織可以比對。 DoS 策略的基石是我們全域顯示狀態。 Microsoft 凝聚網際網路提供者、 對等的提供者 （公用和私人），與私人世界各地的公司。 這可讓 Microsoft 重大的網際網路平台服務，並可讓 Microsoft，以跨大型的表面區域吸收攻擊。
+針對網路上的拒絕服務（DoS）攻擊所進行的保護原則是唯一的，因為規模和全球通用。 這項規模可讓 Microsoft 利用策略及技術，而不是組織、提供者或客戶組織可以比對。 DoS 策略的基石是我們的全球平臺。 Microsoft 與全世界的 Internet 提供者、對等提供者（公開和私營）和私營公司接洽。 這為 Microsoft 提供大量的網際網路服務，讓 Microsoft 能夠吸收跨越大型 surface 區域的攻擊。
 
-指定此獨特性質，Microsoft 會使用偵測和補救跟和大型企業所使用的程序。 透過多個網路邊緣，策略根據偵測和全域分散式緩和措施的區隔。 許多企業使用協力廠商解決方案以偵測並降低在邊緣的攻擊。 Microsoft edge 容量成長，因為它變成清除太低，個別或特定的邊緣任何攻擊的意義。 由於此唯一的組態中，Microsoft 會分隔偵測和補救元件。 Microsoft 會部署多層偵測系統來偵測其飽和度點來攻擊更接近維持在邊緣全域緩和措施。 這項策略可確保我們可以處理多個同時的攻擊。
+在此獨特的情況下，Microsoft 會使用不同于大型企業所使用的偵測和緩解處理常式。 策略是以透過許多網路邊緣的偵測和全域分散式緩解的方式來隔離。 許多企業使用協力廠商解決方案來偵測並減輕 edge 的攻擊。 隨著 Microsoft 的 edge 容量增加，它會明確針對個別或特定邊界的任何攻擊，都是很低的意義。 由於這項獨特的設定，Microsoft 會以偵測和緩解元件為依據。 Microsoft 部署多層偵測系統，以偵測其飽和點較接近的攻擊，同時維持 edge 的全域緩解。 此策略可確保我們可以處理多個同時進行的攻擊。
 
-下列其中一個最有效且低成本的防禦措施採用 microsoft DoS 攻擊會降低服務的攻擊面。 不想要的流量會遭捨棄，而不是分析、 處理，並清除資料內嵌的網路邊緣。
+Microsoft 對 DoS 攻擊所採用的最有效且低成本的防禦措施之一，是減少服務攻擊面。 不需要的流量會在網路 edge 中斷，而不會分析、處理及清理資料內聯。
 
-在公用網路的介面，Microsoft 會使用特殊用途安全性裝置防火牆、 網路位址轉譯及 IP 篩選函式。 Microsoft 也會使用全域等於成本多重路徑 (ECMP) 路由。 全域 ECMP 路由是網路架構，以確保達到服務的多個全域路徑。 這些多個路徑，與服務攻擊僅限於攻擊的來源的區域。 其他區域應該受到此類攻擊，使用者會使用其他路徑來連絡這些區域中的服務。 Microsoft 也開發內部 DoS 相互關聯及偵測系統的使用流量資料、 效能評量，以及其他資訊。 這是在 Microsoft Azure，分析資料收集從各種點上 Microsoft 網路中獲得認證的超大型雲端服務與服務。 跨工作負載 DoS 事件回應小組會識別跨小組、 擴大、 準則和吸引各種小組與事件處理的通訊協定的角色和責任。 這些解決方案提供網路為基礎的保護，不受 DoS 攻擊。
+在使用公用網路的介面上，Microsoft 會針對防火牆、網路位址轉譯和 IP 篩選功能使用特殊用途的安全性裝置。 Microsoft 也會使用全域同等成本多重路徑（ECMP）路由。 全域 ECMP 路由是一個網路架構，可確保有多個通用路徑可以到達服務。 透過這些多重路徑，針對服務的攻擊會限制在發起攻擊的地區。 其他地區應該會受到這項攻擊的影響，因為使用者會使用其他路徑來到達這些地區的服務。 Microsoft 也已開發內部 DoS 的關聯性和偵測系統，使用流程資料、效能度量及其他資訊。 這是 Microsoft Azure 中的超大型雲端服務，可分析從 Microsoft 網路和服務上的各點收集的資料。 跨工作負載 DoS 事件回應小組識別各小組的角色與責任、升級的準則，以及用來吸引各小組和事件處理的通訊協定。 這些解決方案提供網路型防護，以防範 DoS 攻擊。
 
-最後，最佳化其通訊協定為基礎的臨界值來設定雲端工作負載和頻寬使用量需要唯一保護該工作負載。
+最後，以雲端架構為基礎的工作負載會根據其通訊協定和頻寬使用方式來設定優化的門限，以唯一保護該工作負載。
