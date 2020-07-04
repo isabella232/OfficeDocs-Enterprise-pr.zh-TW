@@ -3,7 +3,7 @@ title: 連線至 Office 365 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 03/31/2020
+ms.date: 06/30/2020
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -17,12 +17,12 @@ ms.custom:
 - Ent_Office_Other
 ms.assetid: 5ebc0e21-b72d-46d8-96fa-00643b18eaec
 description: 使用 Office 365 PowerShell 連線至您的 Office 365 組織，以從命令列執行系統管理中心工作。
-ms.openlocfilehash: 00c4e303faa7a182a9bd5c859a09ad150fc0b8d4
-ms.sourcegitcommit: b1042fa2d02f1bc74586751c542776325d3a170f
-ms.translationtype: HT
+ms.openlocfilehash: 0906da2b8773973236bc8cb6ef273d1a14528bfd
+ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "43170611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44997419"
 ---
 # <a name="connect-to-office-365-powershell"></a>連線至 Office 365 PowerShell
 
@@ -47,7 +47,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
     > 針對 Azure Active Directory PowerShell 的圖表模組，請務必使用 PowerShell 版本 5.1 或更新版本。 針對適用於 Windows PowerShell 模組的 Microsoft Azure Active Directory 模組，請務必使用 PowerShell 版本 5.1 或更新版本 (最多可至 PowerShell 版本 6)。 無法使用 PowerShell 版本 7。 若為 Windows 8.1、Windows 8、Windows 7 Service Pack 1 (SP1)、Windows Server 2012 R2、Windows Server 2012 和 Windows Server 2008 R2 SP1，請下載並安裝 [Windows Management Framework 5.1](https://www.microsoft.com/download/details.aspx?id=54616). 
     
     > [!NOTE]
-    > 請使用 64 位元的 Windows 版本。對 Windows PowerShell 的 Microsoft Azure Active Directory 模組 32 位元版本的支援已在 2014 年 10 月終止。
+    > Use a 64-bit version of Windows. Support for the 32-bit version the Microsoft Azure Active Directory Module for Windows PowerShell was discontinued in October of 2014.
     
 這些程序適用於屬於 Office 365 系統管理員角色成員的使用者。 如需詳細資訊，請參閱[關於 Office 365 系統管理員角色](https://go.microsoft.com/fwlink/p/?LinkId=532367)。
 
@@ -64,7 +64,7 @@ Office 365 PowerShell 可讓您從命令列管理 Office 365 的設定。 連線
 
 ### <a name="step-1-install-required-software"></a>步驟 1：安裝必要的軟體
 
-這些步驟只需您在電腦上執行一次，而不必在每次連線時執行。不過，您可能需要定期安裝較新的軟體版本。
+These steps are required once on your computer, not every time you connect. However, you'll likely need to install newer versions of the software periodically.
   
 1. 開啟提升權限的 Windows PowerShell 命令提示字元 (以系統管理員身分執行 Windows PowerShell)。
     
@@ -106,9 +106,9 @@ PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active
     
 ### <a name="step-1-install-required-software"></a>步驟 1：安裝必要的軟體
 
-這些步驟只需您在電腦上執行一次，而不必在每次連線時執行。不過，您可能需要定期安裝較新的軟體版本。
+These steps are required once on your computer, not every time you connect. However, you'll likely need to install newer versions of the software periodically.
   
-1.  安裝 64 位元版本的 Microsoft Online Services 登入小幫手：[適用於 IT 專業人員的 Microsoft Online Services 登入小幫手 RTW](https://go.microsoft.com/fwlink/p/?LinkId=286152)。
+1.  如果您不是執行 Windows 10，請安裝64位版本的 Microsoft Online Services 登入小幫手：[適用于 IT 專業人員的 Microsoft Online services 登入](https://go.microsoft.com/fwlink/p/?LinkId=286152)小幫手幫手 rtw。
     
 2. 以下列步驟安裝適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組：
     
@@ -136,7 +136,7 @@ PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active
 
 ### <a name="how-do-you-know-this-worked"></a>如何知道這是否正常運作？
 
-如果您未收到任何錯誤，便已順利連線。若要做快速測試，您可以執行一個 Office 365 Cmdlet (例如 **Get-MsolUser** )，然後檢視結果。
+If you don't receive any errors, you connected successfully. A quick test is to run an Office 365 cmdlet—for example, **Get-MsolUser** —and see the results.
   
 如果出現錯誤，請檢查下列需求：
   
@@ -151,13 +151,13 @@ PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active
   - 若為 Windows 10、Windows 8.1 和 Windows 8，請參閱[在 Windows 10、Windows 8.1 以及 Windows 8 上安裝 .NET Framework 3.5](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)
 
   
-- **您的 Windows PowerShell 的 Microsoft Azure Active Directory 模組 版本可能已過期。** 若要檢查，請在 Office 365 PowerShell 或 Windows PowerShell 的 Microsoft Azure Active Directory 模組 中執行下列命令：
+- **Your version of the Microsoft Azure Active Directory Module for Windows PowerShell might be out of date.** To check, run the following command in Office 365 PowerShell or the Microsoft Azure Active Directory Module for Windows PowerShell:
     
   ```powershell
   (Get-Item C:\Windows\System32\WindowsPowerShell\v1.0\Modules\MSOnline\Microsoft.Online.Administration.Automation.PSModule.dll).VersionInfo.FileVersion
   ```
 
-    如果傳回的版本號碼低於 1.0.8070.2 值，請將 Windows PowerShell 的 Microsoft Azure Active Directory 模組 解除安裝，然後從步驟 1 中的連結安裝最新版本。
+    若傳回的版本號碼低於低於1.0.8070.2 的值，請卸載 Windows PowerShell 的 Microsoft Azure Active Directory 模組，並從上面的步驟1安裝。
 
 - **如果您收到連線錯誤，請參閱本主題：** [「Connect-MsolService：擲回類型例外狀況」錯誤](https://go.microsoft.com/fwlink/p/?LinkId=532377)。
     
