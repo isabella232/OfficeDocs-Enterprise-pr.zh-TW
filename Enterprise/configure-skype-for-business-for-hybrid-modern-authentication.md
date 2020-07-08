@@ -15,37 +15,37 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 新式驗證是一種提供更安全的使用者驗證和授權的身分識別管理方法，可供商務用 Skype server 內部部署和 Exchange server 內部部署使用，也適用于分割網域 Skype for business 混合式。
-ms.openlocfilehash: bd287bc768aa43c95bc073892b79b7f5aed969df
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 新式驗證是一種可提供更安全的使用者驗證和授權的身分識別管理方法，可供商務用 Skype server 內部部署和 Exchange server 內部部署，以及分割網域商務用 Skype 混合式。
+ms.openlocfilehash: 6415fe374f63093b44ebacc125dc40c9ea70e898
+ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997429"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45052506"
 ---
 # <a name="how-to-configure-skype-for-business-on-premises-to-use-hybrid-modern-authentication"></a>如何設定商務用 Skype 內部部署以使用混合式新式驗證
 
 *本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
 
-新式驗證是一種提供更安全的使用者驗證和授權的身分識別管理方法，可供商務用 Skype server 內部部署和 Exchange server 內部部署使用，也適用于分割網域 Skype for business 混合式。
+新式驗證是一種可提供更安全的使用者驗證和授權的身分識別管理方法，可供商務用 Skype server 內部部署和 Exchange server 內部部署，以及分割網域商務用 Skype 混合式。
   
  **重要事項**您想要深入瞭解新式驗證（MA），以及您為何想要在公司或組織中使用它？ 請查看[這份檔](hybrid-modern-auth-overview.md)中的概要。 如果您需要知道哪些商務用 Skype 拓撲支援 MA，請參閱此處所述！
   
- **開始之前**，我會致電：
+ **開始之前**，我使用下列術語：
   
-- 新式驗證 \> MA
+- 新式驗證（MA）
 
-- 混合式新式驗證 \> HMA
+- 混合式新式驗證（HMA）
 
-- Exchange 內部部署 \> nm-exch-um-2nd
+- Exchange 內部部署（NM-EXCH-UM-2ND）
 
-- Exchange Online \> EXO
+- Exchange Online （EXO）
 
-- 商務用 Skype 內部部署 \> SFB
+- 商務用 Skype 內部部署（SFB）
 
-- 和商務用 Skype Online \> SFBO
+- 商務用 Skype Online （SFBO）
 
-此外，如果本文中的圖形具有一個灰顯或變暗的物件，表示以灰色顯示的元素**不會**包含在 MA 特定的設定中。
+此外，如果本文中的圖形具有變暗或變暗的物件，表示以灰色顯示的元素**不**會包含在 MA 特有的設定中。
   
 ## <a name="read-the-summary"></a>閱讀摘要
 
@@ -69,7 +69,7 @@ ms.locfileid: "44997429"
   
 ![混合式6商務用 Skype HMA 拓撲在所有四個可能的位置上都有 MA 可供使用。](media/ab89cdf2-160b-49ac-9b71-0160800acfc8.png)
   
-如您所見，有四個不同的地方可開啟 MA！ 為了獲得最佳的使用者體驗，建議您在上述四個位置都開啟 MA。 [！注意] 如果您無法在這些位置中開啟 MA，請調整步驟，讓您只在環境所需的位置開啟 MA。
+如您所見，有四個不同的地方可開啟 MA！ 為了獲得最佳的使用者體驗，建議您在上述四個位置中開啟 MA。 [！注意] 如果您無法在這些位置中開啟 MA，請調整步驟，讓您只在環境所需的位置開啟 MA。
   
 如需支援的拓撲，請參閱[適用于商務用 Skype](https://technet.microsoft.com/library/mt803262.aspx)的支援主題。
   
@@ -89,7 +89,7 @@ ms.locfileid: "44997429"
 
 - **SFB 2015 CU5 Web 服務 URLs**
 
-您將需要部署的所有 SfB 2015 集區的內部及外部 web 服務 URL。 若要取得這些，請從商務用 Skype 管理命令介面執行下列命令：
+您將需要部署的所有 SfB 2015 集區的內部及外部 web 服務 URLs。 若要取得這些，請從商務用 Skype 管理命令介面執行下列命令：
   
 ```powershell
 Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | FL
@@ -99,7 +99,7 @@ Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | 
 
 - 前。 外部：https://lyncwebext01.contoso.com
 
-如果您使用 Standard Edition server，內部 URL 將會是空白的。 在此情況下，請使用內部 URL 的集區 fqdn。
+如果您是使用 Standard Edition server，則內部 URL 將會是空白的。 在此情況下，請使用內部 URL 的集區 fqdn。
   
 ## <a name="turn-on-modern-authentication-for-exo"></a>開啟 EXO 的新式驗證
 
@@ -115,13 +115,13 @@ Get-CsService -WebServer | Select-Object PoolFqdn, InternalFqdn, ExternalFqdn | 
   
 ## <a name="turn-on-hybrid-modern-authentication-for-skype-for-business-on-premises"></a>開啟商務用 Skype 內部部署的混合式新式驗證
 
-### <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>在 Azure AD 中將內部部署 web 服務 URLs 當做 Spn 新增
+### <a name="add-on-premises-web-service-urls-as-spns-in-azure-active-directory"></a>在 Azure Active Directory 中將內部部署 web 服務 URLs 當做 Spn 新增
 
 現在，您必須執行命令以將 URLs （先前所收集）新增為 SFBO 中的服務主體。
   
  **記事**服務主體名稱（Spn）可識別 web 服務，並將其與安全性主體（例如帳戶名稱或群組）產生關聯，以便服務可以代表授權的使用者進行動作。 對伺服器進行驗證的用戶端會使用包含在 Spn 中的資訊。
   
-1. 首先，使用[這些指示](https://docs.microsoft.com/powershell/azure/active-directory/overview?view=azureadps-1.0)連接至 AAD。
+1. 首先，使用[下列指示](https://docs.microsoft.com/powershell/azure/active-directory/overview?view=azureadps-1.0)連線到 Azure Active Directory （Azure AD）。
 
 2. 在內部部署中執行此命令，以取得 SFB web 服務 URLs 的清單。
 
@@ -135,7 +135,7 @@ Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 | 
 
 3. 如果內部**或**外部 SFB URLs 來自內部部署（例如， https://lyncwebint01.contoso.com https://lyncwebext01.contoso.com) 我們將需要將這些特定記錄新增至此清單）。
 
-    請務必以 [新增] 命令中的實際 URLs 取代下列*範例 URLs* ，如下所示！
+    請務必使用 Add 命令中的實際 URLs 取代下列*範例 URLs* ！
   
 ```powershell
 $x= Get-MsolServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000
@@ -144,7 +144,7 @@ $x.ServicePrincipalnames.Add("https://lyncwebext01.contoso.com/")
 Set-MSOLServicePrincipal -AppPrincipalId 00000004-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
 ```
   
-4. 再次執行步驟2上的**new-msolserviceprincipal**命令，然後查看輸出，以確認新增的記錄已新增。 將清單/螢幕擷取畫面與新的 Spn 清單進行比較（您也可能會向新的記錄加入新的清單）。 如果您成功，您會在清單中看到兩個新的 URLs。 接下來的範例，Spn 清單現在會包含特定的 URLs https://lyncwebint01.contoso.com 和 https://lyncwebext01.contoso.com/ 。
+4. 再次執行步驟2上的**new-msolserviceprincipal**命令，然後查看輸出，以確認新增的記錄已新增。 將清單或螢幕擷取畫面與新的 Spn 清單進行比較。 您也可以將新的記錄清單螢幕擷取畫面。 如果您成功，您會在清單中看到兩個新的 URLs。 接下來的範例，Spn 清單現在會包含特定的 URLs https://lyncwebint01.contoso.com 和 https://lyncwebext01.contoso.com/ 。
 
 ### <a name="create-the-evosts-auth-server-object"></a>建立 EvoSTS 驗證服務器物件
 
@@ -164,7 +164,7 @@ Set-CsOAuthConfiguration -ClientAuthorizationOAuthServerIdentity evoSTS
 
 ## <a name="verify"></a>驗證
 
-一旦您啟用 HMA，用戶端的下一個登入將會使用新的驗證流程。 請注意，只要開啟 HMA，就不會觸發任何用戶端的重新驗證。 用戶端會根據驗證權杖和/或憑證的存留時間，重新進行驗證。
+一旦您啟用 HMA，用戶端的下一個登入將會使用新的驗證流程。 請注意，只要開啟 HMA，就不會對任何用戶端觸發重新驗證。 用戶端會根據驗證權杖和/或憑證的存留時間來驗證。
   
 若要測試 HMA 在您啟用後是否正常運作，請登出測試 SFB Windows 用戶端，並確定按一下「刪除我的認證」。 重新登入。 用戶端現在應該使用新式驗證流程，而且您的登入現在會包含**Office 365**提示的「工作或學校」帳戶，在用戶端聯繫伺服器並登入您的帳戶之前看到。
   

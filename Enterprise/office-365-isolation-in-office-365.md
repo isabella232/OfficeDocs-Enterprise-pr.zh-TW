@@ -16,16 +16,16 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 摘要： Microsoft 365 的各個應用程式內隔離和存取控制的說明。
-ms.openlocfilehash: 9c1043305f00a7009a89072036bb6bcc54e6119c
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: fc0aa37025936a1a60cfbb8914b079eba5ba2e7f
+ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998787"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45052586"
 ---
 # <a name="isolation-and-access-control-in-microsoft-365"></a>Microsoft 365 中的隔離與存取控制
 
-Azure Active Directo ry （Azure AD）和 Microsoft 365 使用高度複雜的資料模型，其中包含數十項服務、成百上千實體、數千項關係及數十個屬性。 在高層級，Azure AD 和服務目錄是承租人和收件者的容器，並使用以狀態型複寫通訊協定保持同步。 除了 Azure AD 中持有的目錄資訊之外，每個服務工作負載都有自己的目錄服務基礎結構。
+Azure Active Directory （Azure AD）和 Microsoft 365 使用高度複雜的資料模型，其中包含數十項服務、成百上千實體、數千項關係及數十個屬性。 在高層級，Azure AD 和服務目錄是承租人和收件者的容器，並使用以狀態型複寫通訊協定保持同步。 除了 Azure AD 中持有的目錄資訊之外，每個服務工作負載都有自己的目錄服務基礎結構。
  
 ![Microsoft 365 租使用者資料同步處理](media/office-365-isolation-tenant-data-sync.png)
 

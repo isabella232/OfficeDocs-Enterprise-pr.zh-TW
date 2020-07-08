@@ -15,12 +15,12 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 新式驗證是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 可用於在內部部署商務用 Skype server 的混合式部署和 Exchange server 內部部署，以及分割網域 Skype for business 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端（ex）的相關檔。 Outlook 和 Skype 用戶端）資訊。
-ms.openlocfilehash: 6b535133af7a1a6666a6a06e2c86aa675f95e042
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 056262ade67b8ffd452f68cc0c5e3882326b2e44
+ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998021"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45052416"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合新式驗證概述和使用內部部署商務用 Skype 和 Exchange 伺服器的必要條件
 
@@ -157,8 +157,8 @@ Get-CSOAuthConfiguration
 
 - **一般必要條件**
   - 如果您使用 ADFS，您應該具有 Windows 2012 R2 ADFS 3.0 和更新版本的同盟
-  - 您的身分識別設定為 AAD Connect 支援的任何類型（例如密碼雜湊同步處理、傳遞驗證、Office 365 所支援的內部部署 STS）。
-  - 您已設定 AAD Connect，且已設定使用者的複寫和同步處理功能。
+  - 您的身分識別設定是 Azure AD Connect 支援的任何類型（例如密碼雜湊同步處理、傳遞驗證、Office 365 所支援的內部部署 STS）。
+  - 您已設定 Azure AD Connect，以供使用者複寫及同步處理。
   - 您已驗證混合模式是在您的內部部署與 Office 365 環境之間使用 Exchange 傳統混合式拓撲模式設定。 Exchange 混合式的官方支援陳述說，您必須是目前的 CU 或目前的 CU-1。
     > [!NOTE]
     > [混合式代理程式](https://docs.microsoft.com/exchange/hybrid-deployment/hybrid-agent)不支援混合式新式驗證。
@@ -168,7 +168,7 @@ Get-CSOAuthConfiguration
 ## <a name="what-else-do-i-need-to-know-before-i-begin"></a>開始之前，我還需要知道什麼？
 <a name="BKMK_Whatelse"> </a>
 
-- 內部部署伺服器的所有案例都包括設定新式驗證內部部署（事實上，對於商務用 Skype，有支援的拓撲清單，所以負責驗證和授權的伺服器是在 Microsoft 雲端（AAD 的安全性權杖服務，稱為 ' evoSTS '）中，並更新 Azure AD 有關您的內部部署安裝的商務用 Skype 或 Exchange 所使用的 URLs 或命名空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
+- 內部部署伺服器的所有案例都包括設定新式驗證內部部署（事實上，針對商務用 Skype，有支援的拓撲清單，所以負責驗證和授權的伺服器是在 Microsoft 雲端（Azure AD Security Token Service，稱為 ' evoSTS '）中，並更新 Azure AD 有關您的內部部署安裝的商務用 Skype 或 Exchange 所使用的 URLs 或命名空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
 - 本文與其他專案連結，可協助您選擇支援的新式驗證拓撲（僅適用于商務用 Skype）和操作方法文章，概述設定步驟，也就是針對 Exchange 內部部署和商務用 Skype 內部部署，提供如何停用新式驗證的步驟。 如果您想要在您的伺服器環境中使用新式驗證，請在瀏覽器中，將此頁面最愛。
 
 ## <a name="related-topics"></a>相關主題

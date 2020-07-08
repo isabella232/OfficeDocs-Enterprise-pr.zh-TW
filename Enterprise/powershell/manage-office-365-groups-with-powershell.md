@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
 description: 瞭解如何在 Microsoft PowerShell 中執行 Office 365 群組的常見管理工作。
-ms.openlocfilehash: 71d48b133ce716995ec6059a60a0fed487fde208
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: c946b570b0d434886dbd76ba61f53771aa6bca80
+ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44736021"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45052476"
 ---
 # <a name="manage-office-365-groups-with-powershell"></a>使用 PowerShell 管理 Office 365 群組
  
@@ -34,7 +34,7 @@ ms.locfileid: "44736021"
 
 當使用者[在 Outlook 中建立或編輯群組](https://support.office.com/article/04d0c9cf-6864-423c-a380-4fa858f27102.aspx)時，您可以向他們顯示組織使用指導方針的連結。 例如，如果您需要將特定的首碼或尾碼新增至群組名稱。
   
-使用 Azure Active Directory PowerShell，將您的使用者指向您組織的 Office 365 群組使用指導方針。 請參閱[Azure Active Directory Cmdlet 以設定群組設定](https://go.microsoft.com/fwlink/?LinkID=827484)，並遵循在**目錄層級的 [建立設定**] 中的步驟，定義使用方式的超連結。 一旦您執行 AAD Cmdlet，當使用者在 Outlook 中建立或編輯群組時，會看到指導方針的連結。 
+使用 Azure Active Directory （Azure AD） PowerShell，將您的使用者指向您組織的 Office 365 群組使用指導方針。 請參閱[Azure Active Directory Cmdlet 以設定群組設定](https://go.microsoft.com/fwlink/?LinkID=827484)，並遵循在**目錄層級的 [建立設定**] 中的步驟，定義使用方式的超連結。 一旦您執行 Azure AD Cmdlet，當使用者在 Outlook 中建立或編輯群組時，會看到指導方針的連結。 
   
 ![使用使用準則連結建立新的群組](../media/3f74463f-3448-4f24-a0ec-086d9aa95caa.png)
   
