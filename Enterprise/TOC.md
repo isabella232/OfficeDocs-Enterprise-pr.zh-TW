@@ -69,7 +69,7 @@
 ### [Microsoft 365 網路連線原則](office-365-network-connectivity-principles.md)
 ### [Microsoft 365 的網路規劃和效能調整](network-planning-and-performance.md)
 ### [評估 Microsoft 365 網路連線能力](assessing-network-connectivity.md)
-### [Office 365 網路合作夥伴計劃](office-365-networking-partner-program.md)
+### [Microsoft 365 網路合作夥伴計劃](office-365-networking-partner-program.md)
 ### Office 365 IP 位址和 URL
 #### [Office 365 端點](office-365-endpoints.md)
 #### [管理 Office 365 端點](managing-office-365-endpoints.md)
@@ -97,13 +97,13 @@
 #### [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md)
 #### [美國政府 GCC High 端點](office-365-u-s-government-gcc-high-endpoints.md)
 #### [Office 365 加密鏈 - DOD 和 GCC High](https://docs.microsoft.com/microsoft-365/compliance/encryption-office-365-certificate-chains-itar)
-### [Microsoft 365 服務中的 IPv6 支援](ipv6-support.md)
-### [Microsoft 365 的 NAT 支援](nat-support-with-office-365.md)
+### [Office 365 服務中的 IPv6 支援](ipv6-support.md)
+### [Office 365 的 NAT 支援](nat-support-with-office-365.md)
 ### 搭配使用適用於 Microsoft 365 的 ExpressRoute
-#### [適用於 Microsoft 365 的 ExpressRoute](azure-expressroute.md)
-#### [實作適用於 Microsoft 365 的 ExpressRoute](implementing-expressroute.md)
-#### [使用適用於 Microsoft 365 的 ExpressRoute 進行網路規劃](network-planning-with-expressroute.md)
-#### [使用適用於 Microsoft 365 的 ExpressRoute 進行路由傳送](routing-with-expressroute.md)
+#### [ExpressRoute for Office 365](azure-expressroute.md)
+#### [實作 ExpressRoute for Office 365](implementing-expressroute.md)
+#### [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
+#### [使用 ExpressRoute for Office 365 進行路由傳送](routing-with-expressroute.md)
 
 ## 2. 設定您的身分識別
 ### [保護您的全域系統管理員帳戶](protect-your-global-administrator-accounts.md)
@@ -274,4 +274,4 @@
 # [Microsoft 365 合規性](https://docs.microsoft.com/microsoft-365/compliance/)
 # [Microsoft 365 安全性](https://docs.microsoft.com/microsoft-365/security/)
 # [商務用 Microsoft 365](https://www.microsoft.com/microsoft-365/business)
-# [Microsoft 365](https://docs.microsoft.com/microsoft-365)
+# [Microsoft 365 說明中心](https://docs.microsoft.com/microsoft-365)
