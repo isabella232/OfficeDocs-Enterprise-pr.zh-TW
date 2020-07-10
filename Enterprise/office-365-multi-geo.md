@@ -13,12 +13,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 使用 Microsoft 365 多地理位置，將 Microsoft 365 的目前狀態拓展至多個地理區域。
-ms.openlocfilehash: d69d8adb83eb639589efec0863b2e15966339b58
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
+ms.openlocfilehash: af1036ce2e8512a13cbf1867bb75a18aff3ac0a2
+ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44057729"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "45052576"
 ---
 # <a name="microsoft-365-multi-geo"></a>Microsoft 365 多地理位置
 
@@ -30,7 +30,7 @@ ms.locfileid: "44057729"
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE1Yk6B?autoplay=false]
 
-在多地理位置環境中，Microsoft 365 租用戶包含一個中央位置(最初佈建 Microsoft 365 訂閱的位置) 和一個或多個衛星位置。 在多地理位置租用戶中，地理位置、群組和使用者資訊的相關資訊掌握在 Azure Active Directory (AAD) 中。 由於您的租用戶資訊會集中管理並同步到每個地理位置，若要共用及體驗，公司的每一位員工都必須擁有全域概念。
+在多地理位置環境中，Microsoft 365 租用戶包含一個中央位置(最初佈建 Microsoft 365 訂閱的位置) 和一個或多個衛星位置。 在多地理位置租用戶中，地理位置、群組和使用者資訊的相關資訊掌握在 Azure Active Directory (Azure AD) 中。 由於您的租用戶資訊會集中管理並同步到每個地理位置，若要共用及體驗，公司的每一位員工都必須擁有全域概念。
 
 ![SharePoint 系統管理中心內多地理位置地圖的螢幕擷取畫面](media/multi-geo-world-map.png)
 
