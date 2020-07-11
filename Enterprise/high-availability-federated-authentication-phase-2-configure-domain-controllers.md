@@ -14,19 +14,19 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: 6b0eff4c-2c5e-4581-8393-a36f7b36a72f
 description: 摘要：在 Microsoft Azure 中設定 Microsoft 365 高可用性同盟驗證的網域控制站與目錄同步處理伺服器。
-ms.openlocfilehash: c10fb2d32ea572280b43d32da56b9e4d6affa22a
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 14939691e8dc114a6234bfee1ade7212762eae04
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998051"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102521"
 ---
 # <a name="high-availability-federated-authentication-phase-2-configure-domain-controllers"></a>高可用性同盟驗證階段 2：設定網域控制站
 
 在此階段，在 Azure 基礎結構服務中為 Microsoft 365 同盟驗證部署高可用性時，您會在 Azure 虛擬網路中設定兩個網域控制站與目錄同步處理伺服器。 然後用戶端 Web 驗證要求即可在 Azure 虛擬網路中驗證，而非透過站台對站台的 VPN 連線來傳送驗證流量至內部部署網路。
   
 > [!NOTE]
-> Active Directory Federation Services （AD FS）無法使用 Azure Active Directory （Azure AD）取代為 Active Directory 網域服務（AD DS）網域控制站。 
+> Active Directory Federation Services (AD FS) 無法使用 Azure Active Directory (Azure AD) 取代 Active Directory 網域服務 (AD DS) 網域控制站。 
   
 您必須先完成此階段，再移至[階段3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)。 請參閱[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)，以瞭解所有階段。
   
@@ -38,11 +38,11 @@ ms.locfileid: "44998051"
 |:-----|:-----|:-----|:-----|:-----|
 |1.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第一個網域控制站，範例 DC1)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
 |2.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第二個網域控制站，範例 DC2)  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|3.  <br/> |![線條](./media/Common-Images/TableLine.png) （目錄同步處理伺服器，範例 DS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|4.  <br/> |![線條](./media/Common-Images/TableLine.png) （第一個 AD FS 伺服器，範例 ADFS1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|5.  <br/> |![線條](./media/Common-Images/TableLine.png) （第二個 AD FS 伺服器，範例 ADFS2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|6.  <br/> |![線條](./media/Common-Images/TableLine.png) （第一個 web 應用程式 proxy 伺服器，範例 WEB1）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
-|7.  <br/> |![線條](./media/Common-Images/TableLine.png) （第二個 web 應用程式 proxy 伺服器，範例 WEB2）  <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|3.  <br/> |![線條](./media/Common-Images/TableLine.png)  (目錄同步處理伺服器，範例 DS1)   <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|4.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第一個 AD FS 伺服器，範例 ADFS1)   <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|5.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第二個 AD FS 伺服器，範例 ADFS2)   <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|6.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第一個 web 應用程式 proxy 伺服器，範例 WEB1)   <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
+|7.  <br/> |![線條](./media/Common-Images/TableLine.png)  (第二個 web 應用程式 proxy 伺服器，範例 WEB2)   <br/> |Windows Server 2016 Datacenter  <br/> |Standard_LRS  <br/> |Standard_D2  <br/> |
    
  **表格 M-Azure 中 Microsoft 365 高可用性同盟驗證的虛擬機器**
   
@@ -70,7 +70,7 @@ ms.locfileid: "44998051"
 當您已經提供所有正確的值時，在 Azure PowerShell 提示中或本機電腦的 PowerShell 整合式指令碼環境 (ISE) 中執行結果區塊。
   
 > [!TIP]
-> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/deploy-high-availability-federated-authentication-for-office-365-in-azure/O365FedAuthInAzure_Config.xlsx)。 
+> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx)。 
 
 ```powershell
 # Set up variables common to both virtual machines
@@ -247,7 +247,7 @@ Restart-Computer
 
 ![Azure 中具有網域控制站之高可用性 Microsoft 365 同盟驗證基礎結構的階段2](media/b0c1013b-3fb4-499e-93c1-bf310d8f4c32.png)
   
-## <a name="next-step"></a>後續步驟
+## <a name="next-step"></a>下一步
 
 使用[階段3：設定 AD FS 伺服器](high-availability-federated-authentication-phase-3-configure-ad-fs-servers.md)以繼續設定此工作負載。
   

@@ -13,13 +13,13 @@ f1.keywords:
 - CSH
 ms.custom: Ent_Solutions
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
-description: 摘要：在 Microsoft Azure 中建立和設定適用于 Microsoft 365 的高可用性同盟驗證的 Active Directory Federation Services （AD FS）伺服器。
-ms.openlocfilehash: 7b32c39ada30059df78ccb5429dba11c1576dff7
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+description: 摘要：在 Microsoft Azure 中建立和設定 Active Directory Federation Services (AD FS) 伺服器以進行 Microsoft 365 的高可用性同盟驗證。
+ms.openlocfilehash: e4fa1ac49d9c9a60567d587416347093ff0784c9
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711926"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102511"
 ---
 # <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 
@@ -51,7 +51,7 @@ ms.locfileid: "44711926"
 首先，您會為兩個 AD FS 伺服器建立 Azure 內部負載平衡器。 指定變數的值，並移除 \< and > 字元。 當您已提供所有適當的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
 > [!TIP]
-> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/deploy-high-availability-federated-authentication-for-office-365-in-azure/O365FedAuthInAzure_Config.xlsx)。 
+> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx)。 
 
 ```powershell
 # Set up key variables
@@ -129,11 +129,11 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 由於這些虛擬機器是用於內部網路應用程式，並不會指派公用 IP 位址或 DNS 網域名稱標籤，也不會曝露在網際網路上。不過，這也表示您無法透過 Azure 入口網站與虛擬機器連線。當您檢視虛擬機器的屬性時，無法使用**連線**選項。請使用遠端桌面連線附屬應用程式或另一個遠端桌面工具，透過使用其私人 IP 位址或內部網路 DNS 名稱來與虛擬機器連線。
+> Because these virtual machines are for an intranet application, they are not assigned a public IP address or a DNS domain name label and exposed to the Internet. However, this also means that you cannot connect to them from the Azure portal. The **Connect** option is unavailable when you view the properties of the virtual machine. Use the Remote Desktop Connection accessory or another Remote Desktop tool to connect to the virtual machine using its private IP address or intranet DNS name.
   
 針對每個虛擬機器，使用您選擇的遠端桌面用戶端，並建立遠端桌面連線。 請使用其內部網路 DNS 或本機管理員帳戶的電腦名稱和認證。
   
-針對每一部虛擬機器，在 Windows PowerShell 提示中，使用下列命令將其加入適當的 Active Directory 網域服務（AD DS）網域。
+針對每一部虛擬機器，在 Windows PowerShell 提示中，使用下列命令，將其加入至適當的 Active Directory 網域服務 (AD DS) 網域。
   
 ```powershell
 $domName="<AD DS domain name to join, such as corp.contoso.com>"
@@ -154,7 +154,7 @@ Restart-Computer
   
 ## <a name="see-also"></a>另請參閱
 
-[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Microsoft 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Microsoft 365 開發/測試環境的同盟身分識別](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)
 

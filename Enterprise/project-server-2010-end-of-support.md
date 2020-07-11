@@ -18,12 +18,12 @@ search.appverid:
 - PJU120
 - PJW120
 description: Project Server 2010 的支援結束于4月13日（2021）。 使用本文做為升級至 Project Online 或更新版本 Project Server 內部部署的指南。
-ms.openlocfilehash: e9bbe47c93b9e73e37abd352f02872149d28ce90
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.openlocfilehash: cd209b51c94abe1a32b5d48bde79a3d1a443a092
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44775062"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102591"
 ---
 # <a name="project-server-2010-end-of-support-roadmap"></a>Project Server 2010 終止支援藍圖
 
@@ -59,7 +59,7 @@ Project Server 與幾乎所有的 Microsoft 產品一樣，都有一個支援週
   
 - 遷移至 Project Online
     
-- 遷移至較新的內部部署版本的 Project Server （最好是 Project Server 2019）。
+- 遷移至較新的內部部署版本的 Project Server (最好的 Project Server 2019) 。
 
 以下是您可以採取的兩種途徑，以避免 Project Server 2010 的支援結束。
 
@@ -70,7 +70,7 @@ Project Server 與幾乎所有的 Microsoft 產品一樣，都有一個支援週
 
 |**為什麼我想要遷移至 Project Server 2019？**|**為什麼我想要遷移至 Project Online？**|
 |:-----|:-----|
-|商務規則限制我在雲端中運作我的公司。  <br/>  我需要控制環境的更新。  <br/> | 我有行動電話或遠端使用者。  <br/>  遷移內部部署伺服器的成本是非常重要的問題（硬體、軟體、時間和執行工作量等）。  <br/>  遷移後，維護環境所需的成本是非常重要的問題（例如，「自動更新」、「保證時間」等等）。  <br/>  |
+|商務規則限制我在雲端中運作我的公司。  <br/>  我需要控制環境的更新。  <br/> | 我有行動電話或遠端使用者。  <br/>  遷移內部部署伺服器所需的成本是一個很重要的問題 (硬體、軟體、時間與工作的實施，等等 ) 。  <br/>  遷移後，維護環境所需的成本是一個很重要的問題 (例如，自動更新、保證的時間，等等 ) 。  <br/>  |
 
    
 > [!NOTE]
@@ -83,9 +83,9 @@ Project Server 與幾乎所有的 Microsoft 產品一樣，都有一個支援週
  
 #### <a name="moving-to-a-newer-version-of-project-client"></a>移至較新版本的 Project 用戶端
 
-如果您是從 Project Standard 2010 遷移，您可以遷移至較新版本的專案 Standard （Project Standard 2016 或 Project Standard 2019）。  建議您移至最新的版本，以充分利用最新的功能。 此外，遷移至最新的版本（Project Standard 2016）表示，您必須儘早從這個版本開始遷移，因為它會隨之終止的支援日期。
+如果您是從 Project Standard 2010 遷移，您可以將專案 standard 2016 或 Project standard 2019) 的更新版本遷移至新的版本 (。  建議您移至最新的版本，以充分利用最新的功能。 此外，遷移至最新的版本 (Project Standard 2016) 表示您必須儘早從這個版本開始遷移，因為它的支援日期會隨之結束。
 
-同樣地，如果您要從 Project Professional 2010 進行遷移，您可以選擇遷移至更新的版本（Project Professional 2019 或 Project Professional 2016）。 建議您盡可能移至最新版本。  如果您使用 Project Professional 來連線至 Project Server，請確定您已遷移至 Project Professional 的版本，該版本支援與您所用之 Project Server 版本連線。
+同樣地，如果您要從 Project Professional 2010 進行遷移，您可以選擇將版本遷移至較新的版本 (Project Professional 2019 或 Project Professional 2016) 。 建議您盡可能移至最新版本。  如果您使用 Project Professional 來連線至 Project Server，請確定您已遷移至 Project Professional 的版本，該版本支援與您所用之 Project Server 版本連線。
 
 Project Professional 2010 使用者也可以選擇將遷移至 Project Online 桌面用戶端。 它是訂閱型版本的 Project Professional 2019，並包含在專案方案3和專案方案5訂閱中。 
 
@@ -106,7 +106,7 @@ Project Professional 2010 使用者也可以選擇將遷移至 Project Online �
     
 - **規劃自訂**-請注意，遷移至 project server 2019 或 project Online 時，許多您在 Project server 2010 環境中所使用的自訂功能可能無法運作。 在不同版本之間的 Project Server 架構，以及支援的作業系統、資料庫伺服器及用戶端網頁瀏覽器之間，都有很大的差異，可與更新的版本搭配使用。 針對您在新環境中所需的自訂進行測試或重建的計畫。 規劃升級也是一種很好的機會，可在您向前推進時，確認是否真的需要特定的自訂專案。 [在升級期間建立目前自訂專案的計畫 SharePoint 2013]( https://docs.microsoft.com/SharePoint/upgrade-and-update/create-a-plan-for-current-customizations-during-upgrade-to-sharepoint-2013)在升級時，有一些有關評估及規劃目前自訂專案的極佳一般資訊。 
     
-- **時間和耐心**升級的規劃、執行及測試需要很長的時間和精力，尤其是當您要升級至 Project Server 2019 時。 例如，如果您要從 Project Server 2010 遷移至 Project Server 2019，您必須先從 Project Server 2010 遷移至 Project Server 2013，然後檢查您的資料，然後在遷移至每個後續版本時執行相同的操作（若要將資料移轉至 project server 2016，然後再進行 Project Server 2019）。 您可能會想要與 Microsoft 解決方案提供者核對評估成本，使其達到估計成本的時間，以及其成本。 
+- **時間和耐心**升級的規劃、執行及測試需要很長的時間和精力，尤其是當您要升級至 Project Server 2019 時。 例如，如果您要從 Project Server 2010 遷移至 Project Server 2019，您必須先從 Project Server 2010 遷移至 Project Server 2013，然後檢查您的資料，當您將每個後續版本 (遷移至 Project Server 2016，然後再進行) 的 Project Server 2019 時，請執行相同的動作。 您可能會想要與 Microsoft 解決方案提供者核對評估成本，使其達到估計成本的時間，以及其成本。 
     
 ## <a name="migrate-to-project-online"></a>遷移至 Project Online
 
@@ -116,7 +116,7 @@ Project Professional 2010 使用者也可以選擇將遷移至 Project Online �
     
 2. 使用 Project Professional 2016、Project Professional 2019 或 Project Online 桌面用戶端，開啟每個副檔名檔案，然後將其儲存併發布到 Project Online。
     
-您可以在 Project Online 中手動建立 PWA 設定（例如，重新建立任何必要的自訂欄位或企業行事曆）。 Microsoft 解決方案供應商也可協助您進行這種情況。
+您可以在 Project Online 中以手動方式建立 PWA 設定 (例如，重新建立任何必要的自訂欄位或企業行事曆) 。 Microsoft 解決方案供應商也可協助您進行這種情況。
   
 主要資源：
   
@@ -129,7 +129,7 @@ Project Professional 2010 使用者也可以選擇將遷移至 Project Online �
 
 雖然我們極力相信您可以透過遷移至 Project Online，獲得最佳價值和使用者經驗，我們也會瞭解某些組織必須將專案資料保留在內部部署環境中。 如果您選擇將專案資料保留在內部部署中，您可以將 Project Server 2010 環境遷移至 Project Server 2013、Project Server 2016 或 Project Server 2019。
   
-如果您無法遷移至 Project Online，建議您將遷移至 Project Server 2019。 Project Server 2019 包含舊版 Project Server 隨附的功能和增強功能，最符合 Project Online 可用的體驗（雖然有些功能僅適用于 Project Online）。
+如果您無法遷移至 Project Online，建議您將遷移至 Project Server 2019。 Project Server 2019 包含舊版 Project Server 隨附的功能和增強功能，以及與 Project Online 搭配使用的經驗最為接近的功能 (不過某些功能只有在 Project Online) 中才能使用。
   
 完成每個遷移後，您應該檢查資料，以確定其已成功遷移。
   
@@ -229,9 +229,9 @@ Project Server 2010 與 Project Server 2019 之間的架構差異，可防止直
 
 ## <a name="summary-of-options-for-office-2010-client-and-servers-and-windows-7"></a>適用於 Office 2010 用戶端與伺服器和 Windows 7 的選項摘要
 
-如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
+如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./downloads/Office2010Windows7EndOfSupport.pdf)。
 
-[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)
+[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./downloads/Office2010Windows7EndOfSupport.pdf)
 
 這張單頁海報可讓您快速了解可以採取的各種方法，以防止Office 2010 用戶端與伺服器產品以及 Windows 7 進入終止支援，而海報上也會強調顯示 Microsoft 365 企業版中慣用的方式和選項支援。
 

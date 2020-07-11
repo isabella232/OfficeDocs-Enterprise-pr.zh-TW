@@ -13,12 +13,12 @@ ms.assetid: e150e7b9-c432-4c8d-a0ae-c11847129a7d
 f1.keywords:
 - NOCSH
 description: Exchange 2010 即將終止支援。 使用此規劃藍圖做為準備升級到 Exchange Online 或 Exchange Server 內部部署更新版本的指南。
-ms.openlocfilehash: 2d7ab96d065ffd2d85427f320ce01e3b9023891f
-ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
+ms.openlocfilehash: 61f10ef84274f1b4022937bb0edc19695822aef9
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45052466"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102531"
 ---
 # <a name="exchange-2010-end-of-support-roadmap"></a>Exchange 2010 終止支援藍圖
 
@@ -50,7 +50,7 @@ Exchange 2010 即將終止支援，這是探索選項及準備移轉規劃的絕
 > [!IMPORTANT]
 > 如果您的組織選擇將信箱遷移至 Microsoft 365，但是想要保留 DirSync 或 Azure AD Connect，以繼續從內部部署 Active Directory 管理使用者帳戶，您必須在內部部署中至少保留一部 Exchange server。 如果移除最後一部 Exchange 伺服器，您將無法變更 Exchange Online 中的 Exchange 收件者。 這是因為授權單位來源會保留在您內部部署的 Active Directory 中，因此必須在那裡進行變更。 在這個案例中，您有下列選項：
 
-- （**建議使用**）如果您可以將信箱遷移至 Microsoft 365，並在10月 13 2020 日更新您的伺服器，請使用 Exchange 2010 連接至 Microsoft 365 和遷移信箱。 之後，將 Exchange 2010 移轉到 Exchange 2016，並解除委任所有剩下的 Exchange 2010 伺服器。
+-  (**建議**的) 如果您可以將信箱遷移至 Microsoft 365，並在10月 13 2020 日之後升級伺服器，請使用 Exchange 2010 連線至 microsoft 365 和遷移信箱。 之後，將 Exchange 2010 移轉到 Exchange 2016，並解除委任所有剩下的 Exchange 2010 伺服器。
 - 如果您無法在10月13日（2020）完成信箱遷移和內部部署伺服器升級，請先將您的內部部署 Exchange 2010 伺服器升級至 Exchange 2016，然後再使用 Exchange 2016 連線至 Microsoft 365 和遷移信箱。
 
 > [!NOTE]
@@ -146,8 +146,8 @@ Microsoft 365 也會先取得新功能並體驗，您的使用者通常可以立
 如果您考慮要執行完整混合式移轉，以下是一些該考量的事項：
 
 - 完整混合式移轉並不適合所有組織類型。 由於完整混合式移轉十分複雜，即使它具有多項優點，但這種設定所需付出的心力和成本往往令擁有少於數百個信箱的組織望之卻步。 如果這聽起來像是貴組織的情況，強烈建議您考慮改用完全移轉或基本混合式移轉；
-- 您需要在內部部署 Active Directory 伺服器與 Microsoft 365 之間，使用 Azure Active Directory （Azure AD） Connect 來設定目錄同步處理。
-- 使用者將能夠使用使用者登入本機網路時所使用的相同使用者名稱和密碼登入其 Microsoft 365 信箱（需要使用密碼同步處理和/或 Active Directory Federation Services 的 Azure AD Connect）。
+- 您必須在內部部署 Active Directory 伺服器與 Microsoft 365 之間，使用 Azure Active Directory (Azure AD) 連線來設定目錄同步處理。
+- 使用者將能夠使用使用者登入本機網路時所使用的相同使用者名稱和密碼登入他們的 Microsoft 365 信箱。 (需要使用密碼同步處理和/或 Active Directory Federation Services 的 Azure AD Connect) ;
 - 您將需要 Microsoft 365 許可證，其中包含您要遷移的每個使用者信箱的 Exchange Online;
 - 使用者在大部分的裝置上不需要設定新 Outlook 設定檔 (某些舊款 Android 手機可能需要新設定檔)，而且不需要重新下載電子郵件。
 
@@ -168,7 +168,7 @@ Microsoft 365 也會先取得新功能並體驗，您的使用者通常可以立
 
 為了獲得最佳的體驗，我們建議您將剩餘的內部部署環境升級為 Exchange 2016。 如果您想要直接從 Exchange Server 2010 移至 Exchange Server 2016，您不需要安裝 Exchange Server 2013。
 
-Exchange 2016 包括舊版 Exchange 所包含的所有功能和進步，而且其最符合 Microsoft 365 的體驗（雖然有些功能僅適用于 Microsoft 365）。 請查看您遺漏的一些事項：
+Exchange 2016 包括舊版 Exchange 所包含的所有功能和進步，而且它最符合 Microsoft 365 (的體驗，不過某些功能只有在 Microsoft 365) 中提供。 請查看您遺漏的一些事項：
 
 | **Exchange 版本**                     | **功能**                                                                                                                                                                                                                                         |
 |------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -216,9 +216,9 @@ Exchange 2016 包括舊版 Exchange 所包含的所有功能和進步，而且�
 
 ## <a name="summary-of-options-for-office-2010-client-and-servers-and-windows-7"></a>適用於 Office 2010 用戶端與伺服器和 Windows 7 的選項摘要
 
-如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
+如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./downloads/Office2010Windows7EndOfSupport.pdf)。
 
-[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)
+[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./downloads/Office2010Windows7EndOfSupport.pdf)
 
 這張單頁海報可讓您快速了解可以採取的各種方法，以防止Office 2010 用戶端與伺服器產品以及 Windows 7 進入終止支援，而海報上也會強調顯示 Microsoft 365 企業版中慣用的方式和選項支援。
 

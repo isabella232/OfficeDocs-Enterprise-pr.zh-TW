@@ -14,12 +14,12 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: 1c903173-67cd-47da-86d9-d333972dda80
 description: 摘要：在 Microsoft Azure 中為 Microsoft 365 的高可用性同盟驗證設定 web 應用程式 proxy 伺服器。
-ms.openlocfilehash: 4d6e2991c3293952c38e994728e6eca7ea5f5b35
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.openlocfilehash: 005497f9da7986fb4538b4d4c9699e55fe26fa65
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711886"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102491"
 ---
 # <a name="high-availability-federated-authentication-phase-4-configure-web-application-proxies"></a>高可用性同盟驗證階段 4：設定 Web 應用程式 Proxy
 
@@ -37,7 +37,7 @@ ms.locfileid: "44711886"
 當您已提供位置和資源群組的值時，在 Azure PowerShell 命令提示字元上或 PowerShell ISE 中執行結果區塊。
   
 > [!TIP]
-> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/deploy-high-availability-federated-authentication-for-office-365-in-azure/O365FedAuthInAzure_Config.xlsx)。 
+> 若要根據您的自訂設定來產生現成 PowerShell 命令區塊，請使用此[Microsoft Excel 配置活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/O365FedAuthInAzure_Config.xlsx)。 
 
 ```powershell
 # Set up key variables
@@ -64,13 +64,13 @@ Write-Host (Get-AzPublicIpaddress -Name "WebProxyPublicIP" -ResourceGroup $rgNam
   
 一旦您有了同盟服務 FQDN，請針對同盟服務 FDQN 建立公用 DNS 網域 A 記錄，這會解析為 Azure 網際網路對應負載平衡器的公用 IP 位址。
   
-|**Name**|**Type**|**TTL**|**值**|
+|**名稱**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |同盟服務 FDQN  <br/> |A  <br/> |3600  <br/> |Azure 網際網路對應負載平衡器的公用 IP 位址 (透過上一節中的 **Write-Host** 命令顯示) <br/> |
    
 範例如下：
   
-|**Name**|**Type**|**TTL**|**值**|
+|**名稱**|**Type**|**TTL**|**值**|
 |:-----|:-----|:-----|:-----|
 |fs.contoso.com  <br/> |A  <br/> |3600  <br/> |131.107.249.117  <br/> |
    
@@ -150,7 +150,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
 ```
 
 > [!NOTE]
-> 由於這些虛擬機器是用於內部網路應用程式，系統並不會指派公用 IP 位址或 DNS 網域名稱標籤給它們，它們也不會公開在網際網路上。不過，這也表示您無法從 Azure 入口網站連線到這些虛擬機器。當您檢視虛擬機器的屬性時，無法使用**連線**選項。請使用遠端桌面連線附屬應用程式或另一個遠端桌面工具，透過使用虛擬機器的私人 IP 位址或內部網路 DNS 名稱，以及本機管理員帳戶的認證來與其連線。
+> Because these virtual machines are for an intranet application, they are not assigned a public IP address or a DNS domain name label and exposed to the Internet. However, this also means that you cannot connect to them from the Azure portal. The **Connect** option is unavailable when you view the properties of the virtual machine. Use the Remote Desktop Connection accessory or another Remote Desktop tool to connect to the virtual machine using its private IP address or intranet DNS name and the credentials of the local administrator account.
   
 以下是成功完成此階段的設定結果 (包含電腦名稱的預留位置)。
   
@@ -164,7 +164,7 @@ New-AzVM -ResourceGroupName $rgName -Location $locName -VM $vm
   
 ## <a name="see-also"></a>另請參閱
 
-[在 Azure 中部署 Microsoft 365 的高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
+[Azure 中的 Microsoft 365 高可用性同盟驗證](deploy-high-availability-federated-authentication-for-office-365-in-azure.md)
   
 [Microsoft 365 開發/測試環境的同盟身分識別](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)
   

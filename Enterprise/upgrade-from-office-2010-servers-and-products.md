@@ -23,12 +23,12 @@ ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
 description: Office 2010 伺服器和用戶端應用程式的支援即將結束，且無法使用自訂支援協定。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 570386c2f12a098ee2ccb355b5d0fa20bc32aaee
-ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
+ms.openlocfilehash: 5ee19f418512a5ab188a3618d61b067eb8cb790f
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "44906236"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102571"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
 
@@ -42,11 +42,11 @@ SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支�
 
 - Microsoft 365 具有雲端式服務，適用于 Office 2010 伺服器產品（例如 Exchange Server 和 SharePoint 伺服器）及服務（如公司的團隊和 OneDrive）。 
 
-- Microsoft 365 應用程式（先前稱為 Office 365 ProPlus）（隨附于 Microsoft 365 E3 和 E5）是您在本機裝置上安裝的 Office 用戶端應用程式集。 他們會以新的生產力和安全性功能更新，以從 Microsoft 雲端不斷更新。
+- Microsoft 365 應用程式 for enterprise (先前名為 Office 365 ProPlus) （隨附于 Microsoft 365 E3 和 E5）是您在本機裝置上安裝的 Office 用戶端應用程式集。 他們會以新的生產力和安全性功能更新，以從 Microsoft 雲端不斷更新。
 
-如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)。
+如需適用於 Office 2010 用戶端與伺服器和 Windows 7 的升級、移轉和移至雲端選項的視覺摘要，請參閱[終止支援海報](./downloads/Office2010Windows7EndOfSupport.pdf)。
 
-[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./media/upgrade-from-office-2010-servers-and-products/Office2010Windows7EndOfSupport.pdf)
+[![Office 2010 用戶端與伺服器和 Windows 7 終止支援海報的影像](./media/upgrade-from-office-2010-servers-and-products/office2010-windows7-end-of-support.png)](./downloads/Office2010Windows7EndOfSupport.pdf)
 
 這張單頁海報可讓您快速了解可以採取的各種方法，以防止Office 2010 用戶端與伺服器產品以及 Windows 7 進入終止支援，而海報上也會強調顯示 Microsoft 365 企業版中慣用的方式和選項支援。
 
@@ -56,7 +56,7 @@ SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支�
   
 |**這種產品**|**使用此支援日期結束**|**請參閱此資源**|
 |:-----|:-----|:-----|
-|Office 2010 （包括 Word 2010、Excel 2010、PowerPoint 2010 和 Outlook 2010）  <br/> | 2020年10月13日 |[Office 2010 終止支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
+|Office 2010 (包括 Word 2010、Excel 2010、PowerPoint 2010 和 Outlook 2010)   <br/> | 2020年10月13日 |[Office 2010 終止支援藍圖](https://docs.microsoft.com/DeployOffice/office-2010-end-support-roadmap) <br/> |
 |Exchange Server 2010  <br/> | 2020年10月13日  |[Exchange 2010 終止支援藍圖](exchange-2010-end-of-support.md) <br/> |
 |SharePoint 2010 或 SharePoint Server 2010  <br/> | 2021年4月13日 |[從 SharePoint 2010 升級](upgrade-from-sharepoint-2010.md) <br/> |
 |Project Server 2010 <br/> | 2021年4月13日 | [Project Server 2010 終止支援藍圖](project-server-2010-end-of-support.md) <br/> |
