@@ -3,7 +3,7 @@ title: 從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德
 ms.author: andyber
 author: andybergen
 manager: laurawi
-ms.date: 12/09/2019
+ms.date: 07/09/2020
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -19,12 +19,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：了解如何從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務。
-ms.openlocfilehash: 0a90c1b7f74ce9bc14ccae9965c4ce07f74e1b73
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 3270cb9cf51bc35e7eb7549a109b34c42dda16ff
+ms.sourcegitcommit: d34edff71d0b3c8088ec27049f0fc3b6ce57f7e7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998558"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "45092882"
 ---
 # <a name="migration-from-microsoft-cloud-germany-microsoft-cloud-deutschland-to-office-365-services-in-the-new-german-datacenter-regions"></a>從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務
 
@@ -60,6 +60,8 @@ ms.locfileid: "44998558"
 - Dynamics 365 / Power Platform
 
 將在 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 文章中說明這些服務的移轉先決條件與影響。
+
+Office 365 影片即將于年 2021年 3月 1日停用。 如果您選擇將 Office 365 租用者移至新的德國資料中心區域，在 SharePoint Online 遷移完成之後，將不會支援 Office 365 影片。 [深入了解](https://docs.microsoft.com/stream/migrate-from-office-365#microsoft-cloud-deutschland-timeline)
 
 ## <a name="how-to-prepare-for-migration-to-office-365-services-in-the-new-german-datacenter-regions"></a>如何準備移轉至新的德國資料中心區域中的 Office 365 服務
 
@@ -102,6 +104,11 @@ Exchange Online 混合式客戶必須重新執行 [混合式設定精靈]，以�
 ### <a name="skype-for-business-online"></a>商務用 Skype Online
 
 現有的商務用 Skype Online 客戶將會移轉 Microsoft Teams。 如需詳細資訊，請參閱 [https://aka.ms/SkypeToTeams-Home](https://aka.ms/SkypeToTeams-Home)。
+
+### <a name="office-365-video"></a>Office 365 影片
+Office 365 影片的內容將會在 SharePoint Online 遷移過程中進行遷移。 然而，Office 365 正在被停用，且在 SharePoint Online 遷移到新的德國資料中心區域之後，將不會支援 Office 365 影片。 在 SharePoint 遷移之後，Office 365 影片中的影片將無法在 Office 365 影片 UI 中播放。
+
+我們不會將 Microsoft Stream 部署到 Microsoft 德國，而且目前沒有對於在新的德國資料中心區域中部署 Microsoft Stream 的時程規劃。 如此一來，此區域中將不會提供 Office 365 影片的任何遷移工具至 Microsoft Stream。 若要保留您的內容，您必須在 2021年 3月 1日之前，手動下載或移動內容。 [深入了解](https://docs.microsoft.com/stream/migrate-from-office-365#microsoft-cloud-deutschland-timeline)
 
 
 ## <a name="key-differences-between-microsoft-cloud-germany-microsoft-cloud-deutschland-and-office-365-services-in-the-new-german-datacenter-regions"></a>Microsoft Cloud Germany (Microsoft Cloud Deutschland) 和新德國資料中心區域中的 Office 365 服務的主要差別
