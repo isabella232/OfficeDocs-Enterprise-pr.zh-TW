@@ -13,12 +13,12 @@ ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Priority
 description: 使用 Microsoft 365 多地理位置，將 Microsoft 365 的目前狀態拓展至多個地理區域。
-ms.openlocfilehash: af1036ce2e8512a13cbf1867bb75a18aff3ac0a2
-ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
+ms.openlocfilehash: a49ba9b9b5109972a6b0a631d34d14acb189f484
+ms.sourcegitcommit: 6b12e3ab76809d5632923def7ee367cd48ef3ccc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45052576"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "45117275"
 ---
 # <a name="microsoft-365-multi-geo"></a>Microsoft 365 多地理位置
 
@@ -47,6 +47,15 @@ ms.locfileid: "45052576"
 - **慣用的資料位置 (PDL)** - 由系統管理員設定的使用者屬性，表示應佈建使用者 Exchange 信箱和 OneDrive 的地理位置。 PDL 還可決定要在哪裡佈建使用者建立的 SharePoint 網站。
 - **衛星位置** – 在多地理位置租用戶中啟用地理感知 Microsoft 365工作量 (SharePoint、OneDrive和 Exchange) 的地理位置。
 - **租用戶** – 組織在 Microsoft 365 中的呈現方式，通常會有與其相關聯的一個或多個網域 (例如 contoso.com)。
+
+## <a name="licensing"></a>授權
+
+Microsoft 365 多地理位置可作為以下 Microsoft 365 訂閱方案的附加元件，這些 EA 客戶的租用戶中至少有 250 個 Microsoft 365 基座，其中至少有 5% 使用多地理位置。 如需詳細資訊，請連絡您的 Microsoft 帳戶小組。
+
+- Microsoft 365 F1、E1、E3 或 E5
+- Exchange Online 方案 1 或方案 2
+- 商務用 OneDrive 方案 1 或方案 2
+- SharePoint Online 方案 1 或方案 2
 
 ## <a name="microsoft-365-multi-geo-availability"></a>Microsoft 365 多地理位置可用性
 
