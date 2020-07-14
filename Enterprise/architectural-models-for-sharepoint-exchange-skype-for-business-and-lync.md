@@ -20,18 +20,18 @@ ms.assetid: 5b49fa68-f8f2-4705-af96-5f5475e8539a
 search.appverid:
 - MET150
 description: 摘要：取得描述 SharePoint、Exchange、商務用 Skype 和 Lync 結構模型、部署、平台選項的 IT 海報。
-ms.openlocfilehash: 33613e8e4b4eefc051a1c249773301c5249b0b69
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
-ms.translationtype: MT
+ms.openlocfilehash: 9e6e4f2b32bb2e5b39f8891d8acddc0699cdbf8d
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997984"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102561"
 ---
 # <a name="architectural-models-for-sharepoint-exchange-skype-for-business-and-lync"></a>適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型
 
 這些 IT 海報描述適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的結構模型和部署選項，並提供在 Microsoft Azure 內部署 SharePoint 的設計資訊。
   
-使用 Microsoft 365，您可以提供使用者熟悉為雲端式服務的共同作業和通訊服務。 使用一些例外狀況，不論您維護內部部署還是使用 Microsoft 365，使用者經驗都會保持不變。 在放置工作負載時，這種整合式的使用者經驗會令使用者難以判斷放置的位置，並衍生問題如︰
+透過 Microsoft 365，您可以雲端架構服務方式提供使用者所熟悉的共同作業和通訊服務。 除少許個別例子外，不管是維護內部部署或使用 Microsoft 365，使用者經驗皆會維持不變。 在放置工作負載時，這種整合式的使用者經驗會令使用者難以判斷放置的位置，並衍生問題如︰
   
 - 當為您的個別工作負載選擇平台時，您會如何判斷？
     
@@ -53,8 +53,6 @@ Let us know what you think! Send us email at [cloudadopt@microsoft.com](mailto:c
 - **架構模型海報**：您可以使用這些資源來判斷適用於 SharePoint 2016、和商務用 Skype 2015 的理想平台和組態。
     
   - [Microsoft SharePoint 2016 架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md#SP2016_ArchModel)
-    
-  - [在 Microsoft 365 中 OneDrive 和 SharePoint 線上的多地理位置功能](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md#MultiGeoO365ODB)
     
   - [SharePoint Server 2016 資料庫](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md#SP2016_Databases)
     
@@ -97,13 +95,6 @@ These new IT posters for SharePoint 2016 and Skype for Business 2015 provide a w
 |:-----|:-----|
 |[![SharePoint 2016 架構模型海報縮圖](media/7d3e590c-1f3b-42cf-920d-9edac8fa3e04.png)          ](https://www.microsoft.com/download/details.aspx?id=52650) <br/> [PDF](https://download.microsoft.com/download/4/F/A/4FA0F94B-EE2F-41DB-A047-D9864FEF41E9/SharePoint2016ArchitecturalModels.pdf)  \| [Visio](https://download.microsoft.com/download/4/F/A/4FA0F94B-EE2F-41DB-A047-D9864FEF41E9/SharePoint2016ArchitecturalModels.vsdx)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=52650) <br/> | 此 IT 海報描述商務決策者和解決方案架構設計人員需了解的 SharePoint Online、Microsoft Azure 和 SharePoint 內部部署組態。 <br/><br/> - **SharePoint Online (SaaS)**：透過軟體即服務 (SaaS) 訂閱模型取用 SharePoint。 <br/> - **SharePoint Hybrid**：按您自己的速度，將您的 SharePoint 網址和應用程式移至雲端。 <br/> - **SharePoint in Azure (IaaS)** - You extend your on-premises environment into Microsoft Azure and deploy SharePoint 2016 Servers there. (This is recommended for High Availability/Disaster Recovery and dev/test environments.) <br/> - **SharePoint 內部部署**：您會在您維護的資料中心內計劃、部署、維護和自訂 SharePoint 環境。 <br/> |
    
-<a name="MultiGeoO365ODB"> </a>
-### <a name="multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-microsoft-365"></a>在 Microsoft 365 中 OneDrive 和 SharePoint 線上的多地理位置功能
-
-|**項目**|**描述**|
-|:-----|:-----|
-|[![Microsoft 365 模型中的多地理位置 OneDrive](media/c6c1b7cd-7833-46fb-9eec-c12150c260d9.png)          ](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Multi-Geo-ODB.pdf) <br/> [PDF](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Multi-Geo-ODB.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Multi-Geo-ODB.vsdx) <br/> | 此海報是在 Microsoft 365 中 OneDrive 和 SharePoint Online 中的多地理位置功能的概覽。 此模型包括： <br/><br/> - 效益 <br/> - 規劃的步驟 <br/> - 範例組態 <br/><br/>  如需有關 OneDrive 中的多地理位置功能及 Microsoft 365 中的 SharePoint 線上功能的詳細資訊，請按一下[這裡](https://aka.ms/onedrivemultigeo)。  <br/> |
-   
 <a name="SP2016_Databases"> </a>
 ### <a name="sharepoint-server-2016-databases"></a>SharePoint Server 2016 資料庫
 
@@ -139,7 +130,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![SharePoint 2013 Platform Options 的縮圖影像](media/SP-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=40332) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=324594)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=324593)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=40332) <br/> |若為商務決策者（Bdm）和架構師，此模型會顯示 SharePoint 2013 的平臺選項 SharePoint、Microsoft 365 中的內部部署混合搭配 Microsoft 365、Azure 和內部部署的部署。 內含各個架構的概觀、建議、授權需求，以及各個平台的架構設計人員及 IT 專業人員工作清單。 許多 Azure 上的 SharePoint 解決方案都會反白顯示。 <br/> |
+|[![SharePoint 2013 Platform Options 的縮圖影像](media/SP-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=40332) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=324594)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=324593)  \| [其他語言](https://www.microsoft.com/download/details.aspx?id=40332) <br/> |針對企業決策人 (BDM) 和架構設計人員，本模型顯示 SharePoint 2013 的平台選項、Microsoft 365 中的 SharePoint、與 Microsoft 365、Azure 的內部部署混合式，和僅限內部部署的部署。 其中包含每個架構的概觀、建議、授權需求，以及每個平台的架構設計人員和 IT 專業人員工作清單。 許多 Azure 上的 SharePoint 解決方案都會醒目提示。 <br/> |
    
 <a name="Exch2013_options"> </a>
 ## <a name="exchange-2013-platform-options"></a>Exchange 2013 平台選項
@@ -148,7 +139,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Exchange 平台選項的縮圖影像](media/ITPro-Other-Exchange2013PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=42676) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkID=398740)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkID=398742)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=42676) <br/> |這種模型會描述 Exchange 2013 可用的平台選項，並適用於 BDM 和架構設計人員。 客戶可以選擇使用 Microsoft 365、混合式 Exchange、Exchange Server 內部部署和主控 Exchange 來進行 Exchange Online。 海報包含每個架構選項的詳細資訊，包括每個最理想情況下的授權需求以及 IT 專業人員的責任。 <br/> |
+|[![Exchange 平台選項的縮圖影像](media/ITPro-Other-Exchange2013PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=42676) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkID=398740)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkID=398742)  \| [其他語言](https://www.microsoft.com/download/details.aspx?id=42676) <br/> |這種模型會描述 Exchange 2013 可用的平台選項，並適用於 BDM 和架構設計人員。 客戶可以選擇使用 Microsoft 365 的 Exchange Online、混合式 Exchange、Exchange Server 內部部署和 Exchange 託管。 海報包含每個架構選項的詳細資訊，包括每個最理想情況下的授權需求以及 IT 專業人員的責任。 <br/> |
    
 <a name="Lync2013_Options"> </a>
 ## <a name="lync-2013-platform-options"></a>Lync 2013 平台選項
@@ -157,7 +148,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Lync 平台選項的縮圖影像](media/Lync-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41677) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkID=391837)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkID=391839)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41677) <br/> |對於 BDM 和架構設計人員，這種模型會描述 Exchange 2013 可用的平台選項。 客戶可以選擇使用 Microsoft 365、混合式 Lync、Lync Server 內部部署和主控 Lync 的 Lync Online。 IT 海報包含每個架構的選項，包括最理想的情況下，每一個授權需求以及 IT 專業人員的責任。  <br/> |
+|[![Lync 平台選項的縮圖影像](media/Lync-PlatformOptions.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41677) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkID=391837)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkID=391839)  \| [其他語言](https://www.microsoft.com/download/details.aspx?id=41677) <br/> |對於 BDM 和架構設計人員，這種模型會描述 Exchange 2013 可用的平台選項。 客戶可以從 Microsoft 365 中的 Lync Online、混合式 Lync、內部部署 Lync Server 和 Lync 託管中選擇。 IT 海報包含每個架構的選項，包括最理想的情況下，每一個授權需求以及 IT 專業人員的責任。  <br/> |
    
 <a name="Lync2013_Options"> </a>
 ## <a name="sharepoint-in-azure-solutions-posters"></a>Azure 解決方案海報內的 SharePoint
@@ -171,7 +162,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Azure 中使用 SharePoint 的網際網路網站影像](media/MS-AZ-SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報概括列出 Azure 中面向網際網路的網站的重要設計活動和建議的架構選項。  <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [在 Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![Azure 中使用 SharePoint 的網際網路網站影像](media/MS-AZ-SPInternetSites.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41992) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392552)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392551)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41992) <br/> |此海報針對 Azure 中面向網際網路的網站，概述重要的設計活動和建議的架構選項。  <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [在 Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 <a name="DesignSampleInternetSites"> </a>
 ### <a name="design-sample-internet-sites-in-microsoft-azure-for-sharepoint-2013"></a>設計範例：Microsoft Azure 中的 SharePoint 2013 網際網路網站
@@ -180,7 +171,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![設計範例影像：Microsoft Azure for SharePoint 2013 中的網際網路網站](media/MS-AZ-InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |使用此設計範例做為您在 Azure 中使用 SharePoint Server 2013 之網際網路對向網站的基礎結構。 <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [在 Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![設計範例影像：Microsoft Azure for SharePoint 2013 中的網際網路網站](media/MS-AZ-InternetSitesDesignSample.jpg)          ](https://www.microsoft.com/download/details.aspx?id=41991) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392549)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392548)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41991) <br/> |請以此設計範例為起點，在 Azure 中使用 SharePoint Server 2013 來設計面向網際網路的網站架構。 <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [在 Microsoft Azure 中使用 SharePoint Server 2013 的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 <a name="sharepoint_recovery_Azure"> </a>
 ### <a name="sharepoint-disaster-recovery-to-microsoft-azure"></a>對於 Microsoft Azure 的 SharePoint 災害復原
@@ -189,7 +180,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
 
 |**項目**|**描述**|
 |:-----|:-----|
-|[![SharePoint 到 Azure 的災害復原程序](media/SP-DR-Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報會顯示 Azure 中的嚴重損壞復原環境的架構原則。 <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
+|[![SharePoint 到 Azure 的災害復原程序](media/SP-DR-Azure.png)          ](https://www.microsoft.com/download/details.aspx?id=41993) <br/> [PDF](https://go.microsoft.com/fwlink/p/?LinkId=392555)  \| [Visio](https://go.microsoft.com/fwlink/p/?LinkId=392554)  \| [更多語言](https://www.microsoft.com/download/details.aspx?id=41993) <br/> |此 IT 海報說明 Azure 中的嚴重損壞修復環境的架構原則。 <br/><br/> 如需詳細資訊，請參閱下列文章：  <br/><br/> - [Microsoft Azure 中的 SharePoint Server 2013 災害復原](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md) <br/> - [Microsoft Azure SharePoint 2013 架構](microsoft-azure-architectures-for-sharepoint-2013.md) <br/> |
    
 ## <a name="see-also"></a>另請參閱
 
@@ -197,7 +188,7 @@ These IT posters for SharePoint 2013, Exchange 2013, and Lync 2013 provide a way
   
 [Microsoft Cloud IT 架構資源](microsoft-cloud-it-architecture-resources.md)
   
-[企業用 Microsoft 365 測試實驗室指南](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)
+[Microsoft 365 企業版測試實驗室指南](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)
   
 [混合式解決方案](hybrid-solutions.md)
 

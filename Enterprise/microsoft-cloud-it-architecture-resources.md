@@ -18,16 +18,16 @@ ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
 description: "Summary: Learn core cloud architecture concepts for Microsoft identity, security, networking, and hybrid. Review prescriptive recommendations for protecting files, identities, and devices when using Microsoft's cloud."
-ms.openlocfilehash: c1d41fa4ca098a913c7fea039765f916614c7f9c
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
-ms.translationtype: MT
+ms.openlocfilehash: 1798e56139262e2328487b6a998d860bc095b6fc
+ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997895"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "45102611"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 
-這些架構工具和海報提供 Microsoft 雲端服務的相關資訊，包括 Microsoft 365、Windows 10、Azure Active Directory、Microsoft Intune、Microsoft Dynamics 365，以及混合式內部部署和雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。 
+這些架構工具和海報可提供關於 Microsoft 雲端服務的資訊，包括 Microsoft 365、Windows 10、Azure Active Directory、Microsoft Intune、Microsoft Dynamics 365 和混合式內部部署與雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如識別和安全性)。 
   
 <!--**[Microsoft's Enterprise Cloud Roadmap](microsoft-cloud-it-architecture-resources.md#roadmap)** (Sway) -->
     
@@ -67,7 +67,7 @@ See the posters, icon sets, community venues, and other resources that describe 
 <a name="cloudarch"></a>
 ##Microsoft Cloud for Enterprise Architects s系列
 
-這些雲端架構海報提供 Microsoft 雲端服務的相關資訊，包括 Microsoft 365、Azure Active Directory、Microsoft Intune、Microsoft Dynamics CRM Online 和混合式內部部署和雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如身分識別和安全性)。
+這些雲端架構海報提供了有關 Microsoft 雲端服務的資訊，包括 Microsoft 365、Azure Active Directory、Microsoft Intune、Microsoft Dynamics CRM Online 和混合式內部部署與雲端解決方案。 IT 決策者和結構設計師可以使用這些資源，決定其工作負載的理想解決方案，並決定核心基礎結構元件 (例如識別和安全性)。
 
 <!--  
 <a name="platformoptions"></a>
@@ -106,7 +106,7 @@ IT 結構設計師在使用 Microsoft 雲端服務和平台時，有關網路功
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)](media/Network-Poster/MSFT_cloud_architecture_networking.pdf) <br/> [PDF](media/Network-Poster/MSFT_cloud_architecture_networking.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Network-Poster/MSFT_cloud_architecture_networking.vsdx) <br/> | 此模型包含： <ul><li> 將您的網路提升為雲端連線網路 </li><li> Microsoft 雲端連線的共同項目 </li><li> Microsoft 雲端連線的 ExpressRoute </li><li> 設計 Microsoft SaaS、Azure PaaS 和 Azure IaaS 的網路 </li></ul><br/>  <br/>|
+|[![Microsoft 雲端網路模型的縮圖影像](media/95e8ab6a-b4d0-4836-acc1-b0b77ebf46e6.png)](downloads/MSFT_cloud_architecture_networking.pdf) <br/> [PDF](downloads/MSFT_cloud_architecture_networking.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/MSFT_cloud_architecture_networking.vsdx) <br/> | 此模型包含： <ul><li> 將您的網路提升為雲端連線網路 </li><li> Microsoft 雲端連線的共同項目 </li><li> Microsoft 雲端連線的 ExpressRoute </li><li> 設計 Microsoft SaaS、Azure PaaS 和 Azure IaaS 的網路 </li></ul><br/>  <br/>|
 
 <a name="hybrid"></a>
 ### <a name="microsoft-hybrid-cloud-for-enterprise-architects"></a>Microsoft hybrid cloud for enterprise architects
@@ -115,7 +115,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
   
 |**項目**|**描述**|
 |:-----|:-----|
-|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf) <br/> [PDF](media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/Hybrid-Poster/MSFT_cloud_architecture_hybrid.vsdx)  | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS （Microsoft 365）、Azure PaaS 和 Azure 的混合式雲端案例 IaaS </li></ul><br/>|
+|[![Microsoft 混合式雲端模型的縮圖影像](media/9989c71e-f6a0-4dbe-906c-43e67b3ce537.png)](downloads/MSFT_cloud_architecture_hybrid.pdf) <br/> [PDF](downloads/MSFT_cloud_architecture_hybrid.pdf)  \| [Visio](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/downloads/MSFT_cloud_architecture_hybrid.vsdx)  | 此模型包含： <ul><li> Microsoft 的雲端產品 (SaaS、Azure PaaS 和 Azure IaaS) 及其共同元素 </li><li> Microsoft 雲端服務的混合式雲端架構 </li><li> Microsoft SaaS (Microsoft 365)、Azure PaaS 和 Azure IaaS 的混合式雲端案例 </li></ul><br/>|
    
 <a name="attacks"></a>
 ### <a name="common-attacks-and-microsoft-capabilities-that-protect-your-organization"></a>常見攻擊和保護您組織的 Microsoft 功能
@@ -130,7 +130,7 @@ IT 結構設計師在使用 Microsoft 服務和平台時，有關混合雲端需
 
 快速檢視 Microsoft 365 企業版的[底層基礎結構](https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure)以開始部署。
   
-|**項目**|**描述**|
+|**Item**|**描述**|
 |:-----|:-----|
 |[![Microsoft 365 企業版底層基礎結構海報的縮圖影像](media/Microsoft365EnterpriseFoundInfra-thumb.png)](https://aka.ms/m365efoundinfraposter) <br/> [線上檢視](https://aka.ms/m365efoundinfraposter) \| [PDF](https://github.com/MicrosoftDocs/microsoft-365-docs/raw/public/microsoft-365/media/deploy-foundation-infrastructure/Microsoft365EnterpriseFoundInfra.pdf) <br/> | 此海報針對目標、功能和工具、設計決策、設定結果、上架，以及持續監視和更新，摘要說明底層基礎結構的每個階段。 <br/>| 
 
@@ -222,7 +222,7 @@ Microsoft supports several options as you begin your journey to Teams in the Mic
 
 [適用於 SharePoint、Exchange、商務用 Skype 和 Lync 的架構模型](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)
   
-[企業用 Microsoft 365 測試實驗室指南](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)
+[Microsoft 365 企業版測試實驗室指南](https://docs.microsoft.com/microsoft-365/enterprise/m365-enterprise-test-lab-guides)
   
 [混合式解決方案](hybrid-solutions.md)
 
