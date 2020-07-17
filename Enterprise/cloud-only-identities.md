@@ -49,7 +49,7 @@ ms.locfileid: "44774828"
 
 在您的組織中製作使用者類型的股份。 分組的群組為何？ 例如，您可以將高層次的功能或目的群組的使用者群組為您的組織。
 
-Additionally, some cloud services can be shared with users outside your organization without any user accounts. You'll need to identify these groups of users as well.
+此外，某些雲端服務可以與組織外的使用者共用，而不需使用任何使用者帳戶。您也必須識別使用者的這些群組。
 
 您可以針對多種目的使用 Azure AD 中的群組，以簡化雲端環境的管理。 例如，使用 Azure AD 群組時，您可以：
 

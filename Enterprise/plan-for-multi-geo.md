@@ -57,7 +57,7 @@ ms.locfileid: "45052456"
 
 [!INCLUDE [Microsoft 365 Multi-Geo locations](includes/office-365-multi-geo-locations.md)]
 
-When you configure multi-geo, consider taking the opportunity to consolidate your on-premises infrastructure while migrating to Microsoft 365. For example, if you have on-premises farms in Singapore and Malaysia, then you can consolidate them to the APC satellite location, provided data residency requirements allow you to do so.
+設定多地理位置時，請考慮在移轉到 Microsoft 365 時合併內部部署基礎結構的可能性。比方說，如果您在新加坡和馬來西亞有內部部署伺服器陣列，然後您可以將他們合併至 APC 衛星位置中，提供的資料常駐要求可讓您執行此動作。
 
 ## <a name="best-practices"></a>最佳做法
 
@@ -65,13 +65,13 @@ When you configure multi-geo, consider taking the opportunity to consolidate you
 
 與測試使用者一起完成測試後，請選取一個試驗組 (可以是您的 IT 部門的人員)，成為第一批在新地理位置使用 OneDrive 和 Exchange 的人。 在第一批人員當中，選取還沒有 OneDrive 的使用者。 我們建議這個試驗組不要超過五個人，之後再透過批次推出方法來逐步擴展。
 
-Each user should have a *preferred data location* (PDL) set so that Microsoft 365 can determine in which geo location to provision their OneDrive. The user's preferred data location must match one of your chosen satellite locations or your central location. While the PDL field is not mandatory, we recommend that a PDL be set for all users. Workloads of a user without a PDL will be provisioned in the central location.
+每個使用者應具備*慣用的資料位置*(PDL) 設定，以便 Microsoft 365 判斷佈建其 OneDrive 的地理位置。使用者慣用的資料位置必須與您所選的某個衛星位置或您的中心位置相符。當 PDL 不是強制性欄位時，我們建議為所有使用者設定 PDL。沒有 PDL 的使用者工作負載會佈建在中心位置。
 
-Create a list of your users, and include their user principal name (UPN) and the location code for the appropriate preferred data location. Include your test user and your initial pilot group to start with. You'll need this list for the configuration procedures.
+建立使用者清單，並包含使用者主體名稱 (UPN) 與適當慣用資料位置的位置代碼。包含測試使用者與您起始的試驗群組來開始進行。您將需要此清單來設定程序。
 
 如果您的使用者是從內部部署 Active Directory 系統同步到 Azure Active Directory，您必須將慣用資料位置設定為 Active Directory 屬性，並使用 Azure Active Directory Connect 進行同步。 您無法使用 Azure AD PowerShell為同步使用者直接設定慣用資料位置。 在 Active Directory 中設定 PDL 並對其進行同步的步驟會於 [Azure Active Directory Connect 同步：為 Microsoft 365 資源設定慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)中說明。
 
-The administration of a multi-geo tenant can differ from a non-multi-geo tenant, as many of the SharePoint and OneDrive settings and services are multi-geo aware. We recommend that you review [Administering a multi-geo environment](administering-a-multi-geo-environment.md) before you proceed with your configuration.
+多地理位置租用戶的管理可能與非多地理位置租用戶不同，因為許多 SharePoint 和 OneDrive 設定與服務具有多地理位置意識。我們建議您檢閱[管理多地理位置環境](administering-a-multi-geo-environment.md)，再繼續進行您的組態。
 
 請閱讀[在多地理位置環境中的使用者體驗](multi-geo-user-experience.md)，以詳細了解使用者在多地理環境中的體驗。
 

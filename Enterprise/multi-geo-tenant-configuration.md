@@ -28,7 +28,7 @@ ms.locfileid: "45052566"
 
 若要使用 Microsoft 365 多地理位置，您需要「Microsoft 365 中的多地理位置功能」__ 方案。 請與您的帳戶小組合作，將此方案新增到您的租用戶。 您的帳戶小組會協助您聯繫適當的授權專員，讓您完成租用戶設定。
 
-Note that the _Multi-Geo Capabilities in Microsoft 365_ plan are a user-level service plan. You need a license for each user that you want to host in a satellite location. You can add more licenses over time as you add users in satellite locations.
+請注意，「Microsoft 365 的多地理位置功能」__ 方案是使用者層級的服務方案。對於您要在衛星位置裝載的每個使用者，您都需要有授權。隨著您在衛星位置中新增使用者，您可以逐漸新增更多授權。
 
 在租用戶佈建「Microsoft 365 的多地理位置功能」__ 方案後，OneDrive 和 SharePoint 系統管理中心的 [地理位置]**** 索引標籤會變成可用。
 
@@ -54,15 +54,15 @@ Note that the _Multi-Geo Capabilities in Microsoft 365_ plan are a user-level se
 
 6. 按一下 [關閉]****。
 
-Provisioning may take from a few hours up to 72 hours, depending on the size of your tenant. Once provisioning of a satellite location has completed, you will receive an email confirmation. When the new geo location appears in blue on the map on the **Geo locations** tab in the OneDrive admin center, you can proceed to set users' preferred data location to that geo location. 
+佈建可能需要幾小時，最多 72 小時，視租用戶大小而定。衛星位置的佈建完成後，您將會收到電子郵件確認。當新的地理位置在 OneDrive 系統管理中心的 [**地理位置**] 索引標籤上以藍色顯示在地圖上，您就可以繼續將使用者慣用的資料位置設定到該地理位置。 
 
 > [!IMPORTANT]
-> Your new satellite location will be set up with default settings. This will allow you to configure that satellite location as appropriate for your local compliance needs.
+> 您的新衛星位置將會以預設設定進行設定。這可讓您依當地合規性需求來設定該衛星位置。
 
 ## <a name="setting-users-preferred-data-location"></a>設定使用者的慣用資料位置
 <span id="_Setting_a_User's" class="anchor"><span id="_Toc508109326" class="anchor"></span></span> 
 
-Once you enable the needed satellite locations, you can update your user accounts to use the appropriate preferred data location. We recommend that you set a preferred data location for every user, even if that user is staying in the central location.
+一旦啟用所需的衛星位置，您就可以更新使用者帳戶以使用適當的慣用資料位置。建議您為每個使用者設定慣用的資料位置，即使該使用者會停留在中央位置。
 
 > [!IMPORTANT]
 > 如果使用者的慣用資料位置設定為尚未設定衛星位置或中央位置的位置，當佈建 OneDrive 和 SharePoint 網站和群組信箱時，系統將預設其為中央位置。
@@ -91,11 +91,11 @@ Once you enable the needed satellite locations, you can update your user account
 
 1.  使用租用戶的全域系統管理員認證，[連線並登入](/powershell/connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
-2.  Use the [Set-MsolUser](https://docs.microsoft.com/powershell/msonline/v1/set-msoluser) cmdlet to set the preferred data location for each of your users. For example:
+2.  使用 [Set-MsolUser](https://docs.microsoft.com/powershell/msonline/v1/set-msoluser) Cmdlet 為每個使用者設定慣用資料位置。例如：
 
     `Set-MsolUser -userprincipalName Robyn.Buckley@Contoso.com -PreferredDatalocation EUR`
 
-    You can check to confirm that the preferred data location was updated properly by using the Get-MsolUser cmdlet. For example:
+    您可以檢查以確認慣用的資料位置已使用 Get-MsolUser Cmdlet 正確更新。例如：
 
     `(Get-MsolUser -userprincipalName Robyn.Buckley@Contoso.com).PreferredDatalocation`
 
@@ -144,12 +144,12 @@ Once you enable the needed satellite locations, you can update your user account
 
 **OneDrive 同步處理用戶端**
 
-Confirm that the OneDrive sync client automatically detects your OneDrive for Business geo location upon login. If you need to download the sync client, you can click **Sync** in the OneDrive library.
+確認 OneDrive 同步處理用戶端會在登入時自動偵測商務用 OneDrive 的地理位置。如果您要下載同步處理用戶端，請按一下 OneDrive 文件庫中的 [**同步處理**]。
 
 **Office 應用程式**
 
-Confirm that you can access OneDrive for Business by logging in from an Office application, such as Word. Open the Office application and select "OneDrive – <TenantName>". Office will detect your OneDrive location and show you the files that you can open.
+請確認您可以從 Office 應用程式 (如 Word) 登入，以存取商務用 OneDrive。開啟 Office 應用程式並選取 [OneDrive – <TenantName>]。Office 會偵測您的 OneDrive 位置，並顯示您可以開啟的檔案。
 
 **共用**
 
-Try sharing OneDrive files. Confirm that the people picker shows you all your SharePoint online users regardless of their geo location.
+嘗試共用 OneDrive 檔案。確認人員選擇器顯示您的所有 SharePoint 線上使用者，無論其地理位置為何。

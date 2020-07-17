@@ -56,7 +56,7 @@ ms.locfileid: "45102601"
 
 根據預設，Office 2013 用戶端應用程式支援舊版驗證。 「舊版」是表示它們支援 Microsoft 線上登入小幫手或基本驗證。 為了讓這些用戶端使用新式驗證功能，Windows 用戶端必須已設定登錄機碼。 如需相關指示，請參閱[在 Windows 裝置上啟用 Office 2013 的新式驗證](https://support.office.com/article/7dc1c01a-090f-4971-9677-f1b192d6c910)。
 
-To enable modern authentication for any devices running Windows (for example on laptops and tablets), that have Microsoft Office 2013 installed, you need to set the following registry keys. The keys have to be set on each device that you want to enable for modern authentication:
+若要針對已安裝 Microsoft Office 2013、且執行 Windows 的任何裝置啟用新式驗證 (比如膝上型電腦和平板電腦)，您必須先設定下列登錄機碼。您必須在每部要啟用新式驗證的裝置上設定機碼：
   
 |**登錄機碼**|**類型**|**Value** |
 |:-------|:------:|--------:|

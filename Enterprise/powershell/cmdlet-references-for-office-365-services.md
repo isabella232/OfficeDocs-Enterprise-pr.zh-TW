@@ -43,7 +43,7 @@ Exchange Online Cmdlet 參考主題位於[Exchange online PowerShell 檔](https:
 如需 Exchange Online PowerShell 的連線指示，請按一下[[連線至 Exchange online PowerShell]](https://go.microsoft.com/fwlink/p/?LinkId=396554)。
   
 > [!NOTE]
-> Reporting cmdlets for other services, for example, SharePoint Online, Skype for Business Online, and Office 365 user activity are available in Exchange Online PowerShell. For more information, see [Reporting cmdlets in Exchange Online](https://go.microsoft.com/fwlink/p/?LinkId=691595). 
+> 針對其他服務報告 Cmdlet，例如 SharePoint Online、商務用 Skype Online 及 Office 365 使用者活動適用於 Exchange Online PowerShell。如需詳細資訊，請參閱 [Exchange Online 中的報告 Cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=691595)。 
   
 ## <a name="sharepoint-online-powershell-cmdlets"></a>SharePoint Online PowerShell Cmdlet
 
