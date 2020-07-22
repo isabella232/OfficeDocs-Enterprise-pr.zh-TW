@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 165f46e8-3533-4d76-be57-97f81ebd40f2
 description: 使用設定指南，加速規劃和設定 Microsoft 365 或 Office 365。
-ms.openlocfilehash: 92c792b3d82a6a0f1405059ae50db581823704dc
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: a3523b78c33b51d00da24bd9b43d39e5e5fb67e7
+ms.sourcegitcommit: 35655e2b098e46822c14d98583cc47b87516a629
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735971"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "45201627"
 ---
 # <a name="setup-guides-for-microsoft-365-and-office-365-services"></a>Microsoft 365 和 Office 365 服務的設定指南
 
@@ -103,6 +103,15 @@ Microsoft 365 和 Office 365 安裝指南提供管理員針對部署應用程式
 | **運行：** | [遠端工作安裝指南](https://aka.ms/remoteworksetup) |
 |||
 
+### <a name="windows-virtual-desktop-setup-guide"></a>Windows Virtual Desktop 安裝指南
+
+Windows 虛擬機器是雲端中執行的綜合桌面和應用程式虛擬化服務。 這是唯一的虛擬桌面基礎結構（VDI），可提供簡化的管理、多個會話的 Windows 10、Microsoft 365 應用程式的優化，以及支援遠端桌面服務（RDS）環境。 在幾分鐘內部署並縮放您的 Windows 桌面和應用程式至 Azure，以取得內建的安全性和合規性功能。 **Windows Virtual Desktop 安裝指南**為系統管理員提供規劃資源和必要條件，以進行部署、安裝指導及其他資源。 
+
+|||
+|:-------|:-----|
+| **運行：** | [Windows Virtual Desktop 安裝指南](https://aka.ms/wvdsetupguide) |
+|||
+
 ## <a name="guides-for-security"></a>安全性指南
 
 ### <a name="azure-ad-setup-guide"></a>Azure AD 安裝指南
@@ -112,6 +121,15 @@ Microsoft 365 和 Office 365 安裝指南提供管理員針對部署應用程式
 |||
 |:-------|:-----|
 | **運行：** | [Azure AD 安裝指南](https://aka.ms/aadpguidance) |
+|||
+
+### <a name="plan-your-passwordless-deployment"></a>規劃 passwordless 部署
+
+升級至替代登入方法，可讓使用者使用下列其中一個 passwordless 驗證方法，安全地存取其裝置： Windows Hello 企業版、Microsoft 驗證者應用程式或安全性參數。 使用此嚮導探索最佳 passwordless 驗證方法，以使用和接收如何部署這些方法的指導方針。
+
+|||
+|:-------|:-----|
+| **運行：** | [規劃 passwordless 部署](https://aka.ms/passwordlesssetup) |
 |||
 
 ### <a name="microsoft-defender-advanced-threat-protection-atp-advisor"></a>Microsoft Defender 高級威脅防護（ATP）顧問
