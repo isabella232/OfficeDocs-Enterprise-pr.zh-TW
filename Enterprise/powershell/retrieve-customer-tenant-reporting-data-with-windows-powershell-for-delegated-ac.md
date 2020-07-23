@@ -15,43 +15,45 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: 893e5275-30b3-433f-8ecd-644f78f513e2
 description: 摘要：使用遠端 Windows PowerShell for Microsoft Exchange Online 從個別客戶租用戶擷取報告。
-ms.openlocfilehash: d4b8d931b6b8ea8c7b8467dd70326e1b0fbfc3d5
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 4e18eb2e2ed5f801106535b31577d3186e87c58c
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998622"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230279"
 ---
-# <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a><span data-ttu-id="24e23-103">利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料</span><span class="sxs-lookup"><span data-stu-id="24e23-103">Retrieve customer tenant reporting data with Windows PowerShell for Delegated Access Permissions (DAP) partners</span></span>
+# <a name="retrieve-customer-tenant-reporting-data-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a><span data-ttu-id="f0536-103">利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 擷取客戶租用戶報告資料</span><span class="sxs-lookup"><span data-stu-id="f0536-103">Retrieve customer tenant reporting data with Windows PowerShell for Delegated Access Permissions (DAP) partners</span></span>
 
-<span data-ttu-id="24e23-104">使用 Microsoft Exchange Online 的遠端 Windows PowerShell，從個別客戶承租人取得報告。</span><span class="sxs-lookup"><span data-stu-id="24e23-104">Use remote Windows PowerShell for Microsoft Exchange Online to retrieve reports from individual customer tenants.</span></span>
+<span data-ttu-id="f0536-104">*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="f0536-104">*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*</span></span>
+
+<span data-ttu-id="f0536-105">使用 Microsoft Exchange Online 的遠端 Windows PowerShell，從個別客戶承租人取得報告。</span><span class="sxs-lookup"><span data-stu-id="f0536-105">Use remote Windows PowerShell for Microsoft Exchange Online to retrieve reports from individual customer tenants.</span></span>
   
-<span data-ttu-id="24e23-p101">新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴可透過遠端 Windows PowerShell for Exchange Online PowerShell 直接存取構成客戶租用戶報告的資料。這可讓合作夥伴收集和儲存報告資料，再據此執行其他作業。開啟遠端連線之後，擷取客戶租用相關報告資料的程序與針對客戶租用執行任何 Cmdlet 相同。</span><span class="sxs-lookup"><span data-stu-id="24e23-p101">Syndication and Cloud Solution Provider (CSP) partners can access the data that makes up customer tenant reports directly via remoteWindows PowerShell for Exchange Online PowerShell. This lets partners collect and save the reporting data and then perform other operations on it. After you open a remote connection, retrieving reporting data about a customer tenancy is identical to running any cmdlet against a customer tenancy.</span></span>
+<span data-ttu-id="f0536-106">整合和雲端解決方案提供者（CSP）合作夥伴可以透過 Exchange Online PowerShell 的遠端 Windows PowerShell，直接存取組成客戶租使用者報告的資料。</span><span class="sxs-lookup"><span data-stu-id="f0536-106">Syndication and Cloud Solution Provider (CSP) partners can access the data that makes up customer tenant reports directly via remote Windows PowerShell for Exchange Online PowerShell.</span></span> <span data-ttu-id="f0536-107">這可讓合作夥伴收集和儲存報告資料，再據此執行其他作業。</span><span class="sxs-lookup"><span data-stu-id="f0536-107">This lets partners collect and save the reporting data and then perform other operations on it.</span></span> <span data-ttu-id="f0536-108">開啟遠端連線之後，擷取客戶租用相關報告資料的程序與針對客戶租用執行任何 Cmdlet 相同。</span><span class="sxs-lookup"><span data-stu-id="f0536-108">After you open a remote connection, retrieving reporting data about a customer tenancy is identical to running any cmdlet against a customer tenancy.</span></span>
   
-<span data-ttu-id="24e23-p102">在本文中，您可以使用遠端 Windows PowerShell for Exchange Online 來連接單一客戶租用及擷取報告。依預設，Windows PowerShell 不支援從多個客戶租用彙集資料。使用此程序擷取的報告僅限您連接的  _DelegatedOrg_。</span><span class="sxs-lookup"><span data-stu-id="24e23-p102">In this article, you use remoteWindows PowerShell for Exchange Online to connect to a single customer tenancy and retrieve a report. By default, Windows PowerShell does not support aggregating reporting data from multiple customer tenancies. The reports you retrieve with this procedure are only for the  _DelegatedOrg_ that you connect to.</span></span>
+<span data-ttu-id="f0536-109">在本文中，您會使用遠端 Windows PowerShell 以進行 Exchange Online，以連線到單一客戶租使用者並取得報告。</span><span class="sxs-lookup"><span data-stu-id="f0536-109">In this article, you use remote Windows PowerShell for Exchange Online to connect to a single customer tenancy and retrieve a report.</span></span> <span data-ttu-id="f0536-110">依預設，Windows PowerShell 不支援從多個客戶租用彙集資料。</span><span class="sxs-lookup"><span data-stu-id="f0536-110">By default, Windows PowerShell does not support aggregating reporting data from multiple customer tenancies.</span></span> <span data-ttu-id="f0536-111">使用此程序擷取的報告僅限您連接的  _DelegatedOrg_。</span><span class="sxs-lookup"><span data-stu-id="f0536-111">The reports you retrieve with this procedure are only for the  _DelegatedOrg_ that you connect to.</span></span>
   
  
-## <a name="before-you-begin"></a><span data-ttu-id="24e23-111">開始之前</span><span class="sxs-lookup"><span data-stu-id="24e23-111">Before you begin</span></span>
+## <a name="before-you-begin"></a><span data-ttu-id="f0536-112">開始之前</span><span class="sxs-lookup"><span data-stu-id="f0536-112">Before you begin</span></span>
 
-- <span data-ttu-id="24e23-p103">您需要使用遠端 Windows PowerShell 連接 Exchange Online 租用戶。如需詳細指示，請參閱[利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)。</span><span class="sxs-lookup"><span data-stu-id="24e23-p103">You need to connect to your Exchange Online tenant by using remote Windows PowerShell. For instructions, see [Connect to Exchange Online tenants with remote Windows PowerShell for Delegated Access Permissions (DAP) partners](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)</span></span>
+- <span data-ttu-id="f0536-p103">您需要使用遠端 Windows PowerShell 連接 Exchange Online 租用戶。如需詳細指示，請參閱[利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)。</span><span class="sxs-lookup"><span data-stu-id="f0536-p103">You need to connect to your Exchange Online tenant by using remote Windows PowerShell. For instructions, see [Connect to Exchange Online tenants with remote Windows PowerShell for Delegated Access Permissions (DAP) partners](connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated.md)</span></span>
     
-## <a name="run-the-get-stalemailboxreport-sample"></a><span data-ttu-id="24e23-114">執行 Get-StaleMailboxReport 範例</span><span class="sxs-lookup"><span data-stu-id="24e23-114">Run the Get-StaleMailboxReport sample</span></span>
+## <a name="run-the-get-stalemailboxreport-sample"></a><span data-ttu-id="f0536-115">執行 Get-StaleMailboxReport 範例</span><span class="sxs-lookup"><span data-stu-id="f0536-115">Run the Get-StaleMailboxReport sample</span></span>
 
-<span data-ttu-id="24e23-115">在開啟連接 Exchange Online 的遠端工作階段後，執行此命令以擷取日期範圍介於 2015/03/25 到 2015/03/31/ 之間的 **Get-StaleMailboxReport** 。</span><span class="sxs-lookup"><span data-stu-id="24e23-115">After you have opened a remote session to Exchange Online, run this command to retrieve the **Get-StaleMailboxReport** for the date range 03/25/2015 through 03/31/2015.</span></span>
+<span data-ttu-id="f0536-116">在開啟連接 Exchange Online 的遠端工作階段後，執行此命令以擷取日期範圍介於 2015/03/25 到 2015/03/31/ 之間的 **Get-StaleMailboxReport** 。</span><span class="sxs-lookup"><span data-stu-id="f0536-116">After you have opened a remote session to Exchange Online, run this command to retrieve the **Get-StaleMailboxReport** for the date range 03/25/2015 through 03/31/2015.</span></span>
   
 ```
 Get-StaleMailboxReport -StartDate 03/25/2015 -EndDate 03/31/2015
 ```
 
-<span data-ttu-id="24e23-p104">Exchange Online、Lync Online 及 SharePoint Online 另有其他許多適用的報告 Cmdlet，以及其他可用來追蹤訊息的 Cmdlet。若要尋找其他可用之報告 Cmdlet 和 Office 365 報告 Web 服務的相關資訊，請參閱以下小節中的主題。</span><span class="sxs-lookup"><span data-stu-id="24e23-p104">There are many other reporting cmdlets available for Exchange Online, Lync Online, and SharePoint Online as well as others for message tracing that you can use. To find out more about the available reporting cmdlets and the Office 365 Reporting web service, see the topics in the following section.</span></span>
+<span data-ttu-id="f0536-p104">Exchange Online、Lync Online 及 SharePoint Online 另有其他許多適用的報告 Cmdlet，以及其他可用來追蹤訊息的 Cmdlet。若要尋找其他可用之報告 Cmdlet 和 Office 365 報告 Web 服務的相關資訊，請參閱以下小節中的主題。</span><span class="sxs-lookup"><span data-stu-id="f0536-p104">There are many other reporting cmdlets available for Exchange Online, Lync Online, and SharePoint Online as well as others for message tracing that you can use. To find out more about the available reporting cmdlets and the Office 365 Reporting web service, see the topics in the following section.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="24e23-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24e23-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f0536-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f0536-119">See also</span></span>
 
 #### 
 
-[<span data-ttu-id="24e23-119">Office 365 報告 Web 服務</span><span class="sxs-lookup"><span data-stu-id="24e23-119">Office 365 Reporting web service</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=532777)
+[<span data-ttu-id="f0536-120">Office 365 報告 Web 服務</span><span class="sxs-lookup"><span data-stu-id="f0536-120">Office 365 Reporting web service</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=532777)
   
-[<span data-ttu-id="24e23-120">Exchange Online 中的報告 Cmdlet</span><span class="sxs-lookup"><span data-stu-id="24e23-120">Reporting cmdlets in Exchange Online</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=526430)
+[<span data-ttu-id="f0536-121">Exchange Online 中的報告 Cmdlet</span><span class="sxs-lookup"><span data-stu-id="f0536-121">Reporting cmdlets in Exchange Online</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=526430)
   
-[<span data-ttu-id="24e23-121">合作夥伴說明</span><span class="sxs-lookup"><span data-stu-id="24e23-121">Help for partners</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=533477)
+[<span data-ttu-id="f0536-122">合作夥伴說明</span><span class="sxs-lookup"><span data-stu-id="f0536-122">Help for partners</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=533477)
 

@@ -1,5 +1,5 @@
 ---
-title: 停用服務存取權，並指派使用者授權
+title: 在指派使用者授權時停用 Microsoft 365 服務的存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,34 +17,36 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
-description: 瞭解如何使用 Office 365 PowerShell，將授權指派給使用者帳戶並同時停用特定服務方案。
-ms.openlocfilehash: b1fcd8afd9f9fee5b249752821385cd888519a37
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: 瞭解如何使用 Microsoft 365 的 PowerShell，將授權指派給使用者帳戶並同時停用特定服務方案。
+ms.openlocfilehash: 31199fa2fa61ec5da671da5def2bf648a07e7dd4
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009468"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230689"
 ---
-# <a name="disable-access-to-services-while-assigning-user-licenses"></a><span data-ttu-id="8b591-103">停用服務存取權，並指派使用者授權</span><span class="sxs-lookup"><span data-stu-id="8b591-103">Disable access to services while assigning user licenses</span></span>
+# <a name="disable-access-to-microsoft-365-services-while-assigning-user-licenses"></a><span data-ttu-id="9f971-103">在指派使用者授權時停用 Microsoft 365 服務的存取權</span><span class="sxs-lookup"><span data-stu-id="9f971-103">Disable access to Microsoft 365 services while assigning user licenses</span></span>
 
-<span data-ttu-id="8b591-104">Office 365 訂閱隨附個別服務的服務方案。</span><span class="sxs-lookup"><span data-stu-id="8b591-104">Office 365 subscriptions come with service plans for individual services.</span></span> <span data-ttu-id="8b591-105">當您指派授權給使用者時，Office 365 系統管理員常常需要停用某些方案。</span><span class="sxs-lookup"><span data-stu-id="8b591-105">Office 365 administrators often need to disable certain plans when assigning licenses to users.</span></span> <span data-ttu-id="8b591-106">透過本文中的指示，您可以在使用個別使用者帳戶或多個使用者帳戶的 PowerShell 停用特定的服務方案時，指派 Office 365 授權。</span><span class="sxs-lookup"><span data-stu-id="8b591-106">With the instructions in this article, you can assign an Office 365 license while disabling specific service plans using PowerShell for an individual user account or multiple user accounts.</span></span>
+<span data-ttu-id="9f971-104">*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="9f971-104">*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*</span></span>
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="8b591-107">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="8b591-107">Use the Azure Active Directory PowerShell for Graph module</span></span>
+<span data-ttu-id="9f971-105">Microsoft 365 訂閱隨附個別服務的服務方案。</span><span class="sxs-lookup"><span data-stu-id="9f971-105">Microsoft 365 subscriptions come with service plans for individual services.</span></span> <span data-ttu-id="9f971-106">Microsoft 365 系統管理員經常需要在指派授權給使用者時停用特定的計畫。</span><span class="sxs-lookup"><span data-stu-id="9f971-106">Microsoft 365 administrators often need to disable certain plans when assigning licenses to users.</span></span> <span data-ttu-id="9f971-107">透過本文中的指示，您可以在使用個別使用者帳戶或多個使用者帳戶的 PowerShell 停用特定的服務方案時，指派 Microsoft 365 授權。</span><span class="sxs-lookup"><span data-stu-id="9f971-107">With the instructions in this article, you can assign a Microsoft 365 license while disabling specific service plans using PowerShell for an individual user account or multiple user accounts.</span></span>
 
-<span data-ttu-id="8b591-108">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="8b591-108">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="9f971-108">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="9f971-108">Use the Azure Active Directory PowerShell for Graph module</span></span>
+
+<span data-ttu-id="9f971-109">首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="9f971-109">First, [connect to your Microsoft 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
   
 
-<span data-ttu-id="8b591-109">接下來，使用此命令列出租使用者的授權計畫。</span><span class="sxs-lookup"><span data-stu-id="8b591-109">Next, list the license plans for your tenant with this command.</span></span>
+<span data-ttu-id="9f971-110">接下來，使用此命令列出租使用者的授權計畫。</span><span class="sxs-lookup"><span data-stu-id="9f971-110">Next, list the license plans for your tenant with this command.</span></span>
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-<span data-ttu-id="8b591-110">接下來，取得您想要新增授權的帳戶登入名稱，也稱為使用者主要名稱（UPN）。</span><span class="sxs-lookup"><span data-stu-id="8b591-110">Next, get the sign-in name of the account to which you want add a license, also known as the user principal name (UPN).</span></span>
+<span data-ttu-id="9f971-111">接下來，取得您想要新增授權的帳戶登入名稱，也稱為使用者主要名稱（UPN）。</span><span class="sxs-lookup"><span data-stu-id="9f971-111">Next, get the sign-in name of the account to which you want add a license, also known as the user principal name (UPN).</span></span>
 
-<span data-ttu-id="8b591-111">接下來，編譯要啟用的服務清單。</span><span class="sxs-lookup"><span data-stu-id="8b591-111">Next, compile a list of services to enable.</span></span> <span data-ttu-id="8b591-112">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="8b591-112">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
+<span data-ttu-id="9f971-112">接下來，編譯要啟用的服務清單。</span><span class="sxs-lookup"><span data-stu-id="9f971-112">Next, compile a list of services to enable.</span></span> <span data-ttu-id="9f971-113">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="9f971-113">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
 
-<span data-ttu-id="8b591-113">針對下列命令區塊，請填入使用者帳戶的使用者主要名稱、SKU 元件編號，以及要啟用及移除解說文字和\<及 > 字元的服務方案清單。</span><span class="sxs-lookup"><span data-stu-id="8b591-113">For the command block below, fill in the user principal name of the user account, the SKU part number, and the list of service plans to enable and remove the explanatory text and the \< and > characters.</span></span> <span data-ttu-id="8b591-114">然後，在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="8b591-114">Then, run the resulting commands at the PowerShell command prompt.</span></span>
+<span data-ttu-id="9f971-114">在下列命令區塊中，填入使用者帳戶的使用者主要名稱、SKU 元件編號，以及要啟用及移除解說文字和字元的服務方案清單 \< and > 。</span><span class="sxs-lookup"><span data-stu-id="9f971-114">For the command block below, fill in the user principal name of the user account, the SKU part number, and the list of service plans to enable and remove the explanatory text and the \< and > characters.</span></span> <span data-ttu-id="9f971-115">然後，在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="9f971-115">Then, run the resulting commands at the PowerShell command prompt.</span></span>
   
 ```powershell
 $userUPN="<user account UPN>"
@@ -63,63 +65,63 @@ $LicensesToAssign.AddLicenses = $License
 Set-AzureADUserLicense -ObjectId $user.ObjectId -AssignedLicenses $LicensesToAssign
 ```
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="8b591-115">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="8b591-115">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="9f971-116">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="9f971-116">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
 
-<span data-ttu-id="8b591-116">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="8b591-116">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
+<span data-ttu-id="9f971-117">首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="9f971-117">First, [connect to your Microsoft 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
 
-<span data-ttu-id="8b591-117">接下來，執行下列命令以查看您目前的訂閱：</span><span class="sxs-lookup"><span data-stu-id="8b591-117">Next, run this command to see your current subscriptions:</span></span>
+<span data-ttu-id="9f971-118">接下來，執行下列命令以查看您目前的訂閱：</span><span class="sxs-lookup"><span data-stu-id="9f971-118">Next, run this command to see your current subscriptions:</span></span>
   
 ```powershell
 Get-MsolAccountSku
 ```
 
 >[!Note]
-><span data-ttu-id="8b591-118">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="8b591-118">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="8b591-119">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="8b591-119">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
+><span data-ttu-id="9f971-119">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="9f971-119">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="9f971-120">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="9f971-120">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
 >
 
-<span data-ttu-id="8b591-120">在 [顯示] `Get-MsolAccountSku`命令中：</span><span class="sxs-lookup"><span data-stu-id="8b591-120">In the display of the  `Get-MsolAccountSku` command:</span></span>
+<span data-ttu-id="9f971-121">在 [顯示] `Get-MsolAccountSku` 命令中：</span><span class="sxs-lookup"><span data-stu-id="9f971-121">In the display of the  `Get-MsolAccountSku` command:</span></span>
   
-- <span data-ttu-id="8b591-121">**AccountSkuId**是 OrganizationName>： \< \<訂閱> 格式中的組織訂閱。</span><span class="sxs-lookup"><span data-stu-id="8b591-121">**AccountSkuId** is a subscription for your organization in \<OrganizationName>:\<Subscription> format.</span></span> <span data-ttu-id="8b591-122">\<OrganizationName> 是您在 Office 365 中登記時所提供的值，且對您的組織而言是唯一的。</span><span class="sxs-lookup"><span data-stu-id="8b591-122">The \<OrganizationName> is the value that you provided when you enrolled in Office 365, and is unique for your organization.</span></span> <span data-ttu-id="8b591-123">\<訂閱> 值是針對特定訂閱。</span><span class="sxs-lookup"><span data-stu-id="8b591-123">The \<Subscription> value is for a specific subscription.</span></span> <span data-ttu-id="8b591-124">例如，針對 litwareinc:ENTERPRISEPACK，組織名稱是 litwareinc，訂閱名稱是 ENTERPRISEPACK （Office 365 企業版 E3）。</span><span class="sxs-lookup"><span data-stu-id="8b591-124">For example, for litwareinc:ENTERPRISEPACK, the organization name is litwareinc, and the subscription name is ENTERPRISEPACK (Office 365 Enterprise E3).</span></span>
+- <span data-ttu-id="9f971-122">**AccountSkuId**為您組織的訂閱 \<OrganizationName> ： \<Subscription> format。</span><span class="sxs-lookup"><span data-stu-id="9f971-122">**AccountSkuId** is a subscription for your organization in \<OrganizationName>:\<Subscription> format.</span></span> <span data-ttu-id="9f971-123">是您在 \<OrganizationName> Microsoft 365 中註冊時所提供的值，且對您的組織而言是唯一的。</span><span class="sxs-lookup"><span data-stu-id="9f971-123">The \<OrganizationName> is the value that you provided when you enrolled in Microsoft 365, and is unique for your organization.</span></span> <span data-ttu-id="9f971-124">\<Subscription>值是針對特定訂閱。</span><span class="sxs-lookup"><span data-stu-id="9f971-124">The \<Subscription> value is for a specific subscription.</span></span> <span data-ttu-id="9f971-125">例如，針對 litwareinc:ENTERPRISEPACK，組織名稱是 litwareinc，訂閱名稱是 ENTERPRISEPACK （Office 365 企業版 E3）。</span><span class="sxs-lookup"><span data-stu-id="9f971-125">For example, for litwareinc:ENTERPRISEPACK, the organization name is litwareinc, and the subscription name is ENTERPRISEPACK (Office 365 Enterprise E3).</span></span>
     
-- <span data-ttu-id="8b591-125">**ActiveUnits**為您為訂閱購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="8b591-125">**ActiveUnits** is the number of licenses that you've purchased for the subscription.</span></span>
+- <span data-ttu-id="9f971-126">**ActiveUnits**為您為訂閱購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="9f971-126">**ActiveUnits** is the number of licenses that you've purchased for the subscription.</span></span>
     
-- <span data-ttu-id="8b591-126">**WarningUnits**是尚未更新之訂閱中的授權數目，在30天的寬限期後會到期。</span><span class="sxs-lookup"><span data-stu-id="8b591-126">**WarningUnits** is the number of licenses in a subscription that you haven't renewed, and that will expire after the 30-day grace period.</span></span>
+- <span data-ttu-id="9f971-127">**WarningUnits**是尚未更新之訂閱中的授權數目，在30天的寬限期後會到期。</span><span class="sxs-lookup"><span data-stu-id="9f971-127">**WarningUnits** is the number of licenses in a subscription that you haven't renewed, and that will expire after the 30-day grace period.</span></span>
     
-- <span data-ttu-id="8b591-127">**ConsumedUnits**是您為訂閱指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="8b591-127">**ConsumedUnits** is the number of licenses that you've assigned to users for the subscription.</span></span>
+- <span data-ttu-id="9f971-128">**ConsumedUnits**是您為訂閱指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="9f971-128">**ConsumedUnits** is the number of licenses that you've assigned to users for the subscription.</span></span>
     
-<span data-ttu-id="8b591-128">請記下您的 Office 365 訂閱的 AccountSkuId，其中包含您想要授權的使用者。</span><span class="sxs-lookup"><span data-stu-id="8b591-128">Note the AccountSkuId for your Office 365 subscription that contains the users you want to license.</span></span> <span data-ttu-id="8b591-129">此外，請確定有足夠的授權可指派（從**ActiveUnits**中減去**ConsumedUnits** ）。</span><span class="sxs-lookup"><span data-stu-id="8b591-129">Also, ensure that there are enough licenses to assign (subtract **ConsumedUnits** from **ActiveUnits** ).</span></span>
+<span data-ttu-id="9f971-129">請注意包含您要授權之使用者的 Microsoft 365 訂閱 AccountSkuId。</span><span class="sxs-lookup"><span data-stu-id="9f971-129">Note the AccountSkuId for your Microsoft 365 subscription that contains the users you want to license.</span></span> <span data-ttu-id="9f971-130">此外，請確定有足夠的授權可指派（從**ActiveUnits**中減去**ConsumedUnits** ）。</span><span class="sxs-lookup"><span data-stu-id="9f971-130">Also, ensure that there are enough licenses to assign (subtract **ConsumedUnits** from **ActiveUnits** ).</span></span>
   
-<span data-ttu-id="8b591-130">接下來，執行此命令，以查看您所有訂閱中可用之 Office 365 服務方案的詳細資料：</span><span class="sxs-lookup"><span data-stu-id="8b591-130">Next, run this command to see the details about the Office 365 service plans that are available in all your subscriptions:</span></span>
+<span data-ttu-id="9f971-131">接下來，執行此命令，以查看您所有訂閱中可用之 Microsoft 365 服務方案的詳細資料：</span><span class="sxs-lookup"><span data-stu-id="9f971-131">Next, run this command to see the details about the Microsoft 365 service plans that are available in all your subscriptions:</span></span>
   
 ```powershell
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
-<span data-ttu-id="8b591-131">在此命令顯示時，決定當您指派授權給使用者時，您想要停用的服務方案。</span><span class="sxs-lookup"><span data-stu-id="8b591-131">From the display of this command, determine which service plans you would like to disable when you assign licenses to users.</span></span>
+<span data-ttu-id="9f971-132">在此命令顯示時，決定當您指派授權給使用者時，您想要停用的服務方案。</span><span class="sxs-lookup"><span data-stu-id="9f971-132">From the display of this command, determine which service plans you would like to disable when you assign licenses to users.</span></span>
   
-<span data-ttu-id="8b591-132">以下是服務方案及其對應的 Office 365 服務的部分清單。</span><span class="sxs-lookup"><span data-stu-id="8b591-132">Here is a partial list of service plans and their corresponding Office 365 services.</span></span>
+<span data-ttu-id="9f971-133">以下是服務方案及其對應的 Microsoft 365 服務的部分清單。</span><span class="sxs-lookup"><span data-stu-id="9f971-133">Here is a partial list of service plans and their corresponding Microsoft 365 services.</span></span>
 
-<span data-ttu-id="8b591-133">下表顯示 Office 365 服務方案及其最常見服務的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="8b591-133">The following table shows the Office 365 service plans and their friendly names for the most common services.</span></span> <span data-ttu-id="8b591-134">您的服務方案清單可能不同。</span><span class="sxs-lookup"><span data-stu-id="8b591-134">Your list of service plans might be different.</span></span> 
+<span data-ttu-id="9f971-134">下表顯示 Microsoft 365 服務方案及其最常見服務的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="9f971-134">The following table shows the Microsoft 365 service plans and their friendly names for the most common services.</span></span> <span data-ttu-id="9f971-135">您的服務方案清單可能不同。</span><span class="sxs-lookup"><span data-stu-id="9f971-135">Your list of service plans might be different.</span></span> 
   
-|<span data-ttu-id="8b591-135">**服務計劃**</span><span class="sxs-lookup"><span data-stu-id="8b591-135">**Service plan**</span></span>|<span data-ttu-id="8b591-136">**描述**</span><span class="sxs-lookup"><span data-stu-id="8b591-136">**Description**</span></span>|
+|<span data-ttu-id="9f971-136">**服務計劃**</span><span class="sxs-lookup"><span data-stu-id="9f971-136">**Service plan**</span></span>|<span data-ttu-id="9f971-137">**描述**</span><span class="sxs-lookup"><span data-stu-id="9f971-137">**Description**</span></span>|
 |:-----|:-----|
-| `SWAY` <br/> |<span data-ttu-id="8b591-137">Sway</span><span class="sxs-lookup"><span data-stu-id="8b591-137">Sway</span></span>  <br/> |
-| `TEAMS1` <br/> |<span data-ttu-id="8b591-138">Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="8b591-138">Microsoft Teams</span></span>  <br/> |
-| `YAMMER_ENTERPRISE` <br/> |<span data-ttu-id="8b591-139">Yammer</span><span class="sxs-lookup"><span data-stu-id="8b591-139">Yammer</span></span>  <br/> |
-| `RMS_S_ENTERPRISE` <br/> |<span data-ttu-id="8b591-140">Azure 版權管理 (RMS)</span><span class="sxs-lookup"><span data-stu-id="8b591-140">Azure Rights Management (RMS)</span></span>  <br/> |
-| `OFFICESUBSCRIPTION` <br/> |<span data-ttu-id="8b591-141">適用于企業的 Microsoft 365 應用程式 *（先前命名的 Office 365 ProPlus）*</span><span class="sxs-lookup"><span data-stu-id="8b591-141">Microsoft 365 Apps for enterprise *(previously named Office 365 ProPlus)*</span></span>  <br/> |
-| `MCOSTANDARD` <br/> |<span data-ttu-id="8b591-142">商務用 Skype Online</span><span class="sxs-lookup"><span data-stu-id="8b591-142">Skype for Business Online</span></span>  <br/> |
-| `SHAREPOINTWAC` <br/> |<span data-ttu-id="8b591-143">辦公室</span><span class="sxs-lookup"><span data-stu-id="8b591-143">Office</span></span>   <br/> |
-| `SHAREPOINTENTERPRISE` <br/> |<span data-ttu-id="8b591-144">SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="8b591-144">SharePoint Online</span></span>  <br/> |
-| `EXCHANGE_S_ENTERPRISE` <br/> |<span data-ttu-id="8b591-145">Exchange Online Plan 2</span><span class="sxs-lookup"><span data-stu-id="8b591-145">Exchange Online Plan 2</span></span>  <br/> |
+| `SWAY` <br/> |<span data-ttu-id="9f971-138">Sway</span><span class="sxs-lookup"><span data-stu-id="9f971-138">Sway</span></span>  <br/> |
+| `TEAMS1` <br/> |<span data-ttu-id="9f971-139">Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="9f971-139">Microsoft Teams</span></span>  <br/> |
+| `YAMMER_ENTERPRISE` <br/> |<span data-ttu-id="9f971-140">Yammer</span><span class="sxs-lookup"><span data-stu-id="9f971-140">Yammer</span></span>  <br/> |
+| `RMS_S_ENTERPRISE` <br/> |<span data-ttu-id="9f971-141">Azure 版權管理 (RMS)</span><span class="sxs-lookup"><span data-stu-id="9f971-141">Azure Rights Management (RMS)</span></span>  <br/> |
+| `OFFICESUBSCRIPTION` <br/> |<span data-ttu-id="9f971-142">適用于企業的 Microsoft 365 應用程式 *（先前命名的 Office 365 ProPlus）*</span><span class="sxs-lookup"><span data-stu-id="9f971-142">Microsoft 365 Apps for enterprise *(previously named Office 365 ProPlus)*</span></span>  <br/> |
+| `MCOSTANDARD` <br/> |<span data-ttu-id="9f971-143">商務用 Skype Online</span><span class="sxs-lookup"><span data-stu-id="9f971-143">Skype for Business Online</span></span>  <br/> |
+| `SHAREPOINTWAC` <br/> |<span data-ttu-id="9f971-144">辦公室</span><span class="sxs-lookup"><span data-stu-id="9f971-144">Office</span></span>   <br/> |
+| `SHAREPOINTENTERPRISE` <br/> |<span data-ttu-id="9f971-145">SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="9f971-145">SharePoint Online</span></span>  <br/> |
+| `EXCHANGE_S_ENTERPRISE` <br/> |<span data-ttu-id="9f971-146">Exchange Online Plan 2</span><span class="sxs-lookup"><span data-stu-id="9f971-146">Exchange Online Plan 2</span></span>  <br/> |
    
-<span data-ttu-id="8b591-146">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="8b591-146">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
+<span data-ttu-id="9f971-147">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="9f971-147">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
    
-<span data-ttu-id="8b591-147">現在，您已具備要停用的 AccountSkuId 和服務方案，您可以將授權指派給個別使用者或多位使用者。</span><span class="sxs-lookup"><span data-stu-id="8b591-147">Now that you have the AccountSkuId and the service plans to disable, you can assign licenses for an individual user or for multiple users.</span></span>
+<span data-ttu-id="9f971-148">現在，您已具備要停用的 AccountSkuId 和服務方案，您可以將授權指派給個別使用者或多位使用者。</span><span class="sxs-lookup"><span data-stu-id="9f971-148">Now that you have the AccountSkuId and the service plans to disable, you can assign licenses for an individual user or for multiple users.</span></span>
   
-### <a name="for-a-single-user"></a><span data-ttu-id="8b591-148">針對單一使用者</span><span class="sxs-lookup"><span data-stu-id="8b591-148">For a single user</span></span>
+### <a name="for-a-single-user"></a><span data-ttu-id="9f971-149">針對單一使用者</span><span class="sxs-lookup"><span data-stu-id="9f971-149">For a single user</span></span>
 
-<span data-ttu-id="8b591-149">若為單一使用者，請填入使用者帳戶的使用者主要名稱、AccountSkuId，以及要停用的服務方案清單，並移除解說文字和\<及 > 字元。</span><span class="sxs-lookup"><span data-stu-id="8b591-149">For a single user, fill in the user principal name of the user account, the AccountSkuId, and the list of service plans to disable and remove the explanatory text and the \< and > characters.</span></span> <span data-ttu-id="8b591-150">然後，在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="8b591-150">Then, run the resulting commands at the PowerShell command prompt.</span></span>
+<span data-ttu-id="9f971-150">若為單一使用者，請填入使用者帳戶的使用者主要名稱、AccountSkuId，以及要停用的服務方案清單，並移除解說文字和 \< and > 字元。</span><span class="sxs-lookup"><span data-stu-id="9f971-150">For a single user, fill in the user principal name of the user account, the AccountSkuId, and the list of service plans to disable and remove the explanatory text and the \< and > characters.</span></span> <span data-ttu-id="9f971-151">然後，在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="9f971-151">Then, run the resulting commands at the PowerShell command prompt.</span></span>
   
 ```powershell
 $userUPN="<the user's account name in email format>"
@@ -131,7 +133,7 @@ Sleep -Seconds 5
 Set-MsolUserLicense -UserPrincipalName $userUpn -LicenseOptions $licenseOptions -ErrorAction SilentlyContinue
 ```
 
-<span data-ttu-id="8b591-151">以下是名為 belindan@contoso.com 之帳戶的範例命令區塊，供 contoso:ENTERPRISEPACK 授權使用，且要停用的服務方案 RMS_S_ENTERPRISE、SWAY、INTUNE_O365 和 YAMMER_ENTERPRISE：</span><span class="sxs-lookup"><span data-stu-id="8b591-151">Here is an example command block for the account named belindan@contoso.com, for the contoso:ENTERPRISEPACK license, and the service plans to disable are RMS_S_ENTERPRISE, SWAY, INTUNE_O365, and YAMMER_ENTERPRISE:</span></span>
+<span data-ttu-id="9f971-152">以下是名為 belindan@contoso.com 之帳戶的範例命令區塊，供 contoso:ENTERPRISEPACK 授權使用，且要停用的服務方案 RMS_S_ENTERPRISE、SWAY、INTUNE_O365 和 YAMMER_ENTERPRISE：</span><span class="sxs-lookup"><span data-stu-id="9f971-152">Here is an example command block for the account named belindan@contoso.com, for the contoso:ENTERPRISEPACK license, and the service plans to disable are RMS_S_ENTERPRISE, SWAY, INTUNE_O365, and YAMMER_ENTERPRISE:</span></span>
   
 ```powershell
 $userUPN="belindan@contoso.com"
@@ -143,9 +145,9 @@ Sleep -Seconds 5
 Set-MsolUserLicense -UserPrincipalName $userUpn -LicenseOptions $licenseOptions -ErrorAction SilentlyContinue
 ```
 
-### <a name="for-multiple-users"></a><span data-ttu-id="8b591-152">針對多個使用者</span><span class="sxs-lookup"><span data-stu-id="8b591-152">For multiple users</span></span>
+### <a name="for-multiple-users"></a><span data-ttu-id="9f971-153">針對多個使用者</span><span class="sxs-lookup"><span data-stu-id="9f971-153">For multiple users</span></span>
 
-<span data-ttu-id="8b591-153">若要對多位使用者執行這項管理工作，請建立一個逗號分隔值（CSV）文字檔，其中包含 UserPrincipalName 及 UsageLocation 的欄位。</span><span class="sxs-lookup"><span data-stu-id="8b591-153">To perform this administration task for multiple users, create a comma-separated value (CSV) text file that contains the UserPrincipalName and UsageLocation fields.</span></span> <span data-ttu-id="8b591-154">範例如下：</span><span class="sxs-lookup"><span data-stu-id="8b591-154">Here is an example:</span></span>
+<span data-ttu-id="9f971-154">若要對多位使用者執行這項管理工作，請建立一個逗號分隔值（CSV）文字檔，其中包含 UserPrincipalName 及 UsageLocation 的欄位。</span><span class="sxs-lookup"><span data-stu-id="9f971-154">To perform this administration task for multiple users, create a comma-separated value (CSV) text file that contains the UserPrincipalName and UsageLocation fields.</span></span> <span data-ttu-id="9f971-155">範例如下：</span><span class="sxs-lookup"><span data-stu-id="9f971-155">Here is an example:</span></span>
   
 ```powershell
 UserPrincipalName,UsageLocation
@@ -154,7 +156,7 @@ LynneB@contoso.onmicrosoft.com,US
 ShawnM@contoso.onmicrosoft.com,US
 ```
 
-<span data-ttu-id="8b591-155">接下來，填入輸入和輸出 CSV 檔案的位置、帳戶 SKU 識別碼，以及要停用的服務方案清單，然後在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="8b591-155">Next, fill in the location of the input and output CSV files, the account SKU ID, and the list of service plans to disable, and then run the resulting commands at the PowerShell command prompt.</span></span>
+<span data-ttu-id="9f971-156">接下來，填入輸入和輸出 CSV 檔案的位置、帳戶 SKU 識別碼，以及要停用的服務方案清單，然後在 PowerShell 命令提示字元中執行產生的命令。</span><span class="sxs-lookup"><span data-stu-id="9f971-156">Next, fill in the location of the input and output CSV files, the account SKU ID, and the list of service plans to disable, and then run the resulting commands at the PowerShell command prompt.</span></span>
   
 ```powershell
 $inFileName="<path and file name of the input CSV file that contains the users, example: C:\admin\Users2License.CSV>"
@@ -174,20 +176,20 @@ $users | Get-MsolUser | Select UserPrincipalName, Islicensed,Usagelocation | Exp
 }
 ```
 
-<span data-ttu-id="8b591-156">此 PowerShell 命令區塊：</span><span class="sxs-lookup"><span data-stu-id="8b591-156">This PowerShell command block:</span></span>
+<span data-ttu-id="9f971-157">此 PowerShell 命令區塊：</span><span class="sxs-lookup"><span data-stu-id="9f971-157">This PowerShell command block:</span></span>
   
-- <span data-ttu-id="8b591-157">顯示每位使用者的使用者主要名稱。</span><span class="sxs-lookup"><span data-stu-id="8b591-157">Displays the user principal name of each user.</span></span>
+- <span data-ttu-id="9f971-158">顯示每位使用者的使用者主要名稱。</span><span class="sxs-lookup"><span data-stu-id="9f971-158">Displays the user principal name of each user.</span></span>
     
-- <span data-ttu-id="8b591-158">將自訂的授權指派給每個使用者。</span><span class="sxs-lookup"><span data-stu-id="8b591-158">Assigns customized licenses to each user.</span></span>
+- <span data-ttu-id="9f971-159">將自訂的授權指派給每個使用者。</span><span class="sxs-lookup"><span data-stu-id="9f971-159">Assigns customized licenses to each user.</span></span>
     
-- <span data-ttu-id="8b591-159">會建立 CSV 檔案，其中包含所有已處理的使用者，並顯示其授權狀態。</span><span class="sxs-lookup"><span data-stu-id="8b591-159">Creates a CSV file with all the users that were processed and shows their license status.</span></span>
+- <span data-ttu-id="9f971-160">會建立 CSV 檔案，其中包含所有已處理的使用者，並顯示其授權狀態。</span><span class="sxs-lookup"><span data-stu-id="9f971-160">Creates a CSV file with all the users that were processed and shows their license status.</span></span>
     
-## <a name="see-also"></a><span data-ttu-id="8b591-160">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b591-160">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f971-161">請參閱</span><span class="sxs-lookup"><span data-stu-id="9f971-161">See also</span></span>
 
-[<span data-ttu-id="8b591-161">使用 Office 365 PowerShell 停用服務存取權</span><span class="sxs-lookup"><span data-stu-id="8b591-161">Disable access to services with Office 365 PowerShell</span></span>](disable-access-to-services-with-office-365-powershell.md)
+[<span data-ttu-id="9f971-162">使用 PowerShell 停用 Microsoft 365 服務的存取權</span><span class="sxs-lookup"><span data-stu-id="9f971-162">Disable access to Microsoft 365 services with PowerShell</span></span>](disable-access-to-services-with-office-365-powershell.md)
   
-[<span data-ttu-id="8b591-162">使用 Office 365 PowerShell 停用 Sway 的存取權</span><span class="sxs-lookup"><span data-stu-id="8b591-162">Disable access to Sway with Office 365 PowerShell</span></span>](disable-access-to-sway-with-office-365-powershell.md)
+[<span data-ttu-id="9f971-163">使用 PowerShell 停用 Sway 的存取權</span><span class="sxs-lookup"><span data-stu-id="9f971-163">Disable access to Sway with PowerShell</span></span>](disable-access-to-sway-with-office-365-powershell.md)
   
-[<span data-ttu-id="8b591-163">使用 Office 365 管理使用者帳戶、授權和群組 PowerShell</span><span class="sxs-lookup"><span data-stu-id="8b591-163">Manage user accounts, licenses, and groups with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[<span data-ttu-id="9f971-164">使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組</span><span class="sxs-lookup"><span data-stu-id="9f971-164">Manage Microsoft 365 user accounts, licenses, and groups with PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[<span data-ttu-id="8b591-164">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="8b591-164">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="9f971-165">使用 PowerShell 管理 Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="9f971-165">Manage Microsoft 365 with PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)

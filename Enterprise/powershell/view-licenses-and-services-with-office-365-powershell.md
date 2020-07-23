@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 檢視授權與服務
+title: 使用 PowerShell 查看 Microsoft 365 授權和服務
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/16/2019
+ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,66 +19,68 @@ ms.custom:
 - LIL_Placement
 - PowerShell
 ms.assetid: bb5260a9-a6a3-4f34-b19a-06c6699f6723
-description: 說明如何使用 Office 365 PowerShell 來查看您的 Office 365 組織中提供的授權方案、服務和授權的相關資訊。
-ms.openlocfilehash: e76a11d0ac174ef2de05c7e670537304dad9462f
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: 說明如何使用 PowerShell 來查看您的 Microsoft 365 組織中提供的授權方案、服務和授權的相關資訊。
+ms.openlocfilehash: f0b7d6cd5981bec09e7773d10d82ff81c0f34d4e
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009528"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230209"
 ---
-# <a name="view-licenses-and-services-with-office-365-powershell"></a><span data-ttu-id="dda81-103">使用 Office 365 PowerShell 檢視授權與服務</span><span class="sxs-lookup"><span data-stu-id="dda81-103">View licenses and services with Office 365 PowerShell</span></span>
+# <a name="view-microsoft-365-licenses-and-services-with-powershell"></a><span data-ttu-id="50fc9-103">使用 PowerShell 查看 Microsoft 365 授權和服務</span><span class="sxs-lookup"><span data-stu-id="50fc9-103">View Microsoft 365 licenses and services with PowerShell</span></span>
 
-<span data-ttu-id="dda81-104">每個 Office 365 訂閱包含下列元素：</span><span class="sxs-lookup"><span data-stu-id="dda81-104">Every Office 365 subscription consists of the following elements:</span></span>
+<span data-ttu-id="50fc9-104">*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="50fc9-104">*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*</span></span>
 
-- <span data-ttu-id="dda81-105">**授權方案**這些也稱為授權計畫或 Office 365 方案。</span><span class="sxs-lookup"><span data-stu-id="dda81-105">**Licensing plans** These are also known as license plans or Office 365 plans.</span></span> <span data-ttu-id="dda81-106">授權計畫定義使用者可以使用的 Office 365 服務。</span><span class="sxs-lookup"><span data-stu-id="dda81-106">Licensing plans define the Office 365 services that are available to users.</span></span> <span data-ttu-id="dda81-107">您的 Office 365 訂閱可能包含多個授權計畫。</span><span class="sxs-lookup"><span data-stu-id="dda81-107">Your Office 365 subscription may contain multiple licensing plans.</span></span> <span data-ttu-id="dda81-108">授權方案範例是 Office 365 Enterprise E3。</span><span class="sxs-lookup"><span data-stu-id="dda81-108">An example licensing plan would be Office 365 Enterprise E3.</span></span>
+<span data-ttu-id="50fc9-105">每個 Microsoft 365 訂閱都包含下列元素：</span><span class="sxs-lookup"><span data-stu-id="50fc9-105">Every Microsoft 365 subscription consists of the following elements:</span></span>
+
+- <span data-ttu-id="50fc9-106">**授權方案**這些也稱為「授權方案」或「Microsoft 365 方案」。</span><span class="sxs-lookup"><span data-stu-id="50fc9-106">**Licensing plans** These are also known as license plans or Microsoft 365 plans.</span></span> <span data-ttu-id="50fc9-107">授權計畫定義使用者可以使用的 Microsoft 365 服務。</span><span class="sxs-lookup"><span data-stu-id="50fc9-107">Licensing plans define the Microsoft 365 services that are available to users.</span></span> <span data-ttu-id="50fc9-108">您的 Microsoft 365 訂閱可能包含多個授權計畫。</span><span class="sxs-lookup"><span data-stu-id="50fc9-108">Your Microsoft 365 subscription may contain multiple licensing plans.</span></span> <span data-ttu-id="50fc9-109">授權方案範例是 Microsoft 365 E3。</span><span class="sxs-lookup"><span data-stu-id="50fc9-109">An example licensing plan would be Microsoft 365 E3.</span></span>
     
-- <span data-ttu-id="dda81-109">**服務**這些也稱為服務方案。</span><span class="sxs-lookup"><span data-stu-id="dda81-109">**Services** These are also known as service plans.</span></span> <span data-ttu-id="dda81-110">服務是每個授權計畫中可用的 Office 365 產品、功能和功能，例如，Exchange Online 和 Microsoft 365 應用程式的企業版（先前稱為 Office 365 ProPlus）。</span><span class="sxs-lookup"><span data-stu-id="dda81-110">Services are the Office 365 products, features, and capabilities that are available in each licensing plan, for example, Exchange Online and Microsoft 365 Apps for enterprise (previously named Office 365 ProPlus).</span></span> <span data-ttu-id="dda81-111">使用者可以將多個授權指派給他們，以不同授權方案授與不同服務的存取權。</span><span class="sxs-lookup"><span data-stu-id="dda81-111">Users can have multiple licenses assigned to them from different licensing plans that grant access to different services.</span></span>
+- <span data-ttu-id="50fc9-110">**服務**這些也稱為服務方案。</span><span class="sxs-lookup"><span data-stu-id="50fc9-110">**Services** These are also known as service plans.</span></span> <span data-ttu-id="50fc9-111">服務是每個授權計畫中可用的 Microsoft 365 產品、功能及功能，例如，Exchange Online 和 Microsoft 365 應用程式的企業版（先前稱為 Office 365 ProPlus）。</span><span class="sxs-lookup"><span data-stu-id="50fc9-111">Services are the Microsoft 365 products, features, and capabilities that are available in each licensing plan, for example, Exchange Online and Microsoft 365 Apps for enterprise (previously named Office 365 ProPlus).</span></span> <span data-ttu-id="50fc9-112">使用者可以將多個授權指派給他們，以不同授權方案授與不同服務的存取權。</span><span class="sxs-lookup"><span data-stu-id="50fc9-112">Users can have multiple licenses assigned to them from different licensing plans that grant access to different services.</span></span>
     
-- <span data-ttu-id="dda81-112">**授權**每個授權方案都包含您購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-112">**Licenses** Each licensing plan contains the number of licenses that you purchased.</span></span> <span data-ttu-id="dda81-113">您可以將授權指派給使用者，讓他們可以使用授權方案所定義的 Office 365 服務。</span><span class="sxs-lookup"><span data-stu-id="dda81-113">You assign licenses to users so they can use the Office 365 services that are defined by the licensing plan.</span></span> <span data-ttu-id="dda81-114">每個使用者帳戶至少需要一個授權方案的授權，這樣他們才能登入 Office 365 並使用服務。</span><span class="sxs-lookup"><span data-stu-id="dda81-114">Every user account requires at least one license from one licensing plan so they can log on to Office 365 and use the services.</span></span>
+- <span data-ttu-id="50fc9-113">**授權**每個授權方案都包含您購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-113">**Licenses** Each licensing plan contains the number of licenses that you purchased.</span></span> <span data-ttu-id="50fc9-114">您可以將授權指派給使用者，讓他們可以使用授權方案所定義的 Microsoft 365 服務。</span><span class="sxs-lookup"><span data-stu-id="50fc9-114">You assign licenses to users so they can use the Microsoft 365 services that are defined by the licensing plan.</span></span> <span data-ttu-id="50fc9-115">每個使用者帳戶至少需要一個授權方案的授權，這樣他們才能登入 Microsoft 365 並使用服務。</span><span class="sxs-lookup"><span data-stu-id="50fc9-115">Every user account requires at least one license from one licensing plan so they can log on to Microsoft 365 and use the services.</span></span>
     
-<span data-ttu-id="dda81-115">您可以使用 Office 365 PowerShell 來查看 Office 365 組織中可用授權方案、授權及服務的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="dda81-115">You can use Office 365 PowerShell to view details about the available licensing plans, licenses, and services in your Office 365 organization.</span></span> <span data-ttu-id="dda81-116">如需有關不同 Office 365 訂閱中可用之產品、功能和服務的詳細資訊，請參閱[Office 365 方案選項](https://go.microsoft.com/fwlink/p/?LinkId=691147)。</span><span class="sxs-lookup"><span data-stu-id="dda81-116">For more information about the products, features, and services that are available in different Office 365 subscriptions, see [Office 365 Plan Options](https://go.microsoft.com/fwlink/p/?LinkId=691147).</span></span>
+<span data-ttu-id="50fc9-116">您可以使用 Microsoft 365 的 PowerShell，以查看您的 Microsoft 365 組織中可用授權方案、授權及服務的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="50fc9-116">You can use PowerShell for Microsoft 365 to view details about the available licensing plans, licenses, and services in your Microsoft 365 organization.</span></span> <span data-ttu-id="50fc9-117">如需有關不同 Office 365 訂閱中可用之產品、功能和服務的詳細資訊，請參閱[Office 365 方案選項](https://go.microsoft.com/fwlink/p/?LinkId=691147)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-117">For more information about the products, features, and services that are available in different Office 365 subscriptions, see [Office 365 Plan Options](https://go.microsoft.com/fwlink/p/?LinkId=691147).</span></span>
 
 
-## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="dda81-117">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="dda81-117">Use the Azure Active Directory PowerShell for Graph module</span></span>
+## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a><span data-ttu-id="50fc9-118">針對 Graph 模組，請使用 Azure Active Directory PowerShell</span><span class="sxs-lookup"><span data-stu-id="50fc9-118">Use the Azure Active Directory PowerShell for Graph module</span></span>
 
-<span data-ttu-id="dda81-118">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="dda81-118">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
+<span data-ttu-id="50fc9-119">首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-119">First, [connect to your Microsoft 365 tenant](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module).</span></span>
   
-<span data-ttu-id="dda81-119">若要查看您目前授權計畫的摘要資訊，以及每個計畫可用的授權，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="dda81-119">To view summary information about your current licensing plans and the available licenses for each plan, run this command:</span></span>
+<span data-ttu-id="50fc9-120">若要查看您目前授權計畫的摘要資訊，以及每個計畫可用的授權，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="50fc9-120">To view summary information about your current licensing plans and the available licenses for each plan, run this command:</span></span>
   
 ```powershell
 Get-AzureADSubscribedSku | Select -Property Sku*,ConsumedUnits -ExpandProperty PrepaidUnits
 ```
 
-<span data-ttu-id="dda81-120">結果包含：</span><span class="sxs-lookup"><span data-stu-id="dda81-120">The results contain:</span></span>
+<span data-ttu-id="50fc9-121">結果包含：</span><span class="sxs-lookup"><span data-stu-id="50fc9-121">The results contain:</span></span>
   
-- <span data-ttu-id="dda81-121">**SkuPartNumber：** 顯示您的組織可用的授權方案。</span><span class="sxs-lookup"><span data-stu-id="dda81-121">**SkuPartNumber:** Shows the available licensing plans for your organization.</span></span> <span data-ttu-id="dda81-122">例如， `ENTERPRISEPACK` 「Office 365 企業版 E3」的授權方案名稱。</span><span class="sxs-lookup"><span data-stu-id="dda81-122">For example, `ENTERPRISEPACK` is the license plan name for Office 365 Enterprise E3.</span></span>
+- <span data-ttu-id="50fc9-122">**SkuPartNumber：** 顯示您的組織可用的授權方案。</span><span class="sxs-lookup"><span data-stu-id="50fc9-122">**SkuPartNumber:** Shows the available licensing plans for your organization.</span></span> <span data-ttu-id="50fc9-123">例如，「 `ENTERPRISEPACK` Office 365 企業版 E3」的授權方案名稱。</span><span class="sxs-lookup"><span data-stu-id="50fc9-123">For example, `ENTERPRISEPACK` is the license plan name for Office 365 Enterprise E3.</span></span>
     
-- <span data-ttu-id="dda81-123">**已啟用：** 您為特定授權方案購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-123">**Enabled:** Number of licenses that you've purchased for a specific licensing plan.</span></span>
+- <span data-ttu-id="50fc9-124">**已啟用：** 您為特定授權方案購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-124">**Enabled:** Number of licenses that you've purchased for a specific licensing plan.</span></span>
     
-- <span data-ttu-id="dda81-124">**ConsumedUnits：** 您已從特定授權方案中指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-124">**ConsumedUnits:** Number of licenses that you've assigned to users from a specific licensing plan.</span></span>
+- <span data-ttu-id="50fc9-125">**ConsumedUnits：** 您已從特定授權方案中指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-125">**ConsumedUnits:** Number of licenses that you've assigned to users from a specific licensing plan.</span></span>
     
-<span data-ttu-id="dda81-125">若要查看所有授權方案中可用之 Office 365 服務的詳細資訊，請先顯示您的授權方案清單。</span><span class="sxs-lookup"><span data-stu-id="dda81-125">To view details about the Office 365 services that are available in all of your license plans, first display a list of your license plans.</span></span>
+<span data-ttu-id="50fc9-126">若要查看所有授權方案中可用之 Microsoft 365 服務的詳細資訊，請先顯示您的授權方案清單。</span><span class="sxs-lookup"><span data-stu-id="50fc9-126">To view details about the Microsoft 365 services that are available in all of your license plans, first display a list of your license plans.</span></span>
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-<span data-ttu-id="dda81-126">接下來，將授權計畫資訊儲存在變數中。</span><span class="sxs-lookup"><span data-stu-id="dda81-126">Next, store the license plans information in a variable.</span></span>
+<span data-ttu-id="50fc9-127">接下來，將授權計畫資訊儲存在變數中。</span><span class="sxs-lookup"><span data-stu-id="50fc9-127">Next, store the license plans information in a variable.</span></span>
 
 ```powershell
 $licenses = Get-AzureADSubscribedSku
 ```
 
-<span data-ttu-id="dda81-127">接下來，顯示特定授權方案中的服務。</span><span class="sxs-lookup"><span data-stu-id="dda81-127">Next, display the services in a specific license plan.</span></span>
+<span data-ttu-id="50fc9-128">接下來，顯示特定授權方案中的服務。</span><span class="sxs-lookup"><span data-stu-id="50fc9-128">Next, display the services in a specific license plan.</span></span>
 
 ```powershell
 $licenses[<index>].ServicePlans
 ```
 
-<span data-ttu-id="dda81-128">\<index> 是整數，它會指定授權方案的列數，從`Get-AzureADSubscribedSku | Select SkuPartNumber`命令的顯示減1。</span><span class="sxs-lookup"><span data-stu-id="dda81-128">\<index> is an integer that specifies the row number of the license plan from the display of the `Get-AzureADSubscribedSku | Select SkuPartNumber` command, minus 1.</span></span>
+<span data-ttu-id="50fc9-129">\<index>是整數，它會指定授權方案的列數，從命令的顯示 `Get-AzureADSubscribedSku | Select SkuPartNumber` 減1。</span><span class="sxs-lookup"><span data-stu-id="50fc9-129">\<index> is an integer that specifies the row number of the license plan from the display of the `Get-AzureADSubscribedSku | Select SkuPartNumber` command, minus 1.</span></span>
 
-<span data-ttu-id="dda81-129">例如，如果`Get-AzureADSubscribedSku | Select SkuPartNumber`命令的顯示如下：</span><span class="sxs-lookup"><span data-stu-id="dda81-129">For example, if the display of the `Get-AzureADSubscribedSku | Select SkuPartNumber` command is this:</span></span>
+<span data-ttu-id="50fc9-130">例如，如果命令的顯示如下 `Get-AzureADSubscribedSku | Select SkuPartNumber` ：</span><span class="sxs-lookup"><span data-stu-id="50fc9-130">For example, if the display of the `Get-AzureADSubscribedSku | Select SkuPartNumber` command is this:</span></span>
 
 ```powershell
 SkuPartNumber
@@ -89,82 +91,82 @@ ENTERPRISEPREMIUM
 FLOW_FREE
 ```
 
-<span data-ttu-id="dda81-130">顯示 ENTERPRISEPREMIUM 授權方案之服務的命令如下：</span><span class="sxs-lookup"><span data-stu-id="dda81-130">Then the command to display the services for the ENTERPRISEPREMIUM license plan is this:</span></span>
+<span data-ttu-id="50fc9-131">顯示 ENTERPRISEPREMIUM 授權方案之服務的命令如下：</span><span class="sxs-lookup"><span data-stu-id="50fc9-131">Then the command to display the services for the ENTERPRISEPREMIUM license plan is this:</span></span>
 
 ```powershell
 $licenses[2].ServicePlans
 ```
 
-<span data-ttu-id="dda81-131">ENTERPRISEPREMIUM 是第三列。</span><span class="sxs-lookup"><span data-stu-id="dda81-131">ENTERPRISEPREMIUM is the third row.</span></span> <span data-ttu-id="dda81-132">因此，索引值為（3-1）或2。</span><span class="sxs-lookup"><span data-stu-id="dda81-132">Therefore, the index value is (3 - 1), or 2.</span></span>
+<span data-ttu-id="50fc9-132">ENTERPRISEPREMIUM 是第三列。</span><span class="sxs-lookup"><span data-stu-id="50fc9-132">ENTERPRISEPREMIUM is the third row.</span></span> <span data-ttu-id="50fc9-133">因此，索引值為（3-1）或2。</span><span class="sxs-lookup"><span data-stu-id="50fc9-133">Therefore, the index value is (3 - 1), or 2.</span></span>
 
-<span data-ttu-id="dda81-133">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="dda81-133">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
+<span data-ttu-id="50fc9-134">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-134">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
 
-## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="dda81-134">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="dda81-134">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
+## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a><span data-ttu-id="50fc9-135">使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。</span><span class="sxs-lookup"><span data-stu-id="50fc9-135">Use the Microsoft Azure Active Directory Module for Windows PowerShell</span></span>
 
-<span data-ttu-id="dda81-135">首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="dda81-135">First, [connect to your Office 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
+<span data-ttu-id="50fc9-136">首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-136">First, [connect to your Microsoft 365 tenant](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell).</span></span>
 
 >[!Note]
-><span data-ttu-id="dda81-136">PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。</span><span class="sxs-lookup"><span data-stu-id="dda81-136">A PowerShell script is available that automates the procedures described in this topic.</span></span> <span data-ttu-id="dda81-137">具體說來，此腳本可讓您在 Office 365 組織中查看及停用服務，包括 Sway。</span><span class="sxs-lookup"><span data-stu-id="dda81-137">Specifically, the script lets you view and disable services in your Office 365 organization, including Sway.</span></span> <span data-ttu-id="dda81-138">如需詳細資訊，請參閱[Disable access to Sway with Office 365 PowerShell](disable-access-to-sway-with-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="dda81-138">For more information, see [Disable access to Sway with Office 365 PowerShell](disable-access-to-sway-with-office-365-powershell.md).</span></span>
+><span data-ttu-id="50fc9-137">PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。</span><span class="sxs-lookup"><span data-stu-id="50fc9-137">A PowerShell script is available that automates the procedures described in this topic.</span></span> <span data-ttu-id="50fc9-138">具體說來，此腳本可讓您查看及停用 Microsoft 365 組織中的服務，包括 Sway。</span><span class="sxs-lookup"><span data-stu-id="50fc9-138">Specifically, the script lets you view and disable services in your Microsoft 365 organization, including Sway.</span></span> <span data-ttu-id="50fc9-139">如需詳細資訊，請參閱[使用 PowerShell 停用 Sway 的存取權](disable-access-to-sway-with-office-365-powershell.md)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-139">For more information, see [Disable access to Sway with PowerShell](disable-access-to-sway-with-office-365-powershell.md).</span></span>
 >
     
-<span data-ttu-id="dda81-139">若要查看您目前授權計畫的摘要資訊，以及每個計畫可用的授權，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="dda81-139">To view summary information about your current licensing plans and the available licenses for each plan, run the following command:</span></span>
+<span data-ttu-id="50fc9-140">若要查看您目前授權計畫的摘要資訊，以及每個計畫可用的授權，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="50fc9-140">To view summary information about your current licensing plans and the available licenses for each plan, run the following command:</span></span>
   
 ```powershell
 Get-MsolAccountSku
 ```
 
 >[!Note]
-><span data-ttu-id="dda81-140">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="dda81-140">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="dda81-141">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="dda81-141">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
+><span data-ttu-id="50fc9-141">PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。</span><span class="sxs-lookup"><span data-stu-id="50fc9-141">PowerShell Core does not support the Microsoft Azure Active Directory Module for Windows PowerShell module and cmdlets with **Msol** in their name.</span></span> <span data-ttu-id="50fc9-142">若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。</span><span class="sxs-lookup"><span data-stu-id="50fc9-142">To continue using these cmdlets, you must run them from Windows PowerShell.</span></span>
 >
 
-<span data-ttu-id="dda81-142">結果包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="dda81-142">The results contain the following information:</span></span>
+<span data-ttu-id="50fc9-143">結果包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="50fc9-143">The results contain the following information:</span></span>
   
-- <span data-ttu-id="dda81-143">**AccountSkuId：** 使用語法`<CompanyName>:<LicensingPlan>`顯示組織可用的授權方案。</span><span class="sxs-lookup"><span data-stu-id="dda81-143">**AccountSkuId:** Show the available licensing plans for your organization by using the syntax `<CompanyName>:<LicensingPlan>`.</span></span>  <span data-ttu-id="dda81-144">CompanyName>是您在 Office 365 中登記時所提供的值，且對您的組織而言是唯一的。 _ \< _</span><span class="sxs-lookup"><span data-stu-id="dda81-144">_\<CompanyName>_ is the value that you provided when you enrolled in Office 365, and is unique for your organization.</span></span> <span data-ttu-id="dda81-145">所有人的_ \<LicensingPlan>_ 值都是相同的。</span><span class="sxs-lookup"><span data-stu-id="dda81-145">The _\<LicensingPlan>_ value is the same for everyone.</span></span> <span data-ttu-id="dda81-146">例如，在值`litwareinc:ENTERPRISEPACK`、公司名稱`litwareinc`以及授權方案名稱`ENTERPRISEPACK`，也就是 Office 365 企業版 E3 的系統名稱。</span><span class="sxs-lookup"><span data-stu-id="dda81-146">For example, in the value `litwareinc:ENTERPRISEPACK`, the company name is  `litwareinc`, and the licensing plan name  `ENTERPRISEPACK`, which is the system name for Office 365 Enterprise E3.</span></span>
+- <span data-ttu-id="50fc9-144">**AccountSkuId：** 使用語法顯示組織可用的授權方案 `<CompanyName>:<LicensingPlan>` 。</span><span class="sxs-lookup"><span data-stu-id="50fc9-144">**AccountSkuId:** Show the available licensing plans for your organization by using the syntax `<CompanyName>:<LicensingPlan>`.</span></span>  <span data-ttu-id="50fc9-145">_\<CompanyName>_ 是您在 Microsoft 365 中註冊時所提供的值，且對您的組織而言是唯一的。</span><span class="sxs-lookup"><span data-stu-id="50fc9-145">_\<CompanyName>_ is the value that you provided when you enrolled in Microsoft 365, and is unique for your organization.</span></span> <span data-ttu-id="50fc9-146">_\<LicensingPlan>_ 所有人的值都相同。</span><span class="sxs-lookup"><span data-stu-id="50fc9-146">The _\<LicensingPlan>_ value is the same for everyone.</span></span> <span data-ttu-id="50fc9-147">例如，在值 `litwareinc:ENTERPRISEPACK` 、公司名稱以及 `litwareinc` 授權方案名稱 `ENTERPRISEPACK` ，也就是 Office 365 企業版 E3 的系統名稱。</span><span class="sxs-lookup"><span data-stu-id="50fc9-147">For example, in the value `litwareinc:ENTERPRISEPACK`, the company name is  `litwareinc`, and the licensing plan name  `ENTERPRISEPACK`, which is the system name for Office 365 Enterprise E3.</span></span>
     
-- <span data-ttu-id="dda81-147">**ActiveUnits：** 您為特定授權方案購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-147">**ActiveUnits:** Number of licenses that you've purchased for a specific licensing plan.</span></span>
+- <span data-ttu-id="50fc9-148">**ActiveUnits：** 您為特定授權方案購買的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-148">**ActiveUnits:** Number of licenses that you've purchased for a specific licensing plan.</span></span>
     
-- <span data-ttu-id="dda81-148">**WarningUnits：** 授權方案中尚未更新，且30天寬限期後會到期的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-148">**WarningUnits:** Number of licenses in a licensing plan that you haven't renewed, and that will expire after the 30-day grace period.</span></span>
+- <span data-ttu-id="50fc9-149">**WarningUnits：** 授權方案中尚未更新，且30天寬限期後會到期的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-149">**WarningUnits:** Number of licenses in a licensing plan that you haven't renewed, and that will expire after the 30-day grace period.</span></span>
     
-- <span data-ttu-id="dda81-149">**ConsumedUnits：** 您已從特定授權方案中指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="dda81-149">**ConsumedUnits:** Number of licenses that you've assigned to users from a specific licensing plan.</span></span>
+- <span data-ttu-id="50fc9-150">**ConsumedUnits：** 您已從特定授權方案中指派給使用者的授權數目。</span><span class="sxs-lookup"><span data-stu-id="50fc9-150">**ConsumedUnits:** Number of licenses that you've assigned to users from a specific licensing plan.</span></span>
     
-<span data-ttu-id="dda81-150">若要查看所有授權方案中可用之 Office 365 服務的詳細資料，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="dda81-150">To view details about the Office 365 services that are available in all of your license plans, run the following command:</span></span>
+<span data-ttu-id="50fc9-151">若要查看所有授權方案中可用之 Microsoft 365 服務的詳細資料，請執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="50fc9-151">To view details about the Microsoft 365 services that are available in all of your license plans, run the following command:</span></span>
   
 ```powershell
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 ```
 
-<span data-ttu-id="dda81-151">下表顯示 Office 365 服務方案及其最常見服務的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="dda81-151">The following table shows the Office 365 service plans and their friendly names for the most common services.</span></span> <span data-ttu-id="dda81-152">您的服務方案清單可能不同。</span><span class="sxs-lookup"><span data-stu-id="dda81-152">Your list of service plans might be different.</span></span> 
+<span data-ttu-id="50fc9-152">下表顯示 Microsoft 365 服務方案及其最常見服務的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="50fc9-152">The following table shows the Microsoft 365 service plans and their friendly names for the most common services.</span></span> <span data-ttu-id="50fc9-153">您的服務方案清單可能不同。</span><span class="sxs-lookup"><span data-stu-id="50fc9-153">Your list of service plans might be different.</span></span> 
   
-|<span data-ttu-id="dda81-153">**服務計劃**</span><span class="sxs-lookup"><span data-stu-id="dda81-153">**Service plan**</span></span>|<span data-ttu-id="dda81-154">**描述**</span><span class="sxs-lookup"><span data-stu-id="dda81-154">**Description**</span></span>|
+|<span data-ttu-id="50fc9-154">**服務計劃**</span><span class="sxs-lookup"><span data-stu-id="50fc9-154">**Service plan**</span></span>|<span data-ttu-id="50fc9-155">**描述**</span><span class="sxs-lookup"><span data-stu-id="50fc9-155">**Description**</span></span>|
 |:-----|:-----|
-| `SWAY` <br/> |<span data-ttu-id="dda81-155">Sway</span><span class="sxs-lookup"><span data-stu-id="dda81-155">Sway</span></span>  <br/> |
-| `TEAMS1` <br/> |<span data-ttu-id="dda81-156">Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="dda81-156">Microsoft Teams</span></span>  <br/> |
-| `YAMMER_ENTERPRISE` <br/> |<span data-ttu-id="dda81-157">Yammer</span><span class="sxs-lookup"><span data-stu-id="dda81-157">Yammer</span></span>  <br/> |
-| `RMS_S_ENTERPRISE` <br/> |<span data-ttu-id="dda81-158">Azure 版權管理 (RMS)</span><span class="sxs-lookup"><span data-stu-id="dda81-158">Azure Rights Management (RMS)</span></span>  <br/> |
-| `OFFICESUBSCRIPTION` <br/> |<span data-ttu-id="dda81-159">適用于企業的 Microsoft 365 應用程式 *（先前命名的 Office 365 ProPlus）*</span><span class="sxs-lookup"><span data-stu-id="dda81-159">Microsoft 365 Apps for enterprise *(previously named Office 365 ProPlus)*</span></span>  <br/> |
-| `MCOSTANDARD` <br/> |<span data-ttu-id="dda81-160">商務用 Skype Online</span><span class="sxs-lookup"><span data-stu-id="dda81-160">Skype for Business Online</span></span>  <br/> |
-| `SHAREPOINTWAC` <br/> |<span data-ttu-id="dda81-161">辦公室</span><span class="sxs-lookup"><span data-stu-id="dda81-161">Office</span></span>  <br/> |
-| `SHAREPOINTENTERPRISE` <br/> |<span data-ttu-id="dda81-162">SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="dda81-162">SharePoint Online</span></span>  <br/> |
-| `EXCHANGE_S_ENTERPRISE` <br/> |<span data-ttu-id="dda81-163">Exchange Online Plan 2</span><span class="sxs-lookup"><span data-stu-id="dda81-163">Exchange Online Plan 2</span></span>  <br/> |
+| `SWAY` <br/> |<span data-ttu-id="50fc9-156">Sway</span><span class="sxs-lookup"><span data-stu-id="50fc9-156">Sway</span></span>  <br/> |
+| `TEAMS1` <br/> |<span data-ttu-id="50fc9-157">Microsoft Teams</span><span class="sxs-lookup"><span data-stu-id="50fc9-157">Microsoft Teams</span></span>  <br/> |
+| `YAMMER_ENTERPRISE` <br/> |<span data-ttu-id="50fc9-158">Yammer</span><span class="sxs-lookup"><span data-stu-id="50fc9-158">Yammer</span></span>  <br/> |
+| `RMS_S_ENTERPRISE` <br/> |<span data-ttu-id="50fc9-159">Azure 版權管理 (RMS)</span><span class="sxs-lookup"><span data-stu-id="50fc9-159">Azure Rights Management (RMS)</span></span>  <br/> |
+| `OFFICESUBSCRIPTION` <br/> |<span data-ttu-id="50fc9-160">適用于企業的 Microsoft 365 應用程式 *（先前命名的 Office 365 ProPlus）*</span><span class="sxs-lookup"><span data-stu-id="50fc9-160">Microsoft 365 Apps for enterprise *(previously named Office 365 ProPlus)*</span></span>  <br/> |
+| `MCOSTANDARD` <br/> |<span data-ttu-id="50fc9-161">商務用 Skype Online</span><span class="sxs-lookup"><span data-stu-id="50fc9-161">Skype for Business Online</span></span>  <br/> |
+| `SHAREPOINTWAC` <br/> |<span data-ttu-id="50fc9-162">辦公室</span><span class="sxs-lookup"><span data-stu-id="50fc9-162">Office</span></span>  <br/> |
+| `SHAREPOINTENTERPRISE` <br/> |<span data-ttu-id="50fc9-163">SharePoint Online</span><span class="sxs-lookup"><span data-stu-id="50fc9-163">SharePoint Online</span></span>  <br/> |
+| `EXCHANGE_S_ENTERPRISE` <br/> |<span data-ttu-id="50fc9-164">Exchange Online Plan 2</span><span class="sxs-lookup"><span data-stu-id="50fc9-164">Exchange Online Plan 2</span></span>  <br/> |
    
-<span data-ttu-id="dda81-164">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="dda81-164">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
+<span data-ttu-id="50fc9-165">如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。</span><span class="sxs-lookup"><span data-stu-id="50fc9-165">For a complete list of license plans (also known as product names), their included service plans, and their corresponding friendly names, see [Product names and service plan identifiers for licensing](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference).</span></span>
 
-<span data-ttu-id="dda81-165">若要查看特定授權方案中可用之 Office 365 服務的詳細資料，請使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="dda81-165">To view details about the Office 365 services that are available in a specific licensing plan, use the following syntax.</span></span>
+<span data-ttu-id="50fc9-166">若要查看特定授權方案中可用之 Microsoft 365 服務的詳細資料，請使用下列語法。</span><span class="sxs-lookup"><span data-stu-id="50fc9-166">To view details about the Microsoft 365 services that are available in a specific licensing plan, use the following syntax.</span></span>
   
 ```powershell
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "<AccountSkuId>"}).ServiceStatus
 ```
 
-<span data-ttu-id="dda81-166">此範例會顯示 litwareinc:ENTERPRISEPACK （Office 365 企業版 E3）授權計畫中可用的 Office 365 服務。</span><span class="sxs-lookup"><span data-stu-id="dda81-166">This example shows the Office 365 services that are available in the litwareinc:ENTERPRISEPACK (Office 365 Enterprise E3) licensing plan.</span></span>
+<span data-ttu-id="50fc9-167">此範例會顯示 litwareinc:ENTERPRISEPACK （Office 365 企業版 E3）授權方案中可用的服務。</span><span class="sxs-lookup"><span data-stu-id="50fc9-167">This example shows the services that are available in the litwareinc:ENTERPRISEPACK (Office 365 Enterprise E3) licensing plan.</span></span>
   
 ```powershell
 (Get-MsolAccountSku | where {$_.AccountSkuId -eq "litwareinc:ENTERPRISEPACK"}).ServiceStatus
 ```
 
-## <a name="see-also"></a><span data-ttu-id="dda81-167">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dda81-167">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="50fc9-168">請參閱</span><span class="sxs-lookup"><span data-stu-id="50fc9-168">See also</span></span>
 
-[<span data-ttu-id="dda81-168">使用 Office 365 管理使用者帳戶、授權和群組 PowerShell</span><span class="sxs-lookup"><span data-stu-id="dda81-168">Manage user accounts, licenses, and groups with Office 365 PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[<span data-ttu-id="50fc9-169">使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組</span><span class="sxs-lookup"><span data-stu-id="50fc9-169">Manage Microsoft 365 user accounts, licenses, and groups with PowerShell</span></span>](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[<span data-ttu-id="dda81-169">使用 Office 365 PowerShell 管理 Office 365</span><span class="sxs-lookup"><span data-stu-id="dda81-169">Manage Office 365 with Office 365 PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
+[<span data-ttu-id="50fc9-170">使用 PowerShell 管理 Microsoft 365</span><span class="sxs-lookup"><span data-stu-id="50fc9-170">Manage Microsoft 365 with PowerShell</span></span>](manage-office-365-with-office-365-powershell.md)
   
-[<span data-ttu-id="dda81-170">開始使用 Office 365 PowerShell</span><span class="sxs-lookup"><span data-stu-id="dda81-170">Getting started with Office 365 PowerShell</span></span>](getting-started-with-office-365-powershell.md)
+[<span data-ttu-id="50fc9-171">Microsoft 365 的 PowerShell 快速入門</span><span class="sxs-lookup"><span data-stu-id="50fc9-171">Getting started with PowerShell for Microsoft 365</span></span>](getting-started-with-office-365-powershell.md)
