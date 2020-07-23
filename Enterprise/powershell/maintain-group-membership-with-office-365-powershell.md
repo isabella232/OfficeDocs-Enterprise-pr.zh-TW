@@ -1,9 +1,9 @@
 ---
-title: 維護使用 Office 365 的群組成員資格 PowerShell
+title: 維護使用 PowerShell 的 Microsoft 365 群組成員資格
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/06/2019
+ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,23 +18,25 @@ ms.custom:
 - Ent_Office_Other
 - O365ITProTrain
 ms.assetid: 6770c5fa-b886-4512-8c67-ffd53226589e
-description: 瞭解如何使用 Office 365 PowerShell 維護 Office 365 群組的成員資格。
-ms.openlocfilehash: 0e6c5f2e27f9d146bb2a053bd3bdb6694fb07276
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 瞭解如何使用 PowerShell 維護 Microsoft 365 群組中的成員資格。
+ms.openlocfilehash: f75587c9c50a1fce3a5abfb00ddba2845318e9c4
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004626"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230649"
 ---
-# <a name="maintain-group-membership-with-office-365-powershell"></a>維護使用 Office 365 的群組成員資格 PowerShell
+# <a name="maintain-microsoft-365-group-membership-with-powershell"></a>維護使用 PowerShell 的 Microsoft 365 群組成員資格
 
-您可以使用 Office 365 PowerShell 代替 Microsoft 365 系統管理中心，以維護 Office 365 中的群組成員資格。 
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+您可以使用 Microsoft 365 的 PowerShell 代替 microsoft 365 系統管理中心，以維護 Microsoft 365 中的群組成員資格。 
 
 > [!TIP]
 > 若要透過指定使用者帳戶和群組名稱來產生現成的 PowerShell 命令，請使用此[群組維護 Microsoft Excel 活頁簿](https://github.com/MicrosoftDocs/OfficeDocs-Enterprise/raw/live/Enterprise/media/maintain-group-membership-with-office-365-powershell/GroupMaintPowerShellGenerator.xlsx)。 
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
 
 ### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>新增或移除使用者帳戶為群組的成員
 
@@ -72,7 +74,7 @@ Remove-AzureADGroupMember -MemberId (Get-AzureADUser | Where { $_.DisplayName -e
 
 ### <a name="add-or-remove-groups-as-members-of-a-group"></a>新增或移除群組為群組的成員
 
-安全性群組可以包含其他群組做為成員。 不過，Office 365 群組卻無法。 本節包含的 PowerShell 命令可以新增或移除安全性群組的群組。
+安全性群組可以包含其他群組做為成員。 不過，Microsoft 365 群組無法。 本節包含的 PowerShell 命令可以新增或移除安全性群組的群組。
 
 **若要以其顯示名稱來新增群組**，請填入要新增之群組的顯示名稱，以及將包含成員群組的群組的顯示名稱，並在 PowerShell] 視窗或 PowerShell ISE 中執行這些命令。
 
@@ -92,7 +94,7 @@ Remove-AzureADGroupMember -MemberId (Get-AzureADGroup | Where { $_.DisplayName -
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 
 ### <a name="add-or-remove-user-accounts-as-members-of-a-group"></a>新增或移除使用者帳戶為群組的成員
@@ -131,7 +133,7 @@ Remove-MsolGroupMember -GroupMemberObjectId (Get-MsolUser | Where { $_.DisplayNa
 
 ### <a name="add-or-remove-groups-as-members-of-a-group"></a>新增或移除群組為群組的成員
 
-安全性群組可以包含其他群組做為成員。 不過，Office 365 群組卻無法。 本節包含的 PowerShell 命令可以新增或移除安全性群組的群組。
+安全性群組可以包含其他群組做為成員。 不過，Microsoft 365 群組無法。 本節包含的 PowerShell 命令可以新增或移除安全性群組的群組。
 
 **若要以其顯示名稱來新增群組**，請填入要新增之群組的顯示名稱，以及將包含成員群組的群組的顯示名稱，並在 PowerShell] 視窗或 PowerShell ISE 中執行這些命令。
 
@@ -149,11 +151,11 @@ $groupName="<display name of the group contains the member group>"
 Remove-MsolGroupMember -GroupMemberObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupMemberName }).ObjectID -GroupObjectId (Get-MsolGroup | Where { $_.DisplayName -eq $groupName }).ObjectID -GroupMemberType Group
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
 

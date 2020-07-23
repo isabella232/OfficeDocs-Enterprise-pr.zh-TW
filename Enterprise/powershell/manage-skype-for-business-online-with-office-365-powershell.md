@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 管理商務用 Skype Office
+title: 使用 PowerShell 管理商務用 Skype Online
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 05/28/2018
+ms.date: 07/17/2020
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-administration
@@ -13,17 +13,19 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: 054c16e6-9fd1-4e85-a0e6-81788b8410ea
-description: 摘要︰使用 Office 365 PowerShell 來管理 商務用 Skype Online 原則、每一使用者原則和會議的設定。
-ms.openlocfilehash: f1a5df3802d43755e81465743b81c5fbb9fff7e0
-ms.sourcegitcommit: 6c7cc6aca8713e280ae6ff51226dde9db4497401
+description: 摘要：使用 Microsoft 365 PowerShell 來管理商務用 Skype Online 原則、每一使用者原則和會議設定。
+ms.openlocfilehash: f66b3186a5b29bbf0756a629b85c626caf2c1e36
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "44415935"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230439"
 ---
-# <a name="manage-skype-for-business-online-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理商務用 Skype Office
+# <a name="manage-skype-for-business-online-with-powershell"></a>使用 PowerShell 管理商務用 Skype Online
 
-任何 商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。 雖然您可以在 Microsoft 365 系統管理中心中完成其中一些工作，但是使用 Office 365 PowerShell 可以更快速、更輕鬆地完成其他工作。 
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+任何 商務用 Skype Online 系統管理員的其中一個主要工作是管理原則。 雖然您可以在 Microsoft 365 系統管理中心中完成一些工作，但在 PowerShell 中，其他工作會更快速且更容易。 
 
 ## <a name="before-you-start"></a>開始之前
 
@@ -62,15 +64,15 @@ ms.locfileid: "44415935"
 
 如需詳細資訊，請參閱下列主題：
   
-- [線上商務原則與 Office 365 PowerShell 管理 Skype](manage-skype-for-business-online-policies-with-office-365-powershell.md)
+- [使用 PowerShell 管理商務用 Skype Online 原則](manage-skype-for-business-online-policies-with-office-365-powershell.md)
     
-- [指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
+- [將每一使用者商務用 Skype Online 原則指派給 PowerShell](assign-per-user-skype-for-business-online-policies-with-office-365-powershell.md)
     
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
 
 [商務用 Skype PowerShell Cmdlet 參考](https://docs.microsoft.com/powershell/module/skype/?view=skype-ps)
 

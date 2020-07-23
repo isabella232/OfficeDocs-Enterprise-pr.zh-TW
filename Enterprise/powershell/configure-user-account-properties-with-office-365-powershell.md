@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 中設定使用者帳戶屬性
+title: 使用 PowerShell 設定 Microsoft 365 使用者帳戶屬性
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/16/2019
+ms.date: 07/16/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,57 +18,59 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: 30813f8d-b08d-444b-98c1-53df7c29b4d7
-description: 摘要：使用 Office 365 PowerShell 來設定 Office 365 租使用者中個別或多個使用者帳戶的屬性。
-ms.openlocfilehash: 5748bd382357168e4184754fb49fb7304e2d2474
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 摘要：使用 Microsoft 365 PowerShell，設定您的 Microsoft 365 租使用者中個別或多個使用者帳戶的屬性。
+ms.openlocfilehash: ccf9bf9930551ab1ee26ef7a1f69427cdc4871f5
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004716"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230849"
 ---
-# <a name="configure-user-account-properties-with-office-365-powershell"></a>使用 Office 365 PowerShell 中設定使用者帳戶屬性
+# <a name="configure-microsoft-365-user-account-properties-with-powershell"></a>使用 PowerShell 設定 Microsoft 365 使用者帳戶屬性
 
-雖然您可以使用 Microsoft 365 系統管理中心來設定 Office 365 租使用者帳戶的屬性，但您也可以使用 Office 365 PowerShell，並執行系統管理中心的某些工作。
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+雖然您可以使用 Microsoft 365 系統管理中心來設定 Microsoft 365 租使用者之使用者帳戶的屬性，但您也可以使用 PowerShell，並執行 Microsoft 365 系統管理中心無法執行的某些動作。
   
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
 若要使用適用于 Graph 模組的 Azure Active Directory PowerShell，設定使用者帳戶的屬性，您可以使用[AzureADUser 指令程式](https://docs.microsoft.com/powershell/module/azuread/set-azureaduser?view=azureadps-2.0)，並指定要設定或變更的屬性。 
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
    
 ### <a name="change-properties-for-a-specific-user-account"></a>變更特定使用者帳戶的屬性
 
 您可以使用 **-ObjectID**參數識別帳戶，並設定或變更具有其他參數的特定屬性。 以下是最常見的參數清單。
   
-- -部門 "\<部門名稱>"
+- -部門 " \<department name> "
     
-- -DisplayName "\<完整使用者名稱>"
+- -DisplayName " \<full user name> "
     
-- -FacsimilieTelephoneNumber 「\<傳真號碼>
+- -FacsimilieTelephoneNumber " \<fax number> "
     
-- -GivenName "\<user first name>"
+- -GivenName " \<user first name> "
     
-- -姓 "\<user last name>"
+- -姓 " \<user last name> "
     
-- -Mobile "\<mobile phone number>"
+- -Mobile " \<mobile phone number> "
     
-- -JobTitle "\<職稱>"
+- -JobTitle " \<job title> "
     
-- -PreferredLanguage "\<language>"
+- -PreferredLanguage " \<language> "
     
-- -StreetAddress "\<街道位址>"
+- -StreetAddress " \<street address> "
     
-- -城市「\<城市名稱>
+- -城市 " \<city name> "
     
-- -State "\<state name>"
+- -State " \<state name> "
     
-- -PostalCode "\<郵遞區號>"
+- -PostalCode " \<postal code> "
     
-- -國家/\<地區 "country name>"
+- -國家/地區 " \<country name> "
     
-- -TelephoneNumber "\<office phone number>"
+- -TelephoneNumber " \<office phone number> "
     
-- -UsageLocation "\<2 個字元的國家或地區代碼>"
+- -UsageLocation " \<2-character country or region code> "
     
     這是 ISO 3166-1 Alpha-2 （A2）雙字母的國家或地區碼。
     
@@ -81,17 +83,17 @@ ms.locfileid: "44004716"
 Get-AzureADUser | Sort UserPrincipalName | Select UserPrincipalName | More
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **AzureADUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**AzureADUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 依字母順序排序使用者主體名稱清單（ **Sort UserPrincipalName** ），並將其傳送至下一個**|** 命令（）。
+- 依字母順序排序使用者主體名稱清單（**Sort UserPrincipalName**），並將其傳送至下一個命令（ **|** ）。
     
-- 只顯示每個帳戶的使用者主體名稱屬性（**選取 UserPrincipalName** ）。
+- 只顯示每個帳戶的使用者主體名稱屬性（**選取 UserPrincipalName**）。
 
 - 一次顯示一屏（**更多**）。
     
-這個命令會列出您的所有帳戶。 如果您想要根據其顯示名稱（名字和姓氏）顯示帳戶的使用者主要名稱，請填入下列的 **$userName**變數（移除\<和 > 字元），然後執行下列命令：
+這個命令會列出您的所有帳戶。 如果您想要根據其顯示名稱（名字和姓氏）顯示帳戶的使用者主要名稱，請填入下列 **$userName**變數（移除 \< and > 字元），然後執行下列命令：
   
 ```powershell
 $userName="<Display name>"
@@ -121,11 +123,11 @@ Set-AzureADUser -ObjectID $upn -UsageLocation "FR"
 Get-AzureADUser | Set-AzureADUser -UsageLocation "FR"
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **AzureADUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**AzureADUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 將使用者位置設定為法國（ **AzureADUser-UsageLocation "FR"** ）。
+- 將使用者位置設定為法國（**AzureADUser-UsageLocation "FR"**）。
     
 ### <a name="change-properties-for-a-specific-set-of-user-accounts"></a>變更特定使用者帳戶組的屬性
 
@@ -135,19 +137,19 @@ Get-AzureADUser | Set-AzureADUser -UsageLocation "FR"
 Get-AzureADUser | Where {$_.Department -eq "Accounting"} | Set-AzureADUser -UsageLocation "FR"
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **AzureADUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**AzureADUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 尋找其部門屬性設定為 "記帳" 的所有使用者帳戶（**其中 {$ _）。部門-eq "記帳"}** ）並將結果資訊傳送至下一個命令（ **|** ）。
+- 尋找其部門屬性設定為 "記帳" 的所有使用者帳戶（**其中 {$ _）。部門-eq "記帳"}**）並將結果資訊傳送至下一個命令（ **|** ）。
     
-- 將使用者位置設定為法國（ **AzureADUser-UsageLocation "FR"** ）。
+- 將使用者位置設定為法國（**AzureADUser-UsageLocation "FR"**）。
     
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
 若要使用 Microsoft Azure Active Directory Module for Windows PowerShell 設定使用者帳戶的屬性，您可以使用**Set-MsolUser** Cmdlet，並指定要設定或變更的屬性。 
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
   
 >[!Note]
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
@@ -159,37 +161,37 @@ Get-AzureADUser | Where {$_.Department -eq "Accounting"} | Set-AzureADUser -Usag
 
 您可以使用 **-UserPrincipalName**參數來識別帳戶，並設定或變更具有其他參數的特定屬性。 以下是最常見的參數清單。
   
-- -城市「\<城市名稱>
+- -城市 " \<city name> "
     
-- -國家/\<地區 "country name>"
+- -國家/地區 " \<country name> "
     
-- -部門 "\<部門名稱>"
+- -部門 " \<department name> "
     
-- -DisplayName "\<完整使用者名稱>"
+- -DisplayName " \<full user name> "
     
-- -傳真 "\<傳真號碼>"
+- -傳真 " \<fax number> "
     
-- -FirstName "\<user first name>"
+- -FirstName " \<user first name> "
     
-- -LastName "\<user last name>"
+- -LastName " \<user last name> "
     
-- -MobilePhone "\<行動電話號碼>"
+- -MobilePhone " \<mobile phone number> "
     
-- -Office "\<office 位置>"
+- -Office " \<office location> "
     
-- -PhoneNumber "\<office phone number>"
+- -PhoneNumber " \<office phone number> "
     
-- -PostalCode "\<郵遞區號>"
+- -PostalCode " \<postal code> "
     
-- -PreferredLanguage "\<language>"
+- -PreferredLanguage " \<language> "
     
-- -State "\<state name>"
+- -State " \<state name> "
     
-- -StreetAddress "\<街道位址>"
+- -StreetAddress " \<street address> "
     
-- -Title "\<title name>"
+- -職稱 " \<title name> "
     
-- -UsageLocation "\<2 個字元的國家或地區代碼>"
+- -UsageLocation " \<2-character country or region code> "
     
     這是 ISO 3166-1 Alpha-2 （A2）雙字母的國家或地區碼。
     
@@ -201,17 +203,17 @@ Get-AzureADUser | Where {$_.Department -eq "Accounting"} | Set-AzureADUser -Usag
 Get-MSolUser | Sort UserPrincipalName | Select UserPrincipalName | More
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **Get-MsolUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**Get-MsolUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 依字母順序排序使用者主體名稱清單（ **Sort UserPrincipalName** ），並將其傳送至下一個**|** 命令（）。
+- 依字母順序排序使用者主體名稱清單（**Sort UserPrincipalName**），並將其傳送至下一個命令（ **|** ）。
     
-- 只顯示每個帳戶的使用者主體名稱屬性（**選取 UserPrincipalName** ）。
+- 只顯示每個帳戶的使用者主體名稱屬性（**選取 UserPrincipalName**）。
     
 - 一次顯示一屏（**更多**）。
     
-這個命令會列出您的所有帳戶。 如果您想要根據其顯示名稱（名字和姓氏）顯示帳戶的使用者主要名稱，請填入下列的 **$userName**變數（移除\<和 > 字元），然後執行下列命令：
+這個命令會列出您的所有帳戶。 如果您想要根據其顯示名稱（名字和姓氏）顯示帳戶的使用者主要名稱，請填入下列 **$userName**變數（移除 \< and > 字元），然後執行下列命令：
   
 ```powershell
 $userName="<Display name>"
@@ -241,11 +243,11 @@ Set-MsolUser -UserPrincipalName $upn -UsageLocation "FR"
 Get-MsolUser | Set-MsolUser -UsageLocation "FR"
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **Get-MsolUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**Get-MsolUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 將使用者位置設定為法國（ **Set-MsolUser UsageLocation "FR"** ）。
+- 將使用者位置設定為法國（**Set-MsolUser UsageLocation "FR"**）。
     
 ### <a name="change-properties-for-a-specific-set-of-user-accounts"></a>變更特定使用者帳戶組的屬性
 
@@ -255,19 +257,19 @@ Get-MsolUser | Set-MsolUser -UsageLocation "FR"
 Get-MsolUser | Where {$_.Department -eq "Accounting"} | Set-MsolUser -UsageLocation "FR"
 ```
 
-這個命令會指示 Office 365 PowerShell：
+這個命令會指示 PowerShell：
   
-- 取得使用者帳戶（ **Get-MsolUser** ）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
+- 取得使用者帳戶（**Get-MsolUser**）上的所有資訊，並將其傳送至下一個命令（ **|** ）。
     
-- 尋找其部門屬性設定為 "記帳" 的所有使用者帳戶（**其中 {$ _）。部門-eq "記帳"}** ）並將結果資訊傳送至下一個命令（ **|** ）。
+- 尋找其部門屬性設定為 "記帳" 的所有使用者帳戶（**其中 {$ _）。部門-eq "記帳"}**）並將結果資訊傳送至下一個命令（ **|** ）。
     
-- 將使用者位置設定為法國（ **Set-MsolUser UsageLocation "FR"** ）。
+- 將使用者位置設定為法國（**Set-MsolUser UsageLocation "FR"**）。
     
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)

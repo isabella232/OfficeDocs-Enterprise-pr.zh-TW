@@ -1,5 +1,5 @@
 ---
-title: 使用 Office 365 建立 SharePoint Online 網站及新增使用者 PowerShell
+title: 使用 PowerShell 建立 SharePoint Online 網站並新增使用者
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,27 +17,29 @@ ms.custom:
 - Ent_Office_Other
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
-description: 摘要：使用 Office 365 PowerShell 建立新的 SharePoint Online 網站，然後將使用者和群組新增至這些網站。
-ms.openlocfilehash: 8011a7e3f61e6b26d4606bfdae67152a1d894840
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+description: 摘要：使用 PowerShell 建立新的 SharePoint Online 網站，然後將使用者和群組新增至這些網站。
+ms.openlocfilehash: 2791b4de9388e3ff828a665aeeef5ada19627107
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230799"
 ---
-# <a name="create-sharepoint-online-sites-and-add-users-with-office-365-powershell"></a>使用 Office 365 建立 SharePoint Online 網站及新增使用者 PowerShell
+# <a name="create-sharepoint-online-sites-and-add-users-with-powershell"></a>使用 PowerShell 建立 SharePoint Online 網站並新增使用者
 
-當您使用 Office 365 PowerShell 建立 SharePoint 的線上網站和新增使用者時，您可以快速且重複執行工作，其速度會比您在 Microsoft 365 系統管理中心中更快。 您也可以執行不可能在 Office 365 系統管理中心中執行的工作。 
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+當您使用 Microsoft 365 的 PowerShell 建立 SharePoint 的線上網站和新增使用者時，您可以快速且重複執行工作，其速度會比您在 Microsoft 365 系統管理中心中更快。 您也可以執行不可能在 Microsoft 365 系統管理中心中執行的工作。 
 
 ## <a name="before-you-begin"></a>開始之前
 
 本主題中的程式需要您連線至 SharePoint。 如需相關指示，請參閱[Connect to SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-## <a name="step-1-create-new-site-collections-using-office-365-powershell"></a>步驟1：使用 Office 365 PowerShell 建立新的網站集合
+## <a name="step-1-create-new-site-collections-using-powershell"></a>步驟1：使用 PowerShell 建立新的網站集合
 
-使用 Office 365 PowerShell 和 .csv 檔案建立多個網站，該檔案是使用所提供的範例程式碼和記事本建立的。 在此程式中，您將會以您自己的網站與租使用者特有的資訊，取代方括弧中所顯示的預留位置資訊。 此程式可讓您建立單一檔，並執行使用該檔案的單一 Office 365 PowerShell 命令。 這會使得同時採取可重複和可遷移的動作，並避免在 SharePoint 線上管理命令介面中輸入長命令的錯誤。 此程式有兩個部分。 首先，您會建立 .csv 檔案，然後您會使用 Office 365 PowerShell 參照該 .csv 檔案，該檔案會使用其內容來建立網站。
+使用所提供的範例程式碼和記事本，建立多個網站，使用 PowerShell 和 .csv 檔案建立。 在此程式中，您將會以您自己的網站與租使用者特有的資訊，取代方括弧中所顯示的預留位置資訊。 此程式可讓您建立單一檔，並執行使用該檔案的單一 PowerShell 命令。 這會使得同時採取可重複和可遷移的動作，並避免在 SharePoint 線上管理命令介面中輸入長命令的錯誤。 此程式有兩個部分。 首先，您會建立 .csv 檔案，然後您將使用 PowerShell 參照該 .csv 檔案，該檔案會使用其內容來建立網站。
 
-Office 365 PowerShell Cmdlet 會匯入 .csv 檔案，並將其管線傳遞到大括弧中的迴圈，該括弧會將檔案的第一行讀取為欄標頭。 然後，Office 365 PowerShell Cmdlet 會逐一查看餘下的記錄，為每個記錄建立新的網站集合，並根據欄標題指派網站集合的屬性。
+PowerShell Cmdlet 會匯入 .csv 檔案，並將其管線傳遞到大括弧中的迴圈，將檔案的第一行讀取為欄標頭。 PowerShell 指令程式會逐一查看餘下的記錄，為每個記錄建立新的網站集合，並根據欄標題指派網站集合的屬性。
 
 ### <a name="create-a-csv-file"></a>建立 .csv 檔案
 
@@ -156,9 +158,9 @@ c:\users\MyAlias\desktop\UsersAndGroups.ps1
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[管理 SharePoint Online 網站群組 Office 365 PowerShell](manage-sharepoint-site-groups-with-powershell.md)
+[使用 PowerShell 管理 SharePoint Online 網站群組](manage-sharepoint-site-groups-with-powershell.md)
 
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
 

@@ -1,5 +1,5 @@
 ---
-title: 停用服務存取權，並指派使用者授權
+title: 在指派使用者授權時停用 Microsoft 365 服務的存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -17,21 +17,23 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 ms.assetid: bb003bdb-3c22-4141-ae3b-f0656fc23b9c
-description: 瞭解如何使用 Office 365 PowerShell，將授權指派給使用者帳戶並同時停用特定服務方案。
-ms.openlocfilehash: b1fcd8afd9f9fee5b249752821385cd888519a37
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: 瞭解如何使用 Microsoft 365 的 PowerShell，將授權指派給使用者帳戶並同時停用特定服務方案。
+ms.openlocfilehash: 31199fa2fa61ec5da671da5def2bf648a07e7dd4
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009468"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230689"
 ---
-# <a name="disable-access-to-services-while-assigning-user-licenses"></a>停用服務存取權，並指派使用者授權
+# <a name="disable-access-to-microsoft-365-services-while-assigning-user-licenses"></a>在指派使用者授權時停用 Microsoft 365 服務的存取權
 
-Office 365 訂閱隨附個別服務的服務方案。 當您指派授權給使用者時，Office 365 系統管理員常常需要停用某些方案。 透過本文中的指示，您可以在使用個別使用者帳戶或多個使用者帳戶的 PowerShell 停用特定的服務方案時，指派 Office 365 授權。
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+Microsoft 365 訂閱隨附個別服務的服務方案。 Microsoft 365 系統管理員經常需要在指派授權給使用者時停用特定的計畫。 透過本文中的指示，您可以在使用個別使用者帳戶或多個使用者帳戶的 PowerShell 停用特定的服務方案時，指派 Microsoft 365 授權。
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
 
 接下來，使用此命令列出租使用者的授權計畫。
@@ -44,7 +46,7 @@ Get-AzureADSubscribedSku | Select SkuPartNumber
 
 接下來，編譯要啟用的服務清單。 如需授權方案（也稱為產品名稱）、其包含的服務方案及其對應的易記名稱的完整清單，請參閱[產品名稱和服務方案識別碼取得授權](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)。
 
-針對下列命令區塊，請填入使用者帳戶的使用者主要名稱、SKU 元件編號，以及要啟用及移除解說文字和\<及 > 字元的服務方案清單。 然後，在 PowerShell 命令提示字元中執行產生的命令。
+在下列命令區塊中，填入使用者帳戶的使用者主要名稱、SKU 元件編號，以及要啟用及移除解說文字和字元的服務方案清單 \< and > 。 然後，在 PowerShell 命令提示字元中執行產生的命令。
   
 ```powershell
 $userUPN="<user account UPN>"
@@ -65,7 +67,7 @@ Set-AzureADUserLicense -ObjectId $user.ObjectId -AssignedLicenses $LicensesToAss
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 接下來，執行下列命令以查看您目前的訂閱：
   
@@ -77,9 +79,9 @@ Get-MsolAccountSku
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
-在 [顯示] `Get-MsolAccountSku`命令中：
+在 [顯示] `Get-MsolAccountSku` 命令中：
   
-- **AccountSkuId**是 OrganizationName>： \< \<訂閱> 格式中的組織訂閱。 \<OrganizationName> 是您在 Office 365 中登記時所提供的值，且對您的組織而言是唯一的。 \<訂閱> 值是針對特定訂閱。 例如，針對 litwareinc:ENTERPRISEPACK，組織名稱是 litwareinc，訂閱名稱是 ENTERPRISEPACK （Office 365 企業版 E3）。
+- **AccountSkuId**為您組織的訂閱 \<OrganizationName> ： \<Subscription> format。 是您在 \<OrganizationName> Microsoft 365 中註冊時所提供的值，且對您的組織而言是唯一的。 \<Subscription>值是針對特定訂閱。 例如，針對 litwareinc:ENTERPRISEPACK，組織名稱是 litwareinc，訂閱名稱是 ENTERPRISEPACK （Office 365 企業版 E3）。
     
 - **ActiveUnits**為您為訂閱購買的授權數目。
     
@@ -87,9 +89,9 @@ Get-MsolAccountSku
     
 - **ConsumedUnits**是您為訂閱指派給使用者的授權數目。
     
-請記下您的 Office 365 訂閱的 AccountSkuId，其中包含您想要授權的使用者。 此外，請確定有足夠的授權可指派（從**ActiveUnits**中減去**ConsumedUnits** ）。
+請注意包含您要授權之使用者的 Microsoft 365 訂閱 AccountSkuId。 此外，請確定有足夠的授權可指派（從**ActiveUnits**中減去**ConsumedUnits** ）。
   
-接下來，執行此命令，以查看您所有訂閱中可用之 Office 365 服務方案的詳細資料：
+接下來，執行此命令，以查看您所有訂閱中可用之 Microsoft 365 服務方案的詳細資料：
   
 ```powershell
 Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
@@ -97,9 +99,9 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
 
 在此命令顯示時，決定當您指派授權給使用者時，您想要停用的服務方案。
   
-以下是服務方案及其對應的 Office 365 服務的部分清單。
+以下是服務方案及其對應的 Microsoft 365 服務的部分清單。
 
-下表顯示 Office 365 服務方案及其最常見服務的易記名稱。 您的服務方案清單可能不同。 
+下表顯示 Microsoft 365 服務方案及其最常見服務的易記名稱。 您的服務方案清單可能不同。 
   
 |**服務計劃**|**描述**|
 |:-----|:-----|
@@ -119,7 +121,7 @@ Get-MsolAccountSku | Select -ExpandProperty ServiceStatus
   
 ### <a name="for-a-single-user"></a>針對單一使用者
 
-若為單一使用者，請填入使用者帳戶的使用者主要名稱、AccountSkuId，以及要停用的服務方案清單，並移除解說文字和\<及 > 字元。 然後，在 PowerShell 命令提示字元中執行產生的命令。
+若為單一使用者，請填入使用者帳戶的使用者主要名稱、AccountSkuId，以及要停用的服務方案清單，並移除解說文字和 \< and > 字元。 然後，在 PowerShell 命令提示字元中執行產生的命令。
   
 ```powershell
 $userUPN="<the user's account name in email format>"
@@ -182,12 +184,12 @@ $users | Get-MsolUser | Select UserPrincipalName, Islicensed,Usagelocation | Exp
     
 - 會建立 CSV 檔案，其中包含所有已處理的使用者，並顯示其授權狀態。
     
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 PowerShell 停用服務存取權](disable-access-to-services-with-office-365-powershell.md)
+[使用 PowerShell 停用 Microsoft 365 服務的存取權](disable-access-to-services-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 停用 Sway 的存取權](disable-access-to-sway-with-office-365-powershell.md)
+[使用 PowerShell 停用 Sway 的存取權](disable-access-to-sway-with-office-365-powershell.md)
   
-[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)

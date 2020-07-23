@@ -1,5 +1,5 @@
 ---
-title: Azure 中的 Office 365 高可用性同盟驗證
+title: Azure 中的 Microsoft 365 高可用性同盟驗證
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,7 +7,7 @@ ms.date: 11/25/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 search.appverid:
 - MET150s
 ms.collection:
@@ -18,17 +18,17 @@ f1.keywords:
 ms.custom:
 - Ent_Solutions
 ms.assetid: 34b1ab9c-814c-434d-8fd0-e5a82cd9bff6
-description: 摘要：在 Microsoft Azure 中設定 Office 365 訂用帳戶的高可用性同盟驗證。
-ms.openlocfilehash: af73f75b7ac1e3151ddb5c55acdf49a48f784e95
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+description: 摘要：在 Microsoft Azure 中為您的 Microsoft 365 訂閱設定高可用性同盟驗證。
+ms.openlocfilehash: 98b8bdff708d02f866a3e2f2d2521bec5b011bb7
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840520"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230049"
 ---
-# <a name="deploy-high-availability-federated-authentication-for-office-365-in-azure"></a>Azure 中的 Office 365 高可用性同盟驗證
+# <a name="deploy-high-availability-federated-authentication-for-microsoft-365-in-azure"></a>Azure 中的 Microsoft 365 高可用性同盟驗證
 
-本文包含的逐步指示，說明如何使用這些虛擬機器在 Azure 基礎結構服務中的 Microsoft Office 365 部署高可用性聯盟的驗證：
+本文提供以下列虛擬機器在 Azure 基礎結構服務中部署 Microsoft Microsoft 365 高可用性同盟驗證的逐步指示連結。
   
 - 兩個 Web 應用程式 Proxy 伺服器
     
@@ -40,9 +40,9 @@ ms.locfileid: "41840520"
     
 組態如下，包含每部伺服器的預留位置名稱。
   
-**Azure 中適用於 Office 365 基礎結構的高可用性同盟驗證**
+**Azure 中 Microsoft 365 基礎結構的高可用性同盟驗證**
 
-![Azure 中高可用性 Office 365 同盟驗證基礎結構的最後設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
+![Azure 中高可用性 Microsoft 365 同盟驗證基礎結構的最終設定](media/c5da470a-f2aa-489a-a050-df09b4d641df.png)
   
 所有虛擬機器位於單一跨單位 Azure 虛擬網路中 (VNet)。 
   
@@ -54,7 +54,7 @@ ms.locfileid: "41840520"
 > [!NOTE]
 > 因為此 VNet 會連線到內部部署網路，所以此組態不包含管理子網路上的 Jumpbox 或監視虛擬機器。如需詳細資訊，請參閱＜[執行 N 層架構的 Windows VM](https://docs.microsoft.com/azure/guidance/guidance-compute-n-tier-vm)＞。 
   
-這項設定的結果是，您所有的 Office 365 使用者都將會有聯盟驗證，他們可以在其中使用其 AD DS 認證，而不是其 Office 365 帳戶登入。 聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
+這項設定的結果是您將具備所有 Microsoft 365 使用者的同盟驗證，讓他們可以使用其 AD DS 認證來登入，而不是其 Microsoft 365 帳戶。 聯盟驗證基礎結構會使用一組多餘的伺服器，能更輕鬆部署在 Azure 基礎結構服務而不是內部部署邊緣網路中。
   
 ## <a name="bill-of-materials"></a>物料單
 
@@ -96,15 +96,15 @@ ms.locfileid: "41840520"
     
 - [階段 4：設定 Web 應用程式 Proxy](high-availability-federated-authentication-phase-4-configure-web-application-pro.md)。建立並設定兩個 Web 應用程式 Proxy 伺服器。
     
-- [階段 5：設定 Office 365 同盟的驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。設定 Office 365 訂用帳戶的聯盟驗證。
+- [階段5：設定 Microsoft 365 的同盟驗證](high-availability-federated-authentication-phase-5-configure-federated-authentic.md)。為您的 Microsoft 365 訂閱設定同盟驗證。
     
-這些文章是預先定義之架構的引導式、階段式指引，用以在 Azure 基礎結構服務中建立功能性、高可用性的 Office 365 聯盟驗證。請記住下列事項：
+這些文章針對預先定義的架構，提供在 Azure 基礎結構服務中為 Microsoft 365 建立功能性、高可用性同盟驗證的規範性階段指南。請記住下列事項：
   
 - 如果您是有經驗的 AD FS 實作者，請自行適應階段 3 至 4 中的指示，並建置最符合您需求的伺服器組。
     
 - 如果您已擁有的現有 Azure 混合式雲端部署具有現有跨單位虛擬網路，請依需要調整或略過階段 1 和 2 中的指示，並將 AD FS 和 Web 應用程式 Proxy 伺服器置於適當的子網路中。
     
-若要建置此組態的開發/測試環境或概念證明，請參閱＜[Office 365 開發人員/測試環境的同盟身分識別](federated-identity-for-your-office-365-dev-test-environment.md)＞。
+若要建立開發/測試環境或此設定的概念證明，請參閱[適用于 Microsoft 365 開發/測試環境](https://docs.microsoft.com/microsoft-365/enterprise/federated-identity-for-your-office-365-dev-test-environment)的同盟身分識別。
   
 ## <a name="next-step"></a>下一步
 

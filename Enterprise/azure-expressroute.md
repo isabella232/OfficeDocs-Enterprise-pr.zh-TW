@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
 description: 瞭解 Azure ExpressRoute 與 Office 365 搭配使用的方式，以及如何規劃在部署 Azure ExpressRoute 以與 Office 365 搭配使用時所需的網路實施專案。
-ms.openlocfilehash: 80b42fc43f395d9dd94384d456d40eb536541746
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 698b8a3ed73bdd96870e017d02f3ac106ae72081
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997947"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230029"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute for Office 365
 
@@ -64,7 +64,7 @@ ms.locfileid: "44997947"
 |Exchange Online<sup>1</sup> <br/> Exchange Online Protection<sup>1</sup> <br/> Delve<sup>1</sup> <br/> |
 |商務用 Skype Online<sup>1</sup> <br/> Microsoft 團隊<sup>1</sup> <br/> |
 |SharePoint 線上<sup>1</sup> <br/> Business<sup>1</sup>的 OneDrive <br/> Project Online<sup>1</sup> <br/> |
-|入口網站和共用<sup>1</sup> <br/> Azure Active Directory<sup>1</sup> <br/> AAD Connect<sup>1</sup> <br/> Office<sup>1</sup> <br/> |
+|入口網站和共用<sup>1</sup> <br/> Azure Active Directory （Azure AD） <sup>1</sup> <br/> Azure AD Connect<sup>1</sup> <br/> Office<sup>1</sup> <br/> |
 
 <sup>1</sup>這兩個應用程式都不受 ExpressRoute 支援網際網路連線性需求，請參閱[Office 365 端點文章](https://aka.ms/o365endpoints)以取得詳細資訊。
 
@@ -90,7 +90,7 @@ ms.locfileid: "44997947"
 
 8. 選擇性地[實施 QoS](https://support.office.com/article/ExpressRoute-and-QoS-in-Skype-for-Business-Online-20c654da-30ee-4e4f-a764-8b7d8844431d) ，並評估區域擴充。
 
-<sup>1</sup>重要效能考慮。 這裡的決策可能會大幅影響延遲，這對於商務用 Skype 之類的應用程式很重要。
+<sup>1</sup>重要的效能考慮。 這裡的決策可能會大幅影響延遲，這對於商務用 Skype 之類的應用程式很重要。
 
 如需其他參考，除了[ExpressRoute 檔](https://azure.microsoft.com/documentation/articles/expressroute-introduction/)之外，還請使用我們的[路由輔助線](https://support.office.com/article/Routing-with-ExpressRoute-for-Office-365-e1da26c6-2d39-4379-af6f-4da213218408)。
 
@@ -112,7 +112,7 @@ ms.locfileid: "44997947"
 
 [實作 ExpressRoute for Office 365](implementing-expressroute.md)
 
-[在適用于 Office 365 案例的 ExpressRoute 中使用 BGP 社區（預覽）](bgp-communities-in-expressroute.md)
+[在 ExpressRoute for Office 365 案例中使用 BGP 社區](bgp-communities-in-expressroute.md)
 
 [商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
 

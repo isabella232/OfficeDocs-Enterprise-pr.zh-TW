@@ -17,12 +17,12 @@ search.appverid:
 - SPO160
 - MET150
 description: 本文說明如何在線上 SharePoint 中規劃入口網站啟動，以及成功啟動所需採取的步驟。
-ms.openlocfilehash: c6f1ef0817534fe2e643492e882fe8f61c3a01dc
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+ms.openlocfilehash: 4edd1bc9c2001912a8ebb77e467f9663474ecb66
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004106"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230169"
 ---
 # <a name="planning-your-portal-launch-roll-out-plan-in-sharepoint-online"></a>在 SharePoint Online 中規劃您的入口網站啟動向外推廣計畫
 
@@ -35,14 +35,14 @@ ms.locfileid: "44004106"
 部署方法會在下方反白顯示。
 
 ## <a name="overview-of-capacity-planning-in-sharepoint-online"></a>SharePoint 線上的容量規劃概述
-為了有效地使用容量並處理未預期的成長，在任何伺服器陣列中，我們都有追蹤某些使用案例的自動化。 在任何一個伺服器陣列中，任何一個承租人的實際成長都無法預測，而且總的要求總數可透過時間預測。 透過找出 SharePoint 線上中的成長趨勢，我們可以規劃未來的擴充。 如需詳細資訊[，請 SharePoint 線上的容量規劃和負載測試](https://docs.microsoft.com/office365/enterprise/capacity-planning-and-load-testing-sharepoint-online)。
+為了有效地使用容量並處理未預期的成長，在任何伺服器陣列中，我們都有追蹤某些使用案例的自動化。 在任何一個伺服器陣列中，任何一個承租人的實際成長都無法預測，而且總的要求總數可透過時間預測。 透過找出 SharePoint 線上中的成長趨勢，我們可以規劃未來的擴充。 如需詳細資訊[，請 SharePoint 線上的容量規劃和負載測試](capacity-planning-and-load-testing-sharepoint-online.md)。
 
 成功啟動的關鍵區段是下文的「波形」或「逐步外滾」方式。 
 
 ## <a name="can-i-load-test-sharepoint-online"></a>我可以線上載入測試 SharePoint 嗎？
 SharePoint 線上是跨伺服器陣列進行平衡的共用多 tenanted 環境，並可在不斷調整規模。 負載測試環境（如 SharePoint Online），其縮放比例變更不只會給您未預期的結果，但不允許。 
 
-深入瞭解：[容量規劃和負載測試 SharePoint 線上](https://docs.microsoft.com/office365/enterprise/capacity-planning-and-load-testing-sharepoint-online)
+深入瞭解：[容量規劃和負載測試 SharePoint 線上](capacity-planning-and-load-testing-sharepoint-online.md)
 
 ## <a name="optimize-pages-by-following-recommended-guidelines"></a>遵循建議的指導方針以優化頁面
 內部部署中部署的頁面不只是移至 SharePoint 線上，而不需針對線上 SharePoint 建議方針進行查看。 最佳的做法是，針對 SharePoint 中的任何網站或入口網站，一定要優化任何首頁，如此一來，貴組織中大部分的使用者都會存取成您網站的開始點。

@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組
+title: 使用 PowerShell 管理 SharePoint Online 使用者和群組
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/17/2019
+ms.date: 07/17/2020
 audience: Admin
 ms.topic: hub-page
 ms.service: o365-administration
@@ -18,17 +18,19 @@ ms.custom:
 - Ent_Office_Other
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
-description: 摘要：使用 Office 365 PowerShell 管理 SharePoint Online 使用者、群組及網站。
-ms.openlocfilehash: c820fd009635a8a9b27f28d858d345794bea6334
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 摘要：使用 Microsoft 365 PowerShell 來管理 SharePoint Online 使用者、群組及網站。
+ms.openlocfilehash: ffdaa2d4810e2e89878ea3eacde99babb046fce2
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230469"
 ---
-# <a name="manage-sharepoint-online-users-and-groups-with-office-365-powershell"></a>使用 Office 365 PowerShell 管理 SharePoint Online 使用者和群組
+# <a name="manage-sharepoint-online-users-and-groups-with-powershell"></a>使用 PowerShell 管理 SharePoint Online 使用者和群組
 
-如果您是使用大型使用者帳戶或群組清單的 SharePoint Online 系統管理員，而且想要更容易管理，則可以使用 Office 365 PowerShell。 
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+如果您是使用大型使用者帳戶或群組清單的 SharePoint Online 系統管理員，而且想要更容易管理，則可以使用 Microsoft 365 PowerShell。 
 
 在您開始之前，本主題中的程式需要您連線至 SharePoint 線上。 如需相關指示，請參閱[Connect to SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
@@ -56,7 +58,7 @@ Get-SPOSite | ForEach {Get-SPOUser -Site $_.Url}
 
 ## <a name="add-a-user-to-the-site-collection-administrators-group"></a>將使用者新增至網站集合管理員群組
 
-您可以使用`Set-SPOUser` Cmdlet，將使用者新增至網站集合上的網站集合管理員清單。
+您可以使用 `Set-SPOUser` Cmdlet，將使用者新增至網站集合上的網站集合管理員清單。
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -80,7 +82,7 @@ Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$t
 
 ## <a name="add-a-user-to-other-site-collection-groups"></a>將使用者新增至其他網站集合群組
 
-在這個工作中，我們將使用`Add-SPOUser` Cmdlet，將使用者新增至網站集合上的 SharePoint 群組。
+在這個工作中，我們將使用 `Add-SPOUser` Cmdlet，將使用者新增至網站集合上的 SharePoint 群組。
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -103,7 +105,7 @@ Add-SPOUser -Group $group -LoginName $user@$tenant.com -Site https://$tenant.sha
 
 ## <a name="create-a-site-collection-group"></a>建立網站集合群組
 
-您可以使用`New-SPOSiteGroup` Cmdlet 來建立新的 SharePoint 群組，並將其新增至網站集合。
+您可以使用 `New-SPOSiteGroup` Cmdlet 來建立新的 SharePoint 群組，並將其新增至網站集合。
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -112,7 +114,7 @@ $group = "<group name name, such as Auditors>"
 $level = "<permission level, such as View Only>"
 New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sharepoint.com/sites/$site
 ```
-您可以稍後使用`Set-SPOSiteGroup` Cmdlet 來更新群組內容，例如許可權層級。
+您可以稍後使用 Cmdlet 來更新群組內容，例如許可權層級 `Set-SPOSiteGroup` 。
 
 例如，讓我們將 contoso 租使用者的「只查看」許可權新增至「contosotest 網站集合」的審計員群組：
 
@@ -130,7 +132,7 @@ New-SPOSiteGroup -Group $group -PermissionLevels $level -Site https://$tenant.sh
 
 不過，使用 SharePoint 線上管理命令介面和 CSV 檔案，這是一種快速快捷的方式。 在此工作中，您將使用 Windows PowerShell 從網站集合安全性群組中移除使用者。 然後，您會使用 CSV 檔案，並從不同的網站中移除許多使用者。 
 
-我們將使用「Remove-SPOUser ' 指令指令，從網站集合群組中移除單一 Office 365 使用者，這樣就能看到命令語法。 語法的外觀如下：
+我們將使用「Remove-SPOUser ' 指令指令，從網站集合群組中移除單一的 Microsoft 365 使用者，這樣就能看到命令語法。 語法的外觀如下：
 
 ```powershell
 $tenant = "<tenant name, such as litwareinc for litwareinc.com>"
@@ -273,13 +275,13 @@ Get-SPOSite | ForEach {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSiz
 
 這個報告非常簡單，您可以新增更多的程式碼，以建立包含更多詳細資訊的特定報告或報告。 不過，這會讓您瞭解如何使用 SharePoint Online 管理命令介面來管理 SharePoint 線上環境中的使用者。
    
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[使用 Office 365 PowerShell 管理 SharePoint Online](create-sharepoint-sites-and-add-users-with-powershell.md)
+[使用 PowerShell 管理 SharePoint 線上](create-sharepoint-sites-and-add-users-with-powershell.md)
 
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
 

@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 停用服務存取權
+title: 使用 PowerShell 停用 Microsoft 365 服務的存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/17/2019
+ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -18,29 +18,31 @@ ms.custom:
 - PowerShell
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
-description: 使用 Office 365 PowerShell 來停用使用者的 Office 365 服務存取權。
-ms.openlocfilehash: e0a486bbe3a783443fc25cbadff61721761a0028
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 使用 PowerShell 來停用使用者的 Microsoft 365 服務存取權。
+ms.openlocfilehash: 4e7c59447dae027dffa7fd5ea24d1818d5d64a9a
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004646"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230679"
 ---
-# <a name="disable-access-to-services-with-office-365-powershell"></a>使用 Office 365 PowerShell 停用服務存取權
+# <a name="disable-access-to-microsoft-365-services-with-powershell"></a>使用 PowerShell 停用 Microsoft 365 服務的存取權
 
-當 Office 365 帳戶指派授權方案的授權時，使用者就可以從該授權取得 Office 365 服務。 不過，您可以控制使用者可以存取的 Office 365 服務。 例如，即使授權允許存取 SharePoint 線上服務，您還是可以停用存取權。 您可以使用 PowerShell 針對特定授權方案停用任何數目的服務存取權：
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+將授權方案的授權指派給 Microsoft 365 帳戶時，使用者就可以從該授權取得 Microsoft 365 服務。 不過，您可以控制使用者可以存取的 Microsoft 365 服務。 例如，即使授權允許存取 SharePoint 線上服務，您還是可以停用存取權。 您可以使用 PowerShell 針對特定授權方案停用任何數目的服務存取權：
 
 - 個別帳戶。
 - 一組帳戶。
 - 您組織中的所有帳戶。
 
 >[!Note]
->有 Office 365 服務相依性，可防止當其他服務依賴于指定的服務時停用此服務。
+>當其他服務依賴于指定的服務時，Microsoft 365 服務相依性會使您無法停用。
 >
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
 
 接下來，使用此命令來查看可用的授權方案，也稱為 AccountSkuIds：
 
@@ -52,16 +54,16 @@ Get-MsolAccountSku | Select AccountSkuId | Sort AccountSkuId
 >PowerShell Core 不支援適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組和名稱有 **Msol** 的 Cmdlet。 若要繼續使用這些 Cmdlet，您必須從 Windows PowerShell 執行。
 >
 
-如需詳細資訊，請參閱[使用 Office 365 PowerShell 查看授權和服務](view-licenses-and-services-with-office-365-powershell.md)。
+如需詳細資訊，請參閱[使用 PowerShell 查看授權和服務](view-licenses-and-services-with-office-365-powershell.md)。
     
-若要查看本主題中的程式前後的結果，請參閱[使用 Office 365 PowerShell 查看帳戶授權與服務詳細資料](view-account-license-and-service-details-with-office-365-powershell.md)。
+若要查看本主題中程式的 before 和 after 結果，請參閱[使用 PowerShell 查看帳戶授權和服務詳細資料](view-account-license-and-service-details-with-office-365-powershell.md)。
     
-PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。 具體說來，此腳本可讓您在 Office 365 組織中查看及停用服務，包括 Sway。 如需詳細資訊，請參閱[Disable access to Sway with Office 365 PowerShell](disable-access-to-sway-with-office-365-powershell.md)。
+PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。 具體說來，此腳本可讓您查看及停用 Microsoft 365 組織中的服務，包括 Sway。 如需詳細資訊，請參閱[使用 PowerShell 停用 Sway 的存取權](disable-access-to-sway-with-office-365-powershell.md)。
     
     
-### <a name="disable-specific-office-365-services-for-specific-users-for-a-specific-licensing-plan"></a>針對特定授權方案停用特定使用者的特定 Office 365 服務
+### <a name="disable-specific-microsoft-365-services-for-specific-users-for-a-specific-licensing-plan"></a>針對特定授權方案停用特定使用者的特定 Microsoft 365 服務
   
-若要針對特定授權方案停用一組特定的 Office 365 服務，請執行下列步驟：
+若要針對特定授權方案停用一組特定的 Microsoft 365 服務，請執行下列步驟：
   
 #### <a name="step-1-identify-the-undesirable-services-in-the-licensing-plan-by-using-the-following-syntax"></a>步驟1：使用下列語法識別授權方案中不想要的服務：
     
@@ -69,7 +71,7 @@ PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。
 $LO = New-MsolLicenseOptions -AccountSkuId <AccountSkuId> -DisabledPlans "<UndesirableService1>", "<UndesirableService2>"...
 ```
 
-下列範例會建立**LicenseOptions**物件，以停用名為`litwareinc:ENTERPRISEPACK` （Office 365 Enterprise E3）的授權方案中的 Office 和 SharePoint 線上服務。
+下列範例會建立**LicenseOptions**物件，以停用名為 `litwareinc:ENTERPRISEPACK` （Office 365 Enterprise E3）的授權方案中的 Office 和 SharePoint 線上服務。
     
 ```powershell
 $LO = New-MsolLicenseOptions -AccountSkuId "litwareinc:ENTERPRISEPACK" -DisabledPlans "SHAREPOINTWAC", "SHAREPOINTENTERPRISE"
@@ -89,7 +91,7 @@ New-MsolUser -UserPrincipalName <Account> -DisplayName <DisplayName> -FirstName 
 New-MsolUser -UserPrincipalName allieb@litwareinc.com -DisplayName "Allie Bellew" -FirstName Allie -LastName Bellew -LicenseAssignment litwareinc:ENTERPRISEPACK -LicenseOptions $LO -UsageLocation US
 ```
 
-如需在 Office 365 PowerShell 中建立使用者帳戶的詳細資訊，請參閱[Create user accounts With office 365 PowerShell](create-user-accounts-with-office-365-powershell.md)。
+如需在 Microsoft 365 的 PowerShell 中建立使用者帳戶的詳細資訊，請參閱[使用 PowerShell 建立使用者帳戶](create-user-accounts-with-office-365-powershell.md)。
     
 若要停用現有授權使用者的服務，請使用下列語法：
     
@@ -103,7 +105,7 @@ Set-MsolUserLicense -UserPrincipalName <Account> -LicenseOptions $LO
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -LicenseOptions $LO
 ```
 
-若要停用步驟1中所述的所有現有授權使用者的服務，請從**Get-MsolAccountSku** Cmdlet 的顯示（例如**litwareinc:ENTERPRISEPACK**）中指定您的 Office 365 方案名稱，然後執行下列命令：
+若要停用步驟1中所述的所有現有授權使用者的服務，請從**Get-MsolAccountSku** Cmdlet 的顯示（例如**litwareinc:ENTERPRISEPACK**）中指定您的 Microsoft 365 方案名稱，然後執行下列命令：
     
 ```powershell
 $acctSKU="<AccountSkuId>"
@@ -143,7 +145,7 @@ $USSales | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
   kakers@contoso.com
   ```
 
-  在此範例中，文字檔是 C：\\My Documents\\，.txt。
+  在此範例中，文字檔為 C： \\ 我的檔 \\Accounts.txt。
     
 2. 執行下列命令：
     
@@ -156,13 +158,13 @@ $USSales | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
 - 已指派授權方案的使用者帳戶。
 - 授權方案提供要停用的服務。
 
-若要在指派使用者授權時，為使用者停用 Office 365 服務，請參閱在[指派使用者授權時停用服務存取權](disable-access-to-services-while-assigning-user-licenses.md)。
+若要在將使用者指派給授權方案時，為他們停用 Microsoft 365 服務，請參閱在[指派使用者授權時停用服務的存取權](disable-access-to-services-while-assigning-user-licenses.md)。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)

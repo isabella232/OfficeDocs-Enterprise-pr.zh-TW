@@ -3,7 +3,7 @@ title: 混合式解決方案
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/30/2018
+ms.date: 07/20/2020
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
@@ -16,16 +16,16 @@ f1.keywords:
 ms.custom: Ent_Solutions
 ms.assetid: e9b8e065-2750-4534-9d39-aafd51a2a4e2
 description: 摘要：使用這些文章在 Microsoft Azure 中部署 Office Server 工作負載。
-ms.openlocfilehash: 5a3d31e93820302bf5ae900d54c9891cfccdaec9
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 64d74e1d518cde824289a8c3ab9cee15b6b34ad5
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45229949"
 ---
 # <a name="hybrid-solutions"></a>混合式解決方案
 
-使用了 Microsoft Azure，您現在可以部署一些通常是在 Azure 基礎結構服務中內部部署上面部署的 Office Server 工作負載。
+使用 Microsoft Azure，您可以部署一些通常在 Azure 基礎結構服務中部署內部部署的 Office Server 工作負載。
   
 Azure 中的 Microsoft 365 身分識別基礎結構：
 

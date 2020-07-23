@@ -1,9 +1,9 @@
 ---
-title: 指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
+title: 將每一使用者商務用 Skype Online 原則指派給 Microsoft 365 的 PowerShell
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 07/16/2020
 audience: ITPro
 ms.topic: article
 ms.service: o365-administration
@@ -13,17 +13,19 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
-description: 摘要：使用 Office 365 PowerShell，將每一使用者的通訊設定指派給商務用 Skype Online 原則。
-ms.openlocfilehash: 0b95c993c3795bdbe9a68e23e107ea745c15f71b
-ms.sourcegitcommit: 88ede20888e2db0bb904133c0bd97726d6d65ee2
+description: 摘要：使用 Microsoft 365 的 PowerShell，將每位使用者的通訊設定指派給商務用 Skype Online 原則。
+ms.openlocfilehash: 4522cfd877355794c32d9b9bdf14fb11cd0e71b4
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44719964"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45229839"
 ---
-# <a name="assign-per-user-skype-for-business-online-policies-with-office-365-powershell"></a>指派個別使用者 Skype 線上商務原則與 Office 365 PowerShell
+# <a name="assign-per-user-skype-for-business-online-policies-with-powershell-for-microsoft-365"></a>將每一使用者商務用 Skype Online 原則指派給 Microsoft 365 的 PowerShell
 
-使用 Office 365 PowerShell 是將每一使用者通訊設定指派給商務用 Skype Online 原則的有效方式。
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+使用 Microsoft 365 PowerShell，是一種將每一使用者通訊設定指派給商務用 Skype Online 原則的有效方式。
   
 ## <a name="before-you-begin"></a>開始之前
 
@@ -134,10 +136,10 @@ $count = 0
 
 這會在不具備用戶端原則的時刻找到500使用者。 它會授與他們用戶端原則 "ClientPolicyNoIMURL" 和外部存取原則 "FederationAndPicDefault"。 結果會批分為50群組，而每批次50都會傳送至遠端電腦。
   
-## <a name="see-also"></a>也請參閱
+## <a name="see-also"></a>請參閱
 
-[使用 Office 365 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
+[使用 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)

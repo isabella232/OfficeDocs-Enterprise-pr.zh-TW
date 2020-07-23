@@ -1,9 +1,9 @@
 ---
-title: 使用 Office 365 PowerShell 封鎖使用者帳戶
+title: 使用 PowerShell 封鎖 Microsoft 365 使用者帳戶
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/16/2019
+ms.date: 07/16/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -17,21 +17,23 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
-description: 說明如何使用 Office 365 PowerShell 來封鎖和取消封鎖 Office 365 帳戶的存取。
-ms.openlocfilehash: 5633c35feee67ede65c4fffa8bc55276c3b979b8
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 說明如何使用 PowerShell 來封鎖和取消封鎖 Microsoft 365 帳戶的存取。
+ms.openlocfilehash: c18c0248c51096ab089b16b2e9e31eb0929de443
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004726"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230889"
 ---
-# <a name="block-user-accounts-with-office-365-powershell"></a>使用 Office 365 PowerShell 封鎖使用者帳戶
+# <a name="block-microsoft-365-user-accounts-with-powershell"></a>使用 PowerShell 封鎖 Microsoft 365 使用者帳戶
 
-封鎖 Office 365 帳戶的存取權，可防止任何人使用該帳戶登入，並存取您 Office 365 組織中的服務和資料。 您可以使用 Office 365 PowerShell 來封鎖個別和多個使用者帳戶的存取。
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+封鎖存取 Microsoft 365 帳戶，可防止任何人使用該帳戶登入，並存取您的 Microsoft 365 組織中的服務和資料。 您可以使用 PowerShell 來封鎖個別和多個使用者帳戶的存取。
 
 ## <a name="use-the-azure-active-directory-powershell-for-graph-module"></a>針對 Graph 模組，請使用 Azure Active Directory PowerShell
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
  
 ### <a name="block-access-to-individual-user-accounts"></a>封鎖個別使用者帳戶的存取
 
@@ -95,7 +97,7 @@ tjohnston@contoso.com
 kakers@contoso.com
   ```
 
-在下列命令中，範例文字檔是 C:\My Documents\Accounts.txt。 以您的文字檔的路徑和檔案名取代。
+在下列命令中，範例文字檔會 C:\My Documents\Accounts.txt 中。 以您的文字檔的路徑和檔案名取代。
   
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
@@ -111,7 +113,7 @@ Get-Content "C:\My Documents\Accounts.txt" | ForEach { Set-AzureADUSer -ObjectID
 
 ## <a name="use-the-microsoft-azure-active-directory-module-for-windows-powershell"></a>使用適用於 Windows PowerShell 的 Microsoft Azure Active Directory 模組。
 
-首先，[連線到您的 Office 365 租用戶](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
+首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-microsoft-azure-active-directory-module-for-windows-powershell)。
     
 ### <a name="block-access-to-individual-user-accounts"></a>封鎖個別使用者帳戶的存取
 
@@ -153,7 +155,7 @@ tjohnston@contoso.com
 kakers@contoso.com
 ```
 
-在下列命令中，範例文字檔是 C:\My Documents\Accounts.txt。 以您的文字檔的路徑和檔案名取代。
+在下列命令中，範例文字檔會 C:\My Documents\Accounts.txt 中。 以您的文字檔的路徑和檔案名取代。
     
 若要封鎖對文字檔中所列帳戶的存取，請執行下列命令：
     
@@ -168,8 +170,8 @@ kakers@contoso.com
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 Office 365 管理使用者帳戶、授權和群組 PowerShell](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
-[使用 Office 365 PowerShell 管理 Office 365](manage-office-365-with-office-365-powershell.md)
+[使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[開始使用 Office 365 PowerShell](getting-started-with-office-365-powershell.md)
+[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)

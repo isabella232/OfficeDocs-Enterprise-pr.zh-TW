@@ -18,12 +18,12 @@ search.appverid:
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
 description: ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務的備用路由路徑。 Office 365 ExpressRoute 的架構是以 Office 365 服務（已透過網際網路存取） ExpressRoute 中的廣告公用 IP 首碼為基礎，以在您的網路中接下來再發佈這些 IP 首碼。 透過 ExpressRoute，您可以有效地為許多 Office 365 服務啟用多個不同的路由路徑（透過網際網路及透過 ExpressRoute）。 網路上路由的狀態可能代表如何設計內部網路拓撲的重大變更。
-ms.openlocfilehash: ab40a346ca1b19fcd100f17b934b766b21741010
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 925aeb2db9350eab9abb70bf3e3d6957608f618b
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998125"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230299"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
@@ -582,7 +582,7 @@ QoS 是取得商務用 Skype Online 之語音和會議效益的必要。 您可�
   
 [使用 ExpressRoute for Office 365 進行網路規劃](network-planning-with-expressroute.md)
   
-[在適用于 Office 365 案例的 ExpressRoute 中使用 BGP 社區（預覽）](bgp-communities-in-expressroute.md)
+[在 ExpressRoute for Office 365 案例中使用 BGP 社區](bgp-communities-in-expressroute.md)
   
 [商務用 Skype Online 中的媒體品質和網路連線效能](https://support.office.com/article/5fe3e01b-34cf-44e0-b897-b0b2a83f0917)
   

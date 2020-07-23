@@ -26,12 +26,12 @@ search.appverid:
 - MBS150
 ms.assetid: 01920974-9e6f-4331-a370-13aea4e82b3e
 description: 說明當您的 Microsoft 365 訂閱使用僅限雲端身分識別時，如何建立使用者和群組。
-ms.openlocfilehash: f510d82186e9a44c20bd20f1c7b5a7a44c8b765b
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.openlocfilehash: 0c2568d7be3f7a7b476d4cf918f00baf238da5ad
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774828"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230019"
 ---
 # <a name="microsoft-365-cloud-only-identity"></a>僅限 Microsoft 365 雲端身分識別
 
@@ -61,12 +61,12 @@ ms.locfileid: "44774828"
 您可以使用下列方式建立新的***使用者***：
 
 - [Microsoft 365 系統管理中心](https://docs.microsoft.com/office365/admin/add-users/add-users)
-- [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/create-user-accounts-with-office-365-powershell)
+- [Microsoft 365 的 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/create-user-accounts-with-office-365-powershell)
 
 您可以使用下列方式建立新的***群組***：
 
 - [Microsoft 365 系統管理中心](https://docs.microsoft.com/office365/admin/create-groups/create-groups)
-- [Office 365 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell)
+- [Microsoft 365 的 PowerShell](https://docs.microsoft.com/office365/enterprise/powershell/manage-office-365-groups-with-powershell)
 
 
 ## <a name="next-step-for-cloud-only-identity"></a>僅限雲端身分識別的下一個步驟

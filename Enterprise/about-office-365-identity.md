@@ -21,12 +21,12 @@ search.appverid:
 - BCS160
 ms.assetid: 06a189e7-5ec6-4af2-94bf-a22ea225a7a9
 description: 瞭解如何在 Microsoft 365 中管理使用者身分識別。
-ms.openlocfilehash: ba4638fa4d02900e3e85ef1c4cb7719baf12d1f6
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: e473a6397cb0b2fc7a2b81ab7a959a4ccdda400b
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998071"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230059"
 ---
 # <a name="microsoft-365-identity-models-and-azure-active-directory"></a>Microsoft 365 身分識別模型和 Azure Active Directory
 
@@ -90,9 +90,9 @@ Azure AD 租使用者具有 AD DS 帳戶的副本。 在此設定中，內部部
 
 由於原始和權威性的使用者帳戶是儲存在內部部署 AD DS 中，因此您可以使用與 AD DS 相同的工具（例如 Active Directory 使用者和電腦工具）來管理您的身分識別。 
 
-您不會使用 Microsoft 365 系統管理中心或 Office 365 PowerShell 管理 Azure AD 中已同步處理的使用者帳戶。
+您不會使用 Microsoft 365 系統管理中心或 Microsoft 365 的 PowerShell 來管理 Azure AD 中已同步的使用者帳戶。
 
-## <a name="next-step"></a>後續步驟
+## <a name="next-step"></a>下一步
 
 如果您需要僅限雲端的身分識別模型，請參閱[僅限雲端身分識別](cloud-only-identities.md)。
 

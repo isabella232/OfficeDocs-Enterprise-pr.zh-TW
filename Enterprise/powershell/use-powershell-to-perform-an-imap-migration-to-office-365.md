@@ -1,9 +1,9 @@
 ---
-title: 使用 PowerShell 來執行 IMAP 移轉至 Office 365
+title: 使用 PowerShell 執行 IMAP 遷移至 Microsoft 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 12/15/2017
+ms.date: 07/17/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -15,24 +15,26 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
-description: 摘要：了解如何使用 Windows PowerShell 來從 IMAP 移轉到 Office 365。
-ms.openlocfilehash: 051b290a93fbdf7636595d31e6087fccaaf73761
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 摘要：瞭解如何使用 Windows PowerShell 執行 IMAP 遷移至 Microsoft 365。
+ms.openlocfilehash: fa53fd1829121bb697277805e4f07d25ec2179b9
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004506"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45229769"
 ---
-# <a name="use-powershell-to-perform-an-imap-migration-to-office-365"></a>使用 PowerShell 來執行 IMAP 移轉至 Office 365
+# <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>使用 PowerShell 執行 IMAP 遷移至 Microsoft 365
 
-在部署 Office 365 的過程中，您可以選擇將使用者信箱的內容從網際網路訊息存取通訊協定 (IMAP) 電子郵件服務移轉到 Office 365。本文會引導您使用 Exchange Online PowerShell 來進行電子郵件 IMAP 移轉的工作。 
+*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+
+在部署 Microsoft 365 的過程中，您可以選擇將使用者信箱的內容從網際網路郵件存取通訊協定（IMAP）電子郵件服務遷移至 Microsoft 365。本文將引導您透過使用 Exchange Online PowerShell 的電子郵件 IMAP 遷移工作。 
   
 > [!NOTE]
-> 您也可以使用 Exchange 系統管理中心來執行 IMAP 移轉。請參閱[將 IMAP 信箱移轉到 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=536685)。 
+> 您也可以使用 Exchange 系統管理中心來執行 IMAP 遷移。請參閱[遷移 IMAP 信箱](https://go.microsoft.com/fwlink/p/?LinkId=536685)。 
   
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
-完成此工作的預估時間：2-5 分鐘來建立移轉批次。啟動移轉批次之後，移轉所需的時間會依批次中的信箱數目、每個信箱的大小和可用的網路容量而有所不同。如需關於信箱移轉至 Office 365 時所需時間受其他哪些因素影響的詳細資訊，請參閱[移轉效能](https://go.microsoft.com/fwlink/p/?LinkId=275079)。
+完成此工作的預估時間：2-5 分鐘，以建立遷移批次。在啟動遷移批次之後，遷移期間會因批次中的信箱數目、每個信箱的大小和可用網路容量而異。如需其他影響將信箱遷移至 Microsoft 365 的因素的詳細資訊，請參閱[遷移效能](https://go.microsoft.com/fwlink/p/?LinkId=275079)。
   
 您必須已獲指派的權限，才能執行此程序。若要查看您需要哪些權限，請參閱[收件者權限](https://go.microsoft.com/fwlink/p/?LinkId=534105)主題中所含表格的「移轉」項目。
   
@@ -53,9 +55,9 @@ ms.locfileid: "44004506"
 ### <a name="step-1-prepare-for-an-imap-migration"></a>步驟 1：準備進行 IMAP 移轉
 <a name="BK_Step1"> </a>
 
-- **如果您擁有適用於 IMAP 組織的網域，請將其新增為 Office 365 組織的公認網域。** 如果您想使用已擁有並適用於 Office 365 信箱的相同網域，必須先將其新增為 Office 365 的公認網域。新增後，您可以在 Office 365 內建立使用者。如需詳細資訊，請參閱[在 Office 365 中驗證您的網域](https://go.microsoft.com/fwlink/p/?LinkId=534110)。
+- **如果您有 IMAP 組織的網域，請將其新增為 Microsoft 365 組織的公認網域。** 如果您想要使用您的 Microsoft 365 信箱已經擁有的相同網域，您必須先將其新增為 Microsoft 365 的公認網域。新增後，您可以在 Microsoft 365 中建立使用者。如需詳細資訊，請參閱[驗證您的網域](https://go.microsoft.com/fwlink/p/?LinkId=534110)。
     
-- **將每位使用者新增到 Office 365，讓他們都擁有 Office 365 信箱。** 如需指示，請參閱[新增使用者到商務用 Office 365](https://go.microsoft.com/fwlink/p/?LinkId=535065)。
+- **將每位使用者新增至 Microsoft 365，讓他們擁有信箱。** 如需相關指示，請參閱[將使用者新增至 Microsoft 365 for business](https://go.microsoft.com/fwlink/p/?LinkId=535065)。
     
 - **取得 IMAP 伺服器的 FQDN**。您必須提供 IMAP 伺服器的完整網域名稱 (FQDN) (也稱為「完整電腦名稱」)，當您建立 IMAP 移轉端點時，將會從此伺服器移轉信箱資料。使用 IMAP 用戶端或 PING 命令，確認是否可以使用 FQDN，透過網際網路與 IMAP 伺服器通訊。
     
@@ -82,7 +84,7 @@ ms.locfileid: "44004506"
   
 以下是供每個使用者使用的必要屬性。 
   
-- **EmailAddress** 會指定使用者 Office 365 信箱的使用者識別碼。
+- **EmailAddress**會指定使用者的 Microsoft 365 信箱的使用者識別碼。
     
 - **UserName** 會指定帳戶在存取 IMAP 伺服器上的信箱時所使用的登入名稱。
     
@@ -134,7 +136,7 @@ paulc@contoso.edu,#paul.cannon@contoso-students.edu#mailadmin#,P@ssw0rd
 
  **Courier-IMAP：**
   
-某些來源電子郵件系統，例如 Courier IMAP，不支援使用信箱管理員認證將信箱移轉至 Office 365。相反地，您可以設定來源電子郵件系統來使用虛擬共用資料夾。藉由使用虛擬共用資料夾，您可以使用信箱管理員認證來存取來源電子郵件系統上的使用者信箱。如需如何設定適用於 Courier IMAP 的虛擬共用資料夾的詳細資訊，請參閱[共用資料夾](https://go.microsoft.com/fwlink/p/?LinkId=398870)。
+有些來源電子郵件系統（例如「宋體」）不支援使用信箱系統管理員認證，將信箱遷移至 Microsoft 365。相反地，您可以設定您的來源電子郵件系統使用虛擬共用資料夾。使用虛擬共用資料夾，您可以使用信箱系統管理員認證來存取來源電子郵件系統上的使用者信箱。如需如何設定用於「用於宋體」之虛擬共用資料夾的詳細資訊，請參閱[共用資料夾](https://go.microsoft.com/fwlink/p/?LinkId=398870)。
   
 若要在來源電子郵件系統上設定虛擬共用資料夾之後移轉信箱，您必須在移轉檔案中加入選擇性屬性 **UserRoot** 。此屬性會指定每個使用者信箱在來源電子郵件系統之虛擬共用資料夾結構中的位置。例如，前往 Terry 信箱的路徑是 /users/terry.adams。
   
@@ -150,7 +152,7 @@ paulc@contoso.edu,mailadmin,P@ssw0rd,/users/paul.cannon
 ### <a name="step-3-create-an-imap-migration-endpoint"></a>步驟 3：建立 IMAP 移轉端點
 <a name="BK_Step3"> </a>
 
-若要成功移轉電子郵件，Office 365 需要連線到來源電子郵件系統並與其通訊。為了這麼做，Office 365 會使用移轉端點。移轉端點也會定義要同時移轉的信箱數目，以及要在每 24 小時執行一次的增量同步處理期間同時同步處理的信箱數目。若要建立 IMAP 移轉的移轉端點，請先[連線至 Exchange Online](https://go.microsoft.com/fwlink/p/?LinkId=534121)。 
+若要成功遷移電子郵件，Microsoft 365 必須連線到來源電子郵件系統，並與其通訊。若要這樣做，Microsoft 365 會使用遷移端點。遷移端點也會定義要同時遷移的信箱數目，以及要在增量同步處理期間同時同步處理的信箱數目（每24小時就會發生一次）。若要建立 IMAP 遷移的遷移端點，請先連線[至 Exchange Online](https://go.microsoft.com/fwlink/p/?LinkId=534121)。 
   
 若需要移轉命令的完整清單，請參閱[移動與移轉 Cmdlet](https://go.microsoft.com/fwlink/p/?LinkId=534750)。
   
@@ -203,23 +205,23 @@ Get-MigrationBatch -Identity IMAPBatch1 | Format-List
 Get-MigrationBatch -Identity IMAPBatch1 | Format-List Status
 ```
 
-### <a name="step-5-route-your-email-to-office-365"></a>步驟 5：將電子郵件路由傳送至 Office 365
+### <a name="step-5-route-your-email-to-microsoft-365"></a>步驟5：將電子郵件路由傳送至 Microsoft 365
 <a name="BK_Step5"> </a>
 
-電子郵件系統使用稱為 MX 記錄的 DNS 記錄來找出要將電子郵件傳遞到哪裡。在電子郵件移轉過程中，您的 MX 記錄指向來源電子郵件系統。既然電子郵件已移轉至 Office 365，現在該將 MX 記錄指向 Office 365。這有助於確保電子郵件會傳遞至您的 Office 365 信箱。藉由移動 MX 記錄，您也可以在準備好時關閉舊的電子郵件系統。 
+電子郵件系統使用稱為 MX 記錄的 DNS 記錄，找出要傳送電子郵件的位置。在電子郵件遷移過程中，您的 MX 記錄會指向您的來源電子郵件系統。現在，已完成將電子郵件遷移至 Microsoft 365，您可以將您的 MX 記錄指向 Microsoft 365。這可協助確定電子郵件已傳遞至您的 Microsoft 365 信箱。移動 MX 記錄後，您也可以在準備好時關閉舊的電子郵件系統。 
   
-我們針對許多 DNS 提供者提供變更 MX 記錄的特定指示。 如果您的 DNS 提供者不在其中，或如果您想要了解一般指示，我們也提供[在任一 DNS 主機服務提供者建立 Office 365 的 DNS 記錄](https://go.microsoft.com/fwlink/?LinkId=397449)。
+針對許多 DNS 提供者，變更 MX 記錄有特定指示。若未加入您的 DNS 提供者，或如果您想要瞭解一般指示，也會提供[一般 MX 記錄指示](https://go.microsoft.com/fwlink/?LinkId=397449)。
   
 您的客戶與合作夥伴的電子郵件系統最多可能需要 72 小時才能辨識已變更的 MX 記錄。請至少等待 72 小時，再繼續進行下一個工作：步驟 6：刪除 IMAP 移轉批次。 
   
 ### <a name="step-6-delete-imap-migration-batch"></a>步驟 6：刪除 IMAP 移轉批次
 <a name="BK_Step6"> </a>
 
-在變更 MX 記錄並確認所有電子郵件會路由傳送到 Office 365 信箱後，通知使用者他們的郵件將移至 Office 365。在此之後，您便可以刪除 IMAP 移轉批次。在刪除移轉批次之前，請先確認下列事項。
+在您變更 MX 記錄，並確認所有電子郵件都會路由傳送至 Microsoft 365 信箱之後，請通知使用者他們的郵件即將移至 Microsoft 365。之後，您可以刪除 IMAP 遷移批次。在刪除遷移批次之前，請先確認下列事項。
   
-- 所有的使用者都使用 Office 365 信箱。刪除批次之後，傳送到內部部署 Exchange Server 信箱的郵件，就不會複製到對應的 Office 365 信箱。
+- 所有使用者都使用 Microsoft 365 信箱。刪除批次之後，傳送至內部部署 Exchange 伺服器上之信箱的郵件不會複製到對應的 Microsoft 365 信箱。
     
-- 郵件開始直接傳送給 Office 365 信箱後，信箱至少已同步一次。若要這麼做，請確定移轉批次的 [上次同步時間] 方塊中的值，比郵件開始直接路由傳送到 Office 365 信箱時更新。
+- 當郵件開始直接傳送給他們之後，Microsoft 365 信箱會至少同步處理一次。若要這麼做，請確定遷移批次的 [上次同步處理時間] 方塊中的值比直接路由傳送至 Microsoft 365 信箱的時間晚。
     
 若要在 Exchange Online PowerShell 中刪除 "IMAPBatch1" 移轉批次，請執行下列命令：
   

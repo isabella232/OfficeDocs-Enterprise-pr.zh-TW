@@ -22,12 +22,12 @@ search.appverid:
 - BCS160
 ms.assetid: e7968303-c234-46c4-b8b0-b5c93c6d57a7
 description: 如果您有與內部部署使用者相關聯的非 routale 網域，365您必須先將其與您的內部部署使用者相關聯，再瞭解如何進行。
-ms.openlocfilehash: 148d7e1abdeeeea11c838697bbc957e2937ea7f8
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: a9fe6f21dd1e2d9ade6288a083f700fccac4e6e4
+ms.sourcegitcommit: 20c8c98c0b32d8cf56d50cbc70f82fd5c4ce649c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44736011"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45263595"
 ---
 # <a name="prepare-a-non-routable-domain-for-directory-synchronization"></a>為目錄同步處理準備不可路由的網域
 當您同步處理內部部署目錄與 Microsoft 365 時，您必須在 Azure Active Directory （Azure AD）中擁有已驗證的網域。 只會同步處理與內部部署網域相關聯的使用者主要名稱（UPN）。 不過，任何包含無法路由之網域的 UPN （如 local （billa@contoso local））都會同步處理至 onmicrosoft.com 網域（例如 billa@contoso.onmicrosoft.com）。 

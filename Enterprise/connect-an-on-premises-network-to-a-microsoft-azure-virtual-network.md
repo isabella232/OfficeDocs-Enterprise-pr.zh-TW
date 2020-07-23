@@ -7,7 +7,7 @@ ms.date: 11/21/2019
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -19,18 +19,18 @@ ms.custom:
 - Ent_Solutions
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 4ff34795c4141c686523a9ae79b2052d8eb27140
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+ms.openlocfilehash: 9601d746a542c452db2abfee82d9bb98121858fd
+ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41840650"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45230069"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
 跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。 
 
-例如，在 Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢您的內部部署網域控制站是否有帳戶的變更，以將這些變更與您的 Office 365 訂閱進行同步處理。本文示範如何使用已準備好裝載 Azure 虛擬機器的站對站虛擬私人網路 (VPN) 連線，設定跨單位 Azure 虛擬網路。
+例如，Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢內部部署網域控制站，以進行帳戶變更，並同步處理這些變更與 Microsoft 365 訂閱。本文說明如何使用已準備好主控 Azure 虛擬機器的網站對網站虛擬私人網路（VPN）連線來設定跨部署 Azure 虛擬網路。
 
 ## <a name="overview"></a>概觀
 
@@ -335,4 +335,4 @@ $vnetConnection=New-AzVirtualNetworkGatewayConnection -Name $vnetConnectionName 
   
 ## <a name="next-step"></a>下一步
   
-[在 Microsoft Azure 中部署 Office 365 目錄同步作業](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
+[在 Microsoft Azure 中部署 Microsoft 365 目錄同步處理](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
