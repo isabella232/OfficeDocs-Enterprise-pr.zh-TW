@@ -24,25 +24,19 @@ search.appverid:
 ms.assetid: 8548a211-3fe7-47cb-abb1-355ea5aa88a2
 description: 摘要：Office 365 需要連線到網際網路。客戶必須可使用 Office 365 方案取得下列端點，包括 Government Community Cloud (GCC)。
 hideEdit: true
-ms.openlocfilehash: 175359f998c4dd695c301540f94e7d7527377ffc
-ms.sourcegitcommit: 338e3bcf0a62842fbbb17145b67a4a93f3b90aac
+ms.openlocfilehash: 1df2420812cd6ba0fbec619a4a280874c3d9fc9b
+ms.sourcegitcommit: c1a1b028195342affe0f3367db4e79c42429582a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091202"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "45387696"
 ---
 # <a name="office-365-urls-and-ip-address-ranges"></a>Office 365 URL 和 IP 位址範圍
 
 Office 365 需具有網際網路的連線能力。使用　Office 365 方案的客戶必須可取得下列端點，包括 Government Community Cloud (GCC)。
   
-> [!NOTE]
-> 做為 Microsoft 因應 COVID-19 危機的一部分，Microsoft 已聲明暫時暫停一些計劃的 URL 和 IP 位址變更。 此中止的目的是為了讓客戶的 IT 團隊針對在家工作 Office 365 案例實作建議的網路最佳化方面具備信心且簡單化。 從 2020 年 3 月 24 日到 2020 年 6 月 30 日，此暫停會將對重要 Office 365 服務 (Exchange Online、SharePoint Online 及 Microsoft Teams) 有關最佳化類別中所包含的 IP 範圍和 URL 的變更中止。 其他端點類別內的變更將照常進行。 在此期間，客戶可以以靜態方式使用 Office 365 最佳化類別服務定義，以執行目標網路最佳化 (例如頻寬保留或分割通道 VPN 組態)，並由於雲端網路變更而對 Office 365 連線的帶來低度風險。 若要確保在暫停期間結束時，服務不會中斷，Microsoft 強烈建議客戶使用 [管理 Office 365 端點](managing-office-365-endpoints.md)提供的指導方針來實作 Office 365 服務端點的變更管理和/或自動化程序。
-
-> [!NOTE]
-> Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
-  
 *Office 365 全球 (+GCC)* | [21 Vianet 提供的 Office 365](urls-and-ip-address-ranges-21vianet.md) | [Office 365 德國](office-365-germany-endpoints.md) | [Office 365 美國政府 DoD](office-365-u-s-government-dod-endpoints.md)  | [Office 365 美國政府 GCC High](office-365-u-s-government-gcc-high-endpoints.md) |
-  
+
 ||||
 |:-----|:-----|:-----|
 |**上次更新日期：** 2020 年 07 月 09 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更紀錄訂閱](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** 一個 [JSON 格式](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)清單中所有必要與選用的目的地。  <br/> | **使用：** 我們的 proxy [PAC 檔案](managing-office-365-endpoints.md#pacfiles) <br/> |

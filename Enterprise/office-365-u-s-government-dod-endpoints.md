@@ -21,12 +21,12 @@ f1.keywords:
 - NOCSH
 description: 摘要： Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
 hideEdit: true
-ms.openlocfilehash: 824998ea1bcb89a151e9d249d9155bf5e9d785dc
-ms.sourcegitcommit: 338e3bcf0a62842fbbb17145b67a4a93f3b90aac
+ms.openlocfilehash: ec82929a5c92b74eb5ac394cab2a0d6613b9c605
+ms.sourcegitcommit: c1a1b028195342affe0f3367db4e79c42429582a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091190"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "45387740"
 ---
 # <a name="office-365-us-government-dod-endpoints"></a>Office 365 美國政府 DoD 端點
 
@@ -34,14 +34,11 @@ ms.locfileid: "45091190"
 
  Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
   
-> [!NOTE]
-> Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
-  
  **Office 365 端點：** [全球 (包括 GCC)](urls-and-ip-address-ranges.md) | [21 Vianet 提供的 Office 365](urls-and-ip-address-ranges-21vianet.md)  | [Office 365 德國](office-365-germany-endpoints.md) |  *Office 365 美國政府 DoD* | [Office 365 美國政府 GCC High](office-365-u-s-government-gcc-high-endpoints.md) |
   
 |||
 |:-----|:-----|
-|**上次更新：** 07/09/2020- ![ RSS ](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更記錄訂閱](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
+|**上次更新日期：** 2020 年 07 月 09 日 - ![RSS](media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [變更紀錄訂閱](https://endpoints.office.com/version/USGOVDoD?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) <br/> |**下載：** [JSON 格式](https://endpoints.office.com/endpoints/USGOVDoD?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)的完整清單 <br/> |
 
  請從[管理 Office 365 端點](managing-office-365-endpoints.md)開始，以瞭解如何使用此資料來管理網路連線的建議。 端點資料會在每月開始時更新，並以新的 IP 位址和 URLs 在使用中之前發佈30天。 這樣一來，客戶就可以在需要新的連線之前，尚未有自動更新，就能完成他們的處理常式。 如果需要解決支援上報、安全性事件或其他立即運作需求，也可以在當月期間更新端點。 以下顯示在此頁面上的資料都是由 REST web 服務所產生。 如果您使用腳本或網路裝置來存取此資料，您應該直接前往[Web 服務](office-365-ip-web-service.md)。
 
@@ -65,6 +62,6 @@ ms.locfileid: "45091190"
   
 本表附註：
 
-- 安全與合規性中心 (SCC) 為 Office 365 提供 Azure ExpressRoute 的支援。 這同樣適用于透過 SCC 公開的許多功能，例如報告、審核、高級 eDiscovery、整合 DLP 和資料管理。 兩個特定功能（PST 匯入和 eDiscovery 匯出）目前不支援只有 Office 365 路由篩選器的 Azure ExpressRoute，因為它們對 Azure Blob 儲存區有相依的依賴性。 若要使用這些功能，您需要使用任何可支援的 Azure 連線選項（包括網際網路連線或 azure 公用路由篩選器的 Azure ExpressRoute），以個別的方式連接至 Azure Blob 儲存。 您必須評估這兩種功能的建立這類連線能力。 Office 365 資訊保護小組已注意到這項限制，而且目前正致力於為 Office 365 提供 Azure ExpressRoute 的支援，這些功能限制于 Office 365 的路由篩選器。
+- 安全性與合規性中心（SCC）為 Office 365 提供 Azure ExpressRoute 支援。 這同樣適用于透過 SCC 公開的許多功能，例如報告、審核、高級 eDiscovery、整合 DLP 和資料管理。 兩個特定功能（PST 匯入和 eDiscovery 匯出）目前不支援只有 Office 365 路由篩選器的 Azure ExpressRoute，因為它們對 Azure Blob 儲存區有相依的依賴性。 若要使用這些功能，您需要使用任何可支援的 Azure 連線選項（包括網際網路連線或 azure 公用路由篩選器的 Azure ExpressRoute），以個別的方式連接至 Azure Blob 儲存。 您必須評估這兩種功能的建立這類連線能力。 Office 365 資訊保護小組已注意到這項限制，而且目前正致力於為 Office 365 提供 Azure ExpressRoute 的支援，這些功能限制于 Office 365 的路由篩選器。
 
 - Microsoft 365 應用程式的其他選用端點未列出，而且不需要讓使用者啟動 Microsoft 365 應用程式以供企業應用程式和編輯檔。 選用端點主控于 Microsoft 資料中心，不會處理、傳送或儲存客戶資料。 建議您將這些端點的使用者連線導向預設的網際網路出局周邊。

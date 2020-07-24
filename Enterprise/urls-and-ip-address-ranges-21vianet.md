@@ -20,21 +20,18 @@ f1.keywords:
 - NOCSH
 description: 本文適用於由中國 21Vianet 運作的 Office 365。本文章會列出 21Vianet 運作的 Office 365 所使用的 URL 和 IP 位址範圍。
 hideEdit: true
-ms.openlocfilehash: 157f80b6d3bb12f0e3c3aa7f6d2d82a1d24965e1
-ms.sourcegitcommit: 338e3bcf0a62842fbbb17145b67a4a93f3b90aac
+ms.openlocfilehash: fe0015bcda70cace8247fdbcfb6a2d4424b28349
+ms.sourcegitcommit: c1a1b028195342affe0f3367db4e79c42429582a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45091160"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "45387716"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍
 
  *適用於：21Vianet 運作的 Office 365 - 小型企業系統管理員，21Vianet 運作的 Office 365 - 系統管理員*
 
 **摘要**：下列端點 (FQDN、 連接埠、URL、IPv4 和 IPv6 前置字元) 適用於 21Vianet 運作的 Office 365，且專門針對只使用這些計畫為組織提供生產力服務所設計。
-  
-> [!NOTE]
-> Microsoft 發行了以 REST 為基礎且適用於此頁面上的 IP 位址和 FQDN 項目的 Web 服務。這項新服務可協助您設定及更新網路周邊裝置，例如防火牆和 Proxy 伺服器。您可以下載端點的清單、最新版的清單，或是特定變更。這項服務取代了從此頁面連結的 XML 文件，該文件於 2018 年 10 月 2 日被取代。若要嘗試這項新服務，請移至 [Web 服務](office-365-ip-web-service.md)。
   
  **Office 365 端點：** [全球 (包括 GCC)](urls-and-ip-address-ranges.md)  | *21 Vianet 提供的 Office 365* | [Office 365 德國](office-365-germany-endpoints.md) |  [Office 365 美國政府 DoD](office-365-u-s-government-dod-endpoints.md) | [Office 365 美國政府 GCC High](office-365-u-s-government-gcc-high-endpoints.md) |
   
