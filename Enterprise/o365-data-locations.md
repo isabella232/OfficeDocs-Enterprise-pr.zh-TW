@@ -3,9 +3,9 @@ title: Microsoft 365 資料位置
 ms.author: deanw
 author: dmwmsft
 manager: laurawi
-ms.date: 06/17/2020
+ms.date: 07/22/2020
 audience: ITPro
-ms.topic: hub-page
+ms.topic: article
 ms.service: o365-solutions
 localization_priority: Priority
 search.appverid:
@@ -16,13 +16,13 @@ ms.collection:
 ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
-description: 摘要： Microsoft 365 資料位置
-ms.openlocfilehash: a0f62fa7955224c07c8e5af35fb53229e3aeb6c4
-ms.sourcegitcommit: e0603d9259e9be1aeb110fc3dd8b9abc6138c55d
-ms.translationtype: MT
+description: 摘要：Microsoft 365 資料位置
+ms.openlocfilehash: 4fdac5fca89eebd8d1c44ffdf571cee2630b6e8c
+ms.sourcegitcommit: 20c8c98c0b32d8cf56d50cbc70f82fd5c4ce649c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44781058"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45263692"
 ---
 <!--
 Note to new owner: Links in the Notes and FAQ sections need to be added from the source document at https://microsoft.sharepoint.com/:w:/t/golocalteam/Ebv6_Lw6FvNKucfA1eESTPUBy6O1MdvWEeT-L8O5a2HsIg?e=4%3AUfF1Uj&at=9&xsdata=MDR8MDF8am9zZXBoZEBtaWNyb3NvZnQuY29tfGM1ZTg1ODI0ZWRmMTRlN2E3MDkzMDhkNzgzNDMxYTczfDcyZjk4OGJmODZmMTQxYWY5MWFiMmQ3Y2QwMTFkYjQ3fDF8MHw2MzcxMjIxOTY1MzQ5NjM5NDl8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpXSWpvaU1DNHdMakF3TURBaUxDSlFJam9pVjJsdU16SWlMQ0pCVGlJNklrMWhhV3dpTENKWFZDSTZNbjA9fC0x&sdata=MkxOUXhlZEdyR0I1SzBvd044d2hkd2RPaGN2RUpaS09jMkZTcys0dkZQRT0%3D
@@ -30,18 +30,18 @@ Note to new owner: Links in the Notes and FAQ sections need to be added from the
 
 # <a name="where-your-microsoft-365-customer-data-is-stored"></a>Microsoft 365 客戶資料的儲存位置
 
-下表顯示在所有 Microsoft 的全球雲端位置，客戶資料在 Microsoft 365 服務中的存放位置。 展開您的帳單地址所在國家/地區的位置，以找出每個服務的客戶資料將儲存的位置。
+下表顯示針對所有 Microsoft 的全球雲端位置的 Microsoft 365 服務，客戶資料待用儲存的所在位置。 展開您的帳單地址所在國家/地區的位置，以找出每個服務的客戶資料將儲存的位置。
 
 客戶應該在您的 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡****。
 
-根據與該租使用者之第一個訂閱相關聯之交易的國家/地區，新的 Microsoft 365 承租人會預設為 Geo。
+新 Microsoft 365 租用戶會預設為根據與該租用戶的第一個訂閱相關聯之交易上的國家/地區的地區。
 
 在 [Microsoft Online Services 條款 (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215) 中尋找有關客戶待用資料儲存位置契約承諾的相關資訊。
 
 針對相關的 Azure Active Directory 資料位置，請瀏覽 [AAD 資料地圖](https://go.microsoft.com/fwlink/p/?linkid=2092972)。
 
 
-由於 COVID-19 危機的情形是空前的，而且需要在歐洲管理線上服務需求時，如果您的組織是教育機構，我們可以在歐盟（EU）、歐盟自由貿易協會（EFTA）、英國（英國）、美國（美國）或加拿大（CA）中布建您的 Microsoft 365 租使用者，或將您的資料轉接至歐盟的任何資料中心。、EFTA、UK、US 或 CA。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
+由於 COVID-19 危機所造成的空前情況，以及歐洲需要管理線上服務的需求，如果您的組織是教育機構，我們將可佈建您位於歐盟 (EU)、歐洲自由貿易聯盟 (EFTA)、英國 (UK)、美國 (US) 或加拿大 (CA) 的 Microsoft 365 租用戶，或將您的資料移轉至任何位於 EU、EFTA、UK、US 或 CA 的資料中心。  這表示您的資料可儲存在 EU、EFTA、UK、US 或 CA。  在我們實施必要且謹慎的措施來維護服務可用性的同時，我們對合規性、隱私權和安全性的承諾將保持不變。  我們將遵守資料傳輸相關的所有適用法律。
 
 
 
@@ -58,11 +58,11 @@ Microsoft 不會揭露其資料中心的確切地址。 我們建立此原則來
 
 ### <a name="does-the-location-of-your-customer-data-have-a-direct-impact-on-your-end-users-experience"></a>客戶資料的位置是否會直接影響使用者的使用體驗？
 
-Microsoft 365 的效能不只是與使用者與資料中心位置的距離成正比。 Microsoft 在其全域雲端網路、全域雲端基礎結構和 Microsoft 365 服務架構中的持續投資，可協助使用者在實際存放客戶資料的位置，提供單一且一致的經驗。 如果您的使用者遇到效能問題，您應深入疑難排解這些問題。 Microsoft 已發佈指導，以供 Microsoft 365 客戶在[Office 支援網站](https://go.microsoft.com/fwlink/p/?linkid=862645)上規劃及優化使用者效能。
+Microsoft 365 的效能並不只是與使用者距離資料中心位置成比例。 Microsoft 在其全球雲端網路、全球雲端基礎結構和 Microsoft 365 服務架構中的持續投資，可協助為使用者提供單一且一致的體驗，而不受待用客戶資料儲存的位置限制。 如果您的使用者遇到效能問題，您應深入疑難排解這些問題。 Microsoft 已在 [Office 支援網站](https://go.microsoft.com/fwlink/p/?linkid=862645)上發佈指導方針，供 Microsoft 365 客戶規劃並最佳化使用者效能。
 
 ### <a name="how-does-microsoft-help-me-comply-with-my-national-regional-and-industry-specific-regulations"></a>Microsoft 如何協助我遵守國家、地區和產業特定法規？
 
-為了協助您遵守跨國、地區和行業特有的需求，以管理個人資料的集合和使用，Microsoft 365 提供任何全域雲端生產力提供者的最完整一組相容性選項。 請參閱 Microsoft 信任中心的[microsoft 365 規範](https://go.microsoft.com/fwlink/p/?linkid=862317)區段中的[規範服務](https://go.microsoft.com/fwlink/p/?linkid=864391)和詳細資料。 此外，某些 Microsoft 365 方案提供進一步的規範解決方案，可協助您管理資料、遵從法律和法規需求，以及監視對資料採取的動作。
+為了協助您遵守管理個人資料收集和使用的國家、地區和產業特定需求，Microsoft 365 提供適用於任何全球雲端生產力服務提供者的最全面合規性服務集合。 請檢閱[我們的合規性服務](https://go.microsoft.com/fwlink/p/?linkid=864391)和 Microsoft 信任中心上的 [Microsoft 365 合規性](https://go.microsoft.com/fwlink/p/?linkid=862317)一節中的更多詳細資料。 此外，某些 Microsoft 365 方案可提供更進一步的合規性解決方案，協助您管理資料、遵守法律和法規需求，並監控對資料所採取的動作。
 
 ### <a name="who-can-access-your-data-and-according-to-what-rules"></a>誰可以存取您的資料，以及根據什麼規則？
 
@@ -70,15 +70,15 @@ Microsoft 365 的效能不只是與使用者與資料中心位置的距離成正
 
 ### <a name="does-microsoft-access-your-data"></a>Microsoft 是否會存取您的資料？
 
-Microsoft 可自動化大多數的 Microsoft 365 作業，但會特意限制其對客戶資料的存取。 這可協助我們以規模管理 Microsoft 365，並解決對客戶資料的內部威脅風險。 根據預設，Microsoft 工程師沒有任何系統管理許可權，也沒有在 Microsoft 365 中存取客戶資料。 Microsoft 工程師可能會對客戶資料具有有限和登入的存取權且達有限的一段時間，但只有在一般服務作業必要的情況，且僅限由 Microsoft 資深管理成員的核准下 (且針對獲客戶授權使用客戶加密箱功能的客戶)。
+Microsoft 會將多數的 Microsoft 365 作業自動化，同時特意限制其本身對客戶資料的存取。 這可協助我們以大規模管理 Microsoft 365，並解決對客戶資料造成內部威脅的風險。 根據預設，Microsoft 工程師具有零常設系統管理權限，且對 Microsoft 365 中的客戶資料具有零常設存取權。 Microsoft 工程師可能會對客戶資料具有有限和登入的存取權且達有限的一段時間，但只有在一般服務作業必要的情況，且僅限由 Microsoft 資深管理成員的核准下 (且針對獲客戶授權使用客戶加密箱功能的客戶)。
 
 ### <a name="how-does-microsoft-secure-your-data"></a>Microsoft 如何保護您的資料？
 
-Microsoft 已在 Microsoft 365 中引入了穩健的原則、控制措施和系統，以協助保護您的資訊安全。 請參閱 Microsoft 信任中心的[microsoft 365 security 區段](https://go.microsoft.com/fwlink/p/?linkid=864393)以深入瞭解。
+Microsoft 的 Microsoft 365 內建了穩健的原則、控制和系統，可協助確保資訊安全。 若要深入了解，請檢閱 Microsoft 信任中心上的 [Microsoft 365 安全性區段](https://go.microsoft.com/fwlink/p/?linkid=864393)。
 
-### <a name="does-microsoft-365-encrypt-your-data"></a>Microsoft 365 是否要加密您的資料？
+### <a name="does-microsoft-365-encrypt-your-data"></a>Microsoft 365 是否加密您的資料？
 
-Microsoft 365 使用服務端技術，在靜止和傳輸過程中加密客戶資料。 針對靜態客戶資料，Microsoft 365 會使用磁片層級和檔級加密。 針對傳輸中的客戶資料，Microsoft 365 會針對資料中心之間及用戶端與伺服器之間的通訊使用多種加密技術，例如傳輸層安全性（TLS）及網際網路通訊協定安全性（IPsec）。 Microsoft 365 也包含客戶管理的加密功能。
+Microsoft 365 使用服務端技術，可加密待用客戶資料和傳輸中的客戶資料。 針對待用客戶資料，Microsoft 365 使用了磁碟區層級和檔案層級加密。 針對傳輸中的客戶資料，Microsoft 365 針對資料中心之間和用戶端與伺服器之間的通訊使用多種加密技術，例如傳輸層安全性 (TLS) 和網際網路通訊協定安全性 (IPsec)。 Microsoft 365 也包含客戶管理的加密功能。
 
 ### <a name="where-can-i-find-data-residency-information-for-microsoft-azure"></a>哪裡可以找到 Microsoft Azure 的資料落地資訊？
 
@@ -86,26 +86,26 @@ Microsoft 365 使用服務端技術，在靜止和傳輸過程中加密客戶資
 
 ### <a name="what-are-multi-geo-capabilities-in-microsoft-365"></a>何謂 Microsoft 365 中的多地理位置功能？
 
-[多地理](https://go.microsoft.com/fwlink/p/?linkid=872033)位置可讓客戶將靜態的核心客戶資料指派至 Microsoft 365 雲端中的可用位置。   
+[多地理位置](https://go.microsoft.com/fwlink/p/?linkid=872033)讓客戶可以將待用核心客戶資料配置在 Microsoft 365 雲端中我們的可用位置。   
 
 ### <a name="what-services-support-multi-geo"></a>哪些服務支援多地理位置？
 
-[多地理位置](https://go.microsoft.com/fwlink/p/?linkid=872033)可供 Exchange Online、OneDrive 和 SharePoint Online 使用。 Microsoft 正在調查其他 Microsoft 365 服務的多地理位置。
+[多地理位置](https://go.microsoft.com/fwlink/p/?linkid=872033)可供 Exchange Online、OneDrive 和 SharePoint Online 使用。 Microsoft 正在針對其他 Microsoft 365 服務探討多地理位置。
 
-### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune 資料位置的例外狀況為何？
+### <a name="what-are-the-exceptions-for-intune-data-locations"></a>Intune 資料位置有哪些例外狀況？
 
-Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外的位置。 除非：
+Microsoft 不會將 Intune 客戶待用資料儲存在所述的地理位置之外。 以下情況除外：
 
-- Microsoft 必須提供客戶支援、疑難排解服務或符合法律要求。
-- 客戶會設定帳戶，以啟用客戶資料的儲存，包括透過使用下列各項：
+- Microsoft 必須提供客戶支援、疑難排解服務或符合法律需求。
+- 客戶設定帳戶以啟用這類客戶資料的儲存，包括透過使用下列項目：
 
-  - 設計用來全域運作的功能，例如內容傳遞網路（CDN），可提供全域快取服務，並將客戶資料儲存在世界各地的 edge 位置。
+  - 專為全球運作而設計的功能，例如內容傳遞網路 (CDN)，其提供全球快取服務並將客戶資料儲存在世界各地的端點位置。
 
-  - Azure Active Directory （Azure AD），可全域存放目錄資料。 這不適用於美國的 Azure AD 部署（Azure AD 資料只儲存于美國）或歐洲（Azure AD 資料儲存在歐洲或美國的地方）。
+  - Azure Active Directory (Azure AD)，可全球儲存目錄資料。 這不適用於美國 (其中的 Azure AD 資料完全儲存於美國) 或歐洲 (其中的 Azure AD 資料儲存於歐洲或美國) 的 Azure AD 部署。
    
-  - 預覽、Beta 或其他的預先發行服務，通常會將客戶資料儲存在美國，但可將其儲存在全域狀態。
+  - 預覽版、Beta 版或其他搶鮮版服務，其一般會將客戶資料儲存在美國，但也可能會將其儲存在全球。
 
-無論如何，Microsoft 不會控制或限制客戶或其使用者可以存取客戶資料的地理位置。 
+儘管如此，Microsoft 不會控制或限制客戶或其使用者可能從中存取客戶資料的地理位置。 
 
 ## <a name="data-center-locations"></a>資料中心位置
 
@@ -127,9 +127,9 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 
 | 國家/地區 | 城市 |
 | --- | --- |
-| 澳洲 | 悉尼，墨爾本 |
+| 澳洲 | 雪梨、墨爾本 |
 | 加拿大 | 魁北克市、多倫多 |
-| 歐盟 | 奧地利（維也納）、芬蘭（赫爾辛基）、法國（巴黎，Marseille）、愛爾蘭（都柏林）、荷蘭（阿姆斯特丹） |
+| 歐盟 | 奧地利 (維也納)、芬蘭 (赫爾辛基)、法國 (巴黎、馬賽)、愛爾蘭 (都柏林)、荷蘭 (阿姆斯特丹) |
 | 法國 | 巴黎、馬賽 |
 | 德國 | 法蘭克福、柏林 |
 | 印度 | 辰內、孟買、鵬尼 |
@@ -142,7 +142,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | 英國 | 杜倫、倫敦、卡地夫 |
 | 美國 |  博伊頓、夏安、芝加哥、德梅因、昆西、聖安東尼奧、聖塔克拉拉、聖荷西 |
 
-新的 Microsoft 365 承租人會根據與該租使用者之第一個訂閱相關之帳單位址的國家/地區，以預設為 Geo。 若要確認現有 Office 365 服務客戶資料的儲存位置，請在 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡。 或者，展開貴公司所用的國家/地區，從下列清單中找出客戶資料的儲存位置（如果您目前使用的是 Microsoft 365 服務）。
+新 Microsoft 365 租用戶會預設為根據與該租用戶的第一個訂閱相關聯之帳單地址上的國家/地區的地區。 若要確認現有 Office 365 服務客戶資料的儲存位置，請在 Office 365 系統管理中心中檢視租用戶特定資料位置資訊，其位於 [設定] | [組織設定檔] | [資料位置] 卡。 或者，您可以從下列清單展開公司所在的國家/地區，以找出若您今天開始使用 Microsoft 365 服務，將會儲存客戶資料的位置。
 
 ## <a name="afghanistan"></a>阿富汗
 <details><summary>按一下以展開</summary><p>
@@ -476,7 +476,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 澳洲 |
 | Stream | 澳洲 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -524,7 +524,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -692,7 +692,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -716,7 +716,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -980,7 +980,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1028,7 +1028,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1484,7 +1484,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1532,7 +1532,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 3 - 美洲地區 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1796,7 +1796,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1844,7 +1844,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -1940,7 +1940,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 澳洲 |
 | Stream | 澳洲 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2012,7 +2012,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 3 - 美洲地區 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2036,7 +2036,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2132,7 +2132,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2180,7 +2180,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2204,7 +2204,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2564,7 +2564,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2588,7 +2588,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2684,7 +2684,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2708,7 +2708,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2756,7 +2756,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -2780,7 +2780,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3068,7 +3068,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3092,7 +3092,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3308,7 +3308,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3380,7 +3380,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3404,7 +3404,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -3836,7 +3836,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4340,7 +4340,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 2 - 亞太地區 |
 | Stream | 全球地理位置 2 - 亞太地區 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4412,7 +4412,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4436,7 +4436,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4460,7 +4460,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 全球地理位置 1 - EMEA |
+| Forms | 全球地理位置 1 - EMEA |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4484,7 +4484,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -4964,7 +4964,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5084,7 +5084,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 南非 |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5108,7 +5108,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5228,7 +5228,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 全球地理位置 1 - EMEA |
 | Stream | 全球地理位置 1 - EMEA |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
@@ -5756,7 +5756,7 @@ Microsoft 不會將其他 Intune 客戶資料儲存在所述地理位置以外�
 | OneNote 服務 | 美國 |
 | Stream | 美國 |
 | Whiteboard | 美國 |
-| 表單 | 美國 |
+| Forms | 美國 |
 | 工作場所分析 | 美國 |
 </p></details>
 
