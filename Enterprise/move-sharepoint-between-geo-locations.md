@@ -13,12 +13,12 @@ ms.collection:
 localization_priority: Priority
 f1.keywords: NOCSH
 description: 了解如何將 SharePoint 網站移至不同的地理位置。
-ms.openlocfilehash: ab6651802c4add7569978c42f6920b0d21a61faa
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
+ms.openlocfilehash: 3b8028f1dc4b33201a19a8da1cad6c9a559cf4c0
+ms.sourcegitcommit: 35655e2b098e46822c14d98583cc47b87516a629
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44057993"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "45201617"
 ---
 # <a name="move-a-sharepoint-site-to-a-different-geo-location"></a>將 SharePoint 網站移至不同的地理位置
 
@@ -112,11 +112,11 @@ https://Contoso.sharepoint.com/sites/projectx 到 https://ContosoEUR.sharepoint.
 
 ![顯示 Start-SPOSiteContentMove Cmdlet 的 PowerShell 視窗螢幕擷取畫面](media/multi-geo-sharepoint-site-move-powershell.png)
 
-### <a name="start-a-sharepoint-site-geo-move-for-an-microsoft-365-group-connected-site"></a>為 Microsoft 365 群組連線網站開始 SharePoint 網站地理移動
+### <a name="start-a-sharepoint-site-geo-move-for-a-microsoft-365-group-connected-site"></a>為 Microsoft 365 群組連線網站進行 SharePoint 網站地理移動
 
-若要移動 Microsoft 365 群組連線網站，全域系統管理員必須先變更 Microsoft 365 群組的慣用資料位置 (PDL) 屬性。
+若要移動 Office 365 群組連線網站，全域系統管理員或 SharePoint 系統管理員必須先變更 Office 365 群組的慣用資料位置 (PDL) 屬性。
 
-若要設定 Microsoft 365 群組的 PDL：
+若要為 Microsoft 365 群組設定 PDL：
 
 ```PowerShell
 Set-SPOUnifiedGroup -PreferredDataLocation <PDL> -GroupAlias <GroupAlias>
