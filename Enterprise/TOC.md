@@ -15,6 +15,7 @@
 ### 規劃您的身分識別
 #### [身分識別模式](about-office-365-identity.md)
 #### [混合式身分識別](plan-for-directory-synchronization.md)
+#### [管理 Microsoft 365 帳戶的工具](tools-to-manage-office-365-accounts.md)
 
 ### [規劃 Microsoft 365 的第三方 SSL 憑證](plan-for-third-party-ssl-certificates.md)
 ### [Microsoft 365 和 Office 365 服務的設定指南](setup-guides-for-office-365.md)
@@ -110,6 +111,7 @@
 ### [僅雲端身分識別](cloud-only-identities.md)
 ### 混合式身分識別
 #### [為目錄同步作業做好準備](prepare-for-directory-synchronization.md)
+#### [準備無法路由傳送的網域，以用於目錄同步處理](prepare-a-non-routable-domain-for-directory-synchronization.md)
 #### 使用 IdFix 工具
 ##### [使用 IdFix 工具準備目錄屬性](prepare-directory-attributes-for-synch-with-idfix.md)
 ##### [下載和執行 IdFix 工具](install-and-run-idfix.md)
@@ -172,6 +174,7 @@
 #### [Office 365 資料中心中的客戶資料](o365-data-locations.md)
 
 ### 混合式解決方案
+#### [概觀](hybrid-solutions.md)
 #### [使用適用於 SharePoint Server 2016 驗證的 Azure Active Directory](using-azure-ad-for-sharepoint-server-authentication.md)
 #### [使內部部署網路與 Azure 虛擬網路連線](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 #### [在 Azure IaaS 中部署目錄同步處理伺服器](deploy-office-365-directory-synchronization-dirsync-in-microsoft-azure.md)
@@ -270,7 +273,7 @@
 ### [Microsoft 365 中的租用戶影片](office-365-isolation-in-office-365-video.md)
 ### [Microsoft Graph 與 Delve 中的租用戶隔離](office-365-isolation-in-graph-and-delve.md)
 
-# [Office 365 PowerShell](powershell/manage-office-365-with-office-365-powershell.md)
+# [適用於 Microsoft 365 的 PowerShell](powershell/manage-office-365-with-office-365-powershell.md)
 # [Microsoft 365 合規性](https://docs.microsoft.com/microsoft-365/compliance/)
 # [Microsoft 365 安全性](https://docs.microsoft.com/microsoft-365/security/)
 # [商務用 Microsoft 365](https://www.microsoft.com/microsoft-365/business)
