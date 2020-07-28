@@ -11,31 +11,31 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.collection: Strat_SP_gtc
-localization_priority: Priority
+localization_priority: Normal
 description: 了解如何將多地理位置環境中的 SharePoint 網站限制在特定的地理位置。
-ms.openlocfilehash: ca63f46ba45d1b3ddfdf4f676b678d62387b801f
-ms.sourcegitcommit: 265cc03b600e9015a44c60c3f8bb9075b1c20888
-ms.translationtype: HT
+ms.openlocfilehash: 1b1b072709ee54b2a18255798995650fc9f9942e
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "41973955"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433474"
 ---
-# <a name="restrict-sharepoint-site-content-to-a-geo-location"></a><span data-ttu-id="a4cd0-103">將 SharePoint 網站內容限制在地理位置</span><span class="sxs-lookup"><span data-stu-id="a4cd0-103">Restrict SharePoint site content to a geo location</span></span>
+# <a name="restrict-sharepoint-site-content-to-a-geo-location"></a><span data-ttu-id="fa883-103">將 SharePoint 網站內容限制在地理位置</span><span class="sxs-lookup"><span data-stu-id="fa883-103">Restrict SharePoint site content to a geo location</span></span>
 
-<span data-ttu-id="a4cd0-104">在某些情況下，您可以選擇強制將網站及其檔案內容保留在建立網站的地理位置，方法是防止網站移動或防止在另一個地理位置快取網站的檔案內容。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-104">Under some circumstances you may choose to enforce a site and its file content to remain in the geo location where the site was created, either by preventing the site from being moved or by preventing the caching of the site's file content in another geo location.</span></span>
+<span data-ttu-id="fa883-104">在某些情況下，您可以選擇強制將網站及其檔案內容保留在建立網站的地理位置，方法是防止網站移動或防止在另一個地理位置快取網站的檔案內容。</span><span class="sxs-lookup"><span data-stu-id="fa883-104">Under some circumstances you may choose to enforce a site and its file content to remain in the geo location where the site was created, either by preventing the site from being moved or by preventing the caching of the site's file content in another geo location.</span></span>
 
-<span data-ttu-id="a4cd0-105">您使用 [Set-SPOSite](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite) cmdlet 搭配 **RestrictedToGeo** 參數來進行。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-105">You can do this by using the [Set-SPOSite](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite) cmdlet with the **RestrictedToGeo** parameter.</span></span> <span data-ttu-id="a4cd0-106">此參數預設值為 NULL，但您可以將它變更為下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="a4cd0-106">This parameter has a default value of NULL, but you can change it to one of the following:</span></span>
+<span data-ttu-id="fa883-105">您使用 [Set-SPOSite](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite) cmdlet 搭配 **RestrictedToGeo** 參數來進行。</span><span class="sxs-lookup"><span data-stu-id="fa883-105">You can do this by using the [Set-SPOSite](https://docs.microsoft.com/powershell/module/sharepoint-online/set-sposite) cmdlet with the **RestrictedToGeo** parameter.</span></span> <span data-ttu-id="fa883-106">此參數預設值為 NULL，但您可以將它變更為下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="fa883-106">This parameter has a default value of NULL, but you can change it to one of the following:</span></span>
 
-|<span data-ttu-id="a4cd0-107">Restriction</span><span class="sxs-lookup"><span data-stu-id="a4cd0-107">Restriction</span></span>|<span data-ttu-id="a4cd0-108">描述</span><span class="sxs-lookup"><span data-stu-id="a4cd0-108">Description</span></span>|
+|<span data-ttu-id="fa883-107">Restriction</span><span class="sxs-lookup"><span data-stu-id="fa883-107">Restriction</span></span>|<span data-ttu-id="fa883-108">描述</span><span class="sxs-lookup"><span data-stu-id="fa883-108">Description</span></span>|
 |:----------|:----------|
-|<span data-ttu-id="a4cd0-109">NoRestriction</span><span class="sxs-lookup"><span data-stu-id="a4cd0-109">NoRestriction</span></span>|<span data-ttu-id="a4cd0-110">可將網站移至另一個地理位置。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-110">The site can be moved to another geo location.</span></span>|
-|<span data-ttu-id="a4cd0-111">BlockMoveOnly</span><span class="sxs-lookup"><span data-stu-id="a4cd0-111">BlockMoveOnly</span></span>|<span data-ttu-id="a4cd0-112">無法將網站移到另一個地理位置，但可以在其他地理位置快取網站內容。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-112">Site cannot be moved to another geo location, but site content can be cached in other geo locations.</span></span>|
-|<span data-ttu-id="a4cd0-113">BlockFull</span><span class="sxs-lookup"><span data-stu-id="a4cd0-113">BlockFull</span></span>|<span data-ttu-id="a4cd0-114">無法將網站移到另一個地理位置，也不可以在其他地理位置快取完整檔案內容。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-114">Site cannot be moved to another geo location, and full file content is not cached in other geo locations.</span></span> <span data-ttu-id="a4cd0-115">仍可以在其他地理位置快取檔案的標題 (取自內容)、檔案名稱和檔案的其他內容。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-115">Files' title (harvested from the content), file name, and other properties of the file can still be cached in other geo-locations.</span></span><br><span data-ttu-id="a4cd0-116">在設定為 BlockFull 之前儲存在網站中的內容可能會繼續在其他地理位置快取。</span><span class="sxs-lookup"><span data-stu-id="a4cd0-116">Content stored in the site before it was configured to BlockFull, may continue to be cached in other geo locations.</span></span>|
+|<span data-ttu-id="fa883-109">NoRestriction</span><span class="sxs-lookup"><span data-stu-id="fa883-109">NoRestriction</span></span>|<span data-ttu-id="fa883-110">可將網站移至另一個地理位置。</span><span class="sxs-lookup"><span data-stu-id="fa883-110">The site can be moved to another geo location.</span></span>|
+|<span data-ttu-id="fa883-111">BlockMoveOnly</span><span class="sxs-lookup"><span data-stu-id="fa883-111">BlockMoveOnly</span></span>|<span data-ttu-id="fa883-112">無法將網站移到另一個地理位置，但可以在其他地理位置快取網站內容。</span><span class="sxs-lookup"><span data-stu-id="fa883-112">Site cannot be moved to another geo location, but site content can be cached in other geo locations.</span></span>|
+|<span data-ttu-id="fa883-113">BlockFull</span><span class="sxs-lookup"><span data-stu-id="fa883-113">BlockFull</span></span>|<span data-ttu-id="fa883-114">無法將網站移到另一個地理位置，也不可以在其他地理位置快取完整檔案內容。</span><span class="sxs-lookup"><span data-stu-id="fa883-114">Site cannot be moved to another geo location, and full file content is not cached in other geo locations.</span></span> <span data-ttu-id="fa883-115">仍可以在其他地理位置快取檔案的標題 (取自內容)、檔案名稱和檔案的其他內容。</span><span class="sxs-lookup"><span data-stu-id="fa883-115">Files' title (harvested from the content), file name, and other properties of the file can still be cached in other geo-locations.</span></span><br><span data-ttu-id="fa883-116">在設定為 BlockFull 之前儲存在網站中的內容可能會繼續在其他地理位置快取。</span><span class="sxs-lookup"><span data-stu-id="fa883-116">Content stored in the site before it was configured to BlockFull, may continue to be cached in other geo locations.</span></span>|
 
-<span data-ttu-id="a4cd0-117">使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="a4cd0-117">Use the following syntax:</span></span>
+<span data-ttu-id="fa883-117">使用下列語法：</span><span class="sxs-lookup"><span data-stu-id="fa883-117">Use the following syntax:</span></span>
 
 `Set-SPOSite -Identity <siteURL> -RestrictedToGeo <restriction>`
 
-<span data-ttu-id="a4cd0-118">例如：</span><span class="sxs-lookup"><span data-stu-id="a4cd0-118">For example:</span></span>
+<span data-ttu-id="fa883-118">例如：</span><span class="sxs-lookup"><span data-stu-id="fa883-118">For example:</span></span>
 
 `Set-SPOSite -Identity https://contoso.sharepoint.com/sites/RegionRestrictedTeamSite -RestrictedToGeo BlockFull`
