@@ -13,14 +13,14 @@ ms.custom: ''
 ms.collection:
 - Strat_SP_gtc
 - SPO_Content
-localization_priority: Priority
+localization_priority: Normal
 description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: ce631cc8f922fd9f64586bb41e6dd1ec64ac1141
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
-ms.translationtype: HT
+ms.openlocfilehash: 699c9502c7257e5908e79d591170b51a563c4999
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44058003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433874"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
@@ -199,4 +199,8 @@ OneDrive 異地移動完成後，使用者可以在 Teams 應用程式上存取�
 
 ### <a name="existing-followed-groups-and-sites"></a>現有的已追蹤群組和網站
 
-已追蹤的網站和群組會針對業務顯示在使用者的 OneDrive 中，無論其地理位置。裝載於其他地理位置的網站和群組會在不同的索引標籤中開啟。
+已遵循的網站和群組會顯示在使用者的 OneDrive，不論其地理位置為何。位於其他地理位置的網站和群組會在個別的索引標籤中開啟。
+
+### <a name="delve-geo-url-updates"></a>Delve 地理 URL 更新
+
+只有在將使用者的 OneDrive 移至新的地理位置之後，使用者才會傳送至其 PDL 的 Delve 地理對應的 Delve 地理位置。

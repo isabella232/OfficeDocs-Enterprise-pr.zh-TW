@@ -25,12 +25,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 請先查看 Microsoft 365 服務的健康狀態，再致電支援人員，查看是否有使用中的服務中斷狀態。
-ms.openlocfilehash: d937310faeaf5af63a6c36841d7a609006fc4ab5
-ms.sourcegitcommit: 057f0fce08b41a00581fc4736cad89270129c703
+ms.openlocfilehash: 17d0df388d3632f0b27b3ca59c57a995ce7dfb8e
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "44266677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433884"
 ---
 # <a name="how-to-check-microsoft-365-service-health"></a>如何檢查 Microsoft 365 服務健康情況
 
@@ -68,6 +68,9 @@ ms.locfileid: "44266677"
 - 最多兩個電子郵件地址。
 - 您是否需要事件或建議的通知
 - 您要通知的服務
+
+> [!NOTE]
+> 每個系統管理員都可以設定其偏好設定，而每個系統管理員帳戶的上述限制為兩個電子郵件地址。
 
 > [!TIP]
 > 您也可以在行動裝置上使用[Microsoft 365 系統管理應用程式](https://go.microsoft.com/fwlink/p/?linkid=627216)來查看服務健康情況，這是使用推播通知保持最新狀態的絕佳方式。 
@@ -145,4 +148,5 @@ ms.locfileid: "44266677"
 
 ## <a name="see-also"></a>另請參閱
 
-[Microsoft 365 系統管理中心的活動報告](https://support.office.com/article/0d6dfb17-8582-4172-a9a9-aed798150263)
+[Microsoft 365 系統管理中心](https://support.office.com/article/0d6dfb17-8582-4172-a9a9-aed798150263) 
+ 的活動報告[訊息中心喜好](https://docs.microsoft.com/microsoft-365/admin/manage/message-center?view=o365-worldwide#preferences11)設定

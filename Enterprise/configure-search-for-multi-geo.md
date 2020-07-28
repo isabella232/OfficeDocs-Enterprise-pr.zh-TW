@@ -11,14 +11,14 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.collection: Strat_SP_gtc
-localization_priority: Priority
+localization_priority: Normal
 description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: 0b84dc2eea246643e277936cfa8eeb2b9f87b614
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
-ms.translationtype: HT
+ms.openlocfilehash: 06dcfd179b37ae98a4e28b05f55b9f684fb1bc89
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44057669"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433564"
 ---
 # <a name="configure-search-for-microsoft-365-multi-geo"></a>設定 Microsoft 365 多地理位置的搜尋
 
@@ -258,11 +258,11 @@ MultiGeoSearchStatus – 這是 SharePoint 搜尋 API 在回應中傳回至要�
 
 #### <a name="sample-get-request-thats-fanned-out-to-all-geo-locations"></a>已展開傳送至**所有**地理位置的範例 GET 要求
 
-https://\<tenant\>/\_api/search/query?querytext='sharepoint'&Properties='EnableMultiGeoSearch:true'&ClientType='my\_client\_id'
+HTTPs:// \<tenant\> / \_ api/search/query？ querytext = "sharepoint" &屬性 = "EnableMultiGeoSearch:true" &ClientType = "my \_ client \_ id"
 
 #### <a name="sample-get-request-to-fan-out-to-some-geo-locations"></a>要展開傳送至**部分**地理位置的範例 GET 要求
 
-https:// \<tenant\>/\_api/search/query?querytext='site'&ClientType='my_client_id'&Properties='EnableMultiGeoSearch:true, MultiGeoSearchConfiguration:[{DataLocation\\:"NAM"\\,Endpoint\\:"https\\://contosoNAM.sharepoint.com"\\,SourceId\\:"B81EAB55-3140-4312-B0F4-9459D1B4FFEE"}\\,{DataLocation\\:"CAN"\\,Endpoint\\:"https\\://contosoCAN.sharepoint-df.com"}]'
+HTTPs:// \<tenant\> / \_ api/search/query？ querytext = ' site ' &ClientType = ' my_client_id ' &property = ' EnableMultiGeoSearch:true，MultiGeoSearchConfiguration： [{DataLocation \\ ： "名稱" \\ ，端點 \\ ： "HTTPs： \\ //contosoNAM.sharepoint.com"，"！ \\ \\ \\ \\ \\ \\ ：" HTTPs： "HTTPs： \\ //DataLocation"}] '
 
 > [!NOTE]
 > MultiGeoSearchConfiguration 屬性地理位置清單中的逗號和冒號，其前面會加上**反斜線**字元。 這是因為 GET 要求會使用冒號來分隔屬性，以及使用逗號來分隔屬性的引數。 若未使用反斜線做為逸出字元，將會錯誤地解譯 MultiGeoSearchConfiguration 屬性。

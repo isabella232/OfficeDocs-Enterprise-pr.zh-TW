@@ -1,5 +1,5 @@
 ---
-title: 使用特定 PDL 建立 Microsoft 365 群組
+title: 使用特定的 PDL 建立 Microsoft 365 群組
 ms.reviewer: adwood
 ms.author: mikeplum
 author: MikePlumleyMSFT
@@ -11,22 +11,22 @@ f1.keywords:
 - NOCSH
 ms.custom: ''
 ms.collection: Strat_SP_gtc
-localization_priority: Priority
-description: 了解如何使用指定的慣用資料位置在多地理位置環境中建立 Microsoft 365 群組。
-ms.openlocfilehash: 5b2294ff8821e84cb0158fa989b97134353969b2
-ms.sourcegitcommit: 012bf4d8ad132435f9baeffd6f7e5ed264a8bfe0
-ms.translationtype: HT
+localization_priority: Normal
+description: 瞭解如何在多地理位置環境中，使用指定的慣用資料位置來建立 Microsoft 365 群組。
+ms.openlocfilehash: bcababe39035550be445f2eee4d8121a2983132f
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "44057983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433854"
 ---
-# <a name="create-an-microsoft-365-group-with-a-specific-pdl"></a>使用特定 PDL 建立 Microsoft 365 群組
+# <a name="create-a-microsoft-365-group-with-a-specific-pdl"></a>使用特定的 PDL 建立 Microsoft 365 群組
 
-在位於多地理位置環境中的使用者建立 Microsoft 365 群組時，群組慣用資料位置將自動設定為使用者的位置。 全域、SharePoint 和 Exchange 系統管理員可以在他們所選的任何區域中建立群組。 
+在多地理位置環境中的使用者建立 Microsoft 365 群組時，群組慣用資料位置會自動設定為使用者的使用者。 全域、SharePoint 和 Exchange 系統管理員可以在他們所選的任何區域中建立群組。 
 
 如果需要建立具有特定 PDL 的群組，則可以使用 SharePoint 系統管理中心或透過 Exchange Online New-UnifiedGroup Microsoft PowerShell Cmdlet 來執行此動作。 如此一來，將在指定的 PDL 中佈建與該群組關聯的群組信箱和 SharePoint 網站。
 
-若要建立具有您指定的 PDL 的 Microsoft 365 群組，請移至您要建立群組網站的地理位置中的 SharePoint 系統管理中心。
+若要使用您指定的 PDL 建立 Microsoft 365 群組，請移至您要建立群組網站之地理位置的 SharePoint 系統管理中心。
 
 例如：
 

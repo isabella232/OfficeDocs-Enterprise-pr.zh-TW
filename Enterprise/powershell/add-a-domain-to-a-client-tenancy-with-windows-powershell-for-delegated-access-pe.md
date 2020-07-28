@@ -17,16 +17,16 @@ f1.keywords:
 ms.custom: ''
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
 description: 摘要：使用 Microsoft 365 PowerShell，將替代功能變數名稱新增至現有的客戶租使用者。
-ms.openlocfilehash: d5a6c7326684c74d3b05e7b4a1e88c2a37e99ca0
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: eabfa9dfcbb36cb54a2d51321dfe60f197290b10
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433764"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您可以使用 microsoft 365 365 的 PowerShell 比使用 Microsoft 系統管理中心，以更快的速度建立與客戶的租用關聯的新網域。
   
@@ -58,7 +58,7 @@ ms.locfileid: "45229779"
 
 此命令會在 Azure Active Directory 中建立網域，但不會將新網域與公開註冊的網域建立關聯。 當您證明您擁有已公開註冊的網域給 Microsoft Microsoft 365 的企業時，就會發生這種情況。
   
-```
+```powershell
 New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
 ```
 
@@ -70,7 +70,7 @@ New-MsolDomain -TenantId <customer TenantId> -Name <FQDN of new domain>
 
  Microsoft 365 會產生您需要放入 DNS TXT 驗證記錄的特定資料。 若要取得資料，請執行此命令。
   
-```
+```powershell
 Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of new domain> -Mode DnsTxtRecord
 ```
 
@@ -91,7 +91,7 @@ Get-MsolDomainVerificationDNS -TenantId <customer TenantId> -DomainName <FQDN of
   
 透過 nslookup 確認成功建立 TXT 記錄。請遵循此語法。
   
-```
+```console
 nslookup -type=TXT <FQDN of registered domain>
 ```
 
@@ -107,22 +107,24 @@ nslookup -type=TXT <FQDN of registered domain>
 
 在此最後一個步驟中，您會驗證您擁有公開註冊網域的 Microsoft 365。 在此步驟之後，Microsoft 365 會開始接受路由傳送至新功能變數名稱的流量。 若要完成網域建立和註冊程序，請執行此命令。 
   
-```
+```powershell
 Confirm-MsolDomain -TenantId <customer TenantId> -DomainName <FQDN of new domain>
 ```
 
 此命令將不會傳回任何輸出，因此若要確認命令正常運作，請執行此命令。
   
-```
+```powershell
 Get-MsolDomain -TenantId <customer TenantId> -DomainName <FQDN of new domain>
 ```
 
 這會傳回與以下範例相似的內容：
-  
-||||
-|:-----|:-----|:-----|
-| `Name` <br/> | `Status` <br/> | `Authentication` <br/> |
-| `FQDN of new domain` <br/> | `Verified` <br/> | `Managed` <br/> |
+
+```console
+Name                   Status      Authentication
+--------------------   ---------   --------------
+FQDN of new domain     Verified    Managed
+```
+
    
 ## <a name="see-also"></a>另請參閱
 

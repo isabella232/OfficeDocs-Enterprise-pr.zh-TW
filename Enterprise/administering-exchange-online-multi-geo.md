@@ -10,14 +10,14 @@ ms.service: o365-solutions
 f1.keywords:
 - NOCSH
 ms.custom: ''
-localization_priority: Priority
+localization_priority: Normal
 description: 了解如何使用 Microsoft PowerShell 來管理 Exchange Online 多地理位置設定。
-ms.openlocfilehash: d2498178193f71c1ffaea6141a09cc76e826e99e
-ms.sourcegitcommit: ee6fcb8c78de748fa203deacf799f66ad99f18e1
-ms.translationtype: HT
+ms.openlocfilehash: 7c05699b411a3f36fc1bb8b47e643283d1ec2d65
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "44352943"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433504"
 ---
 # <a name="administering-exchange-online-mailboxes-in-a-multi-geo-environment"></a>管理多地理位置環境中的 Exchange Online 信箱
 
@@ -103,7 +103,8 @@ MailboxRegion               : EUR
 MailboxRegionLastUpdateTime : 2/6/2018 8:21:01 PM
 ```
 
-> **附註：** 如果資料庫名稱中的地理位置代碼不符合 **MailboxRegion** 的值，系統會將信箱自動放入重新定位佇列，並移動至 **MailboxRegion** 值指定的地理位置 (Exchange Online 會在這些屬性值之間尋找不相符)。
+> [!NOTE]
+> 如果資料庫名稱中的地理位置代碼不符合**MailboxRegion**值，則信箱將會自動放入重新置放佇列中，並移至**MailboxRegion**值所指定的地理位置（Exchange Online 會在這些屬性值之間尋找不相符）。
 
 ## <a name="move-an-existing-cloud-only-mailbox-to-a-specific-geo-location"></a>將現有僅雲端信箱移動至特定的地理位置
 
@@ -133,17 +134,16 @@ Set-MsolUser -UserPrincipalName <UserPrincipalName> -PreferredDataLocation <GeoL
 Set-MsolUser -UserPrincipalName michelle@contoso.onmicrosoft.com -PreferredDataLocation EUR
 ```
 
-**附註**：
-
-- 如先前所述，您無法對從內部部署 Active Directory 同步處理的使用者物件使用此程序。 您必須變更 Active Directory 中的 **PreferredDataLocation** 值，並使用 AAD Connect 將它同步處理。 如需詳細資訊，請參閱 [Azure Active Directory Connect 同步處理：設定 Microsoft 365 資源的慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)。
-
-- 將信箱重新定位到新的地理位置所需的時間取決於數個因素：
-
-  - 信箱的大小和類型。
-
-  - 要移動的信箱數量。
-
-  - 移動資源的可用性。
+> [!NOTE]
+> - 如先前所述，您無法對內部部署 Active Directory 的同步處理使用者物件使用此程式。 您必須變更 Active Directory 中的 **PreferredDataLocation** 值，並使用 AAD Connect 將它同步處理。 如需詳細資訊，請參閱 [Azure Active Directory Connect 同步處理：設定 Microsoft 365 資源的慣用資料位置](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectsync-feature-preferreddatalocation)。
+> 
+> - 將信箱重新定位到新的地理位置所需的時間取決於數個因素：
+> 
+>   - 信箱的大小和類型。
+> 
+>   - 要移動的信箱數量。
+> 
+>   - 移動資源的可用性。
 
 ### <a name="move-disabled-mailboxes-that-are-on-litigation-hold"></a>移動處於訴訟資料暫留的已停用信箱
 
