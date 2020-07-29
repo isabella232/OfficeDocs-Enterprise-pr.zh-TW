@@ -3,7 +3,7 @@ title: 使用 PowerShell 停用 Microsoft 365 服務的存取權
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
-ms.date: 07/17/2020
+ms.date: 07/27/2020
 audience: Admin
 ms.topic: article
 ms.service: o365-administration
@@ -19,16 +19,16 @@ ms.custom:
 - LIL_Placement
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
 description: 使用 PowerShell 來停用使用者的 Microsoft 365 服務存取權。
-ms.openlocfilehash: 4e7c59447dae027dffa7fd5ea24d1818d5d64a9a
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: 7820bc44837af07975b2eeaeddf2cf20a9230fae
+ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230679"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "46502638"
 ---
 # <a name="disable-access-to-microsoft-365-services-with-powershell"></a>使用 PowerShell 停用 Microsoft 365 服務的存取權
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 將授權方案的授權指派給 Microsoft 365 帳戶時，使用者就可以從該授權取得 Microsoft 365 服務。 不過，您可以控制使用者可以存取的 Microsoft 365 服務。 例如，即使授權允許存取 SharePoint 線上服務，您還是可以停用存取權。 您可以使用 PowerShell 針對特定授權方案停用任何數目的服務存取權：
 
@@ -139,19 +139,19 @@ $USSales | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
     
 1. 建立一個文字檔，其中每一行上都包含一個帳戶，如下所示：
     
-  ```powershell
-  akol@contoso.com
-  tjohnston@contoso.com
-  kakers@contoso.com
-  ```
+   ```powershell
+   akol@contoso.com
+   tjohnston@contoso.com
+   kakers@contoso.com
+   ```
 
-  在此範例中，文字檔為 C： \\ 我的檔 \\Accounts.txt。
+   在此範例中，文字檔為 C： \\ 我的檔 \\Accounts.txt。
     
 2. 執行下列命令：
     
-  ```powershell
-  Get-Content "C:\My Documents\Accounts.txt" | foreach {Set-MsolUserLicense -UserPrincipalName $_ -LicenseOptions $LO}
-  ```
+   ```powershell
+   Get-Content "C:\My Documents\Accounts.txt" | foreach {Set-MsolUserLicense -UserPrincipalName $_ -LicenseOptions $LO}
+   ```
 
 如果您想要針對多個授權方案停用服務存取權，請針對每個授權方案重複上述指示，以確保：
 
@@ -160,6 +160,16 @@ $USSales | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
 
 若要在將使用者指派給授權方案時，為他們停用 Microsoft 365 服務，請參閱在[指派使用者授權時停用服務的存取權](disable-access-to-services-while-assigning-user-licenses.md)。
 
+### <a name="assign-all-services-in-a-licensing-plan-to-a-user-account"></a>將授權方案中的所有服務指派給使用者帳戶
+
+針對已停用服務的使用者帳戶，您可以使用下列命令來啟用特定授權方案的所有服務：
+
+```powershell
+$userUPN="<user account UPN>"
+$acctSKU="<AccountSkuId>"
+$LO = New-MsolLicenseOptions -AccountSkuId $acctSKU
+Set-MsolUserLicense -UserPrincipalName $userUPN -LicenseOptions $LO
+```
 
 ## <a name="see-also"></a>請參閱
 
@@ -167,4 +177,4 @@ $USSales | ForEach {Set-MsolUserLicense -UserPrincipalName $_.UserPrincipalName 
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
