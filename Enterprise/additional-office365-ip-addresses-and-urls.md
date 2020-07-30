@@ -24,12 +24,12 @@ search.appverid:
 ms.assetid: ''
 description: 摘要：新端點 Web 服務不包含特定案例的少量端點。
 hideEdit: true
-ms.openlocfilehash: 4d67d67c3f1c0eb6aa8079dbbdc0d964274af48b
-ms.sourcegitcommit: 93d0cc401c9d910e115072c0229232765fbad75e
+ms.openlocfilehash: 9c57feb143b52bc84bd1d636f639712cf3c04cd3
+ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "43939598"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "45433544"
 ---
 # <a name="additional-endpoints-not-included-in-the-office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務中未包含的其他端點
 
@@ -43,9 +43,8 @@ ms.locfileid: "43939598"
 
 除了 DNS 以外，對大多數客戶來說，這些全都是選用，除非您需要所述的特定案例。
 
-|||||
+| 列 | 用途 | 目的地 | 類型 |
 |:-----|:-----|:-----|:-----|
-| **列** | **用途** | **目的地** | **類型** |
 | 1  | PST 的[匯入服務](https://support.office.com/article/use-network-upload-to-import-your-organization-pst-files-to-office-365-103f940c-0468-4e1a-b527-cc8ad13a5ea6)和檔案擷取 | 如需其他需求的資訊，請參閱[匯入服務](https://support.office.com/article/use-network-upload-to-import-your-organization-pst-files-to-office-365-103f940c-0468-4e1a-b527-cc8ad13a5ea6)。 | 另類外寄範例 |
 | 2  | [適用於 Office 365 的 Microsoft 支援及修復小幫手](https://diagnostics.office.com/#/)  | https<span>://</span>autodiscover.outlook.com <BR> <span>https://</span>officecdn.microsoft.com <BR> <span>https://</span>api.diagnostics.office.com <BR> <span>https://</span>apibasic.diagnostics.office.com <BR> <span>https://</span>autodiscover-s.outlook.com <BR> <span>https://</span>cloudcheckenabler.azurewebsites.net <BR> <span>https://</span>dcs-staging.azure-api.net <BR> <span>https://</span>login.live.com <BR> <span>https://</span>login.microsoftonline.com <BR> <span>https://</span>login.windows.net <BR> <span>https://</span>o365diagtelemetry.trafficmanager.net <BR> <span>https://</span>odc.officeapps.live.com <BR> <span>https://</span>offcatedge.azureedge.net <BR> <span>https://</span>officeapps.live.com <BR> <span>https://</span>outlook.office365.com <BR> <span>https://</span>outlookdiagnostics.azureedge.net | 外寄伺服器流量 |
 | 3  | Azure AD Connect (含 SSO 選項) – WinRM 和遠端 PowerShell | 客戶 STS 環境 (AD FS 伺服器和 AD FS Proxy) \| TCP 通訊埠 80 和 443 | 內送伺服器流量 |
@@ -61,7 +60,7 @@ ms.locfileid: "43939598"
 | 13  | 具有內部部署混合式連線的 Cloud PSTN 要求開啟內部部署主機的網路連線。如需商務用 Skype Online 混合式設定的詳細資料，  | 請參閱[規劃商務用 Skype Server 和 Office 365 之間的混合式連線](https://docs.microsoft.com/skypeforbusiness/hybrid/plan-hybrid-connectivity) (英文) | 商務用 Skype 內部部署混合式輸入 |
 | 14  | **驗證與身分識別 FQDN** <br> FQDN ```secure.aadcdn.microsoftonline-p.com``` 必須在您用戶端的 Internet Explorer (IE) 或 Microsoft Edge 信任的網站區域中才能正常運作。 |  | 信任的網站 |
 | 15  |  **Microsoft Teams FQDN** <br> 如果您使用的是 Internet Explorer 或 Microsoft Edge，您需要啟用第一和第三方 Cookie，並將 Teams 的 FQDN 新增到您的 [信任的網站] 中。這是列 14 所列之跨套件 FQDN、CDN 和遙測之外的項目。如需詳細資訊，請參閱 [Microsoft Teams 的已知問題](https://docs.microsoft.com/microsoftteams/known-issues)。 |  | 信任的網站 |
-| 16  |  **SharePoint Online 和商務用 OneDrive FQDN** <br> 所有 FQDN 中含有 '\<租用戶>' 的 '.sharepoint.com' FQDN 都必須在您用戶端的 IE 或 Microsoft Edge 信任的網站區域中才能正常運作。除了列 14 列出的跨套件 FQDN、CDN 和遙測，您也必須新增這些端點。 |  | 信任的網站 |
+| 16  |  **SharePoint Online 和商務用 OneDrive FQDN** <br> 所有在 FQDN 中含有 '\<tenant>' 的 '.sharepoint.com' 的 FQDN 都必須在您用戶端的 IE 或 Microsoft Edge 信任的網站區域中才能正常運作。除了列 14 列出的跨套件 FQDN、CDN 和遙測，您也必須新增這些端點。 |  | 信任的網站 |
 | 17  | **Yammer**  <br> Yammer 僅可於瀏覽器中使用，且必須透過 Proxy 傳遞已驗證的使用者。所有 Yammer FQDN 都必須在用戶端的 IE 或 Microsoft Edge 的信任的網站區域中才能正常運作。 |  | 信任的網站 |
 | 18  | 使用 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 將內部部署使用者帳戶同步處理到 Azure AD。 | 請參閱[混合式身分識別所需的連接埠和通訊協定](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-ports)、[疑難排解 Azure AD 連線](https://docs.microsoft.com/azure/active-directory/hybrid/tshoot-connect-connectivity) 和 [Azure AD Connect Health 代理程式安裝](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-agent-install#outbound-connectivity-to-the-azure-service-endpoints)。 | 僅限外寄伺服器的流量 |
 | 19  | [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/) 與中國的 21 ViaNet 將內部部署使用者帳戶同步處理到 Azure AD。 | \*.digicert.com:80 <BR> \*.entrust.net:80 <BR> \*.chinacloudapi.cn:443 <BR> secure.aadcdn.partner.microsoftonline-p.cn:443 <BR>*.partner.microsoftonline.cn:443 <BR> <BR>另請參閱[針對 Azure AD Connect 的連線問題進行疑難排解](https://docs.azure.cn/zh-cn/active-directory/hybrid/tshoot-connect-connectivity)。 | 僅限外寄伺服器的流量 |
