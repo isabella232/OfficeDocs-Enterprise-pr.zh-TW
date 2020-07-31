@@ -15,16 +15,15 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: Microsoft 如何抵禦拒絕服務（DoS）攻擊的雲服務。
-ms.openlocfilehash: 58d2d3611c65ba098049fab71282253f7c054ea3
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: a8374e46c9b561afce77545293b9bae3dd42ed64
+ms.sourcegitcommit: 72217e86b0da7ba13407aefe270200449c352548
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998327"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "46529086"
 ---
 # <a name="defending-microsoft-365-cloud-services-against-denial-of-service-attacks"></a>防禦拒絕服務攻擊的 Microsoft 365 雲端服務
 
-## <a name="introduction"></a>簡介
 透過縱深防禦安全性保護 Microsoft 資料中心，其中包括周邊防護、影片相機、安全性人員，以及使用生物特徵、智慧卡和多重要素驗證的安全入口。 縱深防禦安全性會持續透過設施的每個區域和每個實體伺服器單元。 [Microsoft 雲端基礎結構和作業群組](https://www.microsoft.com/cloud-platform/global-datacenters)為雲端服務提供核心基礎結構和基礎技術。 我們的資料中心遵循實體安全性和可靠性的行業標準，並由 Microsoft 作業人員管理、監視和管理。
 
 為了進一步保護我們的雲端服務，Microsoft 提供了 DDoS 防護系統，屬於 Microsoft Azure 持續監控和滲透測試程式的一部分。 Azure DDoS 防護系統的設計不僅能經受外界的攻擊，也不受限於來自其他 Azure 承租人。 Azure 使用標準偵測和緩解技術，例如 SYN cookie、速率限制和連線限制，以防範 DDoS 攻擊。
