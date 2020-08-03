@@ -19,16 +19,16 @@ ms.custom:
 - SPO_Content
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要：使用 Microsoft 365 PowerShell 來管理 SharePoint Online 使用者、群組及網站。
-ms.openlocfilehash: ffdaa2d4810e2e89878ea3eacde99babb046fce2
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: ae232766031dade061e79a574efa14e8432ae08c
+ms.sourcegitcommit: 7bf52d4277b97d6f1c585da2c83979fbcf061c1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230469"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "46542814"
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-powershell"></a>使用 PowerShell 管理 SharePoint Online 使用者和群組
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 如果您是使用大型使用者帳戶或群組清單的 SharePoint Online 系統管理員，而且想要更容易管理，則可以使用 Microsoft 365 PowerShell。 
 
@@ -67,9 +67,9 @@ $user = "<user account name, such as opalc>"
 Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$tenant.com -IsSiteCollectionAdmin $true
  ```
 
-若要使用這些命令，請以正確的名稱取代引號內的所有內容，包括 < 和 > 字元。
+若要使用這些命令，請使用正確的名稱取代引號內的所有專案，包括 < 和 > 字元。
 
-例如，這組命令會將 Opal Castillo （使用者名稱 opalc）新增至 contoso 租使用者的 ContosoTest 網站集合上的網站集合管理員清單：
+例如，這組命令會將 Opal Castillo （使用者名稱 opalc）新增至 Contoso 租使用者的 ContosoTest 網站集合上的網站集合管理員清單：
 
 ```powershell
 $tenant = "contoso"
@@ -279,9 +279,8 @@ Get-SPOSite | ForEach {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSiz
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[使用 PowerShell 管理 SharePoint 線上](create-sharepoint-sites-and-add-users-with-powershell.md)
+[使用 PowerShell 管理 SharePoint Online](create-sharepoint-sites-and-add-users-with-powershell.md)
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
-
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
