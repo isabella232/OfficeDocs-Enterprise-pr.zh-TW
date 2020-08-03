@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 網路連線能力一覽
+title: Microsoft 365 網路連線概況
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -16,16 +16,16 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: 討論為何網路優化對 SaaS 服務、Microsoft 365 網路的目標，以及 SaaS 需要不同的網路與其他工作負載的意義。
-ms.openlocfilehash: bc754337eea5e04d6851509114763004b53a19a7
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: 6dc1ea91607dc43d4e24546f938f4f7ee3af8b3a
+ms.sourcegitcommit: 92bbb6d005d005952a9e2055661fcdccfdd0567b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997823"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "46533498"
 ---
 # <a name="microsoft-365-network-connectivity-overview"></a>Microsoft 365 網路連線能力一覽
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 Microsoft 365 是一種分散式軟體即服務（SaaS）雲端，可透過一組不同的微服務和應用程式來提供生產力與共同作業案例。 Microsoft 365 （如 Outlook、Word 及 PowerPoint）的用戶端元件會在使用者電腦上執行，並連接至 microsoft 資料中心執行的 Microsoft 365 的其他元件。 最重要的因素是判斷 Microsoft 365 使用者體驗的品質為網路可靠性和 Microsoft 365 用戶端與 Microsoft 365 服務前端之間的低延遲。
 
@@ -61,7 +61,7 @@ Microsoft 365 網路的最終目標是在用戶端和最接近的 Microsoft 365 
 
 ## <a name="securing-microsoft-365-connections"></a>保護 Microsoft 365 連線
 
-傳統網路安全性的目標是強化公司網路周邊網路，免於入侵和惡意攻擊。 大部分的商業網路會利用類似 proxy 伺服器、防火牆、SSL 中斷及檢查、深度封包檢查和資料遺失防護系統等技術，強制進行網際網路流量的網路安全性。 這些技術為一般 Internet 要求提供重要的風險降低，但在套用至 Microsoft 365 端點時，可大幅降低效能、可擴充性和使用者體驗的品質。
+傳統網路安全性的目標是強化公司網路周邊網路，免於入侵和惡意攻擊。 大部分的商業網路會利用類似 proxy 伺服器、防火牆、SSL 中斷及檢查、深度封包檢查和資料遺失防護系統等技術，強制進行網際網路流量的網路安全性。 這些技術為一般網際網路要求提供重要的風險降低，但是當套用至 Microsoft 365 端點時，可能會大幅降低效能、延展性和使用者體驗的品質。
 
 Microsoft 365 可協助滿足您組織的內容安全性和資料使用方式相容性的需求，其採用專為 Microsoft 365 功能和工作負載而設計的內建安全性和控管功能。 如需 Microsoft 365 安全性和合規性的詳細資訊，請參閱[Office 365 安全性藍圖](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。 如需 Microsoft 的建議和支援位置的詳細資訊，請參閱在 Microsoft 365 流量上執行高級的處理的高級網路解決方案，請參閱[使用協力廠商網路裝置或 Office 365 流量的解決方案](https://support.microsoft.com/help/2690045)。
 
@@ -81,7 +81,7 @@ Microsoft 365 的設計是要使用端點安全性和加密網路連線以取得
 
 本機出局架構針對傳統模型上的 Microsoft 365 網路流量，具有下列優點：
   
-- 優化路由長度，以提供最佳的 Microsoft 365 效能。 使用者連線會透過 Microsoft 全球網路的_分散式服務前端_基礎結構，動態路由傳送至最接近的 Microsoft 365 進入點，而流量會透過 microsoft 的超低延遲高可用性暗程內部路由傳送至資料和服務端點。
+- 藉由最佳化路由長度，提供最佳的 Microsoft 365 效能。 使用者連線會以 Microsoft 全球網路的_分散式服務前端_基礎結構，動態路由傳送至最接近的 Microsoft 365 進入點，而流量會透過 microsoft 的超低延遲高可用性纖程內部路由傳送至資料和服務端點。
 - 透過允許 Microsoft 365 流量的本機出口，以略過代理和流量檢查裝置，減少公司網路基礎結構的負載。
 - 利用用戶端端點安全性和雲端安全性功能，以避免應用冗余網路安全性技術，來保護兩端的連線。
 
