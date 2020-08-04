@@ -15,12 +15,12 @@ ms.collection:
 - SPO_Content
 localization_priority: Normal
 description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: a4e467edebbcfbb0288b698f3e7d5bcf589cdd69
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.openlocfilehash: d66f33152d4960b4a837a1dd401199f3bb56e5b3
+ms.sourcegitcommit: bb122479c3a2757c0a5adde6c9f0c77c75ab3951
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433524"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "46548895"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
@@ -104,3 +104,7 @@ Stream 目前提供下列語言：
 - 加拿大
 - 印度
 - 英國
+
+## <a name="yammer"></a>Yammer
+
+Yammer 不是多地理位置工作負載。 儲存在 Yammer 中的 yammer 執行緒將會置於租使用者的中央位置。 Yammer 正在推出儲存在 SharePoint 中 Yammer 檔案的檔案儲存變更。 儲存在 SharePoint 中的 Yammer 檔案會放入與 Yammer 群組相關聯的 SharePoint 網站。 SharePoint 群組網站是以 PDL 邏輯為基礎，如[SharePoint 網站和群組](https://docs.microsoft.com/office365/enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365#sharepoint-sites-and-groups)中所述。

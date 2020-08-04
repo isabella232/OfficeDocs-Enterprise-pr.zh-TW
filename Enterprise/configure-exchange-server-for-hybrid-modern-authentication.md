@@ -15,19 +15,19 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 混合式新式驗證（HMA）是一種身分識別管理的方法，可提供更安全的使用者驗證和授權，而且可用於 Exchange server 內部部署混合式部署。
-ms.openlocfilehash: 4348de3fbec5917c2b13af3f93bf79ad898af017
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
+description: 混合式新式驗證 (HMA) ，是一種可提供更安全的使用者驗證和授權方法，可供 Exchange server 內部部署混合式部署使用。
+ms.openlocfilehash: afc3b2926f02a64a9f2f27ba85e5264258b49c3b
+ms.sourcegitcommit: bb122479c3a2757c0a5adde6c9f0c77c75ab3951
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502588"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "46548876"
 ---
 # <a name="how-to-configure-exchange-server-on-premises-to-use-hybrid-modern-authentication"></a>如何設定 Exchange Server 內部部署以使用混合式新式驗證
 
 *本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-混合式新式驗證（HMA）是一種身分識別管理的方法，可提供更安全的使用者驗證和授權，而且可用於 Exchange server 內部部署混合式部署。
+混合式新式驗證 (HMA) 是一種提供更安全的使用者驗證和授權方法，可供 Exchange server 內部部署混合式部署使用。
   
 ## <a name="fyi"></a>僅供參考
 
@@ -49,7 +49,7 @@ ms.locfileid: "46502588"
 
 1. 由於商務用 Skype 和 Exchange 皆是許多**必要條件**，所以[混合新式驗證概述和必要條件搭配內部部署商務用 Skype 和 Exchange 伺服器使用它](hybrid-modern-auth-overview.md)。 在您開始進行本文中的任何步驟之前，請先執行此動作。
 
-1. 在 Azure AD 中將內部部署 web 服務 URLs 新增為**服務主體名稱（spn）** 。
+1. 將內部部署 web 服務 URLs 新增為**服務主體名稱 (** Azure AD 中的 spn) 。
 
 1. 確保所有虛擬目錄都已啟用 HMA
 
@@ -65,14 +65,14 @@ ms.locfileid: "46502588"
   
 ## <a name="add-on-premises-web-service-urls-as-spns-in-azure-ad"></a>在 Azure AD 中將內部部署 web 服務 URLs 當做 Spn 新增
 
-執行將您的內部部署 web 服務 URLs 指派為 Azure AD Spn 的命令。 在驗證和授權期間，用戶端機器和裝置會使用 Spn。 所有可能用來從內部部署至 Azure Active Directory （Azure AD）的 URLs 都必須在 Azure AD 中註冊（這包括內部及外部命名空間）。
+執行將您的內部部署 web 服務 URLs 指派為 Azure AD Spn 的命令。 在驗證和授權期間，用戶端機器和裝置會使用 Spn。 所有可能用來從內部部署至 Azure Active Directory (Azure AD) 的 URLs，都必須在 Azure AD 中註冊， (這包括內部及外部命名空間) 。
   
 首先，請收集您需要在 AAD 中新增的所有 URLs。 在內部部署執行下列命令：
   
 ```powershell
 Get-MapiVirtualDirectory | FL server,*url*
 Get-WebServicesVirtualDirectory | FL server,*url*
-Get-ActiveSyncVirtualDirectory | FL server,*url*
+Get-ClientAccessServer | fl Name, AutodiscoverServiceInternalUri
 Get-OABVirtualDirectory | FL server,*url*
 Get-AutodiscoverVirtualDirectory | FL server,*url*
 Get-OutlookAnywhere | FL server,*url*
@@ -90,9 +90,9 @@ Get-OutlookAnywhere | FL server,*url*
 Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames
 ```
 
-記下（和螢幕擷取畫面以供稍後比較）此命令的輸出應包含 HTTPs:// *autodiscover.yourdomain.com*和 Https:// *mail.yourdomain.com* URL，但通常是由以 00000002-0000-0Ff1-ce00-000000000000/開頭的 spn 所組成。 如果從您的內部部署 HTTPs://URLs，將需要將這些特定記錄新增至此清單。
+記下 (和螢幕擷取畫面，以供稍後比較) 此命令的輸出應包含 HTTPs:// *autodiscover.yourdomain.com*和 Https:// *mail.yourdomain.com* URL，但通常是由以 00000002-0000-0Ff1-ce00-000000000000/開頭的 spn 所組成。 如果從您的內部部署 HTTPs://URLs，將需要將這些特定記錄新增至此清單。
   
-3. 如果您沒有看到您的內部及外部 MAPI/HTTP、EWS、ActiveSync、OAB 及自動探索記錄，您必須使用下列命令進行新增（此範例 URLs 為 ' `mail.corp.contoso.com` ' 和 ' ' `owa.contoso.com` ，但您會**以您自己的範例取代該範例 URLs** ）： <br/>
+3. 如果您沒有看到您的內部及外部 MAPI/HTTP、EWS、ActiveSync、OAB 及自動探索記錄，您必須使用下列命令來新增， (範例 URLs 是 ' `mail.corp.contoso.com` ' 和 ' ' `owa.contoso.com` ，但是您會**以您自己的 URLs 取代範例 ) ** ： <br/>
 ```powershell
 $x= Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000
 $x.ServicePrincipalnames.Add("https://mail.corp.contoso.com/")
@@ -100,7 +100,7 @@ $x.ServicePrincipalnames.Add("https://owa.contoso.com/")
 Set-MSOLServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 -ServicePrincipalNames $x.ServicePrincipalNames
 ```
 
-4. 再次執行步驟2上的 New-msolserviceprincipal 命令，然後查看輸出，以確認新增的記錄已新增。 將清單/螢幕擷取畫面與新的 Spn 清單進行比較（您也可能會向新的記錄加入新的清單）。 如果您成功，您會在清單中看到兩個新的 URLs。 接下來的範例，Spn 清單現在會包含特定的 URLs `https://mail.corp.contoso.com` 和 `https://owa.contoso.com` 。 
+4. 再次執行步驟2上的 New-msolserviceprincipal 命令，然後查看輸出，以確認新增的記錄已新增。 將清單/螢幕擷取畫面與新的 Spn 清單進行比較 (您也可以將記錄新增至新清單) 。 如果您成功，您會在清單中看到兩個新的 URLs。 接下來的範例，Spn 清單現在會包含特定的 URLs `https://mail.corp.contoso.com` 和 `https://owa.contoso.com` 。 
   
 ## <a name="verify-virtual-directories-are-properly-configured"></a>確認已正確設定虛擬目錄
 
@@ -113,7 +113,7 @@ Get-OABVirtualDirectory | FL server,*url*,*oauth*
 Get-AutoDiscoverVirtualDirectory | FL server,*oauth*
 ```
 
-檢查輸出，確定每個 VDirs 都已啟用**OAuth** ，它看起來像這樣（但要尋找的關鍵一點是「OAuth '）：
+檢查輸出，確定每個 VDirs 都已啟用**OAuth** ，它看起來像這樣 (，而要查看的關鍵事項是「OAuth ' ) ：
 
 ```powershell
 Get-MapiVirtualDirectory | fl server,*url*,*auth*
@@ -126,7 +126,7 @@ InternalAuthenticationMethods : {Ntlm, OAuth, Negotiate}
 ExternalAuthenticationMethods : {Ntlm, OAuth, Negotiate}
 ```
   
-如果任何伺服器及任何四個虛擬目錄中的 OAuth 都缺失，您必須在繼續之前使用相關命令新增它（[設定 MapiVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-mapivirtualdirectory?view=exchange-ps)、 [Set-WebServicesVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-webservicesvirtualdirectory?view=exchange-ps)、 [Set-OABVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/set-oabvirtualdirectory?view=exchange-ps)及[Set-AutodiscoverVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-autodiscovervirtualdirectory?view=exchange-ps)）。
+如果任何伺服器及任何四個虛擬目錄中的 OAuth 都缺失，您必須使用相關命令新增它，然後再繼續 ([設定 MapiVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-mapivirtualdirectory?view=exchange-ps)、 [Set-WebServicesVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-webservicesvirtualdirectory?view=exchange-ps)、 [Set-OABVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/email-addresses-and-address-books/set-oabvirtualdirectory?view=exchange-ps)及[Set-AutodiscoverVirtualDirectory](https://docs.microsoft.com/powershell/module/exchange/client-access-servers/set-autodiscovervirtualdirectory?view=exchange-ps)) 。
   
 ## <a name="confirm-the-evosts-auth-server-object-is-present"></a>確認 EvoSTS 驗證服務器物件存在
 
@@ -153,7 +153,7 @@ Set-OrganizationConfig -OAuth2ClientProfileEnabled $true
 
 一旦您啟用 HMA，用戶端的下一個登入將會使用新的驗證流程。 請注意，只要開啟 HMA，就不會觸發任何用戶端的重新驗證。 用戶端會根據驗證權杖和/或憑證的存留時間，重新進行驗證。
   
-您也應該同時按住 CTRL 鍵，以滑鼠右鍵按一下 Outlook 用戶端（也就是在 Windows 通知盤）的圖示，然後按一下 [線上狀態]。 根據 ' Authn ' 類型的 ' 載體 ' 尋找用戶端的 SMTP 位址 \* ，它代表 OAuth 中使用的持有者權杖。
+您也應該同時按住 CTRL 鍵，以滑鼠右鍵按一下 Outlook 用戶端的圖示 (也在 Windows 通知盤) 中，然後按一下 [線上狀態]。 根據 ' Authn ' 類型的 ' 載體 ' 尋找用戶端的 SMTP 位址 \* ，它代表 OAuth 中使用的持有者權杖。
   
  **記事**需要使用 HMA 設定商務用 Skype？ 您將需要兩個文章：一個會列出[支援的拓撲](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)，另一個說明[如何進行](configure-skype-for-business-for-hybrid-modern-authentication.md)設定。
  
