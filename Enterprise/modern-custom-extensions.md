@@ -19,12 +19,12 @@ ms.reviewer: sstewart
 search.appverid:
 - MET150
 description: 深入了解如何在 SharePoint Online 新式網站頁面中最佳化自訂延伸模組的效能。
-ms.openlocfilehash: bdc05c4e786d07a18c49766bf37aca7f4fde56da
-ms.sourcegitcommit: c024b48115cebfdaadfbc724acc2d065394156e9
+ms.openlocfilehash: dbf0c3cba009a102bf37dd65f14e8cb882303cfe
+ms.sourcegitcommit: bb122479c3a2757c0a5adde6c9f0c77c75ab3951
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "42603817"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "46548855"
 ---
 # <a name="optimize-custom-extension-performance-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化自訂延伸模組的效能
 
@@ -37,14 +37,15 @@ ms.locfileid: "42603817"
 >[!NOTE]
 >網頁診斷工具只能用於 SharePoint Online，且無法在 SharePoint 系統頁面使用。
 
-當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 [診斷測試]__ 窗格的 [自訂延伸模組影響載入時間]**** 結果中，看到超過基準計量的自訂延伸模組相關資訊。
+當您使用「適用於 SharePoint 的頁面診斷」工具分析 SharePoint 網站頁面時，您可以在 _[診斷測試]_ 窗格的 **[擴充功能正影響載入時間]** 和/或 **[使用過多擴充功能]** 結果中，看到超過基準計量的自訂延伸模組相關資訊 
 
 可能的結果包括：
 
-- **需要注意** (紅色)：載入耗時比**兩**秒還要久的任何_自訂_延伸模組。 測試結果中顯示的載入時間總計會依據模組載入和初始來細分。
-- **不需要任何動作** (綠色)：沒有任何延伸模組載入耗時超過一秒。
+- **需要注意** (紅色)：載入耗時比**兩**秒還要久的任何_自訂_延伸模組。 測試結果中顯示的載入時間總計會依據模組載入和初始來細分。 此外，如果頁面上的延伸模組太多，可能會影響頁面載入時間，而如果頁面上使用**七個**以上的延伸模組，系統將會醒目提示。
+- **改善機會** (黃色)：如果使用**五個**以上的延伸模組，系統將會在此區段以警示方式醒目提示，直到使用七個以上的延伸模組之後，就會以 [需要注意] 方式醒目提示。
+- **無需採取動作** (綠色)：沒有任何延伸模組載入耗時超過一秒。
 
-如果延伸模組影響頁面載入時間，結果會顯示在 [需要注意]**** 區段中。 按一下結果以查看載入緩慢的延伸模組詳細資料。 未來「適用於 SharePoint 的頁面診斷」工具的更新可能會包含分析規則的更新，因此請確保永遠擁有最新版本的工具。
+如果延伸模組影響頁面載入時間，或頁面上的延伸模組太多，結果會顯示在結果的 **[需要注意]** 區段中。 按一下結果以查看載入緩慢的延伸模組或已醒目提示太多延伸模組的詳細資料。 未來「適用於 SharePoint 的頁面診斷」工具的更新可能會包含分析規則的更新，因此請確保永遠擁有最新版本的工具。
 
 ![頁面載入時間結果](media/page-diagnostics-for-spo/pagediag-extensions-load-time.png)
 
