@@ -112,11 +112,6 @@
 ### 混合式身分識別
 #### [為目錄同步作業做好準備](prepare-for-directory-synchronization.md)
 #### [準備無法路由傳送的網域，以用於目錄同步處理](prepare-a-non-routable-domain-for-directory-synchronization.md)
-#### 使用 IdFix 工具
-##### [使用 IdFix 工具準備目錄屬性](prepare-directory-attributes-for-synch-with-idfix.md)
-##### [下載和執行 IdFix 工具](install-and-run-idfix.md)
-##### [IdFix 已排除和支援的物件和屬性](idfix-excluded-and-supported-objects-and-attributes.md)
-##### [IdFix 交易記錄](idfix-transaction-log.md)
 #### [設定目錄同步處理](set-up-directory-synchronization.md)
 ### [將授權指派給使用者帳戶](assign-licenses-to-user-accounts.md)
 
