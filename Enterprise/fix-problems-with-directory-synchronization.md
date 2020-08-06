@@ -19,12 +19,12 @@ search.appverid:
 - MBS150
 ms.assetid: 79c43023-5a47-45ae-8068-d8a26eee6bc2
 description: 說明 Office 365 中目錄同步處理問題的常見原因，並提供一些協助疑難排解並解決問題的方法。
-ms.openlocfilehash: fac0c477f3c68271a2f0f8c4e2a09fc051fe1ce4
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
+ms.openlocfilehash: faf0f061b8f2798054e63f3338b8076c0ec88f73
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502648"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46570966"
 ---
 # <a name="fixing-problems-with-directory-synchronization-for-microsoft-365"></a>修正 Microsoft 365 的目錄同步處理問題
 
@@ -89,8 +89,3 @@ ms.locfileid: "46502648"
     
 - [使用 PowerShell 修正電子郵件地址重複的問題](https://go.microsoft.com/fwlink/p/?LinkId=396731)
     
-## <a name="diagnostic-tools"></a>診斷工具
-
-[IDFix 工具](prepare-directory-attributes-for-synch-with-idfix.md) 可用來執行內部部署 Active Directory 環境中身分識別物件與其屬性的搜索和修正，以便準備移轉至 Microsoft 365。 IDFix 適用於負責與 Microsoft 365 服務進行目錄同步處理的 Active Directory 系統管理員。 
-
-請從 Microsoft 下載中心[下載 IDFix 工具](https://go.microsoft.com/fwlink/p/?LinkId=396718)。
