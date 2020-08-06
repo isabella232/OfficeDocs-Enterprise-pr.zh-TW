@@ -1,13 +1,13 @@
 ---
-title: 監控 Office 365 連線能力
+title: 監視 Microsoft 365 連線能力
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 7/6/2017
+ms.date: 8/4/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
-localization_priority: Priority
+localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
@@ -17,38 +17,38 @@ search.appverid:
 - MOE150
 - BCS160
 ms.assetid: 53cdb60c-a6b2-4848-b3ff-e7b75dc3fd1f
-description: 完成 Office 365 部署後，您就可以使用下列某些工具和技巧來維護 Office 365 連線能力。建議您了解官方服務健康狀態與持續性指導方針，以及在網路緩慢的情況下使用 Office 365 的最佳做法。也建議您取得 Office 365 Admin App 並將商務用 Office 365 - 系統管理說明加入瀏覽器書籤中。
-ms.openlocfilehash: 5a0a6e217d0f74f6266bffa1bd6037427f14e7bd
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+description: 一旦您部署 Microsoft 365，您可以使用下列一些工具和技術來維護 Microsoft 365 的連線能力。您將需要瞭解官方服務健康情況和持續性指導方針，以及在慢速網路上使用 Microsoft 365 的最佳作法。
+ms.openlocfilehash: aa47ff76f70e48285c6ca5f21ffdf30f1db52521
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843704"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571006"
 ---
-# <a name="monitor-office-365-connectivity"></a>監控 Office 365 連線能力
+# <a name="monitor-microsoft-365-connectivity"></a>監視 Microsoft 365 連線能力
 
-完成 Office 365 部署後，您就可以使用下列某些工具和技巧來維護 Office 365 連線能力。建議您了解官方[服務健康狀態與持續性](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity)指導方針，以及[在網路緩慢的情況下使用 Office 365 的最佳做法](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166)。也建議您取得 [Office 365 Admin App](https://blogs.office.com/2015/03/13/administer-on-the-go-with-the-updated-office-365-admin-app/) 並將[商務用 Office 365 - 系統管理說明](https://support.office.com/article/17d3ff3f-3601-466e-b5a1-482b31cfb791)加入瀏覽器書籤中。
+一旦您部署 Microsoft 365，您可以使用下列一些工具和技術來維護 Microsoft 365 的連線能力。 您將需要瞭解官方[服務健康情況和持續性](https://docs.microsoft.com/office365/servicedescriptions/office-365-platform-service-description/service-health-and-continuity)指導方針，以及[在慢速網路上使用 Microsoft 365 的最佳作法](https://support.office.com/article/fd16c8d2-4799-4c39-8fd7-045f06640166)。 您也會想要取得[microsoft 365 管理應用程式](https://blogs.office.com/2015/03/13/administer-on-the-go-with-the-updated-office-365-admin-app/)，並為商務用書簽加入[microsoft 365 for Business-系統管理](https://support.office.com/article/17d3ff3f-3601-466e-b5a1-482b31cfb791)說明。
   
-## <a name="monitoring-office-365-connectivity"></a>監控 Office 365 連線能力
+## <a name="monitoring-microsoft-365-connectivity"></a>監控 Microsoft 365 連線能力
 
 |||
 |:-----|:-----|
-|**取得 Office 365 新端點的通知** <br/> |如果您[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)，且想要收到新端點的發佈通知，您可以使用您最愛的 RSS 閱讀器來訂閱 RSS 摘要。這裡有[透過 Outlook 訂閱](https://go.microsoft.com/fwlink/p/?LinkId=532416)的方法，或者您也可以[要求透過電子郵件將 RSS 摘要更新傳送給您](https://go.microsoft.com/fwlink/p/?LinkId=532417)。<br/> |
-|**使用 System Center 監控 Office 365** <br/> |如果您使用 Microsoft System Center，您可以下載 [Office 365 的 System Center 管理套件](https://www.microsoft.com/download/details.aspx?id=43708)，立即開始監控 Office 365。如需詳細指導方針，請參閱管理套件操作指南，或是這篇部落格文章[使用 System Centre Operations Manager 監控 Office 365](https://blogs.msdn.com/b/mvpawardprogram/archive/2015/07/08/office365-monitoring-using-system-centre-operations-manager.aspx)。 <br/> |
-|**監控 Azure ExpressRoute 的健康情況** <br/> |如果您使用 Azure ExpressRoute for Office 365 連線到 Office 365，建議您確認已同時採用 Office 365 服務健康情況儀表板並[利用 Azure 資源健康狀態減少疑難排解的時間](https://azure.microsoft.com/blog/reduce-troubleshooting-time-with-azure-resource-health/)。 <br/> |
-|**使用 Azure AD Connect Health 搭配 AD FS** <br/> |如果您的 Office 365 單一登入採用 AD FS，建議您開始[使用 Azure AD Connect Health 來監控 AD FS 基礎結構](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health-adfs/)。  <br/> |
-|**透過程式設計的方式監控 Office 365** <br/> |請參閱 [Office 365 管理 API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview) 中的指導方針。  <br/> |
+|**取得新 Microsoft 365 端點的通知** <br/> |如果您正在[管理 Microsoft 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)，當我們發佈新的端點時，您將會收到通知，您可以使用您最愛的 rss 讀取器訂閱 rss 摘要。 以下說明如何透過[Outlook 訂閱](https://go.microsoft.com/fwlink/p/?LinkId=532416)，也可以[讓 RSS 摘要更新您的電子郵件](https://go.microsoft.com/fwlink/p/?LinkId=532417)。  <br/> |
+|**使用 System Center 監視 Microsoft 365** <br/> |如果您使用 Microsoft System Center，您可以下載適用于[Office 365 的 System Center Management Pack](https://www.microsoft.com/download/details.aspx?id=43708) ，立即開始監控 Microsoft 365。 如需詳細的指導，請參閱 management pack operations guide 或此博客文章[Office365 Monitoring Using System 中心 Operations Manager](https://blogs.msdn.com/b/mvpawardprogram/archive/2015/07/08/office365-monitoring-using-system-centre-operations-manager.aspx) <br/> |
+|**監控 Azure ExpressRoute 的健康情況** <br/> |如果您是使用 Azure ExpressRoute Microsoft 365 來連線至 Microsoft 365，您會想要確定您同時使用的是 Microsoft 365 服務健康情況儀表板，以及 Azure 使用[Azure 資源健康情況來減少疑難排解時間](https://azure.microsoft.com/blog/reduce-troubleshooting-time-with-azure-resource-health/) <br/> |
+|**使用 Azure AD Connect Health 搭配 AD FS** <br/> |如果您使用 AD FS 進行單一 Sign-On 搭配 Microsoft 365，您將會想要開始[使用 AZURE Ad Connect Health 來監視您的 AD FS 基礎結構](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health-adfs/)。  <br/> |
+|**以程式設計方式監視 Microsoft 365** <br/> |請參閱[Microsoft 365 管理 API](https://docs.microsoft.com/office/office-365-management-api/office-365-management-apis-overview)的指導方針。  <br/> |
 
 您可以使用下列短連結返回這裡：[https://aka.ms/monitorconnectivity365](https://aka.ms/monitorconnectivity365)
   
 ## <a name="see-also"></a>另請參閱
 
-[設定 Office 365 企業版服務和應用程式](configure-services-and-applications.md)
+[設定 Microsoft 365 企業版服務和應用程式](configure-services-and-applications.md)
   
-[準備讓您的組織使用 Office 365 企業版](get-your-organization-ready-for-office-365.md)
+[讓您的組織準備好進行 Microsoft 365 企業版](get-your-organization-ready-for-office-365.md)
   
-[Office 365 的網路規劃和效能調整](network-planning-and-performance.md)
+[Microsoft 365 的網路規劃和效能調整](network-planning-and-performance.md)
   
-[Office 365 與內部部署環境整合](office-365-integration.md)
+[Microsoft 365 與內部部署環境的整合](office-365-integration.md)
   
-[管理 Office 365 端點](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
+[管理 Microsoft 365 端點](managing-office-365-endpoints.md)

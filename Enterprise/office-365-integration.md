@@ -21,23 +21,23 @@ search.appverid:
 - MED150
 ms.assetid: 263faf8d-aa21-428b-aed3-2021837a4b65
 description: 瞭解如何將 Microsoft 365 與您現有的目錄服務整合。
-ms.openlocfilehash: 456e3e73451a07750d707e2fca52df9214c2dfaa
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: 1207c7549a0c81a45211581be2b068ca8067a35b
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44736031"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571056"
 ---
 # <a name="microsoft-365-integration-with-on-premises-environments"></a>Microsoft 365 與內部部署環境的整合
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您可以將 Microsoft 365 與現有的目錄服務整合，並使用 Exchange Server、商務用 Skype Server 2015 或 SharePoint 伺服器的內部部署安裝。
   
- - 當您與目錄服務整合時，您可以同步處理及管理這兩種環境的使用者帳戶。 您也可以新增密碼雜湊同步處理或單一登入（SSO），讓使用者能夠使用內部部署認證登入這兩種環境。
+ - 當您與目錄服務整合時，您可以同步處理及管理這兩種環境的使用者帳戶。 您也可以在 SSO) 上新增密碼雜湊同步處理或單一登入 (，讓使用者可以使用內部部署認證登入這兩種環境。
  - 當您整合內部部署伺服器產品時，您會建立混合式環境。 當您將使用者或資訊遷移至 Microsoft 365 時，混合式環境可以協助您，也可以繼續在內部部署中和某些使用者或部分資訊，在雲端中。 如需混合式環境的詳細資訊，請參閱[混合式 cloud 一覽](https://docs.microsoft.com/Office365/Enterprise/hybrid-cloud-overview)。
 
-您也可以使用 Azure Active Directory （Azure AD）顧問以自訂安裝指導方針（您必須登入 Microsoft 365）：
+您也可以使用 Azure Active Directory (Azure AD) 顧問以取得自訂安裝指導， (您必須登入 Microsoft 365) ：
 
 - [從您的組織目錄同步處理使用者](https://aka.ms/aadconnectpwsync)
 - [AD FS 部署顧問](https://aka.ms/adfsguidance)
@@ -50,7 +50,7 @@ ms.locfileid: "44736031"
 如需管理 microsoft 365 使用者和帳戶的可用工具清單，請參閱[管理 microsoft 365 帳戶的位置](manage-office-365-accounts.md)。 
   
 ## <a name="integrate-microsoft-365-with-directory-services"></a>整合 Microsoft 365 與目錄服務
-如果您在內部部署目錄中有現有的使用者帳戶，您不想要在 Microsoft 365 中重新建立所有這些帳戶，以及在環境間引入差異或錯誤的風險。 目錄同步處理可協助您在您的線上和內部部署環境間鏡像這些帳戶。 透過目錄同步作業，您的使用者不需要記住每個環境的新資訊，而且您不需要建立或更新帳戶兩次。 您將需要為[您的內部部署目錄做好](prepare-for-directory-synchronization.md)目錄同步處理的準備工作，您可以手動執行此作業，或使用[IdFix 工具](install-and-run-idfix.md)（IdFix 工具僅適用于 Active DIRECTORY 網域服務 [AD DS]）。 
+如果您在內部部署目錄中有現有的使用者帳戶，您不想要在 Microsoft 365 中重新建立所有這些帳戶，以及在環境間引入差異或錯誤的風險。 目錄同步處理可協助您在您的線上和內部部署環境間鏡像這些帳戶。 透過目錄同步作業，您的使用者不需要記住每個環境的新資訊，而且您不需要建立或更新帳戶兩次。 您將需要[準備內部部署目錄](prepare-for-directory-synchronization.md)，以進行目錄同步處理。
   
 ![使用目錄同步處理將內部部署和線上使用者帳戶資訊同步處理](media/a64af0d0-9be6-46b1-8727-277e683abf5e.png)
   
@@ -62,7 +62,7 @@ ms.locfileid: "44736031"
  
 ### <a name="directory-synchronization-with-or-without-password-hash-synchronization-or-pass-through-authentication"></a>使用或不使用密碼雜湊同步處理或未經過驗證的目錄同步處理
 
-使用者使用使用者帳戶（網域 \ 使用者名稱）登入其內部部署環境。 移至 Microsoft 365 時，他們必須使用其工作或學校帳戶（user@domain.com）重新登入。 這兩個環境中的使用者名稱相同。 當您新增密碼雜湊同步處理或通過驗證時，使用者會在兩個環境上都有相同的密碼，但在登入 Microsoft 365 時，必須提供這些認證。 與密碼雜湊同步處理的目錄同步處理是最常使用的目錄同步案例。
+使用者使用使用者帳戶登入其內部部署環境 (網域 \ 使用者名稱) 。 當他們移至 Microsoft 365 時，他們必須使用其工作或學校帳戶 (user@domain.com) 登入。 這兩個環境中的使用者名稱相同。 當您新增密碼雜湊同步處理或通過驗證時，使用者會在兩個環境上都有相同的密碼，但在登入 Microsoft 365 時，必須提供這些認證。 與密碼雜湊同步處理的目錄同步處理是最常使用的目錄同步案例。
 
 若要設定目錄同步處理，請使用 Azure Active Directory Connect。 如需相關指示，請參閱[設定 Microsoft 365 的目錄同步](set-up-directory-synchronization.md)[處理和 Azure AD Connect with express 設定](https://go.microsoft.com/fwlink/p/?LinkId=698537)。
 
@@ -70,7 +70,7 @@ ms.locfileid: "44736031"
 
 ### <a name="directory-synchronization-with-sso"></a>與 SSO 同步處理的目錄
 
-使用者可以使用其使用者帳戶登入其內部部署環境。 當他們移至 Microsoft 365 時，他們要麼是自動登入，要麼是使用其內部部署環境（網域 \ 使用者）所使用的相同認證登入。
+使用者可以使用其使用者帳戶登入其內部部署環境。 當他們移至 Microsoft 365 時，他們要麼是自動登入，要麼是使用其內部部署環境所用的相同認證（ (網域 \ 使用者名稱」) ）登入。
 
 若要設定 SSO，您也可以使用 Azure AD Connect。 如需相關指示，請參閱[AZURE AD Connect 的自訂安裝](https://go.microsoft.com/fwlink/p/?LinkID=698430)。
 

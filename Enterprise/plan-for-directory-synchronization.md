@@ -19,18 +19,18 @@ search.appverid:
 - MET150
 ms.assetid: d3577c90-dda5-45ca-afb0-370d2889b10f
 description: 說明與 Microsoft 365、Active Directory 網域服務清理和 Azure Active Directory Connect 工具的目錄同步處理。
-ms.openlocfilehash: b22533e66d18541b8eb72900514543367633e462
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.openlocfilehash: 8bfb9a7d65bf76fdadafe1bb49da91115ee9d07c
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711866"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571156"
 ---
 # <a name="hybrid-identity-and-directory-synchronization-for-microsoft-365"></a>Microsoft 365 的混合式身分識別及目錄同步處理
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-根據您的業務需求和技術需求，混合式身分識別模型及目錄同步處理對於採用 Microsoft 365 的企業客戶而言是最常見的選擇。 目錄同步處理可讓您在 Active Directory 網域服務（AD DS）中管理身分識別，而且所有對使用者帳戶、群組和連絡人的更新都會同步處理至您的 Microsoft 365 訂閱的 Azure Active Directory （Azure AD）租使用者。
+根據您的業務需求和技術需求，混合式身分識別模型及目錄同步處理對於採用 Microsoft 365 的企業客戶而言是最常見的選擇。 目錄同步處理可讓您在 Active Directory 網域服務 (AD DS) 中管理身分識別，並且將所有對使用者帳戶、群組和連絡人的更新，同步處理至您的 Microsoft 365 訂閱的 Azure Active Directory (Azure AD) 承租人。
 
 >[!Note]
 >當 AD DS 使用者帳戶第一次同步處理時，不會自動將其指派給 Microsoft 365 許可證，而且無法存取 Microsoft 365 服務，例如電子郵件。 您必須先將其指派為使用位置。 然後，透過群組成員資格個別或動態指派授權給這些使用者帳戶。
@@ -52,7 +52,7 @@ ms.locfileid: "44711866"
 
 受管理的驗證類型有兩種：
 
-- 密碼雜湊同步處理（PHS）
+- 密碼雜湊同步處理 (PHS) 
 
   Azure AD 會自行執行驗證。
 
@@ -61,11 +61,11 @@ ms.locfileid: "44711866"
   Azure AD 具有 AD DS 執行驗證。
 
 
-#### <a name="password-hash-synchronization-phs"></a>密碼雜湊同步處理（PHS）
+#### <a name="password-hash-synchronization-phs"></a>密碼雜湊同步處理 (PHS) 
 
 透過 PHS，您可以將 AD DS 使用者帳戶與 Microsoft 365 同步處理，並管理內部部署的使用者。 使用者密碼的雜湊會從您的 AD DS 同步處理到 Azure AD，讓使用者在內部部署和雲端都有相同的密碼。 這是在 Azure AD 中啟用 AD DS 身分識別驗證的最簡單方式。 
 
-![密碼雜湊同步處理（PHS）](./media/plan-for-directory-synchronization/phs-authentication.png)
+![密碼雜湊同步處理 (PHS) ](./media/plan-for-directory-synchronization/phs-authentication.png)
 
 當密碼變更或重設為內部部署時，新的密碼雜湊會同步處理至 Azure AD，這樣您的使用者就可以在雲端資源和內部部署資源中永遠使用相同的密碼。 使用者密碼永遠不會以明文形式傳送至 Azure AD 或儲存在 Azure AD 中。 不論選取哪一種驗證方法，Azure AD 的某些精品功能（例如身分識別保護）都需要 PHS。
   
@@ -93,21 +93,19 @@ PTA 也適用于具有安全性需求的組織，以立即強制執行內部部�
   
 #### <a name="third-party-authentication-and-identity-providers"></a>協力廠商驗證和身分識別提供者
 
-內部部署目錄物件可能會同步處理至 Microsoft 365，而雲端資源存取主要是由協力廠商身分識別提供者（IdP）來管理。 如果您的組織使用協力廠商同盟解決方案，您可以將協力廠商同盟解決方案與 Azure AD 相容，以供 Microsoft 365 的解決方案進行登錄。
+內部部署目錄物件可能會同步處理至 Microsoft 365，而雲端資源存取主要是由協力廠商身分識別提供者 (IdP) 所管理。 如果您的組織使用協力廠商同盟解決方案，您可以將協力廠商同盟解決方案與 Azure AD 相容，以供 Microsoft 365 的解決方案進行登錄。
   
 請參閱[AZURE AD federation 相容性清單](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-federation-compatibility)以深入瞭解。
   
-## <a name="ad-ds-cleanup"></a>AD DS 清理
+## <a name="ad-ds-preparation"></a>AD DS 準備
 
 若要協助確保透過同步處理順利轉換至 Microsoft 365，您必須先準備您的 AD DS 樹系，再開始 Microsoft 365 目錄同步部署。
   
-當您[設定目錄同步](set-up-directory-synchronization.md)處理時，其中一個步驟就是[下載並執行 IdFix 工具](install-and-run-idfix.md)。 您可以使用 IdFix 工具來協助[清理目錄](prepare-directory-attributes-for-synch-with-idfix.md)。
-  
-您的目錄清理應著重于下列任務：
+您的目錄準備工作應該著重于下列工作：
 
 - 移除重複的**proxyAddress**和**userPrincipalName**屬性。
 - 使用有效的**userPrincipalName**屬性，更新空白及不正確**userPrincipalName**屬性。
-- 移除**givenName**、姓（ **sn** ）、 **sAMAccountName**、 **displayName**、 **mail**、 **proxyAddresses**、 **mailNickname**及**userPrincipalName**屬性中的無效且可疑的字元。 如需準備屬性的詳細資訊，請參閱[由 Azure Active Directory 同步處理工具同步處理的屬性清單](https://go.microsoft.com/fwlink/p/?LinkId=396719)。
+- 移除**givenName**、姓 ( **sn** ) 、 **sAMAccountName**、 **displayName**、 **mail**、 **proxyAddresses**、 **mailNickname**及**userPrincipalName**屬性中的無效且可疑的字元。 如需準備屬性的詳細資訊，請參閱[由 Azure Active Directory 同步處理工具同步處理的屬性清單](https://go.microsoft.com/fwlink/p/?LinkId=396719)。
 
     > [!NOTE]
     > 這些是 Azure AD Connect 同步處理的相同屬性。 
@@ -116,7 +114,7 @@ PTA 也適用于具有安全性需求的組織，以立即強制執行內部部�
 
 若為多個樹系和 SSO 選項，請使用[AZURE AD Connect 的自訂安裝](https://go.microsoft.com/fwlink/p/?LinkId=698430)。
   
-如果您的組織有多個樹系用於驗證（登入樹系），我們強烈建議下列事項：
+如果您的組織有多個樹系用於驗證 (登入樹系) ，我們強烈建議下列事項：
   
 - **請考慮合併您的樹系。** 一般說來，維護多個樹系需要額外的額外負荷。 除非您的組織有規定個別樹系需求的安全性限制，否則請考慮簡化您的內部部署環境。
 - **僅在您的主要登入樹系中使用。** 請考慮只在您的主要登入樹系中部署 Microsoft 365，以進行初次展示 Microsoft 365。 
@@ -129,10 +127,10 @@ PTA 也適用于具有安全性需求的組織，以立即強制執行內部部�
   
 下列功能需要目錄同步處理：
   
-- Azure AD 無縫單一 Sign-On （SSO）
+-  (SSO) 的 Azure AD 無縫單一 Sign-On
 - Skype 共存
 - Exchange 混合式部署，包括：
-  - 在您的內部部署 Exchange 環境與 Microsoft 365 之間的完全共用全域通訊清單（GAL）。
+  - 在您的內部部署 Exchange 環境與 Microsoft 365 之間 (GAL) 的完全共用全域通訊清單。
   - 同步處理來自不同郵件系統的 GAL 資訊。
   - 可在 Microsoft 365 服務產品中新增及移除使用者的功能。 這需要下列各項：
   - 在目錄同步處理設定期間，必須設定雙向同步處理。 根據預設，目錄同步處理工具只會將目錄資訊寫入雲端。 當您設定雙向同步處理時，您可以啟用寫回功能，使有限數目的物件屬性從雲端複製，然後再將其寫入您的本機 AD DS。 回寫也稱為 Exchange 混合模式。 

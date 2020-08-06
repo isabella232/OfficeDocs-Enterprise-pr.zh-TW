@@ -14,19 +14,19 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 新式驗證是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 可用於在內部部署商務用 Skype server 的混合式部署和 Exchange server 內部部署，以及分割網域 Skype for business 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端（ex）的相關檔。 Outlook 和 Skype 用戶端）資訊。
-ms.openlocfilehash: 056262ade67b8ffd452f68cc0c5e3882326b2e44
-ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
+description: 新式驗證是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 可用於在內部部署商務用 Skype server 的混合式部署和 Exchange server 內部部署，以及分割網域 Skype for business 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端 (ex 的相關檔。 Outlook 和 Skype 用戶端) 資訊。
+ms.openlocfilehash: df755c8af161609c1c18dbe066662aaf1d410429
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45052416"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571046"
 ---
 # <a name="hybrid-modern-authentication-overview-and-prerequisites-for-using-it-with-on-premises-skype-for-business-and-exchange-servers"></a>混合新式驗證概述和使用內部部署商務用 Skype 和 Exchange 伺服器的必要條件
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-_新式驗證_是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 它適用于 Office 365 的商務用 Skype server 內部部署和 Exchange server 內部部署，以及分割網域商務用 Skype 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端（ex）的相關檔。 Outlook 和 Skype 用戶端）資訊。
+_新式驗證_是一種身分識別管理的方法，可提供更安全的使用者驗證和授權。 它適用于 Office 365 的商務用 Skype server 內部部署和 Exchange server 內部部署，以及分割網域商務用 Skype 混合式部署。 本文連結至有關必要條件、設定/停用新式驗證及部分相關用戶端 (ex 的相關檔。 Outlook 和 Skype 用戶端) 資訊。
   
 - [何謂新式驗證？](hybrid-modern-auth-overview.md#BKMK_WhatisModAuth)
 - [使用新式驗證時會有什麼變更？](hybrid-modern-auth-overview.md#BKMK_WhatChanges)
@@ -37,13 +37,13 @@ _新式驗證_是一種身分識別管理的方法，可提供更安全的使用
 ## <a name="what-is-modern-authentication"></a>何謂新式驗證？
 <a name="BKMK_WhatisModAuth"> </a>
 
-新式驗證是一項涵蓋條款，結合用戶端（例如，您的膝上型電腦或電話）和伺服器之間的驗證和授權方法，以及一些依賴您可能已經熟悉之存取原則的安全性措施。 包括：
+新式驗證是一項涵蓋在用戶端 (（例如，您的膝上型電腦或電話) 和伺服器）之間的驗證和授權方法的傘條款，以及一些依賴您可能已經熟悉之存取原則的安全性措施。 包括：
   
-- **驗證方法**：多重要素驗證（MFA）;智慧卡驗證;以用戶端憑證為基礎的驗證
-- **授權方法**： Microsoft 的開放式授權實施（OAuth）
-- **條件式存取原則**：行動應用程式管理（MAM）和 Azure Active Directory （azure AD）條件式存取
+- **驗證方法**：多重要素驗證 (MFA) ;智慧卡驗證;以用戶端憑證為基礎的驗證
+- **授權方法**： Microsoft 在開啟授權 (OAuth 的實施) 
+- **條件式存取原則**：行動應用程式管理 (MAM) 和 Azure Active Directory (azure AD) 條件式存取
 
-使用新式驗證來管理使用者身分識別，可讓系統管理員在保護資源時使用許多不同的工具，並提供更安全的身分識別管理方法給內部部署（Exchange 和商務用 Skype）、Exchange 混合式和商務用 Skype 混合式/分割網域案例。
+使用新式驗證來管理使用者身分識別，可讓系統管理員在保護資源時使用許多不同的工具，並提供更安全的身分識別管理方法，以進行內部部署 (Exchange 和商務用 Skype) 、Exchange 混合式和商務用 Skype 混合式/分割網域案例。
   
 請注意，由於商務用 Skype 與 Exchange 緊密合作，所以商務用 Skype 用戶端使用者的登入行為將會受到 Exchange 新式驗證狀態的影響。 如果您有商務用 skype_分割網域混合式_架構，且您的商務用 skype Online 和商務用 skype 內部部署，也會套用這項功能，且使用者同時位於這兩個位置。
 
@@ -55,13 +55,13 @@ _新式驗證_是一種身分識別管理的方法，可提供更安全的使用
 ## <a name="what-changes-when-i-use-modern-authentication"></a>使用新式驗證時會有什麼變更？
 <a name="BKMK_WhatChanges"> </a>
 
-搭配內部部署商務用 Skype server 或 Exchange server 使用新式驗證時，您仍然會*驗證*使用者的內部部署，但*授權*其存取資源（如檔案或電子郵件）的情景也會變更。 這就是由於新式驗證有關用戶端和伺服器通訊的原因，在 evoSTS （Azure AD 使用的安全性 Token 服務）中設定 MA 結果時所採取的步驟，會設定為商務用 Skype 和 Exchange server 內部部署的驗證服務器。
+搭配內部部署商務用 Skype server 或 Exchange server 使用新式驗證時，您仍然會*驗證*使用者的內部部署，但在 (像是檔案或電子郵件) 變更的情況下，對資源進行*授權*存取的情景也是如此。 這就是由於新式驗證有關用戶端和伺服器通訊的原因，在 (evoSTS 中設定 MA 結果時所採取的步驟，是由 Azure AD) 設定為適用于商務用 Skype 和 Exchange server 內部部署之驗證服務器的安全性 Token 服務。
   
-對 evoSTS 所做的變更可讓您的內部部署伺服器利用 OAuth （權杖發佈）來授權您的用戶端，也可讓您的內部部署使用雲端中常見的安全性方法（如多重要素驗證）。 此外，evoSTS 會發出標記，允許使用者要求存取資源，而不提供密碼做為要求的一部分。 不管使用者的所在位置（線上或內部部署），不論是哪一個位置主控必要的資源，EvoSTS 將成為在設定新式驗證之後，授權使用者和用戶端的核心。
+對 evoSTS 所做的變更可讓您的內部部署伺服器利用 OAuth (權杖發行) 來授權您的用戶端，也可讓您的內部部署使用雲端 (中常見的安全性方法，例如多重要素驗證) 。 此外，evoSTS 會發出標記，允許使用者要求存取資源，而不提供密碼做為要求的一部分。 不管您的使用者是在線上或內部部署) 的 (所在的位置，不論哪一個位置主控必要的資源，EvoSTS 將成為在設定新式驗證之後，授權使用者和用戶端的核心。
   
-例如，如果商務用 Skype 用戶端需要存取 Exchange 伺服器以代表使用者取得行事曆資訊，它會使用 Active Directory 驗證程式庫（ADAL）來執行這項作業。 ADAL 是一個程式碼庫，其設計目的是讓您的目錄中的安全資源可供使用 OAuth 安全性權杖的用戶端應用程式使用。 ADAL 可與 OAuth 搭配驗證宣告和交換權杖（而非密碼），以授與使用者對資源的存取權。 過去，在交易中（如下列所示）中的授權機構（即知道如何驗證使用者宣告及發出必要標記的伺服器），可能是內部部署的安全性權杖服務，甚至是 Active Directory Federation Services。 不過，新式驗證使用 Azure AD 來集中該授權。
+例如，如果商務用 Skype 用戶端需要存取 Exchange 伺服器以代表使用者取得行事曆資訊，它會使用 Active Directory 驗證程式庫 (ADAL) 來執行此作業。 ADAL 是一個程式碼庫，其設計目的是讓您的目錄中的安全資源可供使用 OAuth 安全性權杖的用戶端應用程式使用。 ADAL 可與 OAuth 搭配驗證宣告和 exchange token (，而不是密碼) ，以授與使用者對資源的存取權。 過去，在交易中（如下列所示）中的授權機構（即知道如何驗證使用者宣告及發出必要標記的伺服器），可能是內部部署的安全性權杖服務，甚至是 Active Directory Federation Services。 不過，新式驗證使用 Azure AD 來集中該授權。
   
-這也表示，即使您的 Exchange 伺服器和商務用 Skype 環境可能完全在內部部署中，授權伺服器也是線上的，而且您的內部部署環境必須能夠建立及維護雲端（和您的訂閱用來做為其目錄的 Azure AD 實例）中的 Office 365 訂閱連線。
+這也表示，即使您的 Exchange 伺服器和商務用 Skype 環境可能完全在內部部署中，授權伺服器也是線上的，而您的內部部署環境必須能夠建立及維護雲端 (中的 Office 365 訂閱連線，以及您的訂閱用來做為其目錄) 的 Azure AD 實例。
   
 什麼不會變更？ 不論您是在分割網域混合式，還是使用商務用 Skype 和 Exchange server 內部部署，所有使用者都必須先驗證*內部部署*。 在新式驗證的混合式實施中， _Lyncdiscovery_和_自動_探索都指向您的內部部署伺服器。
   
@@ -96,10 +96,10 @@ Get-CSOAuthConfiguration
 繼續進行之前，請先確認並檢查清單中的這些專案：
   
 - **特定商務用 Skype**
-  - 針對商務用 Skype Server 2015 或更新版本，所有伺服器都必須有2017累計更新（CU5）
-    - **例外**狀況分支裝置（SBA）可以是目前版本的版本（根據 Lync 2013）
+  - 在商務用 Skype Server 2015 或更新版本中，所有伺服器都必須有2017累積更新 (CU5) 
+    - **例外**狀況分支裝置 (SBA) 可以在目前的版本 (根據 Lync 2013) 
   - 您的 SIP 網域已新增為 Office 365 的同盟網域
-  - 所有 SFB 前端都必須有外寄至網際網路的連線、Office 365 驗證 URLs （TCP 443）和知名憑證根 Crl （TCP 80）列于[office 125 URLs 和 IP 位址範圍](urls-and-ip-address-ranges.md)的「Microsoft 365 通用和 Office」區段的列56和365中。
+  - 所有 SFB 前端都必須有輸出至網際網路的連線，到 Office 365 驗證 URLs (TCP 443) 和知名憑證根 Crl (TCP 80) 列于[Office 125 URLs 和 IP 位址範圍](urls-and-ip-address-ranges.md)的「Microsoft 365 通用和 Office」區段的列56和365中。
   
 - **混合式 Office 365 環境中的商務用 Skype 內部部署**
   - 商務用 Skype Server 2019 部署，包含所有執行商務用 Skype Server 2019 的伺服器。
@@ -150,26 +150,26 @@ Get-CSOAuthConfiguration
 
   |**用戶端**|**主要通訊協定**|**附註**|
   |:-----|:-----|:-----|
-  |Outlook 2013 與 Outlook 2016  <br/> |MAPI over HTTP  <br/> |必須在 Exchange 內啟用 MAPI over HTTP，才能利用這些用戶端（通常為 Exchange 2013 Service Pack 1 和更新版本啟用或為 True）進行新式驗證。如需詳細資訊，請參閱[office 2013 和 office 2016 用戶端應用程式的新式驗證的運作方式](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016)。  <br/> 確定您執行的是最小必要組建的 Outlook;請查看[使用 Windows Installer （MSI）之 Outlook 版本的最新更新](https://docs.microsoft.com/officeupdates/outlook-updates-msi)。  <br/> |
+  |Outlook 2013 與 Outlook 2016  <br/> |MAPI over HTTP  <br/> |必須在 Exchange 內啟用 MAPI over HTTP，以利用這些用戶端的新式驗證 (通常會啟用或為 Exchange 2013 Service Pack 1 和更新版本的新安裝啟用或設為 True) ;如需詳細資訊，請參閱[office 2013 和 office 2016 用戶端應用程式的新式驗證的運作方式](https://docs.microsoft.com/office365/enterprise/modern-auth-for-office-2013-and-2016)。  <br/> 確定您執行的是最小必要組建的 Outlook;請查看[使用 Windows Installer (MSI) 的 Outlook 版本最新更新](https://docs.microsoft.com/officeupdates/outlook-updates-msi)。  <br/> |
   |Mac 版 Outlook 2016  <br/> |Exchange Web 服務  <br/> |  <br/> |
-  |Outlook for iOS 和 Android  <br/> |  <br/> |如需詳細資訊，請參閱[使用 Outlook 適用于 Outlook 的混合新式驗證 iOS 和 Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) 。  <br/> |
-  |Exchange ActiveSync 用戶端（例如，iOS11 Mail）  <br/> |Exchange ActiveSync  <br/> |針對支援新式驗證的 Exchange ActiveSync 用戶端，您必須重新建立設定檔，才能從基本驗證切換至新式驗證。  <br/> |
+  |iOS 和 Android 版 Outlook  <br/> |  <br/> |如需詳細資訊，請參閱[使用 Outlook 適用于 Outlook 的混合新式驗證 iOS 和 Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) 。  <br/> |
+  |Exchange ActiveSync 用戶端 (例如，iOS11 Mail)   <br/> |Exchange ActiveSync  <br/> |針對支援新式驗證的 Exchange ActiveSync 用戶端，您必須重新建立設定檔，才能從基本驗證切換至新式驗證。  <br/> |
 
 - **一般必要條件**
-  - 如果您使用 ADFS，您應該具有 Windows 2012 R2 ADFS 3.0 和更新版本的同盟
-  - 您的身分識別設定是 Azure AD Connect 支援的任何類型（例如密碼雜湊同步處理、傳遞驗證、Office 365 所支援的內部部署 STS）。
+  - 如果您使用 AD FS，則同盟必須具有 Windows 2012 R2 AD FS 3.0 和更新版本。
+  - 您的身分識別設定是 Azure AD Connect 支援的任何類型，例如密碼雜湊同步處理、傳遞驗證，以及 Office 365 支援的內部部署 STS。
   - 您已設定 Azure AD Connect，以供使用者複寫及同步處理。
   - 您已驗證混合模式是在您的內部部署與 Office 365 環境之間使用 Exchange 傳統混合式拓撲模式設定。 Exchange 混合式的官方支援陳述說，您必須是目前的 CU 或目前的 CU-1。
     > [!NOTE]
     > [混合式代理程式](https://docs.microsoft.com/exchange/hybrid-deployment/hybrid-agent)不支援混合式新式驗證。
 
-  - 請確定內部部署測試使用者以及位於 Office 365 的混合式測試使用者可以登入商務用 Skype 桌面用戶端（如果您想要使用現代驗證搭配使用，則為 [Microsoft Outlook]）。
+  - 如果您想要使用現代驗證與 Exchange) ，請確定內部部署測試使用者和 Office 365 中的混合測試使用者都可以登入商務用 Skype 桌面用戶端 (。如果您想要搭配 Exchange 使用新式驗證， () 則可以登入商務用 Skype 桌面用戶端。
 
 ## <a name="what-else-do-i-need-to-know-before-i-begin"></a>開始之前，我還需要知道什麼？
 <a name="BKMK_Whatelse"> </a>
 
-- 內部部署伺服器的所有案例都包括設定新式驗證內部部署（事實上，針對商務用 Skype，有支援的拓撲清單，所以負責驗證和授權的伺服器是在 Microsoft 雲端（Azure AD Security Token Service，稱為 ' evoSTS '）中，並更新 Azure AD 有關您的內部部署安裝的商務用 Skype 或 Exchange 所使用的 URLs 或命名空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
-- 本文與其他專案連結，可協助您選擇支援的新式驗證拓撲（僅適用于商務用 Skype）和操作方法文章，概述設定步驟，也就是針對 Exchange 內部部署和商務用 Skype 內部部署，提供如何停用新式驗證的步驟。 如果您想要在您的伺服器環境中使用新式驗證，請在瀏覽器中，將此頁面最愛。
+- 內部部署伺服器的所有案例都包括設定新式驗證內部部署 (事實上，若為商務用 Skype，會列出支援的拓撲) ，因此負責驗證和授權的伺服器是在 Microsoft 雲端 (Azure AD 的安全性權杖服務（稱為「evoSTS ' ) ）和更新 Azure AD，以供您的內部部署安裝用 Skype 或 Exchange 使用的 URLs 或命名空間。 因此，內部部署伺服器會採用 Microsoft Cloud 相依性。 採取此動作可能會看作是「混合驗證」。
+- 本文與其他專案連結，可協助您選擇支援的新式驗證拓撲 (只適用于商務用 Skype) ，以及如何對 Exchange 內部部署和商務用 Skype 內部部署啟用新式驗證的步驟。 如果您想要在您的伺服器環境中使用新式驗證，請在瀏覽器中，將此頁面最愛。
 
 ## <a name="related-topics"></a>相關主題
 <a name="BKMK_URLListforMA"> </a>

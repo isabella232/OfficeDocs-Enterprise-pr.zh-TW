@@ -20,16 +20,16 @@ search.appverid:
 - BCS160
 ms.assetid: 98ca5b3f-f720-4d8e-91be-fe656548a25a
 description: '瞭解用來管理 Microsoft 365 使用者的工具。 '
-ms.openlocfilehash: 324a95e111812180cefffe98f2d7ec3c64e956b1
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: ba73d899dee002fa08f373faaed4d772da546b13
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230229"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571026"
 ---
 # <a name="tools-to-manage-microsoft-365-accounts"></a>管理 Microsoft 365 帳戶的工具
 
-您可以根據您的設定，以數種不同的方式管理 Microsoft 365 使用者。 您可以在[Microsoft 365 系統管理中心](https://admin.microsoft.com)、Windows PowerShell、Active Directory 網域服務（AD DS）或 Azure Active Directory （azure AD）管理入口網站中管理使用者。 
+您可以根據您的設定，以數種不同的方式管理 Microsoft 365 使用者。 您可以在[Microsoft 365 系統管理中心](https://admin.microsoft.com)、Windows PowerShell、Active Directory 網域服務 (AD DS) 或 Azure Active Directory (azure AD) 管理入口網站中管理使用者。 
 
 一旦您購買 Microsoft 365，系統管理中心和 Windows PowerShell 便可用於管理帳戶。 在管理雲端身分識別時，組織中的每個人都有個別的使用者識別碼和密碼，適用于 Microsoft 365。 如果您想要與您的內部部署基礎結構整合，並讓使用者帳戶與 Microsoft 365 同步，您可以使用 Azure AD Connect，針對單一登入功能，提供身分識別和密碼的同步處理。
   
@@ -41,15 +41,15 @@ ms.locfileid: "45230229"
 
 - 雲端驗證-建立及管理 Microsoft 365 系統管理中心中的使用者。 您也可以使用 Windows PowerShell 或 Azure AD。 
     
-- 具有無縫單一登入的密碼雜湊同步處理（PHS）-在 Azure AD 中啟用 AD DS 物件的驗證的最簡單方式。 透過 PHS，您可以將 AD DS 使用者帳戶物件與 Microsoft 365 同步處理，並管理您的使用者內部部署。 
+- 密碼雜湊同步處理 (PHS) 具有無縫單一登入-在 Azure AD 中啟用 AD DS 物件的驗證的最簡單方式。 透過 PHS，您可以將 AD DS 使用者帳戶物件與 Microsoft 365 同步處理，並管理您的使用者內部部署。 
     
-- 透過無縫單一登入的傳遞驗證（PTA）-使用在一或多個內部部署伺服器上執行的軟體代理程式，為 Azure AD 驗證服務提供簡單的密碼驗證，以直接使用您的 AD DS 驗證使用者。 
+- 透過無縫單一登入的傳遞驗證 (PTA) 使用一或多個內部部署伺服器上執行的軟體代理程式，為 Azure AD 驗證服務提供簡單的密碼驗證，以直接在您的 AD DS 驗證使用者。 
     
 ### <a name="federated-authentication"></a>同盟驗證
 
 - 同盟驗證選項-主要針對具有更複雜驗證需求的大型企業組織，AD DS 物件會與 Microsoft 365 同步處理，而且使用者帳戶是在內部部署管理。 
     
-- [協力廠商驗證和身分識別提供者](about-office-365-identity.md)-AD DS 物件可同步處理至 Microsoft 365，而雲端資源存取主要是由協力廠商身分識別提供者（IDP）來管理。 
+- [協力廠商驗證和身分識別提供者](about-office-365-identity.md)-AD DS 物件可同步處理至 Microsoft 365，而雲端資源存取主要是由協力廠商身分識別提供者 (IDP) 所管理。 
     
 ## <a name="managing-accounts"></a>管理帳戶
 
@@ -57,7 +57,7 @@ ms.locfileid: "45230229"
   
 - 在內部部署環境中的伺服器上，必須安裝目錄同步作業軟體，以連接 Microsoft 365 和您的 AD DS 之間的身分識別。
     
-- 任何目錄同步處理選項（包括 SSO 選項）都需要您的 AD DS 屬性符合標準。 您的目錄中所使用的屬性和清理（如果有的話）的詳細資訊，說明如何在[目錄同步處理至 Microsoft 365 時提供使用者](prepare-for-directory-synchronization.md)。 如需如何使用識別碼修正程式以自動化目錄清理的說明，請參閱[下載並執行 Microsoft 365 識別碼修正工具](install-and-run-idfix.md)。 
+- 任何目錄同步處理選項（包括 SSO 選項）都需要您的 AD DS 屬性符合標準。 您的目錄中所使用之屬性的詳細資訊，以及 (如果需要的任何) ，將在[準備透過目錄同步作業將使用者布建至 Microsoft 365](prepare-for-directory-synchronization.md)時所述的清除作業。 
     
 - 規劃如何建立 Microsoft 365 帳戶。
     
@@ -65,7 +65,7 @@ ms.locfileid: "45230229"
     
 |**選項**|**附註**|
 |:-----|:-----|
-|系統管理中心  <br/> |[個別或大量新增使用者](https://docs.microsoft.com/microsoft-365/admin/add-users/add-users) <br/>  提供簡單的 web 介面來新增及變更使用者帳戶。  <br/>  如果啟用目錄同步處理（可以設定位置和授權指派），則無法用來變更使用者。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
+|系統管理中心  <br/> |[個別或大量新增使用者](https://docs.microsoft.com/microsoft-365/admin/add-users/add-users) <br/>  提供簡單的 web 介面來新增及變更使用者帳戶。  <br/>  如果啟用目錄同步處理，則無法用來變更使用者 (位置和授權指派可以設定) 。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
 |Windows PowerShell  <br/> |[使用 Windows PowerShell 管理 Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698471) <br/>  可讓您使用 Windows PowerShell 腳本，在大量使用者中新增使用者。  <br/>  可用於將位置和授權指派給帳戶，不論帳戶是如何建立的。  <br/> |
 |大量匯入  <br/> |[同時新增多個使用者](add-several-users-at-the-same-time.md) <br/>  可讓您匯入 CSV 檔案，將使用者群組新增至 Microsoft 365。  <br/>  無法與 SSO 選項搭配使用。  <br/> |
 |Azure AD  <br/> |您可以使用 Microsoft 365 訂閱取得免費的 Azure AD 版本。 您可以執行雲端使用者自助密碼重設的功能，以及使用免費版本自訂登入和存取面板頁面。 若要取得增強的功能，您可以升級至 basic edition、Azure AD Premium P1 或 Azure AD Premium P2。 如需支援的功能清單，請參閱[AZURE AD edition](https://go.microsoft.com/fwlink/p/?LinkId=698465) 。  <br/> |
@@ -76,7 +76,7 @@ ms.locfileid: "45230229"
     如果您選擇透過系統管理中心新增及管理所有使用者，您會指定位置並指派授權，建立 Microsoft 365 帳戶時。 因此，不需要進行許多規劃。
     
     > [!IMPORTANT]
-    > 在未指派授權的情況下建立 Microsoft 365 中的帳戶（例如，若要 SharePoint 線上），表示帳戶擁有者可以查看 Microsoft 365 系統管理中心，但無法存取公司訂閱內的任何服務。 在您指派位置和授權後，系統會將帳戶複製到您指派的服務或服務。 使用者可以登入其帳戶，並使用您指派給他們的服務。 
+    > 在 Microsoft 365 中建立帳戶，但未指派授權 (給 SharePoint 線上，) 表示帳戶擁有者可以查看 Microsoft 365 center，但無法存取公司訂閱內的任何服務。 在您指派位置和授權後，系統會將帳戶複製到您指派的服務或服務。 使用者可以登入其帳戶，並使用您指派給他們的服務。 
   
 ## <a name="next-steps"></a>後續步驟
 

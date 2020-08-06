@@ -7,7 +7,7 @@ ms.date: 10/21/2019
 audience: Admin
 ms.topic: conceptual
 ms.service: o365-administration
-localization_priority: Priority
+localization_priority: Normal
 ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
@@ -20,12 +20,12 @@ search.appverid:
 - BCS160
 ms.assetid: c0531a6f-9e25-4f2d-ad0e-a70bfef09ac0
 description: 摘要：規劃 Office 365 部署時使用的 DNS 記錄參考清單。
-ms.openlocfilehash: ef324adf098d72dca589d60587fd3d5e5c461555
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
-ms.translationtype: HT
+ms.openlocfilehash: b17d97102498cbaabc87b89bb7cd1f32134cfbcd
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502668"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46570976"
 ---
 # <a name="external-domain-name-system-records-for-office-365"></a>Office 365 的外部網域名稱系統記錄
 
@@ -125,14 +125,13 @@ Values: v=spf1 include:spf.protection.outlook.com -all
 > [!NOTE]
 > 如果您有複雜的案例，包含例如在您的防火牆管理電子郵件流量的 Edge 電子郵件伺服器，您將需要設定更詳細的 SPF 記錄。了解如何：[在 Office 365 中設定 SPF 記錄以協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787656)。您也可以了解更多有關 SPF 使用 Office 365 的方式，請閱讀 [Office 365 如何使用寄件者原則架構 (SPF) 協助防範詐騙](https://go.microsoft.com/fwlink/?LinkId=787065)。
   
-|||||
+| 數字|如果您正在使用...  <br/> |用途  <br/> |新增這些包含項目  <br/> |
 |:-----|:-----|:-----|:-----|
-||如果您正在使用...  <br/> |用途  <br/> |新增這些包含項目  <br/> |
 |1  <br/> |所有的電子郵件系統 (必要)  <br/> |以此值開頭的所有 SPF 記錄  <br/> |v=spf1  <br/> |
 |2  <br/> |Exchange Online (普遍)  <br/> |僅搭配使用 Exchange Online  <br/> |include:spf.protection.outlook.com  <br/> |
-|3  <br/> |協力廠商電子郵件系統 (較不普遍)  <br/> ||包含：\<email system like mail.contoso.com\>  <br/> |
-|4  <br/> |內部部署郵件系統 (較不普遍)  <br/> |如果您正在使用 Exchange Online Protection 或 Exchange Online 加上另一個郵件系統，則請使用  <br/> |ip4：\<0.0.0.0\>  <br/> ip6：\< : : \>  <br/> 包含：\<mail.contoso.com\>  <br/> 括號中的值 (\<\>) 應該是將為您的網域傳送電子郵件的其他郵件系統。  <br/> |
-|5  <br/> |所有的電子郵件系統 (必要)  <br/> ||-all  <br/> |
+|個  <br/> |協力廠商電子郵件系統 (較不普遍)  <br/> ||包含：\<email system like mail.contoso.com\>  <br/> |
+|4   <br/> |內部部署郵件系統 (較不普遍)  <br/> |如果您正在使用 Exchange Online Protection 或 Exchange Online 加上另一個郵件系統，則請使用  <br/> |ip4：\<0.0.0.0\>  <br/> ip6：\< : : \>  <br/> 包含：\<mail.contoso.com\>  <br/> 括號中的值 (\<\>) 應該是將為您的網域傳送電子郵件的其他郵件系統。  <br/> |
+|5   <br/> |所有的電子郵件系統 (必要)  <br/> ||-all  <br/> |
 
 ### <a name="example-adding-to-an-existing-spf-record"></a>範例：新增至現有的 SPF 記錄
 <a name="bkmk_addtospf"> </a>

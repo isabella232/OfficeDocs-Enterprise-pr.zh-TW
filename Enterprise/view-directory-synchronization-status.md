@@ -19,12 +19,12 @@ search.appverid:
 - MED150
 ms.assetid: 18be3b98-34ae-47be-9337-ab6c3fb372ac
 description: 瞭解如何停用目錄同步作業。 您也可以查看其狀態。
-ms.openlocfilehash: d6f3a9f1f4e069716501f58e188daedacbf7e597
-ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
+ms.openlocfilehash: 4c2f0baf6d3657e3eb9974ff7d4f8109e52e603b
+ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "44906196"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "46571036"
 ---
 # <a name="view-directory-synchronization-status-in-microsoft-365"></a>在 Microsoft 365 中查看目錄同步處理狀態
 
@@ -50,5 +50,4 @@ ms.locfileid: "44906196"
 |**已啟用密碼同步處理** | True 或 False。 指定您的內部部署與 Microsoft 365 租使用者之間是否有密碼雜湊同步處理。 |
 |**上次密碼同步處理** | 上次執行密碼雜湊同步處理的時間。 若上次同步處理超過三天以上，將會顯示警告及疑難排解工具的連結。 |
 |**目錄同步處理用戶端版本** | 會包含下載連結，如果已發行新版本的 Azure AD Connect。 |
-|**IDFix 工具** | 下載[IDFix](install-and-run-idfix.md)的連結，您可以用來檢查本機 Active Directory 的工具。 |
 |**目錄同步處理服務帳戶** | 顯示 Microsoft 365 目錄同步服務帳戶的名稱。 |
