@@ -1,5 +1,5 @@
 ---
-title: Office 365 端點
+title: Microsoft 365 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -7,7 +7,7 @@ ms.date: 11/07/2018
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -18,40 +18,40 @@ f1.keywords:
 ms.custom:
 - Ent_TLGs
 ms.assetid: ''
-description: 摘要：請參閱下列文章，了解不同 Office 365 雲端的網際網路端點。
-ms.openlocfilehash: 29fb2dab9873aad5f54c678de482941d25d6161f
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
-ms.translationtype: HT
+description: 摘要：請參閱下列文章，瞭解不同 Microsoft 365 雲端的網際網路端點。
+ms.openlocfilehash: 8fe95915f687b38a86fd13fb823a0db39637c47d
+ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843574"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46592197"
 ---
-# <a name="office-365-endpoints"></a>Office 365 端點
+# <a name="microsoft-365-endpoints"></a>Microsoft 365 端點
 
-**摘要：** 請參閱下列文章，了解不同 Office 365 雲端的網際網路端點。
-  
-端點為一組目的地 IP 位址、DNS 網域名稱，以及網際網路上 Office 365 流量的 URL。 
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-若要最佳化 Office 365 雲端式服務的效能，這些端點需要由用戶端瀏覽器和邊緣網路中的裝置進行特別處理。這些裝置包括防火牆、SSL 中斷和檢查及封包檢查裝置，以及資料外洩防護系統。
+端點是網際網路上之 Microsoft 365 流量的目的地 IP 位址、DNS 功能變數名稱和 URLs 的集合。 
 
-請參閱[管理 Office 365 端點](managing-office-365-endpoints.md)以取得詳細資訊。
+若要優化 Microsoft 365 雲端式服務的效能，這些端點需要用戶端瀏覽器和 edge 網路中的裝置的特殊處理。這些裝置包括防火牆、SSL 中斷及檢查和封包檢查裝置，以及資料遺失防護系統。
 
-目前有五種不同的 Office 365 雲端。下表顯示每種雲端的端點清單。
+如需詳細資訊，請參閱[管理 Microsoft 365 端點](managing-office-365-endpoints.md)。
+
+目前有五個不同的 Microsoft 365 雲彩。此表格會帶您前往每一位的端點清單。
 
 |||
 |:-------|:-----|
-| [全球端點](urls-and-ip-address-ranges.md) | 全球 Office 365 訂閱的端點，包括美國政府社群雲端 (GCC)。 |
+| [全球端點](urls-and-ip-address-ranges.md) | 全球 Microsoft 365 訂閱的端點，包含美國政府社區雲端 (GCC) 。 |
 | [美國政府 DoD 端點](office-365-u-s-government-dod-endpoints.md) | 適用於美國國防部 (DoD) 訂閱的端點。 |
 | [美國政府 GCC High 端點](office-365-u-s-government-gcc-high-endpoints.md) | 適用於美國政府社群雲端高 (GCC High) 訂閱的端點。 |
-| [由 21Vianet 營運的 Office 365 端點](urls-and-ip-address-ranges-21vianet.md) | 由 21Vianet 營運的 Office 365 端點，其目的是為了符合中國的 Office 365 需求。 |
-| [Office 365 Germany 端點](office-365-germany-endpoints.md) | 針對德國、歐盟 (EU) 以及歐洲自由貿易聯盟 (EFTA) 中受管制客戶的歐洲個別雲端端點。 |
+| [由世紀端點運作的 Microsoft 365](urls-and-ip-address-ranges-21vianet.md) | 由世紀運作的 Microsoft 365 端點，其設計目的是為了符合中國的 Microsoft 365 的需求。 |
+| [Microsoft 365 德國端點](office-365-germany-endpoints.md) | 針對德國、歐盟 (EU) 以及歐洲自由貿易聯盟 (EFTA) 中受管制客戶的歐洲個別雲端端點。 |
 |||
 
-若要自動取得您 Office 365 雲端的最新端點清單，請參閱 [Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)。
+若要自動取得 Microsoft 365 雲端的最新端點清單，請參閱[Office 365 IP 位址和 URL Web 服務](office-365-ip-web-service.md)。
 
 如需其他端點，請參閱下列文章：
 
 - [未包含在 Web 服務中的其他端點](additional-office365-ip-addresses-and-urls.md)
 - [Mac 版 Office 2016 中的網路要求](network-requests-in-office-2016-for-mac.md)
 
-如果您是網路設備廠商，請加入 [Office 365 網路合作夥伴計劃](office-365-networking-partner-program.md)。註冊此計劃，將 Office 365 網路連線原則建立至您的產品和解決方案中。 
+如果您是網路設備廠商，請加入[Office 365 網路合作夥伴計畫](office-365-networking-partner-program.md)。在程式中註冊，以在您的產品和解決方案中建立 Microsoft 365 網路連接性原則。 
