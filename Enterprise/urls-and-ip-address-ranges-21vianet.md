@@ -7,7 +7,7 @@ ms.date: 07/09/2020
 audience: ITPro
 ms.topic: conceptual
 ms.service: o365-administration
-localization_priority: Priority
+localization_priority: Normal
 ms.collection:
 - M365-subscription-management
 - Strat_O365_Enterprise
@@ -20,12 +20,12 @@ f1.keywords:
 - NOCSH
 description: 本文適用於由中國 21Vianet 運作的 Office 365。本文章會列出 21Vianet 運作的 Office 365 所使用的 URL 和 IP 位址範圍。
 hideEdit: true
-ms.openlocfilehash: fe0015bcda70cace8247fdbcfb6a2d4424b28349
-ms.sourcegitcommit: c1a1b028195342affe0f3367db4e79c42429582a
-ms.translationtype: HT
+ms.openlocfilehash: c5a3825a5271542ca657e955b768b4ecde66eebb
+ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "45387716"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46592167"
 ---
 # <a name="urls-and-ip-address-ranges-for-office-365-operated-by-21vianet"></a>21Vianet 運作的 Office 365 的 URL 和 IP 位址範圍
 

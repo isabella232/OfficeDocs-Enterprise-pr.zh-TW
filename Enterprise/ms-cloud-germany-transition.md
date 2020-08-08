@@ -7,7 +7,7 @@ ms.date: 07/09/2020
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -19,12 +19,12 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: 摘要：了解如何從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務。
-ms.openlocfilehash: 3270cb9cf51bc35e7eb7549a109b34c42dda16ff
-ms.sourcegitcommit: d34edff71d0b3c8088ec27049f0fc3b6ce57f7e7
-ms.translationtype: HT
+ms.openlocfilehash: f63a9228b8669ce0b7a1d49c7b0045a2065f9ec4
+ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "45092882"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46592137"
 ---
 # <a name="migration-from-microsoft-cloud-germany-microsoft-cloud-deutschland-to-office-365-services-in-the-new-german-datacenter-regions"></a>從 Microsoft Cloud Germany (Microsoft Cloud Deutschland) 移轉到新德國資料中心區域中的 Office 365 服務
 
@@ -59,7 +59,7 @@ ms.locfileid: "45092882"
 - Office 365 群組
 - Dynamics 365 / Power Platform
 
-將在 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 文章中說明這些服務的移轉先決條件與影響。
+將在 [Dynamics 365 Customer Engagement](https://aka.ms/d365ceoptin) 文章中說明這些服務的移轉先決條件與影響。
 
 Office 365 影片即將于年 2021年 3月 1日停用。 如果您選擇將 Office 365 租用者移至新的德國資料中心區域，在 SharePoint Online 遷移完成之後，將不會支援 Office 365 影片。 [深入了解](https://docs.microsoft.com/stream/migrate-from-office-365#microsoft-cloud-deutschland-timeline)
 
@@ -203,7 +203,7 @@ Microsoft Cloud Germany (Microsoft Cloud Deutschland) 雲端服務選項提供�
 
 #### <a name="dynamics-365-and-power-bi"></a>Dynamics 365 和 Power BI
 
-立即為 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 和 [Power BI](https://aka.ms/pbioptin) 選擇加入 Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
+立即為 [Dynamics 365 Customer Engagement](https://aka.ms/D365ceOptIn) 和 [Power BI](https://aka.ms/PBIOptIn) 選擇加入 Microsoft 主導的移轉。 當我們準備好開始您的移轉時，我們會透過 Microsoft 365 系統管理中心的[訊息中心](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide)來通知您。
 
 ### <a name="will-the-price-change-for-the-office-services-that-i-use"></a>我使用的 Office 服務價格會有變化嗎？
 
@@ -221,7 +221,7 @@ Microsoft Cloud Germany (Microsoft Cloud Deutschland) 雲端服務選項提供�
 
 - [Microsoft Cloud Deutschland 移轉協助](https://aka.ms/germanymigrateassist)
 - [如何選擇加入移轉](https://aka.ms/office365germanymoveoptin)
-- [Dynamics 365 的移轉程式資訊](https://aka.ms/D365ceOptIn)
+- [Dynamics 365 的移轉程式資訊](https://aka.ms/d365ceoptin)
 - [Power BI 移轉程式資訊](https://aka.ms/pbioptin)
 - [Office 365 URL 與 IP 位址範圍](https://aka.ms/o365endpoints)
 - [Office 365 混合組態精靈](https://aka.ms/HybridWizard)

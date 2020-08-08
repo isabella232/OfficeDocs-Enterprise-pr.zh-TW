@@ -7,7 +7,7 @@ ms.date: 11/19/2019
 audience: ITPro
 ms.topic: hub-page
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 search.appverid:
 - MET150
 ms.collection:
@@ -19,18 +19,18 @@ ms.custom:
 - Ent_TLGs
 ms.assetid: ''
 description: 摘要：請參閱下列文章，以瞭解 Microsoft 365 的網路。
-ms.openlocfilehash: 4c414d8cbf597af9165e991a71e5d6a6a330e33a
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.openlocfilehash: b1497c214777e34ce4a85701ce6596f50e59910d
+ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735653"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "46592147"
 ---
 # <a name="set-up-your-network-for-microsoft-365"></a>設定 Microsoft 365 的網路
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-Microsoft 365 上架的一個重要部分是，確定您的網路和網際網路連線已設定為優化的存取。將您的內部部署網路設定為存取全域分散式軟體即服務（SaaS）雲端與傳統網路不同，該網路是針對內部部署資料中心和中央網際網路連線進行的流量優化。 
+Microsoft 365 上架的一個重要部分是，確定您的網路和網際網路連線已設定為優化的存取。將您的內部部署網路設定為存取全域分散式軟體即服務 (SaaS) 雲端與針對內部部署資料中心和中央網際網路連線的流量優化的傳統網路有所不同。 
 
 參閱這些文章以了解主要差異，並修改您的邊緣裝置、用戶端電腦與內部部署網路，以為您的內部使用者取得最佳的效能。
 
