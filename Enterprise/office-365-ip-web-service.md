@@ -13,19 +13,21 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 ms.reviewer: pandrew
 search.appverid:
 - MET150
 - MOE150
 - BCS160
-description: Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 365 網路流量，讓您更容易評估、設定及掌握變更。
-ms.openlocfilehash: 7a1d882b6bc5e34e3d59cf4bade30a58a1c76d6f
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 了解如何使用 Office 365 IP 位址和 URL Web 服務來協助您更能識別並區分 Office 365 網路流量。
+ms.openlocfilehash: a51ee69c5d1364e92b2f8a1f4c06059023084ef5
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843596"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605625"
 ---
 # <a name="office-365-ip-address-and-url-web-service"></a>Office 365 IP 位址和 URL Web 服務
 
@@ -61,7 +63,7 @@ Office 365 IP 位址和 URL Web 服務可協助您更能識別並區分 Office 3
 這些參數為所有 Web 服務方法通用：
 
 - **format=<JSON | CSV>** - 依預設，傳回的資料格式為 JSON。 使用此選擇性參數可以逗點分隔值 (CSV) 格式傳回資料。
-- **ClientRequestId =\<guid>** - 您為用戶端關聯所產生的必要 GUID。 針對每個呼叫 Web 服務的電腦產生唯一 GUID (此頁面上包含的指令碼會為您產生 GUID)。 請勿使用下列範例所示的 GUID，因為未來 Web 服務可能會加以封鎖。 GUID 格式為 _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_，其中 x 代表十六進位數字。
+- **ClientRequestId=\<guid>** - 您為用戶端關聯所產生的必要 GUID。 針對每個呼叫 Web 服務的電腦產生唯一 GUID (此頁面上包含的指令碼會為您產生 GUID)。 請勿使用下列範例所示的 GUID，因為未來 Web 服務可能會加以封鎖。 GUID 格式為 _xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_，其中 x 代表十六進位數字。
 
   若要產生 GUID，您可以使用 PowerShell 命令 [New-Guid](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/new-guid?view=powershell-6)，或使用線上服務，例如[線上 GUID 產生器](https://www.guidgenerator.com/)。
 

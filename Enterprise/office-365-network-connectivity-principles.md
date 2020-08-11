@@ -15,13 +15,14 @@ search.appverid: MET150
 ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 f1.keywords:
 - NOCSH
-description: 在您開始為 Office 365 網路連線規劃網路之前，務必了解安全管理 Office 365 流量以及可能獲取最佳效能的連線原則。 本文將會協助您了解關於安全最佳化 Office 365 網路連線的最新指引。
-ms.openlocfilehash: 399f00412bfd5c26a5910b9dcaa141a4fababd93
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
+description: 本文提供安全地最佳化 Office 365 網路連線的最新指導方針。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: be8877ca651e29763b16996670b294cb23bea960
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502698"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605495"
 ---
 # <a name="microsoft-365-network-connectivity-principles"></a>Microsoft 365 網路連線原則
 
