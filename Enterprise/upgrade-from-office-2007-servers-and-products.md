@@ -22,45 +22,46 @@ search.appverid:
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: Office 2007 server 的支援已結束，用戶端應用程式和自訂支援協定無法使用。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 79d017c92461b6c53e8d014ba9071957d70157fd
-ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
+description: 本文提供的資源可協助您從 Office 2007 伺服器及用戶端升級，因為 Office 2007 的支援已結束。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 21147ccd027ba0492ced6078f91932acc3bb958c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "44906226"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605869"
 ---
-# <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a><span data-ttu-id="ec161-104">協助您從 Office 2007 伺服器及用戶端升級的資源</span><span class="sxs-lookup"><span data-stu-id="ec161-104">Resources to help you upgrade from Office 2007 servers and clients</span></span>
+# <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a><span data-ttu-id="4a80c-103">協助您從 Office 2007 伺服器及用戶端升級的資源</span><span class="sxs-lookup"><span data-stu-id="4a80c-103">Resources to help you upgrade from Office 2007 servers and clients</span></span>
 
-<span data-ttu-id="ec161-105">*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="ec161-105">*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*</span></span>
+<span data-ttu-id="4a80c-104">*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*</span><span class="sxs-lookup"><span data-stu-id="4a80c-104">*This article applies to both Microsoft 365 Enterprise and Office 365 Enterprise.*</span></span>
 
-<span data-ttu-id="ec161-106">如果您使用的是 Office 2007 產品和服務，這些應用程式的支援已結束。</span><span class="sxs-lookup"><span data-stu-id="ec161-106">If you're using Office 2007 products and services, support for these applications has ended.</span></span> <span data-ttu-id="ec161-107">當您規劃升級時，這是一個考慮移至 Microsoft 雲端（從 Microsoft 365 開始）的最佳時間。</span><span class="sxs-lookup"><span data-stu-id="ec161-107">While you're planning your upgrade, this is a great time to consider moving to the Microsoft Cloud, starting with Microsoft 365.</span></span> <span data-ttu-id="ec161-108">請使用本文做為開始查看選項及規劃升級的起點。</span><span class="sxs-lookup"><span data-stu-id="ec161-108">Use this article as a starting point to review your options and plan your upgrade.</span></span>
+<span data-ttu-id="4a80c-105">如果您使用的是 Office 2007 產品和服務，這些應用程式的支援已結束。</span><span class="sxs-lookup"><span data-stu-id="4a80c-105">If you're using Office 2007 products and services, support for these applications has ended.</span></span> <span data-ttu-id="4a80c-106">當您規劃升級時，這是一個考慮移至 Microsoft 雲端（從 Microsoft 365 開始）的最佳時間。</span><span class="sxs-lookup"><span data-stu-id="4a80c-106">While you're planning your upgrade, this is a great time to consider moving to the Microsoft Cloud, starting with Microsoft 365.</span></span> <span data-ttu-id="4a80c-107">請使用本文做為開始查看選項及規劃升級的起點。</span><span class="sxs-lookup"><span data-stu-id="4a80c-107">Use this article as a starting point to review your options and plan your upgrade.</span></span>
       
-## <a name="office-2007-planning-roadmaps"></a><span data-ttu-id="ec161-109">Office 2007 規劃藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-109">Office 2007 planning roadmaps</span></span>
+## <a name="office-2007-planning-roadmaps"></a><span data-ttu-id="4a80c-108">Office 2007 規劃藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-108">Office 2007 planning roadmaps</span></span>
   
-<span data-ttu-id="ec161-110">Office 2007 產品和服務的支援已結束。</span><span class="sxs-lookup"><span data-stu-id="ec161-110">Support has ended for Office 2007 products and services.</span></span> <span data-ttu-id="ec161-111">下列藍圖可協助您立即規劃升級。</span><span class="sxs-lookup"><span data-stu-id="ec161-111">The following roadmaps can help you plan your upgrade now.</span></span>
+<span data-ttu-id="4a80c-109">Office 2007 產品和服務的支援已結束。</span><span class="sxs-lookup"><span data-stu-id="4a80c-109">Support has ended for Office 2007 products and services.</span></span> <span data-ttu-id="4a80c-110">下列藍圖可協助您立即規劃升級。</span><span class="sxs-lookup"><span data-stu-id="4a80c-110">The following roadmaps can help you plan your upgrade now.</span></span>
 
-|<span data-ttu-id="ec161-112">**規劃內容**</span><span class="sxs-lookup"><span data-stu-id="ec161-112">**Planning Content**</span></span>|<span data-ttu-id="ec161-113">**日期支援結束**</span><span class="sxs-lookup"><span data-stu-id="ec161-113">**Date Support Ended**</span></span>|
+|<span data-ttu-id="4a80c-111">**規劃內容**</span><span class="sxs-lookup"><span data-stu-id="4a80c-111">**Planning Content**</span></span>|<span data-ttu-id="4a80c-112">**日期支援結束**</span><span class="sxs-lookup"><span data-stu-id="4a80c-112">**Date Support Ended**</span></span>|
 |:-----|:-----|
-|[<span data-ttu-id="ec161-114">Office 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-114">Office 2007 end of support roadmap</span></span>](https://docs.microsoft.com/DeployOffice/office-2007-end-support-roadmap) <br/> |<span data-ttu-id="ec161-115">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="ec161-115">October 10, 2017</span></span>  <br/> |
-|[<span data-ttu-id="ec161-116">Exchange 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-116">Exchange 2007 end of support roadmap</span></span>](exchange-2007-end-of-support.md) <br/> |<span data-ttu-id="ec161-117">2017 年 4 月 11 日</span><span class="sxs-lookup"><span data-stu-id="ec161-117">April 11, 2017</span></span>  <br/> |
-|[<span data-ttu-id="ec161-118">SharePoint Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-118">SharePoint Server 2007 end of support roadmap</span></span>](sharepoint-2007-end-of-support.md) <br/> |<span data-ttu-id="ec161-119">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="ec161-119">October 10, 2017</span></span>  <br/> |
-|[<span data-ttu-id="ec161-120">Project Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-120">Project Server 2007 end of support roadmap</span></span>](project-server-2007-end-of-support.md) <br/> |<span data-ttu-id="ec161-121">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="ec161-121">October 10, 2017</span></span>  <br/> |
-|[<span data-ttu-id="ec161-122">從 Office 通訊伺服器升級</span><span class="sxs-lookup"><span data-stu-id="ec161-122">Upgrade from Office Communications Server</span></span>](https://docs.microsoft.com/SkypeForBusiness/plan-your-deployment/upgrade) <br/> |<span data-ttu-id="ec161-123">2018年1月8日</span><span class="sxs-lookup"><span data-stu-id="ec161-123">January 8, 2018</span></span>  <br/> |
-|[<span data-ttu-id="ec161-124">PerformancePoint Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="ec161-124">PerformancePoint Server 2007 end of support roadmap</span></span>](pps-2007-end-of-support.md) <br/> |<span data-ttu-id="ec161-125">2018 年 1 月 9 日</span><span class="sxs-lookup"><span data-stu-id="ec161-125">January 9, 2018</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-113">Office 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-113">Office 2007 end of support roadmap</span></span>](https://docs.microsoft.com/DeployOffice/office-2007-end-support-roadmap) <br/> |<span data-ttu-id="4a80c-114">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="4a80c-114">October 10, 2017</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-115">Exchange 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-115">Exchange 2007 end of support roadmap</span></span>](exchange-2007-end-of-support.md) <br/> |<span data-ttu-id="4a80c-116">2017 年 4 月 11 日</span><span class="sxs-lookup"><span data-stu-id="4a80c-116">April 11, 2017</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-117">SharePoint Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-117">SharePoint Server 2007 end of support roadmap</span></span>](sharepoint-2007-end-of-support.md) <br/> |<span data-ttu-id="4a80c-118">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="4a80c-118">October 10, 2017</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-119">Project Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-119">Project Server 2007 end of support roadmap</span></span>](project-server-2007-end-of-support.md) <br/> |<span data-ttu-id="4a80c-120">2017 年 10 月 10 日</span><span class="sxs-lookup"><span data-stu-id="4a80c-120">October 10, 2017</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-121">從 Office 通訊伺服器升級</span><span class="sxs-lookup"><span data-stu-id="4a80c-121">Upgrade from Office Communications Server</span></span>](https://docs.microsoft.com/SkypeForBusiness/plan-your-deployment/upgrade) <br/> |<span data-ttu-id="4a80c-122">2018年1月8日</span><span class="sxs-lookup"><span data-stu-id="4a80c-122">January 8, 2018</span></span>  <br/> |
+|[<span data-ttu-id="4a80c-123">PerformancePoint Server 2007 終止支援藍圖</span><span class="sxs-lookup"><span data-stu-id="4a80c-123">PerformancePoint Server 2007 end of support roadmap</span></span>](pps-2007-end-of-support.md) <br/> |<span data-ttu-id="4a80c-124">2018 年 1 月 9 日</span><span class="sxs-lookup"><span data-stu-id="4a80c-124">January 9, 2018</span></span>  <br/> |
    
-<span data-ttu-id="ec161-126">當 Microsoft 產品的支援結束時，沒有新的安全性更新、非安全性更新、免費或付費協助支援選項（包括自訂支援協定）或線上技術內容更新。不論您是企業組織或個別的家用使用者，您有數個選項可供您考慮：</span><span class="sxs-lookup"><span data-stu-id="ec161-126">When support ends for a Microsoft product, there are no new security updates, non-security updates, free or paid assisted support options (including custom support agreements), or online technical content updates.Whether you're an enterprise organization or an individual home user, you have several options to consider:</span></span>
+<span data-ttu-id="4a80c-125">當 Microsoft 產品的支援結束時，沒有新的安全性更新、非安全性更新、免費或付費協助支援選項 (包括自訂支援協定) 或線上技術內容更新。不論您是企業組織或個別的家用使用者，您有數個選項可供您考慮：</span><span class="sxs-lookup"><span data-stu-id="4a80c-125">When support ends for a Microsoft product, there are no new security updates, non-security updates, free or paid assisted support options (including custom support agreements), or online technical content updates.Whether you're an enterprise organization or an individual home user, you have several options to consider:</span></span>
 
-## <a name="im-a-home-user-what-do-i-do"></a><span data-ttu-id="ec161-127">我是家用版的使用者。</span><span class="sxs-lookup"><span data-stu-id="ec161-127">I'm a home user.</span></span> <span data-ttu-id="ec161-128">我該怎麼辦？</span><span class="sxs-lookup"><span data-stu-id="ec161-128">What do I do?</span></span>
+## <a name="im-a-home-user-what-do-i-do"></a><span data-ttu-id="4a80c-126">我是家用版的使用者。</span><span class="sxs-lookup"><span data-stu-id="4a80c-126">I'm a home user.</span></span> <span data-ttu-id="4a80c-127">我該怎麼辦？</span><span class="sxs-lookup"><span data-stu-id="4a80c-127">What do I do?</span></span>
 
-<span data-ttu-id="ec161-129">如果您在家使用 Office 2007 產品和應用程式，請參閱[此資訊](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do)。</span><span class="sxs-lookup"><span data-stu-id="ec161-129">If you're using Office 2007 products and applications at home, see [this information](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do).</span></span>
+<span data-ttu-id="4a80c-128">如果您在家使用 Office 2007 產品和應用程式，請參閱[此資訊](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do)。</span><span class="sxs-lookup"><span data-stu-id="4a80c-128">If you're using Office 2007 products and applications at home, see [this information](plan-upgrade-previous-versions-office.md#im-a-home-user-what-do-i-do).</span></span>
      
-## <a name="related-topics"></a><span data-ttu-id="ec161-130">相關主題</span><span class="sxs-lookup"><span data-stu-id="ec161-130">Related topics</span></span>
+## <a name="related-topics"></a><span data-ttu-id="4a80c-129">相關主題</span><span class="sxs-lookup"><span data-stu-id="4a80c-129">Related topics</span></span>
 
-[<span data-ttu-id="ec161-131">影片：何謂 Microsoft 365？</span><span class="sxs-lookup"><span data-stu-id="ec161-131">Video: What is Microsoft 365?</span></span>](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
+[<span data-ttu-id="4a80c-130">影片：什麼是 Microsoft 365？</span><span class="sxs-lookup"><span data-stu-id="4a80c-130">Video: What is Microsoft 365?</span></span>](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
   
-[<span data-ttu-id="ec161-132">Microsoft 週期原則</span><span class="sxs-lookup"><span data-stu-id="ec161-132">Microsoft Lifecycle Policy</span></span>](https://go.microsoft.com/fwlink/?linkid=865200)
+[<span data-ttu-id="4a80c-131">Microsoft 週期原則</span><span class="sxs-lookup"><span data-stu-id="4a80c-131">Microsoft Lifecycle Policy</span></span>](https://go.microsoft.com/fwlink/?linkid=865200)
 
-[<span data-ttu-id="ec161-133">規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級</span><span class="sxs-lookup"><span data-stu-id="ec161-133">Plan your upgrade from Office 2007 or Office 2010 servers and clients</span></span>](plan-upgrade-previous-versions-office.md)
+[<span data-ttu-id="4a80c-132">規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級</span><span class="sxs-lookup"><span data-stu-id="4a80c-132">Plan your upgrade from Office 2007 or Office 2010 servers and clients</span></span>](plan-upgrade-previous-versions-office.md)
   
 
