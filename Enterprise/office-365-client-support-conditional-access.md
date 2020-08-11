@@ -14,19 +14,20 @@ ms.collection:
 - M365-subscription-management
 f1.keywords:
 - NOCSH
-description: 瞭解適用于條件式存取的 Microsoft 365 用戶端應用程式支援
-ms.openlocfilehash: 6081af2ad3bca69978a10baabeae0a13d783f0ae
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，瞭解哪些平臺、用戶端和 Powershell 模組支援 Microsoft 365 的條件式存取。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 77fe8411109bf77287674d8c6fa1607a0689f46f
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998501"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606692"
 ---
 # <a name="microsoft-365-client-app-support--conditional-access"></a>Microsoft 365 用戶端應用程式支援-條件式存取
 
 在新式的工作場所，使用者可以使用各種裝置和應用程式從任何地方存取您組織的資源。 因此，只關注可以存取資源的人員，已不再足夠。 您的組織也必須支援在存取控制基礎結構中存取資源的方式和位置。
 
-您可以使用 Azure Active Directory （Azure AD）裝置、位置及多重要素驗證型條件式存取，滿足此新需求。 條件式存取是 Azure AD 的一項功能，可讓您強制控制環境中應用程式的存取，而這一切都是根據特定條件，並由中央位置所管理。
+使用 Azure Active Directory (Azure AD) 裝置、位置及多重要素驗證型條件式存取，您可以符合此新需求。 條件式存取是 Azure AD 的一項功能，可讓您強制控制環境中應用程式的存取，而這一切都是根據特定條件，並由中央位置所管理。
 
 深入了解 [Azure AD 條件式存取](https://docs.microsoft.com/azure/active-directory/conditional-access/)。
 

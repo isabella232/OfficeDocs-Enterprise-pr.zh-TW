@@ -9,24 +9,24 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 localization_priority: Normal
-description: 了解如何將 OneDrive 網站移至不同的地理位置。
-ms.openlocfilehash: 699c9502c7257e5908e79d591170b51a563c4999
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+description: 尋找將 OneDrive 網站移至不同地理位置的相關資訊，包括如何排程網站移動，以及如何將期望傳遞給使用者。
+ms.openlocfilehash: f893102c7460498a56487dc382c58636caea31a8
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433874"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606849"
 ---
 # <a name="move-a-onedrive-site-to-a-different-geo-location"></a>將 OneDrive 網站移至不同的地理位置 
 
-使用 OneDrive 異地移動時，您可以將使用者的 OneDrive 移到不同的地理位置。OneDrive 異地移動是由 SharePoint Online 系統管理員或 Microsoft 365 全域系統管理員所執行。在啟動 OneDrive 異地移動前，請務必告知使用者 OneDrive 即將移動，並建議使用者在移動期間關閉所有檔案。(如果在移動期間使用者使用 Office 用戶端開啟文件，則在移動完成後，文件必須儲存到新位置。) 如有需要，移動可排程至日後的時間。
+使用 OneDrive 地理位置移動，您可以將使用者的 OneDrive 移至不同的地理位置。OneDrive 地理位置移動由 SharePoint Online 系統管理員或 Microsoft 365 全域管理員執行。在您開始 OneDrive 地理位置移動之前，請務必通知使用者其 OneDrive 已移動，並建議使用者在移動期間關閉所有檔案。 (如果使用者在移動期間使用 Office 用戶端開啟檔，則在移動完成時，將需要將檔儲存到新的位置。 ) 如有需要，可以排程未來時間的移動。
 
-OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDrive 相關聯的儲存體 blob 會在使用者能夠使用目的地 OneDrive 的 40 天內，從來源移動到目的地理位置。在目的地 OneDrive 可以使用後，將會還原使用者 OneDrive 的存取。
+OneDrive 服務使用 Azure Blob 儲存來儲存內容。與使用者的 OneDrive 相關聯的儲存區，將會從來源移至目的地地理位置，40在目的地 OneDrive 可供使用者使用。當目的地 OneDrive 可用時，就會立即還原使用者 OneDrive 的存取權。
 
 在 OneDrive 異地移動期間 (大約 2-6 小時)，使用者的 OneDrive 會設為唯讀狀態。使用者仍可以透過 OneDrive 同步處理用戶端或 SharePoint Online 中的 OneDrive 網站存取檔案。在完成 OneDrive 異地移動後，若使用者瀏覽至 Microsoft 365 應用程式啟動器中的 OneDrive，將會自動連線到位於目的地理位置的 OneDrive。同步處理用戶端將自動開始新位置的同步處理。
 
@@ -54,13 +54,13 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ## <a name="moving-a-onedrive-site"></a>移動 OneDrive 網站
 
-若要執行 OneDrive 異地移動，租用戶系統管理員必須先將使用者的慣用資料位置 (PDL) 設定至適當的地理位置。設定好 PDL 後，請等候至少 24 小時，讓 PDL 更新可在地理位置之間同步處理，才能開始 OneDrive 異地移動。
+若要執行 OneDrive 地理移動，租使用者管理員必須先將使用者的慣用資料位置 (PDL) 設定為適當的地理位置。設定 PDL 後，請至少等候24小時，以供 PDL 更新在開始 OneDrive 地理位置移動之前于整個地理位置進行同步處理。
 
-使用異地移動 Cmdlet 時，請使用下列語法連線到使用者目前 OneDrive 地理位置的 SPO 服務：
+使用 geo 移動指令程式時，請使用下列語法，在使用者目前 OneDrive 地理位置連接至 SPO 服務：
 
 `Connect-SPOService -url https://<tenantName>-admin.sharepoint.com`
 
-例如：若要移動使用者 ‘Matt@contosoenergy.onmicrosoft.com’ 的 OneDrive，因使用者的 OneDrive 位於 EUR 地理位置，請連線到 EUR SharePoint 管理中心：
+例如：若要移動使用者 ' Matt@contosoenergy.onmicrosoft.com ' 的 OneDrive，請在使用者的 OneDrive 位於 EUR 地理位置時，連接到 EUR SharePoint 系統管理中心：
 
 `Connect-SPOSservice -url https://contosoenergyeur-admin.sharepoint.com`
 
@@ -92,7 +92,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 -   _UserPrincipalName_ – OneDrive 即將移動的使用者 UPN。
 
--   _DestinationDataLocation_ – OneDrive 要移動到的地理位置。這應與使用者慣用資料位置相同。
+-   _DestinationDataLocation_ –需要移動 OneDrive 地理位置。這應該與使用者的慣用資料位置相同。
 
 比方說，若要將 matt@contosoenergy.onmicrosoft.com 的 OneDrive 從 EUR 移動到 AUS，請執行：
 
@@ -108,7 +108,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ## <a name="cancel-a-onedrive-geo-move"></a>取消 OneDrive 異地移動 
 
-只要移動非正在進行或已完成，您即可使用 Cmdlet 停止使用者 OneDrive 的異地移動：
+您可以停止地理位置移動使用者的 OneDrive，但前提是移動並未進行中或已完成使用 Cmdlet：
 
 `Stop-SPOUserAndContentMove – UserPrincipalName <UserPrincipalName>`
 
@@ -116,7 +116,7 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ## <a name="determining-current-status"></a>判斷目前狀態
 
-您可以使用 Get-SPOUserAndContentMoveState Cmdlet 查看 OneDrive 異地移動的狀態是位於或已移出您連線的地理位置。
+您可以使用 Get-SPOUserAndContentMoveState Cmdlet，檢查您所連接之地理位置的 OneDrive 異地移入或移出的狀態。
 
 下表說明移動狀態。
 
@@ -147,11 +147,11 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 </tbody>
 </table>
 
-若要尋找特定使用者的移動狀態，請使用 UserPrincipalName 參數：
+若要尋找特定使用者移動的狀態，請使用 UserPrincipalName 參數：
 
 `Get-SPOUserAndContentMoveState -UserPrincipalName <UPN>`
 
-若要找出位於或已移出您連線地理位置的所有移動之狀態，請使用 MoveState 參數搭配下列值的其中一個：NotStarted、InProgress、成功、失敗、全部。
+若要尋找您所連接之地理位置的所有移動狀態，請使用 MoveState 參數搭配下列其中一個值： NotStarted、InProgress、成功、失敗、全部。
 
 `Get-SPOUserAndContentMoveState -MoveState <value>`
 
@@ -163,11 +163,11 @@ OneDrive 服務使用 Azure Blob 儲存體來儲存內容。與使用者 OneDriv
 
 ### <a name="onedrive-for-business"></a>商務用 OneDrive
 
-移動正在進行時，使用者的 OneDrive 會設為唯讀狀態。完成移動後，若使用者瀏覽至 Microsoft 365 應用程式啟動器或網頁瀏覽器中的 OneDrive，使用者會導向至新地理位置中的 OneDrive。
+進行移動時，使用者的 OneDrive 會設定為唯讀。移動完成之後，當使用者流覽 OneDrive Microsoft 365 應用程式啟動器或網頁瀏覽器時，會將他們的 OneDrive 導向新的地理位置。
 
 ### <a name="permissions-on-onedrive-content"></a>OneDrive 內容的權限
 
-具有 OneDrive 內容權限的使用者將在移動期間和移動完成後繼續擁有內容的存取權。
+在移動期間和完成後，具有 OneDrive 內容許可權的使用者仍可存取內容。
 
 ### <a name="onedrive-sync-client"></a>OneDrive 同步處理用戶端 
 

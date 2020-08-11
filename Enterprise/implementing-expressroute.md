@@ -11,23 +11,25 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 77735c9d-8b80-4d2f-890e-a8598547dea6
-description: ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務的備用路由路徑。 Office 365 ExpressRoute 的架構是以 Office 365 服務（已透過網際網路存取） ExpressRoute 中的廣告公用 IP 首碼為基礎，以在您的網路中接下來再發佈這些 IP 首碼。 透過 ExpressRoute，您可以有效地為許多 Office 365 服務啟用多個不同的路由路徑（透過網際網路及透過 ExpressRoute）。 網路上路由的狀態可能代表如何設計內部網路拓撲的重大變更。
-ms.openlocfilehash: 925aeb2db9350eab9abb70bf3e3d6957608f618b
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何針對 Office 365 實施 ExpressRoute，它會為許多網際網路面向 Office 365 服務提供其他路由路徑。
+ms.openlocfilehash: 3495b66556a8bd8d9aa16aaa4a3283e6017e883c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230299"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605695"
 ---
 # <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務的備用路由路徑。 Office 365 ExpressRoute 的架構是以 Office 365 服務（已透過網際網路存取） ExpressRoute 中的廣告公用 IP 首碼為基礎，以在您的網路中接下來再發佈這些 IP 首碼。 透過 ExpressRoute，您可以有效地為許多 Office 365 服務啟用多個不同的路由路徑（透過網際網路及透過 ExpressRoute）。 網路上路由的狀態可能代表如何設計內部網路拓撲的重大變更。
   
@@ -107,16 +109,16 @@ ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務�
 |:-----|:-----|
 |**網路流量方向** <br/> |入境  <br/> |
 |**服務** <br/> |Exchange 混合式  <br/> |
-|**公用 Office 365 端點（來源）** <br/> |Exchange Online （IP 位址）  <br/> |
-|**公用 On-Premises 端點（目的地）** <br/> |5.5.5.5  <br/> |
-|**公用（網際網路） DNS 專案** <br/> |Autodiscover.contoso.com  <br/> |
-|**其他（非 Office 365） Microsoft 服務是否使用此內部部署端點** <br/> |否  <br/> |
+|**公用 Office 365 端點 (來源) ** <br/> |Exchange Online (IP 位址)   <br/> |
+|**Public On-Premises 端點 (目的地) ** <br/> |5.5.5.5  <br/> |
+|**公用 (網際網路) DNS 專案** <br/> |Autodiscover.contoso.com  <br/> |
+|**此內部部署端點是否會供其他 (非 Office 365) Microsoft 服務使用** <br/> |否  <br/> |
 |**Internet 上的使用者或系統是否會使用此內部部署端點** <br/> |是  <br/> |
-|**透過公用端點發佈的內部系統** <br/> |Exchange Server 用戶端存取角色（內部部署）192.168.101、192.168.102、192.168.103  <br/> |
+|**透過公用端點發佈的內部系統** <br/> |Exchange Server client access role (內部部署) 192.168.101、192.168.102、192.168.103  <br/> |
 |**公用端點的 IP 廣告** <br/> |**至網際網路**： 5.5.0.0/16  <br/> **若要 ExpressRoute**： 5.5.5.0/24  <br/> |
 |**安全性/周邊控制** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
 |**高可用性** <br/> |跨2地理冗余的主動/主動  <br/> ExpressRoute 電路-芝加哥和達拉斯  <br/> |
-|**路徑對稱控制** <br/> |**方法**：來源 NAT  <br/> **網際網路路徑**：來源 NAT 輸入連線至192.168.5。5  <br/> |**ExpressRoute 路徑**：來源 NAT 連線到192.168.1.0 （芝加哥）和192.168.2.0 （達拉斯）  <br/> |
+|**路徑對稱控制** <br/> |**方法**：來源 NAT  <br/> **網際網路路徑**：來源 NAT 輸入連線至192.168.5。5  <br/> |**ExpressRoute 路徑**：從 (芝加哥) 和 192.168.2.0 (達拉斯) 的來源 NAT 連接  <br/> |
 
 以下是僅限輸出之服務的範例：
 
@@ -124,12 +126,12 @@ ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務�
 |:-----|:-----|
 |**網路流量方向** <br/> |出境  <br/> |
 |**服務** <br/> |SharePoint Online  <br/> |
-|**內部部署端點（來源）** <br/> |使用者工作站  <br/> |
-|**公用 Office 365 端點（目的地）** <br/> |線上 SharePoint （IP 位址）  <br/> |
-|**公用（網際網路） DNS 專案** <br/> |\*sharepoint.com （及其他 Fqdn）  <br/> |
-|**CDN 參照** <br/> |cdn.sharepointonline.com （及其他 Fqdn）-由 CDN 提供者維護的 IP 位址  <br/> |
-|**IP 播發和 NAT 正在使用中** <br/> |**網際網路路徑/來源 NAT**： 1.1.1.0/24  <br/> **ExpressRoute 路徑/來源 NAT**： 1.1.2.0/24 （芝加哥）和 1.1.3.0/24 （達拉斯）  <br/> |
-|**Connectivity 方法** <br/> |**Internet**： via layer 7 proxy （pac 檔案）  <br/> **ExpressRoute**：直接路由（無 proxy）  <br/> |
+|**內部部署端點 (來源) ** <br/> |使用者工作站  <br/> |
+|**公用 Office 365 端點 (目的地) ** <br/> |SharePoint 線上 (IP 位址)   <br/> |
+|**公用 (網際網路) DNS 專案** <br/> |\*sharepoint.com (及其他 Fqdn)   <br/> |
+|**CDN 參照** <br/> |cdn.sharepointonline.com (及其他 Fqdn) 由 CDN 提供者所維護)   <br/> |
+|**IP 播發和 NAT 正在使用中** <br/> |**網際網路路徑/來源 NAT**： 1.1.1.0/24  <br/> **ExpressRoute 路徑/來源 NAT**： 1.1.2.0/24 (芝加哥) 和 1.1.3.0/24 (達拉斯)   <br/> |
+|**Connectivity 方法** <br/> |**Internet**： via layer 7 proxy ( 的 pac 檔案)   <br/> **ExpressRoute**：直接路由 (沒有 proxy)   <br/> |
 |**安全性/周邊控制** <br/> |**網際網路路徑**： DeviceID_002  <br/> **ExpressRoute 路徑**： DeviceID_003  <br/> |
 |**高可用性** <br/> |**網際網路路徑**：重複的網際網路出局  <br/> **ExpressRoute 路徑**：跨2地理位置冗余 ExpressRoute 電路-芝加哥和達拉斯的主動/主動 ' 熱刷」路由  <br/> |
 |**路徑對稱控制** <br/> |**方法**：所有連接的來源 NAT  <br/> |
@@ -190,9 +192,9 @@ ExpressRoute for Office 365 可提供許多網際網路對向 Office 365 服務�
 |**在加州和紐約的計畫 ExpressRoute 符合我的場所**||
 |:-----|:-----|
 |位置  <br/> |人員人數  <br/> |透過網際網路出局對 Microsoft 網路的預期延遲  <br/> |對 ExpressRoute 的 Microsoft 網路的預期延遲  <br/> |
-|Los Angeles  <br/> |10,000  <br/> |~ 15ms  <br/> |~ 10ms （透過矽低谷）  <br/> |
-|華盛頓  <br/> |15,000  <br/> |~ 20 毫秒  <br/> |~ 10ms （透過紐約）  <br/> |
-|達拉斯  <br/> |5,000  <br/> |~ 15ms  <br/> |~ 40ms （透過紐約）  <br/> |
+|Los Angeles  <br/> |10,000  <br/> |~ 15ms  <br/> |~ 10ms (經由矽谷)   <br/> |
+|華盛頓  <br/> |15,000  <br/> |~ 20 毫秒  <br/> |~ 10ms 透過紐約 ()   <br/> |
+|達拉斯  <br/> |5,000  <br/> |~ 15ms  <br/> |~ 40ms 透過紐約 ()   <br/> |
 
 在顯示 Office 365 地區的全域網路架構之後，ExpressRoute 網路服務提供者的 [符合我的位置]，以及 [依位置排列的人員數量]，可以用來識別是否可以進行任何優化。 它也可能會顯示全域髮夾網路連線，其中的流量會路由傳送到遠處的位置，以便取得「我的位置」的位置。 如果已探索全域網路上的髮夾，則應該先修正此，然後再繼續進行。 請找到另一個 [符合我的位置] 位置，或使用選擇性的網際網路專題討論顯示點，以避免髮夾。
   

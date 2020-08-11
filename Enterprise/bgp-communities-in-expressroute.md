@@ -13,19 +13,21 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 9ac4d7d4-d9f8-40a8-8c78-2a6d7fe96099
-description: 使用 Azure ExpressRoute 連線到 Office 365 是根據特定 IP 子網的 BGP 廣告，其代表部署 Office 365 端點的網路。 由於 Office 365 的全域性質和構成 Office 365 的服務數目，客戶常常需要在其網路上管理其所接受的廣告。 減少 IP 子網的數目;在本文的其餘部分中，稱為 IP 首碼，以與 BGP 網路管理術語相符，可為客戶提供下列最終目標：
-ms.openlocfilehash: 13d2404182eb18b7c72a9aaefdb96464fd665a03
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 瞭解如何在 Azure ExpressRoute 中使用 BGP 社區，以管理 Office 365 案例的 IP 首碼數目及所需的頻寬。
+ms.openlocfilehash: ce83b95de0b1032ebd23f0262f814aeac4ed2d0a
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997870"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606089"
 ---
 # <a name="using-bgp-communities-in-expressroute-for-office-365-scenarios"></a>在 ExpressRoute for Office 365 案例中使用 BGP 社區
 
@@ -45,7 +47,7 @@ ms.locfileid: "44997870"
 |Exchange Online\*  <br/> |12076:5010  <br/> |包含 Exchange 和 EOP 服務\*  <br/> |
 |SharePoint Online\*  <br/> |12076:5020  <br/> |SharePoint Online  <br/> |
 |商務用 Skype\*  <br/> |12076:5030  <br/> |Microsoft 團隊服務 & 的商務用 Skype Online  <br/> |
-|其他 Office 365 服務\*  <br/> |12076:5100  <br/> |包含 Azure Active Directory （驗證及目錄同步處理案例）和 Office 365 入口網站服務  <br/> |
+|其他 Office 365 服務\*  <br/> |12076:5100  <br/> |包含 Azure Active Directory (驗證及目錄同步處理案例) 以及 Office 365 入口網站服務  <br/> |
 |\*ExpressRoute 所包含的服務案例範圍已記錄在[Office 365 端點](https://aka.ms/o365endpoints)文章中。  <br/> \*\*未來可能會新增其他服務和 BGP 群組值。 [請參閱目前的 BGP 社區清單](https://azure.microsoft.com/documentation/articles/expressroute-routing/)。  <br/> |
 
 ## <a name="what-are-the-most-common-scenarios-for-using-bgp-communities"></a>使用 BGP 社區最常見的案例是什麼？
@@ -58,10 +60,10 @@ Contoso Corporation 是目前使用 Office 365 進行 Exchange Online 和 ShareP
 
 |**使用的 BGP 社區標記**|**透過 Azure ExpressRoute 可路由傳送的功能**|**需要網際網路路由**|
 |:-----|:-----|:-----|
-|SharePoint  <br/> （12076:5020）  <br/> |SharePoint &amp; 商務 OneDrive 商務  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/>  Exchange Online、Exchange Online Protection 和商務用 Skype Online  <br/> |
+|SharePoint  <br/>  (12076:5020)   <br/> |SharePoint &amp; 商務 OneDrive 商務  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/>  Exchange Online、Exchange Online Protection 和商務用 Skype Online  <br/> |
 
 > [!NOTE]
-> 若要為每個服務取得較低的前置詞計數，服務之間的重迭量會保持不變。 這是預期的行為。
+> 若要為每個服務取得較低的前置詞計數，服務之間的重迭量會保持不變。 這是預期會發生的情況。
   
 ### <a name="scenario-2-scoping-expressroute-and-internal-bandwidth-use-to-some-office-365-services"></a>案例2：範圍 ExpressRoute 和內部頻寬用於某些 Office 365 服務
 
@@ -71,7 +73,7 @@ Fabrikam Inc. 是具有分散式異類網路的大型多國企業，是許多 Of
 
 |**使用的 BGP 社區標記**|**透過 Azure ExpressRoute 可路由傳送的功能**|**需要網際網路路由**|
 |:-----|:-----|:-----|
-|商務用 Skype  <br/> （12076:5030）  <br/> |Skype SIP 信號、下載、語音、影片和桌面共用  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/>  商務用 skype 遙測、Skype 用戶端快速秘訣、公用 IM 連線能力  <br/>  Exchange Online、Exchange Online Protection 及 SharePoint 線上  <br/> |
+|商務用 Skype  <br/>  (12076:5030)   <br/> |Skype SIP 信號、下載、語音、影片和桌面共用  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/>  Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/>  商務用 skype 遙測、Skype 用戶端快速秘訣、公用 IM 連線能力  <br/>  Exchange Online、Exchange Online Protection 及 SharePoint 線上  <br/> |
 
 ### <a name="scenario-3-scoping-azure-expressroute-for-office-365-services-only"></a>案例3：僅限 Office 365 服務的 Azure ExpressRoute 範圍
 
@@ -81,7 +83,7 @@ Woodgrove Bank 是許多 Microsoft 雲端服務（包括 Office 365）的客戶�
 
 |**使用的 BGP 社區標記**|**透過 Azure ExpressRoute 可路由傳送的功能**|**需要網際網路路由**|
 |:-----|:-----|:-----|
-|Exchange，商務用 Skype & Microsoft 小組，SharePoint， &amp; 其他服務  <br/> （12076:5010、12076:5020、12076:5030、12076:5100）  <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint &amp; 商務 OneDrive 商務  <br/> Skype SIP 信號、下載、語音、影片和桌面共用  <br/> Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/> |
+|Exchange，商務用 Skype & Microsoft 小組，SharePoint， &amp; 其他服務  <br/>  (12076:5010、12076:5020、12076:5030、12076:5100)   <br/> |Exchange Online &amp; Exchange Online Protection  <br/> SharePoint &amp; 商務 OneDrive 商務  <br/> Skype SIP 信號、下載、語音、影片和桌面共用  <br/> Office 365 入口網站、Office 365 驗證、 &amp; office in 瀏覽器  <br/> | DNS、CRL、 &amp; CDN 要求  <br/>  所有其他 Office 365 服務並不是透過 Azure 明確支援 ExpressRoute  <br/>  所有其他 Microsoft 雲端服務  <br/> |
 
 ## <a name="key-planning-considerations-to-using-bgp-communities"></a>使用 BGP 社區的主要規劃考慮
 

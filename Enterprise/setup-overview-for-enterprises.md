@@ -16,15 +16,17 @@ ms.collection:
 - M365-subscription-management
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 ms.assetid: ee73dafb-be54-492e-bcfd-0fbfb5f65e94
-description: 這些概述步驟的設計是為了協助您設定網路、建立您的身分識別、部署 Microsoft 365 Apps for enterprise、遷移您的資料，以及協助貴組織中的人員開始使用 Microsoft 365。
-ms.openlocfilehash: 274cd4ae285ae97825b4d46a125cd9eeecf83312
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+description: 這些概述步驟的設計是為了協助您設定網路、建立您的身分識別、部署 Microsoft 365 應用程式，以及遷移您的資料。
+ms.openlocfilehash: aa1e4a364843ab6c502e037d464517b643dddbdc
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735941"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605125"
 ---
 # <a name="deploy-microsoft-365-enterprise-for-your-organization"></a>為您的組織部署 Microsoft 365 Enterprise
 
@@ -54,7 +56,7 @@ ms.locfileid: "44735941"
  
 2. [設定您的身分識別](protect-your-global-administrator-accounts.md)
 
-   包括決定身分識別模型（僅限雲端或混合），以及針對混合式身分識別，在您的內部部署 Active Directory 網域服務（AD DS）和您的 Microsoft 365 訂閱之間設定目錄同步處理。
+   包括判斷 identity model (僅限雲端或混合) ，以及混合身分識別，在您的內部部署 Active Directory 網域服務之間設定目錄同步處理 (AD DS) 和您的 Microsoft 365 訂閱。
 
 3. [實施安全性](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)
 
@@ -62,7 +64,7 @@ ms.locfileid: "44735941"
  
 4. [部署用戶端軟體](https://docs.microsoft.com/DeployOffice/deployment-guide-microsoft-365-apps)
 
-   包括部署 Microsoft 365 Apps for enterprise （先前稱為 Office 365 ProPlus）、雲端更新和永遠都在裝置上的 Office 套件（Word、Excel、PowerPoint 及其他）版本。 每個 Microsoft 365 用戶端授權均包含適用于企業的 Microsoft 365 應用程式的授權。
+   包括部署 Microsoft 365 Apps for enterprise (以前命名為 Office 365 ProPlus) ，雲端更新及永遠不是目前版本的 Office 套件 (Word、Excel、PowerPoint，以及其他在您的裝置上) 的版本。 每個 Microsoft 365 用戶端授權均包含適用于企業的 Microsoft 365 應用程式的授權。
  
 5. [設定行動裝置管理](https://support.office.com/article/set-up-mobile-device-management-mdm-in-office-365-dd892318-bc44-4eb1-af00-9db5430be3cd)
 

@@ -15,6 +15,7 @@ ms.custom:
 - O365M_ServiceHealthModern
 - O365E_ViewStatusServices
 - O365E_ServiceHealthModern
+- seo-marvel-apr2020
 ms.collection:
 - Ent_O365
 - M365-subscription-management
@@ -25,12 +26,12 @@ search.appverid:
 - IWA160
 ms.assetid: 932ad3ad-533c-418a-b938-6e44e8bc33b0
 description: 請先查看 Microsoft 365 服務的健康狀態，再致電支援人員，查看是否有使用中的服務中斷狀態。
-ms.openlocfilehash: 17d0df388d3632f0b27b3ca59c57a995ce7dfb8e
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.openlocfilehash: c6995d96df46b4f83014a7ccf6d549dea421a97a
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433884"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605839"
 ---
 # <a name="how-to-check-microsoft-365-service-health"></a>如何檢查 Microsoft 365 服務健康情況
 
@@ -55,7 +56,7 @@ ms.locfileid: "45433884"
 
    ![View of current issues in service health](media/service-health-all-services.png)
 
-[**所有服務**] 索引標籤（預設視圖）會顯示所有服務及其目前的健康狀態。 圖示及 [**狀態**] 欄會指出每項服務的狀態。 
+[**所有服務**] 索引標籤 (預設 view) 會顯示所有服務及其目前的健康狀態。 圖示及 [**狀態**] 欄會指出每項服務的狀態。 
 
 若要將您的視圖篩選為目前出現事件的服務，請選取頁面頂端的 [**事件**] 索引標籤。 選取 [**建議**] 索引標籤只會顯示目前已發表建議的服務。 
 
@@ -146,7 +147,7 @@ ms.locfileid: "45433884"
   
 如需關於我們工作時間承諾的詳細資訊，請參閱[來自 Microsoft 365 的透明作業](https://go.microsoft.com/fwlink/?linkid=848695)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="related-topics"></a>相關主題
 
 [Microsoft 365 系統管理中心](https://support.office.com/article/0d6dfb17-8582-4172-a9a9-aed798150263) 
  的活動報告[訊息中心喜好](https://docs.microsoft.com/microsoft-365/admin/manage/message-center?view=o365-worldwide#preferences11)設定

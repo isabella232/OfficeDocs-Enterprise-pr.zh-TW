@@ -11,25 +11,27 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365_Setup
+ms.custom:
+- Adm_O365_Setup
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - BCS160
 ms.assetid: e4468915-15e1-4530-9361-cd18ce82e231
-description: ExpressRoute for Office 365 提供備用的路由路徑，以到達許多 Office 365 服務，而不需要將所有流量送出至網際網路。 雖然仍然需要網際網路連線到 Office 365，但 Microsoft 透過 BGP 向您的網路公佈的特定路由會使直接 ExpressRoute 電路成為首選的，除非您的網路中有其他設定。 您可能想要設定以管理此路由的三個常見方面包括前置詞篩選、安全性和符合性。
-ms.openlocfilehash: 4793cd5c70407e7dc58a5a8f6f0eda30b3f23474
-ms.sourcegitcommit: 88a110ede50e210aaff3469307d85d354fdaef49
+description: 瞭解如何管理 Office 365 的 ExpressRoute，包括設定類似首碼篩選、安全性和符合性等的常見區域。
+ms.openlocfilehash: f62731b9f2fcfcb47504d2f73e9b8874980c4c7e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "43798794"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606329"
 ---
 # <a name="managing-expressroute-for-office-365-connectivity"></a>管理 ExpressRoute for Office 365 連線
 
 ExpressRoute for Office 365 提供備用的路由路徑，以到達許多 Office 365 服務，而不需要將所有流量送出至網際網路。 雖然仍然需要網際網路連線到 Office 365，但 Microsoft 透過 BGP 向您的網路公佈的特定路由會使直接 ExpressRoute 電路成為首選的，除非您的網路中有其他設定。 您可能想要設定以管理此路由的三個常見方面包括前置詞篩選、安全性和符合性。
   
 > [!NOTE]
-> Microsoft 變更了如何檢查 Azure ExpressRoute 的 Microsoft 對等路由網域。 從2017年7月31日起，所有 Azure ExpressRoute 客戶都可以直接從 Azure 系統管理主控台或透過 PowerShell 啟用 Microsoft 對等功能。 啟用 Microsoft 對等專案後，任何客戶都可以建立路由篩選器以接收 Dynamics 365 客戶參與應用程式（以前稱為 CRM Online）的 BGP 路由播發。 需要 Office 365 Azure ExpressRoute 的客戶必須先從 Microsoft 取得檢查，然後才能建立 Office 365 的路由篩選。 請與您的 Microsoft 帳戶小組聯繫，以瞭解如何要求複查以啟用 Office 365 ExpressRoute。 嘗試建立 Office 365 之路由篩選的未授權訂閱將會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)
+> Microsoft 變更了如何檢查 Azure ExpressRoute 的 Microsoft 對等路由網域。 從2017年7月31日起，所有 Azure ExpressRoute 客戶都可以直接從 Azure 系統管理主控台或透過 PowerShell 啟用 Microsoft 對等功能。 啟用 Microsoft 對等專案後，任何客戶都可以建立路由篩選器，以接收 Dynamics 365 客戶參與應用程式 (以前稱為 CRM Online) 的 BGP 路由播發。 需要 Office 365 Azure ExpressRoute 的客戶必須先從 Microsoft 取得檢查，然後才能建立 Office 365 的路由篩選。 請與您的 Microsoft 帳戶小組聯繫，以瞭解如何要求複查以啟用 Office 365 ExpressRoute。 嘗試建立 Office 365 之路由篩選的未授權訂閱將會收到[錯誤訊息](https://support.microsoft.com/kb/3181709)
   
 ## <a name="prefix-filtering"></a>首碼篩選
 

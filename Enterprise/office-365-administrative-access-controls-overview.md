@@ -14,13 +14,14 @@ f1.keywords:
 ms.collection:
 - Strat_O365_IP
 - M365-security-compliance
-description: 摘要： Microsoft 365 的系統管理存取控制及資料分類的概述。
-ms.openlocfilehash: 93b62acbda2508d5b41578eb807293c34fdda4dd
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.custom: seo-marvel-apr2020
+description: 本文提供 Microsoft 365 中的「管理存取控制」和「資料分類」的概述。
+ms.openlocfilehash: 58cbc7ebea3edb66f5d48d282a3e6995b247a044
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774968"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606709"
 ---
 # <a name="administrative-access-controls-in-microsoft-365"></a>Microsoft 365 中的管理存取控制 
 
@@ -31,7 +32,7 @@ Microsoft 投入大量的系統和控制，可自動化大多數的 Microsoft 36
 Microsoft 提供使用多種形式的雲端傳遞的線上服務：
 
 - **公用雲彩：** 包含多承租人版本的 Microsoft 365、Azure 及其他主控于北美、南美洲、歐洲、亞洲、澳大利亞等的服務。
-- **國家雲彩：** 包括美國以外的所有以及主權和協力廠商運作的雲彩（除非先前所述），例如 microsoft 365 在中國（由世紀運作）365和德國（由 Microsoft 運作），但在該模型下，當德文資料受信者、德國 Telekom、控制及監視 Microsoft 對客戶資料和系統（包含客戶資料）的存取。
+- **國家雲彩：** 包括美國以外的所有以及主權和協力廠商運作的雲彩 (，但除了上述) 之外，它是由 Microsoft 運作的中國 (中的 Microsoft 365，而由 Microsoft 使用的德國) 中的 Microsoft 365，但在該模型下，在此模型中，您可以控制並監控 Microsoft 對客戶資料和包含客戶資料 (的系統的存取。
 - **政府雲彩：** 包含適用于美國政府客戶的 Microsoft 365 和 Azure 服務。
 
 基於本文的目的，Microsoft 365 服務包括：
@@ -58,13 +59,13 @@ Microsoft 提供使用多種形式的雲端傳遞的線上服務：
 - 行事曆專案
 - 文件
 - Contacts
-- 使用者可辨識的資訊（EUII）（是使用者特有或 linkable 給個別使用者的資料，但不包括客戶內容）
+- 使用者識別資訊 (EUII () 使用者特有或 linkable 個別使用者的資料，但不包括客戶內容) 
 
 ### <a name="other-types-of-data"></a>其他類型的資料
 
 其他類型的資料包括：
 
-- **帳戶資料：** 包含管理資料（系統管理員在註冊或購買服務時所提供的資訊）和付款資料（有關付款儀器的資訊，例如信用卡詳細資料）。
+- **帳戶資料：** 包含系統管理員在註冊或購買服務) 時所提供的管理資料 (資訊，以及付款資料 (相關的付款資訊，例如信用卡詳細資料) 。
 - **組織識別資訊：** 包含用來識別租使用者、使用狀況資料，而不是 linkable 給個別使用者或包含在客戶內容中的資料。
 - **系統中繼資料：** 包含服務記錄，包含有關訂閱及承租人的設定設定、系統狀態、Microsoft IP 位址和技術資訊。
 

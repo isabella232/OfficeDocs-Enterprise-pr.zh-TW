@@ -11,15 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Ent_Solutions
+ms.custom:
+- Ent_Solutions
+- seo-marvel-apr2020
 ms.assetid: 202b76ff-74a6-4486-ada1-a9bf099dab8f
-description: 摘要：在 Microsoft Azure 中建立和設定 Active Directory Federation Services (AD FS) 伺服器以進行 Microsoft 365 的高可用性同盟驗證。
-ms.openlocfilehash: e4fa1ac49d9c9a60567d587416347093ff0784c9
-ms.sourcegitcommit: d8ca7017b25d5ddc2771e662e02b62ff2058383b
+description: 瞭解如何在 Microsoft Azure 中為 Microsoft 365 的高可用性同盟驗證建立和設定 AD FS 伺服器。
+ms.openlocfilehash: 3b4805dd29eb62b337cb455530615fd9c13c0f5c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "45102511"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606369"
 ---
 # <a name="high-availability-federated-authentication-phase-3-configure-ad-fs-servers"></a>高可用性同盟驗證階段 3：設定 AD FS 伺服器
 

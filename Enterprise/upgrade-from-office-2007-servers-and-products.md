@@ -22,17 +22,18 @@ search.appverid:
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: Office 2007 server 的支援已結束，用戶端應用程式和自訂支援協定無法使用。 請使用本文立即開始規劃升級。
-ms.openlocfilehash: 79d017c92461b6c53e8d014ba9071957d70157fd
-ms.sourcegitcommit: 0f7607b5e88b78ae250900ce7ce1b019cd245aa1
+description: 本文提供的資源可協助您從 Office 2007 伺服器及用戶端升級，因為 Office 2007 的支援已結束。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 21147ccd027ba0492ced6078f91932acc3bb958c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "44906226"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605869"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2007-servers-and-clients"></a>協助您從 Office 2007 伺服器及用戶端升級的資源
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 如果您使用的是 Office 2007 產品和服務，這些應用程式的支援已結束。 當您規劃升級時，這是一個考慮移至 Microsoft 雲端（從 Microsoft 365 開始）的最佳時間。 請使用本文做為開始查看選項及規劃升級的起點。
       
@@ -49,7 +50,7 @@ Office 2007 產品和服務的支援已結束。 下列藍圖可協助您立即�
 |[從 Office 通訊伺服器升級](https://docs.microsoft.com/SkypeForBusiness/plan-your-deployment/upgrade) <br/> |2018年1月8日  <br/> |
 |[PerformancePoint Server 2007 終止支援藍圖](pps-2007-end-of-support.md) <br/> |2018 年 1 月 9 日  <br/> |
    
-當 Microsoft 產品的支援結束時，沒有新的安全性更新、非安全性更新、免費或付費協助支援選項（包括自訂支援協定）或線上技術內容更新。不論您是企業組織或個別的家用使用者，您有數個選項可供您考慮：
+當 Microsoft 產品的支援結束時，沒有新的安全性更新、非安全性更新、免費或付費協助支援選項 (包括自訂支援協定) 或線上技術內容更新。不論您是企業組織或個別的家用使用者，您有數個選項可供您考慮：
 
 ## <a name="im-a-home-user-what-do-i-do"></a>我是家用版的使用者。 我該怎麼辦？
 
@@ -57,7 +58,7 @@ Office 2007 產品和服務的支援已結束。 下列藍圖可協助您立即�
      
 ## <a name="related-topics"></a>相關主題
 
-[影片：何謂 Microsoft 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
+[影片：什麼是 Microsoft 365？](https://support.office.com/article/847caf12-2589-452c-8aca-1c009797678b.aspx)
   
 [Microsoft 週期原則](https://go.microsoft.com/fwlink/?linkid=865200)
 

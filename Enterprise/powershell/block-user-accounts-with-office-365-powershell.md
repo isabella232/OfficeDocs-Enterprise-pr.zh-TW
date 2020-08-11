@@ -16,18 +16,19 @@ f1.keywords:
 ms.custom:
 - Ent_Office_Other
 - PowerShell
+- seo-marvel-apr2020
 ms.assetid: 04e58c2a-400b-496a-acd4-8ec5d37236dc
-description: 說明如何使用 PowerShell 來封鎖和取消封鎖 Microsoft 365 帳戶的存取。
-ms.openlocfilehash: c18c0248c51096ab089b16b2e9e31eb0929de443
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 本文說明如何使用 PowerShell 來封鎖和取消封鎖 Microsoft 365 帳戶的存取。
+ms.openlocfilehash: 1d32554642f29b4548e2525135d20967ba6b0f16
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230889"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606429"
 ---
 # <a name="block-microsoft-365-user-accounts-with-powershell"></a>使用 PowerShell 封鎖 Microsoft 365 使用者帳戶
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 封鎖存取 Microsoft 365 帳戶，可防止任何人使用該帳戶登入，並存取您的 Microsoft 365 組織中的服務和資料。 您可以使用 PowerShell 來封鎖個別和多個使用者帳戶的存取。
 
@@ -170,8 +171,8 @@ kakers@contoso.com
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[以 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)

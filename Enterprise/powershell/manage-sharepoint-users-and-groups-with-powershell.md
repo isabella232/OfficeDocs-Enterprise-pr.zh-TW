@@ -17,14 +17,15 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 - SPO_Content
+- seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
-description: 摘要：使用 Microsoft 365 PowerShell 來管理 SharePoint Online 使用者、群組及網站。
-ms.openlocfilehash: ae232766031dade061e79a574efa14e8432ae08c
-ms.sourcegitcommit: 7bf52d4277b97d6f1c585da2c83979fbcf061c1e
+description: 在本文中，您將瞭解如何使用 Microsoft 365 的 PowerShell 來管理 SharePoint Online 使用者、群組及網站。
+ms.openlocfilehash: 96e9040542ac9a3351cf8b8f3ab314910dc66a3b
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "46542814"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605889"
 ---
 # <a name="manage-sharepoint-online-users-and-groups-with-powershell"></a>使用 PowerShell 管理 SharePoint Online 使用者和群組
 
@@ -69,7 +70,7 @@ Set-SPOUser -Site https://$tenant.sharepoint.com/sites/$site -LoginName $user@$t
 
 若要使用這些命令，請使用正確的名稱取代引號內的所有專案，包括 < 和 > 字元。
 
-例如，這組命令會將 Opal Castillo （使用者名稱 opalc）新增至 Contoso 租使用者的 ContosoTest 網站集合上的網站集合管理員清單：
+例如，這組命令會將 Opal Castillo (使用者名稱 opalc) 新增至 Contoso 租使用者之 ContosoTest 網站集合上的網站集合管理員清單：
 
 ```powershell
 $tenant = "contoso"
@@ -93,7 +94,7 @@ Add-SPOUser -Group $group -LoginName $user@$tenant.com -Site https://$tenant.sha
 
 ```
 
-例如，讓我們將 Glen Rife （使用者名稱 glenr）新增至 contoso 租使用者的 ContosoTest 網站集合上的審計員群組：
+例如，將 Glen Rife (使用者名稱 glenr) 新增至 contoso 租使用者之 ContosoTest 網站集合上的審計員群組：
 
 ```powershell
 $tenant = "contoso"
@@ -166,7 +167,7 @@ Get-SPOSite | ForEach {Get-SPOSiteGroup –Site $_.Url} | ForEach {Remove-SPOUse
 
 若要將大量帳戶新增至 SharePoint 網站並授與許可權，您可以使用 Microsoft 365 系統管理中心、個別的 PowerShell 命令，或 PowerShell CSV 檔案。 在這些選項中，CSV 檔案是自動化此工作的最快方法。
 
-基本程式是建立 CSV 檔案，其標頭（欄）與 Windows PowerShell 腳本所需的參數相對應。 您可以在 Excel 中輕鬆建立這類清單，然後將它匯出為 CSV 檔案。 然後，您可以使用 Windows PowerShell 腳本，逐一查看 CSV 檔案中的記錄（資料列），將使用者新增至群組，並將群組新增至網站。 
+基本程式是建立 CSV 檔案，該檔案具有與 Windows PowerShell 腳本所需之參數對應的標題 (欄) 。 您可以在 Excel 中輕鬆建立這類清單，然後將它匯出為 CSV 檔案。 然後，您可以使用 Windows PowerShell 腳本，逐一查看 CSV 檔案中) 的記錄 (列，將使用者新增至群組，並將群組新增至網站。 
 
 例如，讓我們建立 CSV 檔案，以定義網站集合、群組和許可權的群組。 接下來，我們會建立 CSV 檔案，以將使用者填入群組。 最後，我們將建立並執行簡單的 Windows PowerShell 腳本，以建立及填入群組。
 
@@ -275,7 +276,7 @@ Get-SPOSite | ForEach {Get-SPOUser –Site $_.Url} | Format-Table -Wrap -AutoSiz
 
 這個報告非常簡單，您可以新增更多的程式碼，以建立包含更多詳細資訊的特定報告或報告。 不過，這會讓您瞭解如何使用 SharePoint Online 管理命令介面來管理 SharePoint 線上環境中的使用者。
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 

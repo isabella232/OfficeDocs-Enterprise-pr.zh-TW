@@ -14,19 +14,20 @@ search.appverid:
 - MET150
 f1.keywords:
 - NOCSH
-description: 適用于新式驗證的 Microsoft 365 用戶端應用程式支援。
-ms.openlocfilehash: ed573cdf0cbd8f685f2807127335f5abc940cace
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，瞭解哪些平臺、用戶端和 Powershell 模組支援 Microsoft 365 的新式驗證。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 29a579111d04cef444d1f8ad306b940a93517fe6
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998491"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606659"
 ---
 # <a name="microsoft-365-client-app-support---modern-authentication"></a>Microsoft 365 用戶端應用程式支援-新式驗證
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-新式驗證針對不同平臺上的 Office 用戶端應用程式啟用 Active Directory 驗證程式庫（ADAL）型登錄。 這樣可啟用諸如 Multi-Factor 驗證（MFA）、智慧卡和憑證型驗證等登入功能。
+新式驗證可讓 Active Directory 驗證程式庫 (ADAL) 型登入跨不同平臺的 Office 用戶端應用程式。 這可讓登入功能（例如 Multi-Factor 驗證） (MFA) 、智慧卡和憑證型驗證。
 
 深入瞭解[多重要素驗證](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)和[憑證型驗證](https://docs.microsoft.com/azure/active-directory/active-directory-certificate-based-authentication-get-started)。
 

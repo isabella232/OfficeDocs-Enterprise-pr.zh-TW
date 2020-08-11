@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 搜尋中的租使用者隔離
+title: Microsoft 365 搜尋中的租用戶隔離
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,15 +14,16 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： Microsoft 365 搜尋中有關租使用者隔離的說明。
-ms.openlocfilehash: 2c57b5610fd1a59f2cff2001981e77e354226452
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，會找到有關租使用者隔離如何在 Microsoft 365 搜尋中個別租使用者資料運作方式的說明。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: b887088799c83422a6bc5797a76dde73a58e2f29
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998253"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605585"
 ---
-# <a name="tenant-isolation-in-microsoft-365-search"></a>Microsoft 365 搜尋中的租使用者隔離
+# <a name="tenant-isolation-in-microsoft-365-search"></a>Microsoft 365 搜尋中的租用戶隔離
 
 SharePoint 線上搜尋使用租使用者分隔模型，它會平衡共用資料結構的效率，防範租使用者之間的資訊洩漏。 使用此模型，我們避免搜尋功能：
 
@@ -54,10 +55,10 @@ SharePoint 線上搜尋使用租使用者分隔模型，它會平衡共用資料
 
 ## <a name="document-access-control-list-checks"></a>檔存取控制清單檢查
 
-搜尋會透過儲存在搜尋索引中的 ACLs，控制對檔的存取。 每個專案都會以特殊 ACL 欄位中的一組字詞編制索引。 ACL 欄位包含每個群組或使用者可以查看檔的一個字詞。 每個查詢都會擴充一個存取控制專案（ACE）字詞的清單，其中一個是驗證使用者所屬的群組。
+搜尋會透過儲存在搜尋索引中的 ACLs，控制對檔的存取。 每個專案都會以特殊 ACL 欄位中的一組字詞編制索引。 ACL 欄位包含每個群組或使用者可以查看檔的一個字詞。 每個查詢都會擴充 (ACE) 字詞的存取控制專案清單，其中一個是驗證使用者所屬的群組。
 
-例如，像 "<*guid*> 的查詢。*FOO 和 tenantID*： "<*guid*>" 變成： "<*guid*>。*foo 和 tenantID*： <*guid* >  *及*（*docACL：* < *ace1* >  *或 docACL*： <*ace2* >  *或 docACL*： <*ace3* >  *...*） "
+例如，像 "<*guid*> 的查詢。*FOO 和 tenantID*： "<*guid*>" 變成： "<*guid*>。*foo 和 tenantID*： <*guid* >  *和* (*docACL：* < *ace1* >  *或 docACL*： <*ace2* >  *or docACL*： <*ace3* >  *...*) "
 
 由於使用者和群組識別碼（因此 Ace）是唯一的，因此會為只對某些使用者顯示之檔的承租人提供額外的安全性層級。 這種情況也是特殊的「外部使用者以外的所有人」 ACE 的案例，可將存取權授與租使用者中的一般使用者。 不過，由於 "Everyone" 的 Ace 對於所有承租人都是相同的，所以公用檔的承租人分隔取決於租使用者識別碼篩選。 也支援「拒絕」 Ace。 當與 deny ACE 相符時，查詢充實會新增一個子句，該子句會從結果中移除檔。
 
-在 Exchange Online 搜尋中，索引是針對個別使用者的信箱（而不是租使用者識別碼（訂閱識別碼））的信箱識別碼進行分割，如 SharePoint Online 中所示。 分割機制與 SharePoint 線上，但沒有 ACL 篩選。
+在 Exchange Online 搜尋中，索引會分割個別使用者信箱的信箱 ID，而不是租使用者識別碼 (訂閱識別碼) 如 SharePoint Online 中所示。 分割機制與 SharePoint 線上，但沒有 ACL 篩選。

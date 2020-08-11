@@ -14,15 +14,16 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 定義及說明 Microsoft 365 中的資料永久性。
-ms.openlocfilehash: 8648060f3036d2f3c81704cf53a817910607263a
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 瞭解 Microsoft 365 如何保留可探索表單中的資料，以解決法規遵從性、內部管理需求和訴訟風險。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: dcc997cf157df08441bf1f6e825d0a5a468edbd1
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998457"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605635"
 ---
-# <a name="immutability-in-microsoft-365"></a>Microsoft 365 中的可變性
+# <a name="immutability-in-microsoft-365"></a>Microsoft 365 中的不可變性
 
 法規遵從性、內部管理需求或訴訟風險，都需要組織保留可探索表單中的電子郵件和相關資料。 系統中的所有資料都必須可探索，而且無法銷毀或變更。 這項業界標準的術語是「不永久性」。
 
@@ -49,7 +50,7 @@ ms.locfileid: "44998457"
 
 例如，當信箱處於訴訟暫止狀態時，會保留協力廠商資料。 您可以使用 In-Place eDiscovery 或符合性搜尋來搜尋協力廠商資料。 或者，您可以將封存和保留原則套用至協力廠商資料，就像您可以使用 Microsoft 資料一樣。 在 Microsoft 365 中封存協力廠商資料可協助您的組織遵守政府和法規原則。
 
-Microsoft 365 中的封存可提供證券和 Exchange 傭金（SEC）與原則17a-4 相容的儲存體。 Microsoft 365 會使用就地保留原則和保留原則（包括保留鎖定），保留以不可重寫、不可讀寫格式收集之所有資料的永久檔。
+Microsoft 365 中的封存可讓證券和 Exchange 傭金 (SEC) 規則17a-4 相容的儲存體。 Microsoft 365 會使用就地保留原則和保留原則（包括保留鎖定），保留以不可重寫、不可讀寫格式收集之所有資料的永久檔。
 
 特別是：
 

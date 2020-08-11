@@ -13,30 +13,32 @@ ms.collection:
 - M365-identity-device-management
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - MED150
 - BCS160
 ms.assetid: a5efce5d-9c9c-4190-b61b-fd273c1d425f
-description: 您的 Microsoft 365 訂閱包含 Azure AD 的訂閱。 如果您想要使用您的內部部署環境進行密碼同步處理或單一登入，請整合 Microsoft 365 與 Azure AD。
-ms.openlocfilehash: d6ef9d05d66709d360c625fd3b47ad142bdde7a0
-ms.sourcegitcommit: 3349fdaff646f5f7d92c22565402dfc22c12d2ed
+description: 如果您想要使用您的內部部署環境進行密碼同步處理或單一登入，請整合 Microsoft 365 與 Azure AD。
+ms.openlocfilehash: 64fcf25c75e636bebf78e9367f4cc68b367548f7
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "44842055"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606099"
 ---
 # <a name="azure-integration-with-microsoft-365"></a>Azure 與 Microsoft 365 的整合
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-Microsoft 365 使用 Azure Active Directory （Azure AD）來管理幕後的使用者身分識別。 您的 Microsoft 365 訂閱包含 Azure AD 的免費訂閱，如果您想要同步處理密碼或設定與您的內部部署環境的單一登入，則可以整合 Microsoft 365 與 Azure AD。 您也可以購買高級功能，以更好地管理帳戶。
+Microsoft 365 使用 Azure Active Directory (Azure AD) 管理幕後的使用者身分識別。 您的 Microsoft 365 訂閱包含 Azure AD 的免費訂閱，如果您想要同步處理密碼或設定與您的內部部署環境的單一登入，則可以整合 Microsoft 365 與 Azure AD。 您也可以購買高級功能，以更好地管理帳戶。
   
 Azure 也提供其他功能（如管理整合型應用程式），您可以用來擴充和自訂您的 Microsoft 365 訂閱。
   
-您可以使用 Azure AD 部署顧問進行引導安裝和設定體驗（您必須登入 Microsoft 365）：
+您可以使用 Azure AD 部署顧問進行引導安裝和設定經驗 (您必須登入 Microsoft 365) ：
 
  - [Azure AD Connect advisor](https://aka.ms/aadconnectpwsync)
  - [AD FS 部署顧問](https://aka.ms/adfsguidance)
@@ -50,7 +52,7 @@ Azure 也提供其他功能（如管理整合型應用程式），您可以用�
   
 使用免費訂閱，您可以同步處理內部部署目錄、設定單一登入，並與許多軟體（例如 Salesforce、DropBox 及其他許多軟體）同步處理。
   
-如果您想要增強的 Active Directory 網域服務（AD DS）功能、雙向同步處理及其他管理功能，您可以將免費訂閱升級為付費的特優訂閱。 如需詳細資訊，請參閱[Azure Active Directory 版本](https://azure.microsoft.com/pricing/details/active-directory/)。
+如果您想要增強的 Active Directory 網域服務 (AD DS) 功能、雙向同步處理及其他管理功能，您可以將免費訂閱升級為付費的特優訂閱。 如需詳細資訊，請參閱[Azure Active Directory 版本](https://azure.microsoft.com/pricing/details/active-directory/)。
   
 如需 Microsoft 365 和 Azure AD 的詳細資訊，請參閱[瞭解 microsoft 365 身分識別和 Azure Active Directory](about-office-365-identity.md)。
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerShell 執行到 Microsoft 365 的分段遷移
+title: 使用 PowerShell 以階段移轉至 Microsoft 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,19 +13,19 @@ search.appverid:
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: a20f9dbd-6102-4ffa-b72c-ff813e700930
-description: 摘要：瞭解如何使用 Windows PowerShell 執行分步遷移至 Microsoft 365。
-ms.openlocfilehash: bc21ec403b0c6daa3fe2411f8f4fea790dd5e71c
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何使用 PowerShell，透過一段時間將內容從來源電子郵件系統移轉至 Microsoft 365。
+ms.openlocfilehash: a50966f65bbec5e4b453c4caf02e4b89fa7d04b5
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229789"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606209"
 ---
-# <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>使用 PowerShell 執行到 Microsoft 365 的分段遷移
+# <a name="use-powershell-to-perform-a-staged-migration-to-microsoft-365"></a>使用 PowerShell 以階段移轉至 Microsoft 365
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您可以使用分段遷移，將使用者信箱的內容從來源電子郵件系統移轉至 Microsoft 365。
   
@@ -63,7 +63,7 @@ ms.locfileid: "45229789"
   
 - 從公司網路之外使用 Outlook 連線至您的內部部署 Exchange 信箱。
     
-- 使用[Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/)來測試您的連線設定。使用 Outlook 無所不在（RPC over HTTP）或 Outlook 自動探勘測試。
+- 使用[Microsoft Remote Connectivity Analyzer](https://https://testconnectivity.microsoft.com/)來測試您的連線設定。使用 Outlook 無所不在 (RPC over HTTP) 或 Outlook 自動探勘測試。
     
 - 在 Exchange Online PowerShell 中執行下列命令：
     
@@ -75,7 +75,7 @@ ms.locfileid: "45229789"
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
- **設定許可權**您用來連線至內部部署 Exchange 組織的內部部署使用者帳戶（也稱為「遷移系統管理員」）必須具備必要的許可權，才能存取您要遷移至 Microsoft 365 的內部部署信箱。當您在此程式稍後建立遷移端點以連線至電子郵件系統時，就會使用此使用者帳戶（[步驟3：建立遷移端點](use-powershell-to-perform-a-staged-migration-to-office-365.md#BK_Endpoint)）。
+ **設定許可權**您用來連線至內部部署 Exchange 組織的內部部署使用者帳戶 (也稱為「遷移系統管理員」) 必須具備必要的許可權，才能存取您要遷移至 Microsoft 365 的內部部署信箱。當您在此程式中建立遷移端點時，使用此程式來連線到電子郵件系統時，就會使用此使用者帳戶 ([步驟3：建立遷移端點](use-powershell-to-perform-a-staged-migration-to-office-365.md#BK_Endpoint)) 。
   
 若要移轉信箱，系統管理員必須具備下列其中一組權限：
   
@@ -97,11 +97,11 @@ ms.locfileid: "45229789"
   
 您必須授權已建立的使用者。您必須在建立使用者後的 30 天內增加授權。若要增加授權的步驟，請參閱[步驟 8：完成移轉後工作](use-powershell-to-perform-a-staged-migration-to-office-365.md#BK_Postmigration)。
   
- 您可以使用 Microsoft Azure Active Directory （Azure AD）同步處理工具或 Microsoft Azure AD Sync 服務同步處理，並在 Microsoft 365 中建立內部部署使用者。將信箱遷移至 Microsoft 365 之後，您可以在內部部署組織中管理使用者帳戶，並與您的 Microsoft 365 組織同步處理。如需詳細資訊，請參閱[目錄整合](https://go.microsoft.com/fwlink/?LinkId=521788)。
+ 您可以使用 Microsoft Azure Active Directory (Azure AD) 同步處理工具或 Microsoft Azure AD Sync 服務同步處理，並在 Microsoft 365 中建立內部部署使用者。將信箱遷移至 Microsoft 365 之後，您可以在內部部署組織中管理使用者帳戶，並與您的 Microsoft 365 組織同步處理。如需詳細資訊，請參閱[目錄整合](https://go.microsoft.com/fwlink/?LinkId=521788)。
   
 ### <a name="step-2-create-a-csv-file-for-a-staged-migration-batch"></a>步驟 2：建立分段移轉批次所需的 CSV 檔案
 
-在您識別想要將其內部部署信箱遷移至 Microsoft 365 的使用者之後，您可以使用逗號分隔值（CSV）檔案來建立遷移批次。CSV 檔案中的每一列（Microsoft 365 用來執行遷移）包含內部部署信箱的相關資訊。 
+在您識別想要將其內部部署信箱遷移至 Microsoft 365 的使用者之後，您可以使用以逗號分隔的值 (CSV ) 檔案來建立遷移批次。CSV 檔案中的每一列（Microsoft 365 用來執行遷移）包含內部部署信箱的相關資訊。 
   
 > [!NOTE]
 > 您可以使用分段遷移將信箱遷移至 Microsoft 365 的信箱數目不受限制。遷移批次的 CSV 檔案最多可以包含2000列。若要遷移超過2000個信箱，請建立其他 CSV 檔案，並使用每個檔案來建立新的遷移批次。 

@@ -14,13 +14,14 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Microsoft 365 如何強制租使用者隔離的摘要。
-ms.openlocfilehash: 891fdb9bebb500c40a9658d170942ca396facfd1
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 本文摘要說明 Microsoft 如何在雲端服務（如 Microsoft 365）中強制執行租使用者隔離。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 531b5023af49c776cccfef06dee5bff4b303beff
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998642"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606539"
 ---
 # <a name="tenant-isolation-in-microsoft-365"></a>Microsoft 365 中的租使用者隔離
 
@@ -30,15 +31,15 @@ ms.locfileid: "44998642"
 
 在多租使用者環境中維護租使用者隔離的兩個主要目標如下：
 
-1.  防止對承租人的客戶內容洩露或未經授權存取和
-2.  防止一個承租人的動作對其他租使用者的服務造成不良影響
+1.    防止對承租人的客戶內容洩露或未經授權存取和
+2.    防止一個承租人的動作對其他租使用者的服務造成不良影響
 
 已在整個 Microsoft 365 中實施多種保護形式，以防止客戶損除 Microsoft 365 服務或應用程式，或未經授權存取其他承租人或 Microsoft 365 系統本身的資訊，包括：
 
 - Microsoft 365 服務各租使用者中的客戶內容邏輯隔離，是透過 Azure Active Directory 授權和以角色為基礎的存取控制來實現。
 - SharePoint 線上在儲存層級提供資料隔離機制。
 - Microsoft 使用嚴謹的實體安全性、背景篩選和多層次的加密策略，以保護客戶內容的機密性和完整性。 所有 Microsoft 365 資料中心都具有生物識別存取控制，大多數需要 palm 列印才能獲得實體存取權。 此外，所有以美國為基礎的 Microsoft 員工都必須在聘用過程中成功完成標準背景檢查。 如需 Microsoft 365 中用於管理存取之控制項的詳細資訊，請參閱[microsoft 365 管理存取控制](office-365-administrative-access-controls-overview.md)。
-- Microsoft 365 使用服務端技術，在靜止和傳輸中加密客戶內容，包括 BitLocker、每個檔案加密、傳輸層安全性（TLS）及網際網路通訊協定安全性（IPsec）。 如需 Microsoft 365 中加密的特定詳細資料，請參閱[microsoft 365 中的資料加密技術](https://docs.microsoft.com/microsoft-365/compliance/office-365-encryption-in-the-microsoft-cloud-overview)。
+- Microsoft 365 使用服務端技術，在靜止和傳輸中加密客戶內容，包括 BitLocker、每個檔案加密、傳輸層安全性 (TLS) 和網際網路通訊協定安全性 (IPsec) 。 如需 Microsoft 365 中加密的特定詳細資料，請參閱[microsoft 365 中的資料加密技術](https://docs.microsoft.com/microsoft-365/compliance/office-365-encryption-in-the-microsoft-cloud-overview)。
 
 以上所列的保護功能提供了可靠的邏輯隔離控制，可提供與獨立實體隔離所提供之威脅防護和緩解同等的威脅。
 
@@ -46,7 +47,7 @@ ms.locfileid: "44998642"
 
 - [Azure Active Directory 中的隔離與存取控制](office-365-isolation-in-azure-active-directory.md)
 - [Office Graph 與 Delve 中的租用戶隔離](office-365-isolation-in-graph-and-delve.md)
-- [Microsoft 365 搜尋中的租使用者隔離](office-365-isolation-in-office-365-search.md)
+- [Microsoft 365 搜尋中的租用戶隔離](office-365-isolation-in-office-365-search.md)
 - [Office 365 影片中的租用戶隔離](office-365-isolation-in-office-365-video.md)
 - [資源限制](office-365-resource-limits.md)
 - [監視及測試租用戶界限](office-365-monitoring-and-testing.md)

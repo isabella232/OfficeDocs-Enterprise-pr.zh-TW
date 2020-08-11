@@ -17,14 +17,15 @@ f1.keywords:
 - CSH
 ms.custom:
 - Ent_TLGs
+- seo-marvel-apr2020
 ms.assetid: ''
-description: 摘要：請參閱下列文章，以瞭解 Microsoft 365 的網路。
-ms.openlocfilehash: b1497c214777e34ce4a85701ce6596f50e59910d
-ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+description: 尋找包含資訊的文章連結，以協助您設定 Microsoft 365 的網路，包括網路連線概述和端點清單。
+ms.openlocfilehash: 2c5966dc169a189a4f5040d4b5673859a38e6640
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46592147"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605205"
 ---
 # <a name="set-up-your-network-for-microsoft-365"></a>設定 Microsoft 365 的網路
 

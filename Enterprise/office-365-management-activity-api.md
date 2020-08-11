@@ -14,13 +14,14 @@ ms.collection:
 - M365-analytics
 f1.keywords:
 - NOCSH
-description: 有關 Office 365 管理活動 API 的簡短摘要。
-ms.openlocfilehash: 8c7e4723ffb1792847c4b4eca0ec8285b8848c98
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，您可以找到 Office 365 管理活動 API 的簡短摘要，以及它在活動記錄檔中提供的資訊。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 05b47be60816b09a24df3dd0076a4d0cbcdabe84
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998672"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605545"
 ---
 # <a name="office-365-management-activity-api"></a>Office 365 管理活動 API
 
@@ -28,6 +29,6 @@ Microsoft 提供報表服務，您可以用來取得 Office 365 租使用者的�
 
 Office 365 管理活動 API 提供 Office 365 和 Azure Active Directory 活動記錄中各種使用者、系統管理員、系統和原則動作及事件的相關資訊。 API 提供一致的審核架構，所有服務都有超過10個欄位。 API 可讓組織在事件之間進行簡易的連線，並可讓您在資料的情況下提供新的方式。
 
-許多獨立軟體廠商（Isv）會與 Microsoft 合作，並已建立以 API 為基礎的解決方案。 有些解決方案只會專注于 Office 365 資料和其他雲端供應商和內部部署系統的來來源資料，以建立作業、安全性及規範相關活動的統一視圖。 
+許多獨立的軟體廠商 (Isv) 與 Microsoft 合作，並已建立以 API 為基礎的解決方案。 有些解決方案只會專注于 Office 365 資料和其他雲端供應商和內部部署系統的來來源資料，以建立作業、安全性及規範相關活動的統一視圖。 
 
 如需詳細資訊，請參閱[Office 365 管理活動 API 參考](https://docs.microsoft.com/office/office-365-management-api/office-365-management-activity-api-reference)。

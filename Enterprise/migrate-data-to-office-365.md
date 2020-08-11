@@ -15,13 +15,14 @@ search.appverid:
 ms.assetid: e2fdfc8d-547e-4419-8628-2738ed4e0f46
 f1.keywords:
 - NOCSH
-description: 如果您已選擇 FastTrack 部署，且準備好將資料移轉至 Microsoft 365，這是開始的位置。
-ms.openlocfilehash: a04c4df37d5f8c72330907752247d7bea48fb72d
-ms.sourcegitcommit: d2a3d6eeeaa07510ee94c2bc675284d893221a95
+ms.custom: seo-marvel-apr2020
+description: 在本文中，您將會有説明您將組織資料移轉至 Microsoft 365 的資源。
+ms.openlocfilehash: b7598b6d8ccf566c43aacded5237dc4dc22fe42e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "44711846"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605665"
 ---
 # <a name="migrate-your-organization-data-to-microsoft-365-enterprise"></a>將組織資料移轉至 Microsoft 365 企業版
 
@@ -37,8 +38,8 @@ ms.locfileid: "44711846"
 - 尋找[組織中人員可以移轉電子郵件、連絡人和行事曆](https://support.office.com/article/Migrate-email-and-contacts-to-Office-365-for-business-a3e3bddb-582e-4133-8670-e61b9f58627e)的其他方式。
 
 ## <a name="migrate-files-and-folders"></a>移轉檔案和資料夾
-- [線上及 OneDrive 遷移至 SharePoint](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。 身份
-- [SharePoint 伺服器的混合](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)式設定藍圖。 身份
+- [線上及 OneDrive 遷移至 SharePoint](https://docs.microsoft.com/sharepointmigration/migrate-to-sharepoint-online)。  (管理員) 
+- [SharePoint 伺服器的混合](https://docs.microsoft.com/SharePoint/hybrid/configuration-roadmaps)式設定藍圖。  (管理員) 
 
 ## <a name="migrate-skype-for-business-users"></a>移轉商務用 Skype 使用者
 - [移轉至商務用 Skype Online](https://technet.microsoft.com/library/jj204969.aspx) (英文)。(系統管理員)

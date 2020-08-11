@@ -15,19 +15,21 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 如果您已啟用混合式新式驗證（HMA），而只是找出它不適用於您目前的環境，您可以停用 HMA。 本文說明如何進行。
-ms.openlocfilehash: ad9db5894670b49d2d9a1f385cd9f6acd43ea00f
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.custom:
+- seo-marvel-apr2020
+description: 本文說明如何從商務用 Skype 和 Exchange 中移除或停用混合式新式驗證。
+ms.openlocfilehash: 9c3dcb2f4bb8993964707a3f30c699bcea3f0dbb
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998202"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606169"
 ---
 # <a name="removing-or-disabling-hybrid-modern-authentication-from-skype-for-business-and-exchange"></a>從商務用 Skype 與 Exchange 移除或停用混合式新式驗證
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-如果您已啟用混合式新式驗證（HMA），而只是找出它不適用於您目前的環境，您可以停用 HMA。 本文說明如何進行。
+如果您已啟用混合式新式驗證 (HMA) 找到它不適用於您目前的環境，您可以停用 HMA。 本文說明如何進行。
   
 ## <a name="who-is-this-article-for"></a>本文的人選是誰？
 
@@ -36,7 +38,7 @@ ms.locfileid: "44998202"
 > [!IMPORTANT]
 > 若您是在商務用 Skype Online 或內部部署中，請參閱「[新式驗證支援的商務用 skype 拓撲](https://technet.microsoft.com/library/mt803262.aspx)」文章，其具有混合拓撲 HMA，您必須先查看支援的拓撲，再開始。
   
-## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>如何停用混合式新式驗證（Exchange）
+## <a name="how-to-disable-hybrid-modern-authentication-exchange"></a>如何停用混合式新式驗證 (Exchange) 
 
 1. **Exchange 內部部署**：開啟 Exchange 管理命令介面，並執行下列命令： 
 
@@ -51,7 +53,7 @@ Set-AuthServer -Identity evoSTS -IsDefaultAuthorizationEndpoint $false
 Set-OrganizationConfig -OAuth2ClientProfileEnabled:$false
 ```
     
-## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>如何停用混合式新式驗證（商務用 Skype）
+## <a name="how-to-disable-hybrid-modern-authentication-skype-for-business"></a>如何停用 (商務用 Skype) 的混合式新式驗證
 
 1. **商務用 skype 內部部署**：在商務用 Skype 管理命令介面中執行下列命令：
 

@@ -17,14 +17,15 @@ ms.custom:
 - Ent_Office_Other
 - PowerShell
 - LIL_Placement
+- seo-marvel-apr2020
 ms.assetid: 264f4f0d-e2cd-44da-a9d9-23bef250a720
-description: 使用 PowerShell 來停用使用者的 Microsoft 365 服務存取權。
-ms.openlocfilehash: 7820bc44837af07975b2eeaeddf2cf20a9230fae
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
+description: 在本文中，您將瞭解如何使用 PowerShell 來停用使用者的 Microsoft 365 服務存取權。
+ms.openlocfilehash: f546014b83e0910e38817e0b7ef84d67f1b88614
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502638"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605969"
 ---
 # <a name="disable-access-to-microsoft-365-services-with-powershell"></a>使用 PowerShell 停用 Microsoft 365 服務的存取權
 
@@ -71,7 +72,7 @@ PowerShell 指令碼可供使用，會自動執行本主題中所述的程序。
 $LO = New-MsolLicenseOptions -AccountSkuId <AccountSkuId> -DisabledPlans "<UndesirableService1>", "<UndesirableService2>"...
 ```
 
-下列範例會建立**LicenseOptions**物件，以停用名為 `litwareinc:ENTERPRISEPACK` （Office 365 Enterprise E3）的授權方案中的 Office 和 SharePoint 線上服務。
+下列範例會建立**LicenseOptions**物件，以停用名為 `litwareinc:ENTERPRISEPACK` (Office 365 Enterprise E3) 之授權方案中的 Office 和 SharePoint Online 服務。
     
 ```powershell
 $LO = New-MsolLicenseOptions -AccountSkuId "litwareinc:ENTERPRISEPACK" -DisabledPlans "SHAREPOINTWAC", "SHAREPOINTENTERPRISE"
@@ -105,7 +106,7 @@ Set-MsolUserLicense -UserPrincipalName <Account> -LicenseOptions $LO
 Set-MsolUserLicense -UserPrincipalName belindan@litwareinc.com -LicenseOptions $LO
 ```
 
-若要停用步驟1中所述的所有現有授權使用者的服務，請從**Get-MsolAccountSku** Cmdlet 的顯示（例如**litwareinc:ENTERPRISEPACK**）中指定您的 Microsoft 365 方案名稱，然後執行下列命令：
+若要停用步驟1中所述的所有現有授權使用者的服務，請從**Get-MsolAccountSku** Cmdlet (（例如**litwareinc:ENTERPRISEPACK**) ）中指定您的 Microsoft 365 方案名稱，然後執行下列命令：
     
 ```powershell
 $acctSKU="<AccountSkuId>"
@@ -171,9 +172,9 @@ $LO = New-MsolLicenseOptions -AccountSkuId $acctSKU
 Set-MsolUserLicense -UserPrincipalName $userUPN -LicenseOptions $LO
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="related-topic"></a>相關主題
 
-[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[以 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   

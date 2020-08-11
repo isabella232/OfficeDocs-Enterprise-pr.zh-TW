@@ -12,17 +12,18 @@ ms.collection: Ent_O365
 ms.assetid: c3024358-326b-404e-9fe6-b618e54d977d
 f1.keywords:
 - NOCSH
-description: 在2017年4月11日，Exchange Server 2007 已到達支援終止。 若尚未開始從 Exchange 2007 遷移至 Microsoft 365、Office 365 或 Exchange 2016，現在是開始規劃的時間。
-ms.openlocfilehash: 7228d123a8f4fe21c3d92753fe3f60a7d2e4f67b
-ms.sourcegitcommit: c6a2256f746f55d1cfb739649ffeee1f2f2152aa
+ms.custom: seo-marvel-apr2020
+description: 深入瞭解您的選項 Exchange Server 2007 已到達支援終止的位置，並開始規劃遷移至 Microsoft 365、Office 365 或 Exchange 2016。
+ms.openlocfilehash: c77d3de47ea917730874253c286565971d80ea48
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "45052435"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606399"
 ---
 # <a name="exchange-2007-end-of-support-roadmap"></a>Exchange 2007 終止支援藍圖
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 在**2017 年4月11日**，Exchange Server 2007 已到達支援終止。 若尚未開始從 Exchange 2007 遷移至 Microsoft 365、Office 365 或 Exchange 2016，現在是開始規劃的時間。 
   
@@ -52,7 +53,7 @@ Exchange 2007 的安裝會在此日期之後繼續執行。 不過，由於以�
     
 下列各節將詳細探討每個選項。
   
-### <a name="migrate-to-microsoft-365"></a>遷移至 Microsoft 365
+### <a name="migrate-to-microsoft-365"></a>移轉至 Microsoft 365
 
 將您的電子郵件遷移至 Microsoft 365，是協助您淘汰 Exchange 2007 部署的最佳且最簡單的選項。 透過遷移至 Microsoft 365，您可以從10年舊的技術將單一躍點變為一流的功能，如下所示：
   
@@ -179,13 +180,13 @@ Microsoft 365 也會先取得新功能並體驗，您的使用者通常可以立
     
 - Microsoft 365 將需要透過 TCP 埠443，使用 Outlook 無所不在連線至「混合伺服器」;
     
-- 您需要在內部部署 Active Directory 伺服器與 Microsoft 365 之間，使用 Azure Active Directory （Azure AD） Connect 來設定目錄同步處理。
+- 您必須在內部部署 Active Directory 伺服器與 Microsoft 365 之間，使用 Azure Active Directory (Azure AD) 連線來設定目錄同步處理。
     
-- 使用者將能夠使用使用者登入本機網路時所使用的相同使用者名稱和密碼登入其 Microsoft 365 信箱（需要使用密碼同步處理和/或 Active Directory Federation Services 的 Azure AD Connect）。
+- 使用者將能夠使用使用者登入本機網路時所使用的相同使用者名稱和密碼登入他們的 Microsoft 365 信箱。 (需要使用密碼同步處理和/或 Active Directory Federation Services 的 Azure AD Connect) ;
     
 - 您將需要 Microsoft 365 許可證，其中包含您要遷移的每個使用者信箱的 Exchange Online;
     
-- 使用者不需要在大多數裝置上設定新的 Outlook 設定檔（有些舊版的 Android 手機可能需要新的設定檔），而且不需要重新下載其電子郵件。
+- 使用者不需要在大部分的裝置上設定新的 Outlook 設定檔 (有些舊版的 Android 手機可能需要新的設定檔) ，而且不需要重新下載其電子郵件。
     
 如果您適合使用完整混合式移轉，請參閱下列可協助您進行移轉的相關資源：
   
@@ -203,11 +204,11 @@ Microsoft 365 也會先取得新功能並體驗，您的使用者通常可以立
 
 雖然我們極力相信您可以透過遷移至 Microsoft 365 達到最佳的價值和使用者經驗，我們也會瞭解某些組織必須將電子郵件保存在內部部署中。 這可能是因為法規需求，保證資料不會儲存在另一個國家/地區的資料中心，依此類推。 如果您選擇保留電子郵件的內部部署，您可以將 Exchange 2007 環境遷移至 Exchange 2010、Exchange 2013 或 Exchange 2016。
   
-如果您無法遷移至 Microsoft 365，建議您將遷移至 Exchange 2016。 Exchange 2016 包括舊版 Exchange 所包含的所有功能和進步，而且其最符合 Microsoft 365 的體驗（雖然有些功能僅適用于 Microsoft 365）。 請查看您遺漏的一些事項：
+如果您無法遷移至 Microsoft 365，建議您將遷移至 Exchange 2016。 Exchange 2016 包括舊版 Exchange 所包含的所有功能和進步，而且它最符合 Microsoft 365 (的體驗，不過某些功能只有在 Microsoft 365) 中提供。 請查看您遺漏的一些事項：
   
 |**Exchange 版本**|**功能**|
 |:-----|:-----|
-|Exchange 2010  <br/> | Role-Based 存取控制（沒有 ACLs 的許可權）  <br/>  Outlook Web App 信箱原則  <br/>  能夠在組織之間共用空閒/忙碌及委派行事曆  <br/> |
+|Exchange 2010  <br/> | Role-Based 不 ACLs 的存取控制 (許可權)   <br/>  Outlook Web App 信箱原則  <br/>  能夠在組織之間共用空閒/忙碌及委派行事曆  <br/> |
 |Exchange 2013  <br/> | *來自 Exchange 2010 和 ... 的功能*  <br/>  將伺服器角色數目減少為三個 (信箱、用戶端存取、邊際傳輸) 的簡化架構  <br/>  可協助保護機密資訊防止外洩的資料外洩防護原則 (DLP)  <br/>  大幅改善的 Outlook Web App 體驗  <br/> |
 |Exchange 2016  <br/> | *來自 Exchange 2013 的功能以及…*  <br/>  更進一步簡化的伺服器角色，只有信箱和邊際傳輸  <br/>  與 SharePoint 整合一併改善的 DLP  <br/>  改善的資料庫恢復  <br/>  線上文件共同作業  <br/> |
    
@@ -219,8 +220,8 @@ Microsoft 365 也會先取得新功能並體驗，您的使用者通常可以立
 |:-----|:-----|
 |終止支援日期  <br/> | 與 Exchange 2007 類似的是，每個 Exchange 版本都有自己的支援時間結尾：  <br/> **Exchange 2010** -1 月2020  <br/> **Exchange 2013** - 2023 年 4 月  <br/> **Exchange 2016** - 2025 年 10 月  <br/>  終止支援日期愈早，您將需要愈快執行其他移轉。 2020年1月比您想像的要近許多。  <br/> |
 |Exchange 2010 和2013的遷移路徑  <br/> |以下是遷移至 Exchange 2010 或 Exchange 2013 的一般階段：  <br/> 將 Exchange 2010 或2013安裝至現有的 Exchange 2007 組織將服務和其他基礎結構移至 Exchange 2010 或2013將信箱和公用資料夾移至 Exchange 2010 或2013解除委任其他 Exchange 2007 伺服器的授權 |
-|Exchange 2016 的遷移路徑  <br/> |以下是遷移至 Exchange 2016 的一般階段：  <br/> 將 Exchange 2013 安裝至現有的 Exchange 2007 組織將服務和其他基礎結構移至 exchange 2013 將信箱和公用資料夾移至 Exchange 2013 解除委任其他 Exchange 2007 伺服器將 Exchange 2016 安裝至現有的 Exchange 2013 組織。 將信箱、公用資料夾、服務及其他基礎結構移至 Exchange 2016 （順序無關緊要）。 解除委任餘下的 Exchange 2013 伺服器 > [!NOTE]> 從 exchange 2013 遷移至 exchange 2016 非常簡單。 這兩個版本都有幾乎相同的硬體需求。 因此，這些版本都是如此相容的，這表示您可以重新建立您為 Exchange 2013 購買的伺服器，並在其上安裝 Exchange 2016。 而且，使用線上信箱移動，大部分使用者永遠不會注意到他們的信箱即將移離伺服器，之後再回到 Exchange 2016。           |
-|版本共存  <br/> | 遷移至：  <br/> **Exchange 2016**Exchange 2016 無法安裝在包含 Exchange 2007 伺服器的組織中。 您必須先遷移至 Exchange 2010 或2013（強烈建議 Exchange 2013）、移除所有 Exchange 2007 伺服器，然後遷移至 Exchange 2016。  <br/> **Exchange 2010 或 exchange 2013**您可以將 Exchange 2010 或 Exchange 2013 安裝到現有的 Exchange 2007 組織中。 這可讓您安裝一或多部 Exchange 2010 或2013伺服器，並執行您的遷移。  <br/> |
+|Exchange 2016 的遷移路徑  <br/> |以下是遷移至 Exchange 2016 的一般階段：  <br/> 將 Exchange 2013 安裝至現有的 Exchange 2007 組織將服務和其他基礎結構移至 exchange 2013 將信箱和公用資料夾移至 Exchange 2013 解除委任其他 Exchange 2007 伺服器將 Exchange 2016 安裝至現有的 Exchange 2013 組織。 將信箱、公用資料夾、服務及其他基礎結構移至 Exchange 2016 (順序無關緊要) 。 解除委任餘下的 Exchange 2013 伺服器 > [!NOTE]> 從 exchange 2013 遷移至 exchange 2016 非常簡單。 這兩個版本都有幾乎相同的硬體需求。 因此，這些版本都是如此相容的，這表示您可以重新建立您為 Exchange 2013 購買的伺服器，並在其上安裝 Exchange 2016。 而且，使用線上信箱移動，大部分使用者永遠不會注意到他們的信箱即將移離伺服器，之後再回到 Exchange 2016。           |
+|版本共存  <br/> | 遷移至：  <br/> **Exchange 2016**Exchange 2016 無法安裝在包含 Exchange 2007 伺服器的組織中。 您必須先將 exchange 2010 或2013遷移至 Exchange 或 (我們強烈建議 Exchange 2013) 、移除所有 Exchange 2007 伺服器，然後遷移至 Exchange 2016。  <br/> **Exchange 2010 或 exchange 2013**您可以將 Exchange 2010 或 Exchange 2013 安裝到現有的 Exchange 2007 組織中。 這可讓您安裝一或多部 Exchange 2010 或2013伺服器，並執行您的遷移。  <br/> |
 |伺服器硬體  <br/> | 伺服器硬體需求已從 Exchange 2007 變更。 您必須確認要使用的硬體能夠相容。 如需每個版本的硬體需求相關詳細資訊，請參閱：  <br/> [Exchange 2016 系統需求](https://technet.microsoft.com/library/aa996719%28v=exchg.160%29.aspx) <br/> [Exchange 2013 系統需求](https://technet.microsoft.com/library/aa996719%28v=exchg.150%29.aspx) <br/> [Exchange 2010 系統需求](https://technet.microsoft.com/library/aa996719%28v=exchg.141%29.aspx) <br/>  透過大幅改善的 Exchange 效能，以及新款伺服器中的提升運算效能及儲存空間容量，您會發現只需要比較少的伺服器就能支援相同信箱數。  <br/> |
 |作業系統版本  <br/> | 每個版本的最低支援作業系統版本為：  <br/> **Exchange 2016** Windows Server 2012  <br/> **Exchange 2013** Windows Server 2008 R2 SP1  <br/> **Exchange 2010**Windows Server 2008 SP2  <br/>  如需作業系統支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/library/ff728623%28v=exchg.150%29.aspx)。  <br/> |
 |Active Directory 樹系功能等級  <br/> | 每個版本的最低支援 Active Directory 樹系功能等級為：  <br/> Exchange 2016** **：Windows Server 2008 R2 SP1  <br/> **Exchange 2013** Windows Server 2003  <br/> **Exchange 2010**Windows Server 2003  <br/>  如需樹系功能等級支援的相關詳細資訊，請參閱 [Exchange Server 支援性總表](https://technet.microsoft.com/library/ff728623%28v=exchg.150%29.aspx)。  <br/> |

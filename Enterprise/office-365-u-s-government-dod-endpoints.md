@@ -1,5 +1,5 @@
 ---
-title: Office 365 美國政府 DoD 端點
+title: Office 365 美國政府 DOD 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -19,14 +19,15 @@ search.appverid:
 ms.assetid: 5d7dce60-4892-4b58-b45e-ee42fe8a907f
 f1.keywords:
 - NOCSH
-description: 摘要： Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
+description: Office 365 需要連接至網際網路。 下列端點應可供使用 Office 365 美國政府 DoD 方案的客戶使用。
 hideEdit: true
-ms.openlocfilehash: d4c719711bf09f22c0d7adcd87b98bb0a97f579a
-ms.sourcegitcommit: b2767740251b257bb5e66d056731c6c9e7f2677d
+ms.custom: seo-marvel-mar2020
+ms.openlocfilehash: 1097baeca9bb3b1ba7c732f23cea4005d6b3529e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "46596890"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606501"
 ---
 # <a name="office-365-us-government-dod-endpoints"></a>Office 365 美國政府 DoD 端點
 
@@ -50,7 +51,7 @@ ms.locfileid: "46596890"
 
 - **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
+- **類別**：顯示端點設定是否分類為「最佳化​​」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
 - **ER**：如果端點集是透過 Azure ExpressRoute 與 Office 365 路由首碼一起支援，則為 **[是]** 。 包含路由首碼的 BGP 群組，會與所列的服務區域對齊。 當 ER 為**No**時，這表示此端點組不支援 ExpressRoute。 不過，不應假設在 ER 為**no**的端點集未宣告任何路由。 如果您打算使用 Azure AD Connect，請閱讀[特殊考慮區段](https://docs.microsoft.com/azure/active-directory/hybrid/reference-connect-instances#microsoft-azure-government)，以確保您具有適當的 Azure ad connect 設定。
 

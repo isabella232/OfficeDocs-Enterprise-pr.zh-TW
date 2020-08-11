@@ -1,5 +1,5 @@
 ---
-title: Microsoft 365 服務的 Cmdlet 參考
+title: Microsoft 365 服務的 Cmdlet 參考資料
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,19 +11,21 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: ''
+ms.custom:
+- Ent_Office_Other
+- seo-marvel-apr2020
 ms.assetid: 3a1ea1a6-edbd-4922-9ad3-0b075f7f9009
-description: 摘要：尋找適用于 Azure Active Directory、Exchange Online、SharePoint Online、商務用 Skype Online 及安全性 & 合規性的 PowerShell Cmdlet 參考主題的 Microsoft 365。
-ms.openlocfilehash: 71259e49fd70c4f3f7d7ebb7332fe75955797335
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 尋找適用于 Azure AD、Exchange Online、SharePoint Online、商務用 Skype Online 及安全性 & 規範的 Microsoft 365 PowerShell Cmdlet 參考主題。
+ms.openlocfilehash: 92423c9bd1f6a977c41d9077ab30122589ae374f
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230859"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606019"
 ---
-# <a name="cmdlet-references-for-microsoft-365-services"></a>Microsoft 365 服務的 Cmdlet 參考
+# <a name="cmdlet-references-for-microsoft-365-services"></a>Microsoft 365 服務的 Cmdlet 參考資料
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 各種 Microsoft 365 服務的 Cmdlet 參考主題提供如何使用每個 Cmdlet 的詳細資訊和指示。 此外，每個具有 PowerShell 支援的 Microsoft 365 服務都需要不同的連接指示。
   
@@ -34,7 +36,7 @@ ms.locfileid: "45230859"
 
 有關 Graph Cmdlet 的 Azure Active Directory PowerShell，請參閱《 [Azure Active directory PowerShell For graph 檔](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2?view=azureadps-2.0)》的 [**參考**] 區段。
 
-Windows PowerShell Cmdlet 的 Azure Active Directory 模組參考主題位於[Azure Active directory （MSOnline）檔](https://docs.microsoft.com/powershell/azure/active-directory/overview?view=azureadps-1.0)的 [**參考**] 區段中。
+Windows PowerShell Cmdlet 的 Azure Active Directory 模組參考主題位於[Azure Active directory (MSOnline) 檔](https://docs.microsoft.com/powershell/azure/active-directory/overview?view=azureadps-1.0)的 [**參考**] 區段中。
 
 如需 Microsoft 365 PowerShell 連線指示，請參閱[Connect To Microsoft 365 with PowerShell](connect-to-office-365-powershell.md)。
   
@@ -67,9 +69,9 @@ Microsoft 365 安全性與 &amp; 合規性中心 Cmdlet 參考主題位於[Excha
 
 
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
 

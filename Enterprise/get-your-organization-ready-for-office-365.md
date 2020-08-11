@@ -13,19 +13,21 @@ ms.collection:
 - M365-subscription-management
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 712fced7-f9d0-4fde-8b79-286262a5d0bc
-description: 取得資源的存取權，以規劃 Microsoft 365 企業版部署。
-ms.openlocfilehash: 4b779365fc1dbad05e1eacbba1e346530952d372
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+description: 本文提供規劃 Microsoft 365 企業版部署的檢查清單及其他資源。
+ms.openlocfilehash: 0f3fb9a70f9f5035f2f1a0f3a90ce1a50ac3c6b8
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774468"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606389"
 ---
 # <a name="plan-for-microsoft-365-enterprise"></a>Microsoft 365 Enterprise 的計畫
 
@@ -45,18 +47,18 @@ ms.locfileid: "44774468"
 
 - 您的 Microsoft 365 租用戶
 
-  包括對網際網路的網路連線、Microsoft 365 身分識別的規劃，以及與應用程式、內部部署、Azure 及其他元素的整合。 從[這裡](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)開始。
+  包括對網際網路的網路連線、Microsoft 365 身分識別的規劃，以及與應用程式、內部部署、Azure 及其他元素的整合。 如需詳細資訊，請參閱[訂閱、授權、帳戶及](subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings.md)租使用者的相關承租人。
 
 - 用戶端支援
 
-  包括憑證型驗證、行動裝置管理、驗證選項及承租人間共同作業。 從[這裡](office-365-client-support-certificate-based-authentication.md)開始。
+  包括憑證型驗證、行動裝置管理、驗證選項及承租人間共同作業。 請移至[憑證型驗證](office-365-client-support-certificate-based-authentication.md)，以取得詳細資訊。
 
 - 支援混合式新式驗證
 
-  包括使用主要 Microsoft 365 生產力應用程式的混合式設定時，規劃新式驗證。 從[這裡](hybrid-modern-auth-overview.md)開始。
+  包括使用主要 Microsoft 365 生產力應用程式的混合式設定時，規劃新式驗證。 如需詳細資訊，請移至[混合式新式驗證概述和必要條件](hybrid-modern-auth-overview.md)。
 
 - 舊版 Office 用戶端和伺服器
 
-  包括 Office 2007 和 Office 2010 用戶端和伺服器產品的遷移資訊。 從[這裡](plan-upgrade-previous-versions-office.md)開始。
+  包括 Office 2007 和 Office 2010 用戶端和伺服器產品的遷移資訊。 如需詳細資訊，請參閱[規劃升級](plan-upgrade-previous-versions-office.md)。
 
 您也可以登入您的 Microsoft 365 訂閱，並使用[microsoft 365 和 Office 365 服務的設定指南](setup-guides-for-office-365.md)。

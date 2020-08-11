@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.collection: Strat_SP_gtc
 localization_priority: Normal
-description: 了解如何將多地理位置環境中的 SharePoint 網站限制在特定的地理位置。
-ms.openlocfilehash: 1b1b072709ee54b2a18255798995650fc9f9942e
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+description: 在本文中，您將瞭解如何將 SharePoint 網站限制在多地理位置環境中的指定地理位置。
+ms.openlocfilehash: 7f0147d803fe4dbc6aa444a5e5014884c0f00beb
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433474"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606149"
 ---
 # <a name="restrict-sharepoint-site-content-to-a-geo-location"></a>將 SharePoint 網站內容限制在地理位置
 

@@ -13,20 +13,21 @@ search.appverid:
 ms.assetid: 0a35176a-e585-4dec-a90b-36be8314667f
 f1.keywords:
 - NOCSH
-description: 新的資料中心 geos 增加容量及計算資源，以支援我們持續的客戶需求和使用量成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置資料派駐服務。 核心客戶資料是指在 Microsoft Online Services 條款中所定義之客戶資料子集的字詞： Exchange Online 信箱內容（電子郵件內文、行事曆專案和電子郵件附件的內容），以及 SharePoint 線上網站內容和該網站中儲存的檔案，以及上傳至商務 OneDrive 的檔案。
-ms.openlocfilehash: 3cd30e46f9339fafb3a14f26d6995cd4cb953871
-ms.sourcegitcommit: 58aa8b2e89685490f849e0392d566b7bfb7b933e
+description: 瞭解新的 Office 365 資料中心 geos，以及如何使用資料派駐選項，將核心資料要求移至新的地理位置。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: d612c77eec4cb14e9522f3003c557e7e5bffd900
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "43547721"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606819"
 ---
 # <a name="moving-core-data-to-new-microsoft-365-datacenter-geos"></a>將核心資料移至新的 Microsoft 365 datacenter geos
 
 我們仍然開啟新的資料中心 geos for Microsoft 365 服務。 這些新的資料中心 geos 可增加容量及計算資源，以支援我們持續的客戶需求和使用量成長。 此外，新的資料中心 geos 提供核心客戶資料的地理位置資料派駐服務。 
 
 核心客戶資料是一項字詞，參考客戶資料的子集，包括： 
-- Exchange Online 信箱內容（電子郵件內文、行事曆專案和電子郵件附件的內容）
+- Exchange Online 信箱內容 (電子郵件內文、行事曆專案和電子郵件附件的內容) 
 - SharePoint 線上網站內容和儲存在該網站中的檔案
 - 上傳至商務 OneDrive 的檔案
 - 小組聊天訊息，包括私人郵件、通道訊息和交談中使用的影像
@@ -46,13 +47,13 @@ ms.locfileid: "43547721"
 |**南非**| 歐洲 | 南非 | 2019 年 7 月 |
 |**瑞士，列支敦斯登**| 歐洲 | 瑞士 | 2019 年 12 月 |
 |**德國**| 歐洲 | 德國 | 2019 年 12 月 |
-|**挪威**| 歐洲 | 挪威 | 2020年4月 |
+|**挪威**| 歐洲 | 挪威 | 2020 年 4 月 |
   
 新客戶或 Office 365 租使用者在新資料中心地理位置的可用性之後所建立的承租人，會自動將其核心客戶資料儲存在新的資料中心地理位置。
 
 
 >[!Note]
->我們已于2019年12月啟動德國資料中心區域。 新的 Microsoft 365 客戶若有與其租使用者相關的德國登入位址，其核心客戶資料會以德國的方式儲存在其他位置。 我們打算為未來的德國客戶提供從歐洲到德國的遷移。 目前，Microsoft Cloud 德國/Deutschland 客戶可以在新的德國資料中心區域要求遷移至 Office 365 服務。 如需詳細資訊，請參閱 how [to 自願 to in 從 Microsoft Cloud 德國（Microsoft Cloud Deutschland）遷移至 Office 365 services 中的新德國資料中心區域](https://aka.ms/office365germanymoveoptin)。
+>我們已于2019年12月啟動德國資料中心區域。 新的 Microsoft 365 客戶若有與其租使用者相關的德國登入位址，其核心客戶資料會以德國的方式儲存在其他位置。 我們打算為未來的德國客戶提供從歐洲到德國的遷移。 目前，Microsoft Cloud 德國/Deutschland 客戶可以在新的德國資料中心區域要求遷移至 Office 365 服務。 如需詳細資訊，請參閱[如何選擇從 Microsoft Cloud 德國遷移 (Microsoft Cloud Deutschland) 到 Office 365 服務](https://aka.ms/office365germanymoveoptin)。
 >
   
 [互動式資料中心地圖](https://office.com/datamaps)的一部分，所有資料中心 geos、資料中心及客戶資料的位置完整清單皆可供使用。 
@@ -65,7 +66,7 @@ ms.locfileid: "43547721"
     
 複雜性、精確度及規模，我們需要在全域運作及自動環境中執行資料移動，禁止當您的租使用者或任何其他單一租使用者完成資料移動時，無法進行共用。 當客戶的資料移動完成時，客戶會在訊息中心接收一次確認。 
     
-資料移動是後端服務作業，對使用者影響最小。 在[資料移動頁面的期間和之後](during-and-after-your-data-move.md)，會列出受影響的功能。 我們遵循[Microsoft Online Services 服務等級協定（SLA）](https://go.microsoft.com/fwlink/p/?LinkId=523897)的可用性，讓客戶在移動期間無需準備或監視任何專案。 如有需要，應執行任何服務維護的通知。 
+資料移動是後端服務作業，對使用者影響最小。 在[資料移動頁面的期間和之後](during-and-after-your-data-move.md)，會列出受影響的功能。 我們遵循[Microsoft Online Services 服務等級協定 (SLA) ](https://go.microsoft.com/fwlink/p/?LinkId=523897)以取得可用性，讓客戶無需準備或在移動期間進行監視。 如有需要，應執行任何服務維護的通知。 
 
 將資料移至新的資料中心地理位置，對客戶沒有額外的成本。
     

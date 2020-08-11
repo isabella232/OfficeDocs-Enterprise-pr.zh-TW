@@ -17,18 +17,19 @@ ms.custom:
 - O365ITProTrain
 - PowerShell
 - Ent_Office_Other
+- seo-marvel-apr2020
 ms.assetid: ede7598c-b5d5-4e3e-a488-195f02f26d93
-description: 摘要：使用 Microsoft 365 的 PowerShell，將角色指派給使用者帳戶。
-ms.openlocfilehash: 2be491692c23b1f528612cc5c56e041553f80c48
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 在本文中，瞭解如何使用 Microsoft 365 將角色指派給使用者帳戶，以快速且輕鬆地使用 PowerShell。
+ms.openlocfilehash: a3e1936dfa685c78f88e4f4333192f9a07de3cec
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230869"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606439"
 ---
 # <a name="assign-roles-to-microsoft-365-user-accounts-with-powershell"></a>使用 PowerShell 將角色指派給 Microsoft 365 使用者帳戶
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您可以使用 Microsoft 365 PowerShell，快速且輕鬆地將角色指派給使用者帳戶。
 
@@ -40,7 +41,7 @@ ms.locfileid: "45230869"
 
 首先，使用全域系統管理員帳戶[連接至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
-接下來，決定要新增至角色之使用者帳戶的登入名稱（例如： fredsm@contoso.com）。 這也稱為使用者主要名稱（UPN）。
+接下來，決定要新增至角色的使用者帳戶登入名稱 (例如： fredsm@contoso.com) 。 這也稱為使用者主要名稱 (UPN) 。
 
 接下來，決定角色的名稱。 使用[Azure Active Directory 中的系統管理員角色許可權清單](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。
 
@@ -89,7 +90,7 @@ Get-AzureADDirectoryRole | Where { $_.DisplayName -eq $roleName } | Get-AzureADD
   
 ### <a name="for-a-single-role-change"></a>針對單一角色變更
 
-特定使用者帳戶最常見的方式是顯示名稱或其電子郵件名稱，也就是知道其登入名稱或使用者主要名稱（UPN）。
+特定使用者帳戶最常見的方式是顯示名稱或其電子郵件名稱，也就是知道其登入名稱或使用者主要名稱 (UPN) 。
 
 #### <a name="display-names-of-user-accounts"></a>使用者帳戶的顯示名稱
 
@@ -131,7 +132,7 @@ $roleName="<The role name you want to assign to the account>"
 Add-MsolRoleMember -RoleMemberEmailAddress (Get-MsolUser -All | Where DisplayName -eq $dispName).UserPrincipalName -RoleName $roleName
 ```
 
-複製命令，並將其貼到 [記事本]。 針對 **$dispName**和 **$roleName**變數，以其值取代描述文字、移除 \< and > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell 的整合式腳本環境（ISE）。
+複製命令，並將其貼到 [記事本]。 針對 **$dispName**和 **$roleName**變數，以其值取代描述文字、移除 \< and > 字元，並留下引號。 複製已修改的列，並將其貼到 windows 的 Windows Azure Active Directory 模組中 PowerShell] 視窗以執行。 或者，您也可以使用 Windows PowerShell 整合型腳本環境 (ISE) 。
   
 以下是已完成命令集的範例：
   
@@ -201,7 +202,7 @@ Add-MsolRoleMember -RoleMemberEmailAddress $upnName -RoleName $roleName
   Get-MsolRole | Sort Name | Select Name,Description
   ```
 
-接下來，建立一個逗號分隔值（CSV）文字檔，其中包含 [顯示名稱] 或 [UPN] 和 [角色名稱] 欄位。 您可以使用 Microsoft Excel 輕鬆做到這一點。
+接下來，建立一個逗號分隔值 (CSV) 文字檔，該文字檔具有顯示名稱或 UPN 及角色名稱欄位。 您可以使用 Microsoft Excel 輕鬆做到這一點。
 
 以下是顯示名稱的範例：
   
@@ -235,8 +236,8 @@ $roleChanges=Import-Csv $fileName | ForEach { Add-MsolRoleMember -RoleMemberEmai
 
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+- [以 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
 - [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
-- [Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+- [開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)

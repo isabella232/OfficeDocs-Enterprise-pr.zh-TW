@@ -18,17 +18,18 @@ search.appverid:
 f1.keywords:
 - NOCSH
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
-description: 保護您的 Microsoft 365 訂閱的全域系統管理員存取權。
-ms.openlocfilehash: fdab22944902b554bc7fa295d189cfd2899933ef
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 本文提供保護 Microsoft 365 訂閱之全域管理員存取的相關資訊。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 5184b39a48348b07f0a16ce3db2aeaccfe0b2d21
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229759"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606189"
 ---
 # <a name="protect-your-microsoft-365-global-administrator-accounts"></a>保護您的 Microsoft 365 全域管理員帳戶
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 Microsoft 365 訂閱的安全性違規（包括資訊竊取和網路釣魚攻擊）通常會危及 Microsoft 365 全域管理員帳戶的認證。 雲端的安全性是您和 Microsoft 之間的合作關係：
   
@@ -48,7 +49,7 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
 
 需要全域管理員許可權的系統管理工作相對較少，例如指派角色給使用者帳戶。 因此，請執行下列步驟，而不是使用已獲指派全域系統管理員角色的日常使用者帳戶：
   
-1. 決定已指派全域系統管理員角色的使用者帳戶集。 您可以使用 Azure Active （Azure AD）目錄 PowerShell for Graph 命令來執行這項作業：
+1. 決定已指派全域系統管理員角色的使用者帳戶集。 您可以使用 Azure Active (Azure AD) Directory PowerShell for Graph] 命令來執行這項操作：
   
   ```powershell
   Get-AzureADDirectoryRole | where { $_.DisplayName -eq "Company Administrator" } | Get-AzureADDirectoryRoleMember | Ft DisplayName
@@ -89,7 +90,7 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
   
 ## <a name="step-2-configure-multi-factor-authentication-for-your-dedicated-microsoft-365-global-administrator-accounts-and-use-the-strongest-form-of-additional-verification"></a>步驟 2： 為專用的 Microsoft 365 全域管理員帳戶設定多重要素驗證，並使用最強的額外驗證形式
 
-多重要素驗證（MFA）需要帳戶名稱和密碼以外的其他資訊。 Microsoft 365 支援下列其他驗證方法：
+多重要素驗證 (MFA) 需要帳戶名稱和密碼以外的其他資訊。 Microsoft 365 支援下列其他驗證方法：
   
 - Microsoft Authenticator 應用程式
 
@@ -102,10 +103,10 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
 - 生物特徵辨識裝置
     
 >[!Note]
->針對必須遵守國家標準及技術研究院（NIST）標準的組織，使用電話通話或以短信為基礎的其他驗證方法會受到限制。 如需詳細資訊，請按一下[這裡](https://pages.nist.gov/800-63-FAQ/#q-b01)。
+>針對必須遵守全國研究院標準及技術的組織 (NIST) 標準，會限制使用電話通話或以文字訊息為基礎的其他驗證方法。 如需詳細資訊，請按一下[這裡](https://pages.nist.gov/800-63-FAQ/#q-b01)。
 >
 
-如果您是一部小型企業，其使用的使用者帳戶只會儲存在雲端中（僅限雲端身分識別模型），請使用下列步驟，使用傳送至 smart phone 的來電或短信驗證碼，設定 MFA：
+如果您是一位小型企業，使用僅儲存在雲端中的使用者帳戶 (僅限雲端身分識別模型) ，請使用下列步驟，使用傳送至 smart phone 的來電或短信驗證碼，設定 MFA：
   
 1. [設定 MFA](https://docs.microsoft.com/office365/admin/security-and-compliance/set-up-multi-factor-authentication)。
     
@@ -135,23 +136,23 @@ Microsoft 提供的功能可協助保護您的組織，但只有在您使用這�
   
 ### <a name="privileged-access-workstation"></a>許可權存取工作站
 
-為了確保高特權工作的執行盡可能安全，請使用一種特殊許可權的存取工作站（PAW）。 PAW 是一種專用的電腦，只用于機密設定工作，例如要求全域管理員帳戶的 Microsoft 365 設定。 由於這部電腦不會在每日使用網際網路流覽或傳送電子郵件，因此可從網際網路攻擊和威脅中獲得更好的保護。
+為了確保高特權工作的執行盡可能安全，請使用一種特殊許可權存取工作站 (PAW) 。 PAW 是一種專用的電腦，只用于機密設定工作，例如要求全域管理員帳戶的 Microsoft 365 設定。 由於這部電腦不會在每日使用網際網路流覽或傳送電子郵件，因此可從網際網路攻擊和威脅中獲得更好的保護。
   
 如需如何設定 PAW 的指示，請參閱 [https://aka.ms/cyberpaw](https://aka.ms/cyberpaw) 。
   
 ### <a name="azure-ad-privileged-identity-management"></a>Azure AD Privileged Identity Management
 
-您可以使用 Azure AD 特權身分識別管理（PIM）將全域系統管理員角色指派給必要的即時指派，以在需要時，自行指派全域系統管理員角色。
+您可以使用 Azure AD 特權身分識別管理 (PIM) ，以在需要時立即為全域系統管理員角色指派，而不是讓全域系統管理員帳戶永久指派全域系統管理員角色。
   
 而非全域系統管理員帳戶是永久管理員，他們會變成合格的系統管理員。 全域系統管理員角色會停用，直到某人需要為止。 然後，您會完成啟用程式，將全域系統管理員角色新增到全域管理員帳戶中的預先決定的時間長度。 當時間到期時，PIM 會從全域管理員帳戶移除全域系統管理員角色。
   
 使用 PIM 和此程式可大幅減少全域管理員帳戶受到惡意使用者攻擊和使用的時間量。
 
-PIM 可用於 Azure AD Premium P2，其隨附于 Microsoft 365 企業版 E5 或 Enterprise 可移動性 + Security （EMS） E5，您也可以為全域系統管理員帳戶購買個別的授權。
+PIM 可與 Azure AD Premium P2 搭配使用，其隨附于 Microsoft 365 企業版 E5 或 Enterprise 可移動性 + Security (EMS) E5，您也可以為全域系統管理員帳戶購買個別的授權。
   
 如需詳細資訊，請參閱[AZURE AD 特權身分識別管理](https://docs.microsoft.com/azure/active-directory/active-directory-privileged-identity-management-configure)。
   
-### <a name="security-information-and-event-management-siem-software-for-microsoft-365-logging"></a>Microsoft 365 記錄的安全性資訊和事件管理（SIEM）軟體
+### <a name="security-information-and-event-management-siem-software-for-microsoft-365-logging"></a>Microsoft 365 記錄的安全性資訊和事件管理 (SIEM) 軟體
 
 在伺服器上執行的 SIEM 軟體會即時分析應用程式和網路硬體所建立的安全性警示和事件。 若要讓您的 SIEM 伺服器在其分析和報告功能中包含 Microsoft 365 的安全性警示和事件，請整合 Azure AD 至您的 SEIM。 請參閱[Azure 記錄整合簡介](https://docs.microsoft.com/azure/security/security-azure-log-integration-overview)。
 
@@ -163,6 +164,6 @@ PIM 可用於 Azure AD Premium P2，其隨附于 Microsoft 365 企業版 E5 或 
 - 如果您使用的是混合身分識別，[準備目錄同步](prepare-for-directory-synchronization.md)處理
 
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Microsoft 365 安全性藍圖](https://docs.microsoft.com/office365/securitycompliance/security-roadmap)。

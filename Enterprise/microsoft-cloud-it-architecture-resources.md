@@ -14,16 +14,17 @@ f1.keywords:
 - CSH
 ms.custom:
 - Ent_Architecture
+- seo-marvel-apr2020
 ms.assetid: 28986107-e2fb-4116-bfdd-f66d751a7c16
 search.appverid:
 - MET150
-description: 摘要：了解 Microsoft 身分識別、安全性、網路和混合式的核心雲架構概念。使用 Microsoft 雲端服務時，檢閱有關保護檔案、身分識別及裝置的規定建議。
-ms.openlocfilehash: f19a84297de0ff809979bc5735eb8c19cfbb7f57
-ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+description: 在本文中，您將會發現可深入瞭解核心 Microsoft cloud IT 架構的資源，以及保護 & 部署程式的相關建議。
+ms.openlocfilehash: 644dc437fe1d0c3dc60c3e191a98ee52e761e03a
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46592177"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605675"
 ---
 # <a name="microsoft-cloud-it-architecture-resources"></a>Microsoft Cloud IT 架構資源
 

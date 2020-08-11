@@ -14,13 +14,14 @@ localization_priority: Normal
 ms.assetid: f47e3e09-b1dc-4b80-b6ea-fd6e0933407f
 f1.keywords:
 - NOCSH
-description: 資料移動是後端作業，對使用者的影響最小。 Microsoft 將租使用者的每一個服務和相關資料移至新的資料中心地理位置時，不需要執行任何動作。 資料傳輸和驗證會在背景中預先進行，並將對使用者的影響降至最低。
-ms.openlocfilehash: d07c9c62a778ce23d2e088ddeb8b34346911a19a
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+description: 資料移動是指 Microsoft 將租使用者的服務和相關資料移至新的資料中心地理位置時，會發生後端作業。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 6dbfbd9f33aba84086b257ce5a93f01bb707a54c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774488"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606409"
 ---
 # <a name="during-and-after-your-data-move"></a>資料移動期間和之後
 
@@ -53,7 +54,7 @@ ms.locfileid: "44774488"
   
 ### <a name="open-shared-folder-in-outlook-web-access"></a>在 Outlook Web Access 中開啟「共用資料夾」
 
-有些使用者使用「共用資料夾」功能，在 Outlook Web Access 中從另一個信箱（該使用者有讀取或寫入權限）開啟共用郵件資料夾。 下表說明在信箱移動期間，共用資料夾的存取如何運作。 請注意，在移動期間，具有共用信箱的完整許可權的使用者可以使用 Outlook Web Access 開啟信箱。 
+部分使用者使用「共用資料夾」功能，從其他信箱 (開啟共用郵件資料夾，該使用者具有在 Outlook Web Access 中) 讀取或寫入權限。 下表說明在信箱移動期間，共用資料夾的存取如何運作。 請注意，在移動期間，具有共用信箱的完整許可權的使用者可以使用 Outlook Web Access 開啟信箱。 
   
 |**設定**|**描述**|
 |:-----|:-----|
@@ -104,7 +105,7 @@ ms.locfileid: "44774488"
     
 - eDiscovery：在編目挑選變更之前，不會顯示在遷移期間變更的專案。
     
-- 資料遺失防護（DLP）：在編目挑選變更之前，不會對變更的專案強制執行原則。
+- 資料遺失防護 (DLP) ：原則不會對變更的專案執行，直到編目拾取變更為止。
 
 ## <a name="microsoft-teams"></a>Microsoft Teams
 
@@ -123,11 +124,11 @@ ms.locfileid: "44774488"
   
 |**在整個移動期間可運作的功能**|**移動部分期間可能會限制的功能**|
 |:-----|:-----|
-| 立即訊息和語音通話  <br/>  使用者可以新增連絡人、新增連絡人群組、新增會議、設定其位置，以及變更「今天所發生的情形」。  <br/>  音訊會議提供者（ACP）設定會複製到目標資料中心地理位置。 如果目標資料中心存在 ACP 提供者，則會運作。 否則，它將不會。  <br/> | 租使用者系統管理員 TRPS （租使用者遠端 PowerShell）將無法供系統管理員建立會話。  <br/>  租使用者系統管理員 LAC 將無法供系統管理員登入和變更使用者設定。  <br/> |
+| 立即訊息和語音通話  <br/>  使用者可以新增連絡人、新增連絡人群組、新增會議、設定其位置，以及變更「今天所發生的情形」。  <br/>  音訊會議提供者 (ACP) 設定會複製到目標資料中心地理位置。 如果目標資料中心存在 ACP 提供者，則會運作。 否則，它將不會。  <br/> | 承租人 Admin TRPS (承租人 Remote PowerShell) 將無法供系統管理員建立會話。  <br/>  租使用者系統管理員 LAC 將無法供系統管理員登入和變更使用者設定。  <br/> |
    
 |**移動後**|
 |:-----|
-| 會議資料（上傳的簡報等）將不會移動，且必須重新上傳。  <br/>  舊版的 Lync 用戶端（例如 Lync 2010 用戶端和 Lync for Mac 2011 用戶端）會被稱為快取 DNS 資訊至導致登入問題的服務。 如果使用者不在最新的商務用 Skype Windows 用戶端，則可能需要清除 DNS 快取。 請參閱[Office 365 中的商務用 Skype ONLINE DNS 設定問題疑難排解](https://docs.microsoft.com/skypeforbusiness/troubleshoot/online-configuration/dns-configuration-issue)。 Lync for Mac 用戶端使用者應遵循[這些指示](https://support.microsoft.com/kb/2629861)。  <br/> |
+| 會議資料 (上傳的簡報等 ) 不會移動，也不需要重新上傳。  <br/>  舊版的 Lync 用戶端（例如 Lync 2010 用戶端和 Lync for Mac 2011 用戶端）會被稱為快取 DNS 資訊至導致登入問題的服務。 如果使用者不在最新的商務用 Skype Windows 用戶端，則可能需要清除 DNS 快取。 請參閱[Office 365 中的商務用 Skype ONLINE DNS 設定問題疑難排解](https://docs.microsoft.com/skypeforbusiness/troubleshoot/online-configuration/dns-configuration-issue)。 Lync for Mac 用戶端使用者應遵循[這些指示](https://support.microsoft.com/kb/2629861)。  <br/> |
    
 ### <a name="skype-for-business-moves-that-involve-a-third-party-audio-conferencing-provider"></a>涉及協力廠商音訊會議提供者的商務用 Skype 移動
 適用于商務用 Skype 的協力廠商音訊會議提供者附加元件服務，不適用於位於新地理位置特定資料中心的使用者。  使用協力廠商音訊會議提供者服務的現有客戶不應要求移至新的地理特定資料中心。  新的特定地理位置資料中心部署的新客戶必須要求移至地區資料中心，才能使用協力廠商音訊會議提供者。

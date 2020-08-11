@@ -16,20 +16,21 @@ ms.custom:
 - LIL_Placement
 - PowerShell
 - O365ITProTrain
+- seo-marvel-apr2020
 ms.assetid: ba235f4f-e640-4360-81ea-04507a3a70be
 search.appverid:
 - MET150
-description: 如何使用 PowerShell 將 Microsoft 365 授權指派給未授權的使用者。
-ms.openlocfilehash: 25a57158be82f985885a7ceaf89f526f9d522b4d
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 在本文中，您將瞭解如何使用 PowerShell 將 Microsoft 365 授權指派給未授權的使用者。
+ms.openlocfilehash: 824d6b786c3334ae36929e50298e6be0aafd9cb2
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229829"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606469"
 ---
 # <a name="assign-microsoft-365-licenses-to-user-accounts-with-powershell"></a>使用 PowerShell 將 Microsoft 365 授權指派給使用者帳戶
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 使用者必須先將授權方案的授權指派給他們的帳戶，才可使用任何 Microsoft 365 服務。 您可以使用 PowerShell 快速將授權指派給未授權的帳戶。 
 
@@ -48,7 +49,7 @@ ms.locfileid: "45229829"
 Get-AzureADSubscribedSku | Select SkuPartNumber
 ```
 
-接下來，取得您想要新增授權的帳戶登入名稱，也稱為使用者主要名稱（UPN）。
+接下來，取得您想要新增授權的帳戶登入名稱，也稱為使用者主要名稱 (UPN) 。
 
 接下來，確定使用者帳戶已指派使用位置。
 
@@ -122,7 +123,7 @@ Set-MsolUser -UserPrincipalName "belindan@litwareinc.com" -UsageLocation US
 Set-MsolUserLicense -UserPrincipalName "<Account>" -AddLicenses "<AccountSkuId>"
 ```
 
-此範例會將**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權計畫中的授權指派給未授權的使用者**belindan \@ litwareinc.com**：
+此範例會將**litwareinc:ENTERPRISEPACK** (Office 365 Enterprise E3) 授權方案的授權指派給未授權的使用者**belindan \@ litwareinc.com**：
   
 ```powershell
 Set-MsolUserLicense -UserPrincipalName "belindan@litwareinc.com" -AddLicenses "litwareinc:ENTERPRISEPACK"
@@ -138,7 +139,7 @@ Get-MsolUser -All -UnlicensedUsersOnly [<FilterableAttributes>] | Set-MsolUserLi
 >您無法將多個授權指派給使用者，請使用相同的授權計畫。 如果您沒有足夠的可用授權，授權會依照**Get-MsolUser** Cmdlet 所傳回的順序指派給使用者，直到可用的授權執行完畢為止。
 >
 
-此範例會將**litwareinc:ENTERPRISEPACK** （Office 365 企業版 E3）授權計畫中的授權指派給所有未授權的使用者：
+此範例會將 Office 365 Enterprise E3) 授權計畫中**litwareinc:ENTERPRISEPACK** (的授權指派給所有未授權的使用者：
   
 ```powershell
 Get-MsolUser -All -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"
@@ -150,13 +151,13 @@ Get-MsolUser -All -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwa
 Get-MsolUser -All -Department "Sales" -UsageLocation "US" -UnlicensedUsersOnly | Set-MsolUserLicense -AddLicenses "litwareinc:ENTERPRISEPACK"
 ```
   
-## <a name="move-a-user-to-a-different-subscription-license-plan-with-the-azure-active-directory-powershell-for-graph-module"></a>使用適用于 Graph 模組的 Azure Active Directory PowerShell，將使用者移至不同的訂閱（授權計畫）
+## <a name="move-a-user-to-a-different-subscription-license-plan-with-the-azure-active-directory-powershell-for-graph-module"></a>使用適用于 Graph 模組的 Azure Active Directory PowerShell，將使用者移至不同訂閱 (授權方案) 
 
 首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
   
-接下來，取得您要切換訂閱之使用者帳戶的登入名稱，也稱為使用者主要名稱（UPN）。
+接下來，取得您要切換訂閱的使用者帳戶登入名稱，也稱為使用者主要名稱 (UPN) 。
 
-接下來，使用此命令列出租使用者的訂閱（授權方案）。
+接下來，使用此命令列出租使用者 (授權方案) 的訂閱。
 
 ```powershell
 Get-AzureADSubscribedSku | Select SkuPartNumber
@@ -171,9 +172,9 @@ $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty Assigned
 $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
 ```
 
-識別使用者目前擁有的訂閱（從訂閱）和使用者移動的訂閱（TO 訂閱）。
+識別使用者目前已 (FROM 訂閱) 和使用者移至其中的訂閱 (TO 訂閱) 。
 
-最後，指定 TO 和 FROM 訂閱名稱（SKU 部分編號）並執行這些命令。
+最後，指定 TO 及 FROM 訂閱名稱 (SKU 部分編號) 並執行這些命令。
 
 ```powershell
 $subscriptionFrom="<SKU part number of the current subscription>"
@@ -202,10 +203,10 @@ $userList = Get-AzureADUser -ObjectID $userUPN | Select -ExpandProperty Assigned
 $userList | ForEach { $sku=$_.SkuId ; $licensePlanList | ForEach { If ( $sku -eq $_.ObjectId.substring($_.ObjectId.length - 36, 36) ) { Write-Host $_.SkuPartNumber } } }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 PowerShell 管理使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)

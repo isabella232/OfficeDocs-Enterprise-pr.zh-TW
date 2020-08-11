@@ -13,13 +13,14 @@ search.appverid:
 ms.assetid: 5bb64310-36fc-473d-b791-a0176f21707f
 f1.keywords:
 - NOCSH
-description: 現有的 Office 365 客戶將需要提交其國家/地區期限之前的要求，以便將參與 Microsoft 365 服務的客戶資料移至新的地理位置。
-ms.openlocfilehash: 06deead188f985f7cd8e410937ae612f3d509b7c
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+description: 現有的 Office 365 客戶必須先提交要求，然後才將其 Microsoft 365 服務資料移至新的地理位置。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 72b7c7d1f6b6b19ff5749787fd8ea6e789c3372a
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433754"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606159"
 ---
 # <a name="how-to-request-your-data-move"></a>如何要求資料移動
 
@@ -54,7 +55,7 @@ ms.locfileid: "45433754"
   
 **下列其中一項適用時，您可能不會看到此區段**：
 - 您的租使用者不適合 Office 365 移動程式。  資格取決於承租人註冊國家/地區。
-- 您所有的核心客戶資料都已經位於新的 geo 中（請參閱頁面的 [資料位置] 區段）。 
+- 您所有的核心客戶資料都已經位於新的 geo 中 (請參閱頁面) 的 [資料位置] 區段。 
   
 如果您的組織有資料常駐需求，而且您需要要求遷移，請標記核取方塊，然後再進行**儲存**。
   

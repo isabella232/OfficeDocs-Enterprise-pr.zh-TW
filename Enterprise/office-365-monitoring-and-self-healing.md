@@ -14,19 +14,21 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Microsoft 365 監控及自我修復功能的相關資訊。
-ms.openlocfilehash: 88338f722e8563c3db6573ac6ab64252cb98c450
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.custom:
+- seo-marvel-apr2020
+description: 在本文中，您將深入瞭解 Microsoft 365 的監控及自我修復功能。
+ms.openlocfilehash: 1fa42e5e4ac20462b0d32db28f59c1c51b8a1f35
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998760"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605525"
 ---
 # <a name="microsoft-365-monitoring-and-self-healing"></a>Microsoft 365 監控及自我修復
 
 由於 Microsoft 365 規模的比例，使客戶資料保持彈性且安全，不需要內建監控，只是智慧化且具有快速且可靠的自我修復功能。 以 Microsoft 365 的比例監控一組服務是非常困難的。 需要引進新的 mindsets 和方法，並在已連線的全域環境中建立新的技術集合，以進行操作及管理服務。 我們已從傳統的監控方式收集資料集合及篩選，以建立以資料分析為基礎的方法提醒;在該資料中採取信號及建立信任，然後使用「自動化」來復原或解決問題。 這種方法可協助您從復原方程式中移出，進而使作業執行成本變低、速度更快，且易出錯。 
 
-Microsoft 365 監控的基礎是一組技術集合，其中包含了資料洞察力引擎，該引擎是以 Azure、SQL Azure 及[開放來源流式資料庫技術](https://cassandra.apache.org/)為基礎。 其設計目的是收集和匯總資料，並取得結論。 目前，它會在許多地區內，處理每小時500000000個以上的事件（每100000小時大約 15 TB）分散于數十個資料中心，而這些數位則不斷增加。 
+Microsoft 365 監控的基礎是一組技術集合，其中包含了資料洞察力引擎，該引擎是以 Azure、SQL Azure 及[開放來源流式資料庫技術](https://cassandra.apache.org/)為基礎。 其設計目的是收集和匯總資料，並取得結論。 目前，它會從超過100000個伺服器處理超過500000000個事件， (每天大約 15 TB) 分散于許多地區的數十個資料中心，且這些數位不斷增加。 
 
 Microsoft 365 使用*外部監控*，這包括建立綜合交易，以測試重要的內容。 例如，在 Exchange Online 中，每個案例會以分散的方式每隔五分鐘的時間來測試每個資料庫，以提供系統中所有專案的接近連續覆蓋率。 從多個位置，每日250000000測試交易會執行，以建立服務的可靠基準或心跳。 
 
@@ -48,8 +50,8 @@ Microsoft 365 也會使用*紅色警示*的概念，它會將資料中心內所�
 
 ## <a name="autoreseed"></a>AutoReseed
 
-Exchange Online 伺服器部署在設定中，以將多個資料庫及其記錄資料流程儲存在相同的非 RAID 磁片上。 這項設定通常稱為*一組磁片*（JBOD），因為沒有任何儲存冗余機制（例如 RAID）是用來複製磁片上的資料。 當 JBOD 環境中的磁片失敗時，該磁片上的資料將會遺失。 
+Exchange Online 伺服器部署在設定中，以將多個資料庫及其記錄資料流程儲存在相同的非 RAID 磁片上。 這項設定通常稱為 (JBOD) *一組磁片*，因為不會使用任何儲存重複機制（例如 RAID）來複製磁片上的資料。 當 JBOD 環境中的磁片失敗時，該磁片上的資料將會遺失。 
 
-考慮到 Exchange Online 的大小，而且在其內部部署的事實是數百萬磁片磁碟機，Exchange Online 中的一般情況下會發生磁片磁碟機故障。 實際上，每日超過100的失敗。 當內部部署企業部署中的磁片失敗時，系統管理員必須手動更換失敗的磁片並還原受影響的資料。 在雲端部署中，Microsoft 365 的大小是以操作員（cloud administrators）手動取代磁片的方式，也不是切實可行或經濟可行的。 
+考慮到 Exchange Online 的大小，而且在其內部部署的事實是數百萬磁片磁碟機，Exchange Online 中的一般情況下會發生磁片磁碟機故障。 實際上，每日超過100的失敗。 當內部部署企業部署中的磁片失敗時，系統管理員必須手動更換失敗的磁片並還原受影響的資料。 在雲端部署中，Microsoft 365 的大小，使用操作員 (cloud administrators) 手動取代磁片既不實用也可行，也不是經濟可行的。 
 
 自動重新植入（或*AutoReseed*）是一項功能，取代了操作員導向的動作，以回應磁片失敗、資料庫損毀事件或其他需要重新植入資料庫副本的問題。 AutoReseed 專為磁碟故障後，使用佈建在系統上的備用磁碟自動還原資料庫備援而設計。 磁片失敗時，儲存在該磁片上的資料庫副本會自動重新植入至伺服器上預先設定的備用磁片，進而還原冗余。 

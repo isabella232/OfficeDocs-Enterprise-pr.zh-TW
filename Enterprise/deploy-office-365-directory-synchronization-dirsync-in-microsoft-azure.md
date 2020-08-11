@@ -17,18 +17,19 @@ f1.keywords:
 - CSH
 ms.custom:
 - Ent_Solutions
+- seo-marvel-apr2020
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
-description: 摘要：在 Azure 中的虛擬機器上部署 Azure AD Connect，以同步處理內部部署目錄與您 Microsoft 365 訂閱的 Azure AD 租使用者之間的帳戶。
-ms.openlocfilehash: bd1b973c60576002f110a909c0022b27f4595b81
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何在 Azure 中的虛擬機器上部署 Azure AD Connect，以同步處理內部部署目錄與 Azure AD 租使用者之間的帳戶。
+ms.openlocfilehash: 2872e3d5d233d04885fadd3e422ec1d15284ac26
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229969"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605739"
 ---
 # <a name="deploy-microsoft-365-directory-synchronization-in-microsoft-azure"></a>在 Microsoft Azure 中部署 Microsoft 365 目錄同步處理
 
-Azure Active Directory （Azure AD） Connect （以前稱為目錄同步處理工具、目錄同步處理工具或 DirSync.exe 工具）是您在加入網域的伺服器上安裝的應用程式，可將內部部署 Active Directory 網域服務（AD DS）使用者同步處理至您的 Microsoft 365 訂閱的 Azure AD 租使用者。 Microsoft 365 針對其目錄服務使用 Azure AD。 您的 Microsoft 365 訂閱包含 Azure AD 租使用者。 此租使用者也可以用來管理組織的身分識別與其他雲端工作負載，包括其他的 SaaS 應用程式和 Azure 中的應用程式。
+Azure Active Directory (Azure AD)  (Connect （以前稱為目錄同步處理工具、目錄同步處理工具或 DirSync.exe 工具) ）是您在加入網域的伺服器上安裝，以同步處理內部部署 Active Directory 網域服務 (AD DS) 使用者加入您的 Microsoft 365 訂閱的 Azure AD 租使用者。 Microsoft 365 針對其目錄服務使用 Azure AD。 您的 Microsoft 365 訂閱包含 Azure AD 租使用者。 此租使用者也可以用來管理組織的身分識別與其他雲端工作負載，包括其他的 SaaS 應用程式和 Azure 中的應用程式。
 
 您可以在內部部署伺服器上安裝Azure AD Connect，您也可以因為以下原因將其安裝在 Azure 中的虛擬機器上：
   
@@ -43,7 +44,7 @@ Azure Active Directory （Azure AD） Connect （以前稱為目錄同步處理�
   
 ## <a name="overview-of-deploying-microsoft-365-directory-synchronization-in-azure"></a>在 Azure 中部署 Microsoft 365 目錄同步處理的概覽
 
-下圖顯示在 Azure （目錄同步處理伺服器）中的虛擬機器上執行 Azure AD Connect，以同步處理內部部署 AD DS 樹系與 Microsoft 365 訂閱。
+下圖顯示在 Azure 中的虛擬機器上執行 Azure AD Connect (會將內部部署 AD DS 樹系同步處理至 Microsoft 365 訂閱的目錄同步處理伺服器) 。
   
 ![Azure 中虛擬機器上的 azure AD Connect 工具將內部部署帳戶同步處理至具有流量流量之 Microsoft 365 訂閱的 Azure AD 租使用者。](media/CP-DirSyncOverview.png)
   
@@ -65,7 +66,7 @@ Azure Active Directory （Azure AD） Connect （以前稱為目錄同步處理�
     
     安裝及設定 [Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594)。
     
-    設定 Azure AD Connect 需要 Azure AD 系統管理員帳戶的認證（使用者名稱和密碼）和 AD DS 企業系統管理員帳戶。 Azure AD Connect 會立即執行，並持續執行，以同步處理內部部署 AD DS 樹系與 Microsoft 365。
+    若要設定 Azure AD Connect，必須 (Azure AD 系統管理員帳戶和 AD DS 企業系統管理員帳戶的認證使用者名稱和密碼) 。 Azure AD Connect 會立即執行，並持續執行，以同步處理內部部署 AD DS 樹系與 Microsoft 365。
     
 在生產環境中部署此方案之前，您可以使用[模擬的企業基本](https://docs.microsoft.com/microsoft-365/enterprise/simulated-ent-base-configuration-microsoft-365-enterprise)設定中的指示，將此設定設為概念證明、示範或實驗。
   

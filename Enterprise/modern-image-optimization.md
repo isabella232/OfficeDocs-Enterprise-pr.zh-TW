@@ -14,17 +14,19 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 ms.reviewer: sstewart
 search.appverid:
 - MET150
-description: 了解如何在 SharePoint Online 新式網站頁面中最佳化影像。
-ms.openlocfilehash: b5b1af0e78b3be7f84b1ee83048010feabddf82e
-ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
+description: 瞭解如何使用 SharePoint Online 中所包含的工具，在 SharePoint 線上新式網站頁面中優化圖像。
+ms.openlocfilehash: 6130855d163da738a34605ba1057bbfc956ebf23
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46571126"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606899"
 ---
 # <a name="optimize-images-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化影像
 

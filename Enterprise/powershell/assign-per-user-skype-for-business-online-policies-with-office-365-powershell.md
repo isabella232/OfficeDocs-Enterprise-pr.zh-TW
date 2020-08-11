@@ -11,29 +11,29 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: 36743c86-46c2-46be-b9ed-ad9d4e85d186
 description: 摘要：使用 Microsoft 365 的 PowerShell，將每位使用者的通訊設定指派給商務用 Skype Online 原則。
-ms.openlocfilehash: 4522cfd877355794c32d9b9bdf14fb11cd0e71b4
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: a5850c24f991161ec1de817d5b3f5037e9526767
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229839"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606459"
 ---
 # <a name="assign-per-user-skype-for-business-online-policies-with-powershell-for-microsoft-365"></a>將每一使用者商務用 Skype Online 原則指派給 Microsoft 365 的 PowerShell
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 使用 Microsoft 365 PowerShell，是一種將每一使用者通訊設定指派給商務用 Skype Online 原則的有效方式。
   
-## <a name="before-you-begin"></a>開始之前
+## <a name="prepare-to-run-the-powershell-commands"></a>準備執行 PowerShell 命令
 
-使用這些指示設定執行命令（略過您已完成的步驟）：
+使用下列指示設定執行命令 (略過已完成的步驟) ：
   
 1. 下載及安裝[商務用 Skype Online 連接器模組](https://www.microsoft.com/download/details.aspx?id=39366)。
     
-2. 開啟 Windows PowerShell 命令提示字元，並執行下列命令： 
+2. 開啟 Windows PowerShell 命令提示字元，然後執行下列命令： 
     
 ```powershell
 Import-Module LyncOnlineConnector
@@ -46,7 +46,7 @@ Import-PSSession $sfbSession
     
 ## <a name="updating-external-communication-settings-for-a-user-account"></a>更新使用者帳戶的外部通訊設定
 
-假設您想要變更使用者帳戶上的外部通訊設定。 例如，您想要允許 Alex 與同盟使用者通訊（EnableFederationAccess 等於 True），但不是與 Windows Live 使用者進行通訊（EnablePublicCloudAccess 等於 False）。 若要這麼做，您必須執行下列兩項動作：
+假設您想要變更使用者帳戶上的外部通訊設定。 例如，您想要允許 Alex 與同盟使用者通訊 (EnableFederationAccess 等於 True) 但不是與 Windows Live 使用者 (EnablePublicCloudAccess 等於 False) 。 若要這麼做，您必須執行下列兩項動作：
   
 1. 尋找符合我們準則的外部存取原則。
     
@@ -58,7 +58,7 @@ Import-PSSession $sfbSession
 Get-CsExternalAccessPolicy -Include All| Where-Object {$_.EnableFederationAccess -eq $True -and $_.EnablePublicCloudAccess -eq $False}
 ```
 
-除非您已建立 Microsoft.rtc.management.writableconfig.policy.externalaccess.externalaccesspolicy 的任何自訂實例，否則該命令會傳回符合我們準則的一個原則（FederationOnly）。 範例如下：
+除非您已建立 Microsoft.rtc.management.writableconfig.policy.externalaccess.externalaccesspolicy 的任何自訂實例，否則該命令會傳回符合我們準則 (FederationOnly) 的一個原則。 範例如下：
   
 ```powershell
 Identity                          : Tag:FederationOnly
@@ -84,7 +84,7 @@ Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName "FederationOnly
 Get-CsOnlineUser -Filter {ExternalAccessPolicy -eq "FederationAndPICDefault"} | Select-Object DisplayName
 ```
 
-換句話說，向我們展示 Microsoft.rtc.management.writableconfig.policy.externalaccess.externalaccesspolicy 屬性設定為 FederationAndPICDefault 的所有使用者。 （為了限制螢幕上顯示的資訊數量，您可以使用 Select-Object Cmdlet 來顯示 [只顯示每位使用者的顯示名稱]。） 
+換句話說，向我們展示 Microsoft.rtc.management.writableconfig.policy.externalaccess.externalaccesspolicy 屬性設定為 FederationAndPICDefault 的所有使用者。  (，為了限制螢幕上顯示的資訊數量，請使用 Select-Object Cmdlet 來顯示 [只顯示每位使用者的顯示名稱]。 )  
   
 若要將所有使用者帳戶設定為使用相同原則，請使用下列命令：
   
@@ -100,12 +100,12 @@ Get-CsOnlineUser | Grant-CsExternalAccessPolicy "FederationAndPICDefault"
 Grant-CsExternalAccessPolicy -Identity "Alex Darrow" -PolicyName $Null
 ```
 
-這個命令會將指派給 Alex 的外部存取原則名稱設為 null 值（$Null）。 Null 表示 "nothing"。 換句話說，也就是沒有任何外部存取原則指派給 Alex。 當沒有任何外部存取原則指派給使用者時，該使用者就會受到全域原則的管理。
+這個命令會將指派給 Alex 的外部存取原則的名稱，設定為 null 值 ($Null) 。 Null 表示 "nothing"。 換句話說，也就是沒有任何外部存取原則指派給 Alex。 當沒有任何外部存取原則指派給使用者時，該使用者就會受到全域原則的管理。
   
 
 ## <a name="managing-large-numbers-of-users"></a>管理大量使用者
 
-若要管理大量的使用者（1000或更多），您必須使用[Invoke-Command](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7) Cmdlet，透過腳本區塊批次處理命令。  在先前的範例中，每次執行 Cmdlet 時，必須先設定此呼叫，然後等候結果，再將其傳送回來。  使用腳本區塊時，這可讓 Cmdlet 以遠端方式執行，並在完成之後傳送資料回來。 
+若要管理大量使用者 (1000 或以上) ，您必須使用[Invoke-Command](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-7) Cmdlet 透過腳本區塊批命令。  在先前的範例中，每次執行 Cmdlet 時，必須先設定此呼叫，然後等候結果，再將其傳送回來。  使用腳本區塊時，這可讓 Cmdlet 以遠端方式執行，並在完成之後傳送資料回來。 
 
 ```powershell
 Import-Module LyncOnlineConnector
@@ -136,10 +136,10 @@ $count = 0
 
 這會在不具備用戶端原則的時刻找到500使用者。 它會授與他們用戶端原則 "ClientPolicyNoIMURL" 和外部存取原則 "FederationAndPicDefault"。 結果會批分為50群組，而每批次50都會傳送至遠端電腦。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 PowerShell 管理商務用 Skype Online](manage-skype-for-business-online-with-office-365-powershell.md)
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)

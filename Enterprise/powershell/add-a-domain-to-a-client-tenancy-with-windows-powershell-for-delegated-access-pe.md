@@ -1,5 +1,5 @@
 ---
-title: 利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
+title: 使用適用于協力合作夥伴的 Windows PowerShell，新增網域至用戶端租使用者
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,15 +14,15 @@ ms.collection:
 - M365-subscription-management
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: f49b4d24-9aa0-48a6-95dd-6bae9cf53d2c
 description: 摘要：使用 Microsoft 365 PowerShell，將替代功能變數名稱新增至現有的客戶租使用者。
-ms.openlocfilehash: eabfa9dfcbb36cb54a2d51321dfe60f197290b10
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.openlocfilehash: 8b38caf72db57d5e80f0483062adb3bd2529672b
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433764"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606479"
 ---
 # <a name="add-a-domain-to-a-client-tenancy-with-windows-powershell-for-delegated-access-permission-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的 Windows PowerShell 新增用戶端租用網域
 
@@ -30,7 +30,7 @@ ms.locfileid: "45433764"
 
 您可以使用 microsoft 365 365 的 PowerShell 比使用 Microsoft 系統管理中心，以更快的速度建立與客戶的租用關聯的新網域。
   
-委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會將 Microsoft 365 訂閱捆綁到其客戶的服務產品中。 當他們銷售 Microsoft 365 訂閱時，系統會自動授與客戶租用的「管理」（AOBO）許可權，讓他們能管理及報告客戶租用。
+委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會將 Microsoft 365 訂閱捆綁到其客戶的服務產品中。 當他們銷售 Microsoft 365 訂閱時，系統會自動授與 (AOBO 的「管理」) 許可權給客戶租用，讓他們能管理及報告客戶租用。
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
 本主題中的程式需要使用 PowerShell 連接至[Microsoft 365](connect-to-office-365-powershell.md)。

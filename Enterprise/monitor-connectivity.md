@@ -11,19 +11,21 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 53cdb60c-a6b2-4848-b3ff-e7b75dc3fd1f
-description: 一旦您部署 Microsoft 365，您可以使用下列一些工具和技術來維護 Microsoft 365 的連線能力。您將需要瞭解官方服務健康情況和持續性指導方針，以及在慢速網路上使用 Microsoft 365 的最佳作法。
-ms.openlocfilehash: aa47ff76f70e48285c6ca5f21ffdf30f1db52521
-ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
+description: 在本文中，您將瞭解可用於監視及維護 Microsoft 365 連線的工具和技術。
+ms.openlocfilehash: 791352910cf82bf4d43543166cb4b1e974f9a238
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46571006"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606859"
 ---
 # <a name="monitor-microsoft-365-connectivity"></a>監視 Microsoft 365 連線能力
 
@@ -41,7 +43,7 @@ ms.locfileid: "46571006"
 
 您可以使用下列短連結返回這裡：[https://aka.ms/monitorconnectivity365](https://aka.ms/monitorconnectivity365)
   
-## <a name="see-also"></a>另請參閱
+## <a name="related-topics"></a>相關主題
 
 [設定 Microsoft 365 企業版服務和應用程式](configure-services-and-applications.md)
   

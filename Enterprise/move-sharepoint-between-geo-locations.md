@@ -11,14 +11,16 @@ ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 localization_priority: Normal
-f1.keywords: NOCSH
-description: 了解如何將 SharePoint 網站移至不同的地理位置。
-ms.openlocfilehash: 88c739e69f27df72cba3757f224ccd1a916d3148
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+f1.keywords:
+- NOCSH
+description: 瞭解如何將 SharePoint 網站移至多地理位置環境中的不同地理位置，並溝通對使用者所做的變更。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 8fdf6e3ec181ac5c4303579871c6f83112df1e3c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433864"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606839"
 ---
 # <a name="move-a-sharepoint-site-to-a-different-geo-location"></a>將 SharePoint 網站移至不同的地理位置
 
@@ -82,8 +84,8 @@ SharePoint 網站地理移動要求您從網站所在地理位置中的 SharePoi
 建議您在排程任何網站移動之前先進行驗證，以確保可以移動該網站。
 
 我們不支援移動具有下列項目的網站：
--   Business Connectivity Services
--   InfoPath 表單 
+-    Business Connectivity Services
+-    InfoPath 表單 
 - 套用的資訊版權管理 (IRM) 範本
 
 若要確保所有地理位置相容，請執行 `Get-SPOGeoMoveCrossCompatibilityStatus`。 這會顯示您的所有地理位置，以及環境是否與目的地地理位置相容。

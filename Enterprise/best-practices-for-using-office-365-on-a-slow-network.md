@@ -18,13 +18,14 @@ search.appverid:
 ms.assetid: fd16c8d2-4799-4c39-8fd7-045f06640166
 f1.keywords:
 - NOCSH
-description: 如果您的網際網路連線一直都很快且未曾中斷，不是很好嗎？ 或許那一天會到來。 但在此同時，有一些實務做法可暫時解決不聽使喚的網路，讓您仍可完成日常工作。
-ms.openlocfilehash: 3e9a3e91c5e1cc775d28742b39ea9c0ed507d2c9
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+ms.custom: seo-marvel-apr2020
+description: 本文會引導您完成在慢速網路上使用 Office 365 的最佳作法。
+ms.openlocfilehash: b4b81826dfca4c5962cc6aef026c3878e3b52304
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41844954"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605779"
 ---
 # <a name="best-practices-for-using-office-365-on-a-slow-network"></a>在網路緩慢的情況下使用 Office 365 的最佳做法
 

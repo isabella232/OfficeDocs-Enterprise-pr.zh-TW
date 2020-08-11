@@ -13,17 +13,19 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid: MET150
 ms.assetid: cbd2369c-fd96-464c-bf48-c99826b459ee
-description: 如果您的組織使用 Office 365 並限制網路上的電腦連線至網際網路，則在下列情況下，您將會發現應該包含在輸出允許清單中的端點 (Fqdn、埠、URLs、IPv4 和 IPv6 位址) 範圍，以確保您的電腦可以成功使用 Office 365。
+description: 在本文中，您將會發現使用 Office 365 美國政府版高方案之客戶可以到達的端點。
 hideEdit: true
-ms.openlocfilehash: f8c6707d4d77182c64564dc9f150e60a9153bb4b
-ms.sourcegitcommit: b2767740251b257bb5e66d056731c6c9e7f2677d
+ms.openlocfilehash: 509cbf028899d0e289bc151922c63f22a231a827
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "46596870"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606521"
 ---
 # <a name="office-365-us-government-gcc-high-endpoints"></a>Office 365 美國政府版高端點
 

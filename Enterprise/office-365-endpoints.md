@@ -17,14 +17,15 @@ f1.keywords:
 - CSH
 ms.custom:
 - Ent_TLGs
+- seo-marvel-apr2020
 ms.assetid: ''
-description: 摘要：請參閱下列文章，瞭解不同 Microsoft 365 雲端的網際網路端點。
-ms.openlocfilehash: 8fe95915f687b38a86fd13fb823a0db39637c47d
-ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+description: 針對 Microsoft 365 流量的目的地 IP 位址和 URLs，請針對不同 Microsoft 365 雲端的網際網路端點使用此清單文章。
+ms.openlocfilehash: 1ef9d3a97beb14a1d51827d145f6fdc644c49f3c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46592197"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606619"
 ---
 # <a name="microsoft-365-endpoints"></a>Microsoft 365 端點
 

@@ -7,7 +7,7 @@ ms.date: 04/14/2020
 audience: ITPro
 ms.topic: overview
 ms.service: o365-solutions
-localization_priority: Priority
+localization_priority: Normal
 ms.collection: Ent_O365
 search.appverid:
 - MET150
@@ -22,13 +22,14 @@ search.appverid:
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: Office 2010 伺服器和用戶端應用程式的支援服務即將結束，且不再提供自訂支援合約。 請立即使用此文章來開始規劃升級。
-ms.openlocfilehash: 50273a76873df8315c898ad622c82d44eea3972e
-ms.sourcegitcommit: d9abb99b336170f07b8f3f6d00fac19ad2159d3a
-ms.translationtype: HT
+description: 開始規劃從 Office 2010 伺服器和用戶端應用程式進行的升級，因為支援即將結束，且無法使用自訂支援協定。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 47e3239ee68e80cb03f8942fd9ef23645128da04
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "46502618"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46603625"
 ---
 # <a name="resources-to-help-you-upgrade-from-office-2010-servers-and-clients"></a>可幫助您從 Office 2010 伺服器和用戶端升級的資源
 

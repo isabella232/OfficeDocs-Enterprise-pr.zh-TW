@@ -9,18 +9,18 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.collection:
 - Strat_SP_gtc
 - SPO_Content
 localization_priority: Normal
-description: 深入了解在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
-ms.openlocfilehash: d66f33152d4960b4a837a1dd401199f3bb56e5b3
-ms.sourcegitcommit: bb122479c3a2757c0a5adde6c9f0c77c75ab3951
+description: 系統管理員可以瞭解如何在多地理位置環境中管理 SharePoint 和 OneDrive 服務。
+ms.openlocfilehash: 166aa61b6ef3158c8ff479fd1a93252ef1bc50d7
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "46548895"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606109"
 ---
 # <a name="administering-a-multi-geo-environment"></a>管理多地理位置環境
 
@@ -36,7 +36,7 @@ BCS、Secure Store 及應用程式在每個衛星位置中都有個別的執行�
 
 ## <a name="ediscovery"></a>eDiscovery 
 
-根據預設，多地理位置租用戶的電子文件探索管理員或系統管理員只能在該租用戶的中央位置進行電子文件探索。 Microsoft 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行電子文件探索，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行電子文件探索的區域指定為衛星位置，否則將不會為該衛星位置執行任何電子文件探索。 若要設定地區的法規遵循安全性篩選器，請參閱[設定 Microsoft 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)。
+根據預設，多地理位置租用戶的電子文件探索管理員或系統管理員只能在該租用戶的中央位置進行電子文件探索。 Office 365 全域系統管理員必須指派電子文件探索管理員權限，以允許其他人執行電子文件探索，並在其適用的合規性安全性篩選中指派「地區」參數，以將進行電子文件探索的區域指定為衛星位置，否則將不會為該衛星位置執行任何電子文件探索。 若要設定地區的法規遵循安全性篩選器，請參閱[設定 Office 365 多地理位置電子文件探索](multi-geo-ediscovery-configuration.md)。
 
 ## <a name="exchange-mailboxes"></a>Exchange 信箱
 

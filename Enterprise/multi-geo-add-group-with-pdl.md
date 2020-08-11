@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: o365-solutions
 f1.keywords:
 - NOCSH
-ms.custom: ''
 ms.collection: Strat_SP_gtc
 localization_priority: Normal
 description: 瞭解如何在多地理位置環境中，使用指定的慣用資料位置來建立 Microsoft 365 群組。
-ms.openlocfilehash: bcababe39035550be445f2eee4d8121a2983132f
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 1648a9c974e7d25d989156c5a8e2d6818727a3b6
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433854"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606829"
 ---
 # <a name="create-a-microsoft-365-group-with-a-specific-pdl"></a>使用特定的 PDL 建立 Microsoft 365 群組
 
@@ -55,6 +55,6 @@ New-UnifiedGroup -DisplayName MultiGeoEUR -Alias "MultiGeoEUR" -AccessType Publi
 
 [!INCLUDE [Microsoft 365 Multi-Geo locations](includes/office-365-multi-geo-locations.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="related-topics"></a>相關主題
 
 [連線到 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)

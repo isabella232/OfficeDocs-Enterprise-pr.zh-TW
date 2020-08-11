@@ -13,16 +13,18 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365_Setup
+ms.custom:
+- Adm_O365_Setup
+- seo-marvel-apr2020
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
-description: 某些企業網路會限制存取一般網際網路位置，或包括真實的 Backhaul 或網路流量的處理。 若要確保這類網路上的電腦能存取 Office 365，網路與 Proxy 的系統管理員需要管理組成 Office 365 端點的 FQDN、URL 和 IP 位址清單。 然後再將這些資訊加入直接路由、Proxy 許可，和/或防火牆規則與 PAC 檔案，以確保網路要求可以連線到 Office 365。
-ms.openlocfilehash: 35f07538bd55386dc245286822eab9e14e70a3cf
-ms.sourcegitcommit: 839236443410eb804372c4aae969ac9a82ba683b
+description: 瞭解如何管理 Office 365 端點，以與企業組織網路架構搭配運作。
+ms.openlocfilehash: 336e1a0d92ee9844bbd9b020d03774473c1d738b
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "46592157"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606319"
 ---
 # <a name="managing-office-365-endpoints"></a>管理 Office 365 端點
 

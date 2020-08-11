@@ -13,13 +13,14 @@ search.appverid:
 ms.assetid: 1f01bc6f-5d37-4d14-bdd3-9d94a1e23e14
 f1.keywords:
 - NOCSH
-description: 以下是有關將核心資料移至新資料中心地理位置的一般問題的解答。
-ms.openlocfilehash: 2954d85b0094a8d0f74980fa4e0ee9cac504abbe
-ms.sourcegitcommit: e0603d9259e9be1aeb110fc3dd8b9abc6138c55d
+description: 尋找常見問題解答 (FAQs) 將核心資料移至新的 Office 365 datacenter geo。
+ms.custom: seo-marvel-mar2020
+ms.openlocfilehash: bd26296831ddb5aa0932d4106893e5a9adfb1d50
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44781038"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606039"
 ---
 # <a name="data-move-general-faq"></a>資料移動一般常見問題集
 
@@ -32,7 +33,7 @@ ms.locfileid: "44781038"
 ## <a name="how-do-we-define-core-customer-data"></a>如何定義核心客戶資料？
  
 核心客戶資料是指在[Microsoft Online Services 條款](https://aka.ms/ost)中所定義之客戶資料的子集的字詞： 
-- Exchange Online 信箱內容（電子郵件內文、行事曆專案和電子郵件附件的內容）
+- Exchange Online 信箱內容 (電子郵件內文、行事曆專案和電子郵件附件的內容) 
 - SharePoint 線上網站內容和儲存在該網站中的檔案
 - 上傳至商務 OneDrive 的檔案 
 
@@ -42,7 +43,7 @@ ms.locfileid: "44781038"
 
 ## <a name="how-do-you-make-sure-my-customer-data-is-safe-during-the-move-and-that-i-wont-experience-downtime"></a>如何在移動期間保證客戶資料是安全的，而且不會發生停機時間？
   
-資料移動是後端服務作業，對使用者影響最小。 在[資料移動期間和之後，](during-and-after-your-data-move.md)會列出受影響的功能。 我們遵循[Microsoft Online Services 服務等級協定（SLA）](https://go.microsoft.com/fwlink/p/?LinkId=523897)的可用性，讓客戶在移動期間無需準備或監視任何專案。 
+資料移動是後端服務作業，對使用者影響最小。 在[資料移動期間和之後，](during-and-after-your-data-move.md)會列出受影響的功能。 我們遵循[Microsoft Online Services 服務等級協定 (SLA) ](https://go.microsoft.com/fwlink/p/?LinkId=523897)以取得可用性，讓客戶無需準備或在移動期間進行監視。 
   
 所有 Microsoft 365 服務都會在資料中心內執行相同的版本，因此您可以保證一致的功能。 整個程式都完全支援您的服務。
 
@@ -130,7 +131,7 @@ ms.locfileid: "44781038"
   
 ## <a name="will-microsoft-365-tenants-hosted-in-the-new-datacenters-be-available-to-users-outside-of-the-country"></a>位於新資料中心的 Microsoft 365 租使用者是否可供全國以外的使用者使用？
   
-是。 Microsoft 會在世界各地的35國家/地區，使用超過超過超過超過2700的網際網路服務提供者（Isp）的相關合約，來維護具有公用網際網路130連線的大型全球網路。 使用者將能夠從網際網路上的任何地方存取資料中心。
+是。 Microsoft 會在世界各地的35國家/地區內，以超過130個位置的 Internet 服務提供者（ (Isp) 中的對2700等合約來維護具有相關合約的大型全域網路。 使用者將能夠從網際網路上的任何地方存取資料中心。
 
 ## <a name="my-tenant-has-configured-the-multi-geo-add-on-can-i-still-enroll-in-my-tenant-in-the-microsoft-365-move-program-to-change-my-default-geo-and-move-any-user-not-in-a-satellite-region-to-the-new-default-geo"></a>我的承租人已設定[多地理位置附加](https://aka.ms/multi-geo)元件。 我是否可以在 Microsoft 365 移動程式中註冊我的租使用者，以變更我的預設地理位置，並將不在附屬區域中的任何使用者移至新的預設地理位置？
 

@@ -14,17 +14,18 @@ search.appverid:
 - MET150
 f1.keywords:
 - NOCSH
-description: Microsoft 365 用戶端應用程式支援憑證型驗證。
-ms.openlocfilehash: a174e24c31e9ad2688ead557c29c3fecdac82a56
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，尋找有關以憑證為基礎之驗證的 Microsoft 365 用戶端應用程式支援的詳細資料。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 759979ac7236ff4a6cf4c77ab52fff9b472b84ec
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998595"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606669"
 ---
 # <a name="microsoft-365-client-app-support--certificate-based-authentication"></a>Microsoft 365 用戶端應用程式支援-憑證型驗證
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 憑證型驗證可讓您使用 Windows、Android 或 iOS 裝置上的用戶端憑證，對 Azure Active Directory 進行驗證。 設定此功能後，您就不需要在行動裝置上的某些郵件和 Microsoft Office 應用程式中輸入使用者名稱和密碼組合。
 

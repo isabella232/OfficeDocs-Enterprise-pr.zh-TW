@@ -14,13 +14,14 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: Microsoft 365 中資料損毀的說明，以及 Microsoft 的預防和修復工作。
-ms.openlocfilehash: 674f2a3a026c5706f5c3a23db6e2d968ed815656
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.custom: seo-marvel-apr2020
+description: 本文說明 Microsoft 365 中的資料損毀，以及 Microsoft 採取的工作，以防止及復原資料。
+ms.openlocfilehash: dc8e865a69e110fa0a68e6cd9d9f4d6b45d43d71
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998447"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606629"
 ---
 # <a name="dealing-with-data-corruption-in-microsoft-365"></a>處理 Microsoft 365 中的資料損毀
 
@@ -40,4 +41,4 @@ ms.locfileid: "44998447"
 - 單元測試、整合測試及系統測試
 - 行程電線測試/關口
 
-在 Microsoft 365 的實際執行環境中，資料中心之間的對等複寫可確保任何資料都有多個即時複本。 標準映射和腳本用於復原遺失的伺服器，而複寫的資料則用於還原客戶資料。 由於內建的資料恢復檢查和程式，Microsoft 只會維護 Microsoft 365 資訊系統檔的備份（包括安全性相關檔），在 SharePoint Online 和我們的內部程式碼存放庫工具，來源集內使用內建複寫。 系統檔儲存在 SharePoint 線上，來源返廠包含系統和應用程式影像。 線上和來源返廠 SharePoint 都使用版本設定，而且會以接近即時的時間進行複製。
+在 Microsoft 365 的實際執行環境中，資料中心之間的對等複寫可確保任何資料都有多個即時複本。 標準映射和腳本用於復原遺失的伺服器，而複寫的資料則用於還原客戶資料。 由於內建的資料恢復檢查和程式，Microsoft 只會維護 Microsoft 365 資訊系統檔 (的備份，包括安全性相關檔) ，使用內建複寫 SharePoint 線上和內部程式碼存放庫工具，來源集。 系統檔儲存在 SharePoint 線上，來源返廠包含系統和應用程式影像。 線上和來源返廠 SharePoint 都使用版本設定，而且會以接近即時的時間進行複製。

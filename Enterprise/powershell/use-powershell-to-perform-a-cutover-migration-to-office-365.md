@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerShell 執行將遷移轉換至 Microsoft 365
+title: 使用 PowerShell 以完全移轉至 Microsoft 365
 ms.author: sirkkuw
 author: sirkkuw
 manager: laurawi
@@ -12,19 +12,19 @@ search.appverid:
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: b468cb4b-a35c-43d3-85bf-65446998af40
-description: 摘要：瞭解如何使用 Windows PowerShell 執行將遷移至 Microsoft 365 的作業。
-ms.openlocfilehash: 203c041e0bd5fe58d697d074e94b749726bb22bf
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何使用 PowerShell 一次從來源電子郵件系統移動內容，方法是對 Microsoft 365 執行完全遷移。
+ms.openlocfilehash: fde0795b767f908fb0d1dcc5ce17a0bb50235d8e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229848"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606219"
 ---
-# <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>使用 PowerShell 執行將遷移轉換至 Microsoft 365
+# <a name="use-powershell-to-perform-a-cutover-migration-to-microsoft-365"></a>使用 PowerShell 以完全移轉至 Microsoft 365
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您可以使用完全遷移，將使用者信箱的內容從來源電子郵件系統移轉至 Microsoft 365。 本文會引導您使用 Exchange Online PowerShell 來進行電子郵件完全移轉的工作。 
   
@@ -79,13 +79,13 @@ ms.locfileid: "45229848"
   Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress <email address for on-premises administrator> -Credentials $credentials
   ```
 
-- **指派必要權限給內部部署使用者帳戶來存取 Exchange 組織中的信箱。** 您用來連線至內部部署 Exchange 組織的內部部署使用者帳戶（也稱為「遷移系統管理員」）必須具備必要的許可權，才能存取您要遷移至 Microsoft 365 的內部部署信箱。 此使用者帳戶可用來建立內部部署組織的移轉端點。
+- **指派必要權限給內部部署使用者帳戶來存取 Exchange 組織中的信箱。** 您用來連線至內部部署 Exchange 組織的內部部署使用者帳戶 (也稱為「遷移系統管理員」) 必須具備必要的許可權，才能存取您要遷移至 Microsoft 365 的內部部署信箱。 此使用者帳戶可用來建立內部部署組織的移轉端點。
     
     下列清單顯示使用完全移轉來移轉信箱時所需的系統管理權限。有三個可能的選項。
     
   - 移轉系統管理員在內部部署組織的 Active Directory 中必須是 **Domain Admins** 群組的成員。
     
-    或者
+    或
     
   - 移轉系統管理員必須具有每個內部部署信箱的 **FullAccess** 權限。
     
@@ -219,7 +219,7 @@ Remove-MigrationBatch -Identity CutoverBatch
     
     如需詳細資訊，請參閱[新增 DNS 記錄以連接您的網域](https://go.microsoft.com/fwlink/p/?LinkId=535028)。
     
-- **解除委任內部部署 Exchange 伺服器。** 在您確認所有電子郵件都直接路由傳送至 Microsoft 365 信箱之後，您不再需要維護內部部署電子郵件組織或不需要維護單一登入（SSO）方案，您可以從伺服器卸載 Exchange，並移除內部部署 Exchange 組織。
+- **解除委任內部部署 Exchange 伺服器。** 在您確認所有電子郵件都直接路由傳送至 Microsoft 365 信箱之後，如果您不再需要維護內部部署電子郵件組織，或不需要維護單一登入 (SSO) 解決方案，您可以從伺服器卸載 Exchange，並移除內部部署 Exchange 組織。
     
     如需詳細資訊，請參閱下列各主題：
     

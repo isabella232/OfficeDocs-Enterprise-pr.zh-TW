@@ -14,17 +14,18 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 說明 Microsoft 365 工程運作的內部記錄如何運作。
-ms.openlocfilehash: 09e0d2910a71cbcae9db0b75193cc5d672914737
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+description: 在本文中，將尋找 Microsoft 365 工程小組內部記錄運作方式的說明。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: e7c5c32d1ea0704f8f56a4af6e6dd85f73f9c2df
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774918"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606549"
 ---
 # <a name="internal-logging-for-microsoft-365-engineering"></a>Microsoft 365 工程的內部記錄
 
-除了可供客戶使用的事件和記錄資料之外，microsoft 的 Microsoft 365 工程師也可使用內部記錄資料收集系統。 許多不同類型的記錄資料會從 Microsoft 365 伺服器上傳至內部的大型資料計算服務，稱為 Cosmos。 每個服務小組都會將審核記錄從各自的伺服器上傳至 Cosmos 資料庫，以進行匯總和分析。 使用稱為 Office Data Loader （ODL）的專屬自動化工具，在特別認可的埠和通訊協定上，會透過 FIPS 140-2 驗證的 TLS 連線進行此資料傳輸。 Microsoft 365 中用來收集和處理審計記錄的工具不允許對原始的審計記錄內容或時間順序進行永久或不可逆的變更。
+除了可供客戶使用的事件和記錄資料之外，microsoft 的 Microsoft 365 工程師也可使用內部記錄資料收集系統。 許多不同類型的記錄資料會從 Microsoft 365 伺服器上傳至內部的大型資料計算服務，稱為 Cosmos。 每個服務小組都會將審核記錄從各自的伺服器上傳至 Cosmos 資料庫，以進行匯總和分析。 使用稱為 Office Data Loader (ODL) 的專屬自動化工具，在特別認可的埠和通訊協定上，會透過 FIPS 140-2 驗證的 TLS 連線進行此資料傳輸。 Microsoft 365 中用來收集和處理審計記錄的工具不允許對原始的審計記錄內容或時間順序進行永久或不可逆的變更。
 
 服務小組使用 Cosmos 做為集中式存放庫，進行應用程式使用方式的分析，以測量系統和操作效能，並尋找可能表示問題或安全性問題的 abnormalities 和模式。 每個服務小組會根據要分析的內容，將記錄的基準上傳至 Cosmos，這通常包括：
 

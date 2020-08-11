@@ -13,23 +13,25 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 6d2534a2-c19c-4a99-be5e-33a0cee5d3bd
-description: 瞭解 Azure ExpressRoute 與 Office 365 搭配使用的方式，以及如何規劃在部署 Azure ExpressRoute 以與 Office 365 搭配使用時所需的網路實施專案。
-ms.openlocfilehash: 698b8a3ed73bdd96870e017d02f3ac106ae72081
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何搭配使用 Azure ExpressRoute 搭配 Office 365，並規劃網路實施專案（如果您要使用它進行部署）。
+ms.openlocfilehash: 3d74d8b9274aebd92710f859a8c39aed12fe8da2
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230029"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605789"
 ---
 # <a name="azure-expressroute-for-office-365"></a>Azure ExpressRoute for Office 365
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 瞭解 Azure ExpressRoute 與 Office 365 搭配使用的方式，以及如何規劃在部署 Azure ExpressRoute 以與 Office 365 搭配使用時所需的網路實施專案。 在 Azure 中執行的基礎結構和平臺服務常常會以網路架構和效能考慮的方式來受益。 在這兩種情況下，我們建議 ExpressRoute Azure。 軟體即服務產品（如 Office 365 和 Dynamics 365）是透過網際網路安全且可靠地存取而建立的。 您可以閱讀 Internet 效能及安全性，以及在[評估 office 365 網路](assessing-network-connectivity.md)連線的文章中，您可能會考慮 office 365 的 Azure ExpressRoute。
 
@@ -64,11 +66,11 @@ ms.locfileid: "45230029"
 |Exchange Online<sup>1</sup> <br/> Exchange Online Protection<sup>1</sup> <br/> Delve<sup>1</sup> <br/> |
 |商務用 Skype Online<sup>1</sup> <br/> Microsoft 團隊<sup>1</sup> <br/> |
 |SharePoint 線上<sup>1</sup> <br/> Business<sup>1</sup>的 OneDrive <br/> Project Online<sup>1</sup> <br/> |
-|入口網站和共用<sup>1</sup> <br/> Azure Active Directory （Azure AD） <sup>1</sup> <br/> Azure AD Connect<sup>1</sup> <br/> Office<sup>1</sup> <br/> |
+|入口網站和共用<sup>1</sup> <br/> Azure Active Directory (Azure AD) <sup>1</sup> <br/> Azure AD Connect<sup>1</sup> <br/> Office<sup>1</sup> <br/> |
 
 <sup>1</sup>這兩個應用程式都不受 ExpressRoute 支援網際網路連線性需求，請參閱[Office 365 端點文章](https://aka.ms/o365endpoints)以取得詳細資訊。
 
-未隨附于 Office 365 ExpressRoute 的服務是適用于企業用戶端下載、內部部署身分識別提供者 Sign-In 上的 Microsoft 365 應用程式，以及在中國使用的 Office 365 （由 21 Vianet）服務。
+未隨附于 Office 365 ExpressRoute 的服務是適用于企業用戶端下載、內部部署身分識別提供者 Sign-In 和 Office 365 (（中國中的 21 Vianet) 服務）的 Microsoft 365 應用程式。
 
 ## <a name="implementing-expressroute-for-office-365"></a>實作 ExpressRoute for Office 365
 

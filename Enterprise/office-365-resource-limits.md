@@ -14,17 +14,18 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： Microsoft 365 中各種應用程式的資源限制的相關資訊。
-ms.openlocfilehash: c3f10be1e64cb5d355d319a603cc0c1d2f238dc7
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，您可以找到 Microsoft 365 內各種應用程式的資源限制的相關資訊。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 4d2e7987620891ddeac2c4fa08aaeb203f001f57
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997850"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606299"
 ---
 # <a name="resource-limits"></a>資源限制
 
-使用配額（限制）和節流來強制執行資源限制。 Azure Active Directory （Azure AD）和個別 Microsoft 365 服務都會使用兩者。 限制是服務特有的，而且隨時間而變更會隨著新功能的增加而變更。 如需各種服務目前限制的詳細資訊，請參閱下列主題：
+資源限制是使用配額來強制執行 (限制) 和節流。 Azure Active Directory (Azure AD) 和個別 Microsoft 365 服務都會使用兩者。 限制是服務特有的，而且隨時間而變更會隨著新功能的增加而變更。 如需各種服務目前限制的詳細資訊，請參閱下列主題：
 
 - [Azure AD 服務限制和限制](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits)
 - [Exchange Online 限制](https://technet.microsoft.com/library/exchange-online-limits.aspx)
@@ -36,6 +37,6 @@ ms.locfileid: "44997850"
 
 除了這些限制以外，還會在整個 Azure AD 和 Microsoft 365 中使用多個節流機制。 在服務內節流尤其重要，因為 Microsoft 資料中心的網路資源已針對使用服務的廣泛客戶進行優化。 節流機制包括：
 
-- Azure AD 和 Microsoft 365 功能的使用者層級節流，它會限制單一使用者可以執行的交易或並行通話數目（按腳本或程式碼）。
+- Azure AD 和 Microsoft 365 功能的使用者層級節流，它會限制由單一使用者執行的腳本或程式碼) 所 (的交易或並行通話數目。
 - 在建立承租人時，會將預設的 PowerShell 節流原則指派給每個承租人。 這些設定會影響其他專案，例如可由單一系統管理員開啟的最大併發 PowerShell 會話數目。
-- 每個 Exchange Online 客戶都有一個預設 Exchange Web 服務（EWS）原則，針對 EWS 用戶端作業進行調整，以及適用于所有 Outlook 用戶端的節流。
+- 每個 Exchange Online 客戶都有 (EWS) 原則，以進行 EWS 用戶端作業的預設 Exchange Web 服務，以及適用于所有 Outlook 用戶端的節流。

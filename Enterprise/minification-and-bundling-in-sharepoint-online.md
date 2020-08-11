@@ -13,18 +13,20 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: 87a52468-994e-43a2-b155-7229ed659291
-description: 本文說明如何搭配 Web Essentials 使用縮制和捆綁技術，以減少 HTTP 要求數目，以及減少在線上 SharePoint 載入網頁所需的時間。
-ms.openlocfilehash: 44f9e6151c22c3715b56a164bd0c9cacedcf2580
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 瞭解如何搭配 Web Essentials 使用縮制和捆綁技術，以減少 HTTP 要求，以及在線上 SharePoint 中載入網頁所需的時間。
+ms.openlocfilehash: 3b840b7da953103448515c51f79ba15cb356ae38
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004768"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605655"
 ---
 # <a name="minification-and-bundling-in-sharepoint-online"></a>SharePoint Online 中的縮製和統合
 
@@ -39,13 +41,13 @@ ms.locfileid: "44004768"
 您可以使用協力廠商軟體（如 Web Essentials）來捆綁 CSS 和 JavaScript 檔案。
   
 > [!IMPORTANT]
-> Web Essentials 是協力廠商、開放來源、以群組為基礎的專案。 軟體是 Visual Studio 2012 和 Visual Studio 2013 的擴充功能，且不受 Microsoft 支援。 若要下載 Web Essentials，請流覽網站[https://vswebessentials.com/download](https://go.microsoft.com/fwlink/p/?LinkId=525629)，網址為。 
+> Web Essentials 是協力廠商、開放來源、以群組為基礎的專案。 軟體是 Visual Studio 2012 和 Visual Studio 2013 的擴充功能，且不受 Microsoft 支援。 若要下載 Web Essentials，請流覽網站，網址為 [https://vswebessentials.com/download](https://go.microsoft.com/fwlink/p/?LinkId=525629) 。 
   
 Web Essentials 提供兩種捆綁形式：
   
 - 。束： CSS 和 JavaScript 檔案
     
-- sprite：用於影像（僅適用于 Visual Studio 2013）
+- sprite：只有在 Visual Studio 2013 中才能使用的影像 () 
     
 如果現有的功能包含一些在自訂主版頁面內參照的署名元素，您可以使用 Web Essentials，例如：
   

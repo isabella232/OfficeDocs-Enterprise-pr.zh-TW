@@ -13,18 +13,20 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: 74d327e5-755f-4135-b9a5-7b79578c1bf9
-description: 本文說明如何使用 JavaScript 延後載入影像，以及等候載入非必要的 JavaScript，直到載入頁面後，才能縮短 SharePoint 線上頁面的載入時間。
-ms.openlocfilehash: 09feb74b92d6fec99ba28f432ea19858cb3e094b
-ms.sourcegitcommit: 11751463c952f57f397b886eebfbd37790d461af
+description: 瞭解如何使用 JavaScript 延遲載入影像和非必要 JavaScript，縮短 SharePoint 線上頁面的載入時間。
+ms.openlocfilehash: 72eabed2dd940bb07ece44bbc0dbc9d72e426a67
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2020
-ms.locfileid: "44009348"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605749"
 ---
 # <a name="delay-loading-images-and-javascript-in-sharepoint-online"></a>延遲載入 SharePoint Online 中的影像和 JavaScript
 
@@ -34,7 +36,7 @@ ms.locfileid: "44009348"
   
 ## <a name="improve-page-load-times-by-delaying-image-loading-in-sharepoint-online-pages-by-using-javascript"></a>在 SharePoint 線上頁面上使用 JavaScript 延遲圖像載入，以提升頁面載入時間
 
-您可以使用 JavaScript 以避免網頁瀏覽器預先提取圖像。 這會加快整體檔渲染的速度。 若要這麼做，您可以從\<img\>標記中移除 src 屬性的值，並將它取代為數據屬性中的檔案路徑，例如： data-src。 例如：
+您可以使用 JavaScript 以避免網頁瀏覽器預先提取圖像。 這會加快整體檔渲染的速度。 若要這麼做，您必須從標籤中移除 src 屬性的值 \<img\> ，並將它取代為數據屬性中的檔案路徑，例如： data-src。 例如：
   
 ```html
 <img src="" data-src="/sites/NavigationBySearch/_catalogs/masterpage/media/microsoft-white-8.jpg" />
@@ -44,7 +46,7 @@ ms.locfileid: "44009348"
   
 若要進行上述所有動作，您必須使用 JavaScript。
   
-在文字檔中，定義**isElementInViewport （）** 函數，以檢查元素是否位於使用者可以看見的瀏覽器部分。
+在文字檔中，定義**isElementInViewport ( # B1**函數，以檢查元素是否位於使用者可以看見的瀏覽器部分。
   
 ```javascript
 function isElementInViewport(el) {
@@ -60,7 +62,7 @@ function isElementInViewport(el) {
 }
 ```
 
-接下來，在**loadItemsInView （）** 函數中使用**isElementInViewport （）** 。 **LoadItemsInView （）** 函數會載入具有資料 src 屬性值的所有影像（如果它們位於使用者可以看見的瀏覽器部分中）。 將下列函數新增至文字檔：
+接下來，在**loadItemsInView ( # B3**函數中使用**IsElementInViewport ( # B1** 。 **LoadItemsInView ( # B1**函數會載入具有資料 src 屬性值的所有影像（如果它們位於使用者可以看見的瀏覽器部分中）。 將下列函數新增至文字檔：
   
 ```javascript
 function loadItemsInView() {
@@ -76,7 +78,7 @@ function loadItemsInView() {
 }
 ```
 
-最後，從**loadItemsInView （** ）中呼叫**onscroll （）** ，如下列範例所示。 這可確保視區中的任何影像都會在使用者需要時載入，但不會在之前載入。 將下列專案新增至文字檔：
+最後，從** ( loadItemsInView**中 ( # B1 開始呼叫。 onscroll 如下列範例所示的 **# B3** 。 這可確保視區中的任何影像都會在使用者需要時載入，但不會在之前載入。 將下列專案新增至文字檔：
   
 ```javascript
 //Example of calling loadItemsInView() from within window.onscroll()
@@ -86,7 +88,7 @@ $(window).on("scroll", function () {
 
 ```
 
-針對 SharePoint 線上，您必須將下列函數附加到 #s4 工作區\<div\>標籤上的 scroll 事件。 這是因為會覆寫視窗事件，以確保功能區保持附加在頁面頂端。
+針對 SharePoint 線上，您必須在 #s4 工作區標籤上的 scroll 事件中附加下列功能 \<div\> 。 這是因為會覆寫視窗事件，以確保功能區保持附加在頁面頂端。
   
 ```javascript
 //Keep the ribbon at the top of the page
@@ -97,7 +99,7 @@ $('#s4-workspace').on("scroll", function () {
 
 將文字檔儲存為副檔名為 .js 的 JavaScript 檔，例如 delayLoadImages.js。
   
-DelayLoadImages.js 寫入完畢後，您可以在 SharePoint 線上中將檔案的內容新增至主版頁面。 若要這麼做，您可以將腳本連結新增至主版頁面的頁首。 在主版頁面中，JavaScript 會套用至所有使用該主版頁面版面配置的 SharePoint Online 網站中的所有頁面。 或者，如果您只想在網站的一個頁面上使用此程式，請使用 [腳本編輯器網頁元件] 將 JavaScript 嵌入頁面中。 如需詳細資訊，請參閱以下主題：
+delayLoadImages.js 寫入完畢後，您可以在 SharePoint 線上中將檔案的內容新增至主版頁面。 若要這麼做，您可以將腳本連結新增至主版頁面的頁首。 在主版頁面中，JavaScript 會套用至所有使用該主版頁面版面配置的 SharePoint Online 網站中的所有頁面。 或者，如果您只想在網站的一個頁面上使用此程式，請使用 [腳本編輯器網頁元件] 將 JavaScript 嵌入頁面中。 如需詳細資訊，請參閱以下主題：
   
 - [操作方法：將主版頁面套用至 SharePoint 2013 的網站](https://go.microsoft.com/fwlink/p/?LinkId=525627)
 

@@ -17,18 +17,19 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 - SPO_Content
+- seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
-description: 摘要：使用 PowerShell 來管理 SharePoint Online 網站群組。
-ms.openlocfilehash: bee1f01ae78ec35d34a6aba0119bba3fbf7eeada
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 在本文中，尋找使用 PowerShell Microsoft 365 來管理 SharePoint Online 網站群組的程式。
+ms.openlocfilehash: 5df2b57db4ac57aaf7905346d090ccde2d96a11c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230489"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605899"
 ---
 # <a name="manage-sharepoint-online-site-groups-with-powershell"></a>使用 PowerShell 管理 SharePoint Online 網站群組
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 雖然您可以使用 Microsoft 365 系統管理中心，但也可以使用 Microsoft 365 的 PowerShell 來管理 SharePoint Online 網站群組。
 
@@ -41,7 +42,7 @@ ms.locfileid: "45230489"
 SharePoint Online 系統管理中心具有一些用於管理網站群組的便於使用的方法。 例如，假設您想要查看網站的群組和群組成員 `https://litwareinc.sharepoint.com/sites/finance` 。 以下是您必須執行的動作：
 
 1. 從 SharePoint 系統管理中心，按一下 [作用中的**網站**]，然後按一下網站的 URL。
-2. 在 [網站] 頁面上，按一下 [**設定**] 圖示（位於頁面右上角），然後按一下 [**網站許可權**]。
+2. 在 [網站] 頁面上，按一下位於頁面右上角的 [**設定**] 圖示 () ，然後按一下 [**網站許可權**]。
 
 然後針對您想要查看的下一個網站重複此程式。
 
@@ -60,8 +61,8 @@ foreach ($y in $x)
 
 在 SharePoint 線上管理命令介面命令提示字元中，有兩種方式可以執行這個命令集：
 
-- 將命令複製到 [記事本（或其他文字編輯器）] 中，修改 **$siteURL**變數的值，然後選取命令，再將其貼到 SharePoint 線上管理命令介面命令提示字元中。 當您這麼做時，PowerShell 會在 **>>** 提示時停止。 按 Enter 鍵以執行 `foreach` 命令。<br/>
-- 將命令複製到 [記事本（或其他文字編輯器）] 中，修改 **$siteURL**變數的值，然後在適當的資料夾中，將名稱和. ps1 副檔名的文字檔儲存在適當的資料夾中。 接下來，指定 SharePoint 線上管理命令介面命令提示字元，並指定其路徑和檔案名以執行腳本。 範例命令如下：
+- 將命令複製到記事本中 (或其他文字編輯器) 、修改 **$siteURL**變數的值、選取命令，然後將其貼到 SharePoint 線上管理命令介面命令提示字元中。 當您這麼做時，PowerShell 會在 **>>** 提示時停止。 按 Enter 鍵以執行 `foreach` 命令。<br/>
+- 將命令複製到記事本中 (或其他文字編輯器) 、修改 **$siteURL**變數的值，然後在適當的資料夾中以名稱及 ps1 副檔名儲存這個文字檔。 接下來，指定 SharePoint 線上管理命令介面命令提示字元，並指定其路徑和檔案名以執行腳本。 範例命令如下：
 
 ```powershell
 C:\Scripts\SiteGroupsAndUsers.ps1
@@ -91,7 +92,7 @@ foreach ($y in $x)
     }
 ```
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
@@ -101,5 +102,5 @@ foreach ($y in $x)
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
 

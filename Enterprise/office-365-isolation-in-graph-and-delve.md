@@ -14,13 +14,14 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： microsoft Graph 和 Delve 中 Microsoft 365 租使用者隔離的說明。
-ms.openlocfilehash: 70888d084792cfb819c0ee54f34d2a8869fb198b
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，我們將尋找 Microsoft 365 租使用者隔離在 Office Graph 和 Delve 中的運作方式的說明。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 285f910362628f52c379fcf535da7d0b1365383a
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998263"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605595"
 ---
 # <a name="microsoft-365-tenant-isolation-in-the-microsoft-graph-and-delve"></a>Microsoft Graph 和 Delve 中的 microsoft 365 租使用者隔離
 
@@ -28,7 +29,7 @@ ms.locfileid: "44998263"
 
 Microsoft 365 服務中的[Microsoft Graph](https://developer.microsoft.com/graph)模型活動，包括 Exchange online、SharePoint Online、Yammer、商務用 Skype、Azure Active Directory 等等，以及外部服務（如其他 Microsoft 服務或協力廠商服務）中的活動。 Microsoft Graph 元件是用於整個 Microsoft 365。 Microsoft Graph 代表內容和活動的集合，以及跨整個 Office 套件所發生的關聯。 它會使用複雜的機器學習技巧，將人員連接至相關的內容、交談和人員。 例如，SharePoint Online 中的承租人索引具有 Microsoft Graph 索引，用來提供 Delve 查詢，則 SharePoint Online 中的 Analytics 處理引擎是用來儲存信號及計算洞察力，而 Exchange Online 會將每個使用者的收件者快取計算為租使用者分析的輸入。
 
-Microsoft Graph 包含企業物件的相關資訊，例如人員和檔，以及這些物件之間的關聯性與互動。 關係和互動會以*邊*來表示。 Microsoft Graph 是由租使用者所分割，這兩個邊界只能存在於相同租使用者之間的*節點*。 *節點*是具有統一資源識別項（URI）、節點類型、存取控制清單和一組包含*中繼資料*和邊緣的層面的實體。 每個節點都有相關聯的中繼資料和邊界，視常見知識模型中的*小平面*排列。 *中繼資料*是儲存在節點上的命名屬性，可用於在 Microsoft Graph 內進行搜尋、篩選或分析。 一個*方面*是中繼資料的邏輯集合及節點上的邊界。 每個層面都描述節點的一個方位。 
+Microsoft Graph 包含企業物件的相關資訊，例如人員和檔，以及這些物件之間的關聯性與互動。 關係和互動會以*邊*來表示。 Microsoft Graph 是由租使用者所分割，這兩個邊界只能存在於相同租使用者之間的*節點*。 *節點*是具有統一資源識別項的實體 (URI) 、節點類型、存取控制清單，以及一組包含*中繼資料*和邊緣的層面。 每個節點都有相關聯的中繼資料和邊界，視常見知識模型中的*小平面*排列。 *中繼資料*是儲存在節點上的命名屬性，可用於在 Microsoft Graph 內進行搜尋、篩選或分析。 一個*方面*是中繼資料的邏輯集合及節點上的邊界。 每個層面都描述節點的一個方位。 
 
 Microsoft Graph 不會將所有資料移到單一存放庫中;相反地，它會儲存位於其他位置之資料的中繼資料和關聯性。 Microsoft Graph 由數個數據儲存區和處理元件所組成：
 

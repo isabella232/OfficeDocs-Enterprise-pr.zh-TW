@@ -11,46 +11,48 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - MSO150
 - BCS160
 ms.assetid: beec23c2-c5d6-4e84-a8af-e82aefca7802
-description: 本文提供的誰要規劃網路頻寬需求，或誰需要改善的效能 Skype 商務 Online 系統管理員的連結。
-ms.openlocfilehash: 4ca25d8a38ffce5b694b9ca31c330f6488720fcb
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 本文提供系統管理員規劃網路頻寬需求或改善商務用 Skype Online 效能的連結。
+ms.openlocfilehash: 1ca9d969f4552cf260d44099becd41f5868286d7
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843914"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606419"
 ---
 # <a name="tune-skype-for-business-online-performance"></a>調整商務用 Skype Online 效能
 
-本文提供的誰要規劃網路頻寬需求，或誰需要改善的效能 Skype 商務 Online 系統管理員的連結。 
+本文提供系統管理員的連結，這些系統管理員想要規劃網路頻寬需求，或需要改善商務用 Skype Online 效能的人員。 
   
-## <a name="fine-tuning-skype-for-business-online-performance"></a>來微調 Skype for Business Online 效能
+## <a name="fine-tuning-skype-for-business-online-performance"></a>微調商務用 Skype Online 效能
 
-- **若要了解設定和維護您的組織的通話品質計量**，請務必閱讀[媒體品質和網路連線效能 skype for Business Online](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/media-quality-and-network-connectivity-performance)。 本文提供的詳細資訊，如果您想要使用 ExpressRoute，部署類型和其他您需要的資訊。
+- **若要瞭解維護組織之通話品質的設定和計量**，請務必閱讀[商務用 Skype Online 中的媒體質量和網路連線效能](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/media-quality-and-network-connectivity-performance)。 如果您想要使用 ExpressRoute （如您將需要的部署類型及其他資訊），本文會提供您的資訊。
     
-- **內部部署和混合式部署**，您可以看見頻寬需求 skype for Business Server 撥入式會議，請參閱[規劃商務用 Skype Server 2015 中的電話撥入式會議](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/conferencing/dial-in-conferencing)。
+- **針對內部部署和混合部署**，您可以看到商務用 skype server 電話撥入式會議的頻寬需求，請參閱[在商務用 skype Server 2015 中規劃撥入式會議](https://docs.microsoft.com/skypeforbusiness/plan-your-deployment/conferencing/dial-in-conferencing)。
     
-## <a name="more-ways-to-improve-skype-for-business-online-performance"></a>更多如何增進 Skype for Business Online 效能
+## <a name="more-ways-to-improve-skype-for-business-online-performance"></a>提高商務用 Skype Online 效能的更多方式
 
-- [ExpressRoute 與 QoS skype for Business Online](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online)： 透過使用 Azure ExpressRoute for Office 365 和 Skype 商務 Online 專用的網路連線連線到 Office 365。 
+- [在商務用 Skype online 中 ExpressRoute 和 QoS](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online)：透過使用 Azure ExpressRoute 的私人網路絡連線，使用 office 365 和商務用 Skype Online 連線到 office 365。 
     
-- [開啟並使用通話品質儀表板中的商務用 Skype](https://docs.microsoft.com/SkypeForBusiness/using-call-quality-in-your-organization/turning-on-and-using-call-quality-dashboard): 通話品質儀表板 (CQD) 可讓您監視並深入了解使用 Skype 商務服務進行的通話品質情形。 
+- [開啟和使用商務用 Skype Online 中的通話品質儀表板](https://docs.microsoft.com/SkypeForBusiness/using-call-quality-in-your-organization/turning-on-and-using-call-quality-dashboard)：通話品質儀表板 (CQD) 可讓您監視和深入瞭解使用商務用 Skype 服務所進行的呼叫品質。 
     
-## <a name="articles-on-setting-up-skype-for-business-online"></a>設定商務用 Skype 的文章
+## <a name="articles-on-setting-up-skype-for-business-online"></a>設定商務用 Skype Online 的相關文章
 
 - [設定商務用 Skype Online](https://docs.microsoft.com/skypeforbusiness/set-up-skype-for-business-online/set-up-skype-for-business-online)
     
-- [設定音訊會議 skype for Business 和 Microsoft Teams](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/set-up-audio-conferencing)
+- [為商務用 Skype 和 Microsoft 團隊設定音訊會議](https://docs.microsoft.com/skypeforbusiness/audio-conferencing-in-office-365/set-up-audio-conferencing)
     
-- [設定通話方案 (商務用 Skype)](https://docs.microsoft.com/SkypeForBusiness/what-are-calling-plans-in-office-365/set-up-calling-plans)
+- [設定通話方案 (商務用 Skype) ](https://docs.microsoft.com/SkypeForBusiness/what-are-calling-plans-in-office-365/set-up-calling-plans)
     
-- [以下是您取得與 Office 365 中的電話系統](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/here-s-what-you-get-with-phone-system)
+- [以下是您使用 Office 365 中的電話系統所取得的目標](https://docs.microsoft.com/skypeforbusiness/what-is-phone-system-in-office-365/here-s-what-you-get-with-phone-system)
     
 ## <a name="see-also"></a>另請參閱
 
@@ -58,7 +60,7 @@ ms.locfileid: "41843914"
   
 [針對商務用 Skype Online 最佳化您的網路](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/optimizing-your-network)
   
-[ExpressRoute 與 QoS skype for Business Online](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online)
+[商務用 Skype Online 中的 ExpressRoute 與 QoS](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/expressroute-and-qos-in-skype-for-business-online)
   
 [使用 ExpressRoute 的通話流程](https://docs.microsoft.com/skypeforbusiness/optimizing-your-network/call-flow-using-expressroute)
 

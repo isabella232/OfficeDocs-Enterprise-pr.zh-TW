@@ -24,17 +24,19 @@ search.appverid:
 ms.assetid: 66325a43-5816-4f8e-81ba-c11b71345b7c
 f1.keywords:
 - NOCSH
-description: SharePoint Server 2007 已到達支援的結束時間，必須進行升級。 請使用本文協助您建立計畫。
-ms.openlocfilehash: e319438e2d760c391414f699de5967738d8c6b81
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.custom:
+- seo-marvel-apr2020
+description: 本文包含使用 SharePoint Server 2007 之使用者的資訊，以協助他們規劃升級。
+ms.openlocfilehash: 9dd659936bd15e0052ce9f6ba6830238aa2c5180
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774988"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46603685"
 ---
 # <a name="sharepoint-2007-migration-options-to-consider"></a>SharePoint 2007 要考慮的遷移選項
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 Microsoft SharePoint 2007 和 SharePoint Server 2007 已到達支援的結尾。 是時候升級！ 本文提供遷移選項的相關資訊。
   
@@ -48,15 +50,15 @@ Microsoft SharePoint 2007 和 SharePoint Server 2007 已到達支援的結尾。
     
 - 就地升級 
     
-- 混合式升級（與拆離的資料庫/個別資料庫附加的就地關聯）
+- 混合式升級 (就地搭配已拆離資料庫/個別資料庫附加) 
     
-- SharePoint 混合式（連線至內部部署 SharePoint）
+- SharePoint 混合 (連線至內部部署 SharePoint) 
     
 - 在網站集合或文件庫之間手動移動資料
     
-- FastTrack 嚮導升級至 Microsoft 365 （[SharePoint Online 部署顧問](https://aka.ms/spoguidance)）
+- FastTrack 嚮導升級至 Microsoft 365 ([SharePoint 線上部署顧問](https://aka.ms/spoguidance)) 
     
-- 在 Microsoft 365 中 SharePoint Online （SPO）的遷移 API
+- 在 Microsoft 365 中 SharePoint Online (SPO) 的遷移 API
     
 哪種方法最適合您？
   
@@ -65,21 +67,21 @@ Microsoft SharePoint 2007 和 SharePoint Server 2007 已到達支援的結尾。
 > [!TIP]
 > Microsoft Office SharePoint Server 2007 也有一個逐步升級，但這裡並未涵蓋此部分。 若要查看步驟特定升級文章的清單，請參閱[SharePoint Server 2007 結束支援藍圖](sharepoint-2007-end-of-support.md)。 
   
-請記得檢查[產品生命週期](https://support.microsoft.com/lifecycle/search)和系統需求，以瞭解升級所用 SharePoint 的任何版本。 如此一來，您就會知道何時需要進行下一個升級（例如，如果您在傳統產品（如 SharePoint Server 2010）上暫停以規劃更多升級，請確定您知道其支援的結束日期，並確定您有支援方案的硬體。 
+請記得檢查[產品生命週期](https://support.microsoft.com/lifecycle/search)和系統需求，以瞭解升級所用 SharePoint 的任何版本。 如此一來，您就會知道下一次升級是必要的 (例如，如果您在傳統產品（如 SharePoint Server 2010）上暫停以規劃更多升級，請確定您知道其支援日期的結束日期) ，並確定您有支援方案的硬體。 
   
 如果您打算將部分（或全部）的 SharePoint 網站轉換為雲端中的 Microsoft 365，這是一段時間，可將[microsoft 365 和 Office 365 服務說明](https://docs.microsoft.com/office365/servicedescriptions/office-365-service-descriptions-technet-library)的連結做成書簽。 您將需要服務說明，以瞭解 SharePoint 線上功能，以及它們與內部部署 SharePoint 伺服器的差異。 升級功能 Microsoft Office SharePoint Server 2007 伺服器陣列。 如果您的安裝中有中斷的網站，請在升級之前加以修正。
   
 ## <a name="a-note-about-managing-risk"></a>有關管理風險的附注
 
-例如「並列」的方法對於升級邏輯的配置很重要。 當您同時升級時，您會維護 Microsoft Office SharePoint Server 2007 伺服器陣列，但在新硬體上建立伺服器陣列下一個版本（SharePoint 伺服器2010）。 這可透過三種方式進行：
+例如「並列」的方法對於升級邏輯的配置很重要。 當您同時升級時，您會維護 Microsoft Office SharePoint Server 2007 伺服器陣列，但建立伺服器陣列下一個版本的下一個版本 (SharePoint 伺服器 2010) 新的硬體上。 這可透過三種方式進行：
   
 1. 您有一個地方，您可以使用資料庫附加，將 Microsoft Office SharePoint Server 2007 資料庫備份，以分開升級。
     
-2. 如果您找出的 Microsoft Office SharePoint Server 2007 伺服器陣列上只包含少量重要的文件庫和其他資訊，您可以選擇從 Microsoft Office SharePoint Server 2007 手動移動資料，以 SharePoint 伺服器2010，或是只將特定網站和網站帶至下一個版本（這可讓您的工作更容易）。
+2. 如果您找出的 Microsoft Office SharePoint Server 2007 伺服器陣列上只包含少量重要的文件庫和其他資訊，您可以選擇從 Microsoft Office SharePoint Server 2007 手動移動資料，以 SharePoint 伺服器2010，或是只將特定網站和網站帶至下一個版本 (這樣可讓您的工作更容易) 。
     
 3. 您對 Microsoft Office SharePoint Server 2007 伺服器陣列所做的較少，就像您升級時，伺服器陣列包含的資料更安全。
     
-In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Server 2007 伺服器陣列，讓您更少的選項可放棄路徑，然後再從 pristine 環境重新開始。 盡可能組建一些安全措施（如進行原始環境的備份和測試）。 例如，如果您的 Microsoft Office SharePoint Server 2007 伺服器陣列是虛擬的，且是重複備份及還原的目的，請在升級服務時段之前備份及還原最新的資料庫。 知道您可以還原資料庫備份的選項，並不會使您成為安全保護，但可讓您高枕無憂。
+In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Server 2007 伺服器陣列，讓您更少的選項可放棄路徑，然後再從 pristine 環境重新開始。 您可以盡可能組建一些安全措施， (例如進行原始環境的備份或測試) 。 例如，如果您的 Microsoft Office SharePoint Server 2007 伺服器陣列是虛擬的，且是重複備份及還原的目的，請在升級服務時段之前備份及還原最新的資料庫。 知道您可以還原資料庫備份的選項，並不會使您成為安全保護，但可讓您高枕無憂。
   
 > [!TIP]
 > [Microsoft Office SharePoint Server 2007](https://technet.microsoft.com/library/cc261992%28v=office.12%29.aspx)、 [SharePoint Server 2010](https://technet.microsoft.com/library/cc261992%28v=office.14%29.aspx)、 [SharePoint Server 2013](https://technet.microsoft.com/library/cc261992%28v=office.15%29.aspx)及[SharePoint 伺服器 2016](https://technet.microsoft.com/library/cc261992%28v=office.16%29.aspx)的最佳作法檔都存在於升級中。 您也可以搜尋使用升級或 Microsoft 365 遷移經驗的[Microsoft 合作夥伴](https://partnercenter.microsoft.com/pcv/search)。 
@@ -99,11 +101,11 @@ In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Ser
   
 - 內建的 SharePoint 功能
     
-- 大型資料主體（例如檔案的封存）
+- 大型資料主體 (例如檔案的封存) 
     
 - 可用性
     
-- 主要應用程式、網頁元件或伺服器陣列中的檔（任務關鍵型伺服器陣列）
+- 伺服器陣列中的重要應用程式、網頁元件或檔 (任務重要的伺服器陣列) 
     
 - 符合規範標準
     
@@ -131,7 +133,7 @@ In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Ser
     
 - 有17個其他廣泛使用的網站。
     
-- 兩個文件庫（根網站集合上的會議工作區和檔）都是最大的（超過8000個檔）。 我們有大量的封存檔和清單包含試算表附件。
+- 兩個文件庫 (根網站集合上的會議工作區和檔，) 每個) 的 (超過8000個檔的最大。 我們有大量的封存檔和清單包含試算表附件。
     
 - 有十四個文件庫的清單，其具有必須符合規範的敏感性資料。
     
@@ -146,7 +148,7 @@ In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Ser
 |**是** <br/> |**否** <br/> |
 |使用資料庫附加升級資料庫  <br/> |就地升級   <br/> |
 |以並行方式升級伺服器陣列  <br/> |混合式升級  <br/> |
-|遷移 API 至 SPO in Microsoft 365 （適用于個人網站資料）  <br/> |SharePoint 混合式（尚不需要）  <br/> |
+|用於個人網站資料) Microsoft 365 (中的遷移 API SPO  <br/> |尚不需要 SharePoint 混合 ()   <br/> |
 |某些手動資料移轉至 SharePoint 線上以進行重要資料  <br/> |升級至 Microsoft 365 的 FastTrack 嚮導  <br/> |
    
  **建議的計畫：**
@@ -157,7 +159,7 @@ In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Ser
     
 - 如果您想要從這裡升級至 SharePoint 線上，請考慮[FastTrack 協助](https://fasttrack.microsoft.com)。 
     
-- 決定是否可將任何網站集合卸載至 Microsoft 365 訂閱。 （Microsoft 365 符合許多[規範標準](https://technet.microsoft.com/library/office-365-compliance.aspx)。 Microsoft 365 具有[eDiscovery](https://support.office.com/article/edea80d6-20a7-40fb-b8c4-5e8c8395f6da) ，可透過規範中心進行[封存](https://support.office.com/article/A18F8975-AA7F-43B4-A7D6-001D14744D8E)。 
+- 決定是否可將任何網站集合卸載至 Microsoft 365 訂閱。  (Microsoft 365 符合許多[規範標準](https://technet.microsoft.com/library/office-365-compliance.aspx)。 Microsoft 365 具有[eDiscovery](https://support.office.com/article/edea80d6-20a7-40fb-b8c4-5e8c8395f6da) ，可透過規範中心進行[封存](https://support.office.com/article/A18F8975-AA7F-43B4-A7D6-001D14744D8E)。 )  
     
 否則，繼續執行 SharePoint Server 2016 的並列升級。
   
@@ -176,7 +178,7 @@ In-Place 升級等方法將直接作用於您的 Microsoft Office SharePoint Ser
     
 更詳細的步驟，或特定升級方向的連結數目應遵循計畫。 MOSS 2007 電腦不應解除委任，為了進行比較，應維護虛擬環境;不過，當使用者重新導向至 SharePoint Server 2016 時，將會完成升級。
   
-選擇方法的主要因素是升級的總成本和時間成本（在 SharePoint 遷移藍圖文章中，您將會看到更多內容）。 不過，事先規劃可讓您極大的好處是設定期望、明智的選擇，以及將成功的方式呈現成一組幀。
+選擇方法的主要因素是升級的總成本和時間成本 (您會在 SharePoint 遷移藍圖文章) 中深入瞭解。 不過，事先規劃可讓您極大的好處是設定期望、明智的選擇，以及將成功的方式呈現成一組幀。
   
 ## <a name="related-links"></a>相關連結
 

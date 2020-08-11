@@ -17,22 +17,23 @@ f1.keywords:
 - CSH
 ms.custom:
 - Ent_Solutions
+- seo-marvel-apr2020
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: 摘要：了解如何設定適用於具有站對站 VPN 連線的 Office 伺服器工作負載的跨單位 Azure 虛擬網路。
-ms.openlocfilehash: 9601d746a542c452db2abfee82d9bb98121858fd
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: 939ba28b1fc2b21a93e22ce019879fef73d58c1c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230069"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606049"
 ---
 # <a name="connect-an-on-premises-network-to-a-microsoft-azure-virtual-network"></a>使內部部署網路與 Microsoft Azure 虛擬網路連線
 
 跨單位 Azure 虛擬網路會與您的內部部署網路連線，藉此擴充您的網路以包含 Azure 基礎架構服務中裝載的子網路和虛擬機器。此連線能讓內部部署網路上的電腦直接存取 Azure 中的虛擬機器，反之亦然。 
 
-例如，Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢內部部署網域控制站，以進行帳戶變更，並同步處理這些變更與 Microsoft 365 訂閱。本文說明如何使用已準備好主控 Azure 虛擬機器的網站對網站虛擬私人網路（VPN）連線來設定跨部署 Azure 虛擬網路。
+例如，Azure 虛擬機器上執行的目錄同步處理伺服器必須查詢內部部署網域控制站，以進行帳戶變更，並同步處理這些變更與 Microsoft 365 訂閱。本文說明如何使用可供主控 Azure 虛擬機器的網站對網站的虛擬私人網路 (VPN) 連線，設定跨部署 Azure 虛擬網路。
 
-## <a name="overview"></a>概觀
+## <a name="configure-a-cross-premises-azure-virtual-network"></a>設定跨部署 Azure 虛擬網路
 
 Azure 中的虛擬機器無須與您的內部部署環境隔離。若要讓 Azure 虛擬機器與內部部署網路資源連線，您必須設定跨單位 Azure 虛擬網路。下列圖表顯示當 Azure 中有一部虛擬機器時，部署跨單位 Azure 虛擬網路所需要的元件。
   

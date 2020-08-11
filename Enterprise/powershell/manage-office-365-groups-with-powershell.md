@@ -7,8 +7,11 @@ audience: Admin
 ms.topic: article
 ms.service: o365-administration
 localization_priority: Normal
-f1.keywords: CSH
-ms.custom: Adm_O365
+f1.keywords:
+- CSH
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
@@ -17,17 +20,17 @@ search.appverid:
 - BSA160
 - BCS160
 ms.assetid: aeb669aa-1770-4537-9de2-a82ac11b0540
-description: 瞭解如何在 Microsoft PowerShell 中執行 Microsoft 365 群組的常見管理工作。
-ms.openlocfilehash: 25a0a3c90082c016c37820f12caddd1dc1f09704
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 在本文中，您將瞭解如何在 PowerShell 中執行 Microsoft 365 群組的常見管理工作。
+ms.openlocfilehash: 899205fbf53821758f848fd4e1c75f25fd16e223
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230599"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605949"
 ---
 # <a name="manage-microsoft-365-groups-with-powershell"></a>使用 PowerShell 管理 Microsoft 365 群組
  
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 本文提供執行 Microsoft PowerShell 中群組一般管理工作的步驟。 此外，它也會列出群組的 PowerShell Cmdlet。 如需管理 SharePoint 網站的相關資訊，請參閱[Manage SharePoint Online sites using PowerShell](https://docs.microsoft.com/sharepoint/manage-team-and-communication-sites-in-powershell)。
 
@@ -36,7 +39,7 @@ ms.locfileid: "45230599"
 
 當使用者[在 Outlook 中建立或編輯群組](https://support.office.com/article/04d0c9cf-6864-423c-a380-4fa858f27102.aspx)時，您可以向他們顯示組織使用指導方針的連結。 例如，如果您需要將特定的首碼或尾碼新增至群組名稱。
   
-使用 Azure Active Directory （Azure AD） PowerShell，將您的使用者指向您組織的 Microsoft 365 群組使用指導方針。 請參閱[Azure Active Directory Cmdlet 以設定群組設定](https://go.microsoft.com/fwlink/?LinkID=827484)，並遵循在**目錄層級的 [建立設定**] 中的步驟，定義使用方式的超連結。 一旦您執行 AAD Cmdlet，當使用者在 Outlook 中建立或編輯群組時，會看到指導方針的連結。 
+使用 Azure Active Directory (Azure AD) PowerShell 將使用者指向您組織的 Microsoft 365 群組使用原則。 請參閱[Azure Active Directory Cmdlet 以設定群組設定](https://go.microsoft.com/fwlink/?LinkID=827484)，並遵循在**目錄層級的 [建立設定**] 中的步驟，定義使用方式的超連結。 一旦您執行 AAD Cmdlet，當使用者在 Outlook 中建立或編輯群組時，會看到指導方針的連結。 
   
 ![使用使用準則連結建立新的群組](../media/3f74463f-3448-4f24-a0ec-086d9aa95caa.png)
   
@@ -47,7 +50,7 @@ ms.locfileid: "45230599"
   
 如果您想要讓 Microsoft 365 群組「傳送為」，請使用[Add-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/Add-RecipientPermission)和[Get-RecipientPermission](https://docs.microsoft.com/powershell/module/exchange/Get-Recipient) Cmdlet 來設定此設定。 一旦您啟用此設定，Microsoft 365 群組使用者便可使用 Outlook 或 Outlook 網頁版，以 Microsoft 365 群組的身分傳送和回復電子郵件。 使用者可以移至群組、建立新的電子郵件，然後將「傳送為」欄位變更為群組的電子郵件地址。 
 
-（[您也可以在 Exchange 系統管理中心中執行此](https://docs.microsoft.com/office365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group)動作。）
+ ([您也可以在 Exchange 系統管理中心中執行此](https://docs.microsoft.com/office365/admin/create-groups/allow-members-to-send-as-or-send-on-behalf-of-group)動作。 ) 
   
 使用下列腳本，並以 *\<GroupAlias\>* 您要更新之群組的別名取代，並 *\<UserAlias\>* 使用您要授與許可權的使用者別名進行取代。 [連接至 Exchange Online PowerShell](https://docs.microsoft.com/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell)以執行此腳本。
 
@@ -114,7 +117,7 @@ New-UnifiedGroup <HighImpactGroup@constoso.com> -Classification <HighImpact> -Ac
 ## <a name="hide-office-365-groups-from-gal"></a>隱藏 GAL 中的 Office 365 群組
 <a name="BKMK_CreateClassification"> </a>
 
-您可以指定是否要在全域通訊清單（GAL）和組織中的其他清單中顯示 Office 365 群組。 例如，如果您有一個您不想要顯示在通訊清單中的法律部門群組，您可以停止該群組出現在 GAL 中。 執行設定整合群組指令程式，以從通訊清單中隱藏群組，如下所示：
+您可以指定 Office 365 群組是否會顯示在全域通訊清單中 (GAL) 和組織中的其他清單。 例如，如果您有一個您不想要顯示在通訊清單中的法律部門群組，您可以停止該群組出現在 GAL 中。 執行設定整合群組指令程式，以從通訊清單中隱藏群組，如下所示：
   
 ```
 Set-UnifiedGroup -Identity "Legal Department" -HiddenFromAddressListsEnabled $true
@@ -159,7 +162,7 @@ Set-UnifiedGroup -Identity "mygroup@contoso.com" -DisplayName "My new group"
 ## <a name="change-the-default-setting-of-office-365-groups-for-outlook-to-public-or-private"></a>將 Outlook 365 群組的預設設定變更為 [公用] 或 [私人]
 <a name="BKMK_CreateClassification"> </a>
 
-預設會建立 Outlook 中的 Office 365 群組為私人。 如果您的組織365想要預設建立為 Public （或回私人），請使用此 PowerShell Cmdlet 語法：
+預設會建立 Outlook 中的 Office 365 群組為私人。 如果您的組織想要預設建立為 Public 的 Office 365 群組 (或回私人) ，請使用此 PowerShell Cmdlet 語法：
   
  `Set-OrganizationConfig -DefaultGroupAccessType Public`
   

@@ -13,23 +13,25 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: e1da26c6-2d39-4379-af6f-4da213218408
-description: 若要使用 Azure ExpressRoute 正確瞭解路由傳送至 Office 365，您將需要牢固的核心 ExpressRoute 路由需求，以及 ExpressRoute 電路和路由網域。 這三個元件展示使用 Office 365 客戶所依賴 ExpressRoute 的基礎知識。
-ms.openlocfilehash: c9d81e0823b63750a456f559855bb130a2e87b07
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，瞭解 Azure ExpressRoute 路由需求、電路，以及與 Office 365 搭配使用的路由網域。
+ms.openlocfilehash: c8063d570744b3a5fd42328ed3940fe7477c25c9
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998192"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605225"
 ---
 # <a name="routing-with-expressroute-for-office-365"></a>使用 ExpressRoute for Office 365 進行路由傳送
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 若要使用 Azure ExpressRoute 正確瞭解路由傳送至 Office 365，您將需要牢固的核心[ExpressRoute 路由需求](https://azure.microsoft.com/documentation/articles/expressroute-routing/)，以及[ExpressRoute 電路和路由網域](https://azure.microsoft.com/documentation/articles/expressroute-circuit-peerings/)。 這三個元件展示使用 Office 365 客戶所依賴 ExpressRoute 的基礎知識。
   
@@ -39,7 +41,7 @@ ms.locfileid: "44998192"
 
 - ExpressRoute 電路與客戶 s 機碼之間有1:1 對應。
 
-- 每個電路都可以支援2個獨立的對等關係（Azure 私人對等關係和 Microsoft 對等）;Office 365 需要 Microsoft 對等。
+- 每個電路都可以支援兩個獨立的對等關係 (Azure 私人對等關係和 Microsoft 對等) ;Office 365 需要 Microsoft 對等。
 
 - 每個電路都有固定的頻寬，可在所有對等關係間共用。
 
@@ -126,7 +128,7 @@ ms.locfileid: "44998192"
   
 1. 應用程式所需的頻寬量。 [抽樣現有使用狀況] 是在您的組織中決定這項功能的唯一可靠方法。
 
-2. 您想要網路流量留下網路的哪一個出局位置。 您應該規劃將連線至 Office 365 的網路延遲降至最低，因為這會影響效能。 因為商務用 Skype 使用的是即時語音和影片，所以特別容易受到不良網路延遲的影響。
+2. 您想要網路流量離開網路的 (s) 出局位置。 您應該規劃將連線至 Office 365 的網路延遲降至最低，因為這會影響效能。 因為商務用 Skype 使用的是即時語音和影片，所以特別容易受到不良網路延遲的影響。
 
 3. 如果您希望所有或網路位置的子集都利用 ExpressRoute。
 

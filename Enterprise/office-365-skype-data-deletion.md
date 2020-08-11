@@ -14,13 +14,14 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 在商務用 Skype 中刪除資料的說明。
-ms.openlocfilehash: 7c94c5d1ddfb5a8056e139d664627dd1e7bed0de
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，您可以在商務用 Skype 中尋找資料刪除的說明，包含哪些類型的內容不會保留。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: 40ce2ca16367b0ca4b86ed839ca3ac9c6ddc04e4
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997793"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606279"
 ---
 # <a name="skype-for-business-data-deletion-in-office-365"></a>Office 365 中的商務用 Skype 資料刪除
 
@@ -44,7 +45,7 @@ ms.locfileid: "44997793"
 - **立即開會會議**內容會在會議結束時間後的8小時內保留。
 
 > [!NOTE]
-> 如果使用者未獲授權或已停用（例如，如果**msRTCSIP msrtcsip-userenabled**設定為*False*），然後再重新獲得授權或重新啟用，則不會保留會議內容。
+> 如果使用者未獲授權或已停用 (例如，如果**msRTCSIP msrtcsip-userenabled**設定為*False*) ，然後重新獲得授權或重新啟用，則不會保留會議內容。
 
 ## <a name="meeting-expiration"></a>會議到期
 
@@ -60,12 +61,12 @@ ms.locfileid: "44997793"
 
 ## <a name="audio-test-service"></a>音訊測試服務
 
-語音測試服務通話期間會記錄短（大約5秒）的語音樣本。 語音範例是用來檢查及/或驗證商務用 Skype 通話的音質，取決於錄製品質。 當音訊測試服務通話結束時，語音範例就會被刪除。
+在音訊測試服務通話期間，大約有5秒的時間會記錄) 的語音樣本 (。 語音範例是用來檢查及/或驗證商務用 Skype 通話的音質，取決於錄製品質。 當音訊測試服務通話結束時，語音範例就會被刪除。
 
 ## <a name="persistent-group-chat"></a>持續群組聊天
 
 持續群組聊天會儲存群組聊天交談的內容。 若啟用，系統管理員可以控制保留期間、儲存此資訊的伺服器、如果群組聊天記錄已封存以符合合規性或其他目的，以及管理/修改聊天室上的任何屬性。 具有不同角色的使用者具有不同的保存資料存取權，如下所示：
 
-- 系統管理員可以從任何聊天室刪除舊的內容（例如，在特定日期之前發佈的內容），以避免資料庫的大小大幅增加。 或者，他們可以移除或取代視為不適當的郵件給特定聊天室（或視為不適宜）。
+- 管理員可以刪除舊的內容 (例如，在特定日期之前發佈的內容) 從任何聊天室，以避免資料庫的大小大幅增加。 或者，他們可以移除或取代視為對特定聊天室不適當的郵件 (或視為不適當的) 。
 - 使用者（包括郵件作者）無法刪除任何聊天室中的內容。
 - 聊天室管理員可以停用會議室，但無法刪除會議室。 只有管理員可以在建立聊天室之後刪除聊天室。

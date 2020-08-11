@@ -14,22 +14,24 @@ ms.collection: Ent_O365
 ms.assetid: b2acaeca-4986-40f4-92b7-a1bdd06e549d
 f1.keywords:
 - NOCSH
-description: 如果您使用 Office 2007 或 Office 2010，現在正是升級的時機。 別再使用過期且不受支援的應用程式和伺服器。 請使用這些資源開始使用您的方案。
-ms.openlocfilehash: 83881977bdd3e42be47f7a9f08fdaff84742cf55
-ms.sourcegitcommit: c112869b3ecc0f574b7054ee1edc8c57132f8237
+ms.custom:
+- seo-marvel-apr2020
+description: 本文包含使用 Office 2007 或 Office 2010 的使用者的資源，可協助他們規劃升級。
+ms.openlocfilehash: 8ea43c708c84ae81f61bb2acedd8bf60027070d4
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "44735731"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606249"
 ---
 # <a name="plan-your-upgrade-from-office-2007-or-office-2010-servers-and-clients"></a>規劃從 Office 2007 或 Office 2010 伺服器和用戶端升級
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 如果貴組織使用的是舊版 Office 產品和伺服器，現在是開始規劃升級的絕佳時機。 Office 2007 產品和服務已[終止支援](upgrade-from-office-2007-servers-and-products.md)。 
 
-- Office 2010 和 Exchange 2010 會在**年10月 13 2020 日**到達支援終止。 
-- SharePoint 2010 和 Project Server 2010 會在**年4月 13 2021 日**到達支援終止。 
+- Office 2010 和 Exchange 2010 將于 **2020年10月13日** 終止支援。 
+- SharePoint 2010 和 Project Server 2010 將於 **2021 年 4月 13日**終止支援。 
 
 請使用本文中的資源開始著手。
 
@@ -39,7 +41,7 @@ ms.locfileid: "44735731"
 
 [Microsoft 365](https://www.microsoft.com/microsoft-365)是創新的 Office 應用程式、智慧雲端服務和世界類別安全性的組合，其設計目的是協助您進一步實現。
 
-Microsoft 365 包含授權和功能，可協助確保您的組織在最新的 Windows 作業系統上運作，而且您的裝置（包括 Windows、iOS 和 Android）已使用需要驗證和資料保護的原則進行註冊並保持安全。 此外，Windows 10 和您的 Microsoft 365 應用程式 enterprise （先前稱為 Office 365 ProPlus）用戶端軟體會繼續更新，以包含最新的功能和安全性更新。
+Microsoft 365 包含授權和功能，可協助確保您的組織在最新的 Windows 作業系統上運作，而且您的裝置（包括 Windows、iOS 和 Android）已使用需要驗證和資料保護的原則進行註冊並保持安全。 此外，Windows 10 和您的 Microsoft 365 應用程式 enterprise (先前名為 Office 365 ProPlus) 用戶端軟體會繼續更新，以包含最新的功能和安全性更新。
   
 Microsoft 365 是一種由 Microsoft 雲端提供及保護，且具備不斷改善的裝置和生產力體驗的數位商務轉換方式。
   

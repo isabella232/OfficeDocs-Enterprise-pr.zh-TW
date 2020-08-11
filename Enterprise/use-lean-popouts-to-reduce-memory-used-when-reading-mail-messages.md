@@ -1,5 +1,5 @@
 ---
-title: 若要降低讀取郵件時使用的記憶體使用精簡的快顯
+title: 使用精益快顯減少讀取郵件訊息時所使用的記憶體
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
@@ -13,46 +13,47 @@ search.appverid:
 ms.assetid: a6d6ba01-2562-4c3d-a8f1-78748dd506cf
 f1.keywords:
 - NOCSH
-description: 本文包含改進網頁型 Outlook 中的郵件下載效能的資訊。
-ms.openlocfilehash: 49b570da9092ce4fc857757a7da72b2a81fd0090
-ms.sourcegitcommit: 99411927abdb40c2e82d2279489ba60545989bb1
+description: 本文包含的資訊可讓您使用精益快顯，以改善 Outlook 網頁版中的郵件下載效能。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: e9ca2f90c8798c144f2763106c4c9ca9f57e9df1
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "41843904"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46603605"
 ---
-# <a name="use-lean-popouts-to-reduce-memory-used-when-reading-mail-messages"></a>若要降低讀取郵件時使用的記憶體使用精簡的快顯
+# <a name="use-lean-popouts-to-reduce-memory-used-when-reading-mail-messages"></a>使用精益快顯減少讀取郵件訊息時所使用的記憶體
 
-本文包含改進網頁型 Outlook 中的郵件下載效能的資訊。 本文是[網路規劃和效能調整的 Office 365](https://aka.ms/tune)專案的一部分。
+本文包含改進 Outlook 網頁版中郵件下載效能的資訊。 本文是 Office 365 專案的[網路規劃和效能調整](https://aka.ms/tune)的一部分。
   
-身為 Office 365 全域管理員，您可以設定 outlook 網頁版傳送_精簡的快顯_，較小，較不需要大量記憶體的版本的 Microsoft Edge 或 Internet Explorer 中某些電子郵件訊息。 當精簡的快顯已為網頁型 Outlook 時，伺服器端轉譯元件會載入的最佳化效能。
+做為 Office 365 全域系統管理員，您可以設定網頁型 Outlook，以在 Microsoft Edge 或 Internet Explorer 中提供_精益快顯_，這是佔用大量記憶體的特定電子郵件的版本。 當網頁上的 Outlook 設定精益快顯時，會載入伺服器端呈現的元件，以優化效能。
   
 > [!NOTE]
-> 截至年 3 月 2018年精簡的快顯訣不適用於指定使用的權限限制，例如資訊版權管理 (IRM) 的郵件。
+> 從3月2018，「精益快顯」不適用於指定使用許可權限制（如資訊版權管理 (IRM) ）的郵件。
   
-這些功能將會繼續在主視窗中工作，但不提供精簡的快顯：
+這些功能將繼續在主視窗中運作，但無法在精益快顯中使用：
   
 - Outlook 增益集
   
-- Skype 商務的目前狀態
+- 商務用 Skype 目前狀態
   
-## <a name="to-configure-lean-popouts-for-all-users-within-your-office-365-organization"></a>若要設定的所有使用者在 Office 365 組織的精簡快顯
+## <a name="to-configure-lean-popouts-for-all-users-within-your-office-365-organization"></a>為 Office 365 組織內的所有使用者設定精益快顯
   
-1. [連線至 Exchange Online 使用遠端 PowerShell](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx )。
+1. [使用遠端 PowerShell 連接至 Exchange Online](https://technet.microsoft.com/library/jj984289%28v=exchg.150%29.aspx )。
   
-2. 執行[Set-organizationconfig](https://technet.microsoft.com/library/aa997443%28v=exchg.160%29.aspx)指令程式搭配 LeanPopoutEnabled 參數如下所示：
+2. 使用 LeanPopoutEnabled 參數執行[Set-OrganizationConfig](https://technet.microsoft.com/library/aa997443%28v=exchg.160%29.aspx) Cmdlet，如下所示：
 
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled <$true |$false >
   ```
 
-  例如，若要啟用您的組織中的所有使用者的精簡快顯：
+  例如，若要為您組織中的所有使用者啟用精益快顯：
   
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled $true
   ```
 
-  若要停用您組織中的所有使用者的精簡快顯：
+  若要為您組織中的所有使用者停用精益快顯：
 
   ```powershell
   Set-OrganizationConfig -LeanPopoutEnabled $false

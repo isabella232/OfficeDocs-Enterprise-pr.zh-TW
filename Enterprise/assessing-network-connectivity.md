@@ -11,23 +11,25 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
 - BCS160
 ms.assetid: 64b420ef-0218-48f6-8a34-74bb27633b10
 description: Microsoft 365 的設計目的是讓全球客戶可以使用網際網路連線來連線至服務。 隨著服務演變，Microsoft 365 的安全性、效能和可靠性會隨著使用網際網路的客戶建立服務的連接而改善。
-ms.openlocfilehash: 0ccf729dc8eddfd99ffc0b70c8ab56e31451be88
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+ms.openlocfilehash: eae7e56c13ab0d0799226c834dd7d9092c8f9551
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997957"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605799"
 ---
 # <a name="assessing-microsoft-365-network-connectivity"></a>評估 Microsoft 365 網路連線能力
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 Microsoft 365 的設計目的是讓全球客戶可以使用網際網路連線來連線至服務。 隨著服務演變，Microsoft 365 的安全性、效能和可靠性會隨著使用網際網路的客戶建立服務的連接而改善。
   
@@ -61,7 +63,7 @@ Microsoft 365 的設計目的是讓全球客戶可以使用網際網路連線來
 
 ## <a name="the-microsoft-365-connectivity-test"></a>Microsoft 365 connectivity test
 
-[Microsoft 365 連線測試](https://aka.ms/netonboard)是一種概念證明（POC）網路評估工具，可對您的 microsoft 365 租使用者執行基本連線測試，並針對最佳 microsoft 365 效能進行特定的網路設計建議。 工具強調常見的大型商業網路周邊設計選擇，這些選項對網際網路網頁流覽很有用，但會影響大型 SaaS 應用程式（如 Microsoft 365）的效能。
+[Microsoft 365 連線測試](https://aka.ms/netonboard)是一項概念證明 (POC) 網路評估工具，可對您的 microsoft 365 租使用者執行基本連線測試，並針對最佳 microsoft 365 效能進行特定的網路設計建議。 工具強調常見的大型商業網路周邊設計選擇，這些選項對網際網路網頁流覽很有用，但會影響大型 SaaS 應用程式（如 Microsoft 365）的效能。
 
 網路上架工具會執行下列作業：
 
@@ -83,12 +85,12 @@ Microsoft 365 的設計目的是讓全球客戶可以使用網際網路連線來
   - 透過城市、州和國家的網路出局位置
   - 使用者進入網路出局距離
   - Microsoft 365 Exchange Online 服務的前門位置
-  - 使用者位置的最佳 Microsoft 365 Exchange Online 服務前端門（s）
+  - 適用于使用者位置的最佳 Microsoft 365 Exchange Online 服務前門 (s) 
   - 以較佳效能顯示大都市區域中的客戶
 
 「高級測試下載」應用程式提供下列其他資訊：
 
-- 詳細資料和方案] 索引標籤（附加）
+-  (新增) 的詳細資料和方案] 索引標籤
   - 使用者的預設閘道
   - 用戶端 DNS 伺服器
   - 用戶端 DNS 遞迴解析程式
@@ -107,9 +109,9 @@ Microsoft 365 的設計目的是讓全球客戶可以使用網際網路連線來
   
 您可以使用以下簡短連結回來： [ https://aka.ms/o365networkconnectivity 。](https://aka.ms/o365networkconnectivity)
   
-## <a name="see-also"></a>請參閱
+## <a name="related-topics"></a>相關主題
 
-[Microsoft 365 網路連線能力一覽](office-365-networking-overview.md)
+[Microsoft 365 網路連線概況](office-365-networking-overview.md)
 
 [Microsoft 365 網路連線原則](https://aka.ms/o365networkingprinciples)
 

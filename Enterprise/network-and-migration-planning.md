@@ -13,22 +13,24 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - BCS160
 ms.assetid: f5ee6c33-bcd7-4b0b-b0f8-dc1d9fb8d132
-description: 包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
-ms.openlocfilehash: 530e07aeb2f3420f0c752f2b254913a42c73f8ee
-ms.sourcegitcommit: 6b12e3ab76809d5632923def7ee367cd48ef3ccc
+description: 本文包含有關網路規劃、測試及遷移至 Office 365 的資訊連結。
+ms.openlocfilehash: 56a4d0179f373fd846d2a746d081829a04e94088
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "45117265"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606749"
 ---
 # <a name="network-and-migration-planning-for-office-365"></a>Office 365 的網路和移轉規劃
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 本文包含網路規劃與測試以及移轉至 Office 365 的相關資訊連結。
   

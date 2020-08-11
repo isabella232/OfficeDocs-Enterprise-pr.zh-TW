@@ -7,18 +7,18 @@ manager: arnek
 audience: ITPro
 ms.topic: article
 ms.service: o365-solutions
-f1.keywords:
-- NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-mar2020
 ms.collection: Strat_SP_gtc
 localization_priority: Normal
-description: 深入了解如何設定多地理位置環境中的搜尋。
-ms.openlocfilehash: 06dcfd179b37ae98a4e28b05f55b9f684fb1bc89
-ms.sourcegitcommit: aac21bb1a7c1dfc3ba76a2db883e0457037c5667
+f1.keywords:
+- NOCSH
+description: 瞭解如何設定多地理位置環境中的搜尋。 只有部分用戶端（例如商務用 OneDrive）可以傳回多地理位置環境中的結果。
+ms.openlocfilehash: 94d8b9de0fc7eeb6b7fda20275686de62eaa9346
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "45433564"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605769"
 ---
 # <a name="configure-search-for-microsoft-365-multi-geo"></a>設定 Microsoft 365 多地理位置的搜尋
 
@@ -88,12 +88,12 @@ Delve 摘要和個人檔案卡片只會顯示儲存在中央位置之檔案的�
 <tr class="odd">
 <td align="left"></td>
 <td align="left">多地理位置搜尋不支援數字精簡器的動態貯體。</td>
-<td align="left">將<a href="https://docs.microsoft.com/sharepoint/dev/general-development/query-refinement-in-sharepoint">「分隔」參數</a>用於數字精簡器。</td>
+<td align="left">使用<a href="https://docs.microsoft.com/sharepoint/dev/general-development/query-refinement-in-sharepoint">"分隔" 參數</a>取得數值精簡器。</td>
 </tr>
 <tr class="even">
 <td align="left">文件識別碼</td>
 <td align="left">如果您要開發依賴文件識別碼且以搜尋為導向的應用程式，請注意，多地理位置環境中的文件識別碼在地理位置間不是唯一的，該文件識別碼在每個地理位置中是唯一的。</td>
-<td align="left">我們新增了一欄來識別地理位置。 請使用此欄來達成唯一性。 此欄名為 “GeoLocationSource”。</td>
+<td align="left">我們新增了一欄來識別地理位置。 請使用此欄來達成唯一性。 此欄命名為 "GeoLocationSource"。</td>
 </tr>
 <tr class="odd">
 <td align="left">結果數目</td>

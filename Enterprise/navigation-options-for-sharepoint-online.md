@@ -13,18 +13,20 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - SPO160
 - MET150
 ms.assetid: adb92b80-b342-4ecb-99a1-da2a2b4782eb
-description: 本文說明 SharePoint 線上中啟用 SharePoint 發佈功能的導覽選項網站。 導覽的選擇和設定會大幅影響 SharePoint Online 中網站的效能與擴充性。 本文不適用於傳統小組網站。
-ms.openlocfilehash: c651530284889d2808c8fa415b72836eb6d14aea
-ms.sourcegitcommit: d1022143bdefdd5583d8eff08046808657b49c94
+description: 本文說明 SharePoint 線上中啟用 SharePoint 發佈功能的導覽選項網站。
+ms.openlocfilehash: dd11775c35f9eb7d2b6bccc38023b6f8bce8efc4
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "44004758"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606759"
 ---
 # <a name="navigation-options-for-sharepoint-online"></a>SharePoint Online 的導覽選項
 
@@ -33,13 +35,13 @@ ms.locfileid: "44004758"
 >[!NOTE]
 >如果您使用的是新式 SharePoint 導覽選項（例如，您的百萬位元功能表、級聯導覽或 hub 導覽），本文不會套用到您的網站。 新式 SharePoint 網站架構利用更平展的網站階層和中樞輻射模型。 這可讓許多案例達到，而不需要使用 SharePoint 發佈功能。
 
-## <a name="overview"></a>概觀
+## <a name="overview-of-navigation-options"></a>導覽選項的概述
 
 導覽提供者設定會大幅影響整個網站的效能，而且必須慎重考慮，以挑選流覽提供者和設定，以有效地伸縮 SharePoint 網站的需求。 有兩個現成的導覽提供者和自訂導覽實現。
 
 **如果您開啟網站的結構式流覽**快取，則第一個選項（[**結構導覽**](#using-structural-navigation-in-sharepoint-online)）是 Sharepoint Online for 傳統 SharePoint 網站中的建議流覽選項。 此導覽提供者會顯示目前網站底下的流覽專案，並選擇性地顯示目前網站及其同輩。 它提供額外的功能，例如安全性修整和網站結構列舉。 如果停用快取，這會對效能及擴充性產生負面影響，而且可能會受到節流。
 
-第二個選項（ [**Managed （中繼資料）導覽）**](#using-managed-navigation-and-metadata-in-sharepoint-online)代表使用受管理的中繼資料字片語流覽專案。 建議您先停用安全修整，除非需要。 啟用此導覽提供者的安全性調整為安全的預設設定;不過，許多網站不需要安全性調整的額外負荷，因為導覽元素通常對網站的所有使用者都是一致的。 使用建議的設定來停用安全修整時，此導覽提供者不需要列舉網站結構，高擴充性會影響到可接受的效能。
+第二個選項是[**managed (中繼資料) 導覽**](#using-managed-navigation-and-metadata-in-sharepoint-online)）代表使用受管理的中繼資料字片語流覽專案。 建議您先停用安全修整，除非需要。 啟用此導覽提供者的安全性調整為安全的預設設定;不過，許多網站不需要安全性調整的額外負荷，因為導覽元素通常對網站的所有使用者都是一致的。 使用建議的設定來停用安全修整時，此導覽提供者不需要列舉網站結構，高擴充性會影響到可接受的效能。
 
 除了現成的導覽提供者以外，許多客戶都已成功實施替代的自訂導覽實現。 請參閱本文中[的搜尋導向用戶端腳本](#using-search-driven-client-side-scripting)。
   
@@ -50,12 +52,12 @@ ms.locfileid: "44004758"
 |結構導覽  |受管理導覽  |搜尋導向導覽  |自訂導覽提供者  |
 |---------|---------|---------|---------|
 |優<br/><br/>易於維護<br/>已修整安全性<br/>在內容變更時于24小時內自動更新<br/>     |優<br/><br/>易於維護<br/>|優<br/><br/>已修整安全性<br/>新增網站時自動更新<br/>快速載入時間和本機快取導覽結構<br/>|優<br/><br/>可用選項的更寬選擇<br/>正確使用快取時的快速載入<br/>許多選項適用于快速回應頁面設計<br/>|
-|缺點：<br/><br/>**停用緩衝時影響效能**<br/>受制于節流<br/>|缺點：<br/><br/>不會自動更新以反映網站結構<br/>在**啟用安全修整**或流覽流覽結構複雜時影響效能<br/>|缺點：<br/><br/>不能輕鬆地訂購網站<br/>需要自訂主版頁面（必要的技術技能）<br/>|缺點：<br/><br/>需要自訂開發<br/>需要儲存外部資料源/快取（例如 Azure）<br/>|
+|缺點：<br/><br/>**停用緩衝時影響效能**<br/>受制于節流<br/>|缺點：<br/><br/>不會自動更新以反映網站結構<br/>在**啟用安全修整**或流覽流覽結構複雜時影響效能<br/>|缺點：<br/><br/>不能輕鬆地訂購網站<br/>需要自訂主版頁面 (所需的技術技能) <br/>|缺點：<br/><br/>需要自訂開發<br/>需要儲存外部資料源/快取（例如 Azure）<br/>|
 
 網站最適合的選項取決於您的網站需求和您的技術能力。 如果您想要在內容變更時自動更新的易於設定導覽提供者，則[啟用](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43)快取的結構導覽是一個不錯的選擇。
 
 >[!NOTE]
->將整體網站結構簡化為新式的 SharePoint 網站，以套用相同的原則，可提高效能，並簡化移至現代 SharePoint 網站的效能。 這表示的含義是，不需要有數百個網站（子網站）的單一網站集合，更好的方法是有許多網站集合，具有極少數子網站（子網站）。
+>將整體網站結構簡化為新式的 SharePoint 網站，以套用相同的原則，可提高效能，並簡化移至現代 SharePoint 網站的效能。 這表示的含義是，不需要有數百個網站的單一網站集合 (子網站) ，更好的方法是有許多網站集合，但 (子網站) 很少的子網站。
 
 ## <a name="analyzing-navigation-performance-in-sharepoint-online"></a>在 SharePoint Online 中分析導覽效能
 
@@ -63,7 +65,7 @@ ms.locfileid: "44004758"
 
 工具會針對每個已分析的頁面產生報表，顯示頁面如何針對預先定義的規則集執行，並在測試結果超出基線值時顯示詳細資訊。 SharePoint 線上管理員和設計者可以使用工具來疑難排解效能問題，以確保新頁面在發佈之前已經過優化。
 
-**SPRequestDuration**特別是 SharePoint 處理頁面所需的時間。 粗導覽（如導覽中包含頁面）、複雜的網站階層，以及其他設定和拓撲選項，都可能會大幅增加時間長度。
+**SPRequestDuration**特別是 SharePoint 處理頁面所需的時間。 大量導覽 (例如在導覽) 中包含頁面、複雜的網站階層，以及其他設定和拓撲選項，都可能會大幅增加持續時間。
 
 ## <a name="using-structural-navigation-in-sharepoint-online"></a>在 SharePoint Online 中使用結構導覽
 
@@ -71,15 +73,15 @@ ms.locfileid: "44004758"
 
 ### <a name="how-to-implement-structural-navigation-caching"></a>如何實施結構性導覽快取
 
-在 [**網站設定** > **外觀與風格** > **導覽**] 底下，您可以驗證是否已選取全域導覽或目前導覽的結構導覽。 選取 [**顯示頁面**會對效能產生負面影響。
+在 [**網站設定**  >  **外觀與風格**  >  **導覽**] 底下，您可以驗證是否已選取全域導覽或目前導覽的結構導覽。 選取 [**顯示頁面**會對效能產生負面影響。
 
 ![選取 [顯示子網站] 的結構導覽](media/SPONavOptionsStructuredShowSubsites.png)
 
-您可以在網站集合層級或網站層級啟用或停用快取，且預設為啟用。 若要在網站集合層級啟用，請在 [**網站設定** > **網站集合管理** > **網站集合導覽**] 底下，選取 [**啟用**快取] 方塊。
+您可以在網站集合層級或網站層級啟用或停用快取，且預設為啟用。 若要在網站集合層級啟用，請在 [**網站設定**  >  **網站集合管理**  >  **網站集合導覽**] 底下，選取 [**啟用**快取] 方塊。
 
 ![在網站層級啟用快取](media/structural-nav/structural-nav-caching-site-coll.png)
 
-若要在網站層級啟用，請在 [**網站設定** > **導覽**] 底下，選取 [**啟用**快取] 方塊。
+若要在網站層級啟用，請在 [**網站設定**  >  **導覽**] 底下，選取 [**啟用**快取] 方塊。
 
 ![在網站層級啟用快取](media/structural-nav/structural-nav-caching-site.png)
 
@@ -110,7 +112,7 @@ ms.locfileid: "44004758"
 這些導覽提供者具有以下幾個主要優點：
 
 - 它們通常適用于回應頁面設計。
-- 它們是極具伸縮性和高能力的，因為它們可以呈現沒有資源成本（而且在超時後會在背景中重新整理）。
+- 它們的可擴充性和能力極高，因為它們在呈現時不需資源成本 (，而且在) 超時後會在背景中重新整理。
 - 這些導覽提供者可以使用各種策略（從簡單靜態設定到不同動態資料提供者）來取得導覽資料。
 
 資料提供者的範例是使用**搜尋導向導覽**，這可讓您靈活地列舉流覽節點及有效處理安全性調整。
@@ -119,15 +121,15 @@ ms.locfileid: "44004758"
 
 使用搜尋您可以使用連續編目，利用背景中所建立的索引。 搜尋結果會從搜尋索引中提取，而結果會進行安全修整。 在需要安全性調整時，這通常會比預置的流覽提供者更快速。 使用搜尋結構導覽，尤其是當您有複雜的網站結構時，會大幅加快頁面載入時間。 這透過受管理導覽的主要優點是您可以從安全性調整中受益。
 
-這種方法包含建立自訂主版頁面，並以自訂 HTML 取代現成的導覽程式碼。 請遵循下列範例中所述的程式碼來取代檔案中的導覽`seattle.html`程式碼。 在此範例中，您將會`seattle.html`開啟檔案，並以自`id="DeltaTopNavigation"`定義的 HTML 程式碼取代整個元素。
+這種方法包含建立自訂主版頁面，並以自訂 HTML 取代現成的導覽程式碼。 請遵循下列範例中所述的程式碼來取代檔案中的導覽程式碼 `seattle.html` 。 在此範例中，您將會開啟檔案 `seattle.html` ，並 `id="DeltaTopNavigation"` 以自訂的 HTML 程式碼取代整個元素。
 
 ### <a name="example-replace-the-out-of-the-box-navigation-code-in-a-master-page"></a>範例：取代主版頁面中的現成導覽代碼
 
 1. 流覽至 [網站設定] 頁面。
 2. 按一下 [**主版頁面**] 以開啟主版頁面圖庫。
-3. 您可以從這裡流覽文檔`seattle.master`庫，並下載檔案。
+3. 您可以從這裡流覽文件庫，並下載檔案 `seattle.master` 。
 4. 使用文字編輯器編輯程式碼，並刪除下列螢幕擷取畫面中的程式碼區塊。<br/>![刪除顯示的程式碼區塊](media/SPONavOptionsDeleteCodeBlock.png)<br/>
-5. 移除`<SharePoint:AjaxDelta id="DeltaTopNavigation">` and `<\SharePoint:AjaxDelta>`標記之間的程式碼，並以下列程式碼片段取代它：<br/>
+5. 移除 and 標記之間的程式碼 `<SharePoint:AjaxDelta id="DeltaTopNavigation">` `<\SharePoint:AjaxDelta>` ，並以下列程式碼片段取代它：<br/>
 
 ```javascript
 <div id="loading">
@@ -206,13 +208,13 @@ var root = "https://spperformance.sharepoint.com/sites/NavigationBySearch";
 ```
 
 <br/>
-8. 結果會指派給自身的節點陣列，並使用 linq .js 將輸出指派給陣列自身的物件。 此陣列是系結至 HTML 的物件。 這是在 toggleView （）函數中完成的，其方式是將 self 物件傳遞至 applyBinding （）函數。<br/>這會使階層陣列系結至下列 HTML：<br/>
+8. 結果會指派給自身的節點陣列，並使用 linq.js 將輸出指派給陣列 self 階層的物件。 此陣列是系結至 HTML 的物件。 若要在 ( toggleView 中完成此動作，您可以將 self 物件傳遞至 applyBinding ( # A3 函式函數。<br/>這會使階層陣列系結至下列 HTML：<br/>
 
 ```javascript
 <div data-bind="foreach: hierarchy" class="noindex ms-core-listMenu-horizontalBox">
 ```
 
-及的事件處理常式會新增至最上層的導覽，以處理在該`addEventsToElements()`函數中所完成的子網站下拉式功能表。 `mouseexit` `mouseenter`
+及的事件處理 `mouseenter` 程式 `mouseexit` 會新增至最上層的導覽，以處理在該函數中所完成的子網站下拉式功能表 `addEventsToElements()` 。
 
 在我們的複雜導覽範例中，沒有本機快取的全新頁面載入顯示伺服器上所花費的時間已從基準結構導覽中削減，以取得與受管理導覽方法類似的結果。
 
@@ -456,11 +458,11 @@ function addEventsToElements() {
 
 ```
 
-若要匯總上述`jQuery $(document).ready`函數中所示的程式碼已`viewModel object`建立，然後呼叫`loadNavigationNodes()`該物件上的函數。 此函數會載入先前在用戶端瀏覽器的 HTML5 本機儲存區中所建立的導覽階層，或其`queryRemoteInterface()`呼叫此函數。
+若要匯總上述函數中所示的 `jQuery $(document).ready` 程式碼已 `viewModel object` 建立，然後 `loadNavigationNodes()` 呼叫該物件上的函數。 此函數會載入先前在用戶端瀏覽器的 HTML5 本機儲存區中所建立的導覽階層，或其呼叫此函數 `queryRemoteInterface()` 。
 
-`QueryRemoteInterface()`以腳本中所定義`getRequest()`的查詢參數來建立要求，然後傳回伺服器的資料。 此資料基本上是網站集合中所有網站的陣列，都是以具有各種屬性的資料傳輸物件來表示。
+`QueryRemoteInterface()``getRequest()`以腳本中所定義的查詢參數來建立要求，然後傳回伺服器的資料。 此資料基本上是網站集合中所有網站的陣列，都是以具有各種屬性的資料傳輸物件來表示。
 
-然後，此資料會剖析成先前定義`SPO.Models.NavigationNode`的物件， `Knockout.js`用來建立可透過資料系結至我們先前所定義之 HTML 的可觀測的屬性。
+然後，此資料會剖析成先前定義的 `SPO.Models.NavigationNode` 物件，用 `Knockout.js` 來建立可透過資料系結至我們先前所定義之 HTML 的可觀測的屬性。
 
 然後將物件放入結果陣列中。 此陣列會使用挖空來剖析為 JSON，並儲存在本機瀏覽器儲存體中，以在今後的頁面載入時改善效能。
 
@@ -474,9 +476,9 @@ function addEventsToElements() {
 
 - mobilehttps://jquery.com/
 - KnockoutJS -https://knockoutjs.com/
-- Linq .js- https://linqjs.codeplex.com/或 github.com/neuecc/linq.js
+- Linq.js https://linqjs.codeplex.com/ 或 github.com/neuecc/linq.js
 
-目前的 LinqJS 版本不包含以上程式碼中使用的 ByHierarchy 方法，會中斷導覽程式碼。 若要修正此問題，請將下列方法新增至 Linq .js 檔案中的`Flatten: function ()`該行之前。
+目前的 LinqJS 版本不包含以上程式碼中使用的 ByHierarchy 方法，會中斷導覽程式碼。 若要修正此問題，請將下列方法新增至 Linq.js 檔案中的該行之前 `Flatten: function ()` 。
 
 ```javascript
 ByHierarchy: function(firstLevel, connectBy, orderBy, ascending, parent) {

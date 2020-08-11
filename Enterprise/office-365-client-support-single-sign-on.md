@@ -14,19 +14,20 @@ search.appverid:
 - MET150
 f1.keywords:
 - NOCSH
-description: Microsoft 365 用戶端應用程式對單一登入的支援。
-ms.openlocfilehash: beb0ae405b9c365da0faa64e31a36f7b571ce1aa
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 在本文中，瞭解哪些平臺、用戶端和 Powershell 模組支援 Microsoft 365 的單一登入。
+ms.custom: seo-marvel-apr2020
+ms.openlocfilehash: d0f757c28695c46e6a960828914fff34c7fab5e9
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44998511"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605645"
 ---
 # <a name="microsoft-365-client-app-support--single-sign-on"></a>Microsoft 365 用戶端應用程式支援-單一 Sign-On
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-單一登入（SSO）可在使用者登入 Azure Active Directory （Azure AD）中的應用程式時，加入安全性和便利性。 使用單一登入時，使用者可以使用一個帳戶登入一次，以存取加入網域的裝置、公司資源、軟體（SaaS）應用程式和 web 應用程式。
+單一登入 (SSO) 會在使用者登入 Azure Active Directory (Azure AD) 中的應用程式時，新增安全性和便利性。 使用單一登入時，使用者可以使用一個帳戶登入一次，以存取加入網域的裝置、公司資源、軟體 (SaaS) 應用程式和 web 應用程式。
 
 深入瞭解[單一登入](https://docs.microsoft.com/azure/active-directory/manage-apps/what-is-single-sign-on)。
 

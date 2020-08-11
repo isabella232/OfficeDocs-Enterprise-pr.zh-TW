@@ -16,22 +16,23 @@ ms.custom:
 - PowerShell
 - Ent_Office_Other
 - SPO_Content
+- seo-marvel-apr2020
 ms.assetid: d0d3877a-831f-4744-96b0-d8167f06cca2
 description: 摘要：使用 PowerShell 建立新的 SharePoint Online 網站，然後將使用者和群組新增至這些網站。
-ms.openlocfilehash: 2791b4de9388e3ff828a665aeeef5ada19627107
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: 85694799c32d0a075a158df47dc021bbbbe0c844
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230799"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605999"
 ---
 # <a name="create-sharepoint-online-sites-and-add-users-with-powershell"></a>使用 PowerShell 建立 SharePoint Online 網站並新增使用者
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 當您使用 Microsoft 365 的 PowerShell 建立 SharePoint 的線上網站和新增使用者時，您可以快速且重複執行工作，其速度會比您在 Microsoft 365 系統管理中心中更快。 您也可以執行不可能在 Microsoft 365 系統管理中心中執行的工作。 
 
-## <a name="before-you-begin"></a>開始之前
+## <a name="connect-to-sharepoint-online"></a>連線至 SharePoint Online
 
 本主題中的程式需要您連線至 SharePoint。 如需相關指示，請參閱[Connect to SharePoint Online PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
@@ -52,7 +53,7 @@ owner@tenant.onmicrosoft.com,100,https://tenant.sharepoint.com/sites/Blog01,25,B
 owner@tenant.onmicrosoft.com,150,https://tenant.sharepoint.com/sites/Project01,25,PROJECTSITE#0,10,Project Alpha
 owner@tenant.onmicrosoft.com,150,https://tenant.sharepoint.com/sites/Community01,25,COMMUNITY#0,10,Community Site
 ```
-<br/>其中*租*使用者是您租使用者的名稱，而*擁有*者是您想要授與主要網站集合管理員角色的承租人使用者的使用者名稱。<br/>（您可以在使用 [記事本] 以更快的速度大小時，按 Ctrl + H。）<br/>
+<br/>其中*租*使用者是您租使用者的名稱，而*擁有*者是您想要授與主要網站集合管理員角色的承租人使用者的使用者名稱。<br/> (您可以在使用 [記事本] 以更快的速度大量取代時，按 Ctrl + H。 ) <br/>
 
 2. 將檔案儲存在您的桌面機**SiteCollections.csv**。<br/>
 
@@ -154,7 +155,7 @@ c:\users\MyAlias\desktop\UsersAndGroups.ps1
 
 5. 等待提示傳回後，再繼續進行。 您會先看到群組出現在建立時。 接著，當使用者新增時，您會看到 [群組] 清單重複。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [連線至 SharePoint 線上 PowerShell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
@@ -162,5 +163,5 @@ c:\users\MyAlias\desktop\UsersAndGroups.ps1
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
 

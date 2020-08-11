@@ -1,5 +1,5 @@
 ---
-title: 利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶
+title: 使用適用于合作合作夥伴的遠端 Windows PowerShell，連線至 Exchange Online 承租人
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,24 +13,24 @@ search.appverid:
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: ae5f1a87-8b77-4f93-a1b8-56f800aeb283
 description: 摘要：使用遠端 Windows PowerShell 搭配 DelegatedOrg 值連線至 Exchange Online。
-ms.openlocfilehash: f04632f9e7b5e8dec476a5381550020e5d8a1521
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: bfb041a9ab91cda54e643e8410704662c11ef175
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230829"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606009"
 ---
 # <a name="connect-to-exchange-online-tenants-with-remote-windows-powershell-for-delegated-access-permissions-dap-partners"></a>利用適用於委派存取權限 (DAP) 合作夥伴的遠端 Windows PowerShell 連線至 Exchange Online 租用戶
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 > [!IMPORTANT]
 > 本主題中的程序是僅適用於委派存取權限 (DAP) 合作夥伴。如果您不是 DAP 合作夥伴，請不要使用本主題中的程序。 
   
-DAP 合作夥伴是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 訂閱。 他們擁有一個合作夥伴租使用者，它會自動授與其 Microsoft 365 客戶租用的「管理」（AOBO）許可權，讓他們能管理及報告其所有客戶租用。
+DAP 合作夥伴是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會在提供給客戶的服務方案中搭售 訂閱。 他們擁有的合作夥伴租使用者會自動授與 (AOBO 的「管理」) 許可權給其 Microsoft 365 客戶租用，讓他們能管理及報告其所有客戶租用。
 
 「合作合作夥伴」可以使用 Exchange Online PowerShell 管理客戶 Exchange Online 設定，並從命令列取得 Microsoft 365 報告。 您可在本機電腦上使用 Windows PowerShell 建立對 Exchange Online 的遠端 PowerShell 工作階段。 這是一個簡單的三步驟程式，您可以在其中輸入您的認證、提供必要的連線設定，然後將 Exchange Online Cmdlet 匯入您的本機 Windows PowerShell 會話，讓您可以使用這些程式。
 

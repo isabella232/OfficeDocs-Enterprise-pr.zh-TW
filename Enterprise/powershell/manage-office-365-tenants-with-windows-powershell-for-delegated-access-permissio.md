@@ -1,5 +1,5 @@
 ---
-title: 使用適用于委派存取權限（結合）合作夥伴的 Windows PowerShell 管理 Microsoft 365 承租人
+title: 使用適用于合作協力廠商的 Windows PowerShell 管理 Microsoft 365 承租人
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -14,23 +14,23 @@ ms.collection:
 - M365-subscription-management
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: f92d5116-5b66-4150-ad20-1452fc3dd712
-description: 摘要：使用 Microsoft 365 PowerShell 來管理客戶租用。
-ms.openlocfilehash: 31ce5b9a7bdfa50234c76be65eaeb99d6d199136
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 在本文中，您將瞭解如何使用 Microsoft 365 的 PowerShell 來管理客戶租用。
+ms.openlocfilehash: b1e0459b906bd0a06758147923dff0dcc0af1b3e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230589"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605939"
 ---
-# <a name="manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>使用適用于委派存取權限（結合）合作夥伴的 Windows PowerShell 管理 Microsoft 365 承租人
+# <a name="manage-microsoft-365-tenants-with-windows-powershell-for-delegated-access-permissions-dap-partners"></a>使用 Windows PowerShell 管理適用于委派存取權限的 Microsoft 365 租使用者 (結合) 夥伴
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-Windows PowerShell 可讓供稿和雲端解決方案提供者（CSP）合作夥伴輕鬆管理和報告 Microsoft 365 系統管理中心無法使用的客戶租使用者設定。請注意，若要讓夥伴管理員帳戶連線到其客戶租用，必須要有「管理代理」（AOBO）許可權。
+Windows PowerShell 允許供稿和雲端解決方案提供者 (CSP) 合作夥伴，以輕鬆管理和報告 Microsoft 365 系統管理中心無法使用的客戶租使用者設定。請注意，若要讓夥伴管理員帳戶連接至其客戶租用，必須具備 () AOBO 的管理許可權。
   
-委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會將 Microsoft 365 訂閱捆綁到其客戶的服務產品中。 當他們銷售 Microsoft 365 訂閱時，系統會自動授與客戶租用的「管理」（AOBO）許可權，讓他們能管理及報告客戶租用。
+委派的存取權限 (DAP) 合作夥伴就是新聞訂閱方式和雲端解決方案提供者 (CSP) 合作夥伴。 他們通常是其他公司的網路或電信服務提供者。 他們會將 Microsoft 365 訂閱捆綁到其客戶的服務產品中。 當他們銷售 Microsoft 365 訂閱時，系統會自動授與 (AOBO 的「管理」) 許可權給客戶租用，讓他們能管理及報告客戶租用。
 ## <a name="what-do-you-need-to-know-before-you-begin"></a>開始之前有哪些須知？
 
 本主題中的程式需要使用 PowerShell 連接至[Microsoft 365](connect-to-office-365-powershell.md)。
@@ -100,7 +100,7 @@ Get-MsolUser -TenantId <customer TenantId value> -UserPrincipalName <user princi
 
 ### <a name="add-users-set-options-and-assign-licenses"></a>新增使用者、設定選項及指派授權
 
-Microsoft 365 使用者的大量建立、設定及授權特別有效率地使用 Microsoft 365 PowerShell。 在這兩個步驟的程式中，您會先在逗號分隔值（CSV）檔案中為您要新增的所有使用者建立專案，然後使用 Microsoft 365 的 PowerShell 匯入該檔案。 
+Microsoft 365 使用者的大量建立、設定及授權特別有效率地使用 Microsoft 365 PowerShell。 在這兩個步驟的程式中，您會先建立要以逗號分隔值 (CSV) 檔案的所有使用者專案，然後使用 Microsoft 365 PowerShell 來匯入該檔案。 
   
 #### <a name="create-a-csv-file"></a>建立 CSV 檔案
 

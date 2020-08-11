@@ -1,5 +1,5 @@
 ---
-title: PowerShell 的 Microsoft 365 社區資源
+title: 適用於 PowerShell 的 Microsoft 365 社群資源
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,17 +11,19 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: ''
+ms.custom:
+- Ent_Office_Other
+- seo-marvel-apr2020
 ms.assetid: ebe0f5ff-fd17-487f-bbb6-271b5ea270bb
-description: 摘要：從這些社區基地說明取得 Microsoft 365 的 PowerShell 協助。
-ms.openlocfilehash: 8f07fa685f6abe4edb5d7a54a0f9584eecd0f3f7
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 本文提供群組資源，以連線至您的對等機，並取得 Microsoft 365 PowerShell 的說明。
+ms.openlocfilehash: 4166e47bc974f9109d23bbe3732f0c5da3d41960
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230399"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606449"
 ---
-# <a name="microsoft-365-community-resources-for-powershell"></a>PowerShell 的 Microsoft 365 社區資源
+# <a name="microsoft-365-community-resources-for-powershell"></a>適用於 PowerShell 的 Microsoft 365 社群資源
 
 使用這些社區可讓您連線至對等網路，以及快速且正確地取得 Microsoft 365 問題的 PowerShell。 
   
@@ -29,9 +31,9 @@ ms.locfileid: "45230399"
     
 - [Exchange Server TechNet 的社區論壇](https://social.technet.microsoft.com/Forums/exchange/home?forum=exchangesvrgeneral)
     
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
 

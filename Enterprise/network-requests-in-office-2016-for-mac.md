@@ -11,16 +11,18 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Adm_O365_Setup
+ms.custom:
+- Adm_O365_Setup
+- seo-marvel-apr2020
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
-description: Office for Mac 應用程式提供 macOS 平臺上的原生應用程式體驗。 每個應用程式的設計目的都是在各種案例中運作，包括沒有網路存取可用時的狀態。 當機器連接至網路時，應用程式會自動連接至一系列的 web 型服務，以提供增強的功能。 本白皮書說明應用程式嘗試到達哪些端點和 URLs，以及所提供的服務。 此資訊對於疑難排解網路設定問題及設定網路 proxy 伺服器的原則很有用。 本文中的詳細資料主要是用於補充 Office 365 URL 和位址範圍文章。
-ms.openlocfilehash: ee854aef417c674073b947940b26cddeafb16d00
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+description: 本文說明如何嘗試聯繫哪些端點和 URLs Office for Mac 應用程式，以及所提供的服務。
+ms.openlocfilehash: 70b2da671b590dbe0c7572eebd6d96e0970532e9
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774948"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606719"
 ---
 # <a name="network-requests-in-office-for-mac"></a>Mac 版 Office 中的網路要求
 
@@ -48,7 +50,7 @@ URL 類型定義如下：
 
  **安裝和更新**
   
-下列網路端點是用來從 Microsoft Content 傳遞網路（CDN）下載 Office for Mac 安裝方案。
+下列網路端點是用來從 Microsoft Content 傳遞網路 (CDN) 下載 Office for Mac 安裝方案。
   
 |[URL]****|**類型**|**描述**|
 |:-----|:-----|:-----|
@@ -59,7 +61,7 @@ URL 類型定義如下：
    
  **第一個應用程式啟動**
   
-在第一次啟動 Office 應用程式時，會與下列網路端點取得聯繫。 這些端點為使用者提供增強的 Office 功能，不論授權類型為何（包括大量授權安裝），都會聯繫 URLs。
+在第一次啟動 Office 應用程式時，會與下列網路端點取得聯繫。 這些端點為使用者提供增強的 Office 功能，而不論授權類型 (（包括大量授權安裝) ），都會聯繫 URLs。
   
 |[URL]****|**應用程式**|**類型**|**描述**|
 |:-----|:-----|:-----|:-----|
@@ -73,8 +75,8 @@ URL 類型定義如下：
 |```https://templateservice.office.com/```  <br/> |WXP  <br/> |Cs  <br/> |Office 範本服務-為使用者提供線上檔範本。  <br/> |
 |```https://omextemplates.content.office.net/```  <br/> |WXP  <br/> |Cs  <br/> |Office 範本下載-PNG 範本影像的儲存。  <br/> |
 |```https://store.office.com/```  <br/> |WXP  <br/> |Cs  <br/> |Office 應用程式的儲存區設定。  <br/> |
-|```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |Cs  <br/> |Office 檔整合服務目錄（服務和端點清單）和主領域探索。  <br/> |
-|```https://cdn.odc.officeapps.live.com/```  <br/> |WXPON  <br/> |Cs  <br/> |家庭領域探索 v2 的資源（15.40 和更新版本）  <br/> |
+|```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |Cs  <br/> |Office 檔整合服務目錄 (服務和端點的清單) 和主領域探索。  <br/> |
+|```https://cdn.odc.officeapps.live.com/```  <br/> |WXPON  <br/> |Cs  <br/> |家用領域探索 v2 的資源 (15.40 和更新版本)   <br/> |
 |```https://officecdn.microsoft.com/```  <br/> |WXPON  <br/> |聖  <br/> |Microsoft AutoUpdate 資訊清單-檢查是否有可用的更新  <br/> |
 |```https://ajax.aspnetcdn.com/```  <br/> |WXPO  <br/> |秒  <br/> |Microsoft Ajax JavaScript 程式庫  <br/> |
 |```https://wikipedia.firstpartyapps.oaspapps.com/```  <br/> |W  <br/> |秒  <br/> |適用于 Office 的維琪百科應用程式設定和資源。  <br/> |
@@ -103,15 +105,15 @@ URL 類型定義如下：
 |[URL]****|**應用程式**|**類型**|**描述**|
 |:-----|:-----|:-----|:-----|
 |```https://login.windows.net/```  <br/> |WXPON  <br/> |聖  <br/> |Windows 授權服務  <br/> |
-|```https://login.microsoftonline.com/```  <br/> |WXPON  <br/> |聖  <br/> |Microsoft 365 登入服務（OrgID）  <br/> |
-|```https://login.live.com/```  <br/> |WXPON  <br/> |聖  <br/> |Microsoft 帳戶登入服務（MSA）  <br/> |
-|```https://auth.gfx.ms/```  <br/> |WXPON  <br/> |Cs  <br/> |Microsoft 帳戶登入服務 Helper （MSA）  <br/> |
-|```https://secure.aadcdn.microsoftonline-p.com/```  <br/> |WXPON  <br/> |秒  <br/> |Microsoft 365 登入商標（OrgID）  <br/> |
+|```https://login.microsoftonline.com/```  <br/> |WXPON  <br/> |聖  <br/> |Microsoft 365 登入服務 (OrgID)   <br/> |
+|```https://login.live.com/```  <br/> |WXPON  <br/> |聖  <br/> |Microsoft 帳戶登入服務 (MSA)   <br/> |
+|```https://auth.gfx.ms/```  <br/> |WXPON  <br/> |Cs  <br/> |Microsoft 帳戶登入服務協助 (MSA)   <br/> |
+|```https://secure.aadcdn.microsoftonline-p.com/```  <br/> |WXPON  <br/> |秒  <br/> |Microsoft 365 登入署名 (OrgID)   <br/> |
 |```https://ocws.officeapps.live.com/```  <br/> |WXPN  <br/> |Cs  <br/> |檔和位置存放區定位器  <br/> |
-|```https://roaming.officeapps.live.com/```  <br/> |WXPN  <br/> |Cs  <br/> |最近使用的（MRU）檔服務  <br/> |
+|```https://roaming.officeapps.live.com/```  <br/> |WXPN  <br/> |Cs  <br/> |最近使用 (MRU) 檔服務  <br/> |
    
 > [!NOTE]
-> 若為訂閱型和零售授權，登入都會啟用產品，並可存取雲端資源，例如 OneDrive。 對於大量授權安裝，使用者仍會收到登入（預設值），但是只有在產品已經啟用時，才需要存取雲端資源。 
+> 若為訂閱型和零售授權，登入都會啟用產品，並可存取雲端資源，例如 OneDrive。 在大量授權安裝中，預設) 使用者仍會收到登入 (，但只有在產品已經啟用時，才需要存取雲端資源。 
   
  **產品啟用**
   
@@ -129,7 +131,7 @@ URL 類型定義如下：
 |:-----|:-----|:-----|:-----|
 |```https://contentstorage.osi.office.net/```  <br/> |WXPO  <br/> |秒  <br/> |何謂「新的 JSON 頁面」內容。  <br/> |
    
- **研究員**
+ **研究工具**
   
 下列網路端點只適用于 Microsoft 365 訂閱。
   
@@ -190,9 +192,9 @@ URL 類型定義如下：
   
 |[URL]****|**應用程式**|**類型**|**描述**|
 |:-----|:-----|:-----|:-----|
-|```https://wordcs.officeapps.live.com/```  <br/> |W  <br/> |Cs  <br/> |Word 檔轉換服務（PDF）  <br/> |
+|```https://wordcs.officeapps.live.com/```  <br/> |W  <br/> |Cs  <br/> |Word 檔轉換服務 (PDF)   <br/> |
    
- **Office 應用程式（也稱為增益集）**
+ **Office App (稱為增益集) **
   
 當 Office 應用程式增益集受到信任時，下列網路端點會同時適用于 Microsoft 365 訂閱和零售/大量授權啟用。
   
@@ -265,7 +267,7 @@ Mac 版 Office 的預設設定可提供最佳的使用者體驗，也就是功�
     
 - 上的「產品啟用」區段中所列的所有端點。
     
-- 上面的「Office App （也稱為增益集）」區段中所列的所有端點。
+- 上面的「Office App (中所列的所有端點都) ' 增益集」一節。
     
 若要為使用者重新建立完整功能，請將偏好設定為 "2" 或加以移除。
   
@@ -311,18 +313,18 @@ Microsoft 會認真對待您的隱私權。 您可以在中閱讀 Microsoft 的�
   
 ### <a name="updates"></a>更新
   
-Microsoft 會定期（通常是一個月一次）更新 Mac 版 Office。 我們強烈鼓勵使用者和 IT 系統管理員保持最新的機器，以確保已安裝最新的安全性修正程式。 在 IT 系統管理員想要密切控制及管理電腦更新的情況下，可以設定下列首選項，以避免 AutoUpdate 程式自動偵測及提供產品更新：
+Microsoft 會定期為 Mac 版 Office 發行更新 (每月) 。 我們強烈鼓勵使用者和 IT 系統管理員保持最新的機器，以確保已安裝最新的安全性修正程式。 在 IT 系統管理員想要密切控制及管理電腦更新的情況下，可以設定下列首選項，以避免 AutoUpdate 程式自動偵測及提供產品更新：
   
 ```defaults write com.microsoft.autoupdate2 HowToCheck -string 'Manual'```
 
 ### <a name="blocking-requests-with-a-firewallproxy"></a>使用防火牆/Proxy 封鎖要求
   
-如果您的組織透過防火牆或 proxy 伺服器封鎖 URLs 的要求，請務必將此檔中列出的 URLs 設定為 [允許] （例如，403或404）。 40X 回應可讓 Office 應用程式適當地接受無法存取資源，而且會提供更快的使用者體驗，而不只是放入連線，而是會使用戶端重試。
+如果您的組織透過防火牆或 proxy 伺服器封鎖 URLs 的要求，請務必將此檔中所列的 URLs 設定為 [允許]，或是以40X 回應列出的封鎖 (例如403或 404) 。 40X 回應可讓 Office 應用程式適當地接受無法存取資源，而且會提供更快的使用者體驗，而不只是放入連線，而是會使用戶端重試。
   
 如果您的 proxy 伺服器需要驗證，則407回應會傳回用戶端。 為了獲得最佳的體驗，請確定您使用的是 Office for Mac 組建15.27 或更新版本，因為它們包含使用 NTLM 和 Kerberos 伺服器的特定修正。
   
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Office 365 URL 與 IP 位址範圍](urls-and-ip-address-ranges.md)
 

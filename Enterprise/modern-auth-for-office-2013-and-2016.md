@@ -10,7 +10,9 @@ ms.service: o365-administration
 localization_priority: Normal
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 search.appverid:
 - MET150
 - MOE150
@@ -22,13 +24,13 @@ search.appverid:
 ms.assetid: e4c45989-4b1a-462e-a81b-2a13191cf517
 ms.collection:
 - M365-security-compliance
-description: 瞭解 Office 2013 和2016用戶端應用程式的 Microsoft 365 新式驗證的運作方式。
-ms.openlocfilehash: 469dd665a3f427db3e2ae3731945e53b900f05e9
-ms.sourcegitcommit: 92bbb6d005d005952a9e2055661fcdccfdd0567b
+description: 瞭解 Office 2013 和2016用戶端應用程式的 Microsoft 365 新式驗證功能的運作方式。
+ms.openlocfilehash: 20a6f495ac7e8bd6b2a918ca05b9edd074c7d61c
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "46533488"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606909"
 ---
 # <a name="how-modern-authentication-works-for-office-2013-office-2016-and-office-2019-client-apps"></a>新式驗證如何運作 Office 2013、Office 2016 和 Office 2019 用戶端應用程式
 
@@ -63,7 +65,7 @@ ms.locfileid: "46533488"
 |HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\EnableADAL  |REG_DWORD  |1  |
 |HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Identity\Version |REG_DWORD |1 |
   
-閱讀[如何使用現代驗證（ADAL）搭配商務用 skype](https://go.microsoft.com/fwlink/p/?LinkId=785431)來瞭解如何使用商務用 skype。 
+閱讀[如何使用現代驗證 (ADAL) 搭配商務](https://go.microsoft.com/fwlink/p/?LinkId=785431)用 skype 來瞭解如何使用商務用 skype。 
   
 Office 2016 和 Office 2019 用戶端預設會支援新式驗證，且不需要採取任何動作，用戶端即可使用這些新流程。 不過，需要明確的動作才能使用舊版驗證。
   
@@ -80,7 +82,7 @@ Office 2016 和 Office 2019 用戶端預設會支援新式驗證，且不需要�
 
 下表說明使用或不使用新式驗證連線至 Exchange Online 時，Office 2013、Office 2016 及 Office 2019 用戶端應用程式的驗證行為。
   
-|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為（預設值） * * * *|針對承租人的新式驗證關閉驗證行為 * * * * * * * * *|
+|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為 (預設) * * * * * * * * * * * * *|針對承租人的新式驗證關閉驗證行為 * * * * * * * * *|
 |:-----|:-----|:-----|:-----|:-----|
 |Office 2019  <br/> |不 <br> AlwaysUseMSOAuthForAutoDiscover = 1 <br/> |是  <br/> |在 Outlook 2013、2016或2019上強制執行新式驗證。 <br/> [其他資訊](https://support.microsoft.com/help/3126599/outlook-prompts-for-password-when-modern-authentication-is-enabled)|強制執行 Outlook 用戶端中的新式驗證。<br/> |
 |Office 2019  <br/> |No 或 EnableADAL = 1  <br/> |是  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連接，則使用基本驗證。 當租使用者未啟用時，伺服器會拒絕新式驗證。  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連接，則使用基本驗證。 當租使用者未啟用時，伺服器會拒絕新式驗證。  <br/> |
@@ -98,7 +100,7 @@ Office 2016 和 Office 2019 用戶端預設會支援新式驗證，且不需要�
 
 下表說明 Office 2013、Office 2016 及 Office 2019 用戶端應用程式連線至 SharePoint 線上時，是否有新式驗證的驗證行為。
   
-|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為（預設值） * * * *|針對承租人的新式驗證關閉驗證行為 * * * * * * * * *|
+|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為 (預設) * * * * * * * * * * * * *|針對承租人的新式驗證關閉驗證行為 * * * * * * * * *|
 |:-----|:-----|:-----|:-----|:-----|
 |Office 2019  <br/> |No 或 EnableADAL = 1  <br/> |是  <br/> |僅限新式驗證。  <br/> |連接失敗。  <br/> |
 |Office 2019  <br/> |是，EnableADAL = 1  <br/> |是  <br/> |僅限新式驗證。  <br/> |連接失敗。  <br/> |
@@ -114,7 +116,7 @@ Office 2016 和 Office 2019 用戶端預設會支援新式驗證，且不需要�
 
 下表說明使用或不含新式驗證連線至商務用 Skype Online 時，Office 2013、Office 2016 及 Office 2019 用戶端應用程式的驗證行為。
   
-|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為 * * * * *|已針對租使用者關閉的新式驗證行為驗證行為（預設值） * * * *|
+|Office 用戶端應用程式版本 * * * *|登錄機碼存在？ * * * *|上的新式驗證？ * * * *|針對租使用者開啟的新式驗證行為驗證行為 * * * * *|針對租使用者 (的新式驗證關閉驗證行為預設) * * * * * * * * * * * * *|
 |:-----|:-----|:-----|:-----|:-----|
 |Office 2019  <br/> |No 或 EnableADAL = 1  <br/> |是  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連線，則會使用 Microsoft 線上登入 Assistant。 當未啟用商務用 Skype Online 承租人時，伺服器會拒絕新式驗證。  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連線，則會使用 Microsoft 線上登入 Assistant。 當未啟用商務用 Skype Online 承租人時，伺服器會拒絕新式驗證。  <br/> |
 |Office 2019  <br/> |是，EnableADAL = 1  <br/> |是  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連線，則會使用 Microsoft 線上登入 Assistant。 當未啟用商務用 Skype Online 承租人時，伺服器會拒絕新式驗證。  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連線，則會使用 Microsoft 線上登入 Assistant。 當未啟用商務用 Skype Online 承租人時，伺服器會拒絕新式驗證。  <br/> |
@@ -125,7 +127,7 @@ Office 2016 和 Office 2019 用戶端預設會支援新式驗證，且不需要�
 |Office 2013  <br/> |否  <br/> |否  <br/> |僅限 Microsoft Online 登入助理。  <br/> |僅限 Microsoft Online 登入助理。  <br/> |
 |Office 2013  <br/> |是，EnableADAL = 1  <br/> |是  <br/> |先嘗試新式驗證。 如果伺服器拒絕新式驗證連線，則會使用 Microsoft 線上登入 Assistant。 當未啟用商務用 Skype Online 承租人時，伺服器會拒絕新式驗證。  <br/> |僅限 Microsoft Online 登入助理。  <br/> |
    
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [為 Windows 裝置上的 Office 2013 啟用新式驗證](https://docs.microsoft.com/microsoft-365/admin/security-and-compliance/enable-modern-authentication)
 

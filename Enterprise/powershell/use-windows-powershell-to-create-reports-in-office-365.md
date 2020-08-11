@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerShell 建立 Microsoft 365 的報告
+title: 使用 PowerShell 建立 Microsoft 365 報告
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -11,19 +11,21 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: ''
+ms.custom:
+- Ent_Office_Other
+- seo-marvel-apr2020
 ms.assetid: 1ea4d4ec-af89-496f-9678-701867f5a6fc
 description: 摘要：使用 Microsoft 365 PowerShell 來建立您無法在 Microsoft 365 系統管理中心內產生的報告。
-ms.openlocfilehash: 855f6529445b95dd949fb672f978a82f1afd6149
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+ms.openlocfilehash: d2d03d6ac170fef95352a2aabf6cd27176202a1e
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229799"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605315"
 ---
-# <a name="use-powershell-to-create-reports-for-microsoft-365"></a>使用 PowerShell 建立 Microsoft 365 的報告
+# <a name="use-powershell-to-create-reports-for-microsoft-365"></a>使用 PowerShell 建立 Microsoft 365 報告
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 Microsoft 365 系統管理中心內有許多不同的報表可供使用。 不過，這些報告只提供如此多的資訊，但有時候您需要更多。 如果您需要 Microsoft 365 PowerShell
   
@@ -59,13 +61,13 @@ Microsoft 365 系統管理中心內有許多不同的報表可供使用。 不�
     
   - [使用 PowerShell 顯示 Exchange Online 報告](https://technet.microsoft.com/library/4873a063-9fc4-4ed9-826a-6e935fef61d4.aspx)
     
-## <a name="see-also"></a>另請參閱
+## <a name="related-topics"></a>相關主題
 
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)
   
-[使用 PowerShell 管理 SharePoint 線上](manage-sharepoint-online-with-office-365-powershell.md)
+[使用 PowerShell 管理 SharePoint Online](manage-sharepoint-online-with-office-365-powershell.md)
   
-[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[以 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   

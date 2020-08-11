@@ -14,13 +14,15 @@ ms.collection:
 - M365-security-compliance
 f1.keywords:
 - NOCSH
-description: 摘要： microsoft 365 的 Microsoft 技術控制措施的概述。
-ms.openlocfilehash: ef17d00cdeac4a5c7fa9dd1b2d5b5a644bb62ddb
-ms.sourcegitcommit: 4c519f054216c05c42acba5ac460fb9a821d6436
+ms.custom:
+- seo-marvel-apr2020
+description: 本文概述 microsoft 365 中 Microsoft for 技術控制項使用的工具和技術。
+ms.openlocfilehash: 4944fcdac1142344178d289be1e5699b80b47683
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "44774848"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606269"
 ---
 # <a name="microsoft-365-technology-controls"></a>Microsoft 365 技術控制項 
 
@@ -48,7 +50,7 @@ Microsoft 365 工程師在存取 Microsoft 365 客戶資料時，都有零。 �
 
 ## <a name="just-in-time-access"></a>即時存取
 
-Microsoft 會使用即時（JIT）存取原則來進行 Microsoft 365，以減輕認證篡改風險和側向攻擊。 JIT 可移除服務的持續系統管理存取權，並以要求提升許可權，取代權利。 從系統管理員移除持續性存取權力，可確保認證只有在需要時才可使用，並可減少認證盜竊風險。
+Microsoft 會使用即時 (JIT) Microsoft 365 的 access 原則，以減輕認證篡改風險和側向攻擊。 JIT 可移除服務的持續系統管理存取權，並以要求提升許可權，取代權利。 從系統管理員移除持續性存取權力，可確保認證只有在需要時才可使用，並可減少認證盜竊風險。
 
 JIT 存取模型要求工程師要求較高的期限，以執行管理性的許可權。 此外，工程師會使用以機器產生的複雜密碼建立的暫存帳戶，並只授與允許其執行必要工作的角色。 例如，由密碼箱授與的系統管理員存取權是時間界限的，而且所授與的存取時間取決於要求的角色。 工程師指定要求存取密碼箱系統所需的時間。 當所要求的時間超過提升的允許時間上限時，密碼箱系統會拒絕要求。 到期後，系統會移除系統管理存取權，且暫時帳戶到期。
 
@@ -56,9 +58,9 @@ JIT 存取模型要求工程師要求較高的期限，以執行管理性的許�
 
 ## <a name="constrained-management-interfaces"></a>受限制的管理介面
 
-工程師使用兩個管理介面來執行管理工作：透過安全的終端服務閘道（TSGs）和遠端 PowerShell 的遠端桌面。 在這些管理介面內，軟體原則和存取控制對執行哪些應用程式，以及可以使用哪些命令和 Cmdlet 進行重要的限制。
+工程師使用兩個管理介面來執行系統管理工作：透過安全的終端服務閘道 (TSGs) 和遠端 PowerShell 的遠端桌面。 在這些管理介面內，軟體原則和存取控制對執行哪些應用程式，以及可以使用哪些命令和 Cmdlet 進行重要的限制。
 
-Microsoft 365 伺服器會將同時會話限制為一個會話，每個服務小組管理員、每個伺服器。 TSGs 只允許使用者單一同時會話，而且不允許多個會話。 TSGs 可讓 Microsoft 365 服務小組管理員同時連線到多部伺服器，讓系統管理員能有效地執行其職責。 服務小組管理員對 TSGs 本身沒有任何許可權。 TSG 只用于強制執行多重要素驗證（MFA）和加密需求。 一旦服務小組管理員透過 TSG 連接至特定伺服器，該特定伺服器會強制每個系統管理員一個會話的會話限制。
+Microsoft 365 伺服器會將同時會話限制為一個會話，每個服務小組管理員、每個伺服器。 TSGs 只允許使用者單一同時會話，而且不允許多個會話。 TSGs 可讓 Microsoft 365 服務小組管理員同時連線到多部伺服器，讓系統管理員能有效地執行其職責。 服務小組管理員對 TSGs 本身沒有任何許可權。 TSG 只用于強制執行多重要素驗證 (MFA) 和加密需求。 一旦服務小組管理員透過 TSG 連接至特定伺服器，該特定伺服器會強制每個系統管理員一個會話的會話限制。
 
 Microsoft 365 人員的使用限制與連線和設定需求是由 Active Directory 群組原則所建立。 這些原則包含下列特性：
 
@@ -68,6 +70,6 @@ Microsoft 365 人員的使用限制與連線和設定需求是由 Active Directo
 
 TSGs 的連線也需要使用個別的實體智慧卡和與工程師的 Microsoft 公司認證不同的帳戶，來進行 MFA。 工程師針對各種平臺和機密管理平臺發佈不同的智慧卡，以確保認證的安全儲存。 TSGs 使用 Active Directory 群組原則來控制可登入遠端伺服器的使用者、允許的會話數目及空閒超時設定。 其他原則會限制允許的應用程式存取，並限制網際網路存取。
 
-除了使用特別設定之 TSGs 的遠端存取之外，Exchange Online 還允許具有「服務工程師運作」角色的使用者使用遠端 PowerShell 來存取生產伺服器上的特定管理功能。 若要這樣做，使用者必須獲得 Microsoft 365 實際執行環境的唯讀（調試）存取權。 啟用許可權提升的方式，與使用密碼箱處理常式對 TSGs 啟用許可權提升的方式相同。
+除了使用特別設定之 TSGs 的遠端存取之外，Exchange Online 還允許具有「服務工程師運作」角色的使用者使用遠端 PowerShell 來存取生產伺服器上的特定管理功能。 若要這麼做，使用者必須獲得唯讀 (調試) 對 Microsoft 365 生產環境的存取權。 啟用許可權提升的方式，與使用密碼箱處理常式對 TSGs 啟用許可權提升的方式相同。
 
 針對遠端存取，每個資料中心都有一種負載平衡虛擬 IP，可充當單一存取點。 可用的遠端 PowerShell Cmdlet 是以驗證期間所取得存取宣告中所識別的許可權層級為基礎。 這些 Cmdlet 只會提供使用此方法連線之使用者可存取的唯一管理功能。 Remote PowerShell 會限制工程師可使用的命令範圍，並根據透過密碼箱處理常式授與的存取層級而定。 例如，在 Exchange Online 中，可能會有 Get-Mailbox，但 Set-Mailbox 不會。

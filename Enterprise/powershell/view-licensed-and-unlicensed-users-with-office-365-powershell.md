@@ -17,18 +17,19 @@ ms.custom:
 - O365ITProTrain
 - Ent_Office_Other
 - PowerShell
+- seo-marvel-apr2020
 ms.assetid: e4ee53ed-ed36-4993-89f4-5bec11031435
-description: 說明如何使用 PowerShell 來查看已授權和未經許可的 Microsoft 365 使用者帳戶。
-ms.openlocfilehash: 02b1f76bab0e64e4e7e72f5e5556f5047d956d11
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 本文說明如何使用 PowerShell 來查看已授權和未經許可的 Microsoft 365 使用者帳戶。
+ms.openlocfilehash: 470c4dff2b425ba570926002c1efd68310e37d71
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45230249"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605285"
 ---
 # <a name="view-licensed-and-unlicensed-microsoft-365-users-with-powershell"></a>使用 PowerShell 查看已授權和未經許可的 Microsoft 365 使用者
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
 您的 Microsoft 365 組織中的使用者帳戶可能會從您組織中提供的授權方案中，為他們指派一些、全部或沒有的可用授權。 您可以使用 Microsoft 365 的 PowerShell，在您的組織中快速尋找授權與未經授權的使用者。
 
@@ -36,13 +37,13 @@ ms.locfileid: "45230249"
 
 首先，連線[至您的 Microsoft 365 租使用者](connect-to-office-365-powershell.md#connect-with-the-azure-active-directory-powershell-for-graph-module)。
  
-若要查看您的組織中所有尚未指派任何授權方案（未授權使用者）的使用者帳戶清單，請執行下列命令：
+若要查看組織中所有尚未指派任何授權方案的使用者帳戶清單 (未經許可的使用者) ，請執行下列命令：
   
 ```powershell
 Get-AzureAdUser | ForEach{ $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].SkuId ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $false) { Write-Host $_.UserPrincipalName} }
 ```
 
-若要查看組織中已指派任何授權方案（授權使用者）的所有使用者帳戶清單，請執行下列命令：
+若要查看組織中已指派任何授權方案 (授權使用者的所有使用者帳戶清單) ，請執行下列命令：
   
 ```powershell
 Get-AzureAdUser | ForEach { $licensed=$False ; For ($i=0; $i -le ($_.AssignedLicenses | Measure).Count ; $i++) { If( [string]::IsNullOrEmpty(  $_.AssignedLicenses[$i].SkuId ) -ne $True) { $licensed=$true } } ; If( $licensed -eq $true) { Write-Host $_.UserPrincipalName} }
@@ -78,10 +79,10 @@ Get-MsolUser -All -UnlicensedUsersOnly
 Get-MsolUser -All | where {$_.isLicensed -eq $true}
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[使用 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
+[以 PowerShell 管理 Microsoft 365 使用者帳戶、授權和群組](manage-user-accounts-and-licenses-with-office-365-powershell.md)
   
 [使用 PowerShell 管理 Microsoft 365](manage-office-365-with-office-365-powershell.md)
   
-[Microsoft 365 的 PowerShell 快速入門](getting-started-with-office-365-powershell.md)
+[開始使用適用於 Microsoft 365 的 PowerShell](getting-started-with-office-365-powershell.md)

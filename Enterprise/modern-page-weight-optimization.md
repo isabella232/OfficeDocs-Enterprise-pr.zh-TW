@@ -14,17 +14,19 @@ ms.collection:
 - SPO_Content
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- seo-marvel-apr2020
 ms.reviewer: sstewart
 search.appverid:
 - MET150
-description: 深入了解如何在 SharePoint Online 新式網站頁面中最佳化頁面權數。
-ms.openlocfilehash: d571508648973a73efe1367c4d09b8cc6c8eb522
-ms.sourcegitcommit: a9021ba0800ffc0da21cf2c4da67ab1da2d97099
+description: 瞭解如何使用頁面診斷工具，在 SharePoint 線上新式網站頁面中優化頁面重量。
+ms.openlocfilehash: 0a658217b89dd50ce1c6e58024d4d78d19998612
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "46571106"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606889"
 ---
 # <a name="optimize-page-weight-in-sharepoint-online-modern-site-pages"></a>在 SharePoint Online 新式網站頁面中最佳化頁面權數
 

@@ -14,20 +14,22 @@ search.appverid:
 - MED150
 - MBS150
 - BCS160
-ms.assetid: 94f4e86d-b8e5-42dd-b558-e6092f830ec9
 f1.keywords:
 - NOCSH
+ms.assetid: 94f4e86d-b8e5-42dd-b558-e6092f830ec9
+ms.custom:
+- seo-marvel-apr2020
 description: 使用集中式部署 PowerShell Cmdlet，協助您部署及管理 Microsoft 365 組織的 Office 增益集。
-ms.openlocfilehash: aa8ec43cb0e6bcbcdbb2b4eeb3fd67fec9d8a39b
-ms.sourcegitcommit: 20c8c98c0b32d8cf56d50cbc70f82fd5c4ce649c
+ms.openlocfilehash: 849e27dc3bda5dc9e6b4f45bc100e896eae3e281
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45263585"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605345"
 ---
 # <a name="use-the-centralized-deployment-powershell-cmdlets-to-manage-add-ins"></a>使用集中式部署 PowerShell Cmdlet 來管理增益集
 
-做為 Microsoft 365 全域管理員，您可以透過集中式部署功能，將 Office 增益集部署給使用者（請參閱[在系統管理中心部署 Office 增益集](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins)）。 除了透過 Microsoft 365 系統管理中心部署 Office 增益集之外，您也可以使用 Microsoft PowerShell。 安裝[適用于 Windows PowerShell 的 O365 集中式 Add-In 部署模組](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment)。 
+做為 Microsoft 365 全域管理員，您可以透過 [集中式部署] 功能將 Office 增益集部署至使用者 (請參閱[在系統管理中心部署 Office 增益集](https://docs.microsoft.com/microsoft-365/admin/manage/manage-deployment-of-add-ins)) 。 除了透過 Microsoft 365 系統管理中心部署 Office 增益集之外，您也可以使用 Microsoft PowerShell。 安裝[適用于 Windows PowerShell 的 O365 集中式 Add-In 部署模組](https://www.powershellgallery.com/packages/O365CentralizedAddInDeployment)。 
 
 下載該模組之後，請開啟一般 Windows PowerShell 視窗，並執行下列 Cmdlet：
 

@@ -11,15 +11,17 @@ localization_priority: Normal
 ms.collection: Ent_O365
 f1.keywords:
 - CSH
-ms.custom: Ent_Architecture
+ms.custom:
+- Ent_Architecture
+- seo-marvel-apr2020
 ms.assetid: 98fc1006-9399-4ff0-a216-c7c05820d822
-description: 摘要：您可以在 Microsoft Azure 虛擬機器中主控 SharePoint 2013 解決方案。 瞭解哪種類型的解決方案正確，以及如何將 Microsoft Azure 設定為裝載1。
-ms.openlocfilehash: fee388f56faf2b30534d9a56926d9d62a176df19
-ms.sourcegitcommit: 6e608d957082244d1b4ffb47942e5847ec18c0b9
+description: 瞭解可在 Microsoft Azure 虛擬機器中主控哪些類型的 SharePoint 2013 解決方案，以及如何將 Azure 設定為主機1。
+ms.openlocfilehash: f76d5020ab4695f48edca956d6593040c42dcc70
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44997890"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46605685"
 ---
 # <a name="microsoft-azure-architectures-for-sharepoint-2013"></a>Microsoft Azure SharePoint 2013 架構
 
@@ -37,14 +39,14 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
 |:-----|:-----|
 |開發和測試環境  <br/> |這很容易建立及管理這些環境。  <br/> |
 |內部部署 SharePoint 伺服器陣列至 Azure 的災難修復  <br/> |**主控次要資料中心**使用 Azure，而不是在不同地區的次要資料中心中投資。 <br/> **低成本的災害復原環境**維護和支付的資源少於內部部署的嚴重損壞修復環境。 資源數目取決於您所選擇的嚴重損壞復原環境：冷待命、溫待命或熱待機。 <br/> **更多彈性平臺**萬一發生嚴重損壞，請輕鬆向外延展您的修復 SharePoint 伺服器陣列，以滿足負載需求。 當您不再需要資源時放大。 <br/> 請參閱[在 Microsoft Azure 中 SharePoint Server 2013 災難修復](sharepoint-server-2013-disaster-recovery-in-microsoft-azure.md)。  <br/> |
-|使用 Microsoft 365 無法使用之功能和縮放功能的網際網路對向網站  <br/> |**致力於您的努力**專注于建立卓越的網站，而不是建立基礎結構。 <br/> **在 Azure 中利用彈性**新增新的伺服器，並只支付您需要的資源，以調整需求的伺服器陣列大小。 不支援動態電腦分攤（自動縮放）。 <br/> **使用 Azure Active Directory （AD）** 請利用 Azure AD 取得客戶帳戶。 <br/> **新增 Microsoft 365 中無法使用的 SharePoint 功能**新增深入報告和 web analytics。 <br/> 請參閱[使用 SharePoint Server 2013 的 Microsoft Azure 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
+|使用 Microsoft 365 無法使用之功能和縮放功能的網際網路對向網站  <br/> |**致力於您的努力**專注于建立卓越的網站，而不是建立基礎結構。 <br/> **在 Azure 中利用彈性**新增新的伺服器，並只支付您需要的資源，以調整需求的伺服器陣列大小。  (自動縮放) 不支援動態電腦分配。 <br/> **使用 Azure Active Directory (AD) **請利用 Azure AD 取得客戶帳戶。 <br/> **新增 Microsoft 365 中無法使用的 SharePoint 功能**新增深入報告和 web analytics。 <br/> 請參閱[使用 SharePoint Server 2013 的 Microsoft Azure 中的網際網路網站](internet-sites-in-microsoft-azure-using-sharepoint-server-2013.md)。  <br/> |
 |支援 Microsoft 365 或內部部署環境的應用程式伺服器陣列  <br/> |在 Azure 中**建立、測試和主控應用程式**，以同時支援內部部署和雲端環境。 <br/> 在 Azure 中**主控此角色**，而不是購買內部部署環境的新硬體。 <br/> |
    
 針對內部網路和共同作業解決方案及工作量，請考慮下列選項：
   
 - 判斷 Microsoft 365 是否符合您的業務需求，或是否可以成為解決方案的一部分。 Microsoft 365 提供一個功能齊全的功能集，永遠都是最新的。
     
-- 如果 Microsoft 365 不符合您的所有業務需求，請考慮從 Microsoft 諮詢服務（MCS）內部部署 SharePoint 2013 的標準實施。 標準架構可以是比自訂更快速、成本低且更容易的解決方案。 
+- 如果 Microsoft 365 不符合您的所有業務需求，請考慮從 Microsoft 諮詢服務 (MCS) 的標準實施 SharePoint 2013。 標準架構可以是比自訂更快速、成本低且更容易的解決方案。 
     
 - 如果標準執行不符合您的業務需求，請考慮使用自訂的內部部署解決方案。
     
@@ -73,7 +75,7 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
 
 首先，您需要 Azure 中的虛擬網路，包含您要用來存放虛擬機器的子網。 虛擬網路必須有私人 IP 位址空間，也就是您指派給子網的部分。
   
-如果您是透過跨單位連線將您的內部部署網路擴充至 Azure （適用于嚴重損壞修復環境），則必須選擇尚未在組織網路中其他地方使用的私人位址空間，其中可能包含您的內部部署環境和其他 Azure 虛擬網路。 
+如果您要將內部部署網路擴充至 Azure，並透過執行災難修復) 環境所需的 (跨單位連線，則必須選擇尚未在組織網路中的其他地方使用的私人位址空間，其中可能包含您的內部部署環境和其他 Azure 虛擬網路。 
   
 **圖1：在 Azure 中具有虛擬網路的內部部署環境**
 
@@ -87,7 +89,7 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
     
 ## <a name="add-cross-premises-connectivity"></a>新增跨部署連線能力
 
-下一個部署步驟是建立跨單位連線（如果這適用于您的解決方案）。 若為跨單位連線，Azure 閘道位於個別的閘道子網，您必須建立並指派位址空間。 
+下一個部署步驟是建立跨單位的連線 (如果此連接適用于您的解決方案) 。 若為跨單位連線，Azure 閘道位於個別的閘道子網，您必須建立並指派位址空間。 
   
 當您規劃跨單位連線時，您可以定義及建立 Azure 閘道和內部部署閘道裝置的連線。
   
@@ -105,7 +107,7 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
     
 如需規劃及建立跨單位虛擬網路的其他資訊，請參閱[將內部部署網路連線至 Microsoft Azure 虛擬網路](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)。
   
-## <a name="add-active-directory-domain-services-ad-ds-and-dns"></a>新增 Active Directory 網域服務（AD DS）和 DNS
+## <a name="add-active-directory-domain-services-ad-ds-and-dns"></a>將 Active Directory 網域服務新增 (AD DS) 和 DNS
 
 針對 Azure 中的嚴重損壞修復，您可以在混合案例中部署 Windows Server AD 和 DNS，其中 Windows Server AD 同時部署在內部部署和 Azure 虛擬機器上。
   
@@ -121,7 +123,7 @@ Azure 基礎結構服務是主控 SharePoint 解決方案的極具說服力的�
 |:-----|:-----|
 |Azure 中的虛擬機器大小  <br/> |標準層級的 A1 或 A2 大小  <br/> |
 |作業系統  <br/> |Windows Server 2012 R2  <br/> |
-|Active Directory 角色  <br/> |指定為通用類別目錄伺服器的 AD DS 網域控制站。 這種設定可減少跨跨單位連線的傳出流量。  <br/> 在具有較高變更率的多網域環境（這不常見）中，設定內部部署的網域控制站不要與 Azure 中的通用類別目錄伺服器進行同步處理，以減少複寫流量。  <br/> |
+|Active Directory 角色  <br/> |指定為通用類別目錄伺服器的 AD DS 網域控制站。 這種設定可減少跨跨單位連線的傳出流量。  <br/> 在具有高變更率的多網域環境中 (此) 不常見，請將內部部署的網域控制站設定為不要與 Azure 中的通用類別目錄伺服器進行同步處理，以減少複寫流量。  <br/> |
 |DNS 角色  <br/> |在網域控制站上安裝及設定 DNS 伺服器服務。  <br/> |
 |資料磁片  <br/> |將 Active Directory 資料庫、記錄檔和 SYSVOL 放在其他 Azure 資料磁片上。 請勿將它們置於 Azure 所提供的作業系統磁片或臨時磁片上。  <br/> |
 |IP 位址  <br/> |在設定網域控制站之後，使用靜態 IP 位址和設定虛擬網路以將這些位址指派給虛擬網路中的虛擬機器。  <br/> |

@@ -1,5 +1,5 @@
 ---
-title: Office 365 Germany 端點
+title: 德國的 Office 365 端點
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,17 +13,19 @@ ms.collection:
 - Strat_O365_Enterprise
 f1.keywords:
 - CSH
-ms.custom: Adm_O365_Setup
+ms.custom:
+- Adm_O365_Setup
+- seo-marvel-apr2020
 search.appverid: MOE150
 ms.assetid: 8a113a50-0071-4155-bb8e-eba5a8dbd4c8
-description: 如果您的組織使用 Office 365 並限制網路上的電腦連線至網際網路，則在下列情況下，您將會發現應該包含在輸出允許清單中的端點 (Fqdn、埠、URLs 及 IPv4 和 IPv6 位址) 範圍，以確保您的電腦可以成功使用 Office 365。
+description: 在本文中，您將會發現在德國使用 Office 365 之客戶可以到達的端點。
 hideEdit: true
-ms.openlocfilehash: f78fe11ccf9b659c5606f743fe91bd426392f549
-ms.sourcegitcommit: b2767740251b257bb5e66d056731c6c9e7f2677d
+ms.openlocfilehash: a711499799ecbf50e7534fc0d015146fc26d220d
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "46596910"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606591"
 ---
 # <a name="office-365-germany-endpoints"></a>Office 365 Germany 端點
 
@@ -41,7 +43,7 @@ Office 365 需要連接至網際網路。 下列端點應可供使用**Office 36
 
 以下顯示在此頁面上的資料都是由 REST web 服務所產生。 如果您使用腳本或網路裝置來存取此資料，您應該直接前往[Web 服務](office-365-ip-web-service.md)。
 
-下列端點資料列出使用者的電腦到 Office 365 的連線需求。這不包括從 Microsoft 到客戶網路的網路連線，有時稱為混合式或輸入網路連線。
+以下的端點資料會列出從使用者電腦到 Office 365 的連線需求。 不包括從 Microsoft 到客戶網路的網路連線，有時也稱為混合式或輸入的網路連線。
 
 端點則被歸類成四個服務區域。前三個服務區域可以個別選取進行連線。第四個服務區域 (稱為 Microsoft 365 Common 與 Office) 的常見相依性，且必須一律具有網路連線能力。
 
@@ -49,7 +51,7 @@ Office 365 需要連接至網際網路。 下列端點應可供使用**Office 36
 
 - **識別碼**：資料列的識別碼，也就是端點設定。此 ID 與端點設定的 web 服務所傳回的相同。
 
-- **類別**：顯示端點設定是否分類為「最佳」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
+- **類別**：顯示端點設定是否分類為「最佳化​​」、「允許」或「預設」。您可以在[https://aka.ms/pnc](https://aka.ms/pnc)讀取這些類別和在其中管理的指導方針。此欄也會列出網路連線需要哪些端點設定。對於不需要有網路連線的端點設定，我們會在這個欄位中提供附註，表示如果端點設定受到封鎖，將會遺失什麼功能。如果您不包含整個服務區域，視需要列出的端點設定將不需要連線能力。
 
 - **ER**：如果端點設定透過 Azure ExpressRoute 使用 Office 365 路由首碼支援，則這是 [是]****。包含所顯示路由首碼的 BGP 社群會對齊所列的服務區域。當 ER 為 [否]**** 時，表示 ExpressRoute 不支援此端點集合。不過，不應假設 ER 為 [否]**** 的端點設定不會通告任何路由。
 

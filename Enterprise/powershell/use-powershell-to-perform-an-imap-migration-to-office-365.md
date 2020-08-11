@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerShell 執行 IMAP 遷移至 Microsoft 365
+title: 使用 PowerShell 將 IMAP 移轉至 Microsoft 365
 ms.author: josephd
 author: JoeDavies-MSFT
 manager: laurawi
@@ -13,21 +13,21 @@ search.appverid:
 ms.collection: Ent_O365
 f1.keywords:
 - NOCSH
-ms.custom: ''
+ms.custom: seo-marvel-apr2020
 ms.assetid: c28de4a5-1e8e-4491-9421-af066cde7cdd
-description: 摘要：瞭解如何使用 Windows PowerShell 執行 IMAP 遷移至 Microsoft 365。
-ms.openlocfilehash: fa53fd1829121bb697277805e4f07d25ec2179b9
-ms.sourcegitcommit: 0d1ebcea8c73a644cca3de127a93385c58f9a302
+description: 瞭解如何使用 PowerShell 來執行網際網路郵件存取通訊協定 (IMAP) 遷移至 Microsoft 365。
+ms.openlocfilehash: 0254f35791ac83aed1afff293c98fcd654a27480
+ms.sourcegitcommit: 8634215e257ba2d49832a8f5947700fd00f18ece
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229769"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "46606199"
 ---
-# <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>使用 PowerShell 執行 IMAP 遷移至 Microsoft 365
+# <a name="use-powershell-to-perform-an-imap-migration-to-microsoft-365"></a>使用 PowerShell 將 IMAP 移轉至 Microsoft 365
 
-*本文適用于 Microsoft 365 Enterprise 和 Office 365 企業版。*
+*本文適用於 Microsoft 365 企業版和 Office 365 企業版。*
 
-在部署 Microsoft 365 的過程中，您可以選擇將使用者信箱的內容從網際網路郵件存取通訊協定（IMAP）電子郵件服務遷移至 Microsoft 365。本文將引導您透過使用 Exchange Online PowerShell 的電子郵件 IMAP 遷移工作。 
+在部署 Microsoft 365 的過程中，您可以選擇將使用者信箱的內容從網際網路郵件存取通訊協定（ (IMAP) 電子郵件服務）遷移到 Microsoft 365。本文將引導您透過使用 Exchange Online PowerShell 的電子郵件 IMAP 遷移工作。 
   
 > [!NOTE]
 > 您也可以使用 Exchange 系統管理中心來執行 IMAP 遷移。請參閱[遷移 IMAP 信箱](https://go.microsoft.com/fwlink/p/?LinkId=536685)。 
